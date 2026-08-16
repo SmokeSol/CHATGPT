@@ -1,0 +1,107 @@
+name: morocco26-fminus1-release-gate
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - 'morocco26/data/goal100/fminus1_postflight.json'
+      - '.github/workflows/morocco26-fminus1-release-gate.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-fminus1-release-gate
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Require exact postflight PASS and revalidate
+        run: |
+          python - <<'PY'
+          import hashlib, json, subprocess
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          g=Path('morocco26/data/goal100')
+          report=json.loads((g/'fminus1_postflight.json').read_text(encoding='utf-8'))
+          if report['status']!='PASS':
+              raise SystemExit(f"RELEASE_GATE_FAIL postflight={report['status']}")
+          for cmd in (
+              ['python','morocco26/scripts/validate_anti_drift.py'],
+              ['python','morocco26/scripts/validate_goal100_tracking_dynamic.py'],
+          ):
+              subprocess.run(cmd,check=True)
+          reg=json.loads((g/'forecast_registry.json').read_text(encoding='utf-8'))
+          gates=json.loads((g/'gate_registry.json').read_text(encoding='utf-8'))
+          cert=json.loads((g/'fminus1_registration_certificate.json').read_text(encoding='utf-8'))
+          assert [x['snapshot_id'] for x in reg['snapshots']]==['F-1']
+          assert reg['sequence']['next_id']=='F0'
+          assert all(x['status']=='CLOSED' for x in gates['forecast_unlock'])
+          assert all(x['status']=='LOCKED' for x in gates['agentic_unlock'])
+          assert cert['gate']=='PASS'
+          release={
+              'schema_version':'1.0',
+              'release_gate_id':'M26-GOAL100-FMINUS1-RELEASE-V1',
+              'created_at':datetime.now(ZoneInfo('Africa/Casablanca')).isoformat(timespec='seconds'),
+              'postflight_sha256':hashlib.sha256((g/'fminus1_postflight.json').read_bytes()).hexdigest(),
+              'forecast_sha256':cert['forecast_artifact_sha256'],
+              'manifest_sha256':cert['manifest_sha256'],
+              'snapshot_ids':['F-1'],'next_snapshot':'F0',
+              'forecast_unlock':'ALL_CLOSED','agentic_unlock':'ALL_LOCKED',
+              'goal75_anti_drift':'PASS','goal100_tracking':'PASS',
+              'gate':'PASS'
+          }
+          (g/'fminus1_release_gate.json').write_text(json.dumps(release,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(release,indent=2))
+          PY
+
+      - name: Commit release certificate
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add morocco26/data/goal100/fminus1_release_gate.json
+          git commit -m 'release(morocco26): certify F-1 ready for review' || true
+          git push origin HEAD:morocco26-fminus1-run
+
+      - name: Mark PR ready and publish exact evidence summary
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr ready 8 --repo SmokeSol/CHATGPT
+          python - <<'PY' > /tmp/pr_comment.md
+          import json
+          from pathlib import Path
+          g=Path('morocco26/data/goal100')
+          r=json.loads((g/'fminus1_release_gate.json').read_text(encoding='utf-8'))
+          f=json.loads((g/'snapshots/F-1/forecast.json').read_text(encoding='utf-8'))
+          print('## F-1 release gate: PASS')
+          print()
+          print(f"- Forecast SHA-256: `{r['forecast_sha256']}`")
+          print(f"- Manifest SHA-256: `{r['manifest_sha256']}`")
+          print('- 50,000 valid coherent joint elections')
+          print('- 92 local / 305 seats + 12 regional / 90 seats = 395')
+          print('- All forecast-unlock gates CLOSED; all agentic gates LOCKED')
+          print('- Goal75 anti-drift PASS; Goal100 dynamic tracking PASS')
+          print()
+          print('### Mean national seats in F-1')
+          for p,v in f['national_395']['parties'].items():
+              print(f"- {p}: {v['total_seats']['mean']:.2f}")
+          print()
+          print('F-1 is an early structural prior. It contains no candidate, event, polling or agentic evidence. Next snapshot: F0 after B2 freeze.')
+          PY
+          gh pr comment 8 --repo SmokeSol/CHATGPT --body-file /tmp/pr_comment.md
