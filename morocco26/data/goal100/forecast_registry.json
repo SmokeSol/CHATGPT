@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "registry_id": "M26-GOAL100-FORECAST-REGISTRY-V1",
+  "created_at": "2026-08-16T21:30:00+01:00",
+  "election_date": "2026-09-23",
+  "policy": {
+    "multiple_forecasts_allowed": true,
+    "pre_F0_snapshots_allowed": true,
+    "F0_is_preliminary": true,
+    "snapshot_ids_are_unique": true,
+    "snapshots_are_append_only": true,
+    "published_snapshot_artifacts_are_never_overwritten": true,
+    "later_data_or_model_changes_require_new_snapshot_id": true,
+    "final_snapshot_expected": "2026-09-22",
+    "post_election_revisions_forbidden": true
+  },
+  "sequence": {
+    "next_id": "F-1",
+    "planned_classes": [
+      {
+        "id_pattern": "F-<n>",
+        "class": "STRUCTURAL_PROBABILISTIC_FORECAST",
+        "purpose": "Early frozen structural forecasts before the conventionally named F0."
+      },
+      {
+        "id": "F0",
+        "class": "PRELIMINARY_PROBABILISTIC_FORECAST",
+        "purpose": "First conventional preliminary milestone; not a final candidacy forecast."
+      },
+      {
+        "id_pattern": "F1..Fn",
+        "class": "PREREGISTERED_UPDATE",
+        "purpose": "Immutable updates using later admissible public information under the same frozen protocol or an explicitly versioned protocol."
+      },
+      {
+        "id": "FINAL",
+        "class": "FINAL_PRE_ELECTION_FORECAST",
+        "purpose": "Last forecast frozen before polling day using only information available before the final cutoff."
+      }
+    ]
+  },
+  "required_snapshot_manifest_fields": [
+    "snapshot_id",
+    "snapshot_class",
+    "created_at",
+    "data_cutoff",
+    "protocol_id",
+    "model_code_commit",
+    "data_manifest_hash",
+    "parameter_manifest_hash",
+    "rng_seed_manifest",
+    "monte_carlo_draws",
+    "legal_allocator_version",
+    "geometry_certificate_hash",
+    "registered_N_state",
+    "candidate_evidence_state",
+    "event_evidence_state",
+    "forecast_artifact_hash",
+    "calibration_status",
+    "known_limitations"
+  ],
+  "required_forecast_outputs": {
+    "local_92": ["party vote-share distributions", "party P(seats=k)", "expected seats", "credible intervals"],
+    "regional_12": ["party vote-share distributions", "party P(seats=k)", "expected seats", "credible intervals"],
+    "national_395": ["joint party seat-total distributions", "expected seats", "credible intervals"],
+    "diagnostics": ["N uncertainty sensitivity", "Monte Carlo error", "probability normalization", "legal allocation failures", "known-data anomalies"]
+  },
+  "snapshots": [],
+  "status": "NO_FORECAST_REGISTERED_YET"
+}
