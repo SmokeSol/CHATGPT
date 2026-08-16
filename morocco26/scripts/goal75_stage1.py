@@ -3,7 +3,7 @@ import csv,hashlib,json,math,re,statistics,time,unicodedata
 from collections import defaultdict
 from io import StringIO
 from pathlib import Path
-from urllib.parse import urljoin,unquote
+from urllib.parse import urljoin
 import pandas as pd, requests
 from bs4 import BeautifulSoup
 R=Path(__file__).resolve().parents[1]; D=R/'data'; O=D/'goal75';O.mkdir(parents=True,exist_ok=True)
@@ -35,19 +35,21 @@ def get(url):
 def build_index():
  global INDEX
  if INDEX is not None:return INDEX
- anchor='https://fr.wikipedia.org/wiki/Circonscription_de_Casablanca-Settat'
+ anchor='https://fr.wikipedia.org/wiki/Liste_des_circonscriptions_l%C3%A9gislatives_au_Maroc'
  soup=BeautifulSoup(get(anchor).text,'html.parser');idx={}
  for a in soup.find_all('a',href=True):
   href=a.get('href','');txt=a.get_text(' ',strip=True)
-  if not href.startswith('/wiki/Circonscription_') or not txt:continue
-  url=urljoin('https://fr.wikipedia.org',href);key=norm(txt)
-  if key and key not in idx:idx[key]=(txt,url)
- # deterministic aliases for punctuation/orthography found in nav labels
- aliases={'agadir ida outanane':'agadir ida outanan','beni mellal':'beni mellal','m diq fnideq':'m diq fnideq','ain sebaa hay mohammadi':'ain sebaa hay mohammadi'}
+  if 'Circonscription_' not in href or not txt:continue
+  if href.startswith('./'):url='https://fr.wikipedia.org/wiki/'+href[2:]
+  else:url=urljoin('https://fr.wikipedia.org',href)
+  raw=norm(txt);short=re.sub(r'^circonscription (?:de |d |du |des )?','',raw).strip()
+  for key in (raw,short):
+   if key and key not in idx:idx[key]=(txt,url)
+ aliases={'agadir ida outanane':'agadir ida outanan','beni mellal':'beni mellal','m diq fnideq':'m diq fnideq','ain sebaa hay mohammadi':'ain sebaa hay mohammadi','medina sidi youssef':'marrakech medina sidi youssef'}
  for want,have in aliases.items():
   if have in idx:idx[want]=idx[have]
  INDEX=idx
- if len(idx)<90:raise RuntimeError(f'constituency link index unexpectedly small: {len(idx)}')
+ if len({v[1] for v in idx.values()})<90:raise RuntimeError(f'constituency link index unexpectedly small: {len({v[1] for v in idx.values()})}')
  return idx
 def resolve(name):
  idx=build_index();n=norm(name)
@@ -56,7 +58,7 @@ def resolve(name):
  for k,v in idx.items():
   toks=set(k.split());inter=len(target&toks);union=max(1,len(target|toks));s=(inter/union,inter)
   if s>score:score=s;best=v
- if best and score[1]>=1 and score[0]>=0.45:return best
+ if best and score[1]>=1 and score[0]>=0.34:return best
  raise RuntimeError(f'no indexed page for {name}; best_score={score} best={best}')
 def flatcols(df):
  df=df.copy();df.columns=[' '.join(str(z) for z in c if 'Unnamed' not in str(z)) if isinstance(c,tuple) else str(c) for c in df.columns];return df
