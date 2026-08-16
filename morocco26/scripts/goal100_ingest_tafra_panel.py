@@ -33,16 +33,16 @@ RAW.mkdir(parents=True, exist_ok=True)
 
 DATASETS = {
     2011: {
-        "primary": "https://openafrica.net/dataset/cb7a294b-9569-4647-b35e-3b1cb6c8028e/resource/59229632-d062-4e1a-afff-b344b6afdae7/download/parlement-elections-2011-1-0.xlsx",
+        "primary": "https://open.africa/dataset/cb7a294b-9569-4647-b35e-3b1cb6c8028e/resource/59229632-d062-4e1a-afff-b344b6afdae7/download/parlement-elections-2011-1-0.xlsx",
         "filename": "parlement-elections-2011-1-0.xlsx",
     },
     2016: {
-        "primary": "https://openafrica.net/dataset/6bf3208e-7e01-456f-9ed8-ff8977e49585/resource/6c4000e1-5359-43fd-b941-399af34ee54a/download/parlement-elections-2016-1-1.xlsx",
+        "primary": "https://open.africa/dataset/6bf3208e-7e01-456f-9ed8-ff8977e49585/resource/6c4000e1-5359-43fd-b941-399af34ee54a/download/parlement-elections-2016-1-1.xlsx",
         "mirrors": ["https://server.rferrali.net/media/parlement-elections-2016-1-1.xlsx"],
         "filename": "parlement-elections-2016-1-1.xlsx",
     },
     2021: {
-        "primary": "https://openafrica.net/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+        "primary": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
         "filename": "parlement-elections-2021-1-0.xlsx",
     },
 }
