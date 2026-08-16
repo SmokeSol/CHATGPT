@@ -1,0 +1,166 @@
+name: morocco26-fminus1-finalize-release
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - '.github/workflows/morocco26-fminus1-finalize-release.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-fminus1-finalize-release
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  finalize-release-merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Require registered F-1 and build definitive postflight/release evidence
+        run: |
+          python - <<'PY'
+          import hashlib,json,subprocess
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          root=Path('morocco26'); g=root/'data'/'goal100'
+          required=[
+              g/'fminus1_registration_certificate.json',g/'forecast_registry.json',
+              g/'gate_registry.json',g/'current_state.json',g/'simulation_certificate.json',
+              g/'snapshots/F-1/forecast.json',g/'snapshots/F-1/manifest.json',
+              g/'geometry_2026_certificate.json',g/'local_N_posterior.json',
+              g/'uncertainty_calibration.json'
+          ]
+          missing=[str(p) for p in required if not p.exists()]
+          if missing: raise SystemExit(f'FINALIZE_RELEASE_FAIL missing {missing}')
+
+          validations=[]
+          for cmd in (
+              ['python','morocco26/scripts/validate_anti_drift.py'],
+              ['python','morocco26/scripts/validate_goal100_tracking_dynamic.py'],
+          ):
+              r=subprocess.run(cmd,text=True,capture_output=True)
+              validations.append({'command':' '.join(cmd),'returncode':r.returncode,'stdout':r.stdout[-12000:],'stderr':r.stderr[-12000:]})
+              if r.returncode: raise SystemExit(f"FINALIZE_RELEASE_FAIL {cmd}: {r.stderr}\n{r.stdout}")
+
+          reg=json.loads((g/'forecast_registry.json').read_text(encoding='utf-8'))
+          gates=json.loads((g/'gate_registry.json').read_text(encoding='utf-8'))
+          cert=json.loads((g/'fminus1_registration_certificate.json').read_text(encoding='utf-8'))
+          sim=json.loads((g/'simulation_certificate.json').read_text(encoding='utf-8'))
+          manifest=json.loads((g/'snapshots/F-1/manifest.json').read_text(encoding='utf-8'))
+          assert cert['gate']=='PASS'
+          assert [x['snapshot_id'] for x in reg['snapshots']]==['F-1']
+          assert reg['sequence']['next_id']=='F0'
+          assert all(x['status']=='CLOSED' for x in gates['forecast_unlock'])
+          assert all(x['status']=='LOCKED' for x in gates['agentic_unlock'])
+          assert sim['gate']=='PASS' and sim['valid_election_draws']>=50000
+          assert cert['forecast_artifact_sha256']==manifest['forecast_artifact_hash']
+          assert cert['manifest_sha256']==manifest['manifest_sha256']
+
+          details={
+              'snapshot_ids':['F-1'],'next_snapshot':'F0',
+              'p0':{x['id']:x['status'] for x in gates['p0']},
+              'forecast_unlock':{x['id']:x['status'] for x in gates['forecast_unlock']},
+              'agentic_unlock':{x['id']:x['status'] for x in gates['agentic_unlock']},
+              'forecast_sha256':cert['forecast_artifact_sha256'],
+              'manifest_sha256':cert['manifest_sha256'],
+              'valid_draws':sim['valid_election_draws'],
+              'rejection_rate':sim['legal_rejection_rate']
+          }
+          now=datetime.now(ZoneInfo('Africa/Casablanca')).isoformat(timespec='seconds')
+          post={
+              'schema_version':'3.0','report_id':'M26-GOAL100-FMINUS1-POSTFLIGHT-V3',
+              'created_at':now,'status':'PASS','missing_evidence':[],
+              'validations':validations,'details':details,
+              'rule':'Definitive postflight generated from the exact registered branch head; PASS is not inferred from workflow silence.'
+          }
+          post_path=g/'fminus1_postflight.json'
+          post_path.write_text(json.dumps(post,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          release={
+              'schema_version':'1.0','release_gate_id':'M26-GOAL100-FMINUS1-RELEASE-V1',
+              'created_at':now,'postflight_sha256':hashlib.sha256(post_path.read_bytes()).hexdigest(),
+              'forecast_sha256':cert['forecast_artifact_sha256'],
+              'manifest_sha256':cert['manifest_sha256'],
+              'snapshot_ids':['F-1'],'next_snapshot':'F0',
+              'forecast_unlock':'ALL_CLOSED','agentic_unlock':'ALL_LOCKED',
+              'goal75_anti_drift':'PASS','goal100_tracking':'PASS','gate':'PASS'
+          }
+          (g/'fminus1_release_gate.json').write_text(json.dumps(release,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          journal=root/'FIL_ARIANE.md'; text=journal.read_text(encoding='utf-8')
+          if 'Entrée A015 — Postflight F−1' not in text:
+              text += f'''\n\n### 2026-08-16 — Entrée A015 — Postflight F−1\n\n**Statut :** `PASS`.\n\n**Détails :** `{json.dumps(details,ensure_ascii=False,sort_keys=True)}`.\n\n**Décision :** F−1 est utilisable comme snapshot structurel immuable ; la fusion est autorisée. Rapport : `data/goal100/fminus1_postflight.json`.\n'''
+          if 'Entrée A018 — Release gate F−1' not in text:
+              text += f'''\n\n### 2026-08-16 — Entrée A018 — Release gate F−1\n\n**Résultat :** `PASS`. Goal75 anti-drift et Goal100 tracking passent ; tous les gates forecast sont fermés ; tous les gates agentiques restent verrouillés.\n\n**Hashes :** forecast `{release['forecast_sha256']}` ; manifest `{release['manifest_sha256']}` ; postflight `{release['postflight_sha256']}`.\n\n**Décision :** PR #8 autorisée à fusionner. Prochain objectif : B2 puis F0.\n'''
+          journal.write_text(text,encoding='utf-8')
+          PY
+
+      - name: Synchronize journal index and revalidate release head
+        run: |
+          python morocco26/scripts/goal100_sync_fil_ariane.py
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking_dynamic.py
+
+      - name: Commit exact release evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/fminus1_postflight.json \
+            morocco26/data/goal100/fminus1_release_gate.json \
+            morocco26/data/goal100/fil_ariane_index.json \
+            morocco26/FIL_ARIANE.md
+          git commit -m 'release(morocco26): certify registered F-1 postflight PASS'
+          git push origin HEAD:morocco26-fminus1-run
+
+      - name: Mark PR ready, publish summary and merge exact head
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          HEAD_SHA=$(git rev-parse HEAD)
+          gh pr ready 8 --repo SmokeSol/CHATGPT || true
+          python - <<'PY' > /tmp/comment.md
+          import json
+          from pathlib import Path
+          g=Path('morocco26/data/goal100')
+          r=json.loads((g/'fminus1_release_gate.json').read_text(encoding='utf-8'))
+          f=json.loads((g/'snapshots/F-1/forecast.json').read_text(encoding='utf-8'))
+          s=json.loads((g/'simulation_certificate.json').read_text(encoding='utf-8'))
+          print('## F-1 definitive release: PASS')
+          print()
+          print(f"- Forecast SHA-256: `{r['forecast_sha256']}`")
+          print(f"- Manifest SHA-256: `{r['manifest_sha256']}`")
+          print(f"- Valid coherent elections: `{s['valid_election_draws']:,}`")
+          print(f"- Legal rejection rate: `{s['legal_rejection_rate']:.6f}`")
+          print('- 92 local / 305 seats + 12 regional / 90 seats = 395')
+          print('- All forecast gates CLOSED; all agentic gates LOCKED')
+          print()
+          print('### F-1 mean national seats')
+          for p,v in f['national_395']['parties'].items():
+              print(f"- {p}: {v['total_seats']['mean']:.2f}")
+          print()
+          print('F-1 is an early structural prior with no candidate, event, polling or agentic evidence. Next: freeze B2, then issue F0.')
+          PY
+          gh pr comment 8 --repo SmokeSol/CHATGPT --body-file /tmp/comment.md
+          gh api \
+            --method PUT \
+            -H 'Accept: application/vnd.github+json' \
+            repos/SmokeSol/CHATGPT/pulls/8/merge \
+            -f merge_method=squash \
+            -f sha="$HEAD_SHA" \
+            -f commit_title='MOROCCO//26: register immutable structural forecast F-1' \
+            -f commit_message='50,000 coherent elections; all forecast gates closed; agentic layer remains locked until B2.'
