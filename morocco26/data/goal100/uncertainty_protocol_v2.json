@@ -1,0 +1,67 @@
+{
+  "schema_version": "2.0",
+  "protocol_id": "M26-GOAL100-UNCERTAINTY-PROTOCOL-V2",
+  "frozen_at": "2026-08-16T22:37:00+01:00",
+  "supersedes_for_F_minus_1": "M26-GOAL100-UNCERTAINTY-PROTOCOL-V1",
+  "preserves": [
+    "morocco26/data/goal100/uncertainty_protocol_v1.json",
+    "morocco26/data/goal100/uncertainty_calibration.json"
+  ],
+  "revision_trigger": {
+    "type": "PRIOR_PREDICTIVE_LEGAL_FEASIBILITY_FAILURE_BEFORE_ANY_FORECAST_OUTPUT",
+    "evidence": {
+      "failed_F_minus_1_runs": [31973622928, 31973812526],
+      "diagnostic_run": 31973893554,
+      "first_contest_initial_invalid_draws": 5274,
+      "first_contest_persistent_invalid_after_20_rerounds": 2855,
+      "observed_failure_modes": [
+        "UNIQUE_LIST_THRESHOLD_NOT_MET",
+        "UNFILLED_SEATS_EXCEPTIONAL",
+        "UNRESOLVED_STATUTORY_TIE"
+      ]
+    },
+    "interpretation": "V1 pooled near-zero CLR innovations across territories and doubled them to obtain aggregate coverage. This produced non-credible near-monopoly draws and failed the legal prior-predictive gate. No forecast artifact or seat result existed when V2 was frozen."
+  },
+  "unchanged_contract": {
+    "mean_model": "PERSISTENCE_ZERO_EXPECTED_INNOVATION",
+    "party_buckets": ["RNI", "PAM", "PI", "PJD", "USFP", "MP", "UC", "PPS", "OTHER"],
+    "fit_transition": "2011_TO_2016_ONLY",
+    "validation_transition": "2016_TO_2021",
+    "region_kappa": 5.0,
+    "draws_per_candidate": 8192,
+    "seed": 26092341,
+    "fixed_scale_grid": [0.75, 1.0, 1.25, 1.5, 2.0, 2.5],
+    "vote_score": "TERRITORY_EQUAL_ENERGY_SCORE_SQRT_COMPOSITION",
+    "turnout_score": "TERRITORY_EQUAL_CRPS",
+    "turnout_vote_cross_correlation": 0.0,
+    "free_92x92_covariance": false
+  },
+  "robust_simplex_projection": {
+    "bucket_floor": 0.0005,
+    "floor_rule": "Replace s by floor + (1-K*floor)*s for K=9 before concentration tempering.",
+    "max_bucket_share_cap_rule": "min(0.85, max observed 9-bucket share across every local row in 2011/2016/2021 + 0.05)",
+    "concentration_tempering": "If max share exceeds the cap, find tau in (0,1] by deterministic bisection so normalize(s**tau) has max exactly equal to the cap.",
+    "reason": "Bound transport of structural zero/near-zero CLR shocks without deleting their direction or using any 2026 outcome."
+  },
+  "candidate_selection": {
+    "coverage80_min": 0.75,
+    "coverage95_min": 0.90,
+    "vote": "Among candidates meeting aggregate componentwise coverage thresholds and robust-simplex invariants, select lowest Energy Score, then lower scale. If none meet coverage, fail rather than widen past the frozen grid.",
+    "turnout": "Unchanged V1 selection rule: among candidates meeting coverage thresholds select lowest CRPS, then lower scale."
+  },
+  "prior_predictive_gate": {
+    "required": [
+      "all simulated 9-bucket shares finite and normalized",
+      "minimum bucket share >= 0.0005 minus numerical tolerance",
+      "maximum bucket share <= empirical cap plus numerical tolerance",
+      "selected vote and turnout candidates meet frozen coverage thresholds",
+      "all candidate metrics and V1 comparison retained"
+    ],
+    "forecast_gate": "V2 calibration must pass before F-1 protocol may be amended or rerun."
+  },
+  "legal_list_availability_boundary": {
+    "F_minus_1": "Only lists with positive 2021 votes in the contest are eligible. Absent core-bucket mass is renormalized over observed 2021 lists; verified new 2026 lists belong to B2/F0 or later.",
+    "reason": "F-1 must not invent a filed list merely because a fixed structural bucket exists."
+  },
+  "status": "FROZEN_BEFORE_V2_EXECUTION"
+}
