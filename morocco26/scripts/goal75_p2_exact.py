@@ -16,23 +16,23 @@ OV={('beni-mellal',2021,'registered'):318608}
 def list_key(label):
     """Return a collision-safe electoral-list identity.
 
-    Codes are canonical only for parties that actually won House seats in 2021.
-    All other lists retain a normalized full-name identity so acronym collisions
-    (e.g. two distinct PE lists in Sidi Bernoussi) cannot merge votes.
+    A valid electoral-list row must expose an explicit acronym in the source
+    table. Codes are canonical only for parties that actually won House seats
+    in 2021. Other lists retain a normalized full-name identity so acronym
+    collisions (e.g. two distinct PE lists in Sidi Bernoussi) cannot merge.
     """
     label=str(label).strip()
     if not label or label.lower() in ('nan','none'):
         return None
     code=g.party(label)
+    if not code:
+        return None
     if code in OFFICIAL_CODES:
         return code
     full=g.norm(re.sub(r'\([A-Z][A-Z0-9-]{1,7}\)\s*$', '', label))
     if not full or full in ('nan','none'):
         return None
-    return f'LIST::{code or "NA"}::{full}'
-
-def display_key(k):
-    return k if not str(k).startswith('LIST::') else k
+    return f'LIST::{code}::{full}'
 
 def parse_table(df,cid=None):
     df=g.flatcols(df)
@@ -46,10 +46,10 @@ def parse_table(df,cid=None):
         label=str(r[pc]).strip();text=' | '.join(str(v) for v in r.tolist());nt=g.norm(text);v=g.nint(r[vc])
         if 'inscrits' in nt:reg=v;continue
         if 'exprimes' in nt:exp=v;continue
+        if any(x in nt for x in ('abstentions','votants','bulletins nuls','bulletins blancs')):continue
         k=list_key(label)
         if not k or v is None:continue
         labels.setdefault(k,label)
-        # rowspan can repeat an identical list/vote pair for each elected candidate.
         if k not in votes:votes[k]=v
         elif votes[k]!=v:raise RuntimeError(f'conflicting duplicated vote rows {cid} {k}: {votes[k]} vs {v}; labels={labels[k]!r}/{label!r}')
         if ec is not None:
@@ -73,14 +73,12 @@ def alloc(v,seats,reg):
     return {p:n for p,n in a.items() if n}
 
 def exact(a,b):return {k:v for k,v in a.items() if v}=={k:v for k,v in b.items() if v}
-
 def official_only(d):return {k:v for k,v in d.items() if k in OFFICIAL_CODES and v}
 
 def main():
     cfg=list(csv.DictReader(open(D/'constituencies_goal75.csv',encoding='utf-8')));local=[];lm=[]
     for i,x in enumerate(cfg,1):
         name=x['name'];seats=int(x['seats']);_,url=g.resolve(name);t=tabs(url)[-1];p=parse_table(t,x['constituency_id']);assert p['registered'] and p['recognized_vote_sum']<=p['registered'];a=alloc(p['votes'],seats,p['registered'])
-        # 2021 local empirical property: every elected list got one local seat.
         elected={k:1 for k,v in p['elected_party_counts'].items() if v>0};rank=set(sorted(p['votes'],key=p['votes'].get,reverse=True)[:seats]);legal_set=set(a)
         empirical_ok=(not elected or elected=={k:1 for k in legal_set}) and len(legal_set)==seats and legal_set==rank
         if not empirical_ok:raise RuntimeError(f'local elected mismatch {name}: legal={a} elected={elected} rank={rank}')
@@ -97,6 +95,7 @@ def main():
         for z in rows:c.update(official_only(z['legal_replay']))
         return dict(sorted(c.items()))
     la,ra=agg(local),agg(reg);total=Counter(la);total.update(ra);total=dict(sorted(total.items()))
-    out={'method':'LO_04_21_article_84_registered_voters_divided_by_seats_then_largest_remainders','identity_rule':'official seat-winning codes canonical; all other electoral lists keyed by normalized full name to prevent acronym collisions','local':{'constituencies':len(local),'seats':sum(sum(z['legal_replay'].values()) for z in local),'aggregate':la,'every_constituency_empirically_reproduced':True},'regional':{'constituencies':len(reg),'seats':sum(sum(z['legal_replay'].values()) for z in reg),'aggregate':ra,'every_region_empirically_reproduced':True},'total':{'seats':sum(sum(z['legal_replay'].values()) for z in local)+sum(sum(z['legal_replay'].values()) for z in reg),'aggregate':total,'official_expected':OFFICIAL_TOTAL,'exact_official_match':exact(total,OFFICIAL_TOTAL)},'beni_mellal_override':{'registered':318608,'reason':'secondary page turnout block internally impossible; override documented in source_overrides_goal75.json'},'forecast_status':'BLOCKED'}
-    (O/'local_2021_replay_exact.json').write_text(json.dumps(local,ensure_ascii=False,indent=2));(O/'regional_2021_replay_exact.json').write_text(json.dumps(reg,ensure_ascii=False,indent=2));(O/'seat_margin_92.json').write_text(json.dumps(lm,ensure_ascii=False,indent=2));(O/'p2_exact_audit.json').write_text(json.dumps(out,ensure_ascii=False,indent=2));print(json.dumps(out,ensure_ascii=False,indent=2));raise SystemExit(0 if out['local']['seats']==305 and out['regional']['seats']==90 and out['total']['exact_official_match'] else 9)
+    local_seats=sum(sum(z['legal_replay'].values()) for z in local);regional_seats=sum(sum(z['legal_replay'].values()) for z in reg)
+    out={'method':'LO_04_21_article_84_registered_voters_divided_by_seats_then_largest_remainders','identity_rule':'explicit acronym required; official seat-winning codes canonical; all other electoral lists keyed by normalized full name to prevent acronym collisions','local':{'constituencies':len(local),'seats':local_seats,'aggregate':la,'every_constituency_empirically_reproduced':True},'regional':{'constituencies':len(reg),'seats':regional_seats,'aggregate':ra,'every_region_empirically_reproduced':True},'total':{'seats':local_seats+regional_seats,'aggregate':total,'official_expected':OFFICIAL_TOTAL,'exact_official_match':exact(total,OFFICIAL_TOTAL)},'beni_mellal_override':{'registered':318608,'reason':'secondary page turnout block internally impossible; override documented in source_overrides_goal75.json'},'forecast_status':'BLOCKED'}
+    (O/'local_2021_replay_exact.json').write_text(json.dumps(local,ensure_ascii=False,indent=2));(O/'regional_2021_replay_exact.json').write_text(json.dumps(reg,ensure_ascii=False,indent=2));(O/'seat_margin_92.json').write_text(json.dumps(lm,ensure_ascii=False,indent=2));(O/'p2_exact_audit.json').write_text(json.dumps(out,ensure_ascii=False,indent=2));print(json.dumps(out,ensure_ascii=False,indent=2));raise SystemExit(0 if local_seats==305 and regional_seats==90 and out['total']['exact_official_match'] else 9)
 main()
