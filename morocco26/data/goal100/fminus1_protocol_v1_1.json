@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.1",
+  "protocol_id": "M26-GOAL100-FMINUS1-PROTOCOL-V1.1",
+  "snapshot_id": "F-1",
+  "snapshot_class": "STRUCTURAL_PROBABILISTIC_FORECAST",
+  "frozen_at": "2026-08-16T22:43:00+01:00",
+  "data_cutoff": "2026-08-16T22:43:00+01:00",
+  "supersedes_before_output": "M26-GOAL100-FMINUS1-PROTOCOL-V1",
+  "preserves": [
+    "morocco26/data/goal100/fminus1_protocol_v1.json",
+    "failed workflow 31973622928",
+    "failed workflow 31973812526",
+    "diagnostic workflow 31973893554"
+  ],
+  "revision_reason": "The first two executions failed before producing any snapshot because Uncertainty V1 generated prior-predictive near-monopolies and the initial vector allocator included zero-vote lists. V1.1 adopts the already-frozen and successfully calibrated robust Uncertainty V2, exact active-list availability, and explicit marginalization over unknown statutory age tie-breaks.",
+  "mean_model": {
+    "vote": "V0_PERSIST_2021_LOCAL_AND_REGIONAL_COMPOSITION",
+    "turnout": "T0_PERSIST_2021_LOCAL_TURNOUT",
+    "candidate_evidence": "NONE_STRUCTURAL_ONLY",
+    "event_evidence": "NONE_STRUCTURAL_ONLY"
+  },
+  "uncertainty": {
+    "artifact": "morocco26/data/goal100/uncertainty_calibration_v2.json",
+    "protocol": "M26-GOAL100-UNCERTAINTY-PROTOCOL-V2",
+    "vote_scale": 2.0,
+    "turnout_scale": 2.5,
+    "support_sha256": "09c6c0bb44aebc20395bfa00a2fc362ea75e95e775705f24a4ef12bbefe9f3aa",
+    "robust_projection": {
+      "bucket_floor": 0.0005,
+      "max_bucket_share_cap": 0.6831613228029326,
+      "historical_max_bucket_share": 0.6331613228029326
+    },
+    "calibration_label": "ROBUST_AGGREGATE_COVERAGE_CALIBRATED_2026_UNTOUCHED",
+    "mandatory_disclosure": {
+      "vote_energy_selected": 0.36166884643288155,
+      "vote_coverage80_aggregate": 0.7717391304347826,
+      "vote_coverage95_aggregate": 0.9118357487922706,
+      "turnout_crps_selected": 0.0786261770516104,
+      "turnout_coverage80": 0.8260869565217391,
+      "turnout_coverage95": 1.0,
+      "V1_vote_energy_rejected": 0.42146623099437613,
+      "flat_Bstar_vote_energy_context": 0.36972890027879,
+      "party_coverage_heterogeneity_must_be_published": true
+    },
+    "turnout_vote_cross_correlation": 0.0,
+    "free_92x92_covariance": false
+  },
+  "registered_N": {
+    "artifact": "morocco26/data/goal100/local_N_posterior.json",
+    "national_total": 15801162,
+    "state": "LATENT_NOT_OFFICIAL_LOCAL_COUNTS",
+    "sampler": "Regenerate constrained logistic-normal slack draws from frozen per-territory floors/centres and region/local scales; every draw is 92 positive integers summing exactly to the national total.",
+    "later_official_counts": "Require a new snapshot; F-1 is never overwritten."
+  },
+  "valid_vote_observation_model": {
+    "local": "For each territory compute 2011 valid-list votes divided by registered-times-turnout; winsorize at empirical p05/p95 and shrink 50% toward the national median.",
+    "regional": "Persist the 2021 regional-to-summed-local valid-vote ratio by region after empirical p05/p95 winsorization and 50% shrinkage toward 1.0; cap at sampled regional N.",
+    "uncertainty": "No additional invalid-ballot-rate shock in F-1; disclosed structural limitation."
+  },
+  "legal_party_mapping": {
+    "eligible_lists": "Only party/list codes with positive 2021 votes in that contest are eligible in F-1.",
+    "absent_core_mass": "Drop core buckets absent from the 2021 contest and renormalize over observed lists.",
+    "other_rule": "Split OTHER into actual positive-vote 2021 minor-party codes in proportion to their 2021 votes.",
+    "active_list_projection": "Apply the same 0.0005 floor and 0.6831613228029326 cap after active-list renormalization.",
+    "future_new_lists": "Excluded from F-1; verified 2026 entries belong to B2/F0 or later immutable snapshots."
+  },
+  "integer_vote_model": {
+    "method": "Assign one structural support vote to every observed 2021 eligible list, then use balanced randomized rounding for all remaining valid votes.",
+    "support_vote_reason": "A filed list receiving exactly zero valid votes is treated as outside the structural support of F-1; this prevents numerical tail truncation from manufacturing unique-list/unfilled-seat exceptions.",
+    "precondition": "Every contest must have at least its seat magnitude in observed eligible lists and simulated valid votes must exceed eligible-list count; otherwise fail closed.",
+    "rounding": "Floor expected remaining party counts and assign the exact remainder by Gumbel-top-k weighted by fractional parts.",
+    "unique_or_unfilled_policy": "Any UNIQUE_LIST_THRESHOLD_NOT_MET or UNFILLED_SEATS_EXCEPTIONAL state is a model failure and blocks F-1."
+  },
+  "statutory_tie_uncertainty": {
+    "law": "A binding equal-remainder tie is legally resolved by the relevant candidate age, then lottery on equal age.",
+    "F_minus_1_information_state": "Candidate ages are intentionally absent from this structural-only snapshot.",
+    "prior": "UNKNOWN_AGE_EXCHANGEABLE",
+    "implementation": "For each binding tied remainder group, draw uniformly without replacement the required number of lists using a dedicated frozen RNG stream; this marginalizes unknown age ordering and is not labelled a deterministic legal winner.",
+    "later_replacement": "Verified candidate ages may replace the exchangeable prior only in a new B2/F0-or-later snapshot.",
+    "mandatory_reporting": [
+      "number and rate of contest-draws using the age prior",
+      "zero unique-list threshold failures",
+      "zero unfilled-seat exceptions",
+      "zero unresolved allocations after marginalization"
+    ]
+  },
+  "regional_ballot_bridge": {
+    "latent_shift": "Same national and region vote innovations as local contests plus the mean sampled local residual within the region.",
+    "baseline": "2021 regional-list composition",
+    "limitation": "No pre-2021 current-system regional-list transition exists; 2026 is the first prospective test."
+  },
+  "monte_carlo": {
+    "draws": 50000,
+    "seed_manifest": {
+      "N92": 26092351,
+      "national_vote": 26092352,
+      "regional_vote": 26092353,
+      "local_vote": 26092354,
+      "national_turnout": 26092355,
+      "regional_turnout": 26092356,
+      "local_turnout": 26092357,
+      "vote_rounding": 26092358,
+      "statutory_age_prior": 26092360
+    },
+    "required_invariants": [
+      "92 local N are positive integers and sum exactly to 15,801,162",
+      "all local and regional share vectors are finite, non-negative and sum to one",
+      "all simulated vote counts are non-negative integers and do not exceed registered N",
+      "all 104 contests allocate exactly their configured seats",
+      "every national draw sums to 395 seats",
+      "zero unique-list threshold failures and zero unfilled-seat exceptions",
+      "zero unresolved statutory ties after exchangeable-age marginalization"
+    ]
+  },
+  "required_outputs": {
+    "local_92": ["vote-share distribution", "turnout distribution", "P(seats=k) by frozen bucket", "expected seats", "credible intervals"],
+    "regional_12": ["vote-share distribution", "P(seats=k) by frozen bucket", "expected seats", "credible intervals"],
+    "national_395": ["joint party-bucket seat distributions", "expected seats", "credible intervals", "draw-stream hash"],
+    "diagnostics": ["N sensitivity context", "Monte Carlo standard errors", "normalization errors", "statutory-age-prior incidence", "minor-party disaggregation events", "known limitations"]
+  },
+  "publication_boundary": {
+    "forecast_is_preliminary": true,
+    "forecast_is_not_B2": true,
+    "forecast_is_not_agentic": true,
+    "forecast_may_not_be_overwritten": true,
+    "next_conventional_snapshot": "F0_AFTER_B2_STRUCTURED_EVIDENCE_FREEZE"
+  }
+}
