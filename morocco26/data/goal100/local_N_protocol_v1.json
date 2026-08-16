@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "M26-GOAL100-N92-POSTERIOR-V1",
+  "frozen_on": "2026-08-16",
+  "purpose": "Represent uncertainty in the 92 local registered-voter denominators without fabricating official local counts, while preserving the exact official 2026 national total and measuring whether N uncertainty is electorally material under a coherent rate-based forecast.",
+  "national_constraint": {
+    "registered_voters_2026": 15801162,
+    "exact": true,
+    "rule": "Every draw contains 92 positive integers whose sum is exactly 15,801,162."
+  },
+  "prior_centre": {
+    "source": "2011 canonical TAFRA local registered-voter shares",
+    "transformation": "Scale the 92 shares to the exact 2026 national total.",
+    "epistemic_status": "PRIOR_CENTRE_NOT_OFFICIAL_2026_LOCAL_COUNTS"
+  },
+  "innovation_scale": {
+    "empirical_source": "Exact normalized-name 2007->2011 local electorate-share drift; current-region labels are joined through the stable 2011/2016/2021 constituency IDs.",
+    "decomposition": "Estimate region-mean and within-region residual log-share dispersion from matched territories, then rescale the two components to the stable-seat-magnitude empirical dispersion reported by local_N_drift_diagnostic.json.",
+    "time_scaling": "Multiply four-year standard deviations by sqrt(15/4) to obtain a conservative 2011->2026 diffusion scale.",
+    "distribution": "Variance-standardized Student-t with 5 degrees of freedom for region and local innovations.",
+    "non_claim": "The diffusion scaling is a preregistered uncertainty model, not an assertion that local registration shares follow a stationary random walk."
+  },
+  "sampling": {
+    "draws": 50000,
+    "seed": 26081601,
+    "latent_form": "logistic-normal-style composition with Student-t hierarchical innovations",
+    "integerization": "Allocate N-92 by largest fractional remainder after reserving one registered voter per territory; deterministic tie order by canonical constituency ID.",
+    "stored_output": "Posterior summaries plus deterministic draw-matrix SHA-256; full draws are regenerated from protocol, inputs and seed rather than committed."
+  },
+  "seat_sensitivity": {
+    "principle": "For a coherent forecast expressed as turnout rates and party shares, scaling N and all party vote counts proportionally leaves the quotient/remaining-seat allocation unchanged. N can affect seats only through integerization, finite-count effects or a model that aggregates territories using N weights.",
+    "tests": [
+      "Exact integer scale-invariance regression on historical local and regional vectors.",
+      "Rate-based integerization sensitivity for all 92 local and 12 regional 2021 contest profiles over posterior N draws.",
+      "Report the distinct allocation count and probability of differing from the posterior-median-N reference for every contest."
+    ],
+    "regional_policy": "Regional House ballots are modelled directly at regional level; regional N is the sum of sampled local N in the region."
+  },
+  "closure_gate": {
+    "all_draws_positive_integer": true,
+    "all_draw_sums_exact": true,
+    "posterior_summary_for_92_local": true,
+    "posterior_summary_for_12_regions": true,
+    "exact_scale_invariance_must_pass": true,
+    "sensitivity_report_for_104_contests": true,
+    "fail_closed_on_unmatched_or_duplicate_geography": true
+  },
+  "forbidden": [
+    "Calling posterior medians official local registered-voter counts.",
+    "Using N uncertainty as an unlabelled substitute for political preference uncertainty.",
+    "Changing the seed, distribution, time scaling or gate after observing the output without issuing a new protocol version."
+  ]
+}
