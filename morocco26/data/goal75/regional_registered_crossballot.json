@@ -1,0 +1,87 @@
+{
+  "source_url": "https://fr.wikipedia.org/wiki/%C3%89lections_r%C3%A9gionales_marocaines_de_2021",
+  "same_day_roll_logic": "The 8 September 2021 municipal, regional-council and House elections used the same general electoral lists. Region-level registered-voter counts from the regional-council ballot therefore provide an external denominator for the House regional constituency covering the same region.",
+  "regions_found": 12,
+  "missing": [],
+  "registered_by_region": {
+    "Béni Mellal-Khénifra": 1214886,
+    "Casablanca-Settat": 3860397,
+    "Dakhla-Oued Ed-Dahab": 64971,
+    "Drâa-Tafilalet": 771218,
+    "Fès-Meknès": 1784436,
+    "Guelmim-Oued Noun": 262631,
+    "Laâyoune-Sakia El Hamra": 197289,
+    "Marrakech-Safi": 1957367,
+    "Oriental": 1083663,
+    "Rabat-Salé-Kénitra": 1843468,
+    "Souss-Massa": 1298114,
+    "Tanger-Tétouan-Al Hoceïma": 1328425
+  },
+  "sum_registered": 15666865,
+  "hcp_31_july_rounded": 17509000,
+  "delta_vs_hcp_rounded": -1842135,
+  "relative_delta": 0.10521074875778172,
+  "crossballot_gate_pass": false,
+  "details": [
+    {
+      "region": "Béni Mellal-Khénifra",
+      "registered": 1214886,
+      "heading": "Béni Mellal-Khénifra"
+    },
+    {
+      "region": "Casablanca-Settat",
+      "registered": 3860397,
+      "heading": "Casablanca-Settat"
+    },
+    {
+      "region": "Dakhla-Oued Ed-Dahab",
+      "registered": 64971,
+      "heading": "Dakhla-Oued Ed-Dahab"
+    },
+    {
+      "region": "Drâa-Tafilalet",
+      "registered": 771218,
+      "heading": "Drâa-Tafilalet"
+    },
+    {
+      "region": "Fès-Meknès",
+      "registered": 1784436,
+      "heading": "Fès-Meknès"
+    },
+    {
+      "region": "Guelmim-Oued Noun",
+      "registered": 262631,
+      "heading": "Guelmim-Oued Noun"
+    },
+    {
+      "region": "Laâyoune-Sakia El Hamra",
+      "registered": 197289,
+      "heading": "Laâyoune-Sakia El Hamra"
+    },
+    {
+      "region": "Marrakech-Safi",
+      "registered": 1957367,
+      "heading": "Marrakech-Safi"
+    },
+    {
+      "region": "Oriental",
+      "registered": 1083663,
+      "heading": "Oriental"
+    },
+    {
+      "region": "Rabat-Salé-Kénitra",
+      "registered": 1843468,
+      "heading": "Rabat-Salé-Kénitra"
+    },
+    {
+      "region": "Souss-Massa",
+      "registered": 1298114,
+      "heading": "Souss-Massa"
+    },
+    {
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "registered": 1328425,
+      "heading": "Tanger-Tétouan-Al Hoceïma"
+    }
+  ]
+}
