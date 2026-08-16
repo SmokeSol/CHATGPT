@@ -1,0 +1,31 @@
+name: morocco26-goal100-legal-regression
+on:
+  push:
+    branches: [morocco26-goal100-p0]
+    paths:
+      - 'morocco26/src/morocco26/legal_allocator_2026.py'
+      - 'morocco26/scripts/goal100_legal_regression_104.py'
+      - '.github/workflows/morocco26-goal100-legal-regression.yml'
+permissions:
+  contents: write
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-goal100-p0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Regression 92 local + 12 regional contests
+        run: python morocco26/scripts/goal100_legal_regression_104.py
+      - name: Preserve anti-drift constitution
+        run: python morocco26/scripts/validate_anti_drift.py
+      - name: Commit legal regression artifact
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/legal_regression_104.json
+          git commit -m 'data(morocco26): certify 104-contest legal regression' || true
+          git pull --rebase origin morocco26-goal100-p0
+          git push origin HEAD:morocco26-goal100-p0
