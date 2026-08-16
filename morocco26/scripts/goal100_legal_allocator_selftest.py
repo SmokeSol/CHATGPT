@@ -27,9 +27,10 @@ def main():
     r = allocate_2026({"A": 300, "B": 250, "C": 200, "D": 100}, 1000, 4)
     check("largest_remainder", r.status == STATUS_OK and r.seats_by_list == {"A": 1, "B": 1, "C": 1, "D": 1})
 
-    # N/m = 100. A crosses the quotient twice; B once; last seats are largest remainders.
+    # N/m = 100. Initial seats: A=2, B=1. Remainders are A=30, B=45,
+    # C=90, D=35, so the two remaining seats go to C then B.
     r = allocate_2026({"A": 230, "B": 145, "C": 90, "D": 35}, 500, 5)
-    check("quotient_plus_remainder", r.complete and r.seats_by_list == {"A": 2, "B": 1, "C": 1, "D": 1})
+    check("quotient_plus_remainder", r.complete and r.seats_by_list == {"A": 2, "B": 2, "C": 1})
 
     r = allocate_2026({"A": 199}, 1000, 3)
     check("unique_list_one_fifth_fail", r.status == STATUS_UNIQUE_FAIL and r.allocated_seats == 0)
