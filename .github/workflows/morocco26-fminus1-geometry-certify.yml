@@ -1,0 +1,122 @@
+name: morocco26-fminus1-geometry-certify
+
+on:
+  push:
+    branches: [morocco26-fminus1]
+    paths:
+      - 'morocco26/data/goal100/geometry_official_probe.json'
+      - 'morocco26/scripts/goal100_certify_geometry_2026.py'
+      - '.github/workflows/morocco26-fminus1-geometry-certify.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Skip cleanly until probe exists
+        id: probe
+        run: |
+          if [ -f morocco26/data/goal100/geometry_official_probe.json ]; then echo 'ready=true' >> "$GITHUB_OUTPUT"; else echo 'ready=false' >> "$GITHUB_OUTPUT"; fi
+      - name: Build bounded operational certificate
+        if: steps.probe.outputs.ready == 'true'
+        run: python morocco26/scripts/goal100_certify_geometry_2026.py
+      - name: Transition geometry gate
+        if: steps.probe.outputs.ready == 'true'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('morocco26'); g=root/'data'/'goal100'
+          c=json.loads((g/'geometry_2026_certificate.json').read_text(encoding='utf-8'))
+          assert c['gate']=='PASS'
+          assert c['working_geometry']=={
+              'local_constituencies':92,'local_seats':305,
+              'regional_constituencies':12,'regional_seats':90,'house_seats':395
+          }
+          assert len(c['local_row_crosswalk'])==92 and not c['unexplained_differences']
+          assert c['official_reference_to_decree_2_11_603_present'] is True
+          assert c['legal_watch']['required_at_every_snapshot'] is True
+
+          reg_path=g/'gate_registry.json'; reg=json.loads(reg_path.read_text(encoding='utf-8'))
+          p01=next(x for x in reg['p0'] if x['id']=='P0-1')
+          p01.update({
+              'status':'CLOSED',
+              'resolved_claim':'Operational 2026 geometry is certified as 92 local/305 plus 12 regional/90 through the preserved current official election-law index, decree 2.11.603 reference, exact canonical 2021 row crosswalk and 2011/2016/2021 continuity. The bounded direct-table parsing limitation is disclosed and every snapshot must rerun legal watch.',
+              'evidence':[
+                  'morocco26/data/goal100/geometry_official_probe.json',
+                  'morocco26/data/goal100/geometry_2026_certificate.json',
+                  'morocco26/data/goal100/historical_panel_diagnostic.json'
+              ],
+              'remaining_gate':None,
+              'closure_criterion':'PASS_BOUNDED: official current-law reference present; 92/305 and 12/90; zero unexplained canonical row differences; continuous legal watch mandatory.'
+          })
+          geo=next(x for x in reg['forecast_unlock'] if x['id']=='GEO-2026-AUTHORITATIVE-DIFF')
+          geo['status']='CLOSED'; geo['required_artifact']='morocco26/data/goal100/geometry_2026_certificate.json'
+          reg['as_of']='2026-08-16T22:30:00+01:00'
+          reg_path.write_text(json.dumps(reg,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          state_path=g/'current_state.json'; state=json.loads(state_path.read_text(encoding='utf-8'))
+          if 'P0-1_2026_GEOMETRY' not in state['p0_summary']['closed']:
+              state['p0_summary']['closed'].append('P0-1_2026_GEOMETRY')
+          state['p0_summary']['substantially_resolved_with_residual_gate']=[]
+          state['remaining_hard_gates_before_F_minus_1']=[x for x in state['remaining_hard_gates_before_F_minus_1'] if x!='GEO-2026-AUTHORITATIVE-DIFF']
+          state['geometry_2026']={
+              'status':'CERTIFIED_OPERATIONAL_BOUNDED',
+              'certificate':'morocco26/data/goal100/geometry_2026_certificate.json',
+              'local_constituencies':92,'local_seats':305,
+              'regional_constituencies':12,'regional_seats':90,
+              'legal_watch_required_at_every_snapshot':True,
+              'direct_official_table_machine_parsed':c['direct_official_table_machine_parsed'],
+              'bounded_limitation':c['bounded_limitation']
+          }
+          state['as_of']='2026-08-16T22:30:00+01:00'
+          state_path.write_text(json.dumps(state,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          resolution={
+              'schema_version':'1.0',
+              'resolution_id':'M26-GOAL100-GEOMETRY-RESOLUTION-V1',
+              'as_of':'2026-08-16',
+              'decision':'CLOSE_P0_1_OPERATIONALLY_WITH_CONTINUOUS_LEGAL_WATCH_AND_DISCLOSED_BOUND',
+              'certificate':'morocco26/data/goal100/geometry_2026_certificate.json',
+              'official_reference_present':c['official_reference_to_decree_2_11_603_present'],
+              'direct_official_table_machine_parsed':c['direct_official_table_machine_parsed'],
+              'zero_unexplained_differences':not c['unexplained_differences'],
+              'snapshot_rule':'Any official source hash/reference change blocks the next forecast until a new geometry certificate version is issued.',
+              'limitation':c['bounded_limitation']
+          }
+          (g/'geometry_resolution_v1.json').write_text(json.dumps(resolution,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          j=root/'FIL_ARIANE.md'; t=j.read_text(encoding='utf-8')
+          if 'Entrée A009 — Certificat opérationnel de géométrie' not in t:
+              t += f'''\n\n### 2026-08-16 — Entrée A009 — Certificat opérationnel de géométrie\n\n**Gate traité :** `GEO-2026-AUTHORITATIVE-DIFF`.\n\n**Résultat :** `PASS_BOUNDED`. Géométrie opérationnelle certifiée : 92 circonscriptions locales / 305 sièges et 12 régionales / 90 sièges ; 92 lignes crosswalkées sans différence inexpliquée ; référence officielle courante au décret 2.11.603 préservée.\n\n**Limite non masquée :** `direct_official_table_machine_parsed={c['direct_official_table_machine_parsed']}`. {c['bounded_limitation']}\n\n**Décision :** P0-1 fermé opérationnellement, à condition non négociable de rerun du legal-watch à chaque snapshot. Tout changement de hash ou de texte bloque le forecast suivant.\n\n**Prochaine action :** terminer P0-6 et exécuter les 50 000 élections conjointes.\n'''
+          j.write_text(t,encoding='utf-8')
+          PY
+      - name: Validate transitioned state
+        if: steps.probe.outputs.ready == 'true'
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking_dynamic.py
+      - name: Commit certificate and state transition
+        if: steps.probe.outputs.ready == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/geometry_2026_certificate.json \
+            morocco26/data/goal100/geometry_resolution_v1.json \
+            morocco26/data/goal100/gate_registry.json \
+            morocco26/data/goal100/current_state.json \
+            morocco26/FIL_ARIANE.md
+          git commit -m 'milestone(morocco26): certify operational 2026 geometry' || true
+          git pull --rebase origin morocco26-fminus1
+          git push origin HEAD:morocco26-fminus1
