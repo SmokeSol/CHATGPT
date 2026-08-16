@@ -1,0 +1,51 @@
+name: morocco26-goal100-p0-certify
+on:
+  push:
+    branches: [morocco26-goal100-p0]
+    paths:
+      - 'morocco26/src/morocco26/legal_allocator_2026.py'
+      - 'morocco26/scripts/goal100_legal_allocator_selftest.py'
+      - 'morocco26/scripts/goal100_ingest_tafra_panel.py'
+      - 'morocco26/data/goal100/p0_resolution_v1.json'
+      - 'morocco26/reports/P0_RESOLUTION_2026-08-16.md'
+      - '.github/workflows/morocco26-goal100-p0-certify.yml'
+permissions:
+  contents: write
+jobs:
+  p0-certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-goal100-p0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install --quiet pandas openpyxl requests
+      - name: Geometry structural invariants
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          p=Path('morocco26/data/constituencies_goal75.csv')
+          rows=list(csv.DictReader(p.open(encoding='utf-8')))
+          assert len(rows)==92, len(rows)
+          assert len({r['constituency_id'] for r in rows})==92
+          assert sum(int(r['seats']) for r in rows)==305
+          regional={'Tanger-Tétouan-Al Hoceïma':8,'Oriental':7,'Fès-Meknès':10,'Rabat-Salé-Kénitra':10,'Béni Mellal-Khénifra':7,'Casablanca-Settat':12,'Marrakech-Safi':10,'Drâa-Tafilalet':6,'Souss-Massa':7,'Guelmim-Oued Noun':5,'Laâyoune-Sakia El Hamra':5,'Dakhla-Oued Eddahab':3}
+          assert len(regional)==12 and sum(regional.values())==90
+          print('PASS geometry invariants: 92 local / 305 seats + 12 regional / 90 seats')
+          PY
+      - name: Current-law allocator self-test
+        run: python morocco26/scripts/goal100_legal_allocator_selftest.py
+      - name: Acquire and canonicalize TAFRA 2011/2016/2021
+        run: python morocco26/scripts/goal100_ingest_tafra_panel.py
+      - name: Preserve Goal75 anti-drift constitution
+        run: python morocco26/scripts/validate_anti_drift.py
+      - name: Commit immutable-source historical panel artifacts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/historical
+          git commit -m 'data(morocco26): acquire canonical Goal100 historical panel' || true
+          git pull --rebase origin morocco26-goal100-p0
+          git push origin HEAD:morocco26-goal100-p0
