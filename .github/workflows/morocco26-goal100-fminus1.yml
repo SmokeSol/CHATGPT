@@ -1,0 +1,43 @@
+name: morocco26-goal100-fminus1
+
+on:
+  push:
+    branches: [morocco26-fminus1]
+    paths:
+      - 'morocco26/data/goal100/fminus1_protocol_v1.json'
+      - 'morocco26/scripts/goal100_run_fminus1.py'
+      - 'morocco26/data/goal100/uncertainty_calibration.json'
+      - 'morocco26/data/goal100/local_N_posterior.json'
+      - 'morocco26/data/goal100/geometry_2026_certificate.json'
+      - 'morocco26/data/goal100/historical/**'
+      - 'morocco26/data/goal75/local_92_closure_v3.json'
+      - 'morocco26/src/morocco26/legal_allocator_2026.py'
+      - '.github/workflows/morocco26-goal100-fminus1.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  simulate-and-freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet numpy
+      - name: Execute 50,000 coherent F-1 elections
+        run: python morocco26/scripts/goal100_run_fminus1.py
+      - name: Preserve Goal75 anti-drift checkpoint
+        run: python morocco26/scripts/validate_anti_drift.py
+      - name: Commit immutable F-1 artifacts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add morocco26/data/goal100/forecasts/F-1 morocco26/data/goal100/simulation_certificate.json
+          git commit -m 'forecast(morocco26): freeze immutable 50k-draw F-1' || true
+          git pull --rebase origin morocco26-fminus1
+          git push origin HEAD:morocco26-fminus1
