@@ -1,0 +1,74 @@
+name: morocco26-fminus1-uncertainty
+
+on:
+  push:
+    branches: [morocco26-fminus1]
+    paths:
+      - 'morocco26/data/goal100/uncertainty_protocol_v1.json'
+      - 'morocco26/scripts/goal100_calibrate_uncertainty.py'
+      - '.github/workflows/morocco26-fminus1-uncertainty.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  calibrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet numpy
+
+      - name: Compile calibration source
+        run: python -m py_compile morocco26/scripts/goal100_calibrate_uncertainty.py
+
+      - name: Execute frozen two-direction calibration
+        run: python morocco26/scripts/goal100_calibrate_uncertainty.py
+
+      - name: Verify calibration contract and append breadcrumb journal
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          g=Path('morocco26/data/goal100')
+          c=json.loads((g/'uncertainty_calibration.json').read_text(encoding='utf-8'))
+          p=json.loads((g/'uncertainty_parameters_v1.json').read_text(encoding='utf-8'))
+          assert c['gate']=='PASS'
+          assert c['gate_checks']['both_loto_directions_complete'] is True
+          assert c['gate_checks']['coverage_rule_satisfied'] is True
+          assert c['gate_checks']['anti_trivial_width_satisfied'] is True
+          assert c['gate_checks']['all_covariances_positive_definite'] is True
+          assert c['gate_checks']['2026_outcome_used'] is False
+          assert c['final_parameter_manifest_sha256']==p['parameter_manifest_sha256']
+          journal=Path('morocco26/FIL_ARIANE.md')
+          text=journal.read_text(encoding='utf-8')
+          if 'Entrée A005 — Protocole d’incertitude gelé' not in text:
+              text += '''\n\n### 2026-08-16 — Entrée A005 — Protocole d’incertitude gelé\n\n**Question/gate :** `UNCERTAINTY-CALIBRATION`.\n\n**Hypothèse avant test :** une distribution corrélée parcimonieuse — choc national partagé, choc régional partagé et résidu local — peut être calibrée rétrospectivement sans covariance territoriale libre 92×92.\n\n**Actions :** gel de `data/goal100/uncertainty_protocol_v1.json` avant exécution ; ILR-Helmert pour les compositions, logit pour la participation, Student-t, shrinkage fixe et grille d’inflation préenregistrée.\n\n**Falsification :** aucun facteur n’est accepté s’il échoue les planchers de couverture ou s’il ne passe qu’en produisant des intervalles triviaux trop larges.\n'''
+          if 'Entrée A006 — Résultat de calibration hiérarchique' not in text:
+              m=c['selected_metrics']
+              text += f'''\n\n### 2026-08-16 — Entrée A006 — Résultat de calibration hiérarchique\n\n**Artefacts :** `data/goal100/uncertainty_calibration.json` et `data/goal100/uncertainty_parameters_v1.json`.\n\n**Résultat machine :** `PASS`. Facteur d’inflation sélectionné par la règle gelée : **{c['selected_factor']}**.\n\n**Couverture rétrospective combinée :** votes 50/80/95 = {m['vote_coverage_50']:.3f} / {m['vote_coverage_80']:.3f} / {m['vote_coverage_95']:.3f} ; participation 50/80/95 = {m['turnout_coverage_50']:.3f} / {m['turnout_coverage_80']:.3f} / {m['turnout_coverage_95']:.3f}.\n\n**Proper scores :** energy score votes = {m['vote_energy_score']:.6f} ; CRPS participation = {m['turnout_crps']:.6f}. Hash paramètres : `{p['parameter_manifest_sha256']}`.\n\n**Décision scientifique :** P0-6 peut être fermé sur l’architecture et la calibration rétrospective, avec limitation explicite : deux transitions modernes seulement et extrapolation des composantes national/régional vers le bulletin régional 2026.\n\n**Prochaine action :** intégrer B*, N92 et ces paramètres dans au moins 50 000 élections conjointes de 395 sièges, puis auditer normalisation, erreurs légales, Monte-Carlo et `OTHER`.\n'''
+          journal.write_text(text,encoding='utf-8')
+          PY
+
+      - name: Preserve Goal75 and current Goal100 invariants
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking.py
+
+      - name: Commit calibration evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/uncertainty_calibration.json \
+            morocco26/data/goal100/uncertainty_parameters_v1.json \
+            morocco26/FIL_ARIANE.md
+          git commit -m 'data(morocco26): certify hierarchical uncertainty calibration' || true
+          git pull --rebase origin morocco26-fminus1
+          git push origin HEAD:morocco26-fminus1
