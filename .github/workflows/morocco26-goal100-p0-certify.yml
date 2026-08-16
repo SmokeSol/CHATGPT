@@ -6,6 +6,7 @@ on:
       - 'morocco26/src/morocco26/legal_allocator_2026.py'
       - 'morocco26/scripts/goal100_legal_allocator_selftest.py'
       - 'morocco26/scripts/goal100_ingest_tafra_panel.py'
+      - 'morocco26/scripts/goal100_historical_panel_diagnostic.py'
       - 'morocco26/data/goal100/p0_resolution_v1.json'
       - 'morocco26/reports/P0_RESOLUTION_2026-08-16.md'
       - '.github/workflows/morocco26-goal100-p0-certify.yml'
@@ -39,13 +40,15 @@ jobs:
         run: python morocco26/scripts/goal100_legal_allocator_selftest.py
       - name: Acquire and canonicalize TAFRA 2011/2016/2021
         run: python morocco26/scripts/goal100_ingest_tafra_panel.py
+      - name: Diagnose historical continuity and identifiability
+        run: python morocco26/scripts/goal100_historical_panel_diagnostic.py
       - name: Preserve Goal75 anti-drift constitution
         run: python morocco26/scripts/validate_anti_drift.py
-      - name: Commit immutable-source historical panel artifacts
+      - name: Commit P0 empirical artifacts
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add morocco26/data/goal100/historical
-          git commit -m 'data(morocco26): acquire canonical Goal100 historical panel' || true
+          git add morocco26/data/goal100/historical morocco26/data/goal100/historical_panel_diagnostic.json
+          git commit -m 'data(morocco26): certify Goal100 historical panel diagnostics' || true
           git pull --rebase origin morocco26-goal100-p0
           git push origin HEAD:morocco26-goal100-p0
