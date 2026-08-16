@@ -1,0 +1,23 @@
+name: morocco26-goal75-finalize
+on:
+  push:
+    branches: [morocco26-goal75-hard]
+    paths: ['morocco26/data/goal75/p5_live_gate.json']
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-goal75-hard}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python morocco26/scripts/goal75_finalize.py
+      - run: python morocco26/scripts/validate_anti_drift.py
+      - run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/data/goal75/scientific_completion_75.json morocco26/data/current_phase.json morocco26/data/execution_goal_75.json morocco26/reports/GOAL75_75_PERCENT.md
+          git commit -m "milestone(morocco26): reach 75 percent scientifically gated completion"
+          git pull --rebase origin morocco26-goal75-hard
+          git push origin HEAD:morocco26-goal75-hard
