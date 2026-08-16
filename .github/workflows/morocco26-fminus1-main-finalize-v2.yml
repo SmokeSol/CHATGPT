@@ -1,0 +1,153 @@
+name: morocco26-fminus1-main-finalize-v2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/morocco26-fminus1-main-finalize-v2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  finalize-main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Require exact PASS release gate on run branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api 'repos/SmokeSol/CHATGPT/contents/morocco26/data/goal100/fminus1_release_gate.json?ref=morocco26-fminus1-run' > /tmp/release_api.json
+          python - <<'PY'
+          import base64,json
+          obj=json.load(open('/tmp/release_api.json'))
+          release=json.loads(base64.b64decode(obj['content']).decode())
+          assert release['gate']=='PASS'
+          assert release['snapshot_ids']==['F-1'] and release['next_snapshot']=='F0'
+          assert release['forecast_unlock']=='ALL_CLOSED' and release['agentic_unlock']=='ALL_LOCKED'
+          json.dump(release,open('/tmp/release.json','w'),indent=2)
+          print(release)
+          PY
+
+      - name: Merge exact PR head if still open
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr view 8 --repo SmokeSol/CHATGPT --json state,isDraft,headRefOid,headRefName > /tmp/pr.json
+          state=$(python -c "import json; print(json.load(open('/tmp/pr.json'))['state'])")
+          if [ "$state" != MERGED ]; then
+            gh pr ready 8 --repo SmokeSol/CHATGPT || true
+            head_sha=$(python -c "import json; print(json.load(open('/tmp/pr.json'))['headRefOid'])")
+            gh api \
+              --method PUT \
+              -H 'Accept: application/vnd.github+json' \
+              repos/SmokeSol/CHATGPT/pulls/8/merge \
+              -f merge_method=squash \
+              -f sha="$head_sha" \
+              -f commit_title='MOROCCO//26: register immutable structural forecast F-1' \
+              -f commit_message='50,000 coherent elections; all forecast gates closed; agentic layer remains locked until B2.'
+          else
+            echo 'PR #8 already merged.'
+          fi
+
+      - name: Reload exact main after merge
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Independently verify F-1 on main and append final breadcrumb
+        run: |
+          python - <<'PY'
+          import hashlib,json,subprocess
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          root=Path('morocco26'); g=root/'data'/'goal100'
+          required=[
+              g/'fminus1_registration_certificate.json',g/'fminus1_postflight.json',
+              g/'fminus1_release_gate.json',g/'forecast_registry.json',g/'gate_registry.json',
+              g/'snapshots/F-1/forecast.json',g/'snapshots/F-1/manifest.json',
+              g/'simulation_certificate.json',root/'FIL_ARIANE.md'
+          ]
+          missing=[str(p) for p in required if not p.exists()]
+          if missing: raise SystemExit(f'MAIN_FINALIZE_FAIL missing {missing}')
+          subprocess.run(['python','morocco26/scripts/validate_anti_drift.py'],check=True)
+          subprocess.run(['python','morocco26/scripts/validate_goal100_tracking_dynamic.py'],check=True)
+          registration=json.loads((g/'fminus1_registration_certificate.json').read_text(encoding='utf-8'))
+          post=json.loads((g/'fminus1_postflight.json').read_text(encoding='utf-8'))
+          release=json.loads((g/'fminus1_release_gate.json').read_text(encoding='utf-8'))
+          registry=json.loads((g/'forecast_registry.json').read_text(encoding='utf-8'))
+          gates=json.loads((g/'gate_registry.json').read_text(encoding='utf-8'))
+          sim=json.loads((g/'simulation_certificate.json').read_text(encoding='utf-8'))
+          manifest=json.loads((g/'snapshots/F-1/manifest.json').read_text(encoding='utf-8'))
+          forecast_path=g/'snapshots/F-1/forecast.json'
+          forecast_sha=hashlib.sha256(forecast_path.read_bytes()).hexdigest()
+          assert registration['gate']=='PASS' and post['status']=='PASS' and release['gate']=='PASS'
+          assert [x['snapshot_id'] for x in registry['snapshots']]==['F-1'] and registry['sequence']['next_id']=='F0'
+          assert all(x['status']=='CLOSED' for x in gates['forecast_unlock'])
+          assert all(x['status']=='LOCKED' for x in gates['agentic_unlock'])
+          assert sim['gate']=='PASS' and sim['valid_election_draws']>=50000
+          assert forecast_sha==registration['forecast_artifact_sha256']==release['forecast_sha256']==manifest['forecast_artifact_hash']
+          assert registration['manifest_sha256']==release['manifest_sha256']==manifest['manifest_sha256']
+          verification={
+              'schema_version':'2.0','verification_id':'M26-GOAL100-FMINUS1-MAIN-V2',
+              'verified_at':datetime.now(ZoneInfo('Africa/Casablanca')).isoformat(timespec='seconds'),
+              'branch':'main','snapshot_id':'F-1','snapshot_class':manifest['snapshot_class'],
+              'forecast_sha256':forecast_sha,'manifest_sha256':manifest['manifest_sha256'],
+              'valid_joint_elections':sim['valid_election_draws'],'legal_rejection_rate':sim['legal_rejection_rate'],
+              'p0':{x['id']:x['status'] for x in gates['p0']},
+              'forecast_unlock':'ALL_CLOSED','agentic_unlock':'ALL_LOCKED',
+              'next_snapshot':'F0','goal75_anti_drift':'PASS','goal100_tracking':'PASS',
+              'gate':'PASS_MAIN_VERIFIED'
+          }
+          (g/'fminus1_main_verification.json').write_text(json.dumps(verification,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          journal=root/'FIL_ARIANE.md'; text=journal.read_text(encoding='utf-8')
+          if 'Entrée A019 — Vérification indépendante sur main' not in text:
+              text += f'''\n\n### 2026-08-16 — Entrée A019 — Vérification indépendante sur main\n\n**Résultat :** `PASS_MAIN_VERIFIED`. F−1, son manifest, son certificat de simulation et son enregistrement ont été relus depuis `main`.\n\n**Hashes :** forecast `{forecast_sha}` ; manifest `{manifest['manifest_sha256']}`.\n\n**État :** 50 000 élections conjointes valides ; tous les gates forecast fermés ; agentique verrouillé ; prochain snapshot `F0`.\n'''
+              journal.write_text(text,encoding='utf-8')
+          print(json.dumps(verification,indent=2))
+          PY
+          python morocco26/scripts/goal100_sync_fil_ariane.py
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking_dynamic.py
+
+      - name: Commit independent main verification
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/fminus1_main_verification.json \
+            morocco26/data/goal100/fil_ariane_index.json \
+            morocco26/FIL_ARIANE.md
+          git commit -m 'verify(morocco26): certify F-1 independently on main'
+          git push origin HEAD:main
+
+      - name: Publish main verification on PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > /tmp/comment.md
+          import json
+          r=json.load(open('morocco26/data/goal100/fminus1_main_verification.json'))
+          print('## Independent `main` verification: PASS')
+          print()
+          print(f"- Forecast SHA-256: `{r['forecast_sha256']}`")
+          print(f"- Manifest SHA-256: `{r['manifest_sha256']}`")
+          print(f"- Valid joint elections: `{r['valid_joint_elections']:,}`")
+          print(f"- Legal rejection rate: `{r['legal_rejection_rate']:.6f}`")
+          print(f"- Next snapshot: `{r['next_snapshot']}`")
+          print('- All forecast gates CLOSED; agentic gates LOCKED.')
+          PY
+          gh pr comment 8 --repo SmokeSol/CHATGPT --body-file /tmp/comment.md || true
