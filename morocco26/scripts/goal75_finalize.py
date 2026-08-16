@@ -1,15 +1,12 @@
 #!/usr/bin/env python3
-import json,re
-from datetime import datetime,timezone
+import json
 from pathlib import Path
 R=Path(__file__).resolve().parents[1];D=R/'data';O=D/'goal75';REP=R/'reports'
 def load(p):return json.loads(Path(p).read_text())
-def exists(p):return Path(p).exists()
 def main():
     constitution=load(D/'project_constitution.json');goal=load(D/'execution_goal_75.json');manifest=load(D/'experiment_manifest.json')
     p2=load(O/'p2_exact_audit.json');margins=load(O/'seat_margin_92.json');obs=load(O/'observed_elected_2021.json');kill=load(O/'model_d_kill_preunseal.json');p5=load(O/'p5_live_gate.json')
-    phase2=(REP/'PHASE2_EXECUTIVE_FINDINGS.md').read_text()
-    north=constitution['north_star'];checks={};points={}
+    phase2=(REP/'PHASE2_EXECUTIVE_FINDINGS.md').read_text();north=constitution['north_star'];checks={};points={}
     checks['P1_FOUNDATION']=(manifest['north_star']==north and constitution['forecast_unlock_gate']['default_status']=='BLOCKED' and manifest['publication_status']=='MECHANISM_EXPERIMENT_NOT_FORECAST')
     points['P1_FOUNDATION']=15 if checks['P1_FOUNDATION'] else 0
     checks['P2_EMPIRICAL_GRAPH']=(p2['local']['constituencies']==92 and p2['local']['seats']==305 and p2['local']['every_constituency_empirically_reproduced'] is True and p2['regional']['constituencies']==12 and p2['regional']['seats']==90 and p2['regional']['every_region_independently_reproduced'] is True and p2['total']['seats']==395 and p2['total']['exact_official_match'] is True and len(margins)==92 and obs['original_elected_rows']==395 and obs['local_seats_observed']==305 and obs['regional_seats_observed']==90 and obs['official_total_exact_match'] is True)
@@ -25,11 +22,10 @@ def main():
     (O/'scientific_completion_75.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
     if not passed:
         print(json.dumps(out,ensure_ascii=False,indent=2));raise SystemExit(11)
-    phase={'as_of':'2026-08-16','formal_phase':'P5_FULL_2026_LIVE_SYSTEM','experimental_frontier':'P5_LIVE_DECODING_WITHOUT_NATIONAL_FORECAST','implementation_completion_percent':max(75,int(load(D/'current_phase.json').get('implementation_completion_percent',0))),'scientifically_gated_completion_percent':total,'status':'GOAL75_REACHED_BY_MACHINE_GATES','completed':['P1 foundation','P2 exact 92 local + 12 regional 2021 replay and full Seat Margin Map','P3 causal synthetic-society experiment','P4 Model D resolved by preregistered falsification/KILL','P5 prospective no-forecast 92-constituency decoding snapshot'],'not_completed':out['remaining_to_100'],'forecast_status':'BLOCKED','agent_society_status':'KILLED_FOR_CURRENT_ARCHITECTURE','goal75_status':'TARGET_REACHED'}
+    phase={'as_of':'2026-08-16','formal_phase':'P5_FULL_2026_LIVE_SYSTEM','experimental_frontier':'P6_FREEZE_AND_REALITY_TEST','implementation_completion_percent':max(75,int(load(D/'current_phase.json').get('implementation_completion_percent',0))),'scientifically_gated_completion_percent':total,'status':'GOAL75_REACHED_BY_MACHINE_GATES','completed':['P1 foundation','P2 exact 92 local + 12 regional 2021 replay and full Seat Margin Map','P3 causal synthetic-society experiment','P4 Model D resolved by preregistered falsification/KILL','P5 prospective no-forecast 92-constituency decoding snapshot'],'not_completed':out['remaining_to_100'],'forecast_status':'BLOCKED','agent_society_status':'KILLED_FOR_CURRENT_ARCHITECTURE','goal75_status':'TARGET_REACHED'}
     (D/'current_phase.json').write_text(json.dumps(phase,ensure_ascii=False,indent=2))
     goal.update({'status':'TARGET_REACHED','target_75_reached':True,'completion_at_resolution_percent':total,'resolved_at':'2026-08-16','stop_reason':'Scientifically-gated completion reached target via machine-checkable P1/P2/P3/P4/P5 gates; national forecast remains blocked.'})
     (D/'execution_goal_75.json').write_text(json.dumps(goal,ensure_ascii=False,indent=2))
     report=f'''# MOROCCO//26 — Goal75 scientific checkpoint\n\n**Scientifically gated completion:** {total}%  \n**Goal:** {target}%  \n**Status:** TARGET_REACHED  \n**Forecast:** BLOCKED\n\n## Machine-scored phases\n\n'''+''.join(f'- **{k}: {points[k]} points** — {"PASS" if checks[k] else "FAIL"}\n' for k in points)+'''\n## Architecture decision\n\nModel D / bounded LLM society is **killed for the current architecture** by its preregistered pre-unseal output-contract gate. This is scientific closure by falsification, not a successful LLM result.\n\nThe working architecture at this checkpoint is therefore: empirical electoral graph → exact allocator → structural/statistical baselines → causal non-LLM synthetic experiments where useful → prospective sourced 2026 mechanism decoder.\n\n## What remains\n\nThe remaining 25% is deliberately not credited: deeper 2026 territorial evidence, calibrated prospective uncertainty, the pre-election freeze, and the 23 September reality test.\n'''
-    (REP/'GOAL75_75_PERCENT.md').write_text(report)
-    print(json.dumps(out,ensure_ascii=False,indent=2))
+    (REP/'GOAL75_75_PERCENT.md').write_text(report);print(json.dumps(out,ensure_ascii=False,indent=2))
 if __name__=='__main__':main()
