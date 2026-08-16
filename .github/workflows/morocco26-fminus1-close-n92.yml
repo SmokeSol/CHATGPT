@@ -1,0 +1,170 @@
+name: morocco26-fminus1-close-n92
+
+on:
+  push:
+    branches: [morocco26-fminus1]
+    paths:
+      - 'morocco26/data/goal100/local_N_posterior.json'
+      - 'morocco26/data/goal100/n_scale_invariance_certificate.json'
+      - '.github/workflows/morocco26-fminus1-close-n92.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  close-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Close P0-3 only if evidence exists and passes
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('morocco26')
+          g=root/'data'/'goal100'
+          posterior=g/'local_N_posterior.json'
+          invariant=g/'n_scale_invariance_certificate.json'
+          if not posterior.exists() or not invariant.exists():
+              print('N92 evidence not present yet; no state transition')
+              Path('/tmp/no_transition').write_text('1')
+              raise SystemExit(0)
+          p=json.loads(posterior.read_text(encoding='utf-8'))
+          n=json.loads(invariant.read_text(encoding='utf-8'))
+          assert p['gate']=='PASS'
+          assert p['constraints']['all_positive_integer'] is True
+          assert p['constraints']['all_sums_exact'] is True
+          assert len(p['local_92'])==92 and len(p['regional_12'])==12
+          assert n['gate']=='PASS' and n['exact_scale_invariance'] is True
+          assert n['summary']['contests']==104
+          assert n['summary']['incomplete_allocations']==0
+
+          reg_path=g/'gate_registry.json'
+          reg=json.loads(reg_path.read_text(encoding='utf-8'))
+          p03=next(x for x in reg['p0'] if x['id']=='P0-3')
+          p03.update({
+              'status':'CLOSED',
+              'resolved_claim':'The 92 local registered-voter denominators are represented by a preregistered 50,000-draw positive-integer posterior constrained exactly to national N=15,801,162; exact scale invariance and rate-based N-only seat sensitivity are reported for 92 local and 12 regional contests.',
+              'evidence':[
+                  'morocco26/data/goal100/local_N_protocol_v1.json',
+                  'morocco26/data/goal100/local_N_posterior.json',
+                  'morocco26/data/goal100/n_scale_invariance_certificate.json'
+              ],
+              'remaining_gate':None,
+              'closure_criterion':'PASS: every N draw is positive integer and sums exactly to 15,801,162; 104-contest sensitivity is complete; exact scale invariance has zero failures.'
+          })
+          unlock=next(x for x in reg['forecast_unlock'] if x['id']=='N92-POSTERIOR-FIT')
+          unlock['status']='CLOSED'
+          unlock['required_artifact']='morocco26/data/goal100/local_N_posterior.json'
+          reg['as_of']='2026-08-16T22:00:00+01:00'
+          reg_path.write_text(json.dumps(reg,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          resolution={
+              'schema_version':'4.0',
+              'audit_id':'M26-GOAL100-P0-RESOLUTION-V4',
+              'as_of':'2026-08-16',
+              'preserves':['p0_resolution_v1.json','p0_resolution_v2.json','p0_resolution_v3.json'],
+              'delta_from_v3':{
+                  'P0-3':{
+                      'previous':'NATIONAL_EXACT_LOCAL_POSTERIOR_DESIGN_EMPIRICALLY_ANCHORED_FIT_PENDING',
+                      'current':'N92_POSTERIOR_AND_104_CONTEST_SENSITIVITY_CERTIFIED',
+                      'evidence':{
+                          'national_N':p['national_N'],
+                          'draws':p['draws'],
+                          'draw_matrix_sha256':p['draw_matrix_sha256_int32_rowmajor'],
+                          'all_positive_integer':p['constraints']['all_positive_integer'],
+                          'all_sums_exact':p['constraints']['all_sums_exact'],
+                          'exact_scale_tests':n['exact_scale_tests'],
+                          'exact_scale_failures':len(n['exact_scale_failures']),
+                          'contests_audited':n['summary']['contests'],
+                          'contests_with_integerization_sensitivity':n['summary']['contests_with_any_integerization_sensitivity'],
+                          'max_N_only_sensitivity':n['summary']['max_probability_different_from_reference']
+                      },
+                      'interpretation':'The posterior is a denominator uncertainty model, not an official local roll. Under a coherent rate-based forecast N scale is structurally homogeneous; only disclosed integerization/weighting effects may remain.'
+                  }
+              },
+              'current_p0_status':{
+                  'P0-1_geometry':'RESOLVED_WITH_LEGAL_WATCH_AND_AUTHORITATIVE_ROW_DIFF_REMAINING',
+                  'P0-2_legal_allocator':'RESOLVED_AND_104_VECTOR_REGRESSION_CERTIFIED',
+                  'P0-3_registered_N':'RESOLVED_N92_POSTERIOR_AND_SENSITIVITY_CERTIFIED',
+                  'P0-4_history':'RESOLVED_AND_INGESTED_92_OF_92_MODERN_CONTINUITY',
+                  'P0-5_Bstar':'CORE_SELECTED_PERSISTENCE_FIRST_2026_UNTOUCHED',
+                  'P0-6_uncertainty':'ARCHITECTURE_RESOLVED_POST_SELECTION_FIT_AND_CALIBRATION_PENDING'
+              },
+              'remaining_hard_gates_before_first_calibrated_snapshot':[
+                  'authoritative geometry row-diff/legal watch',
+                  'fit post-selection hierarchical innovation/covariance distribution',
+                  'posterior predictive diagnostics and >=50,000 coherent election simulations'
+              ],
+              'agentic_layer_status':'LOCKED_UNTIL_NON_AGENTIC_B2_AND_FIRST_PROBABILISTIC_SNAPSHOT_ARE_FROZEN',
+              'forecast_sequence_policy':'F-1/F0/F1/... allowed; each immutable; F0 preliminary; no snapshot overwrite'
+          }
+          (g/'p0_resolution_v4.json').write_text(json.dumps(resolution,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          state_path=g/'current_state.json'
+          state=json.loads(state_path.read_text(encoding='utf-8'))
+          closed=state['p0_summary']['closed']
+          if 'P0-3_REGISTERED_VOTER_N' not in closed:
+              closed.append('P0-3_REGISTERED_VOTER_N')
+          state['p0_summary']['active']=[x for x in state['p0_summary']['active'] if x!='P0-3_REGISTERED_VOTER_N']
+          state['p0_summary']['authoritative_resolution']='morocco26/data/goal100/p0_resolution_v4.json'
+          state['registered_voter_N'].update({
+              'local_92_state':'POSTERIOR_FIT_CERTIFIED_NOT_OFFICIAL_COUNTS',
+              'posterior_artifact':'morocco26/data/goal100/local_N_posterior.json',
+              'scale_invariance_artifact':'morocco26/data/goal100/n_scale_invariance_certificate.json',
+              'required_next_test':'integrate certified N generator into coherent F-1 simulation and report its realized seat sensitivity'
+          })
+          state['remaining_hard_gates_before_F_minus_1']=[x for x in state['remaining_hard_gates_before_F_minus_1'] if x!='N92-POSTERIOR-FIT']
+          state['as_of']='2026-08-16T22:00:00+01:00'
+          state_path.write_text(json.dumps(state,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+          validator=root/'scripts'/'validate_goal100_tracking.py'
+          s=validator.read_text(encoding='utf-8')
+          s=s.replace('"P0-3": "OPEN",','"P0-3": "CLOSED",')
+          s=s.replace('for gid in ("GEO-2026-AUTHORITATIVE-DIFF", "N92-POSTERIOR-FIT", "UNCERTAINTY-CALIBRATION", "MC-50000-COHERENT", "SNAPSHOT-IMMUTABILITY-MANIFEST"):',
+                      'for gid in ("GEO-2026-AUTHORITATIVE-DIFF", "UNCERTAINTY-CALIBRATION", "MC-50000-COHERENT", "SNAPSHOT-IMMUTABILITY-MANIFEST"):')
+          s=s.replace('require(unlock["BSTAR-SELECTED"]["status"] == "CLOSED", "B* unlock gate should be closed")',
+                      'require(unlock["BSTAR-SELECTED"]["status"] == "CLOSED", "B* unlock gate should be closed")\n    require(unlock["N92-POSTERIOR-FIT"]["status"] == "CLOSED", "N92 unlock gate should be closed")')
+          s=s.replace('print("p0=CLOSED:3 PARTIAL:1 OPEN:2")','print("p0=CLOSED:4 PARTIAL:1 OPEN:1")')
+          validator.write_text(s,encoding='utf-8')
+
+          journal=root/'FIL_ARIANE.md'
+          jt=journal.read_text(encoding='utf-8')
+          if 'Entrée A004 — Fermeture machine de P0-3' not in jt:
+              jt += f'''\n\n### 2026-08-16 — Entrée A004 — Fermeture machine de P0-3\n\n**Gate traité :** `N92-POSTERIOR-FIT`.\n\n**Résultat machine :** gate fermé. {p['draws']:,} vecteurs N92 positifs et entiers, somme exacte {p['national_N']:,}, 104 scrutins audités, zéro échec d’invariance d’échelle sur {n['exact_scale_tests']} tests.\n\n**Correction conceptuelle importante :** dans un modèle cohérent en taux, multiplier N et les voix par la même échelle ne modifie pas l’allocation. Le posterior N est donc conservé pour exactitude, pondération et entierisation, mais il n’est pas autorisé à fabriquer une volatilité politique.\n\n**État P0 :** 4 CLOSED / 1 PARTIAL / 1 OPEN.\n\n**Prochaine action exacte :** `P0-6` — geler puis fitter le modèle hiérarchique d’innovation et publier ses diagnostics de calibration avant toute simulation F-1.\n'''
+          journal.write_text(jt,encoding='utf-8')
+          PY
+
+      - name: Detect no-transition run
+        id: transition
+        run: |
+          if [ -f /tmp/no_transition ]; then echo 'changed=false' >> "$GITHUB_OUTPUT"; else echo 'changed=true' >> "$GITHUB_OUTPUT"; fi
+
+      - name: Validate transitioned state
+        if: steps.transition.outputs.changed == 'true'
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking.py
+
+      - name: Commit state transition
+        if: steps.transition.outputs.changed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/gate_registry.json \
+            morocco26/data/goal100/current_state.json \
+            morocco26/data/goal100/p0_resolution_v4.json \
+            morocco26/scripts/validate_goal100_tracking.py \
+            morocco26/FIL_ARIANE.md
+          git commit -m 'milestone(morocco26): close certified N92 posterior gate' || true
+          git pull --rebase origin morocco26-fminus1
+          git push origin HEAD:morocco26-fminus1
