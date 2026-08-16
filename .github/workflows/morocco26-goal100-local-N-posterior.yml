@@ -1,0 +1,43 @@
+name: morocco26-goal100-local-N-posterior
+
+on:
+  push:
+    branches: [morocco26-fminus1]
+    paths:
+      - 'morocco26/scripts/goal100_fit_local_N_posterior.py'
+      - 'morocco26/data/goal100/geometry_2026_certificate.json'
+      - 'morocco26/data/goal100/local_N_drift_diagnostic.json'
+      - 'morocco26/data/goal100/historical/**'
+      - 'morocco26/data/goal100/older_history_probe/raw/parlement-elections-2007-1-0.xlsx'
+      - 'morocco26/data/goal75/local_92_closure_v3.json'
+      - 'morocco26/data/goal75/local_allocation_interval_proof.json'
+      - 'morocco26/src/morocco26/legal_allocator_2026.py'
+      - '.github/workflows/morocco26-goal100-local-N-posterior.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet numpy pandas openpyxl
+      - name: Fit constrained N92 posterior and N-only seat sensitivity
+        run: python morocco26/scripts/goal100_fit_local_N_posterior.py
+      - name: Preserve Goal75 anti-drift checkpoint
+        run: python morocco26/scripts/validate_anti_drift.py
+      - name: Commit posterior artifact
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/local_N_posterior.json
+          git commit -m 'data(morocco26): fit constrained N92 posterior' || true
+          git pull --rebase origin morocco26-fminus1
+          git push origin HEAD:morocco26-fminus1
