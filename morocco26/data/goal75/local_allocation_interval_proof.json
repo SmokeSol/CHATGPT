@@ -1,0 +1,3541 @@
+{
+  "logic": "Exact piecewise proof: quota floors change only at N=v*s/k; with floors fixed, remainders are linear in N and their ordering changes only at pairwise crossings. We evaluate all adjacent integer neighborhoods and one or more interior integers per critical interval. Thus allocation invariance over [valid-party-votes,18,000,000] is exhaustive for integer registered counts.",
+  "local_rows": 92,
+  "invariant_full_interval": 81,
+  "not_invariant": 11,
+  "all_92_invariant": false,
+  "rows": [
+    {
+      "idCirconscription": "547",
+      "region": "Beni-Mellal - Khénifra",
+      "circonscription": "Azilal - Demnate",
+      "seats": 3,
+      "lower_bound_registered": 81583,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 81583
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "546",
+      "region": "Beni-Mellal - Khénifra",
+      "circonscription": "Bzou - Ouaouizaght",
+      "seats": 3,
+      "lower_bound_registered": 90603,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "MP": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "RNI": 1
+          },
+          "example_N": 90603
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "545",
+      "region": "Beni-Mellal - Khénifra",
+      "circonscription": "Béni-Mellal",
+      "seats": 6,
+      "lower_bound_registered": 144731,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1,
+        "USFP": 1,
+        "MP": 1,
+        "PPS": 1
+      },
+      "critical_real_points": 24,
+      "integer_test_points": 139,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          },
+          "example_N": 144731
+        },
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 147067
+        }
+      ],
+      "invariant_to_topN_over_full_interval": false,
+      "first_counterexamples": [
+        {
+          "N": 144731,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 144732,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 144733,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 144749,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 144766,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 144767,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 144768,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 144769,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 144770,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 144774,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        }
+      ]
+    },
+    {
+      "idCirconscription": "548",
+      "region": "Beni-Mellal - Khénifra",
+      "circonscription": "Fquih Ben Salah",
+      "seats": 4,
+      "lower_bound_registered": 126772,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "critical_real_points": 12,
+      "integer_test_points": 67,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 126772
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "577",
+      "region": "Beni-Mellal - Khénifra",
+      "circonscription": "Khénifra",
+      "seats": 3,
+      "lower_bound_registered": 109276,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "MP": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 109276
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "594",
+      "region": "Beni-Mellal - Khénifra",
+      "circonscription": "Khouribga",
+      "seats": 6,
+      "lower_bound_registered": 131980,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "MP": 1,
+        "PI": 1,
+        "USFP": 1,
+        "PPS": 1
+      },
+      "critical_real_points": 8,
+      "integer_test_points": 43,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 131980
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "596",
+      "region": "Casablanca - Settat",
+      "circonscription": "Benslimane",
+      "seats": 3,
+      "lower_bound_registered": 77859,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PI": 1,
+        "RNI": 1,
+        "PPS": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "example_N": 77859
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "595",
+      "region": "Casablanca - Settat",
+      "circonscription": "Berrechid",
+      "seats": 4,
+      "lower_bound_registered": 131820,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PI": 1,
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "critical_real_points": 30,
+      "integer_test_points": 175,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 131820
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "523",
+      "region": "Casablanca - Settat",
+      "circonscription": "Aïn-Chock",
+      "seats": 3,
+      "lower_bound_registered": 30900,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "critical_real_points": 17,
+      "integer_test_points": 97,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 30900
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "521",
+      "region": "Casablanca - Settat",
+      "circonscription": "Aïn-Sebaâ - Hay-Mohammadi",
+      "seats": 4,
+      "lower_bound_registered": 43078,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "UC": 1,
+        "PI": 1
+      },
+      "critical_real_points": 11,
+      "integer_test_points": 61,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "example_N": 43078
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "520",
+      "region": "Casablanca - Settat",
+      "circonscription": "Al-Fida - Mers-Sultan",
+      "seats": 3,
+      "lower_bound_registered": 26851,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "critical_real_points": 20,
+      "integer_test_points": 115,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 26851
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "525",
+      "region": "Casablanca - Settat",
+      "circonscription": "Ben-M'sick",
+      "seats": 3,
+      "lower_bound_registered": 25936,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "UC": 1,
+        "RNI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "example_N": 25936
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "519",
+      "region": "Casablanca - Settat",
+      "circonscription": "Casablanca - Anfa",
+      "seats": 4,
+      "lower_bound_registered": 39501,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "PJD": 1
+      },
+      "critical_real_points": 22,
+      "integer_test_points": 127,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          },
+          "example_N": 39501
+        },
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "RNI": 1
+          },
+          "example_N": 52589
+        }
+      ],
+      "invariant_to_topN_over_full_interval": false,
+      "first_counterexamples": [
+        {
+          "N": 39501,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 39502,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 39503,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 39764,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 40026,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 40027,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 40028,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 40029,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 40030,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 44880,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        }
+      ]
+    },
+    {
+      "idCirconscription": "522",
+      "region": "Casablanca - Settat",
+      "circonscription": "Hay-Hassani",
+      "seats": 3,
+      "lower_bound_registered": 27361,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 15,
+      "integer_test_points": 85,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 27361
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "526",
+      "region": "Casablanca - Settat",
+      "circonscription": "Moulay-Rachid",
+      "seats": 3,
+      "lower_bound_registered": 36799,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "critical_real_points": 16,
+      "integer_test_points": 91,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "example_N": 36799
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "524",
+      "region": "Casablanca - Settat",
+      "circonscription": "Sidi-Bernoussi",
+      "seats": 3,
+      "lower_bound_registered": 38879,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 38879
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "590",
+      "region": "Casablanca - Settat",
+      "circonscription": "El-Jadida",
+      "seats": 6,
+      "lower_bound_registered": 201708,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "USFP": 1,
+        "PPS": 1,
+        "MP": 1
+      },
+      "critical_real_points": 34,
+      "integer_test_points": 199,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "USFP": 1
+          },
+          "example_N": 201708
+        },
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 211231
+        }
+      ],
+      "invariant_to_topN_over_full_interval": false,
+      "first_counterexamples": [
+        {
+          "N": 201708,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 201709,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 201710,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 201972,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 202234,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 202235,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 202236,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 202237,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 202238,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 202500,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        }
+      ]
+    },
+    {
+      "idCirconscription": "529",
+      "region": "Casablanca - Settat",
+      "circonscription": "Médiouna",
+      "seats": 2,
+      "lower_bound_registered": 42781,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1
+          },
+          "example_N": 42781
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "527",
+      "region": "Casablanca - Settat",
+      "circonscription": "Mohammadia",
+      "seats": 3,
+      "lower_bound_registered": 66086,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 17,
+      "integer_test_points": 97,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 66086
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "528",
+      "region": "Casablanca - Settat",
+      "circonscription": "Nouaceur",
+      "seats": 3,
+      "lower_bound_registered": 56459,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "critical_real_points": 16,
+      "integer_test_points": 91,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 56459
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "593",
+      "region": "Casablanca - Settat",
+      "circonscription": "Settat",
+      "seats": 6,
+      "lower_bound_registered": 178797,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "UC": 1,
+        "PAM": 1,
+        "USFP": 1,
+        "MP": 1
+      },
+      "critical_real_points": 44,
+      "integer_test_points": 259,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1,
+            "USFP": 1
+          },
+          "example_N": 178797
+        },
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1,
+            "USFP": 1
+          },
+          "example_N": 182191
+        }
+      ],
+      "invariant_to_topN_over_full_interval": false,
+      "first_counterexamples": [
+        {
+          "N": 178797,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 178798,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 178799,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 180493,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 182188,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 182189,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 182190,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1,
+            "USFP": 1
+          }
+        }
+      ]
+    },
+    {
+      "idCirconscription": "591",
+      "region": "Casablanca - Settat",
+      "circonscription": "Sidi Bennour",
+      "seats": 4,
+      "lower_bound_registered": 143380,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "USFP": 1,
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 143380
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "581",
+      "region": "Dakhla - Oued Ed-Dahab",
+      "circonscription": "Aousserd",
+      "seats": 2,
+      "lower_bound_registered": 7893,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "critical_real_points": 11,
+      "integer_test_points": 52,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 7893
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "580",
+      "region": "Dakhla - Oued Ed-Dahab",
+      "circonscription": "Oued-Ed-Dahab",
+      "seats": 2,
+      "lower_bound_registered": 26951,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 26951
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "578",
+      "region": "Drâa - Tafilalet",
+      "circonscription": "Errachidia",
+      "seats": 5,
+      "lower_bound_registered": 113879,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "MDS": 1,
+        "USFP": 1
+      },
+      "critical_real_points": 10,
+      "integer_test_points": 55,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MDS": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 113879
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "579",
+      "region": "Drâa - Tafilalet",
+      "circonscription": "Midelt",
+      "seats": 3,
+      "lower_bound_registered": 86502,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "MP": 1
+      },
+      "critical_real_points": 7,
+      "integer_test_points": 37,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 86502
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "536",
+      "region": "Drâa - Tafilalet",
+      "circonscription": "Ouarzazate",
+      "seats": 3,
+      "lower_bound_registered": 84452,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 14,
+      "integer_test_points": 79,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "RNI": 1
+          },
+          "example_N": 84452
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "538",
+      "region": "Drâa - Tafilalet",
+      "circonscription": "Tinghir",
+      "seats": 3,
+      "lower_bound_registered": 100562,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "PPS": 1
+      },
+      "critical_real_points": 7,
+      "integer_test_points": 37,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "example_N": 100562
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "537",
+      "region": "Drâa - Tafilalet",
+      "circonscription": "Zagora",
+      "seats": 3,
+      "lower_bound_registered": 94625,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "USFP": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 94625
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "553",
+      "region": "Fès - Meknès",
+      "circonscription": "Boulemane",
+      "seats": 3,
+      "lower_bound_registered": 71897,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "MP": 1,
+        "PPS": 1
+      },
+      "critical_real_points": 11,
+      "integer_test_points": 61,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "example_N": 71897
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "575",
+      "region": "Fès - Meknès",
+      "circonscription": "El-Hajeb",
+      "seats": 2,
+      "lower_bound_registered": 78828,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 78828
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "549",
+      "region": "Fès - Meknès",
+      "circonscription": "Fès-Chamalia",
+      "seats": 4,
+      "lower_bound_registered": 47660,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "FFD": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "FFD": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 47660
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "550",
+      "region": "Fès - Meknès",
+      "circonscription": "Fès-Janoubia",
+      "seats": 4,
+      "lower_bound_registered": 55868,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "critical_real_points": 13,
+      "integer_test_points": 73,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 55868
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "576",
+      "region": "Fès - Meknès",
+      "circonscription": "Ifrane",
+      "seats": 2,
+      "lower_bound_registered": 51544,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "MP": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "RNI": 1
+          },
+          "example_N": 51544
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "574",
+      "region": "Fès - Meknès",
+      "circonscription": "Meknès",
+      "seats": 6,
+      "lower_bound_registered": 130369,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PI": 1,
+        "RNI": 1,
+        "MP": 1,
+        "UC": 1,
+        "PAM": 1,
+        "PJD": 1
+      },
+      "critical_real_points": 47,
+      "integer_test_points": 277,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 2,
+            "RNI": 1,
+            "UC": 1
+          },
+          "example_N": 130369
+        },
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "example_N": 131797
+        }
+      ],
+      "invariant_to_topN_over_full_interval": false,
+      "first_counterexamples": [
+        {
+          "N": 130369,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 2,
+            "RNI": 1,
+            "UC": 1
+          }
+        },
+        {
+          "N": 130370,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 2,
+            "RNI": 1,
+            "UC": 1
+          }
+        },
+        {
+          "N": 130371,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 2,
+            "RNI": 1,
+            "UC": 1
+          }
+        },
+        {
+          "N": 130866,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 2,
+            "RNI": 1,
+            "UC": 1
+          }
+        },
+        {
+          "N": 131362,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 2,
+            "RNI": 1,
+            "UC": 1
+          }
+        },
+        {
+          "N": 131363,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 2,
+            "RNI": 1,
+            "UC": 1
+          }
+        },
+        {
+          "N": 131364,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 2,
+            "RNI": 1,
+            "UC": 1
+          }
+        },
+        {
+          "N": 131365,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 2,
+            "RNI": 1,
+            "UC": 1
+          }
+        },
+        {
+          "N": 131366,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 2,
+            "RNI": 1,
+            "UC": 1
+          }
+        },
+        {
+          "N": 131490,
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 2,
+            "RNI": 1,
+            "UC": 1
+          }
+        }
+      ]
+    },
+    {
+      "idCirconscription": "551",
+      "region": "Fès - Meknès",
+      "circonscription": "Moulay-Yacoub",
+      "seats": 2,
+      "lower_bound_registered": 55931,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "example_N": 55931
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "552",
+      "region": "Fès - Meknès",
+      "circonscription": "Sefrou",
+      "seats": 3,
+      "lower_bound_registered": 89500,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 89500
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "544",
+      "region": "Fès - Meknès",
+      "circonscription": "Karia - Rhafsai",
+      "seats": 3,
+      "lower_bound_registered": 100806,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 100806
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "543",
+      "region": "Fès - Meknès",
+      "circonscription": "Taounate - Tissa",
+      "seats": 3,
+      "lower_bound_registered": 99666,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "PPS": 1
+      },
+      "critical_real_points": 11,
+      "integer_test_points": 61,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "example_N": 99666
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "541",
+      "region": "Fès - Meknès",
+      "circonscription": "Taza",
+      "seats": 5,
+      "lower_bound_registered": 141507,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "RNI": 1,
+        "MP": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "example_N": 141507
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "556",
+      "region": "Guelmim - Oued-Noun",
+      "circonscription": "Assa-Zag",
+      "seats": 2,
+      "lower_bound_registered": 16405,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "USFP": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "USFP": 1
+          },
+          "example_N": 16405
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "554",
+      "region": "Guelmim - Oued-Noun",
+      "circonscription": "Guelmim",
+      "seats": 2,
+      "lower_bound_registered": 65409,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "example_N": 65409
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "539",
+      "region": "Guelmim - Oued-Noun",
+      "circonscription": "Sidi Ifni",
+      "seats": 2,
+      "lower_bound_registered": 59144,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "example_N": 59144
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "558",
+      "region": "Guelmim - Oued-Noun",
+      "circonscription": "Tan-Tan",
+      "seats": 2,
+      "lower_bound_registered": 25873,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "example_N": 25873
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "564",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "circonscription": "Boujdour",
+      "seats": 2,
+      "lower_bound_registered": 19339,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 19339
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "557",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "circonscription": "Es-Smara",
+      "seats": 2,
+      "lower_bound_registered": 19188,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1
+          },
+          "example_N": 19188
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "563",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "circonscription": "Laâyoune",
+      "seats": 3,
+      "lower_bound_registered": 87806,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PI": 1,
+        "PAM": 1,
+        "RNI": 1
+      },
+      "critical_real_points": 25,
+      "integer_test_points": 145,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 2
+          },
+          "example_N": 87806
+        },
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 118051
+        }
+      ],
+      "invariant_to_topN_over_full_interval": false,
+      "first_counterexamples": [
+        {
+          "N": 87806,
+          "allocation": {
+            "PAM": 1,
+            "PI": 2
+          }
+        },
+        {
+          "N": 87807,
+          "allocation": {
+            "PAM": 1,
+            "PI": 2
+          }
+        },
+        {
+          "N": 87808,
+          "allocation": {
+            "PAM": 1,
+            "PI": 2
+          }
+        },
+        {
+          "N": 88712,
+          "allocation": {
+            "PAM": 1,
+            "PI": 2
+          }
+        },
+        {
+          "N": 89617,
+          "allocation": {
+            "PAM": 1,
+            "PI": 2
+          }
+        },
+        {
+          "N": 89618,
+          "allocation": {
+            "PAM": 1,
+            "PI": 2
+          }
+        },
+        {
+          "N": 89619,
+          "allocation": {
+            "PAM": 1,
+            "PI": 2
+          }
+        },
+        {
+          "N": 89620,
+          "allocation": {
+            "PAM": 1,
+            "PI": 2
+          }
+        },
+        {
+          "N": 89621,
+          "allocation": {
+            "PAM": 1,
+            "PI": 2
+          }
+        },
+        {
+          "N": 103834,
+          "allocation": {
+            "PAM": 1,
+            "PI": 2
+          }
+        }
+      ]
+    },
+    {
+      "idCirconscription": "565",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "circonscription": "Tarfaya",
+      "seats": 2,
+      "lower_bound_registered": 9422,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 9422
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "570",
+      "region": "Marrakech - Safi",
+      "circonscription": "Al-Haouz",
+      "seats": 4,
+      "lower_bound_registered": 188707,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "UC": 1
+      },
+      "critical_real_points": 8,
+      "integer_test_points": 43,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "example_N": 188707
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "569",
+      "region": "Marrakech - Safi",
+      "circonscription": "Chichaoua",
+      "seats": 4,
+      "lower_bound_registered": 137775,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "MP": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "critical_real_points": 10,
+      "integer_test_points": 55,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 2,
+            "RNI": 1
+          },
+          "example_N": 137775
+        },
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 145253
+        }
+      ],
+      "invariant_to_topN_over_full_interval": false,
+      "first_counterexamples": [
+        {
+          "N": 137775,
+          "allocation": {
+            "MP": 1,
+            "PAM": 2,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 137776,
+          "allocation": {
+            "MP": 1,
+            "PAM": 2,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 137777,
+          "allocation": {
+            "MP": 1,
+            "PAM": 2,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 141513,
+          "allocation": {
+            "MP": 1,
+            "PAM": 2,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 145250,
+          "allocation": {
+            "MP": 1,
+            "PAM": 2,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 145251,
+          "allocation": {
+            "MP": 1,
+            "PAM": 2,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 145252,
+          "allocation": {
+            "MP": 1,
+            "PAM": 2,
+            "RNI": 1
+          }
+        }
+      ]
+    },
+    {
+      "idCirconscription": "572",
+      "region": "Marrakech - Safi",
+      "circonscription": "El-Kelâa-des-Sraghna",
+      "seats": 4,
+      "lower_bound_registered": 153019,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "USFP": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 153019
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "573",
+      "region": "Marrakech - Safi",
+      "circonscription": "Essaouira",
+      "seats": 4,
+      "lower_bound_registered": 142099,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "USFP": 1,
+        "RNI": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 142099
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "567",
+      "region": "Marrakech - Safi",
+      "circonscription": "Guéliz - Annakhil",
+      "seats": 3,
+      "lower_bound_registered": 81451,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "critical_real_points": 8,
+      "integer_test_points": 43,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 81451
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "566",
+      "region": "Marrakech - Safi",
+      "circonscription": "Médina - Sidi-Youssef-Ben-Ali",
+      "seats": 3,
+      "lower_bound_registered": 51227,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 51227
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "568",
+      "region": "Marrakech - Safi",
+      "circonscription": "Ménara",
+      "seats": 3,
+      "lower_bound_registered": 76461,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 76461
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "571",
+      "region": "Marrakech - Safi",
+      "circonscription": "Rehamna",
+      "seats": 3,
+      "lower_bound_registered": 89157,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "critical_real_points": 10,
+      "integer_test_points": 55,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 89157
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "589",
+      "region": "Marrakech - Safi",
+      "circonscription": "Safi",
+      "seats": 6,
+      "lower_bound_registered": 157796,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "PI": 1,
+        "MP": 1,
+        "RNI": 1,
+        "MDS": 1,
+        "UC": 1
+      },
+      "critical_real_points": 20,
+      "integer_test_points": 115,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MDS": 1,
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "example_N": 157796
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "592",
+      "region": "Marrakech - Safi",
+      "circonscription": "Youssoufia",
+      "seats": 2,
+      "lower_bound_registered": 70203,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1
+          },
+          "example_N": 70203
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "584",
+      "region": "Oriental",
+      "circonscription": "Berkane",
+      "seats": 3,
+      "lower_bound_registered": 71093,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 4,
+      "integer_test_points": 19,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 71093
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "588",
+      "region": "Oriental",
+      "circonscription": "Driouch",
+      "seats": 3,
+      "lower_bound_registered": 76245,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 76245
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "586",
+      "region": "Oriental",
+      "circonscription": "Figuig",
+      "seats": 3,
+      "lower_bound_registered": 51184,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 51184
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "542",
+      "region": "Oriental",
+      "circonscription": "Guercif",
+      "seats": 2,
+      "lower_bound_registered": 57936,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1
+          },
+          "example_N": 57936
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "583",
+      "region": "Oriental",
+      "circonscription": "Jerada",
+      "seats": 2,
+      "lower_bound_registered": 39239,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "example_N": 39239
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "587",
+      "region": "Oriental",
+      "circonscription": "Nador",
+      "seats": 4,
+      "lower_bound_registered": 116468,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1,
+        "PI": 1
+      },
+      "critical_real_points": 17,
+      "integer_test_points": 97,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 116468
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "582",
+      "region": "Oriental",
+      "circonscription": "Oujda - Angad",
+      "seats": 4,
+      "lower_bound_registered": 61207,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1,
+        "USFP": 1
+      },
+      "critical_real_points": 39,
+      "integer_test_points": 229,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 61207
+        },
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 74641
+        }
+      ],
+      "invariant_to_topN_over_full_interval": false,
+      "first_counterexamples": [
+        {
+          "N": 61207,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 61208,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 61209,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 63321,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 65434,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 65435,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 65436,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 65437,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 65438,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 1
+          }
+        },
+        {
+          "N": 66332,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 1
+          }
+        }
+      ]
+    },
+    {
+      "idCirconscription": "585",
+      "region": "Oriental",
+      "circonscription": "Taourirt",
+      "seats": 2,
+      "lower_bound_registered": 57943,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "example_N": 57943
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "560",
+      "region": "Rabat - Salé - Kénitra",
+      "circonscription": "El-Gharb",
+      "seats": 3,
+      "lower_bound_registered": 104155,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "UC": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 12,
+      "integer_test_points": 67,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "example_N": 104155
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "559",
+      "region": "Rabat - Salé - Kénitra",
+      "circonscription": "Kénitra",
+      "seats": 4,
+      "lower_bound_registered": 134291,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "UC": 1,
+        "PI": 1,
+        "PJD": 1
+      },
+      "critical_real_points": 22,
+      "integer_test_points": 127,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1
+          },
+          "example_N": 134291
+        },
+        {
+          "allocation": {
+            "PI": 1,
+            "PJD": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "example_N": 156329
+        }
+      ],
+      "invariant_to_topN_over_full_interval": false,
+      "first_counterexamples": [
+        {
+          "N": 134291,
+          "allocation": {
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1
+          }
+        },
+        {
+          "N": 134292,
+          "allocation": {
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1
+          }
+        },
+        {
+          "N": 134293,
+          "allocation": {
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1
+          }
+        },
+        {
+          "N": 145309,
+          "allocation": {
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1
+          }
+        },
+        {
+          "N": 156326,
+          "allocation": {
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1
+          }
+        },
+        {
+          "N": 156327,
+          "allocation": {
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1
+          }
+        },
+        {
+          "N": 156328,
+          "allocation": {
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1
+          }
+        }
+      ]
+    },
+    {
+      "idCirconscription": "517",
+      "region": "Rabat - Salé - Kénitra",
+      "circonscription": "Khémisset - Oulmès",
+      "seats": 3,
+      "lower_bound_registered": 77990,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "RNI": 1
+          },
+          "example_N": 77990
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "518",
+      "region": "Rabat - Salé - Kénitra",
+      "circonscription": "Tifelt - Rommani",
+      "seats": 3,
+      "lower_bound_registered": 93756,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "MDS": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MDS": 1,
+            "PAM": 1,
+            "RNI": 1
+          },
+          "example_N": 93756
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "513",
+      "region": "Rabat - Salé - Kénitra",
+      "circonscription": "Rabat - Challah",
+      "seats": 3,
+      "lower_bound_registered": 40285,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 40285
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "512",
+      "region": "Rabat - Salé - Kénitra",
+      "circonscription": "Rabat - El Mouhit",
+      "seats": 4,
+      "lower_bound_registered": 47753,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1,
+        "MP": 1
+      },
+      "critical_real_points": 17,
+      "integer_test_points": 95,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 47753
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "515",
+      "region": "Rabat - Salé - Kénitra",
+      "circonscription": "Salé - Al-Jadida",
+      "seats": 3,
+      "lower_bound_registered": 56828,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 56828
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "514",
+      "region": "Rabat - Salé - Kénitra",
+      "circonscription": "Salé - Médina",
+      "seats": 4,
+      "lower_bound_registered": 51024,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "PPS": 1,
+        "MP": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "example_N": 51024
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "561",
+      "region": "Rabat - Salé - Kénitra",
+      "circonscription": "Sidi-Kacem",
+      "seats": 5,
+      "lower_bound_registered": 160295,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "USFP": 1
+      },
+      "critical_real_points": 12,
+      "integer_test_points": 67,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 160295
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "562",
+      "region": "Rabat - Salé - Kénitra",
+      "circonscription": "Sidi Slimane",
+      "seats": 3,
+      "lower_bound_registered": 86999,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "UC": 1,
+        "USFP": 1,
+        "RNI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "RNI": 1,
+            "UC": 1,
+            "USFP": 1
+          },
+          "example_N": 86999
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "516",
+      "region": "Rabat - Salé - Kénitra",
+      "circonscription": "Skhirate - Témara",
+      "seats": 4,
+      "lower_bound_registered": 98027,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "UC": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "example_N": 98027
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "530",
+      "region": "Souss - Massa",
+      "circonscription": "Agadir - Ida-ou-Tanane",
+      "seats": 4,
+      "lower_bound_registered": 98344,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "critical_real_points": 34,
+      "integer_test_points": 199,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          },
+          "example_N": 98344
+        },
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "example_N": 174905
+        }
+      ],
+      "invariant_to_topN_over_full_interval": false,
+      "first_counterexamples": [
+        {
+          "N": 98344,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 98345,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 98346,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 99047,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 99748,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 99749,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 99750,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 99751,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 99752,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 99790,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2
+          }
+        }
+      ]
+    },
+    {
+      "idCirconscription": "532",
+      "region": "Souss - Massa",
+      "circonscription": "Chtouka - Aït-Baha",
+      "seats": 3,
+      "lower_bound_registered": 102060,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 10,
+      "integer_test_points": 55,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 102060
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "531",
+      "region": "Souss - Massa",
+      "circonscription": "Inézgane - Aït-Melloul",
+      "seats": 3,
+      "lower_bound_registered": 71861,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 71861
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "533",
+      "region": "Souss - Massa",
+      "circonscription": "Taroudannt - Al-Janoubia",
+      "seats": 4,
+      "lower_bound_registered": 150269,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "PJD": 1
+      },
+      "critical_real_points": 22,
+      "integer_test_points": 123,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "RNI": 1
+          },
+          "example_N": 150269
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "534",
+      "region": "Souss - Massa",
+      "circonscription": "Taroudannt - Chamalia",
+      "seats": 3,
+      "lower_bound_registered": 128595,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 8,
+      "integer_test_points": 43,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 128595
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "555",
+      "region": "Souss - Massa",
+      "circonscription": "Tata",
+      "seats": 2,
+      "lower_bound_registered": 50400,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "example_N": 50400
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "535",
+      "region": "Souss - Massa",
+      "circonscription": "Tiznit",
+      "seats": 2,
+      "lower_bound_registered": 65575,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "critical_real_points": 13,
+      "integer_test_points": 73,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 65575
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "540",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "circonscription": "Al-Hoceïma",
+      "seats": 4,
+      "lower_bound_registered": 104536,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PI": 1,
+        "RNI": 1,
+        "PAM": 1,
+        "MP": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 104536
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "602",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "circonscription": "Chefchaouen",
+      "seats": 4,
+      "lower_bound_registered": 121193,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "USFP": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "critical_real_points": 10,
+      "integer_test_points": 55,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "example_N": 121193
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "598",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "circonscription": "Fahs - Anjra",
+      "seats": 2,
+      "lower_bound_registered": 29110,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "critical_real_points": 5,
+      "integer_test_points": 25,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 29110
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "601",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "circonscription": "Larache",
+      "seats": 4,
+      "lower_bound_registered": 109765,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PI": 1,
+        "UC": 1,
+        "PAM": 1
+      },
+      "critical_real_points": 14,
+      "integer_test_points": 79,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "example_N": 109765
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "600",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "circonscription": "M'Diq - Fnideq",
+      "seats": 2,
+      "lower_bound_registered": 33314,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "PAM": 1,
+        "USFP": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "USFP": 1
+          },
+          "example_N": 33314
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "603",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "circonscription": "Ouezzane",
+      "seats": 3,
+      "lower_bound_registered": 96473,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "example_N": 96473
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "597",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "circonscription": "Tanger - Assilah",
+      "seats": 5,
+      "lower_bound_registered": 116144,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "UC": 1,
+        "PI": 1,
+        "PAM": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "critical_real_points": 2,
+      "integer_test_points": 7,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1,
+            "USFP": 1
+          },
+          "example_N": 116144
+        }
+      ],
+      "invariant_to_topN_over_full_interval": true,
+      "first_counterexamples": []
+    },
+    {
+      "idCirconscription": "599",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "circonscription": "Tétouan",
+      "seats": 5,
+      "lower_bound_registered": 86087,
+      "upper_bound_registered": 18000000,
+      "target_topN_one_each": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1,
+        "USFP": 1,
+        "UC": 1
+      },
+      "critical_real_points": 28,
+      "integer_test_points": 163,
+      "distinct_allocations": [
+        {
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 2
+          },
+          "example_N": 86087
+        },
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          },
+          "example_N": 101411
+        },
+        {
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1,
+            "USFP": 1
+          },
+          "example_N": 108061
+        }
+      ],
+      "invariant_to_topN_over_full_interval": false,
+      "first_counterexamples": [
+        {
+          "N": 86087,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 86088,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 86089,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 93748,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 101408,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 101409,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 101410,
+          "allocation": {
+            "PAM": 2,
+            "PI": 1,
+            "RNI": 2
+          }
+        },
+        {
+          "N": 101411,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 101412,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        },
+        {
+          "N": 101807,
+          "allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 2,
+            "USFP": 1
+          }
+        }
+      ]
+    }
+  ]
+}
