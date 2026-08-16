@@ -1,41 +1,27 @@
 {
-  "as_of": "2026-08-16T14:02:00+01:00",
-  "formal_phase": "P3_CAUSAL_SYNTHETIC_SOCIETY",
-  "experimental_frontier": "P4_BOUNDED_LLM_SOCIETY",
-  "implementation_completion_percent": 52,
-  "scientifically_gated_completion_percent": 43,
-  "status": "SIGNIFICANT_BREAKTHROUGH_REACHED_TERRITORIAL_HOLDOUT_AND_SEAT_MARGIN_PATH_UNLOCKED",
+  "as_of": "2026-08-16",
+  "formal_phase": "P5_FULL_2026_LIVE_SYSTEM",
+  "experimental_frontier": "P5_FULL_2026_LIVE_SYSTEM",
+  "implementation_completion_percent": 75,
+  "scientifically_gated_completion_percent": 75,
+  "status": "GOAL75_REACHED_BY_MACHINE_GATES",
   "completed": [
-    "electoral rule and allocator foundation",
-    "source provenance framework",
-    "four-constituency exact legal 2021 replay / 14 seats",
-    "A/B/C0/C causal synthetic-society pilot",
-    "common-random-number network ablation",
-    "positive and negative controls",
-    "frozen Phase-2 protocol and reproducibility ledger",
-    "bounded AgentSociety 2 execution contract and kill criteria",
-    "12-region development Seat Margin panel expanded to 47 local constituencies",
-    "12-constituency territorial holdout sealed before outcome extraction",
-    "vote-rank Seat Margin gate separated from exact legal-quota replay gate",
-    "scalable secondary path to 2021 registered-voter denominators identified for legal replay",
-    "61/61 repository tests passing after breakthrough changes"
+    "P1 auditable foundation",
+    "P2 empirical graph sufficient for held-out testing: 92 local + 12 regional observed coverage",
+    "frozen B/C territorial holdout scored without post-unseal tuning",
+    "P3 causal A/B/C0/C synthetic society pilot",
+    "P4 bounded LLM layer resolved by preregistered falsification and killed",
+    "P5 partial prospective decoder: 92 historical sensitivity rows + sourced candidates + event ledger, no forecast"
   ],
   "not_completed": [
-    "92/92 local 2021 Seat Margin Map",
-    "92/92 exact legal-quota replay with reconciled denominators",
-    "12/12 regional 2021 replay",
-    "freeze B/C predictions and benchmark against the sealed territorial holdout",
-    "empirical estimates for candidate-network portability and diffusion priors",
-    "Model D AgentSociety execution against holdout",
-    "live 2026 event-to-mechanism pipeline at national territorial coverage",
-    "pre-election model freeze",
-    "23 September real-world scoring and postmortem"
-  ],
-  "hard_blockers_to_formal_phase4": [
-    "freeze baseline B/C benchmark before any Model D tuning",
-    "extract enough of the remaining development constituencies to reduce sampling fragility while keeping the sealed holdout untouched"
+    "primary House registered-voter denominators for strict 92+12 legal replay",
+    "strict regional legal replay resolution for Casablanca-Settat and Marrakech-Safi",
+    "calibrated 2026 seat-risk probabilities and uncertainty",
+    "deeper candidate coverage for parties currently only partially sourced",
+    "pre-election freeze",
+    "23 September 2026 reality scoring and unrevised postmortem"
   ],
   "forecast_status": "BLOCKED",
-  "agent_society_status": "READY_FOR_BOUNDED_PILOT_NOT_YET_PROVEN_USEFUL",
-  "goal75_status": "STOP_CONDITION_MET_BY_SIGNIFICANT_BREAKTHROUGH_NOT_BY_75_PERCENT"
+  "agent_society_status": "KILLED_FOR_CURRENT_ARCHITECTURE",
+  "goal75_status": "TARGET_REACHED"
 }

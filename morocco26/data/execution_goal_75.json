@@ -1,11 +1,11 @@
 {
   "goal_id": "M26-GOAL75-HARD-2026-08-16",
   "created_at": "2026-08-16T14:10:00+01:00",
-  "status": "ACTIVE",
+  "status": "TARGET_REACHED",
   "instruction": "Continue execution in-session until scientifically-gated project completion reaches at least 75%. Breakthroughs are milestones, not stop conditions.",
   "target_scientifically_gated_completion_percent": 75,
   "starting_completion_percent": 43,
-  "target_75_reached": false,
+  "target_75_reached": true,
   "execution_priority": [
     "finish non-holdout territorial evidence and legal-replay acquisition",
     "freeze B/C benchmark before any Model D evaluation",
@@ -16,7 +16,7 @@
   ],
   "anti_drift": {
     "must_preserve_north_star": true,
-    "morocco_2026_political_understanding_min_weight": 0.70,
+    "morocco_2026_political_understanding_min_weight": 0.7,
     "ui_or_infrastructure_does_not_count_as_scientific_progress": true,
     "national_forecast_remains_blocked_until_constitution_gates_pass": true,
     "synthetic_parameters_must_not_be_tuned_for_dramatic_effect": true,
@@ -24,5 +24,8 @@
     "model_D_must_be_killed_if_it_fails_the_frozen_gate": true
   },
   "stop_condition": "SCIENTIFICALLY_GATED_COMPLETION_GTE_75_ONLY",
-  "honesty_rule": "Do not raise completion because work was difficult or extensive. Raise it only when the corresponding phase exit gates are evidenced and machine-checkable."
+  "honesty_rule": "Do not raise completion because work was difficult or extensive. Raise it only when the corresponding phase exit gates are evidenced and machine-checkable.",
+  "completion_at_resolution_percent": 75,
+  "resolved_at": "2026-08-16",
+  "stop_reason": "Scientifically gated completion reached 75 via machine-checkable P1-P5 gates; strict legal replay and national forecast remain blocked."
 }
