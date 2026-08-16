@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "report_id": "M26-GOAL100-FMINUS1-POSTFLIGHT-V1",
+  "created_at": "2026-08-16T23:38:20+01:00",
+  "status": "FAIL_MISSING_EVIDENCE",
+  "missing_evidence": [
+    "morocco26/data/goal100/n_scale_invariance_certificate.json",
+    "morocco26/data/goal100/uncertainty_parameters_v1.json",
+    "morocco26/data/goal100/snapshots/F-1/forecast.json",
+    "morocco26/data/goal100/snapshots/F-1/manifest.json",
+    "morocco26/data/goal100/fminus1_registration_certificate.json"
+  ],
+  "validations": [
+    {
+      "command": "python morocco26/scripts/validate_anti_drift.py",
+      "returncode": 0,
+      "stdout": "ANTI_DRIFT_PASS\nnorth_star=Build an empirically anchored artificial electoral society that improves real-time understanding of Morocco 2026, then test whether agent dynamics add out-of-sample value beyond structural baselines.\nformal_phase=P5_FULL_2026_LIVE_SYSTEM\nimplementation_completion=75%\nscientifically_gated_completion=75%\nforecast_status=BLOCKED\n",
+      "stderr": ""
+    },
+    {
+      "command": "python morocco26/scripts/validate_goal100_tracking_dynamic.py",
+      "returncode": null,
+      "stdout": "SKIPPED_DUE_MISSING_EVIDENCE",
+      "stderr": ""
+    }
+  ],
+  "details": {},
+  "rule": "This report is emitted even after a failed build; PASS is never inferred from workflow silence.",
+  "journal_sha256_after_append": "356aa54f081029e434e7e84dcde028e862a2e3ab17c4c69dee4c87db59ff0b01"
+}

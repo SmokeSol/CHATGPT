@@ -98,3 +98,14 @@ Chaque entrée doit contenir, dans cet ordre :
 **Décision :** ce résultat est une acquisition de preuve, pas encore un certificat. P0-1 reste PARTIAL jusqu’au diff ligne par ligne et au legal-watch sans différence inexpliquée.
 
 **Prochaine action :** construire le parser/crosswalk officiel à partir du document effectivement découvert ; en cas de source non extractible, produire un contrôle manuel borné et hashé plutôt qu’un faux parsing.
+
+
+### 2026-08-16 — Entrée A015 — Postflight F−1
+
+**Statut :** `FAIL_MISSING_EVIDENCE`.
+
+**Preuves manquantes :** `["morocco26/data/goal100/n_scale_invariance_certificate.json", "morocco26/data/goal100/uncertainty_parameters_v1.json", "morocco26/data/goal100/snapshots/F-1/forecast.json", "morocco26/data/goal100/snapshots/F-1/manifest.json", "morocco26/data/goal100/fminus1_registration_certificate.json"]`.
+
+**Détails machine :** `{}`.
+
+**Décision :** un statut autre que PASS interdit la fusion et l’utilisation de F−1. Le rapport complet est `data/goal100/fminus1_postflight.json`.
