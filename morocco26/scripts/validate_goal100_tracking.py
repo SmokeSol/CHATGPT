@@ -48,7 +48,6 @@ def main():
     require(current["goal75_checkpoint"]["status"] == "PRESERVED_IMMUTABLE", "Goal75 checkpoint not marked immutable")
     repo_path(current["goal75_checkpoint"]["reference"])
 
-    # P0 statuses must agree with the most recent resolution certificate.
     expected = {
         "P0-1": "PARTIAL",
         "P0-2": "CLOSED",
@@ -69,14 +68,15 @@ def main():
     require(p0v3["current_p0_status"]["P0-5_Bstar"] == "CORE_SELECTED_PERSISTENCE_FIRST_2026_UNTOUCHED", "P0-5 resolution drift")
 
     # Legal breakthrough must remain exactly what was certified.
+    require(legal["gate"] == "PASS", "legal regression gate is not PASS")
     require(legal["local"]["n"] == 92, "legal regression local n != 92")
     require(legal["local"]["allocator_equivalent"] == 92, "legal local allocator equivalence lost")
     require(legal["local"]["unresolved_statutory_ties"] == 0, "legal local unresolved ties present")
     require(legal["regional"]["n"] == 12, "legal regression regional n != 12")
-    require(legal["regional"]["allocator_equivalent"] == 12, "legal regional allocator equivalence lost")
+    require(legal["regional"]["allocator_equivalent_to_goal75_math"] == 12, "legal regional allocator equivalence lost")
     require(legal["regional"]["unresolved_statutory_ties"] == 0, "legal regional unresolved ties present")
     require(legal["regional"]["observed_independent_matches"] == 10, "regional provenance-anomaly count drifted")
-    require(set(legal["regional"]["known_data_anomalies"]) == {"Casablanca - Settat", "Marrakech - Safi"}, "known regional anomalies changed")
+    require(set(legal["regional"]["expected_known_data_anomalies"]) == {"Casablanca - Settat", "Marrakech - Safi"}, "known regional anomalies changed")
 
     # Modern historical panel continuity is a hard structural invariant.
     cont = history["continuity"]
@@ -115,7 +115,7 @@ def main():
         require(forecasts["status"] == "NO_FORECAST_REGISTERED_YET", "empty snapshot registry has inconsistent status")
         require(current["goal100_objective"]["forecast_status"] == "NOT_YET_ISSUED", "current state falsely says forecast issued")
 
-    # CLOSED unlock gates must have their artifacts now; OPEN gates must not be represented as complete in current state.
+    # CLOSED unlock gates must already have their evidence.
     unlock = {g["id"]: g for g in gates["forecast_unlock"]}
     for g in unlock.values():
         if g["status"] == "CLOSED":
