@@ -1,0 +1,36 @@
+name: morocco26-goal100-tracking
+
+on:
+  push:
+    paths:
+      - 'morocco26/STATUS.md'
+      - 'morocco26/data/goal100/**'
+      - 'morocco26/reports/GOAL100_TRACKER.md'
+      - 'morocco26/scripts/validate_goal100_tracking.py'
+      - 'morocco26/scripts/validate_anti_drift.py'
+      - '.github/workflows/morocco26-goal100-tracking.yml'
+  pull_request:
+    paths:
+      - 'morocco26/STATUS.md'
+      - 'morocco26/data/goal100/**'
+      - 'morocco26/reports/GOAL100_TRACKER.md'
+      - 'morocco26/scripts/validate_goal100_tracking.py'
+      - 'morocco26/scripts/validate_anti_drift.py'
+      - '.github/workflows/morocco26-goal100-tracking.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  tracking-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preserve Goal75 anti-drift checkpoint
+        run: python morocco26/scripts/validate_anti_drift.py
+      - name: Validate Goal100 machine tracking
+        run: python morocco26/scripts/validate_goal100_tracking.py

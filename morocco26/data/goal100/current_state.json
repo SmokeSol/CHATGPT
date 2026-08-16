@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "state_id": "M26-GOAL100-CURRENT-2026-08-16",
+  "as_of": "2026-08-16T21:30:00+01:00",
+  "north_star": "Construire un forecast territorial probabiliste, entièrement gelé et falsifiable, puis déterminer expérimentalement si une intelligence agentique de collecte et de raisonnement résiduel apporte de l'information prédictive supplémentaire au-delà d'une baseline structurelle optimale.",
+  "tracking_policy": {
+    "progress_measure": "machine gates only; no subjective percentage inflation",
+    "frozen_artifacts_are_immutable": true,
+    "new_evidence_requires_new_version_or_snapshot": true,
+    "forecast_snapshots_are_never_overwritten": true,
+    "F0_is_preliminary_not_final": true,
+    "snapshots_before_F0_allowed": true
+  },
+  "program_phase": "P6_PROBABILISTIC_FORECAST_ENGINE",
+  "goal75_checkpoint": {
+    "scientifically_gated_completion_percent": 75,
+    "status": "PRESERVED_IMMUTABLE",
+    "reference": "morocco26/data/goal75/scientific_completion_75.json"
+  },
+  "goal100_objective": {
+    "next_forecast": "F-1",
+    "next_forecast_class": "STRUCTURAL_PROBABILISTIC_FORECAST",
+    "forecast_status": "NOT_YET_ISSUED",
+    "first_calibrated_snapshot_status": "BLOCKED_BY_EXPLICIT_GATES",
+    "agentic_experiment_status": "LOCKED_UNTIL_B2_AND_FIRST_NON_AGENTIC_PROBABILISTIC_SNAPSHOT_ARE_FROZEN"
+  },
+  "p0_summary": {
+    "closed": [
+      "P0-2_LEGAL_ALLOCATOR",
+      "P0-4_HISTORICAL_PANEL",
+      "P0-5_BSTAR_SELECTION"
+    ],
+    "substantially_resolved_with_residual_gate": [
+      "P0-1_2026_GEOMETRY"
+    ],
+    "active": [
+      "P0-3_REGISTERED_VOTER_N",
+      "P0-6_UNCERTAINTY_AND_CORRELATION"
+    ],
+    "authoritative_resolution": "morocco26/data/goal100/p0_resolution_v3.json"
+  },
+  "verified_breakthroughs": [
+    {
+      "id": "BT-LEGAL-104",
+      "claim": "Goal100 fail-closed 2026 legal allocator is equivalent on all 92 local and all 12 regional historical mathematical test vectors; zero unresolved statutory ties in the test set.",
+      "evidence": "morocco26/data/goal100/legal_regression_104.json"
+    },
+    {
+      "id": "BT-HISTORY-92",
+      "claim": "All 92 local constituencies have common IDs, normalized names and seat magnitudes across 2011, 2016 and 2021.",
+      "evidence": "morocco26/data/goal100/historical_panel_diagnostic.json"
+    },
+    {
+      "id": "BT-BSTAR-PERSISTENCE",
+      "claim": "Frozen temporal hindcast selects persistence-first for both vote composition and turnout over the preregistered alternative family.",
+      "evidence": "morocco26/data/goal100/bstar_hindcast_v1.json"
+    }
+  ],
+  "Bstar": {
+    "vote_core": "V0_PERSIST",
+    "turnout_core": "T0_PERSIST",
+    "selection_fit_transition": "2011_to_2016",
+    "selection_validation_transition": "2016_to_2021",
+    "post_selection_2026_policy": "family may be refit/calibrated on available pre-2026 history; after refit 2021 is not described as an untouched holdout",
+    "2026_status": "UNTOUCHED_DECISIVE_TEMPORAL_TEST"
+  },
+  "registered_voter_N": {
+    "national_2026": 15801162,
+    "national_constraint_exact": true,
+    "local_92_state": "LATENT_POSTERIOR_FIT_PENDING",
+    "prior_centre": "2011 local registered-voter shares rescaled to exact 2026 national N",
+    "variance_anchor": "2007_to_2011 local electorate-share drift diagnostic",
+    "evidence": "morocco26/data/goal100/local_N_drift_diagnostic.json",
+    "required_next_test": "fit constrained 92-local posterior and quantify seat outcome sensitivity attributable solely to N uncertainty"
+  },
+  "uncertainty_model": {
+    "architecture": "national + regional + local hierarchical innovations; separate turnout logit state; no free 92x92 covariance",
+    "status": "ARCHITECTURE_RESOLVED_PARAMETERS_NOT_YET_CERTIFIED",
+    "required_next_tests": [
+      "post-selection fit of innovation scales and shrunk covariance",
+      "posterior predictive interval coverage and calibration diagnostics",
+      "explicit variance floor from retrospective error",
+      "minimum 50000 coherent election simulations"
+    ]
+  },
+  "remaining_hard_gates_before_F_minus_1": [
+    "GEO-2026-AUTHORITATIVE-DIFF",
+    "N92-POSTERIOR-FIT",
+    "UNCERTAINTY-CALIBRATION",
+    "MC-50000-COHERENT",
+    "SNAPSHOT-IMMUTABILITY-MANIFEST"
+  ],
+  "next_execution_order": [
+    "complete authoritative 2026 geometry row diff and legal watch",
+    "fit constrained local-N posterior and run N-only seat-sensitivity audit",
+    "fit post-selection hierarchical uncertainty/correlation model",
+    "run retrospective posterior-predictive diagnostics",
+    "run >=50000 coherent 395-seat simulations",
+    "freeze and register F-1",
+    "build/freeze B2 structured evidence layer",
+    "only then preregister and execute E_collect / E_reason / E_full"
+  ],
+  "anti_drift": {
+    "agentic_layer_may_not_unlock_forecast": true,
+    "narrative_quality_has_zero_scientific_credit": true,
+    "known_regional_data_anomalies": [
+      "Casablanca-Settat",
+      "Marrakech-Safi"
+    ],
+    "known_anomalies_must_not_be_posthoc_relabelled_or_bridged": true
+  }
+}

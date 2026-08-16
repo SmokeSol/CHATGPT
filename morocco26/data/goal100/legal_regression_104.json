@@ -1,0 +1,2368 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "M26-GOAL100-LEGAL-REGRESSION-104-V1",
+  "local": {
+    "n": 92,
+    "allocator_equivalent": 92,
+    "unresolved_statutory_ties": 0,
+    "all_equivalent": true,
+    "rows": [
+      {
+        "constituency_id": "rabat-ocean",
+        "name": "Rabat-Océan",
+        "N": 47753,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "rabat-chellah",
+        "name": "Rabat-Chellah",
+        "N": 40285,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "sale-medina",
+        "name": "Salé-Médina",
+        "N": 51024,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "sale-el-jadida",
+        "name": "Salé-El Jadida",
+        "N": 56828,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "skhirate-temara",
+        "name": "Skhirate-Témara",
+        "N": 98027,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "khemisset-oulmes",
+        "name": "Khémisset-Oulmès",
+        "N": 77990,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "tiflet-rommani",
+        "name": "Tiflet-Rommani",
+        "N": 93756,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MDS": 1,
+          "PAM": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "MDS": 1,
+          "PAM": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "kenitra",
+        "name": "Kénitra",
+        "N": 306600,
+        "N_source": "goal75_quarantined_secondary_N",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PI": 1,
+          "PJD": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "goal100_allocation": {
+          "PI": 1,
+          "PJD": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "el-gharb",
+        "name": "El Gharb",
+        "N": 104155,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "sidi-slimane",
+        "name": "Sidi Slimane",
+        "N": 86999,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "sidi-kacem",
+        "name": "Sidi Kacem",
+        "N": 160295,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "laayoune",
+        "name": "Laâyoune",
+        "N": 146051,
+        "N_source": "goal75_quarantined_secondary_N",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "boujdour",
+        "name": "Boujdour",
+        "N": 19339,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "tarfaya",
+        "name": "Tarfaya",
+        "N": 9422,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "es-semara",
+        "name": "Es-Semara",
+        "N": 19188,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "oued-eddahab",
+        "name": "Oued Eddahab",
+        "N": 26951,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "aousserd",
+        "name": "Aousserd",
+        "N": 7893,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "errachidia",
+        "name": "Errachidia",
+        "N": 113879,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MDS": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "MDS": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "tinghir",
+        "name": "Tinghir",
+        "N": 100562,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "zagora",
+        "name": "Zagora",
+        "N": 94625,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "ouarzazate",
+        "name": "Ouarzazate",
+        "N": 84452,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "midelt",
+        "name": "Midelt",
+        "N": 86502,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "casablanca-anfa",
+        "name": "Casablanca-Anfa",
+        "N": 212453,
+        "N_source": "goal75_quarantined_secondary_N",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "ben-m-sick",
+        "name": "Ben M'sick",
+        "N": 25936,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "sidi-bernoussi",
+        "name": "Sidi Bernoussi",
+        "N": 38879,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "al-fida-mers-sultan",
+        "name": "Al Fida-Mers Sultan",
+        "N": 26851,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "ain-sebaa-hay-mohammadi",
+        "name": "Aïn Sebaâ-Hay Mohammadi",
+        "N": 43078,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "moulay-rachid",
+        "name": "Moulay Rachid",
+        "N": 36799,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "hay-hassani",
+        "name": "Hay Hassani",
+        "N": 27361,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "ain-chock",
+        "name": "Aïn Chock",
+        "N": 30900,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "mohammedia",
+        "name": "Mohammédia",
+        "N": 66086,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "nouaceur",
+        "name": "Nouaceur",
+        "N": 56459,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "mediouna",
+        "name": "Médiouna",
+        "N": 42781,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "benslimane",
+        "name": "Benslimane",
+        "N": 77859,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "el-jadida",
+        "name": "El Jadida",
+        "N": 397251,
+        "N_source": "goal75_quarantined_secondary_N",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "berrechid",
+        "name": "Berrechid",
+        "N": 131820,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "settat",
+        "name": "Settat",
+        "N": 338695,
+        "N_source": "goal75_quarantined_secondary_N",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "sidi-bennour",
+        "name": "Sidi Bennour",
+        "N": 143380,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "agadir-ida-outanane",
+        "name": "Agadir Ida-Outanane",
+        "N": 316821,
+        "N_source": "goal75_quarantined_secondary_N",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "inezgane-ait-melloul",
+        "name": "Inezgane-Aït Melloul",
+        "N": 71861,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "chtouka-ait-baha",
+        "name": "Chtouka-Aït Baha",
+        "N": 102060,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "taroudant-sud",
+        "name": "Taroudant-Sud",
+        "N": 150269,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "taroudant-nord",
+        "name": "Taroudant-Nord",
+        "N": 128595,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "tiznit",
+        "name": "Tiznit",
+        "N": 65575,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "tata",
+        "name": "Tata",
+        "N": 50400,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "guelmim",
+        "name": "Guelmim",
+        "N": 65409,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "tan-tan",
+        "name": "Tan-Tan",
+        "N": 25873,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "sidi-ifni",
+        "name": "Sidi Ifni",
+        "N": 59144,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "assa-zag",
+        "name": "Assa-Zag",
+        "N": 16405,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "medina-sidi-youssef",
+        "name": "Medina-Sidi Youssef",
+        "N": 51227,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "gueliz-nakhil",
+        "name": "Guéliz-Nakhil",
+        "N": 81451,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "menara",
+        "name": "Menara",
+        "N": 76461,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "chichaoua",
+        "name": "Chichaoua",
+        "N": 209596,
+        "N_source": "goal75_quarantined_secondary_N",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "safi",
+        "name": "Safi",
+        "N": 157796,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MDS": 1,
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "goal100_allocation": {
+          "MDS": 1,
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "al-haouz",
+        "name": "Al Haouz",
+        "N": 188707,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "el-kelaa-des-sraghna",
+        "name": "El Kelâa des Sraghna",
+        "N": 153019,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "essaouira",
+        "name": "Essaouira",
+        "N": 142099,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "rehamna",
+        "name": "Rehamna",
+        "N": 89157,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "youssoufia",
+        "name": "Youssoufia",
+        "N": 70203,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "tanger-assilah",
+        "name": "Tanger-Assilah",
+        "N": 116144,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "m-diq-fnideq",
+        "name": "M'diq-Fnideq",
+        "N": 33314,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "fahs-anjra",
+        "name": "Fahs-Anjra",
+        "N": 29110,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "tetouan",
+        "name": "Tétouan",
+        "N": 283841,
+        "N_source": "goal75_quarantined_secondary_N",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "ouezzane",
+        "name": "Ouezzane",
+        "N": 96473,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "larache",
+        "name": "Larache",
+        "N": 109765,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "chefchaouen",
+        "name": "Chefchaouen",
+        "N": 121193,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "al-hoceima",
+        "name": "Al Hoceïma",
+        "N": 104536,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "oujda-angad",
+        "name": "Oujda-Angad",
+        "N": 305487,
+        "N_source": "goal75_quarantined_secondary_N",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "nador",
+        "name": "Nador",
+        "N": 116468,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "driouch",
+        "name": "Driouch",
+        "N": 76245,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "jerada",
+        "name": "Jerada",
+        "N": 39239,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "berkane",
+        "name": "Berkane",
+        "N": 71093,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "taourirt",
+        "name": "Taourirt",
+        "N": 57943,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "guercif",
+        "name": "Guercif",
+        "N": 57936,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "figuig",
+        "name": "Figuig",
+        "N": 51184,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "fes-sud",
+        "name": "Fès-Sud",
+        "N": 55868,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "fes-nord",
+        "name": "Fès-Nord",
+        "N": 47660,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "FFD": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "FFD": 1,
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "ifrane",
+        "name": "Ifrane",
+        "N": 51544,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "moulay-yaacoub",
+        "name": "Moulay Yaâcoub",
+        "N": 55931,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "sefrou",
+        "name": "Séfrou",
+        "N": 89500,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "boulemane",
+        "name": "Boulemane",
+        "N": 71897,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "el-hajeb",
+        "name": "El Hajeb",
+        "N": 78828,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "taza",
+        "name": "Taza",
+        "N": 141507,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "taounate-tissa",
+        "name": "Taounate-Tissa",
+        "N": 99666,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "karia-ghafsay",
+        "name": "Karia-Ghafsay",
+        "N": 100806,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "meknes",
+        "name": "Meknès",
+        "N": 423066,
+        "N_source": "goal75_quarantined_secondary_N",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "RNI": 1,
+          "UC": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "beni-mellal",
+        "name": "Béni-Mellal",
+        "N": 318608,
+        "N_source": "goal75_quarantined_secondary_N",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "bzou-ouaouizeght",
+        "name": "Bzou-Ouaouizeght",
+        "N": 90603,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "azilal-demnate",
+        "name": "Azilal-Demnate",
+        "N": 81583,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "fquih-ben-salah",
+        "name": "Fquih Ben Salah",
+        "N": 126772,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "khouribga",
+        "name": "Khouribga",
+        "N": 131980,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      },
+      {
+        "constituency_id": "khenifra",
+        "name": "Khénifra",
+        "N": 109276,
+        "N_source": "denominator_invariant_proof_lower_bound",
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PI": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_elected_match": true,
+        "tie_events": []
+      }
+    ]
+  },
+  "regional": {
+    "n": 12,
+    "allocator_equivalent_to_goal75_math": 12,
+    "unresolved_statutory_ties": 0,
+    "observed_independent_matches": 10,
+    "expected_known_data_anomalies": [
+      "Casablanca - Settat",
+      "Marrakech - Safi"
+    ],
+    "rows": [
+      {
+        "region": "Beni-Mellal - Khénifra",
+        "N": 1214886,
+        "seats": 7,
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_independent": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "observed_independent_match": true,
+        "known_goal75_observed_match": true,
+        "tie_events": []
+      },
+      {
+        "region": "Casablanca - Settat",
+        "N": 3860397,
+        "seats": 12,
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "AFG": 1,
+          "FFD": 1,
+          "MDS": 1,
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "PSU": 1,
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "AFG": 1,
+          "FFD": 1,
+          "MDS": 1,
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "PSU": 1,
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_independent": {
+          "CNI": 1,
+          "FFD": 1,
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "PSU": 1,
+          "RNI": 2,
+          "UC": 1,
+          "USFP": 1
+        },
+        "observed_independent_match": false,
+        "known_goal75_observed_match": false,
+        "tie_events": []
+      },
+      {
+        "region": "Dakhla - Oued Ed-Dahab",
+        "N": 64971,
+        "seats": 3,
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "goal100_allocation": {
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "allocator_equivalent": true,
+        "observed_independent": {
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1
+        },
+        "observed_independent_match": true,
+        "known_goal75_observed_match": true,
+        "tie_events": []
+      },
+      {
+        "region": "Drâa - Tafilalet",
+        "N": 771218,
+        "seats": 6,
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_independent": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "observed_independent_match": true,
+        "known_goal75_observed_match": true,
+        "tie_events": []
+      },
+      {
+        "region": "Fès - Meknès",
+        "N": 1784436,
+        "seats": 10,
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "FFD": 1,
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 2,
+          "UC": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "FFD": 1,
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 2,
+          "UC": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_independent": {
+          "FFD": 1,
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 2,
+          "UC": 1,
+          "USFP": 1
+        },
+        "observed_independent_match": true,
+        "known_goal75_observed_match": true,
+        "tie_events": []
+      },
+      {
+        "region": "Guelmim - Oued-Noun",
+        "N": 262631,
+        "seats": 5,
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_independent": {
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "observed_independent_match": true,
+        "known_goal75_observed_match": true,
+        "tie_events": []
+      },
+      {
+        "region": "Laâyoune - Sakia-El-Hamra",
+        "N": 197289,
+        "seats": 5,
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 2,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 2,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_independent": {
+          "PAM": 1,
+          "PI": 2,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "observed_independent_match": true,
+        "known_goal75_observed_match": true,
+        "tie_events": []
+      },
+      {
+        "region": "Marrakech - Safi",
+        "N": 1957367,
+        "seats": 10,
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 2,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 2,
+          "UC": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 2,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 2,
+          "UC": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_independent": {
+          "MDS": 1,
+          "MP": 1,
+          "PAM": 2,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "observed_independent_match": false,
+        "known_goal75_observed_match": false,
+        "tie_events": []
+      },
+      {
+        "region": "Oriental",
+        "N": 1083663,
+        "seats": 7,
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_independent": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "USFP": 1
+        },
+        "observed_independent_match": true,
+        "known_goal75_observed_match": true,
+        "tie_events": []
+      },
+      {
+        "region": "Rabat - Salé - Kénitra",
+        "N": 1843468,
+        "seats": 10,
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MDS": 1,
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 2,
+          "UC": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "MDS": 1,
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 2,
+          "UC": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_independent": {
+          "MDS": 1,
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 2,
+          "UC": 1,
+          "USFP": 1
+        },
+        "observed_independent_match": true,
+        "known_goal75_observed_match": true,
+        "tie_events": []
+      },
+      {
+        "region": "Souss - Massa",
+        "N": 1298114,
+        "seats": 7,
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 2,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 2,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_independent": {
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 2,
+          "USFP": 1
+        },
+        "observed_independent_match": true,
+        "known_goal75_observed_match": true,
+        "tie_events": []
+      },
+      {
+        "region": "Tanger - Tétouan - Al Hoceima",
+        "N": 1328425,
+        "seats": 8,
+        "status": "OK",
+        "expected_goal75_legal_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "goal100_allocation": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "allocator_equivalent": true,
+        "observed_independent": {
+          "MP": 1,
+          "PAM": 1,
+          "PI": 1,
+          "PJD": 1,
+          "PPS": 1,
+          "RNI": 1,
+          "UC": 1,
+          "USFP": 1
+        },
+        "observed_independent_match": true,
+        "known_goal75_observed_match": true,
+        "tie_events": []
+      }
+    ]
+  },
+  "gate": "PASS",
+  "interpretation": "PASS requires mathematical equivalence on all 104 vectors and preserves the two known regional vote/observed-affiliation data anomalies rather than laundering them into allocator failures."
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": "2.0",
+  "audit_id": "M26-GOAL100-P0-RESOLUTION-V2",
+  "as_of": "2026-08-16",
+  "supersedes_for_status_only": "p0_resolution_v1.json",
+  "immutability_note": "V1 is preserved. V2 records executed evidence obtained after V1; it does not rewrite pre-result protocol choices.",
+  "north_star": "Build an immutable sequence of falsifiable probabilistic territorial forecasts for Morocco 2026, then test prospectively whether agentic collection and bounded residual reasoning add predictive information beyond the strongest non-agentic baseline.",
+  "forecast_snapshots": {
+    "F0_is_final": false,
+    "pre_F0_allowed": true,
+    "policy": "F-1/F0/F1/... are distinct immutable ex-ante artifacts; later snapshots may use later information but never overwrite earlier forecasts."
+  },
+  "p0_status": [
+    {
+      "id": "P0-1",
+      "status": "RESOLVED_WITH_LEGAL_WATCH",
+      "answer": "Current architecture is 395 seats = 305 local + 90 regional. The repo has 92 unique local constituencies summing to 305 and 12 regional magnitudes summing to 90. The canonical TAFRA history proves 92/92 local IDs, normalized names and seat magnitudes are identical in 2011, 2016 and 2021.",
+      "executed_evidence": [
+        "goal100 P0 certify workflow: geometry invariants PASS",
+        "historical_panel_diagnostic.json: 92/92 continuity across 2011/2016/2021"
+      ],
+      "remaining_gate": "Row-by-row authoritative decree diff and legal-source watch before every snapshot.",
+      "blocks_probability_engine": false
+    },
+    {
+      "id": "P0-2",
+      "status": "CORE_LEGAL_RULE_RESOLVED_AND_TESTED",
+      "answer": "2026 local allocation is registered-voter quotient followed by largest remainders under current Article 84; regional allocation uses the Article-84 method. Goal100 uses a new integer-exact fail-closed allocator and does not invent statutory tie-break outcomes.",
+      "executed_evidence": [
+        "legal_allocator_2026.py added",
+        "goal100_legal_allocator_selftest.py PASS in GitHub Actions",
+        "Goal75 non-statutory deterministic tie fallback identified and excluded from Goal100"
+      ],
+      "remaining_gate": "Run the new allocator over every historically testable local/regional vector and preserve known data-provenance anomalies rather than force them to pass.",
+      "blocks_probability_engine": false
+    },
+    {
+      "id": "P0-3",
+      "status": "NATIONAL_N_EXACT_LOCAL_N_PRIOR_EMPIRICALLY_ANCHORED",
+      "answer": "Official 2026 national registered total is 15,801,162. Local N remains latent where no authoritative 92-row table is available. The 2026 local-N vector is constrained to sum exactly to the national total and is marginalized in Monte Carlo rather than fabricated.",
+      "executed_evidence": {
+        "historical_N_drift": {
+          "exact_normalized_2007_2011_name_matches": 74,
+          "coverage_of_2011": 0.8043478260869565,
+          "same_seat_magnitude_matches": 61,
+          "log_local_share_drift_sd": 0.22305173979137335,
+          "p90_abs_log_share_drift": 0.3450925141719198,
+          "stable_magnitude_p90_abs_log_share_drift": 0.29071209061458597
+        },
+        "prior_centre": "2011 local registered shares scaled and integer-rounded to exactly 15,801,162; explicitly labelled PRIOR_CENTRE_NOT_OFFICIAL_LOCAL_COUNTS",
+        "goal75_sensitivity": "81/92 observed 2021 local allocations were invariant across the exhaustive denominator interval; only 11 were denominator-sensitive."
+      },
+      "remaining_gate": "Construct the heavy-tailed/shrunk constrained local-N posterior, optionally update its centre with authoritative demographic/roll evidence, and report seat-probability sensitivity to N uncertainty.",
+      "blocks_probability_engine": false,
+      "blocks_calibrated_label_until_sensitivity_reported": true
+    },
+    {
+      "id": "P0-4",
+      "status": "RESOLVED_AND_DATA_INGESTED",
+      "answer": "The certified territorial calibration core is 2011/2016/2021: 92 local constituencies in every year with exactly matching IDs, normalized names and seat magnitudes. 2007 is retained only as potential national-prior support after party-continuity checks. 2002 is quarantined from primary calibration because the source itself documents incompleteness/errors and missing small-party results.",
+      "executed_evidence": [
+        "raw 2011/2016/2021 workbooks downloaded, hashed and canonicalized",
+        "historical panel = 288 canonical rows: 92 + 92 + 104",
+        "vote transition calibration PASS",
+        "turnout transition calibration PASS_WITH_REPORTED_RATES",
+        "older-history probe 2002/2007 PASS"
+      ],
+      "remaining_gate": "None for modern territorial continuity.",
+      "blocks_probability_engine": false
+    },
+    {
+      "id": "P0-5",
+      "status": "CORE_BSTAR_SELECTED_PROSPECTIVELY_2026_UNTOUCHED",
+      "answer": "Within the frozen pre-result core family, persistence wins for both multiparty vote composition and turnout on the 2016->2021 temporal validation after fitting on 2011->2016.",
+      "executed_evidence": {
+        "fit_transition": "2011->2016",
+        "validation_transition": "2016->2021",
+        "territories": 92,
+        "vote_energy_score_lower_is_better": {
+          "V0_PERSIST": 0.36972890027879,
+          "V1_GLOBAL_CLR": 0.41327788232037443,
+          "V2_REGION_SHRUNK_CLR": 0.4266046232428647
+        },
+        "vote_delta_vs_persist_95pct_bootstrap": {
+          "V1_GLOBAL_CLR": [0.03477346863675754, 0.052662693403930455],
+          "V2_REGION_SHRUNK_CLR": [0.04598912152352629, 0.06805441734792049]
+        },
+        "turnout_crps_lower_is_better": {
+          "T0_PERSIST": 0.09489592095601988,
+          "T1_GLOBAL_LOGIT_SHIFT": 0.12019192784714659,
+          "T2_REGION_SHRUNK_LOGIT_SHIFT": 0.12150033881891643
+        },
+        "turnout_delta_vs_persist_95pct_bootstrap": {
+          "T1_GLOBAL_LOGIT_SHIFT": [0.019741386134675663, 0.030428726439712925],
+          "T2_REGION_SHRUNK_LOGIT_SHIFT": [0.01995418461114007, 0.033079852140188215]
+        },
+        "selected": {
+          "vote": "V0_PERSIST",
+          "turnout": "T0_PERSIST"
+        },
+        "anti_drift": "PASS",
+        "2026_outcome_used": false
+      },
+      "interpretation": "B* is persistence-first, not sophistication-first. 2026 evidence may update it only through separately specified non-agentic evidence layers; historical swing extrapolation does not receive automatic predictive credit.",
+      "post_selection_rule": "The selected family may now be refit/calibrated using all 2011-2021 historical data for the 2026 forecast. Doing so consumes 2021 for final parameter estimation, so 2021 may not subsequently be called an untouched holdout. 2026 remains the decisive untouched temporal test.",
+      "remaining_gate": "Freeze final post-selection fit and structured B2 evidence layer before agentic E variants.",
+      "blocks_probability_engine": false
+    },
+    {
+      "id": "P0-6",
+      "status": "ARCHITECTURE_RESOLVED_CALIBRATION_EXECUTION_PENDING",
+      "answer": "Use coherent hierarchical factors rather than 92 independent districts or a free 92x92 covariance: national party innovation + regional innovation + pooled local residual, with turnout modeled separately on logit scale. The selected mean dynamics are persistence-first. Uncertainty is learned from historical innovations/errors with shrinkage and conservative variance floors.",
+      "identifiability": {
+        "free_92x92_covariance": "REJECTED_NOT_IDENTIFIABLE",
+        "hierarchical_low_rank_covariance": "SUPPORTED",
+        "turnout_vote_cross_correlation": "ZERO_BY_DEFAULT_UNLESS_STABLE_HISTORICAL_EVIDENCE"
+      },
+      "post_selection_fit": "After V0/T0 selection, fit the 2026 innovation distribution using all available modern transitions while preserving structural decomposition and variance floors. This is parameter estimation for the untouched 2026 test, not a claim of a second 2021 holdout.",
+      "monte_carlo_order": [
+        "national innovation",
+        "regional innovation",
+        "local residual",
+        "turnout",
+        "constrained local N if still latent",
+        "credited structured non-agentic evidence",
+        "integer vote realization",
+        "exact 2026 local/regional legal allocation",
+        "395-seat aggregation"
+      ],
+      "remaining_gate": "Fit/shrink covariance scales, run posterior predictive diagnostics, then execute >=50,000 coherent election draws.",
+      "blocks_probability_engine": true
+    }
+  ],
+  "p0_summary": {
+    "conceptual_questions_remaining": 0,
+    "resolved_or_empirically_anchored": 5,
+    "architecture_resolved_but_parameter_fit_pending": 1,
+    "remaining_hard_gates_before_first_calibrated_snapshot": [
+      "104-vector legal regression / authoritative geometry diff",
+      "construct and sensitivity-test constrained local-N posterior",
+      "post-selection hierarchical uncertainty fit + posterior predictive diagnostics + >=50,000 coherent draws"
+    ],
+    "agentic_work_authorized": false,
+    "agentic_unlock_condition": "Freeze B2 and the first non-agentic probabilistic snapshot before fitting or crediting E_collect/E_reason/E_full."
+  },
+  "overall_status": "P0_AMBIGUITY_CLEARED; PROBABILISTIC_ENGINE_LAST_CALIBRATION_GATE_ACTIVE"
+}

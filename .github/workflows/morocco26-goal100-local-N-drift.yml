@@ -1,0 +1,31 @@
+name: morocco26-goal100-local-N-drift
+on:
+  push:
+    branches: [morocco26-goal100-p0]
+    paths:
+      - 'morocco26/scripts/goal100_local_N_drift_diagnostic.py'
+      - '.github/workflows/morocco26-goal100-local-N-drift.yml'
+permissions:
+  contents: write
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-goal100-p0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install --quiet numpy pandas openpyxl
+      - name: Measure 2007->2011 local electorate-share drift
+        run: python morocco26/scripts/goal100_local_N_drift_diagnostic.py
+      - name: Preserve anti-drift constitution
+        run: python morocco26/scripts/validate_anti_drift.py
+      - name: Commit diagnostic
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/local_N_drift_diagnostic.json
+          git commit -m 'data(morocco26): quantify Goal100 local-N drift prior' || true
+          git pull --rebase origin morocco26-goal100-p0
+          git push origin HEAD:morocco26-goal100-p0
