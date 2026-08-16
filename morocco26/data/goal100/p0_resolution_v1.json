@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "M26-GOAL100-P0-RESOLUTION-V1",
+  "as_of": "2026-08-16T20:44:00+01:00",
+  "north_star": "Build within one week a frozen, falsifiable probabilistic territorial forecast for Morocco 2026, then experimentally test whether agentic information collection and residual reasoning add predictive information beyond the strongest non-agentic structural baseline.",
+  "snapshot_policy": {
+    "multiple_prospective_snapshots_allowed": true,
+    "earliest_snapshot_name": "F-1",
+    "F0_is_preliminary_not_final": true,
+    "immutable_once_published": true,
+    "required_snapshot_fields": [
+      "snapshot_id",
+      "data_cutoff",
+      "created_at",
+      "git_commit",
+      "model_hash",
+      "source_manifest_hash",
+      "legal_spec_hash",
+      "electorate_N_state",
+      "calibration_state",
+      "random_seed_manifest",
+      "local_92_probability_distributions",
+      "regional_12_probability_distributions",
+      "national_395_seat_distribution"
+    ],
+    "precalibration_rule": "An early snapshot may be frozen and later scored, but must be visibly tagged EXPERIMENTAL_PRECALIBRATION and may not be described as calibrated.",
+    "no_rewrite_rule": "Later data or model improvements create a new snapshot; prior snapshots are never overwritten."
+  },
+  "p0": [
+    {
+      "id": "P0-1",
+      "question": "What is the exact 2026 electoral geography and district magnitude map?",
+      "status": "RESOLVED_WITH_LEGAL_WATCH",
+      "confidence": 0.97,
+      "answer": "Use the 395-seat architecture in the current Organic Law 27.11: 305 local seats and 90 regional seats. The current House election-law page still lists Decree 2.11.603 as the decree creating local constituencies and assigning their seats. The repo geometry contains 92 local constituencies summing to 305 seats. The 12 regional magnitudes are explicit in current Article 1 and sum to 90.",
+      "forecast_blocker": false,
+      "remaining_machine_gate": "Assert exactly 92 unique local IDs, 305 local seats, 12 regions and 90 regional seats; diff the repo map against the authoritative decree/House table; re-run a legal-source watch before every snapshot.",
+      "invalidation_condition": "A later official decree or consolidated legal source changes local boundaries, local magnitudes, regional magnitudes or the 305/90 architecture.",
+      "sources": [
+        "BDJ current consolidated Organic Law 27.11, Article 1, last modification 2026-01-29",
+        "Moroccan House of Representatives election-law page listing Decree 2.11.603",
+        "Moroccan House 2021 official constituency/magnitude table",
+        "morocco26/data/constituencies_goal75.csv"
+      ]
+    },
+    {
+      "id": "P0-2",
+      "question": "What exact legal algorithm converts votes to seats in 2026?",
+      "status": "LEGAL_RULE_RESOLVED_CORE_PATCH_IMPLEMENTED_REGRESSION_PENDING",
+      "confidence": 0.995,
+      "answer": "Current Article 84 uses electoral quotient N_registered / district_seats followed by largest remainders. Candidate seats follow list order. A binding exact remainder tie is resolved by the youngest eligible next candidate, then lottery on equal age. Single-member elections use plurality with the same age/lottery tie-break. A unique list/candidate must obtain at least one fifth of registered voters. Article 85 applies the Article 84 method to regional allocation.",
+      "forecast_blocker": false,
+      "repo_change": {
+        "new_module": "morocco26/src/morocco26/legal_allocator_2026.py",
+        "selftest": "morocco26/scripts/goal100_legal_allocator_selftest.py",
+        "design": "integer-exact and fail-closed on unresolved statutory ties"
+      },
+      "discovered_goal75_defect": "The Goal75 helper allocator broke equal remainders by raw votes and party name. That is not the statutory age/lottery tie-break. Goal75 comparative artifacts remain frozen; Goal100 must use the new allocator.",
+      "remaining_machine_gate": "Replay the clean 2021 local/regional vectors through the new allocator; any binding exact tie requires candidate-age evidence or remains explicitly unresolved.",
+      "invalidation_condition": "A newer official consolidated law changes Article 84/85 before a snapshot cutoff.",
+      "sources": [
+        "BDJ current consolidated Organic Law 27.11, Articles 84-85, last modification 2026-01-29",
+        "morocco26/scripts/goal75_stage1.py"
+      ]
+    },
+    {
+      "id": "P0-3",
+      "question": "Do we know the registered-voter denominator N needed by Article 84?",
+      "status": "NATIONAL_EXACT_LOCAL_LATENT_AND_MARGINALIZED",
+      "confidence": 0.96,
+      "answer": "The official final national roll as of 2026-07-10 is exactly 15,801,162 registered voters. Indexed official sources do not currently expose a complete 92-local denominator table. Therefore local N is a latent constrained input, not a fabricated constant. Regional N is the sum of the local N draws belonging to each region.",
+      "forecast_blocker": false,
+      "forecast_treatment": {
+        "national_constraint": 15801162,
+        "local_vector": "positive integer posterior over 92 local N values constrained to sum exactly to the official national total",
+        "regional_vector": "deterministic aggregation of each sampled local vector",
+        "allocator": "Article-84 allocation is exact conditional on each sampled N vector; forecast probabilities marginalize over N uncertainty",
+        "epistemic_label": "OFFICIAL_NATIONAL_CONSTRAINED_LOCAL_POSTERIOR",
+        "collapse_rule": "If official local N values become available, a later immutable snapshot replaces the latent N posterior with the official vector."
+      },
+      "forbidden": [
+        "Calling secondary/Wikipedia local N values official",
+        "Forcing the old secondary local N vector to match the national total by arbitrary scaling without uncertainty",
+        "Blocking all forecasts merely because local N is not directly published"
+      ],
+      "remaining_machine_gate": "Construct the constrained local-N posterior from the strongest historical local electorate anchors and population/roll change evidence; quantify sensitivity of seat probabilities to N uncertainty.",
+      "sources": [
+        "Official Moroccan electoral-roll statistics, situation closed 2026-07-10",
+        "morocco26/data/goal75/registered_national_audit.json",
+        "TAFRA documentation on missing historical local registered counts"
+      ]
+    },
+    {
+      "id": "P0-4",
+      "question": "Which historical elections can calibrate predictive uncertainty?",
+      "status": "SOURCE_PATH_RESOLVED_CLEAN_INGEST_PENDING",
+      "confidence": 0.97,
+      "answer": "TAFRA explicitly publishes legislative election datasets for 2002, 2007, 2011, 2016 and 2021 under common geographic identifiers. The core local temporal panel should prioritize 2011/2016/2021, because it is closest to the current territorial regime. Historical vote dynamics can calibrate swing/residual uncertainty even where 2016 local N is unavailable. Historical seat rules must not be replayed as if they were the 2026 law.",
+      "forecast_blocker": true,
+      "blocker_scope": "Calibration, not existence of a forecast engine. An early frozen PRECALIBRATION snapshot is allowed, but the first calibrated snapshot requires a clean historical panel.",
+      "critical_data_caveat": "TAFRA documents that the Interior Ministry did not publish 2016 registered-voter counts by legislative constituency. TAFRA used voting-age population or 2011 registered counts as approximations in a 2020 counterfactual. Goal100 must preserve this as uncertainty rather than counterfeit exact 2016 turnout denominators.",
+      "remaining_machine_gate": "Ingest and schema-validate the 2011/2016/2021 TAFRA files, harmonize party labels and territorial IDs, quantify missingness, and construct temporal transitions without using contaminated Goal75 web-table parsing as calibration truth.",
+      "sources": [
+        "TAFRA data catalogue: legislative elections 2002/2007/2011/2016/2021 and common geographic IDs",
+        "TAFRA Le Maroc Vote 2011-2021",
+        "TAFRA 2020 registered-voter limitation note"
+      ]
+    },
+    {
+      "id": "P0-5",
+      "question": "How is the strongest structural baseline B* selected without post-outcome leakage?",
+      "status": "SELECTION_PROTOCOL_RESOLVED_FIT_PENDING",
+      "confidence": 0.95,
+      "answer": "B* is the winner, under a frozen primary proper-scoring rule, among a preregistered small family of non-agentic models. The consumed Goal75 12-territory holdout is retained as a historical sanity check and may not be reused for hyperparameter selection. Model selection uses prequential temporal hindcasts: fit through 2011 -> predict 2016; fit through 2016 -> predict 2021; optionally earlier transitions only if the geographic crosswalk passes. The 2026 election is the first decisive untouched temporal test.",
+      "forecast_blocker": true,
+      "candidate_family": {
+        "B0": "persistence plus national historical swing and separate turnout",
+        "B1": "hierarchical national + regional + local structural state model",
+        "B2": "B1 plus structured non-agentic candidate/network/event covariates whose effects are empirically estimable or shrunk to zero",
+        "Bstack": "optional convex/stacked combination with weights trained only on retrospective temporal predictions"
+      },
+      "optimization_rule": "Optimal means best within this frozen family under frozen retrospective temporal scoring; it does not mean globally optimal over arbitrary models.",
+      "remaining_machine_gate": "Fit every preregistered candidate on the clean panel, generate honest temporal out-of-sample predictions, select/freeze B* once, and publish all losing models and scores.",
+      "sources": [
+        "morocco26/data/goal75/holdout_bc_score_clean.json",
+        "morocco26/data/goal75/bc_freeze.json",
+        "multiparty Bayesian election-forecasting literature"
+      ]
+    },
+    {
+      "id": "P0-6",
+      "question": "How are predictive uncertainty and territorial correlations generated?",
+      "status": "ARCHITECTURE_RESOLVED_PARAMETERS_PENDING",
+      "confidence": 0.95,
+      "answer": "Do not estimate 92 independent forecasts or a free 92x92 covariance matrix. Use a hierarchical compositional state model whose shared national and regional latent shocks induce coherent territorial correlation, with local residuals and strong shrinkage. Model turnout separately on the logit scale. Every Monte Carlo draw samples a coherent national/region/local state, turnout, local-N vector when uncertain, and only empirically credited structured effects, then passes vote counts through the exact 2026 allocator.",
+      "forecast_blocker": true,
+      "share_model": "log-ratio/logistic-normal multiparty state with national party swing + regional party shock + local residual + structured covariates",
+      "turnout_model": "hierarchical logit turnout state with national + regional + local components; cross-correlation with vote shares only if historical evidence identifies it",
+      "covariance_rule": "low-dimensional shared factors plus shrinkage/diagonal local residual; never a freely estimated 92x92 covariance from two modern transitions",
+      "monte_carlo_order": [
+        "sample national party swing",
+        "sample regional shocks",
+        "sample local residuals",
+        "sample turnout",
+        "sample constrained local N when not official",
+        "apply structured non-agentic covariates",
+        "convert latent composition to integer vote counts",
+        "run exact local and regional legal allocator",
+        "aggregate 395-seat outcome"
+      ],
+      "calibration": "Temporal hindcasts calibrate a small set of global/regional/local variance scales and interval coverage; variance floors prevent false certainty.",
+      "remaining_machine_gate": "Fit and calibrate the variance/correlation parameters on the clean historical panel and run posterior predictive calibration checks.",
+      "sources": [
+        "Stoetzer et al., Political Analysis, Bayesian multiparty forecasting",
+        "dynamic hierarchical Bayesian election forecasting literature"
+      ]
+    }
+  ],
+  "blocker_reduction": {
+    "original_p0_questions": 6,
+    "unanswered_conceptual_questions": 0,
+    "remaining_hard_implementation_dependencies": 3,
+    "dependencies": [
+      "A: authoritative geometry diff + new legal-allocator regression suite",
+      "B: clean historical panel ingestion/harmonization + constrained 2026 local-N posterior",
+      "C: temporal backtest/select B* + fit/calibrate hierarchical uncertainty and Monte Carlo"
+    ]
+  },
+  "agentic_experiment_boundary": {
+    "start_only_after_Bstar_freeze": true,
+    "B2": "strongest non-agentic structural + structured evidence baseline",
+    "E_collect": "agent may acquire additional timestamped facts; downstream mapping is deterministic/non-agentic",
+    "E_reason": "agent receives exactly the B2 corpus and may propose bounded residual updates with evidence and uncertainty",
+    "E_full": "agentic acquisition plus residual reasoning",
+    "estimands": {
+      "collection_alpha": "score(E_collect) - score(B2)",
+      "reasoning_alpha": "score(E_reason) - score(B2)",
+      "total_agentic_alpha": "score(E_full) - score(B2)"
+    },
+    "no_credit_rule": "Agentic outputs receive zero predictive credit until the residual/combination protocol is frozen and evaluated prospectively."
+  },
+  "overall_status": "P0_SCIENTIFIC_QUESTIONS_RESOLVED_IMPLEMENTATION_GATES_ACTIVE",
+  "forecast_status": "EARLY_PRECALIBRATION_SNAPSHOT_CAN_BE_BUILT; CALIBRATED_FORECAST_WAITS_FOR_DEPENDENCIES_B_AND_C"
+}
