@@ -37,7 +37,7 @@
       "name": "Historical panel for uncertainty calibration",
       "status": "CLOSED",
       "resolved_claim": "Canonical 2011/2016/2021 local panel contains 92/92 common constituency IDs, names and magnitudes; 2007 is auxiliary support and 2002 remains quarantined.",
-      "evidence": ["morocco26/data/goal100/historical/historical_ingest_manifest.json", "morocco26/data/goal100/historical_panel_diagnostic.json", "morocco26/data/goal100/older_history_probe/older_history_probe.json"],
+      "evidence": ["morocco26/data/goal100/historical/historical_ingest_manifest.json", "morocco26/data/goal100/historical_panel_diagnostic.json", "morocco26/data/goal100/older_history_probe/older_history_schema_probe.json"],
       "closure_criterion": "2011, 2016 and 2021 raw files hashed and canonicalized; 92 common local IDs across all three; missing N remains missing rather than imputed."
     },
     {
