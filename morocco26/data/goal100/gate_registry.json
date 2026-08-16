@@ -1,18 +1,23 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "registry_id": "M26-GOAL100-GATES-V1",
-  "as_of": "2026-08-16T21:30:00+01:00",
+  "as_of": "2026-08-16T22:02:13+01:00",
   "status_vocabulary": ["CLOSED", "PARTIAL", "OPEN", "LOCKED", "FAILED"],
   "rule": "A gate may move to CLOSED only when every required evidence path exists and the closure criterion is machine-verifiable or explicitly documented as a bounded governance decision.",
   "p0": [
     {
       "id": "P0-1",
       "name": "2026 electoral geometry",
-      "status": "PARTIAL",
-      "resolved_claim": "Working geometry is 92 local / 305 seats plus 12 regional / 90 seats, with 92/92 modern historical territorial continuity.",
-      "evidence": ["morocco26/data/constituencies_goal75.csv", "morocco26/data/goal100/historical_panel_diagnostic.json"],
-      "remaining_gate": "Authoritative row-by-row 2026 decree/table diff plus continued legal watch for superseding texts.",
-      "closure_criterion": "Machine artifact certifies all 92 local names/IDs/magnitudes and all 12 regional magnitudes against authoritative current-law source; zero unexplained differences."
+      "status": "CLOSED",
+      "resolved_claim": "The project geometry matches the authoritative Parliament witness on all 92 local rows and 305 seats and the SGG Article-1 table on all 12 regional rows and 90 seats; zero unexplained differences remain.",
+      "evidence": [
+        "morocco26/data/constituencies_goal75.csv",
+        "morocco26/data/goal100/geometry_authoritative_witness_v1.json",
+        "morocco26/data/goal100/geometry_2026_probe.json",
+        "morocco26/data/goal100/geometry_2026_certificate.json"
+      ],
+      "legal_watch": "ACTIVE; a superseding decree creates a new certificate and forecast version without rewriting prior snapshots.",
+      "closure_criterion": "Machine artifact certifies all 92 local names/IDs/magnitudes and all 12 regional magnitudes against authoritative content; zero unexplained differences."
     },
     {
       "id": "P0-2",
@@ -62,7 +67,7 @@
   "forecast_unlock": [
     {
       "id": "GEO-2026-AUTHORITATIVE-DIFF",
-      "status": "OPEN",
+      "status": "CLOSED",
       "depends_on": ["P0-1"],
       "required_artifact": "morocco26/data/goal100/geometry_2026_certificate.json"
     },
