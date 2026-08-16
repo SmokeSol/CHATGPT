@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import json
 import math
-import statistics
 from collections import defaultdict
 from pathlib import Path
 
@@ -261,8 +260,8 @@ def main():
         "leakage_contract": {
             "fit_transition": "2011_to_2016_only",
             "validation_transition": "2016_to_2021",
-            "goal75_holdout_used_for_fit": false,
-            "post_validation_hyperparameter_search": false,
+            "goal75_holdout_used_for_fit": False,
+            "post_validation_hyperparameter_search": False,
             "kappa_frozen_pre_result": KAPPA,
             "party_buckets_frozen_pre_result": list(BUCKETS),
             "monte_carlo_samples": N_SAMPLES,
