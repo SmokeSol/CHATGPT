@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "M26-GOAL100-GEOMETRY-2026-PROBE-V1",
+  "purpose": "authoritative-source acquisition diagnostic before geometry certification",
+  "epistemic_rule": "official-source failure is recorded; it is never bridged by an unlabeled secondary source",
+  "sources": [
+    {
+      "id": "CURRENT_PARLIAMENT_ELECTORAL_MAP_AR",
+      "role": "current official local constituency map",
+      "url": "https://www.chambredesrepresentants.ma/ar/%D8%AE%D8%B1%D9%8A%D8%B7%D8%A9-%D8%A7%D9%84%D8%AA%D9%82%D8%B3%D9%8A%D9%85-%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D9%8A",
+      "status": 403,
+      "final_url": "https://www.chambredesrepresentants.ma/ar/%D8%AE%D8%B1%D9%8A%D8%B7%D8%A9-%D8%A7%D9%84%D8%AA%D9%82%D8%B3%D9%8A%D9%85-%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D9%8A",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 6326,
+      "sha256": "c055d41b439589fbe548d011bc67163d9e17105f8a4e9989c72199e9750e9391",
+      "looks_like_html": true,
+      "table_profile": null
+    },
+    {
+      "id": "PARLIAMENT_2021_NUMERIC_LIST_FR",
+      "role": "official French local/regional names and seat magnitudes",
+      "url": "https://www.chambredesrepresentants.ma/fr/actualites/donnees-chiffrees-autour-du-scrutin-legislatif-du-mercredi-8-septembre-2021-conformement",
+      "status": 403,
+      "final_url": "https://www.chambredesrepresentants.ma/fr/actualites/donnees-chiffrees-autour-du-scrutin-legislatif-du-mercredi-8-septembre-2021-conformement",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 6196,
+      "sha256": "8afbab636ee1deb772dbe8bc9ec631c8cbda21d1e2a14035015c6a9e8dc6d1a7",
+      "looks_like_html": true,
+      "table_profile": null
+    },
+    {
+      "id": "CURRENT_PARLIAMENT_ELECTION_LAWS_AR",
+      "role": "current official election-law index and decree 2.11.603 reference",
+      "url": "https://www.chambredesrepresentants.ma/ar/%D8%A7%D9%84%D9%82%D9%88%D8%A7%D9%86%D9%8A%D9%86-%D8%A7%D9%84%D9%85%D8%AA%D8%B9%D9%84%D9%82%D8%A9-%D8%A8%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA",
+      "status": 403,
+      "final_url": "https://www.chambredesrepresentants.ma/ar/%D8%A7%D9%84%D9%82%D9%88%D8%A7%D9%86%D9%8A%D9%86-%D8%A7%D9%84%D9%85%D8%AA%D8%B9%D9%84%D9%82%D8%A9-%D8%A8%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 6477,
+      "sha256": "2c374ab0c5d2df352bc6da68252804cb483ad4b6103c7780b34e81d4d863c933",
+      "looks_like_html": true,
+      "table_profile": null
+    }
+  ]
+}
