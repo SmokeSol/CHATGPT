@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0",
+  "overrides":[
+    {
+      "constituency_id":"beni-mellal",
+      "year":2021,
+      "field":"registered",
+      "bad_secondary_value":57452,
+      "corrected_value":318608,
+      "reason":"The constituency page duplicates 2021 party vote rows above an internally inconsistent legacy turnout block (57,452 registered while recognized 2021 party votes sum to 144,731). The Béni-Mellal province/circumscription electorate was reported as 318,608 registered voters for the 8 September 2021 elections, based on Wilaya data.",
+      "bad_source":"https://fr.wikipedia.org/wiki/Circonscription_de_B%C3%A9ni-Mellal",
+      "correction_source":"https://saharanews.org/11011-communales-2021-beni-mellal-le-rni-en-tete-des-elections-des-membres-des-conseils-communaux-avec-155-sieges.html",
+      "cross_check_source":"https://ledesk.ma/live-content/le-rni-le-pam-le-pi-lusfp-le-mp-et-le-pps-remportent-les-6-sieges-de-beni-mellal-resultats-provisoires/",
+      "confidence":"HIGH",
+      "effect":"With 318,608 registered, q=53,101.33 for six seats; no list reaches one full quotient and the six largest remainders are exactly RNI, PAM, PI, USFP, MP, PPS, matching the reported six elected lists."
+    }
+  ]
+}
