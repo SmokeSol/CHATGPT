@@ -1,0 +1,27 @@
+{
+  "holdout_id": "M26-HOLDOUT-2021-V1",
+  "frozen_at": "2026-08-16T13:47:00+01:00",
+  "purpose": "Untouched territorial holdout for scoring Models B/C and, only after those benchmarks are frozen, bounded Model D. These constituencies must not be used for parameter tuning.",
+  "status": "SEALED_BEFORE_RESULT_EXTRACTION",
+  "selection_rule": "Geographically diverse local constituencies whose 2021 detailed result pages had not been opened or queried during the current evidence-building run at freeze time. Rabat-Sale-Kenitra is omitted because its local pages had already been batch-opened.",
+  "constituencies": [
+    {"region":"Laayoune-Sakia El Hamra","name":"Tarfaya"},
+    {"region":"Dakhla-Oued Ed-Dahab","name":"Aousserd"},
+    {"region":"Draa-Tafilalet","name":"Zagora"},
+    {"region":"Casablanca-Settat","name":"Nouaceur"},
+    {"region":"Casablanca-Settat","name":"Sidi Bennour"},
+    {"region":"Souss-Massa","name":"Tata"},
+    {"region":"Guelmim-Oued Noun","name":"Assa-Zag"},
+    {"region":"Marrakech-Safi","name":"Youssoufia"},
+    {"region":"Tanger-Tetouan-Al Hoceima","name":"Fahs-Anjra"},
+    {"region":"Oriental","name":"Figuig"},
+    {"region":"Fes-Meknes","name":"Boulemane"},
+    {"region":"Beni Mellal-Khenifra","name":"Khenifra"}
+  ],
+  "rules": [
+    "Do not use holdout 2021 outcomes to fit synthetic-population, diffusion, portability, turnout or party-choice parameters.",
+    "Freeze B and C predictions/scores before any Model D prompt or model tuning against this holdout.",
+    "After unsealing, retain exact source provenance and the pre-unseal commit hash.",
+    "Any accidental exposure must be recorded and the affected constituency replaced before scoring."
+  ]
+}
