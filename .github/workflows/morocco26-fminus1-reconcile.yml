@@ -1,0 +1,52 @@
+name: morocco26-fminus1-reconcile
+
+on:
+  push:
+    branches: [morocco26-fminus1]
+    paths:
+      - 'morocco26/data/goal100/geometry_2026_certificate.json'
+      - 'morocco26/data/goal100/local_N_posterior.json'
+      - 'morocco26/data/goal100/n_scale_invariance_certificate.json'
+      - 'morocco26/data/goal100/uncertainty_calibration.json'
+      - 'morocco26/data/goal100/uncertainty_parameters_v1.json'
+      - 'morocco26/data/goal100/simulation_certificate.json'
+      - 'morocco26/data/goal100/forecast_registry.json'
+      - 'morocco26/scripts/goal100_reconcile_fminus1_state.py'
+      - '.github/workflows/morocco26-fminus1-reconcile.yml'
+
+concurrency:
+  group: morocco26-fminus1-state-reconciliation
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reconcile state from evidence
+        run: python morocco26/scripts/goal100_reconcile_fminus1_state.py
+      - name: Validate Goal75 and dynamic Goal100 contracts
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking_dynamic.py
+      - name: Commit reconciled state
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/gate_registry.json \
+            morocco26/data/goal100/current_state.json \
+            morocco26/data/goal100/fminus1_state_reconciliation.json
+          git commit -m 'tracking(morocco26): reconcile F-1 gates from evidence' || true
+          git pull --rebase origin morocco26-fminus1
+          git push origin HEAD:morocco26-fminus1
