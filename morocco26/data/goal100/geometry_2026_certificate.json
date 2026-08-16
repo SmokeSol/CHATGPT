@@ -1,0 +1,887 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-GOAL100-GEOMETRY-2026-CERTIFICATE-V1",
+  "as_of": "2026-08-16",
+  "gate": "PASS",
+  "status": "RESOLVED_WITH_ACTIVE_LEGAL_WATCH",
+  "epistemic_boundary": "The project geometry is certified against the current official Parliament map/list witness and the SGG Article-1 regional table. Direct runner retrieval remains WAF-blocked; a superseding decree or official 2026 publication requires a new certificate version.",
+  "source_hashes": {
+    "repo_local_csv_sha256": "88a92d1da98228346bb6420cb27d2ab2024006eeaf937ed1c8a4613164043bd4",
+    "official_local_witness_sha256": "a6a3238aa9351acacbebdb02b5f003088b4cc1ed3e5559e426f8d44c0f22df0f",
+    "official_regional_witness_sha256": "23e9ea8ac3b794340efa1e2c84c005baa2644a043fcd2925146ae0599ceeb9fb",
+    "witness_metadata_sha256": "bb734e55f7fd75b741fdbd2c2c1941e8b941fb7a9de26a5ae295fb55be830bb8",
+    "acquisition_probe_sha256": "e57561127c0ca789de10d19eb95d6b22754e99a4a3d61ac718c7f9208f9a3825"
+  },
+  "local": {
+    "repo_rows": 92,
+    "official_rows": 92,
+    "matched_rows": 92,
+    "repo_seats": 305,
+    "official_seats": 305,
+    "differences": [],
+    "rows": [
+      {
+        "constituency_id": "tanger-assilah",
+        "repo_name": "Tanger-Assilah",
+        "official_name": "Tanger-Assilah",
+        "prefecture_or_province": "Tanger-Assilah",
+        "repo_seats": 5,
+        "official_seats": 5,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "m-diq-fnideq",
+        "repo_name": "M'diq-Fnideq",
+        "official_name": "M'diq-Fnideq",
+        "prefecture_or_province": "M'diq-Fnideq",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "tetouan",
+        "repo_name": "Tétouan",
+        "official_name": "Tétouan",
+        "prefecture_or_province": "Tétouan",
+        "repo_seats": 5,
+        "official_seats": 5,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "fahs-anjra",
+        "repo_name": "Fahs-Anjra",
+        "official_name": "Fahs-Anjra",
+        "prefecture_or_province": "Fahs-Anjra",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "larache",
+        "repo_name": "Larache",
+        "official_name": "Larache",
+        "prefecture_or_province": "Larache",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "al-hoceima",
+        "repo_name": "Al Hoceïma",
+        "official_name": "Al Hoceïma",
+        "prefecture_or_province": "Al Hoceïma",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "chefchaouen",
+        "repo_name": "Chefchaouen",
+        "official_name": "Chefchaouen",
+        "prefecture_or_province": "Chefchaouen",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "ouezzane",
+        "repo_name": "Ouezzane",
+        "official_name": "Ouezzane",
+        "prefecture_or_province": "Ouezzane",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "oujda-angad",
+        "repo_name": "Oujda-Angad",
+        "official_name": "Oujda-Angad",
+        "prefecture_or_province": "Oujda-Angad",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "nador",
+        "repo_name": "Nador",
+        "official_name": "Nador",
+        "prefecture_or_province": "Nador",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "driouch",
+        "repo_name": "Driouch",
+        "official_name": "Driouch",
+        "prefecture_or_province": "Driouch",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "jerada",
+        "repo_name": "Jerada",
+        "official_name": "Jerada",
+        "prefecture_or_province": "Jerada",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "berkane",
+        "repo_name": "Berkane",
+        "official_name": "Berkane",
+        "prefecture_or_province": "Berkane",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "taourirt",
+        "repo_name": "Taourirt",
+        "official_name": "Taourirt",
+        "prefecture_or_province": "Taourirt",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "guercif",
+        "repo_name": "Guercif",
+        "official_name": "Guercif",
+        "prefecture_or_province": "Guercif",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "figuig",
+        "repo_name": "Figuig",
+        "official_name": "Figuig",
+        "prefecture_or_province": "Figuig",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "fes-nord",
+        "repo_name": "Fès-Nord",
+        "official_name": "Fès-Nord",
+        "prefecture_or_province": "Fès",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "fes-sud",
+        "repo_name": "Fès-Sud",
+        "official_name": "Fès-Sud",
+        "prefecture_or_province": "Fès",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "meknes",
+        "repo_name": "Meknès",
+        "official_name": "Meknès",
+        "prefecture_or_province": "Meknès",
+        "repo_seats": 6,
+        "official_seats": 6,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "el-hajeb",
+        "repo_name": "El Hajeb",
+        "official_name": "El Hajeb",
+        "prefecture_or_province": "El Hajeb",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "ifrane",
+        "repo_name": "Ifrane",
+        "official_name": "Ifrane",
+        "prefecture_or_province": "Ifrane",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "moulay-yaacoub",
+        "repo_name": "Moulay Yaâcoub",
+        "official_name": "Moulay Yaâcoub",
+        "prefecture_or_province": "Moulay Yaâcoub",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "sefrou",
+        "repo_name": "Séfrou",
+        "official_name": "Séfrou",
+        "prefecture_or_province": "Séfrou",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "boulemane",
+        "repo_name": "Boulemane",
+        "official_name": "Boulemane",
+        "prefecture_or_province": "Boulemane",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "taounate-tissa",
+        "repo_name": "Taounate-Tissa",
+        "official_name": "Taounate-Tissa",
+        "prefecture_or_province": "Taounate",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "karia-ghafsay",
+        "repo_name": "Karia-Ghafsay",
+        "official_name": "Karia-Ghafsay",
+        "prefecture_or_province": "Taounate",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "taza",
+        "repo_name": "Taza",
+        "official_name": "Taza",
+        "prefecture_or_province": "Taza",
+        "repo_seats": 5,
+        "official_seats": 5,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "rabat-ocean",
+        "repo_name": "Rabat-Océan",
+        "official_name": "Rabat-Océan",
+        "prefecture_or_province": "Rabat",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "rabat-chellah",
+        "repo_name": "Rabat-Chellah",
+        "official_name": "Rabat-Chellah",
+        "prefecture_or_province": "Rabat",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "sale-medina",
+        "repo_name": "Salé-Médina",
+        "official_name": "Salé-Médina",
+        "prefecture_or_province": "Salé",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "sale-el-jadida",
+        "repo_name": "Salé-El Jadida",
+        "official_name": "Salé-El Jadida",
+        "prefecture_or_province": "Salé",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "skhirate-temara",
+        "repo_name": "Skhirate-Témara",
+        "official_name": "Skhirate-Témara",
+        "prefecture_or_province": "Skhirate-Témara",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "kenitra",
+        "repo_name": "Kénitra",
+        "official_name": "Kénitra",
+        "prefecture_or_province": "Kénitra",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "el-gharb",
+        "repo_name": "El Gharb",
+        "official_name": "El Gharb",
+        "prefecture_or_province": "Kénitra",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "khemisset-oulmes",
+        "repo_name": "Khémisset-Oulmès",
+        "official_name": "Khémisset-Oulmès",
+        "prefecture_or_province": "Khémisset",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "tiflet-rommani",
+        "repo_name": "Tiflet-Rommani",
+        "official_name": "Tiflet-Rommani",
+        "prefecture_or_province": "Khémisset",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "sidi-kacem",
+        "repo_name": "Sidi Kacem",
+        "official_name": "Sidi Kacem",
+        "prefecture_or_province": "Sidi Kacem",
+        "repo_seats": 5,
+        "official_seats": 5,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "sidi-slimane",
+        "repo_name": "Sidi Slimane",
+        "official_name": "Sidi Slimane",
+        "prefecture_or_province": "Sidi Slimane",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "beni-mellal",
+        "repo_name": "Béni-Mellal",
+        "official_name": "Béni-Mellal",
+        "prefecture_or_province": "Béni-Mellal",
+        "repo_seats": 6,
+        "official_seats": 6,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "bzou-ouaouizeght",
+        "repo_name": "Bzou-Ouaouizeght",
+        "official_name": "Bzou-Ouaouizeght",
+        "prefecture_or_province": "Azilal",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "azilal-demnate",
+        "repo_name": "Azilal-Demnate",
+        "official_name": "Azilal-Demnate",
+        "prefecture_or_province": "Azilal",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "fquih-ben-salah",
+        "repo_name": "Fquih Ben Salah",
+        "official_name": "Fquih Ben Salah",
+        "prefecture_or_province": "Fquih Ben Salah",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "khenifra",
+        "repo_name": "Khénifra",
+        "official_name": "Khénifra",
+        "prefecture_or_province": "Khénifra",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "khouribga",
+        "repo_name": "Khouribga",
+        "official_name": "Khouribga",
+        "prefecture_or_province": "Khouribga",
+        "repo_seats": 6,
+        "official_seats": 6,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "casablanca-anfa",
+        "repo_name": "Casablanca-Anfa",
+        "official_name": "Casablanca-Anfa",
+        "prefecture_or_province": "Casablanca-Anfa",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "al-fida-mers-sultan",
+        "repo_name": "Al Fida-Mers Sultan",
+        "official_name": "Al Fida-Mers Sultan",
+        "prefecture_or_province": "Al Fida-Mers Sultan",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "ain-sebaa-hay-mohammadi",
+        "repo_name": "Aïn Sebaâ-Hay Mohammadi",
+        "official_name": "Aïn Sebaâ-Hay Mohammadi",
+        "prefecture_or_province": "Aïn Sebaâ-Hay Mohammadi",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "hay-hassani",
+        "repo_name": "Hay Hassani",
+        "official_name": "Hay Hassani",
+        "prefecture_or_province": "Hay Hassani",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "ain-chock",
+        "repo_name": "Aïn Chock",
+        "official_name": "Aïn Chock",
+        "prefecture_or_province": "Aïn Chock",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "sidi-bernoussi",
+        "repo_name": "Sidi Bernoussi",
+        "official_name": "Sidi Bernoussi",
+        "prefecture_or_province": "Sidi Bernoussi",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "ben-m-sick",
+        "repo_name": "Ben M'sick",
+        "official_name": "Ben M'sick",
+        "prefecture_or_province": "Ben M'sick",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "moulay-rachid",
+        "repo_name": "Moulay Rachid",
+        "official_name": "Moulay Rachid",
+        "prefecture_or_province": "Moulay Rachid",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "mohammedia",
+        "repo_name": "Mohammédia",
+        "official_name": "Mohammédia",
+        "prefecture_or_province": "Mohammédia",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "el-jadida",
+        "repo_name": "El Jadida",
+        "official_name": "El Jadida",
+        "prefecture_or_province": "El Jadida",
+        "repo_seats": 6,
+        "official_seats": 6,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "nouaceur",
+        "repo_name": "Nouaceur",
+        "official_name": "Nouaceur",
+        "prefecture_or_province": "Nouaceur",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "mediouna",
+        "repo_name": "Médiouna",
+        "official_name": "Médiouna",
+        "prefecture_or_province": "Médiouna",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "benslimane",
+        "repo_name": "Benslimane",
+        "official_name": "Benslimane",
+        "prefecture_or_province": "Benslimane",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "berrechid",
+        "repo_name": "Berrechid",
+        "official_name": "Berrechid",
+        "prefecture_or_province": "Berrechid",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "settat",
+        "repo_name": "Settat",
+        "official_name": "Settat",
+        "prefecture_or_province": "Settat",
+        "repo_seats": 6,
+        "official_seats": 6,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "sidi-bennour",
+        "repo_name": "Sidi Bennour",
+        "official_name": "Sidi Bennour",
+        "prefecture_or_province": "Sidi Bennour",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "medina-sidi-youssef",
+        "repo_name": "Medina-Sidi Youssef",
+        "official_name": "Medina-Sidi Youssef Ben Ali",
+        "prefecture_or_province": "Marrakech",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "EXPLICIT_ALIAS"
+      },
+      {
+        "constituency_id": "gueliz-nakhil",
+        "repo_name": "Guéliz-Nakhil",
+        "official_name": "Guéliz-Nakhil",
+        "prefecture_or_province": "Marrakech",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "menara",
+        "repo_name": "Menara",
+        "official_name": "Menara",
+        "prefecture_or_province": "Marrakech",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "chichaoua",
+        "repo_name": "Chichaoua",
+        "official_name": "Chichaoua",
+        "prefecture_or_province": "Chichaoua",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "al-haouz",
+        "repo_name": "Al Haouz",
+        "official_name": "Al Haouz",
+        "prefecture_or_province": "Al Haouz",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "el-kelaa-des-sraghna",
+        "repo_name": "El Kelâa des Sraghna",
+        "official_name": "El Kelâa des Sraghna",
+        "prefecture_or_province": "El Kelâa des Sraghna",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "essaouira",
+        "repo_name": "Essaouira",
+        "official_name": "Essaouira",
+        "prefecture_or_province": "Essaouira",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "rehamna",
+        "repo_name": "Rehamna",
+        "official_name": "Rehamna",
+        "prefecture_or_province": "Rehamna",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "safi",
+        "repo_name": "Safi",
+        "official_name": "Safi",
+        "prefecture_or_province": "Safi",
+        "repo_seats": 6,
+        "official_seats": 6,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "youssoufia",
+        "repo_name": "Youssoufia",
+        "official_name": "Youssoufia",
+        "prefecture_or_province": "Youssoufia",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "errachidia",
+        "repo_name": "Errachidia",
+        "official_name": "Errachidia",
+        "prefecture_or_province": "Errachidia",
+        "repo_seats": 5,
+        "official_seats": 5,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "ouarzazate",
+        "repo_name": "Ouarzazate",
+        "official_name": "Ouarzazate",
+        "prefecture_or_province": "Ouarzazate",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "midelt",
+        "repo_name": "Midelt",
+        "official_name": "Midelt",
+        "prefecture_or_province": "Midelt",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "tinghir",
+        "repo_name": "Tinghir",
+        "official_name": "Tinghir",
+        "prefecture_or_province": "Tinghir",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "zagora",
+        "repo_name": "Zagora",
+        "official_name": "Zagora",
+        "prefecture_or_province": "Zagora",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "agadir-ida-outanane",
+        "repo_name": "Agadir Ida-Outanane",
+        "official_name": "Agadir Ida-Outanan",
+        "prefecture_or_province": "Agadir Ida-Outanan",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "EXPLICIT_ALIAS"
+      },
+      {
+        "constituency_id": "inezgane-ait-melloul",
+        "repo_name": "Inezgane-Aït Melloul",
+        "official_name": "Inezgane-Aït Melloul",
+        "prefecture_or_province": "Inezgane-Aït Melloul",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "chtouka-ait-baha",
+        "repo_name": "Chtouka-Aït Baha",
+        "official_name": "Chtouka-Aït Baha",
+        "prefecture_or_province": "Chtouka-Aït Baha",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "taroudant-sud",
+        "repo_name": "Taroudant-Sud",
+        "official_name": "Taroudant-Sud",
+        "prefecture_or_province": "Taroudant",
+        "repo_seats": 4,
+        "official_seats": 4,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "taroudant-nord",
+        "repo_name": "Taroudant-Nord",
+        "official_name": "Taroudant-Nord",
+        "prefecture_or_province": "Taroudant",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "tiznit",
+        "repo_name": "Tiznit",
+        "official_name": "Tiznit",
+        "prefecture_or_province": "Tiznit",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "tata",
+        "repo_name": "Tata",
+        "official_name": "Tata",
+        "prefecture_or_province": "Tata",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "guelmim",
+        "repo_name": "Guelmim",
+        "official_name": "Guelmim",
+        "prefecture_or_province": "Guelmim",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "assa-zag",
+        "repo_name": "Assa-Zag",
+        "official_name": "Assa-Zag",
+        "prefecture_or_province": "Assa-Zag",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "tan-tan",
+        "repo_name": "Tan-Tan",
+        "official_name": "Tan-Tan",
+        "prefecture_or_province": "Tan-Tan",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "sidi-ifni",
+        "repo_name": "Sidi Ifni",
+        "official_name": "Sidi Ifni",
+        "prefecture_or_province": "Sidi Ifni",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "laayoune",
+        "repo_name": "Laâyoune",
+        "official_name": "Laâyoune",
+        "prefecture_or_province": "Laâyoune",
+        "repo_seats": 3,
+        "official_seats": 3,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "boujdour",
+        "repo_name": "Boujdour",
+        "official_name": "Boujdour",
+        "prefecture_or_province": "Boujdour",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "tarfaya",
+        "repo_name": "Tarfaya",
+        "official_name": "Tarfaya",
+        "prefecture_or_province": "Tarfaya",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "es-semara",
+        "repo_name": "Es-Semara",
+        "official_name": "Es-Semara",
+        "prefecture_or_province": "Es-Semara",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "oued-eddahab",
+        "repo_name": "Oued Eddahab",
+        "official_name": "Oued Eddahab",
+        "prefecture_or_province": "Oued Eddahab",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "constituency_id": "aousserd",
+        "repo_name": "Aousserd",
+        "official_name": "Aousserd",
+        "prefecture_or_province": "Aousserd",
+        "repo_seats": 2,
+        "official_seats": 2,
+        "name_match_mode": "NORMALIZED_EXACT"
+      }
+    ]
+  },
+  "regional": {
+    "rows": 12,
+    "seats": 90,
+    "differences": [],
+    "canonical": {
+      "tanger tetouan al hoceima": 8,
+      "oriental": 7,
+      "fes meknes": 10,
+      "rabat sale kenitra": 10,
+      "beni mellal khenifra": 7,
+      "casablanca settat": 12,
+      "marrakech safi": 10,
+      "draa tafilalet": 6,
+      "souss massa": 7,
+      "guelmim oued noun": 5,
+      "laayoune sakia el hamra": 5,
+      "dakhla oued ed dahab": 3
+    }
+  },
+  "house_seats": 395,
+  "direct_official_acquisition": {
+    "status": "WAF_403_RECORDED",
+    "probe_statuses": {
+      "CURRENT_PARLIAMENT_ELECTORAL_MAP_AR": 403,
+      "PARLIAMENT_2021_NUMERIC_LIST_FR": 403,
+      "CURRENT_PARLIAMENT_ELECTION_LAWS_AR": 403
+    },
+    "artifact": "morocco26/data/goal100/geometry_2026_probe.json"
+  },
+  "legal_watch": {
+    "status": "ACTIVE",
+    "rule": "A superseding decree or official 2026 geometry publication creates a new witness and certificate version. No prior forecast is overwritten.",
+    "last_checked": "2026-08-16"
+  }
+}
