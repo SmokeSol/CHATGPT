@@ -1,0 +1,146 @@
+name: morocco26-fminus1-external-audit
+
+on:
+  push:
+    branches: [morocco26-fminus1-diagnose]
+    paths:
+      - '.github/workflows/morocco26-fminus1-external-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+  pull-requests: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-diagnose
+          fetch-depth: 0
+      - name: Collect V2 run, PR and branch evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run list \
+            --repo SmokeSol/CHATGPT \
+            --workflow morocco26-fminus1-end-to-end-v2.yml \
+            --branch morocco26-fminus1-run \
+            --limit 5 \
+            --json databaseId,status,conclusion,headSha,createdAt,updatedAt,displayTitle,url \
+            > /tmp/runs.json
+          python - <<'PY'
+          import json
+          runs=json.load(open('/tmp/runs.json'))
+          if not runs: raise SystemExit('No stable V2 run found')
+          target=runs[0]
+          open('/tmp/run_id','w').write(str(target['databaseId']))
+          json.dump(target,open('/tmp/target.json','w'),indent=2)
+          PY
+          run_id=$(cat /tmp/run_id)
+          gh run view "$run_id" --repo SmokeSol/CHATGPT --json jobs,conclusion,status,url,headSha,createdAt,updatedAt > /tmp/detail.json
+          gh run view "$run_id" --repo SmokeSol/CHATGPT --log-failed > /tmp/failed.log 2>&1 || true
+          gh pr view 8 --repo SmokeSol/CHATGPT --json number,state,isDraft,mergedAt,headRefName,headRefOid,baseRefName,url,mergeStateStatus,statusCheckRollup > /tmp/pr.json
+          set +e
+          gh api 'repos/SmokeSol/CHATGPT/contents/morocco26/data/goal100/fminus1_registration_certificate.json?ref=morocco26-fminus1-run' > /tmp/run_registration.json 2>/tmp/run_registration.err
+          echo $? > /tmp/run_registration.code
+          gh api 'repos/SmokeSol/CHATGPT/contents/morocco26/data/goal100/fminus1_release_gate.json?ref=morocco26-fminus1-run' > /tmp/run_release.json 2>/tmp/run_release.err
+          echo $? > /tmp/run_release.code
+          gh api 'repos/SmokeSol/CHATGPT/contents/morocco26/data/goal100/fminus1_release_gate.json?ref=main' > /tmp/main_release.json 2>/tmp/main_release.err
+          echo $? > /tmp/main_release.code
+          set -e
+
+          python - <<'PY'
+          import base64,hashlib,json
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          def code(name): return int(Path(f'/tmp/{name}.code').read_text().strip())
+          def decoded(name):
+              if code(name)!=0: return None
+              obj=json.loads(Path(f'/tmp/{name}.json').read_text())
+              return json.loads(base64.b64decode(obj['content']).decode())
+
+          target=json.load(open('/tmp/target.json'))
+          detail=json.load(open('/tmp/detail.json'))
+          pr=json.load(open('/tmp/pr.json'))
+          failed=Path('/tmp/failed.log').read_text(errors='replace')
+          registration=decoded('run_registration')
+          release=decoded('run_release')
+          main_release=decoded('main_release')
+
+          if target['conclusion']=='success' and registration and release and release.get('gate')=='PASS':
+              classification='PASS_REGISTERED_RELEASED'
+          elif target['conclusion']=='success' and registration:
+              classification='PASS_REGISTERED_RELEASE_PENDING'
+          elif target['conclusion']=='success':
+              classification='RUN_SUCCESS_EVIDENCE_NOT_VISIBLE'
+          else:
+              classification='RUN_FAILED'
+
+          report={
+              'schema_version':'1.0',
+              'audit_id':'M26-GOAL100-FMINUS1-EXTERNAL-AUDIT-V1',
+              'created_at':datetime.now(ZoneInfo('Africa/Casablanca')).isoformat(timespec='seconds'),
+              'classification':classification,
+              'v2_run':target,
+              'run_detail':detail,
+              'failed_log_sha256':hashlib.sha256(failed.encode()).hexdigest(),
+              'failed_log_tail':failed[-50000:],
+              'pr':pr,
+              'run_branch_registration':registration,
+              'run_branch_release_gate':release,
+              'main_release_gate':main_release,
+              'observations':{
+                  'run_registration_accessible':registration is not None,
+                  'run_release_accessible':release is not None,
+                  'main_release_accessible':main_release is not None,
+                  'pr_merged':pr.get('state')=='MERGED' or bool(pr.get('mergedAt')),
+              },
+              'non_interference':'Audit branch only; no F-1 model, parameter, manifest, registry or run-branch file is changed.'
+          }
+          out=Path('morocco26/data/goal100/fminus1_external_audit.json')
+          out.parent.mkdir(parents=True,exist_ok=True)
+          out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps({
+              'classification':classification,
+              'run_conclusion':target['conclusion'],
+              'pr_state':pr.get('state'),'pr_draft':pr.get('isDraft'),
+              'registration':registration is not None,
+              'release':release is not None,'main_release':main_release is not None
+          },indent=2))
+          PY
+
+      - name: Commit immutable external audit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add morocco26/data/goal100/fminus1_external_audit.json
+          git commit -m 'audit(morocco26): preserve F-1 V2 run and PR status' || true
+          git push origin HEAD:morocco26-fminus1-diagnose
+
+      - name: Comment compact audit on PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > /tmp/comment.md
+          import json
+          r=json.load(open('morocco26/data/goal100/fminus1_external_audit.json'))
+          print('## Out-of-band F-1 audit')
+          print()
+          print(f"- Classification: **{r['classification']}**")
+          print(f"- Stable V2 run: `{r['v2_run']['conclusion']}` ({r['v2_run']['url']})")
+          print(f"- PR state: `{r['pr']['state']}`, draft=`{r['pr']['isDraft']}`")
+          print(f"- Registration on run branch: `{r['observations']['run_registration_accessible']}`")
+          print(f"- Release gate on run branch: `{r['observations']['run_release_accessible']}`")
+          print(f"- Release gate on main: `{r['observations']['main_release_accessible']}`")
+          if r['classification']=='RUN_FAILED':
+              print()
+              print('Failure evidence is preserved in `morocco26/data/goal100/fminus1_external_audit.json` on branch `morocco26-fminus1-diagnose`; no protocol threshold was changed.')
+          PY
+          gh pr comment 8 --repo SmokeSol/CHATGPT --body-file /tmp/comment.md || true
