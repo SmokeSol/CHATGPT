@@ -1,24 +1,30 @@
 {
-  "as_of": "2026-08-16",
+  "as_of": "2026-08-16T14:02:00+01:00",
   "formal_phase": "P3_CAUSAL_SYNTHETIC_SOCIETY",
   "experimental_frontier": "P4_BOUNDED_LLM_SOCIETY",
-  "implementation_completion_percent": 44,
-  "scientifically_gated_completion_percent": 35,
-  "status": "PHASE3_PILOT_COMPLETE_PHASE2_CATCHUP_REQUIRED_BEFORE_FORMAL_PHASE4",
+  "implementation_completion_percent": 52,
+  "scientifically_gated_completion_percent": 43,
+  "status": "SIGNIFICANT_BREAKTHROUGH_REACHED_TERRITORIAL_HOLDOUT_AND_SEAT_MARGIN_PATH_UNLOCKED",
   "completed": [
     "electoral rule and allocator foundation",
     "source provenance framework",
-    "four-constituency real 2021 replay / 14 seats",
+    "four-constituency exact legal 2021 replay / 14 seats",
     "A/B/C0/C causal synthetic-society pilot",
     "common-random-number network ablation",
     "positive and negative controls",
     "frozen Phase-2 protocol and reproducibility ledger",
-    "bounded AgentSociety 2 execution contract and kill criteria"
+    "bounded AgentSociety 2 execution contract and kill criteria",
+    "12-region development Seat Margin panel expanded to 47 local constituencies",
+    "12-constituency territorial holdout sealed before outcome extraction",
+    "vote-rank Seat Margin gate separated from exact legal-quota replay gate",
+    "scalable secondary path to 2021 registered-voter denominators identified for legal replay",
+    "61/61 repository tests passing after breakthrough changes"
   ],
   "not_completed": [
-    "92/92 local 2021 replay and Seat Margin Map",
+    "92/92 local 2021 Seat Margin Map",
+    "92/92 exact legal-quota replay with reconciled denominators",
     "12/12 regional 2021 replay",
-    "frozen territorial holdout benchmark",
+    "freeze B/C predictions and benchmark against the sealed territorial holdout",
     "empirical estimates for candidate-network portability and diffusion priors",
     "Model D AgentSociety execution against holdout",
     "live 2026 event-to-mechanism pipeline at national territorial coverage",
@@ -26,9 +32,10 @@
     "23 September real-world scoring and postmortem"
   ],
   "hard_blockers_to_formal_phase4": [
-    "complete enough territorial evidence graph to define a genuine frozen holdout",
-    "freeze baseline B/C benchmark before any Model D tuning"
+    "freeze baseline B/C benchmark before any Model D tuning",
+    "extract enough of the remaining development constituencies to reduce sampling fragility while keeping the sealed holdout untouched"
   ],
   "forecast_status": "BLOCKED",
-  "agent_society_status": "READY_FOR_BOUNDED_PILOT_NOT_YET_PROVEN_USEFUL"
+  "agent_society_status": "READY_FOR_BOUNDED_PILOT_NOT_YET_PROVEN_USEFUL",
+  "goal75_status": "STOP_CONDITION_MET_BY_SIGNIFICANT_BREAKTHROUGH_NOT_BY_75_PERCENT"
 }
