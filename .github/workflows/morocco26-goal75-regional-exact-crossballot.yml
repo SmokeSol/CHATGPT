@@ -1,0 +1,26 @@
+name: morocco26-goal75-regional-exact-crossballot
+on:
+  push:
+    branches: [morocco26-goal75-hard]
+    paths: ['.github/workflows/morocco26-goal75-regional-exact-crossballot.yml']
+permissions:
+  contents: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-goal75-hard}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install --quiet pandas openpyxl requests
+      - run: python morocco26/scripts/goal75_regional_exact_crossballot_test.py
+      - if: always()
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -f morocco26/data/goal75/regional_exact_crossballot_test.json ]; then
+            git add morocco26/data/goal75/regional_exact_crossballot_test.json
+            git commit -m "data(morocco26): record exact regional denominator test" || true
+            git pull --rebase origin morocco26-goal75-hard || true
+            git push origin HEAD:morocco26-goal75-hard || true
+          fi
