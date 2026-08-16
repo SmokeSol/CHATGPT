@@ -14,6 +14,9 @@ RSLUG={'Dakhla-Oued Eddahab':'Circonscription_de_Dakhla-Oued_Ed-Dahab','Oriental
 REGION_OBS_ALIAS={'dakhla oued eddahab':'dakhla oued ed dahab'}
 OV={('beni-mellal',2021,'registered'):318608}
 ACR=re.compile(r'\(([A-Z][A-Z0-9-]{1,7})\)')
+# Electoral-list label -> parliamentary party affiliation. In Casablanca-Settat,
+# the AGD alliance won one regional seat through Fatima Tamni, a CNI member.
+LIST_TO_AFFILIATION={('casablanca settat','AGD'):'CNI'}
 
 def list_key(label):
     label=str(label).strip()
@@ -24,6 +27,11 @@ def list_key(label):
     full=g.norm(ACR.sub('',label))
     if not full or full in ('nan','none'):return None
     return f'LIST::{code}::{full}'
+
+def list_code(k):
+    if k in OFFICIAL_CODES:return k
+    if str(k).startswith('LIST::'):return str(k).split('::',2)[1]
+    return None
 
 def party_label_from_row(row):
     vals=[str(v).strip() for v in row.tolist()]
@@ -57,19 +65,13 @@ def parse_table(df,cid=None):
     return {'votes':votes,'registered':reg,'expressed':exp,'elected_party_counts':dict(elected),'recognized_vote_sum':sum(votes.values()),'labels':labels,'applied_overrides':[]}
 
 def apply_documented_overrides(cid,p):
-    """Apply only pre-documented, source-verified corrections.
-
-    Each correction asserts the exact erroneous values first. If the upstream
-    source changes, execution fails rather than silently mutating new data.
-    """
     manifest=json.loads((D/'source_overrides_goal75.json').read_text())
     for ov in manifest['overrides']:
         if ov['constituency_id']!=cid or int(ov['year'])!=2021:continue
         if ov['field']=='party_labels_for_vote_rows_PAM_PPS':
             bad=ov['bad_secondary_value'];correct=ov['corrected_value']
             assert p['votes'].get('PAM')==bad['PAM'] and p['votes'].get('PPS')==bad['PPS'], (cid,p['votes'],bad)
-            p['votes']['PAM']=correct['PAM'];p['votes']['PPS']=correct['PPS']
-            p['recognized_vote_sum']=sum(p['votes'].values())
+            p['votes']['PAM']=correct['PAM'];p['votes']['PPS']=correct['PPS'];p['recognized_vote_sum']=sum(p['votes'].values())
             p['applied_overrides'].append({'field':ov['field'],'confidence':ov['confidence'],'bad_source':ov['bad_source'],'correction_sources':ov['correction_sources']})
     return p
 
@@ -87,9 +89,17 @@ def alloc(v,seats,reg):
     return {p:n for p,n in a.items() if n}
 
 def exact(a,b):return {k:v for k,v in a.items() if v}=={k:v for k,v in b.items() if v}
-def official_only(d):return {k:v for k,v in d.items() if k in OFFICIAL_CODES and v}
 def obs_region_key(name):
     k=g.norm(name);return REGION_OBS_ALIAS.get(k,k)
+def to_affiliation(region,allocation):
+    out=Counter();unmapped=[];rk=g.norm(region)
+    for k,n in allocation.items():
+        if k in OFFICIAL_CODES:out[k]+=n;continue
+        code=list_code(k);mapped=LIST_TO_AFFILIATION.get((rk,code))
+        if mapped:out[mapped]+=n
+        else:unmapped.append((k,n))
+    if unmapped:raise RuntimeError(f'unmapped elected alliance/list in {region}: {unmapped}')
+    return dict(out)
 
 def main():
     observed=json.loads((O/'observed_elected_2021.json').read_text())
@@ -103,20 +113,20 @@ def main():
         if not empirical_ok:raise RuntimeError(f'local elected mismatch {name}: legal={a} elected={elected} rank={rank}')
         rr=sorted(p['votes'].items(),key=lambda z:(-z[1],z[0]));cut1,cut2=rr[seats-1],rr[seats]
         lm.append({'constituency_id':x['constituency_id'],'name':name,'region':x['region'],'seats':seats,'registered':p['registered'],'expressed':p['expressed'],'legal_winners':a,'last_rank_party':cut1[0],'last_rank_votes':cut1[1],'first_nonwinner':cut2[0],'first_nonwinner_votes':cut2[1],'raw_margin_votes':cut1[1]-cut2[1],'source_url':url})
-        local.append({'constituency_id':x['constituency_id'],'name':name,'region':x['region'],'seats':seats,'registered':p['registered'],'expressed':p['expressed'],'legal_replay':a,'elected_party_counts_secondary':elected,'source_url':url});print('L',i,name,a,flush=True)
+        local.append({'constituency_id':x['constituency_id'],'name':name,'region':x['region'],'seats':seats,'registered':p['registered'],'expressed':p['expressed'],'legal_replay':a,'parliamentary_affiliation':to_affiliation(x['region'],a),'elected_party_counts_secondary':elected,'source_url':url});print('L',i,name,a,flush=True)
     reg=[]
     for i,(name,seats) in enumerate(REGIONS,1):
-        cid='REGION::'+name;slug=RSLUG.get(name,'Circonscription_de_'+quote(name.replace(' ','_'),safe="_()'-"));url='https://fr.wikipedia.org/wiki/'+slug;t=tabs(url)[-1];p=apply_documented_overrides(cid,parse_table(t,cid));assert p['registered'] and p['recognized_vote_sum']<=p['registered'];a=alloc(p['votes'],seats,p['registered'])
+        cid='REGION::'+name;slug=RSLUG.get(name,'Circonscription_de_'+quote(name.replace(' ','_'),safe="_()'-"));url='https://fr.wikipedia.org/wiki/'+slug;t=tabs(url)[-1];p=apply_documented_overrides(cid,parse_table(t,cid));assert p['registered'] and p['recognized_vote_sum']<=p['registered'];a=alloc(p['votes'],seats,p['registered']);aff=to_affiliation(name,a)
         ok=obs_region_key(name);e=observed['regional'].get(ok)
         if e is None:raise RuntimeError(f'independent observed region missing {name} normalized={ok}; keys={sorted(observed["regional"])}')
-        if sum(e.values())!=seats or not exact(official_only(a),e) or any(k.startswith('LIST::') for k in a):raise RuntimeError(f'regional observed mismatch {name}: legal={a} independent_observed={e} overrides={p["applied_overrides"]}')
-        reg.append({'region':name,'seats':seats,'registered':p['registered'],'expressed':p['expressed'],'legal_replay':a,'independent_observed_elected':e,'source_url':url,'applied_overrides':p['applied_overrides']});print('R',i,name,a,flush=True)
-    def agg(rows):
+        if sum(e.values())!=seats or not exact(aff,e):raise RuntimeError(f'regional observed mismatch {name}: legal_lists={a} affiliations={aff} independent_observed={e} overrides={p["applied_overrides"]}')
+        reg.append({'region':name,'seats':seats,'registered':p['registered'],'expressed':p['expressed'],'legal_replay_lists':a,'parliamentary_affiliation':aff,'independent_observed_elected':e,'source_url':url,'applied_overrides':p['applied_overrides']});print('R',i,name,a,'=>',aff,flush=True)
+    def agg_aff(rows):
         c=Counter()
-        for z in rows:c.update(official_only(z['legal_replay']))
+        for z in rows:c.update(z['parliamentary_affiliation'])
         return dict(sorted(c.items()))
-    la,ra=agg(local),agg(reg);total=Counter(la);total.update(ra);total=dict(sorted(total.items()))
-    local_seats=sum(sum(z['legal_replay'].values()) for z in local);regional_seats=sum(sum(z['legal_replay'].values()) for z in reg)
-    out={'method':'LO_04_21_article_84_registered_voters_divided_by_seats_then_largest_remainders','observed_validation':'regional winners independently validated against TAFRA 395-member 2021 ground truth; source itself reconciles exactly to official party totals','identity_rule':'acronym/full official name locator; official seat-winning codes canonical; all other lists keyed by normalized full name','source_correction_policy':'only documented source_overrides_goal75.json corrections with exact-value assertions','local':{'constituencies':len(local),'seats':local_seats,'aggregate':la,'every_constituency_empirically_reproduced':True},'regional':{'constituencies':len(reg),'seats':regional_seats,'aggregate':ra,'every_region_independently_reproduced':True},'total':{'seats':local_seats+regional_seats,'aggregate':total,'official_expected':OFFICIAL_TOTAL,'exact_official_match':exact(total,OFFICIAL_TOTAL)},'independent_ground_truth':{'rows':observed['original_elected_rows'],'local_seats':observed['local_seats_observed'],'regional_seats':observed['regional_seats_observed'],'official_total_exact_match':observed['official_total_exact_match']},'forecast_status':'BLOCKED'}
+    la,ra=agg_aff(local),agg_aff(reg);total=Counter(la);total.update(ra);total=dict(sorted(total.items()))
+    local_seats=sum(sum(z['legal_replay'].values()) for z in local);regional_seats=sum(sum(z['legal_replay_lists'].values()) for z in reg)
+    out={'method':'LO_04_21_article_84_registered_voters_divided_by_seats_then_largest_remainders','observed_validation':'regional winners independently validated against TAFRA 395-member 2021 ground truth; electoral-list allocation is separately mapped to parliamentary affiliation where an alliance list elected a member of a constituent party','identity_rule':'electoral list identity and parliamentary party affiliation are distinct fields','list_to_affiliation':{'Casablanca-Settat AGD':'CNI (Fatima Tamni)'},'source_correction_policy':'only documented source_overrides_goal75.json corrections with exact-value assertions','local':{'constituencies':len(local),'seats':local_seats,'aggregate_affiliation':la,'every_constituency_empirically_reproduced':True},'regional':{'constituencies':len(reg),'seats':regional_seats,'aggregate_affiliation':ra,'every_region_independently_reproduced':True},'total':{'seats':local_seats+regional_seats,'aggregate':total,'official_expected':OFFICIAL_TOTAL,'exact_official_match':exact(total,OFFICIAL_TOTAL)},'independent_ground_truth':{'rows':observed['original_elected_rows'],'local_seats':observed['local_seats_observed'],'regional_seats':observed['regional_seats_observed'],'official_total_exact_match':observed['official_total_exact_match']},'forecast_status':'BLOCKED'}
     (O/'local_2021_replay_exact.json').write_text(json.dumps(local,ensure_ascii=False,indent=2));(O/'regional_2021_replay_exact.json').write_text(json.dumps(reg,ensure_ascii=False,indent=2));(O/'seat_margin_92.json').write_text(json.dumps(lm,ensure_ascii=False,indent=2));(O/'p2_exact_audit.json').write_text(json.dumps(out,ensure_ascii=False,indent=2));print(json.dumps(out,ensure_ascii=False,indent=2));raise SystemExit(0 if local_seats==305 and regional_seats==90 and out['total']['exact_official_match'] else 9)
 if __name__=='__main__':main()
