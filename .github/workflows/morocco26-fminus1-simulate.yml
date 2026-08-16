@@ -1,0 +1,150 @@
+name: morocco26-fminus1-simulate
+
+on:
+  push:
+    branches: [morocco26-fminus1]
+    paths:
+      - 'morocco26/data/goal100/fminus1_protocol_v1.json'
+      - 'morocco26/scripts/goal100_run_fminus1.py'
+      - 'morocco26/data/goal100/geometry_2026_certificate.json'
+      - 'morocco26/data/goal100/local_N_posterior.json'
+      - 'morocco26/data/goal100/n_scale_invariance_certificate.json'
+      - 'morocco26/data/goal100/uncertainty_calibration.json'
+      - 'morocco26/data/goal100/uncertainty_parameters_v1.json'
+      - '.github/workflows/morocco26-fminus1-simulate.yml'
+
+concurrency:
+  group: morocco26-fminus1-simulation
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet numpy pandas openpyxl requests beautifulsoup4 pypdf
+
+      - name: Check prerequisites
+        id: ready
+        run: |
+          files=(
+            morocco26/data/goal100/geometry_2026_certificate.json
+            morocco26/data/goal100/local_N_posterior.json
+            morocco26/data/goal100/n_scale_invariance_certificate.json
+            morocco26/data/goal100/uncertainty_calibration.json
+            morocco26/data/goal100/uncertainty_parameters_v1.json
+          )
+          ready=true
+          for f in "${files[@]}"; do
+            if [ ! -f "$f" ]; then echo "waiting for $f"; ready=false; fi
+          done
+          echo "ready=$ready" >> "$GITHUB_OUTPUT"
+
+      - name: Apply declared finite-correlation serialization correction
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('morocco26/scripts/goal100_run_fminus1.py')
+          s=p.read_text(encoding='utf-8')
+          old='    correlation = np.corrcoef(national_seats.astype(float), rowvar=False)\n'
+          new='    correlation = np.corrcoef(national_seats.astype(float), rowvar=False)\n    correlation = np.nan_to_num(correlation, nan=0.0, posinf=0.0, neginf=0.0)\n    np.fill_diagonal(correlation, 1.0)\n'
+          if old in s and 'np.nan_to_num(correlation' not in s:
+              s=s.replace(old,new,1)
+              p.write_text(s,encoding='utf-8')
+              print('Applied finite-correlation correction')
+          elif 'np.nan_to_num(correlation' in s:
+              print('Finite-correlation correction already present')
+          else:
+              raise SystemExit('Expected correlation locus not found')
+          PY
+
+      - name: Compile engine
+        if: steps.ready.outputs.ready == 'true'
+        run: python -m py_compile morocco26/scripts/goal100_run_fminus1.py
+
+      - name: Refresh legal watch at snapshot execution
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          python morocco26/scripts/goal100_probe_official_geometry.py
+          python morocco26/scripts/goal100_certify_geometry_2026.py
+
+      - name: Execute 50,000 coherent joint elections
+        if: steps.ready.outputs.ready == 'true'
+        run: python morocco26/scripts/goal100_run_fminus1.py
+
+      - name: Verify simulation and create breadcrumb event
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          g=Path('morocco26/data/goal100')
+          s=json.loads((g/'simulation_certificate.json').read_text(encoding='utf-8'))
+          m=json.loads((g/'snapshots/F-1/manifest.json').read_text(encoding='utf-8'))
+          f=json.loads((g/'snapshots/F-1/forecast.json').read_text(encoding='utf-8'))
+          assert s['gate']=='PASS'
+          assert s['valid_election_draws']>=50000
+          assert s['legal_rejection_rate']<=s['maximum_legal_rejection_rate']
+          assert s['registered_legal_failures']==0
+          assert s['all_local_seat_sums_305'] and s['all_regional_seat_sums_90'] and s['all_house_seat_sums_395']
+          assert s['OTHER_single_list_allocator_calls']==0
+          assert len(f['local_92'])==92 and len(f['regional_12'])==12
+          headline={p:round(v['total_seats']['mean'],4) for p,v in f['national_395']['parties'].items()}
+          event={
+              'event_id':'A011',
+              'date':'2026-08-16',
+              'title':'Simulation F-1 cohérente terminée',
+              'gate':'MC-50000-COHERENT',
+              'status':'PASS',
+              'actions':['refresh legal watch','generate joint vote/turnout/N draws','allocate 92 local and 12 regional contests','hash snapshot artifacts'],
+              'machine_result':{
+                  'valid_draws':s['valid_election_draws'],
+                  'attempts':s['attempted_joint_draws'],
+                  'rejection_rate':s['legal_rejection_rate'],
+                  'max_probability_normalization_error':s['max_probability_normalization_error'],
+                  'monte_carlo_max_binomial_se':s['monte_carlo_max_binomial_standard_error'],
+                  'OTHER_single_list_calls':s['OTHER_single_list_allocator_calls'],
+                  'manifest_sha256':m['manifest_sha256'],
+                  'forecast_sha256':m['forecast_artifact_hash'],
+                  'expected_national_seats':headline
+              },
+              'decision':'Simulation gate eligible for closure; forecast remains unregistered until the append-only registry transition succeeds.',
+              'next_action':'Reconcile gates, register immutable F-1, then freeze B2 before F0.'
+          }
+          d=g/'fil_ariane_events'; d.mkdir(parents=True,exist_ok=True)
+          (d/'A011.json').write_text(json.dumps(event,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+
+      - name: Validate pre-registration state
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking_dynamic.py
+
+      - name: Commit simulation evidence
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/scripts/goal100_run_fminus1.py \
+            morocco26/data/goal100/geometry_official_probe.json \
+            morocco26/data/goal100/geometry_sources \
+            morocco26/data/goal100/geometry_2026_certificate.json \
+            morocco26/data/goal100/simulation_certificate.json \
+            morocco26/data/goal100/snapshots/F-1 \
+            morocco26/data/goal100/fil_ariane_events/A011.json
+          git commit -m 'forecast(morocco26): materialize coherent F-1 simulation evidence' || true
+          git pull --rebase origin morocco26-fminus1
+          git push origin HEAD:morocco26-fminus1
