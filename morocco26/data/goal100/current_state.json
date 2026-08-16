@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "state_id": "M26-GOAL100-CURRENT-2026-08-16",
-  "as_of": "2026-08-16T22:02:13+01:00",
+  "as_of": "2026-08-16T22:12:00+01:00",
   "north_star": "Construire un forecast territorial probabiliste, entièrement gelé et falsifiable, puis déterminer expérimentalement si une intelligence agentique de collecte et de raisonnement résiduel apporte de l'information prédictive supplémentaire au-delà d'une baseline structurelle optimale.",
   "tracking_policy": {
     "progress_measure": "machine gates only; no subjective percentage inflation",
@@ -29,15 +29,15 @@
     "closed": [
       "P0-1_2026_GEOMETRY",
       "P0-2_LEGAL_ALLOCATOR",
+      "P0-3_REGISTERED_VOTER_N",
       "P0-4_HISTORICAL_PANEL",
       "P0-5_BSTAR_SELECTION"
     ],
     "substantially_resolved_with_residual_gate": [],
     "active": [
-      "P0-3_REGISTERED_VOTER_N",
       "P0-6_UNCERTAINTY_AND_CORRELATION"
     ],
-    "authoritative_resolution": "morocco26/data/goal100/p0_resolution_v4.json"
+    "authoritative_resolution": "morocco26/data/goal100/p0_resolution_v5.json"
   },
   "verified_breakthroughs": [
     {
@@ -49,6 +49,11 @@
       "id": "BT-LEGAL-104",
       "claim": "Goal100 fail-closed 2026 legal allocator is equivalent on all 92 local and all 12 regional historical mathematical test vectors; zero unresolved statutory ties in the test set.",
       "evidence": "morocco26/data/goal100/legal_regression_104.json"
+    },
+    {
+      "id": "BT-N92-CONSTRAINED",
+      "claim": "The latent 92-local registered-voter posterior passes 50,000 exact-sum positive-integer draws and reports N-only seat sensitivity for every local and regional contest.",
+      "evidence": "morocco26/data/goal100/local_N_posterior.json"
     },
     {
       "id": "BT-HISTORY-92",
@@ -83,11 +88,20 @@
   "registered_voter_N": {
     "national_2026": 15801162,
     "national_constraint_exact": true,
-    "local_92_state": "LATENT_POSTERIOR_FIT_PENDING",
-    "prior_centre": "2011 local registered-voter shares rescaled to exact 2026 national N",
-    "variance_anchor": "2007_to_2011 local electorate-share drift diagnostic",
-    "evidence": "morocco26/data/goal100/local_N_drift_diagnostic.json",
-    "required_next_test": "fit constrained 92-local posterior and quantify seat outcome sensitivity attributable solely to N uncertainty"
+    "local_92_state": "LATENT_POSTERIOR_FIT_AND_CERTIFIED",
+    "epistemic_status": "NOT_OFFICIAL_LOCAL_COUNTS",
+    "draws": 50000,
+    "positive_integer_entries": true,
+    "exact_sum_every_draw": true,
+    "draw_stream_sha256": "092382b44873c2ee709e3fb62566247980c11eee29daf2758f0a1e1a52919d71",
+    "local_denominator_invariant_exact": 81,
+    "local_denominator_sensitive": 11,
+    "local_with_N_only_change_mass": 2,
+    "regional_with_N_only_change_mass": 5,
+    "unresolved_local_tie_mass_sum": 0.00002,
+    "unresolved_regional_tie_mass_sum": 0.0,
+    "evidence": "morocco26/data/goal100/local_N_posterior.json",
+    "next_role": "jointly sampled with votes and turnout in the coherent F-1 engine"
   },
   "uncertainty_model": {
     "architecture": "national + regional + local hierarchical innovations; separate turnout logit state; no free 92x92 covariance",
@@ -100,13 +114,11 @@
     ]
   },
   "remaining_hard_gates_before_F_minus_1": [
-    "N92-POSTERIOR-FIT",
     "UNCERTAINTY-CALIBRATION",
     "MC-50000-COHERENT",
     "SNAPSHOT-IMMUTABILITY-MANIFEST"
   ],
   "next_execution_order": [
-    "fit constrained local-N posterior and run N-only seat-sensitivity audit",
     "fit post-selection hierarchical uncertainty/correlation model",
     "run retrospective posterior-predictive diagnostics",
     "run >=50000 coherent 395-seat simulations",
@@ -122,6 +134,8 @@
       "Marrakech-Safi"
     ],
     "known_anomalies_must_not_be_posthoc_relabelled_or_bridged": true,
-    "geometry_legal_watch_must_remain_active": true
+    "geometry_legal_watch_must_remain_active": true,
+    "latent_N_must_never_be_relabelled_official": true,
+    "unresolved_statutory_ties_must_not_be_broken_by_party_name_or_vote_count": true
   }
 }
