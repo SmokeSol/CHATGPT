@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "pipeline": "M26-GOAL100-TAFRA-HISTORY-V1",
+  "epistemic_rules": [
+    "missing registered counts remain null",
+    "no 2016 registered-voter inference during ingestion",
+    "historical seat rules are not applied to prospective 2026 draws",
+    "raw files are hashed and retained",
+    "source/schema failure stops the pipeline"
+  ],
+  "datasets": [
+    {
+      "year": 2011,
+      "source_url_used": "https://open.africa/dataset/cb7a294b-9569-4647-b35e-3b1cb6c8028e/resource/59229632-d062-4e1a-afff-b344b6afdae7/download/parlement-elections-2011-1-0.xlsx",
+      "raw_path": "data/goal100/historical/raw/parlement-elections-2011-1-0.xlsx",
+      "raw_sha256": "2152a4581364da51ebff3afa6320d334e2e180aa4319399a033b296fe94e7f8c",
+      "raw_bytes": 35419,
+      "canonical_path": "data/goal100/historical/tafra_legislative_2011_canonical.json",
+      "row_count": 92,
+      "sheet": "données",
+      "registered_nonnull_rows": 92
+    },
+    {
+      "year": 2016,
+      "source_url_used": "https://open.africa/dataset/6bf3208e-7e01-456f-9ed8-ff8977e49585/resource/6c4000e1-5359-43fd-b941-399af34ee54a/download/parlement-elections-2016-1-1.xlsx",
+      "raw_path": "data/goal100/historical/raw/parlement-elections-2016-1-1.xlsx",
+      "raw_sha256": "38f3031b423957050d7c32f0d521952b397f5f41f8f224f30faeb5d7c56b1ba9",
+      "raw_bytes": 48941,
+      "canonical_path": "data/goal100/historical/tafra_legislative_2016_canonical.json",
+      "row_count": 92,
+      "sheet": "données",
+      "registered_nonnull_rows": 0
+    },
+    {
+      "year": 2021,
+      "source_url_used": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "raw_path": "data/goal100/historical/raw/parlement-elections-2021-1-0.xlsx",
+      "raw_sha256": "ffef1b78ae6b2dd4397e8837e094e991d9630787870b5724ee2bed5931374545",
+      "raw_bytes": 36810,
+      "canonical_path": "data/goal100/historical/tafra_legislative_2021_canonical.json",
+      "row_count": 104,
+      "sheet": "donnees",
+      "registered_nonnull_rows": 0
+    }
+  ],
+  "panel_path": "data/goal100/historical/tafra_legislative_2011_2016_2021_rows.jsonl",
+  "panel_rows": 288
+}
