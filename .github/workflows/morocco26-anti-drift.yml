@@ -1,0 +1,23 @@
+name: morocco26-anti-drift
+
+on:
+  pull_request:
+    paths:
+      - 'morocco26/**'
+      - '.github/workflows/morocco26-anti-drift.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'morocco26/**'
+      - '.github/workflows/morocco26-anti-drift.yml'
+
+jobs:
+  anti-drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate project constitution and phase gates
+        run: python morocco26/scripts/validate_anti_drift.py

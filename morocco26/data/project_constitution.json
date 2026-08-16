@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "project": "MOROCCO//26",
+  "north_star": "Build an empirically anchored artificial electoral society that improves real-time understanding of Morocco 2026, then test whether agent dynamics add out-of-sample value beyond structural baselines.",
+  "primary_goal": "Decode the 2026 Moroccan parliamentary election by identifying which observed political mechanisms matter electorally, where they matter territorially, and whether they can alter turnout, party choice, local seat cutoffs, or coalition structure.",
+  "secondary_goal": "Test whether a calibrated artificial society and bounded LLM cognition add stable, falsifiable, out-of-sample explanatory or predictive value beyond structural and statistical baselines.",
+  "priority_weights": {
+    "morocco_2026_political_understanding": 0.70,
+    "artificial_society_ai_experiment": 0.30
+  },
+  "canonical_value_chain": [
+    "empirical_ground_truth",
+    "electoral_intelligence_graph",
+    "structural_and_statistical_baselines",
+    "calibrated_artificial_society",
+    "causal_ablation_and_agent_increment",
+    "live_2026_decoding",
+    "pre_election_freeze",
+    "23_september_real_world_validation"
+  ],
+  "non_goals": [
+    "building a generic election dashboard",
+    "maximizing UI polish as a project milestone",
+    "producing a national seat forecast before validation gates pass",
+    "tuning synthetic parameters until dramatic political effects appear",
+    "treating LLM narrative richness as evidence",
+    "replacing empirical evidence with personas",
+    "political persuasion optimization",
+    "voter microtargeting",
+    "party campaign strategy recommendations"
+  ],
+  "phase_map": [
+    {
+      "id": "P1_FOUNDATION",
+      "range_percent": [0, 15],
+      "exit_gate": "electoral rules, source provenance, allocator and protocol are auditable"
+    },
+    {
+      "id": "P2_EMPIRICAL_GRAPH",
+      "range_percent": [15, 35],
+      "exit_gate": "territorial replay, seat margins, candidates, events and evidence graph are sufficiently complete for held-out testing"
+    },
+    {
+      "id": "P3_CAUSAL_SYNTHETIC_SOCIETY",
+      "range_percent": [35, 50],
+      "exit_gate": "A/B/C0/C experiment is calibrated, causal ablations are valid, and synthetic network effects are measured rather than narrated"
+    },
+    {
+      "id": "P4_BOUNDED_LLM_SOCIETY",
+      "range_percent": [50, 65],
+      "exit_gate": "Model D is replayable, stable across model/prompt variants, and either beats B/C on frozen holdout or is killed"
+    },
+    {
+      "id": "P5_FULL_2026_LIVE_SYSTEM",
+      "range_percent": [65, 90],
+      "exit_gate": "92 local + 12 regional coverage, live event ingestion, calibrated seat-risk map, and prospective decoding operate without retrospective tuning"
+    },
+    {
+      "id": "P6_FREEZE_AND_REALITY_TEST",
+      "range_percent": [90, 100],
+      "exit_gate": "pre-election freeze is complete and 23 September results are scored against all frozen models with an unrevised postmortem"
+    }
+  ],
+  "forecast_unlock_gate": {
+    "required": [
+      "full 92-local replay",
+      "full 12-regional replay",
+      "frozen territorial holdout benchmark",
+      "baseline comparison A/B/C",
+      "uncertainty calibration",
+      "explicit pre-election freeze"
+    ],
+    "default_status": "BLOCKED"
+  },
+  "agent_society_retention_gate": {
+    "retain_only_if": [
+      "schema compliance and replayability pass",
+      "prompt and model instability are below claimed incremental effect",
+      "dose response is directionally coherent",
+      "out-of-sample score improves versus both B and C on the frozen holdout"
+    ],
+    "otherwise": "KILL_OR_REDESIGN_MODEL_D"
+  },
+  "anti_drift_questions": [
+    "Which north-star question does this work answer?",
+    "What new falsifiable claim becomes testable?",
+    "Which phase exit gate does it advance?",
+    "What evidence level is added: observed, derived, synthetic-calibrated, synthetic-sensitivity, or LLM-derived?",
+    "What result would cause us to kill or reverse this work?",
+    "Could the same effort instead improve real Morocco-2026 understanding more directly?",
+    "Does this accidentally promote a synthetic assumption into an observed fact?",
+    "Does this unlock a forecast? If yes, are all forecast gates actually satisfied?"
+  ]
+}
