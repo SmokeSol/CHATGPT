@@ -83,3 +83,18 @@ Chaque entrée doit contenir, dans cet ordre :
 - Tracker humain : `reports/GOAL100_TRACKER.md`
 - Validation Goal100 : `scripts/validate_goal100_tracking.py`
 - Validation anti-drift Goal75 : `scripts/validate_anti_drift.py`
+
+
+### 2026-08-16 — Entrée A008 — Probe des sources géométriques officielles
+
+**Question/gate :** `GEO-2026-AUTHORITATIVE-DIFF`.
+
+**Action :** interrogation et hashage de l’index électoral de la Chambre et des textes SGG ; téléchargement des documents candidats sans les déclarer automatiquement équivalents à la géométrie du repo.
+
+**Résultat du probe :** 0/3 pages sources accessibles ; 0 document(s) candidat(s), 0 téléchargé(s), 0 PDF avec texte extractible. Présence du numéro de décret recherchée : `False`.
+
+**Artefact :** `data/goal100/geometry_official_probe.json` et octets sources sous `data/goal100/geometry_sources/`.
+
+**Décision :** ce résultat est une acquisition de preuve, pas encore un certificat. P0-1 reste PARTIAL jusqu’au diff ligne par ligne et au legal-watch sans différence inexpliquée.
+
+**Prochaine action :** construire le parser/crosswalk officiel à partir du document effectivement découvert ; en cas de source non extractible, produire un contrôle manuel borné et hashé plutôt qu’un faux parsing.
