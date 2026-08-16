@@ -1,0 +1,270 @@
+{
+  "method": "exact piecewise Article-84 allocation intervals over all integer registered counts from valid-vote lower bound to 17,509,127; output uses observed elected only as target for diagnostic interval, not as denominator estimate",
+  "regions": 12,
+  "rows": [
+    {
+      "region": "Beni-Mellal - Khénifra",
+      "seats": 7,
+      "valid_vote_sum_lower_bound": 676334,
+      "observed_affiliation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "good_registered_intervals": [
+        [
+          1015743,
+          17509127
+        ]
+      ],
+      "good_span_total": 16493385,
+      "critical_points": 31
+    },
+    {
+      "region": "Casablanca - Settat",
+      "seats": 12,
+      "valid_vote_sum_lower_bound": 1172619,
+      "observed_affiliation": {
+        "CNI": 1,
+        "FFD": 1,
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "PSU": 1,
+        "RNI": 2,
+        "UC": 1,
+        "USFP": 1
+      },
+      "good_registered_intervals": [
+        [
+          2418493,
+          3669192
+        ]
+      ],
+      "good_span_total": 1250700,
+      "critical_points": 140
+    },
+    {
+      "region": "Dakhla - Oued Ed-Dahab",
+      "seats": 3,
+      "valid_vote_sum_lower_bound": 34475,
+      "observed_affiliation": {
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "good_registered_intervals": [
+        [
+          36292,
+          17509127
+        ]
+      ],
+      "good_span_total": 17472836,
+      "critical_points": 19
+    },
+    {
+      "region": "Drâa - Tafilalet",
+      "seats": 6,
+      "valid_vote_sum_lower_bound": 476011,
+      "observed_affiliation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "good_registered_intervals": [
+        [
+          649339,
+          17509127
+        ]
+      ],
+      "good_span_total": 16859789,
+      "critical_points": 18
+    },
+    {
+      "region": "Fès - Meknès",
+      "seats": 10,
+      "valid_vote_sum_lower_bound": 924089,
+      "observed_affiliation": {
+        "FFD": 1,
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 2,
+        "UC": 1,
+        "USFP": 1
+      },
+      "good_registered_intervals": [
+        [
+          1307641,
+          2334570
+        ]
+      ],
+      "good_span_total": 1026930,
+      "critical_points": 78
+    },
+    {
+      "region": "Guelmim - Oued-Noun",
+      "seats": 5,
+      "valid_vote_sum_lower_bound": 159400,
+      "observed_affiliation": {
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "good_registered_intervals": [
+        [
+          216201,
+          17509127
+        ]
+      ],
+      "good_span_total": 17292927,
+      "critical_points": 30
+    },
+    {
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "seats": 5,
+      "valid_vote_sum_lower_bound": 134818,
+      "observed_affiliation": {
+        "PAM": 1,
+        "PI": 2,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "good_registered_intervals": [
+        [
+          140958,
+          303450
+        ]
+      ],
+      "good_span_total": 162493,
+      "critical_points": 46
+    },
+    {
+      "region": "Marrakech - Safi",
+      "seats": 10,
+      "valid_vote_sum_lower_bound": 1140339,
+      "observed_affiliation": {
+        "MDS": 1,
+        "MP": 1,
+        "PAM": 2,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "good_registered_intervals": [
+        [
+          2188821,
+          2627890
+        ]
+      ],
+      "good_span_total": 439070,
+      "critical_points": 53
+    },
+    {
+      "region": "Oriental",
+      "seats": 7,
+      "valid_vote_sum_lower_bound": 528806,
+      "observed_affiliation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "good_registered_intervals": [
+        [
+          935684,
+          17509127
+        ]
+      ],
+      "good_span_total": 16573444,
+      "critical_points": 53
+    },
+    {
+      "region": "Rabat - Salé - Kénitra",
+      "seats": 10,
+      "valid_vote_sum_lower_bound": 951326,
+      "observed_affiliation": {
+        "MDS": 1,
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 2,
+        "UC": 1,
+        "USFP": 1
+      },
+      "good_registered_intervals": [
+        [
+          1118036,
+          2506990
+        ]
+      ],
+      "good_span_total": 1388955,
+      "critical_points": 81
+    },
+    {
+      "region": "Souss - Massa",
+      "seats": 7,
+      "valid_vote_sum_lower_bound": 677422,
+      "observed_affiliation": {
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 2,
+        "USFP": 1
+      },
+      "good_registered_intervals": [
+        [
+          877192,
+          1830164
+        ]
+      ],
+      "good_span_total": 952973,
+      "critical_points": 61
+    },
+    {
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "seats": 8,
+      "valid_vote_sum_lower_bound": 695984,
+      "observed_affiliation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "good_registered_intervals": [
+        [
+          1294777,
+          17509127
+        ]
+      ],
+      "good_span_total": 16214351,
+      "critical_points": 61
+    }
+  ]
+}
