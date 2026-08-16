@@ -109,3 +109,12 @@ Chaque entrée doit contenir, dans cet ordre :
 **Détails machine :** `{}`.
 
 **Décision :** un statut autre que PASS interdit la fusion et l’utilisation de F−1. Le rapport complet est `data/goal100/fminus1_postflight.json`.
+
+
+### 2026-08-16 — Entrée A016 — Investigation d’un échec F−1
+
+**Run :** `31976786865` — statut `completed`, conclusion `failure`, head `55d48b7362aeb0bae2cf2a37da68956277e3de9d`.
+
+**Preuve :** `data/goal100/fminus1_failure_investigation.json` et `data/goal100/fminus1_failure_log.txt`; SHA-256 log `f77216ee27982bc48eb78b0df24b9015047e73bfde795416d9f06d26ff840fe2`.
+
+**Décision :** aucune baisse de seuil ni modification silencieuse du protocole. La prochaine correction doit être classée explicitement comme bug d’ingénierie ou amendment scientifique versionné.
