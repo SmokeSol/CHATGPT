@@ -1,0 +1,47 @@
+name: morocco26-goal100-install-dynamic-validator
+
+on:
+  push:
+    branches: [morocco26-fminus1]
+    paths:
+      - 'morocco26/scripts/validate_goal100_tracking_dynamic.py'
+      - '.github/workflows/morocco26-goal100-install-dynamic-validator.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Replace checkpoint-specific validator with stable wrapper
+        run: |
+          cat > morocco26/scripts/validate_goal100_tracking.py <<'PY'
+          #!/usr/bin/env python3
+          """Stable entry point for the evidence-driven Goal100 validator."""
+          from validate_goal100_tracking_dynamic import main
+
+          if __name__ == "__main__":
+              main()
+          PY
+          chmod +x morocco26/scripts/validate_goal100_tracking.py
+      - name: Validate current branch before commit
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking.py
+      - name: Commit validator transition
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/scripts/validate_goal100_tracking.py
+          git commit -m 'refactor(morocco26): activate evidence-driven Goal100 validator' || true
+          git pull --rebase origin morocco26-fminus1
+          git push origin HEAD:morocco26-fminus1
