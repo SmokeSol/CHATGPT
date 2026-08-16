@@ -1,0 +1,108 @@
+name: morocco26-fminus1-main-verify
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/morocco26-fminus1-main-verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  verify-main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify exact F-1 release on main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import hashlib,json,subprocess
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          root=Path('morocco26'); g=root/'data'/'goal100'
+          required=[
+              g/'fminus1_registration_certificate.json',g/'fminus1_postflight.json',
+              g/'fminus1_release_gate.json',g/'forecast_registry.json',g/'gate_registry.json',
+              g/'snapshots/F-1/forecast.json',g/'snapshots/F-1/manifest.json',
+              g/'simulation_certificate.json',root/'FIL_ARIANE.md'
+          ]
+          missing=[str(p) for p in required if not p.exists()]
+          if missing: raise SystemExit(f'MAIN_VERIFY_FAIL missing {missing}')
+          for cmd in (
+              ['python','morocco26/scripts/validate_anti_drift.py'],
+              ['python','morocco26/scripts/validate_goal100_tracking_dynamic.py'],
+          ):
+              subprocess.run(cmd,check=True)
+          registration=json.loads((g/'fminus1_registration_certificate.json').read_text(encoding='utf-8'))
+          post=json.loads((g/'fminus1_postflight.json').read_text(encoding='utf-8'))
+          release=json.loads((g/'fminus1_release_gate.json').read_text(encoding='utf-8'))
+          registry=json.loads((g/'forecast_registry.json').read_text(encoding='utf-8'))
+          gates=json.loads((g/'gate_registry.json').read_text(encoding='utf-8'))
+          sim=json.loads((g/'simulation_certificate.json').read_text(encoding='utf-8'))
+          manifest=json.loads((g/'snapshots/F-1/manifest.json').read_text(encoding='utf-8'))
+          forecast_path=g/'snapshots/F-1/forecast.json'
+          assert registration['gate']=='PASS' and post['status']=='PASS' and release['gate']=='PASS'
+          assert [x['snapshot_id'] for x in registry['snapshots']]==['F-1']
+          assert registry['sequence']['next_id']=='F0'
+          assert all(x['status']=='CLOSED' for x in gates['forecast_unlock'])
+          assert all(x['status']=='LOCKED' for x in gates['agentic_unlock'])
+          assert sim['gate']=='PASS' and sim['valid_election_draws']>=50000
+          assert hashlib.sha256(forecast_path.read_bytes()).hexdigest()==registration['forecast_artifact_sha256']==release['forecast_sha256']==manifest['forecast_artifact_hash']
+          assert registration['manifest_sha256']==release['manifest_sha256']==manifest['manifest_sha256']
+          verification={
+              'schema_version':'1.0','verification_id':'M26-GOAL100-FMINUS1-MAIN-V1',
+              'verified_at':datetime.now(ZoneInfo('Africa/Casablanca')).isoformat(timespec='seconds'),
+              'branch':'main','snapshot_id':'F-1','snapshot_class':manifest['snapshot_class'],
+              'forecast_sha256':registration['forecast_artifact_sha256'],
+              'manifest_sha256':registration['manifest_sha256'],
+              'valid_joint_elections':sim['valid_election_draws'],
+              'legal_rejection_rate':sim['legal_rejection_rate'],
+              'p0':{x['id']:x['status'] for x in gates['p0']},
+              'forecast_unlock':'ALL_CLOSED','agentic_unlock':'ALL_LOCKED',
+              'next_snapshot':'F0','goal75_anti_drift':'PASS','goal100_tracking':'PASS',
+              'gate':'PASS_MAIN_VERIFIED'
+          }
+          (g/'fminus1_main_verification.json').write_text(json.dumps(verification,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(verification,indent=2))
+          PY
+
+      - name: Commit independent main certificate
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add morocco26/data/goal100/fminus1_main_verification.json
+          git commit -m 'verify(morocco26): certify F-1 on main' || true
+          git push origin HEAD:main
+
+      - name: Comment independent verification on PR 8
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > /tmp/comment.md
+          import json
+          r=json.load(open('morocco26/data/goal100/fminus1_main_verification.json'))
+          print('## Independent main verification: PASS')
+          print()
+          print(f"- Snapshot: `{r['snapshot_id']}`")
+          print(f"- Forecast SHA-256: `{r['forecast_sha256']}`")
+          print(f"- Manifest SHA-256: `{r['manifest_sha256']}`")
+          print(f"- Valid joint elections: `{r['valid_joint_elections']:,}`")
+          print(f"- Next snapshot: `{r['next_snapshot']}`")
+          print('- All forecast gates CLOSED; agentic gates LOCKED.')
+          PY
+          gh pr comment 8 --repo SmokeSol/CHATGPT --body-file /tmp/comment.md || true
