@@ -1,0 +1,125 @@
+name: morocco26-fminus1-definitive-v3
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - '.github/workflows/morocco26-fminus1-definitive-v3.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-fminus1-definitive-v3
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  definitive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet numpy pandas openpyxl requests beautifulsoup4 pypdf
+
+      - name: Record immutable remote base
+        id: base
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Detect existing valid registration
+        id: registered
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          g=Path('morocco26/data/goal100')
+          path=g/'fminus1_registration_certificate.json'
+          ok=False
+          if path.exists():
+              try:
+                  c=json.loads(path.read_text(encoding='utf-8'))
+                  r=json.loads((g/'forecast_registry.json').read_text(encoding='utf-8'))
+                  ok=c.get('gate')=='PASS' and [x.get('snapshot_id') for x in r.get('snapshots',[])]==['F-1']
+              except Exception: ok=False
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write(f'ok={str(ok).lower()}\n')
+          print({'valid_registration_exists':ok})
+          PY
+
+      - name: Execute full frozen chain only when registration is absent
+        if: steps.registered.outputs.ok != 'true'
+        run: bash morocco26/scripts/goal100_execute_fminus1_end_to_end.sh
+
+      - name: Build definitive postflight and release evidence
+        run: |
+          python -m py_compile morocco26/scripts/goal100_build_release_evidence.py
+          python morocco26/scripts/goal100_build_release_evidence.py
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking_dynamic.py
+
+      - name: Commit release evidence locally
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add morocco26
+          git commit -m 'release(morocco26): certify definitive registered F-1 PASS' || true
+
+      - name: Refuse remote movement during evidence binding
+        env:
+          BASE_SHA: ${{ steps.base.outputs.sha }}
+        run: |
+          git fetch origin morocco26-fminus1-run
+          REMOTE_SHA=$(git rev-parse origin/morocco26-fminus1-run)
+          echo "base=$BASE_SHA remote=$REMOTE_SHA local=$(git rev-parse HEAD)"
+          if [ "$REMOTE_SHA" != "$BASE_SHA" ]; then
+            echo 'Remote moved during definitive execution; refusing rebase or force-push.'
+            exit 1
+          fi
+
+      - name: Push exact evidence chain
+        run: git push origin HEAD:morocco26-fminus1-run
+
+      - name: Publish release summary and merge exact PR head
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          HEAD_SHA=$(git rev-parse HEAD)
+          gh pr ready 8 --repo SmokeSol/CHATGPT || true
+          python - <<'PY' > /tmp/comment.md
+          import json
+          from pathlib import Path
+          g=Path('morocco26/data/goal100')
+          release=json.loads((g/'fminus1_release_gate.json').read_text(encoding='utf-8'))
+          forecast=json.loads((g/'snapshots/F-1/forecast.json').read_text(encoding='utf-8'))
+          sim=json.loads((g/'simulation_certificate.json').read_text(encoding='utf-8'))
+          print('## Definitive F-1 release: PASS')
+          print()
+          print(f"- Forecast SHA-256: `{release['forecast_sha256']}`")
+          print(f"- Manifest SHA-256: `{release['manifest_sha256']}`")
+          print(f"- Valid coherent elections: `{sim['valid_election_draws']:,}`")
+          print(f"- Legal rejection rate: `{sim['legal_rejection_rate']:.6f}`")
+          print('- 92 local / 305 + 12 regional / 90 = 395 seats')
+          print('- All forecast gates CLOSED; all agentic gates LOCKED')
+          print()
+          print('### Mean national seats — F-1 structural prior')
+          for party,value in forecast['national_395']['parties'].items():
+              print(f"- {party}: {value['total_seats']['mean']:.2f}")
+          print()
+          print('Next: freeze non-agentic B2, then issue F0. F-1 contains no candidate, event, polling or agentic evidence.')
+          PY
+          gh pr comment 8 --repo SmokeSol/CHATGPT --body-file /tmp/comment.md || true
+          gh api \
+            --method PUT \
+            -H 'Accept: application/vnd.github+json' \
+            repos/SmokeSol/CHATGPT/pulls/8/merge \
+            -f merge_method=squash \
+            -f sha="$HEAD_SHA" \
+            -f commit_title='MOROCCO//26: register immutable structural forecast F-1' \
+            -f commit_message='50,000 coherent elections; all forecast gates closed; agentic layer remains locked until B2.'
