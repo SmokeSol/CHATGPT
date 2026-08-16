@@ -1,0 +1,28 @@
+{
+  "goal_id": "M26-GOAL75-2026-08-16",
+  "created_at": "2026-08-16T13:44:00+01:00",
+  "status": "ACTIVE",
+  "instruction": "Continue execution in-session until either scientifically-gated project completion reaches at least 75%, or a significant breakthrough is achieved and evidenced.",
+  "target_scientifically_gated_completion_percent": 75,
+  "breakthrough_definition": [
+    "full or near-full 2021 territorial seat-margin evidence becomes available and unlocks a frozen holdout",
+    "Model D demonstrates stable out-of-sample value over both B and C, or is decisively killed by the frozen gate",
+    "a previously unresolved structural electoral mechanism is identified and validated strongly enough to change the project architecture or political interpretation",
+    "the live 2026 system reaches materially broader territorial coverage with a defensible Seats-at-Risk map and prospective event-to-seat mechanism pipeline"
+  ],
+  "execution_priority": [
+    "extend empirical territorial graph and Seat Margin Map",
+    "freeze untouched territorial holdout",
+    "freeze B/C benchmark before Model D",
+    "execute or decisively gate Model D when prerequisites are met",
+    "advance live 2026 decoding only from validated evidence"
+  ],
+  "anti_drift": {
+    "must_preserve_north_star": true,
+    "morocco_2026_political_understanding_min_weight": 0.70,
+    "ui_or_infrastructure_does_not_count_as_scientific_progress": true,
+    "national_forecast_remains_blocked_until_constitution_gates_pass": true,
+    "synthetic_parameters_must_not_be_tuned_for_dramatic_effect": true
+  },
+  "stop_condition": "TARGET_75_OR_SIGNIFICANT_BREAKTHROUGH_WITH_EVIDENCE"
+}
