@@ -5,7 +5,8 @@
 - Protocol: `M26-PHASE2-ABC-D-001` v1.1.1
 - Protocol hash: `0b519444cd6edacae29c8c777ecc14de0b948276c6217054cafdc1e74f131421`
 - Run-ledger hash: `d826930154db1fd7eb805c81bfb5f3d7e53e24704efde7e958618adf6f8678b2`
-- Source archive SHA-256: `3ee4490c961ec4a0d1c0dd84ef0bf073d4b520f43d084840f3f81dad42c6a5fc`
+- Source archive SHA-256: `4b05f2a46a193c73434b6055fe620cd38c7744fa1e5470666ca342df5e859137`
+- Evidence pack SHA-256: `04f009c3a5989e2e899d0ed07f4b7c10cd463f946759a832b2368bc70f649563`
 
 ## Executed scope
 
