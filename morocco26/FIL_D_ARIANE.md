@@ -10,15 +10,15 @@ Construire avant l’élection du 23 septembre 2026 un forecast territorial prob
 
 ## 2. État courant
 
-- Timestamp : `2026-08-16T22:02:13+01:00`
+- Timestamp : `2026-08-16T22:12:00+01:00`
 - Branche active : `morocco26-fminus1`
 - Base initiale : `main@2ccad2e5c89c710de85d8e1e992e65d5169986ca`
 - Phase : `P6_PROBABILISTIC_FORECAST_ENGINE`
 - Forecast publié : aucun
 - Prochain snapshot autorisé : `F-1`
 - Classe : `STRUCTURAL_PROBABILISTIC_FORECAST`
-- P0 : `4 CLOSED / 2 OPEN`
-- Gates F-1 restants : `N92`, `UNCERTAINTY`, `MC-50000`, `IMMUTABILITY-MANIFEST`
+- P0 : `5 CLOSED / 1 OPEN`
+- Gates F-1 restants : `UNCERTAINTY`, `MC-50000`, `IMMUTABILITY-MANIFEST`
 - Agentique : `LOCKED` jusqu’au gel du premier moteur non agentique et de B2
 
 ## 3. Invariants anti-drift
@@ -34,6 +34,7 @@ Construire avant l’élection du 23 septembre 2026 un forecast territorial prob
 9. Le moteur légal échoue fermé si l’âge candidat ou un tirage au sort manque lors d’une égalité contraignante.
 10. Toute estimation locale des inscrits est étiquetée posterior latent, jamais compte officiel.
 11. Le legal watch géographique reste actif même après fermeture de P0-1.
+12. Une masse d’égalité légale, même minuscule, reste visible ; elle n’est jamais cassée par ordre alphabétique, parti ou voix.
 
 ## 4. Baseline scientifique gelée
 
@@ -49,17 +50,17 @@ Construire avant l’élection du 23 septembre 2026 un forecast territorial prob
 |---|---|---|---|
 | P0-1 Géographie 2026 | **CLOSED** | `geometry_2026_certificate.json` : 92/92, 305 ; 12/12, 90 ; zéro différence | legal watch uniquement |
 | P0-2 Allocator légal | **CLOSED** | régression mathématique 104/104 | surveillance uniquement |
-| P0-3 Inscrits N | OPEN | N national exact 15 801 162 ; variance historique ancrée | posterior contraint N92 + sensibilité sièges |
+| P0-3 Inscrits N | **CLOSED** | `local_N_posterior.json` : 50k tirages exacts + sensibilité 92+12 | utiliser conjointement dans F-1 |
 | P0-4 Historique | **CLOSED** | 2011/2016/2021, 92/92 continus | ne pas rouvrir sans nouvelle preuve |
 | P0-5 B* | **CLOSED** | `V0_PERSIST / T0_PERSIST` | construire B2 après F-1 |
 | P0-6 Incertitude | OPEN | architecture national + région + local | fit, calibration, couverture, simulation cohérente |
 
 ## 6. Gates avant F-1
 
-| Ordre | Gate | État | Artefact attendu |
+| Ordre | Gate | État | Artefact |
 |---:|---|---|---|
 | 1 | `GEO-2026-AUTHORITATIVE-DIFF` | **CLOSED** | `geometry_2026_certificate.json` |
-| 2 | `N92-POSTERIOR-FIT` | OPEN | `local_N_posterior.json` |
+| 2 | `N92-POSTERIOR-FIT` | **CLOSED** | `local_N_posterior.json` |
 | 3 | `UNCERTAINTY-CALIBRATION` | OPEN | `uncertainty_calibration.json` |
 | 4 | `MC-50000-COHERENT` | OPEN | `simulation_certificate.json` |
 | 5 | `SNAPSHOT-IMMUTABILITY-MANIFEST` | OPEN | manifest F-1 complet |
@@ -82,20 +83,20 @@ F-1 doit produire, sans couche agentique :
 - `D-001` — Produire F-1 structurel avant le F0 conventionnel.
 - `D-002` — F0 sera le premier forecast préliminaire enrichi par B2.
 - `D-003` — Ne pas attendre les listes définitives de candidats pour F-1.
-- `D-004` — Modéliser N92 comme variable latente contrainte tant que les comptes locaux officiels manquent.
+- `D-004` — N92 reste un posterior latent contraint tant que les comptes officiels locaux manquent.
 - `D-005` — Interdire une covariance territoriale libre 92×92 ; utiliser facteurs national, régional et résidu local shrinké.
 - `D-006` — Séparer collecte agentique et raisonnement agentique pour attribution causale future.
-- `D-007` — Conserver le HTTP 403 du Parlement comme limite de reproductibilité ; utiliser un témoin statique sourcé et un legal watch, sans prétendre à un live fetch inexistant.
+- `D-007` — Conserver le HTTP 403 du Parlement comme limite de reproductibilité ; témoin statique sourcé + legal watch.
+- `D-008` — La dérive 2007→2011 sert de variance floor, pas de loi stationnaire affirmée.
 
 ## 9. Exécution en cours
 
 ### Lot F-1A — Vérité mécanique
 
-- [x] Construire le certificat géographique 2026.
-- [x] Vérifier les 92 lignes locales et 12 magnitudes régionales.
-- [x] Maintenir le legal watch pour tout décret supersédant.
-- [ ] Produire le posterior contraint N92.
-- [ ] Mesurer la sensibilité N-only des sièges.
+- [x] Certificat géographique 92+12.
+- [x] Legal watch actif.
+- [x] Posterior contraint N92.
+- [x] Sensibilité N-only locale et régionale.
 
 ### Lot F-1B — Vérité probabiliste
 
@@ -119,21 +120,27 @@ F-1 doit produire, sans couche agentique :
 - Le présent fichier devient le journal canonique de reprise.
 - Aucun forecast n’est émis.
 
-### 2026-08-16 21:56 +01 — Probe des sources géographiques
+### 2026-08-16 21:56 +01 — Probe géographique
 
-- Les trois pages officielles du Parlement retournent HTTP 403 depuis GitHub Actions.
-- Le blocage WAF est enregistré dans `geometry_2026_probe.json`; aucun fallback secondaire silencieux n’est utilisé.
-- Les contenus officiels accessibles via index de recherche et la loi organique SGG sont transformés en témoins statiques sourcés.
+- Les pages officielles du Parlement retournent HTTP 403 depuis GitHub Actions.
+- Le WAF est enregistré ; aucun fallback secondaire silencieux.
 
 ### 2026-08-16 22:02 +01 — P0-1 fermé
 
 - `geometry_2026_certificate.json` : `PASS`.
-- Local : `92/92` lignes appariées, `305/305` sièges, zéro différence.
-- Régional : `12/12` lignes, `90/90` sièges, zéro différence.
-- Total Chambre : `395`.
-- `p0_resolution_v4.json`, `gate_registry.json` et `current_state.json` mis à jour.
-- Legal watch maintenu actif ; aucune prétention de live fetch direct.
+- Local `92/92`, `305/305`; régional `12/12`, `90/90`; total `395`; zéro différence.
+- Legal watch maintenu actif.
+
+### 2026-08-16 22:12 +01 — P0-3 fermé
+
+- `local_N_posterior.json` : `PASS`.
+- `50 000` tirages ; 92 entiers positifs ; somme exacte `15 801 162` à chaque tirage ; zéro violation de floor.
+- Variance historique : 74 appariements exacts 2007→2011, décomposition shrinkée région/local, floor total `0,2230517` en log-share.
+- 81 territoires sont mathématiquement invariants à N ; 11 sensibles ; seuls 2 reçoivent une masse de changement dans le posterior.
+- 5 des 12 régions reçoivent une masse de changement N-only.
+- Une égalité légale locale non résolue sur 50 000 tirages (`0,00002`) est conservée ; aucune égalité régionale.
+- Draw-stream hash : `092382b44873c2ee709e3fb62566247980c11eee29daf2758f0a1e1a52919d71`.
 
 ## 11. Prochaine action exacte
 
-**Construire `local_N_posterior.json` : une distribution jointe sur 92 entiers positifs, contrainte à sommer exactement à 15 801 162, ancrée sur les parts locales 2011 et la dérive 2007→2011, puis mesurer pour chaque territoire la probabilité qu’un changement de N seul modifie l’allocation des sièges.**
+**Fitter et certifier `uncertainty_calibration.json` : modèle hiérarchique compositionnel et turnout séparé, facteurs national/régional/local, variance floors explicites, validation rétrospective par proper scores et couverture, sans covariance libre 92×92 ni retuning silencieux.**
