@@ -1,0 +1,31 @@
+{
+  "evaluation_id": "M26-GOAL75-D-NOLEAK-001",
+  "decision": "KILL_D_FOR_CURRENT_ARCHITECTURE",
+  "decision_stage": "PRE_HOLDOUT_UNSEAL",
+  "holdout_2021_outcomes_accessed": false,
+  "reason": "Blocking output-contract gate failed before any holdout outcome was opened. Per preregistration, no prompt repair or threshold relaxation is permitted after observing this failure.",
+  "workflow_run_id": 31950089974,
+  "workflow_job_id": 95172118879,
+  "bc_freeze_hash": "4281f4bc7cf7e7101b390a9cedce8c4196bb90873acc9dfe19c48580afbd70a2",
+  "models": {
+    "Qwen/Qwen2.5-0.5B-Instruct": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "HuggingFaceTB/SmolLM2-360M-Instruct": "a10cc1512eabd3dde888204e902eca88bddb4951"
+  },
+  "prompt_equivalent_variants_per_model": 3,
+  "runs": 6,
+  "delegate_records_expected": 72,
+  "delegate_records_valid": 5,
+  "contract_validity_rate": 0.06944444444444445,
+  "preregistered_contract_validity_rate_min": 0.98,
+  "mean_prompt_party_sd_on_parseable_records": 0.0,
+  "mean_prompt_turnout_sd_on_parseable_records": 0.0,
+  "cross_model_flattened_correlation_on_parseable_records": 0.9999999999999998,
+  "pre_unseal_gates_pass": false,
+  "interpretation": "Small local instruction models did not reliably satisfy the bounded aggregate output contract. High correlation on the tiny parseable subset cannot rescue the failed coverage/contract gate. LLM cognition receives zero scientific credit and is removed from the current production architecture.",
+  "anti_drift": {
+    "threshold_changed_after_result": false,
+    "prompt_repaired_after_result": false,
+    "holdout_used_for_tuning": false,
+    "national_forecast_unlocked": false
+  }
+}
