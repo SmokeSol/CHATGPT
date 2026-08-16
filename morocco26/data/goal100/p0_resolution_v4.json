@@ -1,0 +1,46 @@
+{
+  "schema_version": "4.0",
+  "audit_id": "M26-GOAL100-P0-RESOLUTION-V4",
+  "as_of": "2026-08-16",
+  "preserves": [
+    "p0_resolution_v1.json",
+    "p0_resolution_v2.json",
+    "p0_resolution_v3.json"
+  ],
+  "delta_from_v3": {
+    "P0-1": {
+      "previous": "RESOLVED_WITH_LEGAL_WATCH_AND_AUTHORITATIVE_ROW_DIFF_REMAINING",
+      "current": "GEOMETRY_CERTIFIED_WITH_ACTIVE_LEGAL_WATCH",
+      "evidence": {
+        "local_rows": 92,
+        "local_matched": 92,
+        "local_seats": 305,
+        "local_unexplained_differences": 0,
+        "regional_rows": 12,
+        "regional_seats": 90,
+        "regional_unexplained_differences": 0,
+        "house_seats": 395,
+        "direct_runner_acquisition": "WAF_403_RECORDED_NOT_HIDDEN",
+        "legal_watch": "ACTIVE",
+        "artifact": "geometry_2026_certificate.json"
+      },
+      "interpretation": "The repository geometry matches the current official Parliament map/list witness on every local row and the SGG Article-1 table on every regional magnitude. P0-1 is closed for forecast construction; a future superseding decree produces a new certificate and snapshot version rather than rewriting prior forecasts."
+    }
+  },
+  "current_p0_status": {
+    "P0-1_geometry": "RESOLVED_AND_CERTIFIED_WITH_ACTIVE_LEGAL_WATCH",
+    "P0-2_legal_allocator": "RESOLVED_AND_104_VECTOR_REGRESSION_CERTIFIED",
+    "P0-3_registered_N": "NATIONAL_EXACT_LOCAL_POSTERIOR_DESIGN_EMPIRICALLY_ANCHORED_FIT_PENDING",
+    "P0-4_history": "RESOLVED_AND_INGESTED_92_OF_92_MODERN_CONTINUITY",
+    "P0-5_Bstar": "CORE_SELECTED_PERSISTENCE_FIRST_2026_UNTOUCHED",
+    "P0-6_uncertainty": "ARCHITECTURE_RESOLVED_POST_SELECTION_FIT_AND_CALIBRATION_PENDING"
+  },
+  "remaining_hard_gates_before_first_calibrated_snapshot": [
+    "fit constrained 92-local N posterior and quantify seat sensitivity",
+    "fit post-selection hierarchical innovation/covariance distribution",
+    "posterior predictive diagnostics and >=50,000 coherent election simulations",
+    "immutable F-1 snapshot manifest"
+  ],
+  "agentic_layer_status": "LOCKED_UNTIL_NON_AGENTIC_B2_AND_FIRST_PROBABILISTIC_SNAPSHOT_ARE_FROZEN",
+  "forecast_sequence_policy": "F-1/F0/F1/... allowed; each immutable; F0 preliminary; no snapshot overwrite"
+}
