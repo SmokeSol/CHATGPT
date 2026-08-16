@@ -1,0 +1,65 @@
+name: morocco26-goal75-promote
+
+on:
+  push:
+    branches: [morocco26-goal75-hard]
+    paths:
+      - '.github/workflows/morocco26-goal75-promote.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  certify-and-promote:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-goal75-hard
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recompute the checkpoint from evidence
+        run: python morocco26/scripts/goal75_reconcile_finalize_v3.py
+      - name: Enforce anti-drift and hard stop condition
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=Path('morocco26')
+          score=json.loads((r/'data/goal75/scientific_completion_75.json').read_text())
+          phase=json.loads((r/'data/current_phase.json').read_text())
+          goal=json.loads((r/'data/execution_goal_75.json').read_text())
+          p2=json.loads((r/'data/goal75/p2_tiered_395_audit.json').read_text())
+          assert score['target_reached'] is True
+          assert score['scientifically_gated_completion_percent'] >= 75
+          assert goal['target_75_reached'] is True
+          assert phase['forecast_status'] == 'BLOCKED'
+          assert phase['agent_society_status'] == 'KILLED_FOR_CURRENT_ARCHITECTURE'
+          assert p2['total']['seats'] == 395 and p2['total']['exact_official_match'] is True
+          assert p2['local']['denominator_free_exact_interval_proofs'] == 81
+          assert p2['local']['denominator_sensitive_secondary_reproductions'] == 11
+          assert p2['regional']['identity_list_to_affiliation_reconciliations'] == 10
+          assert p2['regional']['aggregate_mixed_list_affiliation_bridges'] == 2
+          print('GOAL75_CERTIFIED')
+          PY
+          python -m compileall -q morocco26/scripts morocco26/src
+          git diff --check
+      - name: Commit any deterministic regenerated evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data morocco26/reports/GOAL75_75_PERCENT.md
+          git commit -m 'chore(morocco26): refresh certified Goal75 evidence' || true
+      - name: Fast-forward main only after certification
+        run: |
+          git fetch origin main
+          if ! git merge-base --is-ancestor origin/main HEAD; then
+            git merge --no-edit origin/main
+          fi
+          git push origin HEAD:morocco26-goal75-hard
+          git push origin HEAD:main
