@@ -1,0 +1,41 @@
+{
+  "schema_version": "3.0",
+  "audit_id": "M26-GOAL100-P0-RESOLUTION-V3",
+  "as_of": "2026-08-16",
+  "preserves": ["p0_resolution_v1.json", "p0_resolution_v2.json"],
+  "delta_from_v2": {
+    "P0-2": {
+      "previous": "CORE_LEGAL_RULE_RESOLVED_AND_TESTED; 104-vector regression pending",
+      "current": "LEGAL_ALLOCATOR_REGRESSION_CERTIFIED",
+      "evidence": {
+        "local_vectors": 92,
+        "local_allocator_equivalent": 92,
+        "local_unresolved_statutory_ties": 0,
+        "regional_vectors": 12,
+        "regional_allocator_equivalent": 12,
+        "regional_unresolved_statutory_ties": 0,
+        "regional_independent_observed_matches": 10,
+        "preserved_known_data_anomalies": ["Casablanca - Settat", "Marrakech - Safi"],
+        "anti_drift": "PASS",
+        "artifact": "legal_regression_104.json"
+      },
+      "interpretation": "The new fail-closed Goal100 allocator is mathematically equivalent on all 104 historical test vectors. The remaining Casablanca/Marrakech mismatch is preserved as a data/provenance discrepancy against independent observed affiliations, not mislabelled as an allocator failure."
+    }
+  },
+  "current_p0_status": {
+    "P0-1_geometry": "RESOLVED_WITH_LEGAL_WATCH_AND_AUTHORITATIVE_ROW_DIFF_REMAINING",
+    "P0-2_legal_allocator": "RESOLVED_AND_104_VECTOR_REGRESSION_CERTIFIED",
+    "P0-3_registered_N": "NATIONAL_EXACT_LOCAL_POSTERIOR_DESIGN_EMPIRICALLY_ANCHORED_FIT_PENDING",
+    "P0-4_history": "RESOLVED_AND_INGESTED_92_OF_92_MODERN_CONTINUITY",
+    "P0-5_Bstar": "CORE_SELECTED_PERSISTENCE_FIRST_2026_UNTOUCHED",
+    "P0-6_uncertainty": "ARCHITECTURE_RESOLVED_POST_SELECTION_FIT_AND_CALIBRATION_PENDING"
+  },
+  "remaining_hard_gates_before_first_calibrated_snapshot": [
+    "authoritative geometry row-diff/legal watch",
+    "fit constrained 92-local N posterior and quantify seat sensitivity",
+    "fit post-selection hierarchical innovation/covariance distribution",
+    "posterior predictive diagnostics and >=50,000 coherent election simulations"
+  ],
+  "agentic_layer_status": "LOCKED_UNTIL_NON_AGENTIC_B2_AND_FIRST_PROBABILISTIC_SNAPSHOT_ARE_FROZEN",
+  "forecast_sequence_policy": "F-1/F0/F1/... allowed; each immutable; F0 preliminary; no snapshot overwrite"
+}
