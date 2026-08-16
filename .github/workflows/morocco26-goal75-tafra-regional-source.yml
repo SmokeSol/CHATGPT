@@ -1,0 +1,24 @@
+name: morocco26-goal75-tafra-regional-source
+on:
+  push:
+    branches: [morocco26-goal75-hard]
+    paths: ['.github/workflows/morocco26-goal75-tafra-regional-source.yml']
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-goal75-hard}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install --quiet pandas openpyxl requests
+      - run: python morocco26/scripts/goal75_tafra_legislative_audit.py
+      - run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/data/goal75/tafra_legislative_workbook_audit.json
+          git commit -m "data(morocco26): validate TAFRA House regional vote source"
+          git pull --rebase origin morocco26-goal75-hard
+          git push origin HEAD:morocco26-goal75-hard
