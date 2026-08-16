@@ -1,0 +1,113 @@
+name: morocco26-fminus1-register
+
+on:
+  push:
+    branches: [morocco26-fminus1]
+    paths:
+      - 'morocco26/data/goal100/simulation_certificate.json'
+      - 'morocco26/data/goal100/snapshots/F-1/**'
+      - 'morocco26/scripts/goal100_finalize_fminus1_manifest.py'
+      - 'morocco26/scripts/goal100_register_fminus1.py'
+      - 'morocco26/scripts/goal100_sync_fil_ariane.py'
+      - '.github/workflows/morocco26-fminus1-register.yml'
+
+concurrency:
+  group: morocco26-fminus1-registration
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Require complete unregistered snapshot evidence
+        id: ready
+        run: |
+          files=(
+            morocco26/data/goal100/simulation_certificate.json
+            morocco26/data/goal100/snapshots/F-1/forecast.json
+            morocco26/data/goal100/snapshots/F-1/manifest.json
+            morocco26/data/goal100/geometry_2026_certificate.json
+            morocco26/data/goal100/local_N_posterior.json
+            morocco26/data/goal100/uncertainty_calibration.json
+          )
+          ready=true
+          for f in "${files[@]}"; do
+            if [ ! -f "$f" ]; then echo "waiting for $f"; ready=false; fi
+          done
+          echo "ready=$ready" >> "$GITHUB_OUTPUT"
+
+      - name: Synchronize branch before binding evidence commit
+        if: steps.ready.outputs.ready == 'true'
+        run: git pull --rebase origin morocco26-fminus1
+
+      - name: Compile finalization and registration code
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          python -m py_compile \
+            morocco26/scripts/goal100_finalize_fminus1_manifest.py \
+            morocco26/scripts/goal100_register_fminus1.py \
+            morocco26/scripts/goal100_sync_fil_ariane.py \
+            morocco26/scripts/goal100_reconcile_fminus1_state.py \
+            morocco26/scripts/validate_goal100_tracking_dynamic.py
+
+      - name: Finalize manifest against exact evidence commit
+        if: steps.ready.outputs.ready == 'true'
+        run: python morocco26/scripts/goal100_finalize_fminus1_manifest.py
+
+      - name: Append F-1 to immutable forecast registry
+        if: steps.ready.outputs.ready == 'true'
+        run: python morocco26/scripts/goal100_register_fminus1.py
+
+      - name: Synchronize append-only FIL_ARIANE from evidence
+        if: steps.ready.outputs.ready == 'true'
+        run: python morocco26/scripts/goal100_sync_fil_ariane.py
+
+      - name: Validate final registered state
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking_dynamic.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          g=Path('morocco26/data/goal100')
+          r=json.loads((g/'forecast_registry.json').read_text(encoding='utf-8'))
+          c=json.loads((g/'fminus1_registration_certificate.json').read_text(encoding='utf-8'))
+          assert c['gate']=='PASS'
+          assert len(r['snapshots'])==1 and r['snapshots'][0]['snapshot_id']=='F-1'
+          assert r['sequence']['next_id']=='F0'
+          assert r['snapshots'][0]['manifest_sha256']==c['manifest_sha256']
+          assert r['snapshots'][0]['forecast_artifact_hash']==c['forecast_artifact_sha256']
+          PY
+
+      - name: Commit immutable registration and journal
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/snapshots/F-1/manifest.json \
+            morocco26/data/goal100/snapshots/F-1/manifest_finalization_certificate.json \
+            morocco26/data/goal100/snapshots/F-1/simulation_certificate.json \
+            morocco26/data/goal100/simulation_certificate.json \
+            morocco26/data/goal100/forecast_registry.json \
+            morocco26/data/goal100/gate_registry.json \
+            morocco26/data/goal100/current_state.json \
+            morocco26/data/goal100/fminus1_state_reconciliation.json \
+            morocco26/data/goal100/fminus1_registration_certificate.json \
+            morocco26/data/goal100/fil_ariane_index.json \
+            morocco26/FIL_ARIANE.md
+          git commit -m 'milestone(morocco26): register immutable probabilistic forecast F-1' || true
+          git push origin HEAD:morocco26-fminus1
