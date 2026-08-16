@@ -1,1 +1,1 @@
-M26-GOAL75-HARD stage1 trigger 2026-08-16T14:16+01:00
+M26-GOAL75-HARD stage1 trigger 2026-08-16T14:24+01:00 retry=2
