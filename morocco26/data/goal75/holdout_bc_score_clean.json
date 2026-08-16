@@ -1,0 +1,164 @@
+{
+  "audit_id": "M26-HOLDOUT-BC-CLEAN-001",
+  "holdout_id": "M26-HOLDOUT-2021-V1",
+  "frozen_before_outcome_access": true,
+  "training_n": 77,
+  "holdout_n": 12,
+  "B": {
+    "party_share_RMSE_pp": 12.645244798185258,
+    "turnout_MAE_pp": 4.558990783212594,
+    "winner_set_Jaccard": 0.5777777777777778,
+    "frozen_score": 15.896103605099517
+  },
+  "C": {
+    "party_share_RMSE_pp": 13.661592859675013,
+    "turnout_MAE_pp": 4.961212147551983,
+    "winner_set_Jaccard": 0.5361111111111111,
+    "frozen_score": 17.221340341007455
+  },
+  "C_beats_B": false,
+  "no_post_unseal_tuning": true,
+  "model_D_status": "KILL_D_FOR_CURRENT_ARCHITECTURE",
+  "rows": [
+    {
+      "constituency_id": "tarfaya",
+      "name": "Tarfaya",
+      "seats": 2,
+      "turnout_actual": 0.8508,
+      "winner_set_actual": [
+        "PI",
+        "RNI"
+      ],
+      "source": "TAFRA Elections.ma-derived legislative workbook + independent Parliament member file"
+    },
+    {
+      "constituency_id": "aousserd",
+      "name": "Aousserd",
+      "seats": 2,
+      "turnout_actual": 0.811,
+      "winner_set_actual": [
+        "PI",
+        "RNI"
+      ],
+      "source": "TAFRA Elections.ma-derived legislative workbook + independent Parliament member file"
+    },
+    {
+      "constituency_id": "zagora",
+      "name": "Zagora",
+      "seats": 3,
+      "turnout_actual": 0.6472,
+      "winner_set_actual": [
+        "PI",
+        "RNI",
+        "USFP"
+      ],
+      "source": "TAFRA Elections.ma-derived legislative workbook + independent Parliament member file"
+    },
+    {
+      "constituency_id": "nouaceur",
+      "name": "Nouaceur",
+      "seats": 3,
+      "turnout_actual": 0.5084,
+      "winner_set_actual": [
+        "PAM",
+        "PI",
+        "RNI"
+      ],
+      "source": "TAFRA Elections.ma-derived legislative workbook + independent Parliament member file"
+    },
+    {
+      "constituency_id": "sidi-bennour",
+      "name": "Sidi Bennour",
+      "seats": 4,
+      "turnout_actual": 0.6937,
+      "winner_set_actual": [
+        "PAM",
+        "PI",
+        "RNI",
+        "USFP"
+      ],
+      "source": "TAFRA Elections.ma-derived legislative workbook + independent Parliament member file"
+    },
+    {
+      "constituency_id": "tata",
+      "name": "Tata",
+      "seats": 2,
+      "turnout_actual": 0.6784,
+      "winner_set_actual": [
+        "PAM",
+        "RNI"
+      ],
+      "source": "TAFRA Elections.ma-derived legislative workbook + independent Parliament member file"
+    },
+    {
+      "constituency_id": "assa-zag",
+      "name": "Assa-Zag",
+      "seats": 2,
+      "turnout_actual": 0.8047,
+      "winner_set_actual": [
+        "PAM",
+        "USFP"
+      ],
+      "source": "TAFRA Elections.ma-derived legislative workbook + independent Parliament member file"
+    },
+    {
+      "constituency_id": "youssoufia",
+      "name": "Youssoufia",
+      "seats": 2,
+      "turnout_actual": 0.6052,
+      "winner_set_actual": [
+        "PAM",
+        "PI"
+      ],
+      "source": "TAFRA Elections.ma-derived legislative workbook + independent Parliament member file"
+    },
+    {
+      "constituency_id": "fahs-anjra",
+      "name": "Fahs-Anjra",
+      "seats": 2,
+      "turnout_actual": 0.7014,
+      "winner_set_actual": [
+        "PI",
+        "RNI"
+      ],
+      "source": "TAFRA Elections.ma-derived legislative workbook + independent Parliament member file"
+    },
+    {
+      "constituency_id": "figuig",
+      "name": "Figuig",
+      "seats": 3,
+      "turnout_actual": 0.6735,
+      "winner_set_actual": [
+        "PAM",
+        "PI",
+        "RNI"
+      ],
+      "source": "TAFRA Elections.ma-derived legislative workbook + independent Parliament member file"
+    },
+    {
+      "constituency_id": "boulemane",
+      "name": "Boulemane",
+      "seats": 3,
+      "turnout_actual": 0.7555,
+      "winner_set_actual": [
+        "MP",
+        "PPS",
+        "RNI"
+      ],
+      "source": "TAFRA Elections.ma-derived legislative workbook + independent Parliament member file"
+    },
+    {
+      "constituency_id": "khenifra",
+      "name": "Khenifra",
+      "seats": 3,
+      "turnout_actual": 0.5754,
+      "winner_set_actual": [
+        "MP",
+        "PI",
+        "RNI"
+      ],
+      "source": "TAFRA Elections.ma-derived legislative workbook + independent Parliament member file"
+    }
+  ],
+  "forecast_status": "BLOCKED"
+}
