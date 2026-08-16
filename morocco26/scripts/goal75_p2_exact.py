@@ -11,6 +11,7 @@ OFFICIAL_TOTAL={'RNI':102,'PAM':87,'PI':81,'USFP':34,'MP':28,'PPS':22,'UC':18,'P
 OFFICIAL_CODES=set(OFFICIAL_TOTAL)
 REGIONS=[('Rabat-Salé-Kénitra',10),('Laâyoune-Sakia El Hamra',5),('Dakhla-Oued Eddahab',3),('Drâa-Tafilalet',6),('Casablanca-Settat',12),('Souss-Massa',7),('Guelmim-Oued Noun',5),('Marrakech-Safi',10),('Tanger-Tétouan-Al Hoceïma',8),('Oriental',7),('Fès-Meknès',10),('Béni Mellal-Khénifra',7)]
 RSLUG={'Dakhla-Oued Eddahab':'Circonscription_de_Dakhla-Oued_Ed-Dahab','Oriental':"Circonscription_d%27Oriental"}
+REGION_OBS_ALIAS={'dakhla oued eddahab':'dakhla oued ed dahab'}
 OV={('beni-mellal',2021,'registered'):318608}
 ACR=re.compile(r'\(([A-Z][A-Z0-9-]{1,7})\)')
 
@@ -25,12 +26,14 @@ def list_key(label):
     return f'LIST::{code}::{full}'
 
 def party_label_from_row(row):
-    # The rendered HTML often has a logo cell under the "Parti" header and
-    # the textual party name in an adjacent cell. The acronym-bearing cell is
-    # therefore the stable structural locator across local and regional tables.
-    for value in row.tolist():
-        s=str(value).strip()
+    vals=[str(v).strip() for v in row.tolist()]
+    # Preferred identity: explicit acronym-bearing party-name cell.
+    for s in vals:
         if ACR.search(s):return s
+    # Some secondary tables omit the acronym for a known party (notably RNI
+    # in Laâyoune-Sakia El Hamra). Full official party names remain unambiguous.
+    for s in vals:
+        if g.party(s) in OFFICIAL_CODES:return s
     return None
 
 def parse_table(df,cid=None):
@@ -72,28 +75,37 @@ def alloc(v,seats,reg):
 
 def exact(a,b):return {k:v for k,v in a.items() if v}=={k:v for k,v in b.items() if v}
 def official_only(d):return {k:v for k,v in d.items() if k in OFFICIAL_CODES and v}
+def obs_region_key(name):
+    k=g.norm(name);return REGION_OBS_ALIAS.get(k,k)
 
 def main():
+    observed=json.loads((O/'observed_elected_2021.json').read_text())
+    assert observed['original_elected_rows']==395 and observed['official_total_exact_match'] is True
+    assert observed['local_seats_observed']==305 and observed['regional_seats_observed']==90
     cfg=list(csv.DictReader(open(D/'constituencies_goal75.csv',encoding='utf-8')));local=[];lm=[]
     for i,x in enumerate(cfg,1):
         name=x['name'];seats=int(x['seats']);_,url=g.resolve(name);t=tabs(url)[-1];p=parse_table(t,x['constituency_id']);assert p['registered'] and p['recognized_vote_sum']<=p['registered'];a=alloc(p['votes'],seats,p['registered'])
+        # Local secondary tables are complete enough to verify each winner set;
+        # 2021 also empirically had one seat per winning local list.
         elected={k:1 for k,v in p['elected_party_counts'].items() if v>0};rank=set(sorted(p['votes'],key=p['votes'].get,reverse=True)[:seats]);legal_set=set(a)
         empirical_ok=(not elected or elected=={k:1 for k in legal_set}) and len(legal_set)==seats and legal_set==rank
         if not empirical_ok:raise RuntimeError(f'local elected mismatch {name}: legal={a} elected={elected} rank={rank}')
         rr=sorted(p['votes'].items(),key=lambda z:(-z[1],z[0]));cut1,cut2=rr[seats-1],rr[seats]
         lm.append({'constituency_id':x['constituency_id'],'name':name,'region':x['region'],'seats':seats,'registered':p['registered'],'expressed':p['expressed'],'legal_winners':a,'last_rank_party':cut1[0],'last_rank_votes':cut1[1],'first_nonwinner':cut2[0],'first_nonwinner_votes':cut2[1],'raw_margin_votes':cut1[1]-cut2[1],'source_url':url})
-        local.append({'constituency_id':x['constituency_id'],'name':name,'region':x['region'],'seats':seats,'registered':p['registered'],'expressed':p['expressed'],'legal_replay':a,'elected_party_counts':elected,'source_url':url});print('L',i,name,a,flush=True)
+        local.append({'constituency_id':x['constituency_id'],'name':name,'region':x['region'],'seats':seats,'registered':p['registered'],'expressed':p['expressed'],'legal_replay':a,'elected_party_counts_secondary':elected,'source_url':url});print('L',i,name,a,flush=True)
     reg=[]
     for i,(name,seats) in enumerate(REGIONS,1):
-        slug=RSLUG.get(name,'Circonscription_de_'+quote(name.replace(' ','_'),safe="_()'-"));url='https://fr.wikipedia.org/wiki/'+slug;t=tabs(url)[-1];p=parse_table(t,'REGION::'+name);assert p['registered'] and p['recognized_vote_sum']<=p['registered'];a=alloc(p['votes'],seats,p['registered']);e=p['elected_party_counts']
-        if sum(e.values())!=seats or not exact(a,e):raise RuntimeError(f'regional elected mismatch {name}: legal={a} elected={e}')
-        reg.append({'region':name,'seats':seats,'registered':p['registered'],'expressed':p['expressed'],'legal_replay':a,'elected_party_counts':e,'source_url':url});print('R',i,name,a,flush=True)
+        slug=RSLUG.get(name,'Circonscription_de_'+quote(name.replace(' ','_'),safe="_()'-"));url='https://fr.wikipedia.org/wiki/'+slug;t=tabs(url)[-1];p=parse_table(t,'REGION::'+name);assert p['registered'] and p['recognized_vote_sum']<=p['registered'];a=alloc(p['votes'],seats,p['registered'])
+        ok=obs_region_key(name);e=observed['regional'].get(ok)
+        if e is None:raise RuntimeError(f'independent observed region missing {name} normalized={ok}; keys={sorted(observed["regional"])}')
+        if sum(e.values())!=seats or not exact(official_only(a),e) or any(k.startswith('LIST::') for k in a):raise RuntimeError(f'regional observed mismatch {name}: legal={a} independent_observed={e}')
+        reg.append({'region':name,'seats':seats,'registered':p['registered'],'expressed':p['expressed'],'legal_replay':a,'independent_observed_elected':e,'source_url':url});print('R',i,name,a,flush=True)
     def agg(rows):
         c=Counter()
         for z in rows:c.update(official_only(z['legal_replay']))
         return dict(sorted(c.items()))
     la,ra=agg(local),agg(reg);total=Counter(la);total.update(ra);total=dict(sorted(total.items()))
     local_seats=sum(sum(z['legal_replay'].values()) for z in local);regional_seats=sum(sum(z['legal_replay'].values()) for z in reg)
-    out={'method':'LO_04_21_article_84_registered_voters_divided_by_seats_then_largest_remainders','identity_rule':'party located by acronym-bearing row cell; official seat-winning codes canonical; all other electoral lists keyed by normalized full name','local':{'constituencies':len(local),'seats':local_seats,'aggregate':la,'every_constituency_empirically_reproduced':True},'regional':{'constituencies':len(reg),'seats':regional_seats,'aggregate':ra,'every_region_empirically_reproduced':True},'total':{'seats':local_seats+regional_seats,'aggregate':total,'official_expected':OFFICIAL_TOTAL,'exact_official_match':exact(total,OFFICIAL_TOTAL)},'beni_mellal_override':{'registered':318608,'reason':'secondary page turnout block internally impossible; override documented in source_overrides_goal75.json'},'forecast_status':'BLOCKED'}
+    out={'method':'LO_04_21_article_84_registered_voters_divided_by_seats_then_largest_remainders','observed_validation':'regional winners independently validated against TAFRA 395-member 2021 ground truth; source itself reconciles exactly to official party totals','identity_rule':'acronym/full official name locator; official seat-winning codes canonical; all other lists keyed by normalized full name','local':{'constituencies':len(local),'seats':local_seats,'aggregate':la,'every_constituency_empirically_reproduced':True},'regional':{'constituencies':len(reg),'seats':regional_seats,'aggregate':ra,'every_region_independently_reproduced':True},'total':{'seats':local_seats+regional_seats,'aggregate':total,'official_expected':OFFICIAL_TOTAL,'exact_official_match':exact(total,OFFICIAL_TOTAL)},'independent_ground_truth':{'rows':observed['original_elected_rows'],'local_seats':observed['local_seats_observed'],'regional_seats':observed['regional_seats_observed'],'official_total_exact_match':observed['official_total_exact_match']},'beni_mellal_override':{'registered':318608,'reason':'secondary page turnout block internally impossible; override documented in source_overrides_goal75.json'},'forecast_status':'BLOCKED'}
     (O/'local_2021_replay_exact.json').write_text(json.dumps(local,ensure_ascii=False,indent=2));(O/'regional_2021_replay_exact.json').write_text(json.dumps(reg,ensure_ascii=False,indent=2));(O/'seat_margin_92.json').write_text(json.dumps(lm,ensure_ascii=False,indent=2));(O/'p2_exact_audit.json').write_text(json.dumps(out,ensure_ascii=False,indent=2));print(json.dumps(out,ensure_ascii=False,indent=2));raise SystemExit(0 if local_seats==305 and regional_seats==90 and out['total']['exact_official_match'] else 9)
 main()
