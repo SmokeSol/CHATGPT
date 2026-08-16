@@ -6,6 +6,9 @@ on:
     paths:
       - 'morocco26/data/goal100/fminus1_protocol_v1.json'
       - 'morocco26/scripts/goal100_run_fminus1.py'
+      - 'morocco26/scripts/goal100_run_fminus1_v2.py'
+      - 'morocco26/scripts/goal100_fminus1_vector_allocator_v2.py'
+      - 'morocco26/scripts/goal100_vector_allocator_equivalence.py'
       - 'morocco26/data/goal100/uncertainty_calibration.json'
       - 'morocco26/data/goal100/local_N_posterior.json'
       - 'morocco26/data/goal100/geometry_2026_certificate.json'
@@ -29,8 +32,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install --quiet numpy
+      - name: Vector/scalar legal allocator equivalence
+        run: python morocco26/scripts/goal100_vector_allocator_equivalence.py
       - name: Execute 50,000 coherent F-1 elections
-        run: python morocco26/scripts/goal100_run_fminus1.py
+        run: python morocco26/scripts/goal100_run_fminus1_v2.py
       - name: Preserve Goal75 anti-drift checkpoint
         run: python morocco26/scripts/validate_anti_drift.py
       - name: Commit immutable F-1 artifacts
