@@ -1,0 +1,76 @@
+name: morocco26-goal75-final-v2
+
+on:
+  push:
+    branches: [morocco26-goal75-hard]
+    paths:
+      - 'morocco26/scripts/goal75_reconcile_finalize_v2.py'
+      - '.github/workflows/morocco26-goal75-final-v2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-goal75-hard
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reconcile all 395 seats and machine-score Goal75
+        run: python morocco26/scripts/goal75_reconcile_finalize_v2.py
+      - name: Compile and run anti-drift guard
+        run: |
+          python -m compileall -q morocco26/scripts morocco26/src
+          python morocco26/scripts/validate_anti_drift.py
+      - name: Run repository tests when present
+        run: |
+          if [ -d morocco26/tests ]; then
+            python -m pip install --quiet pytest
+            python -m pytest -q morocco26/tests
+          else
+            echo 'No morocco26/tests directory on this branch; compile and machine gates remain mandatory.'
+          fi
+      - name: Verify generated scientific checkpoint
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('morocco26')
+          score=json.loads((root/'data/goal75/scientific_completion_75.json').read_text())
+          goal=json.loads((root/'data/execution_goal_75.json').read_text())
+          phase=json.loads((root/'data/current_phase.json').read_text())
+          assert score['target_reached'] is True
+          assert score['scientifically_gated_completion_percent'] >= 75
+          assert goal['target_75_reached'] is True
+          assert phase['scientifically_gated_completion_percent'] >= 75
+          assert phase['forecast_status'] == 'BLOCKED'
+          assert phase['agent_society_status'] == 'KILLED_FOR_CURRENT_ARCHITECTURE'
+          print(json.dumps({'score':score['scientifically_gated_completion_percent'],'forecast':phase['forecast_status'],'D':phase['agent_society_status']},indent=2))
+          PY
+          git diff --check
+      - name: Commit generated evidence and checkpoint
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/current_phase.json \
+            morocco26/data/execution_goal_75.json \
+            morocco26/data/goal75/p2_tiered_395_audit.json \
+            morocco26/data/goal75/p2_exact_audit.json \
+            morocco26/data/goal75/seat_margin_92.json \
+            morocco26/data/goal75/regional_list_affiliation_crosswalk.json \
+            morocco26/data/goal75/p2_gate_clarification_v2.json \
+            morocco26/data/goal75/p5_prospective_decoder_92.json \
+            morocco26/data/goal75/p5_live_gate.json \
+            morocco26/data/goal75/scientific_completion_75.json \
+            morocco26/reports/GOAL75_75_PERCENT.md
+          git commit -m 'feat(morocco26): reach 75% scientifically gated checkpoint' || true
+          git pull --rebase origin morocco26-goal75-hard
+          git push origin HEAD:morocco26-goal75-hard
