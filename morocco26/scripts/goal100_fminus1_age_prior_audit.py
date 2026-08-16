@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Audit the binding-tie structure of the unregistered F-1 V1.1 candidate.
 
-The audit replays the frozen latent streams into /tmp and records the vote levels
-inside every binding remainder group. It does not modify or register F-1.
+The audit replays the frozen latent streams into an ignored working-tree directory
+and records the vote levels inside every binding remainder group. It does not
+modify or register F-1.
 """
 from __future__ import annotations
 
@@ -16,7 +17,9 @@ import numpy as np
 import goal100_run_fminus1 as engine
 import goal100_fminus1_runtime_v4 as runtime
 
-TMP = Path("/tmp/morocco26-fminus1-age-prior-audit")
+# Keep temporary manifests under the repository root because the preserved base
+# engine records repo-relative paths. The workflow never stages this directory.
+TMP = Path(__file__).resolve().parents[2] / ".tmp" / "morocco26-fminus1-age-prior-audit"
 HISTOGRAM = Counter()
 BY_MAGNITUDE = defaultdict(Counter)
 EXAMPLES = []
@@ -109,6 +112,7 @@ def main() -> None:
         },
     }
     print(json.dumps(report, ensure_ascii=False, indent=2))
+    shutil.rmtree(TMP)
 
 
 if __name__ == "__main__":
