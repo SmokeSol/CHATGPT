@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {"source": "/", "destination": "/web/index.html"},
+    {"source": "/app", "destination": "/web/index.html"},
+    {"source": "/styles.css", "destination": "/web/styles.css"},
+    {"source": "/app.js", "destination": "/web/app.js"},
+    {"source": "/data/(.*)", "destination": "/web/data/$1"}
+  ]
+}
