@@ -1,5 +1,5 @@
 {
-  "schema_version":"1.0",
+  "schema_version":"1.1",
   "overrides":[
     {
       "constituency_id":"beni-mellal",
@@ -13,6 +13,21 @@
       "cross_check_source":"https://ledesk.ma/live-content/le-rni-le-pam-le-pi-lusfp-le-mp-et-le-pps-remportent-les-6-sieges-de-beni-mellal-resultats-provisoires/",
       "confidence":"HIGH",
       "effect":"With 318,608 registered, q=53,101.33 for six seats; no list reaches one full quotient and the six largest remainders are exactly RNI, PAM, PI, USFP, MP, PPS, matching the reported six elected lists."
+    },
+    {
+      "constituency_id":"REGION::Dakhla-Oued Eddahab",
+      "year":2021,
+      "field":"party_labels_for_vote_rows_PAM_PPS",
+      "bad_secondary_value":{"PAM":2036,"PPS":1862},
+      "corrected_value":{"PPS":2036,"PAM":1862},
+      "reason":"The secondary results table attaches elected MP Rifaa Maelainine to the 2,036-vote PAM row. Independent elected-member ground truth (TAFRA/Parliament) and L'Economiste's contemporaneous elected list both identify Rifaa Maelainine as PPS. A region has one list per party; therefore the two adjacent PAM/PPS party labels in the secondary transcription are swapped while the vote counts themselves are retained.",
+      "bad_source":"https://fr.wikipedia.org/wiki/Circonscription_de_Dakhla-Oued_Ed-Dahab",
+      "correction_sources":[
+        "electricsheepafrica/africa-membres-de-la-chambre-des-representants-du-maroc-2007-2011-2016-2021 (TAFRA-derived 2021 member data)",
+        "https://www.leconomiste.com/sites/default/files/eco7/public/chambre_des_representants.pdf"
+      ],
+      "confidence":"HIGH",
+      "effect":"The legal allocation changes from PI/RNI/PAM to PI/RNI/PPS, matching the independently observed three regional MPs without changing any vote count, registered-voter total, seat magnitude, or electoral formula."
     }
   ]
 }
