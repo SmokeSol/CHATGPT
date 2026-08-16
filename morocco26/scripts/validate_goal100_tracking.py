@@ -27,7 +27,6 @@ def require(cond: bool, message: str):
 
 
 def repo_path(rel: str) -> Path:
-    # Paths in machine registries are repository-root relative.
     p = ROOT.parent / rel
     require(p.exists(), f"required evidence missing: {rel}")
     return p
@@ -37,19 +36,21 @@ def main():
     current = load(G100 / "current_state.json")
     gates = load(G100 / "gate_registry.json")
     forecasts = load(G100 / "forecast_registry.json")
-    p0v3 = load(G100 / "p0_resolution_v3.json")
+    p0v4 = load(G100 / "p0_resolution_v4.json")
+    geometry = load(G100 / "geometry_2026_certificate.json")
     legal = load(G100 / "legal_regression_104.json")
     history = load(G100 / "historical_panel_diagnostic.json")
     bstar = load(G100 / "bstar_hindcast_v1.json")
     protocol = load(G100 / "forecast_protocol_v1.json")
 
+    require((ROOT / "FIL_D_ARIANE.md").exists(), "canonical FIL_D_ARIANE.md missing")
     require(current["program_phase"] == "P6_PROBABILISTIC_FORECAST_ENGINE", "unexpected Goal100 program phase")
     require(current["goal75_checkpoint"]["scientifically_gated_completion_percent"] == 75, "Goal75 checkpoint must remain 75")
     require(current["goal75_checkpoint"]["status"] == "PRESERVED_IMMUTABLE", "Goal75 checkpoint not marked immutable")
     repo_path(current["goal75_checkpoint"]["reference"])
 
     expected = {
-        "P0-1": "PARTIAL",
+        "P0-1": "CLOSED",
         "P0-2": "CLOSED",
         "P0-3": "OPEN",
         "P0-4": "CLOSED",
@@ -63,9 +64,27 @@ def main():
         for evidence in p0[gid].get("evidence", []):
             repo_path(evidence)
 
-    require(p0v3["current_p0_status"]["P0-2_legal_allocator"] == "RESOLVED_AND_104_VECTOR_REGRESSION_CERTIFIED", "P0-2 resolution drift")
-    require(p0v3["current_p0_status"]["P0-4_history"] == "RESOLVED_AND_INGESTED_92_OF_92_MODERN_CONTINUITY", "P0-4 resolution drift")
-    require(p0v3["current_p0_status"]["P0-5_Bstar"] == "CORE_SELECTED_PERSISTENCE_FIRST_2026_UNTOUCHED", "P0-5 resolution drift")
+    require(p0v4["current_p0_status"]["P0-1_geometry"] == "RESOLVED_AND_CERTIFIED_WITH_ACTIVE_LEGAL_WATCH", "P0-1 resolution drift")
+    require(p0v4["current_p0_status"]["P0-2_legal_allocator"] == "RESOLVED_AND_104_VECTOR_REGRESSION_CERTIFIED", "P0-2 resolution drift")
+    require(p0v4["current_p0_status"]["P0-4_history"] == "RESOLVED_AND_INGESTED_92_OF_92_MODERN_CONTINUITY", "P0-4 resolution drift")
+    require(p0v4["current_p0_status"]["P0-5_Bstar"] == "CORE_SELECTED_PERSISTENCE_FIRST_2026_UNTOUCHED", "P0-5 resolution drift")
+
+    # Geometry breakthrough and legal watch.
+    require(geometry["gate"] == "PASS", "geometry gate is not PASS")
+    require(geometry["status"] == "RESOLVED_WITH_ACTIVE_LEGAL_WATCH", "geometry status drift")
+    require(geometry["local"]["repo_rows"] == 92, "geometry repo local rows != 92")
+    require(geometry["local"]["official_rows"] == 92, "geometry official local rows != 92")
+    require(geometry["local"]["matched_rows"] == 92, "geometry matched local rows != 92")
+    require(geometry["local"]["repo_seats"] == 305, "geometry repo local seats != 305")
+    require(geometry["local"]["official_seats"] == 305, "geometry official local seats != 305")
+    require(not geometry["local"]["differences"], "geometry local differences are non-empty")
+    require(geometry["regional"]["rows"] == 12, "geometry regional rows != 12")
+    require(geometry["regional"]["seats"] == 90, "geometry regional seats != 90")
+    require(not geometry["regional"]["differences"], "geometry regional differences are non-empty")
+    require(geometry["house_seats"] == 395, "geometry House seats != 395")
+    require(geometry["legal_watch"]["status"] == "ACTIVE", "geometry legal watch not active")
+    require(current["geometry_2026"]["status"] == "CERTIFIED_WITH_ACTIVE_LEGAL_WATCH", "current geometry state drift")
+    require(current["geometry_2026"]["unexplained_differences"] == 0, "current geometry says unexplained differences remain")
 
     # Legal breakthrough must remain exactly what was certified.
     require(legal["gate"] == "PASS", "legal regression gate is not PASS")
@@ -103,13 +122,13 @@ def main():
     ids = [s["snapshot_id"] for s in snapshots]
     require(len(ids) == len(set(ids)), "duplicate forecast snapshot IDs")
     required_fields = set(forecasts["required_snapshot_manifest_fields"])
-    for s in snapshots:
-        missing = sorted(required_fields - set(s))
-        require(not missing, f"snapshot {s.get('snapshot_id')} missing manifest fields: {missing}")
-        require(int(s["monte_carlo_draws"]) >= 50000, f"snapshot {s['snapshot_id']} has <50,000 Monte Carlo draws")
-        require(bool(s["forecast_artifact_hash"]), f"snapshot {s['snapshot_id']} lacks artifact hash")
-        require(bool(s["data_manifest_hash"]), f"snapshot {s['snapshot_id']} lacks data manifest hash")
-        require(bool(s["parameter_manifest_hash"]), f"snapshot {s['snapshot_id']} lacks parameter manifest hash")
+    for snapshot in snapshots:
+        missing = sorted(required_fields - set(snapshot))
+        require(not missing, f"snapshot {snapshot.get('snapshot_id')} missing manifest fields: {missing}")
+        require(int(snapshot["monte_carlo_draws"]) >= 50000, f"snapshot {snapshot['snapshot_id']} has <50,000 Monte Carlo draws")
+        require(bool(snapshot["forecast_artifact_hash"]), f"snapshot {snapshot['snapshot_id']} lacks artifact hash")
+        require(bool(snapshot["data_manifest_hash"]), f"snapshot {snapshot['snapshot_id']} lacks data manifest hash")
+        require(bool(snapshot["parameter_manifest_hash"]), f"snapshot {snapshot['snapshot_id']} lacks parameter manifest hash")
 
     if not snapshots:
         require(forecasts["status"] == "NO_FORECAST_REGISTERED_YET", "empty snapshot registry has inconsistent status")
@@ -117,26 +136,35 @@ def main():
 
     # CLOSED unlock gates must already have their evidence.
     unlock = {g["id"]: g for g in gates["forecast_unlock"]}
-    for g in unlock.values():
-        if g["status"] == "CLOSED":
-            artifact = g.get("required_artifact")
-            require(artifact and artifact != "created with first registered forecast snapshot", f"closed gate {g['id']} lacks concrete artifact")
+    for gate in unlock.values():
+        if gate["status"] == "CLOSED":
+            artifact = gate.get("required_artifact")
+            require(artifact and artifact != "created with first registered forecast snapshot", f"closed gate {gate['id']} lacks concrete artifact")
             repo_path(artifact)
 
-    require(unlock["LEGAL-ALLOCATOR-CERTIFIED"]["status"] == "CLOSED", "legal unlock gate should be closed")
-    require(unlock["BSTAR-SELECTED"]["status"] == "CLOSED", "B* unlock gate should be closed")
-    for gid in ("GEO-2026-AUTHORITATIVE-DIFF", "N92-POSTERIOR-FIT", "UNCERTAINTY-CALIBRATION", "MC-50000-COHERENT", "SNAPSHOT-IMMUTABILITY-MANIFEST"):
+    for gid in ("GEO-2026-AUTHORITATIVE-DIFF", "LEGAL-ALLOCATOR-CERTIFIED", "BSTAR-SELECTED"):
+        require(unlock[gid]["status"] == "CLOSED", f"{gid} should be closed")
+    for gid in ("N92-POSTERIOR-FIT", "UNCERTAINTY-CALIBRATION", "MC-50000-COHERENT", "SNAPSHOT-IMMUTABILITY-MANIFEST"):
         require(unlock[gid]["status"] == "OPEN", f"{gid} must remain open at this checkpoint")
 
+    expected_remaining = [
+        "N92-POSTERIOR-FIT",
+        "UNCERTAINTY-CALIBRATION",
+        "MC-50000-COHERENT",
+        "SNAPSHOT-IMMUTABILITY-MANIFEST",
+    ]
+    require(current["remaining_hard_gates_before_F_minus_1"] == expected_remaining, "current remaining F-1 gates drifted")
+
     # Agentic experiment stays locked until B2 is frozen.
-    for g in gates["agentic_unlock"]:
-        require(g["status"] == "LOCKED", f"agentic gate {g['id']} unlocked prematurely")
+    for gate in gates["agentic_unlock"]:
+        require(gate["status"] == "LOCKED", f"agentic gate {gate['id']} unlocked prematurely")
     require(current["goal100_objective"]["agentic_experiment_status"].startswith("LOCKED"), "current state unlocked agentic experiment prematurely")
 
     print("GOAL100_TRACKING_PASS")
     print("phase=P6_PROBABILISTIC_FORECAST_ENGINE")
-    print("p0=CLOSED:3 PARTIAL:1 OPEN:2")
+    print("p0=CLOSED:4 OPEN:2")
     print(f"registered_forecasts={len(snapshots)} next={forecasts['sequence']['next_id']}")
+    print("geometry=92/92 local + 12/12 regional; legal-watch=ACTIVE")
     print("Bstar=V0_PERSIST/T0_PERSIST")
     print("agentic=LOCKED")
 
