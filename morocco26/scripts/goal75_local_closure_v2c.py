@@ -9,17 +9,24 @@ closure.CONFIG_TO_TAFRA.update({
     "taroudant sud": "taroudannt al janoubia",
     "taroudant nord": "taroudannt al chamalia",
 })
+REGION_ALIAS = {
+    "dakhla oued eddahab": "dakhla oued ed dahab",
+}
+
+
+def canonical_region(value: str) -> str:
+    normalized = closure.norm(value)
+    return REGION_ALIAS.get(normalized, normalized)
 
 
 def strict_best_row(config_name: str, rows: list[dict]) -> dict:
     wanted = closure.CONFIG_TO_TAFRA.get(closure.norm(config_name), closure.norm(config_name))
-    # The caller's config is reachable through the unique name in the canonical CSV.
     cfg = next(x for x in strict_best_row.config if x["name"] == config_name)
-    region = closure.norm(cfg["region"])
+    region = canonical_region(cfg["region"])
     seats = int(cfg["seats"])
     candidates = [
         row for row in rows
-        if closure.norm(row["region"]) == region and int(row["seats"]) == seats
+        if canonical_region(row["region"]) == region and int(row["seats"]) == seats
     ]
     if not candidates:
         raise RuntimeError(f"no TAFRA candidates in region/magnitude bucket for {config_name}: {region}/{seats}")
@@ -44,7 +51,6 @@ def strict_best_row(config_name: str, rows: list[dict]) -> dict:
     return best
 
 
-# Load canonical config once for identity constraints, before delegating to main.
 import csv
 strict_best_row.config = list(csv.DictReader((closure.DATA / "constituencies_goal75.csv").open(encoding="utf-8")))
 closure.best_row = strict_best_row
