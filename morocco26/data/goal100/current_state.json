@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "state_id": "M26-GOAL100-CURRENT-2026-08-16",
-  "as_of": "2026-08-16T21:30:00+01:00",
+  "as_of": "2026-08-16T22:02:13+01:00",
   "north_star": "Construire un forecast territorial probabiliste, entièrement gelé et falsifiable, puis déterminer expérimentalement si une intelligence agentique de collecte et de raisonnement résiduel apporte de l'information prédictive supplémentaire au-delà d'une baseline structurelle optimale.",
   "tracking_policy": {
     "progress_measure": "machine gates only; no subjective percentage inflation",
@@ -9,7 +9,8 @@
     "new_evidence_requires_new_version_or_snapshot": true,
     "forecast_snapshots_are_never_overwritten": true,
     "F0_is_preliminary_not_final": true,
-    "snapshots_before_F0_allowed": true
+    "snapshots_before_F0_allowed": true,
+    "canonical_work_log": "morocco26/FIL_D_ARIANE.md"
   },
   "program_phase": "P6_PROBABILISTIC_FORECAST_ENGINE",
   "goal75_checkpoint": {
@@ -26,20 +27,24 @@
   },
   "p0_summary": {
     "closed": [
+      "P0-1_2026_GEOMETRY",
       "P0-2_LEGAL_ALLOCATOR",
       "P0-4_HISTORICAL_PANEL",
       "P0-5_BSTAR_SELECTION"
     ],
-    "substantially_resolved_with_residual_gate": [
-      "P0-1_2026_GEOMETRY"
-    ],
+    "substantially_resolved_with_residual_gate": [],
     "active": [
       "P0-3_REGISTERED_VOTER_N",
       "P0-6_UNCERTAINTY_AND_CORRELATION"
     ],
-    "authoritative_resolution": "morocco26/data/goal100/p0_resolution_v3.json"
+    "authoritative_resolution": "morocco26/data/goal100/p0_resolution_v4.json"
   },
   "verified_breakthroughs": [
+    {
+      "id": "BT-GEOMETRY-92",
+      "claim": "The 2026 working geometry is certified on 92/92 local rows and 305 seats plus 12/12 regional rows and 90 seats with zero unexplained differences; active legal watch remains.",
+      "evidence": "morocco26/data/goal100/geometry_2026_certificate.json"
+    },
     {
       "id": "BT-LEGAL-104",
       "claim": "Goal100 fail-closed 2026 legal allocator is equivalent on all 92 local and all 12 regional historical mathematical test vectors; zero unresolved statutory ties in the test set.",
@@ -56,6 +61,17 @@
       "evidence": "morocco26/data/goal100/bstar_hindcast_v1.json"
     }
   ],
+  "geometry_2026": {
+    "status": "CERTIFIED_WITH_ACTIVE_LEGAL_WATCH",
+    "local_rows": 92,
+    "local_seats": 305,
+    "regional_rows": 12,
+    "regional_seats": 90,
+    "house_seats": 395,
+    "unexplained_differences": 0,
+    "direct_runner_access": "WAF_403_RECORDED",
+    "evidence": "morocco26/data/goal100/geometry_2026_certificate.json"
+  },
   "Bstar": {
     "vote_core": "V0_PERSIST",
     "turnout_core": "T0_PERSIST",
@@ -84,14 +100,12 @@
     ]
   },
   "remaining_hard_gates_before_F_minus_1": [
-    "GEO-2026-AUTHORITATIVE-DIFF",
     "N92-POSTERIOR-FIT",
     "UNCERTAINTY-CALIBRATION",
     "MC-50000-COHERENT",
     "SNAPSHOT-IMMUTABILITY-MANIFEST"
   ],
   "next_execution_order": [
-    "complete authoritative 2026 geometry row diff and legal watch",
     "fit constrained local-N posterior and run N-only seat-sensitivity audit",
     "fit post-selection hierarchical uncertainty/correlation model",
     "run retrospective posterior-predictive diagnostics",
@@ -107,6 +121,7 @@
       "Casablanca-Settat",
       "Marrakech-Safi"
     ],
-    "known_anomalies_must_not_be_posthoc_relabelled_or_bridged": true
+    "known_anomalies_must_not_be_posthoc_relabelled_or_bridged": true,
+    "geometry_legal_watch_must_remain_active": true
   }
 }
