@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "M26-GOAL100-FORECAST-PROTOCOL-V1",
+  "frozen_on": "2026-08-16",
+  "purpose": "Select and calibrate the strongest preregistered non-agentic structural forecast before any Goal100 agentic residual experiment.",
+  "forecast_object": {
+    "local": "for each of 92 local constituencies and each party bucket: posterior vote-share distribution and P(seats=k) for k=0..district magnitude",
+    "regional": "for each of 12 regional constituencies and each party bucket: posterior vote-share distribution and P(seats=k)",
+    "national": "joint posterior over 395 House seats and party seat totals",
+    "party_buckets": ["RNI", "PAM", "PI", "PJD", "USFP", "MP", "UC", "PPS", "OTHER"],
+    "minor_party_rule": "All parties outside the frozen eight named parties are aggregated into OTHER for structural calibration. Raw party identities remain preserved in the evidence graph and can be split prospectively only under a preregistered extension."
+  },
+  "historical_data_policy": {
+    "territorial_core": [2011, 2016, 2021],
+    "territorial_core_reason": "92/92 local IDs, names and seat magnitudes match across all three canonical TAFRA files",
+    "model_development_transition": "2011_to_2016",
+    "retrospective_temporal_validation_transition": "2016_to_2021",
+    "goal75_holdout": "CONSUMED_SANITY_CHECK_ONLY_NOT_TUNING_DATA",
+    "year_2007": "NATIONAL_PRIOR_SUPPORT_ONLY_AFTER_PARTY_CONTINUITY_AUDIT; no current-region/local covariance inference",
+    "year_2002": "QUARANTINED_SENSITIVITY_ONLY due TAFRA-documented source incompleteness/errors and missing small-party results",
+    "2026": "DECISIVE_UNTOUCHED_TEMPORAL_TEST"
+  },
+  "Bstar_selection": {
+    "principle": "Select the vote-composition and turnout dynamics before 2026 using only a small frozen family and the 2016->2021 temporal validation. Historical seat outcomes are not the primary selection target because electoral law changed; 2026 seats are generated later by the current legal allocator.",
+    "vote_models": {
+      "V0_PERSIST": "2021 mean composition equals the previous local-election composition; uncertainty is the empirically centred 2011->2016 territorial innovation distribution.",
+      "V1_GLOBAL_CLR": "Estimate a robust national/global CLR shift on 2011->2016 and add it to each 2016 local composition; uncertainty is the centred training residual distribution.",
+      "V2_REGION_SHRUNK_CLR": "Estimate 2011->2016 CLR shifts by the 2016 regional partition, shrink each regional shift toward the global shift with fixed kappa=5, then apply the corresponding regional shift to 2016; uncertainty is the centred training residual distribution."
+    },
+    "turnout_models": {
+      "T0_PERSIST": "previous local turnout on the logit scale",
+      "T1_GLOBAL_LOGIT_SHIFT": "global median 2011->2016 logit-turnout shift",
+      "T2_REGION_SHRUNK_LOGIT_SHIFT": "2011->2016 regional logit-turnout shift shrunk toward global with fixed kappa=5"
+    },
+    "primary_vote_score": {
+      "name": "TERRITORY_EQUAL_ENERGY_SCORE_SQRT_COMPOSITION",
+      "definition": "For each territory transform the 9-party composition s to sqrt(s) componentwise. From predictive samples X and observation y compute E||sqrt(X)-sqrt(y)|| - 0.5 E||sqrt(X)-sqrt(X')||. Average equally across 92 territories.",
+      "reason": "Sample-based proper score for the full multiparty composition, handles zero shares without arbitrary log-ratio pseudocounts, and does not reward only the point mean."
+    },
+    "primary_turnout_score": {
+      "name": "TERRITORY_EQUAL_CRPS",
+      "definition": "Empirical CRPS of the predictive turnout-rate distribution, averaged equally over the 92 territories."
+    },
+    "selection_rule": "Choose the lowest validation score separately for vote composition and turnout. Publish all candidate scores and paired territory-bootstrap uncertainty. No post-validation hyperparameter search; any new model family requires a new protocol version and cannot erase V1 results.",
+    "secondary_diagnostics": [
+      "party-share RMSE of predictive mean",
+      "turnout MAE/RMSE",
+      "50/80/95 interval coverage",
+      "calibration by predicted-probability bins once seat distributions exist",
+      "Goal75 frozen B/C score as non-tuning historical context"
+    ]
+  },
+  "uncertainty_model": {
+    "vote_state": "hierarchical compositional state in a log-ratio latent space; output scored and published in simplex space",
+    "components": [
+      "national party innovation shared by every territory",
+      "regional party innovation shared by territories in the same current region",
+      "local territorial residual",
+      "structured non-agentic candidate/network/event covariates whose coefficients are empirical or shrunk to zero"
+    ],
+    "turnout_state": "separate hierarchical logit state with national, regional and local innovations",
+    "joint_covariance": {
+      "national": "low-rank/shrunk party covariance; 2011->2016 and 2016->2021 are core, 2007 may support only continuous-party national scale after audit; 2002 cannot tighten the main prior",
+      "regional": "shrunk covariance from region-level residual vectors; never 12 independent overfit region parameters",
+      "local": "shrunk covariance from pooled local residual vectors across modern transitions",
+      "forbidden": "free 92x92 territorial covariance matrix"
+    },
+    "variance_floor": "No fitted innovation scale may collapse below a preregistered empirical floor derived from retrospective forecast errors. Weakly identified national variance is widened, never estimated as near-zero.",
+    "turnout_vote_cross_correlation": "zero by default; enabled only if retrospective transitions demonstrate stable, material correlation under a frozen test.",
+    "posterior_predictive_gate": "Calibration/coverage must be reported on the 2016->2021 temporal validation before any snapshot may be labelled CALIBRATED."
+  },
+  "registered_voter_N": {
+    "national_2026_exact": 15801162,
+    "national_source_state": "official roll closed 2026-07-10",
+    "local_state": "latent until authoritative local counts are obtained",
+    "constraint": "sum of 92 positive integer local N draws equals 15,801,162 exactly",
+    "regional_N": "deterministic sum of sampled local N by region",
+    "historical_anchors": "2011 TAFRA has local N for all 92; 2016/2021 canonical TAFRA local N is missing and remains missing",
+    "sensitivity_rule": "For each snapshot publish the fraction of Monte Carlo seat outcomes changed by N uncertainty. If a territory is allocator-invariant across its admissible N interval, N contributes zero seat uncertainty there.",
+    "later_official_counts": "replace the latent N posterior only in a new immutable forecast snapshot"
+  },
+  "monte_carlo": {
+    "coherent_election_draw": [
+      "draw national vote innovation",
+      "draw correlated regional innovations",
+      "draw local residuals",
+      "draw turnout state",
+      "draw constrained 92-local N vector if still latent",
+      "apply only credited non-agentic structured evidence",
+      "convert shares/turnout/N to integer valid vote counts under a frozen observation model",
+      "apply fail-closed 2026 legal allocator to 92 local and 12 regional contests",
+      "aggregate the joint 395-seat outcome"
+    ],
+    "minimum_draws_per_snapshot": 50000,
+    "deterministic_seed_manifest": true
+  },
+  "prospective_scoring_2026": {
+    "primary_seat_score": "territory-equal Ranked Probability Score over each party's ordered seat count k=0..m, with an aggregation rule frozen before the first calibrated forecast",
+    "secondary": [
+      "national party-seat CRPS/RPS",
+      "vote-composition energy score",
+      "turnout CRPS",
+      "winner-set Jaccard",
+      "national absolute seat error",
+      "50/80/95 interval coverage"
+    ]
+  },
+  "agentic_boundary": {
+    "agentic_fit_forbidden_before_Bstar_freeze": true,
+    "B2": "B* plus all structured non-agentic evidence available under the same data cutoff",
+    "E_collect": "agent obtains additional timestamped facts; deterministic/non-agentic mapping after collection",
+    "E_reason": "agent receives exactly the B2 corpus and proposes bounded residuals with provenance, uncertainty and abstention",
+    "E_full": "E_collect plus E_reason",
+    "primary_null": "agentic intelligence adds no predictive information beyond B2",
+    "credit": "only prospective proper-score improvement; no narrative-quality credit"
+  },
+  "status": "FROZEN_PROTOCOL_READY_FOR_HINDCAST_EXECUTION"
+}
