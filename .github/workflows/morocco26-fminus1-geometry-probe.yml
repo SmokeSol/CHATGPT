@@ -1,0 +1,56 @@
+name: morocco26-fminus1-geometry-probe
+
+on:
+  push:
+    branches: [morocco26-fminus1]
+    paths:
+      - 'morocco26/scripts/goal100_probe_official_geometry.py'
+      - '.github/workflows/morocco26-fminus1-geometry-probe.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet requests beautifulsoup4 pypdf
+      - run: python -m py_compile morocco26/scripts/goal100_probe_official_geometry.py
+      - name: Probe authoritative sources
+        run: python morocco26/scripts/goal100_probe_official_geometry.py
+      - name: Append probe result to breadcrumb journal
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('morocco26/data/goal100/geometry_official_probe.json').read_text(encoding='utf-8'))
+          s=r['summary']
+          j=Path('morocco26/FIL_ARIANE.md')
+          t=j.read_text(encoding='utf-8')
+          if 'Entrée A008 — Probe des sources géométriques officielles' not in t:
+              t += f'''\n\n### 2026-08-16 — Entrée A008 — Probe des sources géométriques officielles\n\n**Question/gate :** `GEO-2026-AUTHORITATIVE-DIFF`.\n\n**Action :** interrogation et hashage de l’index électoral de la Chambre et des textes SGG ; téléchargement des documents candidats sans les déclarer automatiquement équivalents à la géométrie du repo.\n\n**Résultat du probe :** {s['source_pages_ok']}/{s['source_pages_total']} pages sources accessibles ; {s['candidate_documents']} document(s) candidat(s), {s['downloaded_candidates']} téléchargé(s), {s['candidates_with_extractable_pdf_text']} PDF avec texte extractible. Présence du numéro de décret recherchée : `{s['decree_number_found_in_index_or_candidate']}`.\n\n**Artefact :** `data/goal100/geometry_official_probe.json` et octets sources sous `data/goal100/geometry_sources/`.\n\n**Décision :** ce résultat est une acquisition de preuve, pas encore un certificat. P0-1 reste PARTIAL jusqu’au diff ligne par ligne et au legal-watch sans différence inexpliquée.\n\n**Prochaine action :** construire le parser/crosswalk officiel à partir du document effectivement découvert ; en cas de source non extractible, produire un contrôle manuel borné et hashé plutôt qu’un faux parsing.\n'''
+          j.write_text(t,encoding='utf-8')
+          PY
+      - name: Preserve tracking invariants
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking.py
+      - name: Commit probe evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/geometry_official_probe.json \
+            morocco26/data/goal100/geometry_sources \
+            morocco26/FIL_ARIANE.md
+          git commit -m 'data(morocco26): preserve authoritative geometry source probe' || true
+          git pull --rebase origin morocco26-fminus1
+          git push origin HEAD:morocco26-fminus1
