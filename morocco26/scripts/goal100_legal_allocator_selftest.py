@@ -27,7 +27,7 @@ def main():
     r = allocate_2026({"A": 300, "B": 250, "C": 200, "D": 100}, 1000, 4)
     check("largest_remainder", r.status == STATUS_OK and r.seats_by_list == {"A": 1, "B": 1, "C": 1, "D": 1})
 
-    # N/m = 100. A crosses the quotient twice; B once; last seat is C's remainder.
+    # N/m = 100. A crosses the quotient twice; B once; last seats are largest remainders.
     r = allocate_2026({"A": 230, "B": 145, "C": 90, "D": 35}, 500, 5)
     check("quotient_plus_remainder", r.complete and r.seats_by_list == {"A": 2, "B": 1, "C": 1, "D": 1})
 
@@ -61,12 +61,14 @@ def main():
     )
     check("remainder_tie_youngest", r.status == STATUS_OK_AGE_TIEBREAK and r.seats_by_list == {"B": 1, "C": 1, "D": 1})
 
+    # The third seat falls on an equal-age boundary between C and D, so the statute
+    # requires a lottery even though A and B are strictly younger.
     r = allocate_2026(
         {"A": 100, "B": 100, "C": 100, "D": 100}, 1000, 3,
         {
             "A": ["2000-01-01"],
-            "B": ["2000-01-01"],
-            "C": ["1990-01-01"],
+            "B": ["1990-01-01"],
+            "C": ["1980-01-01"],
             "D": ["1980-01-01"],
         },
     )
