@@ -1,0 +1,135 @@
+name: morocco26-fminus1-postflight-v2
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - 'morocco26/data/goal100/fminus1_registration_certificate.json'
+      - '.github/workflows/morocco26-fminus1-postflight-v2.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-fminus1-postflight-v2
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  postflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Detect registration evidence
+        id: ready
+        run: |
+          if [ -f morocco26/data/goal100/fminus1_registration_certificate.json ]; then echo 'ready=true' >> "$GITHUB_OUTPUT"; else echo 'ready=false' >> "$GITHUB_OUTPUT"; fi
+
+      - name: Revalidate and write definitive postflight
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          python - <<'PY'
+          import hashlib, json, subprocess
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          root=Path('morocco26'); g=root/'data'/'goal100'
+          commands=[]
+          for cmd in (
+              ['python','morocco26/scripts/validate_anti_drift.py'],
+              ['python','morocco26/scripts/validate_goal100_tracking_dynamic.py'],
+          ):
+              r=subprocess.run(cmd,text=True,capture_output=True)
+              commands.append({'command':' '.join(cmd),'returncode':r.returncode,'stdout':r.stdout[-12000:],'stderr':r.stderr[-12000:]})
+          status='PASS' if all(x['returncode']==0 for x in commands) else 'FAIL_VALIDATION'
+          missing=[]
+          expected=[
+              g/'geometry_2026_certificate.json',g/'local_N_posterior.json',
+              g/'n_scale_invariance_certificate.json',g/'uncertainty_calibration.json',
+              g/'uncertainty_parameters_v1.json',g/'simulation_certificate.json',
+              g/'snapshots/F-1/forecast.json',g/'snapshots/F-1/manifest.json',
+              g/'fminus1_registration_certificate.json'
+          ]
+          missing=[str(p) for p in expected if not p.exists()]
+          if missing: status='FAIL_MISSING_EVIDENCE'
+          details={}
+          if not missing:
+              reg=json.loads((g/'forecast_registry.json').read_text(encoding='utf-8'))
+              gates=json.loads((g/'gate_registry.json').read_text(encoding='utf-8'))
+              cert=json.loads((g/'fminus1_registration_certificate.json').read_text(encoding='utf-8'))
+              sim=json.loads((g/'simulation_certificate.json').read_text(encoding='utf-8'))
+              details={
+                  'snapshot_ids':[x['snapshot_id'] for x in reg['snapshots']],
+                  'next_snapshot':reg['sequence']['next_id'],
+                  'p0':{x['id']:x['status'] for x in gates['p0']},
+                  'forecast_unlock':{x['id']:x['status'] for x in gates['forecast_unlock']},
+                  'agentic_unlock':{x['id']:x['status'] for x in gates['agentic_unlock']},
+                  'forecast_sha256':cert['forecast_artifact_sha256'],
+                  'manifest_sha256':cert['manifest_sha256'],
+                  'valid_draws':sim['valid_election_draws'],
+                  'rejection_rate':sim['legal_rejection_rate']
+              }
+              if details['snapshot_ids']!=['F-1'] or details['next_snapshot']!='F0': status='FAIL_REGISTRY'
+              if any(v!='CLOSED' for v in details['forecast_unlock'].values()): status='FAIL_OPEN_FORECAST_GATE'
+              if any(v!='LOCKED' for v in details['agentic_unlock'].values()): status='FAIL_AGENTIC_BOUNDARY'
+          report={
+              'schema_version':'2.0','report_id':'M26-GOAL100-FMINUS1-POSTFLIGHT-V2',
+              'created_at':datetime.now(ZoneInfo('Africa/Casablanca')).isoformat(timespec='seconds'),
+              'status':status,'missing_evidence':missing,'validations':commands,'details':details,
+              'rule':'Definitive postflight is emitted only after registration evidence appears; PASS is never inferred from workflow silence.'
+          }
+          path=g/'fminus1_postflight.json'
+          path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          journal=root/'FIL_ARIANE.md'; text=journal.read_text(encoding='utf-8')
+          marker='Entrée A015 — Postflight F−1'
+          if marker not in text:
+              text += f'''\n\n### 2026-08-16 — Entrée A015 — Postflight F−1\n\n**Statut :** `{status}`.\n\n**Preuves manquantes :** `{json.dumps(missing,ensure_ascii=False)}`.\n\n**Détails machine :** `{json.dumps(details,ensure_ascii=False,sort_keys=True)}`.\n\n**Décision :** un statut autre que PASS interdit la fusion et l’utilisation de F−1. Rapport complet : `data/goal100/fminus1_postflight.json`.\n'''
+          journal.write_text(text,encoding='utf-8')
+
+          # Correct a possible queue-era false investigation if the main run actually succeeded.
+          inv_path=g/'fminus1_failure_investigation.json'
+          if inv_path.exists():
+              inv=json.loads(inv_path.read_text(encoding='utf-8'))
+              target=inv.get('target_run',{})
+              if status=='PASS' and target.get('conclusion')=='success':
+                  resolution={
+                      'schema_version':'1.0',
+                      'resolution_id':'M26-GOAL100-FMINUS1-INVESTIGATION-RESOLUTION-V1',
+                      'status':'RESOLVED_FALSE_POSITIVE_QUEUE_ORDER',
+                      'reason':'The investigator ran before definitive postflight/release evidence existed; the target end-to-end run itself concluded success and V2 postflight now passes.',
+                      'investigation_sha256':hashlib.sha256(inv_path.read_bytes()).hexdigest(),
+                      'postflight_sha256':hashlib.sha256(path.read_bytes()).hexdigest()
+                  }
+                  (g/'fminus1_failure_investigation_resolution.json').write_text(json.dumps(resolution,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+                  if 'Entrée A017 — Résolution de l’investigation de concurrence' not in text:
+                      text += '''\n\n### 2026-08-16 — Entrée A017 — Résolution de l’investigation de concurrence\n\n**Constat :** l’investigateur a pu s’exécuter avant le postflight définitif et interpréter l’absence temporaire du release gate comme un échec.\n\n**Résolution :** le run end-to-end ciblé avait conclu `success` et le postflight V2 vaut `PASS`. L’événement antérieur est conservé mais classé `RESOLVED_FALSE_POSITIVE_QUEUE_ORDER`; il n’est pas effacé.\n'''
+                      journal.write_text(text,encoding='utf-8')
+          report['journal_sha256_after_append']=hashlib.sha256(journal.read_bytes()).hexdigest()
+          path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps({'status':status,'details':details},ensure_ascii=False,indent=2))
+          if status!='PASS': raise SystemExit(1)
+          PY
+
+      - name: Commit definitive postflight
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/fminus1_postflight.json \
+            morocco26/data/goal100/fminus1_failure_investigation_resolution.json \
+            morocco26/FIL_ARIANE.md 2>/dev/null || true
+          git commit -m 'tracking(morocco26): certify definitive F-1 postflight' || true
+          git push origin HEAD:morocco26-fminus1-run
+
+      - name: No-op until registration exists
+        if: steps.ready.outputs.ready != 'true'
+        run: echo 'Registration evidence not present yet; definitive postflight withheld.'
