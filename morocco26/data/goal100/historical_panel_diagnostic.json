@@ -1,0 +1,403 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "M26-GOAL100-HISTORICAL-PANEL-DIAGNOSTIC-V1",
+  "purpose": "empirical support audit for temporal calibration and hierarchical uncertainty",
+  "years": {
+    "2011": {
+      "all_rows": 92,
+      "local_rows": 92,
+      "nonlocal_rows": 0,
+      "list_types": {
+        "locale": 92
+      },
+      "unique_local_ids": 92,
+      "local_seats_sum": 305,
+      "registered_nonnull_local": 92,
+      "turnout_nonnull_local": 92,
+      "party_count": 19,
+      "parties": [
+        "AHD",
+        "FFD",
+        "MDS",
+        "MP",
+        "PA",
+        "PAM",
+        "PCS",
+        "PDN",
+        "PEDD",
+        "PGV",
+        "PI",
+        "PJD",
+        "PML",
+        "PPS",
+        "PS",
+        "PT",
+        "RNI",
+        "UC",
+        "USFP"
+      ]
+    },
+    "2016": {
+      "all_rows": 92,
+      "local_rows": 92,
+      "nonlocal_rows": 0,
+      "list_types": {
+        "locale": 92
+      },
+      "unique_local_ids": 92,
+      "local_seats_sum": 305,
+      "registered_nonnull_local": 0,
+      "turnout_nonnull_local": 92,
+      "party_count": 27,
+      "parties": [
+        "AHD",
+        "FFD",
+        "FGD",
+        "MDS",
+        "MP",
+        "NEO",
+        "PAM",
+        "PAN",
+        "PCS",
+        "PDI",
+        "PDN",
+        "PE",
+        "PEDD",
+        "PGV",
+        "PI",
+        "PJD",
+        "PLJS",
+        "PPS",
+        "PRD",
+        "PSD",
+        "PT",
+        "PUD",
+        "RNI",
+        "SAP",
+        "UC",
+        "UMD",
+        "USFP"
+      ]
+    },
+    "2021": {
+      "all_rows": 104,
+      "local_rows": 92,
+      "nonlocal_rows": 12,
+      "list_types": {
+        "locale": 92,
+        "regionale": 12
+      },
+      "unique_local_ids": 92,
+      "local_seats_sum": 305,
+      "registered_nonnull_local": 0,
+      "turnout_nonnull_local": 92,
+      "party_count": 30,
+      "parties": [
+        "AFG",
+        "AHD",
+        "FFD",
+        "MDS",
+        "MP",
+        "NEO",
+        "PA",
+        "PAM",
+        "PAN",
+        "PCS",
+        "PDI",
+        "PDN",
+        "PE",
+        "PE2",
+        "PEDD",
+        "PI",
+        "PJD",
+        "PLJS",
+        "PML1",
+        "PPS",
+        "PRD",
+        "PRV",
+        "PSD",
+        "PSU",
+        "PUD",
+        "PVM",
+        "RNI",
+        "UC",
+        "UMD",
+        "USFP"
+      ]
+    }
+  },
+  "continuity": {
+    "2011_2016": {
+      "common_local_ids": 92,
+      "coverage_of_later_local_ids": 1.0,
+      "same_normalized_name": 92,
+      "same_seat_magnitude": 92,
+      "ids_only_in_earlier": [],
+      "ids_only_in_later": []
+    },
+    "2016_2021": {
+      "common_local_ids": 92,
+      "coverage_of_later_local_ids": 1.0,
+      "same_normalized_name": 92,
+      "same_seat_magnitude": 92,
+      "ids_only_in_earlier": [],
+      "ids_only_in_later": []
+    },
+    "2011_2021": {
+      "common_local_ids": 92,
+      "coverage_of_later_local_ids": 1.0,
+      "same_normalized_name": 92,
+      "same_seat_magnitude": 92,
+      "ids_only_in_earlier": [],
+      "ids_only_in_later": []
+    },
+    "2011_2016_2021": {
+      "common_local_ids_all_three": 92,
+      "coverage_of_2021_local_ids": 1.0
+    }
+  },
+  "transitions": {
+    "2011_2016": {
+      "n_common_territories": 92,
+      "turnout_delta_pp": {
+        "n": 92,
+        "median": -4.110138,
+        "p10": -9.073673,
+        "p90": 3.484417,
+        "mae": 5.32306,
+        "rmse": 6.689372
+      },
+      "core_party_share_delta_pp": {
+        "RNI": {
+          "n": 92,
+          "median": -1.699051,
+          "p10": -11.003246,
+          "p90": 5.712895,
+          "mae": 5.886139,
+          "rmse": 8.815755
+        },
+        "PAM": {
+          "n": 92,
+          "median": 9.318176,
+          "p10": -2.846776,
+          "p90": 23.466408,
+          "mae": 11.642532,
+          "rmse": 14.550827
+        },
+        "PJD": {
+          "n": 92,
+          "median": 5.274813,
+          "p10": -3.65952,
+          "p90": 13.608815,
+          "mae": 7.533596,
+          "rmse": 9.181036
+        },
+        "PI": {
+          "n": 92,
+          "median": -1.815064,
+          "p10": -8.889627,
+          "p90": 5.83524,
+          "mae": 4.677635,
+          "rmse": 6.115298
+        },
+        "MP": {
+          "n": 92,
+          "median": -0.420757,
+          "p10": -7.064494,
+          "p90": 5.498799,
+          "mae": 4.685493,
+          "rmse": 6.961801
+        },
+        "USFP": {
+          "n": 92,
+          "median": -1.785706,
+          "p10": -9.977279,
+          "p90": 5.371581,
+          "mae": 5.26635,
+          "rmse": 7.450394
+        },
+        "PPS": {
+          "n": 92,
+          "median": -1.086386,
+          "p10": -7.47436,
+          "p90": 5.398564,
+          "mae": 4.32269,
+          "rmse": 5.848509
+        },
+        "UC": {
+          "n": 92,
+          "median": -1.14563,
+          "p10": -7.295561,
+          "p90": 4.20942,
+          "mae": 3.683228,
+          "rmse": 5.170702
+        }
+      }
+    },
+    "2016_2021": {
+      "n_common_territories": 92,
+      "turnout_delta_pp": {
+        "n": 92,
+        "median": 11.615,
+        "p10": -7.464,
+        "p90": 21.653,
+        "mae": 11.881957,
+        "rmse": 13.537381
+      },
+      "core_party_share_delta_pp": {
+        "RNI": {
+          "n": 92,
+          "median": 18.070792,
+          "p10": 8.739784,
+          "p90": 32.821009,
+          "mae": 19.232347,
+          "rmse": 21.49294
+        },
+        "PAM": {
+          "n": 92,
+          "median": -1.811239,
+          "p10": -13.703684,
+          "p90": 7.213581,
+          "mae": 7.56713,
+          "rmse": 11.008102
+        },
+        "PJD": {
+          "n": 92,
+          "median": -18.410097,
+          "p10": -43.872374,
+          "p90": -7.030335,
+          "mae": 22.682113,
+          "rmse": 26.306321
+        },
+        "PI": {
+          "n": 92,
+          "median": 5.686589,
+          "p10": -2.725745,
+          "p90": 17.485343,
+          "mae": 7.690766,
+          "rmse": 10.26723
+        },
+        "MP": {
+          "n": 92,
+          "median": 0.17131,
+          "p10": -10.407778,
+          "p90": 5.920619,
+          "mae": 5.24689,
+          "rmse": 8.025188
+        },
+        "USFP": {
+          "n": 92,
+          "median": 0.973321,
+          "p10": -6.617042,
+          "p90": 7.909952,
+          "mae": 4.808961,
+          "rmse": 7.540031
+        },
+        "PPS": {
+          "n": 92,
+          "median": 0.446574,
+          "p10": -7.488862,
+          "p90": 5.733875,
+          "mae": 4.061823,
+          "rmse": 5.907605
+        },
+        "UC": {
+          "n": 92,
+          "median": 0.0,
+          "p10": -5.108018,
+          "p90": 6.531335,
+          "mae": 3.693808,
+          "rmse": 5.448703
+        }
+      }
+    },
+    "2011_2021": {
+      "n_common_territories": 92,
+      "turnout_delta_pp": {
+        "n": 92,
+        "median": 8.514892,
+        "p10": -12.628202,
+        "p90": 18.579187,
+        "mae": 11.607675,
+        "rmse": 13.156854
+      },
+      "core_party_share_delta_pp": {
+        "RNI": {
+          "n": 92,
+          "median": 17.004573,
+          "p10": 3.133219,
+          "p90": 32.368384,
+          "mae": 17.546812,
+          "rmse": 19.841099
+        },
+        "PAM": {
+          "n": 92,
+          "median": 7.632352,
+          "p10": -5.686082,
+          "p90": 22.02634,
+          "mae": 10.639036,
+          "rmse": 13.3061
+        },
+        "PJD": {
+          "n": 92,
+          "median": -12.652068,
+          "p10": -35.693339,
+          "p90": -4.848827,
+          "mae": 17.417633,
+          "rmse": 20.983052
+        },
+        "PI": {
+          "n": 92,
+          "median": 4.386005,
+          "p10": -5.340399,
+          "p90": 14.022155,
+          "mae": 7.049709,
+          "rmse": 9.052386
+        },
+        "MP": {
+          "n": 92,
+          "median": -1.112856,
+          "p10": -9.579865,
+          "p90": 8.63829,
+          "mae": 5.256078,
+          "rmse": 7.363278
+        },
+        "USFP": {
+          "n": 92,
+          "median": -1.142237,
+          "p10": -9.502469,
+          "p90": 4.541477,
+          "mae": 4.834018,
+          "rmse": 6.967714
+        },
+        "PPS": {
+          "n": 92,
+          "median": -0.763209,
+          "p10": -8.444937,
+          "p90": 5.906225,
+          "mae": 4.35169,
+          "rmse": 5.889422
+        },
+        "UC": {
+          "n": 92,
+          "median": -0.46267,
+          "p10": -8.085438,
+          "p90": 6.520787,
+          "mae": 4.272034,
+          "rmse": 5.900899
+        }
+      }
+    }
+  },
+  "identifiability": {
+    "vote_transition_calibration": "PASS",
+    "turnout_transition_calibration": "PASS_WITH_REPORTED_RATES",
+    "exact_registered_panel": "FAIL_EXPECTED",
+    "reason_exact_registered_panel_fails": "2016 and 2021 canonical TAFRA local rows do not report N; missingness is preserved rather than imputed",
+    "full_92x92_covariance": "NOT_IDENTIFIABLE",
+    "hierarchical_low_rank_covariance": "SUPPORTED",
+    "regional_effects": "STRONGEST_ON_2016_2021_CURRENT_REGION_SYSTEM",
+    "selection_protocol": "Use prequential 2011->2016 and 2016->2021 predictions; do not reuse the consumed Goal75 territorial holdout as untouched tuning data",
+    "gate_Bstar_fit": "OPEN"
+  }
+}
