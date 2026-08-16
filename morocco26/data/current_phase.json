@@ -1,0 +1,34 @@
+{
+  "as_of": "2026-08-16",
+  "formal_phase": "P3_CAUSAL_SYNTHETIC_SOCIETY",
+  "experimental_frontier": "P4_BOUNDED_LLM_SOCIETY",
+  "implementation_completion_percent": 44,
+  "scientifically_gated_completion_percent": 35,
+  "status": "PHASE3_PILOT_COMPLETE_PHASE2_CATCHUP_REQUIRED_BEFORE_FORMAL_PHASE4",
+  "completed": [
+    "electoral rule and allocator foundation",
+    "source provenance framework",
+    "four-constituency real 2021 replay / 14 seats",
+    "A/B/C0/C causal synthetic-society pilot",
+    "common-random-number network ablation",
+    "positive and negative controls",
+    "frozen Phase-2 protocol and reproducibility ledger",
+    "bounded AgentSociety 2 execution contract and kill criteria"
+  ],
+  "not_completed": [
+    "92/92 local 2021 replay and Seat Margin Map",
+    "12/12 regional 2021 replay",
+    "frozen territorial holdout benchmark",
+    "empirical estimates for candidate-network portability and diffusion priors",
+    "Model D AgentSociety execution against holdout",
+    "live 2026 event-to-mechanism pipeline at national territorial coverage",
+    "pre-election model freeze",
+    "23 September real-world scoring and postmortem"
+  ],
+  "hard_blockers_to_formal_phase4": [
+    "complete enough territorial evidence graph to define a genuine frozen holdout",
+    "freeze baseline B/C benchmark before any Model D tuning"
+  ],
+  "forecast_status": "BLOCKED",
+  "agent_society_status": "READY_FOR_BOUNDED_PILOT_NOT_YET_PROVEN_USEFUL"
+}
