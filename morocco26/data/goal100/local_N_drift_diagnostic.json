@@ -1,0 +1,1610 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "M26-GOAL100-LOCAL-N-DRIFT-V1",
+  "official_2026_national_N": 15801162,
+  "historical": {
+    "local_rows_2007": 95,
+    "local_rows_2011": 92,
+    "national_sum_local_N_2007": 15462362,
+    "national_sum_local_N_2011": 13420631,
+    "exact_normalized_name_matches": 74,
+    "exact_match_coverage_of_2011": 0.8043478260869565,
+    "same_seat_magnitude_matches": 61,
+    "duplicate_normalized_names_2007": [],
+    "duplicate_normalized_names_2011": []
+  },
+  "drift": {
+    "metric": "log of constituency share of national registered voters, 2011 minus 2007",
+    "n": 74,
+    "median": 0.04973374941137043,
+    "sd": 0.22305173979137335,
+    "median_abs": 0.12029199530138818,
+    "p80_abs": 0.24895102535687882,
+    "p90_abs": 0.3450925141719198,
+    "p95_abs": 0.47759903722737007,
+    "stable_magnitude_n": 61,
+    "stable_magnitude_sd": 0.18411227566434538,
+    "stable_magnitude_p90_abs": 0.29071209061458597,
+    "warning": "This is a four-year historical drift diagnostic, not a stationary-law claim for 2011->2026. It can set a variance floor; it cannot by itself identify the 2026 local N vector."
+  },
+  "point_centre": {
+    "method": "2011 local registered-voter shares scaled to official 2026 national total",
+    "epistemic_status": "PRIOR_CENTRE_NOT_OFFICIAL_LOCAL_COUNTS",
+    "rows": [
+      {
+        "id": 596,
+        "name": "Benslimane",
+        "N_center_scaled_2011_share": 118601
+      },
+      {
+        "id": 595,
+        "name": "Berrechid",
+        "N_center_scaled_2011_share": 172348
+      },
+      {
+        "id": 594,
+        "name": "Khouribga",
+        "N_center_scaled_2011_share": 300040
+      },
+      {
+        "id": 593,
+        "name": "Settat",
+        "N_center_scaled_2011_share": 301405
+      },
+      {
+        "id": 590,
+        "name": "El-Jadida",
+        "N_center_scaled_2011_share": 328265
+      },
+      {
+        "id": 589,
+        "name": "Safi",
+        "N_center_scaled_2011_share": 340310
+      },
+      {
+        "id": 591,
+        "name": "Sidi Bennour",
+        "N_center_scaled_2011_share": 227751
+      },
+      {
+        "id": 592,
+        "name": "Youssoufia",
+        "N_center_scaled_2011_share": 118591
+      },
+      {
+        "id": 553,
+        "name": "Boulemane",
+        "N_center_scaled_2011_share": 102507
+      },
+      {
+        "id": 549,
+        "name": "Fès-Chamalia",
+        "N_center_scaled_2011_share": 204920
+      },
+      {
+        "id": 550,
+        "name": "Fès-Janoubia",
+        "N_center_scaled_2011_share": 225744
+      },
+      {
+        "id": 551,
+        "name": "Moulay-Yacoub",
+        "N_center_scaled_2011_share": 76511
+      },
+      {
+        "id": 552,
+        "name": "Sefrou",
+        "N_center_scaled_2011_share": 148791
+      },
+      {
+        "id": 560,
+        "name": "El-Gharb",
+        "N_center_scaled_2011_share": 151385
+      },
+      {
+        "id": 559,
+        "name": "Kénitra",
+        "N_center_scaled_2011_share": 330973
+      },
+      {
+        "id": 561,
+        "name": "Sidi-Kacem",
+        "N_center_scaled_2011_share": 239464
+      },
+      {
+        "id": 562,
+        "name": "Sidi Slimane",
+        "N_center_scaled_2011_share": 165348
+      },
+      {
+        "id": 523,
+        "name": "Aïn-Chock",
+        "N_center_scaled_2011_share": 150435
+      },
+      {
+        "id": 521,
+        "name": "Aïn-Sebaâ - Hay-Mohammadi",
+        "N_center_scaled_2011_share": 259154
+      },
+      {
+        "id": 520,
+        "name": "Al-Fida - Mers-Sultan",
+        "N_center_scaled_2011_share": 202733
+      },
+      {
+        "id": 525,
+        "name": "Ben-M'sick",
+        "N_center_scaled_2011_share": 146429
+      },
+      {
+        "id": 519,
+        "name": "Casablanca - Anfa",
+        "N_center_scaled_2011_share": 281758
+      },
+      {
+        "id": 522,
+        "name": "Hay-Hassani",
+        "N_center_scaled_2011_share": 173597
+      },
+      {
+        "id": 526,
+        "name": "Moulay-Rachid",
+        "N_center_scaled_2011_share": 225493
+      },
+      {
+        "id": 524,
+        "name": "Sidi-Bernoussi",
+        "N_center_scaled_2011_share": 242881
+      },
+      {
+        "id": 529,
+        "name": "Médiouna",
+        "N_center_scaled_2011_share": 63193
+      },
+      {
+        "id": 527,
+        "name": "Mohammadia",
+        "N_center_scaled_2011_share": 201604
+      },
+      {
+        "id": 528,
+        "name": "Nouaceur",
+        "N_center_scaled_2011_share": 102583
+      },
+      {
+        "id": 556,
+        "name": "Assa-Zag",
+        "N_center_scaled_2011_share": 19446
+      },
+      {
+        "id": 557,
+        "name": "Es-Smara",
+        "N_center_scaled_2011_share": 29610
+      },
+      {
+        "id": 554,
+        "name": "Guelmim",
+        "N_center_scaled_2011_share": 113313
+      },
+      {
+        "id": 558,
+        "name": "Tan-Tan",
+        "N_center_scaled_2011_share": 50066
+      },
+      {
+        "id": 555,
+        "name": "Tata",
+        "N_center_scaled_2011_share": 74921
+      },
+      {
+        "id": 564,
+        "name": "Boujdour",
+        "N_center_scaled_2011_share": 27779
+      },
+      {
+        "id": 563,
+        "name": "Laâyoune",
+        "N_center_scaled_2011_share": 120951
+      },
+      {
+        "id": 565,
+        "name": "Tarfaya",
+        "N_center_scaled_2011_share": 11243
+      },
+      {
+        "id": 570,
+        "name": "Al-Haouz",
+        "N_center_scaled_2011_share": 252757
+      },
+      {
+        "id": 569,
+        "name": "Chichaoua",
+        "N_center_scaled_2011_share": 174266
+      },
+      {
+        "id": 572,
+        "name": "El-Kelâa-des-Sraghna",
+        "N_center_scaled_2011_share": 239984
+      },
+      {
+        "id": 573,
+        "name": "Essaouira",
+        "N_center_scaled_2011_share": 228565
+      },
+      {
+        "id": 567,
+        "name": "Guéliz - Annakhil",
+        "N_center_scaled_2011_share": 177951
+      },
+      {
+        "id": 566,
+        "name": "Médina - Sidi-Youssef-Ben-Ali",
+        "N_center_scaled_2011_share": 177123
+      },
+      {
+        "id": 568,
+        "name": "Ménara",
+        "N_center_scaled_2011_share": 195957
+      },
+      {
+        "id": 571,
+        "name": "Rehamna",
+        "N_center_scaled_2011_share": 138208
+      },
+      {
+        "id": 575,
+        "name": "El-Hajeb",
+        "N_center_scaled_2011_share": 117193
+      },
+      {
+        "id": 578,
+        "name": "Errachidia",
+        "N_center_scaled_2011_share": 220021
+      },
+      {
+        "id": 576,
+        "name": "Ifrane",
+        "N_center_scaled_2011_share": 91459
+      },
+      {
+        "id": 577,
+        "name": "Khénifra",
+        "N_center_scaled_2011_share": 197139
+      },
+      {
+        "id": 574,
+        "name": "Meknès",
+        "N_center_scaled_2011_share": 374333
+      },
+      {
+        "id": 579,
+        "name": "Midelt",
+        "N_center_scaled_2011_share": 153075
+      },
+      {
+        "id": 584,
+        "name": "Berkane",
+        "N_center_scaled_2011_share": 151155
+      },
+      {
+        "id": 588,
+        "name": "Driouch",
+        "N_center_scaled_2011_share": 124980
+      },
+      {
+        "id": 586,
+        "name": "Figuig",
+        "N_center_scaled_2011_share": 80676
+      },
+      {
+        "id": 583,
+        "name": "Jerada",
+        "N_center_scaled_2011_share": 68571
+      },
+      {
+        "id": 587,
+        "name": "Nador",
+        "N_center_scaled_2011_share": 265094
+      },
+      {
+        "id": 582,
+        "name": "Oujda - Angad",
+        "N_center_scaled_2011_share": 285950
+      },
+      {
+        "id": 585,
+        "name": "Taourirt",
+        "N_center_scaled_2011_share": 117615
+      },
+      {
+        "id": 581,
+        "name": "Aousserd",
+        "N_center_scaled_2011_share": 9005
+      },
+      {
+        "id": 580,
+        "name": "Oued-Ed-Dahab",
+        "N_center_scaled_2011_share": 38885
+      },
+      {
+        "id": 517,
+        "name": "Khémisset - Oulmès",
+        "N_center_scaled_2011_share": 148300
+      },
+      {
+        "id": 518,
+        "name": "Tifelt - Rommani",
+        "N_center_scaled_2011_share": 140959
+      },
+      {
+        "id": 513,
+        "name": "Rabat - Challah",
+        "N_center_scaled_2011_share": 150380
+      },
+      {
+        "id": 512,
+        "name": "Rabat - El Mouhit",
+        "N_center_scaled_2011_share": 202549
+      },
+      {
+        "id": 515,
+        "name": "Salé - Al-Jadida",
+        "N_center_scaled_2011_share": 161875
+      },
+      {
+        "id": 514,
+        "name": "Salé - Médina",
+        "N_center_scaled_2011_share": 237415
+      },
+      {
+        "id": 516,
+        "name": "Skhirate - Témara",
+        "N_center_scaled_2011_share": 236811
+      },
+      {
+        "id": 530,
+        "name": "Agadir - Ida-ou-Tanane",
+        "N_center_scaled_2011_share": 268230
+      },
+      {
+        "id": 532,
+        "name": "Chtouka - Aït-Baha",
+        "N_center_scaled_2011_share": 179395
+      },
+      {
+        "id": 531,
+        "name": "Inézgane - Aït-Melloul",
+        "N_center_scaled_2011_share": 232743
+      },
+      {
+        "id": 536,
+        "name": "Ouarzazate",
+        "N_center_scaled_2011_share": 141448
+      },
+      {
+        "id": 539,
+        "name": "Sidi Ifni",
+        "N_center_scaled_2011_share": 81829
+      },
+      {
+        "id": 533,
+        "name": "Taroudannt - Al-Janoubia",
+        "N_center_scaled_2011_share": 239595
+      },
+      {
+        "id": 534,
+        "name": "Taroudannt - Chamalia",
+        "N_center_scaled_2011_share": 184094
+      },
+      {
+        "id": 538,
+        "name": "Tinghir",
+        "N_center_scaled_2011_share": 155591
+      },
+      {
+        "id": 535,
+        "name": "Tiznit",
+        "N_center_scaled_2011_share": 131315
+      },
+      {
+        "id": 537,
+        "name": "Zagora",
+        "N_center_scaled_2011_share": 128327
+      },
+      {
+        "id": 547,
+        "name": "Azilal - Demnate",
+        "N_center_scaled_2011_share": 112257
+      },
+      {
+        "id": 546,
+        "name": "Bzou - Ouaouizaght",
+        "N_center_scaled_2011_share": 140879
+      },
+      {
+        "id": 545,
+        "name": "Béni-Mellal",
+        "N_center_scaled_2011_share": 280853
+      },
+      {
+        "id": 548,
+        "name": "Fquih Ben Salah",
+        "N_center_scaled_2011_share": 166943
+      },
+      {
+        "id": 602,
+        "name": "Chefchaouen",
+        "N_center_scaled_2011_share": 185391
+      },
+      {
+        "id": 598,
+        "name": "Fahs - Anjra",
+        "N_center_scaled_2011_share": 40404
+      },
+      {
+        "id": 601,
+        "name": "Larache",
+        "N_center_scaled_2011_share": 218076
+      },
+      {
+        "id": 600,
+        "name": "M'Diq - Fnideq",
+        "N_center_scaled_2011_share": 91177
+      },
+      {
+        "id": 603,
+        "name": "Ouezzane",
+        "N_center_scaled_2011_share": 137551
+      },
+      {
+        "id": 597,
+        "name": "Tanger - Assilah",
+        "N_center_scaled_2011_share": 352421
+      },
+      {
+        "id": 599,
+        "name": "Tétouan",
+        "N_center_scaled_2011_share": 248686
+      },
+      {
+        "id": 540,
+        "name": "Al-Hoceïma",
+        "N_center_scaled_2011_share": 207444
+      },
+      {
+        "id": 542,
+        "name": "Guercif",
+        "N_center_scaled_2011_share": 97596
+      },
+      {
+        "id": 544,
+        "name": "Karia - Rhafsai",
+        "N_center_scaled_2011_share": 129840
+      },
+      {
+        "id": 543,
+        "name": "Taounate - Tissa",
+        "N_center_scaled_2011_share": 149911
+      },
+      {
+        "id": 541,
+        "name": "Taza",
+        "N_center_scaled_2011_share": 290772
+      }
+    ]
+  },
+  "matches": [
+    {
+      "key": "agadiridaoutanane",
+      "name_2007": "Agadir - Ida-ou-Tanane",
+      "name_2011": "Agadir - Ida-ou-Tanane",
+      "id_2011": 530,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 230814,
+      "N_2011": 227820,
+      "national_share_2007": 0.014927473564517504,
+      "national_share_2011": 0.01697535682189608,
+      "log_national_share_drift": 0.12855931514706595,
+      "relative_N_change": -0.012971483532194794
+    },
+    {
+      "key": "ainchock",
+      "name_2007": "Aïn-Chock",
+      "name_2011": "Aïn-Chock",
+      "id_2011": 523,
+      "seats_2007": 2,
+      "seats_2011": 3,
+      "same_seat_magnitude": false,
+      "N_2007": 121945,
+      "N_2011": 127771,
+      "national_share_2007": 0.007886569981998869,
+      "national_share_2011": 0.009520491249629023,
+      "log_national_share_drift": 0.1882851387730185,
+      "relative_N_change": 0.04777563655746442
+    },
+    {
+      "key": "ainsebaahaymohammadi",
+      "name_2007": "Aïn-Sebaâ - Hay-Mohammadi",
+      "name_2011": "Aïn-Sebaâ - Hay-Mohammadi",
+      "id_2011": 521,
+      "seats_2007": 3,
+      "seats_2011": 4,
+      "same_seat_magnitude": false,
+      "N_2007": 249772,
+      "N_2011": 220111,
+      "national_share_2007": 0.016153547562785038,
+      "national_share_2011": 0.016400942697850793,
+      "log_national_share_drift": 0.015199125877866471,
+      "relative_N_change": -0.1187523020995147
+    },
+    {
+      "key": "alfidamerssultan",
+      "name_2007": "Al-Fida - Mers-Sultan",
+      "name_2011": "Al-Fida - Mers-Sultan",
+      "id_2011": 520,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 229998,
+      "N_2011": 172190,
+      "national_share_2007": 0.014874700256015219,
+      "national_share_2011": 0.012830246208244606,
+      "log_national_share_drift": -0.14785643188667608,
+      "relative_N_change": -0.2513413160114436
+    },
+    {
+      "key": "alhaouz",
+      "name_2007": "Al-Haouz",
+      "name_2011": "Al-Haouz",
+      "id_2011": 570,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 253325,
+      "N_2011": 214678,
+      "national_share_2007": 0.016383331343555404,
+      "national_share_2011": 0.01599611821530597,
+      "log_national_share_drift": -0.023918355212246806,
+      "relative_N_change": -0.15255896575545247
+    },
+    {
+      "key": "alhoceima",
+      "name_2007": "Al-Hoceïma",
+      "name_2011": "Al-Hoceïma",
+      "id_2011": 540,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 217839,
+      "N_2011": 176191,
+      "national_share_2007": 0.01408833915542787,
+      "national_share_2011": 0.013128369299476306,
+      "log_national_share_drift": -0.07057196090392177,
+      "relative_N_change": -0.1911870693493819
+    },
+    {
+      "key": "aousserd",
+      "name_2007": "Aousserd",
+      "name_2011": "Aousserd",
+      "id_2011": 581,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 7336,
+      "N_2011": 7648,
+      "national_share_2007": 0.00047444239114308667,
+      "national_share_2011": 0.0005698688832142095,
+      "log_national_share_drift": 0.1832661038433799,
+      "relative_N_change": 0.04252998909487449
+    },
+    {
+      "key": "assazag",
+      "name_2007": "Assa-Zag",
+      "name_2011": "Assa-Zag",
+      "id_2011": 556,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 14326,
+      "N_2011": 16516,
+      "national_share_2007": 0.0009265078647104498,
+      "national_share_2011": 0.0012306425830499327,
+      "log_national_share_drift": 0.2838692028800278,
+      "relative_N_change": 0.15286890967471733
+    },
+    {
+      "key": "azilaldemnate",
+      "name_2007": "Azilal - Demnate",
+      "name_2011": "Azilal - Demnate",
+      "id_2011": 547,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 124025,
+      "N_2011": 95345,
+      "national_share_2007": 0.008021090180141948,
+      "national_share_2011": 0.007104360443260827,
+      "log_national_share_drift": -0.12136560285207924,
+      "relative_N_change": -0.23124370086676072
+    },
+    {
+      "key": "benimellal",
+      "name_2007": "Béni-Mellal",
+      "name_2011": "Béni-Mellal",
+      "id_2011": 545,
+      "seats_2007": 3,
+      "seats_2011": 6,
+      "same_seat_magnitude": false,
+      "N_2007": 172287,
+      "N_2011": 238541,
+      "national_share_2007": 0.011142346816094462,
+      "national_share_2011": 0.01777420152599382,
+      "log_national_share_drift": 0.4669951754686685,
+      "relative_N_change": 0.38455600248422694
+    },
+    {
+      "key": "benmsick",
+      "name_2007": "Ben-M'sick",
+      "name_2011": "Ben-M'sick",
+      "id_2011": 525,
+      "seats_2007": 2,
+      "seats_2011": 3,
+      "same_seat_magnitude": false,
+      "N_2007": 158881,
+      "N_2011": 124369,
+      "national_share_2007": 0.01027533826979345,
+      "national_share_2011": 0.00926700093311559,
+      "log_national_share_drift": -0.10328687817793811,
+      "relative_N_change": -0.2172191766164614
+    },
+    {
+      "key": "benslimane",
+      "name_2007": "Benslimane",
+      "name_2011": "Benslimane",
+      "id_2011": 596,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 109950,
+      "N_2011": 100733,
+      "national_share_2007": 0.007110815281649725,
+      "national_share_2011": 0.0075058318792909215,
+      "log_national_share_drift": 0.05406339814588454,
+      "relative_N_change": -0.08382901318781266
+    },
+    {
+      "key": "berkane",
+      "name_2007": "Berkane",
+      "name_2011": "Berkane",
+      "id_2011": 584,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 150606,
+      "N_2011": 128383,
+      "national_share_2007": 0.009740167769969426,
+      "national_share_2011": 0.009566092682229323,
+      "log_national_share_drift": -0.0180335084247048,
+      "relative_N_change": -0.14755720223629865
+    },
+    {
+      "key": "berrechid",
+      "name_2007": "Berrechid",
+      "name_2011": "Berrechid",
+      "id_2011": 595,
+      "seats_2007": 3,
+      "seats_2011": 4,
+      "same_seat_magnitude": false,
+      "N_2007": 135956,
+      "N_2011": 146383,
+      "national_share_2007": 0.008792705797471306,
+      "national_share_2011": 0.010907311288120506,
+      "log_national_share_drift": 0.21551083363724433,
+      "relative_N_change": 0.07669393038924355
+    },
+    {
+      "key": "boujdour",
+      "name_2007": "Boujdour",
+      "name_2011": "Boujdour",
+      "id_2011": 564,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 19303,
+      "N_2011": 23594,
+      "national_share_2007": 0.0012483862426710744,
+      "national_share_2011": 0.0017580395437442546,
+      "log_national_share_drift": 0.3423475812223559,
+      "relative_N_change": 0.22229705227166763
+    },
+    {
+      "key": "boulemane",
+      "name_2007": "Boulemane",
+      "name_2011": "Boulemane",
+      "id_2011": 553,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 97222,
+      "N_2011": 87064,
+      "national_share_2007": 0.006287655146089582,
+      "national_share_2011": 0.0064873253724061115,
+      "log_national_share_drift": 0.031262120137706795,
+      "relative_N_change": -0.10448252453148466
+    },
+    {
+      "key": "bzououaouizaght",
+      "name_2007": "Bzou - Ouaouizaght",
+      "name_2011": "Bzou - Ouaouizaght",
+      "id_2011": 546,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 145487,
+      "N_2011": 119655,
+      "national_share_2007": 0.009409105801558649,
+      "national_share_2011": 0.008915750682661643,
+      "log_national_share_drift": -0.0538584704611754,
+      "relative_N_change": -0.17755538295517814
+    },
+    {
+      "key": "casablancaanfa",
+      "name_2007": "Casablanca - Anfa",
+      "name_2011": "Casablanca - Anfa",
+      "id_2011": 519,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 300994,
+      "N_2011": 239310,
+      "national_share_2007": 0.019466236788402702,
+      "national_share_2011": 0.017831501365323285,
+      "log_national_share_drift": -0.08771488535579117,
+      "relative_N_change": -0.20493431762759395
+    },
+    {
+      "key": "chefchaouen",
+      "name_2007": "Chefchaouen",
+      "name_2011": "Chefchaouen",
+      "id_2011": 602,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 256483,
+      "N_2011": 157461,
+      "national_share_2007": 0.016587569221313016,
+      "national_share_2011": 0.011732756827901758,
+      "log_national_share_drift": -0.3462689140074471,
+      "relative_N_change": -0.38607627016215496
+    },
+    {
+      "key": "chichaoua",
+      "name_2007": "Chichaoua",
+      "name_2011": "Chichaoua",
+      "id_2011": 569,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 199199,
+      "N_2011": 148012,
+      "national_share_2007": 0.012882831225914902,
+      "national_share_2011": 0.011028691571953658,
+      "log_national_share_drift": -0.15539531045082966,
+      "relative_N_change": -0.2569641413862519
+    },
+    {
+      "key": "chtoukaaitbaha",
+      "name_2007": "Chtouka - Aït-Baha",
+      "name_2011": "Chtouka - Aït-Baha",
+      "id_2011": 532,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 147898,
+      "N_2011": 152368,
+      "national_share_2007": 0.009565032819694688,
+      "national_share_2011": 0.011353266474579325,
+      "log_national_share_drift": 0.17139146352525084,
+      "relative_N_change": 0.0302235324345157
+    },
+    {
+      "key": "elgharb",
+      "name_2007": "El-Gharb",
+      "name_2011": "El-Gharb",
+      "id_2011": 560,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 166350,
+      "N_2011": 128578,
+      "national_share_2007": 0.010758382192837031,
+      "national_share_2011": 0.00958062255045981,
+      "log_national_share_drift": -0.11594261534206207,
+      "relative_N_change": -0.227063420498948
+    },
+    {
+      "key": "elhajeb",
+      "name_2007": "El-Hajeb",
+      "name_2011": "El-Hajeb",
+      "id_2011": 575,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 120990,
+      "N_2011": 99537,
+      "national_share_2007": 0.007824807102562985,
+      "national_share_2011": 0.007416715354143929,
+      "log_national_share_drift": -0.053562800166446524,
+      "relative_N_change": -0.17731217455988102
+    },
+    {
+      "key": "essaouira",
+      "name_2007": "Essaouira",
+      "name_2011": "Essaouira",
+      "id_2011": 573,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 240162,
+      "N_2011": 194130,
+      "national_share_2007": 0.015532038378095145,
+      "national_share_2011": 0.014465042664536415,
+      "log_national_share_drift": -0.07116999484622734,
+      "relative_N_change": -0.19167062232992726
+    },
+    {
+      "key": "essmara",
+      "name_2007": "Es-Smara",
+      "name_2011": "Es-Smara",
+      "id_2011": 557,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 23592,
+      "N_2011": 25149,
+      "national_share_2007": 0.0015257694781689887,
+      "national_share_2011": 0.0018739059288642986,
+      "log_national_share_drift": 0.2055261258592982,
+      "relative_N_change": 0.06599694811800605
+    },
+    {
+      "key": "fahsanjra",
+      "name_2007": "Fahs - Anjra",
+      "name_2011": "Fahs - Anjra",
+      "id_2011": 598,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 48464,
+      "N_2011": 34317,
+      "national_share_2007": 0.003134320616733718,
+      "national_share_2011": 0.0025570332721315415,
+      "log_national_share_drift": -0.20356473302479203,
+      "relative_N_change": -0.29190739517992736
+    },
+    {
+      "key": "feschamalia",
+      "name_2007": "Fès - Chamalia",
+      "name_2011": "Fès-Chamalia",
+      "id_2011": 549,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 194218,
+      "N_2011": 174048,
+      "national_share_2007": 0.01256069415526554,
+      "national_share_2011": 0.012968689773230483,
+      "log_national_share_drift": 0.031965546776465376,
+      "relative_N_change": -0.10385237207673848
+    },
+    {
+      "key": "fesjanoubia",
+      "name_2007": "Fès - Janoubia",
+      "name_2011": "Fès-Janoubia",
+      "id_2011": 550,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 199036,
+      "N_2011": 191734,
+      "national_share_2007": 0.012872289498848883,
+      "national_share_2011": 0.014286511565663343,
+      "log_national_share_drift": 0.10423894494673049,
+      "relative_N_change": -0.036686830523121494
+    },
+    {
+      "key": "figuig",
+      "name_2007": "Figuig",
+      "name_2011": "Figuig",
+      "id_2011": 586,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 70447,
+      "N_2011": 68522,
+      "national_share_2007": 0.004556030960858374,
+      "national_share_2011": 0.005105721184048648,
+      "log_national_share_drift": 0.11390987059095606,
+      "relative_N_change": -0.027325507118826975
+    },
+    {
+      "key": "guelizannakhil",
+      "name_2007": "Guéliz - Annakhil",
+      "name_2011": "Guéliz - Annakhil",
+      "id_2011": 567,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 165591,
+      "N_2011": 151142,
+      "national_share_2007": 0.010709295255149246,
+      "national_share_2011": 0.011261914585089182,
+      "log_national_share_drift": 0.0503145626696137,
+      "relative_N_change": -0.08725715769576847
+    },
+    {
+      "key": "guelmim",
+      "name_2007": "Guelmim",
+      "name_2011": "Guelmim",
+      "id_2011": 554,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 81096,
+      "N_2011": 96242,
+      "national_share_2007": 0.005244735571447622,
+      "national_share_2011": 0.007171197837121071,
+      "log_national_share_drift": 0.312847877798722,
+      "relative_N_change": 0.1867663016671599
+    },
+    {
+      "key": "guercif",
+      "name_2007": "Guercif",
+      "name_2011": "Guercif",
+      "id_2011": 542,
+      "seats_2007": 3,
+      "seats_2011": 2,
+      "same_seat_magnitude": false,
+      "N_2007": 184296,
+      "N_2011": 82893,
+      "national_share_2007": 0.011919006940854186,
+      "national_share_2011": 0.006176535216563216,
+      "log_national_share_drift": -0.6573768781550723,
+      "relative_N_change": -0.5502181273603334
+    },
+    {
+      "key": "hayhassani",
+      "name_2007": "Hay-Hassani",
+      "name_2011": "Hay-Hassani",
+      "id_2011": 522,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 150954,
+      "N_2011": 147444,
+      "national_share_2007": 0.009762674033889519,
+      "national_share_2011": 0.010986368673723315,
+      "log_national_share_drift": 0.11808895107944237,
+      "relative_N_change": -0.023252116538813095
+    },
+    {
+      "key": "ifrane",
+      "name_2007": "Ifrane",
+      "name_2011": "Ifrane",
+      "id_2011": 576,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 85699,
+      "N_2011": 77680,
+      "national_share_2007": 0.005542426183011367,
+      "national_share_2011": 0.005788103405868174,
+      "log_national_share_drift": 0.04337233010729277,
+      "relative_N_change": -0.09357168695083962
+    },
+    {
+      "key": "inezganeaitmelloul",
+      "name_2007": "Inézgane - Aït-Melloul",
+      "name_2011": "Inézgane - Aït-Melloul",
+      "id_2011": 531,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 182283,
+      "N_2011": 197679,
+      "national_share_2007": 0.011788819845247447,
+      "national_share_2011": 0.014729486266331292,
+      "log_national_share_drift": 0.2226997415788777,
+      "relative_N_change": 0.08446207271111406
+    },
+    {
+      "key": "jerada",
+      "name_2007": "Jerada",
+      "name_2011": "Jerada",
+      "id_2011": 583,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 60165,
+      "N_2011": 58240,
+      "national_share_2007": 0.0038910614044607157,
+      "national_share_2011": 0.004339587311505696,
+      "log_national_share_drift": 0.10909727904674796,
+      "relative_N_change": -0.031995346131471814
+    },
+    {
+      "key": "kariarhafsai",
+      "name_2007": "Karia - Rhafsai",
+      "name_2011": "Karia - Rhafsai",
+      "id_2011": 544,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 177978,
+      "N_2011": 110279,
+      "national_share_2007": 0.011510401838994586,
+      "national_share_2011": 0.008217124813281879,
+      "log_national_share_drift": -0.33703076581233554,
+      "relative_N_change": -0.38037847374394584
+    },
+    {
+      "key": "kenitra",
+      "name_2007": "Kénitra",
+      "name_2011": "Kénitra",
+      "id_2011": 559,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 267776,
+      "N_2011": 281110,
+      "national_share_2007": 0.017317923354788874,
+      "national_share_2011": 0.0209461090167817,
+      "log_national_share_drift": 0.19021090473451474,
+      "relative_N_change": 0.04979535133843216
+    },
+    {
+      "key": "khemissetoulmes",
+      "name_2007": "Khémisset - Oulmès",
+      "name_2011": "Khémisset - Oulmès",
+      "id_2011": 517,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 158616,
+      "N_2011": 125958,
+      "national_share_2007": 0.010258199879164645,
+      "national_share_2011": 0.009385400731157872,
+      "log_national_share_drift": -0.0889220057375776,
+      "relative_N_change": -0.20589347858980178
+    },
+    {
+      "key": "khenifra",
+      "name_2007": "Khénifra",
+      "name_2011": "Khénifra",
+      "id_2011": 577,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 157113,
+      "N_2011": 167439,
+      "national_share_2007": 0.010160996101371835,
+      "national_share_2011": 0.012476239008434104,
+      "log_national_share_drift": 0.20526947720091054,
+      "relative_N_change": 0.06572339653625092
+    },
+    {
+      "key": "laayoune",
+      "name_2007": "Laâyoune",
+      "name_2011": "Laâyoune",
+      "id_2011": 563,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 92374,
+      "N_2011": 102729,
+      "national_share_2007": 0.005974119607340716,
+      "national_share_2011": 0.007654558120255299,
+      "log_national_share_drift": 0.24786456220440783,
+      "relative_N_change": 0.11209864247515533
+    },
+    {
+      "key": "larache",
+      "name_2007": "Larache",
+      "name_2011": "Larache",
+      "id_2011": 601,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 221161,
+      "N_2011": 185222,
+      "national_share_2007": 0.01430318343342369,
+      "national_share_2011": 0.013801288478909822,
+      "log_national_share_drift": -0.03572017437057112,
+      "relative_N_change": -0.1625015260375925
+    },
+    {
+      "key": "mdiqfnideq",
+      "name_2007": "M'Diq - Fnideq",
+      "name_2011": "M'Diq - Fnideq",
+      "id_2011": 600,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 46082,
+      "N_2011": 77441,
+      "national_share_2007": 0.0029802691205910196,
+      "national_share_2011": 0.00577029500326773,
+      "log_national_share_drift": 0.6607096009329901,
+      "relative_N_change": 0.6805043183889588
+    },
+    {
+      "key": "medinasidiyoussefbenali",
+      "name_2007": "Médina - Sidi-Youssef-Ben-Ali",
+      "name_2011": "Médina - Sidi-Youssef-Ben-Ali",
+      "id_2011": 566,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 215186,
+      "N_2011": 150438,
+      "national_share_2007": 0.013916761229623261,
+      "national_share_2011": 0.011209458035169881,
+      "log_national_share_drift": -0.21633606818373372,
+      "relative_N_change": -0.3008931807831364
+    },
+    {
+      "key": "mediouna",
+      "name_2007": "Médiouna",
+      "name_2011": "Médiouna",
+      "id_2011": 529,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 53044,
+      "N_2011": 53673,
+      "national_share_2007": 0.003430523745337226,
+      "national_share_2011": 0.003999290346333194,
+      "log_national_share_drift": 0.1534039870088862,
+      "relative_N_change": 0.0118580800844581
+    },
+    {
+      "key": "menara",
+      "name_2007": "Ménara",
+      "name_2011": "Ménara",
+      "id_2011": 568,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 178344,
+      "N_2011": 166435,
+      "national_share_2007": 0.011534072220013993,
+      "national_share_2011": 0.012401428815083285,
+      "log_national_share_drift": 0.07250623633310704,
+      "relative_N_change": -0.06677544520701562
+    },
+    {
+      "key": "mohammadia",
+      "name_2007": "Mohammadia",
+      "name_2011": "Mohammadia",
+      "id_2011": 527,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 160440,
+      "N_2011": 171231,
+      "national_share_2007": 0.010376163745228576,
+      "national_share_2011": 0.012758789061408513,
+      "log_national_share_drift": 0.20670914422853134,
+      "relative_N_change": 0.06725878833208676
+    },
+    {
+      "key": "moulayrachid",
+      "name_2007": "Moulay-Rachid",
+      "name_2011": "Moulay-Rachid",
+      "id_2011": 526,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 186703,
+      "N_2011": 191521,
+      "national_share_2007": 0.012074675266301488,
+      "national_share_2011": 0.014270640478826964,
+      "log_national_share_drift": 0.1670940072535104,
+      "relative_N_change": 0.025805691392211116
+    },
+    {
+      "key": "moulayyacoub",
+      "name_2007": "Moulay-Yacoub",
+      "name_2011": "Moulay-Yacoub",
+      "id_2011": 551,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 79843,
+      "N_2011": 64984,
+      "national_share_2007": 0.005163700086700855,
+      "national_share_2011": 0.004842097215846259,
+      "log_national_share_drift": -0.0643054576504849,
+      "relative_N_change": -0.1861027266009544
+    },
+    {
+      "key": "nouaceur",
+      "name_2007": "Nouaceur",
+      "name_2011": "Nouaceur",
+      "id_2011": 528,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 93122,
+      "N_2011": 87128,
+      "national_share_2007": 0.006022495140134476,
+      "national_share_2011": 0.006492094149671502,
+      "log_national_share_drift": 0.07508350340611242,
+      "relative_N_change": -0.06436717424453942
+    },
+    {
+      "key": "ouarzazate",
+      "name_2007": "Ouarzazate",
+      "name_2011": "Ouarzazate",
+      "id_2011": 536,
+      "seats_2007": 5,
+      "seats_2011": 3,
+      "same_seat_magnitude": false,
+      "N_2007": 250465,
+      "N_2011": 120138,
+      "national_share_2007": 0.01619836607110867,
+      "national_share_2011": 0.00895174004858639,
+      "log_national_share_drift": -0.5930624451171997,
+      "relative_N_change": -0.5203401672888428
+    },
+    {
+      "key": "ouededdahab",
+      "name_2007": "Oued-Ed-Dahab",
+      "name_2011": "Oued-Ed-Dahab",
+      "id_2011": 580,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 23142,
+      "N_2011": 33027,
+      "national_share_2007": 0.0014966665506861113,
+      "national_share_2011": 0.0024609126053760067,
+      "log_national_share_drift": 0.49729192335067346,
+      "relative_N_change": 0.4271454498314753
+    },
+    {
+      "key": "oujdaangad",
+      "name_2007": "Oujda - Angad",
+      "name_2011": "Oujda - Angad",
+      "id_2011": 582,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 248371,
+      "N_2011": 242870,
+      "national_share_2007": 0.016062940448555014,
+      "national_share_2011": 0.018096764600710653,
+      "log_national_share_drift": 0.11921838775069712,
+      "relative_N_change": -0.02214831844297438
+    },
+    {
+      "key": "rabatchallah",
+      "name_2007": "Rabat - Challah",
+      "name_2011": "Rabat - Challah",
+      "id_2011": 513,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 139488,
+      "N_2011": 127724,
+      "national_share_2007": 0.0090211314416258,
+      "national_share_2011": 0.009516989178824752,
+      "log_national_share_drift": 0.053508772857867336,
+      "relative_N_change": -0.08433700389997711
+    },
+    {
+      "key": "rabatelmouhit",
+      "name_2007": "Rabat - El Mouhit",
+      "name_2011": "Rabat - El Mouhit",
+      "id_2011": 512,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 212644,
+      "N_2011": 172034,
+      "national_share_2007": 0.013752362025931096,
+      "national_share_2011": 0.012818622313660214,
+      "log_national_share_drift": -0.07031161117871312,
+      "relative_N_change": -0.19097646771129206
+    },
+    {
+      "key": "rehamna",
+      "name_2007": "Rehamna",
+      "name_2011": "Rehamna",
+      "id_2011": 571,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 150543,
+      "N_2011": 117386,
+      "national_share_2007": 0.009736093360121824,
+      "national_share_2011": 0.008746682626174581,
+      "log_national_share_drift": -0.10716544476044342,
+      "relative_N_change": -0.22024936396909855
+    },
+    {
+      "key": "salealjadida",
+      "name_2007": "Salé - Al-Jadida",
+      "name_2011": "Salé - Al-Jadida",
+      "id_2011": 515,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 133361,
+      "N_2011": 137488,
+      "national_share_2007": 0.008624878915653379,
+      "national_share_2011": 0.010244525760375947,
+      "log_national_share_drift": 0.17209256670458575,
+      "relative_N_change": 0.030946078688672163
+    },
+    {
+      "key": "salemedina",
+      "name_2007": "Salé - Médina",
+      "name_2011": "Salé - Médina",
+      "id_2011": 514,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 221181,
+      "N_2011": 201647,
+      "national_share_2007": 0.014304476896867374,
+      "national_share_2011": 0.015025150456785527,
+      "log_national_share_drift": 0.049152936153127165,
+      "relative_N_change": -0.08831680840578526
+    },
+    {
+      "key": "sefrou",
+      "name_2007": "Sefrou",
+      "name_2011": "Sefrou",
+      "id_2011": 552,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 149280,
+      "N_2011": 126375,
+      "national_share_2007": 0.009654411143653214,
+      "national_share_2011": 0.009416472295527684,
+      "log_national_share_drift": -0.024954396709954876,
+      "relative_N_change": -0.15343649517684887
+    },
+    {
+      "key": "settat",
+      "name_2007": "Settat",
+      "name_2011": "Settat",
+      "id_2011": 593,
+      "seats_2007": 4,
+      "seats_2011": 6,
+      "same_seat_magnitude": false,
+      "N_2007": 204098,
+      "N_2011": 255997,
+      "national_share_2007": 0.013199665096445162,
+      "national_share_2011": 0.019074885525129183,
+      "log_national_share_drift": 0.3681811180596326,
+      "relative_N_change": 0.25428470636654943
+    },
+    {
+      "key": "sidibernoussi",
+      "name_2007": "Sidi-Bernoussi",
+      "name_2011": "Sidi-Bernoussi",
+      "id_2011": 524,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 204332,
+      "N_2011": 206290,
+      "national_share_2007": 0.013214798618736258,
+      "national_share_2011": 0.01537111034496068,
+      "log_national_share_drift": 0.15115248689202937,
+      "relative_N_change": 0.009582444257385081
+    },
+    {
+      "key": "skhiratetemara",
+      "name_2007": "Skhirate - Témara",
+      "name_2011": "Skhirate - Témara",
+      "id_2011": 516,
+      "seats_2007": 3,
+      "seats_2011": 4,
+      "same_seat_magnitude": false,
+      "N_2007": 176610,
+      "N_2011": 201134,
+      "national_share_2007": 0.011421928939446638,
+      "national_share_2011": 0.014986925726517627,
+      "log_national_share_drift": 0.2716431039423999,
+      "relative_N_change": 0.13885963422229763
+    },
+    {
+      "key": "tangerassilah",
+      "name_2007": "Tanger - Assilah",
+      "name_2011": "Tanger - Assilah",
+      "id_2011": 597,
+      "seats_2007": 4,
+      "seats_2011": 5,
+      "same_seat_magnitude": false,
+      "N_2007": 309689,
+      "N_2011": 299327,
+      "national_share_2007": 0.02002857002054408,
+      "national_share_2011": 0.022303496758088348,
+      "log_national_share_drift": 0.107583716224613,
+      "relative_N_change": -0.03345937375883545
+    },
+    {
+      "key": "tantan",
+      "name_2007": "Tan-Tan",
+      "name_2011": "Tan-Tan",
+      "id_2011": 558,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 38133,
+      "N_2011": 42523,
+      "national_share_2007": 0.0024661820748990357,
+      "national_share_2011": 0.0031684799321283776,
+      "log_national_share_drift": 0.2505807200855853,
+      "relative_N_change": 0.1151233839456638
+    },
+    {
+      "key": "taounatetissa",
+      "name_2007": "Taounate - Tissa",
+      "name_2011": "Taounate - Tissa",
+      "id_2011": 543,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 196189,
+      "N_2011": 127326,
+      "national_share_2007": 0.012688164977640545,
+      "national_share_2011": 0.009487333345205603,
+      "log_national_share_drift": -0.29071209061458597,
+      "relative_N_change": -0.3510033692001081
+    },
+    {
+      "key": "taourirt",
+      "name_2007": "Taourirt",
+      "name_2011": "Taourirt",
+      "id_2011": 585,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 114209,
+      "N_2011": 99896,
+      "national_share_2007": 0.007386258321982113,
+      "national_share_2011": 0.007443465214116982,
+      "log_national_share_drift": 0.007715204637822024,
+      "relative_N_change": -0.12532287297848677
+    },
+    {
+      "key": "taroudanntaljanoubia",
+      "name_2007": "Taroudannt - Al-Janoubia",
+      "name_2011": "Taroudannt - Al-Janoubia",
+      "id_2011": 533,
+      "seats_2007": 4,
+      "seats_2011": 4,
+      "same_seat_magnitude": true,
+      "N_2007": 236633,
+      "N_2011": 203499,
+      "national_share_2007": 0.0153038067534572,
+      "national_share_2011": 0.015163146948902775,
+      "log_national_share_drift": -0.009233663813027563,
+      "relative_N_change": -0.14002273562858947
+    },
+    {
+      "key": "taroudanntchamalia",
+      "name_2007": "Taroudannt - Chamalia",
+      "name_2011": "Taroudannt - Chamalia",
+      "id_2011": 534,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 207060,
+      "N_2011": 156359,
+      "national_share_2007": 0.01339122703245468,
+      "national_share_2011": 0.011650644444363308,
+      "log_national_share_drift": -0.13923829788279066,
+      "relative_N_change": -0.24486139283299524
+    },
+    {
+      "key": "tata",
+      "name_2007": "Tata",
+      "name_2011": "Tata",
+      "id_2011": 555,
+      "seats_2007": 2,
+      "seats_2011": 2,
+      "same_seat_magnitude": true,
+      "N_2007": 66578,
+      "N_2011": 63634,
+      "national_share_2007": 0.004305810457677812,
+      "national_share_2011": 0.004741505820404421,
+      "log_national_share_drift": 0.09638938910159002,
+      "relative_N_change": -0.04421881101865477
+    },
+    {
+      "key": "taza",
+      "name_2007": "Taza",
+      "name_2011": "Taza",
+      "id_2011": 541,
+      "seats_2007": 4,
+      "seats_2011": 5,
+      "same_seat_magnitude": false,
+      "N_2007": 228721,
+      "N_2011": 246966,
+      "national_share_2007": 0.014792112615136032,
+      "national_share_2011": 0.01840196634569567,
+      "log_national_share_drift": 0.2183634182170809,
+      "relative_N_change": 0.07976967571845184
+    },
+    {
+      "key": "tetouan",
+      "name_2007": "Tétouan",
+      "name_2011": "Tétouan",
+      "id_2011": 599,
+      "seats_2007": 4,
+      "seats_2011": 5,
+      "same_seat_magnitude": false,
+      "N_2007": 266504,
+      "N_2011": 211220,
+      "national_share_2007": 0.017235659079770607,
+      "national_share_2011": 0.015738455218685322,
+      "log_national_share_drift": -0.09087334550735084,
+      "relative_N_change": -0.20744153933899678
+    },
+    {
+      "key": "tifeltrommani",
+      "name_2007": "Tifelt - Rommani",
+      "name_2011": "Tifelt - Rommani",
+      "id_2011": 518,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 150813,
+      "N_2011": 119723,
+      "national_share_2007": 0.00975355511661155,
+      "national_share_2011": 0.00892081750850612,
+      "log_national_share_drift": -0.08924425456606046,
+      "relative_N_change": -0.20614933725872442
+    },
+    {
+      "key": "tiznit",
+      "name_2007": "Tiznit",
+      "name_2011": "Tiznit",
+      "id_2011": 535,
+      "seats_2007": 3,
+      "seats_2011": 2,
+      "same_seat_magnitude": false,
+      "N_2007": 200931,
+      "N_2011": 111532,
+      "national_share_2007": 0.012994845160137889,
+      "national_share_2011": 0.00831048853068086,
+      "log_national_share_drift": -0.4470343572527125,
+      "relative_N_change": -0.44492387934166455
+    },
+    {
+      "key": "zagora",
+      "name_2007": "Zagora",
+      "name_2011": "Zagora",
+      "id_2011": 537,
+      "seats_2007": 3,
+      "seats_2011": 3,
+      "same_seat_magnitude": true,
+      "N_2007": 136120,
+      "N_2011": 108994,
+      "national_share_2007": 0.008803312197709509,
+      "national_share_2011": 0.008121376707250202,
+      "log_national_share_drift": -0.08062835174175724,
+      "relative_N_change": -0.1992800470173376
+    }
+  ],
+  "posterior_design_implication": "Use the scaled-2011 vector only as a centre. Perturb local log-shares jointly with a heavy-tailed/shrunk prior no tighter than observed historical share drift, then renormalize and integer-round to exactly 15,801,162. Update centre with HCP/RGPH demographic growth or official local roll data when available.",
+  "status": "EMPIRICAL_VARIANCE_FLOOR_ESTIMATED_IF_MATCH_COVERAGE_IS_SUFFICIENT"
+}
