@@ -1,0 +1,2002 @@
+{
+  "audit_id": "M26-LOCAL-92-TIERED-V3",
+  "local_constituencies": 92,
+  "local_seats": 305,
+  "invariant_exact_rows": 81,
+  "denominator_sensitive_reproduced_rows": 11,
+  "all_92_empirically_reproduced": true,
+  "primary_denominator_complete": false,
+  "forecast_status": "BLOCKED",
+  "rows": [
+    {
+      "constituency_id": "rabat-ocean",
+      "name": "Rabat-Océan",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "tafra_name": "Rabat - El Mouhit",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1,
+        "MP": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "rabat-chellah",
+      "name": "Rabat-Chellah",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "tafra_name": "Rabat - Challah",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "sale-medina",
+      "name": "Salé-Médina",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "tafra_name": "Salé - Médina",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PPS": 1,
+        "MP": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "sale-el-jadida",
+      "name": "Salé-El Jadida",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "tafra_name": "Salé - Al-Jadida",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "skhirate-temara",
+      "name": "Skhirate-Témara",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "tafra_name": "Skhirate - Témara",
+      "legal_allocation": {
+        "RNI": 1,
+        "UC": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "khemisset-oulmes",
+      "name": "Khémisset-Oulmès",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "tafra_name": "Khémisset - Oulmès",
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "tiflet-rommani",
+      "name": "Tiflet-Rommani",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "tafra_name": "Tifelt - Rommani",
+      "legal_allocation": {
+        "RNI": 1,
+        "MDS": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "MDS": 1,
+        "PAM": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "kenitra",
+      "name": "Kénitra",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "tafra_name": "Kénitra",
+      "legal_allocation": {
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "observed_elected": {
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "evidence_tier": "B_QUARANTINED_DENOMINATOR_REPRODUCTION",
+      "registered_used": 306600,
+      "source": "https://fr.wikipedia.org/wiki/Circonscription_de_K%C3%A9nitra",
+      "forecast_unlock_eligible": false
+    },
+    {
+      "constituency_id": "el-gharb",
+      "name": "El Gharb",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "tafra_name": "El-Gharb",
+      "legal_allocation": {
+        "RNI": 1,
+        "UC": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "sidi-slimane",
+      "name": "Sidi Slimane",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "tafra_name": "Sidi Slimane",
+      "legal_allocation": {
+        "UC": 1,
+        "USFP": 1,
+        "RNI": 1
+      },
+      "observed_elected": {
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "sidi-kacem",
+      "name": "Sidi Kacem",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 5,
+      "tafra_name": "Sidi-Kacem",
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "laayoune",
+      "name": "Laâyoune",
+      "region": "Laâyoune-Sakia El Hamra",
+      "seats": 3,
+      "tafra_name": "Laâyoune",
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "B_QUARANTINED_DENOMINATOR_REPRODUCTION",
+      "registered_used": 146051,
+      "source": "https://ledesk.ma/live-content/le-pi-le-pam-et-le-rni-se-partagent-les-trois-sieges-de-laayoune-resultats-provisoires/",
+      "forecast_unlock_eligible": false
+    },
+    {
+      "constituency_id": "boujdour",
+      "name": "Boujdour",
+      "region": "Laâyoune-Sakia El Hamra",
+      "seats": 2,
+      "tafra_name": "Boujdour",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "tarfaya",
+      "name": "Tarfaya",
+      "region": "Laâyoune-Sakia El Hamra",
+      "seats": 2,
+      "tafra_name": "Tarfaya",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "es-semara",
+      "name": "Es-Semara",
+      "region": "Laâyoune-Sakia El Hamra",
+      "seats": 2,
+      "tafra_name": "Es-Smara",
+      "legal_allocation": {
+        "PI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "oued-eddahab",
+      "name": "Oued Eddahab",
+      "region": "Dakhla-Oued Eddahab",
+      "seats": 2,
+      "tafra_name": "Oued-Ed-Dahab",
+      "legal_allocation": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "aousserd",
+      "name": "Aousserd",
+      "region": "Dakhla-Oued Eddahab",
+      "seats": 2,
+      "tafra_name": "Aousserd",
+      "legal_allocation": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "errachidia",
+      "name": "Errachidia",
+      "region": "Drâa-Tafilalet",
+      "seats": 5,
+      "tafra_name": "Errachidia",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "MDS": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "MDS": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "tinghir",
+      "name": "Tinghir",
+      "region": "Drâa-Tafilalet",
+      "seats": 3,
+      "tafra_name": "Tinghir",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PPS": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "zagora",
+      "name": "Zagora",
+      "region": "Drâa-Tafilalet",
+      "seats": 3,
+      "tafra_name": "Zagora",
+      "legal_allocation": {
+        "RNI": 1,
+        "USFP": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "ouarzazate",
+      "name": "Ouarzazate",
+      "region": "Drâa-Tafilalet",
+      "seats": 3,
+      "tafra_name": "Ouarzazate",
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "midelt",
+      "name": "Midelt",
+      "region": "Drâa-Tafilalet",
+      "seats": 3,
+      "tafra_name": "Midelt",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "MP": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "casablanca-anfa",
+      "name": "Casablanca-Anfa",
+      "region": "Casablanca-Settat",
+      "seats": 4,
+      "tafra_name": "Casablanca - Anfa",
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "B_QUARANTINED_DENOMINATOR_REPRODUCTION",
+      "registered_used": 212453,
+      "source": "https://lecollimateur.ma/57341",
+      "forecast_unlock_eligible": false
+    },
+    {
+      "constituency_id": "ben-m-sick",
+      "name": "Ben M'sick",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_name": "Ben-M'sick",
+      "legal_allocation": {
+        "UC": 1,
+        "RNI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "sidi-bernoussi",
+      "name": "Sidi Bernoussi",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_name": "Sidi-Bernoussi",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "al-fida-mers-sultan",
+      "name": "Al Fida-Mers Sultan",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_name": "Al-Fida - Mers-Sultan",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "ain-sebaa-hay-mohammadi",
+      "name": "Aïn Sebaâ-Hay Mohammadi",
+      "region": "Casablanca-Settat",
+      "seats": 4,
+      "tafra_name": "Aïn-Sebaâ - Hay-Mohammadi",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "UC": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "moulay-rachid",
+      "name": "Moulay Rachid",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_name": "Moulay-Rachid",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "observed_elected": {
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "hay-hassani",
+      "name": "Hay Hassani",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_name": "Hay-Hassani",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "ain-chock",
+      "name": "Aïn Chock",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_name": "Aïn-Chock",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "mohammedia",
+      "name": "Mohammédia",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_name": "Mohammadia",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "nouaceur",
+      "name": "Nouaceur",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_name": "Nouaceur",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "mediouna",
+      "name": "Médiouna",
+      "region": "Casablanca-Settat",
+      "seats": 2,
+      "tafra_name": "Médiouna",
+      "legal_allocation": {
+        "PI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "benslimane",
+      "name": "Benslimane",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_name": "Benslimane",
+      "legal_allocation": {
+        "PI": 1,
+        "RNI": 1,
+        "PPS": 1
+      },
+      "observed_elected": {
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "el-jadida",
+      "name": "El Jadida",
+      "region": "Casablanca-Settat",
+      "seats": 6,
+      "tafra_name": "El-Jadida",
+      "legal_allocation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "B_QUARANTINED_DENOMINATOR_REPRODUCTION",
+      "registered_used": 397251,
+      "source": "https://ledesk.ma/live-content/six-partis-se-partagent-les-sieges-de-la-province-del-jadida/",
+      "forecast_unlock_eligible": false
+    },
+    {
+      "constituency_id": "berrechid",
+      "name": "Berrechid",
+      "region": "Casablanca-Settat",
+      "seats": 4,
+      "tafra_name": "Berrechid",
+      "legal_allocation": {
+        "PI": 1,
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "settat",
+      "name": "Settat",
+      "region": "Casablanca-Settat",
+      "seats": 6,
+      "tafra_name": "Settat",
+      "legal_allocation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "B_QUARANTINED_DENOMINATOR_REPRODUCTION",
+      "registered_used": 338695,
+      "source": "https://mobile.ledesk.ma/live-content/le-rni-le-pi-luc-le-pam-lusfp-et-le-mp-remportent-les-6-sieges-de-settat/",
+      "forecast_unlock_eligible": false
+    },
+    {
+      "constituency_id": "sidi-bennour",
+      "name": "Sidi Bennour",
+      "region": "Casablanca-Settat",
+      "seats": 4,
+      "tafra_name": "Sidi Bennour",
+      "legal_allocation": {
+        "USFP": 1,
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "agadir-ida-outanane",
+      "name": "Agadir Ida-Outanane",
+      "region": "Souss-Massa",
+      "seats": 4,
+      "tafra_name": "Agadir - Ida-ou-Tanane",
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "B_QUARANTINED_DENOMINATOR_REPRODUCTION",
+      "registered_used": 316821,
+      "source": "https://www.maghress.com/fr/aujourdhui/386305",
+      "forecast_unlock_eligible": false
+    },
+    {
+      "constituency_id": "inezgane-ait-melloul",
+      "name": "Inezgane-Aït Melloul",
+      "region": "Souss-Massa",
+      "seats": 3,
+      "tafra_name": "Inézgane - Aït-Melloul",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "chtouka-ait-baha",
+      "name": "Chtouka-Aït Baha",
+      "region": "Souss-Massa",
+      "seats": 3,
+      "tafra_name": "Chtouka - Aït-Baha",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "taroudant-sud",
+      "name": "Taroudant-Sud",
+      "region": "Souss-Massa",
+      "seats": 4,
+      "tafra_name": "Taroudannt - Al-Janoubia",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "PJD": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "taroudant-nord",
+      "name": "Taroudant-Nord",
+      "region": "Souss-Massa",
+      "seats": 3,
+      "tafra_name": "Taroudannt - Chamalia",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "tiznit",
+      "name": "Tiznit",
+      "region": "Souss-Massa",
+      "seats": 2,
+      "tafra_name": "Tiznit",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "tata",
+      "name": "Tata",
+      "region": "Souss-Massa",
+      "seats": 2,
+      "tafra_name": "Tata",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "guelmim",
+      "name": "Guelmim",
+      "region": "Guelmim-Oued Noun",
+      "seats": 2,
+      "tafra_name": "Guelmim",
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "tan-tan",
+      "name": "Tan-Tan",
+      "region": "Guelmim-Oued Noun",
+      "seats": 2,
+      "tafra_name": "Tan-Tan",
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "sidi-ifni",
+      "name": "Sidi Ifni",
+      "region": "Guelmim-Oued Noun",
+      "seats": 2,
+      "tafra_name": "Sidi Ifni",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "assa-zag",
+      "name": "Assa-Zag",
+      "region": "Guelmim-Oued Noun",
+      "seats": 2,
+      "tafra_name": "Assa-Zag",
+      "legal_allocation": {
+        "PAM": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "medina-sidi-youssef",
+      "name": "Medina-Sidi Youssef",
+      "region": "Marrakech-Safi",
+      "seats": 3,
+      "tafra_name": "Médina - Sidi-Youssef-Ben-Ali",
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "gueliz-nakhil",
+      "name": "Guéliz-Nakhil",
+      "region": "Marrakech-Safi",
+      "seats": 3,
+      "tafra_name": "Guéliz - Annakhil",
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "menara",
+      "name": "Menara",
+      "region": "Marrakech-Safi",
+      "seats": 3,
+      "tafra_name": "Ménara",
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "chichaoua",
+      "name": "Chichaoua",
+      "region": "Marrakech-Safi",
+      "seats": 4,
+      "tafra_name": "Chichaoua",
+      "legal_allocation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "B_QUARANTINED_DENOMINATOR_REPRODUCTION",
+      "registered_used": 209596,
+      "source": "https://ledesk.ma/live-content/chichaoua-un-taux-de-participation-de-73-aux-elections-generales/",
+      "forecast_unlock_eligible": false
+    },
+    {
+      "constituency_id": "safi",
+      "name": "Safi",
+      "region": "Marrakech-Safi",
+      "seats": 6,
+      "tafra_name": "Safi",
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "MP": 1,
+        "RNI": 1,
+        "MDS": 1,
+        "UC": 1
+      },
+      "observed_elected": {
+        "MDS": 1,
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "al-haouz",
+      "name": "Al Haouz",
+      "region": "Marrakech-Safi",
+      "seats": 4,
+      "tafra_name": "Al-Haouz",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "UC": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "el-kelaa-des-sraghna",
+      "name": "El Kelâa des Sraghna",
+      "region": "Marrakech-Safi",
+      "seats": 4,
+      "tafra_name": "El-Kelâa-des-Sraghna",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "USFP": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "essaouira",
+      "name": "Essaouira",
+      "region": "Marrakech-Safi",
+      "seats": 4,
+      "tafra_name": "Essaouira",
+      "legal_allocation": {
+        "USFP": 1,
+        "RNI": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "observed_elected": {
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "rehamna",
+      "name": "Rehamna",
+      "region": "Marrakech-Safi",
+      "seats": 3,
+      "tafra_name": "Rehamna",
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "youssoufia",
+      "name": "Youssoufia",
+      "region": "Marrakech-Safi",
+      "seats": 2,
+      "tafra_name": "Youssoufia",
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "tanger-assilah",
+      "name": "Tanger-Assilah",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 5,
+      "tafra_name": "Tanger - Assilah",
+      "legal_allocation": {
+        "UC": 1,
+        "PI": 1,
+        "PAM": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "m-diq-fnideq",
+      "name": "M'diq-Fnideq",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 2,
+      "tafra_name": "M'Diq - Fnideq",
+      "legal_allocation": {
+        "PAM": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "fahs-anjra",
+      "name": "Fahs-Anjra",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 2,
+      "tafra_name": "Fahs - Anjra",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "tetouan",
+      "name": "Tétouan",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 5,
+      "tafra_name": "Tétouan",
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "B_QUARANTINED_DENOMINATOR_REPRODUCTION",
+      "registered_used": 283841,
+      "source": "https://ledesk.ma/live-content/province-de-tetouan-un-taux-de-participation-de-plus-de-35/",
+      "forecast_unlock_eligible": false
+    },
+    {
+      "constituency_id": "ouezzane",
+      "name": "Ouezzane",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 3,
+      "tafra_name": "Ouezzane",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "larache",
+      "name": "Larache",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 4,
+      "tafra_name": "Larache",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "UC": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "chefchaouen",
+      "name": "Chefchaouen",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 4,
+      "tafra_name": "Chefchaouen",
+      "legal_allocation": {
+        "RNI": 1,
+        "USFP": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "al-hoceima",
+      "name": "Al Hoceïma",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 4,
+      "tafra_name": "Al-Hoceïma",
+      "legal_allocation": {
+        "PI": 1,
+        "RNI": 1,
+        "PAM": 1,
+        "MP": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "oujda-angad",
+      "name": "Oujda-Angad",
+      "region": "Oriental",
+      "seats": 4,
+      "tafra_name": "Oujda - Angad",
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "B_QUARANTINED_DENOMINATOR_REPRODUCTION",
+      "registered_used": 305487,
+      "source": "https://barlamane.com/fr/oujda-angad-le-pam-en-tete-des-elections/",
+      "forecast_unlock_eligible": false
+    },
+    {
+      "constituency_id": "nador",
+      "name": "Nador",
+      "region": "Oriental",
+      "seats": 4,
+      "tafra_name": "Nador",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "driouch",
+      "name": "Driouch",
+      "region": "Oriental",
+      "seats": 3,
+      "tafra_name": "Driouch",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "jerada",
+      "name": "Jerada",
+      "region": "Oriental",
+      "seats": 2,
+      "tafra_name": "Jerada",
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "berkane",
+      "name": "Berkane",
+      "region": "Oriental",
+      "seats": 3,
+      "tafra_name": "Berkane",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "taourirt",
+      "name": "Taourirt",
+      "region": "Oriental",
+      "seats": 2,
+      "tafra_name": "Taourirt",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "guercif",
+      "name": "Guercif",
+      "region": "Oriental",
+      "seats": 2,
+      "tafra_name": "Guercif",
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "figuig",
+      "name": "Figuig",
+      "region": "Oriental",
+      "seats": 3,
+      "tafra_name": "Figuig",
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "fes-sud",
+      "name": "Fès-Sud",
+      "region": "Fès-Meknès",
+      "seats": 4,
+      "tafra_name": "Fès-Janoubia",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "fes-nord",
+      "name": "Fès-Nord",
+      "region": "Fès-Meknès",
+      "seats": 4,
+      "tafra_name": "Fès-Chamalia",
+      "legal_allocation": {
+        "RNI": 1,
+        "FFD": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "FFD": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "ifrane",
+      "name": "Ifrane",
+      "region": "Fès-Meknès",
+      "seats": 2,
+      "tafra_name": "Ifrane",
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "moulay-yaacoub",
+      "name": "Moulay Yaâcoub",
+      "region": "Fès-Meknès",
+      "seats": 2,
+      "tafra_name": "Moulay-Yacoub",
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "sefrou",
+      "name": "Séfrou",
+      "region": "Fès-Meknès",
+      "seats": 3,
+      "tafra_name": "Sefrou",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "boulemane",
+      "name": "Boulemane",
+      "region": "Fès-Meknès",
+      "seats": 3,
+      "tafra_name": "Boulemane",
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1,
+        "PPS": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "el-hajeb",
+      "name": "El Hajeb",
+      "region": "Fès-Meknès",
+      "seats": 2,
+      "tafra_name": "El-Hajeb",
+      "legal_allocation": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "taza",
+      "name": "Taza",
+      "region": "Fès-Meknès",
+      "seats": 5,
+      "tafra_name": "Taza",
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1,
+        "MP": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "taounate-tissa",
+      "name": "Taounate-Tissa",
+      "region": "Fès-Meknès",
+      "seats": 3,
+      "tafra_name": "Taounate - Tissa",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PPS": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "karia-ghafsay",
+      "name": "Karia-Ghafsay",
+      "region": "Fès-Meknès",
+      "seats": 3,
+      "tafra_name": "Karia - Rhafsai",
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "meknes",
+      "name": "Meknès",
+      "region": "Fès-Meknès",
+      "seats": 6,
+      "tafra_name": "Meknès",
+      "legal_allocation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "evidence_tier": "B_QUARANTINED_DENOMINATOR_REPRODUCTION",
+      "registered_used": 423066,
+      "source": "https://www.medi1news.com/fr/article/229198",
+      "forecast_unlock_eligible": false
+    },
+    {
+      "constituency_id": "beni-mellal",
+      "name": "Béni-Mellal",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 6,
+      "tafra_name": "Béni-Mellal",
+      "legal_allocation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "B_QUARANTINED_DENOMINATOR_REPRODUCTION",
+      "registered_used": 318608,
+      "source": "https://saharanews.org/10963-elections-communales-le-pam-le-mp-et-le-rni-decrochent-le-plus-grand-nombre-de-sieges-a-beni-mellal.html",
+      "forecast_unlock_eligible": false
+    },
+    {
+      "constituency_id": "bzou-ouaouizeght",
+      "name": "Bzou-Ouaouizeght",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 3,
+      "tafra_name": "Bzou - Ouaouizaght",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "MP": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "azilal-demnate",
+      "name": "Azilal-Demnate",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 3,
+      "tafra_name": "Azilal - Demnate",
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "fquih-ben-salah",
+      "name": "Fquih Ben Salah",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 4,
+      "tafra_name": "Fquih Ben Salah",
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "khouribga",
+      "name": "Khouribga",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 6,
+      "tafra_name": "Khouribga",
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "MP": 1,
+        "PI": 1,
+        "USFP": 1,
+        "PPS": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    },
+    {
+      "constituency_id": "khenifra",
+      "name": "Khénifra",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 3,
+      "tafra_name": "Khénifra",
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1,
+        "PI": 1
+      },
+      "observed_elected": {
+        "MP": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "evidence_tier": "A_DENOMINATOR_FREE_EXACT_INTERVAL_PROOF",
+      "registered_used": null,
+      "source": "mathematical full-integer interval proof",
+      "forecast_unlock_eligible": null
+    }
+  ]
+}
