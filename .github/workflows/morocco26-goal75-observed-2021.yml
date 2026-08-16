@@ -1,0 +1,24 @@
+name: morocco26-goal75-observed-2021
+on:
+  push:
+    branches: [morocco26-goal75-hard]
+    paths: ['.github/workflows/morocco26-goal75-observed-2021.yml']
+permissions:
+  contents: write
+jobs:
+  observed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-goal75-hard}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install --quiet 'datasets>=3,<5' pandas pyarrow
+      - run: python morocco26/scripts/goal75_observed_2021.py
+      - run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/data/goal75/observed_elected_2021.json
+          git commit -m "data(morocco26): freeze independent observed 2021 elected ground truth"
+          git pull --rebase origin morocco26-goal75-hard
+          git push origin HEAD:morocco26-goal75-hard

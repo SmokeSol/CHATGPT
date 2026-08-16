@@ -1,0 +1,24 @@
+name: morocco26-goal75-p5-live
+on:
+  push:
+    branches: [morocco26-goal75-hard]
+    paths:
+      - 'morocco26/data/goal75/p2_exact_audit.json'
+      - 'morocco26/data/goal75/seat_margin_92.json'
+permissions:
+  contents: write
+jobs:
+  live-decode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-goal75-hard}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python morocco26/scripts/goal75_p5_live_decode.py
+      - run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/data/goal75/live_decoding_2026.json morocco26/data/goal75/p5_live_gate.json
+          git commit -m "data(morocco26): gate prospective no-forecast 2026 decoder"
+          git pull --rebase origin morocco26-goal75-hard
+          git push origin HEAD:morocco26-goal75-hard

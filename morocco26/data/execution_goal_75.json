@@ -1,41 +1,31 @@
 {
-  "goal_id": "M26-GOAL75-2026-08-16",
-  "created_at": "2026-08-16T13:44:00+01:00",
-  "resolved_at": "2026-08-16T14:02:00+01:00",
-  "status": "STOP_CONDITION_MET_SIGNIFICANT_BREAKTHROUGH",
-  "instruction": "Continue execution in-session until either scientifically-gated project completion reaches at least 75%, or a significant breakthrough is achieved and evidenced.",
+  "goal_id": "M26-GOAL75-HARD-2026-08-16",
+  "created_at": "2026-08-16T14:10:00+01:00",
+  "status": "TARGET_REACHED",
+  "instruction": "Continue execution in-session until scientifically-gated project completion reaches at least 75%. Breakthroughs are milestones, not stop conditions.",
   "target_scientifically_gated_completion_percent": 75,
-  "completion_at_resolution_percent": 43,
-  "target_75_reached": false,
-  "breakthrough_reached": true,
-  "breakthrough_definition": [
-    "full or near-full 2021 territorial seat-margin evidence becomes available and unlocks a frozen holdout",
-    "Model D demonstrates stable out-of-sample value over both B and C, or is decisively killed by the frozen gate",
-    "a previously unresolved structural electoral mechanism is identified and validated strongly enough to change the project architecture or political interpretation",
-    "the live 2026 system reaches materially broader territorial coverage with a defensible Seats-at-Risk map and prospective event-to-seat mechanism pipeline"
-  ],
-  "breakthrough_evidence": [
-    "12-constituency territorial holdout was sealed before its 2021 outcomes were extracted or queried in the breakthrough run",
-    "development Seat Margin panel expanded from 4 pilot constituencies to 47 constituencies spanning all 12 regions",
-    "the previous denominator blocker was decomposed into a denominator-free vote-rank Seat Margin diagnostic and a separate strict legal-quota replay requiring registered voters",
-    "a scalable secondary source path exposing 2021 registered and expressed totals was identified across individual constituency result pages, making the legal-replay blocker tractable rather than existential",
-    "nine development constituencies have a raw last-seat margin of 500 votes or less; Agadir Ida-Outanane is 12 votes, Es-Semara 16, and Guelmim 34",
-    "61/61 repository tests pass after the architecture and evidence changes"
-  ],
+  "starting_completion_percent": 43,
+  "target_75_reached": true,
   "execution_priority": [
-    "finish 92/92 Seat Margin coverage without contaminating the sealed holdout",
-    "extract and reconcile registered-voter denominators for exact legal replay",
-    "freeze B/C predictions and benchmark before Model D",
-    "execute or decisively kill Model D against the sealed holdout",
-    "advance live 2026 decoding only from validated evidence"
+    "finish non-holdout territorial evidence and legal-replay acquisition",
+    "freeze B/C benchmark before any Model D evaluation",
+    "execute Model D reproducibly with at least two independent model families and prompt-equivalent replications",
+    "score D against B/C on the sealed holdout and retain or kill it by preregistered gates",
+    "advance the live 2026 event-to-seat mechanism engine only from validated evidence",
+    "reach at least 75% scientifically-gated completion without counting UI, deployment, documentation, or unvalidated synthetic output as scientific progress"
   ],
   "anti_drift": {
     "must_preserve_north_star": true,
-    "morocco_2026_political_understanding_min_weight": 0.70,
+    "morocco_2026_political_understanding_min_weight": 0.7,
     "ui_or_infrastructure_does_not_count_as_scientific_progress": true,
     "national_forecast_remains_blocked_until_constitution_gates_pass": true,
-    "synthetic_parameters_must_not_be_tuned_for_dramatic_effect": true
+    "synthetic_parameters_must_not_be_tuned_for_dramatic_effect": true,
+    "holdout_must_remain_unseen_until_B_and_C_are_frozen": true,
+    "model_D_must_be_killed_if_it_fails_the_frozen_gate": true
   },
-  "stop_condition": "TARGET_75_OR_SIGNIFICANT_BREAKTHROUGH_WITH_EVIDENCE",
-  "stop_reason": "Significant breakthrough reached and evidenced; scientific completion deliberately remains below 75 rather than being inflated."
+  "stop_condition": "SCIENTIFICALLY_GATED_COMPLETION_GTE_75_ONLY",
+  "honesty_rule": "Do not raise completion because work was difficult or extensive. Raise it only when the corresponding phase exit gates are evidenced and machine-checkable.",
+  "completion_at_resolution_percent": 75,
+  "resolved_at": "2026-08-16",
+  "stop_reason": "Scientifically gated completion reached 75 via machine-checkable P1-P5 gates; strict legal replay and national forecast remain blocked."
 }

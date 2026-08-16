@@ -1,0 +1,28 @@
+name: morocco26-goal75-holdout-clean
+on:
+  push:
+    branches: [morocco26-goal75-hard]
+    paths:
+      - 'morocco26/scripts/goal75_holdout_score_clean.py'
+      - '.github/workflows/morocco26-goal75-holdout-clean.yml'
+permissions:
+  contents: write
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-goal75-hard
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet pandas openpyxl requests
+      - run: python morocco26/scripts/goal75_holdout_score_clean.py
+      - run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal75/holdout_bc_score_clean.json
+          git commit -m 'data(morocco26): record frozen B/C holdout score' || true
+          git pull --rebase origin morocco26-goal75-hard
+          git push origin HEAD:morocco26-goal75-hard

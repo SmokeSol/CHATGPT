@@ -1,0 +1,2281 @@
+{
+  "schema_version": "2.0",
+  "method": "81 exhaustive denominator-invariant rows + 10 independent registered counts + exhaustive Kénitra/El Gharb province-sum constraint",
+  "local_constituencies": 92,
+  "local_seats": 305,
+  "invariant_rows": 81,
+  "direct_registered_rows": 10,
+  "joint_constraint_pass": false,
+  "resolved_records": [
+    {
+      "constituency_id": "rabat-ocean",
+      "name": "Rabat-Océan",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "tafra_id": "512",
+      "tafra_name": "Rabat - El Mouhit",
+      "valid_vote_sum": 47753,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1,
+        "MP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "rabat-chellah",
+      "name": "Rabat-Chellah",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "tafra_id": "513",
+      "tafra_name": "Rabat - Challah",
+      "valid_vote_sum": 40285,
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "sale-medina",
+      "name": "Salé-Médina",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "tafra_id": "514",
+      "tafra_name": "Salé - Médina",
+      "valid_vote_sum": 51024,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PPS": 1,
+        "MP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "sale-el-jadida",
+      "name": "Salé-El Jadida",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "tafra_id": "515",
+      "tafra_name": "Salé - Al-Jadida",
+      "valid_vote_sum": 56828,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "skhirate-temara",
+      "name": "Skhirate-Témara",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "tafra_id": "516",
+      "tafra_name": "Skhirate - Témara",
+      "valid_vote_sum": 98027,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "UC": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "khemisset-oulmes",
+      "name": "Khémisset-Oulmès",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "tafra_id": "517",
+      "tafra_name": "Khémisset - Oulmès",
+      "valid_vote_sum": 77990,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "tiflet-rommani",
+      "name": "Tiflet-Rommani",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "tafra_id": "518",
+      "tafra_name": "Tifelt - Rommani",
+      "valid_vote_sum": 93756,
+      "observed_elected": {
+        "MDS": 1,
+        "PAM": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "MDS": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "el-gharb",
+      "name": "El Gharb",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "tafra_id": "560",
+      "tafra_name": "El-Gharb",
+      "valid_vote_sum": 104155,
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "UC": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "sidi-slimane",
+      "name": "Sidi Slimane",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "tafra_id": "562",
+      "tafra_name": "Sidi Slimane",
+      "valid_vote_sum": 86999,
+      "observed_elected": {
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "UC": 1,
+        "USFP": 1,
+        "RNI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "sidi-kacem",
+      "name": "Sidi Kacem",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 5,
+      "tafra_id": "561",
+      "tafra_name": "Sidi-Kacem",
+      "valid_vote_sum": 160295,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "laayoune",
+      "name": "Laâyoune",
+      "region": "Laâyoune-Sakia El Hamra",
+      "seats": 3,
+      "tafra_id": "563",
+      "tafra_name": "Laâyoune",
+      "valid_vote_sum": 87806,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "INDEPENDENT_CONTEMPORANEOUS_REGISTERED_COUNT",
+      "registered_evidence": {
+        "constituency_id": "laayoune",
+        "registered": 146051,
+        "source": "https://ledesk.ma/live-content/le-pi-le-pam-et-le-rni-se-partagent-les-trois-sieges-de-laayoune-resultats-provisoires/",
+        "evidence": "MAP/local authority: 146,051 citizens called to polls in Laayoune triple ballot"
+      },
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "boujdour",
+      "name": "Boujdour",
+      "region": "Laâyoune-Sakia El Hamra",
+      "seats": 2,
+      "tafra_id": "564",
+      "tafra_name": "Boujdour",
+      "valid_vote_sum": 19339,
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "tarfaya",
+      "name": "Tarfaya",
+      "region": "Laâyoune-Sakia El Hamra",
+      "seats": 2,
+      "tafra_id": "565",
+      "tafra_name": "Tarfaya",
+      "valid_vote_sum": 9422,
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "es-semara",
+      "name": "Es-Semara",
+      "region": "Laâyoune-Sakia El Hamra",
+      "seats": 2,
+      "tafra_id": "557",
+      "tafra_name": "Es-Smara",
+      "valid_vote_sum": 19188,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "oued-eddahab",
+      "name": "Oued Eddahab",
+      "region": "Dakhla-Oued Eddahab",
+      "seats": 2,
+      "tafra_id": "580",
+      "tafra_name": "Oued-Ed-Dahab",
+      "valid_vote_sum": 26951,
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "aousserd",
+      "name": "Aousserd",
+      "region": "Dakhla-Oued Eddahab",
+      "seats": 2,
+      "tafra_id": "581",
+      "tafra_name": "Aousserd",
+      "valid_vote_sum": 7893,
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "errachidia",
+      "name": "Errachidia",
+      "region": "Drâa-Tafilalet",
+      "seats": 5,
+      "tafra_id": "578",
+      "tafra_name": "Errachidia",
+      "valid_vote_sum": 113879,
+      "observed_elected": {
+        "MDS": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "MDS": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "tinghir",
+      "name": "Tinghir",
+      "region": "Drâa-Tafilalet",
+      "seats": 3,
+      "tafra_id": "538",
+      "tafra_name": "Tinghir",
+      "valid_vote_sum": 100562,
+      "observed_elected": {
+        "PAM": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PPS": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "zagora",
+      "name": "Zagora",
+      "region": "Drâa-Tafilalet",
+      "seats": 3,
+      "tafra_id": "537",
+      "tafra_name": "Zagora",
+      "valid_vote_sum": 94625,
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "USFP": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "ouarzazate",
+      "name": "Ouarzazate",
+      "region": "Drâa-Tafilalet",
+      "seats": 3,
+      "tafra_id": "536",
+      "tafra_name": "Ouarzazate",
+      "valid_vote_sum": 84452,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "midelt",
+      "name": "Midelt",
+      "region": "Drâa-Tafilalet",
+      "seats": 3,
+      "tafra_id": "579",
+      "tafra_name": "Midelt",
+      "valid_vote_sum": 86502,
+      "observed_elected": {
+        "MP": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "MP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "casablanca-anfa",
+      "name": "Casablanca-Anfa",
+      "region": "Casablanca-Settat",
+      "seats": 4,
+      "tafra_id": "519",
+      "tafra_name": "Casablanca - Anfa",
+      "valid_vote_sum": 39501,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "INDEPENDENT_CONTEMPORANEOUS_REGISTERED_COUNT",
+      "registered_evidence": {
+        "constituency_id": "casablanca-anfa",
+        "registered": 212453,
+        "source": "https://lecollimateur.ma/57341",
+        "evidence": "MAP, results after 100% count; 50,256 voters of 212,453 registered; prefecture is one House local constituency"
+      },
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "ben-m-sick",
+      "name": "Ben M'sick",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_id": "525",
+      "tafra_name": "Ben-M'sick",
+      "valid_vote_sum": 25936,
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "UC": 1,
+        "RNI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "sidi-bernoussi",
+      "name": "Sidi Bernoussi",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_id": "524",
+      "tafra_name": "Sidi-Bernoussi",
+      "valid_vote_sum": 38879,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "al-fida-mers-sultan",
+      "name": "Al Fida-Mers Sultan",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_id": "520",
+      "tafra_name": "Al-Fida - Mers-Sultan",
+      "valid_vote_sum": 26851,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "ain-sebaa-hay-mohammadi",
+      "name": "Aïn Sebaâ-Hay Mohammadi",
+      "region": "Casablanca-Settat",
+      "seats": 4,
+      "tafra_id": "521",
+      "tafra_name": "Aïn-Sebaâ - Hay-Mohammadi",
+      "valid_vote_sum": 43078,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "UC": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "moulay-rachid",
+      "name": "Moulay Rachid",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_id": "526",
+      "tafra_name": "Moulay-Rachid",
+      "valid_vote_sum": 36799,
+      "observed_elected": {
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "hay-hassani",
+      "name": "Hay Hassani",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_id": "522",
+      "tafra_name": "Hay-Hassani",
+      "valid_vote_sum": 27361,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "ain-chock",
+      "name": "Aïn Chock",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_id": "523",
+      "tafra_name": "Aïn-Chock",
+      "valid_vote_sum": 30900,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "mohammedia",
+      "name": "Mohammédia",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_id": "527",
+      "tafra_name": "Mohammadia",
+      "valid_vote_sum": 66086,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "nouaceur",
+      "name": "Nouaceur",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_id": "528",
+      "tafra_name": "Nouaceur",
+      "valid_vote_sum": 56459,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "mediouna",
+      "name": "Médiouna",
+      "region": "Casablanca-Settat",
+      "seats": 2,
+      "tafra_id": "529",
+      "tafra_name": "Médiouna",
+      "valid_vote_sum": 42781,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "benslimane",
+      "name": "Benslimane",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "tafra_id": "596",
+      "tafra_name": "Benslimane",
+      "valid_vote_sum": 77859,
+      "observed_elected": {
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PI": 1,
+        "RNI": 1,
+        "PPS": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "el-jadida",
+      "name": "El Jadida",
+      "region": "Casablanca-Settat",
+      "seats": 6,
+      "tafra_id": "590",
+      "tafra_name": "El-Jadida",
+      "valid_vote_sum": 201708,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "INDEPENDENT_CONTEMPORANEOUS_REGISTERED_COUNT",
+      "registered_evidence": {
+        "constituency_id": "el-jadida",
+        "registered": 397251,
+        "source": "https://ledesk.ma/live-content/six-partis-se-partagent-les-sieges-de-la-province-del-jadida/",
+        "evidence": "MAP/prefecture same-day general electorate; province is one House local constituency"
+      },
+      "legal_allocation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "berrechid",
+      "name": "Berrechid",
+      "region": "Casablanca-Settat",
+      "seats": 4,
+      "tafra_id": "595",
+      "tafra_name": "Berrechid",
+      "valid_vote_sum": 131820,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PI": 1,
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "settat",
+      "name": "Settat",
+      "region": "Casablanca-Settat",
+      "seats": 6,
+      "tafra_id": "593",
+      "tafra_name": "Settat",
+      "valid_vote_sum": 178797,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "INDEPENDENT_CONTEMPORANEOUS_REGISTERED_COUNT",
+      "registered_evidence": {
+        "constituency_id": "settat",
+        "registered": 338695,
+        "source": "https://mobile.ledesk.ma/live-content/le-rni-le-pi-luc-le-pam-lusfp-et-le-mp-remportent-les-6-sieges-de-settat/",
+        "evidence": "MAP/local authorities; explicitly electing six House members"
+      },
+      "legal_allocation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "sidi-bennour",
+      "name": "Sidi Bennour",
+      "region": "Casablanca-Settat",
+      "seats": 4,
+      "tafra_id": "591",
+      "tafra_name": "Sidi Bennour",
+      "valid_vote_sum": 143380,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "USFP": 1,
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "agadir-ida-outanane",
+      "name": "Agadir Ida-Outanane",
+      "region": "Souss-Massa",
+      "seats": 4,
+      "tafra_id": "530",
+      "tafra_name": "Agadir - Ida-ou-Tanane",
+      "valid_vote_sum": 98344,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "INDEPENDENT_CONTEMPORANEOUS_REGISTERED_COUNT",
+      "registered_evidence": {
+        "constituency_id": "agadir-ida-outanane",
+        "registered": 316821,
+        "source": "https://www.maghress.com/fr/aujourdhui/386305",
+        "evidence": "Wilaya of Agadir data: 316,821 registered in House constituency"
+      },
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "inezgane-ait-melloul",
+      "name": "Inezgane-Aït Melloul",
+      "region": "Souss-Massa",
+      "seats": 3,
+      "tafra_id": "531",
+      "tafra_name": "Inézgane - Aït-Melloul",
+      "valid_vote_sum": 71861,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "chtouka-ait-baha",
+      "name": "Chtouka-Aït Baha",
+      "region": "Souss-Massa",
+      "seats": 3,
+      "tafra_id": "532",
+      "tafra_name": "Chtouka - Aït-Baha",
+      "valid_vote_sum": 102060,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "taroudant-sud",
+      "name": "Taroudant-Sud",
+      "region": "Souss-Massa",
+      "seats": 4,
+      "tafra_id": "533",
+      "tafra_name": "Taroudannt - Al-Janoubia",
+      "valid_vote_sum": 150269,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "PJD": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "taroudant-nord",
+      "name": "Taroudant-Nord",
+      "region": "Souss-Massa",
+      "seats": 3,
+      "tafra_id": "534",
+      "tafra_name": "Taroudannt - Chamalia",
+      "valid_vote_sum": 128595,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "tiznit",
+      "name": "Tiznit",
+      "region": "Souss-Massa",
+      "seats": 2,
+      "tafra_id": "535",
+      "tafra_name": "Tiznit",
+      "valid_vote_sum": 65575,
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "tata",
+      "name": "Tata",
+      "region": "Souss-Massa",
+      "seats": 2,
+      "tafra_id": "555",
+      "tafra_name": "Tata",
+      "valid_vote_sum": 50400,
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "guelmim",
+      "name": "Guelmim",
+      "region": "Guelmim-Oued Noun",
+      "seats": 2,
+      "tafra_id": "554",
+      "tafra_name": "Guelmim",
+      "valid_vote_sum": 65409,
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "tan-tan",
+      "name": "Tan-Tan",
+      "region": "Guelmim-Oued Noun",
+      "seats": 2,
+      "tafra_id": "558",
+      "tafra_name": "Tan-Tan",
+      "valid_vote_sum": 25873,
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "sidi-ifni",
+      "name": "Sidi Ifni",
+      "region": "Guelmim-Oued Noun",
+      "seats": 2,
+      "tafra_id": "539",
+      "tafra_name": "Sidi Ifni",
+      "valid_vote_sum": 59144,
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "assa-zag",
+      "name": "Assa-Zag",
+      "region": "Guelmim-Oued Noun",
+      "seats": 2,
+      "tafra_id": "556",
+      "tafra_name": "Assa-Zag",
+      "valid_vote_sum": 16405,
+      "observed_elected": {
+        "PAM": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "medina-sidi-youssef",
+      "name": "Medina-Sidi Youssef",
+      "region": "Marrakech-Safi",
+      "seats": 3,
+      "tafra_id": "566",
+      "tafra_name": "Médina - Sidi-Youssef-Ben-Ali",
+      "valid_vote_sum": 51227,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "gueliz-nakhil",
+      "name": "Guéliz-Nakhil",
+      "region": "Marrakech-Safi",
+      "seats": 3,
+      "tafra_id": "567",
+      "tafra_name": "Guéliz - Annakhil",
+      "valid_vote_sum": 81451,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "menara",
+      "name": "Menara",
+      "region": "Marrakech-Safi",
+      "seats": 3,
+      "tafra_id": "568",
+      "tafra_name": "Ménara",
+      "valid_vote_sum": 76461,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "chichaoua",
+      "name": "Chichaoua",
+      "region": "Marrakech-Safi",
+      "seats": 4,
+      "tafra_id": "569",
+      "tafra_name": "Chichaoua",
+      "valid_vote_sum": 137775,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "INDEPENDENT_CONTEMPORANEOUS_REGISTERED_COUNT",
+      "registered_evidence": {
+        "constituency_id": "chichaoua",
+        "registered": 209596,
+        "source": "https://ledesk.ma/live-content/chichaoua-un-taux-de-participation-de-73-aux-elections-generales/",
+        "evidence": "official local-authority data; 152,995 of 209,596 registered"
+      },
+      "legal_allocation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "safi",
+      "name": "Safi",
+      "region": "Marrakech-Safi",
+      "seats": 6,
+      "tafra_id": "589",
+      "tafra_name": "Safi",
+      "valid_vote_sum": 157796,
+      "observed_elected": {
+        "MDS": 1,
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "MP": 1,
+        "RNI": 1,
+        "MDS": 1,
+        "UC": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "al-haouz",
+      "name": "Al Haouz",
+      "region": "Marrakech-Safi",
+      "seats": 4,
+      "tafra_id": "570",
+      "tafra_name": "Al-Haouz",
+      "valid_vote_sum": 188707,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "UC": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "el-kelaa-des-sraghna",
+      "name": "El Kelâa des Sraghna",
+      "region": "Marrakech-Safi",
+      "seats": 4,
+      "tafra_id": "572",
+      "tafra_name": "El-Kelâa-des-Sraghna",
+      "valid_vote_sum": 153019,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "USFP": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "essaouira",
+      "name": "Essaouira",
+      "region": "Marrakech-Safi",
+      "seats": 4,
+      "tafra_id": "573",
+      "tafra_name": "Essaouira",
+      "valid_vote_sum": 142099,
+      "observed_elected": {
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "USFP": 1,
+        "RNI": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "rehamna",
+      "name": "Rehamna",
+      "region": "Marrakech-Safi",
+      "seats": 3,
+      "tafra_id": "571",
+      "tafra_name": "Rehamna",
+      "valid_vote_sum": 89157,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "youssoufia",
+      "name": "Youssoufia",
+      "region": "Marrakech-Safi",
+      "seats": 2,
+      "tafra_id": "592",
+      "tafra_name": "Youssoufia",
+      "valid_vote_sum": 70203,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "tanger-assilah",
+      "name": "Tanger-Assilah",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 5,
+      "tafra_id": "597",
+      "tafra_name": "Tanger - Assilah",
+      "valid_vote_sum": 116144,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "UC": 1,
+        "PI": 1,
+        "PAM": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "m-diq-fnideq",
+      "name": "M'diq-Fnideq",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 2,
+      "tafra_id": "600",
+      "tafra_name": "M'Diq - Fnideq",
+      "valid_vote_sum": 33314,
+      "observed_elected": {
+        "PAM": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "fahs-anjra",
+      "name": "Fahs-Anjra",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 2,
+      "tafra_id": "598",
+      "tafra_name": "Fahs - Anjra",
+      "valid_vote_sum": 29110,
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "tetouan",
+      "name": "Tétouan",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 5,
+      "tafra_id": "599",
+      "tafra_name": "Tétouan",
+      "valid_vote_sum": 86087,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "INDEPENDENT_CONTEMPORANEOUS_REGISTERED_COUNT",
+      "registered_evidence": {
+        "constituency_id": "tetouan",
+        "registered": 283841,
+        "source": "https://ledesk.ma/live-content/province-de-tetouan-un-taux-de-participation-de-plus-de-35/",
+        "evidence": "MAP: 101,349 of 283,841 registered; one five-seat House local constituency"
+      },
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "ouezzane",
+      "name": "Ouezzane",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 3,
+      "tafra_id": "603",
+      "tafra_name": "Ouezzane",
+      "valid_vote_sum": 96473,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "larache",
+      "name": "Larache",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 4,
+      "tafra_id": "601",
+      "tafra_name": "Larache",
+      "valid_vote_sum": 109765,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "UC": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "chefchaouen",
+      "name": "Chefchaouen",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 4,
+      "tafra_id": "602",
+      "tafra_name": "Chefchaouen",
+      "valid_vote_sum": 121193,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "USFP": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "al-hoceima",
+      "name": "Al Hoceïma",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 4,
+      "tafra_id": "540",
+      "tafra_name": "Al-Hoceïma",
+      "valid_vote_sum": 104536,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PI": 1,
+        "RNI": 1,
+        "PAM": 1,
+        "MP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "oujda-angad",
+      "name": "Oujda-Angad",
+      "region": "Oriental",
+      "seats": 4,
+      "tafra_id": "582",
+      "tafra_name": "Oujda - Angad",
+      "valid_vote_sum": 61207,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "INDEPENDENT_CONTEMPORANEOUS_REGISTERED_COUNT",
+      "registered_evidence": {
+        "constituency_id": "oujda-angad",
+        "registered": 305487,
+        "source": "https://barlamane.com/fr/oujda-angad-le-pam-en-tete-des-elections/",
+        "evidence": "official results report: 305,487 registered in Oujda-Angad prefecture; one House local constituency"
+      },
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "nador",
+      "name": "Nador",
+      "region": "Oriental",
+      "seats": 4,
+      "tafra_id": "587",
+      "tafra_name": "Nador",
+      "valid_vote_sum": 116468,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "driouch",
+      "name": "Driouch",
+      "region": "Oriental",
+      "seats": 3,
+      "tafra_id": "588",
+      "tafra_name": "Driouch",
+      "valid_vote_sum": 76245,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "jerada",
+      "name": "Jerada",
+      "region": "Oriental",
+      "seats": 2,
+      "tafra_id": "583",
+      "tafra_name": "Jerada",
+      "valid_vote_sum": 39239,
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "berkane",
+      "name": "Berkane",
+      "region": "Oriental",
+      "seats": 3,
+      "tafra_id": "584",
+      "tafra_name": "Berkane",
+      "valid_vote_sum": 71093,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "taourirt",
+      "name": "Taourirt",
+      "region": "Oriental",
+      "seats": 2,
+      "tafra_id": "585",
+      "tafra_name": "Taourirt",
+      "valid_vote_sum": 57943,
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "guercif",
+      "name": "Guercif",
+      "region": "Oriental",
+      "seats": 2,
+      "tafra_id": "542",
+      "tafra_name": "Guercif",
+      "valid_vote_sum": 57936,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "figuig",
+      "name": "Figuig",
+      "region": "Oriental",
+      "seats": 3,
+      "tafra_id": "586",
+      "tafra_name": "Figuig",
+      "valid_vote_sum": 51184,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "fes-sud",
+      "name": "Fès-Sud",
+      "region": "Fès-Meknès",
+      "seats": 4,
+      "tafra_id": "550",
+      "tafra_name": "Fès-Janoubia",
+      "valid_vote_sum": 55868,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "fes-nord",
+      "name": "Fès-Nord",
+      "region": "Fès-Meknès",
+      "seats": 4,
+      "tafra_id": "549",
+      "tafra_name": "Fès-Chamalia",
+      "valid_vote_sum": 47660,
+      "observed_elected": {
+        "FFD": 1,
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "FFD": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "ifrane",
+      "name": "Ifrane",
+      "region": "Fès-Meknès",
+      "seats": 2,
+      "tafra_id": "576",
+      "tafra_name": "Ifrane",
+      "valid_vote_sum": 51544,
+      "observed_elected": {
+        "MP": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "moulay-yaacoub",
+      "name": "Moulay Yaâcoub",
+      "region": "Fès-Meknès",
+      "seats": 2,
+      "tafra_id": "551",
+      "tafra_name": "Moulay-Yacoub",
+      "valid_vote_sum": 55931,
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "sefrou",
+      "name": "Séfrou",
+      "region": "Fès-Meknès",
+      "seats": 3,
+      "tafra_id": "552",
+      "tafra_name": "Sefrou",
+      "valid_vote_sum": 89500,
+      "observed_elected": {
+        "PAM": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "boulemane",
+      "name": "Boulemane",
+      "region": "Fès-Meknès",
+      "seats": 3,
+      "tafra_id": "553",
+      "tafra_name": "Boulemane",
+      "valid_vote_sum": 71897,
+      "observed_elected": {
+        "MP": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1,
+        "PPS": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "el-hajeb",
+      "name": "El Hajeb",
+      "region": "Fès-Meknès",
+      "seats": 2,
+      "tafra_id": "575",
+      "tafra_name": "El-Hajeb",
+      "valid_vote_sum": 78828,
+      "observed_elected": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "taza",
+      "name": "Taza",
+      "region": "Fès-Meknès",
+      "seats": 5,
+      "tafra_id": "541",
+      "tafra_name": "Taza",
+      "valid_vote_sum": 141507,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1,
+        "MP": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "taounate-tissa",
+      "name": "Taounate-Tissa",
+      "region": "Fès-Meknès",
+      "seats": 3,
+      "tafra_id": "543",
+      "tafra_name": "Taounate - Tissa",
+      "valid_vote_sum": 99666,
+      "observed_elected": {
+        "PAM": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "PPS": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "karia-ghafsay",
+      "name": "Karia-Ghafsay",
+      "region": "Fès-Meknès",
+      "seats": 3,
+      "tafra_id": "544",
+      "tafra_name": "Karia - Rhafsai",
+      "valid_vote_sum": 100806,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "meknes",
+      "name": "Meknès",
+      "region": "Fès-Meknès",
+      "seats": 6,
+      "tafra_id": "574",
+      "tafra_name": "Meknès",
+      "valid_vote_sum": 130369,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "INDEPENDENT_CONTEMPORANEOUS_REGISTERED_COUNT",
+      "registered_evidence": {
+        "constituency_id": "meknes",
+        "registered": 423066,
+        "source": "https://www.medi1news.com/fr/article/229198",
+        "evidence": "MAP; general electoral lists in Meknes prefecture, one six-seat House constituency"
+      },
+      "legal_allocation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "beni-mellal",
+      "name": "Béni-Mellal",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 6,
+      "tafra_id": "545",
+      "tafra_name": "Béni-Mellal",
+      "valid_vote_sum": 144731,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "INDEPENDENT_CONTEMPORANEOUS_REGISTERED_COUNT",
+      "registered_evidence": {
+        "constituency_id": "beni-mellal",
+        "registered": 318608,
+        "source": "https://saharanews.org/10963-elections-communales-le-pam-le-mp-et-le-rni-decrochent-le-plus-grand-nombre-de-sieges-a-beni-mellal.html",
+        "evidence": "Wilaya/authority same-day general electoral lists; province is one House local constituency"
+      },
+      "legal_allocation": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "bzou-ouaouizeght",
+      "name": "Bzou-Ouaouizeght",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 3,
+      "tafra_id": "546",
+      "tafra_name": "Bzou - Ouaouizaght",
+      "valid_vote_sum": 90603,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "MP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "azilal-demnate",
+      "name": "Azilal-Demnate",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 3,
+      "tafra_id": "547",
+      "tafra_name": "Azilal - Demnate",
+      "valid_vote_sum": 81583,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "fquih-ben-salah",
+      "name": "Fquih Ben Salah",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 4,
+      "tafra_id": "548",
+      "tafra_name": "Fquih Ben Salah",
+      "valid_vote_sum": 126772,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "khouribga",
+      "name": "Khouribga",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 6,
+      "tafra_id": "594",
+      "tafra_name": "Khouribga",
+      "valid_vote_sum": 131980,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "PAM": 1,
+        "MP": 1,
+        "PI": 1,
+        "USFP": 1,
+        "PPS": 1
+      },
+      "gate_pass": true
+    },
+    {
+      "constituency_id": "khenifra",
+      "name": "Khénifra",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 3,
+      "tafra_id": "577",
+      "tafra_name": "Khénifra",
+      "valid_vote_sum": 109276,
+      "observed_elected": {
+        "MP": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "source_votes": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+      "closure_method": "EXHAUSTIVE_DENOMINATOR_INTERVAL_INVARIANCE",
+      "registered_evidence": null,
+      "legal_allocation": {
+        "RNI": 1,
+        "MP": 1,
+        "PI": 1
+      },
+      "gate_pass": true
+    }
+  ],
+  "unresolved_records": [
+    {
+      "constituency_id": "kenitra+el-gharb",
+      "name": "Kénitra / El Gharb joint constraint",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 7,
+      "closure_method": "EXHAUSTIVE_PROVINCE_SUM_CONSTRAINT",
+      "province_registered": 503119,
+      "kenitra_valid_vote_lower_bound": 134291,
+      "kenitra_feasible_upper_bound": 398964,
+      "feasible_integer_splits": 264674,
+      "matching_kenitra_N_intervals": [
+        [
+          156329,
+          398964
+        ]
+      ],
+      "matching_splits": 242636,
+      "all_feasible_splits_match": false,
+      "distinct_allocation_pairs": [
+        {
+          "kenitra": {
+            "PI": 1,
+            "PJD": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "el_gharb": {
+            "PAM": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "integer_splits": 242636
+        },
+        {
+          "kenitra": {
+            "PI": 1,
+            "RNI": 2,
+            "UC": 1
+          },
+          "el_gharb": {
+            "PAM": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "integer_splits": 22038
+        }
+      ],
+      "observed_kenitra": {
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "observed_el_gharb": {
+        "PAM": 1,
+        "RNI": 1,
+        "UC": 1
+      },
+      "registered_evidence": {
+        "constituency_id": "kenitra",
+        "constraint": "N_kenitra + N_el_gharb = 503119; N_el_gharb >= valid_party_votes_el_gharb; N_kenitra >= valid_party_votes_kenitra",
+        "province_registered": 503119,
+        "source": "https://mapexpresssnew.servermdz.com/actualite/societe-et-regions/province-kenitra-taux-participation-4980-aux-elections-generales/",
+        "evidence": "MAP/local authorities: province has exactly two House constituencies, Kenitra (4 seats) and El Gharb (3 seats), with 503,119 registered total"
+      },
+      "gate_pass": false
+    }
+  ],
+  "local_92_exact_gate_pass": false,
+  "forecast_status": "BLOCKED"
+}

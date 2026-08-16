@@ -1,0 +1,4589 @@
+{
+  "source_dataset": "electricsheepafrica/africa-membres-de-la-chambre-des-representants-du-maroc-2007-2011-2016-2021",
+  "source_method": "TAFRA member data, 2021-2026, motifentree=Elu, first record per idsiege",
+  "original_elected_rows": 395,
+  "official_party_total_observed": {
+    "CNI": 1,
+    "FFD": 3,
+    "MDS": 5,
+    "MP": 28,
+    "PAM": 87,
+    "PI": 81,
+    "PJD": 13,
+    "PPS": 22,
+    "PSU": 1,
+    "RNI": 102,
+    "UC": 18,
+    "USFP": 34
+  },
+  "official_party_total_expected": {
+    "RNI": 102,
+    "PAM": 87,
+    "PI": 81,
+    "USFP": 34,
+    "MP": 28,
+    "PPS": 22,
+    "UC": 18,
+    "PJD": 13,
+    "MDS": 5,
+    "FFD": 3,
+    "CNI": 1,
+    "PSU": 1
+  },
+  "official_total_exact_match": true,
+  "regional_seats_observed": 90,
+  "regional": {
+    "beni mellal khenifra": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "PJD": 1,
+      "PPS": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "casablanca settat": {
+      "CNI": 1,
+      "FFD": 1,
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "PJD": 1,
+      "PPS": 1,
+      "PSU": 1,
+      "RNI": 2,
+      "UC": 1,
+      "USFP": 1
+    },
+    "dakhla oued ed dahab": {
+      "PI": 1,
+      "PPS": 1,
+      "RNI": 1
+    },
+    "draa tafilalet": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "PPS": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "fes meknes": {
+      "FFD": 1,
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "PJD": 1,
+      "PPS": 1,
+      "RNI": 2,
+      "UC": 1,
+      "USFP": 1
+    },
+    "guelmim oued noun": {
+      "PAM": 1,
+      "PI": 1,
+      "PJD": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "laayoune sakia el hamra": {
+      "PAM": 1,
+      "PI": 2,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "marrakech safi": {
+      "MDS": 1,
+      "MP": 1,
+      "PAM": 2,
+      "PI": 1,
+      "PJD": 1,
+      "PPS": 1,
+      "RNI": 1,
+      "UC": 1,
+      "USFP": 1
+    },
+    "oriental": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "PJD": 1,
+      "PPS": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "rabat sale kenitra": {
+      "MDS": 1,
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "PJD": 1,
+      "PPS": 1,
+      "RNI": 2,
+      "UC": 1,
+      "USFP": 1
+    },
+    "souss massa": {
+      "PAM": 1,
+      "PI": 1,
+      "PJD": 1,
+      "PPS": 1,
+      "RNI": 2,
+      "USFP": 1
+    },
+    "tanger tetouan al hoceima": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "PJD": 1,
+      "PPS": 1,
+      "RNI": 1,
+      "UC": 1,
+      "USFP": 1
+    }
+  },
+  "local_seats_observed": 305,
+  "local": {
+    "agadir ida ou tanane": {
+      "PAM": 1,
+      "PI": 1,
+      "PPS": 1,
+      "RNI": 1
+    },
+    "ain chock": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "ain sebaa hay mohammadi": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "UC": 1
+    },
+    "al fida mers sultan": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "al haouz": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "UC": 1
+    },
+    "al hoceima": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "aousserd": {
+      "PI": 1,
+      "RNI": 1
+    },
+    "assa zag": {
+      "PAM": 1,
+      "USFP": 1
+    },
+    "azilal demnate": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "ben m sick": {
+      "PAM": 1,
+      "RNI": 1,
+      "UC": 1
+    },
+    "beni mellal": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "PPS": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "benslimane": {
+      "PI": 1,
+      "PPS": 1,
+      "RNI": 1
+    },
+    "berkane": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "berrechid": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "boujdour": {
+      "PI": 1,
+      "RNI": 1
+    },
+    "boulemane": {
+      "MP": 1,
+      "PPS": 1,
+      "RNI": 1
+    },
+    "bzou ouaouizaght": {
+      "MP": 1,
+      "PAM": 1,
+      "RNI": 1
+    },
+    "casablanca anfa": {
+      "PAM": 1,
+      "PI": 1,
+      "PJD": 1,
+      "RNI": 1
+    },
+    "chefchaouen": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "chichaoua": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "chtouka ait baha": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "driouch": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "el gharb": {
+      "PAM": 1,
+      "RNI": 1,
+      "UC": 1
+    },
+    "el hajeb": {
+      "PI": 1,
+      "RNI": 1
+    },
+    "el jadida": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "PPS": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "el kelaa des sraghna": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "errachidia": {
+      "MDS": 1,
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "es smara": {
+      "PAM": 1,
+      "PI": 1
+    },
+    "essaouira": {
+      "PI": 1,
+      "PPS": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "fahs anjra": {
+      "PI": 1,
+      "RNI": 1
+    },
+    "fes chamalia": {
+      "FFD": 1,
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "fes janoubia": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "figuig": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "fquih ben salah": {
+      "MP": 1,
+      "PAM": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "gueliz annakhil": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "guelmim": {
+      "PAM": 1,
+      "RNI": 1
+    },
+    "guercif": {
+      "PAM": 1,
+      "PI": 1
+    },
+    "hay hassani": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "ifrane": {
+      "MP": 1,
+      "RNI": 1
+    },
+    "inezgane ait melloul": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "jerada": {
+      "PAM": 1,
+      "RNI": 1
+    },
+    "karia rhafsai": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "kenitra": {
+      "PI": 1,
+      "PJD": 1,
+      "RNI": 1,
+      "UC": 1
+    },
+    "khemisset oulmes": {
+      "MP": 1,
+      "PAM": 1,
+      "RNI": 1
+    },
+    "khenifra": {
+      "MP": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "khouribga": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "PPS": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "laayoune": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "larache": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "UC": 1
+    },
+    "m diq fnideq": {
+      "PAM": 1,
+      "USFP": 1
+    },
+    "medina sidi youssef ben ali": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "mediouna": {
+      "PAM": 1,
+      "PI": 1
+    },
+    "meknes": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "PJD": 1,
+      "RNI": 1,
+      "UC": 1
+    },
+    "menara": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "midelt": {
+      "MP": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "mohammadia": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "moulay rachid": {
+      "PI": 1,
+      "PPS": 1,
+      "RNI": 1
+    },
+    "moulay yacoub": {
+      "PAM": 1,
+      "RNI": 1
+    },
+    "nador": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "nouaceur": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "ouarzazate": {
+      "MP": 1,
+      "PAM": 1,
+      "RNI": 1
+    },
+    "oued ed dahab": {
+      "PI": 1,
+      "RNI": 1
+    },
+    "ouezzane": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "oujda angad": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "rabat challah": {
+      "PAM": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "rabat el mouhit": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "rehamna": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "safi": {
+      "MDS": 1,
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "UC": 1
+    },
+    "sale al jadida": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "sale medina": {
+      "MP": 1,
+      "PAM": 1,
+      "PPS": 1,
+      "RNI": 1
+    },
+    "sefrou": {
+      "PAM": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "settat": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "UC": 1,
+      "USFP": 1
+    },
+    "sidi bennour": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "sidi bernoussi": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "sidi ifni": {
+      "PAM": 1,
+      "RNI": 1
+    },
+    "sidi kacem": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "USFP": 1
+    },
+    "sidi slimane": {
+      "RNI": 1,
+      "UC": 1,
+      "USFP": 1
+    },
+    "skhirate temara": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "UC": 1
+    },
+    "tan tan": {
+      "PAM": 1,
+      "RNI": 1
+    },
+    "tanger assilah": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "UC": 1,
+      "USFP": 1
+    },
+    "taounate tissa": {
+      "PAM": 1,
+      "PPS": 1,
+      "RNI": 1
+    },
+    "taourirt": {
+      "PAM": 1,
+      "RNI": 1
+    },
+    "tarfaya": {
+      "PI": 1,
+      "RNI": 1
+    },
+    "taroudannt al janoubia": {
+      "PAM": 1,
+      "PI": 1,
+      "PJD": 1,
+      "RNI": 1
+    },
+    "taroudannt chamalia": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1
+    },
+    "tata": {
+      "PAM": 1,
+      "RNI": 1
+    },
+    "taza": {
+      "MP": 1,
+      "PAM": 1,
+      "PI": 1,
+      "PPS": 1,
+      "RNI": 1
+    },
+    "tetouan": {
+      "PAM": 1,
+      "PI": 1,
+      "RNI": 1,
+      "UC": 1,
+      "USFP": 1
+    },
+    "tifelt rommani": {
+      "MDS": 1,
+      "PAM": 1,
+      "RNI": 1
+    },
+    "tinghir": {
+      "PAM": 1,
+      "PPS": 1,
+      "RNI": 1
+    },
+    "tiznit": {
+      "PI": 1,
+      "RNI": 1
+    },
+    "youssoufia": {
+      "PAM": 1,
+      "PI": 1
+    },
+    "zagora": {
+      "PI": 1,
+      "RNI": 1,
+      "USFP": 1
+    }
+  },
+  "rows": [
+    {
+      "idsiege": 721,
+      "idperson": 155644,
+      "name": "ZINEB SIMOU",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Tanger - Tétouan - Al Hoceima",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 722,
+      "idperson": 155645,
+      "name": "KOLOUB FATIH",
+      "party": "PAM",
+      "circonscription": "Circonscription régionale : Tanger - Tétouan - Al Hoceima",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 723,
+      "idperson": 155646,
+      "name": "MALIKA LHYANE",
+      "party": "PI",
+      "circonscription": "Circonscription régionale : Tanger - Tétouan - Al Hoceima",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 724,
+      "idperson": 155647,
+      "name": "SELOUA DEMNATI",
+      "party": "USFP",
+      "circonscription": "Circonscription régionale : Tanger - Tétouan - Al Hoceima",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 725,
+      "idperson": 155648,
+      "name": "OUASSILA SAHLI",
+      "party": "UC",
+      "circonscription": "Circonscription régionale : Tanger - Tétouan - Al Hoceima",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 726,
+      "idperson": 155649,
+      "name": "LATIFA  AABOUTE",
+      "party": "MP",
+      "circonscription": "Circonscription régionale : Tanger - Tétouan - Al Hoceima",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 727,
+      "idperson": 155650,
+      "name": "SALOUA BERDHI",
+      "party": "PJD",
+      "circonscription": "Circonscription régionale : Tanger - Tétouan - Al Hoceima",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 728,
+      "idperson": 155651,
+      "name": "NOUHA ELMOUSSAOUI",
+      "party": "PPS",
+      "circonscription": "Circonscription régionale : Tanger - Tétouan - Al Hoceima",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 729,
+      "idperson": 70165,
+      "name": "NOURDIN MOUDIAN",
+      "party": "PI",
+      "circonscription": "Al-Hoceïma",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 730,
+      "idperson": 155652,
+      "name": "BOUTAHAR BOUTAHIRI",
+      "party": "RNI",
+      "circonscription": "Al-Hoceïma",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 731,
+      "idperson": 70163,
+      "name": "MOHAMED ELHAMOUTI",
+      "party": "PAM",
+      "circonscription": "Al-Hoceïma",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 732,
+      "idperson": 68546,
+      "name": "MOHAMED LAARAJ",
+      "party": "MP",
+      "circonscription": "Al-Hoceïma",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 733,
+      "idperson": 68710,
+      "name": "MOHAMED SIMOU",
+      "party": "RNI",
+      "circonscription": "Larache",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 734,
+      "idperson": 155653,
+      "name": "NIZAR BARAKA",
+      "party": "PI",
+      "circonscription": "Larache",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 735,
+      "idperson": 70158,
+      "name": "ABDELAZIZ EL OUADGUI",
+      "party": "UC",
+      "circonscription": "Larache",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 736,
+      "idperson": 68434,
+      "name": "MOHAMED HAMMANI",
+      "party": "PAM",
+      "circonscription": "Larache",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 737,
+      "idperson": 155655,
+      "name": "MOHAMED LARBI MERABET",
+      "party": "PAM",
+      "circonscription": "M'Diq - Fnideq",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 738,
+      "idperson": 155656,
+      "name": "ABDENNOUR HASNAOUI",
+      "party": "USFP",
+      "circonscription": "M'Diq - Fnideq",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 739,
+      "idperson": 68732,
+      "name": "RACHID TALBI ALAMI",
+      "party": "RNI",
+      "circonscription": "Tétouan",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 740,
+      "idperson": 68109,
+      "name": "MOHAMED EL ARBI AHNIN",
+      "party": "PAM",
+      "circonscription": "Tétouan",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 741,
+      "idperson": 155657,
+      "name": "MONSSEF TOUB",
+      "party": "PI",
+      "circonscription": "Tétouan",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 742,
+      "idperson": 155658,
+      "name": "HAMID DARRAK",
+      "party": "USFP",
+      "circonscription": "Tétouan",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 743,
+      "idperson": 70151,
+      "name": "NOR-DDIN ELHROUCHI",
+      "party": "UC",
+      "circonscription": "Tétouan",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 744,
+      "idperson": 70160,
+      "name": "ABDERRAHMAN EL AMRI",
+      "party": "RNI",
+      "circonscription": "Chefchaouen",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 745,
+      "idperson": 155659,
+      "name": "EL AMINE EL BAKKALI TAHIRI",
+      "party": "USFP",
+      "circonscription": "Chefchaouen",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 746,
+      "idperson": 155660,
+      "name": "ABDERRAHIM BOUAZZA",
+      "party": "PAM",
+      "circonscription": "Chefchaouen",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 747,
+      "idperson": 70161,
+      "name": "ISMAIL BEKKALI",
+      "party": "PI",
+      "circonscription": "Chefchaouen",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 748,
+      "idperson": 68767,
+      "name": "MOHAMED ZEMMOURI",
+      "party": "UC",
+      "circonscription": "Tanger - Assilah",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 749,
+      "idperson": 155661,
+      "name": "MOHAMED HMAMI",
+      "party": "PI",
+      "circonscription": "Tanger - Assilah",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 750,
+      "idperson": 155662,
+      "name": "ADIL DFOUF",
+      "party": "PAM",
+      "circonscription": "Tanger - Assilah",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 751,
+      "idperson": 155663,
+      "name": "OMAR MOUROU",
+      "party": "RNI",
+      "circonscription": "Tanger - Assilah",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 752,
+      "idperson": 155665,
+      "name": "ABDELKADER TAHER",
+      "party": "USFP",
+      "circonscription": "Tanger - Assilah",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 753,
+      "idperson": 155666,
+      "name": "ABDESLAM EL HASNAOUI",
+      "party": "RNI",
+      "circonscription": "Fahs - Anjra",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 754,
+      "idperson": 155667,
+      "name": "IDRISS SAUIR MANSOURI",
+      "party": "PI",
+      "circonscription": "Fahs - Anjra",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 755,
+      "idperson": 70154,
+      "name": "MOHAMED IHOUIYET",
+      "party": "RNI",
+      "circonscription": "Ouezzane",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 756,
+      "idperson": 155668,
+      "name": "LARBI EL MHARCHI",
+      "party": "PAM",
+      "circonscription": "Ouezzane",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 757,
+      "idperson": 70155,
+      "name": "ABDELAZIZ LACHEHAB",
+      "party": "PI",
+      "circonscription": "Ouezzane",
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 758,
+      "idperson": 155669,
+      "name": "FATINE EL GHALI",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Oriental",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 759,
+      "idperson": 155670,
+      "name": "HOURIA DIDI",
+      "party": "PAM",
+      "circonscription": "Circonscription régionale : Oriental",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 760,
+      "idperson": 155671,
+      "name": "FTIMA BENAZZA",
+      "party": "PI",
+      "circonscription": "Circonscription régionale : Oriental",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 761,
+      "idperson": 155672,
+      "name": "LATIFA CHRIF",
+      "party": "USFP",
+      "circonscription": "Circonscription régionale : Oriental",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 762,
+      "idperson": 155673,
+      "name": "FATIMA EL KCHOUTI",
+      "party": "MP",
+      "circonscription": "Circonscription régionale : Oriental",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 763,
+      "idperson": 155674,
+      "name": "FARIDA KHNITI",
+      "party": "PPS",
+      "circonscription": "Circonscription régionale : Oriental",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 764,
+      "idperson": 155675,
+      "name": "FATIMA ZAHRA BATA",
+      "party": "PJD",
+      "circonscription": "Circonscription régionale : Oriental",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 765,
+      "idperson": 68340,
+      "name": "ABDELLAH EL BOUKILI",
+      "party": "RNI",
+      "circonscription": "Driouch",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 766,
+      "idperson": 155676,
+      "name": "ABDELMOUNHIM FETTAHI",
+      "party": "PI",
+      "circonscription": "Driouch",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 767,
+      "idperson": 155677,
+      "name": "MOSTAFA KHALFIOUI",
+      "party": "PAM",
+      "circonscription": "Driouch",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 768,
+      "idperson": 155679,
+      "name": "MOHAMMADI TOUHTOUH",
+      "party": "RNI",
+      "circonscription": "Nador",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 769,
+      "idperson": 155680,
+      "name": "RAFIK MAJAIT",
+      "party": "PAM",
+      "circonscription": "Nador",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 770,
+      "idperson": 68078,
+      "name": "MOHAMED ABERKANE",
+      "party": "USFP",
+      "circonscription": "Nador",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 771,
+      "idperson": 68730,
+      "name": "MOHAMED TAIBI",
+      "party": "PI",
+      "circonscription": "Nador",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 772,
+      "idperson": 70272,
+      "name": "MOHAMED SADIKI",
+      "party": "RNI",
+      "circonscription": "Berkane",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 773,
+      "idperson": 155683,
+      "name": "ABDELHAKIM BOUAZZA BEN ABDELLAH",
+      "party": "PI",
+      "circonscription": "Berkane",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 774,
+      "idperson": 70175,
+      "name": "MOHAMMED IBRAHIMI",
+      "party": "PAM",
+      "circonscription": "Berkane",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 775,
+      "idperson": 155684,
+      "name": "MILOUD NACER",
+      "party": "RNI",
+      "circonscription": "Taourirt",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 776,
+      "idperson": 155685,
+      "name": "ABDERRAHMANE SEHLI",
+      "party": "PAM",
+      "circonscription": "Taourirt",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 777,
+      "idperson": 155686,
+      "name": "RADOUANE BOUGATAYA",
+      "party": "PAM",
+      "circonscription": "Jerada",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 778,
+      "idperson": 70173,
+      "name": "MOSTAPHA TOUTOU",
+      "party": "RNI",
+      "circonscription": "Jerada",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 779,
+      "idperson": 68217,
+      "name": "MOHAMED BERNICHI",
+      "party": "PAM",
+      "circonscription": "Guercif",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 780,
+      "idperson": 70179,
+      "name": "ALI JEGHAOUI",
+      "party": "PI",
+      "circonscription": "Guercif",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 781,
+      "idperson": 155687,
+      "name": "HAMID CHAYA",
+      "party": "PAM",
+      "circonscription": "Figuig",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 782,
+      "idperson": 155688,
+      "name": "MOHAMMED JAMELEDDINE",
+      "party": "RNI",
+      "circonscription": "Figuig",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 783,
+      "idperson": 70181,
+      "name": "EL KEBIR KADA",
+      "party": "PI",
+      "circonscription": "Figuig",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 784,
+      "idperson": 70340,
+      "name": "BADIA ELFILALI",
+      "party": "PAM",
+      "circonscription": "Oujda - Angad",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 785,
+      "idperson": 155689,
+      "name": "MOHAMED HOUAR",
+      "party": "RNI",
+      "circonscription": "Oujda - Angad",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 786,
+      "idperson": 68459,
+      "name": "OMAR HJIRA",
+      "party": "PI",
+      "circonscription": "Oujda - Angad",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 787,
+      "idperson": 155690,
+      "name": "OMAR ANANE",
+      "party": "USFP",
+      "circonscription": "Oujda - Angad",
+      "region": "Oriental",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 788,
+      "idperson": 155691,
+      "name": "ZINA CHAHIM",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Fès - Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 789,
+      "idperson": 155692,
+      "name": "SAMIRA KAYSSOUR",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Fès - Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 790,
+      "idperson": 155693,
+      "name": "MAROUA AL ANSARI",
+      "party": "PI",
+      "circonscription": "Circonscription régionale : Fès - Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 791,
+      "idperson": 155694,
+      "name": "ILHAM SAKI",
+      "party": "PAM",
+      "circonscription": "Circonscription régionale : Fès - Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 792,
+      "idperson": 155695,
+      "name": "FEDWA MOHCINE HAYYANI",
+      "party": "MP",
+      "circonscription": "Circonscription régionale : Fès - Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 793,
+      "idperson": 155696,
+      "name": "IKRAM EL HANNAOUI",
+      "party": "PPS",
+      "circonscription": "Circonscription régionale : Fès - Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 794,
+      "idperson": 155697,
+      "name": "KHDOUJ SLASSI",
+      "party": "USFP",
+      "circonscription": "Circonscription régionale : Fès - Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 795,
+      "idperson": 155698,
+      "name": "NADIA EL KANSOURI",
+      "party": "PJD",
+      "circonscription": "Circonscription régionale : Fès - Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 796,
+      "idperson": 155699,
+      "name": "HAKIMA S’HAKI",
+      "party": "UC",
+      "circonscription": "Circonscription régionale : Fès - Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 797,
+      "idperson": 155700,
+      "name": "RIM CHABAT",
+      "party": "FFD",
+      "circonscription": "Circonscription régionale : Fès - Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 798,
+      "idperson": 155701,
+      "name": "LAHCEN ELAMOUD",
+      "party": "PI",
+      "circonscription": "El-Hajeb",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 799,
+      "idperson": 155702,
+      "name": "OUAHID HAKIM",
+      "party": "RNI",
+      "circonscription": "El-Hajeb",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 800,
+      "idperson": 155703,
+      "name": "ABDERRAZAK HACHIMI",
+      "party": "RNI",
+      "circonscription": "Ifrane",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 801,
+      "idperson": 68655,
+      "name": "MOHAMMED OUZZINE",
+      "party": "MP",
+      "circonscription": "Ifrane",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 802,
+      "idperson": 155704,
+      "name": "MOHAMED CHAOUKI",
+      "party": "RNI",
+      "circonscription": "Boulemane",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 803,
+      "idperson": 70193,
+      "name": "HASSAN LAENSER",
+      "party": "MP",
+      "circonscription": "Boulemane",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 804,
+      "idperson": 68436,
+      "name": "RACHID HAMOUNI",
+      "party": "PPS",
+      "circonscription": "Boulemane",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 805,
+      "idperson": 70197,
+      "name": "ABDELOUAHAD EL MASSAOUDI",
+      "party": "PAM",
+      "circonscription": "Taza",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 806,
+      "idperson": 68393,
+      "name": "KHALIL ESSADIKI",
+      "party": "RNI",
+      "circonscription": "Taza",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 807,
+      "idperson": 155705,
+      "name": "ABDELMAJID BEN KAMRA",
+      "party": "MP",
+      "circonscription": "Taza",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 808,
+      "idperson": 155706,
+      "name": "MOUNIR CHENTIR",
+      "party": "PI",
+      "circonscription": "Taza",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 809,
+      "idperson": 155707,
+      "name": "AHMED EL ABBADI",
+      "party": "PPS",
+      "circonscription": "Taza",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 810,
+      "idperson": 155708,
+      "name": "BOUCHTA BOUSSAF",
+      "party": "RNI",
+      "circonscription": "Taounate - Tissa",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 811,
+      "idperson": 70201,
+      "name": "ABDELLATIF EL-FOUIKAR",
+      "party": "PAM",
+      "circonscription": "Taounate - Tissa",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 812,
+      "idperson": 68352,
+      "name": "ABDELLAH EL IDRISSI EL BOUZIDI",
+      "party": "PPS",
+      "circonscription": "Taounate - Tissa",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 813,
+      "idperson": 70204,
+      "name": "NOUR-DEN KCHIBEL",
+      "party": "RNI",
+      "circonscription": "Karia - Rhafsai",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 814,
+      "idperson": 70203,
+      "name": "M'FEDDAL TAHRI",
+      "party": "PI",
+      "circonscription": "Karia - Rhafsai",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 815,
+      "idperson": 70202,
+      "name": "MOHAMED EL-HEJIRA",
+      "party": "PAM",
+      "circonscription": "Karia - Rhafsai",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 816,
+      "idperson": 155709,
+      "name": "HAFID OUACHAK",
+      "party": "RNI",
+      "circonscription": "Sefrou",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 817,
+      "idperson": 155710,
+      "name": "IDRISS CHEBCHALI",
+      "party": "PAM",
+      "circonscription": "Sefrou",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 818,
+      "idperson": 68294,
+      "name": "DRISS CHTIBI",
+      "party": "USFP",
+      "circonscription": "Sefrou",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 819,
+      "idperson": 70186,
+      "name": "RACHID EL FAYEK",
+      "party": "RNI",
+      "circonscription": "Fès-Janoubia",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 820,
+      "idperson": 70185,
+      "name": "ALLAL AMRAOUI",
+      "party": "PI",
+      "circonscription": "Fès-Janoubia",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 821,
+      "idperson": 70188,
+      "name": "AZIZ LEBBAR",
+      "party": "PAM",
+      "circonscription": "Fès-Janoubia",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 822,
+      "idperson": 155711,
+      "name": "ABDELKADER BOUSSAIRI",
+      "party": "USFP",
+      "circonscription": "Fès-Janoubia",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 823,
+      "idperson": 155712,
+      "name": "THAMI OUAZZANI THAMI",
+      "party": "RNI",
+      "circonscription": "Fès-Chamalia",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 824,
+      "idperson": 155713,
+      "name": "RAOUF ABDELLAOUI MAAN",
+      "party": "FFD",
+      "circonscription": "Fès-Chamalia",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 825,
+      "idperson": 70394,
+      "name": "ABDEMAJID FASSI-FIHRI",
+      "party": "PI",
+      "circonscription": "Fès-Chamalia",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 826,
+      "idperson": 155714,
+      "name": "KHADIJA HAJJOUBI",
+      "party": "PAM",
+      "circonscription": "Fès-Chamalia",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 827,
+      "idperson": 68322,
+      "name": "ABDELOUAHED EL ANSARI",
+      "party": "PI",
+      "circonscription": "Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 828,
+      "idperson": 68728,
+      "name": "BADER TAHIRI",
+      "party": "RNI",
+      "circonscription": "Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 829,
+      "idperson": 70205,
+      "name": "ABDELKADER LABRIGUI",
+      "party": "MP",
+      "circonscription": "Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 830,
+      "idperson": 154198,
+      "name": "ELABBES MRHARI",
+      "party": "UC",
+      "circonscription": "Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 831,
+      "idperson": 155717,
+      "name": "JAOUAD CHAMI",
+      "party": "PAM",
+      "circonscription": "Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 832,
+      "idperson": 68233,
+      "name": "ABDELLAH BOUANOU",
+      "party": "PJD",
+      "circonscription": "Meknès",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 833,
+      "idperson": 155718,
+      "name": "LAHCEN BELMKADEM",
+      "party": "PAM",
+      "circonscription": "Moulay-Yacoub",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 834,
+      "idperson": 155719,
+      "name": "THAMI AKBI",
+      "party": "RNI",
+      "circonscription": "Moulay-Yacoub",
+      "region": "Fès - Meknès",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 835,
+      "idperson": 155720,
+      "name": "YASMINE LEMGHOUR",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Rabat - Salé - Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 836,
+      "idperson": 155721,
+      "name": "TOURIA EL AZZAOUI",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Rabat - Salé - Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 837,
+      "idperson": 155722,
+      "name": "LATIFA LABLIH",
+      "party": "PAM",
+      "circonscription": "Circonscription régionale : Rabat - Salé - Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 838,
+      "idperson": 155723,
+      "name": "KHADIJA ZOUMI",
+      "party": "PI",
+      "circonscription": "Circonscription régionale : Rabat - Salé - Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 839,
+      "idperson": 155724,
+      "name": " JIHANE TATOU",
+      "party": "UC",
+      "circonscription": "Circonscription régionale : Rabat - Salé - Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 840,
+      "idperson": 155725,
+      "name": "SOUKAINA LAHMOUCH",
+      "party": "MP",
+      "circonscription": "Circonscription régionale : Rabat - Salé - Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 841,
+      "idperson": 155726,
+      "name": "AICHA EL KARJI",
+      "party": "USFP",
+      "circonscription": "Circonscription régionale : Rabat - Salé - Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 842,
+      "idperson": 155727,
+      "name": "RABIA BOUJA",
+      "party": "PJD",
+      "circonscription": "Circonscription régionale : Rabat - Salé - Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 843,
+      "idperson": 155728,
+      "name": "KHADIJA OUALBACHA",
+      "party": "MDS",
+      "circonscription": "Circonscription régionale : Rabat - Salé - Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 844,
+      "idperson": 155729,
+      "name": "NADIA THAMI",
+      "party": "PPS",
+      "circonscription": "Circonscription régionale : Rabat - Salé - Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 845,
+      "idperson": 155730,
+      "name": "ABDESSLAM EL BOUIRMANI",
+      "party": "RNI",
+      "circonscription": "Khémisset - Oulmès",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 846,
+      "idperson": 68562,
+      "name": "MOHAMED LAHMOUCHE",
+      "party": "MP",
+      "circonscription": "Khémisset - Oulmès",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 847,
+      "idperson": 68293,
+      "name": "MOHAMED CHROUROU",
+      "party": "PAM",
+      "circonscription": "Khémisset - Oulmès",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 848,
+      "idperson": 68343,
+      "name": "HASSAN EL FILALI",
+      "party": "RNI",
+      "circonscription": "Tifelt - Rommani",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 849,
+      "idperson": 70280,
+      "name": "ABDESSAMAD ARCHAANE",
+      "party": "MDS",
+      "circonscription": "Tifelt - Rommani",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 850,
+      "idperson": 68350,
+      "name": "RAHHOU EL HILAA",
+      "party": "PAM",
+      "circonscription": "Tifelt - Rommani",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 851,
+      "idperson": 155731,
+      "name": "ABDERRAHIM OISSLAM",
+      "party": "RNI",
+      "circonscription": "Rabat - El Mouhit",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 852,
+      "idperson": 68212,
+      "name": "MOHAMED MEHDI BENSAID",
+      "party": "PAM",
+      "circonscription": "Rabat - El Mouhit",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 853,
+      "idperson": 155732,
+      "name": "ABDELILAH IDRISSI BOUZIDI",
+      "party": "PI",
+      "circonscription": "Rabat - El Mouhit",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 854,
+      "idperson": 155733,
+      "name": "NABIL DAKCH",
+      "party": "MP",
+      "circonscription": "Rabat - El Mouhit",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 855,
+      "idperson": 155734,
+      "name": "ALAE-EDDINE BAHRAOUI",
+      "party": "RNI",
+      "circonscription": "Rabat - Challah",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 856,
+      "idperson": 155735,
+      "name": "ADIB BENBRAHIM",
+      "party": "PAM",
+      "circonscription": "Rabat - Challah",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 857,
+      "idperson": 155736,
+      "name": " EL HASSAN LACHGAR",
+      "party": "USFP",
+      "circonscription": "Rabat - Challah",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 858,
+      "idperson": 155737,
+      "name": "RACHID HAMRI",
+      "party": "RNI",
+      "circonscription": "Skhirate - Témara",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 859,
+      "idperson": 68155,
+      "name": "HASSAN ARIF",
+      "party": "UC",
+      "circonscription": "Skhirate - Témara",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 860,
+      "idperson": 70278,
+      "name": "MOHAMMED EL HILALI",
+      "party": "PAM",
+      "circonscription": "Skhirate - Témara",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 861,
+      "idperson": 68699,
+      "name": "RACHID SAJID",
+      "party": "PI",
+      "circonscription": "Skhirate - Témara",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 862,
+      "idperson": 155738,
+      "name": "HATIM BEN RKIA",
+      "party": "RNI",
+      "circonscription": "Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 863,
+      "idperson": 68671,
+      "name": "ELHOUÇAIN RAHOUIA",
+      "party": "UC",
+      "circonscription": "Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 864,
+      "idperson": 155739,
+      "name": "MOHAMED OUZRI",
+      "party": "PI",
+      "circonscription": "Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 865,
+      "idperson": 70281,
+      "name": "MOSTAFA BRAHIMI",
+      "party": "PJD",
+      "circonscription": "Kénitra",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 866,
+      "idperson": 68417,
+      "name": "JAOUAD GHRIB",
+      "party": "RNI",
+      "circonscription": "El-Gharb",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 867,
+      "idperson": 68281,
+      "name": "BELASSAL CHAOUI",
+      "party": "UC",
+      "circonscription": "El-Gharb",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 868,
+      "idperson": 155741,
+      "name": "ABDELAZIZ BOUHSSINI",
+      "party": "PAM",
+      "circonscription": "El-Gharb",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 869,
+      "idperson": 68573,
+      "name": "NOUREDDINE LAZREQ",
+      "party": "RNI",
+      "circonscription": "Salé - Médina",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 870,
+      "idperson": 68316,
+      "name": "RACHID EL ABDI",
+      "party": "PAM",
+      "circonscription": "Salé - Médina",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 871,
+      "idperson": 155744,
+      "name": "MHAMED AOUAD",
+      "party": "PPS",
+      "circonscription": "Salé - Médina",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 872,
+      "idperson": 68707,
+      "name": "DRISS SENTISSI",
+      "party": "MP",
+      "circonscription": "Salé - Médina",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 873,
+      "idperson": 155745,
+      "name": "ABDELKRIM ZEMZAMI",
+      "party": "RNI",
+      "circonscription": "Salé - Al-Jadida",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 874,
+      "idperson": 68708,
+      "name": "OMAR SENTISSI",
+      "party": "PI",
+      "circonscription": "Salé - Al-Jadida",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 875,
+      "idperson": 68191,
+      "name": "MOHAMED BENATTIA",
+      "party": "PAM",
+      "circonscription": "Salé - Al-Jadida",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 876,
+      "idperson": 68668,
+      "name": "YASSINE RADI",
+      "party": "UC",
+      "circonscription": "Sidi Slimane",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 877,
+      "idperson": 68666,
+      "name": "ABDELOUAHED RADI",
+      "party": "USFP",
+      "circonscription": "Sidi Slimane",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 878,
+      "idperson": 155747,
+      "name": "ANOUAR SABRI",
+      "party": "RNI",
+      "circonscription": "Sidi Slimane",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 879,
+      "idperson": 70285,
+      "name": "AHMED EL GHAZOUI",
+      "party": "RNI",
+      "circonscription": "Sidi-Kacem",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 880,
+      "idperson": 155748,
+      "name": "ABDENNEBI AIDOUDI",
+      "party": "MP",
+      "circonscription": "Sidi-Kacem",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 881,
+      "idperson": 70286,
+      "name": "SAAD BEN ZEROUAL",
+      "party": "PAM",
+      "circonscription": "Sidi-Kacem",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 882,
+      "idperson": 70287,
+      "name": "MOHAMED EL HAFED",
+      "party": "PI",
+      "circonscription": "Sidi-Kacem",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 883,
+      "idperson": 68549,
+      "name": "MOHAMED LAASEL",
+      "party": "USFP",
+      "circonscription": "Sidi-Kacem",
+      "region": "Rabat - Salé - Kénitra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 884,
+      "idperson": 155749,
+      "name": "SAADIA AMEHZOUNE",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Beni-Mellal - Khénifra",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 885,
+      "idperson": 155750,
+      "name": "JAOUHARA BOUSJADA",
+      "party": "PAM",
+      "circonscription": "Circonscription régionale : Beni-Mellal - Khénifra",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 886,
+      "idperson": 155751,
+      "name": "ZINEB AMAHROUK",
+      "party": "MP",
+      "circonscription": "Circonscription régionale : Beni-Mellal - Khénifra",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 887,
+      "idperson": 155752,
+      "name": "MADIHA KHYIR",
+      "party": "PI",
+      "circonscription": "Circonscription régionale : Beni-Mellal - Khénifra",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 888,
+      "idperson": 155753,
+      "name": "MALIKA ZEKHNINI",
+      "party": "USFP",
+      "circonscription": "Circonscription régionale : Beni-Mellal - Khénifra",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 889,
+      "idperson": 155754,
+      "name": "ZAHRA MOUMEN",
+      "party": "PPS",
+      "circonscription": "Circonscription régionale : Beni-Mellal - Khénifra",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 890,
+      "idperson": 155755,
+      "name": "TOURIA AFIF",
+      "party": "PJD",
+      "circonscription": "Circonscription régionale : Beni-Mellal - Khénifra",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 891,
+      "idperson": 70210,
+      "name": "MUSTAPHA REDDAD",
+      "party": "RNI",
+      "circonscription": "Bzou - Ouaouizaght",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 892,
+      "idperson": 155756,
+      "name": "ADIL BARAKAT",
+      "party": "PAM",
+      "circonscription": "Bzou - Ouaouizaght",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 893,
+      "idperson": 155758,
+      "name": "MOHAMED IBRAHIM EL BOUFRISSI",
+      "party": "MP",
+      "circonscription": "Bzou - Ouaouizaght",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 894,
+      "idperson": 155759,
+      "name": "IBRAHIM MJAHED",
+      "party": "PAM",
+      "circonscription": "Azilal - Demnate",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 895,
+      "idperson": 155760,
+      "name": "RACHID MANSOURI",
+      "party": "RNI",
+      "circonscription": "Azilal - Demnate",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 896,
+      "idperson": 155761,
+      "name": "ABDELALI BROUKI",
+      "party": "PI",
+      "circonscription": "Azilal - Demnate",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 897,
+      "idperson": 155762,
+      "name": "MAHFOUD KAMAL",
+      "party": "RNI",
+      "circonscription": "Fquih Ben Salah",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 898,
+      "idperson": 68606,
+      "name": "MOHAMED MOUBDII",
+      "party": "MP",
+      "circonscription": "Fquih Ben Salah",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 899,
+      "idperson": 155763,
+      "name": "IBRAHIM FADLI",
+      "party": "PAM",
+      "circonscription": "Fquih Ben Salah",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 900,
+      "idperson": 68774,
+      "name": "CHERKAOUI ZNAIDI",
+      "party": "USFP",
+      "circonscription": "Fquih Ben Salah",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 901,
+      "idperson": 70206,
+      "name": "KHALID EL MANSOURI",
+      "party": "RNI",
+      "circonscription": "Béni-Mellal",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 902,
+      "idperson": 70312,
+      "name": "HICHAM SABIRY",
+      "party": "PAM",
+      "circonscription": "Béni-Mellal",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 903,
+      "idperson": 68531,
+      "name": "ABDERRAHMANE KHAYR",
+      "party": "PI",
+      "circonscription": "Béni-Mellal",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 904,
+      "idperson": 155765,
+      "name": "FADEL BRASS",
+      "party": "USFP",
+      "circonscription": "Béni-Mellal",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 905,
+      "idperson": 155766,
+      "name": "AHMED CHADA",
+      "party": "MP",
+      "circonscription": "Béni-Mellal",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 906,
+      "idperson": 70414,
+      "name": "MERYEM OU-HSSATA",
+      "party": "PPS",
+      "circonscription": "Béni-Mellal",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 907,
+      "idperson": 68324,
+      "name": "HAMID EL ARCHI",
+      "party": "RNI",
+      "circonscription": "Khouribga",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 908,
+      "idperson": 155768,
+      "name": "KHALIFA MAJIDI",
+      "party": "PAM",
+      "circonscription": "Khouribga",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 909,
+      "idperson": 155769,
+      "name": "SAID SERAR",
+      "party": "MP",
+      "circonscription": "Khouribga",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 910,
+      "idperson": 68766,
+      "name": "MOHAMED ZEKRANI",
+      "party": "PI",
+      "circonscription": "Khouribga",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 911,
+      "idperson": 68361,
+      "name": "HABIB EL MALKI",
+      "party": "USFP",
+      "circonscription": "Khouribga",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 912,
+      "idperson": 155770,
+      "name": "ABDESSAMAD KHANANI",
+      "party": "PPS",
+      "circonscription": "Khouribga",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 913,
+      "idperson": 155771,
+      "name": "MOHAMED BADDOU",
+      "party": "RNI",
+      "circonscription": "Khénifra",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 914,
+      "idperson": 155772,
+      "name": "IBRAHIM AABA",
+      "party": "MP",
+      "circonscription": "Khénifra",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 915,
+      "idperson": 70218,
+      "name": "SALEH AOURHEBAL",
+      "party": "PI",
+      "circonscription": "Khénifra",
+      "region": "Beni-Mellal - Khénifra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 916,
+      "idperson": 155773,
+      "name": "FATIMA KHAIR",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Casablanca - Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 917,
+      "idperson": 155774,
+      "name": "SALMA BENAZIZ",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Casablanca - Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 918,
+      "idperson": 155775,
+      "name": "SOUMIA KADIRI",
+      "party": "PI",
+      "circonscription": "Circonscription régionale : Casablanca - Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 919,
+      "idperson": 155776,
+      "name": "NAJOUA KOUKOUSS",
+      "party": "PAM",
+      "circonscription": "Circonscription régionale : Casablanca - Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 920,
+      "idperson": 155777,
+      "name": "ATIKA JABROU",
+      "party": "USFP",
+      "circonscription": "Circonscription régionale : Casablanca - Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 921,
+      "idperson": 155778,
+      "name": "OMAIMA ZAHIR",
+      "party": "UC",
+      "circonscription": "Circonscription régionale : Casablanca - Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 922,
+      "idperson": 155779,
+      "name": "LOUBNA SGHIRI",
+      "party": "PPS",
+      "circonscription": "Circonscription régionale : Casablanca - Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 923,
+      "idperson": 155780,
+      "name": "HIND BENNANI",
+      "party": "PJD",
+      "circonscription": "Circonscription régionale : Casablanca - Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 924,
+      "idperson": 155781,
+      "name": "KELTHOUM NAIM",
+      "party": "MP",
+      "circonscription": "Circonscription régionale : Casablanca - Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 925,
+      "idperson": 155782,
+      "name": "CHAFIKA LACHRAF",
+      "party": "FFD",
+      "circonscription": "Circonscription régionale : Casablanca - Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 926,
+      "idperson": 155783,
+      "name": "FATIMA TAMNI",
+      "party": "CNI",
+      "circonscription": "Circonscription régionale : Casablanca - Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 927,
+      "idperson": 155784,
+      "name": "NABILA MOUNIB",
+      "party": "PSU",
+      "circonscription": "Circonscription régionale : Casablanca - Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 928,
+      "idperson": 155785,
+      "name": "BENASSER RAFIK",
+      "party": "RNI",
+      "circonscription": "El-Jadida",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 929,
+      "idperson": 68736,
+      "name": "MBAREK TARMOUNIA",
+      "party": "PI",
+      "circonscription": "El-Jadida",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 930,
+      "idperson": 155786,
+      "name": "MOHAMED MOHADAB",
+      "party": "PAM",
+      "circonscription": "El-Jadida",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 931,
+      "idperson": 155787,
+      "name": "MOULAY MEHDI FATMI",
+      "party": "USFP",
+      "circonscription": "El-Jadida",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 932,
+      "idperson": 155788,
+      "name": "YOUSEF BIZID",
+      "party": "PPS",
+      "circonscription": "El-Jadida",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 933,
+      "idperson": 155789,
+      "name": "MOHAMED LAMKHANTAR",
+      "party": "MP",
+      "circonscription": "El-Jadida",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 934,
+      "idperson": 155790,
+      "name": "HICHAM AIT MENNA",
+      "party": "RNI",
+      "circonscription": "Mohammadia",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 935,
+      "idperson": 70262,
+      "name": "SAID TADLAOUI",
+      "party": "PI",
+      "circonscription": "Mohammadia",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 936,
+      "idperson": 70261,
+      "name": "TAHAR BIMEZZAGH",
+      "party": "PAM",
+      "circonscription": "Mohammadia",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 937,
+      "idperson": 68669,
+      "name": "NOUREDDINE RAFIK",
+      "party": "RNI",
+      "circonscription": "Nouaceur",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 938,
+      "idperson": 155791,
+      "name": "ABDERRAHIM BENDOU",
+      "party": "PAM",
+      "circonscription": "Nouaceur",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 939,
+      "idperson": 155792,
+      "name": "BOUCHAIB TAHA",
+      "party": "PI",
+      "circonscription": "Nouaceur",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 940,
+      "idperson": 70324,
+      "name": "TARIK KADIRI",
+      "party": "PI",
+      "circonscription": "Berrechid",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 941,
+      "idperson": 68534,
+      "name": "SABER KIAF",
+      "party": "RNI",
+      "circonscription": "Berrechid",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 942,
+      "idperson": 68839,
+      "name": "NOURREDINNE EL BAIDI",
+      "party": "PAM",
+      "circonscription": "Berrechid",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 943,
+      "idperson": 155793,
+      "name": "MOHAMED EL BOUAMRI",
+      "party": "USFP",
+      "circonscription": "Berrechid",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 944,
+      "idperson": 70264,
+      "name": "MOHAMMED KRIMEN",
+      "party": "PI",
+      "circonscription": "Benslimane",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 945,
+      "idperson": 155794,
+      "name": "YASSINE OUAKACHA",
+      "party": "RNI",
+      "circonscription": "Benslimane",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 946,
+      "idperson": 70322,
+      "name": "SAID ZAIDI",
+      "party": "PPS",
+      "circonscription": "Benslimane",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 947,
+      "idperson": 70326,
+      "name": "MOHAMED GHAYATE",
+      "party": "RNI",
+      "circonscription": "Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 948,
+      "idperson": 155795,
+      "name": "MUSTAPHA EL KASSMI",
+      "party": "PI",
+      "circonscription": "Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 949,
+      "idperson": 155796,
+      "name": "SGHIR BABOUR",
+      "party": "UC",
+      "circonscription": "Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 950,
+      "idperson": 155797,
+      "name": "RABII HRAMI",
+      "party": "PAM",
+      "circonscription": "Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 951,
+      "idperson": 70268,
+      "name": "SAID NMILI",
+      "party": "USFP",
+      "circonscription": "Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 952,
+      "idperson": 155798,
+      "name": "MOHAMED HIACHMI",
+      "party": "MP",
+      "circonscription": "Settat",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 953,
+      "idperson": 70270,
+      "name": "ABDELGHANI MAKHDAD",
+      "party": "USFP",
+      "circonscription": "Sidi Bennour",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 954,
+      "idperson": 155799,
+      "name": "ABDELFATTAH AMMAR",
+      "party": "PAM",
+      "circonscription": "Sidi Bennour",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 955,
+      "idperson": 68507,
+      "name": "ABDELKADER KANDIL",
+      "party": "RNI",
+      "circonscription": "Sidi Bennour",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 956,
+      "idperson": 155800,
+      "name": "MOHAMED NAJI",
+      "party": "PI",
+      "circonscription": "Sidi Bennour",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 957,
+      "idperson": 68498,
+      "name": "MOHAMED JOUDAR",
+      "party": "UC",
+      "circonscription": "Ben-M'sick",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 958,
+      "idperson": 70253,
+      "name": "TAOUFIK KAMIL",
+      "party": "RNI",
+      "circonscription": "Ben-M'sick",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 959,
+      "idperson": 155802,
+      "name": "MUSTAPHA JDAD",
+      "party": "PAM",
+      "circonscription": "Ben-M'sick",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 960,
+      "idperson": 155803,
+      "name": "MOHAMED BOUDRIKA",
+      "party": "RNI",
+      "circonscription": "Al-Fida - Mers-Sultan",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 961,
+      "idperson": 68198,
+      "name": "MOHAMED TOUIMI BENJELLOUN",
+      "party": "PAM",
+      "circonscription": "Al-Fida - Mers-Sultan",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 962,
+      "idperson": 155804,
+      "name": "HUSSEIN NASSRALLAH",
+      "party": "PI",
+      "circonscription": "Al-Fida - Mers-Sultan",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 963,
+      "idperson": 155805,
+      "name": "ABDERRAHIM OUTTASS",
+      "party": "RNI",
+      "circonscription": "Sidi-Bernoussi",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 964,
+      "idperson": 68266,
+      "name": "AHMED BRIJA",
+      "party": "PAM",
+      "circonscription": "Sidi-Bernoussi",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 965,
+      "idperson": 155806,
+      "name": "HICHAM EL HID",
+      "party": "PI",
+      "circonscription": "Sidi-Bernoussi",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 966,
+      "idperson": 68209,
+      "name": "HASSAN BENOMAR",
+      "party": "RNI",
+      "circonscription": "Aïn-Sebaâ - Hay-Mohammadi",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 967,
+      "idperson": 70256,
+      "name": "ADIL EL BITAR",
+      "party": "PAM",
+      "circonscription": "Aïn-Sebaâ - Hay-Mohammadi",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 968,
+      "idperson": 68442,
+      "name": "ABDELLATIF HARCHICH",
+      "party": "UC",
+      "circonscription": "Aïn-Sebaâ - Hay-Mohammadi",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 969,
+      "idperson": 155807,
+      "name": "RACHID AFILAL ALAMI IDRISSI",
+      "party": "PI",
+      "circonscription": "Aïn-Sebaâ - Hay-Mohammadi",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 970,
+      "idperson": 68422,
+      "name": "MOHAMED HADDADI",
+      "party": "RNI",
+      "circonscription": "Moulay-Rachid",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 971,
+      "idperson": 155808,
+      "name": "ABDELILAH AMEHDI",
+      "party": "PI",
+      "circonscription": "Moulay-Rachid",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 972,
+      "idperson": 155809,
+      "name": "ABDELILAH CHIKER",
+      "party": "PPS",
+      "circonscription": "Moulay-Rachid",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 973,
+      "idperson": 155810,
+      "name": "IDRISS CHRAIBI",
+      "party": "RNI",
+      "circonscription": "Hay-Hassani",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 974,
+      "idperson": 155811,
+      "name": "MOHAMED REKANI",
+      "party": "PI",
+      "circonscription": "Hay-Hassani",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 975,
+      "idperson": 155812,
+      "name": "SALAHEDDINE CHANGUITE",
+      "party": "PAM",
+      "circonscription": "Hay-Hassani",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 976,
+      "idperson": 155813,
+      "name": "MOHAMED CHEBBAK",
+      "party": "RNI",
+      "circonscription": "Casablanca - Anfa",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 977,
+      "idperson": 155814,
+      "name": "HASSAN BERKANI",
+      "party": "PI",
+      "circonscription": "Casablanca - Anfa",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 978,
+      "idperson": 68620,
+      "name": "SAID NACIRI",
+      "party": "PAM",
+      "circonscription": "Casablanca - Anfa",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 979,
+      "idperson": 68426,
+      "name": "ABDESSAMAD HAIKER",
+      "party": "PJD",
+      "circonscription": "Casablanca - Anfa",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 980,
+      "idperson": 155816,
+      "name": "MOHAMED CHAFIK BENKIRANE",
+      "party": "RNI",
+      "circonscription": "Aïn-Chock",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 981,
+      "idperson": 68273,
+      "name": "ABDELHAQ CHAFIQ",
+      "party": "PAM",
+      "circonscription": "Aïn-Chock",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 982,
+      "idperson": 155817,
+      "name": "ISMAIL BENBI",
+      "party": "PI",
+      "circonscription": "Aïn-Chock",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 983,
+      "idperson": 70263,
+      "name": "HACHIM-AMINE CHAFIK",
+      "party": "PI",
+      "circonscription": "Médiouna",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 984,
+      "idperson": 68088,
+      "name": "SALAHEDDINE ABOULGHALI",
+      "party": "PAM",
+      "circonscription": "Médiouna",
+      "region": "Casablanca - Settat",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 985,
+      "idperson": 155818,
+      "name": "NADIA BENZEDFA",
+      "party": "PAM",
+      "circonscription": "Circonscription régionale : Marrakech - Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 986,
+      "idperson": 155819,
+      "name": "HANANE ATERKINE",
+      "party": "PAM",
+      "circonscription": "Circonscription régionale : Marrakech - Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 987,
+      "idperson": 155820,
+      "name": "MERIEM RMILI",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Marrakech - Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 988,
+      "idperson": 155821,
+      "name": "SAHAR ABDOUH",
+      "party": "PI",
+      "circonscription": "Circonscription régionale : Marrakech - Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 989,
+      "idperson": 155822,
+      "name": "SANAE EL BANINE",
+      "party": "UC",
+      "circonscription": "Circonscription régionale : Marrakech - Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 990,
+      "idperson": 155823,
+      "name": "HANANE FATRASS",
+      "party": "USFP",
+      "circonscription": "Circonscription régionale : Marrakech - Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 991,
+      "idperson": 155824,
+      "name": "MALIKA AKHECHKHOUCH",
+      "party": "PPS",
+      "circonscription": "Circonscription régionale : Marrakech - Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 992,
+      "idperson": 155825,
+      "name": "AZIZA BOUJRIDA",
+      "party": "MP",
+      "circonscription": "Circonscription régionale : Marrakech - Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 993,
+      "idperson": 155826,
+      "name": "AICHA EL KOUTE",
+      "party": "PJD",
+      "circonscription": "Circonscription régionale : Marrakech - Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 994,
+      "idperson": 155827,
+      "name": "MERIEM LEMSSAKI",
+      "party": "MDS",
+      "circonscription": "Circonscription régionale : Marrakech - Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 995,
+      "idperson": 68512,
+      "name": "MOHAMED KARIM",
+      "party": "PAM",
+      "circonscription": "Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 996,
+      "idperson": 68842,
+      "name": "HICHAM SAANANE",
+      "party": "PI",
+      "circonscription": "Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 997,
+      "idperson": 68395,
+      "name": "ADIL ESSOUBAI",
+      "party": "MP",
+      "circonscription": "Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 998,
+      "idperson": 155828,
+      "name": "MOHAMED EL HIDAOUI",
+      "party": "RNI",
+      "circonscription": "Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 999,
+      "idperson": 70249,
+      "name": "THAMI EL MASQI",
+      "party": "MDS",
+      "circonscription": "Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1000,
+      "idperson": 68771,
+      "name": "FAYSAL ZERHOUNI",
+      "party": "UC",
+      "circonscription": "Safi",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1001,
+      "idperson": 155830,
+      "name": "SAID EL GOURCH",
+      "party": "RNI",
+      "circonscription": "Al-Haouz",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1002,
+      "idperson": 68100,
+      "name": "MOHAMED ADMOUSA",
+      "party": "PI",
+      "circonscription": "Al-Haouz",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1003,
+      "idperson": 155831,
+      "name": "AHMED TOUIZI",
+      "party": "PAM",
+      "circonscription": "Al-Haouz",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1004,
+      "idperson": 68654,
+      "name": "BRAHIM OUTOUKART",
+      "party": "UC",
+      "circonscription": "Al-Haouz",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1005,
+      "idperson": 70246,
+      "name": "ABDELLATIF ZAIM",
+      "party": "PAM",
+      "circonscription": "Rehamna",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1006,
+      "idperson": 155833,
+      "name": "ABDELATFIF SINDIL",
+      "party": "RNI",
+      "circonscription": "Rehamna",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1007,
+      "idperson": 155834,
+      "name": "ABDELHALIM EL MANSOURI",
+      "party": "PI",
+      "circonscription": "Rehamna",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1008,
+      "idperson": 68582,
+      "name": "MOHAMED MALAL",
+      "party": "USFP",
+      "circonscription": "Essaouira",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1009,
+      "idperson": 68493,
+      "name": "MOHAMED JENNI",
+      "party": "RNI",
+      "circonscription": "Essaouira",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1010,
+      "idperson": 155835,
+      "name": "AZIZ EL FIDI",
+      "party": "PI",
+      "circonscription": "Essaouira",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1011,
+      "idperson": 70244,
+      "name": "SAID ID-BAALI",
+      "party": "PPS",
+      "circonscription": "Essaouira",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1012,
+      "idperson": 70251,
+      "name": "YOUSSEF ROUIJEL",
+      "party": "PAM",
+      "circonscription": "Youssoufia",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1013,
+      "idperson": 155836,
+      "name": "HASSAN EL BAHI",
+      "party": "PI",
+      "circonscription": "Youssoufia",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1014,
+      "idperson": 70238,
+      "name": "MOULAY HICHAM ELM'HAJRI",
+      "party": "PAM",
+      "circonscription": "Chichaoua",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1015,
+      "idperson": 155837,
+      "name": "AOUAD AMARA",
+      "party": "MP",
+      "circonscription": "Chichaoua",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1016,
+      "idperson": 68659,
+      "name": "ABDERRAHMANE RABEH",
+      "party": "RNI",
+      "circonscription": "Chichaoua",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1017,
+      "idperson": 154197,
+      "name": "HOUCINE AIT OULAHIANE",
+      "party": "PI",
+      "circonscription": "Chichaoua",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1018,
+      "idperson": 68194,
+      "name": "MOKHTAR BENFAIDA",
+      "party": "RNI",
+      "circonscription": "El-Kelâa-des-Sraghna",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1019,
+      "idperson": 155838,
+      "name": "EL AYACHI AL FERFAR",
+      "party": "PI",
+      "circonscription": "El-Kelâa-des-Sraghna",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1020,
+      "idperson": 155839,
+      "name": "NOURREDINE AIT EL HAJ",
+      "party": "USFP",
+      "circonscription": "El-Kelâa-des-Sraghna",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1021,
+      "idperson": 70240,
+      "name": "ABDERRAHIM OUAAMAR",
+      "party": "PAM",
+      "circonscription": "El-Kelâa-des-Sraghna",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1022,
+      "idperson": 155840,
+      "name": "TARIK HNICH",
+      "party": "PAM",
+      "circonscription": "Ménara",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1023,
+      "idperson": 155841,
+      "name": "ABDELOUAHED CHAFKI",
+      "party": "RNI",
+      "circonscription": "Ménara",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1024,
+      "idperson": 155842,
+      "name": "ABDERRAZAK AHLOUCH",
+      "party": "PI",
+      "circonscription": "Ménara",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1025,
+      "idperson": 155843,
+      "name": "FATIMA ZAHRA BENTALEB",
+      "party": "PAM",
+      "circonscription": "Guéliz - Annakhil",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1026,
+      "idperson": 68337,
+      "name": "ISMAIL EL BERHOUMI",
+      "party": "RNI",
+      "circonscription": "Guéliz - Annakhil",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1027,
+      "idperson": 155844,
+      "name": "MOHAMED NAJIB EL KHALDI",
+      "party": "PI",
+      "circonscription": "Guéliz - Annakhil",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1028,
+      "idperson": 68387,
+      "name": "FATIMA EZZAHRA ELMANSOURI",
+      "party": "PAM",
+      "circonscription": "Médina - Sidi-Youssef-Ben-Ali",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1029,
+      "idperson": 155846,
+      "name": "ABDELAZIZ DRIOUCH",
+      "party": "PI",
+      "circonscription": "Médina - Sidi-Youssef-Ben-Ali",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1030,
+      "idperson": 68214,
+      "name": "YOUNES BENSLIMAN",
+      "party": "RNI",
+      "circonscription": "Médina - Sidi-Youssef-Ben-Ali",
+      "region": "Marrakech - Safi",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1031,
+      "idperson": 155847,
+      "name": "OUMENJOUJ OUMENJOUJ",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Drâa - Tafilalet",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1032,
+      "idperson": 155848,
+      "name": "SAMIRA HIJAZI",
+      "party": "PI",
+      "circonscription": "Circonscription régionale : Drâa - Tafilalet",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1033,
+      "idperson": 155849,
+      "name": "FATIMA YASSINE",
+      "party": "MP",
+      "circonscription": "Circonscription régionale : Drâa - Tafilalet",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1034,
+      "idperson": 155850,
+      "name": " IMANE LMAOUI",
+      "party": "PAM",
+      "circonscription": "Circonscription régionale : Drâa - Tafilalet",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1035,
+      "idperson": 155851,
+      "name": "MAJIDA CHAHID",
+      "party": "USFP",
+      "circonscription": "Circonscription régionale : Drâa - Tafilalet",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1036,
+      "idperson": 155852,
+      "name": "NEZHA MEKDAD",
+      "party": "PPS",
+      "circonscription": "Circonscription régionale : Drâa - Tafilalet",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1037,
+      "idperson": 155853,
+      "name": "OMAR OUJIL",
+      "party": "RNI",
+      "circonscription": "Errachidia",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1038,
+      "idperson": 155854,
+      "name": "MOULAY HASSAN BENLEFKIH",
+      "party": "PI",
+      "circonscription": "Errachidia",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1039,
+      "idperson": 155855,
+      "name": "ABDELLAH EL OMARI",
+      "party": "PAM",
+      "circonscription": "Errachidia",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1040,
+      "idperson": 155856,
+      "name": "HAMID NOUGHOU",
+      "party": "MDS",
+      "circonscription": "Errachidia",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1041,
+      "idperson": 68318,
+      "name": "EL MEHDI EL ALAOUI",
+      "party": "USFP",
+      "circonscription": "Errachidia",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1042,
+      "idperson": 70299,
+      "name": "ADDI KHEZOU",
+      "party": "RNI",
+      "circonscription": "Tinghir",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1043,
+      "idperson": 155857,
+      "name": "IBRAHIM BENDIDI",
+      "party": "PAM",
+      "circonscription": "Tinghir",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1044,
+      "idperson": 155858,
+      "name": "CHAJRI CHAJRI",
+      "party": "PPS",
+      "circonscription": "Tinghir",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1045,
+      "idperson": 155859,
+      "name": "HUSSEIN OUAALLAL",
+      "party": "RNI",
+      "circonscription": "Zagora",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1046,
+      "idperson": 155860,
+      "name": "ABDERRAHIM CHAHID",
+      "party": "USFP",
+      "circonscription": "Zagora",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1047,
+      "idperson": 68145,
+      "name": "MIMOUNE AMIRI",
+      "party": "PI",
+      "circonscription": "Zagora",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1048,
+      "idperson": 155861,
+      "name": "MAROUANE CHBAATOU",
+      "party": "RNI",
+      "circonscription": "Midelt",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1049,
+      "idperson": 68101,
+      "name": "RACHID ADNANE",
+      "party": "PI",
+      "circonscription": "Midelt",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1050,
+      "idperson": 155862,
+      "name": "RACHID TAIBI ALAOUI",
+      "party": "MP",
+      "circonscription": "Midelt",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1051,
+      "idperson": 155863,
+      "name": "YOUSSEF CHIRI",
+      "party": "RNI",
+      "circonscription": "Ouarzazate",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1052,
+      "idperson": 155864,
+      "name": "OMAR EL BAZ",
+      "party": "MP",
+      "circonscription": "Ouarzazate",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1053,
+      "idperson": 68247,
+      "name": "ELHOUSSAIN BOUHSSINI",
+      "party": "PAM",
+      "circonscription": "Ouarzazate",
+      "region": "Drâa - Tafilalet",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1054,
+      "idperson": 155865,
+      "name": "ZAINA IDHALI",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Souss - Massa",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1055,
+      "idperson": 155866,
+      "name": "KALILA BOUNAILATE",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Souss - Massa",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1056,
+      "idperson": 155867,
+      "name": "NOURA KROUM",
+      "party": "PI",
+      "circonscription": "Circonscription régionale : Souss - Massa",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1057,
+      "idperson": 155868,
+      "name": "HANANE EL MASSI",
+      "party": "PAM",
+      "circonscription": "Circonscription régionale : Souss - Massa",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1058,
+      "idperson": 155869,
+      "name": "NAIMA EL FETHAOUI",
+      "party": "PJD",
+      "circonscription": "Circonscription régionale : Souss - Massa",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1059,
+      "idperson": 155870,
+      "name": "NEZHA ABAKRIM",
+      "party": "USFP",
+      "circonscription": "Circonscription régionale : Souss - Massa",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1060,
+      "idperson": 155871,
+      "name": "KHADIJA AROUHAL",
+      "party": "PPS",
+      "circonscription": "Circonscription régionale : Souss - Massa",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1061,
+      "idperson": 155872,
+      "name": "KARIM ACHENGLI",
+      "party": "RNI",
+      "circonscription": "Agadir - Ida-ou-Tanane",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1062,
+      "idperson": 70221,
+      "name": "HAMID OUAHBI",
+      "party": "PAM",
+      "circonscription": "Agadir - Ida-ou-Tanane",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1063,
+      "idperson": 155874,
+      "name": "JAMAL DIWANY",
+      "party": "PI",
+      "circonscription": "Agadir - Ida-ou-Tanane",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1064,
+      "idperson": 155875,
+      "name": "HASSAN OUMRIBTE",
+      "party": "PPS",
+      "circonscription": "Agadir - Ida-ou-Tanane",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1065,
+      "idperson": 155876,
+      "name": "ISMAIL ZITOUNI",
+      "party": "RNI",
+      "circonscription": "Inézgane - Aït-Melloul",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1066,
+      "idperson": 155877,
+      "name": "MOHAMED OUADMINE",
+      "party": "PAM",
+      "circonscription": "Inézgane - Aït-Melloul",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1067,
+      "idperson": 70405,
+      "name": "KHALID CHENNAK",
+      "party": "PI",
+      "circonscription": "Inézgane - Aït-Melloul",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1068,
+      "idperson": 155878,
+      "name": "ISMAIL KARAM",
+      "party": "RNI",
+      "circonscription": "Chtouka - Aït-Baha",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1069,
+      "idperson": 70224,
+      "name": "LAHOUCINE AZOUGAGH",
+      "party": "PI",
+      "circonscription": "Chtouka - Aït-Baha",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1070,
+      "idperson": 155879,
+      "name": "AHMED BOUMKOUK",
+      "party": "PAM",
+      "circonscription": "Chtouka - Aït-Baha",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1071,
+      "idperson": 68245,
+      "name": "MOHAMED BOUHDOUD",
+      "party": "RNI",
+      "circonscription": "Taroudannt - Al-Janoubia",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1072,
+      "idperson": 68519,
+      "name": "ABDESSAMAD KAYYOUH",
+      "party": "PI",
+      "circonscription": "Taroudannt - Al-Janoubia",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1073,
+      "idperson": 155880,
+      "name": "KHALID HATIMI",
+      "party": "PAM",
+      "circonscription": "Taroudannt - Al-Janoubia",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1074,
+      "idperson": 155881,
+      "name": "IBRAHIM AJNINE",
+      "party": "PJD",
+      "circonscription": "Taroudannt - Al-Janoubia",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1075,
+      "idperson": 155882,
+      "name": "LAHCEN SAADI",
+      "party": "RNI",
+      "circonscription": "Taroudannt - Chamalia",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1076,
+      "idperson": 155883,
+      "name": "ABDELAZIZ BAHJA",
+      "party": "PI",
+      "circonscription": "Taroudannt - Chamalia",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1077,
+      "idperson": 68636,
+      "name": "ABDELLATIF OUAHBI",
+      "party": "PAM",
+      "circonscription": "Taroudannt - Chamalia",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1078,
+      "idperson": 70228,
+      "name": "ABDELLAH GHAZI",
+      "party": "RNI",
+      "circonscription": "Tiznit",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1079,
+      "idperson": 155885,
+      "name": "HANANE ADBAOUI",
+      "party": "PI",
+      "circonscription": "Tiznit",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1080,
+      "idperson": 68724,
+      "name": "MUSTAPHA TADOUMANT",
+      "party": "RNI",
+      "circonscription": "Tata",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1081,
+      "idperson": 68722,
+      "name": "HASSANE TABBI",
+      "party": "PAM",
+      "circonscription": "Tata",
+      "region": "Souss - Massa",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1082,
+      "idperson": 155886,
+      "name": "YASMINA HAJJI",
+      "party": "PAM",
+      "circonscription": "Circonscription régionale : Guelmim - Oued-Noun",
+      "region": "Guelmim - Oued-Noun",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1083,
+      "idperson": 155887,
+      "name": "NADIA BOUAIDA",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Guelmim - Oued-Noun",
+      "region": "Guelmim - Oued-Noun",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1084,
+      "idperson": 155888,
+      "name": "KHAOULA EL KHARCHI",
+      "party": "PI",
+      "circonscription": "Circonscription régionale : Guelmim - Oued-Noun",
+      "region": "Guelmim - Oued-Noun",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1085,
+      "idperson": 155889,
+      "name": "AICHA ZELFA",
+      "party": "USFP",
+      "circonscription": "Circonscription régionale : Guelmim - Oued-Noun",
+      "region": "Guelmim - Oued-Noun",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1086,
+      "idperson": 155890,
+      "name": "BATOUL ABLADI",
+      "party": "PJD",
+      "circonscription": "Circonscription régionale : Guelmim - Oued-Noun",
+      "region": "Guelmim - Oued-Noun",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1087,
+      "idperson": 68733,
+      "name": "RACHID TAMEK",
+      "party": "PAM",
+      "circonscription": "Assa-Zag",
+      "region": "Guelmim - Oued-Noun",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1088,
+      "idperson": 155892,
+      "name": "MAHMOUD ABBA",
+      "party": "USFP",
+      "circonscription": "Assa-Zag",
+      "region": "Guelmim - Oued-Noun",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1089,
+      "idperson": 70412,
+      "name": "MUSTAPHA BAITAS",
+      "party": "RNI",
+      "circonscription": "Sidi Ifni",
+      "region": "Guelmim - Oued-Noun",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1090,
+      "idperson": 155894,
+      "name": "SIDATI JAMAL",
+      "party": "PAM",
+      "circonscription": "Sidi Ifni",
+      "region": "Guelmim - Oued-Noun",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1091,
+      "idperson": 155895,
+      "name": "IBRAHIM ELOUAABANE",
+      "party": "PAM",
+      "circonscription": "Tan-Tan",
+      "region": "Guelmim - Oued-Noun",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1092,
+      "idperson": 68079,
+      "name": "ABDELLAH ABERKI",
+      "party": "RNI",
+      "circonscription": "Tan-Tan",
+      "region": "Guelmim - Oued-Noun",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1093,
+      "idperson": 155896,
+      "name": "MOHAMED SABBARI",
+      "party": "PAM",
+      "circonscription": "Guelmim",
+      "region": "Guelmim - Oued-Noun",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1094,
+      "idperson": 155897,
+      "name": "MOHAMED RAJDAL",
+      "party": "RNI",
+      "circonscription": "Guelmim",
+      "region": "Guelmim - Oued-Noun",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1095,
+      "idperson": 155899,
+      "name": "FATIMA SYIDA",
+      "party": "PI",
+      "circonscription": "Circonscription régionale : Laâyoune - Sakia-El-Hamra",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1096,
+      "idperson": 155900,
+      "name": " RABAB AILAL",
+      "party": "PI",
+      "circonscription": "Circonscription régionale : Laâyoune - Sakia-El-Hamra",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1097,
+      "idperson": 155901,
+      "name": "LALLA EL HEJJA JOUMANI",
+      "party": "PAM",
+      "circonscription": "Circonscription régionale : Laâyoune - Sakia-El-Hamra",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1098,
+      "idperson": 155902,
+      "name": "LAILA DAHI",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Laâyoune - Sakia-El-Hamra",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1099,
+      "idperson": 155903,
+      "name": "HAYAT LAARAYCH",
+      "party": "USFP",
+      "circonscription": "Circonscription régionale : Laâyoune - Sakia-El-Hamra",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1100,
+      "idperson": 70292,
+      "name": "MOULAY ZOUBIR HABADDI",
+      "party": "PI",
+      "circonscription": "Es-Smara",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1101,
+      "idperson": 155904,
+      "name": "SIDI SALEH IDRISSI",
+      "party": "PAM",
+      "circonscription": "Es-Smara",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1102,
+      "idperson": 68650,
+      "name": "MOULAY HAMDI OULD ERRACHID",
+      "party": "PI",
+      "circonscription": "Laâyoune",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1103,
+      "idperson": 70289,
+      "name": "MOHAMED SALEM ELJOMANI",
+      "party": "PAM",
+      "circonscription": "Laâyoune",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1104,
+      "idperson": 155905,
+      "name": "MOHAMED AYYACH",
+      "party": "RNI",
+      "circonscription": "Laâyoune",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1105,
+      "idperson": 68529,
+      "name": "SIDI BRAHIM KHAYA",
+      "party": "RNI",
+      "circonscription": "Boujdour",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1106,
+      "idperson": 68071,
+      "name": "ABDELAZIZ ABBA",
+      "party": "PI",
+      "circonscription": "Boujdour",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1107,
+      "idperson": 155906,
+      "name": "ABDELHAY HARTOUNE",
+      "party": "RNI",
+      "circonscription": "Tarfaya",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1108,
+      "idperson": 68221,
+      "name": "ABDELLAH BILAT",
+      "party": "PI",
+      "circonscription": "Tarfaya",
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1109,
+      "idperson": 155907,
+      "name": "KHADIJA BOUGARNE",
+      "party": "PI",
+      "circonscription": "Circonscription régionale : Dakhla - Oued Ed-Dahab",
+      "region": "Dakhla - Oued Ed-Dahab",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1110,
+      "idperson": 155908,
+      "name": "LAILA AHL SIDI MOULOUD",
+      "party": "RNI",
+      "circonscription": "Circonscription régionale : Dakhla - Oued Ed-Dahab",
+      "region": "Dakhla - Oued Ed-Dahab",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1111,
+      "idperson": 155909,
+      "name": "RIFAA MAELAININE",
+      "party": "PPS",
+      "circonscription": "Circonscription régionale : Dakhla - Oued Ed-Dahab",
+      "region": "Dakhla - Oued Ed-Dahab",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1112,
+      "idperson": 70294,
+      "name": "ABDELFATTAH AHL EL MAKKI",
+      "party": "PI",
+      "circonscription": "Aousserd",
+      "region": "Dakhla - Oued Ed-Dahab",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1113,
+      "idperson": 68460,
+      "name": "MOHAMED LAMINE HORMATOLLAH",
+      "party": "RNI",
+      "circonscription": "Aousserd",
+      "region": "Dakhla - Oued Ed-Dahab",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1114,
+      "idperson": 155910,
+      "name": "KHATTAT YANJA",
+      "party": "PI",
+      "circonscription": "Oued-Ed-Dahab",
+      "region": "Dakhla - Oued Ed-Dahab",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    },
+    {
+      "idsiege": 1115,
+      "idperson": 155912,
+      "name": "MBAREK HMIA",
+      "party": "RNI",
+      "circonscription": "Oued-Ed-Dahab",
+      "region": "Dakhla - Oued Ed-Dahab",
+      "dateentree": "2021-10-08 00:00:00",
+      "motifentree": "Elu"
+    }
+  ]
+}

@@ -1,0 +1,666 @@
+{
+  "expected_national_registered": 17983490,
+  "secondary_local_registered_sum": 14822985,
+  "delta": -3160505,
+  "exact_match": false,
+  "regional_sums": {
+    "Béni Mellal-Khénifra": 1259874,
+    "Casablanca-Settat": 2714919,
+    "Dakhla-Oued Eddahab": 58633,
+    "Drâa-Tafilalet": 775728,
+    "Fès-Meknès": 1743221,
+    "Guelmim-Oued Noun": 260693,
+    "Laâyoune-Sakia El Hamra": 197459,
+    "Marrakech-Safi": 1976584,
+    "Oriental": 1126473,
+    "Rabat-Salé-Kénitra": 1965387,
+    "Souss-Massa": 1289422,
+    "Tanger-Tétouan-Al Hoceïma": 1454592
+  },
+  "constituencies": [
+    {
+      "constituency_id": "rabat-ocean",
+      "name": "Rabat-Océan",
+      "region": "Rabat-Salé-Kénitra",
+      "registered": 150072,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Rabat-Océan"
+    },
+    {
+      "constituency_id": "rabat-chellah",
+      "name": "Rabat-Chellah",
+      "region": "Rabat-Salé-Kénitra",
+      "registered": 110038,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Rabat-Chellah"
+    },
+    {
+      "constituency_id": "sale-medina",
+      "name": "Salé-Médina",
+      "region": "Rabat-Salé-Kénitra",
+      "registered": 193639,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Salé-Médina"
+    },
+    {
+      "constituency_id": "sale-el-jadida",
+      "name": "Salé-El Jadida",
+      "region": "Rabat-Salé-Kénitra",
+      "registered": 158295,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Salé-El_Jadida"
+    },
+    {
+      "constituency_id": "skhirate-temara",
+      "name": "Skhirate-Témara",
+      "region": "Rabat-Salé-Kénitra",
+      "registered": 209281,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Skhirate-Témara"
+    },
+    {
+      "constituency_id": "khemisset-oulmes",
+      "name": "Khémisset-Oulmès",
+      "region": "Rabat-Salé-Kénitra",
+      "registered": 143920,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Khémisset-Oulmès"
+    },
+    {
+      "constituency_id": "tiflet-rommani",
+      "name": "Tiflet-Rommani",
+      "region": "Rabat-Salé-Kénitra",
+      "registered": 144240,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tiflet-Rommani"
+    },
+    {
+      "constituency_id": "kenitra",
+      "name": "Kénitra",
+      "region": "Rabat-Salé-Kénitra",
+      "registered": 306600,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Kénitra"
+    },
+    {
+      "constituency_id": "el-gharb",
+      "name": "El Gharb",
+      "region": "Rabat-Salé-Kénitra",
+      "registered": 160887,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_El_Gharb"
+    },
+    {
+      "constituency_id": "sidi-slimane",
+      "name": "Sidi Slimane",
+      "region": "Rabat-Salé-Kénitra",
+      "registered": 152096,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Sidi_Slimane"
+    },
+    {
+      "constituency_id": "sidi-kacem",
+      "name": "Sidi Kacem",
+      "region": "Rabat-Salé-Kénitra",
+      "registered": 236319,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Sidi_Kacem"
+    },
+    {
+      "constituency_id": "laayoune",
+      "name": "Laâyoune",
+      "region": "Laâyoune-Sakia El Hamra",
+      "registered": 127811,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Laâyoune"
+    },
+    {
+      "constituency_id": "boujdour",
+      "name": "Boujdour",
+      "region": "Laâyoune-Sakia El Hamra",
+      "registered": 30076,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Boujdour"
+    },
+    {
+      "constituency_id": "tarfaya",
+      "name": "Tarfaya",
+      "region": "Laâyoune-Sakia El Hamra",
+      "registered": 11074,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tarfaya"
+    },
+    {
+      "constituency_id": "es-semara",
+      "name": "Es-Semara",
+      "region": "Laâyoune-Sakia El Hamra",
+      "registered": 28498,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Es-Semara"
+    },
+    {
+      "constituency_id": "oued-eddahab",
+      "name": "Oued Eddahab",
+      "region": "Dakhla-Oued Eddahab",
+      "registered": 48902,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Oued_Eddahab"
+    },
+    {
+      "constituency_id": "aousserd",
+      "name": "Aousserd",
+      "region": "Dakhla-Oued Eddahab",
+      "registered": 9731,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Aousserd"
+    },
+    {
+      "constituency_id": "errachidia",
+      "name": "Errachidia",
+      "region": "Drâa-Tafilalet",
+      "registered": 194002,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Errachidia"
+    },
+    {
+      "constituency_id": "tinghir",
+      "name": "Tinghir",
+      "region": "Drâa-Tafilalet",
+      "registered": 161002,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tinghir"
+    },
+    {
+      "constituency_id": "zagora",
+      "name": "Zagora",
+      "region": "Drâa-Tafilalet",
+      "registered": 146207,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Zagora"
+    },
+    {
+      "constituency_id": "ouarzazate",
+      "name": "Ouarzazate",
+      "region": "Drâa-Tafilalet",
+      "registered": 138678,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Ouarzazate"
+    },
+    {
+      "constituency_id": "midelt",
+      "name": "Midelt",
+      "region": "Drâa-Tafilalet",
+      "registered": 135839,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Midelt"
+    },
+    {
+      "constituency_id": "casablanca-anfa",
+      "name": "Casablanca-Anfa",
+      "region": "Casablanca-Settat",
+      "registered": 167023,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Casablanca-Anfa"
+    },
+    {
+      "constituency_id": "ben-m-sick",
+      "name": "Ben M'sick",
+      "region": "Casablanca-Settat",
+      "registered": 97066,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Ben_M'sick"
+    },
+    {
+      "constituency_id": "sidi-bernoussi",
+      "name": "Sidi Bernoussi",
+      "region": "Casablanca-Settat",
+      "registered": 182103,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Sidi_Bernoussi"
+    },
+    {
+      "constituency_id": "al-fida-mers-sultan",
+      "name": "Al Fida-Mers Sultan",
+      "region": "Casablanca-Settat",
+      "registered": 135338,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Al_Fida-Mers_Sultan"
+    },
+    {
+      "constituency_id": "ain-sebaa-hay-mohammadi",
+      "name": "Aïn Sebaâ-Hay Mohammadi",
+      "region": "Casablanca-Settat",
+      "registered": 189104,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Aïn_Sebaâ-Hay_Mohammadi"
+    },
+    {
+      "constituency_id": "moulay-rachid",
+      "name": "Moulay Rachid",
+      "region": "Casablanca-Settat",
+      "registered": 169862,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Moulay_Rachid"
+    },
+    {
+      "constituency_id": "hay-hassani",
+      "name": "Hay Hassani",
+      "region": "Casablanca-Settat",
+      "registered": 133860,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Hay_Hassani"
+    },
+    {
+      "constituency_id": "ain-chock",
+      "name": "Aïn Chock",
+      "region": "Casablanca-Settat",
+      "registered": 117223,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Aïn_Chock"
+    },
+    {
+      "constituency_id": "mohammedia",
+      "name": "Mohammédia",
+      "region": "Casablanca-Settat",
+      "registered": 163863,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Mohammédia"
+    },
+    {
+      "constituency_id": "nouaceur",
+      "name": "Nouaceur",
+      "region": "Casablanca-Settat",
+      "registered": 111123,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Nouaceur"
+    },
+    {
+      "constituency_id": "mediouna",
+      "name": "Médiouna",
+      "region": "Casablanca-Settat",
+      "registered": 70121,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Médiouna"
+    },
+    {
+      "constituency_id": "benslimane",
+      "name": "Benslimane",
+      "region": "Casablanca-Settat",
+      "registered": 113862,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Benslimane"
+    },
+    {
+      "constituency_id": "el-jadida",
+      "name": "El Jadida",
+      "region": "Casablanca-Settat",
+      "registered": 350509,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'El_Jadida"
+    },
+    {
+      "constituency_id": "berrechid",
+      "name": "Berrechid",
+      "region": "Casablanca-Settat",
+      "registered": 212579,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Berrechid"
+    },
+    {
+      "constituency_id": "settat",
+      "name": "Settat",
+      "region": "Casablanca-Settat",
+      "registered": 294594,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Settat"
+    },
+    {
+      "constituency_id": "sidi-bennour",
+      "name": "Sidi Bennour",
+      "region": "Casablanca-Settat",
+      "registered": 206689,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Sidi_Bennour"
+    },
+    {
+      "constituency_id": "agadir-ida-outanane",
+      "name": "Agadir Ida-Outanane",
+      "region": "Souss-Massa",
+      "registered": 271969,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Agadir_Ida-Outanane"
+    },
+    {
+      "constituency_id": "inezgane-ait-melloul",
+      "name": "Inezgane-Aït Melloul",
+      "region": "Souss-Massa",
+      "registered": 202539,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Inezgane-Aït_Melloul"
+    },
+    {
+      "constituency_id": "chtouka-ait-baha",
+      "name": "Chtouka-Aït Baha",
+      "region": "Souss-Massa",
+      "registered": 176727,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Chtouka-Aït_Baha"
+    },
+    {
+      "constituency_id": "taroudant-sud",
+      "name": "Taroudant-Sud",
+      "region": "Souss-Massa",
+      "registered": 259801,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Taroudant-Sud"
+    },
+    {
+      "constituency_id": "taroudant-nord",
+      "name": "Taroudant-Nord",
+      "region": "Souss-Massa",
+      "registered": 188114,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Taroudant-Nord"
+    },
+    {
+      "constituency_id": "tiznit",
+      "name": "Tiznit",
+      "region": "Souss-Massa",
+      "registered": 115980,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tiznit"
+    },
+    {
+      "constituency_id": "tata",
+      "name": "Tata",
+      "region": "Souss-Massa",
+      "registered": 74292,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tata"
+    },
+    {
+      "constituency_id": "guelmim",
+      "name": "Guelmim",
+      "region": "Guelmim-Oued Noun",
+      "registered": 111753,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Guelmim"
+    },
+    {
+      "constituency_id": "tan-tan",
+      "name": "Tan-Tan",
+      "region": "Guelmim-Oued Noun",
+      "registered": 47719,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tan-Tan"
+    },
+    {
+      "constituency_id": "sidi-ifni",
+      "name": "Sidi Ifni",
+      "region": "Guelmim-Oued Noun",
+      "registered": 80831,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Sidi_Ifni"
+    },
+    {
+      "constituency_id": "assa-zag",
+      "name": "Assa-Zag",
+      "region": "Guelmim-Oued Noun",
+      "registered": 20390,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Assa-Zag"
+    },
+    {
+      "constituency_id": "medina-sidi-youssef",
+      "name": "Medina-Sidi Youssef",
+      "region": "Marrakech-Safi",
+      "registered": 124217,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Medina-Sidi_Youssef"
+    },
+    {
+      "constituency_id": "gueliz-nakhil",
+      "name": "Guéliz-Nakhil",
+      "region": "Marrakech-Safi",
+      "registered": 166532,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Guéliz-Nakhil"
+    },
+    {
+      "constituency_id": "menara",
+      "name": "Menara",
+      "region": "Marrakech-Safi",
+      "registered": 187542,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Menara"
+    },
+    {
+      "constituency_id": "chichaoua",
+      "name": "Chichaoua",
+      "region": "Marrakech-Safi",
+      "registered": 189799,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Chichaoua"
+    },
+    {
+      "constituency_id": "safi",
+      "name": "Safi",
+      "region": "Marrakech-Safi",
+      "registered": 324683,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Safi"
+    },
+    {
+      "constituency_id": "al-haouz",
+      "name": "Al Haouz",
+      "region": "Marrakech-Safi",
+      "registered": 274433,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Al_Haouz"
+    },
+    {
+      "constituency_id": "el-kelaa-des-sraghna",
+      "name": "El Kelâa des Sraghna",
+      "region": "Marrakech-Safi",
+      "registered": 240747,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'El_Kelâa_des_Sraghna"
+    },
+    {
+      "constituency_id": "essaouira",
+      "name": "Essaouira",
+      "region": "Marrakech-Safi",
+      "registered": 214360,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Essaouira"
+    },
+    {
+      "constituency_id": "rehamna",
+      "name": "Rehamna",
+      "region": "Marrakech-Safi",
+      "registered": 138271,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Rehamna"
+    },
+    {
+      "constituency_id": "youssoufia",
+      "name": "Youssoufia",
+      "region": "Marrakech-Safi",
+      "registered": 116000,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Youssoufia"
+    },
+    {
+      "constituency_id": "tanger-assilah",
+      "name": "Tanger-Assilah",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "registered": 351952,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tanger-Assilah"
+    },
+    {
+      "constituency_id": "m-diq-fnideq",
+      "name": "M'diq-Fnideq",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "registered": 81692,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_M'diq-Fnideq"
+    },
+    {
+      "constituency_id": "fahs-anjra",
+      "name": "Fahs-Anjra",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "registered": 41503,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Fahs-Anjra"
+    },
+    {
+      "constituency_id": "tetouan",
+      "name": "Tétouan",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "registered": 239397,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tétouan"
+    },
+    {
+      "constituency_id": "ouezzane",
+      "name": "Ouezzane",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "registered": 145094,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Ouezzane"
+    },
+    {
+      "constituency_id": "larache",
+      "name": "Larache",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "registered": 207299,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Larache"
+    },
+    {
+      "constituency_id": "chefchaouen",
+      "name": "Chefchaouen",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "registered": 189482,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Chefchaouen"
+    },
+    {
+      "constituency_id": "al-hoceima",
+      "name": "Al Hoceïma",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "registered": 198173,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Al_Hoceïma"
+    },
+    {
+      "constituency_id": "oujda-angad",
+      "name": "Oujda-Angad",
+      "region": "Oriental",
+      "registered": 246604,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Oujda-Angad"
+    },
+    {
+      "constituency_id": "nador",
+      "name": "Nador",
+      "region": "Oriental",
+      "registered": 255861,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Nador"
+    },
+    {
+      "constituency_id": "driouch",
+      "name": "Driouch",
+      "region": "Oriental",
+      "registered": 129823,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Driouch"
+    },
+    {
+      "constituency_id": "jerada",
+      "name": "Jerada",
+      "region": "Oriental",
+      "registered": 65051,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Jerada"
+    },
+    {
+      "constituency_id": "berkane",
+      "name": "Berkane",
+      "region": "Oriental",
+      "registered": 136902,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Berkane"
+    },
+    {
+      "constituency_id": "taourirt",
+      "name": "Taourirt",
+      "region": "Oriental",
+      "registered": 117080,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Taourirt"
+    },
+    {
+      "constituency_id": "guercif",
+      "name": "Guercif",
+      "region": "Oriental",
+      "registered": 99155,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Guercif"
+    },
+    {
+      "constituency_id": "figuig",
+      "name": "Figuig",
+      "region": "Oriental",
+      "registered": 75997,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Figuig"
+    },
+    {
+      "constituency_id": "fes-sud",
+      "name": "Fès-Sud",
+      "region": "Fès-Meknès",
+      "registered": 194602,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Fès-Sud"
+    },
+    {
+      "constituency_id": "fes-nord",
+      "name": "Fès-Nord",
+      "region": "Fès-Meknès",
+      "registered": 174005,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Fès-Nord"
+    },
+    {
+      "constituency_id": "ifrane",
+      "name": "Ifrane",
+      "region": "Fès-Meknès",
+      "registered": 81172,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Ifrane"
+    },
+    {
+      "constituency_id": "moulay-yaacoub",
+      "name": "Moulay Yaâcoub",
+      "region": "Fès-Meknès",
+      "registered": 75726,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Moulay_Yaâcoub"
+    },
+    {
+      "constituency_id": "sefrou",
+      "name": "Séfrou",
+      "region": "Fès-Meknès",
+      "registered": 139452,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Séfrou"
+    },
+    {
+      "constituency_id": "boulemane",
+      "name": "Boulemane",
+      "region": "Fès-Meknès",
+      "registered": 95165,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Boulemane"
+    },
+    {
+      "constituency_id": "el-hajeb",
+      "name": "El Hajeb",
+      "region": "Fès-Meknès",
+      "registered": 112595,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'El_Hajeb"
+    },
+    {
+      "constituency_id": "taza",
+      "name": "Taza",
+      "region": "Fès-Meknès",
+      "registered": 245459,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Taza"
+    },
+    {
+      "constituency_id": "taounate-tissa",
+      "name": "Taounate-Tissa",
+      "region": "Fès-Meknès",
+      "registered": 141491,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Taounate-Tissa"
+    },
+    {
+      "constituency_id": "karia-ghafsay",
+      "name": "Karia-Ghafsay",
+      "region": "Fès-Meknès",
+      "registered": 135346,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Karia-Ghafsay"
+    },
+    {
+      "constituency_id": "meknes",
+      "name": "Meknès",
+      "region": "Fès-Meknès",
+      "registered": 348208,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Meknès"
+    },
+    {
+      "constituency_id": "beni-mellal",
+      "name": "Béni-Mellal",
+      "region": "Béni Mellal-Khénifra",
+      "registered": 318608,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Béni-Mellal"
+    },
+    {
+      "constituency_id": "bzou-ouaouizeght",
+      "name": "Bzou-Ouaouizeght",
+      "region": "Béni Mellal-Khénifra",
+      "registered": 129019,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Bzou-Ouaouizeght"
+    },
+    {
+      "constituency_id": "azilal-demnate",
+      "name": "Azilal-Demnate",
+      "region": "Béni Mellal-Khénifra",
+      "registered": 111407,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Azilal-Demnate"
+    },
+    {
+      "constituency_id": "fquih-ben-salah",
+      "name": "Fquih Ben Salah",
+      "region": "Béni Mellal-Khénifra",
+      "registered": 249994,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Fquih_Ben_Salah"
+    },
+    {
+      "constituency_id": "khouribga",
+      "name": "Khouribga",
+      "region": "Béni Mellal-Khénifra",
+      "registered": 260933,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Khouribga"
+    },
+    {
+      "constituency_id": "khenifra",
+      "name": "Khénifra",
+      "region": "Béni Mellal-Khénifra",
+      "registered": 189913,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Khénifra"
+    }
+  ]
+}

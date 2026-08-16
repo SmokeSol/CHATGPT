@@ -1,0 +1,31 @@
+{
+  "evaluation_id": "M26-GOAL75-D-NOLEAK-001",
+  "status": "PREREGISTERED_BEFORE_HOLDOUT_UNSEAL",
+  "parent_freeze_hash": "4281f4bc7cf7e7101b390a9cedce8c4196bb90873acc9dfe19c48580afbd70a2",
+  "purpose": "Test whether bounded LLM cognition adds stable out-of-sample value over frozen B and C without allowing memorized 2021 Moroccan results to identify parties or constituencies.",
+  "models": [
+    "Qwen/Qwen2.5-0.5B-Instruct",
+    "HuggingFaceTB/SmolLM2-360M-Instruct"
+  ],
+  "model_revisions": "Resolve and record immutable Hugging Face commit SHA at execution time before holdout unseal.",
+  "prompt_equivalent_variants": 3,
+  "generation": {"do_sample": false, "temperature": 0.0, "max_new_tokens": 1800},
+  "leakage_controls": [
+    "No 2021 holdout outcome may exist in the Stage-2a process input.",
+    "Constituency names are replaced by opaque district ids.",
+    "Party labels are independently permuted to opaque labels within each holdout constituency.",
+    "Region names are replaced by opaque group ids.",
+    "Only 2016 inputs, frozen B/C predictions, and a deterministic development-example set are supplied."
+  ],
+  "frozen_score": "party_share_RMSE_pp + 0.25 * turnout_MAE_pp + 5 * (1 - mean_winner_set_Jaccard)",
+  "gates": {
+    "contract_validity_rate_min": 0.98,
+    "delegate_coverage_min": 0.95,
+    "mean_prompt_party_sd_max": 0.05,
+    "mean_prompt_turnout_sd_max": 0.06,
+    "cross_model_flattened_correlation_min": 0.65,
+    "out_of_sample_improvement": "aggregated D frozen score must be strictly lower than both B and C"
+  },
+  "decision": "RETAIN_D only if every blocking gate passes; otherwise KILL_D_FOR_CURRENT_ARCHITECTURE",
+  "safety": {"persuasion": false, "microtargeting": false, "party_strategy": false, "personal_voter_data": false}
+}

@@ -1,0 +1,14 @@
+{
+  "development_target": 80,
+  "development_acquired": 80,
+  "holdout_inputs_2016_only": 12,
+  "holdout_2021_outcomes_accessed": false,
+  "errors": [],
+  "legal_replay_evaluable": 80,
+  "legal_vs_rank_matches": 80,
+  "legal_vs_rank_match_rate": 1.0,
+  "seat_margin_records": 80,
+  "bc_predictions_frozen": 12,
+  "bc_freeze_hash": "4281f4bc7cf7e7101b390a9cedce8c4196bb90873acc9dfe19c48580afbd70a2",
+  "ready_to_unseal": true
+}

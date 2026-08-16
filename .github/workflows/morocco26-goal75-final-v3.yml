@@ -1,0 +1,81 @@
+name: morocco26-goal75-final-v3
+
+on:
+  push:
+    branches: [morocco26-goal75-hard]
+    paths:
+      - 'morocco26/scripts/goal75_reconcile_finalize_v3.py'
+      - '.github/workflows/morocco26-goal75-final-v3.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-goal75-hard
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Execute deterministic tiered reconciliation
+        run: python morocco26/scripts/goal75_reconcile_finalize_v3.py
+      - name: Compile and validate anti-drift
+        run: |
+          python -m compileall -q morocco26/scripts morocco26/src
+          python morocco26/scripts/validate_anti_drift.py
+      - name: Verify exact Goal75 state and create success marker
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('morocco26')
+          score=json.loads((root/'data/goal75/scientific_completion_75.json').read_text())
+          p2=json.loads((root/'data/goal75/p2_tiered_395_audit.json').read_text())
+          phase=json.loads((root/'data/current_phase.json').read_text())
+          goal=json.loads((root/'data/execution_goal_75.json').read_text())
+          assert score['target_reached'] is True and score['scientifically_gated_completion_percent'] >= 75
+          assert p2['local']['constituencies']==92 and p2['local']['seats']==305
+          assert p2['local']['denominator_free_exact_interval_proofs']==81
+          assert p2['local']['denominator_sensitive_secondary_reproductions']==11
+          assert p2['regional']['constituencies']==12 and p2['regional']['seats']==90
+          assert p2['regional']['identity_list_to_affiliation_reconciliations']==10
+          assert p2['regional']['aggregate_mixed_list_affiliation_bridges']==2
+          assert p2['total']['seats']==395 and p2['total']['exact_official_match'] is True
+          assert phase['forecast_status']=='BLOCKED'
+          assert phase['agent_society_status']=='KILLED_FOR_CURRENT_ARCHITECTURE'
+          assert goal['target_75_reached'] is True
+          marker={
+            'goal_id':goal['goal_id'],
+            'scientifically_gated_completion_percent':score['scientifically_gated_completion_percent'],
+            'target_reached':True,
+            'p2_local':'92 constituencies / 305 seats',
+            'p2_regional':'12 regions / 90 seats',
+            'p2_total':'395 observed seats reconciled',
+            'model_d':'KILLED_BY_PREREGISTERED_PRE_HOLDOUT_GATE',
+            'forecast':'BLOCKED',
+            'honesty_boundary':'Primary House denominators and prospective 2026 validation remain uncredited.'
+          }
+          (root/'data/goal75/GOAL75_SUCCESS_MARKER.json').write_text(json.dumps(marker,indent=2)+'\n')
+          print(json.dumps(marker,indent=2))
+          PY
+          git diff --check
+      - name: Run tests when present
+        run: |
+          if [ -d morocco26/tests ]; then
+            python -m pip install --quiet pytest
+            python -m pytest -q morocco26/tests
+          fi
+      - name: Commit scientific checkpoint
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data morocco26/reports/GOAL75_75_PERCENT.md
+          git commit -m 'feat(morocco26): certify 75% scientifically gated checkpoint' || true
+          git pull --rebase origin morocco26-goal75-hard
+          git push origin HEAD:morocco26-goal75-hard

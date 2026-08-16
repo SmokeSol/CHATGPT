@@ -1,0 +1,33 @@
+name: morocco26-goal75-model-d-preunseal-b
+on:
+  push:
+    branches: [morocco26-goal75-hard]
+    paths: ['.github/workflows/morocco26-goal75-model-d-preunseal-b.yml']
+permissions:
+  contents: write
+jobs:
+  model-d-preunseal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      TOKENIZERS_PARALLELISM: 'false'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-goal75-hard
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          pip install --quiet torch --index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet transformers==4.55.0 huggingface_hub==0.34.4 accelerate==1.10.0 numpy
+      - name: Run anonymized Model D before holdout unseal
+        run: python morocco26/scripts/goal75_model_d_preunseal_b.py
+      - name: Commit immutable Model D predictions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/data/goal75/model_d_preunseal*.json
+          git commit -m "data(morocco26): freeze no-leak Model D outputs before unseal"
+          git push origin HEAD:morocco26-goal75-hard

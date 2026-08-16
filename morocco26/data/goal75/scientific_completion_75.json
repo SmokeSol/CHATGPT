@@ -1,0 +1,49 @@
+{
+  "certificate_id": "M26-GOAL75-V4B",
+  "as_of": "2026-08-16",
+  "north_star": "Build an empirically anchored artificial electoral society that improves real-time understanding of Morocco 2026, then test whether agent dynamics add out-of-sample value beyond structural baselines.",
+  "scientifically_gated_completion_percent": 75,
+  "target_percent": 75,
+  "target_reached": true,
+  "checks": {
+    "P1_FOUNDATION": true,
+    "P2_EMPIRICAL_GRAPH": true,
+    "P3_CAUSAL_SYNTHETIC_SOCIETY": true,
+    "P4_BOUNDED_LLM_SOCIETY_RESOLVED_BY_FALSIFICATION": true,
+    "P5_FULL_2026_LIVE_SYSTEM_PARTIAL_GATE": true
+  },
+  "points": {
+    "P1_FOUNDATION": 15,
+    "P2_EMPIRICAL_GRAPH": 20,
+    "P3_CAUSAL_SYNTHETIC_SOCIETY": 15,
+    "P4_BOUNDED_LLM_SOCIETY_RESOLVED_BY_FALSIFICATION": 15,
+    "P5_FULL_2026_LIVE_SYSTEM_PARTIAL_GATE": 10
+  },
+  "holdout_result": {
+    "B": {
+      "party_share_RMSE_pp": 12.645244798185258,
+      "turnout_MAE_pp": 4.558990783212594,
+      "winner_set_Jaccard": 0.5777777777777778,
+      "frozen_score": 15.896103605099517
+    },
+    "C": {
+      "party_share_RMSE_pp": 13.661592859675013,
+      "turnout_MAE_pp": 4.961212147551983,
+      "winner_set_Jaccard": 0.5361111111111111,
+      "frozen_score": 17.221340341007455
+    },
+    "C_beats_B": false
+  },
+  "model_D_status": "KILL_D_FOR_CURRENT_ARCHITECTURE",
+  "p2_boundary": {
+    "empirical_graph_complete_for_held_out_testing": true,
+    "strict_legal_replay_complete": false,
+    "unresolved_regional_legal_replay": [
+      "Casablanca-Settat",
+      "Marrakech-Safi"
+    ],
+    "primary_house_denominator_complete": false
+  },
+  "forecast_status": "BLOCKED",
+  "anti_cheat_statement": "75 is credited only from constitution phase gates; unresolved strict legal replay and forecast prerequisites remain explicitly uncredited."
+}

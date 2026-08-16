@@ -1,0 +1,182 @@
+{
+  "regions": 12,
+  "configured_seats": 90,
+  "anomaly_count": 6,
+  "rows": [
+    {
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 10,
+      "registered": 1977828,
+      "expressed": 950742,
+      "recognized_vote_sum": 1218402,
+      "recognized_over_registered": 0.6160303120392673,
+      "recognized_over_expressed": 1.2815274806414358,
+      "direct_seat_sum": 2,
+      "direct": {
+        "RNI": 2
+      },
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Rabat-Sal%C3%A9-K%C3%A9nitra",
+      "anomaly": true
+    },
+    {
+      "region": "Laâyoune-Sakia El Hamra",
+      "seats": 5,
+      "registered": 197577,
+      "expressed": 135755,
+      "recognized_vote_sum": 199616,
+      "recognized_over_registered": 1.0103200271286639,
+      "recognized_over_expressed": 1.4704136127582779,
+      "direct_seat_sum": 3,
+      "direct": {
+        "PI": 3
+      },
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_La%C3%A2youne-Sakia_El_Hamra",
+      "anomaly": true
+    },
+    {
+      "region": "Dakhla-Oued Eddahab",
+      "seats": 3,
+      "registered": 58561,
+      "expressed": 34844,
+      "recognized_vote_sum": 34844,
+      "recognized_over_registered": 0.5950035006232817,
+      "recognized_over_expressed": 1.0,
+      "direct_seat_sum": 0,
+      "direct": {},
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Dakhla-Oued_Ed-Dahab",
+      "anomaly": false
+    },
+    {
+      "region": "Drâa-Tafilalet",
+      "seats": 6,
+      "registered": 775387,
+      "expressed": 479887,
+      "recognized_vote_sum": 479887,
+      "recognized_over_registered": 0.6188999815575964,
+      "recognized_over_expressed": 1.0,
+      "direct_seat_sum": 1,
+      "direct": {
+        "RNI": 1
+      },
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Dr%C3%A2a-Tafilalet",
+      "anomaly": false
+    },
+    {
+      "region": "Casablanca-Settat",
+      "seats": 12,
+      "registered": 2765116,
+      "expressed": 1167432,
+      "recognized_vote_sum": 1484932,
+      "recognized_over_registered": 0.5370234015498807,
+      "recognized_over_expressed": 1.2719644484646644,
+      "direct_seat_sum": 2,
+      "direct": {
+        "RNI": 2
+      },
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Casablanca-Settat",
+      "anomaly": true
+    },
+    {
+      "region": "Souss-Massa",
+      "seats": 7,
+      "registered": 1297783,
+      "expressed": 666801,
+      "recognized_vote_sum": 936230,
+      "recognized_over_registered": 0.7214071998169186,
+      "recognized_over_expressed": 1.4040620814905795,
+      "direct_seat_sum": 2,
+      "direct": {
+        "RNI": 2
+      },
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Souss-Massa",
+      "anomaly": true
+    },
+    {
+      "region": "Guelmim-Oued Noun",
+      "seats": 5,
+      "registered": 261127,
+      "expressed": 166834,
+      "recognized_vote_sum": 166834,
+      "recognized_over_registered": 0.6388998456689656,
+      "recognized_over_expressed": 1.0,
+      "direct_seat_sum": 0,
+      "direct": {},
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Guelmim-Oued_Noun",
+      "anomaly": false
+    },
+    {
+      "region": "Marrakech-Safi",
+      "seats": 10,
+      "registered": 1988730,
+      "expressed": 1147895,
+      "recognized_vote_sum": 1420790,
+      "recognized_over_registered": 0.7144207609881683,
+      "recognized_over_expressed": 1.23773515870354,
+      "direct_seat_sum": 3,
+      "direct": {
+        "PAM": 2,
+        "RNI": 1
+      },
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Marrakech-Safi",
+      "anomaly": true
+    },
+    {
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 8,
+      "registered": 1463184,
+      "expressed": 696622,
+      "recognized_vote_sum": 696622,
+      "recognized_over_registered": 0.47610006670384586,
+      "recognized_over_expressed": 1.0,
+      "direct_seat_sum": 1,
+      "direct": {
+        "RNI": 1
+      },
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tanger-T%C3%A9touan-Al_Hoce%C3%AFma",
+      "anomaly": false
+    },
+    {
+      "region": "Oriental",
+      "seats": 7,
+      "registered": 1135774,
+      "expressed": 531315,
+      "recognized_vote_sum": 531315,
+      "recognized_over_registered": 0.46779993202873105,
+      "recognized_over_expressed": 1.0,
+      "direct_seat_sum": 0,
+      "direct": {},
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d%27Oriental",
+      "anomaly": false
+    },
+    {
+      "region": "Fès-Meknès",
+      "seats": 10,
+      "registered": 1769969,
+      "expressed": 922508,
+      "recognized_vote_sum": 1178557,
+      "recognized_over_registered": 0.6658630744380268,
+      "recognized_over_expressed": 1.2775574845963396,
+      "direct_seat_sum": 2,
+      "direct": {
+        "RNI": 2
+      },
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_F%C3%A8s-Mekn%C3%A8s",
+      "anomaly": true
+    },
+    {
+      "region": "Béni Mellal-Khénifra",
+      "seats": 7,
+      "registered": 1207283,
+      "expressed": 685133,
+      "recognized_vote_sum": 685133,
+      "recognized_over_registered": 0.567499915098614,
+      "recognized_over_expressed": 1.0,
+      "direct_seat_sum": 1,
+      "direct": {
+        "RNI": 1
+      },
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_B%C3%A9ni_Mellal-Kh%C3%A9nifra",
+      "anomaly": false
+    }
+  ]
+}

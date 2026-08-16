@@ -1,0 +1,29 @@
+name: morocco26-goal75-stage1
+on:
+  push:
+    branches: [morocco26-goal75-hard]
+    paths: ['morocco26/data/goal75_stage1.trigger']
+permissions:
+  contents: write
+jobs:
+  acquire-freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-goal75-hard
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install acquisition dependencies
+        run: pip install --quiet pandas requests lxml html5lib beautifulsoup4
+      - name: Acquire development truth without opening holdout 2021 and freeze B/C
+        run: python morocco26/scripts/goal75_stage1b.py
+      - name: Commit frozen Stage 1 evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/data/goal75
+          git commit -m "data(morocco26): freeze Goal75 stage1 evidence" || exit 0
+          git push origin HEAD:morocco26-goal75-hard

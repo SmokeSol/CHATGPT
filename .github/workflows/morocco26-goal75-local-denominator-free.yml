@@ -1,0 +1,26 @@
+name: morocco26-goal75-local-denominator-free
+on:
+  push:
+    branches: [morocco26-goal75-hard]
+    paths: ['.github/workflows/morocco26-goal75-local-denominator-free.yml']
+permissions:
+  contents: write
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-goal75-hard}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install --quiet pandas openpyxl requests
+      - run: python morocco26/scripts/goal75_denominator_free_local_proof.py
+      - if: always()
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -f morocco26/data/goal75/local_denominator_free_proof.json ]; then
+            git add morocco26/data/goal75/local_denominator_free_proof.json
+            git commit -m "data(morocco26): record denominator-free local allocation proof" || true
+            git pull --rebase origin morocco26-goal75-hard || true
+            git push origin HEAD:morocco26-goal75-hard || true
+          fi

@@ -1,0 +1,345 @@
+{
+  "audit_id": "M26-REGIONAL-GRAPH-V4",
+  "regions": 12,
+  "observed_seats": 90,
+  "vote_tables_complete": 12,
+  "proxy_N_exact_reproductions": 10,
+  "strict_legal_replay_unresolved_regions": [
+    "Casablanca - Settat",
+    "Marrakech - Safi"
+  ],
+  "strict_legal_replay_complete": false,
+  "empirical_graph_complete_for_held_out_testing": true,
+  "independent_member_ground_truth_exact": true,
+  "observed_regional_party_affiliation_aggregate": {
+    "CNI": 1,
+    "FFD": 2,
+    "MDS": 2,
+    "MP": 8,
+    "PAM": 12,
+    "PI": 13,
+    "PJD": 9,
+    "PPS": 10,
+    "PSU": 1,
+    "RNI": 16,
+    "UC": 5,
+    "USFP": 11
+  },
+  "forecast_unlock_eligible": false,
+  "forecast_status": "BLOCKED",
+  "epistemic_boundary": "Casablanca-Settat and Marrakech-Safi retain unresolved primary House denominator/list-affiliation mechanics; no post-hoc bridge is used to call them legal replays.",
+  "rows": [
+    {
+      "region": "Beni-Mellal - Khénifra",
+      "seats": 7,
+      "vote_table_complete": true,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "observed_seat_sum": 7,
+      "evidence_tier": "A_PROXY_DENOMINATOR_REPRODUCES_OBSERVED_REGIONAL_OUTCOME",
+      "replay_status": "REPRODUCED_WITH_QUARANTINED_EXTERNAL_N",
+      "external_N_tested": 1214886,
+      "external_N_exact_match": true,
+      "observed_compatible_registered_intervals": [
+        [
+          1015743,
+          17509127
+        ]
+      ],
+      "forecast_unlock_eligible": false
+    },
+    {
+      "region": "Casablanca - Settat",
+      "seats": 12,
+      "vote_table_complete": true,
+      "observed_elected": {
+        "CNI": 1,
+        "FFD": 1,
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "PSU": 1,
+        "RNI": 2,
+        "UC": 1,
+        "USFP": 1
+      },
+      "observed_seat_sum": 12,
+      "evidence_tier": "C_COMPLETE_VOTE_AND_OBSERVED_OUTCOME_LEGAL_DENOMINATOR_UNRESOLVED",
+      "replay_status": "STRICT_LEGAL_REPLAY_UNRESOLVED",
+      "external_N_tested": 3860397,
+      "external_N_exact_match": false,
+      "observed_compatible_registered_intervals": [
+        [
+          2418493,
+          3669192
+        ]
+      ],
+      "forecast_unlock_eligible": false
+    },
+    {
+      "region": "Dakhla - Oued Ed-Dahab",
+      "seats": 3,
+      "vote_table_complete": true,
+      "observed_elected": {
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1
+      },
+      "observed_seat_sum": 3,
+      "evidence_tier": "A_PROXY_DENOMINATOR_REPRODUCES_OBSERVED_REGIONAL_OUTCOME",
+      "replay_status": "REPRODUCED_WITH_QUARANTINED_EXTERNAL_N",
+      "external_N_tested": 64971,
+      "external_N_exact_match": true,
+      "observed_compatible_registered_intervals": [
+        [
+          36292,
+          17509127
+        ]
+      ],
+      "forecast_unlock_eligible": false
+    },
+    {
+      "region": "Drâa - Tafilalet",
+      "seats": 6,
+      "vote_table_complete": true,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "observed_seat_sum": 6,
+      "evidence_tier": "A_PROXY_DENOMINATOR_REPRODUCES_OBSERVED_REGIONAL_OUTCOME",
+      "replay_status": "REPRODUCED_WITH_QUARANTINED_EXTERNAL_N",
+      "external_N_tested": 771218,
+      "external_N_exact_match": true,
+      "observed_compatible_registered_intervals": [
+        [
+          649339,
+          17509127
+        ]
+      ],
+      "forecast_unlock_eligible": false
+    },
+    {
+      "region": "Fès - Meknès",
+      "seats": 10,
+      "vote_table_complete": true,
+      "observed_elected": {
+        "FFD": 1,
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 2,
+        "UC": 1,
+        "USFP": 1
+      },
+      "observed_seat_sum": 10,
+      "evidence_tier": "A_PROXY_DENOMINATOR_REPRODUCES_OBSERVED_REGIONAL_OUTCOME",
+      "replay_status": "REPRODUCED_WITH_QUARANTINED_EXTERNAL_N",
+      "external_N_tested": 1784436,
+      "external_N_exact_match": true,
+      "observed_compatible_registered_intervals": [
+        [
+          1307641,
+          2334570
+        ]
+      ],
+      "forecast_unlock_eligible": false
+    },
+    {
+      "region": "Guelmim - Oued-Noun",
+      "seats": 5,
+      "vote_table_complete": true,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "observed_seat_sum": 5,
+      "evidence_tier": "A_PROXY_DENOMINATOR_REPRODUCES_OBSERVED_REGIONAL_OUTCOME",
+      "replay_status": "REPRODUCED_WITH_QUARANTINED_EXTERNAL_N",
+      "external_N_tested": 262631,
+      "external_N_exact_match": true,
+      "observed_compatible_registered_intervals": [
+        [
+          216201,
+          17509127
+        ]
+      ],
+      "forecast_unlock_eligible": false
+    },
+    {
+      "region": "Laâyoune - Sakia-El-Hamra",
+      "seats": 5,
+      "vote_table_complete": true,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 2,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "observed_seat_sum": 5,
+      "evidence_tier": "A_PROXY_DENOMINATOR_REPRODUCES_OBSERVED_REGIONAL_OUTCOME",
+      "replay_status": "REPRODUCED_WITH_QUARANTINED_EXTERNAL_N",
+      "external_N_tested": 197289,
+      "external_N_exact_match": true,
+      "observed_compatible_registered_intervals": [
+        [
+          140958,
+          303450
+        ]
+      ],
+      "forecast_unlock_eligible": false
+    },
+    {
+      "region": "Marrakech - Safi",
+      "seats": 10,
+      "vote_table_complete": true,
+      "observed_elected": {
+        "MDS": 1,
+        "MP": 1,
+        "PAM": 2,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "observed_seat_sum": 10,
+      "evidence_tier": "C_COMPLETE_VOTE_AND_OBSERVED_OUTCOME_LEGAL_DENOMINATOR_UNRESOLVED",
+      "replay_status": "STRICT_LEGAL_REPLAY_UNRESOLVED",
+      "external_N_tested": 1957367,
+      "external_N_exact_match": false,
+      "observed_compatible_registered_intervals": [
+        [
+          2188821,
+          2627890
+        ]
+      ],
+      "forecast_unlock_eligible": false
+    },
+    {
+      "region": "Oriental",
+      "seats": 7,
+      "vote_table_complete": true,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "observed_seat_sum": 7,
+      "evidence_tier": "A_PROXY_DENOMINATOR_REPRODUCES_OBSERVED_REGIONAL_OUTCOME",
+      "replay_status": "REPRODUCED_WITH_QUARANTINED_EXTERNAL_N",
+      "external_N_tested": 1083663,
+      "external_N_exact_match": true,
+      "observed_compatible_registered_intervals": [
+        [
+          935684,
+          17509127
+        ]
+      ],
+      "forecast_unlock_eligible": false
+    },
+    {
+      "region": "Rabat - Salé - Kénitra",
+      "seats": 10,
+      "vote_table_complete": true,
+      "observed_elected": {
+        "MDS": 1,
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 2,
+        "UC": 1,
+        "USFP": 1
+      },
+      "observed_seat_sum": 10,
+      "evidence_tier": "A_PROXY_DENOMINATOR_REPRODUCES_OBSERVED_REGIONAL_OUTCOME",
+      "replay_status": "REPRODUCED_WITH_QUARANTINED_EXTERNAL_N",
+      "external_N_tested": 1843468,
+      "external_N_exact_match": true,
+      "observed_compatible_registered_intervals": [
+        [
+          1118036,
+          2506990
+        ]
+      ],
+      "forecast_unlock_eligible": false
+    },
+    {
+      "region": "Souss - Massa",
+      "seats": 7,
+      "vote_table_complete": true,
+      "observed_elected": {
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 2,
+        "USFP": 1
+      },
+      "observed_seat_sum": 7,
+      "evidence_tier": "A_PROXY_DENOMINATOR_REPRODUCES_OBSERVED_REGIONAL_OUTCOME",
+      "replay_status": "REPRODUCED_WITH_QUARANTINED_EXTERNAL_N",
+      "external_N_tested": 1298114,
+      "external_N_exact_match": true,
+      "observed_compatible_registered_intervals": [
+        [
+          877192,
+          1830164
+        ]
+      ],
+      "forecast_unlock_eligible": false
+    },
+    {
+      "region": "Tanger - Tétouan - Al Hoceima",
+      "seats": 8,
+      "vote_table_complete": true,
+      "observed_elected": {
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PJD": 1,
+        "PPS": 1,
+        "RNI": 1,
+        "UC": 1,
+        "USFP": 1
+      },
+      "observed_seat_sum": 8,
+      "evidence_tier": "A_PROXY_DENOMINATOR_REPRODUCES_OBSERVED_REGIONAL_OUTCOME",
+      "replay_status": "REPRODUCED_WITH_QUARANTINED_EXTERNAL_N",
+      "external_N_tested": 1328425,
+      "external_N_exact_match": true,
+      "observed_compatible_registered_intervals": [
+        [
+          1294777,
+          17509127
+        ]
+      ],
+      "forecast_unlock_eligible": false
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+name: morocco26-goal75-unseal-b
+on:
+  push:
+    branches: [morocco26-goal75-hard]
+    paths: ['.github/workflows/morocco26-goal75-unseal-b.yml']
+permissions:
+  contents: write
+jobs:
+  unseal-score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-goal75-hard
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet pandas requests lxml html5lib beautifulsoup4
+      - name: Reacquire already-unsealed holdout without tuning and audit 305+90 seats
+        run: python morocco26/scripts/goal75_unseal_score_d.py
+      - name: Commit holdout score and 395-seat evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/data/goal75/unsealed_holdout_2021.json morocco26/data/goal75/regional_2021_replay.json morocco26/data/goal75/seat_margin_92.json morocco26/data/goal75/goal75_scoring.json
+          git commit -m "data(morocco26): score frozen holdout and audit 395 seats"
+          git pull --rebase origin morocco26-goal75-hard
+          git push origin HEAD:morocco26-goal75-hard

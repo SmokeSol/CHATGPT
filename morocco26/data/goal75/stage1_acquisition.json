@@ -1,0 +1,5820 @@
+{
+  "stage": "PRE_UNSEAL",
+  "holdout_2021_outcomes_accessed": false,
+  "development": [
+    {
+      "constituency_id": "rabat-ocean",
+      "name": "Rabat-Océan",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Rabat-Océan",
+      "2016": null,
+      "2021": {
+        "votes": {
+          "RNI": 15888,
+          "PAM": 7076,
+          "PI": 4545,
+          "MP": 4299,
+          "PJD": 4028,
+          "AGD": 2650,
+          "USFP": 2446,
+          "PPS": 2210,
+          "UC": 1170,
+          "PSU": 1160,
+          "UMD": 627,
+          "PML": 477,
+          "PUD": 317,
+          "PEDD": 252,
+          "PRE": 251,
+          "FFD": 155,
+          "PND": 94,
+          "PVM": 70,
+          "PDN": 38
+        },
+        "registered": 150072,
+        "expressed": 47753,
+        "abstentions": 102319,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 47753
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1,
+        "MP": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "PI",
+        "MP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "rabat-chellah",
+      "name": "Rabat-Chellah",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Rabat-Chellah",
+      "2016": {
+        "votes": {
+          "PJD": 45102,
+          "PAM": 14389,
+          "UC": 4330,
+          "FGD": 3085,
+          "PI": 1781,
+          "USFP": 1757,
+          "UMD": 1210,
+          "PPS": 664,
+          "RNI": 649,
+          "MP": 308,
+          "FFD": 252,
+          "PEDD": 168,
+          "PCS": 124,
+          "PUD": 117,
+          "MDS": 104,
+          "PRV": 94,
+          "PRD": 76,
+          "PDN": 21
+        },
+        "registered": 119353,
+        "expressed": 51680,
+        "abstentions": 67673,
+        "vote_coverage": 1.436358359133127,
+        "explicit_expressed": 51680
+      },
+      "2021": {
+        "votes": {
+          "RNI": 10829,
+          "PAM": 7641,
+          "USFP": 5934,
+          "PI": 5494,
+          "MP": 2708,
+          "PJD": 2611,
+          "AGD": 1067,
+          "UC": 793,
+          "PSU": 578,
+          "PPS": 567,
+          "PML": 547,
+          "FFD": 426,
+          "PT": 366,
+          "PEDD": 301,
+          "PCS": 127,
+          "PRD": 113,
+          "PND": 63,
+          "PRV": 52,
+          "PVM": 38,
+          "PSD": 30
+        },
+        "registered": 110038,
+        "expressed": 40285,
+        "abstentions": 69753,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 40285
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "USFP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "sale-medina",
+      "name": "Salé-Médina",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Salé-Médina",
+      "2016": {
+        "votes": {
+          "PJD": 72808,
+          "PAM": 11592,
+          "RNI": 8674,
+          "MP": 8008,
+          "PI": 3461,
+          "FGD": 2459,
+          "USFP": 913,
+          "UC": 351,
+          "MDS": 134,
+          "PRV": 127,
+          "AHD": 125,
+          "PRD": 120,
+          "PUD": 88,
+          "PDN": 26
+        },
+        "registered": 198363,
+        "expressed": 72482,
+        "abstentions": 125881,
+        "vote_coverage": 1.502248834193317,
+        "explicit_expressed": 72482
+      },
+      "2021": {
+        "votes": {
+          "RNI": 10893,
+          "PAM": 9768,
+          "PPS": 7577,
+          "MP": 5862,
+          "PI": 5428,
+          "PJD": 4354,
+          "USFP": 2359,
+          "UC": 1459,
+          "AGD": 902,
+          "PSU": 811,
+          "PUD": 545,
+          "MDS": 497,
+          "PEDD": 244,
+          "PLJS": 139,
+          "PE": 74,
+          "PND": 58,
+          "PRE": 54
+        },
+        "registered": 193639,
+        "expressed": 51024,
+        "abstentions": 142615,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 51024
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "PPS": 1,
+        "MP": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "PPS",
+        "MP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "sale-el-jadida",
+      "name": "Salé-El Jadida",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Salé-El_Jadida",
+      "2016": {
+        "votes": {
+          "PJD": 50040,
+          "PAM": 11802,
+          "PPS": 6611,
+          "UC": 3227,
+          "PI": 2616,
+          "MP": 1702,
+          "FGD": 1224,
+          "PEDD": 404,
+          "USFP": 355,
+          "RNI": 319,
+          "AHD": 211,
+          "PRV": 167,
+          "FFD": 98,
+          "PE": 79,
+          "PSD": 70,
+          "MDS": 50,
+          "PDI": 45,
+          "PRD": 43,
+          "PDN": 7
+        },
+        "registered": 2765116,
+        "expressed": 1167432,
+        "abstentions": 1597684,
+        "vote_coverage": 0.067729854929452,
+        "explicit_expressed": 1167432
+      },
+      "2021": {
+        "votes": {
+          "RNI": 15832,
+          "PI": 14090,
+          "PAM": 10532,
+          "PPS": 4644,
+          "PJD": 3616,
+          "MP": 2333,
+          "UC": 1212,
+          "USFP": 1186,
+          "FFD": 1141,
+          "AGD": 561,
+          "PSU": 407,
+          "PUD": 391,
+          "PEDD": 334,
+          "PRV": 268,
+          "PRD": 139,
+          "PCS": 56,
+          "PVM": 47,
+          "PDN": 39
+        },
+        "registered": 158295,
+        "expressed": 56828,
+        "abstentions": 101467,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 56828
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "skhirate-temara",
+      "name": "Skhirate-Témara",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Skhirate-Témara",
+      "2016": {
+        "votes": {
+          "PJD": 77592,
+          "PAM": 20010,
+          "UC": 10740,
+          "RNI": 7247,
+          "PI": 4351,
+          "FGD": 3048,
+          "PPS": 3040,
+          "USFP": 2138,
+          "MDS": 511,
+          "MP": 411,
+          "PDI": 343,
+          "PE": 341,
+          "FFD": 297,
+          "PRE": 265,
+          "PSD": 185,
+          "PRV": 159,
+          "PDN": 89
+        },
+        "registered": 116331,
+        "expressed": 53175,
+        "abstentions": 63156,
+        "vote_coverage": 2.459181946403385,
+        "explicit_expressed": 53175
+      },
+      "2021": {
+        "votes": {
+          "RNI": 22219,
+          "UC": 16824,
+          "PAM": 15545,
+          "PI": 12877,
+          "PJD": 5398,
+          "PPS": 4874,
+          "MP": 4552,
+          "MDS": 2399,
+          "AGD": 2006,
+          "PRE": 1778,
+          "USFP": 1744,
+          "PEDD": 1279,
+          "PSU": 1049,
+          "FFD": 1030,
+          "PND": 973,
+          "PUD": 955,
+          "PE": 790,
+          "PRD": 706,
+          "PML": 562,
+          "PCS": 400,
+          "PVM": 67
+        },
+        "registered": 209281,
+        "expressed": 98027,
+        "abstentions": 111254,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 98027
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "UC": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "UC",
+        "PAM",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "khemisset-oulmes",
+      "name": "Khémisset-Oulmès",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Khémisset-Oulmès",
+      "2016": {
+        "votes": {
+          "MP": 13470,
+          "PAM": 10571,
+          "PPS": 9950,
+          "RNI": 7561,
+          "PJD": 4435,
+          "MDS": 3917,
+          "PI": 1764,
+          "FFD": 973,
+          "PDI": 935,
+          "FGD": 863,
+          "PLJS": 232,
+          "USFP": 182,
+          "PRD": 157,
+          "PSD": 134,
+          "PRV": 131,
+          "PCS": 101,
+          "PGV": 94,
+          "PND": 34
+        },
+        "registered": 129320,
+        "expressed": 55504,
+        "abstentions": 73816,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 55504
+      },
+      "2021": {
+        "votes": {
+          "RNI": 18342,
+          "MP": 17516,
+          "PAM": 15811,
+          "MDS": 8521,
+          "PI": 3371,
+          "PPS": 3366,
+          "PND": 2011,
+          "UC": 1268,
+          "PDI": 1094,
+          "PRD": 1051,
+          "PJD": 893,
+          "PRE": 767,
+          "PEDD": 702,
+          "AGD": 585,
+          "PSU": 512,
+          "USFP": 485,
+          "PE": 369,
+          "PUD": 313,
+          "PCS": 296,
+          "PSD": 249,
+          "PVM": 208,
+          "PLJS": 149,
+          "PAN": 111
+        },
+        "registered": 143920,
+        "expressed": 77990,
+        "abstentions": 65930,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 77990
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "MP",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "tiflet-rommani",
+      "name": "Tiflet-Rommani",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tiflet-Rommani",
+      "2016": {
+        "votes": {
+          "MDS": 18163,
+          "RNI": 14789,
+          "PAM": 9754,
+          "PJD": 8947,
+          "PI": 6814,
+          "USFP": 4960,
+          "PPS": 4178,
+          "FGD": 493,
+          "PDI": 321,
+          "PE": 101,
+          "PRD": 22
+        },
+        "registered": 131382,
+        "expressed": 68542,
+        "abstentions": 62840,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 68542
+      },
+      "2021": {
+        "votes": {
+          "RNI": 28348,
+          "MDS": 24407,
+          "PAM": 20118,
+          "PI": 8512,
+          "PPS": 4093,
+          "MP": 1576,
+          "USFP": 1200,
+          "AGD": 1168,
+          "PJD": 1084,
+          "PEDD": 796,
+          "PDI": 551,
+          "UMD": 475,
+          "PT": 378,
+          "PUD": 261,
+          "PAN": 217,
+          "PCS": 216,
+          "PRE": 185,
+          "PLJS": 171
+        },
+        "registered": 144240,
+        "expressed": 93756,
+        "abstentions": 50484,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 93756
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "MDS": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "MDS",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "kenitra",
+      "name": "Kénitra",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Kénitra",
+      "2016": {
+        "votes": {
+          "PJD": 72274,
+          "PAM": 20431,
+          "RNI": 10073,
+          "UC": 9727,
+          "AHD": 6525,
+          "PI": 6487,
+          "USFP": 6165,
+          "FGD": 3324,
+          "PEDD": 1790,
+          "MP": 1300,
+          "PPS": 600,
+          "UMD": 520,
+          "PRV": 408,
+          "PT": 151,
+          "PCS": 138,
+          "FFD": 129
+        },
+        "registered": 284749,
+        "expressed": 103905,
+        "abstentions": 180844,
+        "vote_coverage": 1.3477888455800973,
+        "explicit_expressed": 103905
+      },
+      "2021": {
+        "votes": {
+          "RNI": 49230,
+          "UC": 18448,
+          "PI": 16643,
+          "PJD": 10148,
+          "PAM": 7825,
+          "MP": 7185,
+          "USFP": 5573,
+          "MDS": 4432,
+          "PPS": 3925,
+          "UMD": 2665,
+          "AGD": 2412,
+          "PSU": 1309,
+          "FFD": 1173,
+          "PEDD": 1001,
+          "PRE": 888,
+          "PCS": 530,
+          "PLJS": 219,
+          "PUD": 193,
+          "PVM": 171,
+          "PDI": 142,
+          "PE": 127,
+          "PSD": 52
+        },
+        "registered": 306600,
+        "expressed": 134291,
+        "abstentions": 172309,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 134291
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "UC": 1,
+        "PI": 1,
+        "PJD": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "UC",
+        "PI",
+        "PJD"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "el-gharb",
+      "name": "El Gharb",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_El_Gharb",
+      "2016": {
+        "votes": {
+          "PJD": 13953,
+          "RNI": 11930,
+          "UC": 9194,
+          "PAM": 8733,
+          "PI": 8214,
+          "MDS": 5848,
+          "MP": 4882,
+          "USFP": 4498,
+          "PPS": 532,
+          "FGD": 285,
+          "FFD": 265,
+          "PGV": 63
+        },
+        "registered": 146179,
+        "expressed": 68397,
+        "abstentions": 77782,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 68397
+      },
+      "2021": {
+        "votes": {
+          "RNI": 36887,
+          "UC": 22250,
+          "PAM": 15693,
+          "PI": 8259,
+          "PJD": 7770,
+          "MP": 5161,
+          "MDS": 2644,
+          "USFP": 2001,
+          "PPS": 921,
+          "PEDD": 621,
+          "PRV": 420,
+          "PSU": 385,
+          "PT": 371,
+          "UMD": 200,
+          "PRE": 158,
+          "PDI": 144
+        },
+        "registered": 160887,
+        "expressed": 103885,
+        "abstentions": 57002,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 103885
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "UC": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "UC",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "sidi-slimane",
+      "name": "Sidi Slimane",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Sidi_Slimane",
+      "2016": {
+        "votes": {
+          "UC": 12536,
+          "USFP": 10733,
+          "PJD": 10192,
+          "PAM": 9150,
+          "PPS": 6779,
+          "RNI": 4689,
+          "MP": 3251,
+          "PI": 1314,
+          "PDI": 1208,
+          "MDS": 934,
+          "FGD": 818,
+          "FFD": 599,
+          "PEDD": 482,
+          "AHD": 469,
+          "PSD": 376,
+          "PRV": 271,
+          "PDN": 211,
+          "PUD": 203,
+          "PCS": 126,
+          "PT": 48
+        },
+        "registered": 144564,
+        "expressed": 64389,
+        "abstentions": 80175,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 64389
+      },
+      "2021": {
+        "votes": {
+          "UC": 25136,
+          "USFP": 18607,
+          "RNI": 17212,
+          "PAM": 9977,
+          "PI": 3862,
+          "MP": 2067,
+          "PJD": 1735,
+          "PPS": 1625,
+          "FFD": 1545,
+          "PRE": 1409,
+          "PML": 1103,
+          "PDI": 560,
+          "PT": 472,
+          "PRV": 398,
+          "UMD": 366,
+          "PEDD": 360,
+          "PAN": 181,
+          "PCS": 153,
+          "PSU": 117,
+          "PRD": 58,
+          "PUD": 56
+        },
+        "registered": 152096,
+        "expressed": 86999,
+        "abstentions": 65097,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 86999
+      },
+      "legal_replay": {
+        "UC": 1,
+        "USFP": 1,
+        "RNI": 1
+      },
+      "rank_winners": [
+        "UC",
+        "USFP",
+        "RNI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "sidi-kacem",
+      "name": "Sidi Kacem",
+      "region": "Rabat-Salé-Kénitra",
+      "seats": 5,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Sidi_Kacem",
+      "2016": {
+        "votes": {
+          "PPS": 19075,
+          "PAM": 16783,
+          "PI": 12021,
+          "PJD": 9252,
+          "UC": 7837,
+          "AHD": 7631,
+          "USFP": 5862,
+          "PEDD": 5653,
+          "RNI": 3599,
+          "FGD": 2706,
+          "MP": 1932,
+          "PND": 1065,
+          "PGV": 544,
+          "PSD": 286,
+          "FFD": 286
+        },
+        "registered": 207171,
+        "expressed": 94532,
+        "abstentions": 112639,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 94532
+      },
+      "2021": {
+        "votes": {
+          "RNI": 41980,
+          "MP": 24996,
+          "PAM": 22492,
+          "PI": 21913,
+          "USFP": 21466,
+          "UC": 10801,
+          "PJD": 5834,
+          "PPS": 5111,
+          "PML": 3202,
+          "AGD": 1343,
+          "PEDD": 508,
+          "PVM": 298,
+          "PRV": 227,
+          "PDI": 76,
+          "PND": 48
+        },
+        "registered": 236319,
+        "expressed": 160295,
+        "abstentions": 76024,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 160295
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1,
+        "PI": 1,
+        "USFP": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "MP",
+        "PAM",
+        "PI",
+        "USFP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "laayoune",
+      "name": "Laâyoune",
+      "region": "Laâyoune-Sakia El Hamra",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Laâyoune",
+      "2016": {
+        "votes": {
+          "PI": 26827,
+          "PAM": 21572,
+          "PJD": 8424,
+          "USFP": 6239,
+          "MP": 2258,
+          "PE": 272,
+          "FGD": 228,
+          "MDS": 159,
+          "PPS": 158,
+          "PDI": 131,
+          "PND": 129,
+          "FFD": 110,
+          "PCS": 83,
+          "PLJS": 62,
+          "PT": 34,
+          "PSD": 34,
+          "PEDD": 34,
+          "UMD": 23,
+          "PDN": 9
+        },
+        "registered": 116738,
+        "expressed": 66786,
+        "abstentions": 49952,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 66786
+      },
+      "2021": {
+        "votes": {
+          "PI": 47548,
+          "PAM": 17675,
+          "RNI": 8198,
+          "USFP": 4918,
+          "MP": 1724,
+          "PRV": 1623,
+          "UC": 1282,
+          "PJD": 810,
+          "PPS": 604,
+          "PVM": 502,
+          "PSD": 374,
+          "FFD": 364,
+          "PML": 320,
+          "PDN": 294,
+          "PRD": 251,
+          "PDI": 236,
+          "AGD": 213,
+          "MDS": 207,
+          "PRE": 196,
+          "PUD": 160,
+          "PSU": 135,
+          "UMD": 116,
+          "PCS": 56
+        },
+        "registered": 127811,
+        "expressed": 87806,
+        "abstentions": 40005,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 87806
+      },
+      "legal_replay": {
+        "PI": 1,
+        "PAM": 1,
+        "RNI": 1
+      },
+      "rank_winners": [
+        "PI",
+        "PAM",
+        "RNI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "boujdour",
+      "name": "Boujdour",
+      "region": "Laâyoune-Sakia El Hamra",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Boujdour",
+      "2016": {
+        "votes": {
+          "PI": 5034,
+          "PAM": 4993,
+          "MP": 4914,
+          "PJD": 1912,
+          "RNI": 126,
+          "PPS": 58,
+          "USFP": 16,
+          "PEDD": 16,
+          "PLJS": 9
+        },
+        "registered": 26560,
+        "expressed": 17078,
+        "abstentions": 9482,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 17078
+      },
+      "2021": {
+        "votes": {
+          "RNI": 6493,
+          "PI": 5897,
+          "PAM": 4211,
+          "FFD": 1103,
+          "PML": 579,
+          "UC": 427,
+          "PJD": 247,
+          "PPS": 160,
+          "AGD": 117,
+          "PND": 55,
+          "USFP": 35,
+          "PVM": 15
+        },
+        "registered": 30076,
+        "expressed": 19339,
+        "abstentions": 10737,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 19339
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "es-semara",
+      "name": "Es-Semara",
+      "region": "Laâyoune-Sakia El Hamra",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Es-Semara",
+      "2016": {
+        "votes": {
+          "PAM": 8089,
+          "PI": 4987,
+          "PJD": 1956,
+          "PPS": 447,
+          "PDI": 306,
+          "FGD": 301,
+          "USFP": 165,
+          "RNI": 81,
+          "PEDD": 18,
+          "FFD": 16,
+          "PT": 15,
+          "PUD": 11
+        },
+        "registered": 26439,
+        "expressed": 16392,
+        "abstentions": 10047,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 16392
+      },
+      "2021": {
+        "votes": {
+          "PI": 7676,
+          "PAM": 3771,
+          "RNI": 3755,
+          "PRV": 1143,
+          "USFP": 944,
+          "PUD": 644,
+          "PPS": 539,
+          "PJD": 269,
+          "PT": 229,
+          "PRD": 91,
+          "PSD": 64,
+          "PE": 39,
+          "PVM": 24
+        },
+        "registered": 28498,
+        "expressed": 19188,
+        "abstentions": 9310,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 19188
+      },
+      "legal_replay": {
+        "PI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "PI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "oued-eddahab",
+      "name": "Oued Eddahab",
+      "region": "Dakhla-Oued Eddahab",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Oued_Eddahab",
+      "2016": {
+        "votes": {
+          "MP": 6619,
+          "PJD": 5979,
+          "PI": 2674,
+          "USFP": 2134,
+          "PPS": 1028,
+          "FFD": 561,
+          "PCS": 176,
+          "FGD": 163,
+          "UC": 143,
+          "MDS": 135,
+          "PND": 114,
+          "PRV": 90,
+          "PEDD": 72,
+          "PLJS": 60,
+          "PRD": 55,
+          "PE": 40,
+          "PUD": 37,
+          "PT": 32,
+          "PDI": 24,
+          "PGV": 24
+        },
+        "registered": 40653,
+        "expressed": 20160,
+        "abstentions": 20493,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 20160
+      },
+      "2021": {
+        "votes": {
+          "PI": 11611,
+          "RNI": 6497,
+          "PAM": 2007,
+          "PE": 1942,
+          "PPS": 1745,
+          "PSD": 564,
+          "PJD": 530,
+          "PCS": 266,
+          "USFP": 217,
+          "PRV": 215,
+          "PEDD": 211,
+          "PML": 172,
+          "MDS": 167,
+          "PND": 157,
+          "PRD": 143,
+          "PAN": 131,
+          "PLJS": 111,
+          "PRE": 86,
+          "PVM": 81,
+          "PDI": 52,
+          "PT": 46
+        },
+        "registered": 48902,
+        "expressed": 26951,
+        "abstentions": 21539,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 26951
+      },
+      "legal_replay": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "rank_winners": [
+        "PI",
+        "RNI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "errachidia",
+      "name": "Errachidia",
+      "region": "Drâa-Tafilalet",
+      "seats": 5,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Errachidia",
+      "2016": {
+        "votes": {
+          "PJD": 26525,
+          "PAM": 15744,
+          "PI": 15129,
+          "RNI": 9251,
+          "PGV": 8577,
+          "USFP": 7233,
+          "PPS": 6393,
+          "MP": 2540,
+          "FGD": 1968,
+          "UC": 1852,
+          "PRV": 1472,
+          "AHD": 687,
+          "PND": 591,
+          "MDS": 350,
+          "PEDD": 241,
+          "FFD": 232,
+          "PE": 208,
+          "PDI": 128
+        },
+        "registered": 188910,
+        "expressed": 99121,
+        "abstentions": 89789,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 99121
+      },
+      "2021": {
+        "votes": {
+          "RNI": 24927,
+          "PI": 16014,
+          "PAM": 14596,
+          "MDS": 13100,
+          "USFP": 11651,
+          "PJD": 9747,
+          "MP": 6809,
+          "UC": 6538,
+          "PPS": 6401,
+          "FFD": 2104,
+          "PSU": 643,
+          "PT": 471,
+          "PRD": 390,
+          "PEDD": 233,
+          "PVM": 141,
+          "PDI": 114
+        },
+        "registered": 194002,
+        "expressed": 113879,
+        "abstentions": 80123,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 113879
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "MDS": 1,
+        "USFP": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM",
+        "MDS",
+        "USFP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "tinghir",
+      "name": "Tinghir",
+      "region": "Drâa-Tafilalet",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tinghir",
+      "2016": {
+        "votes": {
+          "PAM": 15860,
+          "RNI": 13659,
+          "PJD": 12177,
+          "PPS": 8446,
+          "MP": 4642,
+          "USFP": 3593,
+          "PI": 1750,
+          "PND": 827,
+          "PGV": 770,
+          "UC": 653,
+          "FGD": 571,
+          "UMD": 172,
+          "PCS": 142,
+          "AHD": 135,
+          "PDI": 109,
+          "FFD": 102
+        },
+        "registered": 143294,
+        "expressed": 63608,
+        "abstentions": 79686,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 63608
+      },
+      "2021": {
+        "votes": {
+          "RNI": 36365,
+          "PAM": 18350,
+          "PPS": 17418,
+          "PI": 9997,
+          "MP": 7731,
+          "USFP": 4507,
+          "PJD": 4248,
+          "PSU": 776,
+          "PND": 680,
+          "PCS": 339,
+          "PVM": 151
+        },
+        "registered": 161002,
+        "expressed": 100562,
+        "abstentions": 60440,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 100562
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "PPS": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "PPS"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "ouarzazate",
+      "name": "Ouarzazate",
+      "region": "Drâa-Tafilalet",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Ouarzazate",
+      "2016": {
+        "votes": {
+          "PJD": 17923,
+          "MP": 9542,
+          "PAM": 8964,
+          "PPS": 8542,
+          "RNI": 6450,
+          "PI": 4970,
+          "MDS": 1082,
+          "UC": 802,
+          "FGD": 802,
+          "USFP": 495,
+          "PE": 449,
+          "FFD": 395,
+          "PDN": 327,
+          "PRD": 204,
+          "PCS": 108,
+          "PAN": 106
+        },
+        "registered": 126079,
+        "expressed": 61161,
+        "abstentions": 64918,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 61161
+      },
+      "2021": {
+        "votes": {
+          "RNI": 30677,
+          "MP": 21982,
+          "PAM": 13168,
+          "PI": 6932,
+          "PPS": 5819,
+          "PJD": 1967,
+          "USFP": 1045,
+          "PSU": 687,
+          "AGD": 618,
+          "PEDD": 526,
+          "PND": 459,
+          "PUD": 223,
+          "UMD": 181,
+          "PAN": 144,
+          "PVM": 77,
+          "PCS": 47
+        },
+        "registered": 138678,
+        "expressed": 84552,
+        "abstentions": 54126,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 84552
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "MP",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "midelt",
+      "name": "Midelt",
+      "region": "Drâa-Tafilalet",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Midelt",
+      "2016": {
+        "votes": {
+          "RNI": 16085,
+          "PJD": 8455,
+          "PAM": 8270,
+          "PI": 7198,
+          "MP": 2445,
+          "MDS": 1522,
+          "PE": 1331,
+          "PPS": 1221,
+          "UC": 930,
+          "USFP": 691,
+          "FGD": 611,
+          "FFD": 456,
+          "AHD": 360,
+          "PEDD": 119,
+          "PCS": 97,
+          "PDI": 70,
+          "PRD": 63
+        },
+        "registered": 125595,
+        "expressed": 49924,
+        "abstentions": 75671,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 49924
+      },
+      "2021": {
+        "votes": {
+          "RNI": 29480,
+          "PI": 21049,
+          "MP": 19039,
+          "PAM": 3120,
+          "PPS": 3060,
+          "USFP": 2622,
+          "FFD": 1762,
+          "PJD": 1698,
+          "UC": 1398,
+          "PRE": 1278,
+          "PE": 719,
+          "AGD": 617,
+          "PVM": 412,
+          "PSU": 133,
+          "PDI": 115
+        },
+        "registered": 135839,
+        "expressed": 86502,
+        "abstentions": 49337,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 86502
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "MP": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "MP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "casablanca-anfa",
+      "name": "Casablanca-Anfa",
+      "region": "Casablanca-Settat",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Casablanca-Anfa",
+      "2016": {
+        "votes": {
+          "PJD": 61234,
+          "PAM": 10380,
+          "FGD": 6629,
+          "PI": 5730,
+          "RNI": 5306,
+          "USFP": 3477,
+          "PPS": 717,
+          "UC": 689,
+          "MDS": 915,
+          "FFD": 554,
+          "PEDD": 289,
+          "PDI": 246,
+          "PND": 183,
+          "PE": 146,
+          "PRV": 145,
+          "PLJS": 136,
+          "MP": 132,
+          "PCS": 118,
+          "UMD": 114,
+          "PUD": 109,
+          "PT": 77
+        },
+        "registered": 199847,
+        "expressed": 66709,
+        "abstentions": 133138,
+        "vote_coverage": 1.4589635581405807,
+        "explicit_expressed": 66709
+      },
+      "2021": {
+        "votes": {
+          "RNI": 16146,
+          "PI": 6139,
+          "PAM": 3713,
+          "PJD": 2999,
+          "PSU": 2162,
+          "USFP": 1707,
+          "AGD": 1359,
+          "FFD": 1157,
+          "UC": 1059,
+          "PPS": 700,
+          "MP": 602,
+          "PND": 599,
+          "PCS": 266,
+          "PLJS": 247,
+          "MDS": 221,
+          "PDI": 132,
+          "PGV": 112,
+          "PML": 93,
+          "PRD": 61,
+          "PE": 27
+        },
+        "registered": 167023,
+        "expressed": 39501,
+        "abstentions": 127522,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 39501
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "PJD": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM",
+        "PJD"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "ben-m-sick",
+      "name": "Ben M'sick",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Ben_M'sick",
+      "2016": {
+        "votes": {
+          "PJD": 15584,
+          "UC": 8657,
+          "RNI": 4473,
+          "PI": 3788,
+          "PAM": 1388,
+          "PT": 685,
+          "FGD": 648,
+          "PPS": 475,
+          "PE": 426,
+          "USFP": 140,
+          "MP": 133,
+          "FFD": 109,
+          "AHD": 57,
+          "PDI": 57,
+          "PDN": 12
+        },
+        "registered": 111377,
+        "expressed": 36632,
+        "abstentions": 74745,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 36632
+      },
+      "2021": {
+        "votes": {
+          "UC": 8012,
+          "RNI": 7815,
+          "PAM": 2283,
+          "PJD": 1810,
+          "MP": 1296,
+          "MDS": 1213,
+          "PI": 931,
+          "USFP": 565,
+          "PND": 468,
+          "PRV": 419,
+          "PSU": 412,
+          "PPS": 317,
+          "PUD": 246,
+          "PEDD": 106,
+          "PCS": 26,
+          "PDI": 17
+        },
+        "registered": 97066,
+        "expressed": 25936,
+        "abstentions": 71130,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 25936
+      },
+      "legal_replay": {
+        "UC": 1,
+        "RNI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "UC",
+        "RNI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "sidi-bernoussi",
+      "name": "Sidi Bernoussi",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Sidi_Bernoussi",
+      "2016": {
+        "votes": {
+          "PJD": 66280,
+          "PAM": 9801,
+          "RNI": 3396,
+          "UC": 2821,
+          "FGD": 2208,
+          "MP": 1835,
+          "PI": 1493,
+          "USFP": 832,
+          "PPS": 590,
+          "PLJS": 347,
+          "PND": 345,
+          "PSD": 169,
+          "FFD": 127,
+          "MDS": 100,
+          "AHD": 95
+        },
+        "registered": 193643,
+        "expressed": 57299,
+        "abstentions": 136344,
+        "vote_coverage": 1.5783696050541893,
+        "explicit_expressed": 57299
+      },
+      "2021": {
+        "votes": {
+          "RNI": 11209,
+          "PAM": 6625,
+          "PI": 3698,
+          "PJD": 3630,
+          "UC": 2740,
+          "PPS": 2153,
+          "MP": 1993,
+          "USFP": 1633,
+          "AGD": 1137,
+          "PEDD": 1124,
+          "PSU": 751,
+          "PDI": 597,
+          "PLJS": 441,
+          "PE": 437,
+          "PUD": 163,
+          "PND": 148,
+          "PML": 116,
+          "PCS": 104,
+          "PAN": 87,
+          "PRD": 55,
+          "PT": 38
+        },
+        "registered": 182103,
+        "expressed": 38879,
+        "abstentions": 143224,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 38879
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "al-fida-mers-sultan",
+      "name": "Al Fida-Mers Sultan",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Al_Fida-Mers_Sultan",
+      "2016": {
+        "votes": {
+          "PJD": 42878,
+          "PAM": 5906,
+          "PI": 4524,
+          "FGD": 1213,
+          "USFP": 685,
+          "FFD": 369,
+          "MDS": 342,
+          "UC": 317,
+          "PND": 192,
+          "PAN": 190,
+          "PPS": 174,
+          "PLJS": 170,
+          "AHD": 142,
+          "PUD": 111,
+          "PDN": 90,
+          "PCS": 67,
+          "PRD": 36
+        },
+        "registered": 140441,
+        "expressed": 35967,
+        "abstentions": 104474,
+        "vote_coverage": 1.5960741791086273,
+        "explicit_expressed": 35967
+      },
+      "2021": {
+        "votes": {
+          "RNI": 9957,
+          "PAM": 5326,
+          "PI": 3335,
+          "PJD": 2082,
+          "FFD": 913,
+          "UC": 842,
+          "USFP": 765,
+          "MP": 591,
+          "PRV": 555,
+          "AGD": 517,
+          "PSU": 384,
+          "PPS": 373,
+          "PCS": 297,
+          "MDS": 230,
+          "PUD": 187,
+          "PDI": 172,
+          "PE": 164,
+          "PT": 69,
+          "PND": 51,
+          "PLJS": 35,
+          "PRD": 6
+        },
+        "registered": 135338,
+        "expressed": 26851,
+        "abstentions": 108487,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 26851
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "ain-sebaa-hay-mohammadi",
+      "name": "Aïn Sebaâ-Hay Mohammadi",
+      "region": "Casablanca-Settat",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Aïn_Sebaâ-Hay_Mohammadi",
+      "2016": {
+        "votes": {
+          "PJD": 54076,
+          "PAM": 9676,
+          "RNI": 6593,
+          "UC": 5673,
+          "FGD": 2288,
+          "USFP": 2068,
+          "PI": 1615,
+          "MP": 1483,
+          "PLJS": 314,
+          "PPS": 313,
+          "PND": 235,
+          "PRV": 148,
+          "PRD": 148,
+          "PCS": 110,
+          "MDS": 106
+        },
+        "registered": 190660,
+        "expressed": 57808,
+        "abstentions": 132852,
+        "vote_coverage": 1.4677207306947135,
+        "explicit_expressed": 57808
+      },
+      "2021": {
+        "votes": {
+          "RNI": 11884,
+          "PAM": 6169,
+          "UC": 5705,
+          "PI": 3701,
+          "MP": 3237,
+          "PJD": 2862,
+          "PPS": 2350,
+          "USFP": 2110,
+          "MDS": 1675,
+          "AGD": 1093,
+          "PSU": 842,
+          "FFD": 409,
+          "PND": 394,
+          "PEDD": 264,
+          "PT": 220,
+          "PCS": 94,
+          "PUD": 69
+        },
+        "registered": 189104,
+        "expressed": 43078,
+        "abstentions": 146026,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 43078
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "UC": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "UC",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "moulay-rachid",
+      "name": "Moulay Rachid",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Moulay_Rachid",
+      "2016": {
+        "votes": {
+          "PJD": 52078,
+          "PAM": 6236,
+          "RNI": 6191,
+          "PI": 1975,
+          "FGD": 946,
+          "USFP": 799,
+          "UC": 515,
+          "PPS": 512,
+          "FFD": 173,
+          "PEDD": 156,
+          "PE": 122,
+          "PRV": 120,
+          "PUD": 98,
+          "MDS": 84,
+          "PCS": 73,
+          "PRD": 34
+        },
+        "registered": 168733,
+        "expressed": 44073,
+        "abstentions": 124660,
+        "vote_coverage": 1.5908152383545482,
+        "explicit_expressed": 44073
+      },
+      "2021": {
+        "votes": {
+          "RNI": 14352,
+          "PI": 4636,
+          "PPS": 4206,
+          "PAM": 3218,
+          "PJD": 3194,
+          "MP": 1442,
+          "UC": 1223,
+          "USFP": 814,
+          "FFD": 795,
+          "PND": 620,
+          "PE": 576,
+          "PSU": 568,
+          "AGD": 509,
+          "MDS": 312,
+          "PCS": 176,
+          "PAN": 73,
+          "PEDD": 54,
+          "PUD": 41
+        },
+        "registered": 169862,
+        "expressed": 36809,
+        "abstentions": 133053,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 36809
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PPS"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "hay-hassani",
+      "name": "Hay Hassani",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Hay_Hassani",
+      "2016": {
+        "votes": {
+          "PJD": 45598,
+          "PAM": 6518,
+          "PPS": 4923,
+          "PI": 3183,
+          "FGD": 2262,
+          "RNI": 765,
+          "UC": 753,
+          "USFP": 609,
+          "PRV": 335,
+          "MP": 266,
+          "PDI": 224,
+          "MDS": 166,
+          "PND": 93,
+          "PLJS": 91,
+          "AHD": 67,
+          "PUD": 60
+        },
+        "registered": 134437,
+        "expressed": 43114,
+        "abstentions": 91323,
+        "vote_coverage": 1.5288073479612192,
+        "explicit_expressed": 43114
+      },
+      "2021": {
+        "votes": {
+          "RNI": 9934,
+          "PI": 3731,
+          "PAM": 3617,
+          "PJD": 2519,
+          "PPS": 1427,
+          "AHD": 998,
+          "PSU": 994,
+          "USFP": 944,
+          "MP": 787,
+          "AGD": 763,
+          "PRV": 310,
+          "FFD": 305,
+          "MDS": 260,
+          "PE": 275,
+          "PND": 207,
+          "PLJS": 98,
+          "UC": 92,
+          "PT": 62,
+          "PCS": 38
+        },
+        "registered": 133860,
+        "expressed": 27361,
+        "abstentions": 106499,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 27361
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "ain-chock",
+      "name": "Aïn Chock",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Aïn_Chock",
+      "2016": {
+        "votes": {
+          "PJD": 47090,
+          "PAM": 11388,
+          "RNI": 6981,
+          "FGD": 2069,
+          "PI": 1887,
+          "USFP": 548,
+          "UC": 341,
+          "PPS": 256,
+          "MP": 192,
+          "AHD": 115,
+          "PND": 78,
+          "UMD": 66,
+          "PGV": 65,
+          "PSD": 58,
+          "FFD": 38,
+          "PCS": 37,
+          "PRV": 35,
+          "MDS": 34,
+          "PRD": 16,
+          "PDN": 4
+        },
+        "registered": 121663,
+        "expressed": 47753,
+        "abstentions": 73880,
+        "vote_coverage": 1.4930580277678889,
+        "explicit_expressed": 47753
+      },
+      "2021": {
+        "votes": {
+          "RNI": 10966,
+          "PAM": 8158,
+          "PI": 2695,
+          "PJD": 2669,
+          "USFP": 1134,
+          "PSU": 1036,
+          "PND": 662,
+          "PPS": 609,
+          "UC": 508,
+          "AGD": 501,
+          "MP": 441,
+          "FFD": 363,
+          "PUD": 321,
+          "PT": 265,
+          "PE": 232,
+          "PCS": 156,
+          "PRE": 84,
+          "PSD": 37,
+          "PLJS": 35,
+          "PRD": 28
+        },
+        "registered": 117223,
+        "expressed": 30900,
+        "abstentions": 86323,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 30900
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "mohammedia",
+      "name": "Mohammédia",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Mohammédia",
+      "2016": {
+        "votes": {
+          "PJD": 27835,
+          "MP": 14592,
+          "PAM": 11029,
+          "USFP": 5198,
+          "PI": 2083,
+          "FGD": 1538,
+          "PRV": 568,
+          "FFD": 559,
+          "UC": 538,
+          "PPS": 341,
+          "PND": 248,
+          "PEDD": 189,
+          "PE": 172,
+          "AHD": 170,
+          "MDS": 160,
+          "PCS": 103,
+          "UMD": 63
+        },
+        "registered": 162450,
+        "expressed": 65386,
+        "abstentions": 97064,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 65386
+      },
+      "2021": {
+        "votes": {
+          "RNI": 24401,
+          "PI": 14498,
+          "PAM": 8605,
+          "USFP": 5121,
+          "PJD": 2638,
+          "UC": 2469,
+          "PND": 1424,
+          "FFD": 1159,
+          "MP": 1102,
+          "PPS": 1051,
+          "AGD": 788,
+          "PEDD": 725,
+          "PSU": 633,
+          "PUD": 346,
+          "PCS": 330,
+          "PRE": 310,
+          "PML": 156,
+          "PAN": 139,
+          "PDI": 105,
+          "PRD": 86
+        },
+        "registered": 163863,
+        "expressed": 66086,
+        "abstentions": 97777,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 66086
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "mediouna",
+      "name": "Médiouna",
+      "region": "Casablanca-Settat",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Médiouna",
+      "2016": {
+        "votes": {
+          "PAM": 10795,
+          "UC": 6501,
+          "PJD": 6277,
+          "PI": 4584,
+          "PPS": 4003,
+          "FGD": 310,
+          "MP": 222,
+          "RNI": 120,
+          "PDI": 92,
+          "PEDD": 74,
+          "USFP": 65,
+          "PE": 48
+        },
+        "registered": 60540,
+        "expressed": 33091,
+        "abstentions": 27449,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 33091
+      },
+      "2021": {
+        "votes": {
+          "PI": 13387,
+          "PAM": 13029,
+          "RNI": 11673,
+          "USFP": 1121,
+          "PPS": 1033,
+          "PJD": 853,
+          "PVM": 753,
+          "PE": 505,
+          "FFD": 242,
+          "PCS": 165,
+          "PT": 20
+        },
+        "registered": 70121,
+        "expressed": 42781,
+        "abstentions": 27340,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 42781
+      },
+      "legal_replay": {
+        "PI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "PI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "benslimane",
+      "name": "Benslimane",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Benslimane",
+      "2016": {
+        "votes": {
+          "PI": 10925,
+          "RNI": 10792,
+          "PJD": 8164,
+          "PAM": 6953,
+          "PPS": 4846,
+          "MP": 4332,
+          "USFP": 2053,
+          "FGD": 858,
+          "PND": 644,
+          "PEDD": 625,
+          "UMD": 457,
+          "UC": 142,
+          "PDN": 50,
+          "PRD": 37
+        },
+        "registered": 110220,
+        "expressed": 57546,
+        "abstentions": 52674,
+        "vote_coverage": 0.8841274806241963,
+        "explicit_expressed": 57546
+      },
+      "2021": {
+        "votes": {
+          "PI": 18849,
+          "RNI": 16743,
+          "PPS": 14582,
+          "USFP": 11065,
+          "PAM": 6657,
+          "PJD": 4550,
+          "PND": 822,
+          "PSU": 763,
+          "PT": 711,
+          "PLJS": 639,
+          "AFG": 541,
+          "PE": 526,
+          "PSD": 363,
+          "FFD": 352,
+          "PML": 313,
+          "PVM": 276,
+          "PCS": 107
+        },
+        "registered": 113862,
+        "expressed": 77859,
+        "abstentions": 36003,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 77859
+      },
+      "legal_replay": {
+        "PI": 1,
+        "RNI": 1,
+        "PPS": 1
+      },
+      "rank_winners": [
+        "PI",
+        "RNI",
+        "PPS"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "el-jadida",
+      "name": "El Jadida",
+      "region": "Casablanca-Settat",
+      "seats": 6,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'El_Jadida",
+      "2016": {
+        "votes": {
+          "PI": 25163,
+          "PJD": 24687,
+          "PAM": 19183,
+          "UC": 12280,
+          "USFP": 10418,
+          "MP": 9851,
+          "FGD": 4089,
+          "RNI": 2537,
+          "PPS": 1484,
+          "FFD": 1261,
+          "AHD": 461,
+          "PND": 428,
+          "PRD": 393,
+          "PEDD": 189
+        },
+        "registered": 285123,
+        "expressed": 112424,
+        "abstentions": 172699,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 112424
+      },
+      "2021": {
+        "votes": {
+          "RNI": 52953,
+          "PI": 35868,
+          "PAM": 27290,
+          "USFP": 22367,
+          "PPS": 20719,
+          "MP": 17748,
+          "UC": 4595,
+          "PJD": 4477,
+          "AGD": 3544,
+          "UMD": 2162,
+          "FFD": 2074,
+          "PND": 1314,
+          "PDI": 1099,
+          "PSU": 895,
+          "PEDD": 813,
+          "MDS": 752,
+          "PLJS": 685,
+          "PE": 650,
+          "PCS": 582,
+          "PML": 562,
+          "PRD": 408,
+          "PAN": 151
+        },
+        "registered": 350509,
+        "expressed": 201708,
+        "abstentions": 148801,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 201708
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "USFP": 1,
+        "PPS": 1,
+        "MP": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM",
+        "USFP",
+        "PPS",
+        "MP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "berrechid",
+      "name": "Berrechid",
+      "region": "Casablanca-Settat",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Berrechid",
+      "2016": {
+        "votes": {
+          "PI": 21540,
+          "PJD": 15118,
+          "PAM": 12865,
+          "RNI": 10664,
+          "USFP": 4655,
+          "UC": 4391,
+          "MP": 1966,
+          "FFD": 1408,
+          "FGD": 941,
+          "PRV": 822,
+          "PND": 468,
+          "PPS": 463,
+          "PGV": 311,
+          "AHD": 216,
+          "MDS": 196,
+          "PDN": 100
+        },
+        "registered": 166028,
+        "expressed": 76124,
+        "abstentions": 89904,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 76124
+      },
+      "2021": {
+        "votes": {
+          "PI": 43744,
+          "RNI": 38879,
+          "PAM": 20161,
+          "USFP": 14748,
+          "PJD": 5153,
+          "MP": 2996,
+          "UC": 1477,
+          "PPS": 1227,
+          "PRV": 1126,
+          "AFG": 897,
+          "PND": 409,
+          "PSU": 360,
+          "PML": 196,
+          "PE": 189,
+          "PEDD": 132,
+          "PVM": 73,
+          "PCS": 53
+        },
+        "registered": 212579,
+        "expressed": 131820,
+        "abstentions": 80759,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 131820
+      },
+      "legal_replay": {
+        "PI": 1,
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "rank_winners": [
+        "PI",
+        "RNI",
+        "PAM",
+        "USFP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "settat",
+      "name": "Settat",
+      "region": "Casablanca-Settat",
+      "seats": 6,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Settat",
+      "2016": {
+        "votes": {
+          "PJD": 20542,
+          "PAM": 17754,
+          "UC": 9076,
+          "USFP": 8875,
+          "PPS": 8477,
+          "PI": 8362,
+          "MP": 7923,
+          "PND": 5079,
+          "RNI": 4204,
+          "PRD": 3431,
+          "FGD": 3410,
+          "PEDD": 3233,
+          "PDN": 3181,
+          "MDS": 2193,
+          "FFD": 1318,
+          "PE": 614,
+          "PLJS": 203,
+          "PAN": 170,
+          "PDI": 47
+        },
+        "registered": 280031,
+        "expressed": 108092,
+        "abstentions": 171939,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 108092
+      },
+      "2021": {
+        "votes": {
+          "RNI": 38020,
+          "PI": 34171,
+          "UC": 32360,
+          "PAM": 24893,
+          "USFP": 15032,
+          "MP": 7655,
+          "MDS": 6088,
+          "PJD": 6060,
+          "PPS": 4608,
+          "AGD": 2668,
+          "PML": 1508,
+          "PRE": 1127,
+          "PEDD": 1005,
+          "PSU": 793,
+          "FFD": 742,
+          "PLJS": 714,
+          "PVM": 599,
+          "PAN": 267,
+          "PUD": 199,
+          "PCS": 150,
+          "PT": 138
+        },
+        "registered": 294594,
+        "expressed": 178797,
+        "abstentions": 115956,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 178797
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "UC": 1,
+        "PAM": 1,
+        "USFP": 1,
+        "MP": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "UC",
+        "PAM",
+        "USFP",
+        "MP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "agadir-ida-outanane",
+      "name": "Agadir Ida-Outanane",
+      "region": "Souss-Massa",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Agadir_Ida-Outanane",
+      "2016": {
+        "votes": {
+          "PJD": 73008,
+          "PAM": 15011,
+          "RNI": 7804,
+          "USFP": 3758,
+          "FGD": 3207,
+          "PPS": 2955,
+          "PI": 2356,
+          "PEDD": 562,
+          "MP": 264,
+          "UC": 220,
+          "PE": 196,
+          "PDN": 179,
+          "MDS": 149,
+          "PAN": 122,
+          "PUD": 107,
+          "FFD": 107,
+          "PRV": 103,
+          "PRD": 86,
+          "PGV": 59
+        },
+        "registered": 229533,
+        "expressed": 73749,
+        "abstentions": 155784,
+        "vote_coverage": 1.4949762030671603,
+        "explicit_expressed": 73749
+      },
+      "2021": {
+        "votes": {
+          "RNI": 50829,
+          "PAM": 14136,
+          "PI": 8175,
+          "PPS": 7103,
+          "USFP": 7091,
+          "PJD": 5390,
+          "AGD": 2230,
+          "MP": 954,
+          "PSU": 914,
+          "FFD": 660,
+          "PVM": 255,
+          "PML": 137,
+          "PUD": 118,
+          "PLJS": 84,
+          "PEDD": 81,
+          "PE": 71,
+          "PAN": 54,
+          "PRE": 41,
+          "PT": 21
+        },
+        "registered": 271969,
+        "expressed": 98344,
+        "abstentions": 173625,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 98344
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "PI",
+        "PPS"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "inezgane-ait-melloul",
+      "name": "Inezgane-Aït Melloul",
+      "region": "Souss-Massa",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Inezgane-Aït_Melloul",
+      "2016": {
+        "votes": {
+          "PJD": 80490,
+          "PAM": 10985,
+          "PI": 5572,
+          "PPS": 1799,
+          "USFP": 1495,
+          "FGD": 1392,
+          "RNI": 960,
+          "FFD": 349,
+          "UC": 321,
+          "PDI": 193,
+          "PE": 110,
+          "MDS": 101,
+          "PRD": 40
+        },
+        "registered": 198136,
+        "expressed": 63562,
+        "abstentions": 134574,
+        "vote_coverage": 1.6331613228029325,
+        "explicit_expressed": 63562
+      },
+      "2021": {
+        "votes": {
+          "RNI": 22975,
+          "PAM": 11122,
+          "PI": 10577,
+          "USFP": 7428,
+          "PJD": 5513,
+          "PPS": 5487,
+          "FFD": 3002,
+          "MP": 2142,
+          "PUD": 1222,
+          "AGD": 555,
+          "PSU": 531,
+          "PE": 410,
+          "PRD": 404,
+          "PRV": 251,
+          "PEDD": 242
+        },
+        "registered": 202539,
+        "expressed": 71861,
+        "abstentions": 130678,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 71861
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "chtouka-ait-baha",
+      "name": "Chtouka-Aït Baha",
+      "region": "Souss-Massa",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Chtouka-Aït_Baha",
+      "2016": {
+        "votes": {
+          "PJD": 19839,
+          "PAM": 16728,
+          "PI": 13916,
+          "RNI": 8128,
+          "PPS": 3028,
+          "FGD": 2485,
+          "USFP": 730,
+          "UC": 243,
+          "PRV": 138,
+          "PEDD": 106,
+          "MDS": 73
+        },
+        "registered": 141896,
+        "expressed": 65414,
+        "abstentions": 76482,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 65414
+      },
+      "2021": {
+        "votes": {
+          "RNI": 37077,
+          "PI": 25022,
+          "PAM": 24718,
+          "PJD": 4380,
+          "USFP": 3571,
+          "PPS": 2669,
+          "PSU": 2393,
+          "MP": 1153,
+          "AGD": 501,
+          "PCS": 468,
+          "PVM": 62,
+          "PE": 46
+        },
+        "registered": 176727,
+        "expressed": 102060,
+        "abstentions": 74667,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 102060
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "taroudant-sud",
+      "name": "Taroudant-Sud",
+      "region": "Souss-Massa",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Taroudant-Sud",
+      "2016": {
+        "votes": {
+          "PJD": 81286,
+          "PI": 26115,
+          "RNI": 15592,
+          "PAM": 12705,
+          "USFP": 5403,
+          "MP": 837,
+          "PCS": 817,
+          "FGD": 661,
+          "UC": 408,
+          "PEDD": 395,
+          "FFD": 380,
+          "MDS": 144,
+          "AHD": 138,
+          "PPS": 127,
+          "PRD": 80,
+          "PSD": 68
+        },
+        "registered": 222463,
+        "expressed": 104513,
+        "abstentions": 117950,
+        "vote_coverage": 1.3888798522671821,
+        "explicit_expressed": 104513
+      },
+      "2021": {
+        "votes": {
+          "RNI": 47450,
+          "PI": 40762,
+          "PAM": 27517,
+          "PJD": 19657,
+          "USFP": 11875,
+          "MP": 925,
+          "PML": 459,
+          "AGD": 349,
+          "PSU": 318,
+          "PPS": 297,
+          "PND": 205,
+          "PUD": 204,
+          "PCS": 145,
+          "PE": 106
+        },
+        "registered": 259801,
+        "expressed": 150269,
+        "abstentions": 109532,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 150269
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "PJD": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM",
+        "PJD"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "taroudant-nord",
+      "name": "Taroudant-Nord",
+      "region": "Souss-Massa",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Taroudant-Nord",
+      "2016": {
+        "votes": {
+          "RNI": 29587,
+          "PJD": 19138,
+          "PAM": 15512,
+          "PI": 11894,
+          "UC": 3459,
+          "PPS": 2027,
+          "FFD": 660,
+          "USFP": 515,
+          "FGD": 430,
+          "AHD": 239,
+          "MP": 158,
+          "PRD": 56
+        },
+        "registered": 160328,
+        "expressed": 83675,
+        "abstentions": 76653,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 83675
+      },
+      "2021": {
+        "votes": {
+          "RNI": 56693,
+          "PI": 32751,
+          "PAM": 29624,
+          "PJD": 5725,
+          "UC": 2175,
+          "USFP": 1165,
+          "MP": 330,
+          "PSU": 132
+        },
+        "registered": 188114,
+        "expressed": 128595,
+        "abstentions": 59519,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 128595
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "tiznit",
+      "name": "Tiznit",
+      "region": "Souss-Massa",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tiznit",
+      "2016": {
+        "votes": {
+          "PJD": 14159,
+          "RNI": 14027,
+          "PAM": 6548,
+          "USFP": 5842,
+          "PI": 1626,
+          "PPS": 1130,
+          "FGD": 474,
+          "MDS": 200,
+          "FFD": 130,
+          "MP": 119,
+          "PDI": 79,
+          "PND": 64,
+          "PUD": 57,
+          "PGV": 54
+        },
+        "registered": 104383,
+        "expressed": 44509,
+        "abstentions": 59874,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 44509
+      },
+      "2021": {
+        "votes": {
+          "RNI": 37605,
+          "PI": 7661,
+          "PPS": 5456,
+          "PJD": 4548,
+          "USFP": 4516,
+          "PAM": 4340,
+          "MP": 331,
+          "AGD": 296,
+          "PAN": 264,
+          "PSU": 211,
+          "PVM": 187,
+          "PML": 139,
+          "PDI": 21
+        },
+        "registered": 115980,
+        "expressed": 65575,
+        "abstentions": 50405,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 65575
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "guelmim",
+      "name": "Guelmim",
+      "region": "Guelmim-Oued Noun",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Guelmim",
+      "2016": {
+        "votes": {
+          "USFP": 13951,
+          "RNI": 12360,
+          "PJD": 11653,
+          "PI": 2635,
+          "FGD": 1001,
+          "PAM": 911,
+          "MDS": 444,
+          "PPS": 427,
+          "PRV": 333,
+          "PGV": 233,
+          "PE": 224,
+          "PND": 202,
+          "MP": 175,
+          "AHD": 125,
+          "PLJS": 113,
+          "PDI": 25
+        },
+        "registered": 102851,
+        "expressed": 44812,
+        "abstentions": 58039,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 44812
+      },
+      "2021": {
+        "votes": {
+          "PAM": 18807,
+          "RNI": 16199,
+          "PI": 16165,
+          "MP": 4142,
+          "PJD": 1870,
+          "PEDD": 1733,
+          "PPS": 1325,
+          "USFP": 689,
+          "AGD": 608,
+          "PE": 596,
+          "PVM": 554,
+          "PML": 498,
+          "PSU": 402,
+          "PDI": 400,
+          "PND": 325,
+          "PUD": 297,
+          "PCS": 275,
+          "FFD": 225,
+          "PRD": 204,
+          "PLJS": 70,
+          "PAN": 25
+        },
+        "registered": 111753,
+        "expressed": 65409,
+        "abstentions": 46344,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 65409
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "RNI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "tan-tan",
+      "name": "Tan-Tan",
+      "region": "Guelmim-Oued Noun",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tan-Tan",
+      "2016": {
+        "votes": {
+          "PI": 7871,
+          "PAM": 5286,
+          "PJD": 4505,
+          "MDS": 1824,
+          "RNI": 889,
+          "PRV": 684,
+          "FGD": 369,
+          "UC": 296,
+          "FFD": 220,
+          "PA": 76,
+          "PE": 70,
+          "AHD": 42,
+          "PPS": 29
+        },
+        "registered": 45263,
+        "expressed": 22161,
+        "abstentions": 23102,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 22161
+      },
+      "2021": {
+        "votes": {
+          "PAM": 5955,
+          "RNI": 4299,
+          "PI": 4011,
+          "PRD": 3252,
+          "MDS": 2320,
+          "PND": 1106,
+          "PPS": 945,
+          "MP": 874,
+          "PJD": 513,
+          "PSD": 481,
+          "PEDD": 458,
+          "PDI": 274,
+          "PE": 262,
+          "PML": 223,
+          "PLJS": 220,
+          "PCS": 186,
+          "FFD": 176,
+          "PVM": 125,
+          "PT": 99,
+          "UMD": 94
+        },
+        "registered": 47719,
+        "expressed": 25873,
+        "abstentions": 21846,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 25873
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "RNI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "sidi-ifni",
+      "name": "Sidi Ifni",
+      "region": "Guelmim-Oued Noun",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Sidi_Ifni",
+      "2016": {
+        "votes": {
+          "USFP": 11703,
+          "PJD": 6148,
+          "PAM": 6144,
+          "MP": 5744,
+          "PPS": 2971,
+          "RNI": 1945,
+          "FGD": 621,
+          "PI": 586,
+          "FFD": 519,
+          "MDS": 437,
+          "PND": 298,
+          "PLJS": 120,
+          "UC": 76
+        },
+        "registered": 72818,
+        "expressed": 37312,
+        "abstentions": 35506,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 37312
+      },
+      "2021": {
+        "votes": {
+          "RNI": 26825,
+          "PAM": 20873,
+          "USFP": 4770,
+          "PPS": 4202,
+          "PJD": 1460,
+          "PI": 725,
+          "PT": 104,
+          "PVM": 100,
+          "PCS": 67,
+          "PDI": 18
+        },
+        "registered": 80831,
+        "expressed": 59144,
+        "abstentions": 21687,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 59144
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "medina-sidi-youssef",
+      "name": "Medina-Sidi Youssef",
+      "region": "Marrakech-Safi",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Medina-Sidi_Youssef",
+      "2016": {
+        "votes": {
+          "PJD": 51742,
+          "PAM": 14713,
+          "RNI": 4348,
+          "PI": 1014,
+          "FGD": 778,
+          "USFP": 435,
+          "UMD": 253,
+          "MP": 221,
+          "FFD": 216,
+          "PPS": 200,
+          "PRE": 181,
+          "PND": 132,
+          "PRD": 117,
+          "PE": 80
+        },
+        "registered": 122797,
+        "expressed": 48812,
+        "abstentions": 73985,
+        "vote_coverage": 1.5248299598459396,
+        "explicit_expressed": 48812
+      },
+      "2021": {
+        "votes": {
+          "PAM": 16136,
+          "PI": 11361,
+          "RNI": 8753,
+          "UC": 3668,
+          "USFP": 3089,
+          "MP": 1812,
+          "PJD": 1723,
+          "MDS": 954,
+          "PE": 916,
+          "PEDD": 648,
+          "PPS": 642,
+          "PUD": 635,
+          "PSU": 438,
+          "PML": 366,
+          "PAN": 57,
+          "PVM": 29
+        },
+        "registered": 124217,
+        "expressed": 51227,
+        "abstentions": 72990,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 51227
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "PI": 1,
+        "RNI": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "PI",
+        "RNI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "gueliz-nakhil",
+      "name": "Guéliz-Nakhil",
+      "region": "Marrakech-Safi",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Guéliz-Nakhil",
+      "2016": {
+        "votes": {
+          "PJD": 27959,
+          "PAM": 21679,
+          "MP": 10397,
+          "RNI": 7013,
+          "FGD": 2267,
+          "PI": 986,
+          "USFP": 930,
+          "PPS": 231,
+          "PEDD": 224,
+          "FFD": 164,
+          "PE": 101,
+          "PGV": 60,
+          "MDS": 33
+        },
+        "registered": 155468,
+        "expressed": 72044,
+        "abstentions": 83424,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 72044
+      },
+      "2021": {
+        "votes": {
+          "PAM": 28424,
+          "RNI": 18416,
+          "PI": 10117,
+          "MP": 9474,
+          "UC": 4880,
+          "PJD": 3338,
+          "USFP": 2070,
+          "PPS": 1613,
+          "MDS": 1324,
+          "PSU": 781,
+          "AGD": 445,
+          "PML": 377,
+          "PAN": 116,
+          "PDI": 76
+        },
+        "registered": 166532,
+        "expressed": 81451,
+        "abstentions": 85081,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 81451
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "RNI",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "menara",
+      "name": "Menara",
+      "region": "Marrakech-Safi",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Menara",
+      "2016": {
+        "votes": {
+          "PJD": 75108,
+          "PAM": 12181,
+          "PPS": 6742,
+          "RNI": 6521,
+          "UC": 4298,
+          "FGD": 2770,
+          "PI": 1082,
+          "USFP": 1069,
+          "MP": 615,
+          "PRV": 162,
+          "PSD": 145,
+          "FFD": 89,
+          "MDS": 79,
+          "PRD": 61
+        },
+        "registered": 178772,
+        "expressed": 73368,
+        "abstentions": 105404,
+        "vote_coverage": 1.5118580307491005,
+        "explicit_expressed": 73368
+      },
+      "2021": {
+        "votes": {
+          "PAM": 21021,
+          "RNI": 17773,
+          "PI": 15555,
+          "PJD": 7137,
+          "UC": 5777,
+          "USFP": 2774,
+          "MP": 1435,
+          "PPS": 1237,
+          "PSU": 1023,
+          "AGD": 681,
+          "PEDD": 607,
+          "PDI": 480,
+          "PML": 386,
+          "PUD": 300,
+          "PRE": 193,
+          "PAN": 82
+        },
+        "registered": 187542,
+        "expressed": 76461,
+        "abstentions": 111081,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 76461
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "RNI",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "chichaoua",
+      "name": "Chichaoua",
+      "region": "Marrakech-Safi",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Chichaoua",
+      "2016": {
+        "votes": {
+          "PAM": 59062,
+          "PJD": 13745,
+          "PI": 10921,
+          "MP": 8156,
+          "PPS": 6338,
+          "USFP": 4877,
+          "RNI": 4447,
+          "UC": 4414,
+          "FFD": 1900,
+          "FGD": 364,
+          "PLJS": 202,
+          "AHD": 154
+        },
+        "registered": 160804,
+        "expressed": 85049,
+        "abstentions": 75755,
+        "vote_coverage": 1.34722336535409,
+        "explicit_expressed": 85049
+      },
+      "2021": {
+        "votes": {
+          "PAM": 51689,
+          "MP": 21110,
+          "RNI": 20082,
+          "PI": 15376,
+          "USFP": 12290,
+          "UC": 10468,
+          "PJD": 3145,
+          "PPS": 2151,
+          "FFD": 1027,
+          "PSU": 437
+        },
+        "registered": 189799,
+        "expressed": 137775,
+        "abstentions": 52024,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 137775
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "MP": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "MP",
+        "RNI",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "safi",
+      "name": "Safi",
+      "region": "Marrakech-Safi",
+      "seats": 6,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Safi",
+      "2016": {
+        "votes": {
+          "PJD": 58112,
+          "PAM": 22584,
+          "PI": 11165,
+          "MDS": 8214,
+          "MP": 6819,
+          "RNI": 6525,
+          "UC": 6195,
+          "PEDD": 5739,
+          "USFP": 5324,
+          "PPS": 4422,
+          "FGD": 1953,
+          "PDI": 686,
+          "PND": 435,
+          "AHD": 406,
+          "PCS": 208,
+          "PSD": 200,
+          "PE": 128,
+          "PDN": 55
+        },
+        "registered": 295608,
+        "expressed": 110114,
+        "abstentions": 185494,
+        "vote_coverage": 1.2638719872132518,
+        "explicit_expressed": 110114
+      },
+      "2021": {
+        "votes": {
+          "PAM": 33209,
+          "PI": 21524,
+          "MP": 18853,
+          "RNI": 17649,
+          "MDS": 15192,
+          "UC": 13065,
+          "USFP": 11586,
+          "PPS": 11110,
+          "PJD": 5315,
+          "FFD": 1471,
+          "PE": 1232,
+          "AGD": 1077,
+          "PCS": 892,
+          "UMD": 849,
+          "PML": 805,
+          "PND": 787,
+          "PSU": 758,
+          "PAN": 457,
+          "PLJS": 439,
+          "PUD": 424,
+          "PT": 356,
+          "PRD": 289,
+          "PRE": 232,
+          "PVM": 147,
+          "PSD": 78
+        },
+        "registered": 324683,
+        "expressed": 157796,
+        "abstentions": 166887,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 157796
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "PI": 1,
+        "MP": 1,
+        "RNI": 1,
+        "MDS": 1,
+        "UC": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "PI",
+        "MP",
+        "RNI",
+        "MDS",
+        "UC"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "al-haouz",
+      "name": "Al Haouz",
+      "region": "Marrakech-Safi",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Al_Haouz",
+      "2016": {
+        "votes": {
+          "PAM": 31729,
+          "PJD": 26305,
+          "PI": 13084,
+          "RNI": 10555,
+          "UC": 9420,
+          "MP": 7574,
+          "PPS": 1452,
+          "PUD": 1401,
+          "PND": 1347,
+          "MDS": 1113,
+          "USFP": 755,
+          "FFD": 572,
+          "PRD": 365,
+          "AGD": 286,
+          "PLJS": 234
+        },
+        "registered": 224034,
+        "expressed": 106192,
+        "abstentions": 117842,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 106192
+      },
+      "2021": {
+        "votes": {
+          "RNI": 64255,
+          "PI": 32192,
+          "PAM": 30407,
+          "UC": 26724,
+          "PPS": 19850,
+          "MP": 8024,
+          "PJD": 4528,
+          "USFP": 2139,
+          "PE": 304,
+          "PAN": 284
+        },
+        "registered": 274433,
+        "expressed": 188707,
+        "abstentions": 85726,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 188707
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "UC": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM",
+        "UC"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "el-kelaa-des-sraghna",
+      "name": "El Kelâa des Sraghna",
+      "region": "Marrakech-Safi",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'El_Kelâa_des_Sraghna",
+      "2016": {
+        "votes": {
+          "PAM": 77026,
+          "PJD": 12433,
+          "PI": 9032,
+          "RNI": 8391,
+          "MP": 7375,
+          "PPS": 6209,
+          "MDS": 4421,
+          "FFD": 3742,
+          "USFP": 3180,
+          "PRV": 2575,
+          "FGD": 1355,
+          "UC": 1076,
+          "PSD": 592,
+          "PAN": 291,
+          "PLJS": 173
+        },
+        "registered": 225968,
+        "expressed": 99358,
+        "abstentions": 126610,
+        "vote_coverage": 1.3876185108395902,
+        "explicit_expressed": 99358
+      },
+      "2021": {
+        "votes": {
+          "RNI": 34567,
+          "PI": 24279,
+          "USFP": 21325,
+          "PAM": 20607,
+          "UC": 17597,
+          "PPS": 14332,
+          "MDS": 10680,
+          "PJD": 4909,
+          "MP": 1527,
+          "AGD": 1212,
+          "PSU": 567,
+          "PE": 364,
+          "PML": 326,
+          "PVM": 313,
+          "PND": 281,
+          "PCS": 133
+        },
+        "registered": 240747,
+        "expressed": 153019,
+        "abstentions": 87728,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 153019
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "USFP": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "USFP",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "essaouira",
+      "name": "Essaouira",
+      "region": "Marrakech-Safi",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Essaouira",
+      "2016": {
+        "votes": {
+          "PJD": 16613,
+          "USFP": 16309,
+          "PPS": 14875,
+          "PAM": 14392,
+          "RNI": 10314,
+          "PI": 8566,
+          "MP": 5160,
+          "FGD": 916,
+          "MDS": 831,
+          "UC": 574,
+          "PCS": 164
+        },
+        "registered": 200620,
+        "expressed": 88714,
+        "abstentions": 111906,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 88714
+      },
+      "2021": {
+        "votes": {
+          "USFP": 34343,
+          "RNI": 30553,
+          "PI": 23092,
+          "PPS": 22178,
+          "PAM": 21209,
+          "PND": 3675,
+          "PJD": 2003,
+          "AGD": 1383,
+          "PLJS": 840,
+          "PML": 671,
+          "MP": 563,
+          "PE": 381,
+          "MDS": 369,
+          "PSD": 344,
+          "PCS": 319,
+          "FFD": 176
+        },
+        "registered": 214360,
+        "expressed": 142099,
+        "abstentions": 72261,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 142099
+      },
+      "legal_replay": {
+        "USFP": 1,
+        "RNI": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "rank_winners": [
+        "USFP",
+        "RNI",
+        "PI",
+        "PPS"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "rehamna",
+      "name": "Rehamna",
+      "region": "Marrakech-Safi",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Rehamna",
+      "2016": {
+        "votes": {
+          "PAM": 53026,
+          "PJD": 11083,
+          "RNI": 7321,
+          "FGD": 3813,
+          "PI": 1546,
+          "PAN": 206,
+          "USFP": 190,
+          "PPS": 167,
+          "PEDD": 134,
+          "AHD": 120,
+          "PSD": 51
+        },
+        "registered": 120936,
+        "expressed": 51144,
+        "abstentions": 69792,
+        "vote_coverage": 1.5183990301892696,
+        "explicit_expressed": 51144
+      },
+      "2021": {
+        "votes": {
+          "PAM": 31073,
+          "RNI": 27319,
+          "PI": 13643,
+          "UC": 8079,
+          "PPS": 2558,
+          "AGD": 2283,
+          "PJD": 1780,
+          "USFP": 642,
+          "PSU": 496,
+          "PRE": 466,
+          "PND": 257,
+          "PCS": 238,
+          "PAN": 179,
+          "PLJS": 144
+        },
+        "registered": 138271,
+        "expressed": 89157,
+        "abstentions": 49114,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 89157
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "RNI",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "tanger-assilah",
+      "name": "Tanger-Assilah",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 5,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tanger-Assilah",
+      "2016": {
+        "votes": {
+          "PJD": 180834,
+          "PAM": 25948,
+          "UC": 10636,
+          "RNI": 6525,
+          "FGD": 2668,
+          "PI": 1746,
+          "USFP": 748,
+          "PPS": 660,
+          "PCS": 242,
+          "AHD": 197,
+          "PRV": 165,
+          "PGV": 164,
+          "PND": 138,
+          "PAN": 117,
+          "PDI": 99,
+          "PSD": 86
+        },
+        "registered": 229933,
+        "expressed": 110417,
+        "abstentions": 119516,
+        "vote_coverage": 2.091824628453952,
+        "explicit_expressed": 110417
+      },
+      "2021": {
+        "votes": {
+          "UC": 22821,
+          "PI": 21218,
+          "PAM": 20131,
+          "RNI": 19900,
+          "USFP": 11650,
+          "PJD": 8010,
+          "MP": 2567,
+          "PPS": 2485,
+          "PSU": 1410,
+          "PND": 1059,
+          "PCS": 938,
+          "PVM": 792,
+          "AGD": 654,
+          "PE": 558,
+          "PEDD": 437,
+          "PAN": 371,
+          "MDS": 349,
+          "PUD": 316,
+          "PRV": 158,
+          "PT": 130,
+          "UMD": 123,
+          "PDI": 51,
+          "PLJS": 16
+        },
+        "registered": 351952,
+        "expressed": 116144,
+        "abstentions": 235808,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 116144
+      },
+      "legal_replay": {
+        "UC": 1,
+        "PI": 1,
+        "PAM": 1,
+        "RNI": 1,
+        "USFP": 1
+      },
+      "rank_winners": [
+        "UC",
+        "PI",
+        "PAM",
+        "RNI",
+        "USFP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "m-diq-fnideq",
+      "name": "M'diq-Fnideq",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_M'diq-Fnideq",
+      "2016": {
+        "votes": {
+          "PJD": 9080,
+          "PPS": 7391,
+          "PAM": 6508,
+          "MP": 4240,
+          "USFP": 1588,
+          "UC": 1309,
+          "FGD": 400,
+          "PI": 317,
+          "PND": 198,
+          "MDS": 83,
+          "PEDD": 68,
+          "FFD": 52,
+          "PRD": 22
+        },
+        "registered": 78770,
+        "expressed": 31256,
+        "abstentions": 47514,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 31256
+      },
+      "2021": {
+        "votes": {
+          "PAM": 9299,
+          "USFP": 5149,
+          "RNI": 4479,
+          "PPS": 3245,
+          "UC": 2896,
+          "PI": 2544,
+          "PJD": 1675,
+          "AGD": 1179,
+          "FFD": 1048,
+          "PEDD": 1027,
+          "PSU": 573,
+          "PML": 200
+        },
+        "registered": 81692,
+        "expressed": 33314,
+        "abstentions": 48378,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 33314
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "USFP": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "USFP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "tetouan",
+      "name": "Tétouan",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 5,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tétouan",
+      "2016": {
+        "votes": {
+          "PJD": 20136,
+          "RNI": 16328,
+          "PPS": 13289,
+          "PAM": 11792,
+          "USFP": 10639,
+          "FGD": 2478,
+          "PI": 1168,
+          "MDS": 282,
+          "MP": 194,
+          "PUD": 99,
+          "UC": 79
+        },
+        "registered": 206314,
+        "expressed": 79472,
+        "abstentions": 126842,
+        "vote_coverage": 0.9624018522246829,
+        "explicit_expressed": 79472
+      },
+      "2021": {
+        "votes": {
+          "RNI": 26877,
+          "PAM": 25706,
+          "PI": 11798,
+          "USFP": 5424,
+          "UC": 5265,
+          "PJD": 2866,
+          "PPS": 2852,
+          "MP": 2434,
+          "PSU": 1065,
+          "AGD": 827,
+          "PML": 421,
+          "PRE": 224,
+          "PEDD": 145,
+          "PUD": 117,
+          "PVM": 66
+        },
+        "registered": 239397,
+        "expressed": 86087,
+        "abstentions": 153310,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 86087
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1,
+        "USFP": 1,
+        "UC": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "PI",
+        "USFP",
+        "UC"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "ouezzane",
+      "name": "Ouezzane",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Ouezzane",
+      "2016": {
+        "votes": {
+          "PAM": 24871,
+          "PI": 14269,
+          "USFP": 11190,
+          "PJD": 10322,
+          "RNI": 7513,
+          "UC": 3965,
+          "PPS": 2270,
+          "FFD": 834,
+          "MP": 609,
+          "FGD": 599,
+          "MDS": 385,
+          "PAN": 107,
+          "PSD": 82
+        },
+        "registered": 128876,
+        "expressed": 77016,
+        "abstentions": 51860,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 77016
+      },
+      "2021": {
+        "votes": {
+          "RNI": 30619,
+          "PAM": 27818,
+          "PI": 17214,
+          "USFP": 12545,
+          "PJD": 5712,
+          "MP": 1150,
+          "PPS": 734,
+          "PVM": 308,
+          "PEDD": 186,
+          "PRD": 108,
+          "PAN": 62,
+          "PDI": 17
+        },
+        "registered": 145094,
+        "expressed": 96473,
+        "abstentions": 48621,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 96473
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "larache",
+      "name": "Larache",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Larache",
+      "2016": {
+        "votes": {
+          "MP": 18106,
+          "PJD": 16178,
+          "PAM": 11740,
+          "UC": 10633,
+          "PPS": 7142,
+          "RNI": 6568,
+          "USFP": 4994,
+          "PI": 4110,
+          "FGD": 1279,
+          "FFD": 1148,
+          "PND": 191,
+          "AHD": 152,
+          "PEDD": 119
+        },
+        "registered": 187352,
+        "expressed": 82360,
+        "abstentions": 104992,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 82360
+      },
+      "2021": {
+        "votes": {
+          "RNI": 35532,
+          "PI": 24676,
+          "UC": 19068,
+          "PAM": 14510,
+          "USFP": 5418,
+          "PJD": 4106,
+          "MP": 2905,
+          "PEDD": 766,
+          "PVM": 585,
+          "PPS": 552,
+          "PE": 522,
+          "PND": 367,
+          "PUD": 338,
+          "AGD": 317,
+          "PT": 103
+        },
+        "registered": 207299,
+        "expressed": 109765,
+        "abstentions": 97534,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 109765
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "UC": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "UC",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "chefchaouen",
+      "name": "Chefchaouen",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Chefchaouen",
+      "2016": {
+        "votes": {
+          "MP": 13999,
+          "PAM": 13692,
+          "PI": 11429,
+          "UC": 10435,
+          "USFP": 7954,
+          "PLJS": 7203,
+          "PJD": 6893,
+          "FFD": 5780,
+          "PPS": 5430,
+          "RNI": 3750,
+          "PEDD": 1807,
+          "MDS": 1336,
+          "PND": 915,
+          "AHD": 768,
+          "FGD": 427,
+          "PDI": 409,
+          "PGV": 44
+        },
+        "registered": 176157,
+        "expressed": 92271,
+        "abstentions": 83886,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 92271
+      },
+      "2021": {
+        "votes": {
+          "RNI": 31888,
+          "USFP": 21321,
+          "PAM": 19106,
+          "PI": 17076,
+          "UC": 9101,
+          "MP": 8440,
+          "PPS": 6097,
+          "PSU": 2897,
+          "PRE": 1190,
+          "PJD": 1129,
+          "PEDD": 833,
+          "AGD": 752,
+          "PND": 546,
+          "PUD": 493,
+          "PVM": 324
+        },
+        "registered": 189482,
+        "expressed": 121193,
+        "abstentions": 68289,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 121193
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "USFP": 1,
+        "PAM": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "USFP",
+        "PAM",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "al-hoceima",
+      "name": "Al Hoceïma",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Al_Hoceïma",
+      "2016": {
+        "votes": {
+          "PAM": 81736,
+          "MP": 9347,
+          "PI": 9103,
+          "USFP": 7525,
+          "RNI": 5941,
+          "PJD": 3770,
+          "PPS": 1116,
+          "PRV": 736,
+          "FGD": 326,
+          "MDS": 233,
+          "FFD": 133,
+          "PND": 92
+        },
+        "registered": 185023,
+        "expressed": 79190,
+        "abstentions": 105833,
+        "vote_coverage": 1.5160752620280338,
+        "explicit_expressed": 79190
+      },
+      "2021": {
+        "votes": {
+          "PI": 22902,
+          "RNI": 19346,
+          "PAM": 14635,
+          "MP": 14190,
+          "USFP": 13702,
+          "UC": 11457,
+          "PPS": 4426,
+          "PJD": 1137,
+          "FFD": 957,
+          "PSU": 820,
+          "PVM": 329,
+          "PND": 316,
+          "PML": 160,
+          "PRD": 159
+        },
+        "registered": 198173,
+        "expressed": 104536,
+        "abstentions": 93637,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 104536
+      },
+      "legal_replay": {
+        "PI": 1,
+        "RNI": 1,
+        "PAM": 1,
+        "MP": 1
+      },
+      "rank_winners": [
+        "PI",
+        "RNI",
+        "PAM",
+        "MP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "oujda-angad",
+      "name": "Oujda-Angad",
+      "region": "Oriental",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Oujda-Angad",
+      "2016": {
+        "votes": {
+          "PAM": 60896,
+          "PJD": 57220,
+          "PI": 9939,
+          "FGD": 2103,
+          "USFP": 1676,
+          "RNI": 1347,
+          "MP": 838,
+          "PPS": 700,
+          "PND": 511,
+          "UC": 186,
+          "AHD": 155,
+          "PRV": 135,
+          "FFD": 127,
+          "PLJS": 111,
+          "PGV": 50
+        },
+        "registered": 230003,
+        "expressed": 76936,
+        "abstentions": 153067,
+        "vote_coverage": 1.7676250389934491,
+        "explicit_expressed": 76936
+      },
+      "2021": {
+        "votes": {
+          "PAM": 21979,
+          "RNI": 19678,
+          "PI": 5050,
+          "USFP": 3319,
+          "PJD": 2871,
+          "MDS": 2285,
+          "PND": 790,
+          "PSU": 741,
+          "UC": 715,
+          "AGD": 684,
+          "MP": 674,
+          "PPS": 604,
+          "PUD": 488,
+          "PDI": 300,
+          "PRV": 273,
+          "PLJS": 262,
+          "PVM": 150,
+          "PAN": 122,
+          "PML": 116,
+          "PEDD": 106
+        },
+        "registered": 246604,
+        "expressed": 61207,
+        "abstentions": 185397,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 61207
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1,
+        "USFP": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "RNI",
+        "PI",
+        "USFP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "nador",
+      "name": "Nador",
+      "region": "Oriental",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Nador",
+      "2016": {
+        "votes": {
+          "PAM": 13974,
+          "PJD": 13527,
+          "MP": 13171,
+          "RNI": 12135,
+          "PI": 10456,
+          "USFP": 7769,
+          "PPS": 2495,
+          "PRV": 1035,
+          "FGD": 934,
+          "FFD": 272,
+          "PUD": 267,
+          "PLJS": 254,
+          "AHD": 148,
+          "UC": 87,
+          "PEDD": 75,
+          "PSD": 63,
+          "PRD": 23
+        },
+        "registered": 243987,
+        "expressed": 76685,
+        "abstentions": 167302,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 76685
+      },
+      "2021": {
+        "votes": {
+          "RNI": 35973,
+          "PAM": 23301,
+          "USFP": 18791,
+          "PI": 15915,
+          "PPS": 7986,
+          "PJD": 4467,
+          "MP": 2904,
+          "UC": 2297,
+          "PE": 1032,
+          "PSU": 668,
+          "PRV": 582,
+          "AGD": 567,
+          "PUD": 485,
+          "PVM": 445,
+          "PEDD": 350,
+          "FFD": 347,
+          "PT": 271,
+          "PSD": 45,
+          "PDI": 42
+        },
+        "registered": 255861,
+        "expressed": 116468,
+        "abstentions": 139393,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 116468
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "USFP",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "driouch",
+      "name": "Driouch",
+      "region": "Oriental",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Driouch",
+      "2016": {
+        "votes": {
+          "MP": 14748,
+          "RNI": 11040,
+          "PAM": 10644,
+          "AHD": 9317,
+          "PUD": 1304,
+          "PJD": 1298,
+          "PPS": 758,
+          "USFP": 565,
+          "PI": 206,
+          "FFD": 197,
+          "FGD": 79,
+          "MDS": 14
+        },
+        "registered": 113661,
+        "expressed": 50170,
+        "abstentions": 63491,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 50170
+      },
+      "2021": {
+        "votes": {
+          "RNI": 20464,
+          "PI": 17939,
+          "PAM": 16658,
+          "MP": 14449,
+          "PND": 2107,
+          "PPS": 1760,
+          "PE": 1233,
+          "PJD": 713,
+          "FFD": 466,
+          "USFP": 293,
+          "PVM": 163
+        },
+        "registered": 129823,
+        "expressed": 76245,
+        "abstentions": 53578,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 76245
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "jerada",
+      "name": "Jerada",
+      "region": "Oriental",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Jerada",
+      "2016": {
+        "votes": {
+          "PAM": 8358,
+          "PI": 4525,
+          "PJD": 4507,
+          "USFP": 2678,
+          "MP": 2576,
+          "FFD": 2296,
+          "FGD": 475,
+          "PPS": 425,
+          "UC": 367,
+          "AHD": 172,
+          "PRV": 136,
+          "PRD": 36,
+          "PGV": 24
+        },
+        "registered": 59625,
+        "expressed": 26575,
+        "abstentions": 33050,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 26575
+      },
+      "2021": {
+        "votes": {
+          "RNI": 9855,
+          "PAM": 9332,
+          "PPS": 8956,
+          "PI": 5019,
+          "UC": 2630,
+          "MP": 1376,
+          "USFP": 1022,
+          "FFD": 533,
+          "PJD": 409,
+          "PML": 70,
+          "PVM": 37
+        },
+        "registered": 65051,
+        "expressed": 39239,
+        "abstentions": 25812,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 39239
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "berkane",
+      "name": "Berkane",
+      "region": "Oriental",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Berkane",
+      "2016": {
+        "votes": {
+          "PAM": 17354,
+          "PJD": 13405,
+          "PI": 4260,
+          "MP": 3993,
+          "UC": 3964,
+          "RNI": 3166,
+          "FFD": 3165,
+          "PRD": 1547,
+          "PPS": 1445,
+          "USFP": 1331,
+          "FGD": 1231,
+          "AHD": 167,
+          "PT": 80,
+          "PRV": 46
+        },
+        "registered": 130697,
+        "expressed": 55154,
+        "abstentions": 75543,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 55154
+      },
+      "2021": {
+        "votes": {
+          "RNI": 23797,
+          "PI": 17148,
+          "PAM": 12174,
+          "MP": 4086,
+          "PJD": 3813,
+          "PPS": 3576,
+          "FFD": 1952,
+          "UC": 1740,
+          "USFP": 1386,
+          "PSU": 744,
+          "AGD": 485,
+          "PE": 103,
+          "PND": 89
+        },
+        "registered": 136902,
+        "expressed": 71093,
+        "abstentions": 65809,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 71093
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "taourirt",
+      "name": "Taourirt",
+      "region": "Oriental",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Taourirt",
+      "2016": {
+        "votes": {
+          "PI": 8800,
+          "UC": 7443,
+          "MP": 7251,
+          "PJD": 6787,
+          "PAM": 6548,
+          "PPS": 1312,
+          "USFP": 1278,
+          "FGD": 851,
+          "RNI": 643,
+          "FFD": 246,
+          "PND": 205,
+          "AHD": 202,
+          "PRD": 100,
+          "PRV": 92,
+          "PCS": 21
+        },
+        "registered": 108432,
+        "expressed": 41779,
+        "abstentions": 66653,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 41779
+      },
+      "2021": {
+        "votes": {
+          "RNI": 13721,
+          "PAM": 13163,
+          "PI": 11452,
+          "MP": 11065,
+          "USFP": 2244,
+          "PPS": 1993,
+          "PJD": 1462,
+          "PSU": 771,
+          "UC": 723,
+          "PEDD": 412,
+          "PRE": 368,
+          "PAN": 325,
+          "PVM": 138,
+          "PSD": 64,
+          "UMD": 42
+        },
+        "registered": 117080,
+        "expressed": 57943,
+        "abstentions": 59137,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 57943
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "guercif",
+      "name": "Guercif",
+      "region": "Oriental",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Guercif",
+      "2016": {
+        "votes": {
+          "PAM": 10096,
+          "PI": 9049,
+          "USFP": 8257,
+          "PJD": 7039,
+          "MP": 3934,
+          "AHD": 432,
+          "PPS": 326,
+          "FGD": 216,
+          "MDS": 200,
+          "FFD": 150,
+          "PRV": 121,
+          "PUD": 89,
+          "RNI": 59,
+          "PDI": 31
+        },
+        "registered": 89264,
+        "expressed": 39999,
+        "abstentions": 49265,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 39999
+      },
+      "2021": {
+        "votes": {
+          "PAM": 18598,
+          "PI": 15324,
+          "RNI": 15025,
+          "USFP": 5730,
+          "FFD": 993,
+          "PJD": 918,
+          "MP": 364,
+          "PPS": 266,
+          "AGD": 265,
+          "PEDD": 220,
+          "PND": 158,
+          "PRE": 64,
+          "PDI": 11
+        },
+        "registered": 99155,
+        "expressed": 57936,
+        "abstentions": 41219,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 57936
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "fes-sud",
+      "name": "Fès-Sud",
+      "region": "Fès-Meknès",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Fès-Sud",
+      "2016": {
+        "votes": {
+          "PJD": 81856,
+          "RNI": 8607,
+          "PI": 8244,
+          "PAM": 6231,
+          "MP": 3929,
+          "FGD": 3381,
+          "USFP": 2261,
+          "UC": 1111,
+          "PPS": 470,
+          "PND": 252,
+          "FFD": 179,
+          "MDS": 159,
+          "PCS": 132,
+          "PUD": 117,
+          "PE": 91,
+          "PAN": 79,
+          "PDN": 79,
+          "PGV": 68,
+          "PRV": 61
+        },
+        "registered": 194448,
+        "expressed": 76379,
+        "abstentions": 118069,
+        "vote_coverage": 1.5358540960211577,
+        "explicit_expressed": 76379
+      },
+      "2021": {
+        "votes": {
+          "RNI": 16451,
+          "PI": 7842,
+          "PAM": 7551,
+          "USFP": 5699,
+          "PJD": 5332,
+          "FFD": 4786,
+          "PPS": 2501,
+          "PSU": 1866,
+          "AGD": 1717,
+          "MP": 1055
+        },
+        "registered": 194602,
+        "expressed": 54800,
+        "abstentions": 139802,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 54800
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM",
+        "USFP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "fes-nord",
+      "name": "Fès-Nord",
+      "region": "Fès-Meknès",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Fès-Nord",
+      "2016": {
+        "votes": {
+          "PJD": 68940,
+          "PI": 9370,
+          "PAM": 8237,
+          "RNI": 2304,
+          "USFP": 2235,
+          "PPS": 1991,
+          "FGD": 1278,
+          "MP": 866,
+          "FFD": 678,
+          "AHD": 473,
+          "PUD": 337,
+          "UC": 225,
+          "MDS": 147,
+          "PGV": 129,
+          "PAN": 125,
+          "PRV": 117,
+          "PND": 116,
+          "PRD": 44
+        },
+        "registered": 162863,
+        "expressed": 63142,
+        "abstentions": 99721,
+        "vote_coverage": 1.5459123879509677,
+        "explicit_expressed": 63142
+      },
+      "2021": {
+        "votes": {
+          "RNI": 9244,
+          "FFD": 7776,
+          "PI": 6876,
+          "PAM": 5774,
+          "PJD": 4201,
+          "MP": 3285,
+          "USFP": 2967,
+          "PPS": 2049,
+          "UC": 1361,
+          "PSU": 847,
+          "PSD": 815,
+          "AGD": 683,
+          "PND": 627,
+          "PRD": 232,
+          "PAN": 190,
+          "PCS": 170,
+          "PLJS": 167,
+          "PVM": 164,
+          "PML": 86,
+          "PE": 85,
+          "UMD": 34,
+          "PDI": 27
+        },
+        "registered": 174005,
+        "expressed": 47660,
+        "abstentions": 126345,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 47660
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "FFD": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "FFD",
+        "PI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "ifrane",
+      "name": "Ifrane",
+      "region": "Fès-Meknès",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Ifrane",
+      "2016": {
+        "votes": {
+          "MP": 8372,
+          "PJD": 5165,
+          "PAM": 5063,
+          "PPS": 4393,
+          "PI": 4349,
+          "USFP": 2481,
+          "RNI": 1488,
+          "AHD": 1410,
+          "FFD": 1021,
+          "FGD": 588,
+          "UC": 353,
+          "MDS": 270,
+          "UMD": 196,
+          "PT": 136,
+          "PRV": 126,
+          "PDN": 62,
+          "PGV": 55
+        },
+        "registered": 74373,
+        "expressed": 35528,
+        "abstentions": 38845,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 35528
+      },
+      "2021": {
+        "votes": {
+          "RNI": 19595,
+          "MP": 17400,
+          "PI": 8010,
+          "PAM": 1363,
+          "PJD": 1002,
+          "USFP": 850,
+          "PPS": 728,
+          "PE": 437,
+          "PCS": 423,
+          "FFD": 391,
+          "UC": 365,
+          "PND": 307,
+          "PRE": 300,
+          "PVM": 204,
+          "PDI": 90,
+          "UMD": 49,
+          "PLJS": 19,
+          "PT": 11
+        },
+        "registered": 81172,
+        "expressed": 51544,
+        "abstentions": 29628,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 51544
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "MP": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "MP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "moulay-yaacoub",
+      "name": "Moulay Yaâcoub",
+      "region": "Fès-Meknès",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Moulay_Yaâcoub",
+      "2016": {
+        "votes": {
+          "PAM": 9783,
+          "PJD": 8051,
+          "PI": 7045,
+          "MP": 6155,
+          "RNI": 4160,
+          "PPS": 202,
+          "USFP": 184,
+          "PDN": 111,
+          "FFD": 75,
+          "PAN": 69,
+          "FGD": 62,
+          "PLJS": 36,
+          "PRD": 33,
+          "MDS": 24
+        },
+        "registered": 65365,
+        "expressed": 35990,
+        "abstentions": 29375,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 35990
+      },
+      "2021": {
+        "votes": {
+          "PAM": 18296,
+          "RNI": 14228,
+          "PI": 10629,
+          "MP": 8763,
+          "PJD": 1058,
+          "FFD": 859,
+          "USFP": 845,
+          "UC": 579,
+          "PPS": 389,
+          "PSU": 132,
+          "PND": 73,
+          "PRE": 60,
+          "PT": 9,
+          "PDI": 9,
+          "PLJS": 2
+        },
+        "registered": 75726,
+        "expressed": 55931,
+        "abstentions": 19795,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 55931
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "RNI": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "RNI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "sefrou",
+      "name": "Séfrou",
+      "region": "Fès-Meknès",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Séfrou",
+      "2016": {
+        "votes": {
+          "MP": 10064,
+          "USFP": 8856,
+          "PJD": 7752,
+          "PAM": 6566,
+          "PI": 4637,
+          "PPS": 4327,
+          "UC": 3307,
+          "RNI": 2739,
+          "AHD": 1916,
+          "FFD": 1843,
+          "FGD": 1030,
+          "PRV": 826,
+          "MDS": 801,
+          "PCS": 287,
+          "PGV": 287,
+          "PDN": 172,
+          "PLJS": 72,
+          "PEDD": 45
+        },
+        "registered": 100848,
+        "expressed": 55527,
+        "abstentions": 45321,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 55527
+      },
+      "2021": {
+        "votes": {
+          "RNI": 21648,
+          "PAM": 19740,
+          "USFP": 19006,
+          "PI": 9364,
+          "MP": 5620,
+          "PPS": 4271,
+          "UC": 2315,
+          "PJD": 1812,
+          "AGD": 1008,
+          "PSU": 986,
+          "FFD": 943,
+          "PRE": 826,
+          "PUD": 542,
+          "PND": 393,
+          "PVM": 348,
+          "PEDD": 305,
+          "PCS": 204,
+          "PT": 150,
+          "PDI": 19
+        },
+        "registered": 139452,
+        "expressed": 89500,
+        "abstentions": 49952,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 89500
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "USFP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "el-hajeb",
+      "name": "El Hajeb",
+      "region": "Fès-Meknès",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'El_Hajeb",
+      "2016": {
+        "votes": {
+          "PI": 12014,
+          "PJD": 11407,
+          "MP": 8497,
+          "USFP": 7627,
+          "PAM": 4146,
+          "RNI": 2800,
+          "MDS": 1746,
+          "UC": 1117,
+          "FGD": 980,
+          "PPS": 447,
+          "PRV": 303,
+          "PUD": 136,
+          "PGV": 98,
+          "PCS": 92,
+          "PDI": 15
+        },
+        "registered": 106382,
+        "expressed": 51425,
+        "abstentions": 54957,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 51425
+      },
+      "2021": {
+        "votes": {
+          "PI": 23569,
+          "RNI": 21115,
+          "PPS": 9922,
+          "PAM": 7147,
+          "MP": 5164,
+          "PJD": 4626,
+          "USFP": 2740,
+          "PSU": 1394,
+          "PEDD": 762,
+          "MDS": 711,
+          "AGD": 543,
+          "PCS": 402,
+          "PRE": 273,
+          "PVM": 262,
+          "PDI": 182,
+          "PT": 16
+        },
+        "registered": 112595,
+        "expressed": 78828,
+        "abstentions": 33767,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 78828
+      },
+      "legal_replay": {
+        "PI": 1,
+        "RNI": 1
+      },
+      "rank_winners": [
+        "PI",
+        "RNI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "taza",
+      "name": "Taza",
+      "region": "Fès-Meknès",
+      "seats": 5,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Taza",
+      "2016": {
+        "votes": {
+          "PAM": 22651,
+          "PJD": 16146,
+          "PI": 10397,
+          "MP": 8791,
+          "MDS": 8476,
+          "PAN": 7738,
+          "PUD": 7189,
+          "RNI": 6787,
+          "USFP": 6180,
+          "FFD": 5204,
+          "PPS": 3054,
+          "UC": 2558,
+          "UMD": 2023,
+          "FGD": 1474,
+          "PND": 665,
+          "PCS": 245,
+          "PE": 178,
+          "PRV": 164,
+          "PEDD": 106,
+          "PSD": 103,
+          "PDN": 92
+        },
+        "registered": 250104,
+        "expressed": 110221,
+        "abstentions": 139883,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 110221
+      },
+      "2021": {
+        "votes": {
+          "PAM": 27665,
+          "RNI": 25146,
+          "MP": 18370,
+          "PI": 17962,
+          "PPS": 15648,
+          "UC": 10369,
+          "USFP": 5821,
+          "FFD": 5260,
+          "AGD": 5238,
+          "PND": 2972,
+          "PJD": 2545,
+          "PSU": 1185,
+          "PDN": 1103,
+          "PAN": 935,
+          "PCS": 670,
+          "PVM": 264,
+          "PSD": 259,
+          "PLJS": 62,
+          "PDI": 33
+        },
+        "registered": 245459,
+        "expressed": 141507,
+        "abstentions": 103952,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 141507
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "RNI": 1,
+        "MP": 1,
+        "PI": 1,
+        "PPS": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "RNI",
+        "MP",
+        "PI",
+        "PPS"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "taounate-tissa",
+      "name": "Taounate-Tissa",
+      "region": "Fès-Meknès",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Taounate-Tissa",
+      "2016": {
+        "votes": {
+          "RNI": 16133,
+          "PAM": 16104,
+          "PPS": 7752,
+          "USFP": 5895,
+          "MP": 5729,
+          "PJD": 5251,
+          "PI": 4008,
+          "FGD": 1599,
+          "PRV": 284,
+          "PGV": 216
+        },
+        "registered": 134697,
+        "expressed": 62971,
+        "abstentions": 71726,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 62971
+      },
+      "2021": {
+        "votes": {
+          "RNI": 39235,
+          "PAM": 23819,
+          "PPS": 13037,
+          "PI": 11534,
+          "USFP": 5284,
+          "PJD": 2537,
+          "AGD": 2010,
+          "FFD": 1169,
+          "PSU": 567,
+          "MDS": 357,
+          "PCS": 69,
+          "PDI": 48
+        },
+        "registered": 141491,
+        "expressed": 99666,
+        "abstentions": 41825,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 99666
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "PPS": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "PPS"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "karia-ghafsay",
+      "name": "Karia-Ghafsay",
+      "region": "Fès-Meknès",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Karia-Ghafsay",
+      "2016": {
+        "votes": {
+          "PJD": 16595,
+          "PI": 16451,
+          "PAM": 9728,
+          "USFP": 8767,
+          "MP": 7643,
+          "PPS": 5923,
+          "RNI": 5071,
+          "PT": 1070,
+          "FGD": 461,
+          "PEDD": 367,
+          "MDS": 164
+        },
+        "registered": 128747,
+        "expressed": 72240,
+        "abstentions": 56507,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 72240
+      },
+      "2021": {
+        "votes": {
+          "RNI": 32249,
+          "PI": 25155,
+          "PAM": 22893,
+          "USFP": 8506,
+          "PJD": 6208,
+          "PPS": 4215,
+          "PSU": 1580
+        },
+        "registered": 135346,
+        "expressed": 100806,
+        "abstentions": 34540,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 100806
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PI": 1,
+        "PAM": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PI",
+        "PAM"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "meknes",
+      "name": "Meknès",
+      "region": "Fès-Meknès",
+      "seats": 6,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Meknès",
+      "2016": {
+        "votes": {
+          "PJD": 96240,
+          "MP": 16748,
+          "PI": 15906,
+          "RNI": 10555,
+          "UC": 9729,
+          "PAM": 9086,
+          "FGD": 5875,
+          "USFP": 2090,
+          "PPS": 1590,
+          "FFD": 1299,
+          "AHD": 940,
+          "PAN": 714,
+          "PRV": 635,
+          "PEDD": 556,
+          "MDS": 472,
+          "PRD": 256,
+          "PE": 229,
+          "PCS": 208,
+          "PDI": 207,
+          "PND": 169,
+          "PGV": 77,
+          "PT": 66
+        },
+        "registered": 313113,
+        "expressed": 125527,
+        "abstentions": 187586,
+        "vote_coverage": 1.3833438224445738,
+        "explicit_expressed": 125527
+      },
+      "2021": {
+        "votes": {
+          "PI": 29425,
+          "RNI": 28336,
+          "MP": 22550,
+          "UC": 12966,
+          "PAM": 10347,
+          "PJD": 7459,
+          "USFP": 4007,
+          "PSU": 3250,
+          "AGD": 2334,
+          "PPS": 2299,
+          "FFD": 1651,
+          "MDS": 1477,
+          "PEDD": 1029,
+          "PDI": 656,
+          "PRD": 614,
+          "PND": 521,
+          "PE": 428,
+          "PRE": 413,
+          "PUD": 365,
+          "PVM": 97,
+          "PML": 85,
+          "PT": 60
+        },
+        "registered": 348208,
+        "expressed": 130369,
+        "abstentions": 217839,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 130369
+      },
+      "legal_replay": {
+        "PI": 1,
+        "RNI": 1,
+        "MP": 1,
+        "UC": 1,
+        "PAM": 1,
+        "PJD": 1
+      },
+      "rank_winners": [
+        "PI",
+        "RNI",
+        "MP",
+        "UC",
+        "PAM",
+        "PJD"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "beni-mellal",
+      "name": "Béni-Mellal",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 6,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Béni-Mellal",
+      "2016": {
+        "votes": {
+          "PAM": 51692,
+          "PJD": 43428,
+          "PI": 8501,
+          "MP": 8110,
+          "USFP": 6965,
+          "PDI": 6129,
+          "FGD": 5041,
+          "UC": 3202,
+          "RNI": 2687,
+          "PPS": 2443,
+          "AHD": 1891,
+          "PRD": 1478,
+          "PRV": 1389,
+          "PE": 1350,
+          "FFD": 463,
+          "PEDD": 301,
+          "MDS": 164
+        },
+        "registered": null,
+        "expressed": 145234,
+        "abstentions": null,
+        "vote_coverage": 1.0,
+        "explicit_expressed": null
+      },
+      "2021": {
+        "votes": {
+          "RNI": 35299,
+          "PAM": 30383,
+          "PI": 16274,
+          "USFP": 12589,
+          "MP": 11169,
+          "PPS": 10788,
+          "AGD": 9566,
+          "PJD": 6852,
+          "MDS": 6255,
+          "FFD": 3328,
+          "PSU": 946,
+          "PVM": 671,
+          "PE": 234,
+          "PDN": 208,
+          "PRV": 103,
+          "PSD": 66
+        },
+        "registered": 57452,
+        "expressed": 144731,
+        "abstentions": 41061,
+        "vote_coverage": 1.0,
+        "explicit_expressed": null
+      },
+      "legal_replay": {
+        "RNI": 3,
+        "PAM": 3,
+        "PI": 1,
+        "USFP": 1,
+        "MP": 1,
+        "PPS": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "PI",
+        "USFP",
+        "MP",
+        "PPS"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "bzou-ouaouizeght",
+      "name": "Bzou-Ouaouizeght",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Bzou-Ouaouizeght",
+      "2016": {
+        "votes": {
+          "PAM": 14333,
+          "RNI": 8199,
+          "UC": 7530,
+          "MP": 6210,
+          "PI": 6197,
+          "PEDD": 5233,
+          "PJD": 4708,
+          "PPS": 4632,
+          "USFP": 3773,
+          "FGD": 1210,
+          "FFD": 531,
+          "PGV": 502,
+          "PRD": 343,
+          "MDS": 157,
+          "PE": 152,
+          "PDI": 126,
+          "PT": 109,
+          "PDN": 92
+        },
+        "registered": 124683,
+        "expressed": 64037,
+        "abstentions": 60646,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 64037
+      },
+      "2021": {
+        "votes": {
+          "RNI": 22930,
+          "PAM": 20985,
+          "MP": 10923,
+          "PI": 9483,
+          "UC": 9392,
+          "USFP": 6025,
+          "PJD": 4646,
+          "PPS": 2705,
+          "PSU": 1439,
+          "AGD": 751,
+          "PML": 483,
+          "PVM": 457,
+          "FFD": 457,
+          "PDI": 115
+        },
+        "registered": 129019,
+        "expressed": 90791,
+        "abstentions": 38228,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 90791
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "MP": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "MP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "azilal-demnate",
+      "name": "Azilal-Demnate",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Azilal-Demnate",
+      "2016": {
+        "votes": {
+          "PAM": 12263,
+          "PJD": 8716,
+          "PUD": 7912,
+          "PI": 4447,
+          "RNI": 4041,
+          "PND": 3955,
+          "PPS": 3634,
+          "USFP": 2559,
+          "PRD": 1465,
+          "MP": 690,
+          "FGD": 647,
+          "MDS": 324,
+          "FFD": 174,
+          "PE": 155
+        },
+        "registered": 99789,
+        "expressed": 50982,
+        "abstentions": 48807,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 50982
+      },
+      "2021": {
+        "votes": {
+          "PAM": 26478,
+          "RNI": 23466,
+          "PI": 12178,
+          "USFP": 9098,
+          "PJD": 4334,
+          "PPS": 3350,
+          "PE": 812,
+          "MP": 711,
+          "PCS": 649,
+          "PSU": 507
+        },
+        "registered": 111407,
+        "expressed": 81583,
+        "abstentions": 29824,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 81583
+      },
+      "legal_replay": {
+        "PAM": 1,
+        "RNI": 1,
+        "PI": 1
+      },
+      "rank_winners": [
+        "PAM",
+        "RNI",
+        "PI"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "fquih-ben-salah",
+      "name": "Fquih Ben Salah",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Fquih_Ben_Salah",
+      "2016": {
+        "votes": {
+          "USFP": 16820,
+          "MP": 16770,
+          "PAM": 14584,
+          "PJD": 10105,
+          "RNI": 9391,
+          "PRD": 4041,
+          "AHD": 3295,
+          "PPS": 3076,
+          "PI": 1782,
+          "FGD": 1756,
+          "UC": 1168,
+          "MDS": 276,
+          "PRV": 174,
+          "PLJS": 77
+        },
+        "registered": 219997,
+        "expressed": 83315,
+        "abstentions": 136862,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 83315
+      },
+      "2021": {
+        "votes": {
+          "RNI": 37584,
+          "MP": 25704,
+          "PAM": 20367,
+          "USFP": 17205,
+          "PI": 12231,
+          "PJD": 6559,
+          "UC": 2265,
+          "AGD": 1517,
+          "PML": 902,
+          "PVM": 875,
+          "PPS": 735,
+          "PT": 352,
+          "PCS": 269,
+          "PLJS": 149,
+          "PRV": 58
+        },
+        "registered": 249994,
+        "expressed": 126772,
+        "abstentions": 123222,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 126772
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "MP": 1,
+        "PAM": 1,
+        "USFP": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "MP",
+        "PAM",
+        "USFP"
+      ],
+      "legal_vs_rank_match": true
+    },
+    {
+      "constituency_id": "khouribga",
+      "name": "Khouribga",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 6,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Khouribga",
+      "2016": {
+        "votes": {
+          "PJD": 15979,
+          "PAM": 15888,
+          "USFP": 10168,
+          "UC": 8996,
+          "PI": 7362,
+          "RNI": 7157,
+          "MP": 6690,
+          "PPS": 3250,
+          "FGD": 2255,
+          "FFD": 2055,
+          "PCS": 1248,
+          "MDS": 972,
+          "PAN": 891,
+          "PEDD": 772,
+          "AHD": 744,
+          "PRV": 677,
+          "PLJS": 592,
+          "PE": 407,
+          "PND": 353,
+          "PT": 250,
+          "PSD": 248,
+          "PGV": 233,
+          "PRD": 146,
+          "PDI": 124,
+          "PDN": 96
+        },
+        "registered": 246004,
+        "expressed": 87553,
+        "abstentions": 158451,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 87553
+      },
+      "2021": {
+        "votes": {
+          "RNI": 22708,
+          "PAM": 18811,
+          "MP": 17227,
+          "PI": 16326,
+          "USFP": 15576,
+          "PPS": 11940,
+          "MDS": 9394,
+          "PJD": 5528,
+          "UC": 5507,
+          "PSU": 2197,
+          "AGD": 1441,
+          "PND": 1419,
+          "PML": 1054,
+          "FFD": 1049,
+          "PAN": 527,
+          "PE": 400,
+          "PVM": 364,
+          "PLJS": 341,
+          "PRD": 171
+        },
+        "registered": 260933,
+        "expressed": 131980,
+        "abstentions": 128953,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 131980
+      },
+      "legal_replay": {
+        "RNI": 1,
+        "PAM": 1,
+        "MP": 1,
+        "PI": 1,
+        "USFP": 1,
+        "PPS": 1
+      },
+      "rank_winners": [
+        "RNI",
+        "PAM",
+        "MP",
+        "PI",
+        "USFP",
+        "PPS"
+      ],
+      "legal_vs_rank_match": true
+    }
+  ],
+  "holdout_inputs_2016": [
+    {
+      "constituency_id": "tarfaya",
+      "name": "Tarfaya",
+      "region": "Laâyoune-Sakia El Hamra",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tarfaya",
+      "2016": {
+        "votes": {
+          "PAM": 2644,
+          "PJD": 2299,
+          "PI": 1659,
+          "FFD": 453,
+          "USFP": 49,
+          "PPS": 31,
+          "MP": 16,
+          "PND": 16,
+          "PEDD": 7,
+          "PGV": 7,
+          "MDS": 4
+        },
+        "registered": 9461,
+        "expressed": 7185,
+        "abstentions": 2276,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 7185
+      },
+      "holdout_role": "SEALED_2021_OUTCOME"
+    },
+    {
+      "constituency_id": "aousserd",
+      "name": "Aousserd",
+      "region": "Dakhla-Oued Eddahab",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Aousserd",
+      "2016": {
+        "votes": {
+          "USFP": 1997,
+          "PAM": 1986,
+          "PI": 1686,
+          "PJD": 204,
+          "PPS": 74,
+          "PND": 73,
+          "PRD": 19,
+          "PUD": 10,
+          "FGD": 6,
+          "PA": 5,
+          "PEDD": 4
+        },
+        "registered": 7906,
+        "expressed": 6064,
+        "abstentions": 1842,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 6064
+      },
+      "holdout_role": "SEALED_2021_OUTCOME"
+    },
+    {
+      "constituency_id": "zagora",
+      "name": "Zagora",
+      "region": "Drâa-Tafilalet",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Zagora",
+      "2016": {
+        "votes": {
+          "PJD": 17923,
+          "RNI": 9542,
+          "PAM": 8964,
+          "PI": 8542,
+          "USFP": 6450,
+          "UC": 4970,
+          "PPS": 4146,
+          "MP": 1082,
+          "PCS": 802,
+          "FFD": 495,
+          "AHD": 444,
+          "FGD": 267,
+          "PND": 177,
+          "MDS": 124,
+          "PDI": 122,
+          "PGV": 66
+        },
+        "registered": 121616,
+        "expressed": 64116,
+        "abstentions": 57500,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 64116
+      },
+      "holdout_role": "SEALED_2021_OUTCOME"
+    },
+    {
+      "constituency_id": "nouaceur",
+      "name": "Nouaceur",
+      "region": "Casablanca-Settat",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Nouaceur",
+      "2016": {
+        "votes": {
+          "PAM": 14837,
+          "PJD": 13768,
+          "PI": 9354,
+          "UC": 7239,
+          "RNI": 717,
+          "FGD": 416,
+          "PPS": 357,
+          "PND": 213,
+          "USFP": 127
+        },
+        "registered": 99069,
+        "expressed": 47028,
+        "abstentions": 52041,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 47028
+      },
+      "holdout_role": "SEALED_2021_OUTCOME"
+    },
+    {
+      "constituency_id": "sidi-bennour",
+      "name": "Sidi Bennour",
+      "region": "Casablanca-Settat",
+      "seats": 4,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Sidi_Bennour",
+      "2016": {
+        "votes": {
+          "PAM": 68040,
+          "PJD": 17391,
+          "RNI": 12048,
+          "PPS": 7406,
+          "PI": 6609,
+          "MP": 5853,
+          "USFP": 5487,
+          "UC": 5338,
+          "FGD": 2984,
+          "PND": 492,
+          "MDS": 445,
+          "FFD": 290,
+          "PDI": 259,
+          "PE": 213,
+          "PAN": 144,
+          "PEDD": 131
+        },
+        "registered": 194562,
+        "expressed": 99110,
+        "abstentions": 95452,
+        "vote_coverage": 1.3432549692261124,
+        "explicit_expressed": 99110
+      },
+      "holdout_role": "SEALED_2021_OUTCOME"
+    },
+    {
+      "constituency_id": "tata",
+      "name": "Tata",
+      "region": "Souss-Massa",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Tata",
+      "2016": {
+        "votes": {
+          "RNI": 10114,
+          "PI": 9863,
+          "PAM": 7420,
+          "PJD": 5675,
+          "USFP": 657,
+          "FGD": 381,
+          "MDS": 280,
+          "UC": 231,
+          "PGV": 120,
+          "PPS": 106
+        },
+        "registered": 62674,
+        "expressed": 34847,
+        "abstentions": 27827,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 34847
+      },
+      "holdout_role": "SEALED_2021_OUTCOME"
+    },
+    {
+      "constituency_id": "assa-zag",
+      "name": "Assa-Zag",
+      "region": "Guelmim-Oued Noun",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_d'Assa-Zag",
+      "2016": {
+        "votes": {
+          "PAM": 4916,
+          "USFP": 3070,
+          "UC": 1604,
+          "MP": 492,
+          "FFD": 491,
+          "PJD": 439,
+          "PPS": 121,
+          "PI": 114,
+          "RNI": 62,
+          "FGD": 48
+        },
+        "registered": 17189,
+        "expressed": 11357,
+        "abstentions": 5832,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 11357
+      },
+      "holdout_role": "SEALED_2021_OUTCOME"
+    },
+    {
+      "constituency_id": "youssoufia",
+      "name": "Youssoufia",
+      "region": "Marrakech-Safi",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Youssoufia",
+      "2016": {
+        "votes": {
+          "PJD": 11756,
+          "PAM": 10582,
+          "UC": 9753,
+          "RNI": 5288,
+          "PPS": 4056,
+          "PI": 3144,
+          "FFD": 966,
+          "USFP": 491,
+          "FGD": 345,
+          "PND": 155,
+          "MDS": 107,
+          "PSD": 96,
+          "PRD": 87
+        },
+        "registered": 106077,
+        "expressed": 46826,
+        "abstentions": 59251,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 46826
+      },
+      "holdout_role": "SEALED_2021_OUTCOME"
+    },
+    {
+      "constituency_id": "fahs-anjra",
+      "name": "Fahs-Anjra",
+      "region": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 2,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Fahs-Anjra",
+      "2016": {
+        "votes": {
+          "PJD": 7594,
+          "PAM": 6558,
+          "RNI": 4819,
+          "AHD": 524,
+          "PI": 379,
+          "USFP": 161,
+          "FGD": 79,
+          "PAN": 19,
+          "FFD": 17
+        },
+        "registered": 34747,
+        "expressed": 20150,
+        "abstentions": 14597,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 20150
+      },
+      "holdout_role": "SEALED_2021_OUTCOME"
+    },
+    {
+      "constituency_id": "figuig",
+      "name": "Figuig",
+      "region": "Oriental",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Figuig",
+      "2016": {
+        "votes": {
+          "PAM": 7940,
+          "PI": 6444,
+          "PJD": 3935,
+          "USFP": 3633,
+          "FGD": 3177,
+          "RNI": 2819,
+          "MP": 2540,
+          "UC": 1271,
+          "FFD": 1140,
+          "PPS": 911,
+          "PND": 118
+        },
+        "registered": 70056,
+        "expressed": 33928,
+        "abstentions": 36128,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 33928
+      },
+      "holdout_role": "SEALED_2021_OUTCOME"
+    },
+    {
+      "constituency_id": "boulemane",
+      "name": "Boulemane",
+      "region": "Fès-Meknès",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Boulemane",
+      "2016": {
+        "votes": {
+          "MP": 8678,
+          "PAM": 8568,
+          "PJD": 7453,
+          "PPS": 7449,
+          "PI": 4841,
+          "RNI": 3376,
+          "FGD": 2853,
+          "UC": 661,
+          "FFD": 436,
+          "USFP": 334,
+          "PDI": 307,
+          "MDS": 214,
+          "PEDD": 195,
+          "PRD": 174,
+          "PND": 115,
+          "AHD": 81
+        },
+        "registered": 86114,
+        "expressed": 45735,
+        "abstentions": 40379,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 45735
+      },
+      "holdout_role": "SEALED_2021_OUTCOME"
+    },
+    {
+      "constituency_id": "khenifra",
+      "name": "Khénifra",
+      "region": "Béni Mellal-Khénifra",
+      "seats": 3,
+      "source_url": "https://fr.wikipedia.org/wiki/Circonscription_de_Khénifra",
+      "2016": {
+        "votes": {
+          "USFP": 13484,
+          "MP": 12200,
+          "PI": 11640,
+          "PJD": 11607,
+          "PAM": 11037,
+          "RNI": 6568,
+          "PEDD": 4785,
+          "PPS": 2922,
+          "FGD": 2184,
+          "MDS": 997,
+          "UC": 864,
+          "AHD": 529,
+          "PUD": 296,
+          "PGV": 79,
+          "PT": 76
+        },
+        "registered": 174215,
+        "expressed": 79268,
+        "abstentions": 94947,
+        "vote_coverage": 1.0,
+        "explicit_expressed": 79268
+      },
+      "holdout_role": "SEALED_2021_OUTCOME"
+    }
+  ],
+  "errors": []
+}
