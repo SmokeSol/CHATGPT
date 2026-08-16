@@ -1,0 +1,60 @@
+{
+  "source_url": "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx",
+  "definitions": [
+    {
+      "Label": "typeListe",
+      "Définition (FR)": "Type de liste",
+      "Définition (EN)": "List type"
+    },
+    {
+      "Label": "nSieges",
+      "Définition (FR)": "Nombre de sièges",
+      "Définition (EN)": "Number of seats"
+    },
+    {
+      "Label": "nInscrits",
+      "Définition (FR)": "Nombre d'inscrits",
+      "Définition (EN)": "Number of registered voters"
+    },
+    {
+      "Label": "txParticipation",
+      "Définition (FR)": "Taux de participation",
+      "Définition (EN)": "Turnout rate"
+    },
+    {
+      "Label": "invalide",
+      "Définition (FR)": "Pourcentage de votes blancs ou nuls",
+      "Définition (EN)": "Number of spoilt votes"
+    }
+  ],
+  "notes": [
+    {
+      "Source": "Ce jeu de données a été collecté par l'association Tafra. Les résultats ont été copiés de http://www.elections.ma. Les sources ne reportent pas le taux de votes nuls ou le nombre d'inscrits.",
+      "Unnamed: 1": "This dataset has been collected by the NGO Tafra. Results have been copied from http://www.elections.ma. Sources do not report the rate of spoilt votes nor the number of registered voters. "
+    },
+    {
+      "Source": "Licence",
+      "Unnamed: 1": ""
+    },
+    {
+      "Source": "Ce jeu de données est mis à votre disposition sous la licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/deed.fr). Vous êtes libre de l'utiliser à votre guise, mais vous devez faire référence à l'auteur en utilisant la citation ci-dessous. ",
+      "Unnamed: 1": "This dataset is made availabe under the CC BY 4.0 licence (https://creativecommons.org/licenses/by/4.0/deed). You are free to use it as you see fit, but have to refer to the author using the citation below. "
+    },
+    {
+      "Source": "Citation",
+      "Unnamed: 1": ""
+    },
+    {
+      "Source": "\"Résultats des élections législatives marocaines de 2021, listes locales et régionales\" Association Tafra. Rabat. 2022",
+      "Unnamed: 1": ""
+    },
+    {
+      "Source": "Version",
+      "Unnamed: 1": ""
+    },
+    {
+      "Source": "Version 1.0.0, Février 2022: version initiale",
+      "Unnamed: 1": ""
+    }
+  ]
+}
