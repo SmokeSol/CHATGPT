@@ -56,6 +56,7 @@ const NAV = [
   ['territories','Carte territoriale','92'],
   ['parties','Partis','9'],
   ['signals','Signaux 2026',''],
+  ['methodology','Méthodologie',''],
   ['history','Historique','']
 ];
 let D = {};
@@ -87,6 +88,7 @@ async function boot(){
     renderParties();
     renderSignals();
     renderHistory();
+    renderMethodology();
     window.addEventListener('scroll',()=>document.body.classList.toggle('compact',window.scrollY>140),{passive:true});
   }catch(e){
     $('#fatal').hidden = false;
@@ -123,4 +125,24 @@ function renderHeader(){
     ['395','sièges au total','hi'],['305','sièges locaux',''],['90','sièges régionaux',''],
     [Number(s.draws||0).toLocaleString('fr-FR'),'scénarios simulés',''],['92','circonscriptions locales',''],['12','circonscriptions régionales','']
   ].map(([v,l,c])=>`<div class="kpi ${c}"><b class="big">${v}</b><span>${l}</span></div>`).join('');
+}
+
+function renderMethodology(){
+  if(!$('#method-snapshot')) return;
+  const m = D.methodology || {};
+  const c = m.current_checkpoint || {};
+  const reserved = c.reserved_for_e_collect || m.agentic_experiment?.reserved_for_e_collect || {};
+  const draws = Number(c.draws || D.snapshot?.draws || 0);
+  $('#method-snapshot').textContent = c.snapshot_id || 'F0';
+  $('#method-snapshot-date').textContent = c.created_at ? `gelé le ${dateFr(c.created_at)}` : 'version gelée';
+  $('#method-draws').textContent = draws ? draws.toLocaleString('fr-FR') : '—';
+  $('#method-cutoff').textContent = dateFr(c.data_cutoff || D.snapshot?.data_cutoff);
+  $('#method-b2-effect').textContent = c.distribution_equivalence_to_parent === 'EXACT' ? '0' : '—';
+  const historical = Number(reserved.historical_input_classes || 16);
+  const arabic = Number(reserved.unresolved_arabic_rows || 92);
+  $('#method-reserved').textContent = `${historical} + ${arabic}`;
+  $('#method-audit-snapshot').textContent = c.snapshot_id || 'F0';
+  $('#method-audit-status').textContent = c.status || 'REGISTERED_IMMUTABLE';
+  $('#method-audit-cutoff').textContent = c.data_cutoff || '—';
+  $('#method-audit-hash').textContent = c.forecast_artifact_sha256 || '—';
 }
