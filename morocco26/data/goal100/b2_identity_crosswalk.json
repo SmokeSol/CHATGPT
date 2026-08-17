@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "crosswalk_id": "M26-GOAL100-B2-IDENTITY-CROSSWALK-V1",
-  "protocol_id": "M26-GOAL100-B2-IDENTITY-PROTOCOL-V1",
-  "generated_at": "2026-08-17T07:54:30+01:00",
-  "gate": "FAIL",
+  "crosswalk_id": "M26-GOAL100-B2-IDENTITY-CROSSWALK-V1.1",
+  "protocol_id": "M26-GOAL100-B2-IDENTITY-PROTOCOL-V1.1",
+  "generated_at": "2026-08-17T08:02:54+01:00",
+  "gate": "PASS",
   "normalizer": {
     "version": "M26_TEXT_NORMALIZER_V1",
     "unicode": "NFKC followed by controlled diacritic removal for Latin and Arabic text.",
@@ -118,7 +118,7 @@
       {
         "constituency_id": "aousserd",
         "canonical_name": "Aousserd",
-        "region_id": null,
+        "region_id": "reg-dakhla-oued-ed-dahab",
         "seats": 2,
         "tafra_name": "Aousserd",
         "aliases": [
@@ -907,7 +907,7 @@
       {
         "constituency_id": "oued-eddahab",
         "canonical_name": "Oued Eddahab",
-        "region_id": null,
+        "region_id": "reg-dakhla-oued-ed-dahab",
         "seats": 2,
         "tafra_name": "Oued-Ed-Dahab",
         "aliases": [
@@ -1408,11 +1408,14 @@
         "seats": 3,
         "aliases": [
           "Dakhla - Oued Ed-Dahab",
-          "Dakhla-Oued Ed-Dahab"
+          "Dakhla-Oued Ed-Dahab",
+          "Dakhla-Oued Eddahab",
+          "dakhla oued eddahab"
         ],
         "identity_basis": "AUTHORITATIVE_REGIONAL_ROW",
         "normalized_aliases": [
-          "dakhla oued ed dahab"
+          "dakhla oued ed dahab",
+          "dakhla oued eddahab"
         ]
       },
       {
@@ -1537,7 +1540,7 @@
       }
     ],
     "local_alias_count": 109,
-    "regional_alias_count": 13,
+    "regional_alias_count": 14,
     "unreviewed_fuzzy_matches": 0
   },
   "parties": [
@@ -51895,8 +51898,8 @@
   },
   "input_hashes": {
     "protocol": {
-      "path": "morocco26/data/goal100/b2_identity_protocol_v1.json",
-      "sha256": "e1aab5ddc114dcd2f55946b9596b67a08a816f3a1fdd2dbbab33f36aaab83291"
+      "path": "morocco26/data/goal100/b2_identity_protocol_v1_1.json",
+      "sha256": "9e2a88bff0a5ea34ed44f6a333bc25802ae8b0b9e4f5fe757751183e01d7f55b"
     },
     "local_closure": {
       "path": "morocco26/data/goal75/local_92_closure_v3.json",
@@ -51935,19 +51938,6 @@
       "sha256": "5d6a32c0c29fe61f83156facf11fd7571b10864b0a6cb803a0099d5ab12fab9f"
     }
   },
-  "failures": [
-    {
-      "kind": "UNRESOLVED_REGION",
-      "raw": "Dakhla-Oued Eddahab",
-      "normalized": "dakhla oued eddahab",
-      "context": "closure:oued-eddahab"
-    },
-    {
-      "kind": "UNRESOLVED_REGION",
-      "raw": "Dakhla-Oued Eddahab",
-      "normalized": "dakhla oued eddahab",
-      "context": "closure:aousserd"
-    }
-  ],
-  "canonical_crosswalk_sha256": "92d4d75bc1f2ca2e4e9873e8dddc0b0e9e7e4b0ec247c060e3e3ddb6311e6b13"
+  "failures": [],
+  "canonical_crosswalk_sha256": "1d3a7b7973fc1426025d522de8ca26cd6fa3e0a5f02d3623d0e93ec1fba13b85"
 }

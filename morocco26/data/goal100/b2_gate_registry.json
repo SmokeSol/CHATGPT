@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "registry_id": "M26-GOAL100-B2-GATES-V1",
-  "as_of": "2026-08-17T07:41:43+01:00",
+  "as_of": "2026-08-17T08:02:54+01:00",
   "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
   "status_vocabulary": [
     "CLOSED",
@@ -30,9 +30,10 @@
     },
     {
       "id": "B2-2-IDENTITY-TERRITORY-CROSSWALK",
-      "status": "OPEN",
+      "status": "CLOSED",
       "required_artifact": "morocco26/data/goal100/b2_identity_territory_certificate.json",
-      "closure_criterion": "All admitted candidate, party, list and territorial IDs resolve without unreviewed fuzzy matching; collisions and unresolved aliases are reported."
+      "closure_criterion": "All admitted candidate, party, list and territorial IDs resolve without unreviewed fuzzy matching; collisions and unresolved aliases are reported.",
+      "resolved_claim": "The certified 92 local and 12 regional territorial IDs, all observed historical party/list codes and all 395 elected-member rows resolve deterministically without fuzzy matching; legacy 2026 candidate aggregates admit zero B2 records."
     },
     {
       "id": "B2-3-HISTORICAL-FEATURE-PANEL",
@@ -89,5 +90,5 @@
       "reason": "Cannot be preregistered until collection and reasoning ablations are independently frozen."
     }
   ],
-  "next_gate": "B2-2-IDENTITY-TERRITORY-CROSSWALK"
+  "next_gate": "B2-3-HISTORICAL-FEATURE-PANEL"
 }

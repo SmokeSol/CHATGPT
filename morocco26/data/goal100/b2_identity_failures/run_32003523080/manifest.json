@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "archive_id": "M26-GOAL100-B2-IDENTITY-FAILURE-32003523080",
+  "failed_run_id": 32003523080,
+  "failed_commit": "7b08117b1fb987cdc2925e882527c5d3920ccc78",
+  "status": "IMMUTABLE_GIT_HISTORY_REFERENCE",
+  "failed_crosswalk_canonical_sha256": "92d4d75bc1f2ca2e4e9873e8dddc0b0e9e7e4b0ec247c060e3e3ddb6311e6b13",
+  "failure_classes": [
+    {
+      "kind": "UNRESOLVED_REGION",
+      "raw": "Dakhla-Oued Eddahab",
+      "normalized": "dakhla oued eddahab",
+      "context": "closure:oued-eddahab"
+    },
+    {
+      "kind": "UNRESOLVED_REGION",
+      "raw": "Dakhla-Oued Eddahab",
+      "normalized": "dakhla oued eddahab",
+      "context": "closure:aousserd"
+    }
+  ],
+  "counts_at_failure": {
+    "local_territories": 92,
+    "regional_territories": 12,
+    "historical_local_rows_mapped": 276,
+    "historical_regional_rows_mapped": 12,
+    "party_codes": 37,
+    "historical_list_ids": 4796,
+    "elected_member_rows": 395,
+    "legacy_2026_candidate_records_admitted": 0,
+    "unreviewed_fuzzy_matches": 0
+  },
+  "artifacts": {
+    "crosswalk": {
+      "path": "morocco26/data/goal100/b2_identity_crosswalk.json",
+      "git_blob_sha": "f8415923a34073d595237d6d53e0464386315a6d",
+      "sha256": "68db9ddc2f741ef785e55f32c46c85a7a987f11bb2ed1186a076dc835ce5a0ec",
+      "bytes": 1623226
+    },
+    "certificate": {
+      "path": "morocco26/data/goal100/b2_identity_territory_certificate.json",
+      "git_blob_sha": "2d9f09f6a668e7f5d9af6ab6c791c722dcd0e37b",
+      "sha256": "9dfed8162fa8d30ed82aa217527101836b108322cfb0b44efd66426350a283f9",
+      "bytes": 1638
+    },
+    "event": {
+      "path": "morocco26/data/goal100/fil_ariane_events/A021F32003523080.json",
+      "git_blob_sha": "babd130742f1b799a1778934f1449d1bd9d57b39",
+      "sha256": "7ad9f93122147ea8fd3f9d15ca3210cb077f56dd80c76e08e7d5ddc093c8fb44",
+      "bytes": 2277
+    },
+    "journal": {
+      "path": "morocco26/FIL_ARIANE.md",
+      "git_blob_sha": "053ac9c8ef0bf21b92f03d91c77f2813e89c691c",
+      "sha256": "b8ddc5572c8e7cd8e7b4032f98ed2a659ccb5667e61786cc2383c751dd603124",
+      "bytes": 15110
+    }
+  },
+  "preservation_rule": "The failed artifacts are retrieved from the exact Git commit; future PASS artifacts may overwrite working-tree paths but cannot rewrite this commit or manifest.",
+  "canonical_manifest_sha256": "5871f9a4bb53ad448712bf2d9e30e7edbd52c40b453ef93e372c8a7cdc212eb0"
+}

@@ -229,3 +229,33 @@ Chaque entrée doit contenir, dans cet ordre :
 **Décision scientifique :** le gate reste `OPEN`. Aucun fallback fuzzy, aucune fusion d’homonyme et aucun record candidat 2026 n’est admis.
 
 **Prochaine action exacte :** corriger uniquement les inputs ou aliases explicitement défaillants sous une nouvelle version revue, sans diminuer les critères de couverture.
+
+
+### 2026-08-17 — Entrée A022 — Amendement exact de l’alias régional Dakhla
+
+**Question/gate traité :** corriger l’unique classe d’échec du run `32003523080` sans introduire de fuzzy matching.
+
+**Échec conservé :** crosswalk canonique `92d4d75bc1f2ca2e4e9873e8dddc0b0e9e7e4b0ec247c060e3e3ddb6311e6b13` au commit `7b08117b1fb987cdc2925e882527c5d3920ccc78`. Les deux échecs sont `UNRESOLVED_REGION` pour `Dakhla-Oued Eddahab` dans `['closure:oued-eddahab', 'closure:aousserd']` ; l’intitulé officiel cible est `Dakhla-Oued Ed-Dahab`.
+
+**Amendement preregistré :** protocole `M26-GOAL100-B2-IDENTITY-PROTOCOL-V1.1` ; alias normalisé exact `dakhla oued eddahab` → `reg-dakhla-oued-ed-dahab` ; portée `ONE_EXACT_REVIEWED_REGION_ALIAS_ONLY`.
+
+**Impact scientifique :** `NONE`. Forecast modifié = `false` ; claims B2 modifiés = `false` ; dictionnaire de features modifié = `false` ; coefficient modifié = `false` ; seuil modifié = `false` ; fuzzy matching activé = `false`.
+
+**Préservation :** The failed crosswalk, certificate, event and journal state remain immutable at commit 7b08117 and are indexed by b2_identity_failures/run_32003523080/manifest.json before rerun.
+
+**Prochaine action exacte :** Preserve the failed attempt by hashes, execute identity protocol V1.1, and close B2-2 only if every prior criterion passes with zero unresolved mappings and zero admitted legacy 2026 candidates.
+
+
+### 2026-08-17 — Entrée A021 — Certification du crosswalk identité-parti-liste-territoire B2
+
+**Question/gate traité :** `B2-2-IDENTITY-TERRITORY-CROSSWALK` — certifier les clés avant tout record candidat 2026.
+
+**Hypothèse avant test :** 92 territoires locaux / 305 sièges, 12 régions / 90 sièges, toutes les listes historiques et les 395 élus 2021 doivent être résolus sans fuzzy matching. Les collisions de noms doivent rester séparées par ID stable.
+
+**Résultat machine :** `PASS` — locaux `92`, régions `12`, codes partis/listes `37`, list IDs historiques `4796`, élus `395` dont `305` locaux et `90` régionaux ; groupes de collision de nom `0` ; fuzzy matches `0`.
+
+**Frontière scientifique :** les `414` enregistrements annoncés par l’ancien résumé 2026 sont conservés comme leads agrégés mais admis dans B2 = `0`. Ils n’ont aucun effet mécanique ni prédictif.
+
+**Décision scientifique :** crosswalk certifié ; aucune homonymie n’est fusionnée et aucun code non-core n’est transformé en parti connu par supposition.
+
+**Prochaine action exacte :** construire `B2-3` — panel historique de features candidat/liste au même cutoff, avec couverture et support publiés, avant tout fit de coefficient.

@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
-  "certificate_id": "M26-GOAL100-B2-IDENTITY-TERRITORY-CERTIFICATE-V1",
-  "protocol_id": "M26-GOAL100-B2-IDENTITY-PROTOCOL-V1",
-  "certified_at": "2026-08-17T07:54:30+01:00",
-  "gate": "FAIL",
+  "certificate_id": "M26-GOAL100-B2-IDENTITY-TERRITORY-CERTIFICATE-V1.1",
+  "protocol_id": "M26-GOAL100-B2-IDENTITY-PROTOCOL-V1.1",
+  "certified_at": "2026-08-17T08:02:54+01:00",
+  "gate": "PASS",
   "crosswalk_path": "morocco26/data/goal100/b2_identity_crosswalk.json",
-  "crosswalk_sha256": "92d4d75bc1f2ca2e4e9873e8dddc0b0e9e7e4b0ec247c060e3e3ddb6311e6b13",
+  "crosswalk_sha256": "1d3a7b7973fc1426025d522de8ca26cd6fa3e0a5f02d3623d0e93ec1fba13b85",
   "local_territories": 92,
   "local_seats": 305,
   "regional_territories": 12,
@@ -27,19 +27,6 @@
   "B2_claim_records_before_certificate": 0,
   "legacy_2026_candidate_records_reported": 414,
   "legacy_2026_candidate_records_admitted": 0,
-  "failures": [
-    {
-      "kind": "UNRESOLVED_REGION",
-      "raw": "Dakhla-Oued Eddahab",
-      "normalized": "dakhla oued eddahab",
-      "context": "closure:oued-eddahab"
-    },
-    {
-      "kind": "UNRESOLVED_REGION",
-      "raw": "Dakhla-Oued Eddahab",
-      "normalized": "dakhla oued eddahab",
-      "context": "closure:aousserd"
-    }
-  ],
+  "failures": [],
   "scientific_boundary": "PASS certifies deterministic identifiers and exact territorial mappings only. It does not certify any 2026 candidacy, ballot presence, party switch, endorsement or predictive effect."
 }

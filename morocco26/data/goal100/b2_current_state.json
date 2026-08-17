@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "state_id": "M26-GOAL100-B2-CURRENT-V1",
-  "as_of": "2026-08-17T07:41:43+01:00",
-  "phase": "B2_SOURCE_UNIVERSE_FROZEN_COLLECTION_ENABLED",
+  "as_of": "2026-08-17T08:02:54+01:00",
+  "phase": "B2_IDENTITY_TERRITORY_CERTIFIED_HISTORICAL_PANEL_PENDING",
   "parent_snapshot": {
     "snapshot_id": "F-1",
     "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
@@ -35,10 +35,10 @@
   "gates": {
     "closed": [
       "B2-0-PROTOCOL-FROZEN",
-      "B2-1-SOURCE-UNIVERSE-FROZEN"
+      "B2-1-SOURCE-UNIVERSE-FROZEN",
+      "B2-2-IDENTITY-TERRITORY-CROSSWALK"
     ],
     "open": [
-      "B2-2-IDENTITY-TERRITORY-CROSSWALK",
       "B2-3-HISTORICAL-FEATURE-PANEL",
       "B2-4-2026-BALLOT-ROSTER",
       "B2-5-PROVENANCE-CONFLICT-AUDIT",
@@ -62,5 +62,19 @@
     "missing_never_silently_zero": true,
     "conflicts_never_silently_resolved": true
   },
-  "next_action_exact": "Build and certify the deterministic party/list/candidate/incumbent/territory identity crosswalk before admitting any predictive feature matrix or mechanical ballot constraint."
+  "next_action_exact": "Freeze and build the same-cutoff historical candidate/list feature panel for 2011->2016 and 2016->2021; no 2026 predictive coefficient may move before B2-3 and B2-6 pass.",
+  "identity_crosswalk": {
+    "status": "CERTIFIED",
+    "certificate": "morocco26/data/goal100/b2_identity_territory_certificate.json",
+    "crosswalk": "morocco26/data/goal100/b2_identity_crosswalk.json",
+    "crosswalk_sha256": "1d3a7b7973fc1426025d522de8ca26cd6fa3e0a5f02d3623d0e93ec1fba13b85",
+    "local_territories": 92,
+    "regional_territories": 12,
+    "party_codes": 37,
+    "historical_list_ids": 4796,
+    "elected_member_rows": 395,
+    "normalized_name_collision_groups": 0,
+    "unreviewed_fuzzy_matches": 0,
+    "legacy_2026_candidate_records_admitted": 0
+  }
 }
