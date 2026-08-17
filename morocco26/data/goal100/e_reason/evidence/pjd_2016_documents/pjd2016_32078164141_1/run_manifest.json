@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0",
+  "run_id": "pjd2016_32078164141_1",
+  "created_at": "2026-08-17T22:58:12+00:00",
+  "cutoff_utc": "20161006225959",
+  "source_class": "T1_OFFICIAL_PARTY",
+  "qualified_domain": "pjd.ma",
+  "articles": [
+    {
+      "id": "RABAT_FES_MARRAKECH",
+      "url": "https://www.pjd.ma/74975-38982.html",
+      "published_at_source": "2016-09-15T06:00:00+01:00",
+      "expected_attachment": "jht_lrbt_wfs_wmrksh.pdf",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "current_page": {
+        "status": 200,
+        "bytes": 153269,
+        "sha256": "96f319f9b61fab826cdd8cfdb1edd9eea9e2e0712c2aaac04af0d38dc189d727",
+        "path": "morocco26/data/goal100/e_reason/evidence/pjd_2016_documents/pjd2016_32078164141_1/raw/96f319f9b61fab826cdd8cfdb1edd9eea9e2e0712c2aaac04af0d38dc189d727.html",
+        "admissible_candidate_evidence": false
+      },
+      "cdx_diagnostics": [
+        {
+          "url_pattern": "https://www.pjd.ma/74975-38982.html",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "http://www.pjd.ma/74975-38982.html",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "http://pjd.ma/74975-38982.html",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "pjd.ma/*jht_lrbt_wfs_wmrksh.pdf",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "pjd.ma/*jht_lrbt_wfs_wmrksh*",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "www.pjd.ma/*jht_lrbt_wfs_wmrksh.pdf",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "www.pjd.ma/*jht_lrbt_wfs_wmrksh*",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        }
+      ],
+      "precutoff_article_snapshots": [],
+      "selected_precutoff_article": null,
+      "archived_pdf_links": [],
+      "attachment_cdx_candidates": [],
+      "current_mirror_candidates": [
+        "https://pjd.ma/static/uploads/2022/04/jht_lrbt_wfs_wmrksh.pdf",
+        "https://pjd.ma/static/uploads/2022/04/jht_lrbt_wfs_wmrksh_0.pdf",
+        "https://pjd.ma/static/uploads/2022/05/jht_lrbt_wfs_wmrksh.pdf",
+        "https://pjd.ma/static/uploads/2022/05/jht_lrbt_wfs_wmrksh_0.pdf",
+        "https://pjd.ma/static/uploads/2022/06/jht_lrbt_wfs_wmrksh.pdf",
+        "https://pjd.ma/static/uploads/2022/06/jht_lrbt_wfs_wmrksh_0.pdf",
+        "https://www.pjd.ma/static/uploads/2022/04/jht_lrbt_wfs_wmrksh.pdf",
+        "https://www.pjd.ma/static/uploads/2022/04/jht_lrbt_wfs_wmrksh_0.pdf",
+        "https://www.pjd.ma/static/uploads/2022/05/jht_lrbt_wfs_wmrksh.pdf",
+        "https://www.pjd.ma/static/uploads/2022/05/jht_lrbt_wfs_wmrksh_0.pdf",
+        "https://www.pjd.ma/static/uploads/2022/06/jht_lrbt_wfs_wmrksh.pdf",
+        "https://www.pjd.ma/static/uploads/2022/06/jht_lrbt_wfs_wmrksh_0.pdf"
+      ]
+    },
+    {
+      "id": "SOUTH_SOUSS_ORIENT",
+      "url": "https://www.pjd.ma/74215-38568.html",
+      "published_at_source": "2016-08-28T00:00:00+01:00",
+      "expected_attachment": "mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "current_page": {
+        "status": 200,
+        "bytes": 168744,
+        "sha256": "be9d79c6fafaa789839a739461813fd143f86c278228c9aeed138a6eb2b03311",
+        "path": "morocco26/data/goal100/e_reason/evidence/pjd_2016_documents/pjd2016_32078164141_1/raw/be9d79c6fafaa789839a739461813fd143f86c278228c9aeed138a6eb2b03311.html",
+        "admissible_candidate_evidence": false
+      },
+      "cdx_diagnostics": [
+        {
+          "url_pattern": "https://www.pjd.ma/74215-38568.html",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "http://www.pjd.ma/74215-38568.html",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "http://pjd.ma/74215-38568.html",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "pjd.ma/*mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "pjd.ma/*mrshhw_jht_ljnwb_wsws_wlshrq*",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "www.pjd.ma/*mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "www.pjd.ma/*mrshhw_jht_ljnwb_wsws_wlshrq*",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        }
+      ],
+      "precutoff_article_snapshots": [],
+      "selected_precutoff_article": null,
+      "archived_pdf_links": [],
+      "attachment_cdx_candidates": [],
+      "current_mirror_candidates": [
+        "https://pjd.ma/static/uploads/2022/04/mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+        "https://pjd.ma/static/uploads/2022/04/mrshhw_jht_ljnwb_wsws_wlshrq_0.pdf",
+        "https://pjd.ma/static/uploads/2022/05/mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+        "https://pjd.ma/static/uploads/2022/05/mrshhw_jht_ljnwb_wsws_wlshrq_0.pdf",
+        "https://pjd.ma/static/uploads/2022/06/mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+        "https://pjd.ma/static/uploads/2022/06/mrshhw_jht_ljnwb_wsws_wlshrq_0.pdf",
+        "https://www.pjd.ma/static/uploads/2022/04/mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+        "https://www.pjd.ma/static/uploads/2022/04/mrshhw_jht_ljnwb_wsws_wlshrq_0.pdf",
+        "https://www.pjd.ma/static/uploads/2022/05/mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+        "https://www.pjd.ma/static/uploads/2022/05/mrshhw_jht_ljnwb_wsws_wlshrq_0.pdf",
+        "https://www.pjd.ma/static/uploads/2022/06/mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+        "https://www.pjd.ma/static/uploads/2022/06/mrshhw_jht_ljnwb_wsws_wlshrq_0.pdf"
+      ]
+    },
+    {
+      "id": "LIST_3",
+      "url": "https://www.pjd.ma/74973-38983.html",
+      "published_at_source": "2016-09-15T06:00:00+01:00",
+      "expected_attachment": "ldf_3.pdf",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "current_page": {
+        "status": 200,
+        "bytes": 152961,
+        "sha256": "cef1f3471f7941d56d5784db971524beff9473185e936ae04b31d07da767e302",
+        "path": "morocco26/data/goal100/e_reason/evidence/pjd_2016_documents/pjd2016_32078164141_1/raw/cef1f3471f7941d56d5784db971524beff9473185e936ae04b31d07da767e302.html",
+        "admissible_candidate_evidence": false
+      },
+      "cdx_diagnostics": [
+        {
+          "url_pattern": "https://www.pjd.ma/74973-38983.html",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "http://www.pjd.ma/74973-38983.html",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "http://pjd.ma/74973-38983.html",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "pjd.ma/*ldf_3.pdf",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "pjd.ma/*ldf_3*",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "www.pjd.ma/*ldf_3.pdf",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "url_pattern": "www.pjd.ma/*ldf_3*",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        }
+      ],
+      "precutoff_article_snapshots": [],
+      "selected_precutoff_article": null,
+      "archived_pdf_links": [],
+      "attachment_cdx_candidates": [],
+      "current_mirror_candidates": [
+        "https://pjd.ma/static/uploads/2022/04/ldf_3.pdf",
+        "https://pjd.ma/static/uploads/2022/04/ldf_3_0.pdf",
+        "https://pjd.ma/static/uploads/2022/05/ldf_3.pdf",
+        "https://pjd.ma/static/uploads/2022/05/ldf_3_0.pdf",
+        "https://pjd.ma/static/uploads/2022/06/ldf_3.pdf",
+        "https://pjd.ma/static/uploads/2022/06/ldf_3_0.pdf",
+        "https://www.pjd.ma/static/uploads/2022/04/ldf_3.pdf",
+        "https://www.pjd.ma/static/uploads/2022/04/ldf_3_0.pdf",
+        "https://www.pjd.ma/static/uploads/2022/05/ldf_3.pdf",
+        "https://www.pjd.ma/static/uploads/2022/05/ldf_3_0.pdf",
+        "https://www.pjd.ma/static/uploads/2022/06/ldf_3.pdf",
+        "https://www.pjd.ma/static/uploads/2022/06/ldf_3_0.pdf"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "expected_attachment": "jht_lrbt_wfs_wmrksh.pdf",
+      "transport": "CURRENT_STATIC_MIRROR_DISCOVERY_ONLY",
+      "url": "https://pjd.ma/static/uploads/2022/05/jht_lrbt_wfs_wmrksh.pdf",
+      "status": 200,
+      "bytes": 267766,
+      "sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "raw_path": "morocco26/data/goal100/e_reason/evidence/pjd_2016_documents/pjd2016_32078164141_1/raw/e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3.pdf",
+      "text_path": "morocco26/data/goal100/e_reason/evidence/pjd_2016_documents/pjd2016_32078164141_1/text/e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3.txt",
+      "text_chars": 2272,
+      "party_fact_status": "PARTY_ANNOUNCED_UNVERIFIED_MIRROR",
+      "admissible_candidate_evidence": false
+    },
+    {
+      "article_id": "SOUTH_SOUSS_ORIENT",
+      "expected_attachment": "mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+      "transport": "CURRENT_STATIC_MIRROR_DISCOVERY_ONLY",
+      "url": "https://pjd.ma/static/uploads/2022/05/mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+      "status": 200,
+      "bytes": 273029,
+      "sha256": "48878329a2849f980bf65b6b2e1ef1a68836c71aa5fb0eaee05421822a9e8143",
+      "raw_path": "morocco26/data/goal100/e_reason/evidence/pjd_2016_documents/pjd2016_32078164141_1/raw/48878329a2849f980bf65b6b2e1ef1a68836c71aa5fb0eaee05421822a9e8143.pdf",
+      "text_path": "morocco26/data/goal100/e_reason/evidence/pjd_2016_documents/pjd2016_32078164141_1/text/48878329a2849f980bf65b6b2e1ef1a68836c71aa5fb0eaee05421822a9e8143.txt",
+      "text_chars": 1957,
+      "party_fact_status": "PARTY_ANNOUNCED_UNVERIFIED_MIRROR",
+      "admissible_candidate_evidence": false
+    },
+    {
+      "article_id": "LIST_3",
+      "expected_attachment": "ldf_3.pdf",
+      "transport": "CURRENT_STATIC_MIRROR_DISCOVERY_ONLY",
+      "url": "https://pjd.ma/static/uploads/2022/05/ldf_3.pdf",
+      "status": 200,
+      "bytes": 271033,
+      "sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "raw_path": "morocco26/data/goal100/e_reason/evidence/pjd_2016_documents/pjd2016_32078164141_1/raw/9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a.pdf",
+      "text_path": "morocco26/data/goal100/e_reason/evidence/pjd_2016_documents/pjd2016_32078164141_1/text/9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a.txt",
+      "text_chars": 2780,
+      "party_fact_status": "PARTY_ANNOUNCED_UNVERIFIED_MIRROR",
+      "admissible_candidate_evidence": false
+    }
+  ],
+  "admissible_precutoff_document_count": 0,
+  "mirror_only_document_count": 3,
+  "admissible_article_ids": [],
+  "predictive_judgments_generated": false,
+  "forecast_delta_generated": false,
+  "outcomes_unsealed": false,
+  "F1_created": false,
+  "Atlas_UI_modified": false
+}
