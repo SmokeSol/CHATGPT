@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "decision_id": "M26-E-REASON-PJD-2016-MIGRATED-STATIC-ADMISSIBILITY-V1",
+  "created_at": "2026-08-17T22:43:21+00:00",
+  "frozen_source_policy": "morocco26/data/goal100/e_reason/e_reason_source_policy_v1.json",
+  "pre_extraction_source_registry": "morocco26/data/goal100/e_reason/e_reason_source_registry_v1.json",
+  "provenance_audit": "morocco26/data/goal100/e_reason/evidence/pjd_2016_provenance_audit/audit.json",
+  "source_class_preserved": "T1_OFFICIAL_PARTY",
+  "new_source_class_added": false,
+  "accepted_document_count": 3,
+  "rejected_document_count": 0,
+  "status": "PASS",
+  "decisions": [
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR",
+      "official_article_url": "https://www.pjd.ma/74975-38982.html",
+      "article_publication_dates": [
+        "2016-09-15T06:00:00+00:00",
+        "2016-09-15T06:00:00+01:00"
+      ],
+      "attachment_basename": "jht_lrbt_wfs_wmrksh.pdf",
+      "mirror_url": "https://pjd.ma/static/uploads/2022/05/jht_lrbt_wfs_wmrksh.pdf",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "pdf_creation_date": "2016-09-02T17:37:54+00:00",
+      "criteria": {
+        "official_domain_prequalified_T1_before_extraction": true,
+        "historical_article_publication_pre_cutoff": true,
+        "current_official_article_links_expected_attachment_basename": true,
+        "pdf_internal_creation_pre_cutoff": true,
+        "document_explicitly_describes_upcoming_7_october_poll": true,
+        "document_is_candidate_slate": true,
+        "document_is_party_secretariat_material": true,
+        "no_target_election_outcome_terms_detected": true,
+        "mechanical_provenance_audit_pass": true
+      },
+      "decision": "ADMISSIBLE_FOR_PRE_CUTOFF_T1_PARTY_FACTS",
+      "authorized_fact_scope": [
+        "PARTY_ANNOUNCED_CANDIDATE_IDENTITY",
+        "CANDIDATE_REGISTERED_RANK_AS_PARTY_SLATE_RANK",
+        "FORMAL_ENDORSEMENT"
+      ],
+      "explicitly_not_authorized": [
+        "T0_LEGAL_REGISTRATION",
+        "TARGET_ELECTION_OUTCOME",
+        "WINNER_LOSER_STATUS",
+        "POST_ELECTION_ANALYSIS"
+      ]
+    },
+    {
+      "article_id": "SOUTH_SOUSS_ORIENT",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR",
+      "official_article_url": "https://www.pjd.ma/74215-38568.html",
+      "article_publication_dates": [
+        "2016-08-28T10:26:00+00:00",
+        "2016-08-28T10:26:00+01:00"
+      ],
+      "attachment_basename": "mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+      "mirror_url": "https://pjd.ma/static/uploads/2022/05/mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+      "pdf_sha256": "48878329a2849f980bf65b6b2e1ef1a68836c71aa5fb0eaee05421822a9e8143",
+      "pdf_creation_date": "2016-08-28T14:35:32+00:00",
+      "criteria": {
+        "official_domain_prequalified_T1_before_extraction": true,
+        "historical_article_publication_pre_cutoff": true,
+        "current_official_article_links_expected_attachment_basename": true,
+        "pdf_internal_creation_pre_cutoff": true,
+        "document_explicitly_describes_upcoming_7_october_poll": true,
+        "document_is_candidate_slate": true,
+        "document_is_party_secretariat_material": true,
+        "no_target_election_outcome_terms_detected": true,
+        "mechanical_provenance_audit_pass": true
+      },
+      "decision": "ADMISSIBLE_FOR_PRE_CUTOFF_T1_PARTY_FACTS",
+      "authorized_fact_scope": [
+        "PARTY_ANNOUNCED_CANDIDATE_IDENTITY",
+        "CANDIDATE_REGISTERED_RANK_AS_PARTY_SLATE_RANK",
+        "FORMAL_ENDORSEMENT"
+      ],
+      "explicitly_not_authorized": [
+        "T0_LEGAL_REGISTRATION",
+        "TARGET_ELECTION_OUTCOME",
+        "WINNER_LOSER_STATUS",
+        "POST_ELECTION_ANALYSIS"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR",
+      "official_article_url": "https://www.pjd.ma/74973-38983.html",
+      "article_publication_dates": [
+        "2016-09-15T06:00:00+00:00",
+        "2016-09-15T06:00:00+01:00"
+      ],
+      "attachment_basename": "ldf_3.pdf",
+      "mirror_url": "https://pjd.ma/static/uploads/2022/05/ldf_3.pdf",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "pdf_creation_date": "2016-09-06T17:27:11+00:00",
+      "criteria": {
+        "official_domain_prequalified_T1_before_extraction": true,
+        "historical_article_publication_pre_cutoff": true,
+        "current_official_article_links_expected_attachment_basename": true,
+        "pdf_internal_creation_pre_cutoff": true,
+        "document_explicitly_describes_upcoming_7_october_poll": true,
+        "document_is_candidate_slate": true,
+        "document_is_party_secretariat_material": true,
+        "no_target_election_outcome_terms_detected": true,
+        "mechanical_provenance_audit_pass": true
+      },
+      "decision": "ADMISSIBLE_FOR_PRE_CUTOFF_T1_PARTY_FACTS",
+      "authorized_fact_scope": [
+        "PARTY_ANNOUNCED_CANDIDATE_IDENTITY",
+        "CANDIDATE_REGISTERED_RANK_AS_PARTY_SLATE_RANK",
+        "FORMAL_ENDORSEMENT"
+      ],
+      "explicitly_not_authorized": [
+        "T0_LEGAL_REGISTRATION",
+        "TARGET_ELECTION_OUTCOME",
+        "WINNER_LOSER_STATUS",
+        "POST_ELECTION_ANALYSIS"
+      ]
+    }
+  ],
+  "invariants": {
+    "legal_registration_inferred": false,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "forecast_delta_generated": false,
+    "F1_created": false
+  }
+}
