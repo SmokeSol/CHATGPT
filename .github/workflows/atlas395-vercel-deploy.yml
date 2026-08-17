@@ -1,0 +1,223 @@
+name: Atlas 395 — Deploy production to Vercel
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [atlas395-v0]
+    paths:
+      - 'morocco26/web/**'
+      - 'morocco26/vercel.json'
+      - '.github/workflows/atlas395-vercel-deploy.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: atlas395-vercel-production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      VERCEL_TOKEN_PRIMARY: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_TOKEN_ATLAS: ${{ secrets.ATLAS395_VERCEL_TOKEN }}
+      VERCEL_ORG_PRIMARY: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_ORG_ATLAS: ${{ secrets.ATLAS395_VERCEL_ORG_ID }}
+      VERCEL_TEAM_PRIMARY: ${{ secrets.VERCEL_TEAM_ID }}
+      VERCEL_PROJECT_PRIMARY: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_PROJECT_ATLAS: ${{ secrets.ATLAS395_VERCEL_PROJECT_ID }}
+      VERCEL_HOOK_PRIMARY: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+      VERCEL_HOOK_ATLAS: ${{ secrets.ATLAS395_VERCEL_DEPLOY_HOOK }}
+      VERCEL_TOKEN_VAR: ${{ vars.VERCEL_TOKEN }}
+      VERCEL_ORG_VAR: ${{ vars.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_VAR: ${{ vars.VERCEL_PROJECT_ID }}
+      VERCEL_HOOK_VAR: ${{ vars.VERCEL_DEPLOY_HOOK }}
+
+    steps:
+      - name: Checkout deployed Atlas branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Validate release payload before deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('morocco26/web/data/atlas_v1.json').read_text(encoding='utf-8'))
+          assert data['forecast']['immutable'] is True
+          assert data['forecast']['candidate_and_signal_impact'] == 'NOT_CALIBRATED'
+          assert data['coverage']['arabic_identity_coverage'] == 92
+          assert data['coverage']['candidate_records_after_official_pjd_merge'] == 546
+          assert data['coverage']['local_territories_with_records_after_merge'] == 92
+          assert data['coverage']['missing_after_merge'] == []
+          assert len(data['territories']) == 92
+          assert Path('morocco26/web/assets/candidates.js').is_file()
+          assert Path('morocco26/web/assets/candidates.css').is_file()
+          print('ATLAS_V1_RELEASE_PAYLOAD=PASS')
+          PY
+
+      - name: Detect available Vercel authorization channel
+        id: auth
+        shell: bash
+        run: |
+          set -euo pipefail
+          TOKEN="${VERCEL_TOKEN_PRIMARY:-${VERCEL_TOKEN_ATLAS:-${VERCEL_TOKEN_VAR:-}}}"
+          ORG="${VERCEL_ORG_PRIMARY:-${VERCEL_ORG_ATLAS:-${VERCEL_TEAM_PRIMARY:-${VERCEL_ORG_VAR:-}}}}"
+          PROJECT="${VERCEL_PROJECT_PRIMARY:-${VERCEL_PROJECT_ATLAS:-${VERCEL_PROJECT_VAR:-}}}"
+          HOOK="${VERCEL_HOOK_PRIMARY:-${VERCEL_HOOK_ATLAS:-${VERCEL_HOOK_VAR:-}}}"
+          [ -n "$TOKEN" ] && echo '::add-mask::'$TOKEN
+          [ -n "$ORG" ] && echo '::add-mask::'$ORG
+          [ -n "$PROJECT" ] && echo '::add-mask::'$PROJECT
+          [ -n "$HOOK" ] && echo '::add-mask::'$HOOK
+          printf 'token=%s\n' "$TOKEN" >> "$GITHUB_OUTPUT"
+          printf 'org=%s\n' "$ORG" >> "$GITHUB_OUTPUT"
+          printf 'project=%s\n' "$PROJECT" >> "$GITHUB_OUTPUT"
+          printf 'hook=%s\n' "$HOOK" >> "$GITHUB_OUTPUT"
+          [ -n "$TOKEN" ] && HAS_TOKEN=yes || HAS_TOKEN=no
+          [ -n "$ORG" ] && HAS_ORG=yes || HAS_ORG=no
+          [ -n "$PROJECT" ] && HAS_PROJECT=yes || HAS_PROJECT=no
+          [ -n "$HOOK" ] && HAS_HOOK=yes || HAS_HOOK=no
+          {
+            echo '### Vercel authorization discovery'
+            echo "- Token available: **$HAS_TOKEN**"
+            echo "- Organization/team identifier available: **$HAS_ORG**"
+            echo "- Project identifier available: **$HAS_PROJECT**"
+            echo "- Deploy hook available: **$HAS_HOOK**"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Trigger configured Vercel deploy hook
+        if: ${{ steps.auth.outputs.hook != '' }}
+        shell: bash
+        env:
+          DEPLOY_HOOK: ${{ steps.auth.outputs.hook }}
+        run: |
+          set -euo pipefail
+          response=$(curl -fsS -X POST --max-time 45 "$DEPLOY_HOOK")
+          python - "$response" <<'PY'
+          import json, sys
+          try:
+              data=json.loads(sys.argv[1])
+          except Exception:
+              data={'response_received': True}
+          safe={k:v for k,v in data.items() if k in {'job','state','createdAt','id'}}
+          print('Deploy hook accepted:', safe or {'response_received': True})
+          PY
+          echo 'DEPLOY_CHANNEL=HOOK' >> "$GITHUB_ENV"
+
+      - name: Discover existing Atlas project with Vercel API
+        id: discover
+        if: ${{ steps.auth.outputs.hook == '' && steps.auth.outputs.token != '' && steps.auth.outputs.project == '' }}
+        shell: bash
+        env:
+          VERCEL_TOKEN: ${{ steps.auth.outputs.token }}
+          VERCEL_ORG_ID: ${{ steps.auth.outputs.org }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os, urllib.parse, urllib.request
+          token=os.environ['VERCEL_TOKEN']
+          org=os.environ.get('VERCEL_ORG_ID','')
+          candidates=['atlas-395-rescue-20260817','atlas395-maroc-2026','atlas-395','atlas395']
+          headers={'Authorization':f'Bearer {token}','User-Agent':'Atlas395-GitHub-Actions'}
+          def get(url):
+              req=urllib.request.Request(url,headers=headers)
+              with urllib.request.urlopen(req,timeout=40) as r:
+                  return json.load(r)
+          base='https://api.vercel.com/v9/projects?limit=100'
+          if org:
+              base += '&teamId='+urllib.parse.quote(org)
+          data=get(base)
+          projects=data.get('projects',[])
+          chosen=None
+          for name in candidates:
+              chosen=next((p for p in projects if p.get('name')==name),None)
+              if chosen: break
+          if not chosen:
+              for p in projects:
+                  name=str(p.get('name','')).lower()
+                  if 'atlas' in name and ('395' in name or 'moroc' in name):
+                      chosen=p;break
+          if not chosen:
+              print('Accessible Vercel projects:', [p.get('name') for p in projects])
+              raise SystemExit('NO_ACCESSIBLE_ATLAS_VERCEL_PROJECT')
+          project=chosen.get('id') or chosen.get('name')
+          with open(os.environ['GITHUB_OUTPUT'],'a',encoding='utf-8') as f:
+              f.write(f"project={project}\n")
+          print('Existing Atlas Vercel project found:', chosen.get('name'))
+          PY
+
+      - name: Deploy Atlas V1 with Vercel CLI
+        if: ${{ steps.auth.outputs.hook == '' && steps.auth.outputs.token != '' }}
+        shell: bash
+        env:
+          VERCEL_TOKEN: ${{ steps.auth.outputs.token }}
+          VERCEL_ORG_ID: ${{ steps.auth.outputs.org }}
+          CONFIGURED_PROJECT_ID: ${{ steps.auth.outputs.project }}
+          DISCOVERED_PROJECT_ID: ${{ steps.discover.outputs.project }}
+        run: |
+          set -euo pipefail
+          PROJECT="${CONFIGURED_PROJECT_ID:-${DISCOVERED_PROJECT_ID:-}}"
+          test -n "$PROJECT" || { echo 'NO_VERCEL_PROJECT_ID'; exit 1; }
+          npm install --global vercel@latest
+          cd morocco26
+          export VERCEL_PROJECT_ID="$PROJECT"
+          args=(deploy --prod --yes --token "$VERCEL_TOKEN" --project "$PROJECT")
+          if [ -n "${VERCEL_ORG_ID:-}" ]; then args+=(--scope "$VERCEL_ORG_ID"); fi
+          deployment_url=$(vercel "${args[@]}" 2>&1 | tee /tmp/vercel-deploy.log | grep -Eo 'https://[^ ]+\.vercel\.app' | tail -1 || true)
+          test -n "$deployment_url" || { cat /tmp/vercel-deploy.log; exit 1; }
+          echo "VERCEL_DEPLOYMENT_URL=$deployment_url" >> "$GITHUB_ENV"
+          echo 'DEPLOY_CHANNEL=CLI' >> "$GITHUB_ENV"
+          echo "- CLI production deployment: $deployment_url" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail clearly when no deploy authorization exists
+        if: ${{ steps.auth.outputs.hook == '' && steps.auth.outputs.token == '' }}
+        shell: bash
+        run: |
+          echo 'NO_VERCEL_DEPLOY_AUTHORIZATION_IN_GITHUB'
+          echo '- Result: **blocked — no Vercel token or deploy hook is stored in this repository**' >> "$GITHUB_STEP_SUMMARY"
+          exit 1
+
+      - name: Wait for Atlas V1 on public production aliases
+        shell: bash
+        run: |
+          set -euo pipefail
+          candidates=(
+            "${VERCEL_DEPLOYMENT_URL:-}"
+            'https://atlas-395-rescue-20260817.vercel.app/'
+            'https://atlas395-maroc-2026.vercel.app/'
+          )
+          PUBLIC=''
+          for attempt in $(seq 1 24); do
+            for URL in "${candidates[@]}"; do
+              [ -n "$URL" ] || continue
+              case "$URL" in */) ;; *) URL="$URL/" ;; esac
+              code=$(curl -sS -L -o /tmp/atlas.html -w '%{http_code}' --max-time 35 "$URL" || true)
+              if [ "$code" = 200 ] && grep -Fq '20260817-1848' /tmp/atlas.html; then
+                data_code=$(curl -sS -L -o /tmp/atlas-v1.json -w '%{http_code}' --max-time 35 "${URL}data/atlas_v1.json" || true)
+                if [ "$data_code" = 200 ]; then PUBLIC="$URL"; break 2; fi
+              fi
+            done
+            sleep 10
+          done
+          test -n "$PUBLIC" || { echo 'DEPLOYMENT_DID_NOT_REACH_PUBLIC_ALIAS'; exit 1; }
+          python - <<'PY'
+          import json
+          data=json.load(open('/tmp/atlas-v1.json',encoding='utf-8'))
+          assert data['coverage']['arabic_identity_coverage']==92
+          assert data['coverage']['candidate_records_after_official_pjd_merge']==546
+          assert data['coverage']['local_territories_with_records_after_merge']==92
+          assert data['forecast']['immutable'] is True
+          PY
+          echo "ATLAS_PUBLIC_URL=$PUBLIC" >> "$GITHUB_ENV"
+          {
+            echo '### Atlas V1 production deployment'
+            echo "- Deploy channel: **${DEPLOY_CHANNEL:-unknown}**"
+            echo "- Public URL: **$PUBLIC**"
+            echo '- Evidence payload: **92 Arabic identities / 546 candidate records / 92 territories covered**'
+            echo '- F0: **immutable; no candidate delta applied**'
+          } >> "$GITHUB_STEP_SUMMARY"
