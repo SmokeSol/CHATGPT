@@ -1,4 +1,4 @@
-name: Atlas 395 — V0.5 Daily
+name: Atlas 395 — V0.5 Validation
 
 on:
   workflow_dispatch:
@@ -14,15 +14,10 @@ on:
       - '.github/workflows/morocco26-atlas395-v0.yml'
 
 permissions:
-  contents: write
-
-concurrency:
-  group: atlas395-v05-publish
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  publish-daily-edition:
-    if: github.actor != 'github-actions[bot]'
+  validate-product-and-intake:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,13 +27,28 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build official daily edition from latest certified science state
-        run: bash morocco26/scripts/atlas395_daily_publish.sh
-      - name: Check reader interface syntax
+      - name: Check Python and reader interface syntax
         shell: bash
         run: |
+          python -m py_compile morocco26/scripts/atlas395_*.py
           node --check morocco26/web/app.js
           for f in morocco26/web/assets/*.js; do node --check "$f"; done
+      - name: Smoke-test autonomous intake against certified source surface
+        shell: bash
+        run: |
+          git fetch origin morocco26-b2:refs/remotes/origin/morocco26-b2
+          git show origin/morocco26-b2:morocco26/data/goal100/b2_deterministic_acquisition_surface.json > /tmp/atlas395_surface.json
+          python morocco26/scripts/atlas395_intake.py --surface /tmp/atlas395_surface.json --out /tmp/atlas395-intake --days-back 2 --max-per-source 2
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('/tmp/atlas395-intake/latest.json').read_text())
+          assert p['contract']['product_watch_only'] is True
+          assert p['contract']['writes_science'] is False
+          assert p['contract']['may_change_forecast'] is False
+          assert p['active_sources_scanned'] > 0
+          print('ATLAS395_INTAKE_CONTRACT_OK', p['active_sources_scanned'], p['detection_count'])
+          PY
       - name: Check final-reader language surface
         shell: bash
         run: |
@@ -50,17 +60,12 @@ jobs:
           if bad: raise SystemExit('Forbidden final-reader terms in HTML: ' + ', '.join(bad))
           print('ATLAS395_READER_LANGUAGE_OK')
           PY
-      - name: Enforce product-only write boundary
+      - name: Enforce no science mutation
         shell: bash
         run: |
-          bad="$(git status --porcelain | awk '{print $2}' | grep -Ev '^morocco26/web/(data|editions)/' || true)"
-          if [ -n "$bad" ]; then echo "Daily publisher modified forbidden paths:"; echo "$bad"; exit 1; fi
-      - name: Commit current views and immutable edition
-        shell: bash
-        run: |
-          if [ -z "$(git status --porcelain -- morocco26/web/data morocco26/web/editions)" ]; then echo "No daily product changes."; exit 0; fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add morocco26/web/data morocco26/web/editions
-          git commit -m "atlas395: publish daily edition $(TZ=Africa/Casablanca date +%F)"
-          git push origin HEAD:atlas395-v0
+          if [ -n "$(git status --porcelain)" ]; then
+            echo 'Validation changed tracked working-tree content:'
+            git status --porcelain
+            exit 1
+          fi
+          echo ATLAS395_VALIDATION_NO_MUTATION_OK
