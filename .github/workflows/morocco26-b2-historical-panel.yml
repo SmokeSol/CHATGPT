@@ -1,0 +1,77 @@
+name: morocco26-b2-historical-panel
+
+on:
+  push:
+    branches: [morocco26-b2]
+    paths:
+      - 'morocco26/scripts/goal100_build_b2_historical_panel.py'
+      - 'morocco26/scripts/validate_b2_historical_panel.py'
+      - 'morocco26/data/goal100/b2_feature_dictionary_v1.json'
+      - 'morocco26/data/goal100/b2_identity_crosswalk.json'
+      - 'morocco26/data/goal100/historical/**'
+      - '.github/workflows/morocco26-b2-historical-panel.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-b2-historical-panel
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-b2
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile the B2-3 chain
+        run: |
+          python -m py_compile \
+            morocco26/scripts/goal100_build_b2_historical_panel.py \
+            morocco26/scripts/validate_b2_historical_panel.py
+
+      - name: Verify the certified B2-2 parent gate
+        run: python morocco26/scripts/validate_b2_identity_crosswalk_v1_1.py
+
+      - name: Build the same-cutoff historical feature panel
+        id: build
+        continue-on-error: true
+        run: python morocco26/scripts/goal100_build_b2_historical_panel.py
+
+      - name: Enforce the B2-3 panel contract
+        id: enforce
+        run: python morocco26/scripts/validate_b2_historical_panel.py
+
+      - name: Revalidate anti-drift after the panel attempt
+        run: python morocco26/scripts/validate_anti_drift.py
+
+      - name: Persist the panel, certificate and journal evidence
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/b2_historical_panel.json \
+            morocco26/data/goal100/b2_historical_panel_certificate.json \
+            morocco26/data/goal100/b2_gate_registry.json \
+            morocco26/data/goal100/b2_current_state.json \
+            morocco26/data/goal100/fil_ariane_events \
+            morocco26/reports/B2_AGENTIC_COLLECTION_HANDOFF.md \
+            morocco26/FIL_ARIANE.md
+          git commit -m 'milestone(morocco26): record B2-3 historical panel gate result' || true
+          git pull --rebase origin morocco26-b2
+          git push origin HEAD:morocco26-b2
+
+      - name: Report that B2-3 remains open
+        if: steps.build.outcome != 'success'
+        run: |
+          echo 'B2-3 measured a non-identifiable historical panel. The result is preserved;'
+          echo 'the gate stays OPEN and every predictive coefficient stays exactly zero.'

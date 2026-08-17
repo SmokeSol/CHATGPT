@@ -259,3 +259,22 @@ Chaque entrée doit contenir, dans cet ordre :
 **Décision scientifique :** crosswalk certifié ; aucune homonymie n’est fusionnée et aucun code non-core n’est transformé en parti connu par supposition.
 
 **Prochaine action exacte :** construire `B2-3` — panel historique de features candidat/liste au même cutoff, avec couverture et support publiés, avant tout fit de coefficient.
+
+
+### 2026-08-17 — Entrée A023 — Panel historique de features B2 au même cutoff
+
+**Question/gate traité :** `B2-3-HISTORICAL-FEATURE-PANEL` — quelles features du dictionnaire gelé sont réellement constructibles au cutoff historique, avec quelle couverture et quel support ?
+
+**Hypothèse avant test :** le panel candidat/liste doit couvrir au moins `0.8` des 92 territoires locaux sur `2011→2016` et `2016→2021`, et tout binaire promu doit atteindre `30` instances positives.
+
+**Résultat machine :** `FAIL` — features totales `16` ; identifiables `0` (fit) et `0` (validation). Couverture mécanique `0.0` / `0.0` ; couverture prédictive centrale `0.0` / `0.0`. Panel mécanique `FAIL`, panel prédictif `FAIL`.
+
+**Classes d'entrée bloquantes :** `HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR`, `HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR`, `HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR`, `HISTORICAL_CANDIDATE_RANK_TARGET_YEAR`, `HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR`, `HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR`, `HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR`, `HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR`, `HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR`, `HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR`, `HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR`, `HISTORICAL_LIST_REJECTION_TARGET_YEAR`, `HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR`, `HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR`, `HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR`, `HISTORICAL_PARTY_OFFICE_TARGET_YEAR`, `HISTORICAL_PARTY_SWITCH_TARGET_YEAR`
+
+**Cellules mesurées :** `2815` dont `0` cellules de feature et `2815` cellules de diagnostic ; hash canonique `1f9992ad752024cd…`
+
+**Frontière scientifique :** `people_2021` est un résultat électoral ; il n'est jamais utilisé comme roster de candidats ni comme incumbency de son propre cycle. Aucune absence n'est convertie en zéro.
+
+**Décision scientifique :** B2-3 reste OPEN ; la non-identifiabilité mesurée est conservée comme résultat et aucun coefficient ne bouge.
+
+**Prochaine action exacte :** ingérer les classes d'entrée bloquantes publiées via un pipeline historique versionné, ou geler le résultat négatif ; dans les deux cas les coefficients prédictifs restent exactement nuls.
