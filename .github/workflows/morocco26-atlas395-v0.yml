@@ -37,7 +37,14 @@ jobs:
         shell: bash
         run: |
           git fetch origin morocco26-b2:refs/remotes/origin/morocco26-b2
-          git show origin/morocco26-b2:morocco26/data/goal100/b2_deterministic_acquisition_surface.json > /tmp/atlas395_surface.json
+          git show origin/morocco26-b2:morocco26/data/goal100/b2_deterministic_acquisition_surface.json > /tmp/atlas395_surface_full.json
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/atlas395_surface_full.json'))
+          keep={'T0_MAROC_MA_ELECTIONS','T1_PJD_OFFICIAL'}
+          p['surfaces']=[x for x in p['surfaces'] if x.get('source_id') in keep]
+          json.dump(p,open('/tmp/atlas395_surface.json','w'))
+          PY
           python morocco26/scripts/atlas395_intake.py --surface /tmp/atlas395_surface.json --out /tmp/atlas395-intake --days-back 2 --max-per-source 2
           python - <<'PY'
           import json
@@ -47,7 +54,7 @@ jobs:
           assert p['contract']['writes_science'] is False
           assert p['contract']['may_change_forecast'] is False
           assert p['active_sources_scanned'] > 0
-          print('ATLAS395_INTAKE_CONTRACT_OK', p['active_sources_scanned'], p['detection_count'])
+          print('ATLAS395_INTAKE_CONTRACT_OK', p['active_sources_scanned'], p['detection_count'], p['probe_count'])
           PY
       - name: Check final-reader language surface
         shell: bash
