@@ -40,10 +40,10 @@ jobs:
           grep -Fq "['signals','Veille 2026'" morocco26/web/assets/core.js
           grep -Fq 'Candidatures documentées par circonscription' morocco26/web/assets/candidates.js
           grep -Fq 'RÉFÉRENCE CONSERVÉE' morocco26/web/assets/candidates.js
+          grep -Fq 'edition_date||ec?.edition_id' morocco26/web/assets/daily.js
+          grep -Fq 'institutionalNavBound' morocco26/web/assets/institutional.js
           ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|tester l.?IA|mettre l.?IA|IA contre référence|E_reason|E_full|agentic|Arabic Native|AUCUN DELTA APPLIQUÉ' morocco26/web/index.html morocco26/web/assets/candidates.js morocco26/web/data/public_methodology.json
-          node --check morocco26/web/app.js
-          node --check morocco26/web/assets/core.js
-          node --check morocco26/web/assets/candidates.js
+          for js in morocco26/web/app.js morocco26/web/assets/core.js morocco26/web/assets/daily.js morocco26/web/assets/map.js morocco26/web/assets/candidates.js morocco26/web/assets/institutional.js; do node --check "$js"; done
           python - <<'PY'
           import json
           x=json.load(open('morocco26/web/data/atlas_v1.json',encoding='utf-8'))
@@ -78,42 +78,41 @@ jobs:
           echo "TEMPORARY_VERIFIED_ATLAS_URL=$url" >> "$GITHUB_STEP_SUMMARY"
           echo "TEMPORARY_ATLAS_URL=$url"
 
-      - name: Verify rendered institutional interface in Chromium
+      - name: Verify rendered institutional interface and navigation
         shell: bash
         run: |
           set -euo pipefail
           curl --retry 4 --retry-all-errors -fsSL --max-time 40 "${ATLAS_URL}data/atlas_v1.json" -o /tmp/atlas_v1.json
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
-          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=35000 --dump-dom "$ATLAS_URL" > /tmp/live-dom.html
+          dump(){ "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=35000 --dump-dom "$1"; }
+          dump "$ATLAS_URL" > /tmp/live-dom.html
           python - <<'PY'
           from pathlib import Path
           dom=Path('/tmp/live-dom.html').read_text(encoding='utf-8',errors='replace')
-          required=[
-            'Intelligence électorale territoriale · Maroc 2026',
-            'Rapport de forces et incertitude territoriale',
-            'Synthèse',
-            'Carte territoriale',
-            'Candidatures',
-            'Partis',
-            'Veille 2026',
-            'Méthode',
-            'Historique',
-            'Candidatures documentées par circonscription',
-            'RÉFÉRENCE CONSERVÉE',
-            'territoires bilingues',
-            '546',
-            'الدار البيضاء آنفا',
-          ]
-          forbidden=['LLM','intelligence artificielle','expérimentation IA','E_reason','E_full','agentic','Arabic Native','AUCUN DELTA APPLIQUÉ']
+          required=['Intelligence électorale territoriale · Maroc 2026','Rapport de forces et incertitude territoriale','Synthèse','Carte territoriale','Candidatures','Partis','Veille 2026','Méthode','Historique','Candidatures documentées par circonscription','RÉFÉRENCE CONSERVÉE','territoires bilingues','546','الدار البيضاء آنفا','data-institutional-nav-bound="1"']
+          forbidden=['LLM','intelligence artificielle','expérimentation IA','E_reason','E_full','agentic','Arabic Native','AUCUN DELTA APPLIQUÉ','Invalid Date','NaN']
           missing=[x for x in required if x not in dom]
           forbidden_present=[x for x in forbidden if x.lower() in dom.lower()]
           fatal=[x for x in ['Atlas 395 ne peut pas charger','Atlas 395 ne peut pas initialiser'] if x in dom]
-          print('MISSING_REQUIRED=',missing)
-          print('FORBIDDEN_PRESENT=',forbidden_present)
-          print('FATAL_PRESENT=',fatal)
-          print('DOM_BYTES=',len(dom.encode('utf-8')))
-          if missing or forbidden_present or fatal:
-              raise SystemExit(1)
+          assert '17 août 2026' in dom, 'reference date not rendered as 17 août 2026'
+          print('MISSING_REQUIRED=',missing);print('FORBIDDEN_PRESENT=',forbidden_present);print('FATAL_PRESENT=',fatal)
+          if missing or forbidden_present or fatal: raise SystemExit(1)
           print('INSTITUTIONAL_BROWSER_SMOKE=PASS')
           PY
-          echo "INSTITUTIONAL_BROWSER_SMOKE=PASS" >> "$GITHUB_STEP_SUMMARY"
+          for view in overview territories candidates parties signals methodology history; do
+            dump "${ATLAS_URL}#${view}" > "/tmp/${view}.html"
+            python - "$view" <<'PY'
+          import re,sys
+          from pathlib import Path
+          view=sys.argv[1]
+          dom=Path(f'/tmp/{view}.html').read_text(encoding='utf-8',errors='replace')
+          tag=re.search(rf'<section[^>]*id="view-{re.escape(view)}"[^>]*>',dom)
+          if not tag: raise SystemExit(f'MISSING_VIEW={view}')
+          if 'active' not in tag.group(0).split('class="',1)[-1].split('"',1)[0].split(): raise SystemExit(f'VIEW_NOT_ACTIVE={view}: {tag.group(0)}')
+          if f'data-view="{view}"' not in dom: raise SystemExit(f'MISSING_TAB={view}')
+          if 'Invalid Date' in dom: raise SystemExit(f'INVALID_DATE_IN_VIEW={view}')
+          print(f'VIEW_PASS={view}')
+          PY
+          done
+          echo "TAB_NAVIGATION_SMOKE=PASS" >> "$GITHUB_STEP_SUMMARY"
+          echo "REFERENCE_DATE_SMOKE=PASS" >> "$GITHUB_STEP_SUMMARY"
