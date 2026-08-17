@@ -1,0 +1,59 @@
+name: morocco26-fminus1-register-existing-v1-1
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - 'morocco26/scripts/goal100_register_existing_fminus1_v1_1.py'
+      - '.github/workflows/morocco26-fminus1-register-existing-v1-1.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-fminus1-register-existing-v1-1
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  verify-register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile fail-closed registration transition
+        run: python -m py_compile morocco26/scripts/goal100_register_existing_fminus1_v1_1.py
+
+      - name: Re-hash, verify and register immutable F-1
+        run: python morocco26/scripts/goal100_register_existing_fminus1_v1_1.py
+
+      - name: Verify registered state independently
+        run: |
+          python morocco26/scripts/goal100_register_existing_fminus1_v1_1.py --verify-only
+          python morocco26/scripts/validate_goal100_tracking.py
+          python morocco26/scripts/validate_anti_drift.py
+
+      - name: Commit exact registration evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/forecast_registry.json \
+            morocco26/data/goal100/gate_registry.json \
+            morocco26/data/goal100/current_state.json \
+            morocco26/data/goal100/p0_resolution_v6.json \
+            morocco26/data/goal100/fminus1_registration_certificate.json \
+            morocco26/data/goal100/snapshots/F-1/manifest.json \
+            morocco26/data/goal100/fil_ariane_events/A017.json \
+            morocco26/FIL_ARIANE.md \
+            morocco26/scripts/validate_goal100_tracking.py
+          git commit -m 'milestone(morocco26): register immutable verified F-1' || true
+          git pull --rebase origin morocco26-fminus1-run
+          git push origin HEAD:morocco26-fminus1-run
