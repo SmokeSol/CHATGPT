@@ -3,7 +3,7 @@
   "panel_id": "M26-GOAL100-B2-HISTORICAL-PANEL-V1",
   "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
   "dictionary_id": "M26-GOAL100-B2-FEATURE-DICTIONARY-V1",
-  "generated_at": "2026-08-17T11:04:43+01:00",
+  "generated_at": "2026-08-17T11:03:24+01:00",
   "gate": "FAIL",
   "determinism": {
     "llm_used": false,
@@ -1201,5 +1201,5 @@
       "identifiable_predictive_features": 0
     }
   ],
-  "canonical_panel_sha256": "f5047decc2296a401dd1539ced0a29ebd204c01f296e44fc0b6b5284d1a0c915"
+  "canonical_panel_sha256": "8ed118cce63a5cafcfbe92ea57844d65445cb06da3d212bb8abd9c0c16680b49"
 }
