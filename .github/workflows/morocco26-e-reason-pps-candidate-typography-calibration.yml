@@ -1,0 +1,32 @@
+name: morocco26-e-reason-pps-candidate-typography-calibration
+on:
+  workflow_dispatch:
+  push:
+    branches: [morocco26-e-reason]
+    paths:
+      - "morocco26/scripts/e_reason_calibrate_pps_candidate_typography.py"
+      - ".github/workflows/morocco26-e-reason-pps-candidate-typography-calibration.yml"
+permissions:
+  contents: write
+jobs:
+  calibrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-e-reason, fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python morocco26/scripts/validate_e_reason_prereg.py
+      - run: python -m pip install --disable-pip-version-check pdfplumber==0.11.7
+      - run: python morocco26/scripts/e_reason_calibrate_pps_candidate_typography.py
+      - run: python morocco26/scripts/validate_e_reason_prereg.py
+      - name: Commit calibration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/data/goal100/e_reason/evidence/pps_2016_candidate_typography_calibration/calibration.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "experiment(e-reason): freeze PPS candidate typography calibration"
+          git pull --rebase origin morocco26-e-reason
+          git push origin HEAD:morocco26-e-reason
