@@ -278,3 +278,18 @@ Chaque entrée doit contenir, dans cet ordre :
 **Décision scientifique :** B2-3 reste OPEN ; la non-identifiabilité mesurée est conservée comme résultat et aucun coefficient ne bouge.
 
 **Prochaine action exacte :** ingérer les classes d'entrée bloquantes publiées via un pipeline historique versionné, ou geler le résultat négatif ; dans les deux cas les coefficients prédictifs restent exactement nuls.
+
+### 2026-08-17 — Entrée A024 — Gel B2 négatif et enregistrement F0
+
+**Question/gate traité :** fermer B2 sans déplacer les règles gelées, puis produire le snapshot prospectif `F0` avant toute expérience agentique.
+
+**Résultat B2 :** `B2_3_DATA_BLOCKED_NONAGENTIC` et `B2_4_FAIL` sont conservés comme échecs visibles. `B2-5` passe sur un ensemble admissible vide avec zéro conflit silencieusement résolu. `B2-6` applique mécaniquement la règle de défaut : aucun fit ridge n'est exécuté et tous les coefficients prédictifs restent exactement à zéro. `B2-7` gèle le résultat négatif au cutoff `2026-08-17T16:14:58+01:00`.
+
+**Résultat F0 :** `REGISTERED_IMMUTABLE_PRELIMINARY_FORECAST`. B2 n'admettant aucun changement mécanique et aucun effet prédictif, `F0` est l'identité exacte sur les 50 000 élections cohérentes déjà enregistrées dans `F-1`; un nouveau tirage Monte Carlo n'aurait ajouté que du bruit numérique. Les ablations mécanique, résiduelle et B2 complète ont toutes un delta `EXACT_ZERO`.
+
+**Frontière scientifique :** `F-1` n'est pas réécrit; `F0` ne contient aucune information agentique. Les 16 classes d'entrée historiques bloquées et les 92 lignes arabes PJD non résolues restent intactes comme corpus contrôlé pour mesurer ultérieurement `Δ_collect`.
+
+**Décision :** B2 est terminé et gelé; F0 est enregistré. `E-COLLECT-PREREGISTERED` peut maintenant s'ouvrir, mais `E_collect` n'est pas exécuté. `E_reason` et `E_full` restent verrouillés.
+
+**Prochaine action exacte :** preregistrer `E_collect` contre le cutoff et le corpus B2 gelés, sans modifier `F-1` ni `F0`.
+

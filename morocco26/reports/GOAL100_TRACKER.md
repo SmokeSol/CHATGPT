@@ -2,7 +2,33 @@
 
 **Canonical human status page.** Machine truth lives in `morocco26/data/goal100/current_state.json`, `gate_registry.json`, and `forecast_registry.json`.
 
-Last synchronized: **2026-08-16 21:30 Africa/Casablanca**.
+Last synchronized: **2026-08-17 16:22 Africa/Casablanca**.
+
+
+<!-- F0_CHECKPOINT_2026_08_17 -->
+## Current checkpoint — F0 registered (17 August 2026)
+
+**Machine truth supersedes the historical sections below where they describe F-1 or B2 as pending.** F0 is now registered immutable.
+
+- B2 terminal state: **frozen negative result**.
+- B2-3: `B2_3_DATA_BLOCKED_NONAGENTIC` — 0.0 coverage on both historical transitions vs frozen 0.8 threshold.
+- B2-4: `B2_4_FAIL` — 92 Arabic PJD rows parsed, 0 deterministically resolved/admitted; no transliteration or semantic guessing was used.
+- B2-5: `PASS_EMPTY_ADMISSIBLE_SET`; zero silently bridged conflicts.
+- B2-6: `FAIL_CLOSED_ZERO_COEFFICIENTS`; no ridge fit, all predictive coefficients exactly zero.
+- B2-7: frozen at `2026-08-17T16:14:58+01:00`.
+- F0: **REGISTERED_IMMUTABLE_PRELIMINARY_FORECAST**; exact identity counterfactual over F-1's registered 50,000 coherent elections, with mechanical/predictive/full-B2 deltas all exactly zero.
+- F-1 remains immutable; F0 may never be overwritten.
+- Controlled future `E_collect` test material remains untouched: 16 blocked historical input classes + 92 unresolved Arabic roster rows.
+- `E_collect` execution has **not** started. Only its preregistration gate is open; `E_reason` and `E_full` remain locked.
+- Next immutable forecast ID: `F1`.
+
+Canonical certificates: `data/goal100/b2_freeze_certificate.json`, `data/goal100/forecasts/F0/simulation_certificate.json`, `data/goal100/f0_registration_certificate.json`.
+
+---
+
+### Historical tracker retained below
+
+The material below is preserved as the prior project state and should not be read as the current checkpoint where it says F-1/F0/B2 are pending.
 
 ## North star
 

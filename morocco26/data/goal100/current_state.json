@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.3",
+  "schema_version": "1.4",
   "state_id": "M26-GOAL100-CURRENT-2026-08-16",
-  "as_of": "2026-08-17T06:12:57+00:00",
+  "as_of": "2026-08-17T16:22:07+01:00",
   "north_star": "Construire un forecast territorial probabiliste, entièrement gelé et falsifiable, puis déterminer expérimentalement si une intelligence agentique de collecte et de raisonnement résiduel apporte de l'information prédictive supplémentaire au-delà d'une baseline structurelle optimale.",
   "tracking_policy": {
     "progress_measure": "machine gates only; no subjective percentage inflation",
@@ -12,18 +12,18 @@
     "snapshots_before_F0_allowed": true,
     "canonical_work_log": "morocco26/FIL_D_ARIANE.md"
   },
-  "program_phase": "P7_B2_STRUCTURED_EVIDENCE_LAYER",
+  "program_phase": "P7_B2_STRUCTURED_EVIDENCE_LAYER_F0_REGISTERED",
   "goal75_checkpoint": {
     "scientifically_gated_completion_percent": 75,
     "status": "PRESERVED_IMMUTABLE",
     "reference": "morocco26/data/goal75/scientific_completion_75.json"
   },
   "goal100_objective": {
-    "next_forecast": "F0",
-    "next_forecast_class": "PRELIMINARY_PROBABILISTIC_FORECAST",
-    "forecast_status": "F-1_ISSUED_IMMUTABLE",
-    "first_calibrated_snapshot_status": "F-1_REGISTERED",
-    "agentic_experiment_status": "LOCKED_UNTIL_B2_IS_FROZEN_AND_AGENTIC_ABLATIONS_ARE_PREREGISTERED"
+    "next_forecast": "F1",
+    "next_forecast_class": "PREREGISTERED_UPDATE",
+    "forecast_status": "F0_REGISTERED_IMMUTABLE",
+    "first_calibrated_snapshot_status": "F0_REGISTERED_PRELIMINARY_IDENTITY_COUNTERFACTUAL",
+    "agentic_experiment_status": "E_COLLECT_PREREGISTRATION_OPEN_EXECUTION_NOT_STARTED"
   },
   "p0_summary": {
     "closed": [
@@ -68,6 +68,16 @@
       "id": "BT-FMINUS1-REGISTERED",
       "claim": "F-1 is an immutable, non-agentic structural prior based on 50,000 coherent elections over all 395 seats, registered with recomputed artifact hashes.",
       "evidence": "morocco26/data/goal100/fminus1_registration_certificate.json"
+    },
+    {
+      "id": "BT-B2-FROZEN",
+      "claim": "B2 is frozen as a negative deterministic result: B2-3 is DATA_BLOCKED_NONAGENTIC, B2-4 failed authoritative roster verification, B2-5 passes on an empty admissible claim set, and all predictive coefficients remain exactly zero.",
+      "evidence": "morocco26/data/goal100/b2_freeze_certificate.json"
+    },
+    {
+      "id": "BT-F0-REGISTERED",
+      "claim": "F0 is registered immutable as an exact identity counterfactual over the registered 50,000-election F-1 ensemble because frozen B2 admits zero mechanical constraints and zero predictive effects.",
+      "evidence": "morocco26/data/goal100/f0_registration_certificate.json"
     }
   ],
   "geometry_2026": {
@@ -121,10 +131,10 @@
   },
   "remaining_hard_gates_before_F_minus_1": [],
   "next_execution_order": [
-    "freeze B2 admissibility, evidence schema, cutoff and transformation rules before collection",
-    "populate deterministic structured candidate/list/defection/endorsement/event evidence with provenance and territorial mapping",
-    "apply B2 to the frozen F-1 prior and issue immutable F0",
-    "only then preregister E_collect / E_reason / E_full against the same cutoff and corpus"
+    "preregister E_collect against the frozen B2 cutoff, source policy, 16 blocked historical input classes and 92 unresolved Arabic roster rows",
+    "execute E_collect only after its protocol and scoring contract are frozen; never modify F-1 or F0",
+    "then preregister E_reason on the same evidence corpus and cutoff",
+    "only after independent collection and reasoning ablations are frozen may E_full open"
   ],
   "anti_drift": {
     "agentic_layer_may_not_unlock_forecast": true,
@@ -139,7 +149,11 @@
     "unresolved_statutory_ties_must_not_be_broken_by_party_name_or_vote_count": true,
     "F_minus_1_may_never_be_overwritten": true,
     "B2_must_be_frozen_before_F0": true,
-    "agentic_layer_remains_locked": true
+    "agentic_layer_remains_locked": true,
+    "B2_is_frozen": true,
+    "F0_may_never_be_overwritten": true,
+    "agentic_execution_requires_preregistration": true,
+    "unresolved_arabic_rows_must_not_be_semantically_backfilled_into_B2_or_F0": true
   },
   "fminus1": {
     "status": "REGISTERED_IMMUTABLE",
@@ -151,5 +165,36 @@
     "house_seats_every_draw": 395,
     "candidate_evidence": "NONE_STRUCTURAL_ONLY",
     "event_evidence": "NONE_STRUCTURAL_ONLY"
+  },
+  "b2": {
+    "status": "FROZEN_NEGATIVE_RESULT",
+    "evidence_cutoff": "2026-08-17T16:14:58+01:00",
+    "freeze_certificate": "morocco26/data/goal100/b2_freeze_certificate.json",
+    "freeze_certificate_sha256": "eab248d63051643600d0b2220f269b587302c4631fe24a7760fd971277fd88e1",
+    "B2_3": "B2_3_DATA_BLOCKED_NONAGENTIC",
+    "B2_4": "B2_4_FAIL",
+    "B2_5": "PASS_EMPTY_ADMISSIBLE_SET",
+    "B2_6": "FAIL_CLOSED_ZERO_COEFFICIENTS",
+    "mechanical_constraints_admitted": 0,
+    "predictive_coefficients": "ALL_EXACTLY_ZERO",
+    "reserved_for_e_collect": {
+      "historical_input_classes": 16,
+      "unresolved_arabic_roster_rows": 92
+    }
+  },
+  "f0": {
+    "status": "REGISTERED_IMMUTABLE_PRELIMINARY_FORECAST",
+    "created_at": "2026-08-17T16:22:07+01:00",
+    "data_cutoff": "2026-08-17T16:14:58+01:00",
+    "forecast_artifact_sha256": "fbe5197999f20d0612bc0c66e1954b5c611b11208e43a72eb5494a03b1e40d3f",
+    "distribution_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "distribution_equivalence_to_F_minus_1": "EXACT",
+    "counterfactual_elections": 50000,
+    "mechanical_delta": "EXACT_ZERO",
+    "predictive_delta": "EXACT_ZERO",
+    "full_B2_delta": "EXACT_ZERO",
+    "registration_certificate": "morocco26/data/goal100/f0_registration_certificate.json",
+    "registration_certificate_sha256": "40175a828eda6a33642caa7efb950d43cd99f11b0653b8c80e201a8739c52c8c",
+    "agentic_information_used": false
   }
 }
