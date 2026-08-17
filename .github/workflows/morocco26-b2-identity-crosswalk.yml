@@ -1,0 +1,90 @@
+name: morocco26-b2-identity-crosswalk
+
+on:
+  push:
+    branches: [morocco26-b2]
+    paths:
+      - 'morocco26/data/goal100/b2_identity_protocol_v1.json'
+      - 'morocco26/scripts/goal100_build_b2_identity_crosswalk.py'
+      - 'morocco26/scripts/goal100_build_b2_identity_crosswalk_v1_1.py'
+      - 'morocco26/scripts/validate_b2_identity_crosswalk.py'
+      - 'morocco26/scripts/goal100_finalize_b2_identity_event.py'
+      - '.github/workflows/morocco26-b2-identity-crosswalk.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-b2-identity-crosswalk
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build-certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-b2
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile deterministic identity gate
+        run: |
+          python -m py_compile \
+            morocco26/scripts/goal100_build_b2_identity_crosswalk.py \
+            morocco26/scripts/goal100_build_b2_identity_crosswalk_v1_1.py \
+            morocco26/scripts/validate_b2_identity_crosswalk.py \
+            morocco26/scripts/goal100_finalize_b2_identity_event.py
+
+      - name: Verify B2 protocol and source universe before identity execution
+        run: |
+          python morocco26/scripts/validate_b2_protocol.py
+          python morocco26/scripts/validate_b2_source_universe.py
+
+      - name: Build exact identity party list territory crosswalk
+        id: build
+        continue-on-error: true
+        run: python morocco26/scripts/goal100_build_b2_identity_crosswalk_v1_1.py
+
+      - name: Append failed identity gate to FIL_ARIANE when needed
+        if: always()
+        run: python morocco26/scripts/goal100_finalize_b2_identity_event.py
+
+      - name: Enforce B2-2 identity certificate
+        id: enforce
+        continue-on-error: true
+        run: python morocco26/scripts/validate_b2_identity_crosswalk.py
+
+      - name: Validate complete registered and B2 state after PASS
+        if: steps.enforce.outcome == 'success'
+        run: |
+          python morocco26/scripts/validate_b2_protocol.py
+          python morocco26/scripts/validate_b2_source_universe.py
+          python morocco26/scripts/validate_goal100_tracking.py
+          python morocco26/scripts/validate_anti_drift.py
+
+      - name: Persist PASS or FAIL identity evidence append-only
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/b2_identity_crosswalk.json \
+            morocco26/data/goal100/b2_identity_territory_certificate.json \
+            morocco26/data/goal100/b2_gate_registry.json \
+            morocco26/data/goal100/b2_current_state.json \
+            morocco26/data/goal100/fil_ariane_events \
+            morocco26/FIL_ARIANE.md
+          git commit -m 'milestone(morocco26): record B2 identity territory gate result' || true
+          git pull --rebase origin morocco26-b2
+          git push origin HEAD:morocco26-b2
+
+      - name: Fail closed if B2-2 did not pass
+        if: steps.enforce.outcome != 'success'
+        run: |
+          echo 'B2-2 identity/territory gate remains OPEN; evidence was persisted.'
+          exit 1
