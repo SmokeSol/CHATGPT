@@ -1,0 +1,58 @@
+name: MOROCCO26 Atlas 395 V0
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [atlas395-v0]
+    paths:
+      - 'morocco26/data/goal100/**'
+      - 'morocco26/scripts/atlas395_export.py'
+      - 'morocco26/scripts/validate_atlas395_views.py'
+      - 'morocco26/web/**'
+      - '!morocco26/web/data/**'
+      - '.github/workflows/morocco26-atlas395-v0.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-derived-product-views:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: atlas395-v0
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Snapshot scientific tree before product generation
+        run: git status --porcelain && git rev-parse HEAD
+      - name: Generate read-only Atlas views
+        run: python morocco26/scripts/atlas395_export.py --snapshot F-1
+      - name: Validate Atlas views
+        run: python morocco26/scripts/validate_atlas395_views.py
+      - name: Check UI syntax
+        run: node --check morocco26/web/app.js
+      - name: Enforce one-way write boundary
+        shell: bash
+        run: |
+          bad="$(git diff --name-only | grep -v '^morocco26/web/data/' || true)"
+          if [ -n "$bad" ]; then
+            echo "Atlas generator modified forbidden paths:"
+            echo "$bad"
+            exit 1
+          fi
+      - name: Commit generated views
+        shell: bash
+        run: |
+          if git diff --quiet -- morocco26/web/data; then
+            echo "No derived view changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/web/data
+          git commit -m "atlas395: regenerate read-only F-1 product views"
+          git push origin HEAD:atlas395-v0
