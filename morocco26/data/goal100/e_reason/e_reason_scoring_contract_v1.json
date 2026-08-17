@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-E-REASON-SCORING-V1",
+  "frozen_at": "2026-08-17T21:42:17+01:00",
+  "panel": {
+    "territories": 92,
+    "party_buckets": 9,
+    "cells_per_election": 828,
+    "inclusion": "All 92 x 9 cells with the frozen structural baseline and observed target outcome. Missing candidate evidence remains a zero-information packet; no post-outcome exclusions."
+  },
+  "primary_metric": {
+    "name": "macro_party_share_RMSE",
+    "formula": "sqrt(mean_over_all_92x9_cells((predicted_share - observed_share)^2))",
+    "direction": "lower_is_better"
+  },
+  "secondary_metrics": [
+    {
+      "name": "mean_constituency_L1",
+      "formula": "mean_d(sum_p(abs(predicted_share_dp-observed_share_dp)))",
+      "direction": "lower_is_better"
+    },
+    {
+      "name": "top_party_accuracy",
+      "formula": "mean_d(argmax_p(predicted_share_dp)==argmax_p(observed_share_dp))",
+      "direction": "higher_is_better"
+    },
+    {
+      "name": "local_seat_national_MAE",
+      "formula": "sum_p(abs(predicted_local_seats_p-observed_local_seats_p))",
+      "seat_scope": 305,
+      "direction": "lower_is_better"
+    },
+    {
+      "name": "mean_energy_score",
+      "formula": "Use the frozen Bstar uncertainty draws shifted by the frozen residual transform; identical draw count and RNG stream across conditions.",
+      "direction": "lower_is_better"
+    }
+  ],
+  "comparisons": ["C1_MINUS_C0", "C2_MINUS_C0", "C2_MINUS_C1"],
+  "uncertainty_test": {
+    "method": "paired bootstrap by constituency",
+    "replicates": 10000,
+    "seed": 260817,
+    "statistic": "difference in primary RMSE",
+    "reported": ["point_delta","relative_delta","bootstrap_probability_treatment_better","percentile_95_interval"]
+  },
+  "calibration": {
+    "development_only": 2016,
+    "parameters_allowed_to_select": ["lambda_C1","lambda_C2"],
+    "tie_breaker": "smaller lambda",
+    "forbidden": "No prompt, rubric, feature, threshold, party set or scoring change based on 2016 or 2021 outcome inspection."
+  },
+  "holdout": {
+    "year": 2021,
+    "rule": "All metrics and bootstrap code are frozen before outcome unseal.",
+    "reporting_label": "COMPONENT_LEVEL_LOCKED_HOLDOUT"
+  }
+}
