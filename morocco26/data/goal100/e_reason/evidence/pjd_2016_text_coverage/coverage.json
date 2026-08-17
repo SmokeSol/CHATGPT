@@ -1,0 +1,1204 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-17T22:42:00+00:00",
+  "documents": [
+    "RABAT_FES_MARRAKECH",
+    "SOUTH_SOUSS_ORIENT",
+    "LIST_3"
+  ],
+  "counts": {
+    "canonical_territories": 92,
+    "territories_detected_in_recovered_documents": 76,
+    "detected_territories_with_historical_seats_at_least_3": 57,
+    "identity_gate_threshold": 70,
+    "maximum_possible_identity_gate_from_current_documents_if_all_candidate_rows_parse": false,
+    "additional_ge3_territories_needed_to_reach_70": 13,
+    "missing_territories": 16
+  },
+  "missing": [
+    {
+      "constituency_id": "figuig",
+      "name_ar": "فجيج بوعرفة",
+      "historical_constituency": "Figuig",
+      "historical_seats_2016": 3
+    },
+    {
+      "constituency_id": "el-gharb",
+      "name_ar": "الغرب",
+      "historical_constituency": "El-Gharb",
+      "historical_seats_2016": 3
+    },
+    {
+      "constituency_id": "khemisset-oulmes",
+      "name_ar": "الخميسات – أولماس",
+      "historical_constituency": "Khémisset - Oulmès",
+      "historical_seats_2016": 3
+    },
+    {
+      "constituency_id": "tiflet-rommani",
+      "name_ar": "تيفلت – الرماني",
+      "historical_constituency": "Tifelt - Rommani",
+      "historical_seats_2016": 3
+    },
+    {
+      "constituency_id": "sidi-kacem",
+      "name_ar": "سيدي قاسم",
+      "historical_constituency": "Sidi-Kacem",
+      "historical_seats_2016": 5
+    },
+    {
+      "constituency_id": "casablanca-anfa",
+      "name_ar": "الدار البيضاء آنفا",
+      "historical_constituency": "Casablanca - Anfa",
+      "historical_seats_2016": 4
+    },
+    {
+      "constituency_id": "ain-sebaa-hay-mohammadi",
+      "name_ar": "عين السبع الحي المحمدي",
+      "historical_constituency": "Aïn-Sebaâ - Hay-Mohammadi",
+      "historical_seats_2016": 4
+    },
+    {
+      "constituency_id": "sidi-bernoussi",
+      "name_ar": "سيدي البرنوصي",
+      "historical_constituency": "Sidi-Bernoussi",
+      "historical_seats_2016": 3
+    },
+    {
+      "constituency_id": "moulay-rachid",
+      "name_ar": "مولاي رشيد",
+      "historical_constituency": "Moulay-Rachid",
+      "historical_seats_2016": 3
+    },
+    {
+      "constituency_id": "mediouna",
+      "name_ar": "مديونة",
+      "historical_constituency": "Médiouna",
+      "historical_seats_2016": 2
+    },
+    {
+      "constituency_id": "mohammedia",
+      "name_ar": "المحمدية",
+      "historical_constituency": "Mohammadia",
+      "historical_seats_2016": 3
+    },
+    {
+      "constituency_id": "berrechid",
+      "name_ar": "برشيد",
+      "historical_constituency": "Berrechid",
+      "historical_seats_2016": 4
+    },
+    {
+      "constituency_id": "essaouira",
+      "name_ar": "الصويرة",
+      "historical_constituency": "Essaouira",
+      "historical_seats_2016": 4
+    },
+    {
+      "constituency_id": "youssoufia",
+      "name_ar": "اليوسفية",
+      "historical_constituency": "Youssoufia",
+      "historical_seats_2016": 2
+    },
+    {
+      "constituency_id": "khouribga",
+      "name_ar": "خريبكة",
+      "historical_constituency": "Khouribga",
+      "historical_seats_2016": 6
+    },
+    {
+      "constituency_id": "chtouka-ait-baha",
+      "name_ar": "شتوكة آيت باها",
+      "historical_constituency": "Chtouka - Aït-Baha",
+      "historical_seats_2016": 3
+    }
+  ],
+  "covered": [
+    {
+      "constituency_id": "tanger-assilah",
+      "name_ar": "طنجة أصيلة",
+      "historical_id_constituency": 597,
+      "historical_constituency": "Tanger - Assilah",
+      "historical_seats_2016": 5,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "طنجة اصيلا"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "fahs-anjra",
+      "name_ar": "الفحص أنجرة",
+      "historical_id_constituency": 598,
+      "historical_constituency": "Fahs - Anjra",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "الفحص انجرة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "tetouan",
+      "name_ar": "تطوان",
+      "historical_id_constituency": 599,
+      "historical_constituency": "Tétouan",
+      "historical_seats_2016": 5,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "تطوان"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "m-diq-fnideq",
+      "name_ar": "المضيق الفنيدق",
+      "historical_id_constituency": 600,
+      "historical_constituency": "M'Diq - Fnideq",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "المضيق الفنيدق"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "larache",
+      "name_ar": "العرائش",
+      "historical_id_constituency": 601,
+      "historical_constituency": "Larache",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "العرائش"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "chefchaouen",
+      "name_ar": "شفشاون",
+      "historical_id_constituency": 602,
+      "historical_constituency": "Chefchaouen",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "شفشاون"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "ouezzane",
+      "name_ar": "وزان",
+      "historical_id_constituency": 603,
+      "historical_constituency": "Ouezzane",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "وزان"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "al-hoceima",
+      "name_ar": "الحسيمة",
+      "historical_id_constituency": 540,
+      "historical_constituency": "Al-Hoceïma",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "الحسيمة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "oujda-angad",
+      "name_ar": "وجدة أنجاد",
+      "historical_id_constituency": 582,
+      "historical_constituency": "Oujda - Angad",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "وجدة انجاد"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "jerada",
+      "name_ar": "جرادة",
+      "historical_id_constituency": 583,
+      "historical_constituency": "Jerada",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "جرادة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "berkane",
+      "name_ar": "بركان",
+      "historical_id_constituency": 584,
+      "historical_constituency": "Berkane",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "بركان"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "taourirt",
+      "name_ar": "تاوريرت",
+      "historical_id_constituency": 585,
+      "historical_constituency": "Taourirt",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "تاوريرت"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "nador",
+      "name_ar": "الناظور",
+      "historical_id_constituency": 587,
+      "historical_constituency": "Nador",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "الناضور"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "driouch",
+      "name_ar": "الدرويش",
+      "historical_id_constituency": 588,
+      "historical_constituency": "Driouch",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "الدريوش"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "guercif",
+      "name_ar": "جرسيف",
+      "historical_id_constituency": 542,
+      "historical_constituency": "Guercif",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "جرسيف"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "fes-nord",
+      "name_ar": "فاس الشمالية",
+      "historical_id_constituency": 549,
+      "historical_constituency": "Fès-Chamalia",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "فاس الشمالية"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "fes-sud",
+      "name_ar": "فاس الجنوبية",
+      "historical_id_constituency": 550,
+      "historical_constituency": "Fès-Janoubia",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "فاس الجنوبية"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "meknes",
+      "name_ar": "مكناس",
+      "historical_id_constituency": 574,
+      "historical_constituency": "Meknès",
+      "historical_seats_2016": 6,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "مكناس"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "el-hajeb",
+      "name_ar": "الحاجب",
+      "historical_id_constituency": 575,
+      "historical_constituency": "El-Hajeb",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "الحاجب"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "ifrane",
+      "name_ar": "إفران",
+      "historical_id_constituency": 576,
+      "historical_constituency": "Ifrane",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "افران"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "moulay-yaacoub",
+      "name_ar": "مولاي يعقوب",
+      "historical_id_constituency": 551,
+      "historical_constituency": "Moulay-Yacoub",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "مولاي يعقوب"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "sefrou",
+      "name_ar": "صفرو",
+      "historical_id_constituency": 552,
+      "historical_constituency": "Sefrou",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "صفرو"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "boulemane",
+      "name_ar": "بولمان",
+      "historical_id_constituency": 553,
+      "historical_constituency": "Boulemane",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "بولمان"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "taza",
+      "name_ar": "تازة",
+      "historical_id_constituency": 541,
+      "historical_constituency": "Taza",
+      "historical_seats_2016": 5,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "تازة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "taounate-tissa",
+      "name_ar": "تاونات تيسة",
+      "historical_id_constituency": 543,
+      "historical_constituency": "Taounate - Tissa",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "تاونات تيسة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "karia-ghafsay",
+      "name_ar": "القرية غفساي",
+      "historical_id_constituency": 544,
+      "historical_constituency": "Karia - Rhafsai",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "القرية غفساي"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "rabat-ocean",
+      "name_ar": "الرباط – المحيط",
+      "historical_id_constituency": 512,
+      "historical_constituency": "Rabat - El Mouhit",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "الرباط المحيط"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "rabat-chellah",
+      "name_ar": "الرباط – شالة",
+      "historical_id_constituency": 513,
+      "historical_constituency": "Rabat - Challah",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "الرباط شالة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "sale-medina",
+      "name_ar": "سلا المدينة",
+      "historical_id_constituency": 514,
+      "historical_constituency": "Salé - Médina",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "سلا المدينة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "sale-el-jadida",
+      "name_ar": "سلا الجديدة",
+      "historical_id_constituency": 515,
+      "historical_constituency": "Salé - Al-Jadida",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "سلا الجديدة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "skhirate-temara",
+      "name_ar": "الصخيرات -تمارة",
+      "historical_id_constituency": 516,
+      "historical_constituency": "Skhirate - Témara",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "الصخيرات تمارة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "kenitra",
+      "name_ar": "القنيطرة",
+      "historical_id_constituency": 559,
+      "historical_constituency": "Kénitra",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "القنيطرة"
+        },
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "القنيطرة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "sidi-slimane",
+      "name_ar": "سيدي سليمان",
+      "historical_id_constituency": 562,
+      "historical_constituency": "Sidi Slimane",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "سيدي سليمان"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "al-fida-mers-sultan",
+      "name_ar": "الفداء مرس السلطان",
+      "historical_id_constituency": 520,
+      "historical_constituency": "Al-Fida - Mers-Sultan",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "الفداء مرس السلطان"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "hay-hassani",
+      "name_ar": "الحي الحسني",
+      "historical_id_constituency": 522,
+      "historical_constituency": "Hay-Hassani",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "الحي الحسني"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "ain-chock",
+      "name_ar": "عين الشق",
+      "historical_id_constituency": 523,
+      "historical_constituency": "Aïn-Chock",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "عين الشق"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "ben-m-sick",
+      "name_ar": "ابن مسيك",
+      "historical_id_constituency": 525,
+      "historical_constituency": "Ben-M'sick",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "ابن امسيك"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "nouaceur",
+      "name_ar": "النواصر",
+      "historical_id_constituency": 528,
+      "historical_constituency": "Nouaceur",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "النواصر"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "settat",
+      "name_ar": "سطات",
+      "historical_id_constituency": 593,
+      "historical_constituency": "Settat",
+      "historical_seats_2016": 6,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "سطات"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "el-jadida",
+      "name_ar": "الجديدة",
+      "historical_id_constituency": 590,
+      "historical_constituency": "El-Jadida",
+      "historical_seats_2016": 6,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "الجديدة"
+        },
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "الجديدة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "sidi-bennour",
+      "name_ar": "سيدي بنور",
+      "historical_id_constituency": 591,
+      "historical_constituency": "Sidi Bennour",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "سيدي بنور"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "benslimane",
+      "name_ar": "بنسليمان",
+      "historical_id_constituency": 596,
+      "historical_constituency": "Benslimane",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "بنسليمان"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "medina-sidi-youssef",
+      "name_ar": "المدينة – سيدي يوسف بن علي",
+      "historical_id_constituency": 566,
+      "historical_constituency": "Médina - Sidi-Youssef-Ben-Ali",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "المدينة سيدي يوسف بن علي"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "gueliz-nakhil",
+      "name_ar": "جليز – النخيل",
+      "historical_id_constituency": 567,
+      "historical_constituency": "Guéliz - Annakhil",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "جليز النخيل"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "menara",
+      "name_ar": "المنارة",
+      "historical_id_constituency": 568,
+      "historical_constituency": "Ménara",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "المنارة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "chichaoua",
+      "name_ar": "شيشاوة",
+      "historical_id_constituency": 569,
+      "historical_constituency": "Chichaoua",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "شيشاوة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "al-haouz",
+      "name_ar": "الحوز",
+      "historical_id_constituency": 570,
+      "historical_constituency": "Al-Haouz",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "الحوز"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "el-kelaa-des-sraghna",
+      "name_ar": "قلعة السراغنة",
+      "historical_id_constituency": 572,
+      "historical_constituency": "El-Kelâa-des-Sraghna",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "قلعة السراغنة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "rehamna",
+      "name_ar": "الرحامنة",
+      "historical_id_constituency": 571,
+      "historical_constituency": "Rehamna",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "الرحامنة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "safi",
+      "name_ar": "آسفي",
+      "historical_id_constituency": 589,
+      "historical_constituency": "Safi",
+      "historical_seats_2016": 6,
+      "document_hits": [
+        {
+          "article_id": "RABAT_FES_MARRAKECH",
+          "matched_variant": "اسفي"
+        },
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "اسفي"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "beni-mellal",
+      "name_ar": "بني ملال",
+      "historical_id_constituency": 545,
+      "historical_constituency": "Béni-Mellal",
+      "historical_seats_2016": 6,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "بني ملال"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "bzou-ouaouizeght",
+      "name_ar": "بزو – واويزغت",
+      "historical_id_constituency": 546,
+      "historical_constituency": "Bzou - Ouaouizaght",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "بزو واوزغت"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "azilal-demnate",
+      "name_ar": "أزيلال – دمنات",
+      "historical_id_constituency": 547,
+      "historical_constituency": "Azilal - Demnate",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "ازيلال دمنات"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "fquih-ben-salah",
+      "name_ar": "الفقيه بن صالح",
+      "historical_id_constituency": 548,
+      "historical_constituency": "Fquih Ben Salah",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "الفقيه بنصالح"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "khenifra",
+      "name_ar": "خنيفرة",
+      "historical_id_constituency": 577,
+      "historical_constituency": "Khénifra",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "خنيفرة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "errachidia",
+      "name_ar": "الرشيدية",
+      "historical_id_constituency": 578,
+      "historical_constituency": "Errachidia",
+      "historical_seats_2016": 5,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "الرشيدية"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "midelt",
+      "name_ar": "ميدلت",
+      "historical_id_constituency": 579,
+      "historical_constituency": "Midelt",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "ميدلت"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "ouarzazate",
+      "name_ar": "ورزازات",
+      "historical_id_constituency": 536,
+      "historical_constituency": "Ouarzazate",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "ورزازات"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "zagora",
+      "name_ar": "زاكورة",
+      "historical_id_constituency": 537,
+      "historical_constituency": "Zagora",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "زاكورة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "tinghir",
+      "name_ar": "تنغير",
+      "historical_id_constituency": 538,
+      "historical_constituency": "Tinghir",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "تنغير"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "agadir-ida-outanane",
+      "name_ar": "أكادير إداوتنان",
+      "historical_id_constituency": 530,
+      "historical_constituency": "Agadir - Ida-ou-Tanane",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "اكادير اداوتنان"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "inezgane-ait-melloul",
+      "name_ar": "إنزكان آيت ملول",
+      "historical_id_constituency": 531,
+      "historical_constituency": "Inézgane - Aït-Melloul",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "انزكان ايت ملول"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "taroudant-sud",
+      "name_ar": "تارودانت الجنوبية",
+      "historical_id_constituency": 533,
+      "historical_constituency": "Taroudannt - Al-Janoubia",
+      "historical_seats_2016": 4,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "تارودانت الجنوبية"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "taroudant-nord",
+      "name_ar": "تارودانت الشمالية",
+      "historical_id_constituency": 534,
+      "historical_constituency": "Taroudannt - Chamalia",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "تارودانت الشمالية"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "tiznit",
+      "name_ar": "تيزنيت",
+      "historical_id_constituency": 535,
+      "historical_constituency": "Tiznit",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "تيزنيت"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "tata",
+      "name_ar": "طاطا",
+      "historical_id_constituency": 555,
+      "historical_constituency": "Tata",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "طاطا"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "guelmim",
+      "name_ar": "كلميم",
+      "historical_id_constituency": 554,
+      "historical_constituency": "Guelmim",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "كلميم"
+        },
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "كلميم"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "sidi-ifni",
+      "name_ar": "سيدي افني",
+      "historical_id_constituency": 539,
+      "historical_constituency": "Sidi Ifni",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "LIST_3",
+          "matched_variant": "سيدي افني"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "tan-tan",
+      "name_ar": "طانطان",
+      "historical_id_constituency": 558,
+      "historical_constituency": "Tan-Tan",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "طانطان"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "assa-zag",
+      "name_ar": "أسا الزاك",
+      "historical_id_constituency": 556,
+      "historical_constituency": "Assa-Zag",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "اسا الزالك"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "laayoune",
+      "name_ar": "العيون",
+      "historical_id_constituency": 563,
+      "historical_constituency": "Laâyoune",
+      "historical_seats_2016": 3,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "العيون"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "boujdour",
+      "name_ar": "بوجدور",
+      "historical_id_constituency": 564,
+      "historical_constituency": "Boujdour",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "بوجدور"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "tarfaya",
+      "name_ar": "طرفاية",
+      "historical_id_constituency": 565,
+      "historical_constituency": "Tarfaya",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "طرفاية"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "es-semara",
+      "name_ar": "السمارة",
+      "historical_id_constituency": 557,
+      "historical_constituency": "Es-Smara",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "السمارة"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "oued-eddahab",
+      "name_ar": "وادي الذهب",
+      "historical_id_constituency": 580,
+      "historical_constituency": "Oued-Ed-Dahab",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "وادي الذهب"
+        }
+      ],
+      "covered": true
+    },
+    {
+      "constituency_id": "aousserd",
+      "name_ar": "أوسرد",
+      "historical_id_constituency": 581,
+      "historical_constituency": "Aousserd",
+      "historical_seats_2016": 2,
+      "document_hits": [
+        {
+          "article_id": "SOUTH_SOUSS_ORIENT",
+          "matched_variant": "اوسرد"
+        }
+      ],
+      "covered": true
+    }
+  ],
+  "invariants": {
+    "candidate_identities_not_yet_counted": true,
+    "predictive_judgments_generated": false,
+    "outcomes_unsealed": false,
+    "F1_created": false
+  }
+}
