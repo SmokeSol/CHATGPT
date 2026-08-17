@@ -1,0 +1,289 @@
+name: morocco26-b2-open-e2e
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - '.github/workflows/morocco26-b2-open-e2e.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-b2-open-e2e-transaction
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+jobs:
+  transition:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      SOURCE_BRANCH: morocco26-fminus1-run
+      B2_BRANCH: morocco26-b2-structured-evidence
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install --quiet numpy pandas openpyxl requests beautifulsoup4 pypdf
+
+      - name: Cancel stale component workflows to prevent branch races
+        run: |
+          for workflow in \
+            morocco26-bootstrap-b2.yml \
+            morocco26-extend-b2.yml \
+            morocco26-prepare-b2-collection.yml \
+            morocco26-install-b2-source-watch.yml \
+            morocco26-b2-reconcile.yml \
+            morocco26-accept-b2-open-phase.yml \
+            morocco26-probe-b2-historical-identifiability.yml \
+            morocco26-report-b2-transition.yml; do
+            gh run list --repo "$GITHUB_REPOSITORY" --workflow "$workflow" --status queued --json databaseId --jq '.[].databaseId' 2>/dev/null | xargs -r -n1 gh run cancel --repo "$GITHUB_REPOSITORY" || true
+            gh run list --repo "$GITHUB_REPOSITORY" --workflow "$workflow" --status in_progress --json databaseId --jq '.[].databaseId' 2>/dev/null | xargs -r -n1 gh run cancel --repo "$GITHUB_REPOSITORY" || true
+          done
+
+      - name: Define exact F-1 readiness probe
+        run: |
+          cat > /tmp/check_f1.py <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root=Path('morocco26'); g=root/'data'/'goal100'
+          def load(p,d=None): return json.loads(p.read_text(encoding='utf-8')) if p.exists() else d
+          registry=load(g/'forecast_registry.json',{}) or {}
+          ids=[]
+          for row in registry.get('snapshots',[]):
+              ids.append(row.get('snapshot_id') if isinstance(row,dict) else row)
+          manifests=[g/'snapshots'/'F-1'/'manifest.json',g/'snapshots'/'F-1'/'snapshot_manifest.json',g/'forecasts'/'F-1'/'manifest.json',g/'forecasts'/'F-1'/'snapshot_manifest.json']
+          manifest_path=next((p for p in manifests if p.exists()),None)
+          manifest=load(manifest_path,{}) if manifest_path else {}
+          artifact_paths=manifest.get('artifact_paths',{}) if isinstance(manifest,dict) else {}
+          declared=artifact_paths.get('forecast') if isinstance(artifact_paths,dict) else None
+          forecast_candidates=[]
+          if declared: forecast_candidates.append(Path(declared))
+          if manifest_path: forecast_candidates.append(manifest_path.parent/'forecast.json')
+          forecast_candidates += [g/'snapshots'/'F-1'/'forecast.json',g/'forecasts'/'F-1'/'forecast.json']
+          forecast=next((p for p in forecast_candidates if p.exists()),None)
+          declared_hash=manifest.get('forecast_artifact_hash') or manifest.get('forecast_sha256')
+          actual_hash=hashlib.sha256(forecast.read_bytes()).hexdigest() if forecast else None
+          simulation_candidates=[g/'simulation_certificate.json']
+          if manifest_path: simulation_candidates.append(manifest_path.parent/'simulation_certificate.json')
+          simulation_path=next((p for p in simulation_candidates if p.exists()),None)
+          simulation=load(simulation_path,{}) if simulation_path else {}
+          seats=simulation.get('national_seats_every_draw') or simulation.get('seat_total_every_draw')
+          ready=(ids.count('F-1')==1 and manifest_path is not None and int(manifest.get('monte_carlo_draws',0) or 0)>=50000 and forecast is not None and declared_hash==actual_hash and simulation.get('gate') in {'PASS','PASS_MAIN_VERIFIED'} and int(seats or 0)==395)
+          report={'ready':ready,'snapshot_ids':ids,'manifest':str(manifest_path) if manifest_path else None,'draws':manifest.get('monte_carlo_draws'),'forecast':str(forecast) if forecast else None,'declared_hash':declared_hash,'actual_hash':actual_hash,'simulation_gate':simulation.get('gate'),'seats_every_draw':seats}
+          Path('/tmp/f1_probe.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+          Path('/tmp/f1_ready').write_text('true' if ready else 'false',encoding='utf-8')
+          print(json.dumps(report,indent=2))
+          PY
+          python /tmp/check_f1.py
+
+      - name: Attempt existing F-1 end-to-end finalization when needed
+        run: |
+          if [ "$(cat /tmp/f1_ready)" = "true" ]; then
+            echo 'F-1 already registered and immutable on source branch'
+            exit 0
+          fi
+          if [ ! -f .github/workflows/morocco26-fminus1-end-to-end.yml ]; then
+            echo 'Existing F-1 end-to-end workflow absent; B2 will remain blocked' >&2
+            exit 0
+          fi
+          echo 'F-1 not yet proven; dispatching existing fail-closed finalizer'
+          gh workflow run morocco26-fminus1-end-to-end.yml --repo "$GITHUB_REPOSITORY" --ref "$SOURCE_BRANCH" || true
+          sleep 10
+          run_id=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow morocco26-fminus1-end-to-end.yml --branch "$SOURCE_BRANCH" --event workflow_dispatch --limit 1 --json databaseId --jq '.[0].databaseId // empty')
+          if [ -n "$run_id" ]; then
+            gh run watch "$run_id" --repo "$GITHUB_REPOSITORY" --exit-status || true
+          fi
+          git fetch origin "$SOURCE_BRANCH"
+          git switch -C "$SOURCE_BRANCH" "origin/$SOURCE_BRANCH"
+          python /tmp/check_f1.py
+
+      - name: Create or update isolated B2 branch from exact source head
+        run: |
+          git fetch origin --prune
+          if git ls-remote --exit-code --heads origin "$B2_BRANCH" >/dev/null 2>&1; then
+            git switch -C "$B2_BRANCH" "origin/$B2_BRANCH"
+            git merge --no-edit "origin/$SOURCE_BRANCH"
+          else
+            git switch -c "$B2_BRANCH" "origin/$SOURCE_BRANCH"
+          fi
+
+      - name: Import all B2 executors from source branch
+        run: |
+          git checkout "origin/$SOURCE_BRANCH" -- \
+            morocco26/scripts/goal100_bootstrap_b2_v1.py \
+            morocco26/scripts/goal100_extend_b2_v1.py \
+            morocco26/scripts/goal100_prepare_b2_collection_queue.py \
+            morocco26/scripts/goal100_install_b2_source_watch.py \
+            morocco26/scripts/goal100_accept_b2_open_phase.py \
+            morocco26/scripts/goal100_probe_b2_historical_identifiability.py
+
+      - name: Build complete B2 scaffold transactionally
+        run: |
+          python morocco26/scripts/goal100_bootstrap_b2_v1.py
+          python morocco26/scripts/goal100_extend_b2_v1.py
+          python morocco26/scripts/goal100_prepare_b2_collection_queue.py
+          python morocco26/scripts/goal100_install_b2_source_watch.py
+          python morocco26/scripts/goal100_b2_source_watch.py
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/goal100_validate_b2_v1.py
+          set +e
+          python morocco26/scripts/goal100_backtest_b2_residual_v1.py
+          residual_code=$?
+          set -e
+          if [ "$residual_code" -ne 2 ]; then
+            echo "Expected residual fail-closed exit 2, got $residual_code" >&2
+            exit 1
+          fi
+
+      - name: Create reconciled machine checkpoint
+        run: |
+          python - <<'PY'
+          import csv,json
+          from datetime import datetime,timezone
+          from pathlib import Path
+          b=Path('morocco26/data/goal100/b2/v1')
+          queue=json.loads((b/'collection_queue_certificate.json').read_text(encoding='utf-8'))
+          residual=json.loads((b/'b2_residual_backtest.json').read_text(encoding='utf-8'))
+          pre=json.loads((b/'b2_preflight.json').read_text(encoding='utf-8'))
+          watches=sorted((b/'source_watch').glob('*.json'))
+          status={'schema_version':'1.0','reconciliation_id':'M26-GOAL100-B2-RECONCILIATION-V1','created_at':datetime.now(timezone.utc).replace(microsecond=0).isoformat(),'gate':'PASS','B2_branch':'morocco26-b2-structured-evidence','F_minus_1_preflight_ready':pre['ready_for_b2_non_agentic_scaffold'],'protocol_and_schema':'PASS','deterministic_feature_compiler':'PASS_COMPILED','collection_queue':{'contests':104,'seats':395,'tasks':queue['collection_tasks'],'all_unknown':True},'source_watch':{'snapshots':len(watches),'latest':str(watches[-1]),'evidence_rows_created':0},'evidence_rows':sum(bool(x.strip()) for x in (b/'evidence_ledger.ndjson').read_text(encoding='utf-8').splitlines()),'historical_residual_backtest':residual['gate'],'non_legal_coefficients':'ALL_ZERO','F0_created':False,'agentic_status':'LOCKED','next_action':'Tier-A current evidence and historical feature backfill.'}
+          (b/'b2_reconciliation_status.json').write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(status,ensure_ascii=False,indent=2))
+          PY
+
+      - name: Certify phase opening only when F-1 prerequisite passes
+        run: |
+          ready=$(python - <<'PY'
+          import json
+          from pathlib import Path
+          print(str(json.loads(Path('morocco26/data/goal100/b2/v1/b2_preflight.json').read_text(encoding='utf-8'))['ready_for_b2_non_agentic_scaffold']).lower())
+          PY
+          )
+          echo "B2_F1_READY=$ready" >> "$GITHUB_ENV"
+          if [ "$ready" = "true" ]; then
+            if [ ! -f morocco26/data/goal100/b2/v1/b2_phase_open_certificate.json ]; then
+              python morocco26/scripts/goal100_accept_b2_open_phase.py
+            fi
+          else
+            python - <<'PY'
+            import json
+            from datetime import datetime,timezone
+            from pathlib import Path
+            b=Path('morocco26/data/goal100/b2/v1')
+            c={'schema_version':'1.0','certificate_id':'M26-GOAL100-B2-BLOCKED-FMINUS1-V1','created_at':datetime.now(timezone.utc).replace(microsecond=0).isoformat(),'gate':'BLOCKED_F_MINUS_1_NOT_REGISTERED','B2_status':'SCAFFOLD_READY_NOT_ACTIVE','B2_frozen':False,'F0_created':False,'agentic_status':'ALL_LOCKED','next_action':'Finish and verify immutable F-1 registration before activating B2 collection.'}
+            (b/'b2_phase_blocked_certificate.json').write_text(json.dumps(c,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+            print(json.dumps(c,ensure_ascii=False,indent=2))
+            PY
+          fi
+
+      - name: Probe historical identifiability and generate backfill queue
+        run: |
+          python morocco26/scripts/goal100_probe_b2_historical_identifiability.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          b=Path('morocco26/data/goal100/b2/v1')
+          p=json.loads((b/'historical_identifiability_probe.json').read_text(encoding='utf-8'))
+          assert p['gate']=='BLOCKED_HISTORICAL_FEATURE_BACKFILL_REQUIRED'
+          assert p['common_local_territories']==92
+          assert p['historical_backfill_tasks']==1932
+          assert p['predictive_features_with_nonzero_historical_coverage']==[]
+          r=json.loads((b/'b2_residual_backtest.json').read_text(encoding='utf-8'))
+          assert r['non_legal_coefficients']=='ALL_ZERO'
+          assert r['F0_unlocked'] is False
+          print('B2_IDENTIFIABILITY_BOUNDARY_PASS')
+          PY
+
+      - name: Generate definitive transition report
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime,timezone
+          from pathlib import Path
+          g=Path('morocco26/data/goal100'); b=g/'b2'/'v1'
+          pre=json.loads((b/'b2_preflight.json').read_text(encoding='utf-8'))
+          hist=json.loads((b/'historical_identifiability_probe.json').read_text(encoding='utf-8'))
+          queue=json.loads((b/'collection_queue_certificate.json').read_text(encoding='utf-8'))
+          phase_gate='PASS_B2_PHASE_OPEN_WITH_IDENTIFIED_BACKFILL_BLOCKER' if pre['ready_for_b2_non_agentic_scaffold'] else 'BLOCKED_F_MINUS_1_WITH_B2_SCAFFOLD_AND_BACKFILL_PROBE_READY'
+          report={'schema_version':'1.0','report_id':'M26-GOAL100-B2-TRANSITION-REPORT-V1','created_at':datetime.now(timezone.utc).replace(microsecond=0).isoformat(),'gate':phase_gate,'branch':'morocco26-b2-structured-evidence','F_minus_1_preflight_ready':pre['ready_for_b2_non_agentic_scaffold'],'B2_phase_open':pre['ready_for_b2_non_agentic_scaffold'],'B2_frozen':False,'F0_created':False,'agentic_status':'ALL_LOCKED','current_collection':{'contests':queue['contests'],'tasks':queue['collection_tasks'],'initial_coverage':'ALL_UNKNOWN','evidence_rows':0},'historical_identifiability':{'gate':hist['gate'],'transitions':hist['forecast_transitions_available'],'common_territories':hist['common_local_territories'],'predictive_features_identified':0,'backfill_tasks':hist['historical_backfill_tasks'],'non_legal_coefficients':'ALL_ZERO'},'scientific_result':'The collection system and deterministic feature compiler are operational. The current repository has no cutoff-specific historical candidate/network/event feature coverage, so no non-legal B2 coefficient or adjusted F0 is admissible.','next_action':'If F-1 is ready: resolve Tier-A current filing/candidate endpoints and backfill 2016/2021 head-candidate, incumbency and switch features in parallel. If not: finish F-1 first.'}
+          (b/'b2_transition_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          (g/'b2_transition_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          Path('/tmp/b2_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          Path('/tmp/b2_comment.md').write_text(f'''## B2 machine checkpoint\n\n- Gate: `{phase_gate}`\n- F-1 prerequisite: `{pre['ready_for_b2_non_agentic_scaffold']}`\n- Current collection universe: 104 contests / 395 seats / {queue['collection_tasks']} tasks; coverage remains `UNKNOWN`\n- Historical transitions: 2011→2016 and 2016→2021 over 92 territories\n- Historically identified candidate/network/event features: **0**\n- Historical backfill tasks: **{hist['historical_backfill_tasks']}**\n- Non-legal coefficients: **all zero**\n- B2 frozen: no; F0 created: no; agentic arms: locked\n''',encoding='utf-8')
+          print(json.dumps(report,ensure_ascii=False,indent=2))
+          PY
+
+      - name: Final validation
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/goal100_validate_b2_v1.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('morocco26/data/goal100/b2/v1/b2_transition_report.json').read_text(encoding='utf-8'))
+          assert r['B2_frozen'] is False and r['F0_created'] is False
+          assert r['agentic_status']=='ALL_LOCKED'
+          assert r['historical_identifiability']['non_legal_coefficients']=='ALL_ZERO'
+          if r['F_minus_1_preflight_ready']:
+              assert r['gate']=='PASS_B2_PHASE_OPEN_WITH_IDENTIFIED_BACKFILL_BLOCKER'
+              assert Path('morocco26/data/goal100/b2/v1/b2_phase_open_certificate.json').exists()
+          else:
+              assert r['gate'].startswith('BLOCKED_F_MINUS_1')
+              assert Path('morocco26/data/goal100/b2/v1/b2_phase_blocked_certificate.json').exists()
+          print('B2_TRANSACTION_FINAL_VALIDATION_PASS')
+          PY
+
+      - name: Commit complete B2 transaction
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'milestone(morocco26): complete fail-closed transition from F-1 to B2' || true
+          for attempt in 1 2 3 4 5; do
+            git fetch origin "$B2_BRANCH"
+            git rebase "origin/$B2_BRANCH" || { git rebase --abort; exit 1; }
+            if git push --set-upstream origin HEAD:"$B2_BRANCH"; then exit 0; fi
+            sleep 7
+          done
+          exit 1
+
+      - name: Create or update draft B2 pull request
+        run: |
+          pr=$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$B2_BRANCH" --state open --json number --jq '.[0].number // empty')
+          if [ -z "$pr" ]; then
+            gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$B2_BRANCH" --draft \
+              --title 'MOROCCO//26: B2 structured non-agentic evidence layer' \
+              --body-file /tmp/b2_comment.md
+            pr=$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$B2_BRANCH" --state open --json number --jq '.[0].number')
+          else
+            gh pr comment "$pr" --repo "$GITHUB_REPOSITORY" --body-file /tmp/b2_comment.md
+          fi
+          echo "B2_PR=$pr" >> "$GITHUB_ENV"
+
+      - name: Mirror report to source branch
+        run: |
+          cp /tmp/b2_report.json /tmp/b2_report_copy.json
+          git fetch origin "$SOURCE_BRANCH"
+          git switch -C "$SOURCE_BRANCH" "origin/$SOURCE_BRANCH"
+          mkdir -p morocco26/data/goal100
+          cp /tmp/b2_report_copy.json morocco26/data/goal100/b2_transition_report.json
+          git add morocco26/data/goal100/b2_transition_report.json
+          git commit -m 'tracking(morocco26): mirror definitive B2 transition report' || true
+          git pull --rebase origin "$SOURCE_BRANCH"
+          git push origin HEAD:"$SOURCE_BRANCH"
+
+      - name: Print definitive state
+        run: |
+          cat /tmp/b2_report.json
+          echo "B2 pull request: #$B2_PR"
