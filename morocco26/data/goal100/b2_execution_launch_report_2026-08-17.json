@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "report_id": "M26-GOAL100-B2-EXECUTION-LAUNCH-2026-08-17",
+  "created_at": "2026-08-17T00:00:00+01:00",
+  "status": "EXECUTION_LAUNCHED_NOT_EQUIVALENT_TO_GATE_PASS",
+  "source_branch": "morocco26-fminus1-run",
+  "target_branch": "morocco26-b2-structured-evidence",
+  "transactional_orchestrator": ".github/workflows/morocco26-b2-open-e2e.yml",
+  "implemented_components": [
+    "F-1 immutability and registration preflight with optional existing finalizer dispatch",
+    "B2 non-agentic protocol, source policy, atomic evidence schema and feature dictionary",
+    "deterministic feature compiler with evidence-level provenance",
+    "fail-closed residual backtest that leaves all non-legal coefficients at zero without historical data",
+    "104-contest / 395-seat current collection universe with 832 UNKNOWN tasks",
+    "append-only official source acquisition watch with zero automatic interpretation",
+    "historical identifiability probe over 2011/2016/2021",
+    "1,932-task historical feature backfill queue",
+    "research-only priority ranking for the first 100 backfill tasks",
+    "repository corpus inventory for overlooked candidate/incumbency/switch data",
+    "append-only FIL_D_ARIANE updates and draft B2 pull-request reporting"
+  ],
+  "hard_boundaries": {
+    "F_minus_1_may_be_rewritten": false,
+    "manual_political_swing_allowed": false,
+    "unknown_may_be_imputed_zero": false,
+    "LLM_or_agentic_collection_allowed": false,
+    "non_legal_coefficients_before_historical_backtest": "ALL_ZERO",
+    "B2_frozen": false,
+    "F0_created": false,
+    "agentic_status": "LOCKED"
+  },
+  "definitive_machine_report": "morocco26/data/goal100/b2_transition_report.json",
+  "possible_final_gates": [
+    "PASS_B2_PHASE_OPEN_WITH_IDENTIFIED_BACKFILL_BLOCKER",
+    "BLOCKED_F_MINUS_1_WITH_B2_SCAFFOLD_AND_BACKFILL_PROBE_READY"
+  ],
+  "next_action_after_machine_report": "Resolve exact Tier-A filing/candidate endpoints and execute the top historical head-candidate/incumbency/party-switch backfill tasks; do not create F0 until B2 residual backtest and freeze gates pass."
+}
