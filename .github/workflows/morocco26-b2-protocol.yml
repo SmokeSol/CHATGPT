@@ -10,11 +10,20 @@ on:
       - 'morocco26/data/goal100/b2_gate_registry.json'
       - 'morocco26/data/goal100/b2_source_registry.json'
       - 'morocco26/data/goal100/b2_current_state.json'
+      - 'morocco26/data/goal100/b2_freeze_certificate.json'
+      - 'morocco26/data/goal100/b2_coefficients.json'
+      - 'morocco26/data/goal100/b2_provenance_audit.json'
+      - 'morocco26/data/goal100/b2_effect_calibration.json'
+      - 'morocco26/data/goal100/forecast_registry.json'
+      - 'morocco26/data/goal100/f0_registration_certificate.json'
+      - 'morocco26/data/goal100/forecasts/F0/**'
+      - 'morocco26/data/goal100/snapshots/F0/**'
       - 'morocco26/data/goal100/fil_ariane_events/A018.json'
       - 'morocco26/data/goal100/fil_ariane_events/A019.json'
       - 'morocco26/scripts/goal100_append_b2_ariane.py'
       - 'morocco26/scripts/goal100_append_b2_integration_fix.py'
       - 'morocco26/scripts/validate_b2_protocol.py'
+      - 'morocco26/scripts/validate_b2_post_f0.py'
       - 'morocco26/scripts/validate_registered_fminus1_post_squash.py'
       - 'morocco26/scripts/validate_goal100_tracking.py'
       - '.github/workflows/morocco26-b2-protocol.yml'
@@ -46,6 +55,7 @@ jobs:
             morocco26/scripts/goal100_append_b2_ariane.py \
             morocco26/scripts/goal100_append_b2_integration_fix.py \
             morocco26/scripts/validate_b2_protocol.py \
+            morocco26/scripts/validate_b2_post_f0.py \
             morocco26/scripts/validate_registered_fminus1_post_squash.py \
             morocco26/scripts/validate_goal100_tracking.py
 
@@ -54,8 +64,13 @@ jobs:
           python morocco26/scripts/goal100_append_b2_ariane.py
           python morocco26/scripts/goal100_append_b2_integration_fix.py
 
-      - name: Validate frozen B2 protocol and zero-coefficient boundary
-        run: python morocco26/scripts/validate_b2_protocol.py
+      - name: Validate frozen B2 protocol or post-F0 transition
+        run: |
+          if [ -f morocco26/data/goal100/forecasts/F0/forecast.json ]; then
+            python morocco26/scripts/validate_b2_post_f0.py
+          else
+            python morocco26/scripts/validate_b2_protocol.py
+          fi
 
       - name: Preserve registered F-1 and Goal75 anti-drift invariants
         run: |
