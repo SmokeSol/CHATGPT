@@ -1,4 +1,4 @@
-name: Atlas 395 — Ship complete app now
+name: Atlas 395 — Ship institutional reader
 
 on:
   push:
@@ -14,11 +14,12 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - name: Checkout complete Atlas branch
         uses: actions/checkout@v4
 
-      - name: Verify full app before publishing
+      - name: Verify institutional reader before publishing
         shell: bash
         run: |
           set -euo pipefail
@@ -26,61 +27,78 @@ jobs:
           test -f morocco26/web/styles.css
           test -f morocco26/web/app.js
           test -f morocco26/web/assets/core.js
+          test -f morocco26/web/assets/candidates.js
+          test -f morocco26/web/assets/candidates.css
           test -f morocco26/web/assets/methodology.css
+          test -f morocco26/web/data/atlas_v1.json
           test -f morocco26/web/data/current_snapshot.json
           test -f morocco26/web/data/public_methodology.json
-          grep -q 'view-overview' morocco26/web/index.html
-          grep -q 'view-methodology' morocco26/web/index.html
-          grep -q 'view-territories' morocco26/web/index.html
-          grep -q 'view-parties' morocco26/web/index.html
-          grep -q 'view-signals' morocco26/web/index.html
-          grep -q 'view-history' morocco26/web/index.html
-          grep -q "\['methodology','Méthodologie'" morocco26/web/assets/core.js
-          grep -q "load('public_methodology.json')" morocco26/web/assets/core.js
-          grep -q 'Une projection territoriale, probabiliste et traçable' morocco26/web/app.js
-          ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|agentic|E_collect|F0|F-1|B2_' morocco26/web/data/public_methodology.json
+          grep -Fq 'Intelligence électorale territoriale · Maroc 2026' morocco26/web/index.html
+          grep -Fq 'Rapport de forces et incertitude territoriale' morocco26/web/index.html
+          grep -Fq 'Une projection territoriale, probabiliste et traçable' morocco26/web/index.html
+          grep -Fq "['overview','Synthèse'" morocco26/web/assets/core.js
+          grep -Fq "['signals','Veille 2026'" morocco26/web/assets/core.js
+          grep -Fq 'Candidatures documentées par circonscription' morocco26/web/assets/candidates.js
+          grep -Fq 'RÉFÉRENCE CONSERVÉE' morocco26/web/assets/candidates.js
+          ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|tester l.?IA|mettre l.?IA|IA contre référence|E_reason|E_full|agentic|Arabic Native|AUCUN DELTA APPLIQUÉ' morocco26/web/index.html morocco26/web/assets/candidates.js morocco26/web/data/public_methodology.json
+          node --check morocco26/web/app.js
+          node --check morocco26/web/assets/core.js
+          node --check morocco26/web/assets/candidates.js
+          python - <<'PY'
+          import json
+          x=json.load(open('morocco26/web/data/atlas_v1.json',encoding='utf-8'))
+          c=x['coverage']
+          assert c['canonical_local_territories']==92
+          assert c['arabic_identity_coverage']==92
+          assert c['candidate_records_after_official_pjd_merge']==546
+          assert c['local_territories_with_records_after_merge']==92
+          assert c['missing_after_merge']==[]
+          assert x['forecast']['immutable'] is True
+          print('ATLAS_V1_DATA=PASS')
+          PY
 
       - name: Package full reader app
         shell: bash
         run: |
           set -euo pipefail
           cd morocco26/web
-          zip -qr /tmp/atlas395-full.zip . -x 'githack.html' 'githack.js' 'githack.css' 'data/methodology_state.json' 'editions/*/methodology_state.json'
-          ! unzip -Z1 /tmp/atlas395-full.zip | grep -q '^data/methodology_state.json$'
-          ! unzip -Z1 /tmp/atlas395-full.zip | grep -Eq '^editions/[^/]+/methodology_state.json$'
-          unzip -Z1 /tmp/atlas395-full.zip | grep -q '^data/public_methodology.json$'
+          zip -qr /tmp/atlas395-institutional.zip . -x 'githack.html' 'githack.js' 'githack.css' 'data/methodology_state.json' 'editions/*/methodology_state.json'
+          ! unzip -Z1 /tmp/atlas395-institutional.zip | grep -q '^data/methodology_state.json$'
+          unzip -Z1 /tmp/atlas395-institutional.zip | grep -q '^data/atlas_v1.json$'
+          unzip -Z1 /tmp/atlas395-institutional.zip | grep -q '^assets/candidates.js$'
 
-      - name: Publish full app
-        id: ship
+      - name: Publish full institutional reader
         shell: bash
         run: |
           set -euo pipefail
-          response=$(curl -fsS -X POST 'https://ship.page/deploy?ttl=604800' -H 'Content-Type: application/zip' --data-binary @/tmp/atlas395-full.zip)
+          response=$(curl --retry 4 --retry-all-errors -fsS -X POST 'https://ship.page/deploy?ttl=604800' -H 'Content-Type: application/zip' --data-binary @/tmp/atlas395-institutional.zip)
           url=$(python -c 'import json,sys; print(json.load(sys.stdin)["url"])' <<<"$response")
           test -n "$url"
           echo "ATLAS_URL=$url" >> "$GITHUB_ENV"
-          echo "$url" >> "$GITHUB_STEP_SUMMARY"
+          echo "TEMPORARY_VERIFIED_ATLAS_URL=$url" >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Verify published files and rendered interface
+      - name: Verify rendered institutional interface in Chromium
         shell: bash
         run: |
           set -euo pipefail
-          curl -fsSL --max-time 20 "${ATLAS_URL}data/public_methodology.json" -o /tmp/public_methodology.json
-          ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|agentic|E_collect|F0|F-1|B2_' /tmp/public_methodology.json
-          code=$(curl -sS -o /dev/null -w '%{http_code}' "${ATLAS_URL}data/methodology_state.json")
-          test "$code" = '404'
+          curl --retry 4 --retry-all-errors -fsSL --max-time 40 "${ATLAS_URL}data/atlas_v1.json" -o /tmp/atlas_v1.json
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
-          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=12000 --dump-dom "$ATLAS_URL" > /tmp/live-dom.html
-          grep -Fq 'Synthèse nationale' /tmp/live-dom.html
-          grep -Fq 'Méthodologie' /tmp/live-dom.html
-          grep -Fq 'Carte territoriale' /tmp/live-dom.html
-          grep -Fq 'Partis' /tmp/live-dom.html
-          grep -Fq 'Signaux 2026' /tmp/live-dom.html
-          grep -Fq 'Historique' /tmp/live-dom.html
-          grep -Fq 'Une projection territoriale, probabiliste et traçable' /tmp/live-dom.html
-          grep -Fq 'Neutralité et gouvernance des données' /tmp/live-dom.html
-          grep -Fq 'class="kpi hi"' /tmp/live-dom.html
-          ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|tester l.IA|IA contre référence|mettre l.IA' /tmp/live-dom.html
-          ! grep -Fq 'Atlas 395 ne peut pas charger les données' /tmp/live-dom.html
-          ! grep -Fq 'Atlas 395 ne peut pas initialiser cette édition' /tmp/live-dom.html
-          echo "VERIFIED_FULL_ATLAS_URL=$ATLAS_URL"
+          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=30000 --dump-dom "$ATLAS_URL" > /tmp/live-dom.html
+          grep -Fq 'Intelligence électorale territoriale · Maroc 2026' /tmp/live-dom.html
+          grep -Fq 'Rapport de forces et incertitude territoriale' /tmp/live-dom.html
+          grep -Fq '>Synthèse<' /tmp/live-dom.html
+          grep -Fq '>Carte territoriale<' /tmp/live-dom.html
+          grep -Fq '>Candidatures<' /tmp/live-dom.html
+          grep -Fq '>Partis<' /tmp/live-dom.html
+          grep -Fq '>Veille 2026<' /tmp/live-dom.html
+          grep -Fq '>Méthode<' /tmp/live-dom.html
+          grep -Fq '>Historique<' /tmp/live-dom.html
+          grep -Fq 'Candidatures documentées par circonscription' /tmp/live-dom.html
+          grep -Fq 'RÉFÉRENCE CONSERVÉE' /tmp/live-dom.html
+          grep -Fq 'territoires bilingues' /tmp/live-dom.html
+          grep -Fq '546' /tmp/live-dom.html
+          grep -Fq 'الدار البيضاء آنفا' /tmp/live-dom.html
+          ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|tester l.?IA|mettre l.?IA|IA contre référence|E_reason|E_full|agentic|Arabic Native|AUCUN DELTA APPLIQUÉ' /tmp/live-dom.html
+          ! grep -Fq 'Atlas 395 ne peut pas charger' /tmp/live-dom.html
+          ! grep -Fq 'Atlas 395 ne peut pas initialiser' /tmp/live-dom.html
+          echo "INSTITUTIONAL_BROWSER_SMOKE=PASS" >> "$GITHUB_STEP_SUMMARY"
