@@ -1,0 +1,45 @@
+name: Atlas 395 — Public URL smoke test
+
+on:
+  push:
+    branches: [atlas395-v0]
+    paths:
+      - 'morocco26/web/**'
+      - '.github/workflows/atlas395-public-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify complete Atlas is publicly reachable
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE='https://raw.githack.com/SmokeSol/CHATGPT/atlas395-v0/morocco26/web'
+          ok=0
+          for i in $(seq 1 20); do
+            if curl -fsSL --max-time 20 "$BASE/githack.html" -o /tmp/githack.html \
+              && curl -fsSL --max-time 20 "$BASE/index.html" -o /tmp/index.html \
+              && curl -fsSL --max-time 20 "$BASE/githack.js" -o /tmp/githack.js \
+              && curl -fsSL --max-time 20 "$BASE/githack.css" -o /tmp/githack.css \
+              && curl -fsSL --max-time 20 "$BASE/assets/core.js" -o /tmp/core.js \
+              && curl -fsSL --max-time 20 "$BASE/data/current_snapshot.json" -o /tmp/snapshot.json; then
+              if grep -q 'view-methodology' /tmp/index.html \
+                && grep -q "\['methodology','Méthodologie'" /tmp/core.js \
+                && grep -q 'ATLAS_DATA_BASE' /tmp/githack.js \
+                && grep -q './assets/methodology.css' /tmp/githack.css; then
+                ok=1
+                break
+              fi
+            fi
+            sleep 5
+          done
+          test "$ok" = 1
+          echo "PUBLIC_URL=$BASE/githack.html" >> "$GITHUB_ENV"
+
+      - name: Report URL
+        run: echo "$PUBLIC_URL"
