@@ -1,22 +1,27 @@
-name: MOROCCO26 Atlas 395 V0
+name: Atlas 395 — V0.5 Daily
 
 on:
   workflow_dispatch:
   push:
     branches: [atlas395-v0]
     paths:
-      - 'morocco26/data/goal100/**'
-      - 'morocco26/scripts/atlas395_export.py'
-      - 'morocco26/scripts/validate_atlas395_views.py'
+      - 'morocco26/atlas395/**'
+      - 'morocco26/scripts/atlas395_*.py'
+      - 'morocco26/scripts/atlas395_daily_publish.sh'
       - 'morocco26/web/**'
       - '!morocco26/web/data/**'
+      - '!morocco26/web/editions/**'
       - '.github/workflows/morocco26-atlas395-v0.yml'
 
 permissions:
   contents: write
 
+concurrency:
+  group: atlas395-v05-publish
+  cancel-in-progress: false
+
 jobs:
-  build-derived-product-views:
+  publish-daily-edition:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
@@ -27,19 +32,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Snapshot scientific tree before product generation
-        run: git status --porcelain && git rev-parse HEAD
-      - name: Generate read-only Atlas views
-        run: python morocco26/scripts/atlas395_export.py --snapshot F-1
-      - name: Validate Atlas views
-        run: python morocco26/scripts/validate_atlas395_views.py
-      - name: Check UI syntax
+      - name: Build official daily edition from latest certified science state
+        run: bash morocco26/scripts/atlas395_daily_publish.sh
+      - name: Check reader interface syntax
         shell: bash
         run: |
           node --check morocco26/web/app.js
-          for f in morocco26/web/assets/*.js; do
-            node --check "$f"
-          done
+          for f in morocco26/web/assets/*.js; do node --check "$f"; done
       - name: Check final-reader language surface
         shell: bash
         run: |
@@ -48,28 +47,20 @@ jobs:
           html = Path('morocco26/web/index.html').read_text(encoding='utf-8').lower()
           forbidden = ['f-1','b2','unknown','locked','read only','github','monte carlo','llm','agentic','time machine']
           bad = [x for x in forbidden if x in html]
-          if bad:
-              raise SystemExit('Forbidden final-reader terms in HTML: ' + ', '.join(bad))
+          if bad: raise SystemExit('Forbidden final-reader terms in HTML: ' + ', '.join(bad))
           print('ATLAS395_READER_LANGUAGE_OK')
           PY
-      - name: Enforce one-way write boundary
+      - name: Enforce product-only write boundary
         shell: bash
         run: |
-          bad="$(git status --porcelain | awk '{print $2}' | grep -v '^morocco26/web/data/' || true)"
-          if [ -n "$bad" ]; then
-            echo "Atlas generator modified forbidden paths:"
-            echo "$bad"
-            exit 1
-          fi
-      - name: Commit generated views
+          bad="$(git status --porcelain | awk '{print $2}' | grep -Ev '^morocco26/web/(data|editions)/' || true)"
+          if [ -n "$bad" ]; then echo "Daily publisher modified forbidden paths:"; echo "$bad"; exit 1; fi
+      - name: Commit current views and immutable edition
         shell: bash
         run: |
-          if [ -z "$(git status --porcelain -- morocco26/web/data)" ]; then
-            echo "No derived view changes."
-            exit 0
-          fi
+          if [ -z "$(git status --porcelain -- morocco26/web/data morocco26/web/editions)" ]; then echo "No daily product changes."; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add morocco26/web/data
-          git commit -m "atlas395: regenerate read-only F-1 product views"
+          git add morocco26/web/data morocco26/web/editions
+          git commit -m "atlas395: publish daily edition $(TZ=Africa/Casablanca date +%F)"
           git push origin HEAD:atlas395-v0
