@@ -1,0 +1,91 @@
+name: morocco26-prioritize-b2-backfill
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - 'morocco26/scripts/goal100_prioritize_b2_historical_backfill.py'
+      - '.github/workflows/morocco26-prioritize-b2-backfill.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-prioritize-b2-backfill-v1
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  prioritize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 130
+    env:
+      B2_BRANCH: morocco26-b2-structured-evidence
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Wait for historical backfill queue
+        run: |
+          for attempt in $(seq 1 180); do
+            git fetch origin --prune
+            if git ls-remote --exit-code --heads origin "$B2_BRANCH" >/dev/null 2>&1; then
+              git switch -C "$B2_BRANCH" "origin/$B2_BRANCH"
+              if [ -f morocco26/data/goal100/b2/v1/historical_backfill_queue.csv ]; then
+                exit 0
+              fi
+            fi
+            git switch -C morocco26-fminus1-run origin/morocco26-fminus1-run >/dev/null 2>&1 || true
+            echo "Waiting for historical backfill queue: $attempt/180"
+            sleep 10
+          done
+          exit 1
+
+      - name: Import and execute priority model
+        run: |
+          git checkout origin/morocco26-fminus1-run -- morocco26/scripts/goal100_prioritize_b2_historical_backfill.py
+          python morocco26/scripts/goal100_prioritize_b2_historical_backfill.py
+
+      - name: Validate research-only boundary
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/goal100_validate_b2_v1.py
+          python - <<'PY'
+          import csv,json
+          from pathlib import Path
+          b=Path('morocco26/data/goal100/b2/v1')
+          c=json.loads((b/'historical_backfill_priority_certificate.json').read_text(encoding='utf-8'))
+          assert c['gate']=='PASS_RESEARCH_PRIORITY_ONLY'
+          assert c['tasks_ranked']==1932
+          assert c['forecast_effect'] is False and c['coefficient_effect'] is False and c['evidence_created'] is False
+          with (b/'historical_backfill_priority.csv').open(encoding='utf-8',newline='') as f:
+              rows=list(csv.DictReader(f))
+          assert len(rows)==1932
+          assert [int(r['priority_rank']) for r in rows]==list(range(1,1933))
+          assert sum(r['priority_band']=='P0_TOP_100' for r in rows)==100
+          residual=json.loads((b/'b2_residual_backtest.json').read_text(encoding='utf-8'))
+          assert residual['non_legal_coefficients']=='ALL_ZERO' and residual['F0_unlocked'] is False
+          print('B2_BACKFILL_PRIORITY_BOUNDARY_PASS')
+          PY
+
+      - name: Commit priority queue
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'research(morocco26): prioritize historical B2 backfill tasks' || true
+          for attempt in 1 2 3; do
+            git fetch origin "$B2_BRANCH"
+            git rebase "origin/$B2_BRANCH" || { git rebase --abort; exit 1; }
+            if git push origin HEAD:"$B2_BRANCH"; then exit 0; fi
+            sleep 5
+          done
+          exit 1
+
+      - name: Print priority certificate
+        run: cat morocco26/data/goal100/b2/v1/historical_backfill_priority_certificate.json
