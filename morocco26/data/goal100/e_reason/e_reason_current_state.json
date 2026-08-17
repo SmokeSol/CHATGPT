@@ -1,12 +1,13 @@
 {
   "schema_version": "1.0",
   "state_id": "M26-GOAL100-E-REASON-CURRENT-V1",
-  "as_of": "2026-08-17T21:42:17+01:00",
+  "as_of": "2026-08-17T21:53:08+01:00",
   "branch": "morocco26-e-reason",
   "exact_parent_commit_sha": "1f6403f80d1516de7c407d1a3ddebbbbd0f9c9b5",
-  "phase": "PREREGISTRATION_PRE_JUDGMENT",
-  "preregistration_status": "FROZEN_PENDING_VALIDATION",
-  "historical_collection_status": "NOT_STARTED",
+  "phase": "HISTORICAL_PRE_ELECTION_EVIDENCE_COLLECTION",
+  "preregistration_status": "FROZEN_VALIDATED",
+  "preregistration_validation_run_id": 32068163382,
+  "historical_collection_status": "AUTHORIZED_NOT_STARTED",
   "evidence_packet_status": "NOT_CREATED",
   "predictive_judgments_generated": false,
   "forecast_delta_generated": false,
@@ -14,5 +15,5 @@
   "F1_created": false,
   "F0_status": "REGISTERED_IMMUTABLE",
   "Atlas_UI_modified": false,
-  "next_allowed_action": "Run preregistration validator; only after PASS may historical collection start."
+  "next_allowed_action": "Collect and archive pre-cutoff 2016 and 2021 evidence under the frozen source and leakage policies."
 }
