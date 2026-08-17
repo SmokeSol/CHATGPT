@@ -1,0 +1,527 @@
+{
+  "schema_version": "1.0",
+  "run_id": "pps_pdf_probe_32079668682_1",
+  "created_at": "2026-08-17T23:16:13+00:00",
+  "source_class": "T1_OFFICIAL_PARTY",
+  "qualified_domain": "ppsmaroc.com",
+  "method": "DETERMINISTIC_REGION_FILENAME_FAMILY_ANCHORED_BY_TWO_EXACT_OFFICIAL_DOWNLOADS",
+  "rows": [
+    {
+      "region_slug": "fes-meknes",
+      "filename": "fes_meknes.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/fes_meknes.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/fes_meknes.pdf",
+      "bytes": 1934438,
+      "content_type": "application/pdf",
+      "sha256": "ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375",
+      "pdf": {
+        "pages": 12,
+        "metadata": {
+          "/Creator": "FoxyUtils Online PDF https://foxyutils.com",
+          "/Producer": "FILEminimizer PDF"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375.txt",
+        "text_chars": 2973,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "beni-mellal-khenifra",
+      "filename": "beni_mellal_khenifra.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/beni_mellal_khenifra.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/beni_mellal_khenifra.pdf",
+      "bytes": 12147731,
+      "content_type": "application/pdf",
+      "sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+      "pdf": {
+        "pages": 6,
+        "metadata": {
+          "/Producer": "UniDoc Library version 1.0.0 (Commercial License) - http://unidoc.io",
+          "/Creator": "FoxyUtils Online PDF https://foxyutils.com"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b.txt",
+        "text_chars": 2136,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "rabat-sale-kenitra",
+      "filename": "rabat_sale_kenitra.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/rabat_sale_kenitra.pdf",
+      "status": 404,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/rabat_sale_kenitra.pdf",
+      "bytes": 47442,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": null,
+      "pdf": null,
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "rabat-sale-kenitra",
+      "filename": "rabat_sale_kenitraa.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/rabat_sale_kenitraa.pdf",
+      "status": 404,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/rabat_sale_kenitraa.pdf",
+      "bytes": 47442,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": null,
+      "pdf": null,
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "casablanca-settat",
+      "filename": "casablanca_settat.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/casablanca_settat.pdf",
+      "status": 404,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/casablanca_settat.pdf",
+      "bytes": 47442,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": null,
+      "pdf": null,
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "casablanca-settat",
+      "filename": "casa_settat.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/casa_settat.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/casa_settat.pdf",
+      "bytes": 2110956,
+      "content_type": "application/pdf",
+      "sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+      "pdf": {
+        "pages": 16,
+        "metadata": {
+          "/CreationDate": "D:20160917121528+01'00'",
+          "/Creator": "Adobe Illustrator CS5",
+          "/ModDate": "D:20161005181506Z",
+          "/Producer": "FILEminimizer PDF",
+          "/Title": "عين الشق"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689.txt",
+        "text_chars": 3717,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "marrakech-safi",
+      "filename": "marrakech_safi.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/marrakech_safi.pdf",
+      "status": 404,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/marrakech_safi.pdf",
+      "bytes": 47442,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": null,
+      "pdf": null,
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "souss-massa",
+      "filename": "souss_massa.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/souss_massa.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/souss_massa.pdf",
+      "bytes": 8226958,
+      "content_type": "application/pdf",
+      "sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+      "pdf": {
+        "pages": 7,
+        "metadata": {
+          "/Creator": "FoxyUtils Online PDF https://foxyutils.com",
+          "/Producer": "UniDoc Library version 1.0.0 (Commercial License) - http://unidoc.io"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570.txt",
+        "text_chars": 1783,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "oriental",
+      "filename": "oriental.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/oriental.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/oriental.pdf",
+      "bytes": 1325952,
+      "content_type": "application/pdf",
+      "sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+      "pdf": {
+        "pages": 8,
+        "metadata": {
+          "/Creator": "FoxyUtils Online PDF https://foxyutils.com",
+          "/Producer": "FILEminimizer PDF"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457.txt",
+        "text_chars": 2040,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "oriental",
+      "filename": "orientale.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/orientale.pdf",
+      "status": 404,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/orientale.pdf",
+      "bytes": 47442,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": null,
+      "pdf": null,
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "tanger-tetouan-al-hoceima",
+      "filename": "tanger_tetouan_al_hoceima.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/tanger_tetouan_al_hoceima.pdf",
+      "status": 404,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/tanger_tetouan_al_hoceima.pdf",
+      "bytes": 47442,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": null,
+      "pdf": null,
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "tanger-tetouan-al-hoceima",
+      "filename": "tanger_tetouan_hoceima.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/tanger_tetouan_hoceima.pdf",
+      "status": 404,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/tanger_tetouan_hoceima.pdf",
+      "bytes": 47442,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": null,
+      "pdf": null,
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "tanger-tetouan-al-hoceima",
+      "filename": "tanger_tetouan_houssima.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/tanger_tetouan_houssima.pdf",
+      "status": 404,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/tanger_tetouan_houssima.pdf",
+      "bytes": 47442,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": null,
+      "pdf": null,
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "draa-tafilalet",
+      "filename": "draa_tafilalet.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/draa_tafilalet.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/draa_tafilalet.pdf",
+      "bytes": 7189012,
+      "content_type": "application/pdf",
+      "sha256": "105cac2f617546c4f4e687b02ebd6441b027830a1364372c3bc2767590676ba4",
+      "pdf": {
+        "pages": 5,
+        "metadata": {
+          "/Producer": "UniDoc Library version 1.0.0 (Commercial License) - http://unidoc.io",
+          "/Creator": "FoxyUtils Online PDF https://foxyutils.com"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/105cac2f617546c4f4e687b02ebd6441b027830a1364372c3bc2767590676ba4.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/105cac2f617546c4f4e687b02ebd6441b027830a1364372c3bc2767590676ba4.txt",
+        "text_chars": 1659,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "draa-tafilalet",
+      "filename": "draa_tafilalt.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/draa_tafilalt.pdf",
+      "status": 404,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/draa_tafilalt.pdf",
+      "bytes": 47442,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": null,
+      "pdf": null,
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "guelmim-oued-noun",
+      "filename": "guelmim_oued_noun.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/guelmim_oued_noun.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/guelmim_oued_noun.pdf",
+      "bytes": 6802161,
+      "content_type": "application/pdf",
+      "sha256": "b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270",
+      "pdf": {
+        "pages": 4,
+        "metadata": {
+          "/ModDate": "D:20161004172301Z",
+          "/Producer": "3-Heights(TM) PDF Security Shell 4.5.24.6 (http://www.pdf-tools.com) / pdcat (www.pdf-tools.com)",
+          "/Title": "سيدي إفني",
+          "/Creator": "Adobe Illustrator CS5",
+          "/CreationDate": "D:20160917105715+01'00'"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270.txt",
+        "text_chars": 1005,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "laayoune-sakia-el-hamra",
+      "filename": "laayoune_sakia_el_hamra.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/laayoune_sakia_el_hamra.pdf",
+      "status": 404,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/laayoune_sakia_el_hamra.pdf",
+      "bytes": 47442,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": null,
+      "pdf": null,
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "laayoune-sakia-el-hamra",
+      "filename": "laayoune_sakia_hamra.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/laayoune_sakia_hamra.pdf",
+      "status": 404,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/laayoune_sakia_hamra.pdf",
+      "bytes": 47442,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": null,
+      "pdf": null,
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "dakhla-oued-ed-dahab",
+      "filename": "dakhla_oued_ed_dahab.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/dakhla_oued_ed_dahab.pdf",
+      "status": 404,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/dakhla_oued_ed_dahab.pdf",
+      "bytes": 47442,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": null,
+      "pdf": null,
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "dakhla-oued-ed-dahab",
+      "filename": "dakhla_oued_dahab.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/dakhla_oued_dahab.pdf",
+      "status": 404,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/dakhla_oued_dahab.pdf",
+      "bytes": 47442,
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": null,
+      "pdf": null,
+      "error": null,
+      "discovery_only": true
+    }
+  ],
+  "pdf_hits": [
+    {
+      "region_slug": "fes-meknes",
+      "filename": "fes_meknes.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/fes_meknes.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/fes_meknes.pdf",
+      "bytes": 1934438,
+      "content_type": "application/pdf",
+      "sha256": "ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375",
+      "pdf": {
+        "pages": 12,
+        "metadata": {
+          "/Creator": "FoxyUtils Online PDF https://foxyutils.com",
+          "/Producer": "FILEminimizer PDF"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375.txt",
+        "text_chars": 2973,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "beni-mellal-khenifra",
+      "filename": "beni_mellal_khenifra.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/beni_mellal_khenifra.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/beni_mellal_khenifra.pdf",
+      "bytes": 12147731,
+      "content_type": "application/pdf",
+      "sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+      "pdf": {
+        "pages": 6,
+        "metadata": {
+          "/Producer": "UniDoc Library version 1.0.0 (Commercial License) - http://unidoc.io",
+          "/Creator": "FoxyUtils Online PDF https://foxyutils.com"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b.txt",
+        "text_chars": 2136,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "casablanca-settat",
+      "filename": "casa_settat.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/casa_settat.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/casa_settat.pdf",
+      "bytes": 2110956,
+      "content_type": "application/pdf",
+      "sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+      "pdf": {
+        "pages": 16,
+        "metadata": {
+          "/CreationDate": "D:20160917121528+01'00'",
+          "/Creator": "Adobe Illustrator CS5",
+          "/ModDate": "D:20161005181506Z",
+          "/Producer": "FILEminimizer PDF",
+          "/Title": "عين الشق"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689.txt",
+        "text_chars": 3717,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "souss-massa",
+      "filename": "souss_massa.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/souss_massa.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/souss_massa.pdf",
+      "bytes": 8226958,
+      "content_type": "application/pdf",
+      "sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+      "pdf": {
+        "pages": 7,
+        "metadata": {
+          "/Creator": "FoxyUtils Online PDF https://foxyutils.com",
+          "/Producer": "UniDoc Library version 1.0.0 (Commercial License) - http://unidoc.io"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570.txt",
+        "text_chars": 1783,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "oriental",
+      "filename": "oriental.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/oriental.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/oriental.pdf",
+      "bytes": 1325952,
+      "content_type": "application/pdf",
+      "sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+      "pdf": {
+        "pages": 8,
+        "metadata": {
+          "/Creator": "FoxyUtils Online PDF https://foxyutils.com",
+          "/Producer": "FILEminimizer PDF"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457.txt",
+        "text_chars": 2040,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "draa-tafilalet",
+      "filename": "draa_tafilalet.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/draa_tafilalet.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/draa_tafilalet.pdf",
+      "bytes": 7189012,
+      "content_type": "application/pdf",
+      "sha256": "105cac2f617546c4f4e687b02ebd6441b027830a1364372c3bc2767590676ba4",
+      "pdf": {
+        "pages": 5,
+        "metadata": {
+          "/Producer": "UniDoc Library version 1.0.0 (Commercial License) - http://unidoc.io",
+          "/Creator": "FoxyUtils Online PDF https://foxyutils.com"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/105cac2f617546c4f4e687b02ebd6441b027830a1364372c3bc2767590676ba4.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/105cac2f617546c4f4e687b02ebd6441b027830a1364372c3bc2767590676ba4.txt",
+        "text_chars": 1659,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    },
+    {
+      "region_slug": "guelmim-oued-noun",
+      "filename": "guelmim_oued_noun.pdf",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/guelmim_oued_noun.pdf",
+      "status": 200,
+      "final_url": "https://pps.ma/wp-content/uploads/2016/10/guelmim_oued_noun.pdf",
+      "bytes": 6802161,
+      "content_type": "application/pdf",
+      "sha256": "b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270",
+      "pdf": {
+        "pages": 4,
+        "metadata": {
+          "/ModDate": "D:20161004172301Z",
+          "/Producer": "3-Heights(TM) PDF Security Shell 4.5.24.6 (http://www.pdf-tools.com) / pdcat (www.pdf-tools.com)",
+          "/Title": "سيدي إفني",
+          "/Creator": "Adobe Illustrator CS5",
+          "/CreationDate": "D:20160917105715+01'00'"
+        },
+        "raw_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/raw/b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270.pdf",
+        "text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32079668682_1/text/b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270.txt",
+        "text_chars": 1005,
+        "outcome_terms": []
+      },
+      "error": null,
+      "discovery_only": true
+    }
+  ],
+  "counts": {
+    "attempts": 20,
+    "pdf_hits": 7,
+    "regions_with_pdf": 7
+  },
+  "invariants": {
+    "candidate_facts_extracted": false,
+    "evidence_promoted": false,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "F1_created": false
+  }
+}

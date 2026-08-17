@@ -1,0 +1,85 @@
+{
+  "counts": {
+    "attempts": 20,
+    "pdf_hits": 7,
+    "regions_with_pdf": 7
+  },
+  "hits": [
+    {
+      "region": "fes-meknes",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/fes_meknes.pdf",
+      "bytes": 1934438,
+      "pages": 12,
+      "metadata": {
+        "/Creator": "FoxyUtils Online PDF https://foxyutils.com",
+        "/Producer": "FILEminimizer PDF"
+      }
+    },
+    {
+      "region": "beni-mellal-khenifra",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/beni_mellal_khenifra.pdf",
+      "bytes": 12147731,
+      "pages": 6,
+      "metadata": {
+        "/Producer": "UniDoc Library version 1.0.0 (Commercial License) - http://unidoc.io",
+        "/Creator": "FoxyUtils Online PDF https://foxyutils.com"
+      }
+    },
+    {
+      "region": "casablanca-settat",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/casa_settat.pdf",
+      "bytes": 2110956,
+      "pages": 16,
+      "metadata": {
+        "/CreationDate": "D:20160917121528+01'00'",
+        "/Creator": "Adobe Illustrator CS5",
+        "/ModDate": "D:20161005181506Z",
+        "/Producer": "FILEminimizer PDF",
+        "/Title": "عين الشق"
+      }
+    },
+    {
+      "region": "souss-massa",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/souss_massa.pdf",
+      "bytes": 8226958,
+      "pages": 7,
+      "metadata": {
+        "/Creator": "FoxyUtils Online PDF https://foxyutils.com",
+        "/Producer": "UniDoc Library version 1.0.0 (Commercial License) - http://unidoc.io"
+      }
+    },
+    {
+      "region": "oriental",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/oriental.pdf",
+      "bytes": 1325952,
+      "pages": 8,
+      "metadata": {
+        "/Creator": "FoxyUtils Online PDF https://foxyutils.com",
+        "/Producer": "FILEminimizer PDF"
+      }
+    },
+    {
+      "region": "draa-tafilalet",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/draa_tafilalet.pdf",
+      "bytes": 7189012,
+      "pages": 5,
+      "metadata": {
+        "/Producer": "UniDoc Library version 1.0.0 (Commercial License) - http://unidoc.io",
+        "/Creator": "FoxyUtils Online PDF https://foxyutils.com"
+      }
+    },
+    {
+      "region": "guelmim-oued-noun",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/guelmim_oued_noun.pdf",
+      "bytes": 6802161,
+      "pages": 4,
+      "metadata": {
+        "/ModDate": "D:20161004172301Z",
+        "/Producer": "3-Heights(TM) PDF Security Shell 4.5.24.6 (http://www.pdf-tools.com) / pdcat (www.pdf-tools.com)",
+        "/Title": "سيدي إفني",
+        "/Creator": "Adobe Illustrator CS5",
+        "/CreationDate": "D:20160917105715+01'00'"
+      }
+    }
+  ]
+}
