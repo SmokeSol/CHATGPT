@@ -17,21 +17,26 @@ jobs:
       - name: Verify Vercel Atlas in headless Chrome
         shell: bash
         run: |
-          set -euo pipefail
+          set -uo pipefail
           URL='https://atlas395-maroc-2026-yannlevy85gmailcoms-projects.vercel.app/'
-          curl -fsSL --retry 8 --retry-delay 3 --max-time 30 "$URL" -o /tmp/index.html
-          grep -Fq 'ATLAS 395' /tmp/index.html
-          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
-          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=18000 --dump-dom "$URL" > /tmp/atlas-dom.html
-          grep -Fq 'Synthèse nationale' /tmp/atlas-dom.html
-          grep -Fq 'Méthodologie' /tmp/atlas-dom.html
-          grep -Fq 'Carte territoriale' /tmp/atlas-dom.html
-          grep -Fq 'Partis' /tmp/atlas-dom.html
-          grep -Fq 'Signaux 2026' /tmp/atlas-dom.html
-          grep -Fq 'Historique' /tmp/atlas-dom.html
-          grep -Fq 'Une projection territoriale, probabiliste et traçable' /tmp/atlas-dom.html
-          grep -Fq 'Neutralité et gouvernance des données' /tmp/atlas-dom.html
-          grep -Fq '50 000' /tmp/atlas-dom.html
-          ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|tester l.IA|IA contre référence|mettre l.IA' /tmp/atlas-dom.html
-          ! grep -Fq 'Édition temporairement indisponible' /tmp/atlas-dom.html
-          echo "VERIFIED_URL=$URL"
+          curl -sSL -D /tmp/headers.txt --retry 4 --retry-delay 2 --max-time 30 "$URL" -o /tmp/index.html || true
+          echo '--- HEADERS ---'; cat /tmp/headers.txt || true
+          echo '--- BODY HEAD ---'; head -c 2500 /tmp/index.html || true; echo
+          echo "INDEX_BYTES=$(wc -c < /tmp/index.html)"
+          failed=0
+          grep -Fq 'ATLAS 395' /tmp/index.html || { echo 'MISSING_STATIC_ATLAS'; failed=1; }
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          if [ -n "$CHROME" ]; then
+            "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=18000 --dump-dom "$URL" > /tmp/atlas-dom.html 2>/tmp/chrome.log || true
+            echo "DOM_BYTES=$(wc -c < /tmp/atlas-dom.html)"
+            for marker in 'Synthèse nationale' 'Méthodologie' 'Carte territoriale' 'Partis' 'Signaux 2026' 'Historique' 'Une projection territoriale, probabiliste et traçable' 'Neutralité et gouvernance des données' '50 000'; do
+              grep -Fq "$marker" /tmp/atlas-dom.html || { echo "MISSING_RENDERED: $marker"; failed=1; }
+            done
+            grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|tester l.IA|IA contre référence|mettre l.IA' /tmp/atlas-dom.html && { echo 'FORBIDDEN_PUBLIC_AI_COPY'; failed=1; }
+            grep -Fq 'Édition temporairement indisponible' /tmp/atlas-dom.html && { echo 'BOOT_FAILURE'; failed=1; }
+            if [ "$failed" != 0 ]; then echo '--- DOM HEAD ---'; head -c 5000 /tmp/atlas-dom.html || true; echo; echo '--- CHROME ---'; tail -80 /tmp/chrome.log || true; fi
+          else
+            echo 'NO_CHROME'; failed=1
+          fi
+          echo "URL=$URL"
+          exit "$failed"
