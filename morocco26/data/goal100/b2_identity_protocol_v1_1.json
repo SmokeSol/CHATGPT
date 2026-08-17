@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.1",
+  "protocol_id": "M26-GOAL100-B2-IDENTITY-PROTOCOL-V1.1",
+  "parent_protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "supersedes": "M26-GOAL100-B2-IDENTITY-PROTOCOL-V1",
+  "base_protocol_path": "morocco26/data/goal100/b2_identity_protocol_v1.json",
+  "base_protocol_git_blob_sha": "d4132cb55a00122807e0e4715323018f3d95e39e",
+  "frozen_at": "2026-08-17T07:58:11+01:00",
+  "status": "FROZEN_PRE_EXECUTION",
+  "amendment": {
+    "trigger": "B2-2 failed run 32003523080",
+    "failed_commit": "7b08117b1fb987cdc2925e882527c5d3920ccc78",
+    "failed_crosswalk_canonical_sha256": "92d4d75bc1f2ca2e4e9873e8dddc0b0e9e7e4b0ec247c060e3e3ddb6311e6b13",
+    "failure_class": "UNRESOLVED_REGION",
+    "failure_count": 2,
+    "exact_source_label": "Dakhla-Oued Eddahab",
+    "authoritative_target_label": "Dakhla-Oued Ed-Dahab",
+    "reviewed_normalized_alias": "dakhla oued eddahab",
+    "canonical_target_id": "reg-dakhla-oued-ed-dahab",
+    "scientific_change": "NONE",
+    "model_change": "NONE",
+    "threshold_change": "NONE",
+    "claim_change": "NONE",
+    "coefficient_change": "NONE",
+    "rule": "Only the exact reviewed regional alias above is added. Every other identity, normalization, collision, coverage and failure rule is inherited unchanged from V1."
+  },
+  "purpose": "Create deterministic, collision-aware identifiers for certified territories, political parties/lists and historical office-holders before any 2026 B2 claim is admitted or any feature matrix is constructed.",
+  "scope": {
+    "territories": "92 certified local constituencies and 12 certified regional constituencies.",
+    "parties": "Every list code observed in the canonical 2011, 2016 and 2021 election files plus every party code observed among the 395 elected members in 2021.",
+    "lists": "One deterministic list_id per observed year, scope, certified territory and actual party/list code.",
+    "people": "The 395 observed elected-member rows for 2021, keyed primarily by the TAFRA idperson and never merged only by name.",
+    "2026_candidates": "No 2026 candidate is admitted by this gate. Legacy aggregate coverage is recorded as LEAD_ONLY_REVALIDATION_REQUIRED because it lacks B2 record-level provenance."
+  },
+  "normalization": {
+    "version": "M26_TEXT_NORMALIZER_V1",
+    "unicode": "NFKC followed by controlled diacritic removal for Latin and Arabic text.",
+    "whitespace": "Collapse all Unicode whitespace to a single ASCII space and trim.",
+    "punctuation": "Normalize apostrophes and dashes, then replace remaining punctuation separators with spaces.",
+    "arabic": "Remove tatweel and harakat; normalize Arabic alef variants to ا, alif maqsura to ي, waw-hamza to و and ya-hamza to ي. Ta marbuta is not collapsed.",
+    "latin": "Remove combining diacritics after canonical decomposition; retain alphanumeric tokens.",
+    "case": "Unicode casefold.",
+    "digits": "Normalize Arabic-Indic and Extended Arabic-Indic digits to ASCII digits.",
+    "forbidden": [
+      "phonetic matching",
+      "edit-distance matching",
+      "embedding similarity",
+      "LLM entity resolution",
+      "automatic transliteration equivalence",
+      "merging two people because their normalized names match"
+    ]
+  },
+  "territory_identity": {
+    "local_id": "Use the existing certified constituency_id from local_92_closure_v3.json.",
+    "regional_id": "Prefix reg- to the deterministic slug of the authoritative French regional name, with only the frozen article-independent Oriental convention.",
+    "local_alias_sources": [
+      "certified canonical name",
+      "TAFRA constituency name already paired in local_92_closure_v3.json",
+      "exact normalized names observed in the canonical 2011/2016/2021 files and the 2021 elected-member file"
+    ],
+    "regional_alias_sources": [
+      "authoritative French regional name",
+      "region labels present in the certified local geometry",
+      "exact normalized region labels present in canonical historical and elected-member files"
+    ],
+    "alias_acceptance": "An alias is admitted only when it maps uniquely after the frozen normalizer or appears in the explicit reviewed_aliases object below.",
+    "collision_rule": "Any alias resolving to more than one territory fails the gate; no first-match rule is allowed."
+  },
+  "party_identity": {
+    "primary_key": "Actual source list code, uppercased and punctuation-normalized.",
+    "core_codes": ["RNI", "PAM", "PI", "PJD", "USFP", "MP", "UC", "PPS"],
+    "reporting_bucket_rule": "Core codes retain their own reporting bucket; every other actual legal list code maps to OTHER only after legal allocation and remains individually identifiable in the list registry.",
+    "unknown_code_rule": "A non-empty historical code is a stable observed code even if its full label is unavailable. It is retained with full_name=null and cannot be guessed from an acronym.",
+    "alias_rule": "Only frozen official French/Arabic full names and exact codes are aliases. Later aliases require a versioned reviewed alias entry."
+  },
+  "person_identity": {
+    "primary_key": "tafra-person:<idperson> for historical elected members.",
+    "seat_key": "tafra-seat:<idsiege>.",
+    "name_key": "Normalized full name is a search key, never the primary identity.",
+    "future_candidate_key": "For a new 2026 person without an authoritative stable ID, use candidate:<normalized_name>:<exact_birthdate_or_na> only when the name key is unique in the current registry; otherwise state UNRESOLVED_COLLISION.",
+    "birthdate_rule": "Approximate age, birth year or media-estimated age cannot disambiguate or replace an exact birthdate.",
+    "collision_rule": "Same normalized name across distinct person IDs remains separate and is published as a collision group. Conflicting names for the same stable ID fail the gate."
+  },
+  "list_identity": {
+    "format": "list:<year>:<scope>:<territory_id>:<actual_party_code>",
+    "scope_values": ["local", "regional"],
+    "presence_semantics": "A historical list_id means a positive-vote list was observed in the canonical historical result. It makes no statement about 2026 ballot registration.",
+    "2026_rule": "No list:2026 identifier receives BALLOT_PRESENT=true until a B2-admissible authoritative ballot record exists."
+  },
+  "reviewed_aliases": {
+    "regional": {
+      "oriental": "reg-oriental",
+      "l oriental": "reg-oriental",
+      "dakhla oued eddahab": "reg-dakhla-oued-ed-dahab"
+    },
+    "local": {},
+    "party": {}
+  },
+  "inputs": [
+    "morocco26/data/goal75/local_92_closure_v3.json",
+    "morocco26/data/goal100/geometry_2026_certificate.json",
+    "morocco26/data/goal100/geometry_authoritative_regional_rows_fr.csv",
+    "morocco26/data/goal100/historical/tafra_legislative_2011_canonical.json",
+    "morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json",
+    "morocco26/data/goal100/historical/tafra_legislative_2021_canonical.json",
+    "morocco26/data/goal75/observed_elected_2021.json",
+    "morocco26/data/candidate_coverage_2026.json"
+  ],
+  "gate_pass_conditions": [
+    "Exactly 92 local IDs summing to 305 seats and 12 regional IDs summing to 90 seats.",
+    "Every canonical historical local row maps to exactly one certified local ID without fuzzy matching.",
+    "Every canonical historical regional row maps to exactly one certified region ID without fuzzy matching.",
+    "All 395 elected-member rows map to one certified territory: 305 local and 90 regional.",
+    "All observed party codes are retained and every historical positive-vote list obtains one unique deterministic list_id.",
+    "Stable person and seat IDs are internally consistent; normalized-name collisions are reported but never merged.",
+    "Zero 2026 candidate/list facts are admitted from the legacy aggregate coverage summary.",
+    "Zero B2 evidence claim record exists before crosswalk certification."
+  ],
+  "outputs": [
+    "morocco26/data/goal100/b2_identity_crosswalk.json",
+    "morocco26/data/goal100/b2_identity_territory_certificate.json",
+    "morocco26/data/goal100/fil_ariane_events/A021.json"
+  ],
+  "failure_rule": "Any unresolved territory, conflicting stable person ID, alias collision, duplicate list_id or pre-existing uncertified B2 claim keeps B2-2 OPEN. No fuzzy fallback is permitted."
+}
