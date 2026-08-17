@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "run_id": "commoncrawl2016_32071626893_1",
+  "created_at": "2026-08-17T21:34:54+00:00",
+  "cutoff_utc": "20161006225959",
+  "commoncrawl_collections": [
+    "CC-MAIN-2016-50",
+    "CC-MAIN-2016-44",
+    "CC-MAIN-2016-40",
+    "CC-MAIN-2016-36",
+    "CC-MAIN-2016-30",
+    "CC-MAIN-2016-26",
+    "CC-MAIN-2016-22",
+    "CC-MAIN-2016-18",
+    "CC-MAIN-2016-07"
+  ],
+  "catalog_rows": 0,
+  "likely_records": 0,
+  "recovered_records": [],
+  "discovered_asset_urls": [],
+  "predictive_judgments_generated": false,
+  "forecast_delta_generated": false,
+  "F1_created": false,
+  "Atlas_UI_modified": false
+}

@@ -1,0 +1,362 @@
+[
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-50-index",
+    "query": "medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": 404,
+    "bytes": 146,
+    "rows": 0,
+    "error": "HTTPError: 404 Client Error: Not Found for url: https://index.commoncrawl.org/CC-MAIN-2016-50-index?url=medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-50-index",
+    "query": "www.medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": 404,
+    "bytes": 150,
+    "rows": 0,
+    "error": "HTTPError: 404 Client Error: Not Found for url: https://index.commoncrawl.org/CC-MAIN-2016-50-index?url=www.medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-50-index",
+    "query": "assets.medias24.com/js/carte/*",
+    "status": 404,
+    "bytes": 67,
+    "rows": 0,
+    "error": "HTTPError: 404 Client Error: Not Found for url: https://index.commoncrawl.org/CC-MAIN-2016-50-index?url=assets.medias24.com%2Fjs%2Fcarte%2F%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-50-index",
+    "query": "medias24.com/*17-cartes*",
+    "status": 404,
+    "bytes": 61,
+    "rows": 0,
+    "error": "HTTPError: 404 Client Error: Not Found for url: https://index.commoncrawl.org/CC-MAIN-2016-50-index?url=medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-50-index",
+    "query": "www.medias24.com/*17-cartes*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-50-index?url=www.medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-44-index",
+    "query": "medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-44-index?url=medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-44-index",
+    "query": "www.medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-44-index?url=www.medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-44-index",
+    "query": "assets.medias24.com/js/carte/*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-44-index?url=assets.medias24.com%2Fjs%2Fcarte%2F%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-44-index",
+    "query": "medias24.com/*17-cartes*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-44-index?url=medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-44-index",
+    "query": "www.medias24.com/*17-cartes*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-44-index?url=www.medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-40-index",
+    "query": "medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-40-index?url=medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-40-index",
+    "query": "www.medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-40-index?url=www.medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-40-index",
+    "query": "assets.medias24.com/js/carte/*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-40-index?url=assets.medias24.com%2Fjs%2Fcarte%2F%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-40-index",
+    "query": "medias24.com/*17-cartes*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-40-index?url=medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-40-index",
+    "query": "www.medias24.com/*17-cartes*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-40-index?url=www.medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-36-index",
+    "query": "medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-36-index?url=medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-36-index",
+    "query": "www.medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-36-index?url=www.medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-36-index",
+    "query": "assets.medias24.com/js/carte/*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-36-index?url=assets.medias24.com%2Fjs%2Fcarte%2F%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-36-index",
+    "query": "medias24.com/*17-cartes*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-36-index?url=medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-36-index",
+    "query": "www.medias24.com/*17-cartes*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-36-index?url=www.medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-30-index",
+    "query": "medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-30-index?url=medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-30-index",
+    "query": "www.medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-30-index?url=www.medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-30-index",
+    "query": "assets.medias24.com/js/carte/*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-30-index?url=assets.medias24.com%2Fjs%2Fcarte%2F%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-30-index",
+    "query": "medias24.com/*17-cartes*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-30-index?url=medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-30-index",
+    "query": "www.medias24.com/*17-cartes*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-30-index?url=www.medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-26-index",
+    "query": "medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": 404,
+    "bytes": 146,
+    "rows": 0,
+    "error": "HTTPError: 404 Client Error: Not Found for url: https://index.commoncrawl.org/CC-MAIN-2016-26-index?url=medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-26-index",
+    "query": "www.medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-26-index?url=www.medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-26-index",
+    "query": "assets.medias24.com/js/carte/*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-26-index?url=assets.medias24.com%2Fjs%2Fcarte%2F%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-26-index",
+    "query": "medias24.com/*17-cartes*",
+    "status": 503,
+    "bytes": 197,
+    "rows": 0,
+    "error": "HTTPError: 503 Server Error: Service Temporarily Unavailable for url: https://index.commoncrawl.org/CC-MAIN-2016-26-index?url=medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-26-index",
+    "query": "www.medias24.com/*17-cartes*",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ReadTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Read timed out. (read timeout=35)"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-22-index",
+    "query": "medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-22-index?url=medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a52fc20>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-22-index",
+    "query": "www.medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-22-index?url=www.medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a52ffb0>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-22-index",
+    "query": "assets.medias24.com/js/carte/*",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-22-index?url=assets.medias24.com%2Fjs%2Fcarte%2F%2A&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a580350>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-22-index",
+    "query": "medias24.com/*17-cartes*",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-22-index?url=medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a580110>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-22-index",
+    "query": "www.medias24.com/*17-cartes*",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-22-index?url=www.medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a5803b0>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-18-index",
+    "query": "medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-18-index?url=medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a52ffe0>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-18-index",
+    "query": "www.medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-18-index?url=www.medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a52fb00>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-18-index",
+    "query": "assets.medias24.com/js/carte/*",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-18-index?url=assets.medias24.com%2Fjs%2Fcarte%2F%2A&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a52eea0>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-18-index",
+    "query": "medias24.com/*17-cartes*",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-18-index?url=medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a580950>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-18-index",
+    "query": "www.medias24.com/*17-cartes*",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-18-index?url=www.medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a580aa0>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-07-index",
+    "query": "medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-07-index?url=medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a580140>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-07-index",
+    "query": "www.medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-07-index?url=www.medias24.com%2F2016%2F10%2F03%2Flegislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes%2F&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a5810d0>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-07-index",
+    "query": "assets.medias24.com/js/carte/*",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-07-index?url=assets.medias24.com%2Fjs%2Fcarte%2F%2A&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a581400>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-07-index",
+    "query": "medias24.com/*17-cartes*",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-07-index?url=medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a5810a0>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  },
+  {
+    "api": "https://index.commoncrawl.org/CC-MAIN-2016-07-index",
+    "query": "www.medias24.com/*17-cartes*",
+    "status": null,
+    "bytes": 0,
+    "rows": 0,
+    "error": "ConnectTimeout: HTTPSConnectionPool(host='index.commoncrawl.org', port=443): Max retries exceeded with url: /CC-MAIN-2016-07-index?url=www.medias24.com%2F%2A17-cartes%2A&output=json&filter=status%3A200&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='index.commoncrawl.org', port=443) at 0x7f6e1a581460>, 'Connection to index.commoncrawl.org timed out. (connect timeout=7)'))"
+  }
+]
