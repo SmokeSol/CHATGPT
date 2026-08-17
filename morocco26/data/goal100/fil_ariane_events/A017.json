@@ -1,0 +1,23 @@
+{
+  "event_id": "A017",
+  "date": "2026-08-17T06:12:57+00:00",
+  "title": "Enregistrement fail-closed du snapshot F-1 existant",
+  "gate": "SNAPSHOT-IMMUTABILITY-MANIFEST",
+  "status": "PASS",
+  "question": "Le candidat F-1 déjà calculé peut-il être raccordé au registre sans réexécution ni modification ?",
+  "pre_test_hypothesis": "Oui uniquement si tous les hashes, les 50 000 tirages, les 104 scrutins, les 395 sièges et les invariants juridiques sont recomputés et concordants.",
+  "machine_result": {
+    "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "source_manifest_sha256": "54272dbfee8809456a9dc429329e34fcc0575553399ba6af54a380470daed2b1",
+    "draws": 50000,
+    "local_contests": 92,
+    "regional_contests": 12,
+    "house_seats_every_draw": 395,
+    "legal_failures": 0,
+    "statutory_age_prior_rate": 0.03848423076923077,
+    "registry_next_id": "F0"
+  },
+  "correction": "Les workflows antérieurs mélangeaient deux schémas et deux répertoires (forecasts/F-1 et snapshots/F-1) et échouaient sur une rustine textuelle obsolète. La correction est une enveloppe de registration, pas un retuning.",
+  "scientific_decision": "F-1 est enregistré comme prior structurel non agentique immuable. B2 peut commencer ; E_collect, E_reason et E_full restent verrouillés.",
+  "next_action": "Geler le protocole B2 avant toute collecte structurée et avant F0."
+}

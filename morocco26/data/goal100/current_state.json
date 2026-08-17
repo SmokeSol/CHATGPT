@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "state_id": "M26-GOAL100-CURRENT-2026-08-16",
-  "as_of": "2026-08-16T22:12:00+01:00",
+  "as_of": "2026-08-17T06:12:57+00:00",
   "north_star": "Construire un forecast territorial probabiliste, entièrement gelé et falsifiable, puis déterminer expérimentalement si une intelligence agentique de collecte et de raisonnement résiduel apporte de l'information prédictive supplémentaire au-delà d'une baseline structurelle optimale.",
   "tracking_policy": {
     "progress_measure": "machine gates only; no subjective percentage inflation",
@@ -12,18 +12,18 @@
     "snapshots_before_F0_allowed": true,
     "canonical_work_log": "morocco26/FIL_D_ARIANE.md"
   },
-  "program_phase": "P6_PROBABILISTIC_FORECAST_ENGINE",
+  "program_phase": "P7_B2_STRUCTURED_EVIDENCE_LAYER",
   "goal75_checkpoint": {
     "scientifically_gated_completion_percent": 75,
     "status": "PRESERVED_IMMUTABLE",
     "reference": "morocco26/data/goal75/scientific_completion_75.json"
   },
   "goal100_objective": {
-    "next_forecast": "F-1",
-    "next_forecast_class": "STRUCTURAL_PROBABILISTIC_FORECAST",
-    "forecast_status": "NOT_YET_ISSUED",
-    "first_calibrated_snapshot_status": "BLOCKED_BY_EXPLICIT_GATES",
-    "agentic_experiment_status": "LOCKED_UNTIL_B2_AND_FIRST_NON_AGENTIC_PROBABILISTIC_SNAPSHOT_ARE_FROZEN"
+    "next_forecast": "F0",
+    "next_forecast_class": "PRELIMINARY_PROBABILISTIC_FORECAST",
+    "forecast_status": "F-1_ISSUED_IMMUTABLE",
+    "first_calibrated_snapshot_status": "F-1_REGISTERED",
+    "agentic_experiment_status": "LOCKED_UNTIL_B2_IS_FROZEN_AND_AGENTIC_ABLATIONS_ARE_PREREGISTERED"
   },
   "p0_summary": {
     "closed": [
@@ -31,13 +31,12 @@
       "P0-2_LEGAL_ALLOCATOR",
       "P0-3_REGISTERED_VOTER_N",
       "P0-4_HISTORICAL_PANEL",
-      "P0-5_BSTAR_SELECTION"
-    ],
-    "substantially_resolved_with_residual_gate": [],
-    "active": [
+      "P0-5_BSTAR_SELECTION",
       "P0-6_UNCERTAINTY_AND_CORRELATION"
     ],
-    "authoritative_resolution": "morocco26/data/goal100/p0_resolution_v5.json"
+    "substantially_resolved_with_residual_gate": [],
+    "active": [],
+    "authoritative_resolution": "morocco26/data/goal100/p0_resolution_v6.json"
   },
   "verified_breakthroughs": [
     {
@@ -64,6 +63,11 @@
       "id": "BT-BSTAR-PERSISTENCE",
       "claim": "Frozen temporal hindcast selects persistence-first for both vote composition and turnout over the preregistered alternative family.",
       "evidence": "morocco26/data/goal100/bstar_hindcast_v1.json"
+    },
+    {
+      "id": "BT-FMINUS1-REGISTERED",
+      "claim": "F-1 is an immutable, non-agentic structural prior based on 50,000 coherent elections over all 395 seats, registered with recomputed artifact hashes.",
+      "evidence": "morocco26/data/goal100/fminus1_registration_certificate.json"
     }
   ],
   "geometry_2026": {
@@ -98,33 +102,29 @@
     "local_denominator_sensitive": 11,
     "local_with_N_only_change_mass": 2,
     "regional_with_N_only_change_mass": 5,
-    "unresolved_local_tie_mass_sum": 0.00002,
+    "unresolved_local_tie_mass_sum": 2e-05,
     "unresolved_regional_tie_mass_sum": 0.0,
     "evidence": "morocco26/data/goal100/local_N_posterior.json",
     "next_role": "jointly sampled with votes and turnout in the coherent F-1 engine"
   },
   "uncertainty_model": {
     "architecture": "national + regional + local hierarchical innovations; separate turnout logit state; no free 92x92 covariance",
-    "status": "ARCHITECTURE_RESOLVED_PARAMETERS_NOT_YET_CERTIFIED",
+    "status": "ROBUST_V2_CALIBRATED_AND_PROSPECTIVELY_FROZEN",
     "required_next_tests": [
       "post-selection fit of innovation scales and shrunk covariance",
       "posterior predictive interval coverage and calibration diagnostics",
       "explicit variance floor from retrospective error",
       "minimum 50000 coherent election simulations"
-    ]
+    ],
+    "calibration_artifact": "morocco26/data/goal100/uncertainty_calibration_v2.json",
+    "registered_snapshot": "F-1"
   },
-  "remaining_hard_gates_before_F_minus_1": [
-    "UNCERTAINTY-CALIBRATION",
-    "MC-50000-COHERENT",
-    "SNAPSHOT-IMMUTABILITY-MANIFEST"
-  ],
+  "remaining_hard_gates_before_F_minus_1": [],
   "next_execution_order": [
-    "fit post-selection hierarchical uncertainty/correlation model",
-    "run retrospective posterior-predictive diagnostics",
-    "run >=50000 coherent 395-seat simulations",
-    "freeze and register F-1",
-    "build/freeze B2 structured evidence layer",
-    "only then preregister and execute E_collect / E_reason / E_full"
+    "freeze B2 admissibility, evidence schema, cutoff and transformation rules before collection",
+    "populate deterministic structured candidate/list/defection/endorsement/event evidence with provenance and territorial mapping",
+    "apply B2 to the frozen F-1 prior and issue immutable F0",
+    "only then preregister E_collect / E_reason / E_full against the same cutoff and corpus"
   ],
   "anti_drift": {
     "agentic_layer_may_not_unlock_forecast": true,
@@ -136,6 +136,20 @@
     "known_anomalies_must_not_be_posthoc_relabelled_or_bridged": true,
     "geometry_legal_watch_must_remain_active": true,
     "latent_N_must_never_be_relabelled_official": true,
-    "unresolved_statutory_ties_must_not_be_broken_by_party_name_or_vote_count": true
+    "unresolved_statutory_ties_must_not_be_broken_by_party_name_or_vote_count": true,
+    "F_minus_1_may_never_be_overwritten": true,
+    "B2_must_be_frozen_before_F0": true,
+    "agentic_layer_remains_locked": true
+  },
+  "fminus1": {
+    "status": "REGISTERED_IMMUTABLE",
+    "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "source_manifest_sha256": "54272dbfee8809456a9dc429329e34fcc0575553399ba6af54a380470daed2b1",
+    "canonical_manifest": "morocco26/data/goal100/snapshots/F-1/manifest.json",
+    "registration_certificate": "morocco26/data/goal100/fminus1_registration_certificate.json",
+    "draws": 50000,
+    "house_seats_every_draw": 395,
+    "candidate_evidence": "NONE_STRUCTURAL_ONLY",
+    "event_evidence": "NONE_STRUCTURAL_ONLY"
   }
 }

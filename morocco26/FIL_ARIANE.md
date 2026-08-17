@@ -118,3 +118,18 @@ Chaque entrée doit contenir, dans cet ordre :
 **Preuve :** `data/goal100/fminus1_failure_investigation.json` et `data/goal100/fminus1_failure_log.txt`; SHA-256 log `f77216ee27982bc48eb78b0df24b9015047e73bfde795416d9f06d26ff840fe2`.
 
 **Décision :** aucune baisse de seuil ni modification silencieuse du protocole. La prochaine correction doit être classée explicitement comme bug d’ingénierie ou amendment scientifique versionné.
+
+
+### 2026-08-17 — Entrée A017 — Enregistrement fail-closed du snapshot F−1 existant
+
+**Question/gate traité :** raccorder le candidat `F-1` déjà calculé au registre canonique, sans réexécution et sans modification d’un output.
+
+**Hypothèse avant test :** l’enregistrement n’est permis que si les hashes du forecast, des manifests, du certificat de simulation, du code juridique, de la géométrie, de l’incertitude et du posterior N concordent exactement.
+
+**Résultat machine :** `PASS` — 50 000 élections, 92 scrutins locaux / 305 sièges, 12 régionaux / 90 sièges, 395 sièges à chaque tirage, zéro échec juridique. Forecast SHA-256 `de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1` ; manifest source SHA-256 `54272dbfee8809456a9dc429329e34fcc0575553399ba6af54a380470daed2b1`.
+
+**Écart et correction :** les orchestrateurs précédents mélangeaient deux schémas de fichiers et échouaient sur `N92 correction locus absent`. Aucun seuil scientifique n’a été abaissé et aucun tirage n’a été changé ; une enveloppe canonique pointe vers l’arbre immuable `forecasts/F-1`.
+
+**Décision scientifique :** `F-1` est désormais enregistré comme prior structurel non agentique. Le registre passe à `F0`. Toutes les expériences agentiques restent `LOCKED`.
+
+**Prochaine action exacte :** geler `B2` — schéma, admissibilité, cutoff, provenance, transformations et tests de non-fuite — avant toute collecte de candidats, listes, défections, endorsements ou événements.

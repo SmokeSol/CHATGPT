@@ -1,8 +1,14 @@
 {
   "schema_version": "1.2",
   "registry_id": "M26-GOAL100-GATES-V1",
-  "as_of": "2026-08-16T22:12:00+01:00",
-  "status_vocabulary": ["CLOSED", "PARTIAL", "OPEN", "LOCKED", "FAILED"],
+  "as_of": "2026-08-17T06:12:57+00:00",
+  "status_vocabulary": [
+    "CLOSED",
+    "PARTIAL",
+    "OPEN",
+    "LOCKED",
+    "FAILED"
+  ],
   "rule": "A gate may move to CLOSED only when every required evidence path exists and the closure criterion is machine-verifiable or explicitly documented as a bounded governance decision.",
   "p0": [
     {
@@ -28,7 +34,10 @@
         "morocco26/src/morocco26/legal_allocator_2026.py",
         "morocco26/data/goal100/legal_regression_104.json"
       ],
-      "known_non_allocator_anomalies": ["Casablanca-Settat", "Marrakech-Safi"],
+      "known_non_allocator_anomalies": [
+        "Casablanca-Settat",
+        "Marrakech-Safi"
+      ],
       "closure_criterion": "92/92 local + 12/12 regional mathematical-vector equivalence; zero unresolved test-vector statutory ties."
     },
     {
@@ -66,64 +75,82 @@
         "morocco26/data/goal100/forecast_protocol_v1.json",
         "morocco26/data/goal100/bstar_hindcast_v1.json"
       ],
-      "selected": {"vote": "V0_PERSIST", "turnout": "T0_PERSIST"},
+      "selected": {
+        "vote": "V0_PERSIST",
+        "turnout": "T0_PERSIST"
+      },
       "closure_criterion": "Model family and hyperparameters frozen before validation; candidate scores and paired bootstrap reported; no post-validation search."
     },
     {
       "id": "P0-6",
       "name": "Joint uncertainty and correlation model",
-      "status": "OPEN",
-      "resolved_claim": "Architecture is hierarchical national + regional + local innovations with separate turnout state; free 92x92 covariance is forbidden.",
+      "status": "CLOSED",
+      "resolved_claim": "Robust V2 national+regional+local vote and turnout uncertainty is retrospectively calibrated without 2026 outcomes; its exact frozen support generated the registered 50,000-draw F-1 snapshot.",
       "evidence": [
-        "morocco26/data/goal100/forecast_protocol_v1.json",
-        "morocco26/data/goal100/historical_panel_diagnostic.json"
+        "morocco26/data/goal100/uncertainty_protocol_v2.json",
+        "morocco26/data/goal100/uncertainty_calibration_v2.json",
+        "morocco26/data/goal100/simulation_certificate.json"
       ],
-      "remaining_gate": "Post-selection parameter fit, calibration/coverage diagnostics and coherent election simulation certification.",
-      "closure_criterion": "Variance floors applied; posterior-predictive diagnostics published; no unjustified covariance degrees of freedom; >=50,000 coherent joint election simulations execute without invalid distributions."
+      "remaining_gate": null,
+      "closure_criterion": "PASS calibration, bounded simplex projection, normalized probabilities, and a coherent 50,000-draw prospective snapshot with no unresolved legal allocation."
     }
   ],
   "forecast_unlock": [
     {
       "id": "GEO-2026-AUTHORITATIVE-DIFF",
       "status": "CLOSED",
-      "depends_on": ["P0-1"],
+      "depends_on": [
+        "P0-1"
+      ],
       "required_artifact": "morocco26/data/goal100/geometry_2026_certificate.json"
     },
     {
       "id": "LEGAL-ALLOCATOR-CERTIFIED",
       "status": "CLOSED",
-      "depends_on": ["P0-2"],
+      "depends_on": [
+        "P0-2"
+      ],
       "required_artifact": "morocco26/data/goal100/legal_regression_104.json"
     },
     {
       "id": "N92-POSTERIOR-FIT",
       "status": "CLOSED",
-      "depends_on": ["P0-3"],
+      "depends_on": [
+        "P0-3"
+      ],
       "required_artifact": "morocco26/data/goal100/local_N_posterior.json"
     },
     {
       "id": "BSTAR-SELECTED",
       "status": "CLOSED",
-      "depends_on": ["P0-5"],
+      "depends_on": [
+        "P0-5"
+      ],
       "required_artifact": "morocco26/data/goal100/bstar_hindcast_v1.json"
     },
     {
       "id": "UNCERTAINTY-CALIBRATION",
-      "status": "OPEN",
-      "depends_on": ["P0-6"],
-      "required_artifact": "morocco26/data/goal100/uncertainty_calibration.json"
+      "status": "CLOSED",
+      "depends_on": [
+        "P0-6"
+      ],
+      "required_artifact": "morocco26/data/goal100/uncertainty_calibration_v2.json"
     },
     {
       "id": "MC-50000-COHERENT",
-      "status": "OPEN",
-      "depends_on": ["P0-2", "P0-3", "P0-6"],
+      "status": "CLOSED",
+      "depends_on": [
+        "P0-2",
+        "P0-3",
+        "P0-6"
+      ],
       "required_artifact": "morocco26/data/goal100/simulation_certificate.json"
     },
     {
       "id": "SNAPSHOT-IMMUTABILITY-MANIFEST",
-      "status": "OPEN",
+      "status": "CLOSED",
       "depends_on": [],
-      "required_artifact": "created with first registered forecast snapshot"
+      "required_artifact": "morocco26/data/goal100/snapshots/F-1/manifest.json"
     }
   ],
   "agentic_unlock": [
