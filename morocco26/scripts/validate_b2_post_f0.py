@@ -99,7 +99,9 @@ def main() -> None:
     require(simulation["parent_execution"]["coherent_elections"] == 50000, "F0 parent execution draw count drift")
     require(simulation["parent_execution"]["house_seats_every_draw"] == 395, "F0 seat-total invariant drift")
     require(simulation["counterfactual_execution"]["coherent_elections_evaluated"] == 50000, "F0 identity replay count drift")
-    require(all(v is True for v in simulation["checks"].values()), "an F0 simulation check is not true")
+    sim_checks = simulation["checks"]
+    require(sim_checks["b2_freeze_certificate_sha256"] == digest(G100 / "b2_freeze_certificate.json"), "F0 simulation B2 freeze hash mismatch")
+    require(all(v is True for k, v in sim_checks.items() if k != "b2_freeze_certificate_sha256"), "an F0 simulation boolean check is not true")
 
     manifest_files = {
         "forecast": F0 / "forecast.json",
