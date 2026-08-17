@@ -1,0 +1,46 @@
+name: Atlas 395 — Institutionalize public index
+
+on:
+  push:
+    branches: [atlas395-v0]
+    paths:
+      - 'morocco26/scripts/atlas395_institutionalize_index.py'
+      - '.github/workflows/atlas395-institutional-index-fix.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rewrite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: atlas395-v0
+          fetch-depth: 0
+      - name: Rewrite public index
+        run: python morocco26/scripts/atlas395_institutionalize_index.py
+      - name: Validate public language and structure
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fq 'Intelligence électorale territoriale · Maroc 2026' morocco26/web/index.html
+          grep -Fq 'Une projection territoriale, probabiliste et traçable' morocco26/web/index.html
+          grep -Fq 'Neutralité et gouvernance des données' morocco26/web/index.html
+          grep -Fq 'Carte électorale des 92 circonscriptions locales' morocco26/web/index.html
+          grep -Fq 'Empreinte nationale et territoires d’appui' morocco26/web/index.html || grep -Fq "Empreinte nationale et territoires d'appui" morocco26/web/index.html
+          ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|tester l.?IA|mettre l.?IA|IA contre référence|E_reason|E_full|agentic' morocco26/web/index.html
+      - name: Commit institutional index
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- morocco26/web/index.html; then
+            echo 'INDEX_ALREADY_INSTITUTIONAL'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/web/index.html
+          git commit -m 'feat(atlas): restore institutional public presentation'
+          git push origin HEAD:atlas395-v0
