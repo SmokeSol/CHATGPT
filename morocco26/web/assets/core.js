@@ -52,11 +52,11 @@ const CARTOGRAM_CELLS = {
 };
 
 const NAV = [
-  ['overview','Synthèse nationale',''],
-  ['methodology','Méthodologie',''],
+  ['overview','Synthèse',''],
   ['territories','Carte territoriale','92'],
   ['parties','Partis','9'],
-  ['signals','Signaux 2026',''],
+  ['signals','Veille 2026',''],
+  ['methodology','Méthode',''],
   ['history','Historique','']
 ];
 let D = {};
@@ -119,7 +119,7 @@ function renderHeader(){
   $('#edition-date').textContent = dateFr(s.created_at);
   const noChange = D.evidence.forecast_change === 'NONE';
   $('#status-detail').textContent = noChange
-    ? 'Version de référence avant intégration de nouvelles informations 2026 suffisamment confirmées.'
+    ? 'Projection territoriale de référence · veille 2026 active · nouvelles informations distinguées de leur éventuel impact électoral.'
     : 'Une version enrichie de la projection est disponible.';
   $('#kpis').innerHTML = [
     ['395','sièges au total','hi'],['305','sièges locaux',''],['90','sièges régionaux',''],
