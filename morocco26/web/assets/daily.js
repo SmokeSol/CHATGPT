@@ -11,7 +11,7 @@ async function boot(){
     D={snapshot,national,constituencies,parties,evidence,methodology,daily,editionCurrent,editionIndex};
     selectedTerritory=[...constituencies.constituencies].sort((a,b)=>b.uncertainty.value-a.uncertainty.value)[0]?.constituency_id;
     selectedParty=national.parties[0]?.party||'RNI';
-    initNavigation();renderHeader();renderOverview();initTerritories();renderTerritories();renderParties();renderSignals();renderHistory();
+    initNavigation();renderHeader();renderOverview();initTerritories();renderTerritories();renderParties();renderSignals();renderHistory();renderMethodology();
     window.addEventListener('scroll',()=>document.body.classList.toggle('compact',window.scrollY>140),{passive:true});
   }catch(e){$('#fatal').hidden=false;$('#fatal').textContent=`Atlas 395 ne peut pas charger les données de cette édition : ${e.message}`;console.error(e)}
 }
