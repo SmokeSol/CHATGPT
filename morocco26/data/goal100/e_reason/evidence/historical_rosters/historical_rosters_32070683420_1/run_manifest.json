@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "run_id": "historical_rosters_32070683420_1",
+  "created_at": "2026-08-17T21:35:42+00:00",
+  "cdx_2016_catalog_rows": 0,
+  "target_snapshots": 10,
+  "fetched_snapshots": 10,
+  "coverage": {
+    "2016": {
+      "candidate_rows": 0,
+      "source_district_labels": 0,
+      "resolved_canonical_districts": 0,
+      "districts_with_at_least_three_verified_candidate_identities": 0,
+      "districts_with_at_least_one_enriched_candidate_fact": 0,
+      "required_identity_districts": 70,
+      "required_enriched_districts": 50,
+      "gate_pass": false
+    },
+    "2021": {
+      "candidate_rows": 303,
+      "source_district_labels": 50,
+      "resolved_canonical_districts": 44,
+      "districts_with_at_least_three_verified_candidate_identities": 44,
+      "districts_with_at_least_one_enriched_candidate_fact": 21,
+      "required_identity_districts": 70,
+      "required_enriched_districts": 50,
+      "gate_pass": false
+    }
+  },
+  "data_sufficiency_gate_pass": false,
+  "status": "E_REASON_DATA_INSUFFICIENT_CURRENT_CORPUS",
+  "predictive_judgments_generated": false,
+  "forecast_delta_generated": false,
+  "outcomes_unsealed": false,
+  "F1_created": false,
+  "Atlas_UI_modified": false
+}

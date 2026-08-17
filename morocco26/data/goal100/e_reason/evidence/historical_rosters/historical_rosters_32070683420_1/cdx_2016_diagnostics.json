@@ -1,0 +1,48 @@
+[
+  {
+    "params": {
+      "url": "assets.medias24.com/js/carte/",
+      "matchType": "prefix",
+      "output": "json",
+      "fl": "timestamp,original,statuscode,mimetype,digest",
+      "filter": "statuscode:200",
+      "from": "2016",
+      "to": "2016",
+      "limit": "5000",
+      "collapse": "urlkey"
+    },
+    "status": 200,
+    "bytes": 3,
+    "error": null
+  },
+  {
+    "params": {
+      "url": "https://assets.medias24.com/js/carte/*",
+      "output": "json",
+      "fl": "timestamp,original,statuscode,mimetype,digest",
+      "filter": "statuscode:200",
+      "from": "2016",
+      "to": "2016",
+      "limit": "5000",
+      "collapse": "urlkey"
+    },
+    "status": 200,
+    "bytes": 3,
+    "error": null
+  },
+  {
+    "params": {
+      "url": "assets.medias24.com/js/carte/*",
+      "output": "json",
+      "fl": "timestamp,original,statuscode,mimetype,digest",
+      "filter": "statuscode:200",
+      "from": "2016",
+      "to": "2016",
+      "limit": "5000",
+      "collapse": "urlkey"
+    },
+    "status": 200,
+    "bytes": 3,
+    "error": null
+  }
+]

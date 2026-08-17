@@ -1,0 +1,157 @@
+[
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/region/Beni-Mellal-Khenifra/index.html",
+    "error": "CDX ReadTimeout: HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=25)"
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/region/Casablanca-Settat/index.html",
+    "error": "CDX ReadTimeout: HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=25)"
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/region/dakhla-oued-ed-dahab/index.html",
+    "error": "CDX ConnectTimeout: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fassets.medias24.com%2Fjs%2Fcarte%2Felection2021%2Fregion%2Fdakhla-oued-ed-dahab%2Findex.html&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&to=20210907&limit=100&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f6345f55400>, 'Connection to web.archive.org timed out. (connect timeout=6)'))"
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/region/draa-tafilalet/index.html",
+    "error": "CDX ReadTimeout: HTTPSConnectionPool(host='web.archive.org', port=443): Read timed out. (read timeout=25)"
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/region/fes-meknes/index.html",
+    "error": "CDX ConnectTimeout: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fassets.medias24.com%2Fjs%2Fcarte%2Felection2021%2Fregion%2Ffes-meknes%2Findex.html&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&to=20210907&limit=100&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f6345f7fc50>, 'Connection to web.archive.org timed out. (connect timeout=6)'))"
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/region/laayoune-sakia-hamra/index.html",
+    "error": "CDX ConnectTimeout: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fassets.medias24.com%2Fjs%2Fcarte%2Felection2021%2Fregion%2Flaayoune-sakia-hamra%2Findex.html&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&to=20210907&limit=100&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f6345f54470>, 'Connection to web.archive.org timed out. (connect timeout=6)'))"
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/region/Marrakech-Safi/index.html",
+    "error": "CDX ConnectTimeout: HTTPSConnectionPool(host='web.archive.org', port=443): Max retries exceeded with url: /cdx/search/cdx?url=https%3A%2F%2Fassets.medias24.com%2Fjs%2Fcarte%2Felection2021%2Fregion%2FMarrakech-Safi%2Findex.html&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest&filter=statuscode%3A200&to=20210907&limit=100&collapse=digest (Caused by ConnectTimeoutError(<HTTPSConnection(host='web.archive.org', port=443) at 0x7f6345f54a10>, 'Connection to web.archive.org timed out. (connect timeout=6)'))"
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/villes/casa/index.html",
+    "archive_timestamp": "20210904195021",
+    "final_url": "https://web.archive.org/web/20210904195021id_/https://assets.medias24.com/js/carte/election2021/villes/casa/index.html",
+    "status": 200,
+    "bytes": 124066,
+    "sha256": "20a7aa653237a9be6db13f8022a9eada2999cc17a62c35740bea2ce8f4b481fe",
+    "districts_parsed": 8,
+    "candidates_parsed": 57,
+    "error": null
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/villes/fes/index.html",
+    "archive_timestamp": "20210904221046",
+    "final_url": "https://web.archive.org/web/20210904221046id_/https://assets.medias24.com/js/carte/election2021/villes/fes/index.html",
+    "status": 200,
+    "bytes": 101214,
+    "sha256": "8a5f2679c28fc9efe066f3f60f19dfede31b236352a872f1ccaa52d400f72b83",
+    "districts_parsed": 2,
+    "candidates_parsed": 13,
+    "error": null
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/villes/marrakech/index.html",
+    "archive_timestamp": "20210903191935",
+    "final_url": "https://web.archive.org/web/20210903191935id_/https://assets.medias24.com/js/carte/election2021/villes/marrakech/index.html",
+    "status": 200,
+    "bytes": 53426,
+    "sha256": "89786e62da9a8d71685e3f26d37b7b3eca2e5ae235d63ef6a4baf5ad94216421",
+    "districts_parsed": 3,
+    "candidates_parsed": 15,
+    "error": null
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/villes/sale/index.html",
+    "archive_timestamp": "20210904200543",
+    "final_url": "https://web.archive.org/web/20210904200543id_/https://assets.medias24.com/js/carte/election2021/villes/sale/index.html",
+    "status": 200,
+    "bytes": 88163,
+    "sha256": "5db522a6db5bf53873e994d580423a00614829cf4efe87307c96d829b27c9eb6",
+    "districts_parsed": 2,
+    "candidates_parsed": 14,
+    "error": null
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/villes/rabat/index.html",
+    "archive_timestamp": "20210903202218",
+    "final_url": "https://web.archive.org/web/20210903202218id_/https://assets.medias24.com/js/carte/election2021/villes/rabat/index.html",
+    "status": 200,
+    "bytes": 102930,
+    "sha256": "44470ef4d9441d5d71066a91e3861b28e9f07841335e7ad4f1a384cbfaab6507",
+    "districts_parsed": 2,
+    "candidates_parsed": 13,
+    "error": null
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/region/rabat-sale-kenitra/index.html",
+    "archive_timestamp": "20210904191133",
+    "final_url": "https://web.archive.org/web/20210904191133id_/https://assets.medias24.com/js/carte/election2021/region/rabat-sale-kenitra/index.html",
+    "status": 200,
+    "bytes": 106783,
+    "sha256": "5190dd3b95417a95d236ca273ee6fb88ec4f371e1c5c55fe3fbf5b93b99634f5",
+    "districts_parsed": 7,
+    "candidates_parsed": 46,
+    "error": null
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/region/guelmim-oued-noun/index.html",
+    "archive_timestamp": "20210904190805",
+    "final_url": "https://web.archive.org/web/20210904190805id_/https://assets.medias24.com/js/carte/election2021/region/guelmim-oued-noun/index.html",
+    "status": 200,
+    "bytes": 48162,
+    "sha256": "f4e72b291e1d04e59ab244ce87110efd3c5bba4877b7e6fdc7293c5970dfa53f",
+    "districts_parsed": 4,
+    "candidates_parsed": 20,
+    "error": null
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/region/oriental/index.html",
+    "archive_timestamp": "20210904190931",
+    "final_url": "https://web.archive.org/web/20210904190931id_/https://assets.medias24.com/js/carte/election2021/region/oriental/index.html",
+    "status": 200,
+    "bytes": 67794,
+    "sha256": "833c4ab5d49d25328b948353b11e9fec2e98d443ce5f0c9e8dd3c2bc1cc66acd",
+    "districts_parsed": 8,
+    "candidates_parsed": 43,
+    "error": null
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/region/Souss-Massa/index.html",
+    "archive_timestamp": "20210904190224",
+    "final_url": "https://web.archive.org/web/20210904190224id_/https://assets.medias24.com/js/carte/election2021/region/Souss-Massa/index.html",
+    "status": 200,
+    "bytes": 72753,
+    "sha256": "dd27a0f1cc8d3f13fd2d7d787ec970bf27c7f7cdfd1fbd9379964e479cc0d19b",
+    "districts_parsed": 6,
+    "candidates_parsed": 30,
+    "error": null
+  },
+  {
+    "year": 2021,
+    "original_url": "https://assets.medias24.com/js/carte/election2021/region/tanger-tetouan-houceima/index.html",
+    "archive_timestamp": "20210904201404",
+    "final_url": "https://web.archive.org/web/20210904201404id_/https://assets.medias24.com/js/carte/election2021/region/tanger-tetouan-houceima/index.html",
+    "status": 200,
+    "bytes": 98910,
+    "sha256": "fe7b87d48ca5f406a5544c3847ee17dfdb3f6aff4f716e42b8eb6a86762f6ee2",
+    "districts_parsed": 8,
+    "candidates_parsed": 52,
+    "error": null
+  }
+]

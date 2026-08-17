@@ -1,0 +1,263 @@
+[
+  {
+    "year": 2021,
+    "territory_id": "ain-sebaa-hay-mohammadi",
+    "candidate_name_source": "Hassan Benomar",
+    "party_bucket": "RNI",
+    "prior_party": "RNI",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "ain-sebaa-hay-mohammadi",
+    "candidate_name_source": "Adil El Bitar",
+    "party_bucket": "PAM",
+    "prior_party": "PAM",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "al-fida-mers-sultan",
+    "candidate_name_source": "Mohamed Toumi Benjelloun",
+    "party_bucket": "PAM",
+    "prior_party": "PAM",
+    "identity_score": 0.979592,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "moulay-rachid",
+    "candidate_name_source": "Mohammed Jbiel",
+    "party_bucket": "PAM",
+    "prior_party": "PAM",
+    "identity_score": 0.96,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "ben-m-sick",
+    "candidate_name_source": "Taoufik Kamil",
+    "party_bucket": "RNI",
+    "prior_party": "RNI",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "sidi-bernoussi",
+    "candidate_name_source": "Abdelmajid Ait Laadila",
+    "party_bucket": "PJD",
+    "prior_party": "PJD",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "sidi-bernoussi",
+    "candidate_name_source": "Ahmed Brija",
+    "party_bucket": "PAM",
+    "prior_party": "PAM",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "sale-medina",
+    "candidate_name_source": "Rachid El Abdi",
+    "party_bucket": "PAM",
+    "prior_party": "PAM",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "skhirate-temara",
+    "candidate_name_source": "Mohammed El Hilali",
+    "party_bucket": "PAM",
+    "prior_party": "PAM",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "khemisset-oulmes",
+    "candidate_name_source": "Mohammed Chrourou",
+    "party_bucket": "PAM",
+    "prior_party": "PAM",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "sidi-slimane",
+    "candidate_name_source": "Mohammed El Ayadi",
+    "party_bucket": "PJD",
+    "prior_party": "PJD",
+    "identity_score": 0.882353,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "sidi-slimane",
+    "candidate_name_source": "Abdelouahed Radi",
+    "party_bucket": "USFP",
+    "prior_party": "USFP",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "sidi-kacem",
+    "candidate_name_source": "Saâd Ben Zeroual",
+    "party_bucket": "PAM",
+    "prior_party": "PAM",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "sidi-kacem",
+    "candidate_name_source": "Ahmed El Ghazoui",
+    "party_bucket": "RNI",
+    "prior_party": "PPS",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "sidi-kacem",
+    "candidate_name_source": "Mohamed El Hafid",
+    "party_bucket": "PI",
+    "prior_party": "PI",
+    "identity_score": 0.9375,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "el-gharb",
+    "candidate_name_source": "Jaouad Gharib",
+    "party_bucket": "RNI",
+    "prior_party": "RNI",
+    "identity_score": 0.96,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "tan-tan",
+    "candidate_name_source": "Abdellah Abberki",
+    "party_bucket": "RNI",
+    "prior_party": "PAM",
+    "identity_score": 0.967742,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "tan-tan",
+    "candidate_name_source": "Essalek Bouloune",
+    "party_bucket": "PI",
+    "prior_party": "PI",
+    "identity_score": 0.967742,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "driouch",
+    "candidate_name_source": "Abdallah El Boukili",
+    "party_bucket": "RNI",
+    "prior_party": "RNI",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "taourirt",
+    "candidate_name_source": "Driss Jeddi",
+    "party_bucket": "PI",
+    "prior_party": "PI",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "figuig",
+    "candidate_name_source": "El Kabir Kada",
+    "party_bucket": "PI",
+    "prior_party": "PI",
+    "identity_score": 0.923077,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "tiznit",
+    "candidate_name_source": "Abdallah Ghazi",
+    "party_bucket": "RNI",
+    "prior_party": "RNI",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "inezgane-ait-melloul",
+    "candidate_name_source": "Ahmed Aderrak",
+    "party_bucket": "PJD",
+    "prior_party": "PJD",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "tata",
+    "candidate_name_source": "Mustapha Tadoumant",
+    "party_bucket": "RNI",
+    "prior_party": "RNI",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "tata",
+    "candidate_name_source": "El Houcine Bouzhay",
+    "party_bucket": "PI",
+    "prior_party": "PI",
+    "identity_score": 0.888889,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "al-hoceima",
+    "candidate_name_source": "Mohammed El Hammouti",
+    "party_bucket": "PAM",
+    "prior_party": "PAM",
+    "identity_score": 0.944444,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "chefchaouen",
+    "candidate_name_source": "Abderrahmane El Omari",
+    "party_bucket": "RNI",
+    "prior_party": "MP",
+    "identity_score": 0.9,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "tetouan",
+    "candidate_name_source": "Mohammed Larbi Ahnine",
+    "party_bucket": "PAM",
+    "prior_party": "PPS",
+    "identity_score": 0.95,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  },
+  {
+    "year": 2021,
+    "territory_id": "tetouan",
+    "candidate_name_source": "Rachid Talbi Alami",
+    "party_bucket": "RNI",
+    "prior_party": "RNI",
+    "identity_score": 1.0,
+    "feature": "INCUMBENT_OR_PARTY_SWITCH"
+  }
+]
