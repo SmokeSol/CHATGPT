@@ -1,0 +1,92 @@
+name: Atlas 395 — Publish complete reader app
+
+on:
+  push:
+    branches: [atlas395-v0]
+    paths:
+      - 'morocco26/**'
+      - '.github/workflows/atlas395-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: atlas395-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare Atlas 395 static bundle for project Pages path
+        shell: bash
+        run: |
+          rm -rf _site
+          cp -R morocco26/web _site
+          python - <<'PY'
+          from pathlib import Path
+
+          root = Path('_site')
+          replacements = [
+              ('href="/styles.css', 'href="./styles.css'),
+              ('src="/app.js', 'src="./app.js'),
+              ("'/assets/", "'./assets/"),
+              ('"/assets/', '"./assets/'),
+              ('`/assets/', '`./assets/'),
+              ("'/data/", "'./data/"),
+              ('"/data/', '"./data/'),
+              ('`/data/', '`./data/'),
+              ("'/editions/", "'./editions/"),
+              ('"/editions/', '"./editions/'),
+              ('`/editions/', '`./editions/'),
+          ]
+
+          for path in root.rglob('*'):
+              if not path.is_file() or path.suffix.lower() not in {'.html', '.js', '.css'}:
+                  continue
+              text = path.read_text(encoding='utf-8')
+              for old, new in replacements:
+                  text = text.replace(old, new)
+              path.write_text(text, encoding='utf-8')
+
+          (root / '.nojekyll').write_text('', encoding='utf-8')
+          PY
+
+      - name: Sanity-check complete Atlas bundle
+        shell: bash
+        run: |
+          test -f _site/index.html
+          test -f _site/styles.css
+          test -f _site/app.js
+          test -f _site/assets/core.js
+          test -f _site/assets/methodology.css
+          test -f _site/data/current_snapshot.json
+          grep -q 'view-methodology' _site/index.html
+          grep -q "\['methodology','Méthodologie'" _site/assets/core.js
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
