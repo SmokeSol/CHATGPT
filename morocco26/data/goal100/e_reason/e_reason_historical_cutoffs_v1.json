@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-E-REASON-HISTORICAL-CUTOFFS-V1",
+  "frozen_at": "2026-08-17T21:42:17+01:00",
+  "elections": [
+    {
+      "anonymous_role": "DEVELOPMENT",
+      "year": 2016,
+      "target_election_date_local": "2016-10-07",
+      "evidence_cutoff": "2016-10-06T23:59:59+01:00",
+      "baseline_information_limit": "Historical election results through 2011 only; no 2016 result or post-election information.",
+      "outcome_partition": "SEALED_UNTIL_DEVELOPMENT_JUDGMENTS_FROZEN"
+    },
+    {
+      "anonymous_role": "LOCKED_COMPONENT_HOLDOUT",
+      "year": 2021,
+      "target_election_date_local": "2021-09-08",
+      "evidence_cutoff": "2021-09-07T23:59:59+01:00",
+      "baseline_information_limit": "Historical election results through 2016 only; no 2021 result or post-election information.",
+      "outcome_partition": "SEALED_UNTIL_HOLDOUT_JUDGMENTS_FROZEN"
+    }
+  ],
+  "publication_time_rule": "The original publication time must be at or before the cutoff. Retrieval after the cutoff is permitted only to recover a provably pre-cutoff artifact.",
+  "unknown_time_rule": "If original publication time or version cannot be established, the fact is not admitted.",
+  "same_day_rule": "Election-day publications are post-cutoff and excluded, even if voting had not yet closed.",
+  "later_biography_rule": "A later biography may not be used to backfill what was knowable before the election unless it reproduces a dated pre-cutoff official record that is independently archived."
+}
