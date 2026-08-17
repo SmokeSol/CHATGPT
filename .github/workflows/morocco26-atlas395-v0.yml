@@ -31,6 +31,7 @@ jobs:
         shell: bash
         run: |
           python -m py_compile morocco26/scripts/atlas395_*.py
+          rm -rf morocco26/scripts/__pycache__
           node --check morocco26/web/app.js
           for f in morocco26/web/assets/*.js; do node --check "$f"; done
       - name: Smoke-test autonomous intake against certified source surface
