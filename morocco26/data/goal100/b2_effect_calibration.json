@@ -7,7 +7,15 @@
   "terminal_result": "FAIL_CLOSED_ZERO_COEFFICIENTS",
   "fit_transition": "2011_TO_2016",
   "validation_transition": "2016_TO_2021",
-  "frozen_regularization_grid": [0.1, 0.3, 1.0, 3.0, 10.0, 30.0, 100.0],
+  "frozen_regularization_grid": [
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0,
+    30.0,
+    100.0
+  ],
   "coverage": {
     "2011_TO_2016": 0.0,
     "2016_TO_2021": 0.0,
