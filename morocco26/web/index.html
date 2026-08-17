@@ -6,7 +6,7 @@
 <title>Atlas 395 — Intelligence électorale territoriale</title>
 <meta name="description" content="Atlas 395 — projection probabiliste, territoriale et documentée des élections législatives marocaines de 2026.">
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css?v=20260817-1710">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080c13'/><g fill='none' stroke='%23ffa24d' stroke-width='2'><rect x='9' y='9' width='14' height='14'/><rect x='9' y='9' width='14' height='14' transform='rotate(45 16 16)'/></g></svg>">
 </head>
 <body>
@@ -58,6 +58,106 @@
   </div>
 </section>
 
+<section class="view" id="view-methodology" role="tabpanel">
+  <div class="view-head">
+    <div><span class="section-kicker">Méthodologie</span><h2>Comment Atlas construit une projection sans choisir un camp</h2><p>Atlas ne demande pas au lecteur de croire un chiffre sur parole. La méthode est conçue pour rendre visibles les hypothèses, l'incertitude, les limites et les règles qui empêchent de modifier la projection selon l'air du temps.</p></div>
+  </div>
+
+  <div class="method-hero">
+    <article class="method-thesis">
+      <span class="section-kicker">Notre objectif</span>
+      <h3>Mesurer ce qui est plausible avant le vote, puis accepter le verdict du réel.</h3>
+      <p>Atlas 395 ne cherche pas à annoncer un vainqueur avec certitude. Il cherche à estimer, territoire par territoire, les résultats plausibles avant le scrutin, à conserver ces prévisions sans les réécrire, puis à les confronter aux résultats réels.</p>
+      <div class="method-northstar"><span>La question centrale</span><b>Peut-on produire avant l'élection des probabilités de sièges territoriales réellement vérifiables — puis mesurer objectivement si une intelligence artificielle apporte une information utile au-delà de cette référence ?</b></div>
+    </article>
+    <aside class="method-state">
+      <div class="method-state-head"><span class="eyebrow">La référence actuelle</span><b>Un point de comparaison qui ne sera pas réécrit</b></div>
+      <div class="method-state-grid">
+        <div><span>Statut</span><b id="method-version">Gelée</b><small id="method-version-date">avant le scrutin</small></div>
+        <div><span>Scénarios</span><b id="method-draws">50 000</b><small>élections complètes simulées</small></div>
+        <div><span>Périmètre</span><b id="method-seats">395</b><small>sièges couverts à chaque scénario</small></div>
+        <div><span>Bonus politique manuel</span><b id="method-manual-bonus">0</b><small>aucun ajustement discrétionnaire</small></div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="panel method-intro">
+    <div class="panel-head"><h3>L'idée en 30 secondes</h3></div>
+    <div class="panel-body"><p><strong>On commence par une référence volontairement sobre.</strong> Elle apprend des élections passées, respecte les règles du scrutin et simule des milliers de futurs possibles. Ensuite seulement, on essaie d'ajouter les informations politiques de 2026. Une candidature, une alliance ou un changement de parti peut être intéressant sans pour autant recevoir automatiquement un effet chiffré. Si l'effet n'est pas défendable, Atlas n'invente pas de bonus ou de malus.</p></div>
+  </div>
+
+  <div class="method-flow" aria-label="Les cinq étapes de la démarche Atlas 395">
+    <article class="method-step"><div class="n">1</div><h3>Reconstituer le terrain</h3><p>Les circonscriptions, les sièges, les règles d'attribution et les résultats historiques sont harmonisés avant toute projection.</p></article>
+    <article class="method-step"><div class="n">2</div><h3>Mesurer l'incertitude</h3><p>Atlas ne produit pas un seul futur. Il simule 50 000 élections cohérentes pour mesurer la fréquence des résultats plausibles.</p></article>
+    <article class="method-step"><div class="n">3</div><h3>Geler une référence</h3><p>La projection est enregistrée avec sa date et ses hypothèses. Une nouvelle information créera une nouvelle version, jamais une réécriture du passé.</p></article>
+    <article class="method-step"><div class="n">4</div><h3>Ajouter les faits avec discipline</h3><p>Candidatures, retraits, alliances ou changements de parti ne modifient les chiffres que lorsqu'ils passent les mêmes règles de vérification pour tous.</p></article>
+    <article class="method-step"><div class="n">5</div><h3>Mettre l'IA à l'épreuve</h3><p>L'IA sera testée contre la référence existante. Elle devra apporter une amélioration mesurable, pas seulement une analyse convaincante.</p></article>
+  </div>
+
+  <div class="method-grid">
+    <section class="panel">
+      <div class="panel-head"><h3>Ce qui rend la démarche rigoureuse</h3></div>
+      <div class="method-rules">
+        <div class="method-rule"><div class="rule-icon">01</div><b>Les règles précèdent le résultat</b><p>Les critères d'admission et d'évaluation sont définis avant de connaître le résultat de l'élection.</p></div>
+        <div class="method-rule"><div class="rule-icon">02</div><b>Une donnée manquante reste manquante</b><p>Elle n'est jamais transformée discrètement en zéro, en absence ou en certitude.</p></div>
+        <div class="method-rule"><div class="rule-icon">03</div><b>L'échec est conservé</b><p>Un test qui échoue n'est pas effacé. Il reste visible et documente une limite réelle de la méthode.</p></div>
+        <div class="method-rule"><div class="rule-icon">04</div><b>Les anciennes versions restent intactes</b><p>Chaque projection enregistrée peut être retrouvée et comparée aux suivantes.</p></div>
+        <div class="method-rule"><div class="rule-icon">05</div><b>L'incertitude est affichée</b><p>Les fourchettes et probabilités sont montrées au lieu de transformer une estimation incertaine en certitude.</p></div>
+        <div class="method-rule"><div class="rule-icon">06</div><b>Le résultat réel aura le dernier mot</b><p>Après l'élection, la qualité des probabilités sera mesurée sur les résultats effectivement observés.</p></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><h3>Comment nous protégeons la neutralité</h3></div>
+      <div class="method-rules">
+        <div class="method-rule"><div class="rule-icon">=</div><b>Mêmes règles pour tous les partis</b><p>Aucun parti ne reçoit un seuil, une source ou un traitement favorable différent des autres.</p></div>
+        <div class="method-rule"><div class="rule-icon">0</div><b>Pas de bonus politique manuel</b><p>Atlas ne peut pas ajouter « +3 % » parce qu'un candidat paraît populaire, puissant ou bien entouré.</p></div>
+        <div class="method-rule"><div class="rule-icon">S</div><b>La provenance compte, pas le camp</b><p>Une information est évaluée selon sa source, sa date et sa vérifiabilité, pas selon le parti qu'elle avantage.</p></div>
+        <div class="method-rule"><div class="rule-icon">↔</div><b>Fait et effet sont séparés</b><p>Savoir qu'un événement a eu lieu ne signifie pas encore savoir combien de voix ou de sièges il fera gagner ou perdre.</p></div>
+        <div class="method-rule"><div class="rule-icon">P</div><b>Pas de sondages injectés arbitrairement</b><p>Un nouveau type de donnée n'entre pas dans la projection sans méthode d'intégration définie et testée.</p></div>
+        <div class="method-rule"><div class="rule-icon">AI</div><b>L'IA n'a aucun passe-droit</b><p>Elle sera jugée sur ce qu'elle améliore réellement par rapport à la référence, pas sur la qualité de son récit.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="method-current">
+    <div class="method-current-head">
+      <div><span class="section-kicker">Exemple concret de discipline</span><h3>Pourquoi de nouvelles informations n'ont pas encore fait bouger la projection</h3><p class="lead">Atlas a déjà rencontré des informations politiques réelles de 2026, notamment une liste structurée de 92 lignes en arabe. La procédure stricte n'a pas pu relier chaque ligne avec assez de certitude aux territoires certifiés ni démontrer historiquement l'effet électoral à appliquer. La règle était fixée avant le test : <strong>pas de preuve suffisante = pas d'effet chiffré.</strong></p></div>
+      <div class="method-zero"><span>Ajustement arbitraire appliqué</span><b>0</b></div>
+    </div>
+    <div class="method-chain">
+      <div class="method-chain-card"><span>Étape 1</span><b>Projection de référence</b><p>Historique électoral, règles du scrutin et incertitude territoriale.</p></div>
+      <div class="method-chain-arrow">→</div>
+      <div class="method-chain-card"><span>Étape 2</span><b>Vérification des faits nouveaux</b><p>Les nouvelles informations sont documentées, reliées au bon territoire et séparées de leur éventuel effet électoral.</p></div>
+      <div class="method-chain-arrow">→</div>
+      <div class="method-chain-card"><span>Étape 3</span><b>Nouvelle projection seulement si justifiée</b><p>Si les conditions ne sont pas réunies, les chiffres ne bougent pas. L'incertitude reste visible.</p></div>
+    </div>
+    <div class="method-promise"><strong>Principe de conduite :</strong> mieux vaut une projection qui reconnaît ses limites qu'une projection plus spectaculaire dont on ne peut pas défendre chaque modification.</div>
+  </section>
+
+  <div class="method-grid">
+    <section class="panel">
+      <div class="panel-head"><h3>Nos sources et leurs rôles</h3></div>
+      <ul class="method-plain-list">
+        <li>Les sources institutionnelles servent à établir les règles, les décisions officielles et les faits relevant d'une autorité publique.</li>
+        <li>Les sites officiels des partis servent à documenter ce que chaque parti annonce lui-même : investitures, listes, retraits ou positions officielles.</li>
+        <li>Médias24 est utilisé pour la veille et la corroboration, mais une publication médiatique ne modifie jamais seule la projection.</li>
+        <li>Une déclaration de parti sur lui-même n'est pas automatiquement considérée comme une confirmation indépendante.</li>
+        <li>Les mêmes critères de source, de date et de vérification s'appliquent quel que soit le parti concerné.</li>
+      </ul>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><h3>Ce qui vient ensuite : tester l'IA</h3></div>
+      <div class="method-next"><h4>L'IA doit battre une référence qui existe déjà.</h4><p>La prochaine expérience testera d'abord si une IA peut retrouver et vérifier des informations que la procédure classique n'a pas su exploiter, notamment dans les sources arabophones. Ensuite, à information identique, on testera si elle sait tirer de meilleures conclusions.</p><p>Cette séparation est essentielle : elle permet de distinguer <strong>mieux chercher</strong> de <strong>mieux raisonner</strong>. Dans les deux cas, le gain devra être traçable et mesurable.</p></div>
+    </section>
+  </div>
+
+  <section class="method-test">
+    <div class="method-test-title"><span class="section-kicker">Le test qui compte</span><h3>Le 23 septembre, le réel tranche.</h3><p>Une méthodologie n'est utile que si elle accepte d'être jugée par ce qui s'est réellement passé.</p></div>
+    <div class="method-test-body"><p>Après le scrutin, Atlas comparera les résultats observés aux probabilités enregistrées avant le vote. On ne regardera pas seulement si le parti arrivé devant avait été bien identifié : on évaluera aussi si les fourchettes étaient raisonnables, si les probabilités étaient bien calibrées et si l'ajout de l'IA a réellement amélioré la prévision.</p><div class="method-score-grid"><div><b>Territoire par territoire</b><span>Comparer les sièges et rapports de forces observés aux distributions publiées.</span></div><div><b>Probabilités, pas slogans</b><span>Une prévision à 70 % n'est pas une certitude : elle doit se comporter comme une probabilité.</span></div><div><b>IA contre référence</b><span>La question finale est simple : l'IA améliore-t-elle les résultats, ou non ?</span></div></div></div>
+  </section>
+</section>
+
 <section class="view" id="view-territories" role="tabpanel">
   <div class="view-head"><div><span class="section-kicker">Lecture territoriale</span><h2>Carte électorale des 92 circonscriptions locales</h2><p>Explorez chaque territoire : projection moyenne de sièges, probabilité d'obtenir au moins un siège, historique récent et état des informations 2026.</p></div></div>
   <div class="filters">
@@ -91,116 +191,6 @@
   <div class="panel" style="margin-top:14px"><div class="panel-head"><h3>Couverture des sources</h3><div class="grow"></div><span class="eyebrow">État de consultation</span></div><div class="source-grid-premium" id="source-grid"></div></div>
 </section>
 
-<section class="view" id="view-methodology" role="tabpanel">
-  <div class="view-head">
-    <div><span class="section-kicker">Méthodologie</span><h2>Comment Atlas construit une projection sans choisir un camp</h2><p>Cette page explique la démarche avec des mots simples : ce que le modèle sait, ce qu'il ne sait pas, les règles qui l'empêchent de « raconter une histoire », et la manière dont il sera jugé après l'élection.</p></div>
-  </div>
-
-  <div class="method-hero">
-    <article class="method-thesis">
-      <span class="section-kicker">Notre objectif</span>
-      <h3>Mesurer ce qui est plausible avant le vote, puis accepter le verdict du réel.</h3>
-      <p>Atlas 395 ne cherche pas à annoncer un vainqueur avec certitude. Il cherche à produire, territoire par territoire, des probabilités de voix et de sièges <strong>avant</strong> le scrutin, à conserver ces prévisions sans les réécrire, puis à les confronter aux résultats réels. Une projection qui ne peut pas être mise en défaut n'est pas une projection scientifique.</p>
-      <div class="method-northstar"><span>La question centrale</span><b>Peut-on produire avant l'élection des probabilités de sièges territoriales réellement vérifiables — et une IA autonome de collecte et de raisonnement apporte-t-elle ensuite une information prédictive mesurable au-delà de cette base ?</b></div>
-    </article>
-    <aside class="method-state">
-      <div class="method-state-head"><span class="eyebrow">Où nous en sommes</span><b>Point de contrôle scientifique actuel</b></div>
-      <div class="method-state-grid">
-        <div><span>Projection</span><b id="method-snapshot">F0</b><small id="method-snapshot-date">version gelée</small></div>
-        <div><span>Scénarios</span><b id="method-draws">50 000</b><small>élections complètes simulées</small></div>
-        <div><span>Effet des faits 2026</span><b id="method-facts-effect">0</b><small>ajustement chiffré admis</small></div>
-        <div><span>Test réservé</span><b id="method-reserved">16 + 92</b><small>classes historiques + lignes arabes</small></div>
-      </div>
-    </aside>
-  </div>
-
-  <div class="panel method-intro">
-    <div class="panel-head"><h3>L'idée en 30 secondes</h3></div>
-    <div class="panel-body"><p><strong>On commence par une base volontairement sobre.</strong> Elle apprend des élections passées, respecte les règles du scrutin et simule des milliers de futurs possibles. Ensuite seulement, on essaie d'ajouter les informations politiques de 2026. Si une information n'est pas suffisamment vérifiée ou si son effet n'a pas été démontré historiquement, elle ne reçoit pas de « bonus » ou de « malus » inventé. Enfin, l'IA sera testée séparément contre cette base gelée : elle devra prouver qu'elle apporte quelque chose, pas simplement produire une analyse convaincante.</p></div>
-  </div>
-
-  <div class="method-flow" aria-label="Les cinq étapes de la démarche Atlas 395">
-    <article class="method-step"><div class="n">1</div><h3>Reconstituer le terrain</h3><p>92 circonscriptions locales, 12 régionales, 395 sièges, règles d'attribution et résultats historiques sont harmonisés avant toute projection.</p></article>
-    <article class="method-step"><div class="n">2</div><h3>Mesurer l'incertitude</h3><p>Atlas ne produit pas un seul futur. Il simule 50 000 élections cohérentes pour montrer les résultats plausibles et leur fréquence.</p></article>
-    <article class="method-step"><div class="n">3</div><h3>Geler une référence</h3><p>La projection de base est enregistrée avec sa date, ses données et ses paramètres. Elle ne pourra pas être corrigée après coup.</p></article>
-    <article class="method-step"><div class="n">4</div><h3>Ajouter les faits avec discipline</h3><p>Candidatures, retraits, alliances ou changements de parti ne modifient les chiffres que s'ils passent des règles définies à l'avance.</p></article>
-    <article class="method-step"><div class="n">5</div><h3>Mettre l'IA à l'épreuve</h3><p>L'IA est un concurrent de la référence, pas son auteur. On mesurera si elle trouve ou exploite une information qui améliore réellement les prévisions.</p></article>
-  </div>
-
-  <div class="method-grid">
-    <section class="panel">
-      <div class="panel-head"><h3>Ce qui rend la démarche rigoureuse</h3></div>
-      <div class="method-rules">
-        <div class="method-rule"><div class="rule-icon">01</div><b>Les règles précèdent le résultat</b><p>Les seuils, critères d'admission et méthodes sont fixés avant de connaître le résultat de 2026.</p></div>
-        <div class="method-rule"><div class="rule-icon">02</div><b>« Inconnu » reste inconnu</b><p>Une donnée manquante n'est jamais transformée discrètement en zéro, en absence ou en certitude.</p></div>
-        <div class="method-rule"><div class="rule-icon">03</div><b>L'échec est conservé</b><p>Un test qui échoue n'est pas effacé. Son résultat reste visible et devient une information sur les limites du système.</p></div>
-        <div class="method-rule"><div class="rule-icon">04</div><b>Les anciennes versions sont intouchables</b><p>Chaque projection publiée est conservée. Une nouvelle information crée une nouvelle version, jamais une réécriture du passé.</p></div>
-        <div class="method-rule"><div class="rule-icon">05</div><b>L'incertitude est affichée</b><p>Les fourchettes et probabilités sont montrées au lieu de transformer une estimation incertaine en chiffre présenté comme certain.</p></div>
-        <div class="method-rule"><div class="rule-icon">06</div><b>L'IA n'a aucun passe-droit</b><p>Une analyse brillante ou un récit plausible n'obtient aucune valeur scientifique sans amélioration mesurable par rapport à la référence.</p></div>
-      </div>
-    </section>
-
-    <section class="panel">
-      <div class="panel-head"><h3>Comment nous protégeons la neutralité</h3></div>
-      <div class="method-rules">
-        <div class="method-rule"><div class="rule-icon">=</div><b>Mêmes règles pour tous les partis</b><p>Aucun parti ne reçoit une règle, un seuil ou un traitement favorable différent des autres.</p></div>
-        <div class="method-rule"><div class="rule-icon">0</div><b>Pas de bonus politique manuel</b><p>Atlas ne peut pas ajouter « +3 % » parce qu'un candidat paraît populaire, puissant ou bien entouré.</p></div>
-        <div class="method-rule"><div class="rule-icon">S</div><b>La provenance compte, pas le camp</b><p>Une information est évaluée selon sa source, sa date et sa vérifiabilité, pas selon le parti qu'elle avantage ou désavantage.</p></div>
-        <div class="method-rule"><div class="rule-icon">P</div><b>Pas de sondages dans ce protocole</b><p>Les sondages sont exclus de la version actuelle tant qu'une méthode séparée d'intégration n'a pas été gelée et testée.</p></div>
-        <div class="method-rule"><div class="rule-icon">↺</div><b>Pas de correction rétrospective</b><p>Un mauvais pronostic ne pourra pas être « réparé » une fois le résultat connu. Il restera un mauvais pronostic.</p></div>
-        <div class="method-rule"><div class="rule-icon">AI</div><b>La référence est construite sans IA</b><p>La première référence est établie sans raisonnement autonome afin que la valeur éventuelle de l'IA puisse être mesurée séparément.</p></div>
-      </div>
-    </section>
-  </div>
-
-  <section class="method-current">
-    <div class="method-current-head">
-      <div><span class="section-kicker">Exemple concret de discipline</span><h3>Pourquoi F0 n'a pas bougé par rapport à la projection précédente</h3><p class="lead">Nous avons essayé d'ajouter des informations politiques réelles de 2026 à la référence. La procédure automatique stricte a rencontré des données utiles — notamment un fichier de 92 lignes en arabe — mais n'a pas pu les relier avec assez de certitude aux territoires certifiés ni démontrer historiquement l'effet des informations manquantes. La règle fixée à l'avance était simple : <strong>pas de preuve suffisante = pas d'effet chiffré.</strong></p></div>
-      <div class="method-zero"><span>Modification de la distribution</span><b>0</b></div>
-    </div>
-    <div class="method-chain">
-      <div class="method-chain-card"><span>Référence</span><b>Projection structurelle</b><p>Historique électoral + règles + incertitude territoriale.</p></div>
-      <div class="method-chain-arrow">→</div>
-      <div class="method-chain-card"><span>Test 2026</span><b>Vérification des faits nouveaux</b><p>Des informations ont été trouvées, mais aucune n'a franchi toutes les conditions permettant de modifier la projection.</p></div>
-      <div class="method-chain-arrow">→</div>
-      <div class="method-chain-card"><span>F0</span><b>Même distribution, nouvelle étape scientifique</b><p>Le système a préféré conserver les chiffres plutôt que d'inventer un effet. F0 devient le témoin gelé contre lequel l'IA sera testée.</p></div>
-    </div>
-    <div class="method-promise"><strong>Notre règle de conduite :</strong> mieux vaut une projection qui reconnaît ses limites qu'une projection plus spectaculaire dont on ne peut pas défendre chaque modification.</div>
-  </section>
-
-  <div class="method-grid">
-    <section class="panel">
-      <div class="panel-head"><h3>Ce qu'Atlas n'est pas</h3></div>
-      <ul class="method-plain-list">
-        <li>Ce n'est pas un sondage d'opinion ni une mesure instantanée de popularité.</li>
-        <li>Ce n'est pas une promesse que le parti ayant la moyenne la plus élevée « gagnera » forcément.</li>
-        <li>Ce n'est pas un outil de campagne, de persuasion ou de recommandation politique.</li>
-        <li>Ce n'est pas une boîte noire autorisée à corriger ses hypothèses après avoir vu le résultat.</li>
-        <li>Ce n'est pas une façon de remplacer les faits manquants par l'intuition d'un analyste ou d'une IA.</li>
-      </ul>
-    </section>
-    <section class="panel">
-      <div class="panel-head"><h3>Ce qui vient ensuite : le test de l'IA</h3></div>
-      <div class="method-next"><h4>L'IA doit maintenant battre une référence qui ne bouge plus.</h4><p>La prochaine expérience testera si une IA peut retrouver et vérifier des informations que la procédure classique n'a pas su exploiter — notamment dans les sources arabophones. Elle ne recevra aucun crédit parce qu'elle « comprend mieux » un texte : son apport devra être traçable, vérifiable et, à terme, améliorer la qualité des prévisions.</p><p>Ensuite seulement, une seconde expérience testera le raisonnement : à information identique, l'IA sait-elle tirer une meilleure conclusion que la méthode déterministe ? Cette séparation permet de distinguer <strong>mieux chercher</strong> de <strong>mieux raisonner</strong>.</p></div>
-    </section>
-  </div>
-
-  <section class="method-test">
-    <div class="method-test-title"><span class="section-kicker">Le test qui compte</span><h3>Le 23 septembre, le réel tranche.</h3><p>Une méthodologie n'est utile que si elle accepte d'être jugée par ce qui s'est réellement passé.</p></div>
-    <div class="method-test-body"><p>Après le scrutin, Atlas comparera les résultats observés aux probabilités enregistrées avant le vote. On ne jugera pas seulement si le « bon parti » est arrivé devant : on regardera si les probabilités étaient bien calibrées, si les fourchettes étaient raisonnables et si une couche d'IA a réellement amélioré les résultats par rapport à la référence.</p><div class="method-score-grid"><div><b>Territoire par territoire</b><span>Comparer les sièges et rapports de forces observés aux distributions publiées.</span></div><div><b>Probabilités, pas slogans</b><span>Une prévision à 70 % n'est pas une certitude : elle doit se comporter comme une probabilité.</span></div><div><b>IA contre référence</b><span>La question finale est mesurable : l'IA fait-elle mieux que F0, ou non ?</span></div></div></div>
-  </section>
-
-  <details class="method-audit">
-    <summary>Pour les lecteurs qui veulent vérifier la trace d'audit</summary>
-    <div class="method-audit-body">
-      <div><span>Snapshot scientifique</span><b id="method-audit-snapshot">F0</b></div>
-      <div><span>Statut</span><b id="method-audit-status">REGISTERED_IMMUTABLE</b></div>
-      <div><span>Cutoff des données</span><b id="method-audit-cutoff">—</b></div>
-      <div><span>Empreinte de l'artefact</span><b id="method-audit-hash">—</b></div>
-    </div>
-  </details>
-</section>
-
 <section class="view" id="view-history" role="tabpanel">
   <div class="view-head"><div><span class="section-kicker">Historique des projections</span><h2>Ce qu'Atlas indiquait à chaque date</h2><p>Chaque version publiée reste conservée. Les nouvelles informations enrichissent la projection sans réécrire les versions antérieures.</p></div></div>
   <div class="history-rail" id="history-rail"></div>
@@ -213,6 +203,6 @@
 <footer class="atlas-footer"><div>ATLAS 395 · Intelligence électorale territoriale</div><div>Maroc · Législatives 2026</div></footer>
 </div>
 <div class="fatal" id="fatal" hidden></div>
-<script src="/app.js" defer></script>
+<script src="/app.js?v=20260817-1710" defer></script>
 </body>
 </html>
