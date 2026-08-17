@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "run_id": "medias24_inventory_32050848302_1",
+  "collector": "CHATGPT_GITHUB_ACTIONS_MEDIAS24_INVENTORY_V1",
+  "started_from_branch": "morocco26-e-collect",
+  "started_from_sha": "eb00ac782d19bcb9ac98a7134a48510f1a2e9bab",
+  "created_at": "2026-08-17T17:33:34+00:00",
+  "human_seed_amendment": "morocco26/data/goal100/e_collect/e_collect_v1_1_human_seed_amendment.json",
+  "execution_scope": "MEDIAS24_ELECTION_ASSET_INVENTORY",
+  "forecast_effect_authorized": false,
+  "frozen_artifacts_modified": false,
+  "seed_count": 11,
+  "fetch_count": 31,
+  "seen_url_count": 31,
+  "queue_remaining_at_stop": 0,
+  "max_fetches": 500,
+  "max_depth": 4,
+  "archived_bytes": 359853,
+  "status_counts": {
+    "200": 2,
+    "403": 10,
+    "404": 19
+  },
+  "role_counts": {
+    "INTERACTIVE_ASSET_HTML": 2,
+    "MEDIAS24_ARTICLE_OR_DASHBOARD": 10,
+    "STRUCTURED_DATA": 11,
+    "STATIC_CODE": 8
+  },
+  "structured_asset_count": 1,
+  "interactive_asset_html_count": 1,
+  "source_policy": {
+    "allowed_hosts": [
+      "assets.medias24.com",
+      "medias24.com",
+      "www.medias24.com"
+    ],
+    "discovery_origin": "HUMAN_SEED",
+    "root_seed": "https://assets.medias24.com/elections/"
+  },
+  "outputs": {
+    "asset_inventory": "morocco26/data/goal100/e_collect/runs/medias24_inventory_32050848302_1/asset_inventory.json",
+    "article_index": "morocco26/data/goal100/e_collect/runs/medias24_inventory_32050848302_1/article_index.json",
+    "search_log": "morocco26/data/goal100/e_collect/runs/medias24_inventory_32050848302_1/search_log.jsonl",
+    "raw_dir": "morocco26/data/goal100/e_collect/runs/medias24_inventory_32050848302_1/raw"
+  }
+}

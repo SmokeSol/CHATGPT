@@ -1,0 +1,1905 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elections | Carte interactive des candidats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Source+Serif+4:wght@600;800;900&display=swap" rel="stylesheet">
+  <!-- sql.js: SQLite compiled to WebAssembly, runs entirely in the browser -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js"></script>
+  <style>
+    :root {
+      --paper: #ffffff;
+      --soft: #f3f4f6;
+      --ink: #202124;
+      --muted: #667085;
+      --line: #d7dbe2;
+      --red: #b20d22;
+      --red-dark: #8f0a1a;
+      --navy: #06264f;
+      --wash: #f4f6fb;
+      --filter-bg: #eef3ff;
+      --gold: #d0a24a;
+      --sage: #3f6f66;
+      --blue: #1f4f77;
+      --panel: #ffffff;
+      --panel-tint: #fafafa;
+      --shadow: 0 12px 28px rgba(16, 24, 40, .10);
+      --sans: "DM Sans", Arial, sans-serif;
+      --serif: "Source Serif 4", Georgia, serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background: var(--wash);
+      font-family: var(--serif);
+    }
+
+    button,
+    select,
+    input { font: inherit; }
+
+    .page {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 30px 0 28px;
+    }
+
+    .masthead {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 30px;
+      align-items: center;
+      border: 0;
+      padding: 18px 0 16px;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      justify-content: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 138px;
+      height: auto;
+    }
+
+    .masthead-side {
+      display: grid;
+      justify-items: end;
+    }
+
+    .election-logo {
+      display: block;
+      width: 240px;
+      height: auto;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      max-width: none;
+      font-family: var(--serif);
+      font-size: 31px;
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 0;
+      color: #111827;
+      font-family: var(--serif);
+      font-size: 18px;
+      line-height: 1.2;
+      border-left: 0;
+      padding-left: 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      white-space: nowrap;
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--red);
+      padding: 10px 12px;
+      background: #fff;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(320px, .95fr);
+      gap: 28px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #cfd6e4;
+      border-radius: 14px;
+      box-shadow: none;
+      padding: 20px 28px 20px 22px;
+      margin-bottom: 24px;
+    }
+
+    .map-panel,
+    .options-panel,
+    .results-panel {
+      min-width: 0;
+      background: var(--panel);
+      border: 1px solid #d2d8e6;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .map-panel {
+      padding: 0;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr);
+      gap: 0;
+      min-height: 0;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+
+    .options-panel {
+      background: var(--filter-bg);
+      padding: 18px;
+      border: 1px solid #cfd6e4;
+      border-radius: 12px;
+      box-shadow: 0 12px 28px rgba(16, 24, 40, .08);
+    }
+
+    .map-titlebar {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .map-titlebar h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 25px;
+      line-height: 1.1;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .panel-head {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .panel-title {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 24px;
+      line-height: 1.1;
+      font-weight: 900;
+    }
+
+    .hint {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .map-wrap {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      place-items: start center;
+      min-height: 0;
+      background: #fff;
+      border: 0;
+      padding: 0;
+      overflow: hidden;
+      touch-action: none;
+      cursor: grab;
+    }
+
+    .map-wrap.dragging {
+      cursor: grabbing;
+    }
+
+    .morocco-map {
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      display: block;
+    }
+
+    .map-loading {
+      fill: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+      text-anchor: middle;
+    }
+
+    .district-shape {
+      cursor: pointer;
+      fill: var(--region-fill, #dfe4ec);
+      stroke: #fff;
+      stroke-width: .75;
+      transition: opacity .16s ease, filter .16s ease;
+      outline: none;
+    }
+
+    .district-shape:hover,
+    .district-shape:focus,
+    .district-shape:focus-visible {
+      opacity: .9;
+      filter: brightness(.94) saturate(1.08);
+      outline: none;
+    }
+
+    .district-shape.active {
+      stroke: var(--red) !important;
+      stroke-width: 1.6px !important;
+      filter: drop-shadow(0 2px 3px rgba(178, 13, 34, .22));
+    }
+
+    .district-hit {
+      cursor: pointer;
+      fill: rgba(0, 0, 0, .001);
+      stroke: none;
+      pointer-events: fill;
+      outline: none;
+    }
+
+    .district-label {
+      fill: rgba(6, 38, 79, .72);
+      font-size: 7px;
+      stroke: rgba(255, 255, 255, .8);
+      stroke-width: 2px;
+    }
+
+    .map-tooltip {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      top: 0;
+      display: none;
+      min-width: 170px;
+      max-width: 280px;
+      pointer-events: auto;
+      border: 1px solid rgba(6, 38, 79, .14);
+      border-left: 4px solid var(--red);
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 0 10px 24px rgba(16, 24, 40, .16);
+      padding: 10px 12px;
+      color: var(--navy);
+      font-size: 13px;
+      line-height: 1.25;
+      font-weight: 800;
+    }
+
+    .map-tooltip span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .map-tooltip[data-mode="summary"][data-has-details="true"] {
+      cursor: pointer;
+    }
+
+    .map-tooltip[data-mode="summary"][data-has-details="true"]:hover {
+      border-color: rgba(178, 13, 34, .42);
+      box-shadow: 0 12px 26px rgba(16, 24, 40, .2);
+    }
+
+    .map-tooltip-title {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .map-tooltip-list {
+      display: grid;
+      gap: 5px;
+    }
+
+    .map-tooltip-option {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      border: 1px solid #d6ddeb;
+      border-radius: 4px;
+      background: #f8fafc;
+      color: var(--navy);
+      padding: 7px 8px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 12px;
+      line-height: 1.15;
+      text-align: left;
+    }
+
+    .map-tooltip-option:hover,
+    .map-tooltip-option:focus-visible {
+      border-color: var(--red);
+      color: var(--red);
+      outline: none;
+    }
+
+    .map-tooltip-option span {
+      margin: 0;
+      color: inherit;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      border: 0;
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+    }
+
+    .field label {
+      color: #243557;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    select,
+    .search-box {
+      width: 100%;
+      height: 58px;
+      border: 1px solid #cfd6e4;
+      border-radius: 3px;
+      background: #fff;
+      color: var(--navy);
+      padding: 0 16px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    select:focus,
+    .search-box:focus {
+      outline: 2px solid rgba(165, 15, 31, .24);
+      border-color: var(--red);
+    }
+
+    .results-panel {
+      display: block;
+      padding: 0;
+      min-height: 0;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      box-shadow: none;
+      margin-bottom: 24px;
+    }
+
+    .selection-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #cfd6e4;
+      color: var(--navy);
+      padding: 16px 18px;
+      margin-bottom: 14px;
+      border-radius: 6px;
+    }
+
+    .selection-card h2 {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.15;
+      font-weight: 900;
+    }
+
+    .selection-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .selection-pill {
+      border: 1px solid #d6ddeb;
+      background: #f8fafc;
+      color: var(--navy);
+      padding: 7px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .selection-pill strong {
+      color: var(--red);
+      font-weight: 900;
+    }
+
+    .party-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 22px 0 0;
+      padding: 18px 0 0;
+      border-top: 1px solid #d6ddeb;
+      background: transparent;
+    }
+
+    .filters,
+    .party-strip {
+      background: transparent;
+    }
+
+    .filters {
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .party-strip {
+      border-bottom: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .search-panel {
+      display: block;
+    }
+
+    .party-filter {
+      min-height: 44px;
+      min-width: 0;
+      width: 100%;
+      border: 1px solid #cfd6e4;
+      border-radius: 11px;
+      background: #fff;
+      color: var(--navy);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .party-filter.active {
+      border-color: var(--red);
+      background: #c91f2f;
+      color: #fff;
+      box-shadow: 0 10px 18px rgba(178, 13, 34, .18);
+    }
+
+    .party-filter img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+    }
+
+    .candidate-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px 28px;
+      align-content: start;
+      overflow: visible;
+      padding: 0;
+      background: transparent;
+    }
+
+    .candidate {
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr) 22px;
+      gap: 16px;
+      align-items: center;
+      border: 1px solid #d2d8e6;
+      background: #fff;
+      border-radius: 8px;
+      padding: 18px 20px 18px 24px;
+      min-height: 118px;
+      box-shadow: 0 8px 20px rgba(16, 24, 40, .08);
+    }
+
+    .candidate-photo-wrap {
+      position: relative;
+      width: 64px;
+      height: 64px;
+      overflow: hidden;
+      background: #fff;
+      border: 2px solid var(--red);
+      border-radius: 50%;
+    }
+
+    .candidate-photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.12);
+      border-radius: 50%;
+    }
+
+    .candidate-party-logo {
+      display: none;
+      position: absolute;
+      right: -5px;
+      bottom: -5px;
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 3px;
+      border-radius: 50%;
+    }
+
+    .party-logo {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 6px;
+    }
+
+    .candidate h3 {
+      margin: 0 0 6px;
+      color: var(--navy);
+      font-size: 23px;
+      line-height: 1.15;
+      font-weight: 900;
+    }
+
+    .candidate p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.25;
+    }
+
+    .candidate p:last-of-type {
+      margin-top: 5px;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .party-code {
+      align-self: stretch;
+      display: grid;
+      place-items: center;
+      min-width: 22px;
+      padding: 0;
+      color: var(--navy);
+      background: transparent;
+      font-size: 0;
+      font-weight: 900;
+      letter-spacing: .04em;
+    }
+
+    .party-code::after {
+      content: "›";
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .empty {
+      border: 1px dashed #8f969e;
+      background: var(--soft);
+      color: var(--muted);
+      padding: 24px;
+      font-family: var(--serif);
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 880px) {
+      .workspace {
+        grid-template-columns: 1fr;
+        padding: 18px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .workspace {
+        grid-template-columns: 1fr;
+      }
+
+      .masthead {
+        grid-template-columns: minmax(0, 1fr) 112px;
+        gap: 14px;
+        align-items: center;
+        padding: 10px 0 14px;
+      }
+
+      .masthead-side,
+      .brand {
+        justify-content: flex-start;
+      }
+
+      .masthead-side {
+        justify-items: end;
+      }
+
+      .brand {
+        margin-bottom: 8px;
+      }
+
+      .brand-logo {
+        width: 96px;
+      }
+
+      .election-logo {
+        width: 112px;
+      }
+
+      h1 {
+        font-size: 22px;
+        white-space: normal;
+      }
+
+      .lead {
+        font-size: 14px;
+        line-height: 1.15;
+      }
+
+      .meta { white-space: normal; }
+
+      .map-wrap {
+        grid-template-columns: 1fr;
+        min-height: 280px;
+      }
+
+      .morocco-map {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .page {
+        width: min(100% - 22px, 1220px);
+        padding-top: 18px;
+      }
+
+      .filters {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 0;
+      }
+
+      .party-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 18px 0 0;
+      }
+
+      .party-filter {
+        min-width: 0;
+      }
+
+      .map-panel {
+        padding: 0;
+        grid-template-rows: minmax(0, 1fr);
+      }
+
+      .map-titlebar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .map-titlebar h2 {
+        font-size: 22px;
+      }
+
+      .candidate-list {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .candidate {
+        grid-template-columns: 66px minmax(0, 1fr);
+        min-height: 96px;
+        padding: 16px;
+      }
+
+      .party-code {
+        display: none;
+      }
+
+      .morocco-map {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <div>
+        <div class="brand"><img class="brand-logo" src="medias24-logo.png" alt="Médias24"></div>
+        <h1>Elections législatives 2026 : Listes des candidats</h1>
+        <p class="lead">Survolez une circonscription pour afficher le nombre de sièges, puis cliquez pour filtrer les candidats déclarés.</p>
+      </div>
+      <div class="masthead-side">
+        <img class="election-logo" src="IMG/logo-elections.png" alt="Elections législatives 2026">
+      </div>
+    </header>
+
+    <section class="workspace" aria-label="Infographie interactive">
+      <div class="map-panel">
+        <div class="map-titlebar">
+          <h2>Nombre de sièges par circonscription</h2>
+        </div>
+        <div class="map-wrap" id="mapWrap">
+          <svg class="morocco-map" viewBox="0 0 420 760" role="img" aria-labelledby="map-title map-desc">
+            <title id="map-title">Carte interactive des circonscriptions du Maroc</title>
+            <desc id="map-desc">Carte GeoJSON cliquable et zoomable des circonscriptions, avec le nom et le nombre de sièges au survol.</desc>
+            <g id="districtsLayer"></g>
+            <g id="labelsLayer"></g>
+            <text class="map-loading" id="mapLoading" x="210" y="380">Chargement de la carte...</text>
+          </svg>
+          <div class="map-tooltip" id="mapTooltip" role="status"></div>
+        </div>
+      </div>
+
+      <aside class="options-panel" aria-label="Filtres et options">
+        <div class="filters">
+          <div class="field">
+            <label for="regionSelect">Toutes les r&eacute;gions</label>
+            <select id="regionSelect"></select>
+          </div>
+          <div class="field">
+            <label for="provinceSelect">Circonscription</label>
+            <select id="provinceSelect"></select>
+          </div>
+          <div class="field search-panel">
+            <label for="candidateSearch">Recherche candidat</label>
+            <input class="search-box" id="candidateSearch" type="search" placeholder="Nom ou parti">
+            <label style="display:flex;align-items:center;gap:6px;margin-top:10px;font-size:13px;cursor:pointer;color:var(--muted);font-weight:600;">
+              <input type="checkbox" id="headCandidatesFilter">
+              Candidats régionaux uniquement
+            </label>
+          </div>
+        </div>
+        <div class="party-strip" id="partyFilters" aria-label="Filtrer par parti"></div>
+      </aside>
+
+    </section>
+
+    <aside class="results-panel" aria-live="polite">
+        <div class="selection-card">
+          <div>
+            <h2 id="selectionTitle"></h2>
+            <div class="selection-meta" aria-label="Contexte de la sélection">
+              <span class="selection-pill">Région : <strong id="selectionRegion"></strong></span>
+              <span class="selection-pill">Sièges : <strong id="selectionSeats"></strong></span>
+            </div>
+          </div>
+        </div>
+        <div class="candidate-list" id="candidateList"></div>
+    </aside>
+  </main>
+
+  <script>
+    const partyLogos = {
+      RNI: "logos-partis/logo_RNI.png",
+      PAM: "logos-partis/logo_PAM.png",
+      PI: "logos-partis/logo_istiqlal.png",
+      USFP: "logos-partis/logo_USFP.png",
+      PJD: "logos-partis/logo_PJD.png",
+      MP: "logos-partis/logo_MP.png",
+      PPS: "logos-partis/logo_PPS.png",
+      UC: "logos-partis/logo_UC.png",
+      FGD: "logos-partis/logo_FGD.png"
+    };
+
+    const partyNames = {
+      RNI: "Rassemblement national des indépendants",
+      PAM: "Parti authenticité et modernité",
+      PI: "Parti de l'Istiqlal",
+      USFP: "Union socialiste des forces populaires",
+      PJD: "Parti de la justice et du développement",
+      MP: "Mouvement populaire",
+      PPS: "Parti du progrès et du socialisme",
+      UC: "Union constitutionnelle",
+      FGD: "Fédération de la gauche démocratique"
+    };
+
+    const mapConfig = {
+      width: 420,
+      height: 760,
+      padding: 18,
+      provincesUrl: "cartes/provinces.geojson",
+      dbUrl: "data/elections.db"
+    };
+
+    const regionMeta = {
+      "Tanger-Tetouan-Hoceima": { key: "tanger", color: "#6EB5C0" },
+      "Oriental": { key: "oriental", color: "#006C84" },
+      "Fes-Meknes": { key: "fes", color: "#F1D3BC" },
+      "Rabat-Sale-Kenitra": { key: "rabat", color: "#003B46" },
+      "Beni Mellal-Khenifra": { key: "beni", color: "#C4DFE6" },
+      "Casablanca-Settat": { key: "casa", color: "#E99787" },
+      "Marrakech-Safi": { key: "marrakech", color: "#07575B" },
+      "Daraa-Tafilelt": { key: "draa", color: "#8E9B97" },
+      "Souss Massa": { key: "souss", color: "#336B87" },
+      "Guelmim-Oued Noun": { key: "guelmim", color: "#FDCBBB" },
+      "Laayoune-Saguia Hamra": { key: "laayoune", color: "#1B4B5A" },
+      "Dakhla-Oued Eddahab": { key: "dakhla", color: "#66A5AD" }
+    };
+
+    const regionByKey = Object.fromEntries(
+      Object.entries(regionMeta).map(([geoName, meta]) => [meta.key, { ...meta, geoName }])
+    );
+
+    const regionSeatTotals = {
+      tanger: 29,
+      oriental: 23,
+      fes: 37,
+      rabat: 39,
+      beni: 25,
+      casa: 57,
+      marrakech: 36,
+      draa: 17,
+      souss: 21,
+      guelmim: 8,
+      laayoune: 9,
+      dakhla: 4
+    };
+
+    const districtSeats = {
+      "Tanger-Assilah": 5,
+      "M'diq-Fnideq": 2,
+      "Tétouan": 5,
+      "Fahs-Anjra": 2,
+      "Larache": 4,
+      "Al Hoceïma": 4,
+      "Chefchaouen": 4,
+      "Ouezzane": 3,
+      "Oujda-Angad": 4,
+      "Nador": 4,
+      "Driouch": 3,
+      "Jerada": 2,
+      "Berkane": 3,
+      "Taourirt": 2,
+      "Guercif": 2,
+      "Figuig": 3,
+      "Meknès": 6,
+      "El Hajeb": 2,
+      "Ifrane": 2,
+      "Moulay Yacoub": 2,
+      "Sefrou": 3,
+      "Boulemane": 3,
+      "Taza": 5,
+      "Taounate": 3,
+      "Fès": 8,
+      "Skhirate-Témara": 4,
+      "Sidi Kacem": 5,
+      "Sidi Slimane": 3,
+      "Rabat": 7,
+      "Salé": 7,
+      "Khémisset-Oulmès": 3,
+      "Khémisset": 3,
+      "Kénitra": 4,
+      "Béni Mellal": 6,
+      "Fquih Ben Salah": 4,
+      "Khénifra": 3,
+      "Khouribga": 6,
+      "Azilal": 3,
+      "Azilal-Demnate": 3,
+      "Bzou-Ouaouizeght": 3,
+      "Casablanca": 23,
+      "Mohammedia": 3,
+      "El Jadida": 6,
+      "Nouaceur": 3,
+      "Médiouna": 2,
+      "Ben Slimane": 3,
+      "Berrechid": 4,
+      "Settat": 6,
+      "Sidi Bennour": 4,
+      "Chichaoua": 4,
+      "Al Haouz": 4,
+      "El Kelâa Des-Sraghna": 4,
+      "Essaouira": 4,
+      "Rehamna": 3,
+      "Safi": 6,
+      "Youssoufia": 2,
+      "Marrakech": 9,
+      "Errachidia": 5,
+      "Ouarzazate": 3,
+      "Midelt": 3,
+      "Tinghir": 3,
+      "Zagora": 3,
+      "Agadir-Ida-Ou-Tanane": 4,
+      "Agadir Ida-Outanane": 4,
+      "Inezgane-Aït Melloul": 3,
+      "Chtouka-Aït Baha": 3,
+      "Tiznit": 2,
+      "Tata": 2,
+      "Taroudant": 7,
+      "Taroudannt": 7,
+      "Guelmim": 2,
+      "Assa-Zag": 2,
+      "Tan-Tan": 2,
+      "Sidi Ifni": 2,
+      "Laâyoune": 3,
+      "Boujdour": 2,
+      "Tarfaya": 2,
+      "Es-Semara": 2,
+      "Oued Ed-Dahab": 2,
+      "Aousserd": 2,
+      "Casablanca-Anfa": 4,
+      "Al Fida-Mers Sultan": 3,
+      "Aïn Sebaâ-Hay Mohammadi": 4,
+      "Hay Hassani": 3,
+      "Aïn Chock": 3,
+      "Sidi Bernoussi": 3,
+      "Ben M'sik": 3,
+      "Sidi Othmane-Moulay Rachid": 3,
+      "Rabat-Océan": 4,
+      "Rabat-Chellah": 3,
+      "Salé Médina": 4,
+      "Salé Nouvelle": 3,
+      "Kénitra - El Gharb": 3,
+      "Tiflet-Rommani": 3,
+      "Fès-Nord": 4,
+      "Fès-Sud": 4,
+      "Taounate-Tissa": 3,
+      "El Karia-Ghafsai": 3,
+      "Gueliz": 3,
+      "Ménara": 3,
+      "Sidi Youssef Ben Ali": 3,
+      "Taroudant Sud": 4,
+      "Taroudant Nord": 3
+    };
+
+    const parentDistrictGroups = {
+      beni: {
+        "Azilal": ["Azilal-Demnate", "Bzou-Ouaouizeght"]
+      },
+      casa: {
+        "Casablanca": [
+          "Casablanca-Anfa",
+          "Al Fida-Mers Sultan",
+          "Aïn Sebaâ-Hay Mohammadi",
+          "Hay Hassani",
+          "Aïn Chock",
+          "Sidi Bernoussi",
+          "Ben M'sik",
+          "Sidi Othmane-Moulay Rachid"
+        ]
+      },
+      rabat: {
+        "Rabat": ["Rabat-Océan", "Rabat-Chellah"],
+        "Salé": ["Salé Médina", "Salé Nouvelle"],
+        "Kénitra": ["Kénitra", "Kénitra - El Gharb"],
+        "Khémisset": ["Khémisset-Oulmès", "Tiflet-Rommani"]
+      },
+      fes: {
+        "Fès": ["Fès-Nord", "Fès-Sud"],
+        "Taounate": ["Taounate-Tissa", "El Karia-Ghafsai"]
+      },
+      marrakech: {
+        "Marrakech": ["Sidi Youssef Ben Ali", "Gueliz", "Ménara"]
+      },
+      souss: {
+        "Taroudant": ["Taroudant Sud", "Taroudant Nord"]
+      }
+    };
+
+    const provinceAliases = {
+      "Agadir-Ida-Ou-Tanane": "Agadir Ida-Outanane",
+      "Agadir-Ida Ou Tanane": "Agadir-Ida-Ou-Tanane",
+      "Al Hoceima": "Al Hoceïma",
+      "Azilal-Demnatt": "Azilal-Demnate",
+      "Anfa": "Casablanca-Anfa",
+      "Casablanca-Anfa": "Casablanca-Anfa",
+      "Ain Chock": "Aïn Chock",
+      "Aïn-Chock": "Aïn Chock",
+      "Ain-Sebaa-Hay Mohammadi": "Aïn Sebaâ-Hay Mohammadi",
+      "Aïn-Sebaâ-Hay Mohammadi": "Aïn Sebaâ-Hay Mohammadi",
+      "Al-Fida-Mers-Sultan": "Al Fida-Mers Sultan",
+      "Aïn Sebaâ-Hay Mohammedi": "Aïn Sebaâ-Hay Mohammadi",
+      "Hay Mohammadi": "Aïn Sebaâ-Hay Mohammadi",
+      "Ben Msik-Sbata": "Ben M'sik",
+      "Ben Msick": "Ben M'sik",
+      "Ben M’sick": "Ben M'sik",
+      "Ben M'sick": "Ben M'sik",
+      "Benslimane": "Ben Slimane",
+      "El Haouz": "Al Haouz",
+      "El Kelaa Sraghna": "El Kelâa Des-Sraghna",
+      "Marrakech - Sidi Youssef Ben Ali": "Sidi Youssef Ben Ali",
+      "Gueliz-Anakhil": "Gueliz",
+      "Guéliz - Ennakhil": "Gueliz",
+      "Guéliz-Anakhil": "Gueliz",
+      "Khémisset - Oulmes": "Khémisset-Oulmès",
+      "Gharb": "Kénitra - El Gharb",
+      "Figuig-Bouarfa": "Figuig",
+      "Mdiq-Fnideq": "M'diq-Fnideq",
+      "M'diq-Fnidq": "M'diq-Fnideq",
+      "Mediouna": "Médiouna",
+      "Mohammadia": "Mohammedia",
+      "Moulay Rachid": "Sidi Othmane-Moulay Rachid",
+      "Rabat-Ocean": "Rabat-Océan",
+      "Sale-Elmadina": "Salé Médina",
+      "Salé El Jadida": "Salé Nouvelle",
+      "Salé-El-Jadida": "Salé Nouvelle",
+      "Skhirate - Témara": "Skhirate-Témara",
+      "Sekhirat-Temara": "Skhirate-Témara",
+      "Fes Nord": "Fès-Nord",
+      "Fès Nord": "Fès-Nord",
+      "Fes Sud": "Fès-Sud",
+      "Fès Sud": "Fès-Sud",
+      "El Karia-Ghafsai": "El Karia-Ghafsai",
+      "Karia-Ghafsai": "El Karia-Ghafsai",
+      "Tanger Asilah": "Tanger-Assilah",
+      "Tanger-Asilah": "Tanger-Assilah",
+      "Tanger- Assilah": "Tanger-Assilah",
+      "Taroudant-Ait Melloul": "Taroudant Sud",
+      "Tiflet - Rommani": "Tiflet-Rommani",
+      "Ouazzane": "Ouezzane",
+      "Rhamna": "Rehamna",
+      "Rehamna": "Rehamna",
+      "Kelaat Sraghna": "El Kelâa Des-Sraghna",
+      "El Kelaâ des Sraghna": "El Kelâa Des-Sraghna",
+      "Taroudannt": "Taroudant"
+    };
+
+    const regionSelect = document.getElementById("regionSelect");
+    const provinceSelect = document.getElementById("provinceSelect");
+    const candidateSearch = document.getElementById("candidateSearch");
+    const candidateList = document.getElementById("candidateList");
+    const selectionTitle = document.getElementById("selectionTitle");
+    const selectionRegion = document.getElementById("selectionRegion");
+    const selectionSeats = document.getElementById("selectionSeats");
+    const partyFilters = document.getElementById("partyFilters");
+    const mapWrap = document.getElementById("mapWrap");
+    const mapSvg = document.querySelector(".morocco-map");
+    const mapLoading = document.getElementById("mapLoading");
+    const mapTooltip = document.getElementById("mapTooltip");
+    let activeRegion = "__all";
+    let activeProvince = "__all";
+    let activeParty = "Tous";
+    let provincesGeo = null;
+    let externalCandidates = [];
+    let mapZoom = 1;
+    let mapBaseViewBox = [0, 0, mapConfig.width, mapConfig.height];
+    let currentMapViewBox = [0, 0, mapConfig.width, mapConfig.height];
+    let isPanning = false;
+    let didMapDrag = false;
+    let panStartPointer = { x: 0, y: 0 };
+    let panStartViewBox = [0, 0, mapConfig.width, mapConfig.height];
+    let tooltipHideTimer = null;
+    let lastMapSelectionAt = 0;
+
+    async function init() {
+      await Promise.all([loadMapData(), loadCandidateData()]);
+      buildRegionSelect();
+      drawDistrictMap();
+      renderAll();
+      candidateSearch.addEventListener("input", renderCandidates);
+      const headCandidatesFilter = document.getElementById("headCandidatesFilter");
+      if (headCandidatesFilter) headCandidatesFilter.addEventListener("change", renderCandidates);
+      regionSelect.addEventListener("change", (e) => {
+        const newRegion = e.target.value;
+        if (newRegion) {
+          setRegion(newRegion, undefined, false);
+        }
+      });
+      provinceSelect.addEventListener("change", () => {
+        activeProvince = provinceSelect.value;
+        activeParty = "Tous";
+        renderAll();
+      });
+      mapWrap.addEventListener("wheel", handleMapWheel, { passive: false });
+      mapWrap.addEventListener("pointerdown", startMapPan);
+      mapWrap.addEventListener("pointerup", handleMapPointerSelection, true);
+      mapWrap.addEventListener("click", handleMapPointerSelection, true);
+      mapWrap.addEventListener("pointermove", moveMapPan);
+      mapWrap.addEventListener("pointerup", endMapPan);
+      mapWrap.addEventListener("pointercancel", endMapPan);
+      mapTooltip.addEventListener("mouseenter", cancelTooltipHide);
+      mapTooltip.addEventListener("mouseleave", scheduleTooltipHide);
+      mapTooltip.addEventListener("click", handleTooltipClick);
+
+      // Auto-refresh when admin page updates the DB (localStorage sync)
+      window.addEventListener("storage", (e) => {
+        if (e.key === "elections_db_v1" && e.newValue) {
+          reloadFromStorage(e.newValue);
+        }
+      });
+      // Also refresh when tab becomes visible (user switches back from admin)
+      document.addEventListener("visibilitychange", () => {
+        if (!document.hidden) {
+          const saved = localStorage.getItem("elections_db_v1");
+          if (saved) reloadFromStorage(saved);
+        }
+      });
+    }
+
+    async function reloadFromStorage(base64) {
+      try {
+        const bytes = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
+        sqlDb = new SQL.Database(bytes);
+        // Reload parties
+        const pr = sqlDb.exec("SELECT code, name, logo, color FROM partis ORDER BY sortOrder");
+        if (pr.length) {
+          pr[0].values.forEach(([code, name, logo, color]) => {
+            partyLogos[code] = logo;
+            partyNames[code] = name;
+          });
+        }
+        // Reload candidates
+        const cr = sqlDb.exec("SELECT id, name, party, regionKey, region, circonscription, role, status, image, source, updatedAt FROM candidats ORDER BY regionKey, circonscription, party, name");
+        if (cr.length) {
+          externalCandidates = cr[0].values.map(row =>
+            Object.fromEntries(cr[0].columns.map((col, i) => [col, row[i]]))
+          );
+        }
+        // Reload circonscriptions
+        const circRes = sqlDb.exec("SELECT regionKey, region, circonscription FROM circonscriptions ORDER BY regionKey, circonscription");
+        if (circRes.length) {
+          externalCirconscriptions = circRes[0].values.map(row =>
+            Object.fromEntries(circRes[0].columns.map((col, i) => [col, row[i]]))
+          );
+          const regionMap = new Map();
+          externalCirconscriptions.forEach((item) => {
+            if (!regionMap.has(item.regionKey)) regionMap.set(item.regionKey, { key: item.regionKey, name: item.region });
+          });
+          regionsList = [...regionMap.values()];
+        }
+        renderAll();
+      } catch (e) { console.warn("Auto-refresh failed:", e); }
+    }
+
+    async function loadMapData() {
+      try {
+        const provincesResponse = await fetch(mapConfig.provincesUrl);
+        if (!provincesResponse.ok) {
+          throw new Error("Fichiers cartographiques introuvables");
+        }
+        provincesGeo = await provincesResponse.json();
+      } catch (error) {
+        mapLoading.textContent = "Impossible de charger les fichiers GeoJSON.";
+        console.error(error);
+      }
+    }
+
+    // SQLite database handle (sql.js), populated by loadCandidateData()
+    let sqlDb = null;
+    // Circonscriptions loaded from SQLite — used to drive the province dropdown
+    let externalCirconscriptions = [];
+    // Regions list built from DB — drives the region dropdown
+    let regionsList = [];
+
+    async function loadCandidateData() {
+      try {
+        // Initialise sql.js, pointing the WASM file at the same CDN
+        const SQL = await initSqlJs({
+          locateFile: (file) =>
+            `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/${file}`
+        });
+
+        // Try localStorage first (synced from admin page), fallback to server file
+        let buffer;
+        const saved = localStorage.getItem("elections_db_v1");
+        if (saved) {
+          buffer = Uint8Array.from(atob(saved), (c) => c.charCodeAt(0)).buffer;
+        } else {
+          const response = await fetch(mapConfig.dbUrl, { cache: "no-store" });
+          if (!response.ok) throw new Error("Base de données introuvable: " + mapConfig.dbUrl);
+          buffer = await response.arrayBuffer();
+        }
+        sqlDb = new SQL.Database(new Uint8Array(buffer));
+
+        // Load parties from DB
+        const partiesResult = sqlDb.exec("SELECT code, name, logo, color FROM partis ORDER BY sortOrder");
+        if (partiesResult.length) {
+          const { columns, values } = partiesResult[0];
+          values.forEach((row) => {
+            const party = Object.fromEntries(columns.map((col, i) => [col, row[i]]));
+            partyLogos[party.code] = party.logo;
+            partyNames[party.code] = party.name;
+          });
+        }
+
+        // Load all candidates from DB into externalCandidates
+        const candidatesResult = sqlDb.exec(
+          "SELECT id, name, party, regionKey, region, circonscription, role, status, image, source, updatedAt FROM candidats ORDER BY regionKey, circonscription, party, name"
+        );
+        if (candidatesResult.length) {
+          const { columns, values } = candidatesResult[0];
+          externalCandidates = values.map((row) =>
+            Object.fromEntries(columns.map((col, i) => [col, row[i]]))
+          );
+        }
+        // Load circonscriptions from DB — used to populate the province dropdown
+        const circResult = sqlDb.exec(
+          "SELECT regionKey, region, circonscription FROM circonscriptions ORDER BY regionKey, circonscription"
+        );
+        if (circResult.length) {
+          const { columns, values } = circResult[0];
+          externalCirconscriptions = values.map((row) =>
+            Object.fromEntries(columns.map((col, i) => [col, row[i]]))
+          );
+          // Build unique regions list from circonscriptions
+          const regionMap = new Map();
+          externalCirconscriptions.forEach((item) => {
+            if (!regionMap.has(item.regionKey)) {
+              regionMap.set(item.regionKey, { key: item.regionKey, name: item.region });
+            }
+          });
+          regionsList = [...regionMap.values()];
+        }
+      } catch (error) {
+        externalCandidates = [];
+        externalCirconscriptions = [];
+        console.error(error);
+      }
+    }
+
+    function drawDistrictMap() {
+      if (!provincesGeo) return;
+
+      const features = provincesGeo.features;
+      const projection = createProjection(features);
+
+      mapSvg.setAttribute("viewBox", `0 0 ${mapConfig.width} ${mapConfig.height}`);
+      mapSvg.innerHTML = `
+        <title id="map-title">Carte interactive des circonscriptions</title>
+        <desc id="map-desc">Carte GeoJSON cliquable et zoomable des circonscriptions, avec le nom et le nombre de sièges au survol.</desc>
+        <g id="districtsLayer"></g>
+        <g id="hitLayer"></g>
+        <g id="labelsLayer"></g>
+      `;
+
+      const districtsLayer = mapSvg.querySelector("#districtsLayer");
+      const hitLayer = mapSvg.querySelector("#hitLayer");
+      const labelsLayer = mapSvg.querySelector("#labelsLayer");
+
+      districtsLayer.innerHTML = features.map((feature, index) => {
+        const province = canonicalPlaceName(feature.properties.nom_fr);
+        const meta = regionMeta[feature.properties.region];
+        const regionKey = meta?.key || "";
+        const regionFill = meta?.color || "#dfe4ec";
+        const seats = isNonSelectableGroupedParent(regionKey, province) ? null : getDistrictSeats(province);
+        return `
+          <path class="district-shape" style="--region-fill: ${regionFill}" data-map-index="${index}" data-region="${regionKey}" data-province="${province}" data-seats="${seats || ""}" tabindex="0" d="${featureToPath(feature, projection)}">
+            <title>${province}${seats ? ` - ${seats} sièges` : ""}</title>
+          </path>
+        `;
+      }).join("");
+
+      hitLayer.innerHTML = features.map((feature, index) => {
+        const province = canonicalPlaceName(feature.properties.nom_fr);
+        const meta = regionMeta[feature.properties.region];
+        const regionKey = meta?.key || "";
+        return `
+          <path class="district-hit" data-map-index="${index}" data-region="${regionKey}" data-province="${province}" tabindex="-1" d="${featureToPath(feature, projection)}"></path>
+        `;
+      }).join("");
+
+      labelsLayer.innerHTML = "";
+
+      fitMapViewBox("#districtsLayer path");
+      mapSvg.querySelectorAll(".district-hit").forEach((hit) => {
+        const shape = mapSvg.querySelector(`.district-shape[data-map-index="${hit.dataset.mapIndex}"]`);
+        hit.addEventListener("mouseenter", (event) => showMapTooltip(event, shape));
+        hit.addEventListener("mousemove", (event) => moveMapTooltip(event));
+        hit.addEventListener("mouseleave", scheduleTooltipHide);
+      });
+
+      mapSvg.querySelectorAll(".district-shape").forEach((shape) => {
+        shape.addEventListener("focus", (event) => showMapTooltip(event, shape));
+        shape.addEventListener("blur", scheduleTooltipHide);
+        shape.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            selectMapShape(shape, event);
+          }
+        });
+      });
+
+      resetMapZoom();
+      updateMapSelection();
+    }
+
+    function selectMapShape(shape, event = {}) {
+      const province = shape.dataset.province;
+      const regionKey = shape.dataset.region;
+      if (!province || !regionKey) return;
+      const districts = getShapeDistrictOptions(shape);
+      if (districts.length > 1) {
+        showMapDistrictList(event, shape, districts);
+        return;
+      }
+      setRegion(regionKey, province);
+      hideMapTooltip();
+    }
+
+    function getDistrictSeats(province) {
+      const match = Object.entries(districtSeats).find(([name]) => samePlace(name, province));
+      return match ? match[1] : null;
+    }
+
+    function showMapTooltip(event, shape) {
+      if (mapTooltip.dataset.mode === "list") return;
+      cancelTooltipHide();
+      mapTooltip.dataset.mode = "summary";
+      mapTooltip.dataset.region = shape.dataset.region || "";
+      mapTooltip.dataset.province = shape.dataset.province || "";
+      const districts = getShapeDistrictOptions(shape);
+      mapTooltip.dataset.hasDetails = districts.length > 1 ? "true" : "false";
+      if (districts.length > 1) {
+        mapTooltip.innerHTML = `
+          <strong class="map-tooltip-title">${escapeHtml(shape.dataset.province)}</strong>
+          <span>${districts.length} circonscriptions</span>
+          <span>Cliquez pour voir le détail des sièges</span>
+        `;
+      } else {
+        const seats = shape.dataset.seats;
+        mapTooltip.innerHTML = `${escapeHtml(shape.dataset.province)}<span>${seats ? `${seats} siège${Number(seats) > 1 ? "s" : ""}` : "Sièges non renseignés"}</span>`;
+      }
+      mapTooltip.style.display = "block";
+      moveMapTooltip(event, shape);
+    }
+
+    function showMapDistrictList(event, shape, districts) {
+      cancelTooltipHide();
+      mapTooltip.dataset.mode = "list";
+      mapTooltip.dataset.region = shape.dataset.region || "";
+      mapTooltip.dataset.province = shape.dataset.province || "";
+      mapTooltip.dataset.hasDetails = "true";
+      mapTooltip.innerHTML = `
+        <strong class="map-tooltip-title">${escapeHtml(shape.dataset.province)}</strong>
+        <div class="map-tooltip-list">
+          ${districts.map((district) => `
+            <button class="map-tooltip-option" type="button" data-region="${escapeHtml(shape.dataset.region)}" data-province="${escapeHtml(district.name)}">
+              ${escapeHtml(district.name)}
+              <span>${district.seats ? `${district.seats} siège${district.seats > 1 ? "s" : ""}` : "N/R"}</span>
+            </button>
+          `).join("")}
+        </div>
+      `;
+      mapTooltip.style.display = "block";
+      moveMapTooltip(event, shape);
+    }
+
+    function getShapeDistrictOptions(shape) {
+      const province = shape.dataset.province;
+      const regionKey = shape.dataset.region;
+      const grouped = getParentDistrictGroup(regionKey, province);
+      if (grouped?.length) {
+        return grouped.map((name) => ({ name, seats: getDistrictSeats(name) }));
+      }
+      return [{ name: province, seats: getDistrictSeats(province) }];
+    }
+
+    function getParentDistrictGroup(regionKey, provinceName) {
+      return Object.entries(parentDistrictGroups[regionKey] || {})
+        .find(([parentName]) => samePlace(parentName, provinceName))?.[1] || null;
+    }
+
+    function isNonSelectableGroupedParent(regionKey, provinceName) {
+      const grouped = getParentDistrictGroup(regionKey, provinceName);
+      return Boolean(grouped?.length && !grouped.some((name) => samePlace(name, provinceName)));
+    }
+
+    function handleTooltipClick(event) {
+      const button = event.target.closest(".map-tooltip-option");
+      if (button) {
+        setRegion(button.dataset.region, button.dataset.province);
+        hideMapTooltip();
+        return;
+      }
+      if (mapTooltip.dataset.mode !== "summary" || mapTooltip.dataset.hasDetails !== "true") return;
+      const shape = mapSvg.querySelector(`.district-shape[data-region="${cssEscape(mapTooltip.dataset.region)}"][data-province="${cssEscape(mapTooltip.dataset.province)}"]`);
+      if (!shape) return;
+      showMapDistrictList(event, shape, getShapeDistrictOptions(shape));
+    }
+
+    function moveMapTooltip(event, shape = null) {
+      if (mapTooltip.dataset.mode === "list") return;
+      const wrapRect = mapWrap.getBoundingClientRect();
+      const shapeRect = shape?.getBoundingClientRect();
+      const clientX = Number.isFinite(event.clientX) ? event.clientX : (shapeRect ? shapeRect.left + shapeRect.width / 2 : wrapRect.left);
+      const clientY = Number.isFinite(event.clientY) ? event.clientY : (shapeRect ? shapeRect.top + shapeRect.height / 2 : wrapRect.top);
+      const tooltipWidth = mapTooltip.offsetWidth || 280;
+      const tooltipHeight = mapTooltip.offsetHeight || 80;
+      const x = Math.min(wrapRect.width - tooltipWidth - 8, Math.max(8, clientX - wrapRect.left + 14));
+      const y = Math.min(wrapRect.height - tooltipHeight - 8, Math.max(8, clientY - wrapRect.top + 14));
+      mapTooltip.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    function scheduleTooltipHide() {
+      if (mapTooltip.dataset.mode === "list") return;
+      cancelTooltipHide();
+      tooltipHideTimer = window.setTimeout(hideMapTooltip, 180);
+    }
+
+    function cancelTooltipHide() {
+      if (!tooltipHideTimer) return;
+      window.clearTimeout(tooltipHideTimer);
+      tooltipHideTimer = null;
+    }
+
+    function hideMapTooltip() {
+      cancelTooltipHide();
+      mapTooltip.dataset.mode = "";
+      mapTooltip.style.display = "none";
+    }
+
+    function updateMapSelection() {
+      mapSvg.querySelectorAll(".district-shape").forEach((shape) => {
+        shape.classList.toggle(
+          "active",
+          activeRegion !== "__all" && activeProvince !== "__all" && isShapeSelectionMatch(shape)
+        );
+      });
+    }
+
+    function isShapeSelectionMatch(shape) {
+      const province = shape.dataset.province || "";
+      if (samePlace(province, activeProvince)) return true;
+      return getShapeDistrictOptions(shape).some((district) => samePlace(district.name, activeProvince));
+    }
+
+    function handleMapPointerSelection(event) {
+      if (event.target.closest("#mapTooltip")) return;
+      if (didMapDrag) return;
+      if (Date.now() - lastMapSelectionAt < 180) return;
+      const directTarget = event.target.closest?.(".district-hit, .district-shape");
+      const pointedTarget = document.elementFromPoint(event.clientX, event.clientY)?.closest?.(".district-hit, .district-shape");
+      const target = directTarget || pointedTarget;
+      if (!target || !mapSvg.contains(target)) return;
+      const shape = target.classList.contains("district-shape")
+        ? target
+        : mapSvg.querySelector(`.district-shape[data-map-index="${target.dataset.mapIndex}"]`);
+      if (!shape) return;
+      lastMapSelectionAt = Date.now();
+      selectMapShape(shape, event);
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    function setMapZoom(nextZoom) {
+      const next = Math.max(1, Math.min(4, nextZoom));
+      const center = [
+        currentMapViewBox[0] + currentMapViewBox[2] / 2,
+        currentMapViewBox[1] + currentMapViewBox[3] / 2
+      ];
+      mapZoom = next;
+      setMapViewBoxFromZoom(center);
+    }
+
+    function resetMapZoom() {
+      mapZoom = 1;
+      setCurrentMapViewBox(mapBaseViewBox);
+    }
+
+    function setMapViewBoxFromZoom(center) {
+      const width = mapBaseViewBox[2] / mapZoom;
+      const height = mapBaseViewBox[3] / mapZoom;
+      const x = center[0] - width / 2;
+      const y = center[1] - height / 2;
+      setCurrentMapViewBox(constrainMapViewBox([x, y, width, height]));
+    }
+
+    function setCurrentMapViewBox(viewBox) {
+      currentMapViewBox = viewBox;
+      mapSvg.setAttribute("viewBox", formatViewBox(viewBox));
+    }
+
+    function constrainMapViewBox(viewBox) {
+      const [baseX, baseY, baseWidth, baseHeight] = mapBaseViewBox;
+      const width = Math.min(baseWidth, viewBox[2]);
+      const height = Math.min(baseHeight, viewBox[3]);
+      const x = Math.min(baseX + baseWidth - width, Math.max(baseX, viewBox[0]));
+      const y = Math.min(baseY + baseHeight - height, Math.max(baseY, viewBox[1]));
+      return [x, y, width, height];
+    }
+
+    function handleMapWheel(event) {
+      event.preventDefault();
+      hideMapTooltip();
+      const rect = mapSvg.getBoundingClientRect();
+      const before = [
+        currentMapViewBox[0] + ((event.clientX - rect.left) / rect.width) * currentMapViewBox[2],
+        currentMapViewBox[1] + ((event.clientY - rect.top) / rect.height) * currentMapViewBox[3]
+      ];
+      const nextZoom = Math.max(1, Math.min(4, mapZoom * (event.deltaY < 0 ? 1.12 : 0.88)));
+      mapZoom = nextZoom;
+      const width = mapBaseViewBox[2] / mapZoom;
+      const height = mapBaseViewBox[3] / mapZoom;
+      const x = before[0] - ((event.clientX - rect.left) / rect.width) * width;
+      const y = before[1] - ((event.clientY - rect.top) / rect.height) * height;
+      setCurrentMapViewBox(constrainMapViewBox([x, y, width, height]));
+    }
+
+    function startMapPan(event) {
+      if (mapZoom <= 1) return;
+      if (event.target.closest("#mapTooltip")) return;
+      if (event.target.closest(".district-hit, .district-shape")) return;
+      isPanning = true;
+      didMapDrag = false;
+      panStartPointer = { x: event.clientX, y: event.clientY };
+      panStartViewBox = [...currentMapViewBox];
+      mapWrap.classList.add("dragging");
+      mapWrap.setPointerCapture(event.pointerId);
+    }
+
+    function moveMapPan(event) {
+      if (!isPanning) return;
+      const rect = mapSvg.getBoundingClientRect();
+      const dx = (event.clientX - panStartPointer.x) * (panStartViewBox[2] / rect.width);
+      const dy = (event.clientY - panStartPointer.y) * (panStartViewBox[3] / rect.height);
+      const moved = Math.hypot(event.clientX - panStartPointer.x, event.clientY - panStartPointer.y);
+      if (moved < 4) return;
+      didMapDrag = true;
+      setCurrentMapViewBox(constrainMapViewBox([
+        panStartViewBox[0] - dx,
+        panStartViewBox[1] - dy,
+        panStartViewBox[2],
+        panStartViewBox[3]
+      ]));
+    }
+
+    function endMapPan(event) {
+      if (!isPanning) return;
+      isPanning = false;
+      mapWrap.classList.remove("dragging");
+      if (mapWrap.hasPointerCapture(event.pointerId)) {
+        mapWrap.releasePointerCapture(event.pointerId);
+      }
+      window.setTimeout(() => {
+        didMapDrag = false;
+      }, 0);
+    }
+
+    function buildRegionSelect() {
+      regionSelect.innerHTML = [
+        `<option value="__all">Toutes les régions</option>`,
+        ...regionsList.map((r) => `<option value="${r.key}">${r.name}</option>`)
+      ].join("");
+    }
+
+    function setRegion(regionKey, provinceName, showDistricts = false) {
+      activeRegion = regionKey;
+      if (regionKey === "__all") {
+        activeProvince = "__all";
+      } else {
+        const provinceNames = getRegionProvinceNames(activeRegion);
+        const nextProvince = provinceNames.find((name) => samePlace(name, provinceName));
+        activeProvince = nextProvince && !isNonSelectableGroupedParent(activeRegion, nextProvince) ? nextProvince : "__all";
+      }
+      activeParty = "Tous";
+      candidateSearch.value = "";
+      const headCandidatesFilter = document.getElementById("headCandidatesFilter");
+      if (headCandidatesFilter) headCandidatesFilter.checked = false;
+      renderAll();
+    }
+
+    function renderAll() {
+      regionSelect.value = activeRegion;
+      provinceSelect.innerHTML = [
+        `<option value="__all">Toutes les circonscriptions</option>`,
+        ...getRegionProvinceNames(activeRegion)
+          .map((province) => `<option value="${province}">${province}</option>`)
+      ]
+        .join("");
+      provinceSelect.value = activeProvince;
+
+      updateMapSelection();
+
+      const regionInfo = regionsList.find((r) => r.key === activeRegion);
+      const regionName = activeRegion === "__all" ? "Toutes les régions" : (regionInfo ? regionInfo.name : activeRegion);
+      const districtName = activeProvince === "__all" ? "Toutes les circonscriptions" : activeProvince;
+      selectionTitle.textContent = districtName;
+      selectionRegion.textContent = regionName;
+      selectionSeats.textContent = formatSeats(getSelectionSeats());
+      renderPartyFilters();
+      renderCandidates();
+    }
+
+    function getSelectionSeats() {
+      if (activeRegion === "__all") return Object.values(regionSeatTotals).reduce((a, b) => a + b, 0);
+      if (activeProvince !== "__all") return getDistrictSeats(activeProvince);
+      return regionSeatTotals[activeRegion] || 0;
+    }
+
+    function formatSeats(seats) {
+      return seats ? `${seats}` : "Non renseigné";
+    }
+
+    function getRegionProvinceNames(regionKey) {
+      if (regionKey === "__all") {
+        // Return all circonscriptions from all regions
+        const fromDb = externalCirconscriptions
+          .map((item) => item.circonscription)
+          .filter((name) => {
+            // Filter out non-selectable grouped parents across all regions
+            const parentRegion = externalCirconscriptions.find((c) => c.circonscription === name)?.regionKey;
+            return parentRegion ? !isNonSelectableGroupedParent(parentRegion, name) : true;
+          });
+        const fromGrouped = Object.values(parentDistrictGroups).flatMap((groups) => Object.values(groups).flat());
+        return uniquePlaceNames([...fromDb, ...fromGrouped]);
+      }
+      const fromDb = externalCirconscriptions
+        .filter((item) => item.regionKey === regionKey)
+        .map((item) => item.circonscription)
+        .filter((name) => !isNonSelectableGroupedParent(regionKey, name));
+      // Add child districts from grouped parents (e.g. Casablanca sub-districts)
+      const fromGrouped = Object.values(parentDistrictGroups[regionKey] || {}).flat();
+      return uniquePlaceNames([...fromDb, ...fromGrouped]);
+    }
+
+    function findRegionForProvince(provinceName) {
+      return (regionsList.map((r) => r.key)).find((regionKey) =>
+        getRegionProvinceNames(regionKey).some((name) => samePlace(name, provinceName))
+      );
+    }
+
+    function getProvinceCandidates() {
+      return externalCandidates
+        .filter((item) => activeRegion === "__all" || item.regionKey === activeRegion)
+        .filter((item) => activeProvince === "__all" || samePlace(item.circonscription, activeProvince))
+        .sort((a, b) => a.circonscription.localeCompare(b.circonscription, "fr") || a.party.localeCompare(b.party, "fr"));
+    }
+
+    function renderPartyFilters() {
+      const parties = ["Tous", ...new Set(getProvinceCandidates().map((item) => item.party))];
+      partyFilters.innerHTML = parties.map((party) => {
+        const isAll = party === "Tous";
+        return `
+          <button class="party-filter ${party === activeParty ? "active" : ""}" type="button" data-party="${party}">
+            ${isAll ? "" : `<img src="${partyLogos[party]}" alt="">`}
+            <span>${party}</span>
+          </button>
+        `;
+      }).join("");
+
+      partyFilters.querySelectorAll("button").forEach((button) => {
+        button.addEventListener("click", () => {
+          activeParty = button.dataset.party;
+          renderPartyFilters();
+          renderCandidates();
+        });
+      });
+    }
+
+    function renderCandidates() {
+      const query = candidateSearch.value.trim().toLowerCase();
+      const onlyRegional = document.getElementById("headCandidatesFilter")?.checked;
+      const candidates = getProvinceCandidates().filter((item) => {
+        const haystack = `${item.name} ${item.party} ${partyNames[item.party]} ${item.role} ${item.circonscription || ""}`.toLowerCase();
+        const textMatch = (activeParty === "Tous" || item.party === activeParty) && (!query || haystack.includes(query));
+        if (onlyRegional) return textMatch && !item.circonscription;
+        return textMatch;
+      });
+
+      if (!candidates.length) {
+        candidateList.innerHTML = `<div class="empty">Aucun candidat ne correspond à cette sélection.</div>`;
+        return;
+      }
+
+      candidateList.innerHTML = candidates.map((item) => `
+        <article class="candidate">
+          <div class="candidate-photo-wrap">
+            <img class="candidate-photo" src="${item.image || partyLogos[item.party]}" alt="${item.image ? `Photo de ${item.name}` : `Logo ${item.party}`}">
+            ${item.image ? `<img class="candidate-party-logo" src="${partyLogos[item.party]}" alt="Logo ${item.party}">` : ""}
+          </div>
+          <div>
+            <h3 dir="auto">${item.name}</h3>
+            <p>${partyNames[item.party]}</p>
+            <p>${item.circonscription ? canonicalPlaceName(item.circonscription) : item.region}${item.role && item.role !== item.circonscription ? ` — ${item.role}` : ""}</p>
+          </div>
+          <div class="party-code" data-party="${item.party}">${item.party}</div>
+        </article>
+      `).join("");
+    }
+
+    function createProjection(features) {
+      const bounds = getBounds(features);
+      const [minX, minY, maxX, maxY] = bounds;
+      const usableWidth = mapConfig.width - mapConfig.padding * 2;
+      const usableHeight = mapConfig.height - mapConfig.padding * 2;
+      const scale = Math.min(usableWidth / (maxX - minX), usableHeight / (maxY - minY));
+      const offsetX = (mapConfig.width - (maxX - minX) * scale) / 2;
+      const offsetY = (mapConfig.height - (maxY - minY) * scale) / 2;
+      return ([lon, lat]) => [
+        offsetX + (lon - minX) * scale,
+        mapConfig.height - (offsetY + (lat - minY) * scale)
+      ];
+    }
+
+    function getBounds(features) {
+      const xs = [];
+      const ys = [];
+      features.forEach((feature) => {
+        forEachCoordinate(feature.geometry.coordinates, ([lon, lat]) => {
+          xs.push(lon);
+          ys.push(lat);
+        });
+      });
+      return [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)];
+    }
+
+    function forEachCoordinate(coordinates, callback) {
+      if (typeof coordinates[0] === "number") {
+        callback(coordinates);
+        return;
+      }
+      coordinates.forEach((item) => forEachCoordinate(item, callback));
+    }
+
+    function featureToPath(feature, projection) {
+      const { type, coordinates } = feature.geometry;
+      if (type === "Polygon") return polygonToPath(coordinates, projection);
+      if (type === "MultiPolygon") return coordinates.map((rings) => polygonToPath(rings, projection)).join(" ");
+      return "";
+    }
+
+    function polygonToPath(rings, projection) {
+      return rings.map((ring) => {
+        return ring.map((point, index) => {
+          const [x, y] = projection(point);
+          return `${index ? "L" : "M"}${x.toFixed(2)} ${y.toFixed(2)}`;
+        }).join(" ") + " Z";
+      }).join(" ");
+    }
+
+    function fitMapViewBox(selector = "#districtsLayer path", animate = false, pad = 12) {
+      const points = [];
+      mapSvg.querySelectorAll(selector).forEach((path) => {
+        if (path.style.display === "none") return;
+        const coordinateSource = path.getAttribute("d") || path.getAttribute("points") || "";
+        const values = coordinateSource
+          .replace(/[A-Za-z]/g, " ")
+          .trim()
+          .split(/[\s,]+/)
+          .map(Number)
+          .filter(Number.isFinite);
+        for (let index = 0; index < values.length - 1; index += 2) {
+          points.push([values[index], values[index + 1]]);
+        }
+      });
+      if (!points.length) return;
+      const xs = points.map((point) => point[0]);
+      const ys = points.map((point) => point[1]);
+      const x = Math.max(0, Math.min(...xs) - pad);
+      const y = Math.max(0, Math.min(...ys) - pad);
+      const width = Math.min(mapConfig.width, Math.max(...xs) - Math.min(...xs) + pad * 2);
+      const height = Math.min(mapConfig.height, Math.max(...ys) - Math.min(...ys) + pad * 2);
+      const nextViewBox = [x, y, width, height];
+      mapBaseViewBox = nextViewBox;
+      currentMapViewBox = nextViewBox;
+      if (animate) {
+        animateMapViewBox(nextViewBox);
+        return;
+      }
+      setCurrentMapViewBox(nextViewBox);
+    }
+
+    function animateMapViewBox(nextViewBox) {
+      const startViewBox = parseViewBox(mapSvg.getAttribute("viewBox")) || [0, 0, mapConfig.width, mapConfig.height];
+      const duration = 520;
+      const startedAt = Date.now();
+
+      function step() {
+        const now = Date.now();
+        const progress = Math.min(1, (now - startedAt) / duration);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = startViewBox.map((value, index) => value + (nextViewBox[index] - value) * eased);
+        mapSvg.setAttribute("viewBox", formatViewBox(current));
+        if (progress < 1) {
+          window.setTimeout(step, 16);
+          return;
+        }
+        mapSvg.setAttribute("viewBox", formatViewBox(nextViewBox));
+      }
+
+      step();
+    }
+
+    function parseViewBox(value) {
+      const parts = (value || "").split(/\s+/).map(Number);
+      return parts.length === 4 && parts.every(Number.isFinite) ? parts : null;
+    }
+
+    function formatViewBox(values) {
+      return values.map((value) => value.toFixed(2)).join(" ");
+    }
+
+    function normalizeName(value) {
+      if (value == null) return "";
+      return String(value)
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "");
+    }
+
+    function canonicalPlaceName(value) {
+      if (value == null) return "";
+      return provinceAliases[value] || value;
+    }
+
+    function canonicalPlaceKey(value) {
+      if (value == null) return "";
+      return normalizeName(canonicalPlaceName(value));
+    }
+
+    function uniquePlaceNames(names) {
+      const seen = new Set();
+      const result = [];
+      names.forEach((name) => {
+        const key = canonicalPlaceKey(name);
+        if (!seen.has(key)) {
+          seen.add(key);
+          result.push(canonicalPlaceName(name));
+        }
+      });
+      return result;
+    }
+
+    function escapeHtml(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function cssEscape(value) {
+      if (window.CSS?.escape) return window.CSS.escape(value || "");
+      return String(value || "").replace(/["\\]/g, "\\$&");
+    }
+
+    function samePlace(a, b) {
+      if (a == null || b == null) return false;
+      return canonicalPlaceKey(a) === canonicalPlaceKey(b);
+    }
+
+    init();
+  </script>
+</body>
+</html>
