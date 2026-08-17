@@ -6,6 +6,7 @@ on:
     branches: [morocco26-e-reason]
     paths:
       - "morocco26/scripts/e_reason_build_historical_rosters.py"
+      - "morocco26/scripts/e_reason_build_historical_rosters_retry_runner.py"
       - ".github/workflows/morocco26-e-reason-build-rosters.yml"
 
 permissions:
@@ -31,10 +32,10 @@ jobs:
         run: python morocco26/scripts/validate_e_reason_prereg.py
       - name: Install bounded dependencies
         run: python -m pip install --disable-pip-version-check requests==2.32.4 beautifulsoup4==4.13.4
-      - name: Recover and parse historical rosters
+      - name: Recover and parse historical rosters with transport retries
         env:
           E_REASON_ROSTER_RUN_ID: historical_rosters_${{ github.run_id }}_${{ github.run_attempt }}
-        run: python morocco26/scripts/e_reason_build_historical_rosters.py
+        run: python morocco26/scripts/e_reason_build_historical_rosters_retry_runner.py
       - name: Revalidate immutable ancestry
         run: python morocco26/scripts/validate_e_reason_prereg.py
       - name: Commit append-only roster evidence
