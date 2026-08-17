@@ -1,118 +1,65 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "state_id": "M26-GOAL100-B2-CURRENT-V1",
-  "as_of": "2026-08-17T16:14:58+01:00",
-  "phase": "B2_FROZEN_NEGATIVE_RESULT_F0_PENDING",
+  "as_of": "2026-08-17T16:22:07+01:00",
+  "phase": "F0_REGISTERED_B2_COMPLETE",
+  "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
   "parent_snapshot": {
     "snapshot_id": "F-1",
     "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
     "status": "REGISTERED_IMMUTABLE"
   },
-  "protocol": {
-    "id": "M26-GOAL100-B2-PROTOCOL-V1",
-    "status": "FROZEN_PRE_COLLECTION",
-    "frozen_at": "2026-08-17T07:16:21+01:00",
-    "evidence_schema": "morocco26/data/goal100/b2_evidence_schema_v1.json",
-    "feature_dictionary": "morocco26/data/goal100/b2_feature_dictionary_v1.json"
-  },
-  "collection": {
-    "status": "FROZEN",
-    "evidence_cutoff": "2026-08-17T16:14:58+01:00",
-    "evidence_records": 0,
-    "admissible_records": 0,
-    "conflicted_records": 0,
-    "source_universe_sha256": "8aa331e941ab892997b68a04b91b5b2147c9561f717a3ca976122dbb1ba44d32",
-    "termination_state": "B2_3_DATA_BLOCKED_NONAGENTIC",
-    "unresolved_historical_input_classes": 16,
-    "unresolved_arabic_roster_rows": 92
-  },
-  "coefficients": {
-    "mechanical": "NOT_APPLICABLE_NO_VERIFIED_CONSTRAINTS",
-    "predictive": "ALL_EXACTLY_ZERO_FINAL_B2",
-    "reporting_only": "ALL_EXACTLY_ZERO",
-    "artifact": "morocco26/data/goal100/b2_coefficients.json",
-    "sha256": "018ed64fc2c058aec4458d63e592cdef4d17549ceb7ea874d69b9c7666dee092"
-  },
-  "gates": {
-    "closed": [
-      "B2-0-PROTOCOL-FROZEN",
-      "B2-1-SOURCE-UNIVERSE-FROZEN",
-      "B2-2-IDENTITY-TERRITORY-CROSSWALK",
-      "B2-5-PROVENANCE-CONFLICT-AUDIT",
-      "B2-7-B2-FROZEN"
-    ],
-    "failed": [
-      "B2-3-HISTORICAL-FEATURE-PANEL",
-      "B2-4-2026-BALLOT-ROSTER",
-      "B2-6-EFFECT-CALIBRATION"
-    ],
-    "open": [],
-    "locked": [
-      "B2-8-F0-COUNTERFACTUAL-SIMULATION",
-      "E-COLLECT-PREREGISTERED",
-      "E-REASON-PREREGISTERED",
-      "E-FULL-PREREGISTERED"
-    ]
-  },
-  "anti_drift": {
-    "F_minus_1_hash_must_match": true,
-    "predictive_shift_before_calibration_forbidden": true,
-    "polls_excluded_in_V1": true,
-    "LLM_semantic_evidence_forbidden": true,
-    "agentic_experiment_locked": true,
-    "missing_never_silently_zero": true,
-    "conflicts_never_silently_resolved": true,
-    "arabic_unresolved_rows_never_guessed": true
-  },
-  "historical_panel": {
-    "status": "FAILED_DATA_BLOCKED_NONAGENTIC",
-    "panel": "morocco26/data/goal100/b2_historical_panel.json",
-    "panel_sha256": "3b8e7150b026c9c9fc35c7cd1eb66bd56437342f1879ade41e1aae69e95570a2",
-    "core_predictive_coverage": {
-      "2011_TO_2016": 0.0,
-      "2016_TO_2021": 0.0,
-      "required": 0.8
-    },
-    "blocking_missing_input_classes": [
-      "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
-      "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
-      "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
-      "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
-      "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
-      "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
-      "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
-      "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
-      "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
-      "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
-      "HISTORICAL_LIST_REJECTION_TARGET_YEAR",
-      "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
-      "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
-      "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR",
-      "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
-      "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
-    ]
-  },
-  "ballot_roster_2026": {
-    "status": "FAILED_NOT_VERIFIED",
-    "certificate": "morocco26/data/goal100/b2_2026_ballot_certificate.json",
-    "roster_sha256": "b702b92929f7271c0309c0e3a8d4336b6e1bd79ee87a222b0cf834bc37c767ac",
-    "rows_parsed": 92,
-    "verified_double_entry_rows": 0,
-    "territory_coverage_fraction": 0.0,
-    "blocking_state": "AMBIGUOUS_DETERMINISTIC_MATCH"
-  },
-  "freeze": {
+  "B2": {
     "status": "FROZEN_NEGATIVE_RESULT",
-    "certificate": "morocco26/data/goal100/b2_freeze_certificate.json",
-    "certificate_sha256": "eab248d63051643600d0b2220f269b587302c4631fe24a7760fd971277fd88e1",
-    "provenance_audit_sha256": "19fa18b0c72bdb3060b2f73e6a2df90bb819ded8dae3a14ae9928a52eb90285a",
-    "effect_calibration_sha256": "0cfde9d2ad5876b93263acd3a09d997e382ad759b8c828db53e384748ad25c11"
+    "evidence_cutoff": "2026-08-17T16:14:58+01:00",
+    "freeze_certificate": "morocco26/data/goal100/b2_freeze_certificate.json",
+    "freeze_certificate_sha256": "eab248d63051643600d0b2220f269b587302c4631fe24a7760fd971277fd88e1",
+    "historical_panel_result": "B2_3_DATA_BLOCKED_NONAGENTIC",
+    "historical_coverage_each_transition": [
+      0.0,
+      0.0
+    ],
+    "required_coverage": 0.8,
+    "roster_result": "B2_4_FAIL",
+    "roster_rows_parsed": 92,
+    "roster_rows_verified": 0,
+    "mechanical_constraints_admitted": 0,
+    "all_predictive_coefficients_exactly_zero": true,
+    "reserved_for_e_collect": {
+      "historical_input_classes": 16,
+      "unresolved_arabic_rows": 92
+    }
+  },
+  "F0": {
+    "status": "REGISTERED_IMMUTABLE_PRELIMINARY_FORECAST",
+    "created_at": "2026-08-17T16:22:07+01:00",
+    "data_cutoff": "2026-08-17T16:14:58+01:00",
+    "forecast_artifact": "morocco26/data/goal100/forecasts/F0/forecast.json",
+    "forecast_artifact_sha256": "fbe5197999f20d0612bc0c66e1954b5c611b11208e43a72eb5494a03b1e40d3f",
+    "distribution_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "distribution_equivalence_to_parent": "EXACT",
+    "counterfactual_elections": 50000,
+    "registration_manifest": "morocco26/data/goal100/snapshots/F0/manifest.json",
+    "registration_manifest_sha256": "501b8e4b498a1de90ce45878e4b152c735dfb1ea63b0b1a76a208fc29494fb74",
+    "registration_certificate": "morocco26/data/goal100/f0_registration_certificate.json",
+    "registration_certificate_sha256": "40175a828eda6a33642caa7efb950d43cd99f11b0653b8c80e201a8739c52c8c",
+    "mechanical_delta": "EXACT_ZERO",
+    "predictive_delta": "EXACT_ZERO",
+    "full_b2_delta": "EXACT_ZERO"
   },
   "agentic": {
-    "status": "LOCKED",
-    "e_collect_executed": false,
-    "reserved_input_classes": 16,
-    "reserved_arabic_rows": 92
+    "e_collect_preregistration": "OPEN",
+    "e_collect_execution": "NOT_STARTED",
+    "e_reason": "LOCKED",
+    "e_full": "LOCKED",
+    "agentic_information_in_F0": false
   },
-  "next_action_exact": "Generate F0 as the append-only counterfactual application of frozen B2 to F-1. Because B2 admits zero mechanical constraints and zero predictive coefficients, F0 must be exactly distribution-equivalent to F-1 and must be registered before agentic experiments unlock."
+  "anti_drift": {
+    "F_minus_1_rewritten": false,
+    "F0_may_not_be_overwritten": true,
+    "missingness_not_zeroed": true,
+    "unresolved_arabic_rows_not_guessed": true,
+    "agentic_execution_requires_preregistration": true
+  },
+  "next_action_exact": "Preregister E_collect against the frozen B2 cutoff and reserved corpus. Do not alter F-1 or F0."
 }

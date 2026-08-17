@@ -1,138 +1,25 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "registry_id": "M26-GOAL100-B2-GATES-V1",
-  "as_of": "2026-08-17T16:14:58+01:00",
+  "as_of": "2026-08-17T16:22:07+01:00",
   "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
-  "status_vocabulary": [
-    "CLOSED",
-    "OPEN",
-    "LOCKED",
-    "FAILED"
-  ],
-  "rule": "A B2 gate closes only from a machine-verifiable artifact satisfying its frozen criterion. Missingness, prose quality or forecast movement never closes a gate.",
-  "terminal_policy": "A preregistered failure branch may be recorded as FAILED and frozen without weakening its original closure criterion. B2-7 may close on a fully hashed negative B2 result; failed upstream gates remain visibly FAILED rather than relabelled CLOSED.",
+  "previous_registry_commit": "90f237a51b3f91a083e4cb59e69530137d1eb381",
+  "rule": "Gate history is append-only through Git history. Failed preregistered branches remain FAILED; they are never relabelled as successful.",
   "gates": [
-    {
-      "id": "B2-0-PROTOCOL-FROZEN",
-      "status": "CLOSED",
-      "evidence": [
-        "morocco26/data/goal100/b2_protocol_v1.json",
-        "morocco26/data/goal100/b2_evidence_schema_v1.json",
-        "morocco26/data/goal100/b2_feature_dictionary_v1.json"
-      ],
-      "closure_criterion": "Protocol, evidence schema and feature dictionary are committed before any B2 claim record; predictive coefficients are zero pending calibration."
-    },
-    {
-      "id": "B2-1-SOURCE-UNIVERSE-FROZEN",
-      "status": "CLOSED",
-      "required_artifact": "morocco26/data/goal100/b2_source_universe_certificate.json",
-      "closure_criterion": "Versioned source/domain/document allowlist, deterministic query/page templates, independence clusters and archive rules are frozen before collection.",
-      "resolved_claim": "The pre-collection source/domain/document allowlist and deterministic query templates are frozen; only sources that passed direct smoke access are active for claims, while blocked/challenged routes are explicitly reference-only or inactive."
-    },
-    {
-      "id": "B2-2-IDENTITY-TERRITORY-CROSSWALK",
-      "status": "CLOSED",
-      "required_artifact": "morocco26/data/goal100/b2_identity_territory_certificate.json",
-      "closure_criterion": "All admitted candidate, party, list and territorial IDs resolve without unreviewed fuzzy matching; collisions and unresolved aliases are reported.",
-      "resolved_claim": "The certified 92 local and 12 regional territorial IDs, all observed historical party/list codes and all 395 elected-member rows resolve deterministically without fuzzy matching; legacy 2026 candidate aggregates admit zero B2 records."
-    },
-    {
-      "id": "B2-3-HISTORICAL-FEATURE-PANEL",
-      "status": "FAILED",
-      "required_artifact": "morocco26/data/goal100/b2_historical_panel_certificate.json",
-      "closure_criterion": "Same-cutoff candidate/list feature panel covers at least 80% of 92 local territories in both 2011->2016 and 2016->2021; feature support counts are published.",
-      "terminal_result": "B2_3_DATA_BLOCKED_NONAGENTIC",
-      "terminal_evidence": "morocco26/data/goal100/b2_v1_1_outcome_certificate.json",
-      "coverage": {
-        "2011_TO_2016": 0.0,
-        "2016_TO_2021": 0.0,
-        "required": 0.8
-      },
-      "blocking_input_classes": [
-        "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
-        "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
-        "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
-        "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
-        "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
-        "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
-        "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
-        "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
-        "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
-        "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
-        "HISTORICAL_LIST_REJECTION_TARGET_YEAR",
-        "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
-        "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
-        "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR",
-        "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
-        "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
-      ]
-    },
-    {
-      "id": "B2-4-2026-BALLOT-ROSTER",
-      "status": "FAILED",
-      "required_artifact": "morocco26/data/goal100/b2_2026_ballot_certificate.json",
-      "closure_criterion": "Authoritative coverage of all 92 local and 12 regional contests, with list presence, candidates/ranks and effective withdrawals/disqualifications; missing official coverage remains explicit.",
-      "terminal_result": "B2_4_FAIL",
-      "last_attempt": {
-        "rows_parsed": 92,
-        "verified_double_entry_rows": 0,
-        "territory_coverage_fraction": 0.0,
-        "blocking_state": "AMBIGUOUS_DETERMINISTIC_MATCH"
-      },
-      "terminal_evidence": "morocco26/data/goal100/b2_v1_1_outcome_certificate.json"
-    },
-    {
-      "id": "B2-5-PROVENANCE-CONFLICT-AUDIT",
-      "status": "CLOSED",
-      "required_artifact": "morocco26/data/goal100/b2_provenance_audit.json",
-      "closure_criterion": "Every admissible claim passes source tier, timestamp, content hash, territory/identity, deduplication and conflict rules; zero silently bridged conflicts.",
-      "result": "PASS_EMPTY_ADMISSIBLE_SET",
-      "admissible_claim_records": 0,
-      "silent_conflicts_bridged": 0
-    },
-    {
-      "id": "B2-6-EFFECT-CALIBRATION",
-      "status": "FAILED",
-      "required_artifact": "morocco26/data/goal100/b2_effect_calibration.json",
-      "closure_criterion": "Frozen ridge grid is fit on 2011->2016 and validated on 2016->2021; promoted features satisfy support/coverage and proper-score rules; all failed features remain coefficient zero.",
-      "terminal_result": "FAIL_CLOSED_ZERO_COEFFICIENTS",
-      "fit_executed": false,
-      "coefficient_artifact": "morocco26/data/goal100/b2_coefficients.json",
-      "reason": "The frozen 80% coverage precondition failed in both transitions, so the protocol failure rule forbids fitting or hand-setting predictive effects."
-    },
-    {
-      "id": "B2-7-B2-FROZEN",
-      "status": "CLOSED",
-      "required_artifact": "morocco26/data/goal100/b2_freeze_certificate.json",
-      "closure_criterion": "One exact evidence cutoff, append-only evidence hash, source-registry hash, feature matrix hash, coefficient hash and admissibility audit are frozen.",
-      "result": "PASS_NEGATIVE_RESULT_FROZEN",
-      "evidence_cutoff": "2026-08-17T16:14:58+01:00"
-    },
-    {
-      "id": "B2-8-F0-COUNTERFACTUAL-SIMULATION",
-      "status": "LOCKED",
-      "required_artifact": "morocco26/data/goal100/snapshots/F0/simulation_certificate.json",
-      "unlock_condition": "B2-7-B2-FROZEN is CLOSED.",
-      "closure_criterion": "F0 preserves F-1, reports mechanical-only and calibrated-residual ablations, executes at least 50,000 coherent elections, and is append-only registered.",
-      "unlock_state": "UNLOCKED_BY_B2_7_BUT_NOT_YET_EXECUTED"
-    }
+    {"id": "B2-0-PROTOCOL-FROZEN", "status": "CLOSED", "evidence": "morocco26/data/goal100/b2_protocol_v1.json"},
+    {"id": "B2-1-SOURCE-UNIVERSE-FROZEN", "status": "CLOSED", "evidence": "morocco26/data/goal100/b2_source_universe_certificate.json"},
+    {"id": "B2-2-IDENTITY-TERRITORY-CROSSWALK", "status": "CLOSED", "evidence": "morocco26/data/goal100/b2_identity_territory_certificate.json"},
+    {"id": "B2-3-HISTORICAL-FEATURE-PANEL", "status": "FAILED", "result": "B2_3_DATA_BLOCKED_NONAGENTIC", "evidence": "morocco26/data/goal100/b2_v1_1_outcome_certificate.json", "coverage_each_transition": [0.0, 0.0], "required_coverage": 0.8},
+    {"id": "B2-4-2026-BALLOT-ROSTER", "status": "FAILED", "result": "B2_4_FAIL", "evidence": "morocco26/data/goal100/b2_v1_1_outcome_certificate.json", "rows_parsed": 92, "verified_rows": 0},
+    {"id": "B2-5-PROVENANCE-CONFLICT-AUDIT", "status": "CLOSED", "result": "PASS_EMPTY_ADMISSIBLE_SET", "evidence": "morocco26/data/goal100/b2_provenance_audit.json"},
+    {"id": "B2-6-EFFECT-CALIBRATION", "status": "FAILED", "result": "FAIL_CLOSED_ZERO_COEFFICIENTS", "evidence": "morocco26/data/goal100/b2_effect_calibration.json", "coefficients": "morocco26/data/goal100/b2_coefficients.json"},
+    {"id": "B2-7-B2-FROZEN", "status": "CLOSED", "result": "PASS_NEGATIVE_RESULT_FROZEN", "evidence": "morocco26/data/goal100/b2_freeze_certificate.json", "cutoff": "2026-08-17T16:14:58+01:00"},
+    {"id": "B2-8-F0-COUNTERFACTUAL-SIMULATION", "status": "CLOSED", "result": "PASS_IDENTITY_REPLAY_PROOF", "evidence": "morocco26/data/goal100/forecasts/F0/simulation_certificate.json", "registration": "morocco26/data/goal100/f0_registration_certificate.json", "counterfactual_elections": 50000, "distribution_equivalence": "EXACT_F_MINUS_1"}
   ],
   "agentic_gates": [
-    {
-      "id": "E-COLLECT-PREREGISTERED",
-      "status": "LOCKED",
-      "reason": "B2 is frozen, but F0 must be registered before any agentic experiment is preregistered or executed."
-    },
-    {
-      "id": "E-REASON-PREREGISTERED",
-      "status": "LOCKED",
-      "reason": "B2 is frozen, but F0 must be registered before any same-corpus reasoning experiment is specified."
-    },
-    {
-      "id": "E-FULL-PREREGISTERED",
-      "status": "LOCKED",
-      "reason": "B2 is frozen, but F0 must be registered before collection/reasoning ablations are unlocked."
-    }
+    {"id": "E-COLLECT-PREREGISTERED", "status": "OPEN", "execution_status": "NOT_STARTED", "reason": "F0 is registered; protocol preregistration may now begin."},
+    {"id": "E-REASON-PREREGISTERED", "status": "LOCKED", "reason": "Opens only after the collection ablation is frozen and evaluated."},
+    {"id": "E-FULL-PREREGISTERED", "status": "LOCKED", "reason": "Opens only after collection and reasoning ablations are independently frozen."}
   ],
-  "next_gate": "B2-8-F0-COUNTERFACTUAL-SIMULATION"
+  "next_gate": "E-COLLECT-PREREGISTERED"
 }
