@@ -5,6 +5,7 @@ on:
     branches: [atlas395-v0]
     paths:
       - '.bootstrap/atlas_policy_patch_*'
+      - '.github/workflows/atlas395-apply-source-policy-patch.yml'
 
 permissions:
   contents: write
@@ -24,10 +25,10 @@ jobs:
       - name: Reconstruct and apply reviewed source-policy patch
         shell: bash
         run: |
-          cat .bootstrap/atlas_policy_patch_00 \
-              .bootstrap/atlas_policy_patch_01 \
-              .bootstrap/atlas_policy_patch_02 \
-              .bootstrap/atlas_policy_patch_03 \
+          (head -c 7000 .bootstrap/atlas_policy_patch_00
+           cat .bootstrap/atlas_policy_patch_01 \
+               .bootstrap/atlas_policy_patch_02 \
+               .bootstrap/atlas_policy_patch_03) \
             | base64 -d > /tmp/atlas_policy_patch.tar.xz
           tar -xJf /tmp/atlas_policy_patch.tar.xz -C .
           chmod +x \
