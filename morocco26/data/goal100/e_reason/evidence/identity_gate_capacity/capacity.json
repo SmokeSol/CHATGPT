@@ -1,0 +1,294 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-17T22:27:37+00:00",
+  "years": {
+    "2016": {
+      "local_constituencies": 92,
+      "seat_magnitude_distribution": {
+        "2": 21,
+        "3": 38,
+        "4": 22,
+        "5": 5,
+        "6": 6
+      },
+      "districts_with_seat_magnitude_at_least_3": 71,
+      "districts_with_seat_magnitude_below_3": 21,
+      "single_complete_party_slate_can_meet_70_identity_gate": true,
+      "additional_below_3_districts_needed_if_under_70": 0,
+      "below_3_districts": [
+        {
+          "id_constituency": 529,
+          "region": "Casablanca - Settat",
+          "constituency": "Médiouna",
+          "seats": 2
+        },
+        {
+          "id_constituency": 581,
+          "region": "Dakhla - Oued Ed-Dahab",
+          "constituency": "Aousserd",
+          "seats": 2
+        },
+        {
+          "id_constituency": 580,
+          "region": "Dakhla - Oued Ed-Dahab",
+          "constituency": "Oued-Ed-Dahab",
+          "seats": 2
+        },
+        {
+          "id_constituency": 575,
+          "region": "Fès - Meknès",
+          "constituency": "El-Hajeb",
+          "seats": 2
+        },
+        {
+          "id_constituency": 576,
+          "region": "Fès - Meknès",
+          "constituency": "Ifrane",
+          "seats": 2
+        },
+        {
+          "id_constituency": 551,
+          "region": "Fès - Meknès",
+          "constituency": "Moulay-Yacoub",
+          "seats": 2
+        },
+        {
+          "id_constituency": 556,
+          "region": "Guelmim - Oued-Noun",
+          "constituency": "Assa-Zag",
+          "seats": 2
+        },
+        {
+          "id_constituency": 554,
+          "region": "Guelmim - Oued-Noun",
+          "constituency": "Guelmim",
+          "seats": 2
+        },
+        {
+          "id_constituency": 539,
+          "region": "Guelmim - Oued-Noun",
+          "constituency": "Sidi Ifni",
+          "seats": 2
+        },
+        {
+          "id_constituency": 558,
+          "region": "Guelmim - Oued-Noun",
+          "constituency": "Tan-Tan",
+          "seats": 2
+        },
+        {
+          "id_constituency": 564,
+          "region": "Laâyoune - Sakia-El-Hamra",
+          "constituency": "Boujdour",
+          "seats": 2
+        },
+        {
+          "id_constituency": 557,
+          "region": "Laâyoune - Sakia-El-Hamra",
+          "constituency": "Es-Smara",
+          "seats": 2
+        },
+        {
+          "id_constituency": 565,
+          "region": "Laâyoune - Sakia-El-Hamra",
+          "constituency": "Tarfaya",
+          "seats": 2
+        },
+        {
+          "id_constituency": 592,
+          "region": "Marrakech - Safi",
+          "constituency": "Youssoufia",
+          "seats": 2
+        },
+        {
+          "id_constituency": 542,
+          "region": "Oriental",
+          "constituency": "Guercif",
+          "seats": 2
+        },
+        {
+          "id_constituency": 583,
+          "region": "Oriental",
+          "constituency": "Jerada",
+          "seats": 2
+        },
+        {
+          "id_constituency": 585,
+          "region": "Oriental",
+          "constituency": "Taourirt",
+          "seats": 2
+        },
+        {
+          "id_constituency": 555,
+          "region": "Souss - Massa",
+          "constituency": "Tata",
+          "seats": 2
+        },
+        {
+          "id_constituency": 535,
+          "region": "Souss - Massa",
+          "constituency": "Tiznit",
+          "seats": 2
+        },
+        {
+          "id_constituency": 598,
+          "region": "Tanger - Tétouan - Al Hoceima",
+          "constituency": "Fahs - Anjra",
+          "seats": 2
+        },
+        {
+          "id_constituency": 600,
+          "region": "Tanger - Tétouan - Al Hoceima",
+          "constituency": "M'Diq - Fnideq",
+          "seats": 2
+        }
+      ]
+    },
+    "2021": {
+      "local_constituencies": 92,
+      "seat_magnitude_distribution": {
+        "2": 21,
+        "3": 38,
+        "4": 22,
+        "5": 5,
+        "6": 6
+      },
+      "districts_with_seat_magnitude_at_least_3": 71,
+      "districts_with_seat_magnitude_below_3": 21,
+      "single_complete_party_slate_can_meet_70_identity_gate": true,
+      "additional_below_3_districts_needed_if_under_70": 0,
+      "below_3_districts": [
+        {
+          "id_constituency": 529,
+          "region": "Casablanca - Settat",
+          "constituency": "Médiouna",
+          "seats": 2
+        },
+        {
+          "id_constituency": 581,
+          "region": "Dakhla - Oued Ed-Dahab",
+          "constituency": "Aousserd",
+          "seats": 2
+        },
+        {
+          "id_constituency": 580,
+          "region": "Dakhla - Oued Ed-Dahab",
+          "constituency": "Oued-Ed-Dahab",
+          "seats": 2
+        },
+        {
+          "id_constituency": 575,
+          "region": "Fès - Meknès",
+          "constituency": "El-Hajeb",
+          "seats": 2
+        },
+        {
+          "id_constituency": 576,
+          "region": "Fès - Meknès",
+          "constituency": "Ifrane",
+          "seats": 2
+        },
+        {
+          "id_constituency": 551,
+          "region": "Fès - Meknès",
+          "constituency": "Moulay-Yacoub",
+          "seats": 2
+        },
+        {
+          "id_constituency": 556,
+          "region": "Guelmim - Oued-Noun",
+          "constituency": "Assa-Zag",
+          "seats": 2
+        },
+        {
+          "id_constituency": 554,
+          "region": "Guelmim - Oued-Noun",
+          "constituency": "Guelmim",
+          "seats": 2
+        },
+        {
+          "id_constituency": 539,
+          "region": "Guelmim - Oued-Noun",
+          "constituency": "Sidi Ifni",
+          "seats": 2
+        },
+        {
+          "id_constituency": 558,
+          "region": "Guelmim - Oued-Noun",
+          "constituency": "Tan-Tan",
+          "seats": 2
+        },
+        {
+          "id_constituency": 564,
+          "region": "Laâyoune - Sakia-El-Hamra",
+          "constituency": "Boujdour",
+          "seats": 2
+        },
+        {
+          "id_constituency": 557,
+          "region": "Laâyoune - Sakia-El-Hamra",
+          "constituency": "Es-Smara",
+          "seats": 2
+        },
+        {
+          "id_constituency": 565,
+          "region": "Laâyoune - Sakia-El-Hamra",
+          "constituency": "Tarfaya",
+          "seats": 2
+        },
+        {
+          "id_constituency": 592,
+          "region": "Marrakech - Safi",
+          "constituency": "Youssoufia",
+          "seats": 2
+        },
+        {
+          "id_constituency": 542,
+          "region": "Oriental",
+          "constituency": "Guercif",
+          "seats": 2
+        },
+        {
+          "id_constituency": 583,
+          "region": "Oriental",
+          "constituency": "Jerada",
+          "seats": 2
+        },
+        {
+          "id_constituency": 585,
+          "region": "Oriental",
+          "constituency": "Taourirt",
+          "seats": 2
+        },
+        {
+          "id_constituency": 555,
+          "region": "Souss - Massa",
+          "constituency": "Tata",
+          "seats": 2
+        },
+        {
+          "id_constituency": 535,
+          "region": "Souss - Massa",
+          "constituency": "Tiznit",
+          "seats": 2
+        },
+        {
+          "id_constituency": 598,
+          "region": "Tanger - Tétouan - Al Hoceima",
+          "constituency": "Fahs - Anjra",
+          "seats": 2
+        },
+        {
+          "id_constituency": 600,
+          "region": "Tanger - Tétouan - Al Hoceima",
+          "constituency": "M'Diq - Fnideq",
+          "seats": 2
+        }
+      ]
+    }
+  },
+  "predictive_judgments_generated": false,
+  "forecast_delta_generated": false,
+  "outcomes_unsealed": false,
+  "F1_created": false
+}
