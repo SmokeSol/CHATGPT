@@ -14,34 +14,89 @@ permissions:
 jobs:
   smoke:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
-      - name: Find and verify public Vercel production domain
+      - name: Find current public Vercel domain and wait for Atlas V1
         shell: bash
         run: |
-          set -uo pipefail
+          set -euo pipefail
           candidates=(
+            'https://atlas-395-rescue-20260817.vercel.app/'
             'https://atlas395-maroc-2026.vercel.app/'
             'https://atlas395-maroc-2026-yannlevy85gmailcoms-projects.vercel.app/'
           )
           PUBLIC=''
-          for URL in "${candidates[@]}"; do
-            code=$(curl -sS -L -o /tmp/candidate.html -w '%{http_code}' --max-time 30 "$URL" || true)
-            echo "$URL HTTP=$code BYTES=$(wc -c < /tmp/candidate.html)"
-            if grep -Fq 'ATLAS 395' /tmp/candidate.html; then PUBLIC="$URL"; break; fi
+          for attempt in $(seq 1 18); do
+            echo "Poll ${attempt}/18"
+            for URL in "${candidates[@]}"; do
+              code=$(curl -sS -L -o /tmp/candidate.html -w '%{http_code}' --max-time 30 "$URL" || true)
+              bytes=$(wc -c < /tmp/candidate.html 2>/dev/null || echo 0)
+              echo "$URL HTTP=$code BYTES=$bytes"
+              if [ "$code" = '200' ] && \
+                 grep -Fq 'ATLAS 395' /tmp/candidate.html && \
+                 grep -Fq '20260817-1848' /tmp/candidate.html; then
+                PUBLIC="$URL"
+                break 2
+              fi
+            done
+            sleep 10
           done
-          test -n "$PUBLIC" || { echo 'NO_PUBLIC_VERCEL_DOMAIN'; exit 1; }
+          test -n "$PUBLIC" || { echo 'NO_CURRENT_ATLAS_V1_VERCEL_DOMAIN'; exit 1; }
+          echo "PUBLIC=$PUBLIC" >> "$GITHUB_ENV"
+          echo "VERIFIED_PUBLIC_VERCEL_URL=$PUBLIC" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Verify Atlas V1 static assets and evidence payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --max-time 40 "${PUBLIC}assets/candidates.js?v=20260817-1848" -o /tmp/candidates.js
+          curl -fsSL --max-time 40 "${PUBLIC}assets/candidates.css?v=20260817-1848" -o /tmp/candidates.css
+          curl -fsSL --max-time 40 "${PUBLIC}assets/map.js?v=20260817-1848" -o /tmp/map.js
+          curl -fsSL --max-time 40 "${PUBLIC}data/atlas_v1.json" -o /tmp/atlas_v1.json
+          grep -Fq "load('atlas_v1.json')" /tmp/candidates.js
+          grep -Fq 'Candidatures 2026' /tmp/candidates.js
+          grep -Fq '/assets/candidates.js?v=20260817-1848' /tmp/map.js
+          grep -Fq '.candidate-layout' /tmp/candidates.css
+          node --check /tmp/candidates.js
+          node --check /tmp/map.js
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('/tmp/atlas_v1.json').read_text(encoding='utf-8'))
+          coverage = data['coverage']
+          assert data['forecast']['immutable'] is True
+          assert data['forecast']['candidate_and_signal_impact'] == 'NOT_CALIBRATED'
+          assert coverage['canonical_local_territories'] == 92
+          assert coverage['arabic_identity_coverage'] == 92
+          assert coverage['candidate_records_after_official_pjd_merge'] == 546
+          assert coverage['local_territories_with_records_after_merge'] == 92
+          assert coverage['missing_after_merge'] == []
+          assert len(data['territories']) == 92
+          assert len({r['constituency_id'] for r in data['territories']}) == 92
+          assert any(r['name_ar'] == 'الدار البيضاء آنفا' for r in data['territories'])
+          assert len(data['pjd_bilingual_roster']) == 92
+          print(json.dumps(coverage, indent=2, ensure_ascii=False))
+          PY
+
+      - name: Verify rendered Atlas V1 in Chromium
+        shell: bash
+        run: |
+          set -euo pipefail
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
-          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=18000 --dump-dom "$PUBLIC" > /tmp/atlas-dom.html
+          "$CHROME" --headless --no-sandbox --disable-gpu \
+            --virtual-time-budget=25000 --dump-dom "$PUBLIC" > /tmp/atlas-dom.html
           grep -Fq 'Synthèse nationale' /tmp/atlas-dom.html
           grep -Fq 'Méthodologie' /tmp/atlas-dom.html
           grep -Fq 'Carte territoriale' /tmp/atlas-dom.html
           grep -Fq 'Partis' /tmp/atlas-dom.html
+          grep -Fq 'Candidatures 2026' /tmp/atlas-dom.html
           grep -Fq 'Signaux 2026' /tmp/atlas-dom.html
           grep -Fq 'Historique' /tmp/atlas-dom.html
-          grep -Fq 'Une projection territoriale, probabiliste et traçable' /tmp/atlas-dom.html
-          grep -Fq 'Neutralité et gouvernance des données' /tmp/atlas-dom.html
-          grep -Fq 'Enregistrée' /tmp/atlas-dom.html
-          grep -Fq '50 000' /tmp/atlas-dom.html
-          ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|agentic|E_collect|E_reason|E_full|F0|F-1|B2_' /tmp/atlas-dom.html
-          ! grep -Fq 'Édition temporairement indisponible' /tmp/atlas-dom.html
-          echo "VERIFIED_PUBLIC_VERCEL_URL=$PUBLIC"
+          grep -Fq 'Candidatures et identité territoriale 2026' /tmp/atlas-dom.html
+          grep -Fq 'Projection gelée inchangée' /tmp/atlas-dom.html
+          grep -Fq '546 fiches' /tmp/atlas-dom.html
+          grep -Fq 'الدار البيضاء آنفا' /tmp/atlas-dom.html
+          grep -Fq 'AUCUN DELTA APPLIQUÉ' /tmp/atlas-dom.html
+          ! grep -Fq 'Atlas 395 ne peut pas charger les données' /tmp/atlas-dom.html
+          ! grep -Fq 'Atlas 395 ne peut pas initialiser cette édition' /tmp/atlas-dom.html
+          echo "ATLAS_V1_BROWSER_SMOKE=PASS" >> "$GITHUB_STEP_SUMMARY"
