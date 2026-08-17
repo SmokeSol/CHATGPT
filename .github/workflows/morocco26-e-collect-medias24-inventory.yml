@@ -1,0 +1,89 @@
+name: morocco26-e-collect-medias24-inventory
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_fetches:
+        description: Maximum number of Médias24 URLs to fetch
+        required: false
+        default: '500'
+      max_depth:
+        description: Maximum recursive discovery depth
+        required: false
+        default: '4'
+  push:
+    branches:
+      - morocco26-e-collect
+    paths:
+      - 'morocco26/scripts/e_collect_medias24_inventory.py'
+      - 'morocco26/data/goal100/e_collect/e_collect_v1_1_human_seed_amendment.json'
+      - '.github/workflows/morocco26-e-collect-medias24-inventory.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: morocco26-e-collect-medias24-inventory
+  cancel-in-progress: false
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout collection branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: morocco26-e-collect
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate frozen preregistration before collection
+        run: python morocco26/scripts/validate_e_collect_prereg.py
+
+      - name: Install bounded collector dependencies
+        run: python -m pip install --disable-pip-version-check requests==2.32.4 beautifulsoup4==4.13.4
+
+      - name: Run Médias24 election asset inventory
+        env:
+          E_COLLECT_RUN_ID: medias24_inventory_${{ github.run_id }}_${{ github.run_attempt }}
+          E_COLLECT_MAX_FETCHES: ${{ github.event.inputs.max_fetches || '500' }}
+          E_COLLECT_MAX_DEPTH: ${{ github.event.inputs.max_depth || '4' }}
+          E_COLLECT_MAX_ARCHIVE_BYTES: '2500000'
+          E_COLLECT_MAX_TOTAL_ARCHIVE_BYTES: '30000000'
+        run: python morocco26/scripts/e_collect_medias24_inventory.py
+
+      - name: Revalidate frozen artifacts after collection
+        run: python morocco26/scripts/validate_e_collect_prereg.py
+
+      - name: Inspect generated evidence package
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('morocco26/data/goal100/e_collect/medias24_inventory_latest.json')
+          latest = json.loads(p.read_text(encoding='utf-8'))
+          manifest = json.loads(Path(latest['latest_run_manifest']).read_text(encoding='utf-8'))
+          print(json.dumps(manifest, indent=2, ensure_ascii=False))
+          assert manifest['frozen_artifacts_modified'] is False
+          assert manifest['forecast_effect_authorized'] is False
+          assert manifest['fetch_count'] > 0
+          PY
+
+      - name: Commit append-only inventory results
+        run: |
+          if git diff --quiet -- morocco26/data/goal100/e_collect && \
+             [ -z "$(git ls-files --others --exclude-standard morocco26/data/goal100/e_collect)" ]; then
+            echo 'No new inventory artifacts to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/e_collect/runs \
+                  morocco26/data/goal100/e_collect/medias24_inventory_latest.json
+          git commit -m 'experiment(e-collect): archive Médias24 election asset inventory [skip e-collect-inventory]'
+          git push origin HEAD:morocco26-e-collect
