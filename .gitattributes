@@ -7,3 +7,6 @@ morocco26/data/goal100/b2_raw_acquisition/** -text -diff
 # Ingested raw source files are archived evidence for the same reason.
 morocco26/data/goal100/historical/raw/** -text -diff
 morocco26/data/goal100/older_history_probe/raw/** -text -diff
+
+# E_collect raw evidence is append-only and hash-addressed.
+morocco26/data/goal100/e_collect/runs/**/raw/** -text -diff
