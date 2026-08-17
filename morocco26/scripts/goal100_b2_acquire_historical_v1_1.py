@@ -296,6 +296,42 @@ def write_manifest(entries: list[dict], surface: dict, certificate: dict, comple
     return manifest
 
 
+LOCK_PATH = G100 / "b2_historical_v1_1_acquisition.lock"
+LOCK_STALE_SECONDS = 3600
+
+
+def acquire_lock() -> None:
+    """Refuse to run concurrently with another acquisition.
+
+    Two simultaneous runs write the same manifest and vault paths, so the
+    surviving manifest describes neither run completely. This guard makes that
+    impossible rather than merely unlikely.
+    """
+    if LOCK_PATH.exists():
+        try:
+            held = json.loads(LOCK_PATH.read_text(encoding="utf-8"))
+            started = datetime.fromisoformat(held["started_at"])
+            age = (datetime.now(TZ) - started).total_seconds()
+        except (json.JSONDecodeError, KeyError, ValueError):
+            age = None
+        if age is None or age < LOCK_STALE_SECONDS:
+            raise SystemExit(
+                f"B2_V1_1_ACQUIRE_FAIL: another acquisition holds {LOCK_PATH.name}. "
+                "Concurrent runs corrupt the manifest; wait or remove a stale lock."
+            )
+    dump(LOCK_PATH, {
+        "pid": os.getpid(),
+        "started_at": now_local(),
+        "environment": environment(),
+        "purpose": "Prevents concurrent acquisition runs from interleaving manifest writes.",
+    })
+
+
+def release_lock() -> None:
+    if LOCK_PATH.exists():
+        LOCK_PATH.unlink()
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--all", action="store_true")
@@ -310,6 +346,7 @@ def main() -> None:
     if certificate["source_surface_sha256"] != surface["canonical_surface_sha256"]:
         raise SystemExit("B2_V1_1_ACQUIRE_FAIL: certificate does not match the frozen surface")
 
+    acquire_lock()
     cutoffs = surface["time_contract"]["election_cutoffs"]
     handlers = {
         "H1_OPENAFRICA_CATALOG": acquire_openafrica,
@@ -317,15 +354,17 @@ def main() -> None:
     }
 
     entries = []
-    for source in surface["sources"]:
-        if source["source_id"] in handlers:
-            entries += handlers[source["source_id"]](source)
-        elif source["source_id"] == "H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS":
-            entries += acquire_web_archive(source, cutoffs)
-        # Checkpoint: a killed run must never discard the work already done.
-        write_manifest(entries, surface, certificate, complete=False)
-
-    manifest = write_manifest(entries, surface, certificate, complete=True)
+    try:
+        for source in surface["sources"]:
+            if source["source_id"] in handlers:
+                entries += handlers[source["source_id"]](source)
+            elif source["source_id"] == "H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS":
+                entries += acquire_web_archive(source, cutoffs)
+            # Checkpoint: a killed run must never discard the work already done.
+            write_manifest(entries, surface, certificate, complete=False)
+        manifest = write_manifest(entries, surface, certificate, complete=True)
+    finally:
+        release_lock()
 
     print("B2_V1_1_HISTORICAL_ACQUISITION_COMPLETE")
     for key, value in manifest["counts"].items():

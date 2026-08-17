@@ -2,7 +2,7 @@
 
 Numeric answers only. No political interpretation, no effect size, no forecast.
 
-- Generated: 2026-08-17T11:52:32+01:00
+- Generated: 2026-08-17T11:58:18+01:00
 - Amendment: `M26-GOAL100-B2-HISTORICAL-SOURCE-SURFACE-V1.1`, frozen `2026-08-17T11:14:31+01:00` **before** acquisition
 - Source-surface SHA-256: `e0fe3585d24ca50fe023b1d7747ae2dba4f0be946dbe86b6a56e33caebf158df`
 - Source-surface certificate: `PASS` (10 checks)
@@ -12,7 +12,7 @@ Numeric answers only. No political interpretation, no effect size, no forecast.
 ## 1. Historical candidate rosters recovered?
 
 **No.** `roster_dataset_found = false`
-across 1093 enumerated dataset/package names.
+across 1109 enumerated dataset/package names.
 Required years [2016, 2021]; recovered coverage **0/92 territories in both**.
 
 Previously recovered and preserved (elected members, not candidate rosters):
@@ -32,7 +32,7 @@ Previously recovered and preserved (elected members, not candidate rosters):
 | `HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR` | no | 0 | `NO_NAMED_SURFACE_IN_AMENDED_CATALOG` |
 | `HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR` | no | 0 | `NO_NAMED_SURFACE_IN_AMENDED_CATALOG` |
 | `HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR` | no | 0 | `NO_NAMED_SURFACE_IN_AMENDED_CATALOG` |
-| `HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR` | yes | 4 | `CANDIDATE_SURFACE_IDENTIFIED_NOT_YET_PARSED` |
+| `HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR` | yes | 3 | `CANDIDATE_SURFACE_IDENTIFIED_NOT_YET_PARSED` |
 | `HISTORICAL_PARTY_OFFICE_TARGET_YEAR` | no | 0 | `NO_NAMED_SURFACE_IN_AMENDED_CATALOG` |
 | `HISTORICAL_PARTY_SWITCH_TARGET_YEAR` | no | 0 | `NO_NAMED_SURFACE_IN_AMENDED_CATALOG` |
 
@@ -148,11 +148,11 @@ protocol digests all agree.
 
 | Surface | Requests | Acquired | Blocked | Truncated | Captures | Exhaustion claimable |
 |---|---:|---:|---:|---:|---:|---|
-| `H1_OPENAFRICA_CATALOG` | 5 | 2 | 3 | 0 | 0 | no |
+| `H1_OPENAFRICA_CATALOG` | 5 | 1 | 4 | 0 | 0 | no |
 | `H2_HUGGINGFACE_ELECTRICSHEEPAFRICA` | 6 | 6 | 0 | 1 | 0 | no |
-| `H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS` | 126 | 9 | 22 | 4 | 11258 | no |
+| `H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS` | 126 | 20 | 18 | 13 | 30130 | no |
 
-`B2_3_DATA_BLOCKED_NONAGENTIC` was selected because: Exhaustion is not established. Blocked or failing surfaces: ['H1_OPENAFRICA_CATALOG', 'H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS']. Truncated enumerations: ['H2_HUGGINGFACE_ELECTRICSHEEPAFRICA', 'H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS']. Pre-cutoff archived material reachable but not deterministically parsable into the required input classes: 11258 captures.
+`B2_3_DATA_BLOCKED_NONAGENTIC` was selected because: Exhaustion is not established. Blocked or failing surfaces: ['H1_OPENAFRICA_CATALOG', 'H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS']. Truncated enumerations: ['H2_HUGGINGFACE_ELECTRICSHEEPAFRICA', 'H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS']. Pre-cutoff archived material reachable but not deterministically parsable into the required input classes: 30130 captures.
 
 Exhaustion is only claimable when a surface is both fully enumerated and reachable. A truncated
 enumeration or a blocked route cannot support a claim that nothing exists, which is why this run does

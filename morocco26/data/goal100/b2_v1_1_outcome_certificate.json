@@ -1,10 +1,10 @@
 {
   "schema_version": "1.1",
   "certificate_id": "M26-GOAL100-B2-V1-1-OUTCOME-CERTIFICATE",
-  "certified_at": "2026-08-17T11:51:45+01:00",
+  "certified_at": "2026-08-17T11:58:08+01:00",
   "amendment_id": "M26-GOAL100-B2-HISTORICAL-SOURCE-SURFACE-V1.1",
   "source_surface_sha256": "e0fe3585d24ca50fe023b1d7747ae2dba4f0be946dbe86b6a56e33caebf158df",
-  "acquisition_manifest_sha256": "3cb59e97032515980793ef5487148ecb3a8681f9b6e810b144ebf2a6f14446ca",
+  "acquisition_manifest_sha256": "9dbd24e560a3565289557d83e62eba744b916579523d46752bc4a802ef05a43f",
   "determinism": {
     "llm_used": false,
     "semantic_selection": false
@@ -13,8 +13,8 @@
     {
       "source_id": "H1_OPENAFRICA_CATALOG",
       "requests": 5,
-      "acquired": 2,
-      "blocked": 3,
+      "acquired": 1,
+      "blocked": 4,
       "errors": 0,
       "no_captures": 0,
       "truncated": 0,
@@ -22,21 +22,30 @@
       "inventory": {
         "source_id": "H1_OPENAFRICA_CATALOG",
         "purpose": "CATALOG_INVENTORY",
-        "retrieved_at": "2026-08-17T11:26:34+01:00",
+        "retrieved_at": "2026-08-17T11:32:31+01:00",
         "state": "INVENTORY",
-        "distinct_packages": 26,
+        "distinct_packages": 42,
         "packages": [
           {
-            "name": "composition-des-conseils-communaux-2015-maroc",
-            "title": "Composition des conseils communaux Maroc 2015",
-            "organization": "tafra",
+            "name": "acled-conflict-data-version-5-1997-2014",
+            "title": "ACLED Conflict Data: Version 5 (1997 - 2014)",
+            "organization": "armed-conflict-location-and-event-data-project",
             "resource_formats": [
-              "XLSX"
+              "XLSX",
+              "ZIP"
             ]
           },
           {
-            "name": "composition-des-conseils-communaux-2021",
-            "title": "Composition des conseils communaux Maroc 2021",
+            "name": "african-timeseries-annual-temperature-1901-2021",
+            "title": "African Timeseries Annual Temperature (1901-2021)",
+            "organization": "world-bank",
+            "resource_formats": [
+              "CSV"
+            ]
+          },
+          {
+            "name": "composition-des-conseils-communaux-2015-maroc",
+            "title": "Composition des conseils communaux Maroc 2015",
             "organization": "tafra",
             "resource_formats": [
               "XLSX"
@@ -155,11 +164,25 @@
             ]
           },
           {
+            "name": "employment-indicators-2006-2010",
+            "title": "Employment Indicators 2006-2010",
+            "organization": null,
+            "resource_formats": []
+          },
+          {
             "name": "engagements-du-gouvernement-a-la-chambre-des-representants-maroc-2023",
             "title": "Engagements du gouvernement à la Chambre des Représentants Maroc 2021",
             "organization": "tafra",
             "resource_formats": [
               ".XLSX"
+            ]
+          },
+          {
+            "name": "health-care-in-morocco",
+            "title": "Health care in Morocco",
+            "organization": null,
+            "resource_formats": [
+              "PDF"
             ]
           },
           {
@@ -179,12 +202,79 @@
             ]
           },
           {
+            "name": "list-of-postal-codes",
+            "title": "List of Postal Codes",
+            "organization": null,
+            "resource_formats": []
+          },
+          {
+            "name": "list-of-private-schools-morocco",
+            "title": "List of Private Schools, Morocco",
+            "organization": null,
+            "resource_formats": []
+          },
+          {
+            "name": "list-of-public-schools-in-morocco",
+            "title": "List of Public Schools in Morocco",
+            "organization": null,
+            "resource_formats": []
+          },
+          {
             "name": "membres-de-la-chambre-des-representants-du-maroc-2007-2011-2016-2021",
             "title": "Membres de la Chambre des Représentants du Maroc",
             "organization": "tafra",
             "resource_formats": [
               "XLSX"
             ]
+          },
+          {
+            "name": "mining-in-morocco",
+            "title": "Mining in Morocco",
+            "organization": null,
+            "resource_formats": [
+              "PDF",
+              "XLS"
+            ]
+          },
+          {
+            "name": "morocco-electricity-transmission-network-2014",
+            "title": "Morocco - Electricity Transmission Network (2014)",
+            "organization": null,
+            "resource_formats": [
+              "GEOJSON",
+              "SHP"
+            ]
+          },
+          {
+            "name": "morocco-electricity-transmission-network-2017",
+            "title": "Morocco - Electricity Transmission Network (2017)",
+            "organization": null,
+            "resource_formats": [
+              "GEOJSON"
+            ]
+          },
+          {
+            "name": "morocco-legislatures",
+            "title": "Morocco legislatures",
+            "organization": "everypolitician",
+            "resource_formats": [
+              "CSV",
+              "JSON"
+            ]
+          },
+          {
+            "name": "morocco-maps",
+            "title": "Morocco Maps",
+            "organization": null,
+            "resource_formats": [
+              "ZIP"
+            ]
+          },
+          {
+            "name": "morroco-international-bank-for-reconstruction-and-development-ibrd-loans",
+            "title": "Morroco - International Bank for Reconstruction and Development (IBRD) loans",
+            "organization": null,
+            "resource_formats": []
           },
           {
             "name": "questions-parlementaires-maroc-2011-et-2016",
@@ -233,6 +323,32 @@
             "resource_formats": [
               "XLSX"
             ]
+          },
+          {
+            "name": "spain-electricity-transmission-network-2017",
+            "title": "Spain - Electricity Transmission Network (2017)",
+            "organization": null,
+            "resource_formats": [
+              "GEOJSON"
+            ]
+          },
+          {
+            "name": "trust-fund-grants-committed-disbursed-morocco",
+            "title": "Trust Fund Grants Committed & Disbursed - Morocco",
+            "organization": null,
+            "resource_formats": []
+          },
+          {
+            "name": "undp-projects-2011-morroco",
+            "title": "UNDP Projects 2011 Morroco",
+            "organization": null,
+            "resource_formats": []
+          },
+          {
+            "name": "world-bank-contract-award-2010-2012-morocco",
+            "title": "World Bank Contract Award 2010-2012 - Morocco",
+            "organization": null,
+            "resource_formats": []
           }
         ],
         "url": null,
@@ -255,7 +371,7 @@
       "inventory": {
         "source_id": "H2_HUGGINGFACE_ELECTRICSHEEPAFRICA",
         "purpose": "CATALOG_INVENTORY",
-        "retrieved_at": "2026-08-17T11:26:36+01:00",
+        "retrieved_at": "2026-08-17T11:32:34+01:00",
         "state": "INVENTORY",
         "distinct_datasets": 1067,
         "datasets": [
@@ -1338,12 +1454,12 @@
     {
       "source_id": "H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS",
       "requests": 126,
-      "acquired": 9,
-      "blocked": 22,
-      "errors": 92,
-      "no_captures": 3,
-      "truncated": 4,
-      "captures_total": 11258,
+      "acquired": 20,
+      "blocked": 18,
+      "errors": 80,
+      "no_captures": 8,
+      "truncated": 13,
+      "captures_total": 30130,
       "inventory": null,
       "fully_enumerated": false,
       "reachable": true,
@@ -1357,7 +1473,7 @@
       2021
     ],
     "dataset_name_search": {
-      "names_enumerated": 1093,
+      "names_enumerated": 1109,
       "match_rule": "word-boundary match requiring a candidate term AND a Morocco term AND an electoral qualifier; no ranking, no interpretation",
       "roster_term_list": [
         "candidat",
@@ -1445,7 +1561,6 @@
         ],
         "matches": [
           "composition-des-conseils-communaux-2015-maroc",
-          "composition-des-conseils-communaux-2021",
           "composition-des-conseils-regionaux-2015",
           "composition-des-conseils-regionaux-2021"
         ],
@@ -1540,7 +1655,7 @@
     "blocking_state": "AMBIGUOUS_DETERMINISTIC_MATCH"
   },
   "termination_state": "B2_3_DATA_BLOCKED_NONAGENTIC",
-  "termination_reason": "Exhaustion is not established. Blocked or failing surfaces: ['H1_OPENAFRICA_CATALOG', 'H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS']. Truncated enumerations: ['H2_HUGGINGFACE_ELECTRICSHEEPAFRICA', 'H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS']. Pre-cutoff archived material reachable but not deterministically parsable into the required input classes: 11258 captures.",
+  "termination_reason": "Exhaustion is not established. Blocked or failing surfaces: ['H1_OPENAFRICA_CATALOG', 'H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS']. Truncated enumerations: ['H2_HUGGINGFACE_ELECTRICSHEEPAFRICA', 'H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS']. Pre-cutoff archived material reachable but not deterministically parsable into the required input classes: 30130 captures.",
   "termination_detail": {
     "blocked_surfaces": [
       "H1_OPENAFRICA_CATALOG",
@@ -1550,7 +1665,7 @@
       "H2_HUGGINGFACE_ELECTRICSHEEPAFRICA",
       "H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS"
     ],
-    "pre_cutoff_captures": 11258
+    "pre_cutoff_captures": 30130
   },
   "reserved_for_e_collect": {
     "policy": "Unresolved cells are preserved, not filled by agentic collection.",
@@ -1582,5 +1697,5 @@
     "F0_CREATED": false,
     "AGENTIC_PREDICTIVE_LAYER": "LOCKED"
   },
-  "canonical_certificate_sha256": "b2824fe2ef0a2bd321e66c33c7054aa4350e738f6848d00be917634e0fd8e148"
+  "canonical_certificate_sha256": "f75b82dc7c0dbc4e430e137f6c2cd80f081f805858d53d0d51bba8008aefd02a"
 }

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "archived_at": "2026-08-17T11:50:33+01:00",
+  "superseded_manifest_sha256": "3cb59e97032515980793ef5487148ecb3a8681f9b6e810b144ebf2a6f14446ca",
+  "superseding_manifest_sha256": "9dbd24e560a3565289557d83e62eba744b916579523d46752bc4a802ef05a43f",
+  "reason": "Two acquisition runs were alive concurrently and both wrote this manifest path. The earlier, less complete run is retained here; the later fuller run supersedes it.",
+  "same_frozen_surface": true,
+  "termination_state_unchanged": "B2_3_DATA_BLOCKED_NONAGENTIC",
+  "counts_superseded": {
+    "entries": 139,
+    "acquired": 17,
+    "blocked": 25,
+    "errors": 92,
+    "no_captures": 3,
+    "truncated_enumerations": 5
+  }
+}

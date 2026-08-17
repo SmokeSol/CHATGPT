@@ -251,3 +251,26 @@ non autoritative. Gate `B2-4` reste `OPEN`, `0` claim B2 créé.
 **Prochain gate machine :** `B2-3-HISTORICAL-FEATURE-PANEL` reste le gate bloquant ; `B2-4` requiert soit
 une source T0 autoritative, soit un amendement versionné d'alias territoriaux arabes revus un par un.
 Coefficients exactement nuls, `B2_FROZEN = false`, `F0_CREATED = false`.
+
+
+### 2026-08-17 — Correction — supersession du manifeste d'acquisition V1.1
+
+**Erreur d'exécution, corrigée sans réécriture.** Deux exécutions d'acquisition V1.1 ont été vivantes
+simultanément et ont écrit le même chemin de manifeste. Ma détection d'arrêt sur 45 s était un faux
+négatif : une requête CDX dure jusqu'à 25 s, donc un domaine lent ne produit aucun fichier neuf dans
+cette fenêtre. L'entrée précédente de ce journal cite les chiffres de la course la moins complète.
+
+**Chiffres corrigés.** Manifeste superseded `3cb59e9703251598` :
+`{"entries": 139, "acquired": 17, "blocked": 25, "errors": 92, "no_captures": 3, "truncated_enumerations": 5}`. Manifeste retenu `9dbd24e560a35652` :
+`{"entries": 139, "acquired": 27, "blocked": 22, "errors": 80, "no_captures": 8, "truncated_enumerations": 14}`.
+La course superseded est conservée sous
+`data/goal100/b2_historical_v1_1_acquisition_attempts/run_3cb59e9703251598/`.
+
+**Impact scientifique : NUL.** Les deux courses utilisent la même surface gelée
+`True` et aucune surface n'est `exhaustion_claimable` dans l'une ou l'autre.
+L'état terminal reste `B2_3_DATA_BLOCKED_NONAGENTIC`. Aucun seuil, aucun coefficient, aucun
+artefact F-1 n'est touché.
+
+**Correctif d'ingénierie.** L'acquéreur prend désormais un verrou exclusif
+(`b2_historical_v1_1_acquisition.lock`) et refuse de démarrer si une autre course est active ; le
+verrou est libéré dans un `finally`.
