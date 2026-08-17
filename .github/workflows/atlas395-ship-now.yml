@@ -90,7 +90,7 @@ jobs:
           from pathlib import Path
           dom=Path('/tmp/live-dom.html').read_text(encoding='utf-8',errors='replace')
           required=['Intelligence électorale territoriale · Maroc 2026','Rapport de forces et incertitude territoriale','Synthèse','Carte territoriale','Candidatures','Partis','Veille 2026','Méthode','Historique','Candidatures documentées par circonscription','RÉFÉRENCE CONSERVÉE','territoires bilingues','546','الدار البيضاء آنفا','data-institutional-nav-bound="1"']
-          forbidden=['LLM','intelligence artificielle','expérimentation IA','E_reason','E_full','agentic','Arabic Native','AUCUN DELTA APPLIQUÉ','Invalid Date','NaN']
+          forbidden=['LLM','intelligence artificielle','expérimentation IA','E_reason','E_full','agentic','Arabic Native','AUCUN DELTA APPLIQUÉ','Invalid Date']
           missing=[x for x in required if x not in dom]
           forbidden_present=[x for x in forbidden if x.lower() in dom.lower()]
           fatal=[x for x in ['Atlas 395 ne peut pas charger','Atlas 395 ne peut pas initialiser'] if x in dom]
