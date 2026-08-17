@@ -1,0 +1,19 @@
+{
+  "product": "ATLAS 395",
+  "generated_from": {
+    "snapshot_id": "F-1",
+    "forecast_path": "data/goal100/forecasts/F-1/forecast.json",
+    "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "snapshot_manifest_path": "data/goal100/forecasts/F-1/snapshot_manifest.json"
+  },
+  "read_only_contract": true,
+  "outputs": {
+    "current_snapshot.json": "c4ea016f13a3ec4c2dc7bd038b9d70e26a8ae132e4c1073cbc973c9c0bcc31c9",
+    "national_projection.json": "41a6bfa68c287c8b0b0e59bd253b32d6afeae9e63b355e121b017d8412f6130a",
+    "constituency_cards.json": "a8387b6c89acb5cc52c90f9d82bd9d7a54b0cbbfe8a5a3b0da860700039d450d",
+    "party_cards.json": "92c94fd5124c6a90f9d8b5d2e89e181d55c82a09d111d9e7ad0ea3f2066e319b",
+    "evidence_index.json": "bd03699cbfd3896400090038f53e317ea1e0e34a3c71edd2af0eb6f1f3191517",
+    "change_log.json": "2cf124cbce46e35cb4736dd554b0e0c3279ac74162edbd5c4bc54fcf6c990f32",
+    "methodology_state.json": "fd3c8b2ddc0f0ce63092b0b1ce6f8307e377b97cdea2fa9f3cd1320633927d28"
+  }
+}

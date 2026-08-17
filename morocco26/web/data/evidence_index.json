@@ -1,0 +1,185 @@
+{
+  "as_of": "2026-08-17T11:04:43+01:00",
+  "parent_snapshot": "F-1",
+  "collection": {
+    "status": "ENABLED_BOUNDED",
+    "reason": "B2-1 source universe smoke test PASS; only ACTIVE allowlisted routes may create candidate records.",
+    "evidence_records": 0,
+    "admissible_records": 0,
+    "conflicted_records": 0,
+    "evidence_cutoff": null,
+    "source_universe_sha256": "8aa331e941ab892997b68a04b91b5b2147c9561f717a3ca976122dbb1ba44d32",
+    "active_sources": 11,
+    "reference_only_sources": 5,
+    "inactive_sources": 3
+  },
+  "wave1": {
+    "documents_acquired": 30,
+    "documents_blocked": 10,
+    "documents_error": 15,
+    "b2_claim_records_created": 0,
+    "sources_claim_eligible": 11,
+    "structured_states_available": [
+      "VERIFIED",
+      "UNKNOWN",
+      "BLOCKED_SOURCE",
+      "UNPARSABLE_NONAGENTIC",
+      "AMBIGUOUS_DETERMINISTIC_MATCH"
+    ]
+  },
+  "sources": [
+    {
+      "source": "T0_CHAMBRE_REPRESENTANTS",
+      "states": {
+        "BLOCKED_SOURCE": 1
+      }
+    },
+    {
+      "source": "T0_CONSTITUTIONAL_COURT",
+      "states": {
+        "ACQUIRED": 2,
+        "FETCH_ERROR": 2
+      }
+    },
+    {
+      "source": "T0_LISTES_ELECTORALES",
+      "states": {
+        "BLOCKED_SOURCE": 1
+      }
+    },
+    {
+      "source": "T0_MAROC_MA_ELECTIONS",
+      "states": {
+        "ACQUIRED": 3,
+        "FETCH_ERROR": 2
+      }
+    },
+    {
+      "source": "T0_SGG_LEGISLATION",
+      "states": {
+        "BLOCKED_SOURCE": 1
+      }
+    },
+    {
+      "source": "T1_ISTIQLAL_OFFICIAL",
+      "states": {
+        "ACQUIRED": 1,
+        "FETCH_ERROR": 3
+      }
+    },
+    {
+      "source": "T1_MP_OFFICIAL",
+      "states": {
+        "ACQUIRED": 4
+      }
+    },
+    {
+      "source": "T1_PAM_OFFICIAL",
+      "states": {
+        "BLOCKED_SOURCE": 1
+      }
+    },
+    {
+      "source": "T1_PJD_OFFICIAL",
+      "states": {
+        "ACQUIRED": 5
+      }
+    },
+    {
+      "source": "T1_PPS_OFFICIAL",
+      "states": {
+        "ACQUIRED": 4,
+        "FETCH_ERROR": 1
+      }
+    },
+    {
+      "source": "T1_RNI_OFFICIAL",
+      "states": {
+        "BLOCKED_SOURCE": 1
+      }
+    },
+    {
+      "source": "T1_UC_OFFICIAL",
+      "states": {
+        "ACQUIRED": 2,
+        "BLOCKED_SOURCE": 2
+      }
+    },
+    {
+      "source": "T1_USFP_OFFICIAL",
+      "states": {
+        "BLOCKED_SOURCE": 1
+      }
+    },
+    {
+      "source": "T2_HESPRESS",
+      "states": {
+        "ACQUIRED": 3,
+        "FETCH_ERROR": 1
+      }
+    },
+    {
+      "source": "T2_LE360",
+      "states": {
+        "ACQUIRED": 1,
+        "FETCH_ERROR": 3
+      }
+    },
+    {
+      "source": "T2_LEMATIN",
+      "states": {
+        "ACQUIRED": 1,
+        "FETCH_ERROR": 3
+      }
+    },
+    {
+      "source": "T2_MEDIAS24",
+      "states": {
+        "BLOCKED_SOURCE": 1
+      }
+    },
+    {
+      "source": "T2_SNRTNEWS",
+      "states": {
+        "ACQUIRED": 4
+      }
+    },
+    {
+      "source": "T2_TELQUEL",
+      "states": {
+        "BLOCKED_SOURCE": 1
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "PJD_ROSTER_SURFACE_WAVE1",
+      "as_of": "2026-08-17T11:03:44+01:00",
+      "source": "T1_PJD_OFFICIAL",
+      "status": "DETECTED_NOT_ADMITTED",
+      "summary": "93 structured roster-like rows detected on an official PJD source.",
+      "forecast_impact": "NONE",
+      "reason": "No B2 claim admitted: frozen critical verification/double-entry requirements are not satisfied."
+    }
+  ],
+  "blocking_historical_input_classes": [
+    "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
+    "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
+    "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+    "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+    "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+    "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
+    "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
+    "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
+    "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+    "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
+    "HISTORICAL_LIST_REJECTION_TARGET_YEAR",
+    "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
+    "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+    "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR",
+    "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
+    "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+  ],
+  "forecast_change": "NONE",
+  "forecast_change_reason": "B2 predictive coefficients remain exactly zero; F-1 remains the current frozen forecast."
+}
