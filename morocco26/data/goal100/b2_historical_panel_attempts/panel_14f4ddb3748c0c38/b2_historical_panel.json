@@ -3,7 +3,7 @@
   "panel_id": "M26-GOAL100-B2-HISTORICAL-PANEL-V1",
   "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
   "dictionary_id": "M26-GOAL100-B2-FEATURE-DICTIONARY-V1",
-  "generated_at": "2026-08-17T10:50:57+01:00",
+  "generated_at": "2026-08-17T10:42:45+01:00",
   "gate": "FAIL",
   "determinism": {
     "llm_used": false,
@@ -1170,15 +1170,15 @@
     },
     "historical_elected_members": {
       "path": "morocco26/data/goal100/historical/b2_historical_elected_members.json",
-      "canonical_json_sha256": "c7a9c4e1786c06918b4ec6a4c40ba61a6f49301f0e59cbdf71d8d3eaece16b75"
+      "canonical_json_sha256": "182bc0b40c01104586d3400fb6ecc9ef06b2516e7492e95cf367b8dcfa7e3321"
     },
     "identity_certificate": {
       "path": "morocco26/data/goal100/b2_identity_territory_certificate.json",
-      "canonical_json_sha256": "615c86e33016f7ff61c23188d5d269a6814e7e86713ceb71b8773b323ad7e4fc"
+      "canonical_json_sha256": "b2476a20973026b2d0ad759ef413e2573d0b11110470ae288e83db3ead998b2e"
     },
     "identity_crosswalk": {
       "path": "morocco26/data/goal100/b2_identity_crosswalk.json",
-      "canonical_json_sha256": "fa57114ac120c1083d608f6dae272f46322062c8b802c220684bfea3fd91c72b"
+      "canonical_json_sha256": "cd467293a8ba660506abc68946f1f9070ab0fba74cc6f21f238349e7109f06f8"
     },
     "protocol": {
       "path": "morocco26/data/goal100/b2_protocol_v1.json",
@@ -1201,5 +1201,5 @@
       "identifiable_predictive_features": 0
     }
   ],
-  "canonical_panel_sha256": "c14bb4e2078f42f86c301ea0b581495eb14df99c9d87a2238d002874f4565991"
+  "canonical_panel_sha256": "14f4ddb3748c0c38a0835450717c7bf079bf12c8b0275c5ffa347ccd5710472b"
 }

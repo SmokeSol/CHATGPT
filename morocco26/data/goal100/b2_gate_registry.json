@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "registry_id": "M26-GOAL100-B2-GATES-V1",
-  "as_of": "2026-08-17T10:11:22+01:00",
+  "as_of": "2026-08-17T10:50:57+01:00",
   "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
   "status_vocabulary": [
     "CLOSED",
@@ -41,10 +41,10 @@
       "required_artifact": "morocco26/data/goal100/b2_historical_panel_certificate.json",
       "closure_criterion": "Same-cutoff candidate/list feature panel covers at least 80% of 92 local territories in both 2011->2016 and 2016->2021; feature support counts are published.",
       "last_attempt": {
-        "certified_at": "2026-08-17T10:11:22+01:00",
+        "certified_at": "2026-08-17T10:50:57+01:00",
         "result": "FAIL",
         "certificate": "morocco26/data/goal100/b2_historical_panel_certificate.json",
-        "panel_sha256": "fe91b5a71237eae536e691bbeff21d4bb7fcc7ef3c6c98673172929df60eee2f",
+        "panel_sha256": "c14bb4e2078f42f86c301ea0b581495eb14df99c9d87a2238d002874f4565991",
         "blocking_missing_input_classes": [
           "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
           "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
@@ -53,7 +53,6 @@
           "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
           "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
           "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
-          "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
           "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
           "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
           "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",

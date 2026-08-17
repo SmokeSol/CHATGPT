@@ -1,0 +1,21 @@
+{
+  "source_id": "HF_CHAMBER_MEMBERS_MULTIYEAR",
+  "bucket": "data",
+  "original_url": "https://huggingface.co/datasets/electricsheepafrica/africa-membres-de-la-chambre-des-representants-du-maroc-2007-2011-2016-2021/resolve/main/metadata.json",
+  "final_url": "https://huggingface.co/api/resolve-cache/datasets/electricsheepafrica/africa-membres-de-la-chambre-des-representants-du-maroc-2007-2011-2016-2021/346d207447f6dd08fdff3e7b8b67784b68d5ab53/metadata.json?%2Fdatasets%2Felectricsheepafrica%2Fafrica-membres-de-la-chambre-des-representants-du-maroc-2007-2011-2016-2021%2Fresolve%2Fmain%2Fmetadata.json=&etag=%22d5572b7fa0c38037d82ea5d4dd2e6368a1ea76da%22",
+  "retrieved_at": "2026-08-17T10:39:43+01:00",
+  "http_status": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "content_length": 812,
+  "etag": "\"d5572b7fa0c38037d82ea5d4dd2e6368a1ea76da\"",
+  "last_modified": null,
+  "sha256": "8acd649e5d7230d3674b68017d3733d0aafcd8874b4d3c440da05cd838636854",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

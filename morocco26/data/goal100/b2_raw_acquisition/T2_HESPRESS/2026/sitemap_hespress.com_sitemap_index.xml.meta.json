@@ -1,0 +1,21 @@
+{
+  "source_id": "T2_HESPRESS",
+  "bucket": "2026",
+  "original_url": "https://hespress.com/sitemap_index.xml",
+  "final_url": "https://www.hespress.com/sitemap_index.xml",
+  "retrieved_at": "2026-08-17T10:45:32+01:00",
+  "http_status": 200,
+  "content_type": "text/xml; charset=UTF-8",
+  "content_length": 34306,
+  "etag": "W/\"f49614af02fde2f5befc69e3e58c3622\"",
+  "last_modified": "Mon, 17 Aug 2026 09:20:38 GMT",
+  "sha256": "bed1135f5df5b502fd327b979dbffff7f4caf4b645d1b212184d7cf6c5055634",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

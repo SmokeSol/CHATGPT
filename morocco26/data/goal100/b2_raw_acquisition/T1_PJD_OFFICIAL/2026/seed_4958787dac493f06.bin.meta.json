@@ -1,0 +1,21 @@
+{
+  "source_id": "T1_PJD_OFFICIAL",
+  "bucket": "2026",
+  "original_url": "https://www.pjd.ma/229786-%D8%A7%D9%84%D9%84%D8%A7%D8%A6%D8%AD%D8%A9-%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%D8%A9-%D9%84%D9%88%D9%83%D9%84%D8%A7%D8%A1-%D9%88%D9%88%D9%83%D9%8A%D9%84%D8%A7%D8%AA-%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84.html",
+  "final_url": "https://www.pjd.ma/229786-%D8%A7%D9%84%D9%84%D8%A7%D8%A6%D8%AD%D8%A9-%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%D8%A9-%D9%84%D9%88%D9%83%D9%84%D8%A7%D8%A1-%D9%88%D9%88%D9%83%D9%8A%D9%84%D8%A7%D8%AA-%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84.html",
+  "retrieved_at": "2026-08-17T10:45:07+01:00",
+  "http_status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "content_length": 180568,
+  "etag": null,
+  "last_modified": null,
+  "sha256": "4958787dac493f0641c4ba672b469e11d8e933ab8a4ca097ebbf720e2928f22d",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

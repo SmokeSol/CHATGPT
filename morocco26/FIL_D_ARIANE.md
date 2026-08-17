@@ -144,3 +144,57 @@ F-1 doit produire, sans couche agentique :
 ## 11. Prochaine action exacte
 
 **Fitter et certifier `uncertainty_calibration.json` : modèle hiérarchique compositionnel et turnout séparé, facteurs national/régional/local, variance floors explicites, validation rétrospective par proper scores et couverture, sans covariance libre 92×92 ni retuning silencieux.**
+
+
+### 2026-08-17 — Phase d'acquisition déterministe B2 — ouverture et premier résultat
+
+**Prompt agentique antérieur rejeté.** Le master-prompt d'orchestration agentique est incompatible avec
+le protocole gelé `M26-GOAL100-B2-PROTOCOL-V1` : `agentic_status = PROHIBITED_AND_LOCKED`, découverte
+autonome de sources interdite, et `extraction.llm_used` fixé à la constante `false` dans le schéma de
+preuve. Aucune collecte agentique n'a été exécutée et aucune contrainte n'a été relâchée.
+
+**Statut B2-3 conservé.** Le résultat reste `UNIDENTIFIABLE`, et non un résultat prédictif négatif :
+features identifiables `0/16` (fit) et
+`0/16` (validation), couverture prédictive centrale
+`0.0` / `0.0` pour un minimum requis de
+`0.8`. Aucun coefficient n'a bougé. La tentative antérieure est archivée sous
+`b2_historical_panel_attempts/`.
+
+**Phase d'acquisition déterministe ouverte.** Surface figée à partir des seuls contrats déjà commités :
+`19` entrées du registre B2 (dont
+`11` éligibles aux claims) et
+`6` entrées de provenance historique.
+Hash de surface `5845c2514bdb2b10b77f1d1a35b939681c0f7cf763a936a6c626e99e4f79d94c`. Mesure décisive : les gabarits de requête gelés
+n'expriment que `[2026]` —
+le registre B2 ne porte aucune surface d'acquisition historique.
+
+**Acquisition réussie.** Le jeu de données de membres déjà référencé par `observed_elected_2021.json`
+contient les quatre législatures. Parser `M26-GOAL100-B2-MEMBER-PARSER` v`1.0`, méthode
+`STRUCTURED_API`, `llm_used = false`. Élus récupérés :
+2007 → 225 locaux sur 74 territoires, 2011 → 305 locaux sur 92 territoires, 2016 → 305 locaux sur 92 territoires, 2021 → 305 locaux sur 92 territoires.
+Le contrôle de correction est 2021, qui reproduit exactement le partage certifié 305 locaux + 90 régionaux.
+Les `Liste nationale` restent non résolues : elles n'ont pas de circonscription certifiée.
+
+**Couverture avant/après.** Classes d'entrée bloquantes : `17` → `16`.
+`HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR` passe d'absente à couverte pour les deux transitions. La couverture
+prédictive reste `0.0` : le blocage résiduel dominant est `HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR`.
+
+**Wave 1 2026.** `30` documents acquis, `10` `BLOCKED_SOURCE`,
+`0` claim B2 créé. Verdict d'extractibilité :
+`DETERMINISTIC_ROSTER_SURFACE_EXISTS_FOR_2026` — une table de `93`
+lignes sur `T1_PJD_OFFICIAL` correspond au
+vocabulaire de preuve gelé. Elle ne produit aucun claim ici : la règle de double saisie critique exige deux
+lectures concordantes ou une table structurée T0 autoritative, et une page de parti T1 ne l'est pas.
+
+**Incohérences de validateurs.** `2` assertions périmées après la fermeture
+légitime de B2-2 ; `1` artefact d'environnement. Correction d'une
+affirmation antérieure : l'échec de `validate_goal100_tracking` n'était pas un défaut du dépôt mais un effet
+de `core.autocrlf=true`. Intégrité F-1 : `INTACT`. Aucun artefact F-1 n'a été réparé.
+
+**Résultat de gate.** `C_UNIDENTIFIABLE_UNDER_FROZEN_PROTOCOL`. `ready_for_b2_backtest = false`.
+`16` classes d'entrée sont réservées non résolues pour
+`E_collect` ; elles ne doivent pas être comblées par de la recherche agentique.
+
+**Prochaine action exacte :** décider entre (a) un amendement versionné de l'univers de sources ouvrant une
+surface historique de rosters de candidats, et (b) le maintien de `C_UNIDENTIFIABLE_UNDER_FROZEN_PROTOCOL`.
+Dans les deux cas aucun coefficient prédictif ne bouge et `B2-4` reste le prochain gate exécutable.

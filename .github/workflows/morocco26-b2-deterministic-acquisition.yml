@@ -1,0 +1,118 @@
+name: morocco26-b2-deterministic-acquisition
+
+on:
+  push:
+    branches: [morocco26-b2]
+    paths:
+      - 'morocco26/scripts/goal100_build_b2_acquisition_surface.py'
+      - 'morocco26/scripts/goal100_b2_acquire.py'
+      - 'morocco26/scripts/goal100_b2_parse_historical_members.py'
+      - 'morocco26/scripts/goal100_b2_certify_acquisition.py'
+      - 'morocco26/scripts/goal100_b2_write_acquisition_handoff.py'
+      - 'morocco26/scripts/goal100_diagnose_b2_validators.py'
+      - '.github/workflows/morocco26-b2-deterministic-acquisition.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-b2-deterministic-acquisition
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  acquire-parse-certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-b2
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deterministic parsing dependencies
+        run: python -m pip install --quiet pandas pyarrow
+
+      - name: Compile the acquisition chain
+        run: |
+          python -m py_compile \
+            morocco26/scripts/goal100_build_b2_acquisition_surface.py \
+            morocco26/scripts/goal100_b2_acquire.py \
+            morocco26/scripts/goal100_b2_parse_historical_members.py \
+            morocco26/scripts/goal100_b2_certify_acquisition.py \
+            morocco26/scripts/goal100_b2_write_acquisition_handoff.py \
+            morocco26/scripts/goal100_diagnose_b2_validators.py
+
+      - name: Verify the certified B2-2 parent gate
+        run: python morocco26/scripts/validate_b2_identity_crosswalk_v1_1.py
+
+      - name: Verify the registered F-1 snapshot is intact
+        run: python morocco26/scripts/validate_goal100_tracking.py
+
+      - name: Freeze the acquisition surface from the frozen contracts
+        run: python morocco26/scripts/goal100_build_b2_acquisition_surface.py
+
+      - name: Acquire recorded historical provenance
+        run: python morocco26/scripts/goal100_b2_acquire.py --historical
+
+      - name: Acquire the bounded 2026 wave-1 corpus
+        continue-on-error: true
+        run: python morocco26/scripts/goal100_b2_acquire.py --wave1
+
+      - name: Parse historical elected members deterministically
+        run: python morocco26/scripts/goal100_b2_parse_historical_members.py
+
+      - name: Rebuild the B2-3 historical feature panel
+        continue-on-error: true
+        run: python morocco26/scripts/goal100_build_b2_historical_panel.py
+
+      - name: Enforce the B2-3 panel contract
+        run: python morocco26/scripts/validate_b2_historical_panel.py
+
+      - name: Certify acquisition and decompose every gap
+        run: python morocco26/scripts/goal100_b2_certify_acquisition.py
+
+      - name: Diagnose validator consistency without patching any validator
+        run: python morocco26/scripts/goal100_diagnose_b2_validators.py
+
+      - name: Write the handoff report and append the Ariane entry
+        run: python morocco26/scripts/goal100_b2_write_acquisition_handoff.py
+
+      - name: Revalidate anti-drift
+        run: python morocco26/scripts/validate_anti_drift.py
+
+      - name: Persist acquisition evidence
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/b2_deterministic_acquisition_surface.json \
+            morocco26/data/goal100/b2_raw_acquisition \
+            morocco26/data/goal100/b2_raw_acquisition_manifest.json \
+            morocco26/data/goal100/b2_parser_manifest.json \
+            morocco26/data/goal100/b2_historical_acquisition_certificate.json \
+            morocco26/data/goal100/b2_current_wave1_acquisition_certificate.json \
+            morocco26/data/goal100/b2_validator_consistency_diagnostic.json \
+            morocco26/data/goal100/b2_historical_panel.json \
+            morocco26/data/goal100/b2_historical_panel_certificate.json \
+            morocco26/data/goal100/b2_historical_panel_attempts \
+            morocco26/data/goal100/historical/b2_historical_elected_members.json \
+            morocco26/data/goal100/b2_gate_registry.json \
+            morocco26/data/goal100/b2_current_state.json \
+            morocco26/data/goal100/fil_ariane_events \
+            morocco26/reports/B2_DETERMINISTIC_ACQUISITION_HANDOFF.md \
+            morocco26/FIL_ARIANE.md \
+            morocco26/FIL_D_ARIANE.md
+          git commit -m 'milestone(morocco26): record B2 deterministic acquisition result' || true
+          git pull --rebase origin morocco26-b2
+          git push origin HEAD:morocco26-b2
+
+      - name: Report that B2-3 remains open
+        run: |
+          echo 'Deterministic acquisition recovered elected-member rosters for 2011 and 2016.'
+          echo 'B2-3 stays OPEN: the candidate roster remains absent from every permitted surface.'
+          echo 'The result is UNIDENTIFIABLE, not a negative predictive finding.'

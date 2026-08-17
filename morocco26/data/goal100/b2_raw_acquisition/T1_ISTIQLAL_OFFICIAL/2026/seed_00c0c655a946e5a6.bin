@@ -1,0 +1,2291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#" xml:lang="ar" lang="ar">
+<head>
+<title> بوابة حزب الاستقلال</title>
+ 
+<meta http-equiv="Content-Type" content="text/html; Charset=UTF-8" />
+<meta name="keywords" content="حزب الاستقلال , نزار بركة , حزب سياسي وطني , المغرب , Maroc , Istiqlal , parti politique , Nizar baraka " />
+<meta name="description" content=" موقع رسمي حزب الاستقلال حزب سياسي وطني في المغرب " />
+
+<meta name="geo.position" content="34.013574;-6.8371868" />
+<meta property="og:url" content="https://www.istiqlal.info" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content=" بوابة حزب الاستقلال" />
+<meta property="og:description" content="موقع رسمي حزب الاستقلال حزب سياسي وطني في المغرب" />
+<meta property="og:site_name" content=" بوابة حزب الاستقلال" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content=" بوابة حزب الاستقلال" />
+<meta property="twitter:description" content="موقع رسمي حزب الاستقلال حزب سياسي وطني في المغرب" />
+<meta property="fb:app_id" content="192457891556921" />
+<link rel="stylesheet" href="/var/style/style_21.css?v=1709453400" type="text/css" />
+<link rel="stylesheet" media="only screen and (max-width : 800px)" href="/var/style/style_1121.css?v=1678287042" type="text/css" />
+<link rel="stylesheet" href="/assets/css/gbfonts.min.css?v=1724246908" type="text/css">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<link id="css-responsive" rel="stylesheet" href="/_public/css/responsive.min.css?v=1731587507" type="text/css" />
+<link rel="stylesheet" media="only screen and (max-width : 800px)" href="/var/style/style_1121_responsive.css?v=1678287042" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Tajawal|verdana&display=swap" rel="stylesheet" type="text/css" />
+<link rel="canonical" href="https://www.istiqlal.info" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/xml/syndication.rss" />
+<link rel="alternate" type="application/atom+xml" title="ATOM" href="/xml/atom.xml" />
+<link rel="icon" href="/favicon.ico?v=1522396686" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico?v=1522396686" type="image/x-icon" />
+ 
+<!-- Google file -->
+<meta name="google-site-verification" content="k57zYC8VPOvpyFQTWGS55YbNP1QRlY8ZqRivC8NU0bQ" />
+<script src="/_public/js/jquery-1.8.3.min.js?v=1731587507" type="text/javascript"></script>
+<script src="/_public/js/jquery.bxslider-4.0.min.js?v=1731587507" type="text/javascript"></script>
+<script src="/_public/js/compress_facebook.js?v=1731587507" type="text/javascript"></script>
+<script src="/_public/js/compress_fonctions.js?v=1731587507" type="text/javascript"></script>
+<script type="text/javascript">
+/*<![CDATA[*//*---->*/
+var deploye55198321 = true;
+
+function sfHover_55198321(id) {
+	var func = 'hover';
+	if ($('#css-responsive').length && parseInt($(window).width()) <= 800) { 
+		func = 'click';
+	}
+
+	$('#' + id + ' li' + (func == 'click' ? ' > a' : '')).on(func, 
+		function(e) { 
+			var obj  = (func == 'click' ? $(this).parent('li') :  $(this));
+			if (func == 'click') {
+				$('#' + id + ' > li').each(function(index) { 
+					if ($(this).attr('id') != obj.attr('id') && !$(this).find(obj).length) {
+						$(this).find(' > ul:visible').each(function() { $(this).hide(); });
+					}
+				});
+			}
+			if(func == 'click' || e.type == 'mouseenter') { 
+				if (obj.find('ul:first:hidden').length)	{
+					sfHoverShow_55198321(obj); 
+				} else if (func == 'click') {
+					sfHoverHide_55198321(obj);
+				}
+				if (func == 'click' && obj.find('ul').length)	return false; 
+			}
+			else if (e.type == 'mouseleave') { sfHoverHide_55198321(obj); }
+		}
+	);
+}
+function sfHoverShow_55198321(obj) {
+	obj.addClass('sfhover').css('z-index', 1000); obj.find('ul:first:hidden').each(function() { if ($(this).hasClass('lvl0')) $(this).show(); else $(this).show(); });
+}
+function sfHoverHide_55198321(obj) {
+	obj.find('ul:visible').each(function() { if ($(this).hasClass('lvl0')) $(this).hide(); else $(this).hide();});
+}
+
+ var GBRedirectionMode = 'REDIRECT';
+/*--*//*]]>*/
+
+</script>
+ 
+<!-- Perso tags -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117523150-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117523150-1');
+</script>
+
+
+<!-- Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122566751-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122566751-1');
+</script>
+
+
+ 
+</head>
+
+<body class="mep21 home">
+<div class="stickyzone">
+
+<div id="z_col130" class="full">
+<div class="z_col130_inner">
+</div>
+</div>
+</div>
+<div id="z_col_130_responsive" class="responsive-menu">
+
+
+<!-- MOBI_swipe 55196894 -->
+<div id="mod_55196894" class="mod_55196894 wm-module fullbackground  module-MOBI_swipe">
+	 <div class="entete"><div class="fullmod">
+		 <span> بوابة حزب الاستقلال</span>
+	 </div></div>
+	<div class="cel1">
+		 <ul>
+			 <li class="liens" data-link="rubrique,2522805"><a href="/أنشطة-الأمين-العام_r6.html" >			 <span>
+			 أنشطة الأمين العام
+			 </span>
+</a></li>
+			 <li class="liens" data-link="rubrique,2532066"><a href="/الدبلوماسية-الموازية_r19.html" >			 <span>
+			 الدبلوماسية الموازية
+			 </span>
+</a></li>
+			 <li class="liens" data-link="rubrique,2822137"><a href="/أخبار-و-أنشطة-حزبية_r48.html" >			 <span>
+			 أخبار و أنشطة حزبية
+			 </span>
+</a></li>
+			 <li class="liens" data-link="rubrique,2522938"><a href="/الإستقلال-WEB-TV_r14.html" >			 <span>
+			  الإستقلال WEB TV
+			 </span>
+</a></li>
+			 <li class="liens" data-link="rubrique,2810300"><a href="/مواقف-و-مبادرات_r43.html" >			 <span>
+			 مواقف و مبادرات 
+			 </span>
+</a></li>
+			 <li class="liens" data-link="rubrique,2554182"><a href="/بلاغات-ومذكرات_r24.html" >			 <span>
+			 بلاغات ومذكرات
+			 </span>
+</a></li>
+			 <li class="liens" data-link="rubrique,2810224"><a href="/الفريق-البرلماني_r32.html" >			 <span>
+			 الفريق البرلماني
+			 </span>
+</a></li>
+			 <li class="liens" data-link="rubrique,2839075"><a href="/قضايا-المرأة_r50.html" >			 <span>
+			 قضايا المرأة 
+			 </span>
+</a></li>
+			 <li class="liens" data-link="rubrique,2839076"><a href="/قضايا-الشباب_r51.html" >			 <span>
+			 قضايا الشباب 
+			 </span>
+</a></li>
+			 <li class="liens" data-link="rubrique,2929474"><a href="/الأمين-العام-لحزب-الاستقلال-الأخ-نزار-بركة_r59.html" >			 <span>
+			 الأمين العام
+			 </span>
+</a></li>
+		 </ul>
+	</div>
+</div>
+</div>
+<div id="main-responsive">
+
+<!-- ********************************************** ZONE TITRE ********************************************** -->
+<div id="z_col0" class="full">
+<div class="z_col0_inner">
+<div id="z_col0_responsive" class="module-responsive">
+
+<!-- MOBI_titre 55196893 -->
+<div id="mod_55196893" class="mod_55196893 module-MOBI_titre">
+<div class="tablet-bg">
+<div onclick="swipe()" class="swipe gbicongeneric icon-gbicongeneric-button-swipe-list"></div>
+	 <a class="image mobile notablet" href="https://www.istiqlal.info"><img src="https://www.istiqlal.info/photo/iphone_titre_55196893.png?v=1678268619" alt="حزب الاستقلال"  title="حزب الاستقلال" /></a>
+<div onclick="$('#search-55196893').toggle()" class="searchbutton gbicongeneric icon-gbicongeneric-search"></div>
+<div id="search-55196893" class="searchbar" style="display:none">
+<form action="/search/" method="get">
+<div class="search-keyword"><input type="text" name="keyword" /></div>
+<div class="search-button"><button>ابحث</button></div>
+</form>
+</div>
+</div>
+</div>
+<div id="ecart_after_55196893" class="ecart_col0" style="display:none"><hr /></div>
+
+<!-- html 55574374 -->
+<div id="ecart_before_55574374" class="ecart_col0 module-responsive" style="display:none"><hr /></div>
+	 <html>
+<body>
+
+<hr style="height:2px;border-width:0;color:Black ;background-color:black">
+
+</body>
+</html>
+</div>
+<div id="mod_55196788" class="mod_55196788 wm-module module-responsive " style="_position:static">
+<div class="fullmod">
+<table cellpadding="0" cellspacing="0" class="module-combo nb-modules-3" style="position:relative; _position:static">
+<tr>
+<td class="celcombo1">
+<!-- services_web2 55196790 -->
+<div id="ecart_before_55196790" class="ecart_col0 " style="display:none"><hr /></div>
+<div id="mod_55196790" class="mod_55196790 wm-module fullbackground  services_web2">
+		 <div class="cel1">
+					 <div class="lien">
+						 <a href="https://www.facebook.com/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9-%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%8A%D8%A9-%D9%84%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%82%D9%84%D8%A7%D9%84-196448427590617/" style="height: 36px; line-height: 36px" target="_blank"><img src="/photo/mod-55196790-225268.png" alt="Facebook" style="max-height: 46px;" title="Facebook" /></a>
+					 </div>
+					 <div class="lien">
+						 <a href="https://www.youtube.com/channel/UCUVVDoCjw1JRDLpEMiYMxsQ" style="height: 36px; line-height: 36px" target="_blank"><img src="/photo/mod-55196790-225270.png" alt="YouTube" style="max-height: 46px;" title="YouTube" /></a>
+					 </div>
+					 <div class="lien">
+						 <a href="https://twitter.com/PartiIstiqlal" style="height: 36px; line-height: 36px" target="_blank"><img src="/photo/mod-55196790-225271.png" alt="Twitter" style="max-height: 46px;" title="Twitter" /></a>
+					 </div>
+					 <div class="lien">
+						 <a href="https://www.istiqlal.info/xml/syndication.rss" style="height: 36px; line-height: 36px" target="_blank"><img src="/photo/mod-55196790-225272.png" alt="Rss" style="max-height: 46px;" title="Rss" /></a>
+					 </div>
+	 <div class="clear"></div>
+		 </div>
+</div>
+</td>
+<td class="celcombo2">
+<!-- titre 55197596 -->
+<div id="ecart_before_55197596" class="ecart_col0 " style="display:none"><hr /></div>
+<div id="mod_55197596" class="mod_55197596 wm-module fullbackground "><div class="fullmod">
+	 <h1 class="titre_image"><a href="https://www.istiqlal.info/"><img src="/photo/titre_55197596.png?v=1685444967" alt=" بوابة حزب الاستقلال" title=" بوابة حزب الاستقلال" class="image"/></a></h1>
+</div></div>
+</td>
+<td class="celcombo3">
+<!-- date 55197957 -->
+<div id="ecart_before_55197957" class="ecart_col0 " style="display:none"><hr /></div>
+<div id="mod_55197957" class="mod_55197957 wm-module fullbackground "><div class="fullmod">
+	 <div class="date"></div>
+	 <div class="heure"></div>
+	 <div class="clear"></div>
+</div></div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="ecart_after_55196788" class="ecart_col0" style="display:none"><hr /></div>
+
+<!-- espace 55198252 -->
+<div id="ecart_before_55198252" class="ecart_col0 " style="display:none"><hr /></div>
+<div id="mod_55198252" class="mod_55198252 wm-module fullbackground "><hr /></div>
+<div id="ecart_after_55198252" class="ecart_col0" style="display:none"><hr /></div>
+
+<!-- menu_deployable 55198321 -->
+<div id="ecart_before_55198321" class="ecart_col0 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55198321" class="mod_55198321 module-menu_deployable wm-module fullbackground  colonne-a type-2 background-cell- " >
+	 <div class="main_menu"><div class="fullmod">
+		 <ul id="menuliste_55198321">
+			 <li data-link="home," class=" titre first" id="menuliste_55198321_1"><a href="https://www.istiqlal.info/" > <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/arrow52.gif?v=1732287502" alt=""  />  الرئيسية</a></li>
+			 <li data-link="rubrique,2522805" class=" titre" id="menuliste_55198321_2"><a href="/أنشطة-الأمين-العام_r6.html" > <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/arrow52.gif?v=1732287502" alt=""  /> أنشطة الأمين العام</a></li>
+			 <li data-link="rubrique,2810224" class=" titre" id="menuliste_55198321_3"><a href="/الفريق-البرلماني_r32.html" > <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/arrow52.gif?v=1732287502" alt=""  /> الفريق البرلماني</a></li>
+			 <li data-link="rubrique,2810300" class=" titre" id="menuliste_55198321_4"><a href="/مواقف-و-مبادرات_r43.html" > <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/arrow52.gif?v=1732287502" alt=""  /> مواقف و مبادرات </a></li>
+			 <li data-link="rubrique,2532066" class=" titre" id="menuliste_55198321_5"><a href="/الدبلوماسية-الموازية_r19.html" > <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/arrow52.gif?v=1732287502" alt=""  /> الدبلوماسية الموازية</a></li>
+			 <li data-link="rubrique,2822137" class=" titre" id="menuliste_55198321_6"><a href="/أخبار-و-أنشطة-حزبية_r48.html" > <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/arrow52.gif?v=1732287502" alt=""  /> أخبار و أنشطة حزبية</a></li>
+			 <li data-link="rubrique,2554182" class=" titre" id="menuliste_55198321_7"><a href="/بلاغات-ومذكرات_r24.html" > <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/arrow52.gif?v=1732287502" alt=""  /> بلاغات ومذكرات</a></li>
+			 <li data-link="faq,all" class=" titre last" id="menuliste_55198321_8"><a href="/faq/" > <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/arrow52.gif?v=1732287502" alt=""  /> مواقف</a></li>
+		 </ul>
+	 <div class="break" style="_height:auto;"></div>
+	 </div></div>
+	 <div class="clear"></div>
+	 <script type="text/javascript">sfHover_55198321('menuliste_55198321')</script>
+</div>
+</div>
+<div id="ecart_after_55198321" class="ecart_col0" style="display:none"><hr /></div>
+
+<!-- espace 55198768 -->
+<div id="ecart_before_55198768" class="ecart_col0 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55198768" class="mod_55198768 wm-module fullbackground "><hr /></div>
+</div>
+<div id="ecart_after_55198768" class="ecart_col0" style="display:none"><hr /></div>
+
+<!-- espace 55574300 -->
+<div id="ecart_before_55574300" class="ecart_col0 " style="display:none"><hr /></div>
+<div class="" style="display:none">
+<div id="mod_55574300" class="mod_55574300 wm-module fullbackground "><hr /></div>
+</div>
+<div id="ecart_after_55574300" class="ecart_col0" style="display:none"><hr /></div>
+<div id="ecart_before_55196795" class="ecart_col0 " style="display:none"><hr /></div>
+<div id="mod_55196795" class="mod_55196795 wm-module module-responsive " style="_position:static">
+<div class="fullmod">
+<table cellpadding="0" cellspacing="0" class="module-combo nb-modules-1" style="position:relative; _position:static">
+<tr>
+<td class="celcombo1 empty">
+<!-- eau 55246583 -->
+<div id="ecart_before_55246583" class="ecart_col0 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55246583" class="mod_55246583 wm-module fullbackground module-responsive  module-eau type-2 nb-col-3 nb_sections-2">
+	 <div class="entete"><div class="fullmod">
+		 <span>آخر الأخبار</span>
+	 </div></div>
+	 <div class="eau">
+		 <div class="cel1 id1 ">
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/رابطة-الاقتصاديين-الاستقلاليين-تنظم-لقاءها-الموضوعاتي-الجهوي_a6945.html">رابطة الاقتصاديين الاستقلاليين تنظم لقاءها الموضوعاتي الجهوي الثاني بفاس حول دعم القدرة الشرائية للأسر</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="date"><label>29/03/2026</label></div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel2 id2 ">
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/جلالة-الملك-يترأس-مجلسا-وزاريا_a6937.html">جلالة الملك يترأس مجلسا وزاريا</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="date"><label>12/05/2025</label></div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel1 id3 ">
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/الأخ-لحسن-حداد-الديبلوماسية-المغربية-رافعة-أساسية-في-تكريس_a6936.html">الأخ لحسن حداد : الديبلوماسية المغربية رافعة أساسية في تكريس الشرعية الدولية لرؤية المغرب السيادية والتنموية في أقاليمه الجنوبية</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="date"><label>05/05/2025</label></div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel2 id4 last">
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/صاحب-الجلالة-الملك-محمد-السادس-نصره-الله-يعطي-انطلاقة-إنجاز-خط_a6933.html">صاحب الجلالة الملك محمد السادس نصره الله يعطي انطلاقة إنجاز خط السكك فائق السرعة بين القنيطرة ومراكش</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="date"><label>24/04/2025</label></div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+</div>
+</div>
+</td>
+<td class="celcombo2">
+<!-- une 55196796 -->
+<div id="ecart_before_55196796" class="ecart_col0 module-responsive" style="display:none"><hr /></div>
+<div id="mod_55196796" class="mod_55196796 wm-module fullbackground module-responsive  module-une type-7">
+		 <div class="fullmod">
+	 <div class="cel1">
+		 <div id="my-glider55196796" class="scroller">
+			 <div class="content">
+<div class="section">
+	 <div style="background:url(https://www.istiqlal.info/photo/art/une/92904644-65029060.jpg?v=1764446868) no-repeat top center;">
+		 <div class="pointer" onclick="document.location.href='/النص-الكامل-للعرض-السياسي-والتنظيمي-للأخ-نزار-بركة-الأمين-العام_a6944.html'" style="height:345px"></div>
+			 <table class="opacity size" cellpadding="0" cellspacing="0">
+				 <tr>
+					 <td id="pager_55196796_1_left" class="arrows"><a class="arrow_left"  href="javascript:void(0)" onclick="my_glider55196796.goToPrevSlide(); my_glider55196796.stopAuto(); my_glider55196796.startAuto();"></a></td>
+					 <td id="td_une55196796_1"><div class="cellpadding">
+						 <div class="titre"><a href="/النص-الكامل-للعرض-السياسي-والتنظيمي-للأخ-نزار-بركة-الأمين-العام_a6944.html">النص الكامل للعرض السياسي والتنظيمي للأخ نزار بركة الأمين العام للحزب في أشغال الدورة العادية الثالثة للمجلس الوطني لحزب الاستقلال </a></div>
+					 </div></td>
+					 <td id="pager_55196796_1_right" class="arrows"><a class="arrow_right"  href="javascript:void(0)" onclick="my_glider55196796.goToNextSlide(); my_glider55196796.stopAuto(); my_glider55196796.startAuto();"></a></td>
+					 </tr>
+				 </table>
+	 </div>
+</div>
+<div class="section">
+	 <div style="background:url(https://www.istiqlal.info/photo/art/une/88353414-62591218.jpg?v=1746455483) no-repeat top center;">
+		 <div class="pointer" onclick="document.location.href='/الأخ-نزار-بركة-من-مجلس-المستشارين-يؤكد-أن-قضية-الصحراء-المغربية_a6934.html'" style="height:345px"></div>
+			 <table class="opacity size" cellpadding="0" cellspacing="0">
+				 <tr>
+					 <td id="pager_55196796_2_left" class="arrows"><a class="arrow_left"  href="javascript:void(0)" onclick="my_glider55196796.goToPrevSlide(); my_glider55196796.stopAuto(); my_glider55196796.startAuto();"></a></td>
+					 <td id="td_une55196796_2"><div class="cellpadding">
+						 <div class="titre"><a href="/الأخ-نزار-بركة-من-مجلس-المستشارين-يؤكد-أن-قضية-الصحراء-المغربية_a6934.html">الأخ نزار بركة من مجلس المستشارين يؤكد أن قضية الصحراء المغربية تدخل مرحلة الحسم و2025 سنة التوطيد النهائي للوحدة الترابية للمملكة </a></div>
+					 </div></td>
+					 <td id="pager_55196796_2_right" class="arrows"><a class="arrow_right"  href="javascript:void(0)" onclick="my_glider55196796.goToNextSlide(); my_glider55196796.stopAuto(); my_glider55196796.startAuto();"></a></td>
+					 </tr>
+				 </table>
+	 </div>
+</div>
+<div class="section">
+	 <div style="background:url(https://www.istiqlal.info/photo/art/une/88355785-62592450.jpg?v=1746458423) no-repeat top center;">
+		 <div class="pointer" onclick="document.location.href='/الأخ-سيدي-محمد-ولد-الرشيد-رئيس-مجلس-المستشارين-يؤكد-أن-منطق_a6935.html'" style="height:345px"></div>
+			 <table class="opacity size" cellpadding="0" cellspacing="0">
+				 <tr>
+					 <td id="pager_55196796_3_left" class="arrows"><a class="arrow_left"  href="javascript:void(0)" onclick="my_glider55196796.goToPrevSlide(); my_glider55196796.stopAuto(); my_glider55196796.startAuto();"></a></td>
+					 <td id="td_une55196796_3"><div class="cellpadding">
+						 <div class="titre"><a href="/الأخ-سيدي-محمد-ولد-الرشيد-رئيس-مجلس-المستشارين-يؤكد-أن-منطق_a6935.html">الأخ سيدي محمد ولد الرشيد رئيس مجلس المستشارين يؤكد أن منطق المبادرة والاستباق أثمر مكاسب وزانة لدعم مغربية الصحراء  </a></div>
+					 </div></td>
+					 <td id="pager_55196796_3_right" class="arrows"><a class="arrow_right"  href="javascript:void(0)" onclick="my_glider55196796.goToNextSlide(); my_glider55196796.stopAuto(); my_glider55196796.startAuto();"></a></td>
+					 </tr>
+				 </table>
+	 </div>
+</div>
+			 </div>
+		 </div>
+	 </div>
+		 </div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="ecart_after_55196795" class="ecart_col0" style="display:none"><hr /></div>
+
+<!-- espace 55246455 -->
+<div id="ecart_before_55246455" class="ecart_col0 " style="display:none"><hr /></div>
+<div id="mod_55246455" class="mod_55246455 wm-module fullbackground "><hr /></div>
+</div>
+</div>
+<!-- ********************************************** FIN ZONE TITRE ****************************************** -->
+
+<div id="main">
+<div id="main_inner">
+
+<div id="z_centre">
+<div class="z_centre_inner">
+
+<!-- ********************************************** COLONNE 1 ********************************************** -->
+<div class="z_colonne main-colonne" id="z_col1">
+<div class="z_col_median z_col1_inner">
+
+<!-- lien_perso 55574836 -->
+<div class="responsive" style="display:none">
+<div id="mod_55574836" class="mod_55574836 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="http://istiqlal.info" target="_blank"> آخر الأخبار</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55574836" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- espace 55575841 -->
+<div id="ecart_before_55575841" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55575841" class="mod_55575841 wm-module fullbackground "><hr /></div>
+</div>
+<div id="ecart_after_55575841" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- eau 55621244 -->
+<div id="ecart_before_55621244" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55621244" class="mod_55621244 wm-module fullbackground module-responsive  module-eau type-2 nb-col-3 nb_sections-2">
+	 <div class="eau">
+		 <div class="cel1 id1 ">
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/رابطة-الاقتصاديين-الاستقلاليين-تنظم-لقاءها-الموضوعاتي-الجهوي_a6945.html">رابطة الاقتصاديين الاستقلاليين تنظم لقاءها الموضوعاتي الجهوي الثاني بفاس حول دعم القدرة الشرائية للأسر</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="date"><label>29/03/2026</label></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/رابطة-الاقتصاديين-الاستقلاليين-تنظم-لقاءها-الموضوعاتي-الجهوي_a6945.html">
+					 تواصل رابطة الاقتصاديين الاستقلاليين تنزيل برنامج لقاءاتها الموضوعاتية الجهوية برسم سنة 2026، تحت شعار: "تعزيز الثقة وصون الكرامة: خطة عمل
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel2 id2 ">
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/جلالة-الملك-يترأس-مجلسا-وزاريا_a6937.html">جلالة الملك يترأس مجلسا وزاريا</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="date"><label>12/05/2025</label></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/جلالة-الملك-يترأس-مجلسا-وزاريا_a6937.html">
+					 &nbsp;الرباط 12 ماي 2025 /ومع/ ترأس صاحب الجلالة الملك محمد السادس، نصره الله، اليوم الاثنين بالقصر الملكي بالرباط، مجلسا وزاريا، خصص للمصادقة على
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel1 id3 ">
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/الأخ-لحسن-حداد-الديبلوماسية-المغربية-رافعة-أساسية-في-تكريس_a6936.html">الأخ لحسن حداد : الديبلوماسية المغربية رافعة أساسية في تكريس الشرعية الدولية لرؤية المغرب السيادية والتنموية في أقاليمه الجنوبية</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="date"><label>05/05/2025</label></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/الأخ-لحسن-حداد-الديبلوماسية-المغربية-رافعة-أساسية-في-تكريس_a6936.html">
+					 أكد الأخ لحسن حداد، نائب رئيس مجلس المستشارين ورئيس المجموعة الموضوعاتية المؤقتة حول القضية الوطنية، أن قضية الصحراء المغربية لم تعد فقط مسألة “حق
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel2 id4 last">
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/صاحب-الجلالة-الملك-محمد-السادس-نصره-الله-يعطي-انطلاقة-إنجاز-خط_a6933.html">صاحب الجلالة الملك محمد السادس نصره الله يعطي انطلاقة إنجاز خط السكك فائق السرعة بين القنيطرة ومراكش</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="date"><label>24/04/2025</label></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/صاحب-الجلالة-الملك-محمد-السادس-نصره-الله-يعطي-انطلاقة-إنجاز-خط_a6933.html">
+					 أشرف صاحب الجلالة الملك محمد السادس نصره الله، اليوم الخميس 24 أبريل 2025 بمحطة القطار الرباط – أكدال، على إعطاء انطلاقة إنجاز الخط السككي فائق
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55621244" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- lien_perso 55579990 -->
+<div id="ecart_before_55579990" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55579990" class="mod_55579990 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/الاخبار-والانشطه-الوطنية_r61.html" > الاخبار والانشطه الوطنية</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55579990" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- eau 55575676 -->
+<div id="ecart_before_55575676" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55575676" class="mod_55575676 wm-module fullbackground module-responsive  module-eau type-3 nb-col-3 nb_sections-1">
+	 <div class="eau">
+	 <table class="inner" cellspacing="0" cellpadding="0">
+		 <tr>
+		 <td class="cel1" style="width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/جلالة-الملك-يترأس-مجلسا-وزاريا_a6937.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/88510499-62682507.jpg?v=1747089442" alt="جلالة الملك يترأس مجلسا وزاريا" title="جلالة الملك يترأس مجلسا وزاريا"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/88510499-62682507.jpg?v=1747089443" alt="جلالة الملك يترأس مجلسا وزاريا" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/جلالة-الملك-يترأس-مجلسا-وزاريا_a6937.html">جلالة الملك يترأس مجلسا وزاريا</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="date"><label>12/05/2025</label></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/جلالة-الملك-يترأس-مجلسا-وزاريا_a6937.html">
+					 &nbsp;الرباط 12 ماي 2025 /ومع/ ترأس صاحب الجلالة الملك محمد السادس، نصره الله، اليوم الاثنين بالقصر الملكي بالرباط، مجلسا وزاريا، خصص للمصادقة على
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </td>
+		 <td class="cel1" style="border-left:none;width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/الأخ-لحسن-حداد-الديبلوماسية-المغربية-رافعة-أساسية-في-تكريس_a6936.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/88362705-62596498.jpg?v=1746477946" alt="الأخ لحسن حداد : الديبلوماسية المغربية رافعة أساسية في تكريس الشرعية الدولية لرؤية المغرب السيادية والتنموية في أقاليمه الجنوبية" title="الأخ لحسن حداد : الديبلوماسية المغربية رافعة أساسية في تكريس الشرعية الدولية لرؤية المغرب السيادية والتنموية في أقاليمه الجنوبية"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/88362705-62596498.jpg?v=1746477946" alt="الأخ لحسن حداد : الديبلوماسية المغربية رافعة أساسية في تكريس الشرعية الدولية لرؤية المغرب السيادية والتنموية في أقاليمه الجنوبية" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/الأخ-لحسن-حداد-الديبلوماسية-المغربية-رافعة-أساسية-في-تكريس_a6936.html">الأخ لحسن حداد : الديبلوماسية المغربية رافعة أساسية في تكريس الشرعية الدولية لرؤية المغرب السيادية والتنموية في أقاليمه الجنوبية</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="date"><label>05/05/2025</label></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/الأخ-لحسن-حداد-الديبلوماسية-المغربية-رافعة-أساسية-في-تكريس_a6936.html">
+					 أكد الأخ لحسن حداد، نائب رئيس مجلس المستشارين ورئيس المجموعة الموضوعاتية المؤقتة حول القضية الوطنية، أن قضية الصحراء المغربية لم تعد فقط مسألة “حق
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </td>
+		 <td class="cel1" style="border-left:none;width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/صاحب-الجلالة-الملك-محمد-السادس-نصره-الله-يعطي-انطلاقة-إنجاز-خط_a6933.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/88125140-62416575.jpg?v=1745525093" alt="صاحب الجلالة الملك محمد السادس نصره الله يعطي انطلاقة إنجاز خط السكك فائق السرعة بين القنيطرة ومراكش" title="صاحب الجلالة الملك محمد السادس نصره الله يعطي انطلاقة إنجاز خط السكك فائق السرعة بين القنيطرة ومراكش"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/88125140-62416575.jpg?v=1745525094" alt="صاحب الجلالة الملك محمد السادس نصره الله يعطي انطلاقة إنجاز خط السكك فائق السرعة بين القنيطرة ومراكش" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/صاحب-الجلالة-الملك-محمد-السادس-نصره-الله-يعطي-انطلاقة-إنجاز-خط_a6933.html">صاحب الجلالة الملك محمد السادس نصره الله يعطي انطلاقة إنجاز خط السكك فائق السرعة بين القنيطرة ومراكش</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="date"><label>24/04/2025</label></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/صاحب-الجلالة-الملك-محمد-السادس-نصره-الله-يعطي-انطلاقة-إنجاز-خط_a6933.html">
+					 أشرف صاحب الجلالة الملك محمد السادس نصره الله، اليوم الخميس 24 أبريل 2025 بمحطة القطار الرباط – أكدال، على إعطاء انطلاقة إنجاز الخط السككي فائق
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </td>
+		 </tr>
+	 </table>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55575676" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- lien_perso 55575877 -->
+<div id="ecart_before_55575877" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55575877" class="mod_55575877 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/الأمين-العام-على-الويب-تي-في_r66.html" > الأمين العام على الويب تي في</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55575877" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- eau 55575878 -->
+<div id="ecart_before_55575878" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55575878" class="mod_55575878 wm-module fullbackground module-responsive  module-eau type-3 nb-col-3 nb_sections-1">
+	 <div class="eau">
+	 <table class="inner" cellspacing="0" cellpadding="0">
+		 <tr>
+		 <td class="cel1" style="width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/في-لقاء-بين-قيادات-الحزبين-الأخ-نزار-بركة-يؤكد-أن-حزب-الجمهوريين_a6701.html">
+						 <img src="/_images/1.gif" alt="" class="play_16_9_m" />
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/72719357-50586387.jpg?v=1683634489" alt="في لقاء بين قيادات الحزبين.. الأخ نزار بركة  يؤكد أن حزب الجمهوريين الفرنسي يدعم المغرب في كل قضاياه العادلة والسيد إيريك سيوتي يؤكد أن خيار سيادة المغرب على الصحراء لا رجعة فيه" title="في لقاء بين قيادات الحزبين.. الأخ نزار بركة  يؤكد أن حزب الجمهوريين الفرنسي يدعم المغرب في كل قضاياه العادلة والسيد إيريك سيوتي يؤكد أن خيار سيادة المغرب على الصحراء لا رجعة فيه"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/72719357-50586387.jpg?v=1683634490" alt="في لقاء بين قيادات الحزبين.. الأخ نزار بركة  يؤكد أن حزب الجمهوريين الفرنسي يدعم المغرب في كل قضاياه العادلة والسيد إيريك سيوتي يؤكد أن خيار سيادة المغرب على الصحراء لا رجعة فيه" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/في-لقاء-بين-قيادات-الحزبين-الأخ-نزار-بركة-يؤكد-أن-حزب-الجمهوريين_a6701.html">في لقاء بين قيادات الحزبين.. الأخ نزار بركة  يؤكد أن حزب الجمهوريين الفرنسي يدعم المغرب في كل قضاياه العادلة والسيد إيريك سيوتي يؤكد أن خيار سيادة المغرب على الصحراء لا رجعة فيه</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="clear"></div>
+		 </td>
+		 <td class="cel1" style="border-left:none;width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/من-أجل-دعم-التنمية-المستدامة-في-المنطقة-العربية-يحرص-المغرب-على_a6685.html">
+						 <img src="/_images/1.gif" alt="" class="play_16_9_m" />
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/71754230-49978091.jpg?v=1680005735" alt="&quot;من أجل دعم التنمية المستدامة في المنطقة العربية يحرص المغرب على تعزيز التعاون المشترك وتبادل الخبرات وتطوير القدرات الوطنية في تدبير الموارد المائية &quot;.. مقتطف من كلمة الأخ نزار بركة، الأمين العام لحزب الاستقلال ووزير التجهيز والماء،" title="&quot;من أجل دعم التنمية المستدامة في المنطقة العربية يحرص المغرب على تعزيز التعاون المشترك وتبادل الخبرات وتطوير القدرات الوطنية في تدبير الموارد المائية &quot;.. مقتطف من كلمة الأخ نزار بركة، الأمين العام لحزب الاستقلال ووزير التجهيز والماء،"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/71754230-49978091.jpg?v=1680005736" alt="&quot;من أجل دعم التنمية المستدامة في المنطقة العربية يحرص المغرب على تعزيز التعاون المشترك وتبادل الخبرات وتطوير القدرات الوطنية في تدبير الموارد المائية &quot;.. مقتطف من كلمة الأخ نزار بركة، الأمين العام لحزب الاستقلال ووزير التجهيز والماء،" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/من-أجل-دعم-التنمية-المستدامة-في-المنطقة-العربية-يحرص-المغرب-على_a6685.html">"من أجل دعم التنمية المستدامة في المنطقة العربية يحرص المغرب على تعزيز التعاون المشترك وتبادل الخبرات وتطوير القدرات الوطنية في تدبير الموارد المائية ".. مقتطف من كلمة الأخ نزار بركة، الأمين العام لحزب الاستقلال ووزير التجهيز والماء،</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="clear"></div>
+		 </td>
+		 <td class="cel1" style="border-left:none;width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/جلالة-الملك-محمد-السادس-نصره-الله-أعطى-توجيهاته-السامية-لتنفيذ_a6684.html">
+						 <img src="/_images/1.gif" alt="" class="play_16_9_m" />
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/71754156-49978062.jpg?v=1680005603" alt="&quot;جلالة الملك محمد السادس نصره الله أعطى توجيهاته السامية لتنفيذ وتفعيل مذكرة التفاهم في مجال الموارد المائية مع دولة فلسطين الشقيقة...&quot;.. من مداخلة الأخ نزار بركة  ، الأمين العام لحزب الاستقلال ووزير التجهيز والماء، على هامش فعاليات اليوم " title="&quot;جلالة الملك محمد السادس نصره الله أعطى توجيهاته السامية لتنفيذ وتفعيل مذكرة التفاهم في مجال الموارد المائية مع دولة فلسطين الشقيقة...&quot;.. من مداخلة الأخ نزار بركة  ، الأمين العام لحزب الاستقلال ووزير التجهيز والماء، على هامش فعاليات اليوم "  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/71754156-49978062.jpg?v=1680005604" alt="&quot;جلالة الملك محمد السادس نصره الله أعطى توجيهاته السامية لتنفيذ وتفعيل مذكرة التفاهم في مجال الموارد المائية مع دولة فلسطين الشقيقة...&quot;.. من مداخلة الأخ نزار بركة  ، الأمين العام لحزب الاستقلال ووزير التجهيز والماء، على هامش فعاليات اليوم " loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/جلالة-الملك-محمد-السادس-نصره-الله-أعطى-توجيهاته-السامية-لتنفيذ_a6684.html">"جلالة الملك محمد السادس نصره الله أعطى توجيهاته السامية لتنفيذ وتفعيل مذكرة التفاهم في مجال الموارد المائية مع دولة فلسطين الشقيقة...".. من مداخلة الأخ نزار بركة  ، الأمين العام لحزب الاستقلال ووزير التجهيز والماء، على هامش فعاليات اليوم </a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="clear"></div>
+		 </td>
+		 </tr>
+	 </table>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55575878" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- lien_perso 55575993 -->
+<div id="ecart_before_55575993" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55575993" class="mod_55575993 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/أخبار-و-أنشطة-حزبية_r48.html" > أنشطة حزبية</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55575993" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- eau 55575998 -->
+<div id="ecart_before_55575998" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55575998" class="mod_55575998 wm-module fullbackground module-responsive  module-eau type-1 nb-col-3 nb_sections-1">
+	 <div class="eau">
+		 <div class="cel1 id1 ">
+			 <h3 class="titre">
+				 <a href="/رابطة-الاقتصاديين-الاستقلاليين-تنظم-لقاءها-الموضوعاتي-الجهوي_a6945.html">رابطة الاقتصاديين الاستقلاليين تنظم لقاءها الموضوعاتي الجهوي الثاني بفاس حول دعم القدرة الشرائية للأسر</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 <div class="shadow photo">
+					 <a href="/رابطة-الاقتصاديين-الاستقلاليين-تنظم-لقاءها-الموضوعاتي-الجهوي_a6945.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/imagette_16_9/95705049-66852239.jpg?v=1774811435" alt="رابطة الاقتصاديين الاستقلاليين تنظم لقاءها الموضوعاتي الجهوي الثاني بفاس حول دعم القدرة الشرائية للأسر" title="رابطة الاقتصاديين الاستقلاليين تنظم لقاءها الموضوعاتي الجهوي الثاني بفاس حول دعم القدرة الشرائية للأسر"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/95705049-66852239.jpg?v=1774811435" alt="رابطة الاقتصاديين الاستقلاليين تنظم لقاءها الموضوعاتي الجهوي الثاني بفاس حول دعم القدرة الشرائية للأسر" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+			 <div class="texte" >
+				 <a href="/رابطة-الاقتصاديين-الاستقلاليين-تنظم-لقاءها-الموضوعاتي-الجهوي_a6945.html">
+					 تواصل رابطة الاقتصاديين الاستقلاليين تنزيل برنامج لقاءاتها الموضوعاتية الجهوية برسم سنة 2026، تحت شعار: "تعزيز الثقة وصون الكرامة: خطة عمل
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel2 id2 ">
+			 <h3 class="titre">
+				 <a href="/انتخاب-الاخ-منصور-لمباركي-رئيسا-لمجلس-مجموعة-الجماعات-الترابية_a6599.html">انتخاب الاخ منصور لمباركي رئيسا لمجلس مجموعة الجماعات الترابية للعيون الساقية الحمراء</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 <div class="shadow photo">
+					 <a href="/انتخاب-الاخ-منصور-لمباركي-رئيسا-لمجلس-مجموعة-الجماعات-الترابية_a6599.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/imagette_16_9/68363683-48113868.jpg?v=1666972634" alt="انتخاب الاخ منصور لمباركي رئيسا لمجلس مجموعة الجماعات الترابية للعيون الساقية الحمراء" title="انتخاب الاخ منصور لمباركي رئيسا لمجلس مجموعة الجماعات الترابية للعيون الساقية الحمراء"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/68363683-48113868.jpg?v=1666972635" alt="انتخاب الاخ منصور لمباركي رئيسا لمجلس مجموعة الجماعات الترابية للعيون الساقية الحمراء" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+			 <div class="texte" >
+				 <a href="/انتخاب-الاخ-منصور-لمباركي-رئيسا-لمجلس-مجموعة-الجماعات-الترابية_a6599.html">
+					 الانتخاب يعكس الثقة في قدرات الأخ منصور لمباركي وحنكته وشخصيته القيادية بتزكية من &nbsp;الأخ مولاي حمدي ولد الرشيد عضو اللجنة التنفيذية لحزب
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel1 id3 last">
+			 <h3 class="titre">
+				 <a href="/إخبار-بإنعقاد-الدورة-الحادية-عشر-العادية-للجنة-المركزية-لحزب_a6523.html">إخبار بإنعقاد الدورة الحادية عشر العادية للجنة المركزية لحزب الاستقلال</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 <div class="shadow photo">
+					 <a href="/إخبار-بإنعقاد-الدورة-الحادية-عشر-العادية-للجنة-المركزية-لحزب_a6523.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/imagette_16_9/64280493-46132280.jpg?v=1651731841" alt="إخبار بإنعقاد الدورة الحادية عشر العادية للجنة المركزية لحزب الاستقلال" title="إخبار بإنعقاد الدورة الحادية عشر العادية للجنة المركزية لحزب الاستقلال"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/64280493-46132280.jpg?v=1651731842" alt="إخبار بإنعقاد الدورة الحادية عشر العادية للجنة المركزية لحزب الاستقلال" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+			 <div class="texte" >
+				 <a href="/إخبار-بإنعقاد-الدورة-الحادية-عشر-العادية-للجنة-المركزية-لحزب_a6523.html">
+					 &nbsp;  تعقد اللجنة المركزية لحزب الاستقلال، برئاسة الأخ نزار بركة الأمين العام للحزب، دورتها الحادية عشرة، وذلك يوم السبت 14 ماي 2022 بالمركز العام
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55575998" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- lien_perso 55576083 -->
+<div id="ecart_before_55576083" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55576083" class="mod_55576083 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/أنشطة-الأمين-العام_r6.html" > أنشطة الأمين العام</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55576083" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- eau 55621240 -->
+<div id="ecart_before_55621240" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55621240" class="mod_55621240 wm-module fullbackground module-responsive  module-eau type-3 nb-col-3 nb_sections-1">
+	 <div class="eau">
+	 <table class="inner" cellspacing="0" cellpadding="0">
+		 <tr>
+		 <td class="cel1" style="width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/النص-الكامل-لكلمة-الأخ-نزار-بركة-الأمين-العام-لحزب-الاستقلال-في_a6930.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/85494192-60927063.jpg?v=1736641819" alt="النص الكامل لكلمة الأخ نزار بركة الأمين العام لحزب الاستقلال في المهرجان الخطابي الوطني تخليدا للذكرى 81 لتقديم وثيقة المطالبة بالاستقلال" title="النص الكامل لكلمة الأخ نزار بركة الأمين العام لحزب الاستقلال في المهرجان الخطابي الوطني تخليدا للذكرى 81 لتقديم وثيقة المطالبة بالاستقلال"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/85494192-60927063.jpg?v=1736641819" alt="النص الكامل لكلمة الأخ نزار بركة الأمين العام لحزب الاستقلال في المهرجان الخطابي الوطني تخليدا للذكرى 81 لتقديم وثيقة المطالبة بالاستقلال" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/النص-الكامل-لكلمة-الأخ-نزار-بركة-الأمين-العام-لحزب-الاستقلال-في_a6930.html">النص الكامل لكلمة الأخ نزار بركة الأمين العام لحزب الاستقلال في المهرجان الخطابي الوطني تخليدا للذكرى 81 لتقديم وثيقة المطالبة بالاستقلال</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/النص-الكامل-لكلمة-الأخ-نزار-بركة-الأمين-العام-لحزب-الاستقلال-في_a6930.html">
+					 تخليدا للذكرى الحادية والثمانين لتقديم وثيقة المطالبة بالاستقلال، ترأس الأخ نزار بركة الأمين العام لحزب الاستقلال، مهرجانا خطابيا وطنيا مساء يوم
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </td>
+		 <td class="cel1" style="border-left:none;width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/النص-الكامل-للعرض-السياسي-للأخ-نزار-بركة-الأمين-العام-لحزب_a6927.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/84788935-60525348.jpg?v=1733594136" alt="النص الكامل للعرض السياسي للأخ نزار بركة الأمين العام لحزب الاستقلال بالدورة العادية الأولى للمجلس الوطني" title="النص الكامل للعرض السياسي للأخ نزار بركة الأمين العام لحزب الاستقلال بالدورة العادية الأولى للمجلس الوطني"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/84788935-60525348.jpg?v=1733594136" alt="النص الكامل للعرض السياسي للأخ نزار بركة الأمين العام لحزب الاستقلال بالدورة العادية الأولى للمجلس الوطني" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/النص-الكامل-للعرض-السياسي-للأخ-نزار-بركة-الأمين-العام-لحزب_a6927.html">النص الكامل للعرض السياسي للأخ نزار بركة الأمين العام لحزب الاستقلال بالدورة العادية الأولى للمجلس الوطني</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/النص-الكامل-للعرض-السياسي-للأخ-نزار-بركة-الأمين-العام-لحزب_a6927.html">
+					 التئم المجلس الوطني لحزب الاستقلال في دورته العادية الأولى برئاسة الأخ نزار بركة الأمين العام للحزب، يومه السبت 7 دجنبر 2024 بقصر المؤتمرات أبي رقراق
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </td>
+		 <td class="cel1" style="border-left:none;width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/الحوار-الاجتماعي-تفاصيل-اتفاق-اجتماعي-هام-بين-الحكومة-ومختلف_a6915.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/79904328-57779862.jpg?v=1714468957" alt="الحوار الاجتماعي.. تفاصيل اتفاق اجتماعي هام بين الحكومة ومختلف الشركاء الاجتماعيين والاقتصاديين" title="الحوار الاجتماعي.. تفاصيل اتفاق اجتماعي هام بين الحكومة ومختلف الشركاء الاجتماعيين والاقتصاديين"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/79904328-57779862.jpg?v=1714468957" alt="الحوار الاجتماعي.. تفاصيل اتفاق اجتماعي هام بين الحكومة ومختلف الشركاء الاجتماعيين والاقتصاديين" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/الحوار-الاجتماعي-تفاصيل-اتفاق-اجتماعي-هام-بين-الحكومة-ومختلف_a6915.html">الحوار الاجتماعي.. تفاصيل اتفاق اجتماعي هام بين الحكومة ومختلف الشركاء الاجتماعيين والاقتصاديين</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/الحوار-الاجتماعي-تفاصيل-اتفاق-اجتماعي-هام-بين-الحكومة-ومختلف_a6915.html">
+					 نص اتفاق جولة أبريل 2024 بين الحكومة ومختلف الشركاء الاجتماعيين والاقتصاديين (الاتحاد العام لمقاولات المغرب والمركزيات النقابية الأكثر تمثيلية) على
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </td>
+		 </tr>
+	 </table>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55621240" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- lien_perso 55576153 -->
+<div id="ecart_before_55576153" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55576153" class="mod_55576153 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/الفريق-البرلماني_r32.html" > الفريق البرلماني</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55576153" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- eau 55576156 -->
+<div id="ecart_before_55576156" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55576156" class="mod_55576156 wm-module fullbackground module-responsive  module-eau type-1 nb-col-3 nb_sections-1">
+	 <div class="eau">
+		 <div class="cel1 id1 ">
+			 <h3 class="titre">
+				 <a href="/لنائب-البرلماني-علال-عمروي-النهوض-بقطاع-النسيج-بفاس-رهين-بتوفير_a6728.html">لنائب البرلماني علال عمروي: النهوض بقطاع النسيج بفاس رهين  بتوفير آليات  كسب التنافسية</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 <div class="shadow photo">
+					 <a href="/لنائب-البرلماني-علال-عمروي-النهوض-بقطاع-النسيج-بفاس-رهين-بتوفير_a6728.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/imagette_16_9/73969568-51446087.jpg?v=1688989260" alt="لنائب البرلماني علال عمروي: النهوض بقطاع النسيج بفاس رهين  بتوفير آليات  كسب التنافسية" title="لنائب البرلماني علال عمروي: النهوض بقطاع النسيج بفاس رهين  بتوفير آليات  كسب التنافسية"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/73969568-51446087.jpg?v=1688989261" alt="لنائب البرلماني علال عمروي: النهوض بقطاع النسيج بفاس رهين  بتوفير آليات  كسب التنافسية" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+			 <div class="texte" >
+				 <a href="/لنائب-البرلماني-علال-عمروي-النهوض-بقطاع-النسيج-بفاس-رهين-بتوفير_a6728.html">
+					 &nbsp;اهتم الفريق الاستقلالي للوحدة والتعادلية بمجلس النواب، بمشاكل قطاع النسيج والألبسة، خلال جلسة الأسئلة الشفهية المنعقدة يوم الإثنين 3 يوليوز
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel2 id2 ">
+			 <h3 class="titre">
+				 <a href="/الناب-البرلماني-العياشي-الفرفار-الوسط-القروي-والمراكز-الأكثر_a6727.html">الناب البرلماني العياشي الفرفار: الوسط القروي والمراكز الأكثر تضررا من معضلة البطالة</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 <div class="shadow photo">
+					 <a href="/الناب-البرلماني-العياشي-الفرفار-الوسط-القروي-والمراكز-الأكثر_a6727.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/imagette_16_9/73969463-51446035.jpg?v=1688988949" alt="الناب البرلماني العياشي الفرفار: الوسط القروي والمراكز الأكثر تضررا من معضلة البطالة" title="الناب البرلماني العياشي الفرفار: الوسط القروي والمراكز الأكثر تضررا من معضلة البطالة"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/73969463-51446035.jpg?v=1688988950" alt="الناب البرلماني العياشي الفرفار: الوسط القروي والمراكز الأكثر تضررا من معضلة البطالة" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+			 <div class="texte" >
+				 <a href="/الناب-البرلماني-العياشي-الفرفار-الوسط-القروي-والمراكز-الأكثر_a6727.html">
+					 شكل موضوع التشغيل والسبل الكفيلة بالتصدي لمعضلة البطالة احد المواضيع التي ركز عليها الفريق الاستقلالي للوحدة والتعادلية بمجلس النواب خلال الجلسة
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel1 id3 last">
+			 <h3 class="titre">
+				 <a href="/النائب-البرلماني-محمد-الركاني-ضرورة-تطوير-المناهج-الدراسية_a6726.html">النائب البرلماني محمد الركاني: ضرورة تطوير المناهج الدراسية وتوفير تكوين يستجيب لاحتياجات سوق الشغل</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 <div class="shadow photo">
+					 <a href="/النائب-البرلماني-محمد-الركاني-ضرورة-تطوير-المناهج-الدراسية_a6726.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/imagette_16_9/73969413-51446002.jpg?v=1688988688" alt="النائب البرلماني محمد الركاني: ضرورة تطوير المناهج الدراسية وتوفير تكوين يستجيب لاحتياجات سوق الشغل" title="النائب البرلماني محمد الركاني: ضرورة تطوير المناهج الدراسية وتوفير تكوين يستجيب لاحتياجات سوق الشغل"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/73969413-51446002.jpg?v=1688988688" alt="النائب البرلماني محمد الركاني: ضرورة تطوير المناهج الدراسية وتوفير تكوين يستجيب لاحتياجات سوق الشغل" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+			 <div class="texte" >
+				 <a href="/النائب-البرلماني-محمد-الركاني-ضرورة-تطوير-المناهج-الدراسية_a6726.html">
+					 شارك الفريق الاستقلالي للوحدة والتعادلية بمجلس النواب في جلسة الأسئلة الشفهية، المنعقدة يوم الاثنين 26 يونيو 2023، التي خصصت لمناقشة عدد من المواضيع
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55576156" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- espace 55457555 -->
+<div id="ecart_before_55457555" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55457555" class="mod_55457555 wm-module fullbackground "><hr /></div>
+</div>
+<div id="ecart_after_55457555" class="ecart_col1"><hr /></div>
+
+<!-- lien_perso 55575994 -->
+<div id="ecart_before_55575994" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55575994" class="mod_55575994 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/أخبار-و-أنشطة-حزبية_r48.html" > أنشطة حزبية</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55575994" class="ecart_col1"><hr /></div>
+
+<!-- eau 55457634 -->
+<div id="ecart_before_55457634" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55457634" class="mod_55457634 wm-module fullbackground module-responsive  module-eau type-4 nb-col-3 nb_sections-1">
+	 <div class="eau">
+	 <div class="cel1"><div id="my-glider55457634" class="scroller nb-col-3"><div class="content" style="width:auto">
+		 <div class="section">
+			 <div class="bloc bottom clear-x2 clear-x3 clear-x4" style="width:252px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/رابطة-الاقتصاديين-الاستقلاليين-تنظم-لقاءها-الموضوعاتي-الجهوي_a6945.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/95705049-66852239.jpg?v=1774811435" alt="رابطة الاقتصاديين الاستقلاليين تنظم لقاءها الموضوعاتي الجهوي الثاني بفاس حول دعم القدرة الشرائية للأسر" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/رابطة-الاقتصاديين-الاستقلاليين-تنظم-لقاءها-الموضوعاتي-الجهوي_a6945.html">رابطة الاقتصاديين الاستقلاليين تنظم لقاءها الموضوعاتي الجهوي الثاني بفاس حول دعم القدرة الشرائية للأسر</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom" style="width:252px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/انتخاب-الاخ-منصور-لمباركي-رئيسا-لمجلس-مجموعة-الجماعات-الترابية_a6599.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/68363683-48113868.jpg?v=1666972635" alt="انتخاب الاخ منصور لمباركي رئيسا لمجلس مجموعة الجماعات الترابية للعيون الساقية الحمراء" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/انتخاب-الاخ-منصور-لمباركي-رئيسا-لمجلس-مجموعة-الجماعات-الترابية_a6599.html">انتخاب الاخ منصور لمباركي رئيسا لمجلس مجموعة الجماعات الترابية للعيون الساقية الحمراء</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom clear-x2" style="width:252px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/إخبار-بإنعقاد-الدورة-الحادية-عشر-العادية-للجنة-المركزية-لحزب_a6523.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/64280493-46132280.jpg?v=1651731842" alt="إخبار بإنعقاد الدورة الحادية عشر العادية للجنة المركزية لحزب الاستقلال" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/إخبار-بإنعقاد-الدورة-الحادية-عشر-العادية-للجنة-المركزية-لحزب_a6523.html">إخبار بإنعقاد الدورة الحادية عشر العادية للجنة المركزية لحزب الاستقلال</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+	 </div></div>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55457634" class="ecart_col1"><hr /></div>
+
+<!-- lien_perso 55576385 -->
+<div id="ecart_before_55576385" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55576385" class="mod_55576385 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/الإستقلال-WEB-TV_r14.html" > الويب تي في الإستقلال</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55576385" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- eau 55576386 -->
+<div id="ecart_before_55576386" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55576386" class="mod_55576386 wm-module fullbackground module-responsive  module-eau type-3 nb-col-3 nb_sections-1">
+	 <div class="eau">
+	 <table class="inner" cellspacing="0" cellpadding="0">
+		 <tr>
+		 <td class="cel1" style="width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/الأخ-عزيز-هيلالي-يؤكد-أن-لا-محيد-عن-مراجعة-النظام-الأساسي_a6702.html">
+						 <img src="/_images/1.gif" alt="" class="play_16_9_m" />
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/72902511-50705379.jpg?v=1684411364" alt="الأخ عزيز هيلالي.. يؤكد أن لا محيد عن مراجعة النظام الأساسي للمهندسين باعتباره مطلبا يحفظ كرامة المهندس ويمهد الطريق إلى تطوير الهندسة الوطنية ورفع تنافسيتها" title="الأخ عزيز هيلالي.. يؤكد أن لا محيد عن مراجعة النظام الأساسي للمهندسين باعتباره مطلبا يحفظ كرامة المهندس ويمهد الطريق إلى تطوير الهندسة الوطنية ورفع تنافسيتها"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/72902511-50705379.jpg?v=1684411365" alt="الأخ عزيز هيلالي.. يؤكد أن لا محيد عن مراجعة النظام الأساسي للمهندسين باعتباره مطلبا يحفظ كرامة المهندس ويمهد الطريق إلى تطوير الهندسة الوطنية ورفع تنافسيتها" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/الأخ-عزيز-هيلالي-يؤكد-أن-لا-محيد-عن-مراجعة-النظام-الأساسي_a6702.html">الأخ عزيز هيلالي.. يؤكد أن لا محيد عن مراجعة النظام الأساسي للمهندسين باعتباره مطلبا يحفظ كرامة المهندس ويمهد الطريق إلى تطوير الهندسة الوطنية ورفع تنافسيتها</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="clear"></div>
+		 </td>
+		 <td class="cel1" style="border-left:none;width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/السيد-أحمد-مجدلاني-وزير-التنمية-الاجتماعية-والأمين-العام-لجبهة_a6683.html">
+						 <img src="/_images/1.gif" alt="" class="play_16_9_m" />
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/71405817-49757975.jpg?v=1678715849" alt="السيد أحمد مجدلاني وزير التنمية الاجتماعية والأمين العام لجبهة النضال الشعبي الفلسطيني.. نشكر حزب الاستقلال والمغرب ملكا حكومة وشعبا على دعمهم الثابت لقضية شعبنا الفلسطيني العادلة" title="السيد أحمد مجدلاني وزير التنمية الاجتماعية والأمين العام لجبهة النضال الشعبي الفلسطيني.. نشكر حزب الاستقلال والمغرب ملكا حكومة وشعبا على دعمهم الثابت لقضية شعبنا الفلسطيني العادلة"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/71405817-49757975.jpg?v=1678715850" alt="السيد أحمد مجدلاني وزير التنمية الاجتماعية والأمين العام لجبهة النضال الشعبي الفلسطيني.. نشكر حزب الاستقلال والمغرب ملكا حكومة وشعبا على دعمهم الثابت لقضية شعبنا الفلسطيني العادلة" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/السيد-أحمد-مجدلاني-وزير-التنمية-الاجتماعية-والأمين-العام-لجبهة_a6683.html">السيد أحمد مجدلاني وزير التنمية الاجتماعية والأمين العام لجبهة النضال الشعبي الفلسطيني.. نشكر حزب الاستقلال والمغرب ملكا حكومة وشعبا على دعمهم الثابت لقضية شعبنا الفلسطيني العادلة</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="clear"></div>
+		 </td>
+		 <td class="cel1" style="border-left:none;width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/الأخ-نور-الدين-مضيان-الفريق-الاستقلالي-بمجلس-النواب-يبحث-الخروج_a6678.html">
+						 <img src="/_images/1.gif" alt="" class="play_16_9_m" />
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/71308399-49683000.jpg?v=1678361055" alt="الأخ نور الدين مضيان.. الفريق الاستقلالي بمجلس النواب يبحث الخروج بتصور مشترك للاجابة على الاكراهات والتساؤلات المطروحة بالتعمير في العالم القروي" title="الأخ نور الدين مضيان.. الفريق الاستقلالي بمجلس النواب يبحث الخروج بتصور مشترك للاجابة على الاكراهات والتساؤلات المطروحة بالتعمير في العالم القروي"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/71308399-49683000.jpg?v=1678361055" alt="الأخ نور الدين مضيان.. الفريق الاستقلالي بمجلس النواب يبحث الخروج بتصور مشترك للاجابة على الاكراهات والتساؤلات المطروحة بالتعمير في العالم القروي" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/الأخ-نور-الدين-مضيان-الفريق-الاستقلالي-بمجلس-النواب-يبحث-الخروج_a6678.html">الأخ نور الدين مضيان.. الفريق الاستقلالي بمجلس النواب يبحث الخروج بتصور مشترك للاجابة على الاكراهات والتساؤلات المطروحة بالتعمير في العالم القروي</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="clear"></div>
+		 </td>
+		 </tr>
+	 </table>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55576386" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- espace 55457633 -->
+<div id="ecart_before_55457633" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55457633" class="mod_55457633 wm-module fullbackground "><hr /></div>
+</div>
+<div id="ecart_after_55457633" class="ecart_col1"><hr /></div>
+
+<!-- lien_perso 55457663 -->
+<div id="ecart_before_55457663" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55457663" class="mod_55457663 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/أنشطة-الأمين-العام_r6.html" > أنشطة الأمين العام</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55457663" class="ecart_col1"><hr /></div>
+
+<!-- eau 55196819 -->
+<div id="ecart_before_55196819" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55196819" class="mod_55196819 wm-module fullbackground module-responsive  module-eau type-4 nb-col-3 nb_sections-1">
+	 <div class="eau">
+	 <div class="cel1"><div id="my-glider55196819" class="scroller nb-col-3"><div class="content" style="width:auto">
+		 <div class="section">
+			 <div class="bloc bottom clear-x2 clear-x3 clear-x4" style="width:252px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/النص-الكامل-لكلمة-الأخ-نزار-بركة-الأمين-العام-لحزب-الاستقلال-في_a6930.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/85494192-60927063.jpg?v=1736641819" alt="النص الكامل لكلمة الأخ نزار بركة الأمين العام لحزب الاستقلال في المهرجان الخطابي الوطني تخليدا للذكرى 81 لتقديم وثيقة المطالبة بالاستقلال" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/النص-الكامل-لكلمة-الأخ-نزار-بركة-الأمين-العام-لحزب-الاستقلال-في_a6930.html">النص الكامل لكلمة الأخ نزار بركة الأمين العام لحزب الاستقلال في المهرجان الخطابي الوطني تخليدا للذكرى 81 لتقديم وثيقة المطالبة بالاستقلال</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom" style="width:252px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/النص-الكامل-للعرض-السياسي-للأخ-نزار-بركة-الأمين-العام-لحزب_a6927.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/84788935-60525348.jpg?v=1733594136" alt="النص الكامل للعرض السياسي للأخ نزار بركة الأمين العام لحزب الاستقلال بالدورة العادية الأولى للمجلس الوطني" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/النص-الكامل-للعرض-السياسي-للأخ-نزار-بركة-الأمين-العام-لحزب_a6927.html">النص الكامل للعرض السياسي للأخ نزار بركة الأمين العام لحزب الاستقلال بالدورة العادية الأولى للمجلس الوطني</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom clear-x2" style="width:252px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/الحوار-الاجتماعي-تفاصيل-اتفاق-اجتماعي-هام-بين-الحكومة-ومختلف_a6915.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/79904328-57779862.jpg?v=1714468957" alt="الحوار الاجتماعي.. تفاصيل اتفاق اجتماعي هام بين الحكومة ومختلف الشركاء الاجتماعيين والاقتصاديين" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/الحوار-الاجتماعي-تفاصيل-اتفاق-اجتماعي-هام-بين-الحكومة-ومختلف_a6915.html">الحوار الاجتماعي.. تفاصيل اتفاق اجتماعي هام بين الحكومة ومختلف الشركاء الاجتماعيين والاقتصاديين</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+	 </div></div>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55196819" class="ecart_col1"><hr /></div>
+
+<!-- lien_perso 55576373 -->
+<div id="ecart_before_55576373" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55576373" class="mod_55576373 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/بلاغات-ومذكرات_r24.html" > بلاغات ومذكرات</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55576373" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- espace 55576383 -->
+<div id="ecart_before_55576383" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55576383" class="mod_55576383 wm-module fullbackground "><hr /></div>
+</div>
+<div id="ecart_after_55576383" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- eau 55576379 -->
+<div id="ecart_before_55576379" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55576379" class="mod_55576379 wm-module fullbackground module-responsive  module-eau type-2 nb-col-3 nb_sections-2">
+	 <div class="eau">
+		 <div class="cel1 id1 ">
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/بلاغ-اللجنة-التنفيذية-لحزب-الاستقلال-الخميس-31-أكتوبر-2024_a6924.html">بلاغ اللجنة التنفيذية لحزب الاستقلال - الخميس 31 أكتوبر 2024</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/بلاغ-اللجنة-التنفيذية-لحزب-الاستقلال-الخميس-31-أكتوبر-2024_a6924.html">
+					 عقدت اللجنة التنفيذية لحزب الاستقلال برئاسة الأخ الأمين العام الأستاذ نزار بركة اجتماعا لها مساء يوم الخميس 31 أكتوبر 2024، بالمركز العام للحزب،
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel2 id2 ">
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/بيان-هيئة-رئاسة-الأغلبية-الحكومية-الاثنين-13-نونبر-2023_a6754.html">بيان هيئة رئاسة الأغلبية الحكومية - الاثنين 13 نونبر 2023</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/بيان-هيئة-رئاسة-الأغلبية-الحكومية-الاثنين-13-نونبر-2023_a6754.html">
+					 عقدت رئاسة الأغلبية الحكومية اجتماعها العادي، برئاسة السيد عزيز أخنوش رئيس حزب التجمع الوطني للأحرار، والسيد عبد اللطيف وهبي الأمين العام لحزب
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel1 id3 ">
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/بلاغ-اللجنة-التنفيذية-لحزب-الإستقلال-بشأن-الخطاب-الملكي-السامي_a6753.html">بلاغ اللجنة التنفيذية لحزب الإستقلال بشأن الخطاب الملكي السامي بمناسبة الذكرى 48 للمسيرة الخضراء المظفرة</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/بلاغ-اللجنة-التنفيذية-لحزب-الإستقلال-بشأن-الخطاب-الملكي-السامي_a6753.html">
+					 عقدت اللجنة التنفيذية لحزب الاستقلال برئاسة الأخ الأمين العام الأستاذ نزار بركة، اجتماعا لها عن بعد، مباشرة بعد الاستماع إلى الخطاب الملكي السامي
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel2 id4 last">
+			 <h3 class="titre">
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 <a href="/بلاغ-اللجنة-التنفيذية-لحزب-الاستقلال-بشأن-التطورات-الخطيرة-التي_a6744.html">بلاغ اللجنة التنفيذية لحزب الاستقلال بشأن التطورات الخطيرة التي تعرفها الأراضي الفلسطينية</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/بلاغ-اللجنة-التنفيذية-لحزب-الاستقلال-بشأن-التطورات-الخطيرة-التي_a6744.html">
+					 تتابع اللجنة التنفيذية لحزب الاستقلال بقلق كبير التطورات الميدانية الخطيرة التي تعرفها الأراضي الفلسطينية، وما خلفته من قتلى وجرحى ومجهولي المصير في
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55576379" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- espace 55468569 -->
+<div id="ecart_before_55468569" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55468569" class="mod_55468569 wm-module fullbackground "><hr /></div>
+</div>
+<div id="ecart_after_55468569" class="ecart_col1"><hr /></div>
+
+<!-- lien_perso 55457859 -->
+<div id="ecart_before_55457859" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55457859" class="mod_55457859 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/الفريق-البرلماني_r32.html" > الفريق البرلماني</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55457859" class="ecart_col1"><hr /></div>
+
+<!-- eau 55310661 -->
+<div id="ecart_before_55310661" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55310661" class="mod_55310661 wm-module fullbackground module-responsive  module-eau type-4 nb-col-3 nb_sections-1">
+	 <div class="eau">
+	 <div class="cel1"><div id="my-glider55310661" class="scroller nb-col-3"><div class="content" style="width:auto">
+		 <div class="section">
+			 <div class="bloc bottom clear-x2 clear-x3 clear-x4" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/لنائب-البرلماني-علال-عمروي-النهوض-بقطاع-النسيج-بفاس-رهين-بتوفير_a6728.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/73969568-51446087.jpg?v=1688989261" alt="لنائب البرلماني علال عمروي: النهوض بقطاع النسيج بفاس رهين  بتوفير آليات  كسب التنافسية" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/لنائب-البرلماني-علال-عمروي-النهوض-بقطاع-النسيج-بفاس-رهين-بتوفير_a6728.html">لنائب البرلماني علال عمروي: النهوض بقطاع النسيج بفاس رهين  بتوفير آليات  كسب التنافسية</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/الناب-البرلماني-العياشي-الفرفار-الوسط-القروي-والمراكز-الأكثر_a6727.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/73969463-51446035.jpg?v=1688988950" alt="الناب البرلماني العياشي الفرفار: الوسط القروي والمراكز الأكثر تضررا من معضلة البطالة" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/الناب-البرلماني-العياشي-الفرفار-الوسط-القروي-والمراكز-الأكثر_a6727.html">الناب البرلماني العياشي الفرفار: الوسط القروي والمراكز الأكثر تضررا من معضلة البطالة</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom clear-x2" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/النائب-البرلماني-محمد-الركاني-ضرورة-تطوير-المناهج-الدراسية_a6726.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/73969413-51446002.jpg?v=1688988688" alt="النائب البرلماني محمد الركاني: ضرورة تطوير المناهج الدراسية وتوفير تكوين يستجيب لاحتياجات سوق الشغل" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/النائب-البرلماني-محمد-الركاني-ضرورة-تطوير-المناهج-الدراسية_a6726.html">النائب البرلماني محمد الركاني: ضرورة تطوير المناهج الدراسية وتوفير تكوين يستجيب لاحتياجات سوق الشغل</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+	 </div></div>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55310661" class="ecart_col1"><hr /></div>
+
+<!-- lien_perso 55576555 -->
+<div id="ecart_before_55576555" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55576555" class="mod_55576555 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/قضايا-المرأة_r50.html" > قضايا المرأة</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55576555" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- eau 55576560 -->
+<div id="ecart_before_55576560" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55576560" class="mod_55576560 wm-module fullbackground module-responsive  module-eau type-3 nb-col-3 nb_sections-1">
+	 <div class="eau">
+	 <table class="inner" cellspacing="0" cellpadding="0">
+		 <tr>
+		 <td class="cel1" style="width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/في-بيان-دورة-مراكش-لكاتبات-فروع-منظمة-المرأة-الاستقلالية_a3757.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/42673711-35489660.jpg?v=1581423062" alt="في بيان دورة مراكش لكاتبات فروع منظمة المرأة الاستقلالية  " title="في بيان دورة مراكش لكاتبات فروع منظمة المرأة الاستقلالية  "  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/42673711-35489660.jpg?v=1581423063" alt="في بيان دورة مراكش لكاتبات فروع منظمة المرأة الاستقلالية  " loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/في-بيان-دورة-مراكش-لكاتبات-فروع-منظمة-المرأة-الاستقلالية_a3757.html">في بيان دورة مراكش لكاتبات فروع منظمة المرأة الاستقلالية  </a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/في-بيان-دورة-مراكش-لكاتبات-فروع-منظمة-المرأة-الاستقلالية_a3757.html">
+					 الانكباب بشكل خاص على الرفع من قدرات المرأة القروية والمرأة في وضعية هشاشة وتمكينهن اقتصاديا واجتماعيا مواصلة تنزيل الخطة الاستراتيجية للمنظمة على
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </td>
+		 <td class="cel1" style="border-left:none;width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/منظمة-المرأة-الاستقلالية-بقلعة-السراغنة-تحيي-ذكرى-تقديم-وثيقة_a3704.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/41868570-35051801.jpg?v=1579265055" alt="منظمة المرأة الاستقلالية بقلعة السراغنة تحيي ذكرى تقديم وثيقة المطالبة بالاستقلال" title="منظمة المرأة الاستقلالية بقلعة السراغنة تحيي ذكرى تقديم وثيقة المطالبة بالاستقلال"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/41868570-35051801.jpg?v=1579265055" alt="منظمة المرأة الاستقلالية بقلعة السراغنة تحيي ذكرى تقديم وثيقة المطالبة بالاستقلال" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/منظمة-المرأة-الاستقلالية-بقلعة-السراغنة-تحيي-ذكرى-تقديم-وثيقة_a3704.html">منظمة المرأة الاستقلالية بقلعة السراغنة تحيي ذكرى تقديم وثيقة المطالبة بالاستقلال</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/منظمة-المرأة-الاستقلالية-بقلعة-السراغنة-تحيي-ذكرى-تقديم-وثيقة_a3704.html">
+					 تخليدا لذكرى 11 يناير واعترافا بالمقاومة النسائية الوطنية المغربية نظم الفرع المحلي لمنظمة المرأة الاستقلالية بقلعة السراغنة لقاء فكريا في موضوع
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </td>
+		 <td class="cel1" style="border-left:none;width:33%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/المرأة-الاستقلالية-حرية-التزام-و-مواطنة-مسؤولة_a3703.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/41868454-35051648.jpg?v=1579264494" alt="&quot;المرأة الاستقلالية حرية.. التزام و مواطنة مسؤولة&quot;" title="&quot;المرأة الاستقلالية حرية.. التزام و مواطنة مسؤولة&quot;"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/41868454-35051648.jpg?v=1579264494" alt="&quot;المرأة الاستقلالية حرية.. التزام و مواطنة مسؤولة&quot;" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/المرأة-الاستقلالية-حرية-التزام-و-مواطنة-مسؤولة_a3703.html">"المرأة الاستقلالية حرية.. التزام و مواطنة مسؤولة"</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/المرأة-الاستقلالية-حرية-التزام-و-مواطنة-مسؤولة_a3703.html">
+					 شعار المؤتمر التأسيسي المحلي لفرع منظمة المرأة الاستقلالية بزايو وجدة: محمد بلبشير   ترأست الأخت مونية فتحي عضوة المكتب التنفيذي لمنظمة المرأة
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </td>
+		 </tr>
+	 </table>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55576560" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- espace 55500542 -->
+<div id="ecart_before_55500542" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55500542" class="mod_55500542 wm-module fullbackground "><hr /></div>
+</div>
+<div id="ecart_after_55500542" class="ecart_col1"><hr /></div>
+
+<!-- lien_perso 55457992 -->
+<div id="ecart_before_55457992" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55457992" class="mod_55457992 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/الإستقلال-WEB-TV_r14.html" > الويب تي في الإستقلال</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55457992" class="ecart_col1"><hr /></div>
+
+<!-- eau 55196829 -->
+<div id="ecart_before_55196829" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55196829" class="mod_55196829 wm-module fullbackground module-responsive  module-eau type-4 nb-col-3 nb_sections-1">
+	 <div class="eau">
+	 <div class="cel1"><div id="my-glider55196829" class="scroller nb-col-3"><div class="content" style="width:auto">
+		 <div class="section">
+			 <div class="bloc bottom clear-x2 clear-x3 clear-x4" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/الأخ-عزيز-هيلالي-يؤكد-أن-لا-محيد-عن-مراجعة-النظام-الأساسي_a6702.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/72902511-50705379.jpg?v=1684411365" alt="الأخ عزيز هيلالي.. يؤكد أن لا محيد عن مراجعة النظام الأساسي للمهندسين باعتباره مطلبا يحفظ كرامة المهندس ويمهد الطريق إلى تطوير الهندسة الوطنية ورفع تنافسيتها" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/الأخ-عزيز-هيلالي-يؤكد-أن-لا-محيد-عن-مراجعة-النظام-الأساسي_a6702.html">الأخ عزيز هيلالي.. يؤكد أن لا محيد عن مراجعة النظام الأساسي للمهندسين باعتباره مطلبا يحفظ كرامة المهندس ويمهد الطريق إلى تطوير الهندسة الوطنية ورفع تنافسيتها</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/السيد-أحمد-مجدلاني-وزير-التنمية-الاجتماعية-والأمين-العام-لجبهة_a6683.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/71405817-49757975.jpg?v=1678715850" alt="السيد أحمد مجدلاني وزير التنمية الاجتماعية والأمين العام لجبهة النضال الشعبي الفلسطيني.. نشكر حزب الاستقلال والمغرب ملكا حكومة وشعبا على دعمهم الثابت لقضية شعبنا الفلسطيني العادلة" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/السيد-أحمد-مجدلاني-وزير-التنمية-الاجتماعية-والأمين-العام-لجبهة_a6683.html">السيد أحمد مجدلاني وزير التنمية الاجتماعية والأمين العام لجبهة النضال الشعبي الفلسطيني.. نشكر حزب الاستقلال والمغرب ملكا حكومة وشعبا على دعمهم الثابت لقضية شعبنا الفلسطيني العادلة</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom clear-x2" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/الأخ-نور-الدين-مضيان-الفريق-الاستقلالي-بمجلس-النواب-يبحث-الخروج_a6678.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/71308399-49683000.jpg?v=1678361055" alt="الأخ نور الدين مضيان.. الفريق الاستقلالي بمجلس النواب يبحث الخروج بتصور مشترك للاجابة على الاكراهات والتساؤلات المطروحة بالتعمير في العالم القروي" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/الأخ-نور-الدين-مضيان-الفريق-الاستقلالي-بمجلس-النواب-يبحث-الخروج_a6678.html">الأخ نور الدين مضيان.. الفريق الاستقلالي بمجلس النواب يبحث الخروج بتصور مشترك للاجابة على الاكراهات والتساؤلات المطروحة بالتعمير في العالم القروي</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+	 </div></div>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55196829" class="ecart_col1"><hr /></div>
+
+<!-- lien_perso 55576633 -->
+<div id="ecart_before_55576633" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55576633" class="mod_55576633 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/الدبلوماسية-الموازية_r19.html" > الدبلوماسية الموازية</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55576633" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- eau 55576647 -->
+<div id="ecart_before_55576647" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55576647" class="mod_55576647 wm-module fullbackground module-responsive  module-eau type-1 nb-col-3 nb_sections-1">
+	 <div class="eau">
+		 <div class="cel1 id1 ">
+			 <h3 class="titre">
+				 <a href="/الأخ-نزار-بركة-يستقبل-وفدا-عن-شبيبة-الحزب-الشعبي-الأوروبي_a6576.html">الأخ نزار بركة يستقبل وفدا عن شبيبة الحزب الشعبي الأوروبي</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 <div class="shadow photo">
+					 <a href="/الأخ-نزار-بركة-يستقبل-وفدا-عن-شبيبة-الحزب-الشعبي-الأوروبي_a6576.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/imagette_16_9/67091130-47520668.jpg?v=1662061905" alt="الأخ نزار بركة يستقبل وفدا عن شبيبة الحزب الشعبي الأوروبي" title="الأخ نزار بركة يستقبل وفدا عن شبيبة الحزب الشعبي الأوروبي"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/67091130-47520668.jpg?v=1662061906" alt="الأخ نزار بركة يستقبل وفدا عن شبيبة الحزب الشعبي الأوروبي" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+			 <div class="texte" >
+				 <a href="/الأخ-نزار-بركة-يستقبل-وفدا-عن-شبيبة-الحزب-الشعبي-الأوروبي_a6576.html">
+					 استقبل الأخ نزار بركة الأمين العام لحزب الاستقلال، بمعية الأخ رحال المكاوي عضو اللجنة التنفيذية والمكلف بالعلاقات الخارجية للحزب إلى جانب عدد من
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel2 id2 ">
+			 <h3 class="titre">
+				 <a href="/الأخ-رحال-المكاوي-يستقبل-وفدا-عن-حزب-الشعب-النمساوي-الحاكم_a6554.html">الأخ رحال المكاوي يستقبل وفدا عن حزب الشعب النمساوي الحاكم</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 <div class="shadow photo">
+					 <a href="/الأخ-رحال-المكاوي-يستقبل-وفدا-عن-حزب-الشعب-النمساوي-الحاكم_a6554.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/imagette_16_9/65305184-46628049.jpg?v=1654912265" alt="الأخ رحال المكاوي يستقبل وفدا عن حزب الشعب النمساوي الحاكم" title="الأخ رحال المكاوي يستقبل وفدا عن حزب الشعب النمساوي الحاكم"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/65305184-46628049.jpg?v=1654912266" alt="الأخ رحال المكاوي يستقبل وفدا عن حزب الشعب النمساوي الحاكم" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+			 <div class="texte" >
+				 <a href="/الأخ-رحال-المكاوي-يستقبل-وفدا-عن-حزب-الشعب-النمساوي-الحاكم_a6554.html">
+					 استقبل الأخ رحال المكاوي عضو اللجنة التنفيذية والمكلف بالعلاقات الخارجية لحزب الاستقلال بمعية كل من الأخوين لحسن حداد عضو الفريق الاستقلالي بمجلس
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+		 <div class="cel1 id3 last">
+			 <h3 class="titre">
+				 <a href="/ممثلا-لحزب-الاستقلال-الأخ-رحال-مكاوي-يشارك-ضمن-فعاليات-المؤتمر_a6529.html">ممثلا لحزب الاستقلال.. الأخ رحال مكاوي يشارك ضمن فعاليات المؤتمر العام للحزب الشعبي الأوروبي بمدينة روتردام الهولندية</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 <div class="shadow photo">
+					 <a href="/ممثلا-لحزب-الاستقلال-الأخ-رحال-مكاوي-يشارك-ضمن-فعاليات-المؤتمر_a6529.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/imagette_16_9/65046111-46504839.jpg?v=1654083418" alt="ممثلا لحزب الاستقلال.. الأخ رحال مكاوي يشارك ضمن فعاليات المؤتمر العام للحزب الشعبي الأوروبي بمدينة روتردام الهولندية" title="ممثلا لحزب الاستقلال.. الأخ رحال مكاوي يشارك ضمن فعاليات المؤتمر العام للحزب الشعبي الأوروبي بمدينة روتردام الهولندية"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/65046111-46504839.jpg?v=1654083419" alt="ممثلا لحزب الاستقلال.. الأخ رحال مكاوي يشارك ضمن فعاليات المؤتمر العام للحزب الشعبي الأوروبي بمدينة روتردام الهولندية" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+			 <div class="texte" >
+				 <a href="/ممثلا-لحزب-الاستقلال-الأخ-رحال-مكاوي-يشارك-ضمن-فعاليات-المؤتمر_a6529.html">
+					 شارك الأخ رحال مكاوي عضو اللجنة التنفيذية والمكلف بالعلاقات الخارجية لحزب الاستقلال، في أشغال المؤتمر العام للحزب الشعبي الأوروبي، والذي انطلقت
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55576647" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- espace 55500663 -->
+<div id="ecart_before_55500663" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55500663" class="mod_55500663 wm-module fullbackground "><hr /></div>
+</div>
+<div id="ecart_after_55500663" class="ecart_col1"><hr /></div>
+
+<!-- lien_perso 55468557 -->
+<div id="ecart_before_55468557" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55468557" class="mod_55468557 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/الدبلوماسية-الموازية_r19.html" > الدبلوماسية الموازية</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55468557" class="ecart_col1"><hr /></div>
+
+<!-- eau 55196833 -->
+<div id="ecart_before_55196833" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55196833" class="mod_55196833 wm-module fullbackground module-responsive  module-eau type-4 nb-col-3 nb_sections-1">
+	 <div class="eau">
+	 <div class="cel1"><div id="my-glider55196833" class="scroller nb-col-3"><div class="content" style="width:auto">
+		 <div class="section">
+			 <div class="bloc bottom clear-x2 clear-x3 clear-x4" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/الأخ-نزار-بركة-يستقبل-وفدا-عن-شبيبة-الحزب-الشعبي-الأوروبي_a6576.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/67091130-47520668.jpg?v=1662061906" alt="الأخ نزار بركة يستقبل وفدا عن شبيبة الحزب الشعبي الأوروبي" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/الأخ-نزار-بركة-يستقبل-وفدا-عن-شبيبة-الحزب-الشعبي-الأوروبي_a6576.html">الأخ نزار بركة يستقبل وفدا عن شبيبة الحزب الشعبي الأوروبي</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/الأخ-رحال-المكاوي-يستقبل-وفدا-عن-حزب-الشعب-النمساوي-الحاكم_a6554.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/65305184-46628049.jpg?v=1654912266" alt="الأخ رحال المكاوي يستقبل وفدا عن حزب الشعب النمساوي الحاكم" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/الأخ-رحال-المكاوي-يستقبل-وفدا-عن-حزب-الشعب-النمساوي-الحاكم_a6554.html">الأخ رحال المكاوي يستقبل وفدا عن حزب الشعب النمساوي الحاكم</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom clear-x2" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/ممثلا-لحزب-الاستقلال-الأخ-رحال-مكاوي-يشارك-ضمن-فعاليات-المؤتمر_a6529.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/65046111-46504839.jpg?v=1654083419" alt="ممثلا لحزب الاستقلال.. الأخ رحال مكاوي يشارك ضمن فعاليات المؤتمر العام للحزب الشعبي الأوروبي بمدينة روتردام الهولندية" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/ممثلا-لحزب-الاستقلال-الأخ-رحال-مكاوي-يشارك-ضمن-فعاليات-المؤتمر_a6529.html">ممثلا لحزب الاستقلال.. الأخ رحال مكاوي يشارك ضمن فعاليات المؤتمر العام للحزب الشعبي الأوروبي بمدينة روتردام الهولندية</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+	 </div></div>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55196833" class="ecart_col1"><hr /></div>
+
+<!-- lien_perso 55580567 -->
+<div id="ecart_before_55580567" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55580567" class="mod_55580567 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/قضايا-الشباب_r51.html" > قضايا الشباب</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55580567" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- eau 55580484 -->
+<div id="ecart_before_55580484" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55580484" class="mod_55580484 wm-module fullbackground module-responsive  module-eau type-3 nb-col-2 nb_sections-1">
+	 <div class="eau">
+	 <table class="inner" cellspacing="0" cellpadding="0">
+		 <tr>
+		 <td class="cel1" style="width:50%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/الجمع-العام-التاسيسي-لمنطمة-الشبيبةالاستقلالية-بالحي-المحمدي_a3770.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/42930993-35606844.jpg?v=1582130886" alt="الجمع العام التاسيسي لمنطمة الشبيبةالاستقلالية بالحي المحمدي سفوح الجبال" title="الجمع العام التاسيسي لمنطمة الشبيبةالاستقلالية بالحي المحمدي سفوح الجبال"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/42930993-35606844.jpg?v=1582130886" alt="الجمع العام التاسيسي لمنطمة الشبيبةالاستقلالية بالحي المحمدي سفوح الجبال" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/الجمع-العام-التاسيسي-لمنطمة-الشبيبةالاستقلالية-بالحي-المحمدي_a3770.html">الجمع العام التاسيسي لمنطمة الشبيبةالاستقلالية بالحي المحمدي سفوح الجبال</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/الجمع-العام-التاسيسي-لمنطمة-الشبيبةالاستقلالية-بالحي-المحمدي_a3770.html">
+					 انتخاب الاخ الدكتو العربي الفقير كاتبا للفرع بالمركب الثقافي محمد بزيكا وتحت رئاسة الاخ حسام الكوينة عضو المكتب التنفيدي للشبيبة الاستقلالية ،
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </td>
+		 <td class="cel1" style="border-left:none;width:50%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/الجامعة-التكوينة-مدرسة-موازية-أصيلة-بالشبيبة-الاستقلالية-وحزب_a3700.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/41838869-35028036.jpg?v=1579195048" alt="الجامعة التكوينة مدرسة موازية أصيلة بالشبيبة الاستقلالية وحزب الاستقلال" title="الجامعة التكوينة مدرسة موازية أصيلة بالشبيبة الاستقلالية وحزب الاستقلال"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/41838869-35028036.jpg?v=1579195048" alt="الجامعة التكوينة مدرسة موازية أصيلة بالشبيبة الاستقلالية وحزب الاستقلال" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/الجامعة-التكوينة-مدرسة-موازية-أصيلة-بالشبيبة-الاستقلالية-وحزب_a3700.html">الجامعة التكوينة مدرسة موازية أصيلة بالشبيبة الاستقلالية وحزب الاستقلال</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/الجامعة-التكوينة-مدرسة-موازية-أصيلة-بالشبيبة-الاستقلالية-وحزب_a3700.html">
+					 أيام قليلة تفصلنا عن إنطلاق فعاليات الجامعة التكوينية الجهوية في نسختها الأولى بعد المصادقة على برنامج العمل السنوي للمكتب التنفيذي للشبيبة المنبثق
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </td>
+		 </tr>
+	 </table>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55580484" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- espace 55457854 -->
+<div id="ecart_before_55457854" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55457854" class="mod_55457854 wm-module fullbackground "><hr /></div>
+</div>
+<div id="ecart_after_55457854" class="ecart_col1"><hr /></div>
+
+<!-- lien_perso 55500664 -->
+<div id="ecart_before_55500664" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55500664" class="mod_55500664 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/مواقف-و-مبادرات_r43.html" > المواقف والمبادرات</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55500664" class="ecart_col1"><hr /></div>
+
+<!-- eau 55196823 -->
+<div id="ecart_before_55196823" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55196823" class="mod_55196823 wm-module fullbackground module-responsive  module-eau type-4 nb-col-3 nb_sections-1">
+	 <div class="eau">
+	 <div class="cel1"><div id="my-glider55196823" class="scroller nb-col-3"><div class="content" style="width:auto">
+		 <div class="section">
+			 <div class="bloc bottom clear-x2 clear-x3 clear-x4" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/افتتاحية-العلم-حينما-تتعبأ-المؤسسات-الوطنية-في-إيجاد-حلول_a6686.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/71898305-50074560.jpg?v=1680525616" alt="افتتاحية العلم.. حينما تتعبأ المؤسسات الوطنية في إيجاد حلول لتحديات الظرفية الاقتصادية الحرجة" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/افتتاحية-العلم-حينما-تتعبأ-المؤسسات-الوطنية-في-إيجاد-حلول_a6686.html">افتتاحية العلم.. حينما تتعبأ المؤسسات الوطنية في إيجاد حلول لتحديات الظرفية الاقتصادية الحرجة</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/افتتاحية-العلم-الشراكة-المغربية-الأوروبية-في-مواجهة-المضايقات_a6615.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/70316596-49056259.jpg?v=1674477883" alt="افتتاحية العلم.. الشراكة المغربية الأوروبية في مواجهة المضايقات الموجهة والهجمات المتعددة" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/افتتاحية-العلم-الشراكة-المغربية-الأوروبية-في-مواجهة-المضايقات_a6615.html">افتتاحية العلم.. الشراكة المغربية الأوروبية في مواجهة المضايقات الموجهة والهجمات المتعددة</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom clear-x2" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/رابطة-المحامين-الاستقلاليين-تقدم-الدعم-والتوجيه-القانوني-لذوي_a5564.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/53815999-40642549.jpg?v=1612983518" alt="رابطة المحامين الاستقلاليين تقدم الدعم والتوجيه القانوني لذوي حقوق ضحايا ومصابي &quot;فاجعة طنجة&quot; لنيل كافة الحقوق المخولة لهم طبق القانون" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/رابطة-المحامين-الاستقلاليين-تقدم-الدعم-والتوجيه-القانوني-لذوي_a5564.html">رابطة المحامين الاستقلاليين تقدم الدعم والتوجيه القانوني لذوي حقوق ضحايا ومصابي "فاجعة طنجة" لنيل كافة الحقوق المخولة لهم طبق القانون</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+	 </div></div>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55196823" class="ecart_col1"><hr /></div>
+
+<!-- espace 55457962 -->
+<div id="ecart_before_55457962" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55457962" class="mod_55457962 wm-module fullbackground "><hr /></div>
+</div>
+<div id="ecart_after_55457962" class="ecart_col1"><hr /></div>
+
+<!-- lien_perso 55500860 -->
+<div id="ecart_before_55500860" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55500860" class="mod_55500860 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/الاخبار-والانشطه-الوطنية_r61.html" > أخبار و أنشطة وطنية</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55500860" class="ecart_col1"><hr /></div>
+
+<!-- eau 55196802 -->
+<div id="ecart_before_55196802" class="ecart_col1 " style="display:none"><hr /></div>
+<div class="module-notresponsive">
+<div id="mod_55196802" class="mod_55196802 wm-module fullbackground module-responsive  module-eau type-4 nb-col-3 nb_sections-1">
+	 <div class="eau">
+	 <div class="cel1"><div id="my-glider55196802" class="scroller nb-col-3"><div class="content" style="width:auto">
+		 <div class="section">
+			 <div class="bloc bottom clear-x2 clear-x3 clear-x4" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/جلالة-الملك-يترأس-مجلسا-وزاريا_a6937.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/88510499-62682507.jpg?v=1747089443" alt="جلالة الملك يترأس مجلسا وزاريا" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/جلالة-الملك-يترأس-مجلسا-وزاريا_a6937.html">جلالة الملك يترأس مجلسا وزاريا</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/الأخ-لحسن-حداد-الديبلوماسية-المغربية-رافعة-أساسية-في-تكريس_a6936.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/88362705-62596498.jpg?v=1746477946" alt="الأخ لحسن حداد : الديبلوماسية المغربية رافعة أساسية في تكريس الشرعية الدولية لرؤية المغرب السيادية والتنموية في أقاليمه الجنوبية" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/الأخ-لحسن-حداد-الديبلوماسية-المغربية-رافعة-أساسية-في-تكريس_a6936.html">الأخ لحسن حداد : الديبلوماسية المغربية رافعة أساسية في تكريس الشرعية الدولية لرؤية المغرب السيادية والتنموية في أقاليمه الجنوبية</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="bloc bottom clear-x2" style="width:248px;">
+				 <div style="width:223px; margin: 0 auto;">
+					 <div class="shadow photo pointer 16_9" style="margin-bottom:5px" onclick="document.location.href='/صاحب-الجلالة-الملك-محمد-السادس-نصره-الله-يعطي-انطلاقة-إنجاز-خط_a6933.html'">
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/88125140-62416575.jpg?v=1745525094" alt="صاحب الجلالة الملك محمد السادس نصره الله يعطي انطلاقة إنجاز خط السكك فائق السرعة بين القنيطرة ومراكش" loading="lazy" class="responsive"  />					 </div>
+			 <h3 class="titre">
+				 <a href="/صاحب-الجلالة-الملك-محمد-السادس-نصره-الله-يعطي-انطلاقة-إنجاز-خط_a6933.html">صاحب الجلالة الملك محمد السادس نصره الله يعطي انطلاقة إنجاز خط السكك فائق السرعة بين القنيطرة ومراكش</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+				 </div>
+			 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+	 </div></div>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55196802" class="ecart_col1"><hr /></div>
+
+<!-- lien_perso 55578753 -->
+<div id="ecart_before_55578753" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55578753" class="mod_55578753 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/مواقف-ومبادرات-سياسية_r44.html" > المواقف والمبادرات</a>
+	 </div>
+</div>
+</div>
+<div id="ecart_after_55578753" class="ecart_col1" style="display:none"><hr /></div>
+
+<!-- eau 55578754 -->
+<div id="ecart_before_55578754" class="ecart_col1 responsive" style="display:none"><hr /></div>
+<div class="responsive" style="display:none">
+<div id="mod_55578754" class="mod_55578754 wm-module fullbackground module-responsive  module-eau type-3 nb-col-2 nb_sections-1">
+	 <div class="eau">
+	 <table class="inner" cellspacing="0" cellpadding="0">
+		 <tr>
+		 <td class="cel1" style="width:50%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/افتتاحية-العلم-حينما-تتعبأ-المؤسسات-الوطنية-في-إيجاد-حلول_a6686.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/71898305-50074560.jpg?v=1680525615" alt="افتتاحية العلم.. حينما تتعبأ المؤسسات الوطنية في إيجاد حلول لتحديات الظرفية الاقتصادية الحرجة" title="افتتاحية العلم.. حينما تتعبأ المؤسسات الوطنية في إيجاد حلول لتحديات الظرفية الاقتصادية الحرجة"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/71898305-50074560.jpg?v=1680525616" alt="افتتاحية العلم.. حينما تتعبأ المؤسسات الوطنية في إيجاد حلول لتحديات الظرفية الاقتصادية الحرجة" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/افتتاحية-العلم-حينما-تتعبأ-المؤسسات-الوطنية-في-إيجاد-حلول_a6686.html">افتتاحية العلم.. حينما تتعبأ المؤسسات الوطنية في إيجاد حلول لتحديات الظرفية الاقتصادية الحرجة</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/افتتاحية-العلم-حينما-تتعبأ-المؤسسات-الوطنية-في-إيجاد-حلول_a6686.html">
+					 لن تكون المرة الأولى ولا الأخيرة التي تجتهد فيها مؤسسات اقتصادية ومالية ونقدية واحصائية وطنية، بالاتفاق أو الاختلاف فيما بينها لمواجهة تحديات الأزمات
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </td>
+		 <td class="cel1" style="border-left:none;width:50%">
+				 <div class="shadow photo" style="padding: 0">
+					 <a href="/افتتاحية-العلم-الشراكة-المغربية-الأوروبية-في-مواجهة-المضايقات_a6615.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/medium_16_9/70316596-49056259.jpg?v=1674477882" alt="افتتاحية العلم.. الشراكة المغربية الأوروبية في مواجهة المضايقات الموجهة والهجمات المتعددة" title="افتتاحية العلم.. الشراكة المغربية الأوروبية في مواجهة المضايقات الموجهة والهجمات المتعددة"  />
+					 <img src="https://www.istiqlal.info/photo/art/large_x2_16_9/70316596-49056259.jpg?v=1674477883" alt="افتتاحية العلم.. الشراكة المغربية الأوروبية في مواجهة المضايقات الموجهة والهجمات المتعددة" loading="lazy" class="responsive" style="display:none" />					 </a>
+				 </div>
+				 <div class="clear"></div>
+			 <h3 class="titre">
+				 <a href="/افتتاحية-العلم-الشراكة-المغربية-الأوروبية-في-مواجهة-المضايقات_a6615.html">افتتاحية العلم.. الشراكة المغربية الأوروبية في مواجهة المضايقات الموجهة والهجمات المتعددة</a>
+			 </h3>
+			 <div class="sous_titre" style="display:none"></div>
+			 <div class="texte" style="margin-top:5px">
+				 <a href="/افتتاحية-العلم-الشراكة-المغربية-الأوروبية-في-مواجهة-المضايقات_a6615.html">
+					 كشف ناصر بوريطة وزير الشؤون الخارجية والتعاون الأفريقي والمغاربة المقيمين بالخارج، الستار عن مصادر العثرات التي تعترض الطريق أمام تعزيز الشراكة بين
+				 </a>
+			 </div>
+			 <div class="clear"></div>
+		 </td>
+		 </tr>
+	 </table>
+	 </div>
+</div>
+</div>
+</div>
+</div>
+<!-- ********************************************** FIN COLONNE 1 ****************************************** -->
+
+<!-- ********************************************** COLONNE 2 ********************************************** -->
+<div class="z_colonne" id="z_col2">
+<div class="z_col_median z_col2_inner">
+
+<!-- rub_une 55196852 -->
+<div id="mod_55196852" class="mod_55196852 wm-module fullbackground module-responsive  module-rub_une type-2">
+	 <div class="entete"><div class="fullmod"></div></div>
+	 <div class="cel1 nb-col-1" style="padding:0"><div class="fullmod">
+	 <div class="encapse_bloc id0  clear-x2 clear-x3 clear-x4" style="padding:0 2px;">
+		 <div class="no_bloc_rub" style="padding:2px 0">
+			 <h4 class="rubrique">
+				 <a class="arub66" href="/الأمين-العام-على-الويب-تي-في_r66.html"><span class="nom_rub66">  الأمين العام على  الويب تي في</span></a>
+			 </h4>
+			 <h3 class="titre first" style=";margin-bottom:5px">
+				 <a href="/مرور-الأخ-نزار-بركة-وزير-التجهيز-والماء-ضيفا-على-نشرة-أخبار_a6747.html">
+					 مرور الأخ نزار بركة  وزير التجهيز والماء ضيفا على نشرة أخبار الظهيرة بالقناة الثانية  بخصوص جلسة العمل التي ترأسها جلالة الملك حول تتبع البرنامج الوطني للتزود بالماء الصالح للشرب ومياه السقي 2020 - 2027
+				 </a>
+			
+			 <br class="clear" />
+			 </h3>
+				 <div class="photo shadow thumbnail-3" style="">
+					 <a href="/مرور-الأخ-نزار-بركة-وزير-التجهيز-والماء-ضيفا-على-نشرة-أخبار_a6747.html">
+						 <img src="/_images/1.gif" alt="" class="play_16_9_l" />
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/large_16_9/76081727-53847349.jpg?v=1698145369" alt="مرور الأخ نزار بركة  وزير التجهيز والماء ضيفا على نشرة أخبار الظهيرة بالقناة الثانية  بخصوص جلسة العمل التي ترأسها جلالة الملك حول تتبع البرنامج الوطني للتزود بالماء الصالح للشرب ومياه السقي 2020 - 2027" title="مرور الأخ نزار بركة  وزير التجهيز والماء ضيفا على نشرة أخبار الظهيرة بالقناة الثانية  بخصوص جلسة العمل التي ترأسها جلالة الملك حول تتبع البرنامج الوطني للتزود بالماء الصالح للشرب ومياه السقي 2020 - 2027"  />
+					 </a>
+				 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+	 </div></div>
+</div>
+<div id="ecart_after_55196852" class="ecart_col2"><hr /></div>
+
+<!-- newsletter 55196842 -->
+<div id="ecart_before_55196842" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55196842" class="mod_55196842 wm-module fullbackground  module-newsletter">
+	 <div class="entete"><div class="fullmod">
+		 <span>الاشتراك بالرسالة الاخبارية</span>
+	 </div></div>
+	 <form action="/newsletter/" method="post" id="form_newsletter_55196842">
+		 <div class="cel1 nowrap">
+			 <input type="hidden" name="subaction" value="add" />
+<input type="hidden" name="html_texte" value="html" />
+			 <div class="inputs">
+				 <span>
+					<input type="text" style="width:240px" class="button hiddeninput" id="email_55196842_safe" name="email_safe" onfocus="$(this).hide(); $('#email_55196842').show(); $('#email_55196842').focus()"  value="" />
+<input type="text" style="display:none;width:240px" id="email_55196842" class="button realinput" name="email" onblur="if (this.value == '') {$(this).hide(); $('#email_55196842_safe').show();}"  value="" />
+				</span>
+				<span>
+<input type="image" src="/_images/icones/ok_8.png?v=1731587505" alt="OK" title="OK" />				</span>
+			 </div>
+		 </div>
+		 <div class="cel1">
+			 <div class="texte">أدخل بريدك الإلكتروني للتوصل بآخر الأخبار</div>
+		 </div>
+	 </form>
+<script type='text/javascript'>make_print_object("55196842", "1405852", "form_newsletter_55196842");
+</script>
+</div>
+<div id="ecart_after_55196842" class="ecart_col2"><hr /></div>
+
+<!-- rub_une 55196853 -->
+<div id="ecart_before_55196853" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55196853" class="mod_55196853 wm-module fullbackground module-responsive  module-rub_une type-2">
+	 <div class="entete"><div class="fullmod"></div></div>
+	 <div class="cel1 nb-col-1" style="padding:0"><div class="fullmod">
+	 <div class="encapse_bloc id0  clear-x2 clear-x3 clear-x4" style="padding:0 2px;">
+		 <div class="no_bloc_rub" style="padding:2px 0">
+			 <h4 class="rubrique">
+				 <a class="arub24" href="/بلاغات-ومذكرات_r24.html"><span class="nom_rub24">بلاغات ومذكرات</span></a>
+			 </h4>
+			 <h3 class="titre first" style=";margin-bottom:5px">
+				 <a href="/بلاغ-اللجنة-التنفيذية-لحزب-الاستقلال-تفاعلا-مع-مضامين-الخطاب_a6926.html">
+					 بلاغ اللجنة التنفيذية لحزب الاستقلال تفاعلا مع مضامين الخطاب الملكي السامي بمناسبة الذكرى 49 للمسيرة الخضراء المظفرة
+				 </a>
+			
+			 <br class="clear" />
+			 </h3>
+				 <div class="photo shadow thumbnail-3" style="">
+					 <a href="/بلاغ-اللجنة-التنفيذية-لحزب-الاستقلال-تفاعلا-مع-مضامين-الخطاب_a6926.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/large_16_9/84052264-60059410.jpg?v=1731000768" alt="بلاغ اللجنة التنفيذية لحزب الاستقلال تفاعلا مع مضامين الخطاب الملكي السامي بمناسبة الذكرى 49 للمسيرة الخضراء المظفرة" title="بلاغ اللجنة التنفيذية لحزب الاستقلال تفاعلا مع مضامين الخطاب الملكي السامي بمناسبة الذكرى 49 للمسيرة الخضراء المظفرة"  />
+					 </a>
+				 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+	 </div></div>
+</div>
+<div id="ecart_after_55196853" class="ecart_col2"><hr /></div>
+
+<!-- recherche 55503180 -->
+<div id="ecart_before_55503180" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55503180" class="mod_55503180 wm-module fullbackground  recherche type-1">
+	 <form id="form_55503180" action="/search/" method="get" enctype="application/x-www-form-urlencoded" lang="ar" dir="rtl">
+	 <div class="entete"><div class="fullmod">
+		 <span>بحث</span>
+	 </div></div>
+		 <div class="cel1">
+			 			 <span><span class="cel">
+<input type="text" style="width:250px" id="keyword_55503180" name="keyword" value="" class="button"   />			 </span><span class="cel">
+<input type="image" src="/_images/icones/ok_8.png?v=1731587505" alt="OK" title="OK" />
+			 </span></span>
+			 <div class="avance" style="margin-top:5px">
+				 <a href="/search/?avance=1">بحث متقدم</a>
+			 </div>
+		 </div>
+	 </form>
+</div>
+<div id="ecart_after_55503180" class="ecart_col2"><hr /></div>
+
+<!-- espace 55196855 -->
+<div id="ecart_before_55196855" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55196855" class="mod_55196855 wm-module fullbackground "><hr /></div>
+<div id="ecart_after_55196855" class="ecart_col2"><hr /></div>
+
+<!-- rub_une 55507070 -->
+<div id="ecart_before_55507070" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55507070" class="mod_55507070 wm-module fullbackground module-responsive  module-rub_une type-2">
+	 <div class="cel1 nb-col-1" style="padding:0"><div class="fullmod">
+	 <div class="encapse_bloc id0  clear-x2 clear-x3 clear-x4" style="padding:0 2px;">
+		 <div class="no_bloc_rub" style="padding:2px 0">
+			 <h4 class="rubrique">
+				 <a class="arub50" href="/قضايا-المرأة_r50.html"><span class="nom_rub50">قضايا المرأة </span></a>
+			 </h4>
+			 <h3 class="titre first" style=";margin-bottom:5px">
+				 <a href="/على-هامش-المعرض-الدولي-للنشر-والكتاب-في-دورته-السادسة-والعشرين_a3771.html">
+					 على هامش المعرض الدولي للنشر والكتاب في دورته السادسة والعشرين
+				 </a>
+			
+			 <br class="clear" />
+			 </h3>
+				 <div class="photo shadow thumbnail-3" style="">
+					 <a href="/على-هامش-المعرض-الدولي-للنشر-والكتاب-في-دورته-السادسة-والعشرين_a3771.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/large_16_9/42933501-35608008.jpg?v=1582134796" alt="على هامش المعرض الدولي للنشر والكتاب في دورته السادسة والعشرين" title="على هامش المعرض الدولي للنشر والكتاب في دورته السادسة والعشرين"  />
+					 </a>
+				 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+	 </div></div>
+</div>
+<div id="ecart_after_55507070" class="ecart_col2"><hr /></div>
+
+<!-- espace 55506973 -->
+<div id="ecart_before_55506973" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55506973" class="mod_55506973 wm-module fullbackground "><hr /></div>
+<div id="ecart_after_55506973" class="ecart_col2"><hr /></div>
+
+<!-- rub_une 55507039 -->
+<div id="ecart_before_55507039" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55507039" class="mod_55507039 wm-module fullbackground module-responsive  module-rub_une type-2">
+	 <div class="cel1 nb-col-1" style="padding:0"><div class="fullmod">
+	 <div class="encapse_bloc id0  clear-x2 clear-x3 clear-x4" style="padding:0 2px;">
+		 <div class="no_bloc_rub" style="padding:2px 0">
+			 <h4 class="rubrique">
+				 <a class="arub51" href="/قضايا-الشباب_r51.html"><span class="nom_rub51">قضايا الشباب </span></a>
+			 </h4>
+			 <h3 class="titre first" style=";margin-bottom:5px">
+				 <a href="/الأخ-مصطفى-تاج-يحل-ضيفا-على-برنامج-شباب-في-الواجهة-بالقناة-الأولى_a5844.html">
+					 الأخ مصطفى تاج  يحل ضيفا على برنامج «  شباب في الواجهة » بالقناة الأولى
+				 </a>
+			
+			 <br class="clear" />
+			 </h3>
+				 <div class="photo shadow thumbnail-3" style="">
+					 <a href="/الأخ-مصطفى-تاج-يحل-ضيفا-على-برنامج-شباب-في-الواجهة-بالقناة-الأولى_a5844.html">
+						 <img loading="lazy" src="https://www.istiqlal.info/photo/art/large_16_9/57254495-42448889.jpg?v=1624351080" alt="الأخ مصطفى تاج  يحل ضيفا على برنامج «  شباب في الواجهة » بالقناة الأولى" title="الأخ مصطفى تاج  يحل ضيفا على برنامج «  شباب في الواجهة » بالقناة الأولى"  />
+					 </a>
+				 </div>
+			 <div class="clear"></div>
+		 </div>
+	 </div>
+	 </div></div>
+</div>
+<div id="ecart_after_55507039" class="ecart_col2"><hr /></div>
+
+<!-- lien_perso 55585671 -->
+<div id="ecart_before_55585671" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55585671" class="mod_55585671 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/photos/" > ذاكره : صورنادرة</a>
+	 </div>
+</div>
+<div id="ecart_after_55585671" class="ecart_col2"><hr /></div>
+
+<!-- espace 55506946 -->
+<div id="ecart_before_55506946" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55506946" class="mod_55506946 wm-module fullbackground "><hr /></div>
+<div id="ecart_after_55506946" class="ecart_col2"><hr /></div>
+
+<!-- lien_perso 55507005 -->
+<div id="ecart_before_55507005" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55507005" class="mod_55507005 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="/photos/" > ذاكره : صورنادرة</a>
+	 </div>
+</div>
+<div id="ecart_after_55507005" class="ecart_col2"><hr /></div>
+
+<!-- galerie 55503245 -->
+<div id="mod_55503245" class="mod_55503245  module-galerie type-1"><div class="fullmod">
+			 <div class="cel1 alone nb-col-3  without_text" style="overflow:hidden;padding-top:2px;padding-bottom:2px">
+				 <div class="col clear-x2 clear-x3 clear-x4" style="float:left;position:relative;width:101px;height:101px;">
+					 <a href="https://www.istiqlal.info/photos/صورة-نادرة_gp24492127.html" class="shadow"><img src="https://www.istiqlal.info/photo/gal/iphone/ipgal-24492127.jpg?v=1677783375" alt="صورة نادرة" title="صورة نادرة" height="75" class="vignette" style=";" /></a>
+				 </div>
+				 <div class="col" style="float:left;position:relative;width:101px;height:101px;">
+					 <a href="https://www.istiqlal.info/photos/صورة-نادرة_gp15116746.html" class="shadow"><img src="https://www.istiqlal.info/photo/gal/iphone/ipgal-15116746.jpg?v=1589703155" alt="صورة نادرة" title="صورة نادرة" height="75" class="vignette" style=";" /></a>
+				 </div>
+				 <div class="col clear-x2" style="float:left;position:relative;width:101px;height:101px;margin-right:0">
+					 <a href="https://www.istiqlal.info/photos/صورة-نادرة_gp15116728.html" class="shadow"><img src="https://www.istiqlal.info/photo/gal/iphone/ipgal-15116728.jpg?v=1589703081" alt="صورة نادرة" title="صورة نادرة" height="75" class="vignette" style=";" /></a>
+				 </div>
+				 <div class="clear"></div>
+				 <div class="col clear-x3" style="float:left;position:relative;width:101px;height:101px;">
+					 <a href="https://www.istiqlal.info/photos/صورة-نادرة_gp14026601.html" class="shadow"><img src="https://www.istiqlal.info/photo/gal/iphone/ipgal-14026601.jpg?v=1582019093" alt="صورة نادرة" title="صورة نادرة" height="75" class="vignette" style=";" /></a>
+				 </div>
+				 <div class="col clear-x2 clear-x4" style="float:left;position:relative;width:101px;height:101px;">
+					 <a href="https://www.istiqlal.info/photos/صورة-نادرة_gp14026365.html" class="shadow"><img src="https://www.istiqlal.info/photo/gal/iphone/ipgal-14026365.jpg?v=1582017130" alt="صورة نادرة" title="صورة نادرة" height="75" class="vignette" style=";" /></a>
+				 </div>
+				 <div class="col" style="float:left;position:relative;width:101px;height:101px;margin-right:0">
+					 <a href="https://www.istiqlal.info/photos/صورة-نادرة_gp13944911.html" class="shadow"><img src="https://www.istiqlal.info/photo/gal/iphone/ipgal-13944911.jpg?v=1581329683" alt="صورة نادرة" title="صورة نادرة" height="75" class="vignette" style=";" /></a>
+				 </div>
+				 <div class="clear"></div>
+				 <div class="col clear-x2 clear-x3" style="float:left;position:relative;width:101px;height:101px;">
+					 <a href="https://www.istiqlal.info/photos/صورة-نادرة_gp13944876.html" class="shadow"><img src="https://www.istiqlal.info/photo/gal/iphone/ipgal-13944876.jpg?v=1581329567" alt="صورة نادرة" title="صورة نادرة" height="75" class="vignette" style=";" /></a>
+				 </div>
+				 <div class="col" style="float:left;position:relative;width:101px;height:101px;">
+					 <a href="https://www.istiqlal.info/photos/صورة-نادرة_gp13823404.html" class="shadow"><img src="https://www.istiqlal.info/photo/gal/iphone/ipgal-13823404.jpg?v=1580283461" alt="صورة نادرة" title="صورة نادرة" height="75" class="vignette" style=";" /></a>
+				 </div>
+				 <div class="col clear-x2 clear-x4" style="float:left;position:relative;width:101px;height:101px;margin-right:0">
+					 <a href="https://www.istiqlal.info/photos/صورة-نادرة_gp13823403.html" class="shadow"><img src="https://www.istiqlal.info/photo/gal/iphone/ipgal-13823403.jpg?v=1580283461" alt="صورة نادرة" title="صورة نادرة" height="75" class="vignette" style=";" /></a>
+				 </div>
+				 <div class="clear"></div>
+				 <div class="col clear-x3" style="float:left;position:relative;width:101px;;">
+					 <a href="https://www.istiqlal.info/photos/صورة-نادرة_gp13823402.html" class="shadow"><img src="https://www.istiqlal.info/photo/gal/iphone/ipgal-13823402.jpg?v=1580283460" alt="صورة نادرة" title="صورة نادرة" height="75" class="vignette" style=";" /></a>
+				 </div>
+				 <div class="col clear-x2" style="float:left;position:relative;width:101px;;">
+					 <a href="https://www.istiqlal.info/photos/صورة-نادرة_gp13823401.html" class="shadow"><img src="https://www.istiqlal.info/photo/gal/iphone/ipgal-13823401.jpg?v=1580283459" alt="صورة نادرة" title="صورة نادرة" height="75" class="vignette" style=";" /></a>
+				 </div>
+				 <div class="col" style="float:left;position:relative;width:101px;;margin-right:0">
+					 <a href="https://www.istiqlal.info/photos/صورة-نادرة_gp13823400.html" class="shadow"><img src="https://www.istiqlal.info/photo/gal/iphone/ipgal-13823400.jpg?v=1580283458" alt="صورة نادرة" title="صورة نادرة" height="75" class="vignette" style=";" /></a>
+				 </div>
+				 <div class="clear"></div>
+				 <div class="clear clearimportant"></div>
+			 </div>
+</div></div>
+<div id="ecart_after_55503245" class="ecart_col2"><hr /></div>
+
+<!-- espace 55506666 -->
+<div id="ecart_before_55506666" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55506666" class="mod_55506666 wm-module fullbackground "><hr /></div>
+<div id="ecart_after_55506666" class="ecart_col2"><hr /></div>
+
+<!-- lien_perso 55196837 -->
+<div id="ecart_before_55196837" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55196837" class="mod_55196837 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="https://www.alalam.ma" target="_blank"> <img src="/photo/mod-55196837.png?v=1678351702" class="image" alt="https://www.alalam.ma" style="width:168px" /></a>
+	 </div>
+</div>
+<div id="ecart_after_55196837" class="ecart_col2"><hr /></div>
+
+<!-- espace 55506774 -->
+<div id="ecart_before_55506774" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55506774" class="mod_55506774 wm-module fullbackground "><hr /></div>
+<div id="ecart_after_55506774" class="ecart_col2"><hr /></div>
+
+<!-- lien_perso 55196848 -->
+<div id="ecart_before_55196848" class="ecart_col2 responsive" style="display:none"><hr /></div>
+<div id="mod_55196848" class="mod_55196848 wm-module fullbackground  module-lien_perso">
+	 <div class="texte">
+		 <a href="https://www.lopinion.ma" target="_blank"> <img src="/photo/mod-55196848.png?v=1677067994" class="image" alt="https://www.lopinion.ma" style="width:294px" /></a>
+	 </div>
+</div>
+</div>
+</div>
+<!-- ********************************************** FIN COLONNE 2 ****************************************** -->
+
+</div>
+</div>
+
+</div>
+
+</div>
+<!-- ********************************************** ZONE OURS FULL ***************************************** -->
+<div id="z_col100" class="full">
+<div class="z_col100_inner">
+
+<!-- espace 55433109 -->
+<div id="mod_55433109" class="mod_55433109 wm-module fullbackground "><hr /></div>
+<div id="ecart_after_55433109" class="ecart_col100"><hr /></div>
+<div id="mod_55531301" class="mod_55531301 wm-module module-responsive " style="_position:static">
+<div class="fullmod">
+<table cellpadding="0" cellspacing="0" class="module-combo nb-modules-1" style="position:relative; _position:static">
+<tr>
+<td class="celcombo1 empty">&nbsp;</td>
+<td class="celcombo2">
+<!-- services_web2 55531302 -->
+<div id="ecart_before_55531302" class="ecart_col100 responsive" style="display:none"><hr /></div>
+<div id="mod_55531302" class="mod_55531302 wm-module fullbackground  services_web2">
+		 <div class="cel1">
+					 <div class="lien">
+						 <a href="https://www.facebook.com/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9-%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%8A%D8%A9-%D9%84%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%82%D9%84%D8%A7%D9%84-196448427590617/" style="height: 46px; line-height: 46px" target="_blank"><img src="/photo/mod-55531302-225297.png" alt="" style="max-height: 46px;" title="" /></a>
+					 </div>
+					 <div class="lien">
+						 <a href="https://twitter.com/PartiIstiqlal" style="height: 46px; line-height: 46px" target="_blank"><img src="/photo/mod-55531302-225298.png" alt="" style="max-height: 46px;" title="" /></a>
+					 </div>
+					 <div class="lien">
+						 <a href="https://www.youtube.com/channel/UCUVVDoCjw1JRDLpEMiYMxsQ" style="height: 46px; line-height: 46px" target="_blank"><img src="/photo/mod-55531302-225299.png" alt="" style="max-height: 46px;" title="" /></a>
+					 </div>
+					 <div class="lien">
+						 <a href="https://www.istiqlal.info/xml/syndication.rss" style="height: 46px; line-height: 46px" target="_blank"><img src="/photo/mod-55531302-225300.png" alt="" style="max-height: 46px;" title="" /></a>
+					 </div>
+	 <div class="clear"></div>
+		 </div>
+</div>
+</td>
+<td class="celcombo3 empty">&nbsp;</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="ecart_after_55531301" class="ecart_col100"><hr /></div>
+<div id="ecart_before_55505031" class="ecart_col100 " style="display:none"><hr /></div>
+<div id="mod_55505031" class="mod_55505031 wm-module module-responsive " style="_position:static">
+<div class="fullmod">
+<table cellpadding="0" cellspacing="0" class="module-combo nb-modules-4" style="position:relative; _position:static">
+<tr>
+<td class="celcombo1">
+<!-- menu_static 55505253 -->
+<div id="ecart_before_55505253" class="ecart_col100 responsive" style="display:none"><hr /></div>
+<div id="mod_55505253" class="mod_55505253 wm-module fullbackground  menu_static colonne-c background-cell- ">
+	 <ul class="menu">
+		 <li class="id1 cel1 keep-padding titre first">
+			 <a href="/faq/" data-link="faq,all" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				  أسئلة وأجوبة
+			 </a>
+		 </li>
+		 <li class="id2 cel2 keep-padding titre ">
+			 <a href="/reader/" data-link="agregateur," >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				  في الصحافة المغربية
+			 </a>
+		 </li>
+		 <li class="id3 cel1 keep-padding titre  last">
+			 <a href="/حزب-الاستقلال_r25.html" data-link="rubrique,2810213" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 قاموس حزب الاستقلال
+			 </a>
+		 </li>
+	 </ul>
+</div>
+</td>
+<td class="celcombo2">
+<!-- menu_static 55505252 -->
+<div id="ecart_before_55505252" class="ecart_col100 responsive" style="display:none"><hr /></div>
+<div id="mod_55505252" class="mod_55505252 wm-module fullbackground  menu_static colonne-c background-cell- ">
+	 <ul class="menu">
+		 <li class="id1 cel1 keep-padding titre first">
+			 <a href="/الإستقلال-WEB-TV_r14.html" data-link="rubrique,2522938" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 الإستقلال تي في
+			 </a>
+		 </li>
+		 <li class="id2 cel2 keep-padding titre ">
+			 <a href="/منشورات_r57.html" data-link="rubrique,2897000" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 منشورات
+			 </a>
+		 </li>
+		 <li class="id3 cel1 keep-padding titre ">
+			 <a href="/بلاغات-ومذكرات_r24.html" data-link="rubrique,2554182" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 بلاغات ومذكرات
+			 </a>
+		 </li>
+		 <li class="id4 cel2 keep-padding titre ">
+			 <a href="/downloads/" data-link="telechargement,all" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 تحميل الوثائق
+			 </a>
+		 </li>
+		 <li class="id5 cel1 keep-padding titre  last">
+			 <a href="/photos/" data-link="galerie,all" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 أذكرة : مكتبة الصور
+			 </a>
+		 </li>
+	 </ul>
+</div>
+</td>
+<td class="celcombo3">
+<!-- menu_static 55505040 -->
+<div id="ecart_before_55505040" class="ecart_col100 responsive" style="display:none"><hr /></div>
+<div id="mod_55505040" class="mod_55505040 wm-module fullbackground  menu_static colonne-c background-cell- ">
+	 <ul class="menu">
+		 <li class="id1 cel1 keep-padding titre first">
+			 <a href="/الأمين-العام-الدكتور-نزار-بركة_a89.html" data-link="article,20358040" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				  الأمين العام
+			 </a>
+		 </li>
+		 <li class="id2 cel2 keep-padding titre ">
+			 <a href="/اللجنة-التنفيذية-لحزب-الاستقلال_a90.html" data-link="article,20358045" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 اللجنة التنفيذية
+			 </a>
+		 </li>
+		 <li class="id3 cel1 keep-padding titre ">
+			 <a href="/اللجنة-المركزية-لحزب-الاستقلال_a92.html" data-link="article,20358048" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 اللجنة المركزية 
+			 </a>
+		 </li>
+		 <li class="id4 cel2 keep-padding titre ">
+			 <a href="/المجلس-الوطني_a91.html" data-link="article,20358046" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 المجلس الوطني
+			 </a>
+		 </li>
+		 <li class="id5 cel1 keep-padding titre ">
+			 <a href="/المنظمات-الموازية-لحزب-الاستقلال_a93.html" data-link="article,20358051" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 المنظمات الموازية
+			 </a>
+		 </li>
+		 <li class="id6 cel2 keep-padding titre ">
+			 <a href="/الروابط-المهنية-لحزب-الاستقلال_a94.html" data-link="article,20358052" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 الروابط المهنية
+			 </a>
+		 </li>
+		 <li class="id7 cel1 keep-padding titre  last">
+			 <a href="/برنامج-العمل-جعل-المناضل-في-خدمة-الوطن-والمواطن_a110.html" data-link="article,20428509" >
+				 <img class="image middle nomargin" src="https://www.istiqlal.info/_images/preset/puces/shape1.gif?v=1732287502" alt=""  /> 
+				 برنامج العمل 2017 - 2021
+			 </a>
+		 </li>
+	 </ul>
+</div>
+</td>
+<td class="celcombo4">
+<!-- likebox 55505039 -->
+<div id="ecart_before_55505039" class="ecart_col100 responsive" style="display:none"><hr /></div>
+<div id="mod_55505039" class="mod_55505039 wm-module fullbackground  module-likebox">
+	 <div class="cel1">
+		 <div class="fb-container" style="width:298px">
+			 <div class="fb-page" 
+        data-href="https://www.facebook.com/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9-%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%8A%D8%A9-%D9%84%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%82%D9%84%D8%A7%D9%84-196448427590617/" 
+        data-width="500" 
+        data-hide-cover="false"
+        data-show-posts="false"
+        data-show-facepile="false"
+        data-height="">
+        </div>
+		 </div>
+	 </div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="ecart_after_55505031" class="ecart_col100"><hr /></div>
+
+<!-- ours 55196859 -->
+<div id="ecart_before_55196859" class="ecart_col100 responsive" style="display:none"><hr /></div>
+<div id="mod_55196859" class="mod_55196859 wm-module fullbackground  module-ours"><div class="fullmod">
+	 <div class="legal">
+		 حزب الاستقلال © 2017. جميع الحقوق محفوظة
+	 </div>
+	 <div class="bouton">
+		 <img src="/_images/icones/rssmini.gif" alt="RSS" class="image" /> <a href="/feeds/">تبادل المحتوى</a>
+	</div>
+</div></div>
+</div>
+<!-- ********************************************** FIN ZONE OURS FULL ************************************* -->
+</div>
+</div>
+<script type="text/javascript">
+/*<![CDATA[*//*---->*/
+if (typeof wm_select_link === 'function') wm_select_link('.mod_55196894 .liens');
+var list_dates = []; var currentDate = new Date(); 
+list_dates['2026-8-16'] = 'الاحد 16 أغسطس';
+list_dates['2026-8-17'] = 'الاثنين 17 أغسطس';
+list_dates['2026-8-18'] = 'الثلاثاء 18 أغسطس';
+list_dates['2026-8-19'] = 'الاربعاء 19 أغسطس';
+list_dates['2026-8-20'] = 'الخميس 20 أغسطس';
+$('.mod_55197957 .date').html(list_dates[currentDate.getFullYear()+'-'+(currentDate.getMonth()+1)+'-'+currentDate.getDate()]);
+            setDatetime55197957();
+            var timer55197957 = setInterval(setDatetime55197957, 60*1000);
+            function setDatetime55197957() {
+                $('.mod_55197957 .heure').html(currentDate.getHours() + ':' + addZero(currentDate.getMinutes()));
+            }
+
+        function addZero(i) {
+            if (i < 10) {
+                i = '0' + i;
+            }
+            return i;
+        }
+        
+			var maxHeight55196796 = 0;
+			$('.mod_55196796 .size').each(function() { 
+				height = $(this).height();
+				if (height > maxHeight55196796)	maxHeight55196796 = height;
+			});
+			
+			$('.mod_55196796 .size').each(function() {
+				height = $(this).height();
+				if (height <= maxHeight55196796)	$(this).css('height', maxHeight55196796 + 'px');
+			});
+		var my_glider55196796 = $('#my-glider55196796 div.content').bxSlider({pager: false,auto: true, controls: false, pause: 7000});
+
+$(function() {
+    var ok_search = false;
+    var search = document.location.pathname.replace(/^(.*)\/search\/([^\/]+)\/?(.*)$/, '$2');
+    if (search != '' && search != document.location.pathname)	{ 
+        ok_search = true;
+    } else {
+        search = document.location.search.replace(/^\?(.*)&?keyword=([^&]*)&?(.*)/, '$2');
+        if (search != '' && search != document.location.search)	{
+            ok_search = true;
+        }
+    }
+    if (ok_search) {
+        $('#icon-search-55503180').trigger('click');
+        $('#keyword_safe_55503180').hide(); 
+        $('#keyword_55503180').val(decodeURIComponent(search).replace('+', ' ')).show();
+    }
+});
+ facebook_load('ar');
+
+/*--*//*]]>*/
+</script>
+</body>
+
+</html>

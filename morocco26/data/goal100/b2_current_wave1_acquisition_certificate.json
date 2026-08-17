@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-GOAL100-B2-WAVE1-ACQUISITION-CERTIFICATE-V1",
+  "certified_at": "2026-08-17T10:51:56+01:00",
+  "surface_sha256": "0faf783890f13da9349e3a934e2f8e9c2b660907a2d9b27ba24cd84e3844489f",
+  "scope": "2026 contest; frozen B2 source registry V1 only",
+  "determinism": {
+    "llm_used": false,
+    "source_discovery": false,
+    "semantic_selection": false
+  },
+  "query_templates_used": [
+    "Q01_FIXED_SEED",
+    "Q02_SITEMAP_PROBE"
+  ],
+  "sources_in_registry": 19,
+  "sources_claim_eligible": 11,
+  "sources_attempted": 19,
+  "sources_with_acquired_content": [
+    "T0_CONSTITUTIONAL_COURT",
+    "T0_MAROC_MA_ELECTIONS",
+    "T1_ISTIQLAL_OFFICIAL",
+    "T1_MP_OFFICIAL",
+    "T1_PJD_OFFICIAL",
+    "T1_PPS_OFFICIAL",
+    "T1_UC_OFFICIAL",
+    "T2_HESPRESS",
+    "T2_LE360",
+    "T2_LEMATIN",
+    "T2_SNRTNEWS"
+  ],
+  "sources_without_acquired_content": [
+    "T0_CHAMBRE_REPRESENTANTS",
+    "T0_LISTES_ELECTORALES",
+    "T0_SGG_LEGISLATION",
+    "T1_PAM_OFFICIAL",
+    "T1_RNI_OFFICIAL",
+    "T1_USFP_OFFICIAL",
+    "T2_MEDIAS24",
+    "T2_TELQUEL"
+  ],
+  "per_source_states": {
+    "T0_CHAMBRE_REPRESENTANTS": {
+      "BLOCKED_SOURCE": 1
+    },
+    "T0_CONSTITUTIONAL_COURT": {
+      "ACQUIRED": 2,
+      "FETCH_ERROR": 2
+    },
+    "T0_LISTES_ELECTORALES": {
+      "BLOCKED_SOURCE": 1
+    },
+    "T0_MAROC_MA_ELECTIONS": {
+      "ACQUIRED": 3,
+      "FETCH_ERROR": 2
+    },
+    "T0_SGG_LEGISLATION": {
+      "BLOCKED_SOURCE": 1
+    },
+    "T1_ISTIQLAL_OFFICIAL": {
+      "ACQUIRED": 1,
+      "FETCH_ERROR": 3
+    },
+    "T1_MP_OFFICIAL": {
+      "ACQUIRED": 4
+    },
+    "T1_PAM_OFFICIAL": {
+      "BLOCKED_SOURCE": 1
+    },
+    "T1_PJD_OFFICIAL": {
+      "ACQUIRED": 5
+    },
+    "T1_PPS_OFFICIAL": {
+      "ACQUIRED": 4,
+      "FETCH_ERROR": 1
+    },
+    "T1_RNI_OFFICIAL": {
+      "BLOCKED_SOURCE": 1
+    },
+    "T1_UC_OFFICIAL": {
+      "ACQUIRED": 2,
+      "BLOCKED_SOURCE": 2
+    },
+    "T1_USFP_OFFICIAL": {
+      "BLOCKED_SOURCE": 1
+    },
+    "T2_HESPRESS": {
+      "ACQUIRED": 3,
+      "FETCH_ERROR": 1
+    },
+    "T2_LE360": {
+      "ACQUIRED": 1,
+      "FETCH_ERROR": 3
+    },
+    "T2_LEMATIN": {
+      "ACQUIRED": 1,
+      "FETCH_ERROR": 3
+    },
+    "T2_MEDIAS24": {
+      "BLOCKED_SOURCE": 1
+    },
+    "T2_SNRTNEWS": {
+      "ACQUIRED": 4
+    },
+    "T2_TELQUEL": {
+      "BLOCKED_SOURCE": 1
+    }
+  },
+  "documents_acquired": 30,
+  "documents_blocked": 10,
+  "documents_error": 15,
+  "b2_claim_records_created": 0,
+  "claim_creation_policy": "Acquisition stores raw documents only. A B2 claim record additionally requires a deterministic parser, critical double entry and the frozen verification rule; no parser for 2026 candidate rosters exists, so this phase creates zero claims.",
+  "absence_rule": "BLOCKED_SOURCE and FETCH_ERROR describe access, never absence or a false value.",
+  "structured_states_available": [
+    "VERIFIED",
+    "UNKNOWN",
+    "BLOCKED_SOURCE",
+    "UNPARSABLE_NONAGENTIC",
+    "AMBIGUOUS_DETERMINISTIC_MATCH"
+  ],
+  "vault_integrity": {
+    "objects_checked": 34,
+    "objects_matching_retrieval_digest": 34,
+    "objects_missing": 0,
+    "objects_mismatched": 0,
+    "verdict": "INTACT",
+    "failures": [],
+    "note": "The vault is declared binary in .gitattributes. A mismatch usually means a checkout translated line endings and corrupted the archived bytes."
+  },
+  "format_inventory": {
+    "frozen_evidence_terms_used": [
+      "candidat",
+      "candidate",
+      "changement de parti",
+      "disqualification",
+      "défection",
+      "investiture",
+      "retrait",
+      "transhumance",
+      "إلغاء الترشيح",
+      "التحاق",
+      "الترحال السياسي",
+      "ترشيح",
+      "تزكية",
+      "سحب الترشيح",
+      "مرشح",
+      "مرشحة",
+      "وكيل اللائحة"
+    ],
+    "method": "STRUCTURAL_COUNT_PLUS_FROZEN_DICTIONARY_MATCH",
+    "llm_used": false,
+    "by_source": {
+      "HF_CHAMBER_MEMBERS_MULTIYEAR": {
+        "documents": 4,
+        "tables": 0,
+        "tables_matching_frozen_terms": 0,
+        "largest_matching_table_rows": 0,
+        "content_types": [
+          "application/json",
+          "application/octet-stream",
+          "text/plain"
+        ]
+      },
+      "T0_CONSTITUTIONAL_COURT": {
+        "documents": 2,
+        "tables": 0,
+        "tables_matching_frozen_terms": 0,
+        "largest_matching_table_rows": 0,
+        "content_types": [
+          "text/html",
+          "text/xml"
+        ]
+      },
+      "T0_MAROC_MA_ELECTIONS": {
+        "documents": 3,
+        "tables": 0,
+        "tables_matching_frozen_terms": 0,
+        "largest_matching_table_rows": 0,
+        "content_types": [
+          "application/xml",
+          "text/html"
+        ]
+      },
+      "T1_ISTIQLAL_OFFICIAL": {
+        "documents": 1,
+        "tables": 13,
+        "tables_matching_frozen_terms": 0,
+        "largest_matching_table_rows": 0,
+        "content_types": [
+          "text/html"
+        ]
+      },
+      "T1_MP_OFFICIAL": {
+        "documents": 4,
+        "tables": 0,
+        "tables_matching_frozen_terms": 0,
+        "largest_matching_table_rows": 0,
+        "content_types": [
+          "text/html",
+          "text/xml"
+        ]
+      },
+      "T1_PJD_OFFICIAL": {
+        "documents": 5,
+        "tables": 2,
+        "tables_matching_frozen_terms": 1,
+        "largest_matching_table_rows": 93,
+        "content_types": [
+          "text/html",
+          "text/xml"
+        ]
+      },
+      "T1_PPS_OFFICIAL": {
+        "documents": 4,
+        "tables": 0,
+        "tables_matching_frozen_terms": 0,
+        "largest_matching_table_rows": 0,
+        "content_types": [
+          "application/xml",
+          "text/html"
+        ]
+      },
+      "T1_UC_OFFICIAL": {
+        "documents": 2,
+        "tables": 0,
+        "tables_matching_frozen_terms": 0,
+        "largest_matching_table_rows": 0,
+        "content_types": [
+          "text/html",
+          "text/xml"
+        ]
+      },
+      "T2_HESPRESS": {
+        "documents": 3,
+        "tables": 0,
+        "tables_matching_frozen_terms": 0,
+        "largest_matching_table_rows": 0,
+        "content_types": [
+          "text/html",
+          "text/xml"
+        ]
+      },
+      "T2_LE360": {
+        "documents": 1,
+        "tables": 0,
+        "tables_matching_frozen_terms": 0,
+        "largest_matching_table_rows": 0,
+        "content_types": [
+          "text/html"
+        ]
+      },
+      "T2_LEMATIN": {
+        "documents": 1,
+        "tables": 4,
+        "tables_matching_frozen_terms": 0,
+        "largest_matching_table_rows": 0,
+        "content_types": [
+          "text/html"
+        ]
+      },
+      "T2_SNRTNEWS": {
+        "documents": 4,
+        "tables": 0,
+        "tables_matching_frozen_terms": 0,
+        "largest_matching_table_rows": 0,
+        "content_types": [
+          "application/xml",
+          "text/html"
+        ]
+      }
+    },
+    "deterministically_parsable_tables": [
+      {
+        "source_id": "T1_PJD_OFFICIAL",
+        "stored_path": "morocco26/data/goal100/b2_raw_acquisition/T1_PJD_OFFICIAL/2026/seed_4958787dac493f06.bin",
+        "table_index": 1,
+        "table_rows": 93,
+        "matched_frozen_terms": [
+          "ترشيح",
+          "تزكية"
+        ],
+        "extraction_status": "DETERMINISTICALLY_PARSABLE_TABLE_PENDING_GATE_B2_4"
+      }
+    ],
+    "interpretation": "A matching table means a deterministic parser could read it. It does not mean a claim exists: the frozen critical-double-entry rule still requires two matching parses or one authoritative T0 structured table, and a T1 party page is not authoritative."
+  },
+  "extractability_summary": {
+    "documents_with_parsable_candidate_tables": 1,
+    "sources_with_parsable_candidate_tables": [
+      "T1_PJD_OFFICIAL"
+    ],
+    "largest_parsable_table_rows": 93,
+    "verdict": "DETERMINISTIC_ROSTER_SURFACE_EXISTS_FOR_2026"
+  },
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "canonical_certificate_sha256": "34b76b6937e81c5fbeba7ea2e19f0a698ea81d3efe5e02025531142bbd6870da"
+}

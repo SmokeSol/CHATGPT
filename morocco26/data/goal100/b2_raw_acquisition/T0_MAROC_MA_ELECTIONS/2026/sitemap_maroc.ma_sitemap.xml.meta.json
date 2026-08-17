@@ -1,0 +1,21 @@
+{
+  "source_id": "T0_MAROC_MA_ELECTIONS",
+  "bucket": "2026",
+  "original_url": "https://maroc.ma/sitemap.xml",
+  "final_url": "https://maroc.ma/sitemap.xml",
+  "retrieved_at": "2026-08-17T10:43:52+01:00",
+  "http_status": 200,
+  "content_type": "application/xml; charset=utf-8",
+  "content_length": 780,
+  "etag": "\"1786950948\"",
+  "last_modified": "Mon, 17 Aug 2026 07:15:48 GMT",
+  "sha256": "2582a651d6c3c03b2241fd7e3aa86bceb044c1d7e8b8b0b5a5a9be938721a0ea",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

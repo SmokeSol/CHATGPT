@@ -1,0 +1,9 @@
+# The B2 raw acquisition vault is an immutable byte-for-byte archive. Its
+# recorded SHA-256 digests are computed over the retrieved bytes, so any
+# line-ending translation on checkout would corrupt the evidence and invalidate
+# every hash. Treat the whole vault as binary.
+morocco26/data/goal100/b2_raw_acquisition/** -text -diff
+
+# Ingested raw source files are archived evidence for the same reason.
+morocco26/data/goal100/historical/raw/** -text -diff
+morocco26/data/goal100/older_history_probe/raw/** -text -diff

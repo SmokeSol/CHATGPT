@@ -3,7 +3,7 @@
   "panel_id": "M26-GOAL100-B2-HISTORICAL-PANEL-V1",
   "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
   "dictionary_id": "M26-GOAL100-B2-FEATURE-DICTIONARY-V1",
-  "generated_at": "2026-08-17T10:50:57+01:00",
+  "generated_at": "2026-08-17T10:11:22+01:00",
   "gate": "FAIL",
   "determinism": {
     "llm_used": false,
@@ -54,29 +54,12 @@
     },
     "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR": {
       "available_years": [
-        2007,
-        2011,
-        2016,
         2021
       ],
       "instances_by_year": {
-        "2007": 225,
-        "2011": 305,
-        "2016": 305,
         "2021": 305
       },
-      "territories_by_year": {
-        "2007": 74,
-        "2011": 92,
-        "2016": 92,
-        "2021": 92
-      },
-      "provenance_by_year": {
-        "2021": "b2_identity_crosswalk.people_2021",
-        "2007": "morocco26/data/goal100/historical/b2_historical_elected_members.json",
-        "2011": "morocco26/data/goal100/historical/b2_historical_elected_members.json",
-        "2016": "morocco26/data/goal100/historical/b2_historical_elected_members.json"
-      },
+      "provenance": "b2_identity_crosswalk.people_2021 (scope=local)",
       "semantics": "ELECTION_OUTCOME_OF_ITS_OWN_CYCLE",
       "leakage_rule": "Admissible only as prior-cycle incumbency for a strictly later cutoff."
     },
@@ -401,7 +384,8 @@
             "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
           ],
           "missing_inputs": [
-            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR"
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
           ],
           "identifiable": false,
           "territories_covered": 0,
@@ -425,7 +409,8 @@
             "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
           ],
           "missing_inputs": [
-            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR"
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
           ],
           "identifiable": false,
           "territories_covered": 0,
@@ -452,6 +437,7 @@
           ],
           "missing_inputs": [
             "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
             "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
           ],
           "identifiable": false,
@@ -479,6 +465,7 @@
           ],
           "missing_inputs": [
             "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
             "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
           ],
           "identifiable": false,
@@ -809,7 +796,8 @@
             "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
           ],
           "missing_inputs": [
-            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR"
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
           ],
           "identifiable": false,
           "territories_covered": 0,
@@ -833,7 +821,8 @@
             "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
           ],
           "missing_inputs": [
-            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR"
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
           ],
           "identifiable": false,
           "territories_covered": 0,
@@ -860,6 +849,7 @@
           ],
           "missing_inputs": [
             "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
             "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
           ],
           "identifiable": false,
@@ -887,6 +877,7 @@
           ],
           "missing_inputs": [
             "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
             "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
           ],
           "identifiable": false,
@@ -1140,6 +1131,7 @@
     "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
     "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
     "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
+    "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
     "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
     "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
     "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
@@ -1150,39 +1142,34 @@
     "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
     "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
   ],
-  "input_hash_method": "CANONICAL_JSON_SHA256",
   "input_hashes": {
     "feature_dictionary": {
       "path": "morocco26/data/goal100/b2_feature_dictionary_v1.json",
-      "canonical_json_sha256": "a5e09c41cab9c77d97bc4f585039948a771d96a273a22ed37b0078a347bc6c08"
+      "sha256": "0275edfc19dabd8c10a2dec26eb685c6bcc5ce0ff0a6a550a76fa9b5cc50914b"
     },
     "historical_2011": {
       "path": "morocco26/data/goal100/historical/tafra_legislative_2011_canonical.json",
-      "canonical_json_sha256": "9a721c84e7e69d9c0e07664a03ef73c49eb5382f7470fe28b75408e3ec79a79c"
+      "sha256": "4abad6a4eb1d3da378477646722c4e6ed39ae0ae259028c3c77ee0956cff3af8"
     },
     "historical_2016": {
       "path": "morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json",
-      "canonical_json_sha256": "c55edb091d8e34a894000edce368371a85d5fde501cbf3046d3dde293c96f09f"
+      "sha256": "aed76c3059aef8894bdcede98553e5feb127781dd6a572c364335ce7d81926dd"
     },
     "historical_2021": {
       "path": "morocco26/data/goal100/historical/tafra_legislative_2021_canonical.json",
-      "canonical_json_sha256": "3957c45cb36657800f79f45301d5d5430e6b0d1726492bd34b8f96f9785ebf15"
-    },
-    "historical_elected_members": {
-      "path": "morocco26/data/goal100/historical/b2_historical_elected_members.json",
-      "canonical_json_sha256": "c7a9c4e1786c06918b4ec6a4c40ba61a6f49301f0e59cbdf71d8d3eaece16b75"
+      "sha256": "74a6fa2b28e88edc081beb4f7c072e7b8d47d97a34dbbf8ae7df3a418cf8e03e"
     },
     "identity_certificate": {
       "path": "morocco26/data/goal100/b2_identity_territory_certificate.json",
-      "canonical_json_sha256": "615c86e33016f7ff61c23188d5d269a6814e7e86713ceb71b8773b323ad7e4fc"
+      "sha256": "053cc051add2b1abb9098dceb0bc2fec7a0a76c4f113b99a13ecb2090674bd68"
     },
     "identity_crosswalk": {
       "path": "morocco26/data/goal100/b2_identity_crosswalk.json",
-      "canonical_json_sha256": "fa57114ac120c1083d608f6dae272f46322062c8b802c220684bfea3fd91c72b"
+      "sha256": "dbc603b6ece204cad21d1df626532b8585fbe9df92a8565b79606035e6de78c2"
     },
     "protocol": {
       "path": "morocco26/data/goal100/b2_protocol_v1.json",
-      "canonical_json_sha256": "fbcdf5ed3a99ff12bfb1dd14331f54a1adb3bf53aba8256b271f6af6fd030b6a"
+      "sha256": "28c080a821325a925e539835accc6d97ea6512b8edcfd78d0b025f08dd2f5e55"
     }
   },
   "failures": [
@@ -1201,5 +1188,5 @@
       "identifiable_predictive_features": 0
     }
   ],
-  "canonical_panel_sha256": "c14bb4e2078f42f86c301ea0b581495eb14df99c9d87a2238d002874f4565991"
+  "canonical_panel_sha256": "fe91b5a71237eae536e691bbeff21d4bb7fcc7ef3c6c98673172929df60eee2f"
 }

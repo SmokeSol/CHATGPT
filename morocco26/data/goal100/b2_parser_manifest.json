@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "M26-GOAL100-B2-PARSER-MANIFEST-V1",
+  "generated_at": "2026-08-17T10:50:58+01:00",
+  "parsers": [
+    {
+      "parser_id": "M26-GOAL100-B2-MEMBER-PARSER",
+      "version": "1.0",
+      "input_format": "parquet",
+      "method": "STRUCTURED_API",
+      "llm_used": false,
+      "semantic_judgment_used": false,
+      "handles": [
+        "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
+      ],
+      "input_source_id": "HF_CHAMBER_MEMBERS_MULTIYEAR",
+      "output_artifact": "morocco26/data/goal100/historical/b2_historical_elected_members.json",
+      "output_sha256": "b29c38e6f8522f5e33291334030c3ab835c67d32b4a23ba481293c9e9dfb135b",
+      "unparsable_policy": "UNPARSABLE_NONAGENTIC is reported; no field is inferred semantically.",
+      "years_parsed": [
+        2007,
+        2011,
+        2016,
+        2021
+      ]
+    }
+  ],
+  "canonical_manifest_sha256": "980d4371b6c2e8be587564163bad1157e1dc8abf3205f9b212f07613d6a39903"
+}

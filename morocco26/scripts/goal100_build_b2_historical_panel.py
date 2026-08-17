@@ -46,6 +46,8 @@ STATE_PATH = G100 / "b2_current_state.json"
 EVIDENCE_DIR = G100 / "b2_evidence"
 PANEL_PATH = G100 / "b2_historical_panel.json"
 CERTIFICATE_PATH = G100 / "b2_historical_panel_certificate.json"
+HISTORICAL_MEMBERS_PATH = G100 / "historical" / "b2_historical_elected_members.json"
+ATTEMPTS_DIR = G100 / "b2_historical_panel_attempts"
 EVENT_DIR = G100 / "fil_ariane_events"
 JOURNAL = ROOT / "FIL_ARIANE.md"
 
@@ -79,6 +81,10 @@ EVIDENCE_TYPE_TO_INPUT = {
     "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY": "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
 }
 
+# Excluded from input hashing: these record when an artifact was produced, not
+# what it contains.
+VOLATILE_INPUT_FIELDS = {"generated_at", "certified_at", "canonical_artifact_sha256"}
+
 # Candidate-level column markers used to detect whether any ingested historical
 # dataset carries a roster rather than aggregated list results.
 CANDIDATE_ROSTER_MARKERS = {
@@ -106,6 +112,27 @@ def sha256(path: Path) -> str:
 def repo_path(path: Path) -> str:
     """Repository-relative POSIX path, so artifacts are OS-independent."""
     return path.relative_to(REPO).as_posix()
+
+
+def canonical_input_hash(path: Path) -> str:
+    """Checkout-independent hash of a JSON input.
+
+    Raw-byte hashing is not portable: a Windows checkout with core.autocrlf=true
+    rewrites LF to CRLF, so the same committed content yields a different digest
+    than it does in Linux CI. Hashing the canonical parsed JSON removes the line
+    ending, indentation and key-order degrees of freedom entirely.
+
+    Run timestamps are excluded so the digest tracks content: regenerating an
+    input without changing it must not invalidate the panel, while any real
+    change still does.
+    """
+    value = json.loads(path.read_text(encoding="utf-8"))
+    if isinstance(value, dict):
+        value = {
+            key: item for key, item in value.items()
+            if key not in VOLATILE_INPUT_FIELDS
+        }
+    return canonical_sha256(value)
 
 
 def canonical_sha256(value) -> str:
@@ -140,9 +167,29 @@ def build_input_inventory(crosswalk: dict) -> dict:
             list_years[int(row["year"])] += 1
 
     elected_years: dict[int, int] = defaultdict(int)
+    elected_territories: dict[int, set[str]] = defaultdict(set)
     for row in crosswalk["people_2021"]:
         if row["scope"] == "local":
             elected_years[2021] += 1
+            if row.get("territory_id"):
+                elected_territories[2021].add(row["territory_id"])
+
+    # Legislatures recovered by deterministic acquisition, if the parser has run.
+    elected_provenance = {"2021": "b2_identity_crosswalk.people_2021"}
+    if HISTORICAL_MEMBERS_PATH.exists():
+        members = load(HISTORICAL_MEMBERS_PATH)
+        for year_key, entry in members["years"].items():
+            year = int(year_key)
+            resolved = [
+                row for row in entry["rows"]
+                if row["scope"] == "local" and row.get("territory_id")
+            ]
+            if not resolved:
+                continue
+            if year != 2021:
+                elected_years[year] = len(resolved)
+                elected_provenance[year_key] = repo_path(HISTORICAL_MEMBERS_PATH)
+            elected_territories[year].update(row["territory_id"] for row in resolved)
 
     roster_years: dict[int, int] = {}
     observed_columns: dict[str, list[str]] = {}
@@ -166,7 +213,10 @@ def build_input_inventory(crosswalk: dict) -> dict:
         "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR": {
             "available_years": sorted(elected_years),
             "instances_by_year": {str(year): elected_years[year] for year in sorted(elected_years)},
-            "provenance": "b2_identity_crosswalk.people_2021 (scope=local)",
+            "territories_by_year": {
+                str(year): len(elected_territories[year]) for year in sorted(elected_territories)
+            },
+            "provenance_by_year": elected_provenance,
             "semantics": "ELECTION_OUTCOME_OF_ITS_OWN_CYCLE",
             "leakage_rule": "Admissible only as prior-cycle incumbency for a strictly later cutoff.",
         },
@@ -427,6 +477,8 @@ def build_panel() -> tuple[dict, dict]:
         "historical_2016": HISTORICAL_PATHS[2016],
         "historical_2021": HISTORICAL_PATHS[2021],
     }
+    if HISTORICAL_MEMBERS_PATH.exists():
+        input_paths["historical_elected_members"] = HISTORICAL_MEMBERS_PATH
 
     panel = {
         "schema_version": "1.0",
@@ -473,8 +525,9 @@ def build_panel() -> tuple[dict, dict]:
             ),
         },
         "missing_input_classes": missing_input_classes,
+        "input_hash_method": "CANONICAL_JSON_SHA256",
         "input_hashes": {
-            name: {"path": repo_path(path), "sha256": sha256(path)}
+            name: {"path": repo_path(path), "canonical_json_sha256": canonical_input_hash(path)}
             for name, path in sorted(input_paths.items())
         },
         "failures": failures,
@@ -666,8 +719,43 @@ def append_journal(certificate: dict, panel: dict) -> None:
     JOURNAL.write_text(text, encoding="utf-8")
 
 
+def preserve_prior_attempt() -> dict | None:
+    """Archive an existing panel/certificate pair before it is replaced.
+
+    A gate attempt is evidence. Reruns append a new archived attempt keyed by
+    the prior panel hash; they never destroy the earlier result.
+    """
+    if not (PANEL_PATH.exists() and CERTIFICATE_PATH.exists()):
+        return None
+    prior_panel = load(PANEL_PATH)
+    prior_certificate = load(CERTIFICATE_PATH)
+    prior_hash = prior_panel.get("canonical_panel_sha256")
+    if not prior_hash:
+        return None
+    archive_dir = ATTEMPTS_DIR / f"panel_{prior_hash[:16]}"
+    if (archive_dir / "manifest.json").exists():
+        return None
+    dump(archive_dir / "b2_historical_panel.json", prior_panel)
+    dump(archive_dir / "b2_historical_panel_certificate.json", prior_certificate)
+    manifest = {
+        "schema_version": "1.0",
+        "archived_at": now_local(),
+        "prior_panel_sha256": prior_hash,
+        "prior_gate": prior_certificate.get("gate"),
+        "prior_certified_at": prior_certificate.get("certified_at"),
+        "prior_features_identifiable": [
+            {"transition_id": row["transition_id"], "features_identifiable": row["features_identifiable"]}
+            for row in prior_certificate.get("transitions", [])
+        ],
+        "reason": "Superseded by a later B2-3 execution; retained because a gate attempt is evidence.",
+    }
+    dump(archive_dir / "manifest.json", manifest)
+    return manifest
+
+
 def main() -> None:
     panel, certificate = build_panel()
+    preserve_prior_attempt()
     dump(PANEL_PATH, panel)
     dump(CERTIFICATE_PATH, certificate)
     append_event_and_transition(certificate, panel)

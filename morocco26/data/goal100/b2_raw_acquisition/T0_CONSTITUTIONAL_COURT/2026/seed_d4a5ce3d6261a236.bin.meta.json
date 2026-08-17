@@ -1,0 +1,21 @@
+{
+  "source_id": "T0_CONSTITUTIONAL_COURT",
+  "bucket": "2026",
+  "original_url": "https://www.courconstitutionnelle.ma/",
+  "final_url": "https://www.courconstitutionnelle.ma/",
+  "retrieved_at": "2026-08-17T10:43:07+01:00",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "content_length": 148981,
+  "etag": null,
+  "last_modified": null,
+  "sha256": "d4a5ce3d6261a236beee341601eca5f1ba826d1900bfbffd934d50152db2036d",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

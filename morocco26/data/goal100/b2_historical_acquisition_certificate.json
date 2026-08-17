@@ -1,0 +1,509 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-GOAL100-B2-HISTORICAL-ACQUISITION-CERTIFICATE-V1",
+  "certified_at": "2026-08-17T10:51:56+01:00",
+  "surface_sha256": "0faf783890f13da9349e3a934e2f8e9c2b660907a2d9b27ba24cd84e3844489f",
+  "panel_sha256": "c14bb4e2078f42f86c301ea0b581495eb14df99c9d87a2238d002874f4565991",
+  "determinism": {
+    "llm_used": false,
+    "source_discovery": false,
+    "semantic_selection": false
+  },
+  "acquisition_runs": [
+    {
+      "run_at": "2026-08-17T10:39:43+01:00",
+      "modes": [
+        "historical"
+      ],
+      "surface_sha256": "5845c2514bdb2b10b77f1d1a35b939681c0f7cf763a936a6c626e99e4f79d94c",
+      "environment": {
+        "platform": "Windows",
+        "python": "3.13.14",
+        "runner": "LOCAL",
+        "github_run_id": null,
+        "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+      },
+      "entries_added": 4,
+      "acquired": 4,
+      "blocked": 0,
+      "errors": 0
+    },
+    {
+      "run_at": "2026-08-17T10:45:42+01:00",
+      "modes": [
+        "wave1"
+      ],
+      "surface_sha256": "5845c2514bdb2b10b77f1d1a35b939681c0f7cf763a936a6c626e99e4f79d94c",
+      "environment": {
+        "platform": "Windows",
+        "python": "3.13.14",
+        "runner": "LOCAL",
+        "github_run_id": null,
+        "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+      },
+      "entries_added": 55,
+      "acquired": 30,
+      "blocked": 10,
+      "errors": 15
+    }
+  ],
+  "parsers": [
+    {
+      "parser_id": "M26-GOAL100-B2-MEMBER-PARSER",
+      "version": "1.0",
+      "input_format": "parquet",
+      "method": "STRUCTURED_API",
+      "llm_used": false,
+      "semantic_judgment_used": false,
+      "handles": [
+        "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
+      ],
+      "input_source_id": "HF_CHAMBER_MEMBERS_MULTIYEAR",
+      "output_artifact": "morocco26/data/goal100/historical/b2_historical_elected_members.json",
+      "output_sha256": "b29c38e6f8522f5e33291334030c3ab835c67d32b4a23ba481293c9e9dfb135b",
+      "unparsable_policy": "UNPARSABLE_NONAGENTIC is reported; no field is inferred semantically.",
+      "years_parsed": [
+        2007,
+        2011,
+        2016,
+        2021
+      ]
+    }
+  ],
+  "recovered_this_phase": {
+    "input_classes": [
+      "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
+      "HISTORICAL_LIST_PRESENCE_TARGET_YEAR"
+    ],
+    "elected_member_years": [
+      2007,
+      2011,
+      2016,
+      2021
+    ],
+    "elected_local_territories_by_year": {
+      "2007": 74,
+      "2011": 92,
+      "2016": 92,
+      "2021": 92
+    }
+  },
+  "input_class_verdicts": [
+    {
+      "input_class": "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
+      "years_required": [
+        2011,
+        2016
+      ],
+      "years_available": [
+        2007,
+        2011,
+        2016,
+        2021
+      ],
+      "years_covered": [
+        2011,
+        2016
+      ],
+      "years_missing": [],
+      "permitted_routes": [
+        "HF_CHAMBER_MEMBERS_MULTIYEAR"
+      ],
+      "verdict": "DATA_EXISTS_AND_PARSED",
+      "reason": "Every year required by the frozen transitions is present and parsed deterministically."
+    },
+    {
+      "input_class": "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_LIST_PRESENCE_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [
+        2011,
+        2016,
+        2021
+      ],
+      "years_covered": [
+        2016,
+        2021
+      ],
+      "years_missing": [],
+      "permitted_routes": [
+        "OPENAFRICA_RESULTS_2011",
+        "OPENAFRICA_RESULTS_2016",
+        "OPENAFRICA_RESULTS_2021"
+      ],
+      "verdict": "DATA_EXISTS_AND_PARSED",
+      "reason": "Every year required by the frozen transitions is present and parsed deterministically."
+    },
+    {
+      "input_class": "HISTORICAL_LIST_REJECTION_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    },
+    {
+      "input_class": "HISTORICAL_PARTY_SWITCH_TARGET_YEAR",
+      "years_required": [
+        2016,
+        2021
+      ],
+      "years_available": [],
+      "years_covered": [],
+      "years_missing": [
+        2016,
+        2021
+      ],
+      "permitted_routes": [],
+      "verdict": "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA",
+      "reason": "No surface in either permitted family declares this input class. The frozen B2 registry is 2026-scoped and the historical provenance carries no such dataset."
+    }
+  ],
+  "verdict_tally": {
+    "DATA_EXISTS_AND_PARSED": 2,
+    "SOURCE_UNIVERSE_HAS_NO_RELEVANT_DATA": 16
+  },
+  "deterministic_identity_unresolved": {
+    "available": true,
+    "by_year": [
+      {
+        "election_year": 2007,
+        "rows_total": 325,
+        "rows_unresolved": 100,
+        "distinct_unresolved_labels": 22,
+        "top_labels": [
+          {
+            "label": "Liste nationale",
+            "count": 30
+          },
+          {
+            "label": "Bni-Moussa - Bni-Amir",
+            "count": 4
+          },
+          {
+            "label": "Ouezzane - Had-Kourt - Jorf-El-Melha",
+            "count": 4
+          }
+        ],
+        "interpretation": "Labels belong to an older territorial geometry and resolve to no certified identifier."
+      },
+      {
+        "election_year": 2011,
+        "rows_total": 395,
+        "rows_unresolved": 90,
+        "distinct_unresolved_labels": 1,
+        "top_labels": [
+          {
+            "label": "Liste nationale",
+            "count": 90
+          }
+        ],
+        "interpretation": "Non-territorial national-list seats carry no certified constituency and are correctly left unresolved."
+      },
+      {
+        "election_year": 2016,
+        "rows_total": 395,
+        "rows_unresolved": 90,
+        "distinct_unresolved_labels": 1,
+        "top_labels": [
+          {
+            "label": "Liste nationale",
+            "count": 90
+          }
+        ],
+        "interpretation": "Non-territorial national-list seats carry no certified constituency and are correctly left unresolved."
+      },
+      {
+        "election_year": 2021,
+        "rows_total": 395,
+        "rows_unresolved": 0,
+        "distinct_unresolved_labels": 0,
+        "top_labels": [],
+        "interpretation": "Labels belong to an older territorial geometry and resolve to no certified identifier."
+      }
+    ]
+  },
+  "blocking_for_predictive_family": [
+    "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+    "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+    "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
+    "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
+    "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
+    "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+  ],
+  "decision_gate": {
+    "outcome": "C_UNIDENTIFIABLE_UNDER_FROZEN_PROTOCOL",
+    "predictive_sub_panel": "FAIL",
+    "core_predictive_coverage": [
+      {
+        "transition_id": "2011_TO_2016",
+        "coverage": 0.0
+      },
+      {
+        "transition_id": "2016_TO_2021",
+        "coverage": 0.0
+      }
+    ],
+    "residual_backtest_unlocked": false,
+    "blocking_machine_gate": "B2-3-HISTORICAL-FEATURE-PANEL",
+    "classification_rule": "Zero coverage from absent inputs is UNIDENTIFIABLE, never a non-predictive finding. Only a executed residual backtest may classify a feature as non-predictive."
+  },
+  "reserved_for_e_collect": {
+    "policy": "Unresolved cells are preserved, not filled by agentic research.",
+    "input_classes": [
+      "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
+      "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
+      "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
+      "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+      "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
+      "HISTORICAL_LIST_REJECTION_TARGET_YEAR",
+      "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
+      "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+      "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR",
+      "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
+      "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+    ],
+    "rationale": "These are exactly the cells deterministic B2 could not recover. They form the controlled test set for a later E_collect experiment comparing agentic retrieval against this baseline."
+  },
+  "coefficients_after_certificate": "ALL_PREDICTIVE_COEFFICIENTS_REMAIN_EXACTLY_ZERO",
+  "canonical_certificate_sha256": "ac217307b2bed33617167c6b1abdc4bbf371c2aff42f971cf628592cb8e8fb6c"
+}

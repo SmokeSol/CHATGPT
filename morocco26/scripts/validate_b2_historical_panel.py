@@ -25,6 +25,7 @@ GATES_PATH = G100 / "b2_gate_registry.json"
 STATE_PATH = G100 / "b2_current_state.json"
 EVIDENCE_DIR = G100 / "b2_evidence"
 
+VOLATILE_INPUT_FIELDS = {"generated_at", "certified_at", "canonical_artifact_sha256"}
 GATE_ID = "B2-3-HISTORICAL-FEATURE-PANEL"
 FROZEN_TRANSITIONS = ["2011_TO_2016", "2016_TO_2021"]
 
@@ -85,11 +86,19 @@ def validate_integrity(panel: dict, certificate: dict) -> None:
     require(certificate["panel_sha256"] == recorded, "certificate does not carry the panel hash")
     require(certificate["panel_path"] == "morocco26/data/goal100/b2_historical_panel.json", "panel path drift")
     require("\\" not in json.dumps(panel["input_hashes"]), "panel input paths are not POSIX")
+    require(
+        panel["input_hash_method"] == "CANONICAL_JSON_SHA256",
+        "input hashes must be checkout-independent; raw-byte digests break under CRLF checkouts",
+    )
 
     for name, entry in panel["input_hashes"].items():
         path = REPO / entry["path"]
         require(path.exists(), f"declared input is missing: {entry['path']}")
-        require(sha256(path) == entry["sha256"], f"input hash drift for {name}")
+        content = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(content, dict):
+            content = {k: v for k, v in content.items() if k not in VOLATILE_INPUT_FIELDS}
+        recomputed = canonical_sha256(content)
+        require(recomputed == entry["canonical_json_sha256"], f"input content drift for {name}")
 
 
 def validate_determinism(panel: dict) -> None:
