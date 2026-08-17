@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-E-REASON-CONDITIONS-V1",
+  "frozen_at": "2026-08-17T21:42:17+01:00",
+  "common_party_score_domain": [-2, -1, 0, 1, 2],
+  "C0_NO_RESIDUAL": {
+    "score": 0,
+    "transform": "identity"
+  },
+  "C1_RULE_ONLY": {
+    "feature_points": {
+      "INCUMBENT_SAME_PARTY_SAME_DISTRICT": 2.0,
+      "INCUMBENT_SAME_PARTY_MOVED_DISTRICT": 0.5,
+      "FORMER_MP": 0.5,
+      "PARTY_SWITCH_IN": 0.5,
+      "PARTY_SWITCH_OUT": -0.5,
+      "LOCAL_EXECUTIVE_OFFICE": 1.0,
+      "PROVINCIAL_OR_REGIONAL_OFFICE": 0.5,
+      "NATIONAL_OR_REGIONAL_PARTY_OFFICE": 0.25,
+      "FORMER_MINISTER_OR_NATIONAL_OFFICE": 0.5,
+      "FORMAL_ENDORSEMENT": 0.25,
+      "FORMAL_LIST_ALLIANCE": 0.25,
+      "WITHDRAWN_OR_DISQUALIFIED": -2.0,
+      "OFFICIAL_SANCTION_OR_INVESTIGATION": -0.5,
+      "VERIFIED_DEATH_OR_INCAPACITY": -2.0
+    },
+    "conversion_to_ordinal": [
+      {"if":"raw_score <= -1.5","ordinal":-2},
+      {"if":"-1.5 < raw_score <= -0.25","ordinal":-1},
+      {"if":"-0.25 < raw_score < 0.25","ordinal":0},
+      {"if":"0.25 <= raw_score < 1.5","ordinal":1},
+      {"if":"raw_score >= 1.5","ordinal":2}
+    ],
+    "missing_feature_value": 0,
+    "conflict_rule": "If a directional feature is in unresolved conflict, its contribution is zero."
+  },
+  "C2_LLM_RESIDUAL": {
+    "model_identity": "Recorded at execution; one declared model family and version for the entire election arm.",
+    "prompt_policy": "One frozen system prompt and one frozen output schema. No prompt revision after any 2016 outcome is used for calibration and no revision of any kind before 2021 scoring.",
+    "information_access": "Anonymized structured packet only; no web, no tools, no real labels, no year, no raw results.",
+    "task": "Assign one ordinal score in {-2,-1,0,1,2} to every anonymous party in the territory and cite only packet feature IDs. ABSTAIN maps to zero.",
+    "sampling": "One primary deterministic pass per packet. Any retry is allowed only for invalid JSON and must reuse the identical prompt; all attempts are logged.",
+    "confidence": "Reported for audit only; confidence never changes residual magnitude."
+  },
+  "H1_REAL_HUMAN_RESIDUAL": {
+    "eligibility": "A genuine human participant who did not construct the target-election outcome dataset.",
+    "information_access": "Identical anonymized packet and no browsing.",
+    "task": "Same ordinal scores and evidence references as C2.",
+    "status_at_preregistration": "OPTIONAL_NOT_YET_RECRUITED",
+    "claim_limit": "No human-versus-LLM conclusion may be published unless this arm is actually executed."
+  },
+  "residual_transform": {
+    "formula": "adjusted_share_dp(lambda) = normalize_p(baseline_share_dp * exp(lambda * (z_dp - mean_p(z_dp))))",
+    "lambda_grid": [0.0, 0.025, 0.05, 0.075, 0.1, 0.15, 0.2, 0.3],
+    "selection": "Select lambda separately for C1 and C2 by minimum 2016 primary RMSE; ties choose the smaller lambda.",
+    "holdout_rule": "Freeze selected lambda and every judgment-generation rule before producing 2021 judgments.",
+    "zero_and_abstention": "z=0 and ABSTAIN imply no party-specific residual before centering."
+  }
+}
