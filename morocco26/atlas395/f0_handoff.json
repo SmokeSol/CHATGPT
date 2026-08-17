@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "handoff_id": "ATLAS395-STEP9-F0-HANDOFF-V1",
+  "verified_science_branch": "morocco26-b2",
+  "verified_science_ref": "540802f08cd2ac565ea59d531d51ac3f58d83d38",
+  "snapshot_id": "F0",
+  "registration_state": "REGISTERED_IMMUTABLE_PRELIMINARY_FORECAST",
+  "forecast_artifact_sha256": "fbe5197999f20d0612bc0c66e1954b5c611b11208e43a72eb5494a03b1e40d3f",
+  "distribution_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+  "distribution_equivalence_to_f_minus_1": "EXACT",
+  "canonical_registration_manifest_sha256": "501b8e4b498a1de90ce45878e4b152c735dfb1ea63b0b1a76a208fc29494fb74",
+  "registration_certificate_sha256": "40175a828eda6a33642caa7efb950d43cd99f11b0653b8c80e201a8739c52c8c",
+  "b2_freeze_certificate_sha256": "eab248d63051643600d0b2220f269b587302c4631fe24a7760fd971277fd88e1",
+  "gate": "PASS",
+  "product_contract": {
+    "read_only_science": true,
+    "preserve_f_minus_1": true,
+    "scientific_artifacts_mutated": false,
+    "ingest_via_latest_registered_hash_valid_snapshot_selector": true
+  }
+}
