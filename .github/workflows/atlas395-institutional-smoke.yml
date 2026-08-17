@@ -22,7 +22,7 @@ jobs:
           set -euo pipefail
           URL='https://atlas-395.vercel.app/'
           for attempt in $(seq 1 30); do
-            code=$(curl -sS -L -o /tmp/index.html -w '%{http_code}' --max-time 40 "$URL" || true)
+            code=$(curl --http1.1 --retry 3 --retry-all-errors -sS -L -o /tmp/index.html -w '%{http_code}' --max-time 40 "$URL" || true)
             echo "attempt=$attempt http=$code bytes=$(wc -c </tmp/index.html 2>/dev/null || echo 0)"
             if [ "$code" = '200' ] && grep -Fq 'Intelligence électorale territoriale · Maroc 2026' /tmp/index.html && grep -Fq 'Rapport de forces et incertitude territoriale' /tmp/index.html; then
               echo "PUBLIC=$URL" >> "$GITHUB_ENV"
@@ -37,14 +37,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for path in app.js assets/core.js assets/map.js assets/candidates.js assets/institutional.js data/atlas_v1.json; do
-            echo "--- HEAD $path ---"
-            (curl -sSI --max-time 30 "${PUBLIC}${path}" | sed -n '1,14p') || true
-          done
-          curl -fsSL --max-time 60 "${PUBLIC}app.js" -o /tmp/app.js
-          curl -fsSL --max-time 60 "${PUBLIC}assets/institutional.js" -o /tmp/institutional.js
-          curl -fsSL --max-time 60 "${PUBLIC}assets/candidates.js" -o /tmp/candidates.js
-          curl -fsSL --max-time 60 "${PUBLIC}data/atlas_v1.json" -o /tmp/atlas.json
+          get(){ curl --http1.1 --retry 5 --retry-delay 1 --retry-all-errors -fsSL --max-time 90 "$1" -o "$2"; }
+          get "${PUBLIC}app.js" /tmp/app.js
+          get "${PUBLIC}assets/institutional.js" /tmp/institutional.js
+          get "${PUBLIC}assets/candidates.js" /tmp/candidates.js
+          get "${PUBLIC}data/atlas_v1.json" /tmp/atlas.json
+          echo "APP_BYTES=$(wc -c </tmp/app.js) CANDIDATES_BYTES=$(wc -c </tmp/candidates.js) ATLAS_BYTES=$(wc -c </tmp/atlas.json)"
           grep -Fq '/assets/institutional.js' /tmp/app.js
           grep -Fq 'Candidatures documentées par circonscription' /tmp/candidates.js
           grep -Fq 'RÉFÉRENCE CONSERVÉE' /tmp/candidates.js
