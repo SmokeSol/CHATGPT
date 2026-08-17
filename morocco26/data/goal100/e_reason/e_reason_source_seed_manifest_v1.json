@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "M26-E-REASON-HISTORICAL-SEEDS-V1",
+  "frozen_at": "2026-08-17T21:42:17+01:00",
+  "purpose": "Discovery seeds for pre-election evidence reconstruction. A seed is not evidence until archived, hashed, cutoff-checked and extracted under the source policy.",
+  "medias24_root": "https://assets.medias24.com/elections/",
+  "seeds": [
+    {"election":2016,"url":"https://medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/","expected_role":"92-constituency candidate map/index"},
+    {"election":2016,"url":"https://medias24.com/2016/09/27/legislatives-les-candidats-de-rabat-carte/","expected_role":"territorial candidate profiles"},
+    {"election":2016,"url":"https://medias24.com/2016/09/29/legislatives-des-figures-politiques-chevronnees-en-lice-a-marrakech-carte/","expected_role":"territorial candidate profiles"},
+    {"election":2016,"url":"https://medias24.com/2016/09/04/legislatives-le-rni-devoile-81-tetes-de-liste/","expected_role":"party roster"},
+    {"election":2016,"url":"https://medias24.com/2016/08/20/legislatives-les-listes-definitives-de-candidatures-seront-connues-fin-aout/","expected_role":"nominations and switches"},
+    {"election":2016,"url":"https://medias24.com/2016/10/05/programmes-candidats-sociologie-electorale-ce-quil-faut-savoir-sur-les-legislatives/","expected_role":"pre-election hub"},
+    {"election":2021,"url":"https://medias24.com/2021/09/05/legislatives-voici-la-liste-des-principaux-candidats-circonscription-par-circonscription/","expected_role":"92-constituency candidate map/index"},
+    {"election":2021,"url":"https://medias24.com/2021/07/25/entrepreneurs-promoteurs-recrues-voici-les-candidats-du-rni-pour-les-prochaines-legislatives/","expected_role":"RNI candidate profiles"},
+    {"election":2021,"url":"https://medias24.com/2021/08/14/voici-les-profils-des-candidats-du-pjd-pour-les-prochaines-legislatives/","expected_role":"PJD candidate profiles"},
+    {"election":2021,"url":"https://medias24.com/2021/08/25/elections-2021-voici-les-candidats-du-pam-pour-les-legislatives/","expected_role":"PAM candidate profiles"},
+    {"election":2021,"url":"https://medias24.com/2021/08/23/elections-2021-voici-les-profils-des-candidats-de-listiqlal-pour-les-legislatives/","expected_role":"PI candidate profiles"},
+    {"election":2021,"url":"https://medias24.com/2021/08/27/legislatives-2021-31-partis-1704-listes-et-6-815-candidats-y-participent/","expected_role":"pre-election roster totals and incumbents"}
+  ],
+  "discovery_rule": "The collector may follow only pre-cutoff links and embedded assets on allowed domains. Every followed URL is recorded with discovery parent and source class."
+}
