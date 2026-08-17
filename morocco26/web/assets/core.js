@@ -65,7 +65,8 @@ let selectedParty = null;
 let territoryFilters = {query:'', region:'', uncertainty:''};
 
 async function load(name){
-  const r = await fetch(`/data/${name}`, {cache:'no-store'});
+  const base = window.ATLAS_DATA_BASE || '/data/';
+  const r = await fetch(`${base}${name}`, {cache:'no-store'});
   if(!r.ok) throw new Error(`Données indisponibles (${r.status})`);
   return r.json();
 }
