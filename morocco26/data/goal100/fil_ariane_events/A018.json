@@ -1,0 +1,37 @@
+{
+  "event_id": "A018",
+  "date": "2026-08-17T07:16:21+01:00",
+  "title": "Gel du protocole B2 non agentique avant collecte",
+  "phase": "P7_B2_STRUCTURED_EVIDENCE_LAYER",
+  "gate": "B2-0-PROTOCOL-FROZEN",
+  "status": "PASS",
+  "question": "Comment ajouter des faits politiques structurés à F-1 sans introduire de raisonnement agentique, de fuite temporelle ou d'effets arbitraires ?",
+  "pre_test_hypothesis": "B2 doit séparer les contraintes mécaniques des features prédictives et verrouiller tous les coefficients prédictifs à zéro jusqu'à un backtest historique preregistré.",
+  "actions": [
+    "Figer b2_protocol_v1.json avant toute collecte.",
+    "Figer b2_evidence_schema_v1.json avec provenance, timestamps, hashes, déduplication et conflits.",
+    "Figer b2_feature_dictionary_v1.json avec coefficients prédictifs à zéro.",
+    "Créer le registre de gates B2 et verrouiller F0/agentique.",
+    "Initialiser le registre de sources en état collection interdite."
+  ],
+  "machine_result": {
+    "parent_snapshot": "F-1",
+    "parent_forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+    "B2_0_status": "CLOSED",
+    "collection_allowed": false,
+    "predictive_coefficients": "ALL_ZERO",
+    "agentic_gates": "ALL_LOCKED",
+    "next_gate": "B2-1-SOURCE-UNIVERSE-FROZEN"
+  },
+  "anti_drift_decisions": [
+    "Opinion polls are excluded from B2 V1.",
+    "LLM semantic extraction, sentiment and narrative salience are forbidden.",
+    "Missing evidence is NA, not zero.",
+    "Conflicts are excluded, not resolved by judgment.",
+    "A feature with insufficient historical support remains exactly zero in F0.",
+    "F-1 is referenced by hash and can never be overwritten."
+  ],
+  "scientific_decision": "B2 protocol is frozen but collection remains locked until the source universe and deterministic query templates pass B2-1.",
+  "next_action_exact": "Research and freeze the source/domain/document allowlist, independence clusters, archive rules and deterministic query templates; only then create B2 evidence records."
+}
