@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-17T22:36:05+00:00",
+  "source_manifest": "morocco26/data/goal100/e_reason/evidence/pjd_2016_documents/pjd2016_32076037599_1/run_manifest.json",
+  "purpose": "PROVENANCE_AUDIT_ONLY_NO_AUTOMATIC_PROMOTION",
+  "documents_audited": 3,
+  "mechanical_pass_count": 2,
+  "all_mechanical_checks_pass": false,
+  "rows": [
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "official_article_url": "https://www.pjd.ma/74975-38982.html",
+      "article_published_at_declared": "2016-09-15T06:00:00+01:00",
+      "html_detected_publication_dates": [
+        "2016-09-15T06:00:00+00:00",
+        "2016-09-15T06:00:00+01:00"
+      ],
+      "publication_pre_cutoff": true,
+      "expected_attachment": "jht_lrbt_wfs_wmrksh.pdf",
+      "pdf_links_on_current_official_article": [
+        {
+          "href": "https://www.pjd.ma/static/uploads/2022/05/jht_lrbt_wfs_wmrksh.pdf",
+          "basename": "jht_lrbt_wfs_wmrksh.pdf",
+          "expected_exact_basename": true,
+          "expected_migration_variant": true
+        }
+      ],
+      "expected_attachment_linked": true,
+      "mirror_url": "https://pjd.ma/static/uploads/2022/05/jht_lrbt_wfs_wmrksh.pdf",
+      "mirror_basename": "jht_lrbt_wfs_wmrksh.pdf",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "pdf_bytes": 267766,
+      "page_count": 2,
+      "pdf_metadata": {
+        "/Author": "AsusPro",
+        "/CreationDate": "D:20160902173754+01'00'",
+        "/ModDate": "D:20160902173754+01'00'",
+        "/Producer": "Microsoft® Excel® 2013",
+        "/Creator": "Microsoft® Excel® 2013"
+      },
+      "pdf_creation_date_parsed_utc_assumption": "2016-09-02T17:37:54+00:00",
+      "pdf_modification_date_parsed_utc_assumption": "2016-09-02T17:37:54+00:00",
+      "pdf_creation_pre_cutoff_if_present": true,
+      "pdf_trailer_id": [
+        "çÃÅÛ*/\u0013G¡.\u000bñ;¯`'",
+        "çÃÅÛ*/\u0013G¡.\u000bñ;¯`'"
+      ],
+      "extracted_text_sha256": "75bc889bdadd3bf42a7f4fded863538a9924ac0adb9cbdd8adb5926c0c582d8c",
+      "page_text_sha256": [
+        "245733376c4fc0ba67677cf33d12effbc6d476f2bc1432a0a989f0fb369a0952",
+        "767a5a05a1ad322e4bb421a85a3722641fa4324457a7613d0a653efeda581425"
+      ],
+      "pre_election_phrase_hits": {
+        "اقتراع يوم 7 أكتوبر": true,
+        "لائحة المرشحين": true,
+        "مرشحي اللائحة": true,
+        "تمت تزكيتها": true,
+        "الأمانة العامة": true
+      },
+      "post_election_outcome_term_hits": {
+        "نتائج اقتراع": false,
+        "النتائج النهائية": false,
+        "فاز بالمقعد": false,
+        "المقاعد المحصل عليها": false,
+        "حصل على مقعد": false,
+        "الفائزون": false
+      },
+      "mechanical_provenance_checks_pass": true,
+      "admissibility_promoted_by_this_audit": false
+    },
+    {
+      "article_id": "SOUTH_SOUSS_ORIENT",
+      "official_article_url": "https://www.pjd.ma/74215-38568.html",
+      "article_published_at_declared": "2016-08-28T00:00:00+01:00",
+      "html_detected_publication_dates": [
+        "2016-08-28T10:26:00+00:00",
+        "2016-08-28T10:26:00+01:00"
+      ],
+      "publication_pre_cutoff": true,
+      "expected_attachment": "mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+      "pdf_links_on_current_official_article": [
+        {
+          "href": "https://www.pjd.ma/static/uploads/2022/05/mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+          "basename": "mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+          "expected_exact_basename": true,
+          "expected_migration_variant": true
+        }
+      ],
+      "expected_attachment_linked": true,
+      "mirror_url": "https://pjd.ma/static/uploads/2022/05/mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+      "mirror_basename": "mrshhw_jht_ljnwb_wsws_wlshrq.pdf",
+      "pdf_sha256": "48878329a2849f980bf65b6b2e1ef1a68836c71aa5fb0eaee05421822a9e8143",
+      "pdf_bytes": 273029,
+      "page_count": 2,
+      "pdf_metadata": {
+        "/Author": "AsusPro",
+        "/CreationDate": "D:20160828143532+01'00'",
+        "/Creator": "Microsoft® Excel® 2013",
+        "/ModDate": "D:20160828221404+01'00'",
+        "/Producer": "Microsoft® Excel® 2013"
+      },
+      "pdf_creation_date_parsed_utc_assumption": "2016-08-28T14:35:32+00:00",
+      "pdf_modification_date_parsed_utc_assumption": "2016-08-28T22:14:04+00:00",
+      "pdf_creation_pre_cutoff_if_present": true,
+      "pdf_trailer_id": [
+        "Cñ(¿¤ŽÀC¹”\u000b\u0004s\u0005Fﬁ",
+        "\u0013¼>{¹Ð\u0017E‚…CÎ„˘˚–"
+      ],
+      "extracted_text_sha256": "16c967817b7d682c67a433f9963cc1e63b05aae8c06ee497ae082cce72b58ffd",
+      "page_text_sha256": [
+        "3cfaa05de95e43dc2521cd4492b4f28472623af28a8d7e3f58ac924d67b7f9f2",
+        "b614a1e4809a1ba335167e2c79e4392f5e63bcc006fb6822c07c512b907725f9"
+      ],
+      "pre_election_phrase_hits": {
+        "اقتراع يوم 7 أكتوبر": true,
+        "لائحة المرشحين": false,
+        "مرشحي اللائحة": true,
+        "تمت تزكيتها": false,
+        "الأمانة العامة": true
+      },
+      "post_election_outcome_term_hits": {
+        "نتائج اقتراع": false,
+        "النتائج النهائية": false,
+        "فاز بالمقعد": false,
+        "المقاعد المحصل عليها": false,
+        "حصل على مقعد": false,
+        "الفائزون": false
+      },
+      "mechanical_provenance_checks_pass": false,
+      "admissibility_promoted_by_this_audit": false
+    },
+    {
+      "article_id": "LIST_3",
+      "official_article_url": "https://www.pjd.ma/74973-38983.html",
+      "article_published_at_declared": "2016-09-15T06:00:00+01:00",
+      "html_detected_publication_dates": [
+        "2016-09-15T06:00:00+00:00",
+        "2016-09-15T06:00:00+01:00"
+      ],
+      "publication_pre_cutoff": true,
+      "expected_attachment": "ldf_3.pdf",
+      "pdf_links_on_current_official_article": [
+        {
+          "href": "https://www.pjd.ma/static/uploads/2022/05/ldf_3.pdf",
+          "basename": "ldf_3.pdf",
+          "expected_exact_basename": true,
+          "expected_migration_variant": true
+        }
+      ],
+      "expected_attachment_linked": true,
+      "mirror_url": "https://pjd.ma/static/uploads/2022/05/ldf_3.pdf",
+      "mirror_basename": "ldf_3.pdf",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "pdf_bytes": 271033,
+      "page_count": 2,
+      "pdf_metadata": {
+        "/Author": "AsusPro",
+        "/CreationDate": "D:20160906172711+01'00'",
+        "/ModDate": "D:20160906172711+01'00'",
+        "/Producer": "Microsoft® Excel® 2013",
+        "/Creator": "Microsoft® Excel® 2013"
+      },
+      "pdf_creation_date_parsed_utc_assumption": "2016-09-06T17:27:11+00:00",
+      "pdf_modification_date_parsed_utc_assumption": "2016-09-06T17:27:11+00:00",
+      "pdf_creation_pre_cutoff_if_present": true,
+      "pdf_trailer_id": [
+        "»ýÿ?ß\u0002²AıﬁÑ\u00111ISø",
+        "»ýÿ?ß\u0002²AıﬁÑ\u00111ISø"
+      ],
+      "extracted_text_sha256": "04356f8b7fb0a0cfdcc25f04b6178afccbfaa066fa852efb5125617bedc306b0",
+      "page_text_sha256": [
+        "58340b0837ebf80dafe3bb975f8de34ffa1485704716211ecb6c5ee6d593d2b2",
+        "5c9772ee0e038ba91a07a29f65ee586e74c517fe3ba7d6b5ddb825c3aa3388a7"
+      ],
+      "pre_election_phrase_hits": {
+        "اقتراع يوم 7 أكتوبر": true,
+        "لائحة المرشحين": true,
+        "مرشحي اللائحة": true,
+        "تمت تزكيتها": true,
+        "الأمانة العامة": true
+      },
+      "post_election_outcome_term_hits": {
+        "نتائج اقتراع": false,
+        "النتائج النهائية": false,
+        "فاز بالمقعد": false,
+        "المقاعد المحصل عليها": false,
+        "حصل على مقعد": false,
+        "الفائزون": false
+      },
+      "mechanical_provenance_checks_pass": true,
+      "admissibility_promoted_by_this_audit": false
+    }
+  ],
+  "invariants": {
+    "predictive_judgments_generated": false,
+    "forecast_delta_generated": false,
+    "outcomes_unsealed": false,
+    "F1_created": false
+  }
+}
