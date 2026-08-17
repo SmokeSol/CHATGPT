@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "validation_id": "M26-E-REASON-PREREG-VALIDATION-001",
+  "validated_at": "2026-08-17T21:53:08+01:00",
+  "branch": "morocco26-e-reason",
+  "validated_commit_sha": "431cad81ab4f9ff721707b88f9f9e521909b44da",
+  "workflow": "morocco26-e-reason-prereg",
+  "workflow_run_id": 32068163382,
+  "conclusion": "PASS",
+  "validator_output": "E_REASON_PREREG_PASS",
+  "predictive_judgments_present": false,
+  "forecast_delta_present": false,
+  "immutable_path_guard": "PASS",
+  "next_authorized_phase": "HISTORICAL_PRE_ELECTION_EVIDENCE_COLLECTION"
+}
