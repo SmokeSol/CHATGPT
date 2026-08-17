@@ -1,0 +1,86 @@
+name: morocco26-bootstrap-b2
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - 'morocco26/scripts/goal100_bootstrap_b2_v1.py'
+      - '.github/workflows/morocco26-bootstrap-b2.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-bootstrap-b2-v1
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      B2_BRANCH: morocco26-b2-structured-evidence
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Create or fast-forward isolated B2 branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin --prune
+          if git ls-remote --exit-code --heads origin "$B2_BRANCH" >/dev/null 2>&1; then
+            git switch -C "$B2_BRANCH" "origin/$B2_BRANCH"
+            git merge --no-edit "origin/morocco26-fminus1-run"
+          else
+            git switch -c "$B2_BRANCH"
+          fi
+
+      - name: Bootstrap fail-closed non-agentic B2
+        run: python morocco26/scripts/goal100_bootstrap_b2_v1.py
+
+      - name: Preserve Goal75 and validate B2
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/goal100_validate_b2_v1.py
+
+      - name: Commit and push B2 scaffold
+        run: |
+          git add \
+            morocco26/data/goal100/b2/v1 \
+            morocco26/data/goal100/gate_registry.json \
+            morocco26/data/goal100/current_state.json \
+            morocco26/scripts/goal100_validate_b2_v1.py \
+            morocco26/scripts/goal100_freeze_b2_v1.py \
+            morocco26/FIL_D_ARIANE.md \
+            morocco26/FIL_ARIANE.md \
+            .github/workflows/morocco26-b2-structured-evidence.yml 2>/dev/null || true
+          git commit -m 'milestone(morocco26): open non-agentic B2 structured-evidence layer' || true
+          git push --set-upstream origin "$B2_BRANCH"
+
+      - name: Create draft B2 pull request when absent
+        run: |
+          existing=$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$B2_BRANCH" --state open --json number --jq '.[0].number // empty')
+          if [ -z "$existing" ]; then
+            gh pr create \
+              --repo "$GITHUB_REPOSITORY" \
+              --base main \
+              --head "$B2_BRANCH" \
+              --draft \
+              --title 'MOROCCO//26: B2 structured non-agentic evidence layer' \
+              --body $'## Objective\nBuild and freeze the timestamped, source-backed, non-agentic evidence layer used to test incremental predictive value beyond immutable F-1.\n\n## Hard boundaries\n- no LLM extraction or agentic search;\n- no manual political swing;\n- unknown is never silently zero;\n- coefficients are pre-2026 calibrated or exactly zero;\n- F-1 is immutable and F0 is a new snapshot;\n- all agentic experiment arms remain locked.\n\nThe PR stays draft until source coverage, historical residual backtest and B2 freeze certificates pass.'
+          else
+            echo "B2 PR already exists: #$existing"
+          fi
+
+      - name: Print machine status
+        run: cat morocco26/data/goal100/b2/v1/b2_bootstrap_status.json
