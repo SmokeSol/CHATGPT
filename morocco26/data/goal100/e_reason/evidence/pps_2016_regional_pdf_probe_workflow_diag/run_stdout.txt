@@ -1,8 +1,8 @@
 {
   "counts": {
-    "attempts": 20,
-    "pdf_hits": 7,
-    "regions_with_pdf": 7
+    "attempts": 12,
+    "pdf_hits": 12,
+    "regions_with_pdf": 12
   },
   "hits": [
     {
@@ -26,6 +26,16 @@
       }
     },
     {
+      "region": "rabat-sale-kenitra",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/rabat-sale-kenitra.pdf",
+      "bytes": 18561086,
+      "pages": 11,
+      "metadata": {
+        "/Producer": "UniDoc Library version 1.0.0 (Commercial License) - http://unidoc.io",
+        "/Creator": "FoxyUtils Online PDF https://foxyutils.com"
+      }
+    },
+    {
       "region": "casablanca-settat",
       "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/casa_settat.pdf",
       "bytes": 2110956,
@@ -36,6 +46,16 @@
         "/ModDate": "D:20161005181506Z",
         "/Producer": "FILEminimizer PDF",
         "/Title": "عين الشق"
+      }
+    },
+    {
+      "region": "marrakech-safi",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/marrakech-safi.pdf",
+      "bytes": 15684805,
+      "pages": 10,
+      "metadata": {
+        "/Producer": "UniDoc Library version 1.0.0 (Commercial License) - http://unidoc.io",
+        "/Creator": "FoxyUtils Online PDF https://foxyutils.com"
       }
     },
     {
@@ -53,6 +73,16 @@
       "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/oriental.pdf",
       "bytes": 1325952,
       "pages": 8,
+      "metadata": {
+        "/Creator": "FoxyUtils Online PDF https://foxyutils.com",
+        "/Producer": "FILEminimizer PDF"
+      }
+    },
+    {
+      "region": "tanger-tetouan-al-hoceima",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/tanger_tetouan_asilah.pdf",
+      "bytes": 1219469,
+      "pages": 7,
       "metadata": {
         "/Creator": "FoxyUtils Online PDF https://foxyutils.com",
         "/Producer": "FILEminimizer PDF"
@@ -79,6 +109,29 @@
         "/Title": "سيدي إفني",
         "/Creator": "Adobe Illustrator CS5",
         "/CreationDate": "D:20160917105715+01'00'"
+      }
+    },
+    {
+      "region": "laayoune-sakia-el-hamra",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/el_ayoun_sakia_hamra-1.pdf",
+      "bytes": 8498340,
+      "pages": 4,
+      "metadata": {
+        "/ModDate": "D:20161004171013Z",
+        "/Producer": "3-Heights(TM) PDF Security Shell 4.5.24.6 (http://www.pdf-tools.com) / pdcat (www.pdf-tools.com)",
+        "/Title": "السمارة",
+        "/Creator": "Adobe Illustrator CS5",
+        "/CreationDate": "D:20160917123414+01'00'"
+      }
+    },
+    {
+      "region": "dakhla-oued-ed-dahab",
+      "url": "https://ppsmaroc.com/ar/wp-content/uploads/2016/10/dakhela_ouddahab.pdf",
+      "bytes": 4502800,
+      "pages": 2,
+      "metadata": {
+        "/Producer": "UniDoc Library version 1.0.0 (Commercial License) - http://unidoc.io",
+        "/Creator": "FoxyUtils Online PDF https://foxyutils.com"
       }
     }
   ]
