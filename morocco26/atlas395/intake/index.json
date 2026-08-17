@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "runs": [
+    {
+      "run_id": "2026-08-17--e4269bfdceca",
+      "date": "2026-08-17",
+      "run_at": "2026-08-17T18:04:47+01:00",
+      "source_policy_id": "ATLAS395-SOURCE-POLICY-V1",
+      "detections": 26,
+      "authorized_sources": 14
+    }
+  ]
+}

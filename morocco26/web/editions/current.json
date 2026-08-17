@@ -1,9 +1,11 @@
 {
-  "edition_id": "2026-08-17",
+  "edition_id": "2026-08-17-c1",
+  "edition_date": "2026-08-17",
   "product_version": "V0.5",
-  "published_at": "2026-08-17T13:54:11+01:00",
-  "science_ref": "87f258f791372a60f40c0b4a0f904ebde1e51f2c",
-  "forecast_snapshot": "F-1",
-  "path": "/editions/2026-08-17/",
+  "published_at": "2026-08-17T18:08:37+01:00",
+  "science_ref": "540802f08cd2ac565ea59d531d51ac3f58d83d38",
+  "forecast_snapshot": "F0",
+  "source_policy_id": "ATLAS395-SOURCE-POLICY-V1",
+  "path": "/editions/2026-08-17-c1/",
   "daily_update_path": "/data/daily_update.json"
 }

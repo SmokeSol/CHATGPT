@@ -1,6 +1,7 @@
 {
-  "schema_version": "1.0",
-  "current_edition": "2026-08-17",
+  "schema_version": "1.1",
+  "current_edition": "2026-08-17-c1",
+  "current_edition_date": "2026-08-17",
   "editions": [
     {
       "edition_id": "2026-08-17",
@@ -11,6 +12,22 @@
       "territories_changed": 0,
       "new_documented_signals": 1,
       "summary_fr": "Première édition quotidienne d’Atlas 395. La projection de référence est enregistrée comme point de comparaison pour les éditions suivantes."
+    },
+    {
+      "edition_id": "2026-08-17-c1",
+      "edition_date": "2026-08-17",
+      "correction_number": 1,
+      "supersedes_edition_id": "2026-08-17",
+      "product_version": "V0.5",
+      "published_at": "2026-08-17T18:08:37+01:00",
+      "science_ref": "540802f08cd2ac565ea59d531d51ac3f58d83d38",
+      "forecast_snapshot": "F0",
+      "source_policy_id": "ATLAS395-SOURCE-POLICY-V1",
+      "projection_changed": false,
+      "territories_changed": 0,
+      "new_documented_signals": 26,
+      "source_policy_changed": true,
+      "summary_fr": "Périmètre des sources mis à jour : seules les sources institutionnelles, les publications officielles et Médias24 sont désormais retenus."
     }
   ]
 }
