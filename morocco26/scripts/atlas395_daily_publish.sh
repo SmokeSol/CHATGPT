@@ -28,9 +28,14 @@ python morocco26/scripts/atlas395_intake_uri.py \
   --days-back 4 \
   --max-per-source 30
 
+# Export is read-only with respect to the scientific branch. Registered F0 is
+# an exact identity counterfactual and therefore references the immutable F-1
+# distribution rather than duplicating it; the adapter materializes that
+# reference only in memory while retaining F0's own artifact hash/provenance.
 mkdir -p "$SCIENCE_DIR/morocco26/scripts"
 cp morocco26/scripts/atlas395_export.py "$SCIENCE_DIR/morocco26/scripts/atlas395_export.py"
-python "$SCIENCE_DIR/morocco26/scripts/atlas395_export.py" --snapshot "$SNAPSHOT"
+cp morocco26/scripts/atlas395_export_registered.py "$SCIENCE_DIR/morocco26/scripts/atlas395_export_registered.py"
+python "$SCIENCE_DIR/morocco26/scripts/atlas395_export_registered.py" --snapshot "$SNAPSHOT"
 
 rm -rf morocco26/web/data
 mkdir -p morocco26/web/data
