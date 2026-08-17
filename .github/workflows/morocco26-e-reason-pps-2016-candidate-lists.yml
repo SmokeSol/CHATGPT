@@ -1,0 +1,40 @@
+name: morocco26-e-reason-pps-2016-candidate-lists
+on:
+  workflow_dispatch:
+  push:
+    branches: [morocco26-e-reason]
+    paths:
+      - "morocco26/scripts/e_reason_collect_pps_2016_candidate_lists.py"
+      - "morocco26/data/goal100/e_reason/e_reason_source_registry_v1.json"
+      - ".github/workflows/morocco26-e-reason-pps-2016-candidate-lists.yml"
+permissions:
+  contents: write
+concurrency:
+  group: morocco26-e-reason-pps-2016-candidate-lists
+  cancel-in-progress: true
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-e-reason, fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python morocco26/scripts/validate_e_reason_prereg.py
+      - run: python -m pip install --disable-pip-version-check requests==2.32.4 beautifulsoup4==4.13.4 pypdf==5.9.0
+      - name: Recover official PPS 2016 candidate-list documents
+        env:
+          E_REASON_PPS2016_RUN_ID: pps2016_${{ github.run_id }}_${{ github.run_attempt }}
+        run: python morocco26/scripts/e_reason_collect_pps_2016_candidate_lists.py
+      - run: python morocco26/scripts/validate_e_reason_prereg.py
+      - name: Commit append-only PPS evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/data/goal100/e_reason/evidence/pps_2016_candidate_lists \
+                  morocco26/data/goal100/e_reason/pps_2016_candidate_lists_latest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "experiment(e-reason): archive PPS 2016 candidate-list recovery"
+          git pull --rebase origin morocco26-e-reason
+          git push origin HEAD:morocco26-e-reason
