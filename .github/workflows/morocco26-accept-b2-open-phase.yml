@@ -1,0 +1,96 @@
+name: morocco26-accept-b2-open-phase
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - 'morocco26/scripts/goal100_accept_b2_open_phase.py'
+      - '.github/workflows/morocco26-accept-b2-open-phase.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-accept-b2-open-phase-v1
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  accept:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      B2_BRANCH: morocco26-b2-structured-evidence
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Wait for reconciled B2 state
+        run: |
+          for attempt in $(seq 1 90); do
+            git fetch origin --prune
+            if git ls-remote --exit-code --heads origin "$B2_BRANCH" >/dev/null 2>&1; then
+              git switch -C "$B2_BRANCH" "origin/$B2_BRANCH"
+              if [ -f morocco26/data/goal100/b2/v1/b2_reconciliation_status.json ]; then
+                python - <<'PY'
+                import json
+                from pathlib import Path
+                p=Path('morocco26/data/goal100/b2/v1/b2_reconciliation_status.json')
+                raise SystemExit(0 if json.loads(p.read_text(encoding='utf-8')).get('gate')=='PASS' else 1)
+                PY
+                if [ "$?" -eq 0 ]; then exit 0; fi
+              fi
+            fi
+            git switch -C morocco26-fminus1-run origin/morocco26-fminus1-run >/dev/null 2>&1 || true
+            echo "Waiting for reconciled B2: $attempt/90"
+            sleep 10
+          done
+          echo 'Reconciled B2 state unavailable' >&2
+          exit 1
+
+      - name: Import phase acceptance script
+        run: git checkout origin/morocco26-fminus1-run -- morocco26/scripts/goal100_accept_b2_open_phase.py
+
+      - name: Certify B2 open but unfrozen
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/goal100_accept_b2_open_phase.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('morocco26/data/goal100/b2/v1/b2_phase_open_certificate.json')
+          c=json.loads(p.read_text(encoding='utf-8'))
+          assert c['gate']=='PASS_B2_OPEN_NOT_FROZEN'
+          assert c['B2_frozen'] is False
+          assert c['F0_created'] is False
+          assert c['agentic_status']=='ALL_LOCKED'
+          assert c['non_legal_coefficients']=='ALL_ZERO'
+          print('B2_PHASE_OPEN_ACCEPTANCE_PASS')
+          PY
+
+      - name: Commit acceptance certificate with retry
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/b2/v1/b2_phase_open_certificate.json \
+            morocco26/data/goal100/current_state.json \
+            morocco26/scripts/goal100_accept_b2_open_phase.py \
+            morocco26/FIL_D_ARIANE.md \
+            morocco26/FIL_ARIANE.md 2>/dev/null || true
+          git commit -m 'milestone(morocco26): certify B2 open, unfrozen and non-agentic' || true
+          for attempt in 1 2 3; do
+            git fetch origin "$B2_BRANCH"
+            git rebase "origin/$B2_BRANCH" || { git rebase --abort; exit 1; }
+            if git push origin HEAD:"$B2_BRANCH"; then exit 0; fi
+            sleep 5
+          done
+          exit 1
+
+      - name: Print certificate
+        run: cat morocco26/data/goal100/b2/v1/b2_phase_open_certificate.json
