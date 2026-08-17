@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "registry_id": "M26-GOAL100-B2-SOURCES-V1",
+  "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "created_at": "2026-08-17T07:16:21+01:00",
+  "status": "DOMAIN_ALLOWLIST_PENDING_COLLECTION_LOCKED",
+  "collection_allowed": false,
+  "rule": "No B2 claim record may be created until this registry is versioned with a frozen allowlist and B2-1-SOURCE-UNIVERSE-FROZEN is closed.",
+  "independence_rule": "Syndicated or copied material shares one independence_cluster and counts once regardless of publisher count.",
+  "archive_rule": "Each accepted publication must retain a content hash and, where feasible, an archive locator or raw-byte repository path.",
+  "source_entries": [],
+  "query_templates": [],
+  "prohibited_sources": [
+    "anonymous or unattributed social accounts",
+    "SEO aggregators without original reporting",
+    "prediction markets, betting odds and third-party seat forecasts",
+    "polls under B2 protocol V1",
+    "private or leaked material without public verifiability",
+    "LLM-generated summaries used as source evidence"
+  ],
+  "closure_requirements": {
+    "minimum_T0_entries": 3,
+    "minimum_T1_party_coverage_rule": "Every in-scope party receives an explicit official-source entry or an explicit documented absence.",
+    "minimum_T2_independent_clusters": 3,
+    "deterministic_query_templates_required": true,
+    "domain_or_document_scope_required": true,
+    "collection_smoke_test_required": true
+  }
+}
