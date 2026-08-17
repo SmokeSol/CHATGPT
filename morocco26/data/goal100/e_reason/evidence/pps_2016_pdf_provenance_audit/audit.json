@@ -1,0 +1,521 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-17T23:23:09+00:00",
+  "cutoff_utc": "2016-10-06T22:59:59+00:00",
+  "category_pages": [
+    {
+      "url": "https://pps.ma/category/%D9%85%D8%B1%D8%B4%D8%AD%D9%8A-%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85-%D9%88-%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D9%8A%D8%A9/",
+      "status": 200,
+      "sha256": "ab2e4a5d08184b10909adafca2265d3ab493af4ebd9de1e5a9d8e5c6da214229",
+      "numeric_post_links": [
+        "https://pps.ma/10462/",
+        "https://pps.ma/10475/",
+        "https://pps.ma/10487/",
+        "https://pps.ma/10495/",
+        "https://pps.ma/10509/",
+        "https://pps.ma/10515/",
+        "https://pps.ma/10521/",
+        "https://pps.ma/10528/",
+        "https://pps.ma/10532/",
+        "https://pps.ma/10535/",
+        "https://pps.ma/13294/",
+        "https://pps.ma/30407/",
+        "https://pps.ma/30828/",
+        "https://pps.ma/30834/",
+        "https://pps.ma/30867/",
+        "https://pps.ma/30870/",
+        "https://pps.ma/30872/",
+        "https://pps.ma/30876/",
+        "https://pps.ma/587/"
+      ]
+    },
+    {
+      "url": "https://pps.ma/category/%D9%85%D8%B1%D8%B4%D8%AD%D9%8A-%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85-%D9%88-%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D9%8A%D8%A9/page/2/?filter_by=featured",
+      "status": 200,
+      "sha256": "b89323f74b42d3a99fe672094fbf10aafdfd37777bb1063c4c7ba38b795feb39",
+      "numeric_post_links": [
+        "https://pps.ma/10446/",
+        "https://pps.ma/10453/",
+        "https://pps.ma/13294/",
+        "https://pps.ma/30407/",
+        "https://pps.ma/30828/",
+        "https://pps.ma/30834/",
+        "https://pps.ma/30867/",
+        "https://pps.ma/30870/",
+        "https://pps.ma/30872/",
+        "https://pps.ma/30876/",
+        "https://pps.ma/587/"
+      ]
+    }
+  ],
+  "region_pages": [
+    {
+      "url": "https://pps.ma/10446/",
+      "status": 200,
+      "title": "طنجة تطوان الحسيمة",
+      "timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "precutoff": true,
+      "pdf_links": [
+        "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/tanger_tetouan_asilah.pdf",
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "9018ca771170d632d3babd144c2a4934b4c30514f7b2a672890ec6819dbb438d",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/10453/",
+      "status": 200,
+      "title": "الشرق",
+      "timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "precutoff": true,
+      "pdf_links": [
+        "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/oriental.pdf",
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "a5903f51e565f2f2e307d9b7fea7c2d24fa40b5867fe7328a69c59cc9102ab3b",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/10462/",
+      "status": 200,
+      "title": "فاس مكناس",
+      "timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "precutoff": true,
+      "pdf_links": [
+        "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/fes_meknes.pdf",
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "002cfc956ffbc4f861f06472e6abac38789cb86f1d0b65e13bc012f48a47b0b9",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/10475/",
+      "status": 200,
+      "title": "الرباط سلا القنيطرة",
+      "timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "precutoff": true,
+      "pdf_links": [
+        "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/rabat-sale-kenitra.pdf",
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "ce57d26a80dc999be0f191d97d70b51e0dcf4f73c4c11f382825086d091d9c63",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/10487/",
+      "status": 200,
+      "title": "بني ملال الخنيفرة",
+      "timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "precutoff": true,
+      "pdf_links": [
+        "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/beni_mellal_khenifra.pdf",
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "fbad3e21189397b0339e5cd804b43d0a9e2b6540a19dee978755a321b4d28bcb",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/10495/",
+      "status": 200,
+      "title": "البيضاء سطات",
+      "timestamps": [
+        "2016-10-03",
+        "2016-10-05"
+      ],
+      "precutoff": true,
+      "pdf_links": [
+        "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/casa_settat.pdf",
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "48d530753e26e8afd1b9ea9b8744cd74c0e363dc6de3a4bd4c685ee428ff9077",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/10509/",
+      "status": 200,
+      "title": "مراكش آسفي",
+      "timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "precutoff": true,
+      "pdf_links": [
+        "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/marrakech-safi.pdf",
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "133bf37b83a147ff36faae5f808aa03add62c9392d8e53183191b89d03f0eba3",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/10515/",
+      "status": 200,
+      "title": "درعة تافيلالت",
+      "timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "precutoff": true,
+      "pdf_links": [
+        "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/draa_tafilalet.pdf",
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "7b4275c64380e78035d675fa2294777c7f245c965c1c43f99beb6efdfc6854e6",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/10521/",
+      "status": 200,
+      "title": "سوس ماسة",
+      "timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "precutoff": true,
+      "pdf_links": [
+        "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/souss_massa.pdf",
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "4f7baf6ca0df368a090b84793be4ec3c75728175cf84c6cc938aad884eacc4f4",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/10528/",
+      "status": 200,
+      "title": "كلميم واد نون",
+      "timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "precutoff": true,
+      "pdf_links": [
+        "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/guelmim_oued_noun.pdf",
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "2b6bd8f0394e9921f830814c2753b6777e16dc16ec41d877b153ddb4c9d10d85",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/10532/",
+      "status": 200,
+      "title": "العيون الساقية الحمراء",
+      "timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "precutoff": true,
+      "pdf_links": [
+        "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/el_ayoun_sakia_hamra-1.pdf",
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "89bc701861af268b9da4b08994ad4aa69e6518d75d10a164c40bd3fc4f7b2761",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/10535/",
+      "status": 200,
+      "title": "الداخلة وادي الذهب",
+      "timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "precutoff": true,
+      "pdf_links": [
+        "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/dakhela_ouddahab.pdf",
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "7788dcba176deceb7478605c5dc73df87071c61ab36e8b775ef90265bb09bfb1",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/13294/",
+      "status": 200,
+      "title": "منتدى المناصفة والمساواة",
+      "timestamps": [
+        "2018-02-07"
+      ],
+      "precutoff": false,
+      "pdf_links": [
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "7e013dfa4be8f247ca5403639ed296b90749b356418c1f3ea10b1c463e4c282f",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/30407/",
+      "status": 200,
+      "title": "نبيل بنعبد الله : ماحدث في الحسيمة ليس إنفصال أو خيانة",
+      "timestamps": [
+        "2026-06-12"
+      ],
+      "precutoff": false,
+      "pdf_links": [
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "4fc78eb1ae801e69747948868c75b1af9efbbf4e67292758cea116b756a3e2b8",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/30828/",
+      "status": 200,
+      "title": "نبيل بنعبد الله : برنامجنا يُشَكِّلُ قَطِيعَةً مع التوجه السياسي الحالي للحكومة",
+      "timestamps": [
+        "2026-07-31"
+      ],
+      "precutoff": false,
+      "pdf_links": [
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "6d596af82b7f187af5b0c657e784781047f84cf7e03c083d0d32d3a0ccfcd200",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/30834/",
+      "status": 200,
+      "title": "بودكاست نزعمو كاملين | لماذا حزب التقدم والاشتراكية ؟ مع د. عزوز الصنهاجي",
+      "timestamps": [
+        "2026-08-01"
+      ],
+      "precutoff": false,
+      "pdf_links": [
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "63c330dbedc5735b1b1cb9dc6f0086324603364cba6c73207353233f6e48f610",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/30867/",
+      "status": 200,
+      "title": "الحلقة الثانية من بودكاست “نزعمو كاملين” : فاطمة الزهراء برصات",
+      "timestamps": [
+        "2026-08-09"
+      ],
+      "precutoff": false,
+      "pdf_links": [
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "795a7efadb506482513037eb11d012e2fbb501b20ead36a6cc9f99ba0ebe34a6",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/30870/",
+      "status": 200,
+      "title": "مذكرة تأطير مشروع قانون المالية لسنة 2027: أي رهانات للحكامة الميزانياتية؟",
+      "timestamps": [
+        "2026-08-12"
+      ],
+      "precutoff": false,
+      "pdf_links": [
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "c4bac52d7d3932fe8376dd0d447dce8fc000ad53591ff308b4b59b0eaad5b8e3",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/30872/",
+      "status": 200,
+      "title": "مشاهد من يوميات الزعيم المغربي علي يعتة..",
+      "timestamps": [
+        "2026-08-13"
+      ],
+      "precutoff": false,
+      "pdf_links": [
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "3817bcd81389b8fae95a68e00d2c3e3860bbc820d47fa5e3cfae6809f0dc83c8",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/30876/",
+      "status": 200,
+      "title": "29 سنة على رحيله علي يعتة.. إرث مستمر ورسالة لا تنتهي",
+      "timestamps": [
+        "2026-08-13"
+      ],
+      "precutoff": false,
+      "pdf_links": [
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "2c0d22b8018ea14a5a5b67f8c4a44db1f9aeb8218e5cfd51697411dadb37d555",
+      "error": null
+    },
+    {
+      "url": "https://pps.ma/587/",
+      "status": 200,
+      "title": "الكشاف الجوال",
+      "timestamps": [
+        "2013-07-16",
+        "2016-09-18"
+      ],
+      "precutoff": true,
+      "pdf_links": [
+        "http://ppsmaroc.com/pub/pps_prog_ramadan_2021.pdf"
+      ],
+      "outcome_terms": [],
+      "sha256": "14f77523364d20d6cf262eabe98c915fb218f41be947a763c9b6a94fb807b229",
+      "error": null
+    }
+  ],
+  "relationships": [
+    {
+      "page_url": "https://pps.ma/10453/",
+      "page_title": "الشرق",
+      "page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "page_precutoff": true,
+      "page_sha256": "a5903f51e565f2f2e307d9b7fea7c2d24fa40b5867fe7328a69c59cc9102ab3b",
+      "pdf_url_on_page": "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/oriental.pdf",
+      "pdf_filename": "oriental.pdf",
+      "probe_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+      "probe_bytes": 1325952,
+      "pdf_outcome_terms": [],
+      "mechanical_pass": true
+    },
+    {
+      "page_url": "https://pps.ma/10462/",
+      "page_title": "فاس مكناس",
+      "page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "page_precutoff": true,
+      "page_sha256": "002cfc956ffbc4f861f06472e6abac38789cb86f1d0b65e13bc012f48a47b0b9",
+      "pdf_url_on_page": "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/fes_meknes.pdf",
+      "pdf_filename": "fes_meknes.pdf",
+      "probe_sha256": "ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375",
+      "probe_bytes": 1934438,
+      "pdf_outcome_terms": [],
+      "mechanical_pass": true
+    },
+    {
+      "page_url": "https://pps.ma/10487/",
+      "page_title": "بني ملال الخنيفرة",
+      "page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "page_precutoff": true,
+      "page_sha256": "fbad3e21189397b0339e5cd804b43d0a9e2b6540a19dee978755a321b4d28bcb",
+      "pdf_url_on_page": "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/beni_mellal_khenifra.pdf",
+      "pdf_filename": "beni_mellal_khenifra.pdf",
+      "probe_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+      "probe_bytes": 12147731,
+      "pdf_outcome_terms": [],
+      "mechanical_pass": true
+    },
+    {
+      "page_url": "https://pps.ma/10495/",
+      "page_title": "البيضاء سطات",
+      "page_timestamps": [
+        "2016-10-03",
+        "2016-10-05"
+      ],
+      "page_precutoff": true,
+      "page_sha256": "48d530753e26e8afd1b9ea9b8744cd74c0e363dc6de3a4bd4c685ee428ff9077",
+      "pdf_url_on_page": "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/casa_settat.pdf",
+      "pdf_filename": "casa_settat.pdf",
+      "probe_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+      "probe_bytes": 2110956,
+      "pdf_outcome_terms": [],
+      "mechanical_pass": true
+    },
+    {
+      "page_url": "https://pps.ma/10515/",
+      "page_title": "درعة تافيلالت",
+      "page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "page_precutoff": true,
+      "page_sha256": "7b4275c64380e78035d675fa2294777c7f245c965c1c43f99beb6efdfc6854e6",
+      "pdf_url_on_page": "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/draa_tafilalet.pdf",
+      "pdf_filename": "draa_tafilalet.pdf",
+      "probe_sha256": "105cac2f617546c4f4e687b02ebd6441b027830a1364372c3bc2767590676ba4",
+      "probe_bytes": 7189012,
+      "pdf_outcome_terms": [],
+      "mechanical_pass": true
+    },
+    {
+      "page_url": "https://pps.ma/10521/",
+      "page_title": "سوس ماسة",
+      "page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "page_precutoff": true,
+      "page_sha256": "4f7baf6ca0df368a090b84793be4ec3c75728175cf84c6cc938aad884eacc4f4",
+      "pdf_url_on_page": "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/souss_massa.pdf",
+      "pdf_filename": "souss_massa.pdf",
+      "probe_sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+      "probe_bytes": 8226958,
+      "pdf_outcome_terms": [],
+      "mechanical_pass": true
+    },
+    {
+      "page_url": "https://pps.ma/10528/",
+      "page_title": "كلميم واد نون",
+      "page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "page_precutoff": true,
+      "page_sha256": "2b6bd8f0394e9921f830814c2753b6777e16dc16ec41d877b153ddb4c9d10d85",
+      "pdf_url_on_page": "http://ppsmaroc.com/ar/wp-content/uploads/2016/10/guelmim_oued_noun.pdf",
+      "pdf_filename": "guelmim_oued_noun.pdf",
+      "probe_sha256": "b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270",
+      "probe_bytes": 6802161,
+      "pdf_outcome_terms": [],
+      "mechanical_pass": true
+    }
+  ],
+  "counts": {
+    "probe_pdf_hits": 7,
+    "region_pages_checked": 21,
+    "linked_probe_pdfs": 7,
+    "mechanically_admissible_pdfs": 7
+  },
+  "status": "PASS_PARTIAL",
+  "invariants": {
+    "candidate_facts_parsed": false,
+    "new_source_class_added": false,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "F1_created": false
+  }
+}
