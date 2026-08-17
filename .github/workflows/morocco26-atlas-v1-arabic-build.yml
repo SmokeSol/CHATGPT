@@ -1,0 +1,84 @@
+name: morocco26-atlas-v1-arabic-build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - morocco26-e-collect
+    paths:
+      - 'morocco26/scripts/build_atlas_v1_arabic_layer.py'
+      - 'morocco26/data/goal100/e_collect/medias24_db_latest.json'
+      - '.github/workflows/morocco26-atlas-v1-arabic-build.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: morocco26-atlas-v1-arabic-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout collection branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: morocco26-e-collect
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate frozen E_collect inputs
+        run: python morocco26/scripts/validate_e_collect_prereg.py
+
+      - name: Build Arabic-native 92-territory Atlas V1 evidence layer
+        run: python morocco26/scripts/build_atlas_v1_arabic_layer.py
+
+      - name: Validate generated V1 snapshot
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('morocco26/data/atlas_v1/atlas_v1_snapshot.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          coverage = data['coverage']
+          assert coverage['canonical_local_territories'] == 92
+          assert coverage['arabic_identity_coverage'] == 92
+          assert coverage['local_territories_with_records_after_merge'] == 92
+          assert coverage['missing_after_merge'] == []
+          assert data['forecast']['immutable'] is True
+          assert data['forecast']['candidate_and_signal_impact'] == 'NOT_CALIBRATED'
+          assert data['integrity']['forecast_delta_authorized'] is False
+          assert len(data['territories']) == 92
+          assert len({row['constituency_id'] for row in data['territories']}) == 92
+          print(json.dumps(coverage, indent=2, ensure_ascii=False))
+          PY
+
+      - name: Revalidate frozen scientific artifacts
+        run: python morocco26/scripts/validate_e_collect_prereg.py
+
+      - name: Commit Atlas V1 Arabic evidence outputs
+        run: |
+          if git diff --quiet -- \
+             morocco26/data/goal100/e_collect \
+             morocco26/data/atlas_v1 \
+             morocco26/web/data/atlas_v1.json && \
+             [ -z "$(git ls-files --others --exclude-standard morocco26/data/goal100/e_collect morocco26/data/atlas_v1 morocco26/web/data/atlas_v1.json)" ]; then
+            echo 'No generated changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/e_collect/arabic_territory_crosswalk_v1.json \
+            morocco26/data/goal100/e_collect/pjd_2026_bilingual_roster_v1.json \
+            morocco26/data/goal100/e_collect/e_collect_v1_1_execution_state.json \
+            morocco26/data/atlas_v1/atlas_v1_snapshot.json \
+            morocco26/web/data/atlas_v1.json
+          git commit -m 'feat(atlas-v1): build Arabic-native 92-territory evidence layer [skip atlas-v1-build]'
+          git push origin HEAD:morocco26-e-collect
