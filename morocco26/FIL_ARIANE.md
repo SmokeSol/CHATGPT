@@ -213,3 +213,19 @@ Chaque entrée doit contenir, dans cet ordre :
 **Décision scientifique :** seules les routes `ACTIVE` peuvent produire des records B2. Une route WAF/challenge ne reçoit aucun crédit par snippet. Tous les coefficients prédictifs restent à zéro.
 
 **Prochaine action exacte :** construire et certifier le crosswalk déterministe identité/parti/liste/territoire (`B2-2`) avant l’admission d’une feature ou d’une contrainte mécanique.
+
+
+### 2026-08-17 — Entrée A021F32003523080 — Échec du crosswalk identité-territoire B2
+
+**Question/gate traité :** `B2-2-IDENTITY-TERRITORY-CROSSWALK`.
+
+**Résultat machine :** `FAIL`. Territoires locaux `92`, régions `12`, élus `395`, fuzzy matches `0`, claims B2 préexistants `0`.
+
+**Classes d’échec :**
+
+- `UNRESOLVED_REGION` — `{"kind": "UNRESOLVED_REGION", "raw": "Dakhla-Oued Eddahab", "normalized": "dakhla oued eddahab", "context": "closure:oued-eddahab"}`
+- `UNRESOLVED_REGION` — `{"kind": "UNRESOLVED_REGION", "raw": "Dakhla-Oued Eddahab", "normalized": "dakhla oued eddahab", "context": "closure:aousserd"}`
+
+**Décision scientifique :** le gate reste `OPEN`. Aucun fallback fuzzy, aucune fusion d’homonyme et aucun record candidat 2026 n’est admis.
+
+**Prochaine action exacte :** corriger uniquement les inputs ou aliases explicitement défaillants sous une nouvelle version revue, sans diminuer les critères de couverture.
