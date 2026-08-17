@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "product": "Atlas 395",
   "current_version": "V0.5",
   "release_name": "Atlas Daily Intelligence",
@@ -7,12 +7,15 @@
   "status": "LIVE",
   "capabilities": [
     "autonomous_public_source_intake",
+    "fail_closed_product_source_policy",
+    "institutional_and_official_source_priority",
+    "medias24_as_sole_authorized_media",
     "whitelisted_same_domain_discovery",
     "sitemap_rss_atom_and_internal_link_scanning",
-    "append_only_daily_intake_archive",
+    "append_only_policy_versioned_intake_archive",
     "detected_signal_quarantine_without_automatic_forecast_effect",
     "official_daily_editions",
-    "immutable_daily_history",
+    "immutable_daily_history_with_append_only_corrections",
     "day_over_day_projection_diff",
     "day_over_day_documented_signal_diff",
     "automatic_latest_registered_forecast_selection",
@@ -21,10 +24,12 @@
   ],
   "daily_operating_model": {
     "execution": "GitHub Actions scheduled job; no persistent server required",
-    "source_universe": "Latest certified B2 acquisition surface used only as an Atlas Intake whitelist",
+    "scientific_source_universe": "Latest certified B2 acquisition surface supplies locators without being modified",
+    "product_source_policy": "morocco26/atlas395/source_policy.json",
+    "authorized_reader_sources": "Explicit fail-closed allowlist of institutional sources, official party publications and Médias24 only",
     "intake_output": "morocco26/atlas395/intake/",
     "forecast_source": "Latest physically present and hash-valid snapshot registered on morocco26-b2",
-    "publication_output": "morocco26/web/data/ and immutable morocco26/web/editions/YYYY-MM-DD/",
+    "publication_output": "morocco26/web/data/ and immutable morocco26/web/editions/",
     "automatic_forecast_mutation_from_intake": false
   },
   "promotion_policy": {
@@ -37,6 +42,8 @@
     "atlas_daily_reads_science_branch": true,
     "atlas_intake_writes_science_branch": false,
     "atlas_intake_may_change_forecast": false,
-    "official_daily_editions_are_immutable": true
+    "scientific_source_registry_is_not_rewritten_by_product_policy": true,
+    "official_daily_editions_are_immutable": true,
+    "same_day_policy_corrections_create_new_edition_ids": true
   }
 }

@@ -14,7 +14,11 @@ on:
       - '.github/workflows/morocco26-atlas395-v0.yml'
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: atlas395-v05-daily-intelligence
+  cancel-in-progress: false
 
 jobs:
   validate-product-and-intake:
@@ -34,28 +38,67 @@ jobs:
           rm -rf morocco26/scripts/__pycache__
           node --check morocco26/web/app.js
           for f in morocco26/web/assets/*.js; do node --check "$f"; done
-      - name: Smoke-test autonomous intake against certified source surface
+      - name: Validate fail-closed source policy
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('morocco26/atlas395/source_policy.json').read_text())
+          allowed=set(p['authorized_source_ids'])
+          media=set(p['authorized_media_source_ids'])
+          assert p['default_decision']=='DENY'
+          assert media=={'T2_MEDIAS24'}
+          assert not any(x.startswith('T2_') and x not in media for x in allowed)
+          assert {'T2_HESPRESS','T2_LE360','T2_LEMATIN','T2_SNRTNEWS','T2_TELQUEL'}.isdisjoint(allowed)
+          print('ATLAS395_SOURCE_POLICY_OK', len(allowed), sorted(media))
+          PY
+      - name: Smoke-test autonomous intake and reader filtering
         shell: bash
         run: |
           git fetch origin morocco26-b2:refs/remotes/origin/morocco26-b2
           git show origin/morocco26-b2:morocco26/data/goal100/b2_deterministic_acquisition_surface.json > /tmp/atlas395_surface_full.json
           python - <<'PY'
           import json
-          p=json.load(open('/tmp/atlas395_surface_full.json'))
-          keep={'T0_MAROC_MA_ELECTIONS','T1_PJD_OFFICIAL'}
-          p['surfaces']=[x for x in p['surfaces'] if x.get('source_id') in keep]
-          json.dump(p,open('/tmp/atlas395_surface.json','w'))
+          from pathlib import Path
+          surface=json.loads(Path('/tmp/atlas395_surface_full.json').read_text())
+          keep={'T0_MAROC_MA_ELECTIONS','T1_PJD_OFFICIAL','T2_MEDIAS24','T2_HESPRESS'}
+          surface['surfaces']=[x for x in surface['surfaces'] if x.get('source_id') in keep]
+          Path('/tmp/atlas395_surface.json').write_text(json.dumps(surface))
+          policy=json.loads(Path('morocco26/atlas395/source_policy.json').read_text())
+          policy['policy_id']=policy['policy_id']+'-SMOKE'
+          policy['authorized_source_ids']=['T0_MAROC_MA_ELECTIONS','T1_PJD_OFFICIAL','T2_MEDIAS24']
+          Path('/tmp/atlas395_policy.json').write_text(json.dumps(policy))
           PY
-          python morocco26/scripts/atlas395_intake.py --surface /tmp/atlas395_surface.json --out /tmp/atlas395-intake --days-back 2 --max-per-source 2
+          python morocco26/scripts/atlas395_intake.py \
+            --surface /tmp/atlas395_surface.json \
+            --policy /tmp/atlas395_policy.json \
+            --out /tmp/atlas395-intake \
+            --days-back 2 \
+            --max-per-source 1
+          cp morocco26/web/data/evidence_index.json /tmp/atlas395_evidence.json
+          python morocco26/scripts/atlas395_apply_intake.py \
+            --intake /tmp/atlas395-intake/latest.json \
+            --evidence /tmp/atlas395_evidence.json \
+            --policy /tmp/atlas395_policy.json
           python - <<'PY'
           import json
           from pathlib import Path
-          p=json.loads(Path('/tmp/atlas395-intake/latest.json').read_text())
-          assert p['contract']['product_watch_only'] is True
-          assert p['contract']['writes_science'] is False
-          assert p['contract']['may_change_forecast'] is False
-          assert p['active_sources_scanned'] > 0
-          print('ATLAS395_INTAKE_CONTRACT_OK', p['active_sources_scanned'], p['detection_count'], p['probe_count'])
+          intake=json.loads(Path('/tmp/atlas395-intake/latest.json').read_text())
+          allowed=set(intake['authorized_source_ids'])
+          assert intake['contract']['product_watch_only'] is True
+          assert intake['contract']['writes_science'] is False
+          assert intake['contract']['may_change_forecast'] is False
+          assert intake['contract']['sole_authorized_media']=='T2_MEDIAS24'
+          assert intake['disallowed_registry_sources_ignored'] >= 1
+          assert all(d['source_id'] in allowed for d in intake['detections'])
+          assert {x for x in allowed if x.startswith('T2_')}=={'T2_MEDIAS24'}
+          evidence=json.loads(Path('/tmp/atlas395_evidence.json').read_text())
+          source_ids={x['source'] for x in evidence['sources']}
+          event_ids={x['source'] for x in evidence['events'] if x.get('source')}
+          assert source_ids <= allowed and event_ids <= allowed
+          assert 'T2_HESPRESS' not in source_ids | event_ids
+          print('ATLAS395_INTAKE_POLICY_CONTRACT_OK', intake['authorized_sources_scanned'], intake['detection_count'], intake['probe_count'])
           PY
       - name: Check final-reader language surface
         shell: bash
@@ -68,7 +111,7 @@ jobs:
           if bad: raise SystemExit('Forbidden final-reader terms in HTML: ' + ', '.join(bad))
           print('ATLAS395_READER_LANGUAGE_OK')
           PY
-      - name: Enforce no science mutation
+      - name: Enforce no validation mutation
         shell: bash
         run: |
           if [ -n "$(git status --porcelain)" ]; then
@@ -77,3 +120,30 @@ jobs:
             exit 1
           fi
           echo ATLAS395_VALIDATION_NO_MUTATION_OK
+
+  publish-source-policy-correction:
+    needs: validate-product-and-intake
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[publish-policy]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: atlas395-v0
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Publish immutable source-policy correction
+        run: bash morocco26/scripts/atlas395_daily_publish.sh
+      - name: Commit intake archive and corrective edition
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- morocco26/atlas395/intake morocco26/web/data morocco26/web/editions)" ]; then
+            echo "No corrective product changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/atlas395/intake morocco26/web/data morocco26/web/editions
+          git commit -m "atlas395: publish official-source policy correction"
+          git push origin HEAD:atlas395-v0

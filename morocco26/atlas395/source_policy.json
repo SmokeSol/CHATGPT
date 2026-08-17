@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "ATLAS395-SOURCE-POLICY-V1",
+  "effective_date": "2026-08-17",
+  "scope": "ATLAS_PRODUCT_WATCH_AND_READER_ONLY",
+  "default_decision": "DENY",
+  "scientific_registry_unchanged": true,
+  "authorized_source_ids": [
+    "T0_CHAMBRE_REPRESENTANTS",
+    "T0_CONSTITUTIONAL_COURT",
+    "T0_LISTES_ELECTORALES",
+    "T0_MAROC_MA_ELECTIONS",
+    "T0_SGG_LEGISLATION",
+    "T1_ISTIQLAL_OFFICIAL",
+    "T1_MP_OFFICIAL",
+    "T1_PAM_OFFICIAL",
+    "T1_PJD_OFFICIAL",
+    "T1_PPS_OFFICIAL",
+    "T1_RNI_OFFICIAL",
+    "T1_UC_OFFICIAL",
+    "T1_USFP_OFFICIAL",
+    "T2_MEDIAS24"
+  ],
+  "authorized_media_source_ids": [
+    "T2_MEDIAS24"
+  ],
+  "explicitly_forbidden_media_source_ids": [
+    "T2_HESPRESS",
+    "T2_LE360",
+    "T2_LEMATIN",
+    "T2_SNRTNEWS",
+    "T2_TELQUEL"
+  ],
+  "source_roles": {
+    "T0": "INSTITUTIONAL_OFFICIAL_WITHIN_COMPETENCE",
+    "T1": "OFFICIAL_PARTY_PRIMARY_BUT_INTERESTED",
+    "T2_MEDIAS24": "MEDIA_MONITORING_AND_CORROBORATION_ONLY"
+  },
+  "monitoring_policy": {
+    "probe_authorized_sources_even_when_registry_access_is_reference_only_or_inactive": true,
+    "new_sources_require_explicit_policy_revision": true,
+    "disallowed_sources_must_not_be_collected_displayed_or_counted": true
+  },
+  "forecast_safety": {
+    "daily_watch_may_change_forecast": false,
+    "media_single_source_is_never_admissible": true,
+    "media_requires_primary_or_independent_corroboration": true,
+    "party_announcement_does_not_establish_legal_registration": true,
+    "conflict_or_uncertainty_means_no_forecast_effect": true
+  }
+}

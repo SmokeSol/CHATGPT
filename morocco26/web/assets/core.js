@@ -20,7 +20,7 @@ const SOURCE_NAMES = {
   T0_CHAMBRE_REPRESENTANTS:'Chambre des représentants',
   T0_CONSTITUTIONAL_COURT:'Cour constitutionnelle',
   T0_LISTES_ELECTORALES:'Listes électorales',
-  T0_MAROC_MA_ELECTIONS:'Portail national des élections',
+  T0_MAROC_MA_ELECTIONS:'Portail officiel du Royaume du Maroc',
   T0_SGG_LEGISLATION:'Secrétariat général du Gouvernement',
   T1_ISTIQLAL_OFFICIAL:"Parti de l’Istiqlal",
   T1_MP_OFFICIAL:'Mouvement Populaire',
@@ -30,8 +30,7 @@ const SOURCE_NAMES = {
   T1_RNI_OFFICIAL:'Rassemblement National des Indépendants',
   T1_UC_OFFICIAL:'Union Constitutionnelle',
   T1_USFP_OFFICIAL:'Union Socialiste des Forces Populaires',
-  T2_HESPRESS:'Hespress', T2_LE360:'Le360', T2_LEMATIN:'Le Matin',
-  T2_MEDIAS24:'Médias24', T2_SNRTNEWS:'SNRTnews', T2_TELQUEL:'TelQuel',
+  T2_MEDIAS24:'Médias24',
   HF_CHAMBER_MEMBERS_MULTIYEAR:'Archives de la Chambre des représentants'
 };
 const U_LABEL = {HIGH:'Forte', MEDIUM:'Moyenne', LOW:'Faible'};
@@ -125,4 +124,3 @@ function renderHeader(){
     [Number(s.draws||0).toLocaleString('fr-FR'),'scénarios simulés',''],['92','circonscriptions locales',''],['12','circonscriptions régionales','']
   ].map(([v,l,c])=>`<div class="kpi ${c}"><b class="big">${v}</b><span>${l}</span></div>`).join('');
 }
-
