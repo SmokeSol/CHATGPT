@@ -137,7 +137,7 @@ function renderMethodology(){
   $('#method-snapshot-date').textContent = c.created_at ? `gelé le ${dateFr(c.created_at)}` : 'version gelée';
   $('#method-draws').textContent = draws ? draws.toLocaleString('fr-FR') : '—';
   $('#method-cutoff').textContent = dateFr(c.data_cutoff || D.snapshot?.data_cutoff);
-  $('#method-b2-effect').textContent = c.distribution_equivalence_to_parent === 'EXACT' ? '0' : '—';
+  $('#method-facts-effect').textContent = c.distribution_equivalence_to_parent === 'EXACT' ? '0' : '—';
   const historical = Number(reserved.historical_input_classes || 16);
   const arabic = Number(reserved.unresolved_arabic_rows || 92);
   $('#method-reserved').textContent = `${historical} + ${arabic}`;
