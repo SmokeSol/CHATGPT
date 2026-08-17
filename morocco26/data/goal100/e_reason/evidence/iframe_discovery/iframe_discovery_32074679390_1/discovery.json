@@ -1,0 +1,584 @@
+{
+  "schema_version": "2.0",
+  "run_id": "iframe_discovery_32074679390_1",
+  "created_at": "2026-08-17T22:12:17+00:00",
+  "cutoff_utc": "20161006225959",
+  "method": "CURRENT_CMS_FOR_ADDRESS_DISCOVERY_ONLY_THEN_PRE_CUTOFF_WAYBACK",
+  "current_sources_are_candidate_evidence": false,
+  "current_discovery_rows": [
+    {
+      "url": "https://medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+      "origin": "LIVE_ARTICLE_ADDRESS_ONLY",
+      "status": 403,
+      "bytes": 5927,
+      "sha256": "5358b30dd9a5bcd59fc58140f515e89dcc43fb554b3c36ad3fd454c4d5725c8a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/5358b30dd9a5bcd59fc58140f515e89dcc43fb554b3c36ad3fd454c4d5725c8a.html",
+      "assets": [],
+      "post_ids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts?slug=legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes&per_page=10",
+      "origin": "WP_EXACT_SLUG",
+      "status": 200,
+      "bytes": 18708,
+      "sha256": "a458a215416f147c0b20592a35652264f0a0e6399df352aafc54f4933499501d",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/a458a215416f147c0b20592a35652264f0a0e6399df352aafc54f4933499501d.json",
+      "assets": [],
+      "post_ids": [
+        868469
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts&slug=legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes&per_page=10",
+      "origin": "WP_EXACT_SLUG_ROUTE",
+      "status": 403,
+      "bytes": 6122,
+      "sha256": "1bb67b8b57295f890c7c7c5d53af8a082d3a399d26325530ff05471c0711adc7",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/1bb67b8b57295f890c7c7c5d53af8a082d3a399d26325530ff05471c0711adc7.html",
+      "assets": [],
+      "post_ids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/search?search=legislatives%20principaux%20candidats%2017%20cartes&per_page=100",
+      "origin": "WP_SEARCH",
+      "status": null,
+      "bytes": 0,
+      "sha256": null,
+      "archive_path": null,
+      "assets": [],
+      "post_ids": [],
+      "error": "ReadTimeout: HTTPSConnectionPool(host='medias24.com', port=443): Read timed out. (read timeout=35)",
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/search?search=legislatives%20carte%20interactive&per_page=100",
+      "origin": "WP_SEARCH",
+      "status": 200,
+      "bytes": 8079,
+      "sha256": "5ae48d3d3ab8e8a1b32a519eeb211c99a4cd1edce29b9156a8255319662b3731",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/5ae48d3d3ab8e8a1b32a519eeb211c99a4cd1edce29b9156a8255319662b3731.json",
+      "assets": [],
+      "post_ids": [
+        1089995,
+        1087834,
+        868432,
+        1086715,
+        868599,
+        868442,
+        1095584,
+        1090439,
+        1088871,
+        1088868,
+        1088124,
+        1087809,
+        1087506,
+        1087167,
+        1086662,
+        1081121
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/search&search=legislatives%20carte%20interactive&per_page=100",
+      "origin": "WP_SEARCH_ROUTE",
+      "status": 403,
+      "bytes": 5932,
+      "sha256": "0f62b136d9289e2f55035bb9b52babe23261408f5e3828c00ec37a4654739d3d",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/0f62b136d9289e2f55035bb9b52babe23261408f5e3828c00ec37a4654739d3d.html",
+      "assets": [],
+      "post_ids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/868432?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 17307,
+      "sha256": "874404f6c10c52a62cf5e67a07dace735629981195ddc547d0c1a1b62be9dc10",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/874404f6c10c52a62cf5e67a07dace735629981195ddc547d0c1a1b62be9dc10.json",
+      "assets": [],
+      "post_ids": [
+        868432
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/868432&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5763,
+      "sha256": "082d0775000ce52c7fc60fc1a86048f75a981c39c33181bf99e4dfbbf55a0065",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/082d0775000ce52c7fc60fc1a86048f75a981c39c33181bf99e4dfbbf55a0065.json",
+      "assets": [],
+      "post_ids": [
+        868432
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/868442?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 15297,
+      "sha256": "3400965d97ed5d6345a2be4a36c944ddb2dd3f6327fcb0b409b083d34450998b",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/3400965d97ed5d6345a2be4a36c944ddb2dd3f6327fcb0b409b083d34450998b.json",
+      "assets": [],
+      "post_ids": [
+        868442
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/868442&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5763,
+      "sha256": "b5ea948188b766bebdcdf47404bf449985bf94e80627d5dd7f2a9787ae7500bd",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/b5ea948188b766bebdcdf47404bf449985bf94e80627d5dd7f2a9787ae7500bd.json",
+      "assets": [],
+      "post_ids": [
+        868442
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/868469?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 18706,
+      "sha256": "73ff0d5ac5d5b1628c553971167832e57c2b02bd437f465712e4950206b3271e",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/73ff0d5ac5d5b1628c553971167832e57c2b02bd437f465712e4950206b3271e.json",
+      "assets": [],
+      "post_ids": [
+        868469
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/868469&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5763,
+      "sha256": "af579389db3996c859a4b768e66e148f87f38069c8b82a0c0938700160b6d9a4",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/af579389db3996c859a4b768e66e148f87f38069c8b82a0c0938700160b6d9a4.json",
+      "assets": [],
+      "post_ids": [
+        868469
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/868599?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 19236,
+      "sha256": "1e5280b6ce126882e4e1b9e7042e1dbb6853274de08878af12a6cc651ca42774",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/1e5280b6ce126882e4e1b9e7042e1dbb6853274de08878af12a6cc651ca42774.json",
+      "assets": [],
+      "post_ids": [
+        868599
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/868599&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5763,
+      "sha256": "f923b163396f362f0294d321dc2ef47e601d865d8e3ed9c54553da22adb866e7",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/f923b163396f362f0294d321dc2ef47e601d865d8e3ed9c54553da22adb866e7.json",
+      "assets": [],
+      "post_ids": [
+        868599
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1081121?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 404,
+      "bytes": 107,
+      "sha256": "346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a.json",
+      "assets": [],
+      "post_ids": [
+        1081121
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/1081121&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5766,
+      "sha256": "429ff71236b77edd69421426554b8d0c611ca8883d8057d2303a21414d49be60",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/429ff71236b77edd69421426554b8d0c611ca8883d8057d2303a21414d49be60.json",
+      "assets": [],
+      "post_ids": [
+        1081121
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1086662?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 18412,
+      "sha256": "6295ace710b0aa232d0f21307ee8446500b0ac6666556f33abdd8d510b420591",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/6295ace710b0aa232d0f21307ee8446500b0ac6666556f33abdd8d510b420591.json",
+      "assets": [],
+      "post_ids": [
+        1086662
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/1086662&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5766,
+      "sha256": "82d9c5b5373d2ce2963e3bc55379be5bfa9a7e45be151ac03dad4d281f4858a8",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/82d9c5b5373d2ce2963e3bc55379be5bfa9a7e45be151ac03dad4d281f4858a8.json",
+      "assets": [],
+      "post_ids": [
+        1086662
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1086715?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 19694,
+      "sha256": "9c8d7360740532baef0f5b64ab8b48f2e6e87d8056de11f69998ad2ff47474f9",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/9c8d7360740532baef0f5b64ab8b48f2e6e87d8056de11f69998ad2ff47474f9.json",
+      "assets": [],
+      "post_ids": [
+        1086715
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/1086715&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5766,
+      "sha256": "422e6a482568bef8e83cf1482676409bee1596c3eb5677f9b6075a054f152ea1",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/422e6a482568bef8e83cf1482676409bee1596c3eb5677f9b6075a054f152ea1.json",
+      "assets": [],
+      "post_ids": [
+        1086715
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1087167?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 404,
+      "bytes": 107,
+      "sha256": "346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a.json",
+      "assets": [],
+      "post_ids": [
+        1087167
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/1087167&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5766,
+      "sha256": "da7f9babe995a87635c3a9b6598d2e58ddb3884f7cb0b85644be60f8a585457a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/da7f9babe995a87635c3a9b6598d2e58ddb3884f7cb0b85644be60f8a585457a.json",
+      "assets": [],
+      "post_ids": [
+        1087167
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1087506?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 18263,
+      "sha256": "59188af21399d223985ca4d2e7cbcf751945523d6446c8c081b4908494f102d1",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/59188af21399d223985ca4d2e7cbcf751945523d6446c8c081b4908494f102d1.json",
+      "assets": [],
+      "post_ids": [
+        1087506
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/1087506&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5766,
+      "sha256": "85305f20bf08148f957f31ddd56ad54bcdf5d223d5f8c0e64f3a99f49e24afab",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/85305f20bf08148f957f31ddd56ad54bcdf5d223d5f8c0e64f3a99f49e24afab.json",
+      "assets": [],
+      "post_ids": [
+        1087506
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1087809?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 404,
+      "bytes": 107,
+      "sha256": "346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a.json",
+      "assets": [],
+      "post_ids": [
+        1087809
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/1087809&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5766,
+      "sha256": "814df8a461e859c51d5503a68f0d84dc48bffe78c0ea1e6f039f50b73d8873d4",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/814df8a461e859c51d5503a68f0d84dc48bffe78c0ea1e6f039f50b73d8873d4.json",
+      "assets": [],
+      "post_ids": [
+        1087809
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1087834?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 20715,
+      "sha256": "c399b7529352f86086ded8d6e5e2bb410413d220d000501602b7d069efa0f8c8",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/c399b7529352f86086ded8d6e5e2bb410413d220d000501602b7d069efa0f8c8.json",
+      "assets": [],
+      "post_ids": [
+        1087834
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/1087834&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5766,
+      "sha256": "ac2a5306ceb4337cd04afe3fd290e494089516534108994fa032d11320ecb183",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/ac2a5306ceb4337cd04afe3fd290e494089516534108994fa032d11320ecb183.json",
+      "assets": [],
+      "post_ids": [
+        1087834
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1088124?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 404,
+      "bytes": 107,
+      "sha256": "346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a.json",
+      "assets": [],
+      "post_ids": [
+        1088124
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/1088124&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5766,
+      "sha256": "61dbd4391a93fc4c1fb84bd73892f7f49917941eb727e0b9e0af89e95864da3f",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/61dbd4391a93fc4c1fb84bd73892f7f49917941eb727e0b9e0af89e95864da3f.json",
+      "assets": [],
+      "post_ids": [
+        1088124
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1088868?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 404,
+      "bytes": 107,
+      "sha256": "346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a.json",
+      "assets": [],
+      "post_ids": [
+        1088868
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/1088868&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5766,
+      "sha256": "0fa8e6be6d95176ed21df7c70ad2c2b754e4d66a6ae47f5ee2b77c35a0ffe3d3",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/0fa8e6be6d95176ed21df7c70ad2c2b754e4d66a6ae47f5ee2b77c35a0ffe3d3.json",
+      "assets": [],
+      "post_ids": [
+        1088868
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1088871?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 404,
+      "bytes": 107,
+      "sha256": "346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a.json",
+      "assets": [],
+      "post_ids": [
+        1088871
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/1088871&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5766,
+      "sha256": "8c552d9c900d3b493f0c90697e90feebdca5c661694dd066e903c7e1529d4435",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/8c552d9c900d3b493f0c90697e90feebdca5c661694dd066e903c7e1529d4435.json",
+      "assets": [],
+      "post_ids": [
+        1088871
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1089995?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 19270,
+      "sha256": "dcf8a06ef2764a844f7ff1a5bddfa66cf9dbda65d2d7e90fbfefa3d8442fbbc8",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/dcf8a06ef2764a844f7ff1a5bddfa66cf9dbda65d2d7e90fbfefa3d8442fbbc8.json",
+      "assets": [],
+      "post_ids": [
+        1089995
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/1089995&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5766,
+      "sha256": "84e25169a1c0f6c76814274b2409181ff1aab79156ace660baa9e9145bc8c51c",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/84e25169a1c0f6c76814274b2409181ff1aab79156ace660baa9e9145bc8c51c.json",
+      "assets": [],
+      "post_ids": [
+        1089995
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1090439?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 18295,
+      "sha256": "2a78392c3795a2bafd5b7e599f95ab5dcb7140ffb2dff128544d76228396af6f",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/2a78392c3795a2bafd5b7e599f95ab5dcb7140ffb2dff128544d76228396af6f.json",
+      "assets": [],
+      "post_ids": [
+        1090439
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/1090439&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5766,
+      "sha256": "1dc273155a5913759bf1129b3cd7ea1624ba01118669e335be78de994ee4d872",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/1dc273155a5913759bf1129b3cd7ea1624ba01118669e335be78de994ee4d872.json",
+      "assets": [],
+      "post_ids": [
+        1090439
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1095584?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 18536,
+      "sha256": "73b784b80906c6d955d9e5c2d42d81eccbb9650270a48c6102af9a012037cb4a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/73b784b80906c6d955d9e5c2d42d81eccbb9650270a48c6102af9a012037cb4a.json",
+      "assets": [],
+      "post_ids": [
+        1095584
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/?rest_route=/wp/v2/posts/1095584&context=view",
+      "origin": "WP_POST_BY_ID_ROUTE",
+      "status": 403,
+      "bytes": 5766,
+      "sha256": "0ee8a5c581f29e342334ce3b6c4c7dea5b36ec31ffbda1e6d38a47f54109ba5b",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32074679390_1/current_discovery_only/0ee8a5c581f29e342334ce3b6c4c7dea5b36ec31ffbda1e6d38a47f54109ba5b.json",
+      "assets": [],
+      "post_ids": [
+        1095584
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    }
+  ],
+  "discovered_asset_urls": [],
+  "archive_rows": [],
+  "admissible_precutoff_snapshot_count": 0,
+  "admissible_precutoff_assets": [],
+  "predictive_judgments_generated": false,
+  "forecast_delta_generated": false,
+  "F1_created": false
+}
