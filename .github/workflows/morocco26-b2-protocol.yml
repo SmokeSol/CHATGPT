@@ -1,0 +1,63 @@
+name: morocco26-b2-protocol
+
+on:
+  push:
+    branches: [morocco26-b2]
+    paths:
+      - 'morocco26/data/goal100/b2_protocol_v1.json'
+      - 'morocco26/data/goal100/b2_evidence_schema_v1.json'
+      - 'morocco26/data/goal100/b2_feature_dictionary_v1.json'
+      - 'morocco26/data/goal100/b2_gate_registry.json'
+      - 'morocco26/data/goal100/b2_source_registry.json'
+      - 'morocco26/data/goal100/b2_current_state.json'
+      - 'morocco26/data/goal100/fil_ariane_events/A018.json'
+      - 'morocco26/scripts/goal100_append_b2_ariane.py'
+      - 'morocco26/scripts/validate_b2_protocol.py'
+      - '.github/workflows/morocco26-b2-protocol.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-b2-protocol-freeze
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  certify-protocol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-b2
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile B2 protocol validators
+        run: |
+          python -m py_compile \
+            morocco26/scripts/goal100_append_b2_ariane.py \
+            morocco26/scripts/validate_b2_protocol.py
+
+      - name: Append A018 to the canonical Ariane journal
+        run: python morocco26/scripts/goal100_append_b2_ariane.py
+
+      - name: Validate frozen B2 protocol and zero-coefficient boundary
+        run: python morocco26/scripts/validate_b2_protocol.py
+
+      - name: Preserve registered F-1 and Goal75 anti-drift invariants
+        run: |
+          python morocco26/scripts/validate_goal100_tracking.py
+          python morocco26/scripts/validate_anti_drift.py
+
+      - name: Commit the append-only journal transition
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add morocco26/FIL_ARIANE.md
+          git commit -m 'tracking(morocco26): record frozen B2 protocol in FIL_ARIANE' || true
+          git pull --rebase origin morocco26-b2
+          git push origin HEAD:morocco26-b2
