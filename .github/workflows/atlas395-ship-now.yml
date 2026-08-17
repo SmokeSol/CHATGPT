@@ -1,0 +1,89 @@
+name: Atlas 395 — Ship complete app now
+
+on:
+  push:
+    branches: [atlas395-v0]
+    paths:
+      - '.github/workflows/atlas395-ship-now.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout complete Atlas branch
+        uses: actions/checkout@v4
+
+      - name: Verify full app before publishing
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f morocco26/web/index.html
+          test -f morocco26/web/styles.css
+          test -f morocco26/web/app.js
+          test -f morocco26/web/assets/core.js
+          test -f morocco26/web/assets/methodology.css
+          test -f morocco26/web/data/current_snapshot.json
+          grep -q 'view-overview' morocco26/web/index.html
+          grep -q 'view-methodology' morocco26/web/index.html
+          grep -q 'view-territories' morocco26/web/index.html
+          grep -q 'view-parties' morocco26/web/index.html
+          grep -q 'view-signals' morocco26/web/index.html
+          grep -q 'view-history' morocco26/web/index.html
+          grep -q "\['methodology','Méthodologie'" morocco26/web/assets/core.js
+
+      - name: Package full reader app
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd morocco26/web
+          zip -qr /tmp/atlas395-full.zip . -x 'githack.html' 'githack.js' 'githack.css'
+          echo "FILES=$(unzip -Z1 /tmp/atlas395-full.zip | wc -l)"
+          du -h /tmp/atlas395-full.zip
+
+      - name: Publish full app
+        id: ship
+        shell: bash
+        run: |
+          set -euo pipefail
+          response=$(curl -fsS -X POST 'https://ship.page/deploy?ttl=604800' \
+            -H 'Content-Type: application/zip' \
+            --data-binary @/tmp/atlas395-full.zip)
+          echo "$response"
+          url=$(python -c 'import json,sys; print(json.load(sys.stdin)["url"])' <<<"$response")
+          test -n "$url"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "ATLAS_URL=$url" >> "$GITHUB_ENV"
+          echo "## Atlas 395 complet" >> "$GITHUB_STEP_SUMMARY"
+          echo "$url" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Verify published files
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --max-time 20 "$ATLAS_URL" -o /tmp/live-index.html
+          curl -fsSL --max-time 20 "${ATLAS_URL}assets/core.js" -o /tmp/live-core.js
+          curl -fsSL --max-time 20 "${ATLAS_URL}data/current_snapshot.json" -o /tmp/live-snapshot.json
+          grep -q 'view-overview' /tmp/live-index.html
+          grep -q 'view-methodology' /tmp/live-index.html
+          grep -q "\['methodology','Méthodologie'" /tmp/live-core.js
+
+      - name: Verify rendered full Atlas in Chrome
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=12000 --dump-dom "$ATLAS_URL" > /tmp/live-dom.html
+          grep -Fq 'Synthèse nationale' /tmp/live-dom.html
+          grep -Fq 'Méthodologie' /tmp/live-dom.html
+          grep -Fq 'Carte territoriale' /tmp/live-dom.html
+          grep -Fq 'Partis' /tmp/live-dom.html
+          grep -Fq 'Signaux 2026' /tmp/live-dom.html
+          grep -Fq 'Historique' /tmp/live-dom.html
+          grep -Fq 'class="kpi hi"' /tmp/live-dom.html
+          ! grep -Fq 'Atlas 395 ne peut pas charger les données' /tmp/live-dom.html
+          ! grep -Fq 'Atlas 395 ne peut pas initialiser cette édition' /tmp/live-dom.html
+          echo "VERIFIED_FULL_ATLAS_URL=$ATLAS_URL"
