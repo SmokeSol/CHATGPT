@@ -1,0 +1,77 @@
+name: morocco26-e-collect-medias24-db
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - morocco26-e-collect
+    paths:
+      - 'morocco26/scripts/e_collect_medias24_db_extract.py'
+      - '.github/workflows/morocco26-e-collect-medias24-db.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: morocco26-e-collect-medias24-db
+  cancel-in-progress: false
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout collection branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: morocco26-e-collect
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate protected scientific state before extraction
+        run: python morocco26/scripts/validate_e_collect_prereg.py
+
+      - name: Install acquisition dependency
+        run: python -m pip install --disable-pip-version-check requests==2.32.4
+
+      - name: Acquire and extract the Médias24 2026 SQLite database
+        env:
+          E_COLLECT_RUN_ID: medias24_db_${{ github.run_id }}_${{ github.run_attempt }}
+        run: python morocco26/scripts/e_collect_medias24_db_extract.py
+
+      - name: Revalidate protected scientific state
+        run: python morocco26/scripts/validate_e_collect_prereg.py
+
+      - name: Validate generated Atlas evidence snapshot
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          latest = json.loads(Path('morocco26/data/goal100/e_collect/medias24_db_latest.json').read_text(encoding='utf-8'))
+          manifest = json.loads(Path(latest['latest_run_manifest']).read_text(encoding='utf-8'))
+          snapshot = json.loads(Path(latest['atlas_snapshot']).read_text(encoding='utf-8'))
+          print(json.dumps(manifest, indent=2, ensure_ascii=False))
+          assert snapshot['forecast']['immutable'] is True
+          assert snapshot['forecast']['candidate_signal_impact'] == 'NOT_CALIBRATED'
+          assert manifest['counts']['candidates'] >= 0
+          assert manifest['integrity']['forecast_effect_authorized'] is False
+          PY
+
+      - name: Commit append-only database evidence and Atlas preview
+        run: |
+          if git diff --quiet -- morocco26/data/goal100/e_collect morocco26/data/atlas_v1 && \
+             [ -z "$(git ls-files --others --exclude-standard morocco26/data/goal100/e_collect morocco26/data/atlas_v1)" ]; then
+            echo 'No new extraction artifacts to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/e_collect/runs \
+                  morocco26/data/goal100/e_collect/medias24_db_latest.json \
+                  morocco26/data/atlas_v1/medias24_2026_snapshot.json
+          git commit -m 'experiment(e-collect): extract Médias24 2026 candidate database [skip e-collect-db]'
+          git push origin HEAD:morocco26-e-collect
