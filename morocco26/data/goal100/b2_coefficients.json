@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "M26-GOAL100-B2-COEFFICIENTS-FROZEN-V1",
+  "frozen_at": "2026-08-17T16:14:58+01:00",
+  "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "feature_dictionary_id": "M26-GOAL100-B2-FEATURE-DICTIONARY-V1",
+  "parent_snapshot": {
+    "snapshot_id": "F-1",
+    "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1"
+  },
+  "calibration_terminal_state": "FAIL_CLOSED_PRE_FIT_COVERAGE_BELOW_THRESHOLD",
+  "historical_coverage": {
+    "2011_TO_2016": 0.0,
+    "2016_TO_2021": 0.0,
+    "required_each_transition": 0.8
+  },
+  "fit_executed": false,
+  "fit_reason": "Frozen coverage gate failed before any ridge fit. The protocol failure rule therefore fixes every predictive coefficient at exactly zero; no hand-set sign or magnitude is permitted.",
+  "mechanical_features": {
+    "B2_M01_BALLOT_LIST_PRESENT": "NOT_APPLICABLE_NO_VERIFIED_2026_MECHANICAL_EVIDENCE",
+    "B2_M02_CANDIDATE_REGISTERED_RANK": "NOT_APPLICABLE_NO_VERIFIED_2026_MECHANICAL_EVIDENCE",
+    "B2_M03_CANDIDATE_BIRTHDATE": "NOT_APPLICABLE_NO_VERIFIED_2026_MECHANICAL_EVIDENCE",
+    "B2_M04_CANDIDATE_WITHDRAWN_OR_DISQUALIFIED": "NOT_APPLICABLE_NO_VERIFIED_2026_MECHANICAL_EVIDENCE",
+    "B2_M05_FORMAL_LIST_ALLIANCE": "NOT_APPLICABLE_NO_VERIFIED_2026_MECHANICAL_EVIDENCE"
+  },
+  "predictive_coefficients": {
+    "B2_P01_INCUMBENT_SAME_PARTY_SAME_DISTRICT": 0.0,
+    "B2_P02_INCUMBENT_SAME_PARTY_MOVED_DISTRICT": 0.0,
+    "B2_P03_INCUMBENT_PARTY_SWITCH_IN": 0.0,
+    "B2_P04_INCUMBENT_PARTY_SWITCH_OUT": 0.0,
+    "B2_P05_LOCAL_EXECUTIVE_OFFICE": 0.0,
+    "B2_P06_NATIONAL_OR_REGIONAL_PARTY_OFFICE": 0.0,
+    "B2_P07_FORMAL_ENDORSEMENT": 0.0,
+    "B2_P08_FORMAL_DEFECTION": 0.0
+  },
+  "reporting_only_coefficients": {
+    "B2_R01_CAMPAIGN_LAUNCH_REPORTED": 0.0,
+    "B2_R02_OFFICIAL_SANCTION_OR_INVESTIGATION": 0.0,
+    "B2_R03_VERIFIED_DEATH_OR_INCAPACITY": 0.0
+  },
+  "all_numeric_coefficients_exactly_zero": true,
+  "effect_cap_state": "NOT_ESTIMATED_BECAUSE_CALIBRATION_GATE_FAILED",
+  "promotion_state": "NO_FEATURE_PROMOTED",
+  "agentic_input_used": false,
+  "llm_semantic_evidence_used": false
+}

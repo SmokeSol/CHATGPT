@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "state_id": "M26-GOAL100-B2-CURRENT-V1",
-  "as_of": "2026-08-17T11:50:58+01:00",
-  "phase": "B2_IDENTITY_TERRITORY_CERTIFIED_HISTORICAL_PANEL_PENDING",
+  "as_of": "2026-08-17T16:14:58+01:00",
+  "phase": "B2_FROZEN_NEGATIVE_RESULT_F0_PENDING",
   "parent_snapshot": {
     "snapshot_id": "F-1",
     "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
@@ -16,35 +16,37 @@
     "feature_dictionary": "morocco26/data/goal100/b2_feature_dictionary_v1.json"
   },
   "collection": {
-    "status": "ENABLED_BOUNDED",
-    "reason": "B2-1 source universe smoke test PASS; only ACTIVE allowlisted routes may create candidate records.",
+    "status": "FROZEN",
+    "evidence_cutoff": "2026-08-17T16:14:58+01:00",
     "evidence_records": 0,
     "admissible_records": 0,
     "conflicted_records": 0,
-    "evidence_cutoff": null,
     "source_universe_sha256": "8aa331e941ab892997b68a04b91b5b2147c9561f717a3ca976122dbb1ba44d32",
-    "active_sources": 11,
-    "reference_only_sources": 5,
-    "inactive_sources": 3
+    "termination_state": "B2_3_DATA_BLOCKED_NONAGENTIC",
+    "unresolved_historical_input_classes": 16,
+    "unresolved_arabic_roster_rows": 92
   },
   "coefficients": {
-    "mechanical": "NOT_APPLICABLE",
-    "predictive": "ALL_EXACTLY_ZERO_PENDING_HISTORICAL_CALIBRATION",
-    "reporting_only": "ZERO"
+    "mechanical": "NOT_APPLICABLE_NO_VERIFIED_CONSTRAINTS",
+    "predictive": "ALL_EXACTLY_ZERO_FINAL_B2",
+    "reporting_only": "ALL_EXACTLY_ZERO",
+    "artifact": "morocco26/data/goal100/b2_coefficients.json",
+    "sha256": "018ed64fc2c058aec4458d63e592cdef4d17549ceb7ea874d69b9c7666dee092"
   },
   "gates": {
     "closed": [
       "B2-0-PROTOCOL-FROZEN",
       "B2-1-SOURCE-UNIVERSE-FROZEN",
-      "B2-2-IDENTITY-TERRITORY-CROSSWALK"
-    ],
-    "open": [
-      "B2-3-HISTORICAL-FEATURE-PANEL",
-      "B2-4-2026-BALLOT-ROSTER",
+      "B2-2-IDENTITY-TERRITORY-CROSSWALK",
       "B2-5-PROVENANCE-CONFLICT-AUDIT",
-      "B2-6-EFFECT-CALIBRATION",
       "B2-7-B2-FROZEN"
     ],
+    "failed": [
+      "B2-3-HISTORICAL-FEATURE-PANEL",
+      "B2-4-2026-BALLOT-ROSTER",
+      "B2-6-EFFECT-CALIBRATION"
+    ],
+    "open": [],
     "locked": [
       "B2-8-F0-COUNTERFACTUAL-SIMULATION",
       "E-COLLECT-PREREGISTERED",
@@ -54,36 +56,23 @@
   },
   "anti_drift": {
     "F_minus_1_hash_must_match": true,
-    "collection_before_source_freeze_forbidden": true,
     "predictive_shift_before_calibration_forbidden": true,
     "polls_excluded_in_V1": true,
     "LLM_semantic_evidence_forbidden": true,
     "agentic_experiment_locked": true,
     "missing_never_silently_zero": true,
-    "conflicts_never_silently_resolved": true
-  },
-  "next_action_exact": "Close B2-3 by ingesting the published blocking historical input classes under a versioned pipeline, or freeze the negative result; either way every predictive coefficient stays exactly zero and B2-4/B2-6 remain unmoved.",
-  "identity_crosswalk": {
-    "status": "CERTIFIED",
-    "certificate": "morocco26/data/goal100/b2_identity_territory_certificate.json",
-    "crosswalk": "morocco26/data/goal100/b2_identity_crosswalk.json",
-    "crosswalk_sha256": "1d3a7b7973fc1426025d522de8ca26cd6fa3e0a5f02d3623d0e93ec1fba13b85",
-    "local_territories": 92,
-    "regional_territories": 12,
-    "party_codes": 37,
-    "historical_list_ids": 4796,
-    "elected_member_rows": 395,
-    "normalized_name_collision_groups": 0,
-    "unreviewed_fuzzy_matches": 0,
-    "legacy_2026_candidate_records_admitted": 0
+    "conflicts_never_silently_resolved": true,
+    "arabic_unresolved_rows_never_guessed": true
   },
   "historical_panel": {
-    "status": "ATTEMPTED_NOT_IDENTIFIABLE",
-    "certificate": "morocco26/data/goal100/b2_historical_panel_certificate.json",
+    "status": "FAILED_DATA_BLOCKED_NONAGENTIC",
     "panel": "morocco26/data/goal100/b2_historical_panel.json",
     "panel_sha256": "3b8e7150b026c9c9fc35c7cd1eb66bd56437342f1879ade41e1aae69e95570a2",
-    "mechanical_sub_panel": "FAIL",
-    "predictive_sub_panel": "FAIL",
+    "core_predictive_coverage": {
+      "2011_TO_2016": 0.0,
+      "2016_TO_2021": 0.0,
+      "required": 0.8
+    },
     "blocking_missing_input_classes": [
       "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
       "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
@@ -104,14 +93,26 @@
     ]
   },
   "ballot_roster_2026": {
-    "status": "ATTEMPTED_NOT_VERIFIED",
+    "status": "FAILED_NOT_VERIFIED",
     "certificate": "morocco26/data/goal100/b2_2026_ballot_certificate.json",
     "roster_sha256": "b702b92929f7271c0309c0e3a8d4336b6e1bd79ee87a222b0cf834bc37c767ac",
     "rows_parsed": 92,
     "verified_double_entry_rows": 0,
     "territory_coverage_fraction": 0.0,
-    "parties_covered": [
-      "PJD"
-    ]
-  }
+    "blocking_state": "AMBIGUOUS_DETERMINISTIC_MATCH"
+  },
+  "freeze": {
+    "status": "FROZEN_NEGATIVE_RESULT",
+    "certificate": "morocco26/data/goal100/b2_freeze_certificate.json",
+    "certificate_sha256": "eab248d63051643600d0b2220f269b587302c4631fe24a7760fd971277fd88e1",
+    "provenance_audit_sha256": "19fa18b0c72bdb3060b2f73e6a2df90bb819ded8dae3a14ae9928a52eb90285a",
+    "effect_calibration_sha256": "0cfde9d2ad5876b93263acd3a09d997e382ad759b8c828db53e384748ad25c11"
+  },
+  "agentic": {
+    "status": "LOCKED",
+    "e_collect_executed": false,
+    "reserved_input_classes": 16,
+    "reserved_arabic_rows": 92
+  },
+  "next_action_exact": "Generate F0 as the append-only counterfactual application of frozen B2 to F-1. Because B2 admits zero mechanical constraints and zero predictive coefficients, F0 must be exactly distribution-equivalent to F-1 and must be registered before agentic experiments unlock."
 }

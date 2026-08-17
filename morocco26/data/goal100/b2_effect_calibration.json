@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "M26-GOAL100-B2-EFFECT-CALIBRATION-V1",
+  "evaluated_at": "2026-08-17T16:14:58+01:00",
+  "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "gate_id": "B2-6-EFFECT-CALIBRATION",
+  "terminal_result": "FAIL_CLOSED_ZERO_COEFFICIENTS",
+  "fit_transition": "2011_TO_2016",
+  "validation_transition": "2016_TO_2021",
+  "frozen_regularization_grid": [0.1, 0.3, 1.0, 3.0, 10.0, 30.0, 100.0],
+  "coverage": {
+    "2011_TO_2016": 0.0,
+    "2016_TO_2021": 0.0,
+    "minimum_required_each_transition": 0.8,
+    "gate_pass": false
+  },
+  "support_gate": "NOT_REACHED_BECAUSE_CORE_COVERAGE_FAILED",
+  "ridge_fit_executed": false,
+  "validation_scores_computed": false,
+  "promotion_rule_evaluated": "FAIL_PRECONDITION",
+  "failure_rule_applied": "If calibration, support or coverage fails, predictive coefficients remain exactly zero and no narrative or hand-set vote shift is substituted.",
+  "coefficient_artifact": {
+    "path": "morocco26/data/goal100/b2_coefficients.json",
+    "sha256": "018ed64fc2c058aec4458d63e592cdef4d17549ceb7ea874d69b9c7666dee092"
+  },
+  "all_predictive_coefficients_exactly_zero": true,
+  "mechanical_constraints_eligible": 0,
+  "mechanical_constraints_applied": 0,
+  "reason_mechanical": "B2-4 failed authoritative full-coverage roster verification; missingness therefore remains NA and no ballot/list/rank/birthdate mechanical constraint is admitted.",
+  "effect_cap": "NOT_ESTIMATED",
+  "proper_score_claim": "NOT_ESTIMATED_NO_FIT",
+  "forecast_shift_authorized": false,
+  "agentic_input_used": false,
+  "scientific_conclusion": "B2 provides no calibrated predictive residual and no verified mechanical constraint for F0 under the frozen V1 rules. F0 must therefore be distributionally identical to F-1, while preserving the negative B2 result as a falsifiable baseline."
+}

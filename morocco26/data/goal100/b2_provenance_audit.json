@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "M26-GOAL100-B2-PROVENANCE-CONFLICT-AUDIT-V1",
+  "audited_at": "2026-08-17T16:14:58+01:00",
+  "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "gate_id": "B2-5-PROVENANCE-CONFLICT-AUDIT",
+  "result": "PASS_EMPTY_ADMISSIBLE_SET",
+  "scope": "ADMISSIBLE_B2_CLAIMS_ONLY",
+  "parent_snapshot": {
+    "snapshot_id": "F-1",
+    "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1"
+  },
+  "inputs": {
+    "outcome_certificate": {
+      "path": "morocco26/data/goal100/b2_v1_1_outcome_certificate.json",
+      "canonical_sha256": "f75b82dc7c0dbc4e430e137f6c2cd80f081f805858d53d0d51bba8008aefd02a"
+    },
+    "historical_panel": {
+      "path": "morocco26/data/goal100/b2_historical_panel.json",
+      "sha256": "3b8e7150b026c9c9fc35c7cd1eb66bd56437342f1879ade41e1aae69e95570a2"
+    },
+    "ballot_roster": {
+      "path": "morocco26/data/goal100/b2_2026_ballot_roster.json",
+      "sha256": "b702b92929f7271c0309c0e3a8d4336b6e1bd79ee87a222b0cf834bc37c767ac"
+    },
+    "source_universe_sha256": "8aa331e941ab892997b68a04b91b5b2147c9561f717a3ca976122dbb1ba44d32",
+    "historical_source_surface_sha256": "e0fe3585d24ca50fe023b1d7747ae2dba4f0be946dbe86b6a56e33caebf158df",
+    "historical_acquisition_manifest_sha256": "9dbd24e560a3565289557d83e62eba744b916579523d46752bc4a802ef05a43f"
+  },
+  "counts": {
+    "admissible_claim_records": 0,
+    "verified_2026_double_entry_rows": 0,
+    "historical_identifiable_feature_classes_fit_transition": 0,
+    "historical_identifiable_feature_classes_validation_transition": 0,
+    "unresolved_b2_4_rows_preserved": 92,
+    "reserved_historical_input_classes_preserved": 16,
+    "silent_conflicts_bridged": 0,
+    "post_cutoff_claims_admitted": 0
+  },
+  "admissible_claim_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "checks": {
+    "source_tier": "PASS_VACUOUS_ZERO_ADMISSIBLE_CLAIMS",
+    "publication_timestamp": "PASS_VACUOUS_ZERO_ADMISSIBLE_CLAIMS",
+    "first_observed_timestamp": "PASS_VACUOUS_ZERO_ADMISSIBLE_CLAIMS",
+    "content_hash": "PASS_VACUOUS_ZERO_ADMISSIBLE_CLAIMS",
+    "territory_identity": "PASS_VACUOUS_ZERO_ADMISSIBLE_CLAIMS",
+    "candidate_party_identity": "PASS_VACUOUS_ZERO_ADMISSIBLE_CLAIMS",
+    "deduplication": "PASS_VACUOUS_ZERO_ADMISSIBLE_CLAIMS",
+    "conflict_rule": "PASS_ZERO_SILENT_CONFLICTS",
+    "missingness_not_zero": "PASS",
+    "unresolved_arabic_rows_not_guessed": "PASS",
+    "agentic_semantic_resolution_used": false,
+    "llm_used": false
+  },
+  "interpretation": "This audit passes because no claim reached the admissible B2 set. It does not convert unresolved or missing evidence into absence. The 16 blocked historical input classes and 92 unresolved Arabic roster rows remain explicit and reserved for later E_collect evaluation.",
+  "gate_closure": "B2-5 may close. This is an integrity result, not evidence that B2-3 or B2-4 succeeded."
+}

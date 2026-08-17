@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "registry_id": "M26-GOAL100-B2-GATES-V1",
-  "as_of": "2026-08-17T11:50:58+01:00",
+  "as_of": "2026-08-17T16:14:58+01:00",
   "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
   "status_vocabulary": [
     "CLOSED",
@@ -10,6 +10,7 @@
     "FAILED"
   ],
   "rule": "A B2 gate closes only from a machine-verifiable artifact satisfying its frozen criterion. Missingness, prose quality or forecast movement never closes a gate.",
+  "terminal_policy": "A preregistered failure branch may be recorded as FAILED and frozen without weakening its original closure criterion. B2-7 may close on a fully hashed negative B2 result; failed upstream gates remain visibly FAILED rather than relabelled CLOSED.",
   "gates": [
     {
       "id": "B2-0-PROTOCOL-FROZEN",
@@ -37,91 +38,101 @@
     },
     {
       "id": "B2-3-HISTORICAL-FEATURE-PANEL",
-      "status": "OPEN",
+      "status": "FAILED",
       "required_artifact": "morocco26/data/goal100/b2_historical_panel_certificate.json",
       "closure_criterion": "Same-cutoff candidate/list feature panel covers at least 80% of 92 local territories in both 2011->2016 and 2016->2021; feature support counts are published.",
-      "last_attempt": {
-        "certified_at": "2026-08-17T11:50:58+01:00",
-        "result": "FAIL",
-        "certificate": "morocco26/data/goal100/b2_historical_panel_certificate.json",
-        "panel_sha256": "3b8e7150b026c9c9fc35c7cd1eb66bd56437342f1879ade41e1aae69e95570a2",
-        "blocking_missing_input_classes": [
-          "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
-          "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
-          "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
-          "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
-          "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
-          "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
-          "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
-          "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
-          "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
-          "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
-          "HISTORICAL_LIST_REJECTION_TARGET_YEAR",
-          "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
-          "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
-          "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR",
-          "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
-          "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
-        ]
-      }
+      "terminal_result": "B2_3_DATA_BLOCKED_NONAGENTIC",
+      "terminal_evidence": "morocco26/data/goal100/b2_v1_1_outcome_certificate.json",
+      "coverage": {
+        "2011_TO_2016": 0.0,
+        "2016_TO_2021": 0.0,
+        "required": 0.8
+      },
+      "blocking_input_classes": [
+        "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
+        "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
+        "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
+        "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+        "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
+        "HISTORICAL_LIST_REJECTION_TARGET_YEAR",
+        "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
+        "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+        "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR",
+        "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
+        "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+      ]
     },
     {
       "id": "B2-4-2026-BALLOT-ROSTER",
-      "status": "OPEN",
+      "status": "FAILED",
       "required_artifact": "morocco26/data/goal100/b2_2026_ballot_certificate.json",
       "closure_criterion": "Authoritative coverage of all 92 local and 12 regional contests, with list presence, candidates/ranks and effective withdrawals/disqualifications; missing official coverage remains explicit.",
+      "terminal_result": "B2_4_FAIL",
       "last_attempt": {
-        "certified_at": "2026-08-17T11:17:35+01:00",
-        "result": "FAIL",
-        "certificate": "morocco26/data/goal100/b2_2026_ballot_certificate.json",
-        "roster_sha256": "b702b92929f7271c0309c0e3a8d4336b6e1bd79ee87a222b0cf834bc37c767ac",
         "rows_parsed": 92,
         "verified_double_entry_rows": 0,
-        "territory_coverage_fraction": 0.0
-      }
+        "territory_coverage_fraction": 0.0,
+        "blocking_state": "AMBIGUOUS_DETERMINISTIC_MATCH"
+      },
+      "terminal_evidence": "morocco26/data/goal100/b2_v1_1_outcome_certificate.json"
     },
     {
       "id": "B2-5-PROVENANCE-CONFLICT-AUDIT",
-      "status": "OPEN",
+      "status": "CLOSED",
       "required_artifact": "morocco26/data/goal100/b2_provenance_audit.json",
-      "closure_criterion": "Every admissible claim passes source tier, timestamp, content hash, territory/identity, deduplication and conflict rules; zero silently bridged conflicts."
+      "closure_criterion": "Every admissible claim passes source tier, timestamp, content hash, territory/identity, deduplication and conflict rules; zero silently bridged conflicts.",
+      "result": "PASS_EMPTY_ADMISSIBLE_SET",
+      "admissible_claim_records": 0,
+      "silent_conflicts_bridged": 0
     },
     {
       "id": "B2-6-EFFECT-CALIBRATION",
-      "status": "OPEN",
+      "status": "FAILED",
       "required_artifact": "morocco26/data/goal100/b2_effect_calibration.json",
-      "closure_criterion": "Frozen ridge grid is fit on 2011->2016 and validated on 2016->2021; promoted features satisfy support/coverage and proper-score rules; all failed features remain coefficient zero."
+      "closure_criterion": "Frozen ridge grid is fit on 2011->2016 and validated on 2016->2021; promoted features satisfy support/coverage and proper-score rules; all failed features remain coefficient zero.",
+      "terminal_result": "FAIL_CLOSED_ZERO_COEFFICIENTS",
+      "fit_executed": false,
+      "coefficient_artifact": "morocco26/data/goal100/b2_coefficients.json",
+      "reason": "The frozen 80% coverage precondition failed in both transitions, so the protocol failure rule forbids fitting or hand-setting predictive effects."
     },
     {
       "id": "B2-7-B2-FROZEN",
-      "status": "OPEN",
+      "status": "CLOSED",
       "required_artifact": "morocco26/data/goal100/b2_freeze_certificate.json",
-      "closure_criterion": "One exact evidence cutoff, append-only evidence hash, source-registry hash, feature matrix hash, coefficient hash and admissibility audit are frozen."
+      "closure_criterion": "One exact evidence cutoff, append-only evidence hash, source-registry hash, feature matrix hash, coefficient hash and admissibility audit are frozen.",
+      "result": "PASS_NEGATIVE_RESULT_FROZEN",
+      "evidence_cutoff": "2026-08-17T16:14:58+01:00"
     },
     {
       "id": "B2-8-F0-COUNTERFACTUAL-SIMULATION",
       "status": "LOCKED",
       "required_artifact": "morocco26/data/goal100/snapshots/F0/simulation_certificate.json",
       "unlock_condition": "B2-7-B2-FROZEN is CLOSED.",
-      "closure_criterion": "F0 preserves F-1, reports mechanical-only and calibrated-residual ablations, executes at least 50,000 coherent elections, and is append-only registered."
+      "closure_criterion": "F0 preserves F-1, reports mechanical-only and calibrated-residual ablations, executes at least 50,000 coherent elections, and is append-only registered.",
+      "unlock_state": "UNLOCKED_BY_B2_7_BUT_NOT_YET_EXECUTED"
     }
   ],
   "agentic_gates": [
     {
       "id": "E-COLLECT-PREREGISTERED",
       "status": "LOCKED",
-      "reason": "Cannot be preregistered until B2-7 is CLOSED and the deterministic corpus is frozen."
+      "reason": "B2 is frozen, but F0 must be registered before any agentic experiment is preregistered or executed."
     },
     {
       "id": "E-REASON-PREREGISTERED",
       "status": "LOCKED",
-      "reason": "Cannot be preregistered until B2-7 is CLOSED and the same-corpus reasoning experiment is specified."
+      "reason": "B2 is frozen, but F0 must be registered before any same-corpus reasoning experiment is specified."
     },
     {
       "id": "E-FULL-PREREGISTERED",
       "status": "LOCKED",
-      "reason": "Cannot be preregistered until collection and reasoning ablations are independently frozen."
+      "reason": "B2 is frozen, but F0 must be registered before collection/reasoning ablations are unlocked."
     }
   ],
-  "next_gate": "B2-3-HISTORICAL-FEATURE-PANEL"
+  "next_gate": "B2-8-F0-COUNTERFACTUAL-SIMULATION"
 }
