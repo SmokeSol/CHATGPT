@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-E-REASON-INFORMATION-SET-V1",
+  "frozen_at": "2026-08-17T21:42:17+01:00",
+  "principle": "E_reason receives verified facts collected before the historical cutoff, not narrative hindsight and not raw election outcomes.",
+  "required_structural_fields": [
+    "anonymous_election_id",
+    "anonymous_territory_id",
+    "anonymous_region_id",
+    "seat_magnitude",
+    "anonymous_party_id",
+    "baseline_vote_share",
+    "baseline_rank",
+    "baseline_uncertainty_summary",
+    "evidence_completeness"
+  ],
+  "allowed_candidate_and_event_features": [
+    {"id":"BALLOT_LIST_PRESENT","type":"boolean_or_missing"},
+    {"id":"CANDIDATE_REGISTERED_RANK","type":"integer_or_missing"},
+    {"id":"INCUMBENT_SAME_PARTY_SAME_DISTRICT","type":"boolean_or_missing"},
+    {"id":"INCUMBENT_SAME_PARTY_MOVED_DISTRICT","type":"boolean_or_missing"},
+    {"id":"FORMER_MP","type":"boolean_or_missing"},
+    {"id":"PARTY_SWITCH_IN","type":"boolean_or_missing"},
+    {"id":"PARTY_SWITCH_OUT","type":"boolean_or_missing"},
+    {"id":"LOCAL_EXECUTIVE_OFFICE","type":"boolean_or_missing"},
+    {"id":"PROVINCIAL_OR_REGIONAL_OFFICE","type":"boolean_or_missing"},
+    {"id":"NATIONAL_OR_REGIONAL_PARTY_OFFICE","type":"boolean_or_missing"},
+    {"id":"FORMER_MINISTER_OR_NATIONAL_OFFICE","type":"boolean_or_missing"},
+    {"id":"FORMAL_ENDORSEMENT","type":"boolean_or_missing"},
+    {"id":"FORMAL_LIST_ALLIANCE","type":"boolean_or_missing"},
+    {"id":"WITHDRAWN_OR_DISQUALIFIED","type":"boolean_or_missing"},
+    {"id":"OFFICIAL_SANCTION_OR_INVESTIGATION","type":"boolean_or_missing"},
+    {"id":"VERIFIED_DEATH_OR_INCAPACITY","type":"boolean_or_missing"},
+    {"id":"PRINCIPAL_COMPETITOR_COUNT_WITH_VERIFIED_PROFILE","type":"integer"},
+    {"id":"SOURCE_CONFLICT","type":"boolean"},
+    {"id":"EVIDENCE_COUNT","type":"integer"},
+    {"id":"SOURCE_CLASS_MAX","type":"enum_T0_T1_M24_NONE"}
+  ],
+  "explicitly_disallowed_features": [
+    "free-form popularity",
+    "charisma",
+    "social-media sentiment",
+    "journalistic adjectives without a factual proxy",
+    "post-election winner or loser status",
+    "real candidate, party, territory or election names",
+    "any fact learned only after the cutoff"
+  ],
+  "missingness_policy": "Every party-territory cell remains in the panel. Missing candidate evidence is encoded as MISSING and produces no automatic positive or negative residual. It is never a reason to drop a cell.",
+  "evidence_packet_rule": "C1, C2 and H1 receive the identical machine-generated packet. C2 and H1 may not browse or request extra context.",
+  "source_evidence_rule": "Each non-missing fact must point to at least one admissible evidence record with publication time, retrieval time, source class, content hash and archived excerpt."
+}
