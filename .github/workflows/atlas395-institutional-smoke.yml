@@ -37,6 +37,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          for path in app.js assets/core.js assets/map.js assets/candidates.js assets/institutional.js data/atlas_v1.json; do
+            echo "--- HEAD $path ---"
+            curl -sSI --max-time 30 "${PUBLIC}${path}" | sed -n '1,20p'
+          done
           curl -fsSL --max-time 60 "${PUBLIC}app.js" -o /tmp/app.js
           curl -fsSL --max-time 60 "${PUBLIC}assets/institutional.js" -o /tmp/institutional.js
           curl -fsSL --max-time 60 "${PUBLIC}assets/candidates.js" -o /tmp/candidates.js
@@ -64,37 +68,21 @@ jobs:
         run: |
           set -euo pipefail
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
-          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=40000 --dump-dom "$PUBLIC" > /tmp/dom.html
+          "$CHROME" --headless --no-sandbox --disable-gpu --enable-logging=stderr --v=1 --virtual-time-budget=40000 --dump-dom "$PUBLIC" > /tmp/dom.html 2>/tmp/chrome.log || true
+          echo '--- CHROME ERROR/CONSOLE HINTS ---'
+          grep -Ei 'javascript|script|console|uncaught|syntax|referenceerror|typeerror|failed to load|mime|cors|error' /tmp/chrome.log | tail -120 || true
+          echo '--- DOM SCRIPT/FATAL HINTS ---'
+          grep -Eo '<script[^>]*>|<div class="fatal"[^>]*>[^<]*|Atlas 395 ne peut[^<]*|data-[a-zA-Z0-9_-]+="[^"]*"' /tmp/dom.html | tail -80 || true
           python - <<'PY'
           from pathlib import Path
           dom=Path('/tmp/dom.html').read_text(encoding='utf-8',errors='replace')
-          required=[
-            'Intelligence électorale territoriale · Maroc 2026',
-            'Rapport de forces et incertitude territoriale',
-            'Candidatures documentées par circonscription',
-            'Intelligence territoriale · Candidatures 2026',
-            'RÉFÉRENCE CONSERVÉE',
-            'territoires bilingues',
-            'Méthode',
-            'Veille 2026'
-          ]
-          forbidden=[
-            'intelligence artificielle',
-            "mettre l'IA",
-            'LLM',
-            'E_reason',
-            'E_full',
-            'Arabic Native',
-            'AUCUN DELTA APPLIQUÉ'
-          ]
+          required=['Intelligence électorale territoriale · Maroc 2026','Rapport de forces et incertitude territoriale','Candidatures documentées par circonscription','Intelligence territoriale · Candidatures 2026','RÉFÉRENCE CONSERVÉE','territoires bilingues','Méthode','Veille 2026']
+          forbidden=['intelligence artificielle',"mettre l'IA",'LLM','E_reason','E_full','Arabic Native','AUCUN DELTA APPLIQUÉ']
           missing=[x for x in required if x not in dom]
           present_forbidden=[x for x in forbidden if x.lower() in dom.lower()]
           print('MISSING_REQUIRED=',missing)
           print('FORBIDDEN_PRESENT=',present_forbidden)
-          if missing or present_forbidden:
-            raise SystemExit(1)
+          if missing or present_forbidden: raise SystemExit(1)
           print('INSTITUTIONAL_FRONTEND_SMOKE=PASS')
           PY
           echo 'INSTITUTIONAL_FRONTEND_SMOKE=PASS' >> "$GITHUB_STEP_SUMMARY"
-
-# Reverification trigger after switching dynamic JavaScript to same-origin Vercel assets.
