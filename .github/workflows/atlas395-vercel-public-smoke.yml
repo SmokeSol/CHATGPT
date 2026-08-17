@@ -4,6 +4,7 @@ on:
   push:
     branches: [atlas395-v0]
     paths:
+      - 'morocco26/web/**'
       - '.github/workflows/atlas395-vercel-public-smoke.yml'
   workflow_dispatch:
 
@@ -21,14 +22,11 @@ jobs:
           candidates=(
             'https://atlas395-maroc-2026.vercel.app/'
             'https://atlas395-maroc-2026-yannlevy85gmailcoms-projects.vercel.app/'
-            'https://atlas395-maroc-2026-8hnny7air-yannlevy85gmailcoms-projects.vercel.app/'
           )
           PUBLIC=''
           for URL in "${candidates[@]}"; do
-            echo "=== $URL ==="
             code=$(curl -sS -L -o /tmp/candidate.html -w '%{http_code}' --max-time 30 "$URL" || true)
-            title=$(grep -o '<title>[^<]*' /tmp/candidate.html | head -1 || true)
-            echo "HTTP=$code TITLE=$title BYTES=$(wc -c < /tmp/candidate.html)"
+            echo "$URL HTTP=$code BYTES=$(wc -c < /tmp/candidate.html)"
             if grep -Fq 'ATLAS 395' /tmp/candidate.html; then PUBLIC="$URL"; break; fi
           done
           test -n "$PUBLIC" || { echo 'NO_PUBLIC_VERCEL_DOMAIN'; exit 1; }
@@ -42,7 +40,8 @@ jobs:
           grep -Fq 'Historique' /tmp/atlas-dom.html
           grep -Fq 'Une projection territoriale, probabiliste et traçable' /tmp/atlas-dom.html
           grep -Fq 'Neutralité et gouvernance des données' /tmp/atlas-dom.html
+          grep -Fq 'Enregistrée' /tmp/atlas-dom.html
           grep -Fq '50 000' /tmp/atlas-dom.html
-          ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|tester l.IA|IA contre référence|mettre l.IA' /tmp/atlas-dom.html
+          ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|agentic|E_collect|E_reason|E_full|F0|F-1|B2_' /tmp/atlas-dom.html
           ! grep -Fq 'Édition temporairement indisponible' /tmp/atlas-dom.html
           echo "VERIFIED_PUBLIC_VERCEL_URL=$PUBLIC"
