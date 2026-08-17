@@ -22,6 +22,21 @@ ROOT = Path(__file__).resolve().parents[2]
 HIST = ROOT / "morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json"
 OUT = ROOT / "morocco26/data/goal100/e_reason/evidence/arabic_2016_crosswalk"
 
+# Explicit identity aliases are limited to historical naming/transliteration
+# differences observed in the frozen TAFRA-2016 labels. They encode no election
+# result, candidate, seat or forecast information. Arabic semantics make the
+# direction terms unambiguous: الشمالية=Chamalia/North, الجنوبية=Janoubia/South,
+# المحيط=El Mouhit/Ocean. The remaining aliases are spelling variants.
+HISTORICAL_IDENTITY_ALIASES = {
+    "fes-nord": "Fès-Chamalia",
+    "fes-sud": "Fès-Janoubia",
+    "karia-ghafsay": "Karia - Rhafsai",
+    "rabat-ocean": "Rabat - El Mouhit",
+    "medina-sidi-youssef": "Médina - Sidi-Youssef-Ben-Ali",
+    "taroudant-sud": "Taroudannt - Al-Janoubia",
+    "taroudant-nord": "Taroudannt - Chamalia",
+}
+
 
 def norm_latin(value: str | None) -> str:
     text = html.unescape(value or "")
@@ -54,14 +69,27 @@ def historical_rows() -> list[dict[str, Any]]:
 
 
 def match_one(source: dict[str, Any], rows: list[dict[str, Any]]) -> tuple[dict[str, Any] | None, float, str, float]:
+    source_id = str(source.get("constituency_id") or "")
+    alias = HISTORICAL_IDENTITY_ALIASES.get(source_id)
+    if alias:
+        exact_alias = [r for r in rows if norm_latin(r.get("constituency")) == norm_latin(alias)]
+        if len(exact_alias) != 1:
+            raise RuntimeError(f"audited historical alias {source_id!r}->{alias!r} does not resolve uniquely")
+        return exact_alias[0], 1.0, "AUDITED_HISTORICAL_NAMING_ALIAS", 0.0
+
     key = norm_latin(source.get("name_fr"))
-    exact: dict[str, dict[str, Any]] = {}
-    for r in rows:
-        for field in ("constituency", "prefprov"):
-            if key and key == norm_latin(r.get(field)):
-                exact[str(r["id_constituency"])] = r
-    if len(exact) == 1:
-        return next(iter(exact.values())), 1.0, "EXACT_NORMALIZED_FRENCH_IDENTITY", 1.0
+    # Constituency label has priority. A prefecture/province can legitimately
+    # contain multiple constituencies (e.g. Kénitra + El-Gharb), so mixing both
+    # exact-match sets creates false ambiguity.
+    exact_constituency = [r for r in rows if key and key == norm_latin(r.get("constituency"))]
+    if len(exact_constituency) == 1:
+        return exact_constituency[0], 1.0, "EXACT_NORMALIZED_CONSTITUENCY_IDENTITY", 0.0
+    if len(exact_constituency) > 1:
+        return None, 1.0, "AMBIGUOUS_EXACT_CONSTITUENCY", 1.0
+
+    exact_prefprov = [r for r in rows if key and key == norm_latin(r.get("prefprov"))]
+    if len(exact_prefprov) == 1:
+        return exact_prefprov[0], 1.0, "EXACT_UNIQUE_PREFPROV_IDENTITY", 0.0
 
     best = None
     best_score = -1.0
@@ -77,8 +105,6 @@ def match_one(source: dict[str, Any], rows: list[dict[str, Any]]) -> tuple[dict[
             best = r
         elif score > second:
             second = score
-    # Identity bridge is deliberately stricter than the roster builder. Anything
-    # below this remains unresolved for explicit audit; no forced 92/92 mapping.
     if best is not None and best_score >= 0.88 and best_score - second >= 0.08:
         return best, best_score, "FUZZY_IDENTITY_BRIDGE_CONSERVATIVE", second
     return None, best_score, "UNRESOLVED", second
@@ -123,12 +149,13 @@ def main() -> int:
 
     resolved = [r for r in records if r["historical_id_constituency"] is not None]
     unresolved = [r for r in records if r["historical_id_constituency"] is None]
-    exact = [r for r in resolved if r["resolution_method"] == "EXACT_NORMALIZED_FRENCH_IDENTITY"]
+    exact = [r for r in resolved if r["resolution_method"].startswith("EXACT_")]
     fuzzy = [r for r in resolved if r["resolution_method"] == "FUZZY_IDENTITY_BRIDGE_CONSERVATIVE"]
+    aliases = [r for r in resolved if r["resolution_method"] == "AUDITED_HISTORICAL_NAMING_ALIAS"]
     historical_ids = {str(r["historical_id_constituency"]) for r in resolved}
 
     payload = {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "artifact_id": "M26-E-REASON-ARABIC-2016-CROSSWALK-BRIDGE-V1",
         "status": "PASS" if len(resolved) == 92 and len(historical_ids) == 92 else "PARTIAL_REQUIRES_AUDIT",
         "purpose": "IDENTITY_ONLY_NO_FORECAST_EFFECT",
@@ -136,10 +163,12 @@ def main() -> int:
         "source_artifact_status": source.get("status"),
         "source_artifact_scope": source.get("scope"),
         "historical_source": str(HIST.relative_to(ROOT)),
+        "historical_identity_aliases": HISTORICAL_IDENTITY_ALIASES,
         "counts": {
             "source_arabic_records": len(records),
             "resolved": len(resolved),
             "exact": len(exact),
+            "audited_historical_alias": len(aliases),
             "fuzzy_conservative": len(fuzzy),
             "unresolved": len(unresolved),
             "unique_historical_ids": len(historical_ids),
