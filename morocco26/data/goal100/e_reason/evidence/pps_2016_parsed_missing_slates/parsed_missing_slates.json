@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.0",
-  "created_at": "2026-08-17T23:33:03+00:00",
+  "schema_version": "3.0",
+  "created_at": "2026-08-17T23:35:50+00:00",
   "status": "PARTIAL_VALID",
   "target_missing_ge3_districts": [
     "ain-sebaa-hay-mohammadi",
@@ -22,6 +22,164 @@
     {
       "year": 2016,
       "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_id_constituency": 594,
+      "historical_constituency": "Khouribga",
+      "historical_region": "Beni-Mellal - Khénifra",
+      "seats": 6,
+      "candidate_count": 6,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "pdf_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+      "parent_page_url": "https://pps.ma/10487/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "evidence_excerpt": {
+        "page": 5,
+        "territory_pattern": "خريبكة",
+        "candidate_cards": [
+          {
+            "row": 0,
+            "bin_from_left": 2,
+            "y_range": [
+              0.455,
+              0.605
+            ],
+            "first_line_top": 336.22,
+            "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+            "detail": {
+              "raw_words": [
+                "دﺎﻤﺼﻟاﺪﺒﻋ",
+                "(cid:31)ﺎﻨﺧ"
+              ],
+              "anchors": [
+                "عبدالصماد"
+              ],
+              "line_candidates": [
+                "عبدالصماد خنا"
+              ]
+            },
+            "candidate_name_ar": "عبدالصماد خنا"
+          },
+          {
+            "row": 0,
+            "bin_from_left": 1,
+            "y_range": [
+              0.455,
+              0.605
+            ],
+            "first_line_top": 322.52,
+            "method": "FIRST_ARABIC_LINE_IN_CARD",
+            "detail": {
+              "raw_words": [
+                "ﻒﺼﻨﻣ",
+                "ﻖﻴﻓﺮﻟا"
+              ],
+              "anchors": [
+                "منصف",
+                "الرفيق"
+              ],
+              "pypdf_line_match": true
+            },
+            "candidate_name_ar": "منصف الرفيق"
+          },
+          {
+            "row": 0,
+            "bin_from_left": 0,
+            "y_range": [
+              0.455,
+              0.605
+            ],
+            "first_line_top": 322.52,
+            "method": "FIRST_ARABIC_LINE_IN_CARD",
+            "detail": {
+              "raw_words": [
+                "ﻲﻨﻐﻟاﺪﺒﻋ",
+                "ﻲﺗﻮﺒﻧ"
+              ],
+              "anchors": [
+                "عبدالغني",
+                "نبوتي"
+              ],
+              "pypdf_line_match": true
+            },
+            "candidate_name_ar": "عبدالغني نبوتي"
+          },
+          {
+            "row": 1,
+            "bin_from_left": 2,
+            "y_range": [
+              0.675,
+              0.825
+            ],
+            "first_line_top": 484.02,
+            "method": "FIRST_ARABIC_LINE_IN_CARD",
+            "detail": {
+              "raw_words": [
+                "بﻮﻳأ",
+                "يﺪﻴﻌﺴﻟا"
+              ],
+              "anchors": [
+                "ايوب",
+                "السعيدي"
+              ],
+              "pypdf_line_match": true
+            },
+            "candidate_name_ar": "ايوب السعيدي"
+          },
+          {
+            "row": 1,
+            "bin_from_left": 1,
+            "y_range": [
+              0.675,
+              0.825
+            ],
+            "first_line_top": 484.02,
+            "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+            "detail": {
+              "raw_words": [
+                "ﺪﻴﻤﺣ",
+                "(cid:31)اوﺪﺣ"
+              ],
+              "anchors": [
+                "حميد"
+              ],
+              "line_candidates": [
+                "حميد حدوا"
+              ]
+            },
+            "candidate_name_ar": "حميد حدوا"
+          },
+          {
+            "row": 1,
+            "bin_from_left": 0,
+            "y_range": [
+              0.675,
+              0.825
+            ],
+            "first_line_top": 483.02,
+            "method": "FIRST_ARABIC_LINE_IN_CARD",
+            "detail": {
+              "raw_words": [
+                "ﺪﻴﻠﺧ",
+                "ﻲﺠﻳاﺮﺑ"
+              ],
+              "anchors": [
+                "خليد",
+                "برايجي"
+              ],
+              "pypdf_line_match": true
+            },
+            "candidate_name_ar": "خليد برايجي"
+          }
+        ]
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
       "constituency_id": "el-gharb",
       "historical_id_constituency": 560,
       "historical_constituency": "El-Gharb",
@@ -39,38 +197,40 @@
       "evidence_excerpt": {
         "page": 8,
         "territory_pattern": "الغرب",
-        "layout": [
-          [
-            0.623,
-            3
-          ]
-        ],
         "candidate_cards": [
           {
             "row": 0,
             "bin_from_left": 2,
-            "anchor_fraction": 0.623,
-            "method": "CALIBRATED_FIRST_CARD_LINE",
+            "y_range": [
+              0.575,
+              0.68
+            ],
+            "first_line_top": 391.69,
+            "method": "FIRST_ARABIC_LINE_IN_CARD",
             "detail": {
               "raw_words": [
-                "Œﺴﻣ",
-                "ﺔﺴﺳﺆﻣ",
-                "ﺔﻳرﺎﲡ"
+                "رﻮﻧ",
+                "ﻦﻳﺪﻟا",
+                "لﺎﻴﳋا"
               ],
               "anchors": [
-                "مس",
-                "مؤسسة",
-                "جتارية"
+                "نور",
+                "الدين",
+                "اخليال"
               ],
               "pypdf_line_match": false
             },
-            "candidate_name_ar": "مس مؤسسة جتارية"
+            "candidate_name_ar": "نور الدين اخليال"
           },
           {
             "row": 0,
             "bin_from_left": 1,
-            "anchor_fraction": 0.623,
-            "method": "UNIQUE_PYPDF_LINE_FROM_SPATIAL_ANCHORS",
+            "y_range": [
+              0.575,
+              0.68
+            ],
+            "first_line_top": 413.13,
+            "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
             "detail": {
               "raw_words": [
                 "ناﻮﺿر",
@@ -88,8 +248,12 @@
           {
             "row": 0,
             "bin_from_left": 0,
-            "anchor_fraction": 0.623,
-            "method": "CALIBRATED_FIRST_CARD_LINE",
+            "y_range": [
+              0.575,
+              0.68
+            ],
+            "first_line_top": 421.8,
+            "method": "FIRST_ARABIC_LINE_IN_CARD",
             "detail": {
               "raw_words": [
                 "ﺐﻴﻄﻟا",
@@ -126,18 +290,16 @@
       "evidence_excerpt": {
         "page": 12,
         "territory_pattern": "سيديالبرنوصي",
-        "layout": [
-          [
-            0.623,
-            3
-          ]
-        ],
         "candidate_cards": [
           {
             "row": 0,
             "bin_from_left": 2,
-            "anchor_fraction": 0.623,
-            "method": "CALIBRATED_FIRST_CARD_LINE",
+            "y_range": [
+              0.575,
+              0.68
+            ],
+            "first_line_top": 413.69,
+            "method": "FIRST_ARABIC_LINE_IN_CARD",
             "detail": {
               "raw_words": [
                 "ﻰﻔﻄﺼﳌا",
@@ -154,8 +316,12 @@
           {
             "row": 0,
             "bin_from_left": 1,
-            "anchor_fraction": 0.623,
-            "method": "CALIBRATED_FIRST_CARD_LINE",
+            "y_range": [
+              0.575,
+              0.68
+            ],
+            "first_line_top": 411.66,
+            "method": "FIRST_ARABIC_LINE_IN_CARD",
             "detail": {
               "raw_words": [
                 "ﻦﺴﺣ",
@@ -172,8 +338,12 @@
           {
             "row": 0,
             "bin_from_left": 0,
-            "anchor_fraction": 0.623,
-            "method": "CALIBRATED_FIRST_CARD_LINE",
+            "y_range": [
+              0.575,
+              0.68
+            ],
+            "first_line_top": 410.66,
+            "method": "FIRST_ARABIC_LINE_IN_CARD",
             "detail": {
               "raw_words": [
                 "يﺪﻬﳌا",
@@ -189,103 +359,995 @@
           }
         ]
       }
-    },
-    {
-      "year": 2016,
-      "party": "PPS",
-      "constituency_id": "figuig",
-      "historical_id_constituency": 586,
-      "historical_constituency": "Figuig",
-      "historical_region": "Oriental",
-      "seats": 3,
-      "candidate_count": 3,
-      "FORMAL_ENDORSEMENT": true,
-      "source_class": "T1_OFFICIAL_PARTY",
-      "pdf_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
-      "parent_page_url": "https://pps.ma/10453/",
-      "parent_page_timestamps": [
-        "2016-10-03",
-        "2016-10-04"
-      ],
-      "evidence_excerpt": {
-        "page": 2,
-        "territory_pattern": "فجيج",
-        "layout": [
-          [
-            0.623,
-            3
-          ]
-        ],
-        "candidate_cards": [
-          {
-            "row": 0,
-            "bin_from_left": 2,
-            "anchor_fraction": 0.623,
-            "method": "CALIBRATED_FIRST_CARD_LINE",
-            "detail": {
-              "raw_words": [
-                "ﺮﻳﺪﻣ",
-                "ﻲﺟﻮﻏاﺪﻴﺑ",
-                "ﺔﺳرﺪﲟ"
-              ],
-              "anchors": [
-                "مدير",
-                "بيداغوجي",
-                "مبدرسة"
-              ],
-              "pypdf_line_match": false
-            },
-            "candidate_name_ar": "مدير بيداغوجي مبدرسة"
-          },
-          {
-            "row": 0,
-            "bin_from_left": 1,
-            "anchor_fraction": 0.623,
-            "method": "CALIBRATED_FIRST_CARD_LINE",
-            "detail": {
-              "raw_words": [
-                "دﻮﻌﺴﻣ",
-                "سﺎﻛﺮﺣ"
-              ],
-              "anchors": [
-                "مسعود",
-                "حركاس"
-              ],
-              "pypdf_line_match": true
-            },
-            "candidate_name_ar": "مسعود حركاس"
-          },
-          {
-            "row": 0,
-            "bin_from_left": 0,
-            "anchor_fraction": 0.623,
-            "method": "CALIBRATED_FIRST_CARD_LINE",
-            "detail": {
-              "raw_words": [
-                "ƒﺸﺒﻟا",
-                "يوﺎﺣر"
-              ],
-              "anchors": [
-                "البش",
-                "رحاوي"
-              ],
-              "pypdf_line_match": false
-            },
-            "candidate_name_ar": "البش رحاوي"
-          }
-        ]
-      }
     }
   ],
   "candidate_rows": [
     {
       "year": 2016,
       "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_id_constituency": 594,
+      "historical_constituency": "Khouribga",
+      "candidate_name_ar": "عبدالصماد خنا",
+      "candidate_name_ar_normalized": "عبدالصماد خنا",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 1,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+        "parent_page_url": "https://pps.ma/10487/",
+        "page": 5,
+        "archived_excerpt": {
+          "page": 5,
+          "territory_pattern": "خريبكة",
+          "candidate_cards": [
+            {
+              "row": 0,
+              "bin_from_left": 2,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 336.22,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+              "detail": {
+                "raw_words": [
+                  "دﺎﻤﺼﻟاﺪﺒﻋ",
+                  "(cid:31)ﺎﻨﺧ"
+                ],
+                "anchors": [
+                  "عبدالصماد"
+                ],
+                "line_candidates": [
+                  "عبدالصماد خنا"
+                ]
+              },
+              "candidate_name_ar": "عبدالصماد خنا"
+            },
+            {
+              "row": 0,
+              "bin_from_left": 1,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 322.52,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﻒﺼﻨﻣ",
+                  "ﻖﻴﻓﺮﻟا"
+                ],
+                "anchors": [
+                  "منصف",
+                  "الرفيق"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "منصف الرفيق"
+            },
+            {
+              "row": 0,
+              "bin_from_left": 0,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 322.52,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﻲﻨﻐﻟاﺪﺒﻋ",
+                  "ﻲﺗﻮﺒﻧ"
+                ],
+                "anchors": [
+                  "عبدالغني",
+                  "نبوتي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "عبدالغني نبوتي"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 2,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 484.02,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "بﻮﻳأ",
+                  "يﺪﻴﻌﺴﻟا"
+                ],
+                "anchors": [
+                  "ايوب",
+                  "السعيدي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "ايوب السعيدي"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 1,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 484.02,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+              "detail": {
+                "raw_words": [
+                  "ﺪﻴﻤﺣ",
+                  "(cid:31)اوﺪﺣ"
+                ],
+                "anchors": [
+                  "حميد"
+                ],
+                "line_candidates": [
+                  "حميد حدوا"
+                ]
+              },
+              "candidate_name_ar": "حميد حدوا"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 0,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 483.02,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﺪﻴﻠﺧ",
+                  "ﻲﺠﻳاﺮﺑ"
+                ],
+                "anchors": [
+                  "خليد",
+                  "برايجي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "خليد برايجي"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_id_constituency": 594,
+      "historical_constituency": "Khouribga",
+      "candidate_name_ar": "منصف الرفيق",
+      "candidate_name_ar_normalized": "منصف الرفيق",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 2,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+        "parent_page_url": "https://pps.ma/10487/",
+        "page": 5,
+        "archived_excerpt": {
+          "page": 5,
+          "territory_pattern": "خريبكة",
+          "candidate_cards": [
+            {
+              "row": 0,
+              "bin_from_left": 2,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 336.22,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+              "detail": {
+                "raw_words": [
+                  "دﺎﻤﺼﻟاﺪﺒﻋ",
+                  "(cid:31)ﺎﻨﺧ"
+                ],
+                "anchors": [
+                  "عبدالصماد"
+                ],
+                "line_candidates": [
+                  "عبدالصماد خنا"
+                ]
+              },
+              "candidate_name_ar": "عبدالصماد خنا"
+            },
+            {
+              "row": 0,
+              "bin_from_left": 1,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 322.52,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﻒﺼﻨﻣ",
+                  "ﻖﻴﻓﺮﻟا"
+                ],
+                "anchors": [
+                  "منصف",
+                  "الرفيق"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "منصف الرفيق"
+            },
+            {
+              "row": 0,
+              "bin_from_left": 0,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 322.52,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﻲﻨﻐﻟاﺪﺒﻋ",
+                  "ﻲﺗﻮﺒﻧ"
+                ],
+                "anchors": [
+                  "عبدالغني",
+                  "نبوتي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "عبدالغني نبوتي"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 2,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 484.02,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "بﻮﻳأ",
+                  "يﺪﻴﻌﺴﻟا"
+                ],
+                "anchors": [
+                  "ايوب",
+                  "السعيدي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "ايوب السعيدي"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 1,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 484.02,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+              "detail": {
+                "raw_words": [
+                  "ﺪﻴﻤﺣ",
+                  "(cid:31)اوﺪﺣ"
+                ],
+                "anchors": [
+                  "حميد"
+                ],
+                "line_candidates": [
+                  "حميد حدوا"
+                ]
+              },
+              "candidate_name_ar": "حميد حدوا"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 0,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 483.02,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﺪﻴﻠﺧ",
+                  "ﻲﺠﻳاﺮﺑ"
+                ],
+                "anchors": [
+                  "خليد",
+                  "برايجي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "خليد برايجي"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_id_constituency": 594,
+      "historical_constituency": "Khouribga",
+      "candidate_name_ar": "عبدالغني نبوتي",
+      "candidate_name_ar_normalized": "عبدالغني نبوتي",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 3,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+        "parent_page_url": "https://pps.ma/10487/",
+        "page": 5,
+        "archived_excerpt": {
+          "page": 5,
+          "territory_pattern": "خريبكة",
+          "candidate_cards": [
+            {
+              "row": 0,
+              "bin_from_left": 2,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 336.22,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+              "detail": {
+                "raw_words": [
+                  "دﺎﻤﺼﻟاﺪﺒﻋ",
+                  "(cid:31)ﺎﻨﺧ"
+                ],
+                "anchors": [
+                  "عبدالصماد"
+                ],
+                "line_candidates": [
+                  "عبدالصماد خنا"
+                ]
+              },
+              "candidate_name_ar": "عبدالصماد خنا"
+            },
+            {
+              "row": 0,
+              "bin_from_left": 1,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 322.52,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﻒﺼﻨﻣ",
+                  "ﻖﻴﻓﺮﻟا"
+                ],
+                "anchors": [
+                  "منصف",
+                  "الرفيق"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "منصف الرفيق"
+            },
+            {
+              "row": 0,
+              "bin_from_left": 0,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 322.52,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﻲﻨﻐﻟاﺪﺒﻋ",
+                  "ﻲﺗﻮﺒﻧ"
+                ],
+                "anchors": [
+                  "عبدالغني",
+                  "نبوتي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "عبدالغني نبوتي"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 2,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 484.02,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "بﻮﻳأ",
+                  "يﺪﻴﻌﺴﻟا"
+                ],
+                "anchors": [
+                  "ايوب",
+                  "السعيدي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "ايوب السعيدي"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 1,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 484.02,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+              "detail": {
+                "raw_words": [
+                  "ﺪﻴﻤﺣ",
+                  "(cid:31)اوﺪﺣ"
+                ],
+                "anchors": [
+                  "حميد"
+                ],
+                "line_candidates": [
+                  "حميد حدوا"
+                ]
+              },
+              "candidate_name_ar": "حميد حدوا"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 0,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 483.02,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﺪﻴﻠﺧ",
+                  "ﻲﺠﻳاﺮﺑ"
+                ],
+                "anchors": [
+                  "خليد",
+                  "برايجي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "خليد برايجي"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_id_constituency": 594,
+      "historical_constituency": "Khouribga",
+      "candidate_name_ar": "ايوب السعيدي",
+      "candidate_name_ar_normalized": "ايوب السعيدي",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 4,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+        "parent_page_url": "https://pps.ma/10487/",
+        "page": 5,
+        "archived_excerpt": {
+          "page": 5,
+          "territory_pattern": "خريبكة",
+          "candidate_cards": [
+            {
+              "row": 0,
+              "bin_from_left": 2,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 336.22,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+              "detail": {
+                "raw_words": [
+                  "دﺎﻤﺼﻟاﺪﺒﻋ",
+                  "(cid:31)ﺎﻨﺧ"
+                ],
+                "anchors": [
+                  "عبدالصماد"
+                ],
+                "line_candidates": [
+                  "عبدالصماد خنا"
+                ]
+              },
+              "candidate_name_ar": "عبدالصماد خنا"
+            },
+            {
+              "row": 0,
+              "bin_from_left": 1,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 322.52,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﻒﺼﻨﻣ",
+                  "ﻖﻴﻓﺮﻟا"
+                ],
+                "anchors": [
+                  "منصف",
+                  "الرفيق"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "منصف الرفيق"
+            },
+            {
+              "row": 0,
+              "bin_from_left": 0,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 322.52,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﻲﻨﻐﻟاﺪﺒﻋ",
+                  "ﻲﺗﻮﺒﻧ"
+                ],
+                "anchors": [
+                  "عبدالغني",
+                  "نبوتي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "عبدالغني نبوتي"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 2,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 484.02,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "بﻮﻳأ",
+                  "يﺪﻴﻌﺴﻟا"
+                ],
+                "anchors": [
+                  "ايوب",
+                  "السعيدي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "ايوب السعيدي"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 1,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 484.02,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+              "detail": {
+                "raw_words": [
+                  "ﺪﻴﻤﺣ",
+                  "(cid:31)اوﺪﺣ"
+                ],
+                "anchors": [
+                  "حميد"
+                ],
+                "line_candidates": [
+                  "حميد حدوا"
+                ]
+              },
+              "candidate_name_ar": "حميد حدوا"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 0,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 483.02,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﺪﻴﻠﺧ",
+                  "ﻲﺠﻳاﺮﺑ"
+                ],
+                "anchors": [
+                  "خليد",
+                  "برايجي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "خليد برايجي"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_id_constituency": 594,
+      "historical_constituency": "Khouribga",
+      "candidate_name_ar": "حميد حدوا",
+      "candidate_name_ar_normalized": "حميد حدوا",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 5,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+        "parent_page_url": "https://pps.ma/10487/",
+        "page": 5,
+        "archived_excerpt": {
+          "page": 5,
+          "territory_pattern": "خريبكة",
+          "candidate_cards": [
+            {
+              "row": 0,
+              "bin_from_left": 2,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 336.22,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+              "detail": {
+                "raw_words": [
+                  "دﺎﻤﺼﻟاﺪﺒﻋ",
+                  "(cid:31)ﺎﻨﺧ"
+                ],
+                "anchors": [
+                  "عبدالصماد"
+                ],
+                "line_candidates": [
+                  "عبدالصماد خنا"
+                ]
+              },
+              "candidate_name_ar": "عبدالصماد خنا"
+            },
+            {
+              "row": 0,
+              "bin_from_left": 1,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 322.52,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﻒﺼﻨﻣ",
+                  "ﻖﻴﻓﺮﻟا"
+                ],
+                "anchors": [
+                  "منصف",
+                  "الرفيق"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "منصف الرفيق"
+            },
+            {
+              "row": 0,
+              "bin_from_left": 0,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 322.52,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﻲﻨﻐﻟاﺪﺒﻋ",
+                  "ﻲﺗﻮﺒﻧ"
+                ],
+                "anchors": [
+                  "عبدالغني",
+                  "نبوتي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "عبدالغني نبوتي"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 2,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 484.02,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "بﻮﻳأ",
+                  "يﺪﻴﻌﺴﻟا"
+                ],
+                "anchors": [
+                  "ايوب",
+                  "السعيدي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "ايوب السعيدي"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 1,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 484.02,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+              "detail": {
+                "raw_words": [
+                  "ﺪﻴﻤﺣ",
+                  "(cid:31)اوﺪﺣ"
+                ],
+                "anchors": [
+                  "حميد"
+                ],
+                "line_candidates": [
+                  "حميد حدوا"
+                ]
+              },
+              "candidate_name_ar": "حميد حدوا"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 0,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 483.02,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﺪﻴﻠﺧ",
+                  "ﻲﺠﻳاﺮﺑ"
+                ],
+                "anchors": [
+                  "خليد",
+                  "برايجي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "خليد برايجي"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_id_constituency": 594,
+      "historical_constituency": "Khouribga",
+      "candidate_name_ar": "خليد برايجي",
+      "candidate_name_ar_normalized": "خليد برايجي",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 6,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+        "parent_page_url": "https://pps.ma/10487/",
+        "page": 5,
+        "archived_excerpt": {
+          "page": 5,
+          "territory_pattern": "خريبكة",
+          "candidate_cards": [
+            {
+              "row": 0,
+              "bin_from_left": 2,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 336.22,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+              "detail": {
+                "raw_words": [
+                  "دﺎﻤﺼﻟاﺪﺒﻋ",
+                  "(cid:31)ﺎﻨﺧ"
+                ],
+                "anchors": [
+                  "عبدالصماد"
+                ],
+                "line_candidates": [
+                  "عبدالصماد خنا"
+                ]
+              },
+              "candidate_name_ar": "عبدالصماد خنا"
+            },
+            {
+              "row": 0,
+              "bin_from_left": 1,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 322.52,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﻒﺼﻨﻣ",
+                  "ﻖﻴﻓﺮﻟا"
+                ],
+                "anchors": [
+                  "منصف",
+                  "الرفيق"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "منصف الرفيق"
+            },
+            {
+              "row": 0,
+              "bin_from_left": 0,
+              "y_range": [
+                0.455,
+                0.605
+              ],
+              "first_line_top": 322.52,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﻲﻨﻐﻟاﺪﺒﻋ",
+                  "ﻲﺗﻮﺒﻧ"
+                ],
+                "anchors": [
+                  "عبدالغني",
+                  "نبوتي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "عبدالغني نبوتي"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 2,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 484.02,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "بﻮﻳأ",
+                  "يﺪﻴﻌﺴﻟا"
+                ],
+                "anchors": [
+                  "ايوب",
+                  "السعيدي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "ايوب السعيدي"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 1,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 484.02,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+              "detail": {
+                "raw_words": [
+                  "ﺪﻴﻤﺣ",
+                  "(cid:31)اوﺪﺣ"
+                ],
+                "anchors": [
+                  "حميد"
+                ],
+                "line_candidates": [
+                  "حميد حدوا"
+                ]
+              },
+              "candidate_name_ar": "حميد حدوا"
+            },
+            {
+              "row": 1,
+              "bin_from_left": 0,
+              "y_range": [
+                0.675,
+                0.825
+              ],
+              "first_line_top": 483.02,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
+              "detail": {
+                "raw_words": [
+                  "ﺪﻴﻠﺧ",
+                  "ﻲﺠﻳاﺮﺑ"
+                ],
+                "anchors": [
+                  "خليد",
+                  "برايجي"
+                ],
+                "pypdf_line_match": true
+              },
+              "candidate_name_ar": "خليد برايجي"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
       "constituency_id": "el-gharb",
       "historical_id_constituency": 560,
       "historical_constituency": "El-Gharb",
-      "candidate_name_ar": "مس مؤسسة جتارية",
-      "candidate_name_ar_normalized": "مس مؤسسة جتارية",
+      "candidate_name_ar": "نور الدين اخليال",
+      "candidate_name_ar_normalized": "نور الدين اخليال",
       "candidate_rank": null,
       "CANDIDATE_REGISTERED_RANK": null,
       "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
@@ -302,38 +1364,40 @@
         "archived_excerpt": {
           "page": 8,
           "territory_pattern": "الغرب",
-          "layout": [
-            [
-              0.623,
-              3
-            ]
-          ],
           "candidate_cards": [
             {
               "row": 0,
               "bin_from_left": 2,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 391.69,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
-                  "Œﺴﻣ",
-                  "ﺔﺴﺳﺆﻣ",
-                  "ﺔﻳرﺎﲡ"
+                  "رﻮﻧ",
+                  "ﻦﻳﺪﻟا",
+                  "لﺎﻴﳋا"
                 ],
                 "anchors": [
-                  "مس",
-                  "مؤسسة",
-                  "جتارية"
+                  "نور",
+                  "الدين",
+                  "اخليال"
                 ],
                 "pypdf_line_match": false
               },
-              "candidate_name_ar": "مس مؤسسة جتارية"
+              "candidate_name_ar": "نور الدين اخليال"
             },
             {
               "row": 0,
               "bin_from_left": 1,
-              "anchor_fraction": 0.623,
-              "method": "UNIQUE_PYPDF_LINE_FROM_SPATIAL_ANCHORS",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 413.13,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
               "detail": {
                 "raw_words": [
                   "ناﻮﺿر",
@@ -351,8 +1415,12 @@
             {
               "row": 0,
               "bin_from_left": 0,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 421.8,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
                   "ﺐﻴﻄﻟا",
@@ -394,38 +1462,40 @@
         "archived_excerpt": {
           "page": 8,
           "territory_pattern": "الغرب",
-          "layout": [
-            [
-              0.623,
-              3
-            ]
-          ],
           "candidate_cards": [
             {
               "row": 0,
               "bin_from_left": 2,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 391.69,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
-                  "Œﺴﻣ",
-                  "ﺔﺴﺳﺆﻣ",
-                  "ﺔﻳرﺎﲡ"
+                  "رﻮﻧ",
+                  "ﻦﻳﺪﻟا",
+                  "لﺎﻴﳋا"
                 ],
                 "anchors": [
-                  "مس",
-                  "مؤسسة",
-                  "جتارية"
+                  "نور",
+                  "الدين",
+                  "اخليال"
                 ],
                 "pypdf_line_match": false
               },
-              "candidate_name_ar": "مس مؤسسة جتارية"
+              "candidate_name_ar": "نور الدين اخليال"
             },
             {
               "row": 0,
               "bin_from_left": 1,
-              "anchor_fraction": 0.623,
-              "method": "UNIQUE_PYPDF_LINE_FROM_SPATIAL_ANCHORS",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 413.13,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
               "detail": {
                 "raw_words": [
                   "ناﻮﺿر",
@@ -443,8 +1513,12 @@
             {
               "row": 0,
               "bin_from_left": 0,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 421.8,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
                   "ﺐﻴﻄﻟا",
@@ -486,38 +1560,40 @@
         "archived_excerpt": {
           "page": 8,
           "territory_pattern": "الغرب",
-          "layout": [
-            [
-              0.623,
-              3
-            ]
-          ],
           "candidate_cards": [
             {
               "row": 0,
               "bin_from_left": 2,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 391.69,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
-                  "Œﺴﻣ",
-                  "ﺔﺴﺳﺆﻣ",
-                  "ﺔﻳرﺎﲡ"
+                  "رﻮﻧ",
+                  "ﻦﻳﺪﻟا",
+                  "لﺎﻴﳋا"
                 ],
                 "anchors": [
-                  "مس",
-                  "مؤسسة",
-                  "جتارية"
+                  "نور",
+                  "الدين",
+                  "اخليال"
                 ],
                 "pypdf_line_match": false
               },
-              "candidate_name_ar": "مس مؤسسة جتارية"
+              "candidate_name_ar": "نور الدين اخليال"
             },
             {
               "row": 0,
               "bin_from_left": 1,
-              "anchor_fraction": 0.623,
-              "method": "UNIQUE_PYPDF_LINE_FROM_SPATIAL_ANCHORS",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 413.13,
+              "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
               "detail": {
                 "raw_words": [
                   "ناﻮﺿر",
@@ -535,8 +1611,12 @@
             {
               "row": 0,
               "bin_from_left": 0,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 421.8,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
                   "ﺐﻴﻄﻟا",
@@ -578,18 +1658,16 @@
         "archived_excerpt": {
           "page": 12,
           "territory_pattern": "سيديالبرنوصي",
-          "layout": [
-            [
-              0.623,
-              3
-            ]
-          ],
           "candidate_cards": [
             {
               "row": 0,
               "bin_from_left": 2,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 413.69,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
                   "ﻰﻔﻄﺼﳌا",
@@ -606,8 +1684,12 @@
             {
               "row": 0,
               "bin_from_left": 1,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 411.66,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
                   "ﻦﺴﺣ",
@@ -624,8 +1706,12 @@
             {
               "row": 0,
               "bin_from_left": 0,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 410.66,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
                   "يﺪﻬﳌا",
@@ -667,18 +1753,16 @@
         "archived_excerpt": {
           "page": 12,
           "territory_pattern": "سيديالبرنوصي",
-          "layout": [
-            [
-              0.623,
-              3
-            ]
-          ],
           "candidate_cards": [
             {
               "row": 0,
               "bin_from_left": 2,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 413.69,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
                   "ﻰﻔﻄﺼﳌا",
@@ -695,8 +1779,12 @@
             {
               "row": 0,
               "bin_from_left": 1,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 411.66,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
                   "ﻦﺴﺣ",
@@ -713,8 +1801,12 @@
             {
               "row": 0,
               "bin_from_left": 0,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 410.66,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
                   "يﺪﻬﳌا",
@@ -756,18 +1848,16 @@
         "archived_excerpt": {
           "page": 12,
           "territory_pattern": "سيديالبرنوصي",
-          "layout": [
-            [
-              0.623,
-              3
-            ]
-          ],
           "candidate_cards": [
             {
               "row": 0,
               "bin_from_left": 2,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 413.69,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
                   "ﻰﻔﻄﺼﳌا",
@@ -784,8 +1874,12 @@
             {
               "row": 0,
               "bin_from_left": 1,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 411.66,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
                   "ﻦﺴﺣ",
@@ -802,8 +1896,12 @@
             {
               "row": 0,
               "bin_from_left": 0,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
+              "y_range": [
+                0.575,
+                0.68
+              ],
+              "first_line_top": 410.66,
+              "method": "FIRST_ARABIC_LINE_IN_CARD",
               "detail": {
                 "raw_words": [
                   "يﺪﻬﳌا",
@@ -820,415 +1918,9 @@
           ]
         }
       }
-    },
-    {
-      "year": 2016,
-      "party": "PPS",
-      "constituency_id": "figuig",
-      "historical_id_constituency": 586,
-      "historical_constituency": "Figuig",
-      "candidate_name_ar": "مدير بيداغوجي مبدرسة",
-      "candidate_name_ar_normalized": "مدير بيداغوجي مبدرسة",
-      "candidate_rank": null,
-      "CANDIDATE_REGISTERED_RANK": null,
-      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
-      "FORMAL_ENDORSEMENT": true,
-      "party_fact_status": "PARTY_ANNOUNCED",
-      "poster_display_order_only": 1,
-      "evidence": {
-        "publication_time": "2016-10-03",
-        "retrieval_time": "2026-08-17T23:31:25+00:00",
-        "source_class": "T1_OFFICIAL_PARTY",
-        "content_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
-        "parent_page_url": "https://pps.ma/10453/",
-        "page": 2,
-        "archived_excerpt": {
-          "page": 2,
-          "territory_pattern": "فجيج",
-          "layout": [
-            [
-              0.623,
-              3
-            ]
-          ],
-          "candidate_cards": [
-            {
-              "row": 0,
-              "bin_from_left": 2,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
-              "detail": {
-                "raw_words": [
-                  "ﺮﻳﺪﻣ",
-                  "ﻲﺟﻮﻏاﺪﻴﺑ",
-                  "ﺔﺳرﺪﲟ"
-                ],
-                "anchors": [
-                  "مدير",
-                  "بيداغوجي",
-                  "مبدرسة"
-                ],
-                "pypdf_line_match": false
-              },
-              "candidate_name_ar": "مدير بيداغوجي مبدرسة"
-            },
-            {
-              "row": 0,
-              "bin_from_left": 1,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
-              "detail": {
-                "raw_words": [
-                  "دﻮﻌﺴﻣ",
-                  "سﺎﻛﺮﺣ"
-                ],
-                "anchors": [
-                  "مسعود",
-                  "حركاس"
-                ],
-                "pypdf_line_match": true
-              },
-              "candidate_name_ar": "مسعود حركاس"
-            },
-            {
-              "row": 0,
-              "bin_from_left": 0,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
-              "detail": {
-                "raw_words": [
-                  "ƒﺸﺒﻟا",
-                  "يوﺎﺣر"
-                ],
-                "anchors": [
-                  "البش",
-                  "رحاوي"
-                ],
-                "pypdf_line_match": false
-              },
-              "candidate_name_ar": "البش رحاوي"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "year": 2016,
-      "party": "PPS",
-      "constituency_id": "figuig",
-      "historical_id_constituency": 586,
-      "historical_constituency": "Figuig",
-      "candidate_name_ar": "مسعود حركاس",
-      "candidate_name_ar_normalized": "مسعود حركاس",
-      "candidate_rank": null,
-      "CANDIDATE_REGISTERED_RANK": null,
-      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
-      "FORMAL_ENDORSEMENT": true,
-      "party_fact_status": "PARTY_ANNOUNCED",
-      "poster_display_order_only": 2,
-      "evidence": {
-        "publication_time": "2016-10-03",
-        "retrieval_time": "2026-08-17T23:31:25+00:00",
-        "source_class": "T1_OFFICIAL_PARTY",
-        "content_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
-        "parent_page_url": "https://pps.ma/10453/",
-        "page": 2,
-        "archived_excerpt": {
-          "page": 2,
-          "territory_pattern": "فجيج",
-          "layout": [
-            [
-              0.623,
-              3
-            ]
-          ],
-          "candidate_cards": [
-            {
-              "row": 0,
-              "bin_from_left": 2,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
-              "detail": {
-                "raw_words": [
-                  "ﺮﻳﺪﻣ",
-                  "ﻲﺟﻮﻏاﺪﻴﺑ",
-                  "ﺔﺳرﺪﲟ"
-                ],
-                "anchors": [
-                  "مدير",
-                  "بيداغوجي",
-                  "مبدرسة"
-                ],
-                "pypdf_line_match": false
-              },
-              "candidate_name_ar": "مدير بيداغوجي مبدرسة"
-            },
-            {
-              "row": 0,
-              "bin_from_left": 1,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
-              "detail": {
-                "raw_words": [
-                  "دﻮﻌﺴﻣ",
-                  "سﺎﻛﺮﺣ"
-                ],
-                "anchors": [
-                  "مسعود",
-                  "حركاس"
-                ],
-                "pypdf_line_match": true
-              },
-              "candidate_name_ar": "مسعود حركاس"
-            },
-            {
-              "row": 0,
-              "bin_from_left": 0,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
-              "detail": {
-                "raw_words": [
-                  "ƒﺸﺒﻟا",
-                  "يوﺎﺣر"
-                ],
-                "anchors": [
-                  "البش",
-                  "رحاوي"
-                ],
-                "pypdf_line_match": false
-              },
-              "candidate_name_ar": "البش رحاوي"
-            }
-          ]
-        }
-      }
-    },
-    {
-      "year": 2016,
-      "party": "PPS",
-      "constituency_id": "figuig",
-      "historical_id_constituency": 586,
-      "historical_constituency": "Figuig",
-      "candidate_name_ar": "البش رحاوي",
-      "candidate_name_ar_normalized": "البش رحاوي",
-      "candidate_rank": null,
-      "CANDIDATE_REGISTERED_RANK": null,
-      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
-      "FORMAL_ENDORSEMENT": true,
-      "party_fact_status": "PARTY_ANNOUNCED",
-      "poster_display_order_only": 3,
-      "evidence": {
-        "publication_time": "2016-10-03",
-        "retrieval_time": "2026-08-17T23:31:25+00:00",
-        "source_class": "T1_OFFICIAL_PARTY",
-        "content_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
-        "parent_page_url": "https://pps.ma/10453/",
-        "page": 2,
-        "archived_excerpt": {
-          "page": 2,
-          "territory_pattern": "فجيج",
-          "layout": [
-            [
-              0.623,
-              3
-            ]
-          ],
-          "candidate_cards": [
-            {
-              "row": 0,
-              "bin_from_left": 2,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
-              "detail": {
-                "raw_words": [
-                  "ﺮﻳﺪﻣ",
-                  "ﻲﺟﻮﻏاﺪﻴﺑ",
-                  "ﺔﺳرﺪﲟ"
-                ],
-                "anchors": [
-                  "مدير",
-                  "بيداغوجي",
-                  "مبدرسة"
-                ],
-                "pypdf_line_match": false
-              },
-              "candidate_name_ar": "مدير بيداغوجي مبدرسة"
-            },
-            {
-              "row": 0,
-              "bin_from_left": 1,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
-              "detail": {
-                "raw_words": [
-                  "دﻮﻌﺴﻣ",
-                  "سﺎﻛﺮﺣ"
-                ],
-                "anchors": [
-                  "مسعود",
-                  "حركاس"
-                ],
-                "pypdf_line_match": true
-              },
-              "candidate_name_ar": "مسعود حركاس"
-            },
-            {
-              "row": 0,
-              "bin_from_left": 0,
-              "anchor_fraction": 0.623,
-              "method": "CALIBRATED_FIRST_CARD_LINE",
-              "detail": {
-                "raw_words": [
-                  "ƒﺸﺒﻟا",
-                  "يوﺎﺣر"
-                ],
-                "anchors": [
-                  "البش",
-                  "رحاوي"
-                ],
-                "pypdf_line_match": false
-              },
-              "candidate_name_ar": "البش رحاوي"
-            }
-          ]
-        }
-      }
     }
   ],
   "failures": [
-    {
-      "region": "beni-mellal-khenifra",
-      "page": 5,
-      "constituency_id": "khouribga",
-      "historical_constituency": "Khouribga",
-      "seats": 6,
-      "matched_territory_pattern": "خريبكة",
-      "layout": [
-        [
-          0.51,
-          3
-        ],
-        [
-          0.732,
-          3
-        ]
-      ],
-      "cards": [
-        {
-          "row": 0,
-          "bin_from_left": 2,
-          "anchor_fraction": 0.51,
-          "method": "UNIQUE_PYPDF_LINE_FROM_SPATIAL_ANCHORS",
-          "detail": {
-            "raw_words": [
-              "دﺎﻤﺼﻟاﺪﺒﻋ",
-              "(cid:31)ﺎﻨﺧ"
-            ],
-            "anchors": [
-              "عبدالصماد"
-            ],
-            "line_candidates": [
-              "عبدالصماد خنا"
-            ]
-          },
-          "candidate_name_ar": "عبدالصماد خنا"
-        },
-        {
-          "row": 0,
-          "bin_from_left": 1,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
-          "detail": {
-            "raw_words": [
-              "مﺪﺨﺘﺴﻣ"
-            ],
-            "anchors": [
-              "مستخدم"
-            ]
-          },
-          "candidate_name_ar": null
-        },
-        {
-          "row": 0,
-          "bin_from_left": 0,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
-          "detail": {
-            "raw_words": [
-              "ﺮﺟﺎﺗ"
-            ],
-            "anchors": [
-              "تاجر"
-            ]
-          },
-          "candidate_name_ar": null
-        },
-        {
-          "row": 1,
-          "bin_from_left": 2,
-          "anchor_fraction": 0.732,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
-          "detail": {
-            "raw_words": [
-              "بﻮﻳأ",
-              "يﺪﻴﻌﺴﻟا"
-            ],
-            "anchors": [
-              "ايوب",
-              "السعيدي"
-            ],
-            "pypdf_line_match": true
-          },
-          "candidate_name_ar": "ايوب السعيدي"
-        },
-        {
-          "row": 1,
-          "bin_from_left": 1,
-          "anchor_fraction": 0.732,
-          "method": "UNIQUE_PYPDF_LINE_FROM_SPATIAL_ANCHORS",
-          "detail": {
-            "raw_words": [
-              "ﺪﻴﻤﺣ",
-              "(cid:31)اوﺪﺣ"
-            ],
-            "anchors": [
-              "حميد"
-            ],
-            "line_candidates": [
-              "حميد حدوا"
-            ]
-          },
-          "candidate_name_ar": "حميد حدوا"
-        },
-        {
-          "row": 1,
-          "bin_from_left": 0,
-          "anchor_fraction": 0.732,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
-          "detail": {
-            "raw_words": [
-              "نﺎﻨﻓ",
-              "ﺪﻴﻠﺧ",
-              "ﻲﺠﻳاﺮﺑ",
-              "ﻲﻠﻴﻜﺸﺗ"
-            ],
-            "anchors": [
-              "فنان",
-              "خليد",
-              "برايجي",
-              "تشكيلي"
-            ],
-            "pypdf_line_match": false
-          },
-          "candidate_name_ar": "فنان خليد برايجي تشكيلي"
-        }
-      ],
-      "errors": [
-        "UNRESOLVED_CARD_row0_bin1",
-        "UNRESOLVED_CARD_row0_bin0",
-        "CANDIDATE_COUNT_4_NE_SEATS_6"
-      ]
-    },
     {
       "region": "rabat-sale-kenitra",
       "page": 3,
@@ -1236,13 +1928,15 @@
       "historical_constituency": "Sidi-Kacem",
       "seats": 5,
       "matched_territory_pattern": "سيديقاسم",
-      "layout": [
+      "card_layout": [
         [
-          0.51,
+          0.455,
+          0.605,
           3
         ],
         [
-          0.732,
+          0.675,
+          0.825,
           2
         ]
       ],
@@ -1250,100 +1944,112 @@
         {
           "row": 0,
           "bin_from_left": 2,
-          "anchor_fraction": 0.51,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": 309.41,
+          "method": "CARD_NAME_UNRESOLVED",
           "detail": {
             "raw_words": [
-              "رﺎﺸﺘﺴﻣ",
-              "ﻲﻋﺎﻤﺟ"
+              "ﺪﻤ(cid:25)",
+              "سﻮﺴﻛ"
             ],
             "anchors": [
-              "مستشار",
-              "جماعي"
+              "كسوس"
             ],
-            "pypdf_line_match": true
+            "line_candidates": [],
+            "guess": "مد كسوس"
           },
-          "candidate_name_ar": "مستشار جماعي"
+          "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": []
           },
           "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.51,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": 309.41,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
-              "ﺲﻴﺋر",
-              "ﺔﻋﺎﻤﺟ",
-              "ةراﺮﻳز"
+              "هﺎﻨﻛ",
+              "ﺲﻳردا"
             ],
             "anchors": [
-              "رئيس",
-              "جماعة",
-              "زيرارة"
+              "كناه",
+              "ادريس"
             ],
             "pypdf_line_match": true
           },
-          "candidate_name_ar": "رئيس جماعة زيرارة"
+          "candidate_name_ar": "كناه ادريس"
         },
         {
           "row": 1,
           "bin_from_left": 1,
-          "anchor_fraction": 0.732,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 475.74,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﺪﻴﺷر",
-              "ذﺎﺘﺳأ",
               "Šوﺮﻌﻣ"
             ],
             "anchors": [
               "رشيد",
-              "استاذ",
               "معرو"
             ],
-            "pypdf_line_match": false
+            "pypdf_line_match": true
           },
-          "candidate_name_ar": "رشيد استاذ معرو"
+          "candidate_name_ar": "رشيد معرو"
         },
         {
           "row": 1,
           "bin_from_left": 0,
-          "anchor_fraction": 0.732,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 475.74,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﺪﺒﻋ",
-              "ﺶﻌﻨﻣ",
               "ﻒﻴﻄﻠﻟا",
-              "يرﺎﻘﻋ",
               "رﺪﻳﻮﻗا"
             ],
             "anchors": [
               "عبد",
-              "منعش",
               "اللطيف",
-              "عقاري",
               "اقويدر"
             ],
-            "pypdf_line_match": false
+            "pypdf_line_match": true
           },
-          "candidate_name_ar": "عبد منعش اللطيف عقاري اقويدر"
+          "candidate_name_ar": "عبد اللطيف اقويدر"
         }
       ],
       "errors": [
-        "UNRESOLVED_CARD_row0_bin1",
-        "CANDIDATE_COUNT_4_NE_SEATS_5"
+        "UNRESOLVED_CARD_r0_b2",
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_3_NE_SEATS_5"
       ]
     },
     {
@@ -1353,9 +2059,10 @@
       "historical_constituency": "Tifelt - Rommani",
       "seats": 3,
       "matched_territory_pattern": "تيفلتالرماني",
-      "layout": [
+      "card_layout": [
         [
-          0.623,
+          0.575,
+          0.68,
           3
         ]
       ],
@@ -1363,8 +2070,12 @@
         {
           "row": 0,
           "bin_from_left": 2,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 413.74,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﺪﻤﺣأ",
@@ -1381,8 +2092,12 @@
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.623,
-          "method": "CID_FONTMAP_UNRESOLVED",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 412.5,
+          "method": "CARD_NAME_UNRESOLVED",
           "detail": {
             "raw_words": [
               "ﺪﺒﻋ",
@@ -1393,15 +2108,20 @@
               "عبد",
               "اجغل"
             ],
-            "line_candidates": []
+            "line_candidates": [],
+            "guess": "عبد ا اجغل"
           },
           "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 412.5,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﻲﺒﻴﻄﻟا",
@@ -1417,7 +2137,7 @@
         }
       ],
       "errors": [
-        "UNRESOLVED_CARD_row0_bin1",
+        "UNRESOLVED_CARD_r0_b1",
         "CANDIDATE_COUNT_2_NE_SEATS_3"
       ]
     },
@@ -1428,9 +2148,10 @@
       "historical_constituency": "Mohammadia",
       "seats": 3,
       "matched_territory_pattern": "المحمدية",
-      "layout": [
+      "card_layout": [
         [
-          0.623,
+          0.575,
+          0.68,
           3
         ]
       ],
@@ -1438,8 +2159,12 @@
         {
           "row": 0,
           "bin_from_left": 2,
-          "anchor_fraction": 0.623,
-          "method": "CID_FONTMAP_UNRESOLVED",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 416.21,
+          "method": "CARD_NAME_UNRESOLVED",
           "detail": {
             "raw_words": [
               "ﺪﻤ(cid:22)",
@@ -1448,15 +2173,20 @@
             "anchors": [
               "غرويطي"
             ],
-            "line_candidates": []
+            "line_candidates": [],
+            "guess": "مد غرويطي"
           },
           "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 412.13,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﺪﻤﺣأ",
@@ -1473,8 +2203,12 @@
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 412.13,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﺪﺒﻋ",
@@ -1492,7 +2226,7 @@
         }
       ],
       "errors": [
-        "UNRESOLVED_CARD_row0_bin2",
+        "UNRESOLVED_CARD_r0_b2",
         "CANDIDATE_COUNT_2_NE_SEATS_3"
       ]
     },
@@ -1503,13 +2237,15 @@
       "historical_constituency": "Berrechid",
       "seats": 4,
       "matched_territory_pattern": "برشيد",
-      "layout": [
+      "card_layout": [
         [
-          0.51,
+          0.455,
+          0.605,
           2
         ],
         [
-          0.732,
+          0.675,
+          0.825,
           2
         ]
       ],
@@ -1517,70 +2253,94 @@
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": []
           },
           "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": 307.43,
+          "method": "CARD_NAME_UNRESOLVED",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": [
+              "ﺪﺒﻋ",
+              "ﻖﳊا",
+              "(cid:2)ﻼﺒﻋ"
+            ],
+            "anchors": [
+              "عبد",
+              "احلق"
+            ],
+            "line_candidates": [],
+            "guess": "عبد احلق عبال"
           },
           "candidate_name_ar": null
         },
         {
           "row": 1,
           "bin_from_left": 1,
-          "anchor_fraction": 0.732,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 457.76,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": [
+              "€ﺴﻣ",
+              "ﺔﻛﺮﺷ"
+            ],
+            "anchors": [
+              "مس",
+              "شركة"
+            ],
+            "pypdf_line_match": false
           },
-          "candidate_name_ar": null
+          "candidate_name_ar": "مس شركة"
         },
         {
           "row": 1,
           "bin_from_left": 0,
-          "anchor_fraction": 0.732,
-          "method": "CID_FONTMAP_UNRESOLVED",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 460.93,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
-              "رﺎﻃا",
-              "ﺔﻛﺮﺸﺑ",
-              "ﺪﻤ(cid:22)",
-              "ﻞﺟر",
-              "لﺎﻤﻋأ",
-              "ةﺮﺟﺎﺗ",
-              "ﻲﻣوﺮﻜﻟا"
+              "ﻰﻔﻄﺼﳌا",
+              "ﻢﻴﻬﻓ",
+              "ﺔﻨﻣآ",
+              "ﻲﺟﺎﳊا"
             ],
             "anchors": [
-              "اطار",
-              "بشركة",
-              "رجل",
-              "اعمال",
-              "تاجرة",
-              "الكرومي"
+              "املصطفي",
+              "فهيم",
+              "امنة",
+              "احلاجي"
             ],
-            "line_candidates": []
+            "pypdf_line_match": false
           },
-          "candidate_name_ar": null
+          "candidate_name_ar": "املصطفي فهيم امنة احلاجي"
         }
       ],
       "errors": [
-        "UNRESOLVED_CARD_row0_bin1",
-        "UNRESOLVED_CARD_row0_bin0",
-        "UNRESOLVED_CARD_row1_bin1",
-        "UNRESOLVED_CARD_row1_bin0",
-        "CANDIDATE_COUNT_0_NE_SEATS_4"
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_2_NE_SEATS_4"
       ]
     },
     {
@@ -1590,13 +2350,15 @@
       "historical_constituency": "Aïn-Sebaâ - Hay-Mohammadi",
       "seats": 4,
       "matched_territory_pattern": "عينالسبعالحيالمحمدي",
-      "layout": [
+      "card_layout": [
         [
-          0.51,
+          0.455,
+          0.605,
           2
         ],
         [
-          0.732,
+          0.675,
+          0.825,
           2
         ]
       ],
@@ -1604,68 +2366,92 @@
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": []
           },
           "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": 308.38,
+          "method": "CARD_NAME_UNRESOLVED",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": [
+              "ﺪﻤ(cid:22)",
+              "ﻲﺷﺎﻳﺮﻟا"
+            ],
+            "anchors": [
+              "الرياشي"
+            ],
+            "line_candidates": [],
+            "guess": "مد الرياشي"
           },
           "candidate_name_ar": null
         },
         {
           "row": 1,
           "bin_from_left": 1,
-          "anchor_fraction": 0.732,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 459.26,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": [
+              "ﺮﻳﺪﻣ",
+              "ﺔﻟﺎﻛو"
+            ],
+            "anchors": [
+              "مدير",
+              "وكالة"
+            ],
+            "pypdf_line_match": true
           },
-          "candidate_name_ar": null
+          "candidate_name_ar": "مدير وكالة"
         },
         {
           "row": 1,
           "bin_from_left": 0,
-          "anchor_fraction": 0.732,
-          "method": "CID_FONTMAP_UNRESOLVED",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 462.38,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
-              "ﺔﻴﻨﻘﺗ",
-              "ﺪﻤ(cid:22)",
-              "ﻞﺟر",
-              "لﺎﻤﻋأ",
-              "ﺪﻋﺎﻘﺘﻣ",
-              "ﻲﻣوﺮﻜﻟا"
+              "ﺔﻔﻴﻄﻟ",
+              "شﺮﻌﻠﺑ",
+              "دﻮﻌﺴﻣ",
+              "دﺎ‹أ"
             ],
             "anchors": [
-              "تقنية",
-              "رجل",
-              "اعمال",
-              "متقاعد",
-              "الكرومي"
+              "لطيفة",
+              "بلعرش",
+              "مسعود",
+              "ا اد"
             ],
-            "line_candidates": []
+            "pypdf_line_match": false
           },
-          "candidate_name_ar": null
+          "candidate_name_ar": "لطيفة بلعرش مسعود ا اد"
         }
       ],
       "errors": [
-        "UNRESOLVED_CARD_row0_bin1",
-        "UNRESOLVED_CARD_row0_bin0",
-        "UNRESOLVED_CARD_row1_bin1",
-        "UNRESOLVED_CARD_row1_bin0",
-        "CANDIDATE_COUNT_0_NE_SEATS_4"
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_2_NE_SEATS_4"
       ]
     },
     {
@@ -1675,13 +2461,15 @@
       "historical_constituency": "Essaouira",
       "seats": 4,
       "matched_territory_pattern": "الصويرة",
-      "layout": [
+      "card_layout": [
         [
-          0.51,
+          0.455,
+          0.605,
           2
         ],
         [
-          0.732,
+          0.675,
+          0.825,
           2
         ]
       ],
@@ -1689,74 +2477,177 @@
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": []
           },
           "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.51,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": 307.27,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
-              "ﺲﻴﺋر",
-              "ﺔﻋﺎﻤﺟ",
-              "ضﺮﻛأ"
+              "ﺔﻴﻃاﺮﻘﳝﺪﻟا",
+              "ﲔﺒﺨﺘﻨﻤﻠﻟ",
+              "ﲔﻴﻣﺪﻘﺘﻟا"
             ],
             "anchors": [
-              "رئيس",
-              "جماعة",
-              "اكرض"
+              "الدميقراطية",
+              "للمنتخبني",
+              "التقدميني"
             ],
-            "pypdf_line_match": true
+            "pypdf_line_match": false
           },
-          "candidate_name_ar": "رئيس جماعة اكرض"
+          "candidate_name_ar": "الدميقراطية للمنتخبني التقدميني"
         },
         {
           "row": 1,
           "bin_from_left": 1,
-          "anchor_fraction": 0.732,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 447.62,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": [
+              "ﺶﻛاﺮﻣ",
+              "ﻲﻔﺳآ"
+            ],
+            "anchors": [
+              "مراكش",
+              "اسفي"
+            ],
+            "pypdf_line_match": true
           },
-          "candidate_name_ar": null
+          "candidate_name_ar": "مراكش اسفي"
         },
         {
           "row": 1,
           "bin_from_left": 0,
-          "anchor_fraction": 0.732,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 450.21,
+          "method": "CARD_NAME_UNRESOLVED",
           "detail": {
             "raw_words": [
-              "رﺎﺸﺘﺴﻣ",
-              "ﻲﻋﺎﻤﺟ",
-              "ﺲﻴﺋر",
-              "ﺔﻋﺎﻤﺟ",
-              "ﻒﻴﻠﻛا"
+              "ﺪﻤ(cid:22)",
+              "ﻲﻣوﺮﻜﻟا"
             ],
             "anchors": [
-              "مستشار",
-              "جماعي",
-              "رئيس",
-              "جماعة",
-              "اكليف"
+              "الكرومي"
             ],
-            "pypdf_line_match": false
+            "line_candidates": [],
+            "guess": "مد الكرومي"
           },
-          "candidate_name_ar": "مستشار جماعي رئيس جماعة اكليف"
+          "candidate_name_ar": null
         }
       ],
       "errors": [
-        "UNRESOLVED_CARD_row0_bin1",
-        "UNRESOLVED_CARD_row1_bin1",
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r1_b0",
         "CANDIDATE_COUNT_2_NE_SEATS_4"
+      ]
+    },
+    {
+      "region": "oriental",
+      "page": 2,
+      "constituency_id": "figuig",
+      "historical_constituency": "Figuig",
+      "seats": 3,
+      "matched_territory_pattern": "فجيج",
+      "card_layout": [
+        [
+          0.575,
+          0.68,
+          3
+        ]
+      ],
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 393.74,
+          "method": "CARD_NAME_UNRESOLVED",
+          "detail": {
+            "raw_words": [
+              "ﺪﻤ(cid:22)",
+              "ﺶﻴﻠﻴﻌﺑ"
+            ],
+            "anchors": [
+              "بعيليش"
+            ],
+            "line_candidates": [],
+            "guess": "مد بعيليش"
+          },
+          "candidate_name_ar": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 416.18,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "detail": {
+            "raw_words": [
+              "دﻮﻌﺴﻣ",
+              "سﺎﻛﺮﺣ"
+            ],
+            "anchors": [
+              "مسعود",
+              "حركاس"
+            ],
+            "pypdf_line_match": true
+          },
+          "candidate_name_ar": "مسعود حركاس"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 416.18,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "detail": {
+            "raw_words": [
+              "ƒﺸﺒﻟا",
+              "يوﺎﺣر"
+            ],
+            "anchors": [
+              "البش",
+              "رحاوي"
+            ],
+            "pypdf_line_match": false
+          },
+          "candidate_name_ar": "البش رحاوي"
+        }
+      ],
+      "errors": [
+        "UNRESOLVED_CARD_r0_b2",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
       ]
     }
   ],
@@ -1792,13 +2683,15 @@
       "historical_constituency": "Khouribga",
       "seats": 6,
       "matched_territory_pattern": "خريبكة",
-      "layout": [
+      "card_layout": [
         [
-          0.51,
+          0.455,
+          0.605,
           3
         ],
         [
-          0.732,
+          0.675,
+          0.825,
           3
         ]
       ],
@@ -1806,8 +2699,12 @@
         {
           "row": 0,
           "bin_from_left": 2,
-          "anchor_fraction": 0.51,
-          "method": "UNIQUE_PYPDF_LINE_FROM_SPATIAL_ANCHORS",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": 336.22,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
           "detail": {
             "raw_words": [
               "دﺎﻤﺼﻟاﺪﺒﻋ",
@@ -1825,38 +2722,56 @@
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": 322.52,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
-              "مﺪﺨﺘﺴﻣ"
+              "ﻒﺼﻨﻣ",
+              "ﻖﻴﻓﺮﻟا"
             ],
             "anchors": [
-              "مستخدم"
-            ]
+              "منصف",
+              "الرفيق"
+            ],
+            "pypdf_line_match": true
           },
-          "candidate_name_ar": null
+          "candidate_name_ar": "منصف الرفيق"
         },
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": 322.52,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
-              "ﺮﺟﺎﺗ"
+              "ﻲﻨﻐﻟاﺪﺒﻋ",
+              "ﻲﺗﻮﺒﻧ"
             ],
             "anchors": [
-              "تاجر"
-            ]
+              "عبدالغني",
+              "نبوتي"
+            ],
+            "pypdf_line_match": true
           },
-          "candidate_name_ar": null
+          "candidate_name_ar": "عبدالغني نبوتي"
         },
         {
           "row": 1,
           "bin_from_left": 2,
-          "anchor_fraction": 0.732,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 484.02,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "بﻮﻳأ",
@@ -1873,8 +2788,12 @@
         {
           "row": 1,
           "bin_from_left": 1,
-          "anchor_fraction": 0.732,
-          "method": "UNIQUE_PYPDF_LINE_FROM_SPATIAL_ANCHORS",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 484.02,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
           "detail": {
             "raw_words": [
               "ﺪﻴﻤﺣ",
@@ -1892,31 +2811,27 @@
         {
           "row": 1,
           "bin_from_left": 0,
-          "anchor_fraction": 0.732,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 483.02,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
-              "نﺎﻨﻓ",
               "ﺪﻴﻠﺧ",
-              "ﻲﺠﻳاﺮﺑ",
-              "ﻲﻠﻴﻜﺸﺗ"
+              "ﻲﺠﻳاﺮﺑ"
             ],
             "anchors": [
-              "فنان",
               "خليد",
-              "برايجي",
-              "تشكيلي"
+              "برايجي"
             ],
-            "pypdf_line_match": false
+            "pypdf_line_match": true
           },
-          "candidate_name_ar": "فنان خليد برايجي تشكيلي"
+          "candidate_name_ar": "خليد برايجي"
         }
       ],
-      "errors": [
-        "UNRESOLVED_CARD_row0_bin1",
-        "UNRESOLVED_CARD_row0_bin0",
-        "CANDIDATE_COUNT_4_NE_SEATS_6"
-      ]
+      "errors": []
     },
     {
       "region": "beni-mellal-khenifra",
@@ -1943,13 +2858,15 @@
       "historical_constituency": "Sidi-Kacem",
       "seats": 5,
       "matched_territory_pattern": "سيديقاسم",
-      "layout": [
+      "card_layout": [
         [
-          0.51,
+          0.455,
+          0.605,
           3
         ],
         [
-          0.732,
+          0.675,
+          0.825,
           2
         ]
       ],
@@ -1957,100 +2874,112 @@
         {
           "row": 0,
           "bin_from_left": 2,
-          "anchor_fraction": 0.51,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": 309.41,
+          "method": "CARD_NAME_UNRESOLVED",
           "detail": {
             "raw_words": [
-              "رﺎﺸﺘﺴﻣ",
-              "ﻲﻋﺎﻤﺟ"
+              "ﺪﻤ(cid:25)",
+              "سﻮﺴﻛ"
             ],
             "anchors": [
-              "مستشار",
-              "جماعي"
+              "كسوس"
             ],
-            "pypdf_line_match": true
+            "line_candidates": [],
+            "guess": "مد كسوس"
           },
-          "candidate_name_ar": "مستشار جماعي"
+          "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": []
           },
           "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.51,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": 309.41,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
-              "ﺲﻴﺋر",
-              "ﺔﻋﺎﻤﺟ",
-              "ةراﺮﻳز"
+              "هﺎﻨﻛ",
+              "ﺲﻳردا"
             ],
             "anchors": [
-              "رئيس",
-              "جماعة",
-              "زيرارة"
+              "كناه",
+              "ادريس"
             ],
             "pypdf_line_match": true
           },
-          "candidate_name_ar": "رئيس جماعة زيرارة"
+          "candidate_name_ar": "كناه ادريس"
         },
         {
           "row": 1,
           "bin_from_left": 1,
-          "anchor_fraction": 0.732,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 475.74,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﺪﻴﺷر",
-              "ذﺎﺘﺳأ",
               "Šوﺮﻌﻣ"
             ],
             "anchors": [
               "رشيد",
-              "استاذ",
               "معرو"
             ],
-            "pypdf_line_match": false
+            "pypdf_line_match": true
           },
-          "candidate_name_ar": "رشيد استاذ معرو"
+          "candidate_name_ar": "رشيد معرو"
         },
         {
           "row": 1,
           "bin_from_left": 0,
-          "anchor_fraction": 0.732,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 475.74,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﺪﺒﻋ",
-              "ﺶﻌﻨﻣ",
               "ﻒﻴﻄﻠﻟا",
-              "يرﺎﻘﻋ",
               "رﺪﻳﻮﻗا"
             ],
             "anchors": [
               "عبد",
-              "منعش",
               "اللطيف",
-              "عقاري",
               "اقويدر"
             ],
-            "pypdf_line_match": false
+            "pypdf_line_match": true
           },
-          "candidate_name_ar": "عبد منعش اللطيف عقاري اقويدر"
+          "candidate_name_ar": "عبد اللطيف اقويدر"
         }
       ],
       "errors": [
-        "UNRESOLVED_CARD_row0_bin1",
-        "CANDIDATE_COUNT_4_NE_SEATS_5"
+        "UNRESOLVED_CARD_r0_b2",
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_3_NE_SEATS_5"
       ]
     },
     {
@@ -2084,9 +3013,10 @@
       "historical_constituency": "El-Gharb",
       "seats": 3,
       "matched_territory_pattern": "الغرب",
-      "layout": [
+      "card_layout": [
         [
-          0.623,
+          0.575,
+          0.68,
           3
         ]
       ],
@@ -2094,28 +3024,36 @@
         {
           "row": 0,
           "bin_from_left": 2,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 391.69,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
-              "Œﺴﻣ",
-              "ﺔﺴﺳﺆﻣ",
-              "ﺔﻳرﺎﲡ"
+              "رﻮﻧ",
+              "ﻦﻳﺪﻟا",
+              "لﺎﻴﳋا"
             ],
             "anchors": [
-              "مس",
-              "مؤسسة",
-              "جتارية"
+              "نور",
+              "الدين",
+              "اخليال"
             ],
             "pypdf_line_match": false
           },
-          "candidate_name_ar": "مس مؤسسة جتارية"
+          "candidate_name_ar": "نور الدين اخليال"
         },
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.623,
-          "method": "UNIQUE_PYPDF_LINE_FROM_SPATIAL_ANCHORS",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 413.13,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
           "detail": {
             "raw_words": [
               "ناﻮﺿر",
@@ -2133,8 +3071,12 @@
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 421.8,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﺐﻴﻄﻟا",
@@ -2164,9 +3106,10 @@
       "historical_constituency": "Tifelt - Rommani",
       "seats": 3,
       "matched_territory_pattern": "تيفلتالرماني",
-      "layout": [
+      "card_layout": [
         [
-          0.623,
+          0.575,
+          0.68,
           3
         ]
       ],
@@ -2174,8 +3117,12 @@
         {
           "row": 0,
           "bin_from_left": 2,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 413.74,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﺪﻤﺣأ",
@@ -2192,8 +3139,12 @@
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.623,
-          "method": "CID_FONTMAP_UNRESOLVED",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 412.5,
+          "method": "CARD_NAME_UNRESOLVED",
           "detail": {
             "raw_words": [
               "ﺪﺒﻋ",
@@ -2204,15 +3155,20 @@
               "عبد",
               "اجغل"
             ],
-            "line_candidates": []
+            "line_candidates": [],
+            "guess": "عبد ا اجغل"
           },
           "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 412.5,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﻲﺒﻴﻄﻟا",
@@ -2228,7 +3184,7 @@
         }
       ],
       "errors": [
-        "UNRESOLVED_CARD_row0_bin1",
+        "UNRESOLVED_CARD_r0_b1",
         "CANDIDATE_COUNT_2_NE_SEATS_3"
       ]
     },
@@ -2281,9 +3237,10 @@
       "historical_constituency": "Mohammadia",
       "seats": 3,
       "matched_territory_pattern": "المحمدية",
-      "layout": [
+      "card_layout": [
         [
-          0.623,
+          0.575,
+          0.68,
           3
         ]
       ],
@@ -2291,8 +3248,12 @@
         {
           "row": 0,
           "bin_from_left": 2,
-          "anchor_fraction": 0.623,
-          "method": "CID_FONTMAP_UNRESOLVED",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 416.21,
+          "method": "CARD_NAME_UNRESOLVED",
           "detail": {
             "raw_words": [
               "ﺪﻤ(cid:22)",
@@ -2301,15 +3262,20 @@
             "anchors": [
               "غرويطي"
             ],
-            "line_candidates": []
+            "line_candidates": [],
+            "guess": "مد غرويطي"
           },
           "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 412.13,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﺪﻤﺣأ",
@@ -2326,8 +3292,12 @@
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 412.13,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﺪﺒﻋ",
@@ -2345,7 +3315,7 @@
         }
       ],
       "errors": [
-        "UNRESOLVED_CARD_row0_bin2",
+        "UNRESOLVED_CARD_r0_b2",
         "CANDIDATE_COUNT_2_NE_SEATS_3"
       ]
     },
@@ -2362,13 +3332,15 @@
       "historical_constituency": "Berrechid",
       "seats": 4,
       "matched_territory_pattern": "برشيد",
-      "layout": [
+      "card_layout": [
         [
-          0.51,
+          0.455,
+          0.605,
           2
         ],
         [
-          0.732,
+          0.675,
+          0.825,
           2
         ]
       ],
@@ -2376,70 +3348,94 @@
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": []
           },
           "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": 307.43,
+          "method": "CARD_NAME_UNRESOLVED",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": [
+              "ﺪﺒﻋ",
+              "ﻖﳊا",
+              "(cid:2)ﻼﺒﻋ"
+            ],
+            "anchors": [
+              "عبد",
+              "احلق"
+            ],
+            "line_candidates": [],
+            "guess": "عبد احلق عبال"
           },
           "candidate_name_ar": null
         },
         {
           "row": 1,
           "bin_from_left": 1,
-          "anchor_fraction": 0.732,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 457.76,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": [
+              "€ﺴﻣ",
+              "ﺔﻛﺮﺷ"
+            ],
+            "anchors": [
+              "مس",
+              "شركة"
+            ],
+            "pypdf_line_match": false
           },
-          "candidate_name_ar": null
+          "candidate_name_ar": "مس شركة"
         },
         {
           "row": 1,
           "bin_from_left": 0,
-          "anchor_fraction": 0.732,
-          "method": "CID_FONTMAP_UNRESOLVED",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 460.93,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
-              "رﺎﻃا",
-              "ﺔﻛﺮﺸﺑ",
-              "ﺪﻤ(cid:22)",
-              "ﻞﺟر",
-              "لﺎﻤﻋأ",
-              "ةﺮﺟﺎﺗ",
-              "ﻲﻣوﺮﻜﻟا"
+              "ﻰﻔﻄﺼﳌا",
+              "ﻢﻴﻬﻓ",
+              "ﺔﻨﻣآ",
+              "ﻲﺟﺎﳊا"
             ],
             "anchors": [
-              "اطار",
-              "بشركة",
-              "رجل",
-              "اعمال",
-              "تاجرة",
-              "الكرومي"
+              "املصطفي",
+              "فهيم",
+              "امنة",
+              "احلاجي"
             ],
-            "line_candidates": []
+            "pypdf_line_match": false
           },
-          "candidate_name_ar": null
+          "candidate_name_ar": "املصطفي فهيم امنة احلاجي"
         }
       ],
       "errors": [
-        "UNRESOLVED_CARD_row0_bin1",
-        "UNRESOLVED_CARD_row0_bin0",
-        "UNRESOLVED_CARD_row1_bin1",
-        "UNRESOLVED_CARD_row1_bin0",
-        "CANDIDATE_COUNT_0_NE_SEATS_4"
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_2_NE_SEATS_4"
       ]
     },
     {
@@ -2461,9 +3457,10 @@
       "historical_constituency": "Sidi-Bernoussi",
       "seats": 3,
       "matched_territory_pattern": "سيديالبرنوصي",
-      "layout": [
+      "card_layout": [
         [
-          0.623,
+          0.575,
+          0.68,
           3
         ]
       ],
@@ -2471,8 +3468,12 @@
         {
           "row": 0,
           "bin_from_left": 2,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 413.69,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﻰﻔﻄﺼﳌا",
@@ -2489,8 +3490,12 @@
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 411.66,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ﻦﺴﺣ",
@@ -2507,8 +3512,12 @@
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 410.66,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "يﺪﻬﳌا",
@@ -2532,13 +3541,15 @@
       "historical_constituency": "Aïn-Sebaâ - Hay-Mohammadi",
       "seats": 4,
       "matched_territory_pattern": "عينالسبعالحيالمحمدي",
-      "layout": [
+      "card_layout": [
         [
-          0.51,
+          0.455,
+          0.605,
           2
         ],
         [
-          0.732,
+          0.675,
+          0.825,
           2
         ]
       ],
@@ -2546,68 +3557,92 @@
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": []
           },
           "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": 308.38,
+          "method": "CARD_NAME_UNRESOLVED",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": [
+              "ﺪﻤ(cid:22)",
+              "ﻲﺷﺎﻳﺮﻟا"
+            ],
+            "anchors": [
+              "الرياشي"
+            ],
+            "line_candidates": [],
+            "guess": "مد الرياشي"
           },
           "candidate_name_ar": null
         },
         {
           "row": 1,
           "bin_from_left": 1,
-          "anchor_fraction": 0.732,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 459.26,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": [
+              "ﺮﻳﺪﻣ",
+              "ﺔﻟﺎﻛو"
+            ],
+            "anchors": [
+              "مدير",
+              "وكالة"
+            ],
+            "pypdf_line_match": true
           },
-          "candidate_name_ar": null
+          "candidate_name_ar": "مدير وكالة"
         },
         {
           "row": 1,
           "bin_from_left": 0,
-          "anchor_fraction": 0.732,
-          "method": "CID_FONTMAP_UNRESOLVED",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 462.38,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
-              "ﺔﻴﻨﻘﺗ",
-              "ﺪﻤ(cid:22)",
-              "ﻞﺟر",
-              "لﺎﻤﻋأ",
-              "ﺪﻋﺎﻘﺘﻣ",
-              "ﻲﻣوﺮﻜﻟا"
+              "ﺔﻔﻴﻄﻟ",
+              "شﺮﻌﻠﺑ",
+              "دﻮﻌﺴﻣ",
+              "دﺎ‹أ"
             ],
             "anchors": [
-              "تقنية",
-              "رجل",
-              "اعمال",
-              "متقاعد",
-              "الكرومي"
+              "لطيفة",
+              "بلعرش",
+              "مسعود",
+              "ا اد"
             ],
-            "line_candidates": []
+            "pypdf_line_match": false
           },
-          "candidate_name_ar": null
+          "candidate_name_ar": "لطيفة بلعرش مسعود ا اد"
         }
       ],
       "errors": [
-        "UNRESOLVED_CARD_row0_bin1",
-        "UNRESOLVED_CARD_row0_bin0",
-        "UNRESOLVED_CARD_row1_bin1",
-        "UNRESOLVED_CARD_row1_bin0",
-        "CANDIDATE_COUNT_0_NE_SEATS_4"
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_2_NE_SEATS_4"
       ]
     },
     {
@@ -2677,13 +3712,15 @@
       "historical_constituency": "Essaouira",
       "seats": 4,
       "matched_territory_pattern": "الصويرة",
-      "layout": [
+      "card_layout": [
         [
-          0.51,
+          0.455,
+          0.605,
           2
         ],
         [
-          0.732,
+          0.675,
+          0.825,
           2
         ]
       ],
@@ -2691,73 +3728,89 @@
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.51,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": []
           },
           "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.51,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.455,
+            0.605
+          ],
+          "first_line_top": 307.27,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
-              "ﺲﻴﺋر",
-              "ﺔﻋﺎﻤﺟ",
-              "ضﺮﻛأ"
+              "ﺔﻴﻃاﺮﻘﳝﺪﻟا",
+              "ﲔﺒﺨﺘﻨﻤﻠﻟ",
+              "ﲔﻴﻣﺪﻘﺘﻟا"
             ],
             "anchors": [
-              "رئيس",
-              "جماعة",
-              "اكرض"
+              "الدميقراطية",
+              "للمنتخبني",
+              "التقدميني"
             ],
-            "pypdf_line_match": true
+            "pypdf_line_match": false
           },
-          "candidate_name_ar": "رئيس جماعة اكرض"
+          "candidate_name_ar": "الدميقراطية للمنتخبني التقدميني"
         },
         {
           "row": 1,
           "bin_from_left": 1,
-          "anchor_fraction": 0.732,
-          "method": "NAME_NOT_MULTIWORD",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 447.62,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
-            "raw_words": [],
-            "anchors": []
+            "raw_words": [
+              "ﺶﻛاﺮﻣ",
+              "ﻲﻔﺳآ"
+            ],
+            "anchors": [
+              "مراكش",
+              "اسفي"
+            ],
+            "pypdf_line_match": true
           },
-          "candidate_name_ar": null
+          "candidate_name_ar": "مراكش اسفي"
         },
         {
           "row": 1,
           "bin_from_left": 0,
-          "anchor_fraction": 0.732,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.675,
+            0.825
+          ],
+          "first_line_top": 450.21,
+          "method": "CARD_NAME_UNRESOLVED",
           "detail": {
             "raw_words": [
-              "رﺎﺸﺘﺴﻣ",
-              "ﻲﻋﺎﻤﺟ",
-              "ﺲﻴﺋر",
-              "ﺔﻋﺎﻤﺟ",
-              "ﻒﻴﻠﻛا"
+              "ﺪﻤ(cid:22)",
+              "ﻲﻣوﺮﻜﻟا"
             ],
             "anchors": [
-              "مستشار",
-              "جماعي",
-              "رئيس",
-              "جماعة",
-              "اكليف"
+              "الكرومي"
             ],
-            "pypdf_line_match": false
+            "line_candidates": [],
+            "guess": "مد الكرومي"
           },
-          "candidate_name_ar": "مستشار جماعي رئيس جماعة اكليف"
+          "candidate_name_ar": null
         }
       ],
       "errors": [
-        "UNRESOLVED_CARD_row0_bin1",
-        "UNRESOLVED_CARD_row1_bin1",
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r1_b0",
         "CANDIDATE_COUNT_2_NE_SEATS_4"
       ]
     },
@@ -2828,9 +3881,10 @@
       "historical_constituency": "Figuig",
       "seats": 3,
       "matched_territory_pattern": "فجيج",
-      "layout": [
+      "card_layout": [
         [
-          0.623,
+          0.575,
+          0.68,
           3
         ]
       ],
@@ -2838,28 +3892,34 @@
         {
           "row": 0,
           "bin_from_left": 2,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 393.74,
+          "method": "CARD_NAME_UNRESOLVED",
           "detail": {
             "raw_words": [
-              "ﺮﻳﺪﻣ",
-              "ﻲﺟﻮﻏاﺪﻴﺑ",
-              "ﺔﺳرﺪﲟ"
+              "ﺪﻤ(cid:22)",
+              "ﺶﻴﻠﻴﻌﺑ"
             ],
             "anchors": [
-              "مدير",
-              "بيداغوجي",
-              "مبدرسة"
+              "بعيليش"
             ],
-            "pypdf_line_match": false
+            "line_candidates": [],
+            "guess": "مد بعيليش"
           },
-          "candidate_name_ar": "مدير بيداغوجي مبدرسة"
+          "candidate_name_ar": null
         },
         {
           "row": 0,
           "bin_from_left": 1,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 416.18,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "دﻮﻌﺴﻣ",
@@ -2876,8 +3936,12 @@
         {
           "row": 0,
           "bin_from_left": 0,
-          "anchor_fraction": 0.623,
-          "method": "CALIBRATED_FIRST_CARD_LINE",
+          "y_range": [
+            0.575,
+            0.68
+          ],
+          "first_line_top": 416.18,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
           "detail": {
             "raw_words": [
               "ƒﺸﺒﻟا",
@@ -2892,7 +3956,10 @@
           "candidate_name_ar": "البش رحاوي"
         }
       ],
-      "errors": []
+      "errors": [
+        "UNRESOLVED_CARD_r0_b2",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ]
     },
     {
       "region": "oriental",
@@ -2934,13 +4001,14 @@
   "counts": {
     "target_missing_ge3": 14,
     "territories_recovered": 3,
-    "candidate_rows": 9,
-    "recovered_districts_with_at_least_three_verified_candidate_identities": 3
+    "candidate_rows": 12,
+    "recovered_districts_with_at_least_three_verified_candidate_identities": 3,
+    "needed_from_pps_to_close_2016_identity_gate": 13,
+    "pps_closure_threshold_reached": false
   },
   "invariants": {
-    "geometry_calibration_precedes_parser_revision": true,
+    "candidate_card_rule": "FIRST_ARABIC_LINE_IN_EACH_CALIBRATED_CARD",
     "candidate_rank_inferred_from_layout": false,
-    "biography_lines_excluded_by_anchor_geometry": true,
     "failed_pages_promoted": false,
     "source_only_T1_pre_cutoff": true,
     "outcomes_unsealed": false,
