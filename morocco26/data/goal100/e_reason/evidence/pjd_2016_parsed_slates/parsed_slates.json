@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.1",
-  "created_at": "2026-08-17T23:10:02+00:00",
+  "schema_version": "2.2",
+  "created_at": "2026-08-17T23:13:35+00:00",
   "status": "FAIL_CLOSED_DIAGNOSTIC_PERSISTED",
   "documents": [
     "RABAT_FES_MARRAKECH",
@@ -1204,7 +1204,7 @@
       "candidate_name_ar": "بوشتى بوصوف",
       "candidate_name_ar_logical_pre_repair": "بوشتى بوصوف",
       "candidate_name_ar_visual_raw": "فوصوب ىتشوب",
-      "candidate_name_ar_normalized": "بوشتى بوصوف",
+      "candidate_name_ar_normalized": "بوشتي بوصوف",
       "identity_cross_verified_in_pypdf_text": true,
       "CANDIDATE_REGISTERED_RANK": 1,
       "FORMAL_ENDORSEMENT": true,
@@ -1244,7 +1244,7 @@
       "candidate_name_ar": "مصطفى الفيزازي",
       "candidate_name_ar_logical_pre_repair": "مصطفى الفيزازي",
       "candidate_name_ar_visual_raw": "يزازيفلا ىفطصم",
-      "candidate_name_ar_normalized": "مصطفى الفيزازي",
+      "candidate_name_ar_normalized": "مصطفي الفيزازي",
       "identity_cross_verified_in_pypdf_text": true,
       "CANDIDATE_REGISTERED_RANK": 3,
       "FORMAL_ENDORSEMENT": true,
@@ -1884,7 +1884,7 @@
       "candidate_name_ar": "مصطفى الخلفي",
       "candidate_name_ar_logical_pre_repair": "مصطفى الخلفي",
       "candidate_name_ar_visual_raw": "يفلخلا ىفطصم",
-      "candidate_name_ar_normalized": "مصطفى الخلفي",
+      "candidate_name_ar_normalized": "مصطفي الخلفي",
       "identity_cross_verified_in_pypdf_text": true,
       "CANDIDATE_REGISTERED_RANK": 1,
       "FORMAL_ENDORSEMENT": true,
@@ -2184,7 +2184,7 @@
       "candidate_name_ar": "مصطفى الدحماني",
       "candidate_name_ar_logical_pre_repair": "مصطفى الدحماني",
       "candidate_name_ar_visual_raw": "ينامحدلا ىفطصم",
-      "candidate_name_ar_normalized": "مصطفى الدحماني",
+      "candidate_name_ar_normalized": "مصطفي الدحماني",
       "identity_cross_verified_in_pypdf_text": true,
       "CANDIDATE_REGISTERED_RANK": 3,
       "FORMAL_ENDORSEMENT": true,
@@ -2364,7 +2364,7 @@
       "candidate_name_ar": "سمير عبد المولى",
       "candidate_name_ar_logical_pre_repair": "سمير عبد املولى",
       "candidate_name_ar_visual_raw": "ىلولما دبع ريمس",
-      "candidate_name_ar_normalized": "سمير عبد المولى",
+      "candidate_name_ar_normalized": "سمير عبد المولي",
       "identity_cross_verified_in_pypdf_text": true,
       "CANDIDATE_REGISTERED_RANK": 2,
       "FORMAL_ENDORSEMENT": true,
@@ -2804,7 +2804,7 @@
       "candidate_name_ar": "لحسن واعرى",
       "candidate_name_ar_logical_pre_repair": "لحسن واعرى",
       "candidate_name_ar_visual_raw": "ىرعاو نسحل",
-      "candidate_name_ar_normalized": "لحسن واعرى",
+      "candidate_name_ar_normalized": "لحسن واعري",
       "identity_cross_verified_in_pypdf_text": true,
       "CANDIDATE_REGISTERED_RANK": 1,
       "FORMAL_ENDORSEMENT": true,
@@ -3204,7 +3204,7 @@
       "candidate_name_ar": "مصطفى أبغاض",
       "candidate_name_ar_logical_pre_repair": "مصطفى أبغاض",
       "candidate_name_ar_visual_raw": "ضاغبأ ىفطصم",
-      "candidate_name_ar_normalized": "مصطفى ابغاض",
+      "candidate_name_ar_normalized": "مصطفي ابغاض",
       "identity_cross_verified_in_pypdf_text": true,
       "CANDIDATE_REGISTERED_RANK": 3,
       "FORMAL_ENDORSEMENT": true,
@@ -3288,7 +3288,8 @@
         {
           "rank": 1,
           "pre_repair": "عبد اإلله ابن كيران",
-          "name": "عبد اإلله ابن كيران"
+          "name": "عبد اإلله ابن كيران",
+          "normalized_compact": "عبدااللهابنكيران"
         }
       ],
       "failures": [
@@ -3368,7 +3369,8 @@
         {
           "rank": 1,
           "pre_repair": "إدريس األزمي اإلدريس ي",
-          "name": "إدريس األزمي اإلدريس ي"
+          "name": "إدريس األزمي اإلدريس ي",
+          "normalized_compact": "ادريساالزمياالدريسي"
         }
       ],
       "failures": [
@@ -3412,7 +3414,8 @@
         {
           "rank": 3,
           "pre_repair": "عبد السالم الخالدي",
-          "name": "عبد السالم الخالدي"
+          "name": "عبد السالم الخالدي",
+          "normalized_compact": "عبدالسالمالخالدي"
         }
       ],
       "failures": [
@@ -3460,7 +3463,8 @@
         {
           "rank": 2,
           "pre_repair": "الجياللي الدومة",
-          "name": "الجياللي الدومة"
+          "name": "الجياللي الدومة",
+          "normalized_compact": "الجيالليالدومة"
         }
       ],
       "failures": [
@@ -3536,7 +3540,8 @@
         {
           "rank": 2,
           "pre_repair": "أمينة العمراني اإلدريس ي",
-          "name": "أمينة العمراني اإلدريس ي"
+          "name": "أمينة العمراني اإلدريس ي",
+          "normalized_compact": "امينةالعمرانياالدريسي"
         }
       ],
       "failures": [
@@ -3578,7 +3583,8 @@
         {
           "rank": 1,
           "pre_repair": "بلعيد أعلوالل",
-          "name": "بلعيد أعلوالل"
+          "name": "بلعيد أعلوالل",
+          "normalized_compact": "بلعيداعلوالل"
         }
       ],
       "failures": [
@@ -3622,7 +3628,8 @@
         {
           "rank": 1,
           "pre_repair": "أبو زيد املقرئ اإلدريس ي",
-          "name": "أبو زيد المقرئ اإلدريس ي"
+          "name": "أبو زيد المقرئ اإلدريس ي",
+          "normalized_compact": "ابوزيدالمقرئاالدريسي"
         }
       ],
       "failures": [
@@ -3670,7 +3677,8 @@
         {
           "rank": 1,
           "pre_repair": "عبد الحليم عالوي",
-          "name": "عبد الحليم عالوي"
+          "name": "عبد الحليم عالوي",
+          "normalized_compact": "عبدالحليمعالوي"
         }
       ],
       "failures": [
@@ -3712,7 +3720,8 @@
         {
           "rank": 2,
           "pre_repair": "عبد السالم برجي",
-          "name": "عبد السالم برجي"
+          "name": "عبد السالم برجي",
+          "normalized_compact": "عبدالسالمبرجي"
         }
       ],
       "failures": [
@@ -3758,7 +3767,8 @@
         {
           "rank": 4,
           "pre_repair": "عبد السالم النباص",
-          "name": "عبد السالم النباص"
+          "name": "عبد السالم النباص",
+          "normalized_compact": "عبدالسالمالنباص"
         }
       ],
       "failures": [
@@ -3802,7 +3812,8 @@
         {
           "rank": 3,
           "pre_repair": "الحسن ملدن",
-          "name": "الحسن ملدن"
+          "name": "الحسن ملدن",
+          "normalized_compact": "الحسنملدن"
         }
       ],
       "failures": [
@@ -4520,6 +4531,7 @@
   ],
   "invariants": {
     "visual_to_logical_transform": "WHOLE_CELL_CODEPOINT_REVERSAL",
+    "unicode_identity_normalization": "NFKC_PLUS_ARABIC_CODEPOINT_VARIANTS",
     "presentation_repairs": [
       [
         "امل",
@@ -4535,6 +4547,7 @@
       ]
     ],
     "candidate_identity_requires_independent_pypdf_text_match": true,
+    "person_name_fuzzy_matching": false,
     "failed_rows_promoted": false,
     "outcomes_unsealed": false,
     "predictive_judgments_generated": false,
