@@ -192,3 +192,24 @@ Chaque entrée doit contenir, dans cet ordre :
 **Décision scientifique :** correction d’ingénierie versionnée. Le validateur d’origine conserve tous les checks de hashes ; seule la condition d’ascendance, inapplicable après squash, est remplacée par existence + reachability dans une ref récupérée.
 
 **Prochaine action exacte :** Rerun the B2 protocol workflow, commit A018/A019 to FIL_ARIANE, and only after PASS proceed to freeze the B2 source universe.
+
+
+### 2026-08-17 — Entrée A020 — Gel de l’univers de sources B2
+
+**Question/gate traité :** `B2-1-SOURCE-UNIVERSE-FROZEN` — vérifier l’allowlist et les cinq requêtes déterministes avant le premier claim.
+
+**Hypothèse avant test :** au moins 2 T0 actives, 8 partis officiellement représentés dont 5 T1 directement actifs, 3 clusters T2 actifs, 10 sources actives au total et zéro claim préexistant.
+
+**Actions et artefacts :** smoke test HTTP borné sur les 19 routes figées ; SHA-256 du payload de source `8aa331e941ab892997b68a04b91b5b2147c9561f717a3ca976122dbb1ba44d32` ; `b2_source_universe_probe.json` et `b2_source_universe_certificate.json`.
+
+**Résultat machine :** `PASS` — T0 actives `2`, partis T1 représentés `8`, partis T1 actifs `5`, clusters T2 actifs `4`, total actif `11`, reference-only `5`, inactives `3`, claims avant PASS `0`.
+
+**Sources ACTIVE :** `['T0_MAROC_MA_ELECTIONS', 'T0_CONSTITUTIONAL_COURT', 'T1_ISTIQLAL_OFFICIAL', 'T1_PJD_OFFICIAL', 'T1_MP_OFFICIAL', 'T1_UC_OFFICIAL', 'T1_PPS_OFFICIAL', 'T2_LE360', 'T2_HESPRESS', 'T2_SNRTNEWS', 'T2_LEMATIN']`.
+
+**Sources REFERENCE_ONLY :** `['T0_CHAMBRE_REPRESENTANTS', 'T0_LISTES_ELECTORALES', 'T1_RNI_OFFICIAL', 'T1_PAM_OFFICIAL', 'T1_USFP_OFFICIAL']`.
+
+**Sources INACTIVE :** `['T0_SGG_LEGISLATION', 'T2_MEDIAS24', 'T2_TELQUEL']`.
+
+**Décision scientifique :** seules les routes `ACTIVE` peuvent produire des records B2. Une route WAF/challenge ne reçoit aucun crédit par snippet. Tous les coefficients prédictifs restent à zéro.
+
+**Prochaine action exacte :** construire et certifier le crosswalk déterministe identité/parti/liste/territoire (`B2-2`) avant l’admission d’une feature ou d’une contrainte mécanique.

@@ -1,9 +1,14 @@
 {
   "schema_version": "1.0",
   "registry_id": "M26-GOAL100-B2-GATES-V1",
-  "as_of": "2026-08-17T07:16:21+01:00",
+  "as_of": "2026-08-17T07:41:43+01:00",
   "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
-  "status_vocabulary": ["CLOSED", "OPEN", "LOCKED", "FAILED"],
+  "status_vocabulary": [
+    "CLOSED",
+    "OPEN",
+    "LOCKED",
+    "FAILED"
+  ],
   "rule": "A B2 gate closes only from a machine-verifiable artifact satisfying its frozen criterion. Missingness, prose quality or forecast movement never closes a gate.",
   "gates": [
     {
@@ -18,9 +23,10 @@
     },
     {
       "id": "B2-1-SOURCE-UNIVERSE-FROZEN",
-      "status": "OPEN",
-      "required_artifact": "morocco26/data/goal100/b2_source_registry.json",
-      "closure_criterion": "Versioned source/domain/document allowlist, deterministic query/page templates, independence clusters and archive rules are frozen before collection."
+      "status": "CLOSED",
+      "required_artifact": "morocco26/data/goal100/b2_source_universe_certificate.json",
+      "closure_criterion": "Versioned source/domain/document allowlist, deterministic query/page templates, independence clusters and archive rules are frozen before collection.",
+      "resolved_claim": "The pre-collection source/domain/document allowlist and deterministic query templates are frozen; only sources that passed direct smoke access are active for claims, while blocked/challenged routes are explicitly reference-only or inactive."
     },
     {
       "id": "B2-2-IDENTITY-TERRITORY-CROSSWALK",
@@ -83,5 +89,5 @@
       "reason": "Cannot be preregistered until collection and reasoning ablations are independently frozen."
     }
   ],
-  "next_gate": "B2-1-SOURCE-UNIVERSE-FROZEN"
+  "next_gate": "B2-2-IDENTITY-TERRITORY-CROSSWALK"
 }

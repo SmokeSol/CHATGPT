@@ -4,12 +4,21 @@
   "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
   "created_at": "2026-08-17T07:16:21+01:00",
   "source_universe_frozen_at": "2026-08-17T07:34:00+01:00",
-  "status": "FROZEN_PENDING_SMOKE_TEST",
-  "collection_allowed": false,
+  "status": "FROZEN_COLLECTION_ENABLED_BOUNDED",
+  "collection_allowed": true,
   "rule": "The source entries, domains, paths, query templates and thresholds below are frozen before the first B2 claim. The smoke test may only add access results and change operational state; it may not add or remove a source or query template.",
   "independence_rule": "Syndicated or copied material shares one independence_cluster and counts once regardless of publisher count. MAP copy reproduced by another outlet remains in the MAP cluster.",
   "archive_rule": "Each accepted publication retains raw bytes or a bounded archival representation, publication timestamp, first-observed timestamp, final URL and SHA-256. A search result snippet is a lead, never evidence.",
-  "in_scope_parties": ["RNI", "PAM", "PI", "PJD", "USFP", "MP", "UC", "PPS"],
+  "in_scope_parties": [
+    "RNI",
+    "PAM",
+    "PI",
+    "PJD",
+    "USFP",
+    "MP",
+    "UC",
+    "PPS"
+  ],
   "party_official_source_map": {
     "RNI": "T1_RNI_OFFICIAL",
     "PAM": "T1_PAM_OFFICIAL",
@@ -26,86 +35,222 @@
       "tier": "T0",
       "publisher": "Portail officiel du Royaume du Maroc / communiqués publics",
       "independence_cluster": "STATE_MAROC_MA_MAP",
-      "allowed_domains": ["maroc.ma", "www.maroc.ma"],
+      "allowed_domains": [
+        "maroc.ma",
+        "www.maroc.ma"
+      ],
       "probe_url": "https://maroc.ma/fr/actualites/la-date-des-elections-des-membres-de-la-chambre-des-representants-fixee-au-mercredi-23-septembre-2026",
       "seed_urls": [
         "https://maroc.ma/fr/actualites/la-date-des-elections-des-membres-de-la-chambre-des-representants-fixee-au-mercredi-23-septembre-2026",
         "https://maroc.ma/fr/actualites/les-preparatifs-des-elections-du-23-septembre-au-coeur-de-deux-reunions-avec-les-chefs-et-cadres-des"
       ],
       "source_role": "AUTHORITATIVE_PROCESS_CALENDAR_AND_MINISTRY_STATEMENTS",
-      "accepted_evidence_types": ["LIST_REGISTERED", "LIST_REJECTED", "CANDIDATE_REGISTERED", "CANDIDATE_WITHDRAWN", "CANDIDATE_DISQUALIFIED", "FORMAL_ALLIANCE", "OFFICIAL_INVESTIGATION", "OFFICIAL_SANCTION"],
+      "accepted_evidence_types": [
+        "LIST_REGISTERED",
+        "LIST_REJECTED",
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_WITHDRAWN",
+        "CANDIDATE_DISQUALIFIED",
+        "FORMAL_ALLIANCE",
+        "OFFICIAL_INVESTIGATION",
+        "OFFICIAL_SANCTION"
+      ],
       "retrieval_policy": "DIRECT_REQUIRED",
-      "path_allowlist": ["/fr/actualites/", "/ar/actualites/"],
-      "languages": ["fr", "ar"],
+      "path_allowlist": [
+        "/fr/actualites/",
+        "/ar/actualites/"
+      ],
+      "languages": [
+        "fr",
+        "ar"
+      ],
       "archive_policy": "RAW_HTML_AND_CONTENT_HASH",
-      "claim_boundary": "Only statements explicitly attributed to a competent public authority are T0. MAP reporting without an identified authority is grouped as state-wire reporting and cannot alone establish a final ballot fact."
+      "claim_boundary": "Only statements explicitly attributed to a competent public authority are T0. MAP reporting without an identified authority is grouped as state-wire reporting and cannot alone establish a final ballot fact.",
+      "operational_state": "ACTIVE",
+      "probe_result": {
+        "access_class": "DIRECT_REPRODUCIBLE",
+        "status_code": 200,
+        "final_url": "https://maroc.ma/fr/actualites/la-date-des-elections-des-membres-de-la-chambre-des-representants-fixee-au-mercredi-23-septembre-2026",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 58379,
+        "content_sha256": "f4f58124e7df2e3da13adc626fb7dae3be199425255463c22286974cd751adb0",
+        "challenge_marker": null,
+        "exception": null
+      }
     },
     {
       "source_id": "T0_SGG_LEGISLATION",
       "tier": "T0",
       "publisher": "Secrétariat général du gouvernement",
       "independence_cluster": "STATE_SGG",
-      "allowed_domains": ["sgg.gov.ma", "www.sgg.gov.ma"],
+      "allowed_domains": [
+        "sgg.gov.ma",
+        "www.sgg.gov.ma"
+      ],
       "probe_url": "https://www.sgg.gov.ma/arabe/Legislation.aspx",
       "seed_urls": [
         "https://www.sgg.gov.ma/arabe/Legislation.aspx",
         "https://www.sgg.gov.ma/Portals/1/textesconsolides/27_11.pdf"
       ],
       "source_role": "AUTHORITATIVE_LAW_GAZETTE_AND_REGULATION",
-      "accepted_evidence_types": ["LIST_REJECTED", "CANDIDATE_DISQUALIFIED", "FORMAL_ALLIANCE", "OFFICIAL_SANCTION"],
+      "accepted_evidence_types": [
+        "LIST_REJECTED",
+        "CANDIDATE_DISQUALIFIED",
+        "FORMAL_ALLIANCE",
+        "OFFICIAL_SANCTION"
+      ],
       "retrieval_policy": "DIRECT_REQUIRED",
-      "path_allowlist": ["/arabe/Legislation.aspx", "/fr/legislation/", "/Portals/1/", "/BO/"],
-      "languages": ["ar", "fr"],
+      "path_allowlist": [
+        "/arabe/Legislation.aspx",
+        "/fr/legislation/",
+        "/Portals/1/",
+        "/BO/"
+      ],
+      "languages": [
+        "ar",
+        "fr"
+      ],
       "archive_policy": "RAW_DOCUMENT_AND_SHA256",
-      "claim_boundary": "Legal texts define admissibility and mechanical rules; they do not prove that a named candidate was actually filed unless a candidate-specific official act is present."
+      "claim_boundary": "Legal texts define admissibility and mechanical rules; they do not prove that a named candidate was actually filed unless a candidate-specific official act is present.",
+      "operational_state": "INACTIVE",
+      "probe_result": {
+        "access_class": "FAILED_REQUEST",
+        "status_code": null,
+        "final_url": null,
+        "final_domain_allowed": false,
+        "content_type": null,
+        "bytes_read": 0,
+        "content_sha256": null,
+        "challenge_marker": null,
+        "exception": "ConnectTimeout: HTTPSConnectionPool(host='www.sgg.gov.ma', port=443): Max retries exceeded with url: /arabe/Legislation.aspx (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.sgg.gov.ma', port=443) at 0x7fc875b27470>, 'Connection to www.sgg.gov.ma timed out. (connect timeout=10)'))"
+      }
     },
     {
       "source_id": "T0_CHAMBRE_REPRESENTANTS",
       "tier": "T0",
       "publisher": "Chambre des représentants",
       "independence_cluster": "STATE_PARLIAMENT",
-      "allowed_domains": ["chambredesrepresentants.ma", "www.chambredesrepresentants.ma"],
+      "allowed_domains": [
+        "chambredesrepresentants.ma",
+        "www.chambredesrepresentants.ma"
+      ],
       "probe_url": "https://www.chambredesrepresentants.ma/",
-      "seed_urls": ["https://www.chambredesrepresentants.ma/"],
+      "seed_urls": [
+        "https://www.chambredesrepresentants.ma/"
+      ],
       "source_role": "AUTHORITATIVE_INCUMBENT_DIRECTORY_OFFICE_AND_GEOMETRY",
-      "accepted_evidence_types": ["INCUMBENT_STATUS", "ELECTED_OFFICE", "CANDIDATE_BIRTHDATE"],
+      "accepted_evidence_types": [
+        "INCUMBENT_STATUS",
+        "ELECTED_OFFICE",
+        "CANDIDATE_BIRTHDATE"
+      ],
       "retrieval_policy": "DIRECT_OR_DOCUMENTED_WAF_REFERENCE_ONLY",
-      "path_allowlist": ["/", "/fr/", "/ar/"],
-      "languages": ["fr", "ar"],
+      "path_allowlist": [
+        "/",
+        "/fr/",
+        "/ar/"
+      ],
+      "languages": [
+        "fr",
+        "ar"
+      ],
       "archive_policy": "RAW_HTML_IF_ACCESSIBLE_OTHERWISE_HASHED_STATIC_WITNESS",
-      "claim_boundary": "A WAF-blocked page remains reference-only until raw content or a bounded static witness is archived. Search snippets cannot create B2 records."
+      "claim_boundary": "A WAF-blocked page remains reference-only until raw content or a bounded static witness is archived. Search snippets cannot create B2 records.",
+      "operational_state": "REFERENCE_ONLY",
+      "probe_result": {
+        "access_class": "REFERENCE_ONLY_NONREPRODUCIBLE",
+        "status_code": 403,
+        "final_url": "https://www.chambredesrepresentants.ma/",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 5634,
+        "content_sha256": "6294b948572cc18fb16256ee58930c121c8e9ade83cf62272116e5bcf1e6959e",
+        "challenge_marker": "just a moment",
+        "exception": null
+      }
     },
     {
       "source_id": "T0_LISTES_ELECTORALES",
       "tier": "T0",
       "publisher": "Service public des listes électorales générales",
       "independence_cluster": "STATE_INTERIOR_ELECTORAL_ROLL",
-      "allowed_domains": ["listeselectorales.ma", "www.listeselectorales.ma"],
+      "allowed_domains": [
+        "listeselectorales.ma",
+        "www.listeselectorales.ma"
+      ],
       "probe_url": "https://www.listeselectorales.ma/",
-      "seed_urls": ["https://www.listeselectorales.ma/"],
+      "seed_urls": [
+        "https://www.listeselectorales.ma/"
+      ],
       "source_role": "AUTHORITATIVE_VOTER_REGISTRATION_PORTAL_REFERENCE_ONLY_FOR_B2",
       "accepted_evidence_types": [],
       "retrieval_policy": "DIRECT_OR_REFERENCE_ONLY",
-      "path_allowlist": ["/"],
-      "languages": ["ar", "fr"],
+      "path_allowlist": [
+        "/"
+      ],
+      "languages": [
+        "ar",
+        "fr"
+      ],
       "archive_policy": "RAW_HTML_AND_CONTENT_HASH",
-      "claim_boundary": "This portal verifies registration procedures, not candidate/list facts; it is reference-only in B2 V1."
+      "claim_boundary": "This portal verifies registration procedures, not candidate/list facts; it is reference-only in B2 V1.",
+      "operational_state": "REFERENCE_ONLY",
+      "probe_result": {
+        "access_class": "REFERENCE_ONLY_NONREPRODUCIBLE",
+        "status_code": 403,
+        "final_url": "https://www.listeselectorales.ma/",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 5649,
+        "content_sha256": "5ab6e05121f3644a175d2be7648df646848c21505c27408632dd9afa8d10c43e",
+        "challenge_marker": "just a moment",
+        "exception": null
+      }
     },
     {
       "source_id": "T0_CONSTITUTIONAL_COURT",
       "tier": "T0",
       "publisher": "Cour constitutionnelle du Royaume du Maroc",
       "independence_cluster": "STATE_CONSTITUTIONAL_COURT",
-      "allowed_domains": ["courconstitutionnelle.ma", "www.courconstitutionnelle.ma"],
+      "allowed_domains": [
+        "courconstitutionnelle.ma",
+        "www.courconstitutionnelle.ma"
+      ],
       "probe_url": "https://www.courconstitutionnelle.ma/",
-      "seed_urls": ["https://www.courconstitutionnelle.ma/"],
+      "seed_urls": [
+        "https://www.courconstitutionnelle.ma/"
+      ],
       "source_role": "AUTHORITATIVE_ELECTORAL_DECISIONS",
-      "accepted_evidence_types": ["LIST_REJECTED", "CANDIDATE_DISQUALIFIED", "OFFICIAL_SANCTION"],
+      "accepted_evidence_types": [
+        "LIST_REJECTED",
+        "CANDIDATE_DISQUALIFIED",
+        "OFFICIAL_SANCTION"
+      ],
       "retrieval_policy": "DIRECT_REQUIRED",
-      "path_allowlist": ["/", "/Decision/", "/Decisions/"],
-      "languages": ["ar", "fr"],
+      "path_allowlist": [
+        "/",
+        "/Decision/",
+        "/Decisions/"
+      ],
+      "languages": [
+        "ar",
+        "fr"
+      ],
       "archive_policy": "RAW_DECISION_AND_SHA256",
-      "claim_boundary": "Only a published decision concerning the named person/list and relevant election is admissible."
+      "claim_boundary": "Only a published decision concerning the named person/list and relevant election is admissible.",
+      "operational_state": "ACTIVE",
+      "probe_result": {
+        "access_class": "DIRECT_REPRODUCIBLE",
+        "status_code": 200,
+        "final_url": "https://www.courconstitutionnelle.ma/",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 148981,
+        "content_sha256": "aa0627b77fd9043e8a13a70f4ee8e5514ff686464bad6c0d348a6592895bffd8",
+        "challenge_marker": null,
+        "exception": null
+      }
     },
     {
       "source_id": "T1_RNI_OFFICIAL",
@@ -113,16 +258,45 @@
       "publisher": "Rassemblement National des Indépendants",
       "party_id": "RNI",
       "independence_cluster": "PARTY_RNI",
-      "allowed_domains": ["rni.ma", "www.rni.ma"],
+      "allowed_domains": [
+        "rni.ma",
+        "www.rni.ma"
+      ],
       "probe_url": "https://rni.ma/",
-      "seed_urls": ["https://rni.ma/"],
+      "seed_urls": [
+        "https://rni.ma/"
+      ],
       "source_role": "OFFICIAL_PARTY_SELF_REPORT",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH"
+      ],
       "retrieval_policy": "DIRECT_OR_REFERENCE_ONLY",
-      "path_allowlist": ["/"],
-      "languages": ["ar", "fr"],
+      "path_allowlist": [
+        "/"
+      ],
+      "languages": [
+        "ar",
+        "fr"
+      ],
       "archive_policy": "RAW_HTML_OR_DOCUMENT_AND_SHA256",
-      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact."
+      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact.",
+      "operational_state": "REFERENCE_ONLY",
+      "probe_result": {
+        "access_class": "REFERENCE_ONLY_NONREPRODUCIBLE",
+        "status_code": 403,
+        "final_url": "https://rni.ma/",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 5461,
+        "content_sha256": "fd63c259c4d6b5b5219be6225a5cc79b68977e2a5254ef75c35e421499480fa8",
+        "challenge_marker": "just a moment",
+        "exception": null
+      }
     },
     {
       "source_id": "T1_PAM_OFFICIAL",
@@ -130,16 +304,45 @@
       "publisher": "Parti Authenticité et Modernité",
       "party_id": "PAM",
       "independence_cluster": "PARTY_PAM",
-      "allowed_domains": ["pam.ma", "www.pam.ma"],
+      "allowed_domains": [
+        "pam.ma",
+        "www.pam.ma"
+      ],
       "probe_url": "https://pam.ma/",
-      "seed_urls": ["https://pam.ma/"],
+      "seed_urls": [
+        "https://pam.ma/"
+      ],
       "source_role": "OFFICIAL_PARTY_SELF_REPORT",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH"
+      ],
       "retrieval_policy": "DIRECT_OR_REFERENCE_ONLY",
-      "path_allowlist": ["/"],
-      "languages": ["ar", "fr"],
+      "path_allowlist": [
+        "/"
+      ],
+      "languages": [
+        "ar",
+        "fr"
+      ],
       "archive_policy": "RAW_HTML_OR_DOCUMENT_AND_SHA256",
-      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact."
+      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact.",
+      "operational_state": "REFERENCE_ONLY",
+      "probe_result": {
+        "access_class": "REFERENCE_ONLY_NONREPRODUCIBLE",
+        "status_code": 200,
+        "final_url": "https://pam.ma/",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 386769,
+        "content_sha256": "9f6f035ae16e067b474368ed90cf0b29fcb29b80d7e369aa40638f4224d0677c",
+        "challenge_marker": "captcha",
+        "exception": null
+      }
     },
     {
       "source_id": "T1_ISTIQLAL_OFFICIAL",
@@ -147,16 +350,45 @@
       "publisher": "Parti de l'Istiqlal",
       "party_id": "PI",
       "independence_cluster": "PARTY_ISTIQLAL",
-      "allowed_domains": ["istiqlal.info", "www.istiqlal.info"],
+      "allowed_domains": [
+        "istiqlal.info",
+        "www.istiqlal.info"
+      ],
       "probe_url": "https://www.istiqlal.info/",
-      "seed_urls": ["https://www.istiqlal.info/"],
+      "seed_urls": [
+        "https://www.istiqlal.info/"
+      ],
       "source_role": "OFFICIAL_PARTY_SELF_REPORT",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH"
+      ],
       "retrieval_policy": "DIRECT_OR_REFERENCE_ONLY",
-      "path_allowlist": ["/"],
-      "languages": ["ar", "fr"],
+      "path_allowlist": [
+        "/"
+      ],
+      "languages": [
+        "ar",
+        "fr"
+      ],
       "archive_policy": "RAW_HTML_OR_DOCUMENT_AND_SHA256",
-      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact."
+      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact.",
+      "operational_state": "ACTIVE",
+      "probe_result": {
+        "access_class": "DIRECT_REPRODUCIBLE",
+        "status_code": 200,
+        "final_url": "https://www.istiqlal.info/",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 165113,
+        "content_sha256": "217811bb808655f2dd8012d079d0ecb7743f4906f3b9e84c3fe7fe776bbed2a7",
+        "challenge_marker": null,
+        "exception": null
+      }
     },
     {
       "source_id": "T1_PJD_OFFICIAL",
@@ -164,19 +396,45 @@
       "publisher": "Parti de la Justice et du Développement",
       "party_id": "PJD",
       "independence_cluster": "PARTY_PJD",
-      "allowed_domains": ["pjd.ma", "www.pjd.ma"],
+      "allowed_domains": [
+        "pjd.ma",
+        "www.pjd.ma"
+      ],
       "probe_url": "https://www.pjd.ma/229786-%D8%A7%D9%84%D9%84%D8%A7%D8%A6%D8%AD%D8%A9-%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%D8%A9-%D9%84%D9%88%D9%83%D9%84%D8%A7%D8%A1-%D9%88%D9%88%D9%83%D9%8A%D9%84%D8%A7%D8%AA-%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84.html",
       "seed_urls": [
         "https://www.pjd.ma/",
         "https://www.pjd.ma/229786-%D8%A7%D9%84%D9%84%D8%A7%D8%A6%D8%AD%D8%A9-%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%D8%A9-%D9%84%D9%88%D9%83%D9%84%D8%A7%D8%A1-%D9%88%D9%88%D9%83%D9%8A%D9%84%D8%A7%D8%AA-%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84.html"
       ],
       "source_role": "OFFICIAL_PARTY_SELF_REPORT",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH"
+      ],
       "retrieval_policy": "DIRECT_OR_REFERENCE_ONLY",
-      "path_allowlist": ["/"],
-      "languages": ["ar"],
+      "path_allowlist": [
+        "/"
+      ],
+      "languages": [
+        "ar"
+      ],
       "archive_policy": "RAW_HTML_OR_DOCUMENT_AND_SHA256",
-      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact."
+      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact.",
+      "operational_state": "ACTIVE",
+      "probe_result": {
+        "access_class": "DIRECT_REPRODUCIBLE",
+        "status_code": 200,
+        "final_url": "https://www.pjd.ma/229786-%D8%A7%D9%84%D9%84%D8%A7%D8%A6%D8%AD%D8%A9-%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%D8%A9-%D9%84%D9%88%D9%83%D9%84%D8%A7%D8%A1-%D9%88%D9%88%D9%83%D9%8A%D9%84%D8%A7%D8%AA-%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84.html",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 180570,
+        "content_sha256": "501cb1fbfb4f1c7023b5ab5ea594cb4a27aabd998a39bfdfc80e0aac63ad531e",
+        "challenge_marker": null,
+        "exception": null
+      }
     },
     {
       "source_id": "T1_USFP_OFFICIAL",
@@ -184,16 +442,45 @@
       "publisher": "Union Socialiste des Forces Populaires",
       "party_id": "USFP",
       "independence_cluster": "PARTY_USFP",
-      "allowed_domains": ["usfp.ma", "www.usfp.ma"],
+      "allowed_domains": [
+        "usfp.ma",
+        "www.usfp.ma"
+      ],
       "probe_url": "https://www.usfp.ma/",
-      "seed_urls": ["https://www.usfp.ma/"],
+      "seed_urls": [
+        "https://www.usfp.ma/"
+      ],
       "source_role": "OFFICIAL_PARTY_SELF_REPORT",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH"
+      ],
       "retrieval_policy": "DIRECT_OR_REFERENCE_ONLY",
-      "path_allowlist": ["/"],
-      "languages": ["ar", "fr"],
+      "path_allowlist": [
+        "/"
+      ],
+      "languages": [
+        "ar",
+        "fr"
+      ],
       "archive_policy": "RAW_HTML_OR_DOCUMENT_AND_SHA256",
-      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact."
+      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact.",
+      "operational_state": "REFERENCE_ONLY",
+      "probe_result": {
+        "access_class": "REFERENCE_ONLY_NONREPRODUCIBLE",
+        "status_code": 200,
+        "final_url": "https://www.usfp.ma/",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 102639,
+        "content_sha256": "61e29ca4f66a5b6cda8a9cf49e6dd851ecc2669bdc3e956edd8cf68f1db22b15",
+        "challenge_marker": "captcha",
+        "exception": null
+      }
     },
     {
       "source_id": "T1_MP_OFFICIAL",
@@ -201,16 +488,45 @@
       "publisher": "Mouvement Populaire",
       "party_id": "MP",
       "independence_cluster": "PARTY_MP",
-      "allowed_domains": ["alharaka.ma", "www.alharaka.ma"],
+      "allowed_domains": [
+        "alharaka.ma",
+        "www.alharaka.ma"
+      ],
       "probe_url": "https://alharaka.ma/",
-      "seed_urls": ["https://alharaka.ma/"],
+      "seed_urls": [
+        "https://alharaka.ma/"
+      ],
       "source_role": "OFFICIAL_PARTY_SELF_REPORT",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH"
+      ],
       "retrieval_policy": "DIRECT_OR_REFERENCE_ONLY",
-      "path_allowlist": ["/"],
-      "languages": ["ar", "fr"],
+      "path_allowlist": [
+        "/"
+      ],
+      "languages": [
+        "ar",
+        "fr"
+      ],
       "archive_policy": "RAW_HTML_OR_DOCUMENT_AND_SHA256",
-      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact."
+      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact.",
+      "operational_state": "ACTIVE",
+      "probe_result": {
+        "access_class": "DIRECT_REPRODUCIBLE",
+        "status_code": 200,
+        "final_url": "https://alharaka.ma/",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 258604,
+        "content_sha256": "331911fbfee074b760094a6457b8184e1388061a937c9f2f7a7e993439b95d24",
+        "challenge_marker": null,
+        "exception": null
+      }
     },
     {
       "source_id": "T1_UC_OFFICIAL",
@@ -218,16 +534,44 @@
       "publisher": "Union Constitutionnelle",
       "party_id": "UC",
       "independence_cluster": "PARTY_UC",
-      "allowed_domains": ["possible.ma", "www.possible.ma"],
+      "allowed_domains": [
+        "possible.ma",
+        "www.possible.ma"
+      ],
       "probe_url": "https://www.possible.ma/",
-      "seed_urls": ["https://www.possible.ma/"],
+      "seed_urls": [
+        "https://www.possible.ma/"
+      ],
       "source_role": "OFFICIAL_PARTY_SELF_REPORT",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH"
+      ],
       "retrieval_policy": "DIRECT_OR_REFERENCE_ONLY",
-      "path_allowlist": ["/"],
-      "languages": ["ar"],
+      "path_allowlist": [
+        "/"
+      ],
+      "languages": [
+        "ar"
+      ],
       "archive_policy": "RAW_HTML_OR_DOCUMENT_AND_SHA256",
-      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact."
+      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact.",
+      "operational_state": "ACTIVE",
+      "probe_result": {
+        "access_class": "DIRECT_REPRODUCIBLE",
+        "status_code": 200,
+        "final_url": "https://www.possible.ma/",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 131675,
+        "content_sha256": "0027de4951b7adcf2af3e16649aa239e00fe8fe05f6da13a2de079107d1c9109",
+        "challenge_marker": null,
+        "exception": null
+      }
     },
     {
       "source_id": "T1_PPS_OFFICIAL",
@@ -235,119 +579,376 @@
       "publisher": "Parti du Progrès et du Socialisme",
       "party_id": "PPS",
       "independence_cluster": "PARTY_PPS",
-      "allowed_domains": ["pps.ma", "www.pps.ma"],
+      "allowed_domains": [
+        "pps.ma",
+        "www.pps.ma"
+      ],
       "probe_url": "https://pps.ma/30495/",
-      "seed_urls": ["https://pps.ma/", "https://pps.ma/30495/"],
+      "seed_urls": [
+        "https://pps.ma/",
+        "https://pps.ma/30495/"
+      ],
       "source_role": "OFFICIAL_PARTY_SELF_REPORT",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH"
+      ],
       "retrieval_policy": "DIRECT_OR_REFERENCE_ONLY",
-      "path_allowlist": ["/"],
-      "languages": ["ar"],
+      "path_allowlist": [
+        "/"
+      ],
+      "languages": [
+        "ar"
+      ],
       "archive_policy": "RAW_HTML_OR_DOCUMENT_AND_SHA256",
-      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact."
+      "claim_boundary": "T1 proves the party's own announcement, not legal registration or independent impact.",
+      "operational_state": "ACTIVE",
+      "probe_result": {
+        "access_class": "DIRECT_REPRODUCIBLE",
+        "status_code": 200,
+        "final_url": "https://pps.ma/30495/",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 81752,
+        "content_sha256": "03772219c4112e8f1dfbd266f9f5e5e9d92d3a4a81def8fbb9c477d935235ddc",
+        "challenge_marker": null,
+        "exception": null
+      }
     },
     {
       "source_id": "T2_MEDIAS24",
       "tier": "T2",
       "publisher": "Médias24",
       "independence_cluster": "MEDIA_MEDIAS24",
-      "allowed_domains": ["medias24.com", "www.medias24.com"],
+      "allowed_domains": [
+        "medias24.com",
+        "www.medias24.com"
+      ],
       "probe_url": "https://medias24.com/2026/06/05/legislatives-2026-le-rni-devoile-une-liste-de-89-candidats-1693575/",
-      "seed_urls": ["https://medias24.com/2026/06/05/legislatives-2026-le-rni-devoile-une-liste-de-89-candidats-1693575/"],
+      "seed_urls": [
+        "https://medias24.com/2026/06/05/legislatives-2026-le-rni-devoile-une-liste-de-89-candidats-1693575/"
+      ],
       "source_role": "PROFESSIONAL_NATIONAL_REPORTING",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "INCUMBENT_STATUS", "PARTY_SWITCH", "ELECTED_OFFICE", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_DEFECTION", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH", "OFFICIAL_INVESTIGATION", "OFFICIAL_SANCTION", "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "INCUMBENT_STATUS",
+        "PARTY_SWITCH",
+        "ELECTED_OFFICE",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_DEFECTION",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH",
+        "OFFICIAL_INVESTIGATION",
+        "OFFICIAL_SANCTION",
+        "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"
+      ],
       "retrieval_policy": "DIRECT_REQUIRED",
-      "path_allowlist": ["/2026/"],
-      "languages": ["fr"],
+      "path_allowlist": [
+        "/2026/"
+      ],
+      "languages": [
+        "fr"
+      ],
       "archive_policy": "RAW_HTML_AND_SHA256",
-      "claim_boundary": "A T2 article cannot alone create a mechanical ballot constraint. Named sourcing and distinction between reporting and commentary are mandatory."
+      "claim_boundary": "A T2 article cannot alone create a mechanical ballot constraint. Named sourcing and distinction between reporting and commentary are mandatory.",
+      "operational_state": "INACTIVE",
+      "probe_result": {
+        "access_class": "FAILED_INACTIVE",
+        "status_code": 403,
+        "final_url": "https://medias24.com/2026/06/05/legislatives-2026-le-rni-devoile-une-liste-de-89-candidats-1693575/",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 5940,
+        "content_sha256": "e02720b0e1a6cabc5236b370ebf9a0bb87d6deff9a4bd5ab46aae37fc20df898",
+        "challenge_marker": "just a moment",
+        "exception": null
+      }
     },
     {
       "source_id": "T2_TELQUEL",
       "tier": "T2",
       "publisher": "TelQuel / TelQuel Arabi",
       "independence_cluster": "MEDIA_TELQUEL",
-      "allowed_domains": ["telquel.ma", "www.telquel.ma", "ar.telquel.ma"],
+      "allowed_domains": [
+        "telquel.ma",
+        "www.telquel.ma",
+        "ar.telquel.ma"
+      ],
       "probe_url": "https://ar.telquel.ma/",
-      "seed_urls": ["https://ar.telquel.ma/", "https://telquel.ma/"],
+      "seed_urls": [
+        "https://ar.telquel.ma/",
+        "https://telquel.ma/"
+      ],
       "source_role": "PROFESSIONAL_NATIONAL_REPORTING",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "INCUMBENT_STATUS", "PARTY_SWITCH", "ELECTED_OFFICE", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_DEFECTION", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH", "OFFICIAL_INVESTIGATION", "OFFICIAL_SANCTION", "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "INCUMBENT_STATUS",
+        "PARTY_SWITCH",
+        "ELECTED_OFFICE",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_DEFECTION",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH",
+        "OFFICIAL_INVESTIGATION",
+        "OFFICIAL_SANCTION",
+        "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"
+      ],
       "retrieval_policy": "DIRECT_REQUIRED",
-      "path_allowlist": ["/", "/politique/"],
-      "languages": ["fr", "ar"],
+      "path_allowlist": [
+        "/",
+        "/politique/"
+      ],
+      "languages": [
+        "fr",
+        "ar"
+      ],
       "archive_policy": "RAW_HTML_AND_SHA256",
-      "claim_boundary": "A T2 article cannot alone create a mechanical ballot constraint. Named sourcing and distinction between reporting and commentary are mandatory."
+      "claim_boundary": "A T2 article cannot alone create a mechanical ballot constraint. Named sourcing and distinction between reporting and commentary are mandatory.",
+      "operational_state": "INACTIVE",
+      "probe_result": {
+        "access_class": "FAILED_INACTIVE",
+        "status_code": 200,
+        "final_url": "https://ar.telquel.ma/",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 142633,
+        "content_sha256": "0616fc84bec616d2bce6293295646a5d0e0717a0b5f01ce60a88daa61e61086c",
+        "challenge_marker": "captcha",
+        "exception": null
+      }
     },
     {
       "source_id": "T2_LE360",
       "tier": "T2",
       "publisher": "Le360",
       "independence_cluster": "MEDIA_LE360",
-      "allowed_domains": ["le360.ma", "www.le360.ma", "fr.le360.ma", "ar.le360.ma", "es.le360.ma"],
+      "allowed_domains": [
+        "le360.ma",
+        "www.le360.ma",
+        "fr.le360.ma",
+        "ar.le360.ma",
+        "es.le360.ma"
+      ],
       "probe_url": "https://fr.le360.ma/politique/legislatives-2026-listiqlal-devoile-une-premiere-liste-de-70-candidats-dans-10-regions_5FBR3RVX3VCPDJTLXGMJBRNEFE/",
-      "seed_urls": ["https://fr.le360.ma/politique/legislatives-2026-listiqlal-devoile-une-premiere-liste-de-70-candidats-dans-10-regions_5FBR3RVX3VCPDJTLXGMJBRNEFE/"],
+      "seed_urls": [
+        "https://fr.le360.ma/politique/legislatives-2026-listiqlal-devoile-une-premiere-liste-de-70-candidats-dans-10-regions_5FBR3RVX3VCPDJTLXGMJBRNEFE/"
+      ],
       "source_role": "PROFESSIONAL_NATIONAL_REPORTING",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "INCUMBENT_STATUS", "PARTY_SWITCH", "ELECTED_OFFICE", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_DEFECTION", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH", "OFFICIAL_INVESTIGATION", "OFFICIAL_SANCTION", "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "INCUMBENT_STATUS",
+        "PARTY_SWITCH",
+        "ELECTED_OFFICE",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_DEFECTION",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH",
+        "OFFICIAL_INVESTIGATION",
+        "OFFICIAL_SANCTION",
+        "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"
+      ],
       "retrieval_policy": "DIRECT_REQUIRED",
-      "path_allowlist": ["/politique/"],
-      "languages": ["fr", "ar", "es"],
+      "path_allowlist": [
+        "/politique/"
+      ],
+      "languages": [
+        "fr",
+        "ar",
+        "es"
+      ],
       "archive_policy": "RAW_HTML_AND_SHA256",
-      "claim_boundary": "Revue de presse and copied material inherit the original publisher's independence cluster and cannot serve as independent corroboration."
+      "claim_boundary": "Revue de presse and copied material inherit the original publisher's independence cluster and cannot serve as independent corroboration.",
+      "operational_state": "ACTIVE",
+      "probe_result": {
+        "access_class": "DIRECT_REPRODUCIBLE",
+        "status_code": 200,
+        "final_url": "https://fr.le360.ma/politique/legislatives-2026-listiqlal-devoile-une-premiere-liste-de-70-candidats-dans-10-regions_5FBR3RVX3VCPDJTLXGMJBRNEFE/",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 374998,
+        "content_sha256": "bf1c89b3faec74b92dd07e5ace5864982d1fe5b121e3ed0b77756dff7575b335",
+        "challenge_marker": null,
+        "exception": null
+      }
     },
     {
       "source_id": "T2_HESPRESS",
       "tier": "T2",
       "publisher": "Hespress",
       "independence_cluster": "MEDIA_HESPRESS",
-      "allowed_domains": ["hespress.com", "www.hespress.com"],
+      "allowed_domains": [
+        "hespress.com",
+        "www.hespress.com"
+      ],
       "probe_url": "https://www.hespress.com/1623196-1623196.html",
-      "seed_urls": ["https://www.hespress.com/1623196-1623196.html"],
+      "seed_urls": [
+        "https://www.hespress.com/1623196-1623196.html"
+      ],
       "source_role": "PROFESSIONAL_NATIONAL_REPORTING",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "INCUMBENT_STATUS", "PARTY_SWITCH", "ELECTED_OFFICE", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_DEFECTION", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH", "OFFICIAL_INVESTIGATION", "OFFICIAL_SANCTION", "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "INCUMBENT_STATUS",
+        "PARTY_SWITCH",
+        "ELECTED_OFFICE",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_DEFECTION",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH",
+        "OFFICIAL_INVESTIGATION",
+        "OFFICIAL_SANCTION",
+        "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"
+      ],
       "retrieval_policy": "DIRECT_REQUIRED",
-      "path_allowlist": ["/"],
-      "path_exclusions": ["/poll"],
-      "languages": ["ar"],
+      "path_allowlist": [
+        "/"
+      ],
+      "path_exclusions": [
+        "/poll"
+      ],
+      "languages": [
+        "ar"
+      ],
       "archive_policy": "RAW_HTML_AND_SHA256",
-      "claim_boundary": "Reader polls and opinion polls are explicitly excluded. Anonymous political sourcing cannot establish a candidate/list fact without admissible corroboration."
+      "claim_boundary": "Reader polls and opinion polls are explicitly excluded. Anonymous political sourcing cannot establish a candidate/list fact without admissible corroboration.",
+      "operational_state": "ACTIVE",
+      "probe_result": {
+        "access_class": "DIRECT_REPRODUCIBLE",
+        "status_code": 200,
+        "final_url": "https://www.hespress.com/%d8%a7%d9%86%d8%aa%d8%ae%d8%a7%d8%a8%d8%a7%d8%aa-2026-%d8%a3%d8%b2%d9%85%d8%a9-%d9%85%d8%b1%d8%b4%d8%ad%d9%8a%d9%86-%d8%aa%d8%b6%d8%b1%d8%a8-%d8%a7%d9%84%d8%a3%d8%ad%d8%b2%d8%a7%d8%a8-%d9%81-1623196.html",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 113425,
+        "content_sha256": "183bb25d47e2a553a0bbff2b135bdf53897c25ad28d4b0caa5e223663d0e557c",
+        "challenge_marker": null,
+        "exception": null
+      }
     },
     {
       "source_id": "T2_SNRTNEWS",
       "tier": "T2",
       "publisher": "SNRTnews",
       "independence_cluster": "MEDIA_SNRT_PUBLIC_BROADCASTER",
-      "allowed_domains": ["snrtnews.com", "www.snrtnews.com"],
+      "allowed_domains": [
+        "snrtnews.com",
+        "www.snrtnews.com"
+      ],
       "probe_url": "https://snrtnews.com/fr/article/anis-birou-a-nokta-ila-satr-nous-avons-tranche-90-des-investitures-du-rni-148741",
-      "seed_urls": ["https://snrtnews.com/fr/article/anis-birou-a-nokta-ila-satr-nous-avons-tranche-90-des-investitures-du-rni-148741"],
+      "seed_urls": [
+        "https://snrtnews.com/fr/article/anis-birou-a-nokta-ila-satr-nous-avons-tranche-90-des-investitures-du-rni-148741"
+      ],
       "source_role": "PROFESSIONAL_PUBLIC_BROADCAST_REPORTING_AND_TRANSCRIPTS",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "INCUMBENT_STATUS", "PARTY_SWITCH", "ELECTED_OFFICE", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_DEFECTION", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH", "OFFICIAL_INVESTIGATION", "OFFICIAL_SANCTION", "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "INCUMBENT_STATUS",
+        "PARTY_SWITCH",
+        "ELECTED_OFFICE",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_DEFECTION",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH",
+        "OFFICIAL_INVESTIGATION",
+        "OFFICIAL_SANCTION",
+        "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"
+      ],
       "retrieval_policy": "DIRECT_REQUIRED",
-      "path_allowlist": ["/fr/article/", "/article/"],
-      "languages": ["fr", "ar"],
+      "path_allowlist": [
+        "/fr/article/",
+        "/article/"
+      ],
+      "languages": [
+        "fr",
+        "ar"
+      ],
       "archive_policy": "RAW_HTML_TRANSCRIPT_AND_SHA256",
-      "claim_boundary": "A direct program transcript proves the speaker's statement, not independent truth; the speaker's self-report remains T1-equivalent for that claim."
+      "claim_boundary": "A direct program transcript proves the speaker's statement, not independent truth; the speaker's self-report remains T1-equivalent for that claim.",
+      "operational_state": "ACTIVE",
+      "probe_result": {
+        "access_class": "DIRECT_REPRODUCIBLE",
+        "status_code": 200,
+        "final_url": "https://snrtnews.com/fr/article/anis-birou-a-nokta-ila-satr-nous-avons-tranche-90-des-investitures-du-rni-148741",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 200746,
+        "content_sha256": "f6baffb3ab4bcf075f8730c94d240d623174c641c0b2e16ef5f7bfa1fc9277a9",
+        "challenge_marker": null,
+        "exception": null
+      }
     },
     {
       "source_id": "T2_LEMATIN",
       "tier": "T2",
       "publisher": "Le Matin",
       "independence_cluster": "MEDIA_LEMATIN",
-      "allowed_domains": ["lematin.ma", "www.lematin.ma"],
+      "allowed_domains": [
+        "lematin.ma",
+        "www.lematin.ma"
+      ],
       "probe_url": "https://lematin.ma/nation/financement-electoral-2026-lenveloppe-publique-portee-a-450-mdh/352161",
-      "seed_urls": ["https://lematin.ma/nation/financement-electoral-2026-lenveloppe-publique-portee-a-450-mdh/352161"],
+      "seed_urls": [
+        "https://lematin.ma/nation/financement-electoral-2026-lenveloppe-publique-portee-a-450-mdh/352161"
+      ],
       "source_role": "PROFESSIONAL_NATIONAL_REPORTING",
-      "accepted_evidence_types": ["CANDIDATE_REGISTERED", "CANDIDATE_RANK", "INCUMBENT_STATUS", "PARTY_SWITCH", "ELECTED_OFFICE", "PARTY_OFFICE", "FORMAL_ENDORSEMENT", "FORMAL_DEFECTION", "FORMAL_ALLIANCE", "CAMPAIGN_LAUNCH", "OFFICIAL_INVESTIGATION", "OFFICIAL_SANCTION", "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"],
+      "accepted_evidence_types": [
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_RANK",
+        "INCUMBENT_STATUS",
+        "PARTY_SWITCH",
+        "ELECTED_OFFICE",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_DEFECTION",
+        "FORMAL_ALLIANCE",
+        "CAMPAIGN_LAUNCH",
+        "OFFICIAL_INVESTIGATION",
+        "OFFICIAL_SANCTION",
+        "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"
+      ],
       "retrieval_policy": "DIRECT_REQUIRED",
-      "path_allowlist": ["/nation/", "/politique/"],
-      "languages": ["fr"],
+      "path_allowlist": [
+        "/nation/",
+        "/politique/"
+      ],
+      "languages": [
+        "fr"
+      ],
       "archive_policy": "RAW_HTML_AND_SHA256",
-      "claim_boundary": "A T2 article cannot alone create a mechanical ballot constraint."
+      "claim_boundary": "A T2 article cannot alone create a mechanical ballot constraint.",
+      "operational_state": "ACTIVE",
+      "probe_result": {
+        "access_class": "DIRECT_REPRODUCIBLE",
+        "status_code": 200,
+        "final_url": "https://lematin.ma/nation/financement-electoral-2026-lenveloppe-publique-portee-a-450-mdh/352161",
+        "final_domain_allowed": true,
+        "content_type": "text/html",
+        "bytes_read": 270498,
+        "content_sha256": "7c138aa7b59984c98eacd505dc4c3784d8df478c399adc8d922ce8ea5fce5d94",
+        "challenge_marker": null,
+        "exception": null
+      }
     }
   ],
   "query_templates": [
     {
       "query_id": "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
-      "applies_to_tiers": ["T0", "T1", "T2"],
+      "applies_to_tiers": [
+        "T0",
+        "T1",
+        "T2"
+      ],
       "method": "FETCH_FIXED_SEEDS_THEN_FOLLOW_ALLOWLISTED_LINKS",
       "parameters": {
         "max_depth": 1,
@@ -357,35 +958,93 @@
         "respect_path_exclusions": true,
         "sort_urls_lexicographically": true
       },
-      "election_terms_any": ["2026", "23 septembre", "23 شتنبر", "élections législatives", "الانتخابات التشريعية", "candidat", "candidate", "مرشح", "مرشحة", "وكيل", "تزكية", "investiture", "tête de liste"],
+      "election_terms_any": [
+        "2026",
+        "23 septembre",
+        "23 شتنبر",
+        "élections législatives",
+        "الانتخابات التشريعية",
+        "candidat",
+        "candidate",
+        "مرشح",
+        "مرشحة",
+        "وكيل",
+        "تزكية",
+        "investiture",
+        "tête de liste"
+      ],
       "output_rule": "URLs are leads until the raw page is archived and parsed under the evidence schema."
     },
     {
       "query_id": "Q02_SITEMAP_BOUNDED_SCAN",
-      "applies_to_tiers": ["T1", "T2"],
+      "applies_to_tiers": [
+        "T1",
+        "T2"
+      ],
       "method": "FETCH_SITEMAP_OR_WORDPRESS_INDEX",
       "parameters": {
-        "candidate_paths": ["/sitemap.xml", "/sitemap_index.xml", "/wp-sitemap.xml"],
+        "candidate_paths": [
+          "/sitemap.xml",
+          "/sitemap_index.xml",
+          "/wp-sitemap.xml"
+        ],
         "published_not_before": "2025-01-01T00:00:00+01:00",
         "max_urls_per_source": 5000,
         "sort_urls_lexicographically": true
       },
-      "url_terms_any": ["election", "legisl", "candidat", "tarsh", "intikhab", "مرشح", "انتخاب", "تزكية"],
+      "url_terms_any": [
+        "election",
+        "legisl",
+        "candidat",
+        "tarsh",
+        "intikhab",
+        "مرشح",
+        "انتخاب",
+        "تزكية"
+      ],
       "output_rule": "A sitemap date is navigation metadata, never the evidence publication timestamp unless verified on-page."
     },
     {
       "query_id": "Q03_EXACT_ENTITY_TERRITORY_SCAN",
-      "applies_to_tiers": ["T1", "T2"],
+      "applies_to_tiers": [
+        "T1",
+        "T2"
+      ],
       "method": "DETERMINISTIC_SITE_SEARCH_OR_LOCAL_INDEX",
       "parameters": {
-        "query_fields": ["canonical_candidate_name", "canonical_party_label", "certified_constituency_name"],
+        "query_fields": [
+          "canonical_candidate_name",
+          "canonical_party_label",
+          "certified_constituency_name"
+        ],
         "exact_quote_candidate": true,
         "exact_quote_territory": true,
         "fixed_evidence_term_groups": [
-          ["candidat", "candidate", "مرشح", "مرشحة", "وكيل اللائحة"],
-          ["investiture", "تزكية", "ترشيح"],
-          ["défection", "transhumance", "changement de parti", "الترحال السياسي", "التحاق"],
-          ["retrait", "disqualification", "سحب الترشيح", "إلغاء الترشيح"]
+          [
+            "candidat",
+            "candidate",
+            "مرشح",
+            "مرشحة",
+            "وكيل اللائحة"
+          ],
+          [
+            "investiture",
+            "تزكية",
+            "ترشيح"
+          ],
+          [
+            "défection",
+            "transhumance",
+            "changement de parti",
+            "الترحال السياسي",
+            "التحاق"
+          ],
+          [
+            "retrait",
+            "disqualification",
+            "سحب الترشيح",
+            "إلغاء الترشيح"
+          ]
         ],
         "max_results_per_entity_source_term_group": 20,
         "sort_results_by_normalized_url": true
@@ -394,7 +1053,10 @@
     },
     {
       "query_id": "Q04_OFFICIAL_DIRECTORY_EXACT_NAME",
-      "applies_to_source_ids": ["T0_CHAMBRE_REPRESENTANTS", "T0_CONSTITUTIONAL_COURT"],
+      "applies_to_source_ids": [
+        "T0_CHAMBRE_REPRESENTANTS",
+        "T0_CONSTITUTIONAL_COURT"
+      ],
       "method": "EXACT_CANONICAL_NAME_OR_OFFICIAL_ID_LOOKUP",
       "parameters": {
         "fuzzy_matching": false,
@@ -405,10 +1067,22 @@
     },
     {
       "query_id": "Q05_CORRECTION_AND_SUPERSESSION_SCAN",
-      "applies_to_tiers": ["T0", "T1", "T2"],
+      "applies_to_tiers": [
+        "T0",
+        "T1",
+        "T2"
+      ],
       "method": "REVISIT_ACCEPTED_SOURCE_URL_AND_NEARBY_CORRECTION_PATHS",
       "parameters": {
-        "terms": ["correction", "rectificatif", "mise à jour", "erratum", "تصحيح", "توضيح", "تحديث"],
+        "terms": [
+          "correction",
+          "rectificatif",
+          "mise à jour",
+          "erratum",
+          "تصحيح",
+          "توضيح",
+          "تحديث"
+        ],
         "max_depth": 1,
         "same_allowed_domain_only": true
       },
@@ -426,15 +1100,32 @@
   ],
   "smoke_test_contract": {
     "minimum_response_bytes": 300,
-    "accepted_http_statuses_for_active": [200],
-    "accepted_content_types": ["text/html", "application/xhtml+xml", "application/pdf", "text/xml", "application/xml"],
-    "challenge_markers": ["just a moment", "one moment, please", "cf-chl", "captcha"],
+    "accepted_http_statuses_for_active": [
+      200
+    ],
+    "accepted_content_types": [
+      "text/html",
+      "application/xhtml+xml",
+      "application/pdf",
+      "text/xml",
+      "application/xml"
+    ],
+    "challenge_markers": [
+      "just a moment",
+      "one moment, please",
+      "cf-chl",
+      "captcha"
+    ],
     "minimum_active_T0_sources": 2,
     "minimum_represented_T1_parties": 8,
     "minimum_active_T1_parties": 5,
     "minimum_active_T2_independence_clusters": 3,
     "minimum_total_active_sources": 10,
-    "reference_only_http_statuses": [401, 403, 429],
+    "reference_only_http_statuses": [
+      401,
+      403,
+      429
+    ],
     "redirect_must_end_on_allowed_domain": true,
     "zero_claim_records_before_pass": true
   },
@@ -447,5 +1138,19 @@
     "collection_smoke_test_required": true,
     "source_universe_cannot_change_during_smoke_test": true
   },
-  "smoke_test": null
+  "smoke_test": {
+    "gate": "PASS",
+    "probed_at": "2026-08-17T07:41:43+01:00",
+    "source_universe_sha256": "8aa331e941ab892997b68a04b91b5b2147c9561f717a3ca976122dbb1ba44d32",
+    "certificate_path": "morocco26/data/goal100/b2_source_universe_certificate.json",
+    "probe_path": "morocco26/data/goal100/b2_source_universe_probe.json",
+    "active_T0_sources": 2,
+    "represented_T1_parties": 8,
+    "active_T1_parties": 5,
+    "active_T2_independence_clusters": 4,
+    "total_active_sources": 11,
+    "reference_only_sources": 5,
+    "inactive_sources": 3,
+    "claim_records_before_pass": 0
+  }
 }

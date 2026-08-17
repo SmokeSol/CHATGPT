@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-GOAL100-B2-SOURCE-UNIVERSE-CERTIFICATE-V1",
+  "gate": "PASS",
+  "certified_at": "2026-08-17T07:41:43+01:00",
+  "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "source_universe_sha256": "8aa331e941ab892997b68a04b91b5b2147c9561f717a3ca976122dbb1ba44d32",
+  "source_count": 19,
+  "query_template_count": 5,
+  "active_T0_sources": 2,
+  "active_T0_source_ids": [
+    "T0_CONSTITUTIONAL_COURT",
+    "T0_MAROC_MA_ELECTIONS"
+  ],
+  "represented_T1_parties": 8,
+  "active_T1_parties": 5,
+  "active_T1_party_ids": [
+    "MP",
+    "PI",
+    "PJD",
+    "PPS",
+    "UC"
+  ],
+  "active_T2_independence_clusters": 4,
+  "active_T2_cluster_ids": [
+    "MEDIA_HESPRESS",
+    "MEDIA_LE360",
+    "MEDIA_LEMATIN",
+    "MEDIA_SNRT_PUBLIC_BROADCASTER"
+  ],
+  "total_active_sources": 11,
+  "active_source_ids": [
+    "T0_CONSTITUTIONAL_COURT",
+    "T0_MAROC_MA_ELECTIONS",
+    "T1_ISTIQLAL_OFFICIAL",
+    "T1_MP_OFFICIAL",
+    "T1_PJD_OFFICIAL",
+    "T1_PPS_OFFICIAL",
+    "T1_UC_OFFICIAL",
+    "T2_HESPRESS",
+    "T2_LE360",
+    "T2_LEMATIN",
+    "T2_SNRTNEWS"
+  ],
+  "reference_only_sources": 5,
+  "reference_only_source_ids": [
+    "T0_CHAMBRE_REPRESENTANTS",
+    "T0_LISTES_ELECTORALES",
+    "T1_PAM_OFFICIAL",
+    "T1_RNI_OFFICIAL",
+    "T1_USFP_OFFICIAL"
+  ],
+  "inactive_sources": 3,
+  "inactive_source_ids": [
+    "T0_SGG_LEGISLATION",
+    "T2_MEDIAS24",
+    "T2_TELQUEL"
+  ],
+  "claim_records_before_pass": 0,
+  "checks": {
+    "active_T0_threshold": true,
+    "represented_T1_threshold": true,
+    "active_T1_threshold": true,
+    "active_T2_cluster_threshold": true,
+    "total_active_threshold": true,
+    "zero_claim_records_before_pass": true,
+    "source_entry_probe_coverage": true
+  },
+  "collection_rule": "Only ACTIVE sources may create B2 claim records. REFERENCE_ONLY and INACTIVE routes remain in the frozen universe but have zero evidentiary authority until a later versioned access correction."
+}
