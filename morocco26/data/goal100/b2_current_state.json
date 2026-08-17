@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "state_id": "M26-GOAL100-B2-CURRENT-V1",
-  "as_of": "2026-08-17T10:11:22+01:00",
+  "as_of": "2026-08-17T10:24:56+01:00",
   "phase": "B2_IDENTITY_TERRITORY_CERTIFIED_HISTORICAL_PANEL_PENDING",
   "parent_snapshot": {
     "snapshot_id": "F-1",
@@ -81,7 +81,7 @@
     "status": "ATTEMPTED_NOT_IDENTIFIABLE",
     "certificate": "morocco26/data/goal100/b2_historical_panel_certificate.json",
     "panel": "morocco26/data/goal100/b2_historical_panel.json",
-    "panel_sha256": "fe91b5a71237eae536e691bbeff21d4bb7fcc7ef3c6c98673172929df60eee2f",
+    "panel_sha256": "50f21891dae089a51d8b2c4d073d4457fe38ad4a1b5aa28379f155f961be81e1",
     "mechanical_sub_panel": "FAIL",
     "predictive_sub_panel": "FAIL",
     "blocking_missing_input_classes": [

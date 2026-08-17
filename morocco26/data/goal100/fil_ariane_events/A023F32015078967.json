@@ -1,0 +1,103 @@
+{
+  "event_id": "A023F32015078967",
+  "date": "2026-08-17T10:24:56+01:00",
+  "title": "Panel historique B2-3 non identifiable en l'état",
+  "phase": "P7_B2_STRUCTURED_EVIDENCE_LAYER",
+  "gate": "B2-3-HISTORICAL-FEATURE-PANEL",
+  "status": "FAIL",
+  "machine_result": {
+    "schema_version": "1.0",
+    "certificate_id": "M26-GOAL100-B2-HISTORICAL-PANEL-CERTIFICATE-V1",
+    "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+    "gate_id": "B2-3-HISTORICAL-FEATURE-PANEL",
+    "certified_at": "2026-08-17T10:24:56+01:00",
+    "gate": "FAIL",
+    "panel_path": "morocco26/data/goal100/b2_historical_panel.json",
+    "panel_sha256": "50f21891dae089a51d8b2c4d073d4457fe38ad4a1b5aa28379f155f961be81e1",
+    "territories_in_scope": 92,
+    "minimum_coverage_required": 0.8,
+    "minimum_binary_support_required": 30,
+    "transitions": [
+      {
+        "transition_id": "2011_TO_2016",
+        "role": "FIT",
+        "features_total": 16,
+        "features_identifiable": 0,
+        "mechanical_panel_coverage": 0.0,
+        "core_predictive_panel_coverage": 0.0,
+        "core_predictive_panel_meets_minimum": false,
+        "features_meeting_support_minimum": []
+      },
+      {
+        "transition_id": "2016_TO_2021",
+        "role": "VALIDATION",
+        "features_total": 16,
+        "features_identifiable": 0,
+        "mechanical_panel_coverage": 0.0,
+        "core_predictive_panel_coverage": 0.0,
+        "core_predictive_panel_meets_minimum": false,
+        "features_meeting_support_minimum": []
+      }
+    ],
+    "observed_diagnostics": [
+      {
+        "diagnostic_id": "OBSERVED_POSITIVE_LOCAL_LIST_PRESENCE",
+        "transition_id": "2011_TO_2016",
+        "territories_covered": 92,
+        "coverage_fraction": 1.0,
+        "positive_instances": 1343,
+        "satisfies_feature": null
+      },
+      {
+        "diagnostic_id": "OBSERVED_POSITIVE_LOCAL_LIST_PRESENCE",
+        "transition_id": "2016_TO_2021",
+        "territories_covered": 92,
+        "coverage_fraction": 1.0,
+        "positive_instances": 1472,
+        "satisfies_feature": null
+      }
+    ],
+    "mechanical_sub_panel": "FAIL",
+    "predictive_sub_panel": "FAIL",
+    "blocking_missing_input_classes": [
+      "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
+      "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
+      "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
+      "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
+      "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+      "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
+      "HISTORICAL_LIST_REJECTION_TARGET_YEAR",
+      "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
+      "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+      "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR",
+      "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
+      "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+    ],
+    "coefficients_after_gate": "ALL_PREDICTIVE_COEFFICIENTS_REMAIN_EXACTLY_ZERO",
+    "B2_claim_records_before_certificate": 0,
+    "failures": [
+      {
+        "kind": "CORE_PREDICTIVE_PANEL_COVERAGE_BELOW_MINIMUM",
+        "transition_id": "2011_TO_2016",
+        "observed_coverage": 0.0,
+        "required_coverage": 0.8,
+        "identifiable_predictive_features": 0
+      },
+      {
+        "kind": "CORE_PREDICTIVE_PANEL_COVERAGE_BELOW_MINIMUM",
+        "transition_id": "2016_TO_2021",
+        "observed_coverage": 0.0,
+        "required_coverage": 0.8,
+        "identifiable_predictive_features": 0
+      }
+    ],
+    "scientific_boundary": "This certificate reports which frozen features are constructible at the historical information cutoff, with measured coverage and support. It certifies no political effect, no coefficient and no 2026 quantity."
+  },
+  "scientific_decision": "B2-3 stays OPEN. The measured non-identifiability is preserved as a result: no feature is improvised, no absence is converted to zero and every predictive coefficient remains exactly zero.",
+  "next_action_exact": "Ingest the blocking historical input classes through the versioned historical ingest pipeline, or record the negative result and proceed with the mechanical sub-panel only. No coefficient may move either way."
+}

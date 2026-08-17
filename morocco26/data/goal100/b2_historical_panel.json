@@ -3,7 +3,7 @@
   "panel_id": "M26-GOAL100-B2-HISTORICAL-PANEL-V1",
   "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
   "dictionary_id": "M26-GOAL100-B2-FEATURE-DICTIONARY-V1",
-  "generated_at": "2026-08-17T10:11:22+01:00",
+  "generated_at": "2026-08-17T10:24:56+01:00",
   "gate": "FAIL",
   "determinism": {
     "llm_used": false,
@@ -1145,31 +1145,31 @@
   "input_hashes": {
     "feature_dictionary": {
       "path": "morocco26/data/goal100/b2_feature_dictionary_v1.json",
-      "sha256": "0275edfc19dabd8c10a2dec26eb685c6bcc5ce0ff0a6a550a76fa9b5cc50914b"
+      "sha256": "b9f8eb80632ad4d0bd735145a7cf517a04d2ea749afcef374da07c7e86d4a744"
     },
     "historical_2011": {
       "path": "morocco26/data/goal100/historical/tafra_legislative_2011_canonical.json",
-      "sha256": "4abad6a4eb1d3da378477646722c4e6ed39ae0ae259028c3c77ee0956cff3af8"
+      "sha256": "a2ef356167c54d9da68609739fd441434e5ceaf50ad81792e3f6fe8f1fdc8bb5"
     },
     "historical_2016": {
       "path": "morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json",
-      "sha256": "aed76c3059aef8894bdcede98553e5feb127781dd6a572c364335ce7d81926dd"
+      "sha256": "e74855c1cc66657327b5d91559cfb7eb574dcc4fbf0879c948ebd63a856ff774"
     },
     "historical_2021": {
       "path": "morocco26/data/goal100/historical/tafra_legislative_2021_canonical.json",
-      "sha256": "74a6fa2b28e88edc081beb4f7c072e7b8d47d97a34dbbf8ae7df3a418cf8e03e"
+      "sha256": "aaaf837e9789bbc2d940e08b63c30994be40fee3360a0bf4070c9e113ebc779e"
     },
     "identity_certificate": {
       "path": "morocco26/data/goal100/b2_identity_territory_certificate.json",
-      "sha256": "053cc051add2b1abb9098dceb0bc2fec7a0a76c4f113b99a13ecb2090674bd68"
+      "sha256": "3032fb91124e6fa4e1ae914e1575fb99802ab78f57ee5f18c7c6a6da325f9039"
     },
     "identity_crosswalk": {
       "path": "morocco26/data/goal100/b2_identity_crosswalk.json",
-      "sha256": "dbc603b6ece204cad21d1df626532b8585fbe9df92a8565b79606035e6de78c2"
+      "sha256": "161e210a704667f4f7876a011d5addfc1e12f2a6483e72a17ada4a3ac4636bae"
     },
     "protocol": {
       "path": "morocco26/data/goal100/b2_protocol_v1.json",
-      "sha256": "28c080a821325a925e539835accc6d97ea6512b8edcfd78d0b025f08dd2f5e55"
+      "sha256": "3bc0fba23d9eae7a5cb451dd27b5b15041dd2a32d7c82d73040b97272eecde94"
     }
   },
   "failures": [
@@ -1188,5 +1188,5 @@
       "identifiable_predictive_features": 0
     }
   ],
-  "canonical_panel_sha256": "fe91b5a71237eae536e691bbeff21d4bb7fcc7ef3c6c98673172929df60eee2f"
+  "canonical_panel_sha256": "50f21891dae089a51d8b2c4d073d4457fe38ad4a1b5aa28379f155f961be81e1"
 }
