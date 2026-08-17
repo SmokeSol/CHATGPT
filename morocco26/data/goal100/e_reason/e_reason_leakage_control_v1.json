@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-E-REASON-LEAKAGE-CONTROL-V1",
+  "frozen_at": "2026-08-17T21:42:17+01:00",
+  "threat_model": [
+    "Outcome files already exist in the repository.",
+    "A language model may have memorized historical Moroccan election outcomes.",
+    "Candidate and territory names can reveal target year and allow recall.",
+    "Live articles may have been updated after the election.",
+    "Post-election descriptions can leak winner or loser status."
+  ],
+  "controls": {
+    "filesystem_partition": "Packet-builder and judge jobs must not mount or checkout target-election outcome files.",
+    "anonymization": "Randomize party labels independently by election; randomize territory, region and candidate IDs; remove real names, year and dates from judge packets.",
+    "mapping_seal": "Before judgments, commit only SHA-256 of the canonical anonymization mapping. Keep the mapping outside judge access. Publish it only after judgment hashes are frozen.",
+    "packet_hashing": "Every packet is canonical JSON and SHA-256 addressed.",
+    "outcome_seal": "Development and holdout outcomes are opened only by a separate scoring step after corresponding judgment manifests are committed.",
+    "internet": "C2 and H1 have no browsing, connectors or external tools.",
+    "text_redaction": "Raw excerpts remain in the evidence archive but judge packets contain only structured verified features and source-rank metadata.",
+    "attempt_log": "All model attempts, including invalid JSON, are retained.",
+    "code_separation": "Packet generation, judgment generation, outcome unseal and scoring are separate scripts with distinct CLI modes.",
+    "git_diff_guard": "CI fails if any immutable F-1/B2/F0/E_collect/Atlas path differs from the exact parent commit."
+  },
+  "automatic_invalidation_events": [
+    "Any real target-election party, territory, candidate or year label appears in a C2 or H1 packet.",
+    "Any target-election result or post-election fact appears in a packet.",
+    "An anonymization mapping is exposed to the judge before outputs freeze.",
+    "A prompt or metric is changed after 2021 outcome access.",
+    "Any historical packet is deleted or regenerated after outcome unseal without a new experiment version."
+  ],
+  "terminal_on_violation": "E_REASON_LEAKAGE_INVALIDATED"
+}
