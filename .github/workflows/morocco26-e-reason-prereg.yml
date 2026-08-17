@@ -1,0 +1,26 @@
+name: morocco26-e-reason-prereg
+
+on:
+  push:
+    branches: [morocco26-e-reason]
+    paths:
+      - "morocco26/data/goal100/e_reason/**"
+      - "morocco26/scripts/validate_e_reason_prereg.py"
+      - ".github/workflows/morocco26-e-reason-prereg.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate E_reason preregistration
+        run: python morocco26/scripts/validate_e_reason_prereg.py
