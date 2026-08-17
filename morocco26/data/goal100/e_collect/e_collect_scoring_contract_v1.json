@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-E-COLLECT-SCORING-V1",
+  "frozen_at": "2026-08-17T17:11:00+01:00",
+  "baseline": {
+    "arabic_roster_verified": 0,
+    "arabic_roster_total": 92,
+    "historical_classes_with_admissible_evidence": 0,
+    "historical_classes_total": 16
+  },
+  "integrity_gates": {
+    "f0_or_fminus1_modified": "FAIL_PROTOCOL",
+    "preregistration_modified_after_run_start": "FAIL_PROTOCOL",
+    "accepted_record_outside_allowed_source_classes": "FAIL_PROTOCOL",
+    "accepted_record_without_archived_or_hashable_evidence": "FAIL_PROTOCOL",
+    "source_policy_compliance_required": 1.0,
+    "provenance_completeness_required": 1.0
+  },
+  "primary_metrics": [
+    {
+      "id": "roster_verified_resolution_rate",
+      "definition": "independently accepted canonical territory resolutions / 92",
+      "baseline": 0.0
+    },
+    {
+      "id": "historical_class_recovery_count",
+      "definition": "number of the 16 frozen historical classes with at least one independently accepted admissible record at the correct historical cutoff",
+      "baseline": 0
+    },
+    {
+      "id": "verified_record_count",
+      "definition": "number of independently accepted E_collect evidence records",
+      "baseline": 0
+    }
+  ],
+  "quality_metrics": [
+    {
+      "id": "accepted_record_precision",
+      "definition": "accepted records judged correct / all adjudicated accepted records"
+    },
+    {
+      "id": "unsupported_or_wrong_mapping_rate",
+      "definition": "rejected factual/entity mappings / all adjudicated proposed factual/entity mappings"
+    },
+    {
+      "id": "source_policy_compliance",
+      "definition": "records sourced exclusively from allowed source classes / all records"
+    },
+    {
+      "id": "provenance_completeness",
+      "definition": "records with URL, retrieval timestamp and content hash / all records"
+    }
+  ],
+  "result_classes": [
+    {
+      "id": "FAIL_PROTOCOL",
+      "condition": "Any integrity gate is violated.",
+      "meaning": "Experiment invalid; no scientific credit."
+    },
+    {
+      "id": "NEGATIVE",
+      "condition": "No integrity violation, but roster_verified_resolution_rate == 0 and historical_class_recovery_count == 0.",
+      "meaning": "No measured collection gain over B2."
+    },
+    {
+      "id": "POSITIVE_COLLECTION",
+      "condition": "No integrity violation and either roster_verified_resolution_rate > 0 or historical_class_recovery_count > 0.",
+      "meaning": "Agentic collection recovers at least some verified evidence beyond B2; report continuous effect sizes."
+    },
+    {
+      "id": "STRONG_POSITIVE_COLLECTION",
+      "condition": "No integrity violation, roster_verified_resolution_rate >= 0.90, historical_class_recovery_count >= 8, accepted_record_precision >= 0.98, source_policy_compliance == 1.0, provenance_completeness == 1.0.",
+      "meaning": "Large collection gain across both Arabic identity resolution and historical evidence."
+    }
+  ],
+  "product_interpretation": "Even STRONG_POSITIVE_COLLECTION does not authorize a forecast delta. It may unlock Atlas V1 evidence-layer production expansion and a separate E_reason preregistration."
+}

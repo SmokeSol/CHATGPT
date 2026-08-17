@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "M26-E-COLLECT-ARABIC-NATIVE-V1",
+  "frozen_at": "2026-08-17T17:11:00+01:00",
+  "design_rule": "Arabic is a first-class source and identity language. Never require translation into French/Latin before evidence can be stored or searched.",
+  "storage": {
+    "preserve_raw_arabic_exactly": true,
+    "preserve_source_encoding_when_archived": true,
+    "store_canonical_arabic_display_form": true,
+    "store_latin_display_form_when_evidenced": true,
+    "store_source_language": true
+  },
+  "match_key_normalization_only": [
+    "Unicode NFC",
+    "remove tatweel U+0640",
+    "remove Arabic harakat/diacritics for match-key only",
+    "normalize Alef variants أ إ آ ٱ to ا for match-key only",
+    "normalize whitespace and common punctuation",
+    "normalize Arabic-Indic digits to ASCII digits for match-key only"
+  ],
+  "forbidden_normalization": [
+    "Do not overwrite raw Arabic",
+    "Do not equate ى and ي unless corroborated by entity evidence",
+    "Do not equate ة and ه",
+    "Do not use automatic transliteration as proof of identity",
+    "Do not force one Latin spelling when several official forms exist"
+  ],
+  "entity_model": {
+    "required_fields": [
+      "canonical_entity_id",
+      "name_ar",
+      "name_lat_or_null",
+      "source_form",
+      "entity_type",
+      "evidence_refs"
+    ],
+    "ambiguity_policy": "If more than one canonical entity remains plausible, status must remain AMBIGUOUS. No best-guess resolution."
+  }
+}

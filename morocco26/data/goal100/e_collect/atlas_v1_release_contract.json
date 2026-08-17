@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "ATLAS395-V1-RELEASE-CONTRACT",
+  "frozen_at": "2026-08-17T17:11:00+01:00",
+  "goal": "A fully functional Arabic-native 2026 electoral intelligence product that exposes the frozen F0 forecast and a separately verified live evidence layer without pretending uncalibrated signals change probabilities.",
+  "release_gates": [
+    {
+      "id": "V1-F0",
+      "criterion": "F0 is displayed from immutable registered artifacts; no UI or pipeline process may rewrite it."
+    },
+    {
+      "id": "V1-ARABIC-TERRITORY",
+      "criterion": "All 92 local constituencies and 12 regions have canonical IDs, Arabic display names, Latin/French display names where evidenced, aliases, and ambiguity-safe matching."
+    },
+    {
+      "id": "V1-SOURCE-LEDGER",
+      "criterion": "Every surfaced 2026 signal has source class, URL, original-language excerpt or archived content reference, retrieval time, verification status and canonical entities."
+    },
+    {
+      "id": "V1-ARABIC-SEARCH",
+      "criterion": "Collector query vocabulary and discovery operate natively in Arabic and French; Arabic is never routed through mandatory French translation."
+    },
+    {
+      "id": "V1-STATUS",
+      "criterion": "UI distinguishes VERIFIED, PARTY_ANNOUNCED, AMBIGUOUS, UNVERIFIED/NOT_FOUND and DATA_BLOCKED; missing data is not silently filled."
+    },
+    {
+      "id": "V1-SIGNALS",
+      "criterion": "Candidate, nomination, withdrawal/disqualification, alliance, party switch, incumbent/local office and major campaign-event evidence can be ingested under the frozen source policy."
+    },
+    {
+      "id": "V1-SEPARATION",
+      "criterion": "2026 signals are visually and computationally separate from forecast impact. Until E_reason/calibration passes, the UI states that signal impact on F0 is not calibrated."
+    },
+    {
+      "id": "V1-DAILY",
+      "criterion": "Daily collection can append a timestamped edition without overwriting prior editions; failures produce explicit stale/data-blocked status."
+    },
+    {
+      "id": "V1-E-COLLECT",
+      "criterion": "The frozen E_collect benchmark has been executed and independently evaluated; its result is displayed in the scientific audit trail."
+    }
+  ],
+  "not_required_for_v1": [
+    "A non-zero forecast impact from 2026 signals",
+    "Complete official candidate registration before authorities publish it",
+    "E_reason or E_full success"
+  ],
+  "post_v1": "E_reason determines whether collected evidence contains calibrated predictive information beyond F0. Forecast probabilities change only in a new preregistered immutable snapshot."
+}

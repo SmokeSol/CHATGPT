@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "M26-E-COLLECT-OUTPUT-SCHEMA-V1",
+  "title": "E_collect proposed evidence record",
+  "type": "object",
+  "required": [
+    "record_id",
+    "run_id",
+    "corpus",
+    "target_id",
+    "status",
+    "source_language",
+    "raw_source_form",
+    "evidence_refs",
+    "collector_agent_id"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "corpus": {
+      "enum": [
+        "ARABIC_ROSTER_92",
+        "HISTORICAL_CLASS_16"
+      ]
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "historical_class": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
+        "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
+        "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
+        "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+        "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
+        "HISTORICAL_LIST_REJECTION_TARGET_YEAR",
+        "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
+        "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+        "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR",
+        "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
+        "HISTORICAL_PARTY_SWITCH_TARGET_YEAR",
+        null
+      ]
+    },
+    "status": {
+      "enum": [
+        "PROPOSED_VERIFIED",
+        "PROPOSED_PARTIAL",
+        "AMBIGUOUS",
+        "NOT_FOUND",
+        "DATA_BLOCKED_AGENTIC",
+        "REJECTED_SOURCE_POLICY",
+        "CONFLICT"
+      ]
+    },
+    "source_language": {
+      "type": "string"
+    },
+    "raw_source_form": {
+      "type": "string"
+    },
+    "canonical_entity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name_ar": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name_lat": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "claim_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "claim_value": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "event_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "url",
+          "source_class",
+          "retrieved_at",
+          "content_sha256"
+        ],
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "source_class": {
+            "enum": [
+              "T0_OFFICIAL_INSTITUTIONAL",
+              "T1_OFFICIAL_PARTY",
+              "M24_MEDIAS24"
+            ]
+          },
+          "retrieved_at": {
+            "type": "string"
+          },
+          "content_sha256": {
+            "type": "string"
+          },
+          "excerpt": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "archive_path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "collector_agent_id": {
+      "type": "string"
+    },
+    "collector_confidence": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

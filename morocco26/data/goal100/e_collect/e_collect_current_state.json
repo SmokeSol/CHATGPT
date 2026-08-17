@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "state_id": "M26-E-COLLECT-CURRENT-V1",
+  "as_of": "2026-08-17T17:11:00+01:00",
+  "branch": "morocco26-e-collect",
+  "parent_f0_commit_sha": "540802f08cd2ac565ea59d531d51ac3f58d83d38",
+  "phase": "E_COLLECT_PREREGISTERED_EXECUTION_AUTHORIZED_NOT_STARTED",
+  "preregistration": {
+    "status": "FROZEN",
+    "certificate": "morocco26/data/goal100/e_collect/e_collect_preregistration_certificate.json",
+    "certificate_sha256": "c00d51da9e0c37f108f75a9aac106771f8893d4abd856e6dd68aeaafe8c13c29"
+  },
+  "execution": {
+    "status": "NOT_STARTED",
+    "run_id": null,
+    "collector": null
+  },
+  "downstream": {
+    "production_atlas_v1_collection": "LOCKED_UNTIL_BENCHMARK_EVALUATED",
+    "e_reason": "LOCKED",
+    "e_full": "LOCKED",
+    "forecast_update": "LOCKED"
+  },
+  "protected": {
+    "F_minus_1": "IMMUTABLE",
+    "F0": "IMMUTABLE",
+    "B2": "IMMUTABLE"
+  }
+}

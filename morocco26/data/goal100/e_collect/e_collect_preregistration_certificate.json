@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-E-COLLECT-PREREGISTRATION-CERT-V1",
+  "gate_id": "E-COLLECT-PREREGISTERED",
+  "gate": "PASS",
+  "frozen_at": "2026-08-17T17:11:00+01:00",
+  "branch": "morocco26-e-collect",
+  "parent_f0_commit_sha": "540802f08cd2ac565ea59d531d51ac3f58d83d38",
+  "frozen_parent_artifacts": {
+    "b2_freeze_certificate_sha256": "eab248d63051643600d0b2220f269b587302c4631fe24a7760fd971277fd88e1",
+    "f0_forecast_artifact_sha256": "fbe5197999f20d0612bc0c66e1954b5c611b11208e43a72eb5494a03b1e40d3f",
+    "f0_distribution_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "b2_arabic_roster_sha256": "b702b92929f7271c0309c0e3a8d4336b6e1bd79ee87a222b0cf834bc37c767ac"
+  },
+  "frozen_protocol_artifacts": {
+    "protocol": {
+      "path": "morocco26/data/goal100/e_collect/e_collect_protocol_v1.json",
+      "sha256": "39eaa017d0b6b66d39e63a3a6ddf0cc99a1076e5f83ce333c31b8158f85831f7"
+    },
+    "source_policy": {
+      "path": "morocco26/data/goal100/e_collect/e_collect_source_policy_v1.json",
+      "sha256": "68f86826cafc504b5b5d9b8d437a8e5e756f163022a8a1608cd3c265d4bd4e22"
+    },
+    "arabic_normalization": {
+      "path": "morocco26/data/goal100/e_collect/e_collect_arabic_normalization_v1.json",
+      "sha256": "67302ed082498d9e3ff46ba67d096288de6abb529bc218b799d1f8d8ae225c81"
+    },
+    "output_schema": {
+      "path": "morocco26/data/goal100/e_collect/e_collect_output_schema_v1.json",
+      "sha256": "bf0b306d124ded421d19722c12f2fdc9a14f5ceaacd7d431aba5d682a932f4eb"
+    },
+    "scoring_contract": {
+      "path": "morocco26/data/goal100/e_collect/e_collect_scoring_contract_v1.json",
+      "sha256": "bea7c607576bdaa259521056b24717596a462d064056749e2723a7532617f8f2"
+    },
+    "testset_manifest": {
+      "path": "morocco26/data/goal100/e_collect/e_collect_testset_manifest_v1.json",
+      "sha256": "7004dd93ce828dadbd0f2a1daa36e18accb8f5ee46e6379a5ab7080a855fef77"
+    },
+    "atlas_v1_release_contract": {
+      "path": "morocco26/data/goal100/e_collect/atlas_v1_release_contract.json",
+      "sha256": "1ce5b3c17c4888606fd392998666c1b78d9a3c399cc6b540a6aedcfd38e5a599"
+    }
+  },
+  "preregistration_checks": {
+    "f0_registered_before_preregistration": true,
+    "b2_frozen_before_preregistration": true,
+    "92_arabic_rows_reserved_before_agentic_execution": true,
+    "16_historical_classes_reserved_before_agentic_execution": true,
+    "scoring_frozen_before_agentic_execution": true,
+    "source_classes_frozen_before_agentic_execution": true,
+    "agentic_execution_started": false,
+    "forecast_modification_authorized": false
+  },
+  "execution_status": "AUTHORIZED_NOT_STARTED",
+  "next_action": "Run the benchmark exactly once under the frozen contract; archive every attempt and independently adjudicate results before production-wide Atlas V1 collection."
+}

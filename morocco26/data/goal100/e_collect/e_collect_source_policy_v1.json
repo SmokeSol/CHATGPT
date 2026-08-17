@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "M26-E-COLLECT-SOURCE-POLICY-V1",
+  "frozen_at": "2026-08-17T17:11:00+01:00",
+  "principle": "Language is unrestricted; source class is restricted. Arabic and French have equal admissibility.",
+  "allowed_source_classes": [
+    {
+      "class": "T0_OFFICIAL_INSTITUTIONAL",
+      "allowed": true,
+      "definition": "Official Moroccan public institutions, constitutional bodies, ministries, Parliament, SGG/official legal publication, election administration, territorial public authorities, or official public datasets.",
+      "admissibility": "Allowed as primary evidence. The page/document must itself be attributable to the official body."
+    },
+    {
+      "class": "T1_OFFICIAL_PARTY",
+      "allowed": true,
+      "definition": "Website controlled by a legally recognized Moroccan political party.",
+      "admissibility": "Allowed for party-controlled facts such as nominations, endorsements, internal office, candidacy announcements and official party positions. For identity/territory resolution or externally verifiable factual claims, require corroboration by T0 or MEDIAS24 unless the party page reproduces an official document."
+    },
+    {
+      "class": "M24_MEDIAS24",
+      "allowed": true,
+      "domains": [
+        "medias24.com"
+      ],
+      "admissibility": "Allowed as the only non-official media source in E_collect V1. Historical archived copies are allowed if provenance and capture date are preserved."
+    }
+  ],
+  "disallowed": [
+    "Other newspapers or media",
+    "Wikipedia and encyclopedias",
+    "Search-result snippets as evidence",
+    "Social media posts, even from official accounts, unless the same claim is available on an allowed website",
+    "Blogs, forums, aggregators and anonymous pages",
+    "LLM-generated summaries or transliterations as evidence",
+    "Unverifiable mirrors"
+  ],
+  "new_domain_rule": "A newly discovered domain may be used only if it objectively qualifies under T0_OFFICIAL_INSTITUTIONAL or T1_OFFICIAL_PARTY before claim extraction. Record qualification evidence in the run source registry. No new source class may be introduced during the run.",
+  "archive_rule": "An archived page inherits the source class of the original domain; the archive is transport/provenance, not a new source class.",
+  "claim_verification_rules": {
+    "territory_alias_or_cross_language_identity": "One T0 source explicitly connecting the forms, OR two independent allowed sources with at least one T0.",
+    "party_nomination_or_internal_party_office": "One T1 official party source is sufficient for the party's own announcement, but status must be labeled PARTY_ANNOUNCED unless a T0 source establishes legal registration.",
+    "candidate_legal_registration_or_disqualification": "T0 required.",
+    "party_switch_or_defection": "T0, or T1 plus independent MEDIAS24/T0 corroboration.",
+    "historical_candidate_fact": "Prefer T0; if absent, two independent allowed sources are required."
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "M26-GOAL100-E-COLLECT-V1",
+  "experiment_name": "Agentic multilingual evidence collection ablation",
+  "preregistered_at": "2026-08-17T17:11:00+01:00",
+  "timezone": "Africa/Casablanca",
+  "branch": "morocco26-e-collect",
+  "parent_f0_commit_sha": "540802f08cd2ac565ea59d531d51ac3f58d83d38",
+  "causal_question": "Does an agentic, Arabic-native collection system recover verified electoral evidence that the frozen deterministic B2 pipeline could not recover, without changing the forecast or using agentic judgment to assign predictive effects?",
+  "baseline": {
+    "b2_status": "FROZEN_NEGATIVE_RESULT",
+    "b2_freeze_certificate_sha256": "eab248d63051643600d0b2220f269b587302c4631fe24a7760fd971277fd88e1",
+    "f0_status": "REGISTERED_IMMUTABLE_PRELIMINARY_FORECAST",
+    "f0_forecast_artifact_sha256": "fbe5197999f20d0612bc0c66e1954b5c611b11208e43a72eb5494a03b1e40d3f",
+    "f0_distribution_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "baseline_roster_verified_resolutions": 0,
+    "baseline_roster_total": 92,
+    "baseline_historical_classes_with_admissible_records": 0,
+    "baseline_historical_classes_total": 16
+  },
+  "frozen_test_corpus": {
+    "arabic_roster": {
+      "path": "morocco26/data/goal100/b2_2026_ballot_roster.json",
+      "sha256": "b702b92929f7271c0309c0e3a8d4336b6e1bd79ee87a222b0cf834bc37c767ac",
+      "rows": 92,
+      "baseline_resolved": 0,
+      "rule": "All 92 rows are evaluated. No row may be dropped, replaced, translated into a new test row, or silently corrected."
+    },
+    "historical_input_classes": {
+      "count": 16,
+      "classes": [
+        "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+        "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
+        "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
+        "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
+        "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+        "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
+        "HISTORICAL_LIST_REJECTION_TARGET_YEAR",
+        "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
+        "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+        "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR",
+        "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
+        "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+      ],
+      "rule": "These are the exact B2-blocked classes. The agent may search for evidence but may not change feature definitions, historical cutoffs, or the B2 result."
+    }
+  },
+  "allowed_agentic_capabilities": [
+    "Arabic-language web search and reading",
+    "French-language web search and reading",
+    "Cross-language entity resolution",
+    "Source discovery inside the frozen source-class policy",
+    "Parallel specialist agents",
+    "Semantic extraction from allowed sources",
+    "Deduplication and entity linking",
+    "Archiving raw source text and provenance",
+    "Proposing bilingual Arabic/Latin canonical aliases"
+  ],
+  "forbidden_actions": [
+    "Modify F-1 or any F0 artifact, manifest, hash, simulation or coefficient",
+    "Backfill agentic outputs into B2",
+    "Assign any predictive effect or forecast delta",
+    "Use election-outcome information unavailable at the historical target-year cutoff",
+    "Accept evidence from sources outside e_collect_source_policy_v1.json",
+    "Use generated transliteration as evidence",
+    "Treat model confidence as verification",
+    "Delete failed, conflicting, ambiguous or unsupported attempts",
+    "Change this protocol or the scoring contract after execution starts"
+  ],
+  "source_policy": "morocco26/data/goal100/e_collect/e_collect_source_policy_v1.json",
+  "arabic_normalization_policy": "morocco26/data/goal100/e_collect/e_collect_arabic_normalization_v1.json",
+  "output_schema": "morocco26/data/goal100/e_collect/e_collect_output_schema_v1.json",
+  "scoring_contract": "morocco26/data/goal100/e_collect/e_collect_scoring_contract_v1.json",
+  "evaluation_order": [
+    "Freeze protocol, source policy, Arabic normalization, output schema and scoring contract",
+    "Run benchmark only on the 92+16 reserved corpus",
+    "Independent adjudication of every proposed accepted record",
+    "Compute delta_collect metrics against B2",
+    "Only after benchmark evaluation may production-wide 2026 collection for Atlas V1 begin"
+  ],
+  "separation_of_roles": {
+    "collector": "Opus multi-agent system or another explicitly declared agentic collector",
+    "adjudicator": "Independent controller; collector self-verification is not final verification",
+    "forecast_owner": "F0 remains frozen; E_collect has no authority to update forecast probabilities"
+  },
+  "stop_conditions": [
+    "All 92 Arabic roster rows have a terminal proposed status, and all 16 historical classes have a terminal search report",
+    "OR a hard source-policy/provenance violation occurs",
+    "OR the collector cannot continue due to access/tooling limits, which must be recorded as DATA_BLOCKED_AGENTIC rather than absence"
+  ],
+  "post_benchmark_rule": "A positive E_collect result authorizes only evidence-layer/product work. It does not authorize forecast adjustment; E_reason and any calibrated forecast update require separate preregistration."
+}

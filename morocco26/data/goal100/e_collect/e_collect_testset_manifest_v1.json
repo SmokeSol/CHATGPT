@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "M26-E-COLLECT-TESTSET-V1",
+  "frozen_at": "2026-08-17T17:11:00+01:00",
+  "parent_f0_commit_sha": "540802f08cd2ac565ea59d531d51ac3f58d83d38",
+  "arabic_roster": {
+    "path": "morocco26/data/goal100/b2_2026_ballot_roster.json",
+    "sha256": "b702b92929f7271c0309c0e3a8d4336b6e1bd79ee87a222b0cf834bc37c767ac",
+    "rows": 92,
+    "b2_terminal_status": "B2_4_FAIL",
+    "b2_resolved_rows": 0,
+    "preserve_row_order": true
+  },
+  "historical_classes": {
+    "count": 16,
+    "classes": [
+      "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+      "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
+      "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
+      "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
+      "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+      "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
+      "HISTORICAL_LIST_REJECTION_TARGET_YEAR",
+      "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
+      "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+      "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR",
+      "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
+      "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+    ],
+    "b2_terminal_status": "B2_3_DATA_BLOCKED_NONAGENTIC",
+    "b2_coverage_2011_to_2016": 0.0,
+    "b2_coverage_2016_to_2021": 0.0
+  },
+  "contamination_rule": "No outcome-derived labels, post-target-year information, or collector-generated corrections may alter the benchmark inputs. Any supplemental evidence is output, not test-set mutation."
+}
