@@ -1,0 +1,39 @@
+name: morocco26-e-reason-pjd-2016-admissibility
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [morocco26-e-reason]
+    paths:
+      - "morocco26/scripts/e_reason_decide_pjd_2016_admissibility.py"
+      - ".github/workflows/morocco26-e-reason-pjd-2016-admissibility.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: morocco26-e-reason-pjd-2016-admissibility
+  cancel-in-progress: true
+
+jobs:
+  decide:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-e-reason, fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python morocco26/scripts/validate_e_reason_prereg.py
+      - name: Decide admissibility under frozen policy and pre-extraction registry
+        run: python morocco26/scripts/e_reason_decide_pjd_2016_admissibility.py
+      - run: python morocco26/scripts/validate_e_reason_prereg.py
+      - name: Commit decision
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/data/goal100/e_reason/evidence/pjd_2016_admissibility/decision.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "experiment(e-reason): freeze PJD 2016 admissibility decision"
+          git pull --rebase origin morocco26-e-reason
+          git push origin HEAD:morocco26-e-reason
