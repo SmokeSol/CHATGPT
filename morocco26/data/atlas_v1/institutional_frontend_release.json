@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "release_id": "ATLAS395-INSTITUTIONAL-READER-2026-08-17",
+  "status": "INSTITUTIONAL_READER_BROWSER_VERIFIED",
+  "product_positioning": "premium institutional electoral-intelligence interface for political decision-makers",
+  "presentation_principles": [
+    "sober",
+    "credible",
+    "high-end",
+    "data-driven",
+    "territorial-first",
+    "probabilistic",
+    "source-traceable"
+  ],
+  "public_navigation": [
+    "Synthèse",
+    "Carte territoriale",
+    "Candidatures",
+    "Partis",
+    "Veille 2026",
+    "Méthode",
+    "Historique"
+  ],
+  "internal_vocabulary_excluded_from_public_reader": [
+    "LLM",
+    "AI experiments",
+    "agentic experiments",
+    "E_reason",
+    "E_full",
+    "Arabic Native",
+    "AUCUN DELTA APPLIQUÉ"
+  ],
+  "data_layer": {
+    "forecast_snapshot": "F0",
+    "forecast_immutable": true,
+    "local_territories": 92,
+    "arabic_identity_coverage": 92,
+    "candidate_records": 546,
+    "structured_parties": 9
+  },
+  "browser_validation": {
+    "workflow_run_id": 32059476735,
+    "workflow_job_id": 95477217703,
+    "result": "PASS",
+    "missing_required_markers": [],
+    "forbidden_public_vocabulary": [],
+    "fatal_loading_errors": [],
+    "rendered_dom_bytes": 173385
+  },
+  "verified_review_url": "https://marked-turnip-3zqu3wpz.shipped.page/",
+  "verified_review_url_ttl": "7 days",
+  "repository_branch": "atlas395-v0",
+  "reader_commit": "3a3fb6a328908da20781aa3e747acc92107b6f34",
+  "note": "The institutional presentation is the public product surface. Experimental reasoning architecture remains internal and must not leak into the political-facing interface."
+}
