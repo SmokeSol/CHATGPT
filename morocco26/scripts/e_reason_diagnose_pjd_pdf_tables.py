@@ -39,10 +39,12 @@ def main():
         with pdfplumber.open(str(p)) as pdf:
             for pi,page in enumerate(pdf.pages,1):
                 page_rec={'page':pi,'width':page.width,'height':page.height,'tables':[],'word_lines':[]}
-                # Excel PDFs usually preserve ruled table lines; test multiple
-                # deterministic strategies without selecting one post hoc.
                 strategies=[
                     ('lines', {'vertical_strategy':'lines','horizontal_strategy':'lines','intersection_tolerance':5,'snap_tolerance':3,'join_tolerance':3}),
+                    # pdfplumber >=0.11 forwards text_* settings to extract_words;
+                    # char_dir='rtl' asks the library to reconstruct Arabic in
+                    # reading direction rather than raw visual glyph order.
+                    ('lines_rtl', {'vertical_strategy':'lines','horizontal_strategy':'lines','intersection_tolerance':5,'snap_tolerance':3,'join_tolerance':3,'text_char_dir':'rtl'}),
                     ('lines_strict', {'vertical_strategy':'lines_strict','horizontal_strategy':'lines_strict','intersection_tolerance':5,'snap_tolerance':3,'join_tolerance':3}),
                     ('text', {'vertical_strategy':'text','horizontal_strategy':'text','min_words_vertical':2,'min_words_horizontal':1,'intersection_tolerance':5}),
                 ]
@@ -57,32 +59,27 @@ def main():
                         page_rec['tables'].append({'strategy':label,'table_count':len(compact),'tables':compact})
                     except Exception as exc:
                         page_rec['tables'].append({'strategy':label,'error':f'{type(exc).__name__}: {exc}'})
-                # Always preserve a coordinate-based fallback sample. We cluster
-                # words by top coordinate, then sort by x descending for Arabic.
-                words=page.extract_words(use_text_flow=False,keep_blank_chars=False,x_tolerance=2,y_tolerance=2) or []
+                words=page.extract_words(use_text_flow=False,keep_blank_chars=False,x_tolerance=2,y_tolerance=2,char_dir='rtl') or []
                 clusters=[]
                 for w in sorted(words,key=lambda x:(round(float(x['top']),1),-float(x['x0']))):
-                    top=float(w['top'])
-                    target=None
+                    top=float(w['top']); target=None
                     for c in clusters:
-                        if abs(c['top']-top)<=2.0:
-                            target=c; break
-                    if target is None:
-                        target={'top':top,'words':[]}; clusters.append(target)
+                        if abs(c['top']-top)<=2.0: target=c; break
+                    if target is None: target={'top':top,'words':[]}; clusters.append(target)
                     target['words'].append({'text':w['text'],'x0':round(float(w['x0']),2),'x1':round(float(w['x1']),2),'top':round(top,2)})
                 for c in sorted(clusters,key=lambda x:x['top'])[:45]:
                     ws=sorted(c['words'],key=lambda x:-x['x0'])
                     page_rec['word_lines'].append({'top':round(c['top'],2),'text_rtl_order':' | '.join(x['text'] for x in ws),'words':ws})
                 d['pages'].append(page_rec)
         rows.append(d)
-    payload={'schema_version':'1.0','created_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),'documents':rows,'invariants':{'evidence_promoted':False,'predictive_judgments_generated':False,'outcomes_unsealed':False,'F1_created':False}}
+    payload={'schema_version':'1.1','created_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),'documents':rows,'invariants':{'evidence_promoted':False,'predictive_judgments_generated':False,'outcomes_unsealed':False,'F1_created':False}}
     OUT.mkdir(parents=True,exist_ok=True)
     (OUT/'diagnostic.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     summary=[]
     for d in rows:
         s={'article_id':d['article_id'],'pages':len(d['pages']),'strategies':[]}
         for p in d['pages']:
-            s['strategies'].append({'page':p['page'],'table_counts':{x['strategy']:x.get('table_count') for x in p['tables'] if 'table_count' in x}})
+            s['strategies'].append({'page':p['page'],'table_counts':{x['strategy']:x.get('table_count') for x in p['tables'] if 'table_count' in x},'errors':{x['strategy']:x.get('error') for x in p['tables'] if x.get('error')}})
         summary.append(s)
     print(json.dumps(summary,ensure_ascii=False,indent=2))
 
