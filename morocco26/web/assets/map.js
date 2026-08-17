@@ -1,30 +1,6 @@
-function renderLegend(id){
-  const counts={HIGH:0,MEDIUM:0,LOW:0};D.constituencies.constituencies.forEach(c=>counts[c.uncertainty.label]=(counts[c.uncertainty.label]||0)+1);
-  $(`#${id}`).innerHTML=['HIGH','MEDIUM','LOW'].map(k=>`<div><i style="background:${U_COLOR[k]}"></i>Incertitude ${String(U_LABEL[k]).toLowerCase()} · ${counts[k]}</div>`).join('');
-}
-
-function drawCartogram(svgId, cards, colorFn, onClick, selectedId=null, visibleSet=null){
-  const svg=document.getElementById(svgId);if(!svg)return;
-  const assignments=cartogramAssignments(cards);
-  const r=14.4, sx=32, sy=25.5, ox=18, oy=18;
-  const pts=(x,y)=>[[x-r,y],[x-r/2,y-r*.86],[x+r/2,y-r*.86],[x+r,y],[x+r/2,y+r*.86],[x-r/2,y+r*.86]].map(p=>p.join(',')).join(' ');
-  svg.setAttribute('viewBox','0 0 430 535');
-  svg.innerHTML=assignments.map(({card,col,row})=>{const x=ox+col*sx+(row%2?16:0),y=oy+row*sy;const dim=visibleSet&&!visibleSet.has(card.constituency_id);const sel=selectedId===card.constituency_id;const txt=abbr(card.name);return`<g class="hex atlas-hex ${dim?'dimmed':''} ${sel?'selected':''}" data-id="${esc(card.constituency_id)}"><title>${esc(card.name)} — ${esc(card.region)}</title><polygon points="${pts(x,y)}" fill="${colorFn(card)}"></polygon><text x="${x}" y="${y+2}">${esc(txt)}</text></g>`}).join('');
-  svg.querySelectorAll('.hex').forEach(g=>g.addEventListener('click',()=>onClick?.(g.dataset.id)));
-}
-function cartogramAssignments(cards){
-  const regs=[...new Set(cards.map(c=>c.region))];
-  const exact=regs.every(r=>CARTOGRAM_CELLS[r])&&Object.keys(CARTOGRAM_CELLS).every(r=>cards.some(c=>c.region===r));
-  if(!exact)return cards.map((card,i)=>({card,col:i%12,row:Math.floor(i/12)}));
-  const out=[];
-  for(const [region,cells] of Object.entries(CARTOGRAM_CELLS)){
-    const list=cards.filter(c=>c.region===region).sort((a,b)=>a.name.localeCompare(b.name,'fr'));
-    list.forEach((card,i)=>{const [col,row]=cells[i]||[0,0];out.push({card,col,row});});
-  }
-  return out;
-}
-function abbr(name){
-  return String(name||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^A-Za-z0-9 ]/g,' ').split(/\s+/).filter(Boolean).slice(0,2).map(x=>x.slice(0,2).toUpperCase()).join('');
-}
-
+const ATLAS_CARTOGRAM_CELLS={'Tanger-Tétouan-Al Hoceïma':[[5,0],[6,0],[7,0],[8,0],[5,1],[6,1],[7,1],[8,1]],'Oriental':[[10,1],[11,1],[10,2],[11,2],[10,3],[11,3],[10,4],[11,4]],'Rabat-Salé-Kénitra':[[2,2],[3,2],[4,2],[5,2],[2,3],[3,3],[4,3],[5,3],[3,4],[4,4],[5,4]],'Fès-Meknès':[[6,2],[7,2],[8,2],[9,2],[6,3],[7,3],[8,3],[9,3],[7,4],[8,4],[9,4]],'Casablanca-Settat':[[1,5],[2,5],[3,5],[4,5],[5,5],[1,6],[2,6],[3,6],[4,6],[5,6],[2,7],[3,7],[4,7],[5,7],[3,8],[4,8]],'Béni Mellal-Khénifra':[[6,5],[7,5],[8,5],[6,6],[7,6],[8,6]],'Drâa-Tafilalet':[[9,5],[10,5],[9,6],[10,6],[9,7]],'Marrakech-Safi':[[1,8],[2,8],[3,8],[4,8],[5,8],[1,9],[2,9],[3,9],[4,9],[5,9]],'Souss-Massa':[[2,10],[3,10],[4,10],[5,10],[3,11],[4,11],[5,11]],'Guelmim-Oued Noun':[[7,10],[8,10],[9,10],[10,10]],'Laâyoune-Sakia El Hamra':[[7,11],[8,11],[9,11],[10,11]],'Dakhla-Oued Eddahab':[[9,12],[10,12]]};
+function renderLegend(id){const counts={HIGH:0,MEDIUM:0,LOW:0};D.constituencies.constituencies.forEach(c=>counts[c.uncertainty.label]=(counts[c.uncertainty.label]||0)+1);$(`#${id}`).innerHTML=['HIGH','MEDIUM','LOW'].map(k=>`<div><i style="background:${U_COLOR[k]}"></i>Incertitude ${String(U_LABEL[k]).toLowerCase()} · ${counts[k]}</div>`).join('')}
+function drawCartogram(svgId,cards,colorFn,onClick,selectedId=null,visibleSet=null){const svg=document.getElementById(svgId);if(!svg)return;const assignments=cartogramAssignments(cards);const r=19.5,sx=43,sy=34.5,ox=30,oy=28;const pts=(x,y)=>[[x-r,y],[x-r/2,y-r*.86],[x+r/2,y-r*.86],[x+r,y],[x+r/2,y+r*.86],[x-r/2,y+r*.86]].map(p=>p.join(',')).join(' ');const maxCol=Math.max(...assignments.map(x=>x.col),0),maxRow=Math.max(...assignments.map(x=>x.row),0);const width=ox*2+maxCol*sx+sx+r,height=oy*2+maxRow*sy+sy+r;svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.setAttribute('preserveAspectRatio','xMidYMid meet');svg.innerHTML=assignments.map(({card,col,row})=>{const x=ox+col*sx+(row%2?sx/2:0),y=oy+row*sy,dim=visibleSet&&!visibleSet.has(card.constituency_id),sel=selectedId===card.constituency_id,txt=abbr(card.name);return`<g class="hex atlas-hex ${dim?'dimmed':''} ${sel?'selected':''}" data-id="${esc(card.constituency_id)}"><title>${esc(card.name)} — ${esc(card.region)}</title><polygon points="${pts(x,y)}" fill="${colorFn(card)}"></polygon><text x="${x}" y="${y+2.6}">${esc(txt)}</text></g>`}).join('');svg.querySelectorAll('.hex').forEach(g=>g.addEventListener('click',()=>onClick?.(g.dataset.id)))}
+function cartogramAssignments(cards){const regs=[...new Set(cards.map(c=>c.region))];const exact=regs.every(r=>ATLAS_CARTOGRAM_CELLS[r])&&Object.keys(ATLAS_CARTOGRAM_CELLS).every(r=>cards.some(c=>c.region===r));if(!exact)return cards.map((card,i)=>({card,col:i%14,row:Math.floor(i/14)}));const out=[];for(const[region,cells]of Object.entries(ATLAS_CARTOGRAM_CELLS)){const list=cards.filter(c=>c.region===region).sort((a,b)=>a.name.localeCompare(b.name,'fr'));list.forEach((card,i)=>{const[col,row]=cells[i]||[0,0];out.push({card,col,row})})}return out}
+function abbr(name){return String(name||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^A-Za-z0-9 ]/g,' ').split(/\s+/).filter(Boolean).slice(0,2).map(x=>x.slice(0,2).toUpperCase()).join('')}
 boot();
