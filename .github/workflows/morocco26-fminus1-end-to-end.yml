@@ -1,0 +1,248 @@
+name: morocco26-fminus1-end-to-end
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - '.github/workflows/morocco26-fminus1-end-to-end.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-fminus1-isolated-end-to-end
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build-freeze-register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet numpy pandas openpyxl requests beautifulsoup4 pypdf
+
+      - name: Detect an already registered identical F-1
+        id: preflight
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          g=Path('morocco26/data/goal100')
+          r=json.loads((g/'forecast_registry.json').read_text(encoding='utf-8'))
+          cert=g/'fminus1_registration_certificate.json'
+          already=bool(r.get('snapshots')) and any(x.get('snapshot_id')=='F-1' for x in r['snapshots']) and cert.exists()
+          with open(os.environ['GITHUB_OUTPUT'],'a',encoding='utf-8') as f:
+              f.write(f'already={str(already).lower()}\n')
+          print({'already_registered':already,'snapshot_ids':[x.get('snapshot_id') for x in r.get('snapshots',[])]})
+          PY
+
+      - name: Apply declared pre-execution implementation corrections
+        if: steps.preflight.outputs.already != 'true'
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          # 1. Python closure declaration noticed before evidentiary N92 execution.
+          p=Path('morocco26/scripts/goal100_fit_local_N_posterior.py')
+          s=p.read_text(encoding='utf-8')
+          locus='    def audit_contest(row: dict, n_values: np.ndarray, label: str, identifier: str) -> dict:\n        turnout = float(row["turnout_rate_reported"])'
+          replacement='    def audit_contest(row: dict, n_values: np.ndarray, label: str, identifier: str) -> dict:\n        nonlocal scale_tests\n        turnout = float(row["turnout_rate_reported"])'
+          if locus in s:
+              s=s.replace(locus,replacement,1)
+          elif '        nonlocal scale_tests\n        turnout = float(row["turnout_rate_reported"])' not in s:
+              raise SystemExit('N92 correction locus absent')
+          p.write_text(s,encoding='utf-8')
+
+          # 2. Finite serialization for a constant national-seat dimension.
+          p=Path('morocco26/scripts/goal100_run_fminus1.py')
+          s=p.read_text(encoding='utf-8')
+          locus='    correlation = np.corrcoef(national_seats.astype(float), rowvar=False)\n'
+          replacement='    correlation = np.corrcoef(national_seats.astype(float), rowvar=False)\n    correlation = np.nan_to_num(correlation, nan=0.0, posinf=0.0, neginf=0.0)\n    np.fill_diagonal(correlation, 1.0)\n'
+          if locus in s and 'np.nan_to_num(correlation' not in s:
+              s=s.replace(locus,replacement,1)
+          elif 'np.nan_to_num(correlation' not in s:
+              raise SystemExit('correlation correction locus absent')
+
+          # 3. Provenance-only protocol amendment recorded before forecast execution.
+          old='fminus1_protocol_v1.json'
+          new='fminus1_protocol_v1_1.json'
+          if old in s:
+              s=s.replace(old,new)
+          p.write_text(s,encoding='utf-8')
+
+          p=Path('morocco26/scripts/goal100_finalize_fminus1_manifest.py')
+          s=p.read_text(encoding='utf-8')
+          if old in s:
+              s=s.replace(old,new)
+          p.write_text(s,encoding='utf-8')
+
+          # Stable evidence-driven validator entry point.
+          Path('morocco26/scripts/validate_goal100_tracking.py').write_text(
+              '#!/usr/bin/env python3\n'
+              '"""Stable entry point for the evidence-driven Goal100 validator."""\n'
+              'from validate_goal100_tracking_dynamic import main\n\n'
+              'if __name__ == "__main__":\n'
+              '    main()\n', encoding='utf-8')
+
+          # Breadcrumb correction is append-only and recorded before any F-1 run.
+          journal=Path('morocco26/FIL_ARIANE.md')
+          text=journal.read_text(encoding='utf-8')
+          entry_id='A004' if 'Entrée A004 —' not in text else 'A014'
+          marker=f'Entrée {entry_id} — Amendment pré-exécution du cutoff'
+          if marker not in text:
+              text += f'''\n\n### 2026-08-16 — Entrée {entry_id} — Amendment pré-exécution du cutoff\n\n**Constat :** `fminus1_protocol_v1.json` utilisait une borne de fin de journée potentiellement postérieure à l’heure réelle d’émission.\n\n**Correction :** création de `data/goal100/fminus1_protocol_v1_1.json` avec cutoff conservateur `2026-08-16T20:00:00+01:00`.\n\n**Timing :** avant toute exécution F−1, avant tout résultat 2026 et sans observation d’un output de forecast.\n\n**Impact scientifique :** aucun paramètre, modèle, seuil ou seed n’est modifié ; correction de provenance uniquement. V1 est conservé et n’est pas réécrit.\n'''
+          journal.write_text(text,encoding='utf-8')
+          PY
+
+      - name: Compile the complete F-1 stack
+        if: steps.preflight.outputs.already != 'true'
+        run: |
+          python -m py_compile \
+            morocco26/scripts/goal100_probe_official_geometry.py \
+            morocco26/scripts/goal100_certify_geometry_2026.py \
+            morocco26/scripts/goal100_fit_local_N_posterior.py \
+            morocco26/scripts/goal100_calibrate_uncertainty.py \
+            morocco26/scripts/goal100_run_fminus1.py \
+            morocco26/scripts/goal100_reconcile_fminus1_state.py \
+            morocco26/scripts/goal100_finalize_fminus1_manifest.py \
+            morocco26/scripts/goal100_register_fminus1.py \
+            morocco26/scripts/goal100_sync_fil_ariane.py \
+            morocco26/scripts/validate_goal100_tracking_dynamic.py \
+            morocco26/scripts/validate_goal100_tracking.py
+
+      - name: Acquire and certify operational 2026 geometry
+        if: steps.preflight.outputs.already != 'true'
+        run: |
+          python morocco26/scripts/goal100_probe_official_geometry.py
+          python morocco26/scripts/goal100_certify_geometry_2026.py
+
+      - name: Fit and falsify the constrained N92 posterior
+        if: steps.preflight.outputs.already != 'true'
+        run: python morocco26/scripts/goal100_fit_local_N_posterior.py
+
+      - name: Calibrate hierarchical uncertainty under frozen LOTO rule
+        if: steps.preflight.outputs.already != 'true'
+        run: python morocco26/scripts/goal100_calibrate_uncertainty.py
+
+      - name: Reconcile prerequisite gates from evidence
+        if: steps.preflight.outputs.already != 'true'
+        run: |
+          python morocco26/scripts/goal100_reconcile_fminus1_state.py
+          python morocco26/scripts/goal100_sync_fil_ariane.py
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking_dynamic.py
+
+      - name: Run 50,000 valid coherent 395-seat elections
+        if: steps.preflight.outputs.already != 'true'
+        run: |
+          # Refresh the official legal watch at the exact simulation execution.
+          python morocco26/scripts/goal100_probe_official_geometry.py
+          python morocco26/scripts/goal100_certify_geometry_2026.py
+          python morocco26/scripts/goal100_run_fminus1.py
+
+      - name: Create machine breadcrumb for the simulation
+        if: steps.preflight.outputs.already != 'true'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          g=Path('morocco26/data/goal100')
+          s=json.loads((g/'simulation_certificate.json').read_text(encoding='utf-8'))
+          m=json.loads((g/'snapshots/F-1/manifest.json').read_text(encoding='utf-8'))
+          f=json.loads((g/'snapshots/F-1/forecast.json').read_text(encoding='utf-8'))
+          assert s['gate']=='PASS' and s['valid_election_draws']>=50000
+          event={
+              'event_id':'A011','date':'2026-08-16','title':'Simulation F-1 cohérente terminée',
+              'gate':'MC-50000-COHERENT','status':'PASS',
+              'actions':['refresh legal watch','generate joint vote/turnout/N draws','allocate 92 local and 12 regional contests','hash snapshot artifacts'],
+              'machine_result':{
+                  'valid_draws':s['valid_election_draws'],'attempts':s['attempted_joint_draws'],
+                  'rejection_rate':s['legal_rejection_rate'],
+                  'max_probability_normalization_error':s['max_probability_normalization_error'],
+                  'monte_carlo_max_binomial_se':s['monte_carlo_max_binomial_standard_error'],
+                  'OTHER_single_list_calls':s['OTHER_single_list_allocator_calls'],
+                  'manifest_sha256':m['manifest_sha256'],'forecast_sha256':m['forecast_artifact_hash'],
+                  'expected_national_seats':{p:round(v['total_seats']['mean'],4) for p,v in f['national_395']['parties'].items()}
+              },
+              'decision':'Simulation gate eligible for closure; forecast remains unregistered until append-only registry transition.',
+              'next_action':'Reconcile, bind exact evidence commit, register F-1.'
+          }
+          d=g/'fil_ariane_events'; d.mkdir(parents=True,exist_ok=True)
+          (d/'A011.json').write_text(json.dumps(event,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+
+      - name: Reconcile and validate simulation evidence
+        if: steps.preflight.outputs.already != 'true'
+        run: |
+          python morocco26/scripts/goal100_reconcile_fminus1_state.py
+          python morocco26/scripts/goal100_sync_fil_ariane.py
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking_dynamic.py
+
+      - name: Commit the exact executed model and evidentiary simulation locally
+        if: steps.preflight.outputs.already != 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26
+          git commit -m 'evidence(morocco26): execute calibrated 50k-election F-1 model'
+          echo "Evidence commit: $(git rev-parse HEAD)"
+
+      - name: Finalize manifest against the evidence commit
+        if: steps.preflight.outputs.already != 'true'
+        run: python morocco26/scripts/goal100_finalize_fminus1_manifest.py
+
+      - name: Register F-1 append-only and synchronize FIL_ARIANE
+        if: steps.preflight.outputs.already != 'true'
+        run: |
+          python morocco26/scripts/goal100_register_fminus1.py
+          python morocco26/scripts/goal100_sync_fil_ariane.py
+
+      - name: Final scientific and tracking validation
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking_dynamic.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          g=Path('morocco26/data/goal100')
+          reg=json.loads((g/'forecast_registry.json').read_text(encoding='utf-8'))
+          cert=json.loads((g/'fminus1_registration_certificate.json').read_text(encoding='utf-8'))
+          state=json.loads((g/'current_state.json').read_text(encoding='utf-8'))
+          gates=json.loads((g/'gate_registry.json').read_text(encoding='utf-8'))
+          assert cert['gate']=='PASS'
+          assert len(reg['snapshots'])==1 and reg['snapshots'][0]['snapshot_id']=='F-1'
+          assert reg['sequence']['next_id']=='F0'
+          assert state['goal100_objective']['forecast_status']=='F-1_ISSUED_IMMUTABLE'
+          assert all(x['status']=='CLOSED' for x in gates['forecast_unlock'])
+          assert all(x['status']=='LOCKED' for x in gates['agentic_unlock'])
+          print(json.dumps({
+              'snapshot':'F-1','forecast_sha256':cert['forecast_artifact_sha256'],
+              'manifest_sha256':cert['manifest_sha256'],'next':'F0',
+              'p0':{x['id']:x['status'] for x in gates['p0']}
+          },indent=2))
+          PY
+
+      - name: Commit immutable registration locally
+        if: steps.preflight.outputs.already != 'true'
+        run: |
+          git add morocco26
+          git commit -m 'milestone(morocco26): register immutable probabilistic forecast F-1'
+
+      - name: Push the complete two-commit evidence chain
+        if: steps.preflight.outputs.already != 'true'
+        run: git push origin HEAD:morocco26-fminus1-run
+
+      - name: Verify already-registered path
+        if: steps.preflight.outputs.already == 'true'
+        run: |
+          python morocco26/scripts/goal100_sync_fil_ariane.py
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking_dynamic.py

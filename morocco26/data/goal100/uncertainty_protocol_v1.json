@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "M26-GOAL100-UNCERTAINTY-PROTOCOL-V1",
+  "frozen_at": "2026-08-16T22:18:00+01:00",
+  "purpose": "Fit and calibrate the joint non-agentic uncertainty layer after B* persistence-first selection and before any 2026 forecast or agentic residual experiment.",
+  "epistemic_statement": "2016->2021 is used first as a transparent temporal hindcast and then as a pre-2026 calibration target under the fixed rule below. After calibration it is not described as an untouched holdout; 2026 remains the decisive untouched temporal test.",
+  "party_buckets": ["RNI", "PAM", "PI", "PJD", "USFP", "MP", "UC", "PPS", "OTHER"],
+  "vote_transform": {
+    "space": "CLR_WITH_FIXED_HALF_VOTE_SMOOTHING",
+    "smoothing_votes": 0.5,
+    "output_space": "9_PARTY_SIMPLEX",
+    "score": "TERRITORY_EQUAL_ENERGY_SCORE_SQRT_COMPOSITION"
+  },
+  "turnout_transform": {
+    "space": "LOGIT",
+    "score": "TERRITORY_EQUAL_CRPS"
+  },
+  "hierarchy": {
+    "mean_model": "PERSISTENCE_ZERO_EXPECTED_INNOVATION",
+    "components": [
+      "national innovation vector shared by all territories",
+      "current-region innovation vector shared within each of 12 regions",
+      "pooled local residual vector sampled independently by territory"
+    ],
+    "decomposition": "For each historical transition, national is the equal-territory mean innovation; region is the kappa=5 shrunk mean residual; local is the remaining residual.",
+    "region_kappa": 5.0,
+    "zero_mean_enforcement": "Each empirical component support is symmetrized by including the positive and negative observed vector/value.",
+    "cross_party_dependence": "Preserved inside empirical multivariate component vectors; no independent per-party Gaussian approximation.",
+    "forbidden": [
+      "free 92x92 territorial covariance",
+      "territory-specific fitted covariance matrices",
+      "post-result deletion of adverse validation diagnostics"
+    ]
+  },
+  "temporal_calibration": {
+    "precalibration_fit": "2011_TO_2016_ONLY",
+    "precalibration_validation": "2016_TO_2021",
+    "draws_per_candidate": 8192,
+    "seed": 26092341,
+    "fixed_scale_grid": [0.75, 1.0, 1.25, 1.5, 2.0, 2.5],
+    "coverage_levels": [0.5, 0.8, 0.95],
+    "selection_rule": {
+      "vote": "Select the lowest-scale candidate with componentwise mean coverage80 >= 0.75 and coverage95 >= 0.90; among qualifying candidates select lowest mean Energy Score, then lower scale. If none qualify, minimize total coverage deficit then Energy Score then scale.",
+      "turnout": "Select the lowest-scale candidate with territory coverage80 >= 0.75 and coverage95 >= 0.90; among qualifying candidates select lowest mean CRPS, then lower scale. If none qualify, minimize total coverage deficit then CRPS then scale."
+    },
+    "postselection_refit": "After scale selection, rebuild symmetrized national, region-specific and pooled-local component libraries using both 2011->2016 and 2016->2021 transitions.",
+    "independent_validation_claim_after_refit": false
+  },
+  "cross_state": {
+    "turnout_vote_cross_correlation": "ZERO_BY_DEFAULT",
+    "reason": "Two modern transitions do not identify a stable cross-state covariance robustly; no correlation is introduced merely because it improves one historical fit."
+  },
+  "regional_ballot_bridge_for_F_minus_1": {
+    "rule": "The same sampled national and region innovation affects the 2021 regional-list baseline; the mean local residual sampled within that region supplies the residual bridge.",
+    "status": "FROZEN_FOR_F_MINUS_1",
+    "limitation": "Only 2021 provides the current regional-list ballot; the bridge is structural and will be scored prospectively in 2026."
+  },
+  "minor_party_legal_disaggregation": {
+    "rule": "OTHER is split back into the actual 2021 minor-party codes within each contest in proportion to their 2021 votes before applying the legal allocator.",
+    "zero_history_rule": "A minor party with zero 2021 votes receives zero in F-1; later verified 2026 list entry requires a new B2/F0 snapshot.",
+    "reason": "Treating OTHER as one legal list would manufacture seats and is forbidden."
+  },
+  "gate": {
+    "required_artifact": "morocco26/data/goal100/uncertainty_calibration.json",
+    "pass_conditions": [
+      "all fixed scale candidates are published",
+      "precalibration scale-1 diagnostics are retained",
+      "selected scales follow the frozen rule exactly",
+      "final component libraries contain no free territorial covariance",
+      "all probabilities and intervals are finite and normalized"
+    ]
+  }
+}

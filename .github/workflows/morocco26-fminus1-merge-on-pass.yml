@@ -1,0 +1,70 @@
+name: morocco26-fminus1-merge-on-pass
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - 'morocco26/data/goal100/fminus1_release_gate.json'
+      - '.github/workflows/morocco26-fminus1-merge-on-pass.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-fminus1-merge-on-pass
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Detect release certificate
+        id: ready
+        run: |
+          if [ -f morocco26/data/goal100/fminus1_release_gate.json ]; then echo 'ready=true' >> "$GITHUB_OUTPUT"; else echo 'ready=false' >> "$GITHUB_OUTPUT"; fi
+
+      - name: Revalidate exact release head
+        if: steps.ready.outputs.ready == 'true'
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking_dynamic.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          g=Path('morocco26/data/goal100')
+          release=json.loads((g/'fminus1_release_gate.json').read_text(encoding='utf-8'))
+          post=json.loads((g/'fminus1_postflight.json').read_text(encoding='utf-8'))
+          reg=json.loads((g/'forecast_registry.json').read_text(encoding='utf-8'))
+          cert=json.loads((g/'fminus1_registration_certificate.json').read_text(encoding='utf-8'))
+          gates=json.loads((g/'gate_registry.json').read_text(encoding='utf-8'))
+          assert release['gate']=='PASS' and post['status']=='PASS'
+          assert [x['snapshot_id'] for x in reg['snapshots']]==['F-1']
+          assert release['forecast_sha256']==cert['forecast_artifact_sha256']==reg['snapshots'][0]['forecast_artifact_hash']
+          assert release['manifest_sha256']==cert['manifest_sha256']==reg['snapshots'][0]['manifest_sha256']
+          assert all(x['status']=='CLOSED' for x in gates['forecast_unlock'])
+          assert all(x['status']=='LOCKED' for x in gates['agentic_unlock'])
+          PY
+
+      - name: Merge PR 8 only on exact PASS
+        if: steps.ready.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr ready 8 --repo SmokeSol/CHATGPT || true
+          gh pr merge 8 --repo SmokeSol/CHATGPT --squash --delete-branch=false
+
+      - name: No-op before release gate exists
+        if: steps.ready.outputs.ready != 'true'
+        run: echo 'Release gate not present; merge correctly withheld.'

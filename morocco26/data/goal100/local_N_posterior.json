@@ -1,0 +1,5480 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "M26-GOAL100-LOCAL-N-POSTERIOR-V1",
+  "as_of": "2026-08-16",
+  "gate": "PASS",
+  "epistemic_status": "LATENT_CALIBRATED_PRIOR_NOT_OFFICIAL_LOCAL_COUNTS",
+  "national_N_2026": 15801162,
+  "draw_contract": {
+    "draws": 50000,
+    "seed": 26092331,
+    "positive_integer_entries": true,
+    "exact_sum_every_draw": true,
+    "max_absolute_sum_error": 0,
+    "feasibility_floor_violations": 0,
+    "minimum_sampled_local_N": 8272,
+    "maximum_sampled_local_N": 775888,
+    "draw_stream_sha256_little_endian_int64": "092382b44873c2ee709e3fb62566247980c11eee29daf2758f0a1e1a52919d71",
+    "raw_draws_persisted": false,
+    "raw_draws_policy": "Summaries and a deterministic stream hash are persisted; the full pseudo-count matrix is regenerated from the frozen seed and parameters."
+  },
+  "centre": {
+    "base": "2011 local registered-voter shares",
+    "projection": "proportional water-filling above local and regional 2021 valid-vote feasibility floors",
+    "national_sum": 15801162,
+    "slack_after_floors": 8197402,
+    "official_status": "NOT_OFFICIAL_LOCAL_COUNTS"
+  },
+  "variance_model": {
+    "source_transition": "2007_to_2011_exact_normalized_name_matches",
+    "matched_territories": 74,
+    "same_magnitude_matches": 61,
+    "national_sum_N2007": 15462362,
+    "national_sum_N2011": 13420631,
+    "global_mean_log_share_delta_diagnostic_only": 0.038106429543602445,
+    "region_kappa": 5.0,
+    "region_metadata": {
+      "Béni Mellal-Khénifra": {
+        "n": 4,
+        "raw_mean_log_share_delta": 0.1242601448390811,
+        "shrinkage_weight": 0.4444444444444444,
+        "shrunk_zero_centred_effect": 0.038290540131323846
+      },
+      "Casablanca-Settat": {
+        "n": 14,
+        "raw_mean_log_share_delta": 0.09813667849583951,
+        "shrinkage_weight": 0.7368421052631579,
+        "shrunk_zero_centred_effect": 0.04423281501743784
+      },
+      "Dakhla-Oued Eddahab": {
+        "n": 2,
+        "raw_mean_log_share_delta": 0.34027901359702667,
+        "shrinkage_weight": 0.2857142857142857,
+        "shrunk_zero_centred_effect": 0.08633502401526406
+      },
+      "Drâa-Tafilalet": {
+        "n": 2,
+        "raw_mean_log_share_delta": -0.33684539842947847,
+        "shrinkage_weight": 0.2857142857142857,
+        "shrunk_zero_centred_effect": -0.10712909370659454
+      },
+      "Fès-Meknès": {
+        "n": 10,
+        "raw_mean_log_share_delta": -0.03413631507685314,
+        "shrinkage_weight": 0.6666666666666666,
+        "shrunk_zero_centred_effect": -0.04816182974697039
+      },
+      "Guelmim-Oued Noun": {
+        "n": 3,
+        "raw_mean_log_share_delta": 0.2824326002547784,
+        "shrinkage_weight": 0.375,
+        "shrunk_zero_centred_effect": 0.09162231401669099
+      },
+      "Laâyoune-Sakia El Hamra": {
+        "n": 3,
+        "raw_mean_log_share_delta": 0.26524608976202063,
+        "shrinkage_weight": 0.375,
+        "shrunk_zero_centred_effect": 0.08517737258190683
+      },
+      "Marrakech-Safi": {
+        "n": 7,
+        "raw_mean_log_share_delta": -0.06445205349296575,
+        "shrinkage_weight": 0.5833333333333334,
+        "shrunk_zero_centred_effect": -0.05982578177133145
+      },
+      "Oriental": {
+        "n": 6,
+        "raw_mean_log_share_delta": -0.05424494075892564,
+        "shrinkage_weight": 0.5454545454545454,
+        "shrunk_zero_centred_effect": -0.050373474710469865
+      },
+      "Rabat-Salé-Kénitra": {
+        "n": 9,
+        "raw_mean_log_share_delta": 0.04135419972978685,
+        "shrinkage_weight": 0.6428571428571429,
+        "shrunk_zero_centred_effect": 0.0020878522625471176
+      },
+      "Souss-Massa": {
+        "n": 7,
+        "raw_mean_log_share_delta": 0.00336194148632197,
+        "shrinkage_weight": 0.5833333333333334,
+        "shrunk_zero_centred_effect": -0.020267618033413613
+      },
+      "Tanger-Tétouan-Al Hoceïma": {
+        "n": 7,
+        "raw_mean_log_share_delta": 0.0030420270490743306,
+        "shrinkage_weight": 0.5833333333333334,
+        "shrunk_zero_centred_effect": -0.020454234788474735
+      }
+    },
+    "raw_sigma_region": 0.05058580406011278,
+    "raw_sigma_local": 0.20174610032297544,
+    "raw_combined_sigma": 0.20799137618645683,
+    "variance_floor": 0.22305173979137335,
+    "floor_scale_applied": 1.0724085963613004,
+    "posterior_sigma_region": 0.054248651127913314,
+    "posterior_sigma_local": 0.21635425226872818,
+    "posterior_combined_sigma": 0.22305173979137335,
+    "zero_mean_rule": "Historical mean drift is diagnostic only; posterior innovations are centred at zero around the 2011-share centre.",
+    "stationarity_warning": "This is a four-year historical drift diagnostic, not a stationary-law claim for 2011->2026. It can set a variance floor; it cannot by itself identify the 2026 local N vector."
+  },
+  "regional_floor_adjustments": {
+    "Béni Mellal-Khénifra": {
+      "regional_valid_vote_floor": 676334,
+      "local_valid_vote_floor_sum_before_adjustment": 684945,
+      "additional_floor_reserved": 0,
+      "floor_sum_after_adjustment": 684945
+    },
+    "Casablanca-Settat": {
+      "regional_valid_vote_floor": 1172619,
+      "local_valid_vote_floor_sum_before_adjustment": 1168195,
+      "additional_floor_reserved": 4424,
+      "floor_sum_after_adjustment": 1172619
+    },
+    "Dakhla-Oued Eddahab": {
+      "regional_valid_vote_floor": 34475,
+      "local_valid_vote_floor_sum_before_adjustment": 34844,
+      "additional_floor_reserved": 0,
+      "floor_sum_after_adjustment": 34844
+    },
+    "Drâa-Tafilalet": {
+      "regional_valid_vote_floor": 476011,
+      "local_valid_vote_floor_sum_before_adjustment": 480020,
+      "additional_floor_reserved": 0,
+      "floor_sum_after_adjustment": 480020
+    },
+    "Fès-Meknès": {
+      "regional_valid_vote_floor": 924089,
+      "local_valid_vote_floor_sum_before_adjustment": 923576,
+      "additional_floor_reserved": 513,
+      "floor_sum_after_adjustment": 924089
+    },
+    "Guelmim-Oued Noun": {
+      "regional_valid_vote_floor": 159400,
+      "local_valid_vote_floor_sum_before_adjustment": 166831,
+      "additional_floor_reserved": 0,
+      "floor_sum_after_adjustment": 166831
+    },
+    "Laâyoune-Sakia El Hamra": {
+      "regional_valid_vote_floor": 134818,
+      "local_valid_vote_floor_sum_before_adjustment": 135755,
+      "additional_floor_reserved": 0,
+      "floor_sum_after_adjustment": 135755
+    },
+    "Marrakech-Safi": {
+      "regional_valid_vote_floor": 1140339,
+      "local_valid_vote_floor_sum_before_adjustment": 1147895,
+      "additional_floor_reserved": 0,
+      "floor_sum_after_adjustment": 1147895
+    },
+    "Oriental": {
+      "regional_valid_vote_floor": 528806,
+      "local_valid_vote_floor_sum_before_adjustment": 531315,
+      "additional_floor_reserved": 0,
+      "floor_sum_after_adjustment": 531315
+    },
+    "Rabat-Salé-Kénitra": {
+      "regional_valid_vote_floor": 951326,
+      "local_valid_vote_floor_sum_before_adjustment": 951403,
+      "additional_floor_reserved": 0,
+      "floor_sum_after_adjustment": 951403
+    },
+    "Souss-Massa": {
+      "regional_valid_vote_floor": 677422,
+      "local_valid_vote_floor_sum_before_adjustment": 667104,
+      "additional_floor_reserved": 10318,
+      "floor_sum_after_adjustment": 677422
+    },
+    "Tanger-Tétouan-Al Hoceïma": {
+      "regional_valid_vote_floor": 695984,
+      "local_valid_vote_floor_sum_before_adjustment": 696622,
+      "additional_floor_reserved": 0,
+      "floor_sum_after_adjustment": 696622
+    }
+  },
+  "mapping_audit": {
+    "2011": [
+      {
+        "historical_id": 596,
+        "historical_name": "Benslimane",
+        "repo_id": "benslimane",
+        "repo_name": "Benslimane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 595,
+        "historical_name": "Berrechid",
+        "repo_id": "berrechid",
+        "repo_name": "Berrechid",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 594,
+        "historical_name": "Khouribga",
+        "repo_id": "khouribga",
+        "repo_name": "Khouribga",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 593,
+        "historical_name": "Settat",
+        "repo_id": "settat",
+        "repo_name": "Settat",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 590,
+        "historical_name": "El-Jadida",
+        "repo_id": "el-jadida",
+        "repo_name": "El Jadida",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 589,
+        "historical_name": "Safi",
+        "repo_id": "safi",
+        "repo_name": "Safi",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 591,
+        "historical_name": "Sidi Bennour",
+        "repo_id": "sidi-bennour",
+        "repo_name": "Sidi Bennour",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 592,
+        "historical_name": "Youssoufia",
+        "repo_id": "youssoufia",
+        "repo_name": "Youssoufia",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 553,
+        "historical_name": "Boulemane",
+        "repo_id": "boulemane",
+        "repo_name": "Boulemane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 549,
+        "historical_name": "Fès-Chamalia",
+        "repo_id": "fes-nord",
+        "repo_name": "Fès-Nord",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 550,
+        "historical_name": "Fès-Janoubia",
+        "repo_id": "fes-sud",
+        "repo_name": "Fès-Sud",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 551,
+        "historical_name": "Moulay-Yacoub",
+        "repo_id": "moulay-yaacoub",
+        "repo_name": "Moulay Yaâcoub",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 552,
+        "historical_name": "Sefrou",
+        "repo_id": "sefrou",
+        "repo_name": "Séfrou",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 560,
+        "historical_name": "El-Gharb",
+        "repo_id": "el-gharb",
+        "repo_name": "El Gharb",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 559,
+        "historical_name": "Kénitra",
+        "repo_id": "kenitra",
+        "repo_name": "Kénitra",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 561,
+        "historical_name": "Sidi-Kacem",
+        "repo_id": "sidi-kacem",
+        "repo_name": "Sidi Kacem",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 562,
+        "historical_name": "Sidi Slimane",
+        "repo_id": "sidi-slimane",
+        "repo_name": "Sidi Slimane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 523,
+        "historical_name": "Aïn-Chock",
+        "repo_id": "ain-chock",
+        "repo_name": "Aïn Chock",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 521,
+        "historical_name": "Aïn-Sebaâ - Hay-Mohammadi",
+        "repo_id": "ain-sebaa-hay-mohammadi",
+        "repo_name": "Aïn Sebaâ-Hay Mohammadi",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 520,
+        "historical_name": "Al-Fida - Mers-Sultan",
+        "repo_id": "al-fida-mers-sultan",
+        "repo_name": "Al Fida-Mers Sultan",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 525,
+        "historical_name": "Ben-M'sick",
+        "repo_id": "ben-m-sick",
+        "repo_name": "Ben M'sick",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 519,
+        "historical_name": "Casablanca - Anfa",
+        "repo_id": "casablanca-anfa",
+        "repo_name": "Casablanca-Anfa",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 522,
+        "historical_name": "Hay-Hassani",
+        "repo_id": "hay-hassani",
+        "repo_name": "Hay Hassani",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 526,
+        "historical_name": "Moulay-Rachid",
+        "repo_id": "moulay-rachid",
+        "repo_name": "Moulay Rachid",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 524,
+        "historical_name": "Sidi-Bernoussi",
+        "repo_id": "sidi-bernoussi",
+        "repo_name": "Sidi Bernoussi",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 529,
+        "historical_name": "Médiouna",
+        "repo_id": "mediouna",
+        "repo_name": "Médiouna",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 527,
+        "historical_name": "Mohammadia",
+        "repo_id": "mohammedia",
+        "repo_name": "Mohammédia",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 528,
+        "historical_name": "Nouaceur",
+        "repo_id": "nouaceur",
+        "repo_name": "Nouaceur",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 556,
+        "historical_name": "Assa-Zag",
+        "repo_id": "assa-zag",
+        "repo_name": "Assa-Zag",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 557,
+        "historical_name": "Es-Smara",
+        "repo_id": "es-semara",
+        "repo_name": "Es-Semara",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 554,
+        "historical_name": "Guelmim",
+        "repo_id": "guelmim",
+        "repo_name": "Guelmim",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 558,
+        "historical_name": "Tan-Tan",
+        "repo_id": "tan-tan",
+        "repo_name": "Tan-Tan",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 555,
+        "historical_name": "Tata",
+        "repo_id": "tata",
+        "repo_name": "Tata",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 564,
+        "historical_name": "Boujdour",
+        "repo_id": "boujdour",
+        "repo_name": "Boujdour",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 563,
+        "historical_name": "Laâyoune",
+        "repo_id": "laayoune",
+        "repo_name": "Laâyoune",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 565,
+        "historical_name": "Tarfaya",
+        "repo_id": "tarfaya",
+        "repo_name": "Tarfaya",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 570,
+        "historical_name": "Al-Haouz",
+        "repo_id": "al-haouz",
+        "repo_name": "Al Haouz",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 569,
+        "historical_name": "Chichaoua",
+        "repo_id": "chichaoua",
+        "repo_name": "Chichaoua",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 572,
+        "historical_name": "El-Kelâa-des-Sraghna",
+        "repo_id": "el-kelaa-des-sraghna",
+        "repo_name": "El Kelâa des Sraghna",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 573,
+        "historical_name": "Essaouira",
+        "repo_id": "essaouira",
+        "repo_name": "Essaouira",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 567,
+        "historical_name": "Guéliz - Annakhil",
+        "repo_id": "gueliz-nakhil",
+        "repo_name": "Guéliz-Nakhil",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 566,
+        "historical_name": "Médina - Sidi-Youssef-Ben-Ali",
+        "repo_id": "medina-sidi-youssef",
+        "repo_name": "Medina-Sidi Youssef",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 568,
+        "historical_name": "Ménara",
+        "repo_id": "menara",
+        "repo_name": "Menara",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 571,
+        "historical_name": "Rehamna",
+        "repo_id": "rehamna",
+        "repo_name": "Rehamna",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 575,
+        "historical_name": "El-Hajeb",
+        "repo_id": "el-hajeb",
+        "repo_name": "El Hajeb",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 578,
+        "historical_name": "Errachidia",
+        "repo_id": "errachidia",
+        "repo_name": "Errachidia",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 576,
+        "historical_name": "Ifrane",
+        "repo_id": "ifrane",
+        "repo_name": "Ifrane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 577,
+        "historical_name": "Khénifra",
+        "repo_id": "khenifra",
+        "repo_name": "Khénifra",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 574,
+        "historical_name": "Meknès",
+        "repo_id": "meknes",
+        "repo_name": "Meknès",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 579,
+        "historical_name": "Midelt",
+        "repo_id": "midelt",
+        "repo_name": "Midelt",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 584,
+        "historical_name": "Berkane",
+        "repo_id": "berkane",
+        "repo_name": "Berkane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 588,
+        "historical_name": "Driouch",
+        "repo_id": "driouch",
+        "repo_name": "Driouch",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 586,
+        "historical_name": "Figuig",
+        "repo_id": "figuig",
+        "repo_name": "Figuig",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 583,
+        "historical_name": "Jerada",
+        "repo_id": "jerada",
+        "repo_name": "Jerada",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 587,
+        "historical_name": "Nador",
+        "repo_id": "nador",
+        "repo_name": "Nador",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 582,
+        "historical_name": "Oujda - Angad",
+        "repo_id": "oujda-angad",
+        "repo_name": "Oujda-Angad",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 585,
+        "historical_name": "Taourirt",
+        "repo_id": "taourirt",
+        "repo_name": "Taourirt",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 581,
+        "historical_name": "Aousserd",
+        "repo_id": "aousserd",
+        "repo_name": "Aousserd",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 580,
+        "historical_name": "Oued-Ed-Dahab",
+        "repo_id": "oued-eddahab",
+        "repo_name": "Oued Eddahab",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 517,
+        "historical_name": "Khémisset - Oulmès",
+        "repo_id": "khemisset-oulmes",
+        "repo_name": "Khémisset-Oulmès",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 518,
+        "historical_name": "Tifelt - Rommani",
+        "repo_id": "tiflet-rommani",
+        "repo_name": "Tiflet-Rommani",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 513,
+        "historical_name": "Rabat - Challah",
+        "repo_id": "rabat-chellah",
+        "repo_name": "Rabat-Chellah",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 512,
+        "historical_name": "Rabat - El Mouhit",
+        "repo_id": "rabat-ocean",
+        "repo_name": "Rabat-Océan",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 515,
+        "historical_name": "Salé - Al-Jadida",
+        "repo_id": "sale-el-jadida",
+        "repo_name": "Salé-El Jadida",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 514,
+        "historical_name": "Salé - Médina",
+        "repo_id": "sale-medina",
+        "repo_name": "Salé-Médina",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 516,
+        "historical_name": "Skhirate - Témara",
+        "repo_id": "skhirate-temara",
+        "repo_name": "Skhirate-Témara",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 530,
+        "historical_name": "Agadir - Ida-ou-Tanane",
+        "repo_id": "agadir-ida-outanane",
+        "repo_name": "Agadir Ida-Outanane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 532,
+        "historical_name": "Chtouka - Aït-Baha",
+        "repo_id": "chtouka-ait-baha",
+        "repo_name": "Chtouka-Aït Baha",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 531,
+        "historical_name": "Inézgane - Aït-Melloul",
+        "repo_id": "inezgane-ait-melloul",
+        "repo_name": "Inezgane-Aït Melloul",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 536,
+        "historical_name": "Ouarzazate",
+        "repo_id": "ouarzazate",
+        "repo_name": "Ouarzazate",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 539,
+        "historical_name": "Sidi Ifni",
+        "repo_id": "sidi-ifni",
+        "repo_name": "Sidi Ifni",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 533,
+        "historical_name": "Taroudannt - Al-Janoubia",
+        "repo_id": "taroudant-sud",
+        "repo_name": "Taroudant-Sud",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 534,
+        "historical_name": "Taroudannt - Chamalia",
+        "repo_id": "taroudant-nord",
+        "repo_name": "Taroudant-Nord",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 538,
+        "historical_name": "Tinghir",
+        "repo_id": "tinghir",
+        "repo_name": "Tinghir",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 535,
+        "historical_name": "Tiznit",
+        "repo_id": "tiznit",
+        "repo_name": "Tiznit",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 537,
+        "historical_name": "Zagora",
+        "repo_id": "zagora",
+        "repo_name": "Zagora",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 547,
+        "historical_name": "Azilal - Demnate",
+        "repo_id": "azilal-demnate",
+        "repo_name": "Azilal-Demnate",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 546,
+        "historical_name": "Bzou - Ouaouizaght",
+        "repo_id": "bzou-ouaouizeght",
+        "repo_name": "Bzou-Ouaouizeght",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 545,
+        "historical_name": "Béni-Mellal",
+        "repo_id": "beni-mellal",
+        "repo_name": "Béni-Mellal",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 548,
+        "historical_name": "Fquih Ben Salah",
+        "repo_id": "fquih-ben-salah",
+        "repo_name": "Fquih Ben Salah",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 602,
+        "historical_name": "Chefchaouen",
+        "repo_id": "chefchaouen",
+        "repo_name": "Chefchaouen",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 598,
+        "historical_name": "Fahs - Anjra",
+        "repo_id": "fahs-anjra",
+        "repo_name": "Fahs-Anjra",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 601,
+        "historical_name": "Larache",
+        "repo_id": "larache",
+        "repo_name": "Larache",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 600,
+        "historical_name": "M'Diq - Fnideq",
+        "repo_id": "m-diq-fnideq",
+        "repo_name": "M'diq-Fnideq",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 603,
+        "historical_name": "Ouezzane",
+        "repo_id": "ouezzane",
+        "repo_name": "Ouezzane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 597,
+        "historical_name": "Tanger - Assilah",
+        "repo_id": "tanger-assilah",
+        "repo_name": "Tanger-Assilah",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 599,
+        "historical_name": "Tétouan",
+        "repo_id": "tetouan",
+        "repo_name": "Tétouan",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 540,
+        "historical_name": "Al-Hoceïma",
+        "repo_id": "al-hoceima",
+        "repo_name": "Al Hoceïma",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 542,
+        "historical_name": "Guercif",
+        "repo_id": "guercif",
+        "repo_name": "Guercif",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 544,
+        "historical_name": "Karia - Rhafsai",
+        "repo_id": "karia-ghafsay",
+        "repo_name": "Karia-Ghafsay",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 543,
+        "historical_name": "Taounate - Tissa",
+        "repo_id": "taounate-tissa",
+        "repo_name": "Taounate-Tissa",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 541,
+        "historical_name": "Taza",
+        "repo_id": "taza",
+        "repo_name": "Taza",
+        "match_mode": "NORMALIZED_EXACT"
+      }
+    ],
+    "2021": [
+      {
+        "historical_id": 547,
+        "historical_name": "Azilal - Demnate",
+        "repo_id": "azilal-demnate",
+        "repo_name": "Azilal-Demnate",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 546,
+        "historical_name": "Bzou - Ouaouizaght",
+        "repo_id": "bzou-ouaouizeght",
+        "repo_name": "Bzou-Ouaouizeght",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 545,
+        "historical_name": "Béni-Mellal",
+        "repo_id": "beni-mellal",
+        "repo_name": "Béni-Mellal",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 548,
+        "historical_name": "Fquih Ben Salah",
+        "repo_id": "fquih-ben-salah",
+        "repo_name": "Fquih Ben Salah",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 577,
+        "historical_name": "Khénifra",
+        "repo_id": "khenifra",
+        "repo_name": "Khénifra",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 594,
+        "historical_name": "Khouribga",
+        "repo_id": "khouribga",
+        "repo_name": "Khouribga",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 596,
+        "historical_name": "Benslimane",
+        "repo_id": "benslimane",
+        "repo_name": "Benslimane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 595,
+        "historical_name": "Berrechid",
+        "repo_id": "berrechid",
+        "repo_name": "Berrechid",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 523,
+        "historical_name": "Aïn-Chock",
+        "repo_id": "ain-chock",
+        "repo_name": "Aïn Chock",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 521,
+        "historical_name": "Aïn-Sebaâ - Hay-Mohammadi",
+        "repo_id": "ain-sebaa-hay-mohammadi",
+        "repo_name": "Aïn Sebaâ-Hay Mohammadi",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 520,
+        "historical_name": "Al-Fida - Mers-Sultan",
+        "repo_id": "al-fida-mers-sultan",
+        "repo_name": "Al Fida-Mers Sultan",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 525,
+        "historical_name": "Ben-M'sick",
+        "repo_id": "ben-m-sick",
+        "repo_name": "Ben M'sick",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 519,
+        "historical_name": "Casablanca - Anfa",
+        "repo_id": "casablanca-anfa",
+        "repo_name": "Casablanca-Anfa",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 522,
+        "historical_name": "Hay-Hassani",
+        "repo_id": "hay-hassani",
+        "repo_name": "Hay Hassani",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 526,
+        "historical_name": "Moulay-Rachid",
+        "repo_id": "moulay-rachid",
+        "repo_name": "Moulay Rachid",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 524,
+        "historical_name": "Sidi-Bernoussi",
+        "repo_id": "sidi-bernoussi",
+        "repo_name": "Sidi Bernoussi",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 590,
+        "historical_name": "El-Jadida",
+        "repo_id": "el-jadida",
+        "repo_name": "El Jadida",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 529,
+        "historical_name": "Médiouna",
+        "repo_id": "mediouna",
+        "repo_name": "Médiouna",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 527,
+        "historical_name": "Mohammadia",
+        "repo_id": "mohammedia",
+        "repo_name": "Mohammédia",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 528,
+        "historical_name": "Nouaceur",
+        "repo_id": "nouaceur",
+        "repo_name": "Nouaceur",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 593,
+        "historical_name": "Settat",
+        "repo_id": "settat",
+        "repo_name": "Settat",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 591,
+        "historical_name": "Sidi Bennour",
+        "repo_id": "sidi-bennour",
+        "repo_name": "Sidi Bennour",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 581,
+        "historical_name": "Aousserd",
+        "repo_id": "aousserd",
+        "repo_name": "Aousserd",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 580,
+        "historical_name": "Oued-Ed-Dahab",
+        "repo_id": "oued-eddahab",
+        "repo_name": "Oued Eddahab",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 578,
+        "historical_name": "Errachidia",
+        "repo_id": "errachidia",
+        "repo_name": "Errachidia",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 579,
+        "historical_name": "Midelt",
+        "repo_id": "midelt",
+        "repo_name": "Midelt",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 536,
+        "historical_name": "Ouarzazate",
+        "repo_id": "ouarzazate",
+        "repo_name": "Ouarzazate",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 538,
+        "historical_name": "Tinghir",
+        "repo_id": "tinghir",
+        "repo_name": "Tinghir",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 537,
+        "historical_name": "Zagora",
+        "repo_id": "zagora",
+        "repo_name": "Zagora",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 553,
+        "historical_name": "Boulemane",
+        "repo_id": "boulemane",
+        "repo_name": "Boulemane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 575,
+        "historical_name": "El-Hajeb",
+        "repo_id": "el-hajeb",
+        "repo_name": "El Hajeb",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 549,
+        "historical_name": "Fès-Chamalia",
+        "repo_id": "fes-nord",
+        "repo_name": "Fès-Nord",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 550,
+        "historical_name": "Fès-Janoubia",
+        "repo_id": "fes-sud",
+        "repo_name": "Fès-Sud",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 576,
+        "historical_name": "Ifrane",
+        "repo_id": "ifrane",
+        "repo_name": "Ifrane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 574,
+        "historical_name": "Meknès",
+        "repo_id": "meknes",
+        "repo_name": "Meknès",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 551,
+        "historical_name": "Moulay-Yacoub",
+        "repo_id": "moulay-yaacoub",
+        "repo_name": "Moulay Yaâcoub",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 552,
+        "historical_name": "Sefrou",
+        "repo_id": "sefrou",
+        "repo_name": "Séfrou",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 544,
+        "historical_name": "Karia - Rhafsai",
+        "repo_id": "karia-ghafsay",
+        "repo_name": "Karia-Ghafsay",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 543,
+        "historical_name": "Taounate - Tissa",
+        "repo_id": "taounate-tissa",
+        "repo_name": "Taounate-Tissa",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 541,
+        "historical_name": "Taza",
+        "repo_id": "taza",
+        "repo_name": "Taza",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 556,
+        "historical_name": "Assa-Zag",
+        "repo_id": "assa-zag",
+        "repo_name": "Assa-Zag",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 554,
+        "historical_name": "Guelmim",
+        "repo_id": "guelmim",
+        "repo_name": "Guelmim",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 539,
+        "historical_name": "Sidi Ifni",
+        "repo_id": "sidi-ifni",
+        "repo_name": "Sidi Ifni",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 558,
+        "historical_name": "Tan-Tan",
+        "repo_id": "tan-tan",
+        "repo_name": "Tan-Tan",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 564,
+        "historical_name": "Boujdour",
+        "repo_id": "boujdour",
+        "repo_name": "Boujdour",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 557,
+        "historical_name": "Es-Smara",
+        "repo_id": "es-semara",
+        "repo_name": "Es-Semara",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 563,
+        "historical_name": "Laâyoune",
+        "repo_id": "laayoune",
+        "repo_name": "Laâyoune",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 565,
+        "historical_name": "Tarfaya",
+        "repo_id": "tarfaya",
+        "repo_name": "Tarfaya",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 570,
+        "historical_name": "Al-Haouz",
+        "repo_id": "al-haouz",
+        "repo_name": "Al Haouz",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 569,
+        "historical_name": "Chichaoua",
+        "repo_id": "chichaoua",
+        "repo_name": "Chichaoua",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 572,
+        "historical_name": "El-Kelâa-des-Sraghna",
+        "repo_id": "el-kelaa-des-sraghna",
+        "repo_name": "El Kelâa des Sraghna",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 573,
+        "historical_name": "Essaouira",
+        "repo_id": "essaouira",
+        "repo_name": "Essaouira",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 567,
+        "historical_name": "Guéliz - Annakhil",
+        "repo_id": "gueliz-nakhil",
+        "repo_name": "Guéliz-Nakhil",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 566,
+        "historical_name": "Médina - Sidi-Youssef-Ben-Ali",
+        "repo_id": "medina-sidi-youssef",
+        "repo_name": "Medina-Sidi Youssef",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 568,
+        "historical_name": "Ménara",
+        "repo_id": "menara",
+        "repo_name": "Menara",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 571,
+        "historical_name": "Rehamna",
+        "repo_id": "rehamna",
+        "repo_name": "Rehamna",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 589,
+        "historical_name": "Safi",
+        "repo_id": "safi",
+        "repo_name": "Safi",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 592,
+        "historical_name": "Youssoufia",
+        "repo_id": "youssoufia",
+        "repo_name": "Youssoufia",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 584,
+        "historical_name": "Berkane",
+        "repo_id": "berkane",
+        "repo_name": "Berkane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 588,
+        "historical_name": "Driouch",
+        "repo_id": "driouch",
+        "repo_name": "Driouch",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 586,
+        "historical_name": "Figuig",
+        "repo_id": "figuig",
+        "repo_name": "Figuig",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 542,
+        "historical_name": "Guercif",
+        "repo_id": "guercif",
+        "repo_name": "Guercif",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 583,
+        "historical_name": "Jerada",
+        "repo_id": "jerada",
+        "repo_name": "Jerada",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 587,
+        "historical_name": "Nador",
+        "repo_id": "nador",
+        "repo_name": "Nador",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 582,
+        "historical_name": "Oujda - Angad",
+        "repo_id": "oujda-angad",
+        "repo_name": "Oujda-Angad",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 585,
+        "historical_name": "Taourirt",
+        "repo_id": "taourirt",
+        "repo_name": "Taourirt",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 560,
+        "historical_name": "El-Gharb",
+        "repo_id": "el-gharb",
+        "repo_name": "El Gharb",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 559,
+        "historical_name": "Kénitra",
+        "repo_id": "kenitra",
+        "repo_name": "Kénitra",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 517,
+        "historical_name": "Khémisset - Oulmès",
+        "repo_id": "khemisset-oulmes",
+        "repo_name": "Khémisset-Oulmès",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 518,
+        "historical_name": "Tifelt - Rommani",
+        "repo_id": "tiflet-rommani",
+        "repo_name": "Tiflet-Rommani",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 513,
+        "historical_name": "Rabat - Challah",
+        "repo_id": "rabat-chellah",
+        "repo_name": "Rabat-Chellah",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 512,
+        "historical_name": "Rabat - El Mouhit",
+        "repo_id": "rabat-ocean",
+        "repo_name": "Rabat-Océan",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 515,
+        "historical_name": "Salé - Al-Jadida",
+        "repo_id": "sale-el-jadida",
+        "repo_name": "Salé-El Jadida",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 514,
+        "historical_name": "Salé - Médina",
+        "repo_id": "sale-medina",
+        "repo_name": "Salé-Médina",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 561,
+        "historical_name": "Sidi-Kacem",
+        "repo_id": "sidi-kacem",
+        "repo_name": "Sidi Kacem",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 562,
+        "historical_name": "Sidi Slimane",
+        "repo_id": "sidi-slimane",
+        "repo_name": "Sidi Slimane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 516,
+        "historical_name": "Skhirate - Témara",
+        "repo_id": "skhirate-temara",
+        "repo_name": "Skhirate-Témara",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 530,
+        "historical_name": "Agadir - Ida-ou-Tanane",
+        "repo_id": "agadir-ida-outanane",
+        "repo_name": "Agadir Ida-Outanane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 532,
+        "historical_name": "Chtouka - Aït-Baha",
+        "repo_id": "chtouka-ait-baha",
+        "repo_name": "Chtouka-Aït Baha",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 531,
+        "historical_name": "Inézgane - Aït-Melloul",
+        "repo_id": "inezgane-ait-melloul",
+        "repo_name": "Inezgane-Aït Melloul",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 533,
+        "historical_name": "Taroudannt - Al-Janoubia",
+        "repo_id": "taroudant-sud",
+        "repo_name": "Taroudant-Sud",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 534,
+        "historical_name": "Taroudannt - Chamalia",
+        "repo_id": "taroudant-nord",
+        "repo_name": "Taroudant-Nord",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 555,
+        "historical_name": "Tata",
+        "repo_id": "tata",
+        "repo_name": "Tata",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 535,
+        "historical_name": "Tiznit",
+        "repo_id": "tiznit",
+        "repo_name": "Tiznit",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 540,
+        "historical_name": "Al-Hoceïma",
+        "repo_id": "al-hoceima",
+        "repo_name": "Al Hoceïma",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 602,
+        "historical_name": "Chefchaouen",
+        "repo_id": "chefchaouen",
+        "repo_name": "Chefchaouen",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 598,
+        "historical_name": "Fahs - Anjra",
+        "repo_id": "fahs-anjra",
+        "repo_name": "Fahs-Anjra",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 601,
+        "historical_name": "Larache",
+        "repo_id": "larache",
+        "repo_name": "Larache",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 600,
+        "historical_name": "M'Diq - Fnideq",
+        "repo_id": "m-diq-fnideq",
+        "repo_name": "M'diq-Fnideq",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 603,
+        "historical_name": "Ouezzane",
+        "repo_id": "ouezzane",
+        "repo_name": "Ouezzane",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 597,
+        "historical_name": "Tanger - Assilah",
+        "repo_id": "tanger-assilah",
+        "repo_name": "Tanger-Assilah",
+        "match_mode": "NORMALIZED_EXACT"
+      },
+      {
+        "historical_id": 599,
+        "historical_name": "Tétouan",
+        "repo_id": "tetouan",
+        "repo_name": "Tétouan",
+        "match_mode": "NORMALIZED_EXACT"
+      }
+    ],
+    "coverage": 92
+  },
+  "local": {
+    "rows": 92,
+    "denominator_invariant_exact": 81,
+    "denominator_sensitive": 11,
+    "territories_with_any_N_only_change_mass": 2,
+    "maximum_any_change_or_unresolved_probability": 0.38022,
+    "aggregate_unresolved_statutory_probability_sum": 2e-05,
+    "rows_detail": [
+      {
+        "constituency_id": "agadir-ida-outanane",
+        "historical_id": 530,
+        "name": "Agadir Ida-Outanane",
+        "region": "Souss-Massa",
+        "seats": 4,
+        "registered_2011": 227820,
+        "weight_2011": 0.01697535682189608,
+        "local_valid_vote_floor_2021": 98344,
+        "posterior_floor_after_regional_constraint": 100456,
+        "posterior": {
+          "center": 268230,
+          "mean": 268308.29206,
+          "sd": 37615.63854915918,
+          "q05": 214094,
+          "q10": 223790,
+          "q50": 264316,
+          "q90": 318015,
+          "q95": 335965,
+          "min": 159943,
+          "max": 529290
+        },
+        "denominator_invariant_exact_proof": false,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0003,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0003,
+          "unique_N_values_evaluated": 41463,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "ain-chock",
+        "historical_id": 523,
+        "name": "Aïn Chock",
+        "region": "Casablanca-Settat",
+        "seats": 3,
+        "registered_2011": 127771,
+        "weight_2011": 0.009520491249629023,
+        "local_valid_vote_floor_2021": 30900,
+        "posterior_floor_after_regional_constraint": 31108,
+        "posterior": {
+          "center": 150435,
+          "mean": 150215.41798,
+          "sd": 26448.710672182056,
+          "q05": 112154,
+          "q10": 118768,
+          "q50": 147484,
+          "q90": 185229,
+          "q95": 198033,
+          "min": 70819,
+          "max": 297103
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "ain-sebaa-hay-mohammadi",
+        "historical_id": 521,
+        "name": "Aïn Sebaâ-Hay Mohammadi",
+        "region": "Casablanca-Settat",
+        "seats": 4,
+        "registered_2011": 220111,
+        "weight_2011": 0.016400942697850793,
+        "local_valid_vote_floor_2021": 43078,
+        "posterior_floor_after_regional_constraint": 43437,
+        "posterior": {
+          "center": 259154,
+          "mean": 259104.82452,
+          "sd": 47227.66629554674,
+          "q05": 190732,
+          "q10": 202688,
+          "q50": 254196,
+          "q90": 321363,
+          "q95": 343732,
+          "min": 117951,
+          "max": 538192
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "al-fida-mers-sultan",
+        "historical_id": 520,
+        "name": "Al Fida-Mers Sultan",
+        "region": "Casablanca-Settat",
+        "seats": 3,
+        "registered_2011": 172190,
+        "weight_2011": 0.012830246208244606,
+        "local_valid_vote_floor_2021": 26851,
+        "posterior_floor_after_regional_constraint": 27131,
+        "posterior": {
+          "center": 202733,
+          "mean": 202636.81206,
+          "sd": 38471.4678055595,
+          "q05": 147092,
+          "q10": 156911,
+          "q50": 198722,
+          "q90": 253548,
+          "q95": 271863,
+          "min": 99642,
+          "max": 419249
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "al-haouz",
+        "historical_id": 570,
+        "name": "Al Haouz",
+        "region": "Marrakech-Safi",
+        "seats": 4,
+        "registered_2011": 214678,
+        "weight_2011": 0.01599611821530597,
+        "local_valid_vote_floor_2021": 188707,
+        "posterior_floor_after_regional_constraint": 188707,
+        "posterior": {
+          "center": 252757,
+          "mean": 252855.51138,
+          "sd": 14495.907199386354,
+          "q05": 232047,
+          "q10": 235690,
+          "q50": 251310,
+          "q90": 272111,
+          "q95": 278903,
+          "min": 213410,
+          "max": 344495
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "al-hoceima",
+        "historical_id": 540,
+        "name": "Al Hoceïma",
+        "region": "Tanger-Tétouan-Al Hoceïma",
+        "seats": 4,
+        "registered_2011": 176191,
+        "weight_2011": 0.013128369299476306,
+        "local_valid_vote_floor_2021": 104536,
+        "posterior_floor_after_regional_constraint": 104536,
+        "posterior": {
+          "center": 207444,
+          "mean": 207330.64766,
+          "sd": 22951.016176808982,
+          "q05": 174059,
+          "q10": 180002,
+          "q50": 204925,
+          "q90": 237711,
+          "q95": 248755,
+          "min": 140730,
+          "max": 336841
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "aousserd",
+        "historical_id": 581,
+        "name": "Aousserd",
+        "region": "Dakhla-Oued Eddahab",
+        "seats": 2,
+        "registered_2011": 7648,
+        "weight_2011": 0.0005698688832142095,
+        "local_valid_vote_floor_2021": 7893,
+        "posterior_floor_after_regional_constraint": 7893,
+        "posterior": {
+          "center": 9005,
+          "mean": 9006.39978,
+          "sd": 252.5039061884081,
+          "q05": 8643,
+          "q10": 8708,
+          "q50": 8979,
+          "q90": 9343,
+          "q95": 9462,
+          "min": 8272,
+          "max": 10478
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "assa-zag",
+        "historical_id": 556,
+        "name": "Assa-Zag",
+        "region": "Guelmim-Oued Noun",
+        "seats": 2,
+        "registered_2011": 16516,
+        "weight_2011": 0.0012306425830499327,
+        "local_valid_vote_floor_2021": 16405,
+        "posterior_floor_after_regional_constraint": 16405,
+        "posterior": {
+          "center": 19446,
+          "mean": 19447.34752,
+          "sd": 691.5828399594225,
+          "q05": 18453,
+          "q10": 18627,
+          "q50": 19374,
+          "q90": 20362,
+          "q95": 20693,
+          "min": 17292,
+          "max": 24247
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "azilal-demnate",
+        "historical_id": 547,
+        "name": "Azilal-Demnate",
+        "region": "Béni Mellal-Khénifra",
+        "seats": 3,
+        "registered_2011": 95345,
+        "weight_2011": 0.007104360443260827,
+        "local_valid_vote_floor_2021": 81583,
+        "posterior_floor_after_regional_constraint": 81583,
+        "posterior": {
+          "center": 112257,
+          "mean": 112286.66888,
+          "sd": 6969.969625992017,
+          "q05": 102286,
+          "q10": 104034,
+          "q50": 111520,
+          "q90": 121491,
+          "q95": 124815,
+          "min": 91607,
+          "max": 156462
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "ben-m-sick",
+        "historical_id": 525,
+        "name": "Ben M'sick",
+        "region": "Casablanca-Settat",
+        "seats": 3,
+        "registered_2011": 124369,
+        "weight_2011": 0.00926700093311559,
+        "local_valid_vote_floor_2021": 25936,
+        "posterior_floor_after_regional_constraint": 26139,
+        "posterior": {
+          "center": 146429,
+          "mean": 146271.34168,
+          "sd": 26560.21575047592,
+          "q05": 107814,
+          "q10": 114820,
+          "q50": 143448,
+          "q90": 181396,
+          "q95": 194148,
+          "min": 66646,
+          "max": 302717
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "beni-mellal",
+        "historical_id": 545,
+        "name": "Béni-Mellal",
+        "region": "Béni Mellal-Khénifra",
+        "seats": 6,
+        "registered_2011": 238541,
+        "weight_2011": 0.01777420152599382,
+        "local_valid_vote_floor_2021": 144731,
+        "posterior_floor_after_regional_constraint": 144731,
+        "posterior": {
+          "center": 280853,
+          "mean": 280845.086,
+          "sd": 30419.069819871518,
+          "q05": 237071,
+          "q10": 244687,
+          "q50": 277450,
+          "q90": 321055,
+          "q95": 336409,
+          "min": 200750,
+          "max": 460539
+        },
+        "denominator_invariant_exact_proof": false,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 39761,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "benslimane",
+        "historical_id": 596,
+        "name": "Benslimane",
+        "region": "Casablanca-Settat",
+        "seats": 3,
+        "registered_2011": 100733,
+        "weight_2011": 0.0075058318792909215,
+        "local_valid_vote_floor_2021": 77859,
+        "posterior_floor_after_regional_constraint": 78023,
+        "posterior": {
+          "center": 118601,
+          "mean": 118627.61268,
+          "sd": 9113.960170311419,
+          "q05": 105537,
+          "q10": 107878,
+          "q50": 117626,
+          "q90": 130681,
+          "q95": 135049,
+          "min": 93885,
+          "max": 173432
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "berkane",
+        "historical_id": 584,
+        "name": "Berkane",
+        "region": "Oriental",
+        "seats": 3,
+        "registered_2011": 128383,
+        "weight_2011": 0.009566092682229323,
+        "local_valid_vote_floor_2021": 71093,
+        "posterior_floor_after_regional_constraint": 71093,
+        "posterior": {
+          "center": 151155,
+          "mean": 151274.50678,
+          "sd": 18140.205144704618,
+          "q05": 125149,
+          "q10": 129841,
+          "q50": 149182,
+          "q90": 175139,
+          "q95": 183814,
+          "min": 103440,
+          "max": 280022
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "berrechid",
+        "historical_id": 595,
+        "name": "Berrechid",
+        "region": "Casablanca-Settat",
+        "seats": 4,
+        "registered_2011": 146383,
+        "weight_2011": 0.010907311288120506,
+        "local_valid_vote_floor_2021": 131820,
+        "posterior_floor_after_regional_constraint": 132058,
+        "posterior": {
+          "center": 172348,
+          "mean": 172333.05928,
+          "sd": 9057.435347710049,
+          "q05": 159327,
+          "q10": 161644,
+          "q50": 171376,
+          "q90": 184221,
+          "q95": 188744,
+          "min": 147942,
+          "max": 232010
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "boujdour",
+        "historical_id": 564,
+        "name": "Boujdour",
+        "region": "Laâyoune-Sakia El Hamra",
+        "seats": 2,
+        "registered_2011": 23594,
+        "weight_2011": 0.0017580395437442546,
+        "local_valid_vote_floor_2021": 19339,
+        "posterior_floor_after_regional_constraint": 19339,
+        "posterior": {
+          "center": 27779,
+          "mean": 27795.15086,
+          "sd": 1939.3658311669312,
+          "q05": 25024,
+          "q10": 25519,
+          "q50": 27588,
+          "q90": 30360,
+          "q95": 31298,
+          "min": 22718,
+          "max": 41167
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "boulemane",
+        "historical_id": 553,
+        "name": "Boulemane",
+        "region": "Fès-Meknès",
+        "seats": 3,
+        "registered_2011": 87064,
+        "weight_2011": 0.0064873253724061115,
+        "local_valid_vote_floor_2021": 71897,
+        "posterior_floor_after_regional_constraint": 71924,
+        "posterior": {
+          "center": 102507,
+          "mean": 102540.24732,
+          "sd": 6940.887045807075,
+          "q05": 92656,
+          "q10": 94393,
+          "q50": 101767,
+          "q90": 111687,
+          "q95": 115182,
+          "min": 83418,
+          "max": 144960
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "bzou-ouaouizeght",
+        "historical_id": 546,
+        "name": "Bzou-Ouaouizeght",
+        "region": "Béni Mellal-Khénifra",
+        "seats": 3,
+        "registered_2011": 119655,
+        "weight_2011": 0.008915750682661643,
+        "local_valid_vote_floor_2021": 90603,
+        "posterior_floor_after_regional_constraint": 90603,
+        "posterior": {
+          "center": 140879,
+          "mean": 140921.0348,
+          "sd": 11399.835260281097,
+          "q05": 124537,
+          "q10": 127422,
+          "q50": 139653,
+          "q90": 156083,
+          "q95": 161622,
+          "min": 107267,
+          "max": 212047
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "casablanca-anfa",
+        "historical_id": 519,
+        "name": "Casablanca-Anfa",
+        "region": "Casablanca-Settat",
+        "seats": 4,
+        "registered_2011": 239310,
+        "weight_2011": 0.017831501365323285,
+        "local_valid_vote_floor_2021": 39501,
+        "posterior_floor_after_regional_constraint": 39891,
+        "posterior": {
+          "center": 281758,
+          "mean": 281323.81392,
+          "sd": 52676.60714730008,
+          "q05": 204737,
+          "q10": 218495,
+          "q50": 276162,
+          "q90": 351193,
+          "q95": 376332,
+          "min": 137620,
+          "max": 627256
+        },
+        "denominator_invariant_exact_proof": false,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 43848,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "chefchaouen",
+        "historical_id": 602,
+        "name": "Chefchaouen",
+        "region": "Tanger-Tétouan-Al Hoceïma",
+        "seats": 4,
+        "registered_2011": 157461,
+        "weight_2011": 0.011732756827901758,
+        "local_valid_vote_floor_2021": 121193,
+        "posterior_floor_after_regional_constraint": 121193,
+        "posterior": {
+          "center": 185391,
+          "mean": 185446.0146,
+          "sd": 14431.612692459736,
+          "q05": 164648,
+          "q10": 168435,
+          "q50": 183910,
+          "q90": 204629,
+          "q95": 211409,
+          "min": 146630,
+          "max": 279378
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "chichaoua",
+        "historical_id": 569,
+        "name": "Chichaoua",
+        "region": "Marrakech-Safi",
+        "seats": 4,
+        "registered_2011": 148012,
+        "weight_2011": 0.011028691571953658,
+        "local_valid_vote_floor_2021": 137775,
+        "posterior_floor_after_regional_constraint": 137775,
+        "posterior": {
+          "center": 174266,
+          "mean": 174398.04708,
+          "sd": 8294.995042373355,
+          "q05": 162447,
+          "q10": 164540,
+          "q50": 173562,
+          "q90": 185292,
+          "q95": 189276,
+          "min": 152627,
+          "max": 233807
+        },
+        "denominator_invariant_exact_proof": false,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 24768,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "chtouka-ait-baha",
+        "historical_id": 532,
+        "name": "Chtouka-Aït Baha",
+        "region": "Souss-Massa",
+        "seats": 3,
+        "registered_2011": 152368,
+        "weight_2011": 0.011353266474579325,
+        "local_valid_vote_floor_2021": 102060,
+        "posterior_floor_after_regional_constraint": 103472,
+        "posterior": {
+          "center": 179395,
+          "mean": 179515.6129,
+          "sd": 17213.662652997828,
+          "q05": 154890,
+          "q10": 159102,
+          "q50": 177700,
+          "q90": 202196,
+          "q95": 210679,
+          "min": 132878,
+          "max": 299655
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "driouch",
+        "historical_id": 588,
+        "name": "Driouch",
+        "region": "Oriental",
+        "seats": 3,
+        "registered_2011": 106151,
+        "weight_2011": 0.007909538679664168,
+        "local_valid_vote_floor_2021": 76245,
+        "posterior_floor_after_regional_constraint": 76245,
+        "posterior": {
+          "center": 124980,
+          "mean": 125004.70844,
+          "sd": 11074.568984578887,
+          "q05": 109061,
+          "q10": 111854,
+          "q50": 123788,
+          "q90": 139643,
+          "q95": 144814,
+          "min": 96787,
+          "max": 208886
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "el-gharb",
+        "historical_id": 560,
+        "name": "El Gharb",
+        "region": "Rabat-Salé-Kénitra",
+        "seats": 3,
+        "registered_2011": 128578,
+        "weight_2011": 0.00958062255045981,
+        "local_valid_vote_floor_2021": 104155,
+        "posterior_floor_after_regional_constraint": 104155,
+        "posterior": {
+          "center": 151385,
+          "mean": 151385.22664,
+          "sd": 10646.776785538088,
+          "q05": 136093,
+          "q10": 138765,
+          "q50": 150211,
+          "q90": 165497,
+          "q95": 170509,
+          "min": 122174,
+          "max": 228713
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "el-hajeb",
+        "historical_id": 575,
+        "name": "El Hajeb",
+        "region": "Fès-Meknès",
+        "seats": 2,
+        "registered_2011": 99537,
+        "weight_2011": 0.007416715354143929,
+        "local_valid_vote_floor_2021": 78828,
+        "posterior_floor_after_regional_constraint": 78859,
+        "posterior": {
+          "center": 117193,
+          "mean": 117169.95344,
+          "sd": 8639.647545583466,
+          "q05": 104696,
+          "q10": 106882,
+          "q50": 116295,
+          "q90": 128633,
+          "q95": 132734,
+          "min": 93274,
+          "max": 174495
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "el-jadida",
+        "historical_id": 590,
+        "name": "El Jadida",
+        "region": "Casablanca-Settat",
+        "seats": 6,
+        "registered_2011": 278810,
+        "weight_2011": 0.020774731083806716,
+        "local_valid_vote_floor_2021": 201708,
+        "posterior_floor_after_regional_constraint": 202162,
+        "posterior": {
+          "center": 328265,
+          "mean": 328118.05814,
+          "sd": 27926.678020277755,
+          "q05": 287881,
+          "q10": 294861,
+          "q50": 325270,
+          "q90": 364902,
+          "q95": 378421,
+          "min": 253446,
+          "max": 507673
+        },
+        "denominator_invariant_exact_proof": false,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 39121,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "el-kelaa-des-sraghna",
+        "historical_id": 572,
+        "name": "El Kelâa des Sraghna",
+        "region": "Marrakech-Safi",
+        "seats": 4,
+        "registered_2011": 203829,
+        "weight_2011": 0.015187735956677446,
+        "local_valid_vote_floor_2021": 153019,
+        "posterior_floor_after_regional_constraint": 153019,
+        "posterior": {
+          "center": 239984,
+          "mean": 239959.08184,
+          "sd": 19497.570273512378,
+          "q05": 211761,
+          "q10": 216672,
+          "q50": 238089,
+          "q90": 265549,
+          "q95": 275179,
+          "min": 186891,
+          "max": 375508
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "errachidia",
+        "historical_id": 578,
+        "name": "Errachidia",
+        "region": "Drâa-Tafilalet",
+        "seats": 5,
+        "registered_2011": 186874,
+        "weight_2011": 0.013924382542072724,
+        "local_valid_vote_floor_2021": 113879,
+        "posterior_floor_after_regional_constraint": 113879,
+        "posterior": {
+          "center": 220021,
+          "mean": 220094.47702,
+          "sd": 23935.09408504778,
+          "q05": 185728,
+          "q10": 191775,
+          "q50": 217564,
+          "q90": 251882,
+          "q95": 263447,
+          "min": 152123,
+          "max": 362021
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MDS": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "es-semara",
+        "historical_id": 557,
+        "name": "Es-Semara",
+        "region": "Laâyoune-Sakia El Hamra",
+        "seats": 2,
+        "registered_2011": 25149,
+        "weight_2011": 0.0018739059288642986,
+        "local_valid_vote_floor_2021": 19188,
+        "posterior_floor_after_regional_constraint": 19188,
+        "posterior": {
+          "center": 29610,
+          "mean": 29618.03214,
+          "sd": 2380.5471336144824,
+          "q05": 26203,
+          "q10": 26812,
+          "q50": 29363,
+          "q90": 32730,
+          "q95": 33946,
+          "min": 22903,
+          "max": 43839
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "essaouira",
+        "historical_id": 573,
+        "name": "Essaouira",
+        "region": "Marrakech-Safi",
+        "seats": 4,
+        "registered_2011": 194130,
+        "weight_2011": 0.014465042664536415,
+        "local_valid_vote_floor_2021": 142099,
+        "posterior_floor_after_regional_constraint": 142099,
+        "posterior": {
+          "center": 228565,
+          "mean": 228570.86716,
+          "sd": 19456.895025980753,
+          "q05": 200617,
+          "q10": 205450,
+          "q50": 226532,
+          "q90": 254488,
+          "q95": 263939,
+          "min": 177115,
+          "max": 336828
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "fahs-anjra",
+        "historical_id": 598,
+        "name": "Fahs-Anjra",
+        "region": "Tanger-Tétouan-Al Hoceïma",
+        "seats": 2,
+        "registered_2011": 34317,
+        "weight_2011": 0.0025570332721315415,
+        "local_valid_vote_floor_2021": 29110,
+        "posterior_floor_after_regional_constraint": 29110,
+        "posterior": {
+          "center": 40404,
+          "mean": 40394.167,
+          "sd": 2556.4319645941673,
+          "q05": 36724,
+          "q10": 37382,
+          "q50": 40111,
+          "q90": 43756,
+          "q95": 45040,
+          "min": 33548,
+          "max": 56596
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "fes-nord",
+        "historical_id": 549,
+        "name": "Fès-Nord",
+        "region": "Fès-Meknès",
+        "seats": 4,
+        "registered_2011": 174048,
+        "weight_2011": 0.012968689773230483,
+        "local_valid_vote_floor_2021": 47660,
+        "posterior_floor_after_regional_constraint": 47715,
+        "posterior": {
+          "center": 204920,
+          "mean": 204822.6349,
+          "sd": 34841.31594661918,
+          "q05": 154193,
+          "q10": 163382,
+          "q50": 201170,
+          "q90": 251016,
+          "q95": 267160,
+          "min": 109156,
+          "max": 415024
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "FFD": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "fes-sud",
+        "historical_id": 550,
+        "name": "Fès-Sud",
+        "region": "Fès-Meknès",
+        "seats": 4,
+        "registered_2011": 191734,
+        "weight_2011": 0.014286511565663343,
+        "local_valid_vote_floor_2021": 55868,
+        "posterior_floor_after_regional_constraint": 55929,
+        "posterior": {
+          "center": 225744,
+          "mean": 225600.30256,
+          "sd": 37561.67947756065,
+          "q05": 171071,
+          "q10": 180813,
+          "q50": 221820,
+          "q90": 275125,
+          "q95": 292989,
+          "min": 120435,
+          "max": 463546
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "figuig",
+        "historical_id": 586,
+        "name": "Figuig",
+        "region": "Oriental",
+        "seats": 3,
+        "registered_2011": 68522,
+        "weight_2011": 0.005105721184048648,
+        "local_valid_vote_floor_2021": 51184,
+        "posterior_floor_after_regional_constraint": 51184,
+        "posterior": {
+          "center": 80676,
+          "mean": 80734.38456,
+          "sd": 6727.772989881694,
+          "q05": 71121,
+          "q10": 72802,
+          "q50": 79979,
+          "q90": 89613,
+          "q95": 92864,
+          "min": 62851,
+          "max": 127805
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "fquih-ben-salah",
+        "historical_id": 548,
+        "name": "Fquih Ben Salah",
+        "region": "Béni Mellal-Khénifra",
+        "seats": 4,
+        "registered_2011": 141792,
+        "weight_2011": 0.010565226031473482,
+        "local_valid_vote_floor_2021": 126772,
+        "posterior_floor_after_regional_constraint": 126772,
+        "posterior": {
+          "center": 166943,
+          "mean": 166978.43696,
+          "sd": 9080.043560942167,
+          "q05": 153892,
+          "q10": 156226,
+          "q50": 165995,
+          "q90": 178988,
+          "q95": 183310,
+          "min": 141054,
+          "max": 227520
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "gueliz-nakhil",
+        "historical_id": 567,
+        "name": "Guéliz-Nakhil",
+        "region": "Marrakech-Safi",
+        "seats": 3,
+        "registered_2011": 151142,
+        "weight_2011": 0.011261914585089182,
+        "local_valid_vote_floor_2021": 81451,
+        "posterior_floor_after_regional_constraint": 81451,
+        "posterior": {
+          "center": 177951,
+          "mean": 177928.7114,
+          "sd": 21721.100887345125,
+          "q05": 146706,
+          "q10": 152212,
+          "q50": 175568,
+          "q90": 206788,
+          "q95": 217285,
+          "min": 118699,
+          "max": 321284
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "guelmim",
+        "historical_id": 554,
+        "name": "Guelmim",
+        "region": "Guelmim-Oued Noun",
+        "seats": 2,
+        "registered_2011": 96242,
+        "weight_2011": 0.007171197837121071,
+        "local_valid_vote_floor_2021": 65409,
+        "posterior_floor_after_regional_constraint": 65409,
+        "posterior": {
+          "center": 113313,
+          "mean": 113339.6423,
+          "sd": 10901.52027977561,
+          "q05": 97732,
+          "q10": 100504,
+          "q50": 112156,
+          "q90": 127780,
+          "q95": 133081,
+          "min": 83197,
+          "max": 190364
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "guercif",
+        "historical_id": 542,
+        "name": "Guercif",
+        "region": "Oriental",
+        "seats": 2,
+        "registered_2011": 82893,
+        "weight_2011": 0.006176535216563216,
+        "local_valid_vote_floor_2021": 57936,
+        "posterior_floor_after_regional_constraint": 57936,
+        "posterior": {
+          "center": 97596,
+          "mean": 97631.39622,
+          "sd": 8966.346474160566,
+          "q05": 84734,
+          "q10": 87037,
+          "q50": 96654,
+          "q90": 109437,
+          "q95": 113890,
+          "min": 71373,
+          "max": 153166
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "hay-hassani",
+        "historical_id": 522,
+        "name": "Hay Hassani",
+        "region": "Casablanca-Settat",
+        "seats": 3,
+        "registered_2011": 147444,
+        "weight_2011": 0.010986368673723315,
+        "local_valid_vote_floor_2021": 27361,
+        "posterior_floor_after_regional_constraint": 27601,
+        "posterior": {
+          "center": 173597,
+          "mean": 173536.3138,
+          "sd": 32267.646158601372,
+          "q05": 126653,
+          "q10": 135052,
+          "q50": 170191,
+          "q90": 216686,
+          "q95": 231412,
+          "min": 80623,
+          "max": 346880
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "ifrane",
+        "historical_id": 576,
+        "name": "Ifrane",
+        "region": "Fès-Meknès",
+        "seats": 2,
+        "registered_2011": 77680,
+        "weight_2011": 0.005788103405868174,
+        "local_valid_vote_floor_2021": 51544,
+        "posterior_floor_after_regional_constraint": 51569,
+        "posterior": {
+          "center": 91459,
+          "mean": 91440.77182,
+          "sd": 8981.80931092861,
+          "q05": 78595,
+          "q10": 80818,
+          "q50": 90456,
+          "q90": 103316,
+          "q95": 107718,
+          "min": 67519,
+          "max": 153462
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "inezgane-ait-melloul",
+        "historical_id": 531,
+        "name": "Inezgane-Aït Melloul",
+        "region": "Souss-Massa",
+        "seats": 3,
+        "registered_2011": 197679,
+        "weight_2011": 0.014729486266331292,
+        "local_valid_vote_floor_2021": 71861,
+        "posterior_floor_after_regional_constraint": 73694,
+        "posterior": {
+          "center": 232743,
+          "mean": 232768.5564,
+          "sd": 35410.41099887039,
+          "q05": 181812,
+          "q10": 190722,
+          "q50": 228908,
+          "q90": 279303,
+          "q95": 296729,
+          "min": 141884,
+          "max": 447872
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "jerada",
+        "historical_id": 583,
+        "name": "Jerada",
+        "region": "Oriental",
+        "seats": 2,
+        "registered_2011": 58240,
+        "weight_2011": 0.004339587311505696,
+        "local_valid_vote_floor_2021": 39239,
+        "posterior_floor_after_regional_constraint": 39239,
+        "posterior": {
+          "center": 68571,
+          "mean": 68573.98322,
+          "sd": 6635.096064243084,
+          "q05": 59017,
+          "q10": 60764,
+          "q50": 67861,
+          "q90": 77360,
+          "q95": 80507,
+          "min": 51696,
+          "max": 111210
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "karia-ghafsay",
+        "historical_id": 544,
+        "name": "Karia-Ghafsay",
+        "region": "Fès-Meknès",
+        "seats": 3,
+        "registered_2011": 110279,
+        "weight_2011": 0.008217124813281879,
+        "local_valid_vote_floor_2021": 100806,
+        "posterior_floor_after_regional_constraint": 100841,
+        "posterior": {
+          "center": 129840,
+          "mean": 129891.73842,
+          "sd": 6557.818458668602,
+          "q05": 120457,
+          "q10": 122094,
+          "q50": 129242,
+          "q90": 138515,
+          "q95": 141673,
+          "min": 111185,
+          "max": 178778
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "kenitra",
+        "historical_id": 559,
+        "name": "Kénitra",
+        "region": "Rabat-Salé-Kénitra",
+        "seats": 4,
+        "registered_2011": 281110,
+        "weight_2011": 0.0209461090167817,
+        "local_valid_vote_floor_2021": 134291,
+        "posterior_floor_after_regional_constraint": 134291,
+        "posterior": {
+          "center": 330973,
+          "mean": 331001.54452,
+          "sd": 43291.45991161956,
+          "q05": 268036,
+          "q10": 279189,
+          "q50": 326650,
+          "q90": 388146,
+          "q95": 408986,
+          "min": 205204,
+          "max": 577068
+        },
+        "denominator_invariant_exact_proof": false,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PI": 1,
+            "PJD": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 42432,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "khemisset-oulmes",
+        "historical_id": 517,
+        "name": "Khémisset-Oulmès",
+        "region": "Rabat-Salé-Kénitra",
+        "seats": 3,
+        "registered_2011": 125958,
+        "weight_2011": 0.009385400731157872,
+        "local_valid_vote_floor_2021": 77990,
+        "posterior_floor_after_regional_constraint": 77990,
+        "posterior": {
+          "center": 148300,
+          "mean": 148294.06896,
+          "sd": 15818.150373757022,
+          "q05": 125529,
+          "q10": 129623,
+          "q50": 146532,
+          "q90": 169194,
+          "q95": 176658,
+          "min": 102806,
+          "max": 279899
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "khenifra",
+        "historical_id": 577,
+        "name": "Khénifra",
+        "region": "Béni Mellal-Khénifra",
+        "seats": 3,
+        "registered_2011": 167439,
+        "weight_2011": 0.012476239008434104,
+        "local_valid_vote_floor_2021": 109276,
+        "posterior_floor_after_regional_constraint": 109276,
+        "posterior": {
+          "center": 197139,
+          "mean": 197141.54414,
+          "sd": 19776.46968308232,
+          "q05": 168563,
+          "q10": 173587,
+          "q50": 195133,
+          "q90": 223000,
+          "q95": 232441,
+          "min": 143131,
+          "max": 318177
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "khouribga",
+        "historical_id": 594,
+        "name": "Khouribga",
+        "region": "Béni Mellal-Khénifra",
+        "seats": 6,
+        "registered_2011": 254837,
+        "weight_2011": 0.018988451437193975,
+        "local_valid_vote_floor_2021": 131980,
+        "posterior_floor_after_regional_constraint": 131980,
+        "posterior": {
+          "center": 300040,
+          "mean": 300075.75436,
+          "sd": 37445.20093606821,
+          "q05": 246188,
+          "q10": 255551,
+          "q50": 296264,
+          "q90": 349047,
+          "q95": 367609,
+          "min": 197603,
+          "max": 530583
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "laayoune",
+        "historical_id": 563,
+        "name": "Laâyoune",
+        "region": "Laâyoune-Sakia El Hamra",
+        "seats": 3,
+        "registered_2011": 102729,
+        "weight_2011": 0.007654558120255299,
+        "local_valid_vote_floor_2021": 87806,
+        "posterior_floor_after_regional_constraint": 87806,
+        "posterior": {
+          "center": 120951,
+          "mean": 121015.67686,
+          "sd": 7592.616583060946,
+          "q05": 110174,
+          "q10": 112030,
+          "q50": 120180,
+          "q90": 131075,
+          "q95": 134817,
+          "min": 100365,
+          "max": 173378
+        },
+        "denominator_invariant_exact_proof": false,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.3802,
+          "unresolved_statutory_probability": 2e-05,
+          "any_change_or_unresolved_probability": 0.38022,
+          "unique_N_values_evaluated": 23565,
+          "status_counts": {
+            "OK": 49999,
+            "UNRESOLVED_STATUTORY_TIE": 1
+          }
+        }
+      },
+      {
+        "constituency_id": "larache",
+        "historical_id": 601,
+        "name": "Larache",
+        "region": "Tanger-Tétouan-Al Hoceïma",
+        "seats": 4,
+        "registered_2011": 185222,
+        "weight_2011": 0.013801288478909822,
+        "local_valid_vote_floor_2021": 109765,
+        "posterior_floor_after_regional_constraint": 109765,
+        "posterior": {
+          "center": 218076,
+          "mean": 218090.5376,
+          "sd": 24372.589171743017,
+          "q05": 183180,
+          "q10": 189305,
+          "q50": 215472,
+          "q90": 249987,
+          "q95": 261959,
+          "min": 151338,
+          "max": 385086
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "m-diq-fnideq",
+        "historical_id": 600,
+        "name": "M'diq-Fnideq",
+        "region": "Tanger-Tétouan-Al Hoceïma",
+        "seats": 2,
+        "registered_2011": 77441,
+        "weight_2011": 0.00577029500326773,
+        "local_valid_vote_floor_2021": 33314,
+        "posterior_floor_after_regional_constraint": 33314,
+        "posterior": {
+          "center": 91177,
+          "mean": 91221.93684,
+          "sd": 13083.376659843869,
+          "q05": 72479,
+          "q10": 75739,
+          "q50": 89748,
+          "q90": 108645,
+          "q95": 114894,
+          "min": 56271,
+          "max": 181238
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "medina-sidi-youssef",
+        "historical_id": 566,
+        "name": "Medina-Sidi Youssef",
+        "region": "Marrakech-Safi",
+        "seats": 3,
+        "registered_2011": 150438,
+        "weight_2011": 0.011209458035169881,
+        "local_valid_vote_floor_2021": 51227,
+        "posterior_floor_after_regional_constraint": 51227,
+        "posterior": {
+          "center": 177123,
+          "mean": 177275.22164,
+          "sd": 28276.079986858575,
+          "q05": 136845,
+          "q10": 144051,
+          "q50": 174012,
+          "q90": 214630,
+          "q95": 228296,
+          "min": 105019,
+          "max": 355997
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "mediouna",
+        "historical_id": 529,
+        "name": "Médiouna",
+        "region": "Casablanca-Settat",
+        "seats": 2,
+        "registered_2011": 53673,
+        "weight_2011": 0.003999290346333194,
+        "local_valid_vote_floor_2021": 42781,
+        "posterior_floor_after_regional_constraint": 42868,
+        "posterior": {
+          "center": 63193,
+          "mean": 63153.45236,
+          "sd": 4526.6174124741765,
+          "q05": 56671,
+          "q10": 57805,
+          "q50": 62662,
+          "q90": 69112,
+          "q95": 71304,
+          "min": 51201,
+          "max": 91880
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "meknes",
+        "historical_id": 574,
+        "name": "Meknès",
+        "region": "Fès-Meknès",
+        "seats": 6,
+        "registered_2011": 317938,
+        "weight_2011": 0.023690242284435063,
+        "local_valid_vote_floor_2021": 130369,
+        "posterior_floor_after_regional_constraint": 130469,
+        "posterior": {
+          "center": 374333,
+          "mean": 374350.49926,
+          "sd": 53775.50199364886,
+          "q05": 296693,
+          "q10": 310271,
+          "q50": 368547,
+          "q90": 445804,
+          "q95": 471349,
+          "min": 224960,
+          "max": 715181
+        },
+        "denominator_invariant_exact_proof": false,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 43733,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "menara",
+        "historical_id": 568,
+        "name": "Menara",
+        "region": "Marrakech-Safi",
+        "seats": 3,
+        "registered_2011": 166435,
+        "weight_2011": 0.012401428815083285,
+        "local_valid_vote_floor_2021": 76461,
+        "posterior_floor_after_regional_constraint": 76461,
+        "posterior": {
+          "center": 195957,
+          "mean": 196271.98022,
+          "sd": 26911.106673794686,
+          "q05": 157613,
+          "q10": 164336,
+          "q50": 193392,
+          "q90": 232120,
+          "q95": 245038,
+          "min": 122491,
+          "max": 363163
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "midelt",
+        "historical_id": 579,
+        "name": "Midelt",
+        "region": "Drâa-Tafilalet",
+        "seats": 3,
+        "registered_2011": 130013,
+        "weight_2011": 0.009687547478207248,
+        "local_valid_vote_floor_2021": 86502,
+        "posterior_floor_after_regional_constraint": 86502,
+        "posterior": {
+          "center": 153075,
+          "mean": 153088.9414,
+          "sd": 14996.311919957854,
+          "q05": 131479,
+          "q10": 135337,
+          "q50": 151470,
+          "q90": 172945,
+          "q95": 180082,
+          "min": 109253,
+          "max": 238867
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "mohammedia",
+        "historical_id": 527,
+        "name": "Mohammédia",
+        "region": "Casablanca-Settat",
+        "seats": 3,
+        "registered_2011": 171231,
+        "weight_2011": 0.012758789061408513,
+        "local_valid_vote_floor_2021": 66086,
+        "posterior_floor_after_regional_constraint": 66365,
+        "posterior": {
+          "center": 201604,
+          "mean": 201563.76136,
+          "sd": 29972.576581397025,
+          "q05": 158147,
+          "q10": 166020,
+          "q50": 198352,
+          "q90": 241290,
+          "q95": 255815,
+          "min": 118415,
+          "max": 403013
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "moulay-rachid",
+        "historical_id": 526,
+        "name": "Moulay Rachid",
+        "region": "Casablanca-Settat",
+        "seats": 3,
+        "registered_2011": 191521,
+        "weight_2011": 0.014270640478826964,
+        "local_valid_vote_floor_2021": 36799,
+        "posterior_floor_after_regional_constraint": 37111,
+        "posterior": {
+          "center": 225493,
+          "mean": 225172.97604,
+          "sd": 41493.61658076776,
+          "q05": 164976,
+          "q10": 175863,
+          "q50": 220932,
+          "q90": 280097,
+          "q95": 299437,
+          "min": 107884,
+          "max": 475912
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "moulay-yaacoub",
+        "historical_id": 551,
+        "name": "Moulay Yaâcoub",
+        "region": "Fès-Meknès",
+        "seats": 2,
+        "registered_2011": 64984,
+        "weight_2011": 0.004842097215846259,
+        "local_valid_vote_floor_2021": 55931,
+        "posterior_floor_after_regional_constraint": 55952,
+        "posterior": {
+          "center": 76511,
+          "mean": 76528.12724,
+          "sd": 4681.629486533825,
+          "q05": 69818,
+          "q10": 70970,
+          "q50": 76034,
+          "q90": 82693,
+          "q95": 84935,
+          "min": 63654,
+          "max": 106236
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "nador",
+        "historical_id": 587,
+        "name": "Nador",
+        "region": "Oriental",
+        "seats": 4,
+        "registered_2011": 225156,
+        "weight_2011": 0.016776856468224185,
+        "local_valid_vote_floor_2021": 116468,
+        "posterior_floor_after_regional_constraint": 116468,
+        "posterior": {
+          "center": 265094,
+          "mean": 264982.36856,
+          "sd": 32925.65947641448,
+          "q05": 217229,
+          "q10": 225758,
+          "q50": 261506,
+          "q90": 308703,
+          "q95": 324007,
+          "min": 173745,
+          "max": 479622
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "nouaceur",
+        "historical_id": 528,
+        "name": "Nouaceur",
+        "region": "Casablanca-Settat",
+        "seats": 3,
+        "registered_2011": 87128,
+        "weight_2011": 0.006492094149671502,
+        "local_valid_vote_floor_2021": 56459,
+        "posterior_floor_after_regional_constraint": 56601,
+        "posterior": {
+          "center": 102583,
+          "mean": 102514.03772,
+          "sd": 10282.421844707455,
+          "q05": 87733,
+          "q10": 90339,
+          "q50": 101370,
+          "q90": 116092,
+          "q95": 121038,
+          "min": 75412,
+          "max": 179258
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "ouarzazate",
+        "historical_id": 536,
+        "name": "Ouarzazate",
+        "region": "Drâa-Tafilalet",
+        "seats": 3,
+        "registered_2011": 120138,
+        "weight_2011": 0.00895174004858639,
+        "local_valid_vote_floor_2021": 84452,
+        "posterior_floor_after_regional_constraint": 84452,
+        "posterior": {
+          "center": 141448,
+          "mean": 141482.89038,
+          "sd": 12859.051321979452,
+          "q05": 122944,
+          "q10": 126220,
+          "q50": 140112,
+          "q90": 158392,
+          "q95": 164726,
+          "min": 104277,
+          "max": 223727
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "oued-eddahab",
+        "historical_id": 580,
+        "name": "Oued Eddahab",
+        "region": "Dakhla-Oued Eddahab",
+        "seats": 2,
+        "registered_2011": 33027,
+        "weight_2011": 0.0024609126053760067,
+        "local_valid_vote_floor_2021": 26951,
+        "posterior_floor_after_regional_constraint": 26951,
+        "posterior": {
+          "center": 38885,
+          "mean": 38890.89208,
+          "sd": 2734.159277988834,
+          "q05": 34996,
+          "q10": 35664,
+          "q50": 38591,
+          "q90": 42497,
+          "q95": 43807,
+          "min": 31625,
+          "max": 58711
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "ouezzane",
+        "historical_id": 603,
+        "name": "Ouezzane",
+        "region": "Tanger-Tétouan-Al Hoceïma",
+        "seats": 3,
+        "registered_2011": 116828,
+        "weight_2011": 0.008705104849391954,
+        "local_valid_vote_floor_2021": 96473,
+        "posterior_floor_after_regional_constraint": 96473,
+        "posterior": {
+          "center": 137551,
+          "mean": 137557.95576,
+          "sd": 9370.435144774168,
+          "q05": 124167,
+          "q10": 126484,
+          "q50": 136494,
+          "q90": 149989,
+          "q95": 154518,
+          "min": 113186,
+          "max": 200395
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "oujda-angad",
+        "historical_id": 582,
+        "name": "Oujda-Angad",
+        "region": "Oriental",
+        "seats": 4,
+        "registered_2011": 242870,
+        "weight_2011": 0.018096764600710653,
+        "local_valid_vote_floor_2021": 61207,
+        "posterior_floor_after_regional_constraint": 61207,
+        "posterior": {
+          "center": 285950,
+          "mean": 285718.37512,
+          "sd": 49437.334716894715,
+          "q05": 214223,
+          "q10": 227002,
+          "q50": 280502,
+          "q90": 350823,
+          "q95": 375358,
+          "min": 145980,
+          "max": 775888
+        },
+        "denominator_invariant_exact_proof": false,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 43338,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "rabat-chellah",
+        "historical_id": 513,
+        "name": "Rabat-Chellah",
+        "region": "Rabat-Salé-Kénitra",
+        "seats": 3,
+        "registered_2011": 127724,
+        "weight_2011": 0.009516989178824752,
+        "local_valid_vote_floor_2021": 40285,
+        "posterior_floor_after_regional_constraint": 40285,
+        "posterior": {
+          "center": 150380,
+          "mean": 150504.64086,
+          "sd": 24626.23346459729,
+          "q05": 115175,
+          "q10": 121281,
+          "q50": 147871,
+          "q90": 182919,
+          "q95": 194706,
+          "min": 82898,
+          "max": 301677
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "rabat-ocean",
+        "historical_id": 512,
+        "name": "Rabat-Océan",
+        "region": "Rabat-Salé-Kénitra",
+        "seats": 4,
+        "registered_2011": 172034,
+        "weight_2011": 0.012818622313660214,
+        "local_valid_vote_floor_2021": 47753,
+        "posterior_floor_after_regional_constraint": 47753,
+        "posterior": {
+          "center": 202549,
+          "mean": 202223.8795,
+          "sd": 34307.70837064307,
+          "q05": 153011,
+          "q10": 161562,
+          "q50": 198576,
+          "q90": 247105,
+          "q95": 263555,
+          "min": 105587,
+          "max": 403262
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "rehamna",
+        "historical_id": 571,
+        "name": "Rehamna",
+        "region": "Marrakech-Safi",
+        "seats": 3,
+        "registered_2011": 117386,
+        "weight_2011": 0.008746682626174581,
+        "local_valid_vote_floor_2021": 89157,
+        "posterior_floor_after_regional_constraint": 89157,
+        "posterior": {
+          "center": 138208,
+          "mean": 138266.8186,
+          "sd": 11126.375837939315,
+          "q05": 122186,
+          "q10": 125120,
+          "q50": 137032,
+          "q90": 152973,
+          "q95": 158486,
+          "min": 106767,
+          "max": 207906
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "safi",
+        "historical_id": 589,
+        "name": "Safi",
+        "region": "Marrakech-Safi",
+        "seats": 6,
+        "registered_2011": 289040,
+        "weight_2011": 0.021536990324821537,
+        "local_valid_vote_floor_2021": 157796,
+        "posterior_floor_after_regional_constraint": 157796,
+        "posterior": {
+          "center": 340310,
+          "mean": 340405.22458,
+          "sd": 40431.49296445199,
+          "q05": 282077,
+          "q10": 292377,
+          "q50": 336107,
+          "q90": 393657,
+          "q95": 413098,
+          "min": 229385,
+          "max": 606880
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MDS": 1,
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "sale-el-jadida",
+        "historical_id": 515,
+        "name": "Salé-El Jadida",
+        "region": "Rabat-Salé-Kénitra",
+        "seats": 3,
+        "registered_2011": 137488,
+        "weight_2011": 0.010244525760375947,
+        "local_valid_vote_floor_2021": 56828,
+        "posterior_floor_after_regional_constraint": 56828,
+        "posterior": {
+          "center": 161875,
+          "mean": 161868.30518,
+          "sd": 23539.70825248727,
+          "q05": 127854,
+          "q10": 133866,
+          "q50": 159372,
+          "q90": 193052,
+          "q95": 204046,
+          "min": 94870,
+          "max": 352457
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "sale-medina",
+        "historical_id": 514,
+        "name": "Salé-Médina",
+        "region": "Rabat-Salé-Kénitra",
+        "seats": 4,
+        "registered_2011": 201647,
+        "weight_2011": 0.015025150456785527,
+        "local_valid_vote_floor_2021": 51024,
+        "posterior_floor_after_regional_constraint": 51024,
+        "posterior": {
+          "center": 237415,
+          "mean": 237435.83016,
+          "sd": 40959.73274472875,
+          "q05": 178354,
+          "q10": 188631,
+          "q50": 233130,
+          "q90": 291629,
+          "q95": 310949,
+          "min": 121606,
+          "max": 491779
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "sefrou",
+        "historical_id": 552,
+        "name": "Séfrou",
+        "region": "Fès-Meknès",
+        "seats": 3,
+        "registered_2011": 126375,
+        "weight_2011": 0.009416472295527684,
+        "local_valid_vote_floor_2021": 89500,
+        "posterior_floor_after_regional_constraint": 89540,
+        "posterior": {
+          "center": 148791,
+          "mean": 148908.94806,
+          "sd": 13311.958811642646,
+          "q05": 129818,
+          "q10": 133198,
+          "q50": 147484,
+          "q90": 166438,
+          "q95": 172896,
+          "min": 112772,
+          "max": 225115
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "settat",
+        "historical_id": 593,
+        "name": "Settat",
+        "region": "Casablanca-Settat",
+        "seats": 6,
+        "registered_2011": 255997,
+        "weight_2011": 0.019074885525129183,
+        "local_valid_vote_floor_2021": 178797,
+        "posterior_floor_after_regional_constraint": 179214,
+        "posterior": {
+          "center": 301405,
+          "mean": 301326.6032,
+          "sd": 27036.418009456163,
+          "q05": 262419,
+          "q10": 269176,
+          "q50": 298538,
+          "q90": 336968,
+          "q95": 350240,
+          "min": 228198,
+          "max": 484893
+        },
+        "denominator_invariant_exact_proof": false,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 38801,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "sidi-bennour",
+        "historical_id": 591,
+        "name": "Sidi Bennour",
+        "region": "Casablanca-Settat",
+        "seats": 4,
+        "registered_2011": 193439,
+        "weight_2011": 0.014413554772499147,
+        "local_valid_vote_floor_2021": 143380,
+        "posterior_floor_after_regional_constraint": 143695,
+        "posterior": {
+          "center": 227751,
+          "mean": 227803.27264,
+          "sd": 18733.492281657702,
+          "q05": 200891,
+          "q10": 205640,
+          "q50": 225836,
+          "q90": 252556,
+          "q95": 261760,
+          "min": 176172,
+          "max": 364970
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "sidi-bernoussi",
+        "historical_id": 524,
+        "name": "Sidi Bernoussi",
+        "region": "Casablanca-Settat",
+        "seats": 3,
+        "registered_2011": 206290,
+        "weight_2011": 0.01537111034496068,
+        "local_valid_vote_floor_2021": 38879,
+        "posterior_floor_after_regional_constraint": 39215,
+        "posterior": {
+          "center": 242881,
+          "mean": 242767.05284,
+          "sd": 44599.3950683865,
+          "q05": 178501,
+          "q10": 190076,
+          "q50": 237798,
+          "q90": 301654,
+          "q95": 322810,
+          "min": 111488,
+          "max": 558129
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "sidi-ifni",
+        "historical_id": 539,
+        "name": "Sidi Ifni",
+        "region": "Guelmim-Oued Noun",
+        "seats": 2,
+        "registered_2011": 69501,
+        "weight_2011": 0.005178668573780174,
+        "local_valid_vote_floor_2021": 59144,
+        "posterior_floor_after_regional_constraint": 59144,
+        "posterior": {
+          "center": 81829,
+          "mean": 81832.01524,
+          "sd": 5161.90428423896,
+          "q05": 74470,
+          "q10": 75740,
+          "q50": 81273,
+          "q90": 88639,
+          "q95": 91128,
+          "min": 67791,
+          "max": 114718
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "sidi-kacem",
+        "historical_id": 561,
+        "name": "Sidi Kacem",
+        "region": "Rabat-Salé-Kénitra",
+        "seats": 5,
+        "registered_2011": 203387,
+        "weight_2011": 0.015154801588688342,
+        "local_valid_vote_floor_2021": 160295,
+        "posterior_floor_after_regional_constraint": 160295,
+        "posterior": {
+          "center": 239464,
+          "mean": 239596.08058,
+          "sd": 17800.90453613785,
+          "q05": 214035,
+          "q10": 218463,
+          "q50": 237734,
+          "q90": 263020,
+          "q95": 271658,
+          "min": 192501,
+          "max": 354941
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "sidi-slimane",
+        "historical_id": 562,
+        "name": "Sidi Slimane",
+        "region": "Rabat-Salé-Kénitra",
+        "seats": 3,
+        "registered_2011": 140437,
+        "weight_2011": 0.010464262075307786,
+        "local_valid_vote_floor_2021": 86999,
+        "posterior_floor_after_regional_constraint": 86999,
+        "posterior": {
+          "center": 165348,
+          "mean": 165413.27508,
+          "sd": 17554.012641253485,
+          "q05": 140172,
+          "q10": 144639,
+          "q50": 163572,
+          "q90": 188566,
+          "q95": 197085,
+          "min": 120506,
+          "max": 282416
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "RNI": 1,
+            "UC": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "skhirate-temara",
+        "historical_id": 516,
+        "name": "Skhirate-Témara",
+        "region": "Rabat-Salé-Kénitra",
+        "seats": 4,
+        "registered_2011": 201134,
+        "weight_2011": 0.014986925726517627,
+        "local_valid_vote_floor_2021": 98027,
+        "posterior_floor_after_regional_constraint": 98027,
+        "posterior": {
+          "center": 236811,
+          "mean": 236816.78014,
+          "sd": 30852.915698197197,
+          "q05": 192274,
+          "q10": 200085,
+          "q50": 233572,
+          "q90": 277593,
+          "q95": 292401,
+          "min": 149190,
+          "max": 440345
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "tan-tan",
+        "historical_id": 558,
+        "name": "Tan-Tan",
+        "region": "Guelmim-Oued Noun",
+        "seats": 2,
+        "registered_2011": 42523,
+        "weight_2011": 0.0031684799321283776,
+        "local_valid_vote_floor_2021": 25873,
+        "posterior_floor_after_regional_constraint": 25873,
+        "posterior": {
+          "center": 50066,
+          "mean": 50101.2383,
+          "sd": 5489.797915801294,
+          "q05": 42234,
+          "q10": 43596,
+          "q50": 49498,
+          "q90": 57370,
+          "q95": 60011,
+          "min": 34677,
+          "max": 84574
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "tanger-assilah",
+        "historical_id": 597,
+        "name": "Tanger-Assilah",
+        "region": "Tanger-Tétouan-Al Hoceïma",
+        "seats": 5,
+        "registered_2011": 299327,
+        "weight_2011": 0.022303496758088348,
+        "local_valid_vote_floor_2021": 116144,
+        "posterior_floor_after_regional_constraint": 116144,
+        "posterior": {
+          "center": 352421,
+          "mean": 352599.5199,
+          "sd": 52029.48925347859,
+          "q05": 276635,
+          "q10": 290473,
+          "q50": 347204,
+          "q90": 421472,
+          "q95": 446502,
+          "min": 212390,
+          "max": 657091
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "taounate-tissa",
+        "historical_id": 543,
+        "name": "Taounate-Tissa",
+        "region": "Fès-Meknès",
+        "seats": 3,
+        "registered_2011": 127326,
+        "weight_2011": 0.009487333345205603,
+        "local_valid_vote_floor_2021": 99666,
+        "posterior_floor_after_regional_constraint": 99706,
+        "posterior": {
+          "center": 149911,
+          "mean": 149886.10422,
+          "sd": 11316.083998909677,
+          "q05": 133646,
+          "q10": 136532,
+          "q50": 148633,
+          "q90": 164779,
+          "q95": 170217,
+          "min": 118849,
+          "max": 235509
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "taourirt",
+        "historical_id": 585,
+        "name": "Taourirt",
+        "region": "Oriental",
+        "seats": 2,
+        "registered_2011": 99896,
+        "weight_2011": 0.007443465214116982,
+        "local_valid_vote_floor_2021": 57943,
+        "posterior_floor_after_regional_constraint": 57943,
+        "posterior": {
+          "center": 117615,
+          "mean": 117628.49452,
+          "sd": 13586.624541070472,
+          "q05": 98127,
+          "q10": 101630,
+          "q50": 116097,
+          "q90": 135670,
+          "q95": 142078,
+          "min": 81912,
+          "max": 203871
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "tarfaya",
+        "historical_id": 565,
+        "name": "Tarfaya",
+        "region": "Laâyoune-Sakia El Hamra",
+        "seats": 2,
+        "registered_2011": 9549,
+        "weight_2011": 0.0007115164704252729,
+        "local_valid_vote_floor_2021": 9422,
+        "posterior_floor_after_regional_constraint": 9422,
+        "posterior": {
+          "center": 11243,
+          "mean": 11244.0646,
+          "sd": 415.9319258895372,
+          "q05": 10648,
+          "q10": 10753,
+          "q50": 11200,
+          "q90": 11791,
+          "q95": 11997,
+          "min": 10100,
+          "max": 13684
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "taroudant-nord",
+        "historical_id": 534,
+        "name": "Taroudant-Nord",
+        "region": "Souss-Massa",
+        "seats": 3,
+        "registered_2011": 156359,
+        "weight_2011": 0.011650644444363308,
+        "local_valid_vote_floor_2021": 128595,
+        "posterior_floor_after_regional_constraint": 130045,
+        "posterior": {
+          "center": 184094,
+          "mean": 184116.8621,
+          "sd": 12205.96220771275,
+          "q05": 166528,
+          "q10": 169645,
+          "q50": 182887,
+          "q90": 200279,
+          "q95": 206080,
+          "min": 151538,
+          "max": 260411
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "taroudant-sud",
+        "historical_id": 533,
+        "name": "Taroudant-Sud",
+        "region": "Souss-Massa",
+        "seats": 4,
+        "registered_2011": 203499,
+        "weight_2011": 0.015163146948902775,
+        "local_valid_vote_floor_2021": 150269,
+        "posterior_floor_after_regional_constraint": 152156,
+        "posterior": {
+          "center": 239595,
+          "mean": 239612.75446,
+          "sd": 19673.23613400322,
+          "q05": 211348,
+          "q10": 216328,
+          "q50": 237480,
+          "q90": 265680,
+          "q95": 275215,
+          "min": 185732,
+          "max": 348550
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "tata",
+        "historical_id": 555,
+        "name": "Tata",
+        "region": "Souss-Massa",
+        "seats": 2,
+        "registered_2011": 63634,
+        "weight_2011": 0.004741505820404421,
+        "local_valid_vote_floor_2021": 50400,
+        "posterior_floor_after_regional_constraint": 50990,
+        "posterior": {
+          "center": 74921,
+          "mean": 74955.10768,
+          "sd": 5421.37581364724,
+          "q05": 67155,
+          "q10": 68536,
+          "q50": 74357,
+          "q90": 82118,
+          "q95": 84742,
+          "min": 60762,
+          "max": 111881
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "taza",
+        "historical_id": 541,
+        "name": "Taza",
+        "region": "Fès-Meknès",
+        "seats": 5,
+        "registered_2011": 246966,
+        "weight_2011": 0.01840196634569567,
+        "local_valid_vote_floor_2021": 141507,
+        "posterior_floor_after_regional_constraint": 141585,
+        "posterior": {
+          "center": 290772,
+          "mean": 290789.81572,
+          "sd": 33358.75815009826,
+          "q05": 242827,
+          "q10": 251430,
+          "q50": 287088,
+          "q90": 335221,
+          "q95": 351261,
+          "min": 206598,
+          "max": 492369
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "tetouan",
+        "historical_id": 599,
+        "name": "Tétouan",
+        "region": "Tanger-Tétouan-Al Hoceïma",
+        "seats": 5,
+        "registered_2011": 211220,
+        "weight_2011": 0.015738455218685322,
+        "local_valid_vote_floor_2021": 86087,
+        "posterior_floor_after_regional_constraint": 86087,
+        "posterior": {
+          "center": 248686,
+          "mean": 248752.77102,
+          "sd": 36225.50521585629,
+          "q05": 196275,
+          "q10": 205613,
+          "q50": 245030,
+          "q90": 296660,
+          "q95": 313282,
+          "min": 152462,
+          "max": 460388
+        },
+        "denominator_invariant_exact_proof": false,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "RNI": 1,
+            "UC": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 41307,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "tiflet-rommani",
+        "historical_id": 518,
+        "name": "Tiflet-Rommani",
+        "region": "Rabat-Salé-Kénitra",
+        "seats": 3,
+        "registered_2011": 119723,
+        "weight_2011": 0.00892081750850612,
+        "local_valid_vote_floor_2021": 93756,
+        "posterior_floor_after_regional_constraint": 93756,
+        "posterior": {
+          "center": 140959,
+          "mean": 140932.59856,
+          "sd": 10598.61191360151,
+          "q05": 125743,
+          "q10": 128382,
+          "q50": 139785,
+          "q90": 154909,
+          "q95": 160085,
+          "min": 109949,
+          "max": 211295
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MDS": 1,
+            "PAM": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "tinghir",
+        "historical_id": 538,
+        "name": "Tinghir",
+        "region": "Drâa-Tafilalet",
+        "seats": 3,
+        "registered_2011": 132150,
+        "weight_2011": 0.00984677993158444,
+        "local_valid_vote_floor_2021": 100562,
+        "posterior_floor_after_regional_constraint": 100562,
+        "posterior": {
+          "center": 155591,
+          "mean": 155704.7005,
+          "sd": 12503.125020658852,
+          "q05": 137642,
+          "q10": 140926,
+          "q50": 154356,
+          "q90": 172070,
+          "q95": 178215,
+          "min": 120982,
+          "max": 236618
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "tiznit",
+        "historical_id": 535,
+        "name": "Tiznit",
+        "region": "Souss-Massa",
+        "seats": 2,
+        "registered_2011": 111532,
+        "weight_2011": 0.00831048853068086,
+        "local_valid_vote_floor_2021": 65575,
+        "posterior_floor_after_regional_constraint": 66609,
+        "posterior": {
+          "center": 131315,
+          "mean": 131297.97404,
+          "sd": 14601.634476280855,
+          "q05": 110371,
+          "q10": 113966,
+          "q50": 129673,
+          "q90": 150545,
+          "q95": 157805,
+          "min": 91672,
+          "max": 215866
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PI": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "youssoufia",
+        "historical_id": 592,
+        "name": "Youssoufia",
+        "region": "Marrakech-Safi",
+        "seats": 2,
+        "registered_2011": 100725,
+        "weight_2011": 0.007505235782132747,
+        "local_valid_vote_floor_2021": 70203,
+        "posterior_floor_after_regional_constraint": 70203,
+        "posterior": {
+          "center": 118591,
+          "mean": 118568.09598,
+          "sd": 10899.461282388811,
+          "q05": 102954,
+          "q10": 105664,
+          "q50": 117314,
+          "q90": 133027,
+          "q95": 138328,
+          "min": 89494,
+          "max": 186371
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      },
+      {
+        "constituency_id": "zagora",
+        "historical_id": 537,
+        "name": "Zagora",
+        "region": "Drâa-Tafilalet",
+        "seats": 3,
+        "registered_2011": 108994,
+        "weight_2011": 0.008121376707250202,
+        "local_valid_vote_floor_2021": 94625,
+        "posterior_floor_after_regional_constraint": 94625,
+        "posterior": {
+          "center": 128327,
+          "mean": 128365.7352,
+          "sd": 7655.832563767695,
+          "q05": 117428,
+          "q10": 119358,
+          "q50": 127532,
+          "q90": 138507,
+          "q95": 142261,
+          "min": 107901,
+          "max": 181205
+        },
+        "denominator_invariant_exact_proof": true,
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PI": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 0,
+          "status_counts": {
+            "DENOMINATOR_INVARIANT_EXACT_PROOF": 50000
+          }
+        }
+      }
+    ]
+  },
+  "regional": {
+    "rows": 12,
+    "regions_with_any_N_only_change_mass": 5,
+    "maximum_any_change_or_unresolved_probability": 0.0439,
+    "aggregate_unresolved_statutory_probability_sum": 0.0,
+    "rows_detail": [
+      {
+        "region": "Béni Mellal-Khénifra",
+        "seats": 7,
+        "constituencies": 6,
+        "regional_valid_vote_floor_2021": 676334,
+        "posterior": {
+          "center": 1198111,
+          "mean": 1198248.52514,
+          "sd": 59157.77944334778,
+          "q05": 1107446,
+          "q10": 1125097,
+          "q50": 1194934,
+          "q90": 1275902,
+          "q95": 1301316,
+          "min": 994677,
+          "max": 1540401
+        },
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "PPS": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 8e-05,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 8e-05,
+          "unique_N_values_evaluated": 44470,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "region": "Casablanca-Settat",
+        "seats": 12,
+        "constituencies": 16,
+        "regional_valid_vote_floor_2021": 1172619,
+        "posterior": {
+          "center": 3198230,
+          "mean": 3196468.41022,
+          "sd": 136757.73801952833,
+          "q05": 2978134,
+          "q10": 3023940,
+          "q50": 3193493,
+          "q90": 3373951,
+          "q95": 3427840,
+          "min": 2674120,
+          "max": 3833654
+        },
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "AFG": 1,
+            "FFD": 1,
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "PPS": 1,
+            "PSU": 1,
+            "RNI": 2,
+            "UC": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.00068,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.00068,
+          "unique_N_values_evaluated": 47535,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "region": "Dakhla-Oued Eddahab",
+        "seats": 3,
+        "constituencies": 2,
+        "regional_valid_vote_floor_2021": 34475,
+        "posterior": {
+          "center": 47890,
+          "mean": 47897.29186,
+          "sd": 2767.0059973193993,
+          "q05": 43935,
+          "q10": 44627,
+          "q50": 47603,
+          "q90": 51537,
+          "q95": 52878,
+          "min": 40333,
+          "max": 67751
+        },
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 11827,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "region": "Drâa-Tafilalet",
+        "seats": 6,
+        "constituencies": 5,
+        "regional_valid_vote_floor_2021": 476011,
+        "posterior": {
+          "center": 798462,
+          "mean": 798736.7445,
+          "sd": 37937.35803473975,
+          "q05": 740443,
+          "q10": 752034,
+          "q50": 796482,
+          "q90": 848647,
+          "q95": 864936,
+          "min": 679498,
+          "max": 992646
+        },
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PPS": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 41869,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "region": "Fès-Meknès",
+        "seats": 10,
+        "constituencies": 11,
+        "regional_valid_vote_floor_2021": 924089,
+        "posterior": {
+          "center": 1911981,
+          "mean": 1911929.14296,
+          "sd": 92526.87445056271,
+          "q05": 1766700,
+          "q10": 1795781,
+          "q50": 1907545,
+          "q90": 2031641,
+          "q95": 2069533,
+          "min": 1578305,
+          "max": 2329760
+        },
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "FFD": 1,
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "UC": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 46362,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "region": "Guelmim-Oued Noun",
+        "seats": 5,
+        "constituencies": 4,
+        "regional_valid_vote_floor_2021": 159400,
+        "posterior": {
+          "center": 264654,
+          "mean": 264720.24336,
+          "sd": 14158.87343008165,
+          "q05": 243415,
+          "q10": 247548,
+          "q50": 263601,
+          "q90": 283197,
+          "q95": 289758,
+          "min": 220276,
+          "max": 351636
+        },
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 32139,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "region": "Laâyoune-Sakia El Hamra",
+        "seats": 5,
+        "constituencies": 4,
+        "regional_valid_vote_floor_2021": 134818,
+        "posterior": {
+          "center": 189583,
+          "mean": 189672.92446,
+          "sd": 8576.019525479856,
+          "q05": 176972,
+          "q10": 179315,
+          "q50": 188873,
+          "q90": 200968,
+          "q95": 205080,
+          "min": 162683,
+          "max": 241798
+        },
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 2,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 25357,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "region": "Marrakech-Safi",
+        "seats": 10,
+        "constituencies": 10,
+        "regional_valid_vote_floor_2021": 1140339,
+        "posterior": {
+          "center": 2043712,
+          "mean": 2044499.55988,
+          "sd": 80509.21151135501,
+          "q05": 1918465,
+          "q10": 1943689,
+          "q50": 2041129,
+          "q90": 2149761,
+          "q95": 2183348,
+          "min": 1760061,
+          "max": 2443132
+        },
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 2,
+            "PI": 1,
+            "PJD": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "UC": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0439,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0439,
+          "unique_N_values_evaluated": 45854,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "region": "Oriental",
+        "seats": 7,
+        "constituencies": 8,
+        "regional_valid_vote_floor_2021": 528806,
+        "posterior": {
+          "center": 1191637,
+          "mean": 1191548.21742,
+          "sd": 71461.29085774347,
+          "q05": 1081812,
+          "q10": 1103774,
+          "q50": 1187658,
+          "q90": 1284773,
+          "q95": 1314759,
+          "min": 956806,
+          "max": 1605847
+        },
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "PPS": 1,
+            "RNI": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 45297,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "region": "Rabat-Salé-Kénitra",
+        "seats": 10,
+        "constituencies": 11,
+        "regional_valid_vote_floor_2021": 951326,
+        "posterior": {
+          "center": 2165459,
+          "mean": 2165472.23018,
+          "sd": 101011.3817750968,
+          "q05": 2006013,
+          "q10": 2039030,
+          "q50": 2161828,
+          "q90": 2297839,
+          "q95": 2338296,
+          "min": 1789848,
+          "max": 2642733
+        },
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MDS": 1,
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "UC": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.00112,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.00112,
+          "unique_N_values_evaluated": 46691,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "region": "Souss-Massa",
+        "seats": 7,
+        "constituencies": 7,
+        "regional_valid_vote_floor_2021": 677422,
+        "posterior": {
+          "center": 1310293,
+          "mean": 1310575.15964,
+          "sd": 67313.50542736378,
+          "q05": 1206390,
+          "q10": 1227225,
+          "q50": 1306682,
+          "q90": 1398273,
+          "q95": 1427496,
+          "min": 1086299,
+          "max": 1678419
+        },
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "PPS": 1,
+            "RNI": 2,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.0,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.0,
+          "unique_N_values_evaluated": 45148,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      },
+      {
+        "region": "Tanger-Tétouan-Al Hoceïma",
+        "seats": 8,
+        "constituencies": 8,
+        "regional_valid_vote_floor_2021": 695984,
+        "posterior": {
+          "center": 1481150,
+          "mean": 1481393.55038,
+          "sd": 81265.53276197654,
+          "q05": 1354671,
+          "q10": 1380918,
+          "q50": 1476617,
+          "q90": 1588024,
+          "q95": 1621175,
+          "min": 1198012,
+          "max": 1911041
+        },
+        "N_only_seat_sensitivity": {
+          "center_allocation": {
+            "MP": 1,
+            "PAM": 1,
+            "PI": 1,
+            "PJD": 1,
+            "PPS": 1,
+            "RNI": 1,
+            "UC": 1,
+            "USFP": 1
+          },
+          "allocation_change_probability_resolved": 0.00492,
+          "unresolved_statutory_probability": 0.0,
+          "any_change_or_unresolved_probability": 0.00492,
+          "unique_N_values_evaluated": 46020,
+          "status_counts": {
+            "OK": 50000
+          }
+        }
+      }
+    ]
+  },
+  "source_hashes": {
+    "canonical_2011": "a2ef356167c54d9da68609739fd441434e5ceaf50ad81792e3f6fe8f1fdc8bb5",
+    "canonical_2021": "aaaf837e9789bbc2d940e08b63c30994be40fee3360a0bf4070c9e113ebc779e",
+    "raw_2007": "5239da6f76de3e3d4dfa6402d6c4ce1bdf3da2ceaeb5f9769390a907c548e5e0",
+    "closure_92": "da75f8275b9a9211a4c115bd3bc85fa0a085f15bdda93cef8280e73ec0a9a429",
+    "interval_proof": "5487504034eaf2de13a3113e464afd169b0e31696a93765d7b82bc2d4fc59043",
+    "drift_diagnostic": "62cec942d8533691a9aca3d0c30c53c717b7d538699ad3334d6d6e56eb55851f",
+    "geometry_certificate": "71b70f575c87221d45a80d3eb9b3dbb668d0884943e05084506ba2bbeaf911ba"
+  },
+  "limitations": [
+    "The local centre is based on 2011 electorate shares, not official 2026 local counts.",
+    "The variance floor is informed by one exact-name 2007->2011 transition and is not asserted stationary.",
+    "N-only seat sensitivity holds the 2021 vote vectors fixed; full F-1 sensitivity will jointly vary votes, turnout and N.",
+    "A later authoritative local-N table requires a new immutable forecast snapshot and does not overwrite this posterior or prior forecasts."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.1",
+  "snapshot_id": "F-1",
+  "data_cutoff": "2026-08-16T22:43:00+01:00",
+  "inputs": {
+    "protocol": {
+      "path": "morocco26/data/goal100/fminus1_protocol_v1_1.json",
+      "sha256": "1bbba194acda1cc6cea8c13a3b609046a53ae926c364dfce895dd9aa63bcbf23"
+    },
+    "uncertainty": {
+      "path": "morocco26/data/goal100/uncertainty_calibration_v2.json",
+      "sha256": "d928bddf2c338eebaa54c96beb2c1f945787ae7d6c94cdaaafa362de7738b983"
+    },
+    "local_N": {
+      "path": "morocco26/data/goal100/local_N_posterior.json",
+      "sha256": "979cd9f86fcb5373600b556d7fce33bbbd98ee387c3f2eee7c66581411bf1681"
+    },
+    "geometry": {
+      "path": "morocco26/data/goal100/geometry_2026_certificate.json",
+      "sha256": "71b70f575c87221d45a80d3eb9b3dbb668d0884943e05084506ba2bbeaf911ba"
+    },
+    "legal_allocator": {
+      "path": "morocco26/src/morocco26/legal_allocator_2026.py",
+      "sha256": "0567fe6e456b1f73083d53c6dbd9444e88ac5641cf53dafef445a7df17e087bd"
+    },
+    "closure_92": {
+      "path": "morocco26/data/goal75/local_92_closure_v3.json",
+      "sha256": "da75f8275b9a9211a4c115bd3bc85fa0a085f15bdda93cef8280e73ec0a9a429"
+    },
+    "canonical_2011": {
+      "path": "morocco26/data/goal100/historical/tafra_legislative_2011_canonical.json",
+      "sha256": "a2ef356167c54d9da68609739fd441434e5ceaf50ad81792e3f6fe8f1fdc8bb5"
+    },
+    "canonical_2021": {
+      "path": "morocco26/data/goal100/historical/tafra_legislative_2021_canonical.json",
+      "sha256": "aaaf837e9789bbc2d940e08b63c30994be40fee3360a0bf4070c9e113ebc779e"
+    }
+  },
+  "candidate_evidence_state": "NONE_STRUCTURAL_ONLY",
+  "event_evidence_state": "NONE_STRUCTURAL_ONLY",
+  "protocol_id": "M26-GOAL100-FMINUS1-PROTOCOL-V1.1",
+  "methodological_history_preserved": {
+    "uncertainty_protocol_v2": {
+      "path": "morocco26/data/goal100/uncertainty_protocol_v2.json",
+      "sha256": "0221e85d1ddce3055e5a77f8a7a02bb59fcd9e8540979d55a1d87a7b77541d4a"
+    },
+    "rejected_fminus1_protocol_v1": {
+      "path": "morocco26/data/goal100/fminus1_protocol_v1.json",
+      "sha256": "24a9264f4dddcc853590c42a520ebef78224adc79e154325ef11dd47983b4548"
+    },
+    "rejected_uncertainty_v1": {
+      "path": "morocco26/data/goal100/uncertainty_calibration.json",
+      "sha256": "414f4913df9389052cbe384b19a642143a5485e93b5343c9a3476f409283427d"
+    }
+  },
+  "runtime_code": {
+    "base_engine": {
+      "path": "morocco26/scripts/goal100_run_fminus1.py",
+      "sha256": "40037f82714509896814f532e64d1032ee2276acf801bf6e354e264eec1ba918"
+    },
+    "runtime_v4": {
+      "path": "morocco26/scripts/goal100_fminus1_runtime_v4.py",
+      "sha256": "ccfa0019fc434d59f7ca55df67a268fa94087f6516752e57334497ad65d9d27d"
+    },
+    "wrapper_v4": {
+      "path": "morocco26/scripts/goal100_run_fminus1_v4.py",
+      "sha256": "e88191ec673727cf3e1e5608f768192cec00968a851db71f22a48771bcaccdc2"
+    },
+    "vector_allocator_v2": {
+      "path": "morocco26/scripts/goal100_fminus1_vector_allocator_v2.py",
+      "sha256": "3008c418853985098b094b7c0d3c5f0e151d10a3adcf11d620e6a1efbf9d12ed"
+    }
+  }
+}

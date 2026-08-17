@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "F-1",
+  "snapshot_class": "STRUCTURAL_PROBABILISTIC_FORECAST",
+  "registration_state": "REGISTERED_IMMUTABLE_STRUCTURAL_PRIOR",
+  "registered_at": "2026-08-17T06:12:57+00:00",
+  "registration_parent_commit": "7bcb8e4a5489b6ed0797d6aeae4b656bf6ecf1f7",
+  "source_artifact_root": "morocco26/data/goal100/forecasts/F-1",
+  "source_snapshot_manifest": {
+    "path": "morocco26/data/goal100/forecasts/F-1/snapshot_manifest.json",
+    "sha256": "54272dbfee8809456a9dc429329e34fcc0575553399ba6af54a380470daed2b1"
+  },
+  "immutable_artifacts": {
+    "forecast": {
+      "path": "morocco26/data/goal100/forecasts/F-1/forecast.json",
+      "sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1"
+    },
+    "data_manifest": {
+      "path": "morocco26/data/goal100/forecasts/F-1/data_manifest.json",
+      "sha256": "ce1547352eca7815121bdfa9b5a298265db2ffd06454cd28abc7fc35b4375067"
+    },
+    "parameter_manifest": {
+      "path": "morocco26/data/goal100/forecasts/F-1/parameter_manifest.json",
+      "sha256": "3d7b31e3c0d0dffd1ea3aa716cc993251eb66d9f60456477d136f7a938591658"
+    },
+    "rng_manifest": {
+      "path": "morocco26/data/goal100/forecasts/F-1/rng_seed_manifest.json",
+      "sha256": "9008407fff5617e46f9547524cf20021aa08ad5727a8904099c67bca240bb71c"
+    },
+    "simulation_certificate": {
+      "path": "morocco26/data/goal100/simulation_certificate.json",
+      "sha256": "29fb72fa45d082d3e37ed571c7e2511ec9cd6bc5f49a70eff334250a3d866824"
+    }
+  },
+  "model_code_commit": "18f685769c7e601887467c96428f445511f7ad29",
+  "protocol_id": "M26-GOAL100-FMINUS1-PROTOCOL-V1.1",
+  "monte_carlo_draws": 50000,
+  "geometry_certificate_hash": "71b70f575c87221d45a80d3eb9b3dbb668d0884943e05084506ba2bbeaf911ba",
+  "calibration_status": "ROBUST_AGGREGATE_COVERAGE_CALIBRATED_2026_UNTOUCHED",
+  "candidate_evidence_state": "NONE_STRUCTURAL_ONLY",
+  "event_evidence_state": "NONE_STRUCTURAL_ONLY",
+  "registered_N_state": "LATENT_CONSTRAINED_NOT_OFFICIAL",
+  "statutory_age_prior": {
+    "state": "UNKNOWN_AGE_EXCHANGEABLE",
+    "contest_draws": 200118,
+    "rate": 0.03848423076923077,
+    "seed": 26092360
+  },
+  "known_limitations": [
+    "F-1 persists the 2021 structural mean and contains no 2026 candidate, defection, endorsement or event adjustment.",
+    "Local registered-voter counts are latent constrained draws, not official 2026 local counts.",
+    "Robust Uncertainty V2 was introduced after a prior-predictive legal-feasibility failure and before any forecast artifact; V1 and the failed executions remain preserved.",
+    "Vote uncertainty meets aggregate componentwise coverage thresholds; party-level historical coverage remains heterogeneous and is published in uncertainty_calibration_v2.json.",
+    "For a binding exact-remainder tie, F-1 marginalizes unknown candidate-age ordering using a frozen exchangeable prior; verified ages may replace it only in a later immutable snapshot.",
+    "The invalid-ballot/valid-vote fraction is a shrunk 2011 structural persistence without an additional F-1 shock.",
+    "The regional ballot uses a structural bridge from local innovations because only 2021 supplies the current regional-list ballot.",
+    "Only lists with positive 2021 votes are eligible in F-1; verified 2026 list changes belong to B2/F0 or later snapshots."
+  ],
+  "canonical_payload_sha256": "abe50f52ba8ffdb7742c3953879b86d288e535e156c7e87ae6a795007c6b59ec"
+}

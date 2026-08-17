@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "probe_id": "M26-GOAL100-GEOMETRY-OFFICIAL-PROBE-V1",
+  "purpose": "locate and hash authoritative current-law geometry sources before row-by-row certification",
+  "pages": [
+    {
+      "role": "current_election_law_index",
+      "url": "https://www.chambredesrepresentants.ma/ar/%D8%A7%D9%84%D9%82%D9%88%D8%A7%D9%86%D9%8A%D9%86-%D8%A7%D9%84%D9%85%D8%AA%D8%B9%D9%84%D9%82%D8%A9-%D8%A8%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA",
+      "status": 403,
+      "final_url": "https://www.chambredesrepresentants.ma/ar/%D8%A7%D9%84%D9%82%D9%88%D8%A7%D9%86%D9%8A%D9%86-%D8%A7%D9%84%D9%85%D8%AA%D8%B9%D9%84%D9%82%D8%A9-%D8%A8%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes": 6241,
+      "sha256": "ef458cdffb9697882e592a8b512d9d32c0afe66dbc50f99e68dd67e772ee4bf7",
+      "error": "HTTP 403"
+    },
+    {
+      "role": "consolidated_organic_law_27_11",
+      "url": "https://www.sgg.gov.ma/Portals/1/textesconsolides/27_11.pdf",
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='www.sgg.gov.ma', port=443): Max retries exceeded with url: /Portals/1/textesconsolides/27_11.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.sgg.gov.ma', port=443) at 0x7ff473457530>, 'Connection to www.sgg.gov.ma timed out. (connect timeout=45)'))\"))"
+    },
+    {
+      "role": "organic_law_53_25",
+      "url": "https://www.sgg.gov.ma/Portals/1/lois/Loi_organique_53.25_ar.pdf",
+      "error": "ConnectTimeout(MaxRetryError(\"HTTPSConnectionPool(host='www.sgg.gov.ma', port=443): Max retries exceeded with url: /Portals/1/lois/Loi_organique_53.25_ar.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.sgg.gov.ma', port=443) at 0x7ff473457b00>, 'Connection to www.sgg.gov.ma timed out. (connect timeout=45)'))\"))"
+    }
+  ],
+  "candidate_documents": [],
+  "gate": "PROBE_ONLY_NOT_GEOMETRY_CERTIFICATE",
+  "summary": {
+    "source_pages_ok": 0,
+    "source_pages_total": 3,
+    "candidate_documents": 0,
+    "downloaded_candidates": 0,
+    "candidates_with_extractable_pdf_text": 0,
+    "decree_number_found_in_index_or_candidate": false
+  }
+}

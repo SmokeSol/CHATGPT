@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-GOAL100-FMINUS1-REGISTRATION-V1",
+  "gate": "PASS",
+  "snapshot_id": "F-1",
+  "registered_at": "2026-08-17T06:12:57+00:00",
+  "registration_parent_commit": "7bcb8e4a5489b6ed0797d6aeae4b656bf6ecf1f7",
+  "forecast_artifact_path": "morocco26/data/goal100/forecasts/F-1/forecast.json",
+  "forecast_artifact_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+  "source_snapshot_manifest_sha256": "54272dbfee8809456a9dc429329e34fcc0575553399ba6af54a380470daed2b1",
+  "canonical_manifest_path": "morocco26/data/goal100/snapshots/F-1/manifest.json",
+  "canonical_manifest_sha256": "a9d51d23c1f19c235ae52be4726fe85929541a584a3380e1c3c32421b34155ea",
+  "simulation_certificate_sha256": "29fb72fa45d082d3e37ed571c7e2511ec9cd6bc5f49a70eff334250a3d866824",
+  "data_manifest_sha256": "ce1547352eca7815121bdfa9b5a298265db2ffd06454cd28abc7fc35b4375067",
+  "parameter_manifest_sha256": "3d7b31e3c0d0dffd1ea3aa716cc993251eb66d9f60456477d136f7a938591658",
+  "rng_manifest_sha256": "9008407fff5617e46f9547524cf20021aa08ad5727a8904099c67bca240bb71c",
+  "geometry_certificate_sha256": "71b70f575c87221d45a80d3eb9b3dbb668d0884943e05084506ba2bbeaf911ba",
+  "uncertainty_artifact_sha256": "d928bddf2c338eebaa54c96beb2c1f945787ae7d6c94cdaaafa362de7738b983",
+  "local_N_artifact_sha256": "979cd9f86fcb5373600b556d7fce33bbbd98ee387c3f2eee7c66581411bf1681",
+  "model_code_commit": "18f685769c7e601887467c96428f445511f7ad29",
+  "protocol_id": "M26-GOAL100-FMINUS1-PROTOCOL-V1.1",
+  "monte_carlo_draws": 50000,
+  "local_contests": 92,
+  "regional_contests": 12,
+  "house_seats_every_draw": 395,
+  "legal_failures": 0,
+  "statutory_age_prior_contest_draws": 200118,
+  "statutory_age_prior_rate": 0.03848423076923077,
+  "forecast_registry_next_id": "F0",
+  "all_forecast_unlock_gates_closed": true,
+  "all_agentic_gates_locked": true,
+  "verification_checks": {
+    "local": {
+      "rows": 92,
+      "seat_sum": 305,
+      "max_expected_seat_sum_error": 8.881784197001252e-16,
+      "max_probability_sum_error": 1.1102230246251565e-16
+    },
+    "regional": {
+      "rows": 12,
+      "seat_sum": 90,
+      "max_expected_seat_sum_error": 1.7763568394002505e-15,
+      "max_probability_sum_error": 1.1102230246251565e-16
+    },
+    "national_expected_seats_sum": 395.0,
+    "statutory_age_prior_contest_draws": 200118,
+    "statutory_age_prior_rate": 0.03848423076923077,
+    "legal_failures": 0
+  },
+  "registration_rule": "Existing immutable artifacts were re-hashed and registered; no model parameter, RNG seed, draw, probability or seat output was changed."
+}

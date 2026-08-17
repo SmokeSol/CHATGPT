@@ -1,0 +1,51 @@
+{
+  "schema_version": "5.0",
+  "audit_id": "M26-GOAL100-P0-RESOLUTION-V5",
+  "as_of": "2026-08-16",
+  "preserves": [
+    "p0_resolution_v1.json",
+    "p0_resolution_v2.json",
+    "p0_resolution_v3.json",
+    "p0_resolution_v4.json"
+  ],
+  "delta_from_v4": {
+    "P0-3": {
+      "previous": "NATIONAL_EXACT_LOCAL_POSTERIOR_DESIGN_EMPIRICALLY_ANCHORED_FIT_PENDING",
+      "current": "CONSTRAINED_N92_POSTERIOR_FIT_AND_SENSITIVITY_CERTIFIED",
+      "evidence": {
+        "national_N": 15801162,
+        "draws": 50000,
+        "positive_integer_entries": true,
+        "exact_sum_every_draw": true,
+        "max_absolute_sum_error": 0,
+        "feasibility_floor_violations": 0,
+        "local_rows": 92,
+        "regional_rows": 12,
+        "local_denominator_invariant_exact": 81,
+        "local_denominator_sensitive": 11,
+        "local_territories_with_N_only_change_mass": 2,
+        "regional_regions_with_N_only_change_mass": 5,
+        "local_unresolved_statutory_probability_sum": 0.00002,
+        "regional_unresolved_statutory_probability_sum": 0.0,
+        "draw_stream_sha256": "092382b44873c2ee709e3fb62566247980c11eee29daf2758f0a1e1a52919d71",
+        "artifact": "local_N_posterior.json"
+      },
+      "interpretation": "The missing local registered-voter vector no longer blocks probabilistic construction. It remains explicitly latent rather than official. Every draw obeys the exact national total and local/regional ballot feasibility floors. N-only seat sensitivity is concentrated and fully reported. The single 1-in-50,000 unresolved local statutory-tie mass is retained for the full simulation gate; it is not silently broken by party name or vote count."
+    }
+  },
+  "current_p0_status": {
+    "P0-1_geometry": "RESOLVED_AND_CERTIFIED_WITH_ACTIVE_LEGAL_WATCH",
+    "P0-2_legal_allocator": "RESOLVED_AND_104_VECTOR_REGRESSION_CERTIFIED",
+    "P0-3_registered_N": "CONSTRAINED_N92_POSTERIOR_FIT_AND_SENSITIVITY_CERTIFIED",
+    "P0-4_history": "RESOLVED_AND_INGESTED_92_OF_92_MODERN_CONTINUITY",
+    "P0-5_Bstar": "CORE_SELECTED_PERSISTENCE_FIRST_2026_UNTOUCHED",
+    "P0-6_uncertainty": "ARCHITECTURE_RESOLVED_POST_SELECTION_FIT_AND_CALIBRATION_PENDING"
+  },
+  "remaining_hard_gates_before_first_calibrated_snapshot": [
+    "fit post-selection hierarchical innovation/correlation distribution",
+    "posterior predictive diagnostics and >=50,000 coherent election simulations",
+    "immutable F-1 snapshot manifest"
+  ],
+  "agentic_layer_status": "LOCKED_UNTIL_NON_AGENTIC_B2_AND_FIRST_PROBABILISTIC_SNAPSHOT_ARE_FROZEN",
+  "forecast_sequence_policy": "F-1/F0/F1/... allowed; each immutable; F0 preliminary; no snapshot overwrite"
+}

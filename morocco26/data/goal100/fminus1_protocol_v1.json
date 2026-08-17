@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "M26-GOAL100-FMINUS1-PROTOCOL-V1",
+  "snapshot_id": "F-1",
+  "snapshot_class": "STRUCTURAL_PROBABILISTIC_FORECAST",
+  "frozen_at": "2026-08-16T22:24:00+01:00",
+  "data_cutoff": "2026-08-16T22:24:00+01:00",
+  "purpose": "Issue the first immutable non-agentic probabilistic forecast before B2 candidate/event enrichment and before any agentic residual experiment.",
+  "mean_model": {
+    "vote": "V0_PERSIST_2021_LOCAL_AND_REGIONAL_COMPOSITION",
+    "turnout": "T0_PERSIST_2021_LOCAL_TURNOUT",
+    "candidate_evidence": "NONE_STRUCTURAL_ONLY",
+    "event_evidence": "NONE_STRUCTURAL_ONLY"
+  },
+  "uncertainty": {
+    "artifact": "morocco26/data/goal100/uncertainty_calibration.json",
+    "vote_scale": 2.0,
+    "turnout_scale": 2.5,
+    "support_sha256": "a9f2c164e6115bc06119481e2b1fda566751658b66c30bacb73dc90aece0bf64",
+    "calibration_label": "AGGREGATE_COVERAGE_CALIBRATED_PARTY_HETEROGENEITY_REPORTED",
+    "mandatory_disclosure": {
+      "vote_energy_selected": 0.42146623099437613,
+      "vote_flat_residual_context": 0.36972890027879,
+      "vote_coverage80_aggregate": 0.751207729468599,
+      "vote_coverage95_aggregate": 0.9094202898550725,
+      "turnout_crps_selected": 0.0786261770516104,
+      "turnout_flat_residual_context": 0.09489592095601988,
+      "turnout_coverage80": 0.8260869565217391,
+      "turnout_coverage95": 1.0,
+      "party_coverage_heterogeneity_must_be_published": true
+    },
+    "turnout_vote_cross_correlation": 0.0,
+    "free_92x92_covariance": false
+  },
+  "registered_N": {
+    "artifact": "morocco26/data/goal100/local_N_posterior.json",
+    "national_total": 15801162,
+    "state": "LATENT_NOT_OFFICIAL_LOCAL_COUNTS",
+    "sampler": "Regenerate constrained logistic-normal slack draws from frozen per-territory floors/centres and region/local scales; every draw is 92 positive integers summing exactly to the national total.",
+    "later_official_counts": "Require a new snapshot; F-1 is never overwritten."
+  },
+  "valid_vote_observation_model": {
+    "local": "For each territory compute 2011 valid-list votes divided by registered-times-turnout; winsorize at empirical p05/p95 and shrink 50% toward the national median. Simulated valid votes equal sampled N times sampled turnout times this frozen fraction.",
+    "regional": "Persist the 2021 regional-to-summed-local valid-vote ratio by region after empirical p05/p95 winsorization and 50% shrinkage toward 1.0; cap at sampled regional N.",
+    "uncertainty": "No additional invalid-ballot-rate shock in F-1; this is a disclosed structural limitation."
+  },
+  "legal_party_mapping": {
+    "core_parties": ["RNI", "PAM", "PI", "PJD", "USFP", "MP", "UC", "PPS"],
+    "other_rule": "Split OTHER back into actual 2021 minor-party list codes in each contest, proportional to 2021 minor-party votes. If no minor-party history exists, fold OTHER back into core shares proportionally and record the event.",
+    "future_new_lists": "Excluded from F-1; verified 2026 entries belong to B2/F0 or later immutable snapshots."
+  },
+  "integer_vote_model": {
+    "method": "Balanced randomized rounding: floor expected party counts and assign the exact remaining votes by Gumbel-top-k weighted by fractional remainders.",
+    "reason": "Maintain exact valid-vote totals without deterministic party-label priority and retain only sub-vote observation noise.",
+    "statutory_tie_policy": "If the legal allocator reaches a binding exact remainder tie without candidate-age evidence, rerandomize only the balanced vote rounding for that contest/draw, preserving latent shares and valid total. No party-name or raw-vote tie-break is allowed.",
+    "maximum_rerounding_attempts": 20,
+    "gate": "Zero unresolved legal allocations after retries; rerounding incidence and attempts must be published."
+  },
+  "regional_ballot_bridge": {
+    "latent_shift": "Same national and region vote innovations as local contests plus the mean sampled local residual within the region.",
+    "baseline": "2021 regional-list composition",
+    "limitation": "No pre-2021 current-system regional-list transition exists; 2026 is the first prospective test."
+  },
+  "monte_carlo": {
+    "draws": 50000,
+    "seed_manifest": {
+      "N92": 26092351,
+      "national_vote": 26092352,
+      "regional_vote": 26092353,
+      "local_vote": 26092354,
+      "national_turnout": 26092355,
+      "regional_turnout": 26092356,
+      "local_turnout": 26092357,
+      "vote_rounding": 26092358
+    },
+    "required_invariants": [
+      "92 local N are positive integers and sum exactly to 15,801,162",
+      "all local and regional share vectors are finite, non-negative and sum to one",
+      "all simulated vote counts are non-negative integers and do not exceed registered N",
+      "all 104 contests allocate exactly their configured seats",
+      "every national draw sums to 395 seats",
+      "zero unresolved statutory ties after the frozen rerounding procedure"
+    ]
+  },
+  "required_outputs": {
+    "local_92": ["vote-share distribution", "turnout distribution", "P(seats=k) by frozen bucket", "expected seats", "credible intervals"],
+    "regional_12": ["vote-share distribution", "P(seats=k) by frozen bucket", "expected seats", "credible intervals"],
+    "national_395": ["joint party-bucket seat distributions", "expected seats", "credible intervals", "draw-stream hash"],
+    "diagnostics": ["N sensitivity context", "Monte Carlo standard errors", "normalization errors", "legal rerounding incidence", "minor-party disaggregation events", "known limitations"]
+  },
+  "publication_boundary": {
+    "forecast_is_preliminary": true,
+    "forecast_is_not_B2": true,
+    "forecast_is_not_agentic": true,
+    "forecast_may_not_be_overwritten": true,
+    "next_conventional_snapshot": "F0_AFTER_B2_STRUCTURED_EVIDENCE_FREEZE"
+  }
+}

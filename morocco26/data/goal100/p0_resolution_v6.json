@@ -1,0 +1,39 @@
+{
+  "schema_version": "6.0",
+  "audit_id": "M26-GOAL100-P0-RESOLUTION-V6",
+  "as_of": "2026-08-17T06:12:57+00:00",
+  "preserves": [
+    "p0_resolution_v1.json",
+    "p0_resolution_v2.json",
+    "p0_resolution_v3.json",
+    "p0_resolution_v4.json",
+    "p0_resolution_v5.json"
+  ],
+  "current_p0_status": {
+    "P0-1": "CLOSED",
+    "P0-2": "CLOSED",
+    "P0-3": "CLOSED",
+    "P0-4": "CLOSED",
+    "P0-5": "CLOSED",
+    "P0-6": "CLOSED"
+  },
+  "forecast_unlock": {
+    "GEO-2026-AUTHORITATIVE-DIFF": "CLOSED",
+    "LEGAL-ALLOCATOR-CERTIFIED": "CLOSED",
+    "N92-POSTERIOR-FIT": "CLOSED",
+    "BSTAR-SELECTED": "CLOSED",
+    "UNCERTAINTY-CALIBRATION": "CLOSED",
+    "MC-50000-COHERENT": "CLOSED",
+    "SNAPSHOT-IMMUTABILITY-MANIFEST": "CLOSED"
+  },
+  "registered_snapshot": {
+    "snapshot_id": "F-1",
+    "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "source_manifest_sha256": "54272dbfee8809456a9dc429329e34fcc0575553399ba6af54a380470daed2b1",
+    "canonical_manifest_sha256": "a9d51d23c1f19c235ae52be4726fe85929541a584a3380e1c3c32421b34155ea",
+    "draws": 50000,
+    "house_seats_every_draw": 395
+  },
+  "agentic_layer_status": "LOCKED",
+  "next_phase": "P7_B2_STRUCTURED_EVIDENCE_LAYER"
+}

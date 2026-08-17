@@ -1,35 +1,57 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.2",
   "registry_id": "M26-GOAL100-GATES-V1",
-  "as_of": "2026-08-16T21:30:00+01:00",
-  "status_vocabulary": ["CLOSED", "PARTIAL", "OPEN", "LOCKED", "FAILED"],
+  "as_of": "2026-08-17T06:12:57+00:00",
+  "status_vocabulary": [
+    "CLOSED",
+    "PARTIAL",
+    "OPEN",
+    "LOCKED",
+    "FAILED"
+  ],
   "rule": "A gate may move to CLOSED only when every required evidence path exists and the closure criterion is machine-verifiable or explicitly documented as a bounded governance decision.",
   "p0": [
     {
       "id": "P0-1",
       "name": "2026 electoral geometry",
-      "status": "PARTIAL",
-      "resolved_claim": "Working geometry is 92 local / 305 seats plus 12 regional / 90 seats, with 92/92 modern historical territorial continuity.",
-      "evidence": ["morocco26/data/constituencies_goal75.csv", "morocco26/data/goal100/historical_panel_diagnostic.json"],
-      "remaining_gate": "Authoritative row-by-row 2026 decree/table diff plus continued legal watch for superseding texts.",
-      "closure_criterion": "Machine artifact certifies all 92 local names/IDs/magnitudes and all 12 regional magnitudes against authoritative current-law source; zero unexplained differences."
+      "status": "CLOSED",
+      "resolved_claim": "The project geometry matches the authoritative Parliament witness on all 92 local rows and 305 seats and the SGG Article-1 table on all 12 regional rows and 90 seats; zero unexplained differences remain.",
+      "evidence": [
+        "morocco26/data/constituencies_goal75.csv",
+        "morocco26/data/goal100/geometry_authoritative_witness_v1.json",
+        "morocco26/data/goal100/geometry_2026_probe.json",
+        "morocco26/data/goal100/geometry_2026_certificate.json"
+      ],
+      "legal_watch": "ACTIVE; a superseding decree creates a new certificate and forecast version without rewriting prior snapshots.",
+      "closure_criterion": "Machine artifact certifies all 92 local names/IDs/magnitudes and all 12 regional magnitudes against authoritative content; zero unexplained differences."
     },
     {
       "id": "P0-2",
       "name": "Exact 2026 legal votes-to-seats allocator",
       "status": "CLOSED",
       "resolved_claim": "Fail-closed current-law allocator handles quotient, largest remainder, unique-list threshold and statutory tie rules and is mathematically equivalent on all 104 historical test vectors.",
-      "evidence": ["morocco26/src/morocco26/legal_allocator_2026.py", "morocco26/data/goal100/legal_regression_104.json"],
-      "known_non_allocator_anomalies": ["Casablanca-Settat", "Marrakech-Safi"],
+      "evidence": [
+        "morocco26/src/morocco26/legal_allocator_2026.py",
+        "morocco26/data/goal100/legal_regression_104.json"
+      ],
+      "known_non_allocator_anomalies": [
+        "Casablanca-Settat",
+        "Marrakech-Safi"
+      ],
       "closure_criterion": "92/92 local + 12/12 regional mathematical-vector equivalence; zero unresolved test-vector statutory ties."
     },
     {
       "id": "P0-3",
       "name": "Registered-voter denominators",
-      "status": "OPEN",
-      "resolved_claim": "National 2026 N is fixed at 15,801,162; missing local N can be represented as a constrained latent vector with an empirical variance floor rather than fabricated point counts.",
-      "evidence": ["morocco26/data/goal100/local_N_drift_diagnostic.json", "morocco26/data/goal75/local_allocation_interval_proof.json"],
-      "remaining_gate": "Fit constrained posterior over all 92 local N values and quantify seat sensitivity caused only by N uncertainty.",
+      "status": "CLOSED",
+      "resolved_claim": "A 50,000-draw constrained posterior now represents all 92 local registered-voter counts as positive integers summing exactly to the official national total 15,801,162; N-only seat sensitivity is reported for all 92 local and 12 regional contests.",
+      "evidence": [
+        "morocco26/data/goal100/local_N_drift_diagnostic.json",
+        "morocco26/data/goal75/local_allocation_interval_proof.json",
+        "morocco26/data/goal100/local_N_posterior.json"
+      ],
+      "epistemic_boundary": "The posterior is a latent calibrated prior, not an official local-count table. A later authoritative table creates a new immutable forecast snapshot.",
+      "reported_edge_case": "One of 50,000 local N-only draws reaches an unresolved statutory tie; it is retained explicitly for the full simulation gate.",
       "closure_criterion": "Every Monte Carlo N draw is positive integer and sums exactly to 15,801,162; posterior diagnostics pass; N-only seat-sensitivity is reported for all 92 local and 12 regional contests."
     },
     {
@@ -37,7 +59,11 @@
       "name": "Historical panel for uncertainty calibration",
       "status": "CLOSED",
       "resolved_claim": "Canonical 2011/2016/2021 local panel contains 92/92 common constituency IDs, names and magnitudes; 2007 is auxiliary support and 2002 remains quarantined.",
-      "evidence": ["morocco26/data/goal100/historical/historical_ingest_manifest.json", "morocco26/data/goal100/historical_panel_diagnostic.json", "morocco26/data/goal100/older_history_probe/older_history_schema_probe.json"],
+      "evidence": [
+        "morocco26/data/goal100/historical/historical_ingest_manifest.json",
+        "morocco26/data/goal100/historical_panel_diagnostic.json",
+        "morocco26/data/goal100/older_history_probe/older_history_schema_probe.json"
+      ],
       "closure_criterion": "2011, 2016 and 2021 raw files hashed and canonicalized; 92 common local IDs across all three; missing N remains missing rather than imputed."
     },
     {
@@ -45,62 +71,86 @@
       "name": "Optimal non-agentic structural baseline B*",
       "status": "CLOSED",
       "resolved_claim": "Within the frozen preregistered model family, persistence-first is selected for vote composition and turnout on the 2016->2021 temporal validation.",
-      "evidence": ["morocco26/data/goal100/forecast_protocol_v1.json", "morocco26/data/goal100/bstar_hindcast_v1.json"],
-      "selected": {"vote": "V0_PERSIST", "turnout": "T0_PERSIST"},
+      "evidence": [
+        "morocco26/data/goal100/forecast_protocol_v1.json",
+        "morocco26/data/goal100/bstar_hindcast_v1.json"
+      ],
+      "selected": {
+        "vote": "V0_PERSIST",
+        "turnout": "T0_PERSIST"
+      },
       "closure_criterion": "Model family and hyperparameters frozen before validation; candidate scores and paired bootstrap reported; no post-validation search."
     },
     {
       "id": "P0-6",
       "name": "Joint uncertainty and correlation model",
-      "status": "OPEN",
-      "resolved_claim": "Architecture is hierarchical national + regional + local innovations with separate turnout state; free 92x92 covariance is forbidden.",
-      "evidence": ["morocco26/data/goal100/forecast_protocol_v1.json", "morocco26/data/goal100/historical_panel_diagnostic.json"],
-      "remaining_gate": "Post-selection parameter fit, calibration/coverage diagnostics and coherent election simulation certification.",
-      "closure_criterion": "Variance floors applied; posterior-predictive diagnostics published; no unjustified covariance degrees of freedom; >=50,000 coherent joint election simulations execute without invalid distributions."
+      "status": "CLOSED",
+      "resolved_claim": "Robust V2 national+regional+local vote and turnout uncertainty is retrospectively calibrated without 2026 outcomes; its exact frozen support generated the registered 50,000-draw F-1 snapshot.",
+      "evidence": [
+        "morocco26/data/goal100/uncertainty_protocol_v2.json",
+        "morocco26/data/goal100/uncertainty_calibration_v2.json",
+        "morocco26/data/goal100/simulation_certificate.json"
+      ],
+      "remaining_gate": null,
+      "closure_criterion": "PASS calibration, bounded simplex projection, normalized probabilities, and a coherent 50,000-draw prospective snapshot with no unresolved legal allocation."
     }
   ],
   "forecast_unlock": [
     {
       "id": "GEO-2026-AUTHORITATIVE-DIFF",
-      "status": "OPEN",
-      "depends_on": ["P0-1"],
+      "status": "CLOSED",
+      "depends_on": [
+        "P0-1"
+      ],
       "required_artifact": "morocco26/data/goal100/geometry_2026_certificate.json"
     },
     {
       "id": "LEGAL-ALLOCATOR-CERTIFIED",
       "status": "CLOSED",
-      "depends_on": ["P0-2"],
+      "depends_on": [
+        "P0-2"
+      ],
       "required_artifact": "morocco26/data/goal100/legal_regression_104.json"
     },
     {
       "id": "N92-POSTERIOR-FIT",
-      "status": "OPEN",
-      "depends_on": ["P0-3"],
+      "status": "CLOSED",
+      "depends_on": [
+        "P0-3"
+      ],
       "required_artifact": "morocco26/data/goal100/local_N_posterior.json"
     },
     {
       "id": "BSTAR-SELECTED",
       "status": "CLOSED",
-      "depends_on": ["P0-5"],
+      "depends_on": [
+        "P0-5"
+      ],
       "required_artifact": "morocco26/data/goal100/bstar_hindcast_v1.json"
     },
     {
       "id": "UNCERTAINTY-CALIBRATION",
-      "status": "OPEN",
-      "depends_on": ["P0-6"],
-      "required_artifact": "morocco26/data/goal100/uncertainty_calibration.json"
+      "status": "CLOSED",
+      "depends_on": [
+        "P0-6"
+      ],
+      "required_artifact": "morocco26/data/goal100/uncertainty_calibration_v2.json"
     },
     {
       "id": "MC-50000-COHERENT",
-      "status": "OPEN",
-      "depends_on": ["P0-2", "P0-3", "P0-6"],
+      "status": "CLOSED",
+      "depends_on": [
+        "P0-2",
+        "P0-3",
+        "P0-6"
+      ],
       "required_artifact": "morocco26/data/goal100/simulation_certificate.json"
     },
     {
       "id": "SNAPSHOT-IMMUTABILITY-MANIFEST",
-      "status": "OPEN",
+      "status": "CLOSED",
       "depends_on": [],
-      "required_artifact": "created with first registered forecast snapshot"
+      "required_artifact": "morocco26/data/goal100/snapshots/F-1/manifest.json"
     }
   ],
   "agentic_unlock": [

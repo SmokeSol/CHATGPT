@@ -1,0 +1,92 @@
+name: morocco26-fminus1-n92
+
+on:
+  push:
+    branches: [morocco26-fminus1]
+    paths:
+      - 'morocco26/data/goal100/local_N_protocol_v1.json'
+      - 'morocco26/scripts/goal100_fit_local_N_posterior.py'
+      - '.github/workflows/morocco26-fminus1-n92.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fit-and-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet numpy pandas openpyxl
+
+      - name: Apply declared lexical correction before first execution
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('morocco26/scripts/goal100_fit_local_N_posterior.py')
+          s=p.read_text(encoding='utf-8')
+          old='    def audit_contest(row: dict, n_values: np.ndarray, label: str, identifier: str) -> dict:\n        turnout = float(row["turnout_rate_reported"])'
+          new='    def audit_contest(row: dict, n_values: np.ndarray, label: str, identifier: str) -> dict:\n        nonlocal scale_tests\n        turnout = float(row["turnout_rate_reported"])'
+          if old in s:
+              s=s.replace(old,new,1)
+              p.write_text(s,encoding='utf-8')
+              print('Applied nonlocal scale_tests correction')
+          elif '        nonlocal scale_tests\n        turnout = float(row["turnout_rate_reported"])' in s:
+              print('Correction already present')
+          else:
+              raise SystemExit('Expected audit_contest locus not found; fail closed')
+          PY
+
+      - name: Compile source
+        run: python -m py_compile morocco26/scripts/goal100_fit_local_N_posterior.py
+
+      - name: Fit N92 posterior and run 104-contest sensitivity audit
+        run: python morocco26/scripts/goal100_fit_local_N_posterior.py
+
+      - name: Verify machine artifacts and append breadcrumb journal
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          g=Path('morocco26/data/goal100')
+          p=json.loads((g/'local_N_posterior.json').read_text(encoding='utf-8'))
+          n=json.loads((g/'n_scale_invariance_certificate.json').read_text(encoding='utf-8'))
+          assert p['gate']=='PASS'
+          assert n['gate']=='PASS' and n['exact_scale_invariance'] is True
+          assert len(p['local_92'])==92 and len(p['regional_12'])==12
+          assert n['summary']['contests']==104
+          assert p['constraints']['all_positive_integer'] is True
+          assert p['constraints']['all_sums_exact'] is True
+          journal=Path('morocco26/FIL_ARIANE.md')
+          text=journal.read_text(encoding='utf-8')
+          if 'Entrée A002 — Protocole N92 gelé' not in text:
+              text += f'''\n\n### 2026-08-16 — Entrée A002 — Protocole N92 gelé\n\n**Question/gate :** `N92-POSTERIOR-FIT`.\n\n**Hypothèse avant test :** les 92 dénominateurs locaux peuvent rester latents sans inventer de chiffres officiels, sous contrainte exacte du total national et avec une dispersion ancrée empiriquement.\n\n**Actions :** gel de `data/goal100/local_N_protocol_v1.json` avant exécution ; centre 2011, dispersion 2007→2011, Student-t hiérarchique, 50 000 tirages, seed fixe.\n\n**Règle spéciale :** la sensibilité électorale de N est mesurée séparément. L’échelle N ne peut pas servir de substitut caché à une variation politique.\n'''
+          if 'Entrée A003 — Résultat posterior N92' not in text:
+              s=n['summary']
+              text += f'''\n\n### 2026-08-16 — Entrée A003 — Résultat posterior N92\n\n**Artefacts :** `data/goal100/local_N_posterior.json` et `data/goal100/n_scale_invariance_certificate.json`.\n\n**Résultat machine :** `PASS`. Les {p['draws']:,} tirages contiennent 92 entiers positifs et totalisent tous exactement {p['national_N']:,}. Le hash de la matrice déterministe est `{p['draw_matrix_sha256_int32_rowmajor']}`.\n\n**Test d’invariance :** {n['exact_scale_tests']} tests d’échelle exacts, {len(n['exact_scale_failures'])} échec. Sur les 104 profils audités, {s['contests_with_any_integerization_sensitivity']} présentent au moins une variation liée uniquement à l’entierisation de N ; la probabilité maximale observée est {s['max_probability_different_from_reference']:.6f}.\n\n**Décision scientifique :** le posterior N92 est une distribution de dénominateurs, jamais une table officielle. Sa matérialité sur les sièges est publiée et ne sera ni masquée ni transformée en choc politique.\n\n**Prochaine action :** fermer formellement le gate N92 après validation du registre, puis estimer et calibrer l’incertitude hiérarchique B*.\n'''
+          journal.write_text(text,encoding='utf-8')
+          PY
+
+      - name: Preserve Goal75 and Goal100 tracking invariants
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/validate_goal100_tracking.py
+
+      - name: Commit evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/scripts/goal100_fit_local_N_posterior.py \
+            morocco26/data/goal100/local_N_posterior.json \
+            morocco26/data/goal100/n_scale_invariance_certificate.json \
+            morocco26/FIL_ARIANE.md
+          git commit -m 'data(morocco26): certify constrained N92 posterior and sensitivity' || true
+          git pull --rebase origin morocco26-fminus1
+          git push origin HEAD:morocco26-fminus1

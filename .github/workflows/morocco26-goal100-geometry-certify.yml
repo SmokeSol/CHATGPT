@@ -1,0 +1,40 @@
+name: morocco26-goal100-geometry-certify
+
+on:
+  push:
+    branches: [morocco26-fminus1]
+    paths:
+      - 'morocco26/data/constituencies_goal75.csv'
+      - 'morocco26/data/goal100/geometry_authoritative_local_rows_fr.csv'
+      - 'morocco26/data/goal100/geometry_authoritative_regional_rows_fr.csv'
+      - 'morocco26/data/goal100/geometry_authoritative_witness_v1.json'
+      - 'morocco26/data/goal100/geometry_2026_probe.json'
+      - 'morocco26/scripts/goal100_geometry_2026_certify.py'
+      - '.github/workflows/morocco26-goal100-geometry-certify.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Certify 92 local plus 12 regional geometry
+        run: python morocco26/scripts/goal100_geometry_2026_certify.py
+      - name: Preserve Goal75 anti-drift checkpoint
+        run: python morocco26/scripts/validate_anti_drift.py
+      - name: Commit geometry certificate
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/geometry_2026_certificate.json
+          git commit -m 'data(morocco26): certify 2026 electoral geometry' || true
+          git pull --rebase origin morocco26-fminus1
+          git push origin HEAD:morocco26-fminus1

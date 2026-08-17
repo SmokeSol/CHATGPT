@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1",
+  "snapshot_id": "F-1",
+  "draws": 50000,
+  "seeds": {
+    "N92": 26092351,
+    "national_vote": 26092352,
+    "regional_vote": 26092353,
+    "local_vote": 26092354,
+    "national_turnout": 26092355,
+    "regional_turnout": 26092356,
+    "local_turnout": 26092357,
+    "vote_rounding": 26092358,
+    "statutory_age_prior": 26092360
+  },
+  "protocol_id": "M26-GOAL100-FMINUS1-PROTOCOL-V1.1"
+}

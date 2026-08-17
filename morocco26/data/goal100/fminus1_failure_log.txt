@@ -1,0 +1,66 @@
+build-freeze-register	Apply declared pre-execution implementation corrections	﻿2026-08-16T22:36:23.5326779Z ##[group]Run python - <<'PY'
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5327176Z ^[[36;1mpython - <<'PY'^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5327435Z ^[[36;1mfrom pathlib import Path^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5327697Z ^[[36;1m^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5328045Z ^[[36;1m# 1. Python closure declaration noticed before evidentiary N92 execution.^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5328558Z ^[[36;1mp=Path('morocco26/scripts/goal100_fit_local_N_posterior.py')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5328930Z ^[[36;1ms=p.read_text(encoding='utf-8')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5329558Z ^[[36;1mlocus='    def audit_contest(row: dict, n_values: np.ndarray, label: str, identifier: str) -> dict:\n        turnout = float(row["turnout_rate_reported"])'^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5330589Z ^[[36;1mreplacement='    def audit_contest(row: dict, n_values: np.ndarray, label: str, identifier: str) -> dict:\n        nonlocal scale_tests\n        turnout = float(row["turnout_rate_reported"])'^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5331567Z ^[[36;1mif locus in s:^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5331841Z ^[[36;1m    s=s.replace(locus,replacement,1)^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5332358Z ^[[36;1melif '        nonlocal scale_tests\n        turnout = float(row["turnout_rate_reported"])' not in s:^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5332857Z ^[[36;1m    raise SystemExit('N92 correction locus absent')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5333197Z ^[[36;1mp.write_text(s,encoding='utf-8')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5333464Z ^[[36;1m^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5333758Z ^[[36;1m# 2. Finite serialization for a constant national-seat dimension.^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5334185Z ^[[36;1mp=Path('morocco26/scripts/goal100_run_fminus1.py')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5334523Z ^[[36;1ms=p.read_text(encoding='utf-8')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5334940Z ^[[36;1mlocus='    correlation = np.corrcoef(national_seats.astype(float), rowvar=False)\n'^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5335857Z ^[[36;1mreplacement='    correlation = np.corrcoef(national_seats.astype(float), rowvar=False)\n    correlation = np.nan_to_num(correlation, nan=0.0, posinf=0.0, neginf=0.0)\n    np.fill_diagonal(correlation, 1.0)\n'^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5336684Z ^[[36;1mif locus in s and 'np.nan_to_num(correlation' not in s:^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5337071Z ^[[36;1m    s=s.replace(locus,replacement,1)^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5337396Z ^[[36;1melif 'np.nan_to_num(correlation' not in s:^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5337776Z ^[[36;1m    raise SystemExit('correlation correction locus absent')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5338105Z ^[[36;1m^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5338431Z ^[[36;1m# 3. Provenance-only protocol amendment recorded before forecast execution.^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5338848Z ^[[36;1mold='fminus1_protocol_v1.json'^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5339132Z ^[[36;1mnew='fminus1_protocol_v1_1.json'^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5339402Z ^[[36;1mif old in s:^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5339635Z ^[[36;1m    s=s.replace(old,new)^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5339904Z ^[[36;1mp.write_text(s,encoding='utf-8')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5340167Z ^[[36;1m^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5340457Z ^[[36;1mp=Path('morocco26/scripts/goal100_finalize_fminus1_manifest.py')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5340981Z ^[[36;1ms=p.read_text(encoding='utf-8')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5341269Z ^[[36;1mif old in s:^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5341497Z ^[[36;1m    s=s.replace(old,new)^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5341766Z ^[[36;1mp.write_text(s,encoding='utf-8')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5342025Z ^[[36;1m^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5342430Z ^[[36;1m# Stable evidence-driven validator entry point.^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5342855Z ^[[36;1mPath('morocco26/scripts/validate_goal100_tracking.py').write_text(^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5343245Z ^[[36;1m    '#!/usr/bin/env python3\n'^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5343620Z ^[[36;1m    '"""Stable entry point for the evidence-driven Goal100 validator."""\n'^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5344085Z ^[[36;1m    'from validate_goal100_tracking_dynamic import main\n\n'^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5344524Z ^[[36;1m    'if __name__ == "__main__":\n'^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5344841Z ^[[36;1m    '    main()\n', encoding='utf-8')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5345116Z ^[[36;1m^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5345439Z ^[[36;1m# Breadcrumb correction is append-only and recorded before any F-1 run.^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5345968Z ^[[36;1mjournal=Path('morocco26/FIL_ARIANE.md')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5346296Z ^[[36;1mtext=journal.read_text(encoding='utf-8')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5346700Z ^[[36;1mentry_id='A004' if 'Entrée A004 —' not in text else 'A014'^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5347152Z ^[[36;1mmarker=f'Entrée {entry_id} — Amendment pré-exécution du cutoff'^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5347526Z ^[[36;1mif marker not in text:^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5349568Z ^[[36;1m    text += f'''\n\n### 2026-08-16 — Entrée {entry_id} — Amendment pré-exécution du cutoff\n\n**Constat :** `fminus1_protocol_v1.json` utilisait une borne de fin de journée potentiellement postérieure à l’heure réelle d’émission.\n\n**Correction :** création de `data/goal100/fminus1_protocol_v1_1.json` avec cutoff conservateur `2026-08-16T20:00:00+01:00`.\n\n**Timing :** avant toute exécution F−1, avant tout résultat 2026 et sans observation d’un output de forecast.\n\n**Impact scientifique :** aucun paramètre, modèle, seuil ou seed n’est modifié ; correction de provenance uniquement. V1 est conservé et n’est pas réécrit.\n'''^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5351814Z ^[[36;1mjournal.write_text(text,encoding='utf-8')^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5352122Z ^[[36;1mPY^[[0m
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5374447Z shell: /usr/bin/bash -e {0}
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5374770Z env:
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5375058Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5375501Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5375928Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5376309Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5376690Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5377127Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5377460Z ##[endgroup]
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5611661Z N92 correction locus absent
+build-freeze-register	Apply declared pre-execution implementation corrections	2026-08-16T22:36:23.5656477Z ##[error]Process completed with exit code 1.

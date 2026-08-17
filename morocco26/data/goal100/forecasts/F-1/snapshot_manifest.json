@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.1",
+  "snapshot_id": "F-1",
+  "snapshot_class": "STRUCTURAL_PROBABILISTIC_FORECAST",
+  "created_at": "2026-08-16T22:43:00+01:00",
+  "data_cutoff": "2026-08-16T22:43:00+01:00",
+  "protocol_id": "M26-GOAL100-FMINUS1-PROTOCOL-V1.1",
+  "model_code_commit": "18f685769c7e601887467c96428f445511f7ad29",
+  "data_manifest_hash": "ce1547352eca7815121bdfa9b5a298265db2ffd06454cd28abc7fc35b4375067",
+  "parameter_manifest_hash": "3d7b31e3c0d0dffd1ea3aa716cc993251eb66d9f60456477d136f7a938591658",
+  "rng_seed_manifest": {
+    "path": "morocco26/data/goal100/forecasts/F-1/rng_seed_manifest.json",
+    "sha256": "9008407fff5617e46f9547524cf20021aa08ad5727a8904099c67bca240bb71c"
+  },
+  "monte_carlo_draws": 50000,
+  "legal_allocator_version": "0567fe6e456b1f73083d53c6dbd9444e88ac5641cf53dafef445a7df17e087bd",
+  "geometry_certificate_hash": "71b70f575c87221d45a80d3eb9b3dbb668d0884943e05084506ba2bbeaf911ba",
+  "registered_N_state": "LATENT_CONSTRAINED_NOT_OFFICIAL",
+  "candidate_evidence_state": "NONE_STRUCTURAL_ONLY",
+  "event_evidence_state": "NONE_STRUCTURAL_ONLY",
+  "forecast_artifact_hash": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+  "calibration_status": "ROBUST_AGGREGATE_COVERAGE_CALIBRATED_2026_UNTOUCHED",
+  "known_limitations": [
+    "F-1 persists the 2021 structural mean and contains no 2026 candidate, defection, endorsement or event adjustment.",
+    "Local registered-voter counts are latent constrained draws, not official 2026 local counts.",
+    "Robust Uncertainty V2 was introduced after a prior-predictive legal-feasibility failure and before any forecast artifact; V1 and the failed executions remain preserved.",
+    "Vote uncertainty meets aggregate componentwise coverage thresholds; party-level historical coverage remains heterogeneous and is published in uncertainty_calibration_v2.json.",
+    "For a binding exact-remainder tie, F-1 marginalizes unknown candidate-age ordering using a frozen exchangeable prior; verified ages may replace it only in a later immutable snapshot.",
+    "The invalid-ballot/valid-vote fraction is a shrunk 2011 structural persistence without an additional F-1 shock.",
+    "The regional ballot uses a structural bridge from local innovations because only 2021 supplies the current regional-list ballot.",
+    "Only lists with positive 2021 votes are eligible in F-1; verified 2026 list changes belong to B2/F0 or later snapshots."
+  ],
+  "artifact_paths": {
+    "forecast": "morocco26/data/goal100/forecasts/F-1/forecast.json",
+    "data_manifest": "morocco26/data/goal100/forecasts/F-1/data_manifest.json",
+    "parameter_manifest": "morocco26/data/goal100/forecasts/F-1/parameter_manifest.json",
+    "rng_manifest": "morocco26/data/goal100/forecasts/F-1/rng_seed_manifest.json"
+  },
+  "uncertainty_artifact": {
+    "path": "morocco26/data/goal100/uncertainty_calibration_v2.json",
+    "sha256": "d928bddf2c338eebaa54c96beb2c1f945787ae7d6c94cdaaafa362de7738b983"
+  },
+  "statutory_age_prior": {
+    "state": "UNKNOWN_AGE_EXCHANGEABLE",
+    "contest_draws": 200118,
+    "rate": 0.03848423076923077,
+    "seed": 26092360
+  }
+}

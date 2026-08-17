@@ -1,0 +1,110 @@
+name: morocco26-fminus1-failure-investigator
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - '.github/workflows/morocco26-fminus1-failure-investigator.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-fminus1-isolated-end-to-end
+  cancel-in-progress: false
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  investigate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - name: Determine whether investigation is needed
+        id: need
+        run: |
+          if [ -f morocco26/data/goal100/fminus1_release_gate.json ]; then
+            gate=$(python -c "import json; print(json.load(open('morocco26/data/goal100/fminus1_release_gate.json'))['gate'])")
+          else
+            gate=MISSING
+          fi
+          if [ "$gate" = PASS ]; then echo 'needed=false' >> "$GITHUB_OUTPUT"; else echo 'needed=true' >> "$GITHUB_OUTPUT"; fi
+
+      - name: Capture latest end-to-end workflow failure
+        if: steps.need.outputs.needed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p morocco26/data/goal100
+          gh run list \
+            --repo SmokeSol/CHATGPT \
+            --workflow morocco26-fminus1-end-to-end.yml \
+            --branch morocco26-fminus1-run \
+            --limit 10 \
+            --json databaseId,status,conclusion,headSha,createdAt,updatedAt,displayTitle \
+            > /tmp/runs.json
+          python - <<'PY'
+          import json
+          runs=json.load(open('/tmp/runs.json'))
+          completed=[r for r in runs if r['status']=='completed']
+          target=completed[0] if completed else (runs[0] if runs else None)
+          if not target:
+              raise SystemExit('No end-to-end workflow run found')
+          open('/tmp/run_id','w').write(str(target['databaseId']))
+          json.dump(target,open('/tmp/target.json','w'),indent=2)
+          print(target)
+          PY
+          run_id=$(cat /tmp/run_id)
+          gh run view "$run_id" --repo SmokeSol/CHATGPT --log-failed > /tmp/failed.log 2>&1 || true
+          gh run view "$run_id" --repo SmokeSol/CHATGPT --json jobs,conclusion,status,url,headSha,createdAt,updatedAt > /tmp/run_detail.json || true
+          python - <<'PY'
+          import hashlib,json
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          g=Path('morocco26/data/goal100')
+          target=json.load(open('/tmp/target.json'))
+          log=Path('/tmp/failed.log').read_text(errors='replace')
+          detail_text=Path('/tmp/run_detail.json').read_text(errors='replace')
+          try: detail=json.loads(detail_text)
+          except Exception: detail={'raw':detail_text}
+          report={
+              'schema_version':'1.0',
+              'investigation_id':'M26-GOAL100-FMINUS1-FAILURE-INVESTIGATION-V1',
+              'created_at':datetime.now(ZoneInfo('Africa/Casablanca')).isoformat(timespec='seconds'),
+              'target_run':target,
+              'run_detail':detail,
+              'failed_log_sha256':hashlib.sha256(log.encode()).hexdigest(),
+              'failed_log_tail':log[-40000:],
+              'classification':'ENGINEERING_OR_SCIENTIFIC_FAILURE_REQUIRES_REVIEW',
+              'rule':'The failed log is preserved verbatim; no threshold or protocol is changed by this investigator.'
+          }
+          (g/'fminus1_failure_investigation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          (g/'fminus1_failure_log.txt').write_text(log,encoding='utf-8')
+          journal=Path('morocco26/FIL_ARIANE.md')
+          text=journal.read_text(encoding='utf-8')
+          marker='Entrée A016 — Investigation d’un échec F−1'
+          if marker not in text:
+              text += f'''\n\n### 2026-08-16 — Entrée A016 — Investigation d’un échec F−1\n\n**Run :** `{target['databaseId']}` — statut `{target['status']}`, conclusion `{target['conclusion']}`, head `{target['headSha']}`.\n\n**Preuve :** `data/goal100/fminus1_failure_investigation.json` et `data/goal100/fminus1_failure_log.txt`; SHA-256 log `{report['failed_log_sha256']}`.\n\n**Décision :** aucune baisse de seuil ni modification silencieuse du protocole. La prochaine correction doit être classée explicitement comme bug d’ingénierie ou amendment scientifique versionné.\n'''
+          journal.write_text(text,encoding='utf-8')
+          PY
+
+      - name: Commit investigation evidence
+        if: steps.need.outputs.needed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/fminus1_failure_investigation.json \
+            morocco26/data/goal100/fminus1_failure_log.txt \
+            morocco26/FIL_ARIANE.md
+          git commit -m 'tracking(morocco26): preserve F-1 failure investigation' || true
+          git push origin HEAD:morocco26-fminus1-run
+
+      - name: Confirm no investigation needed on PASS
+        if: steps.need.outputs.needed != 'true'
+        run: echo 'F-1 release gate PASS; no failure investigation required.'

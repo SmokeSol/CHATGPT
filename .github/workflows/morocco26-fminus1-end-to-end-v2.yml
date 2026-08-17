@@ -1,0 +1,53 @@
+name: morocco26-fminus1-end-to-end-v2
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - '.github/workflows/morocco26-fminus1-end-to-end-v2.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-fminus1-stable-v2
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet numpy pandas openpyxl requests beautifulsoup4 pypdf
+
+      - name: Record stabilized remote head
+        id: base
+        run: |
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          echo "Starting from $(git rev-parse HEAD)"
+
+      - name: Execute complete fail-closed F-1 chain
+        run: bash morocco26/scripts/goal100_execute_fminus1_end_to_end.sh
+
+      - name: Refuse to rebase a forecast-bound commit
+        env:
+          BASE_SHA: ${{ steps.base.outputs.sha }}
+        run: |
+          git fetch origin morocco26-fminus1-run
+          REMOTE_SHA=$(git rev-parse origin/morocco26-fminus1-run)
+          echo "Base=$BASE_SHA Remote=$REMOTE_SHA Local=$(git rev-parse HEAD)"
+          if [ "$REMOTE_SHA" != "$BASE_SHA" ]; then
+            echo 'Remote branch moved during evidentiary execution; refusing to rewrite manifest-bound commits.'
+            exit 1
+          fi
+
+      - name: Push exact two-commit evidence chain
+        run: git push origin HEAD:morocco26-fminus1-run
