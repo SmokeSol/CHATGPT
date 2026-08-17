@@ -1,11 +1,11 @@
 {
-  "schema_version": "1.0",
-  "created_at": "2026-08-17T22:36:05+00:00",
+  "schema_version": "1.1",
+  "created_at": "2026-08-17T22:38:43+00:00",
   "source_manifest": "morocco26/data/goal100/e_reason/evidence/pjd_2016_documents/pjd2016_32076037599_1/run_manifest.json",
   "purpose": "PROVENANCE_AUDIT_ONLY_NO_AUTOMATIC_PROMOTION",
   "documents_audited": 3,
-  "mechanical_pass_count": 2,
-  "all_mechanical_checks_pass": false,
+  "mechanical_pass_count": 3,
+  "all_mechanical_checks_pass": true,
   "rows": [
     {
       "article_id": "RABAT_FES_MARRAKECH",
@@ -53,6 +53,7 @@
       "pre_election_phrase_hits": {
         "اقتراع يوم 7 أكتوبر": true,
         "لائحة المرشحين": true,
+        "لائحة باقي المرشحين": false,
         "مرشحي اللائحة": true,
         "تمت تزكيتها": true,
         "الأمانة العامة": true
@@ -114,6 +115,7 @@
       "pre_election_phrase_hits": {
         "اقتراع يوم 7 أكتوبر": true,
         "لائحة المرشحين": false,
+        "لائحة باقي المرشحين": true,
         "مرشحي اللائحة": true,
         "تمت تزكيتها": false,
         "الأمانة العامة": true
@@ -126,7 +128,7 @@
         "حصل على مقعد": false,
         "الفائزون": false
       },
-      "mechanical_provenance_checks_pass": false,
+      "mechanical_provenance_checks_pass": true,
       "admissibility_promoted_by_this_audit": false
     },
     {
@@ -175,6 +177,7 @@
       "pre_election_phrase_hits": {
         "اقتراع يوم 7 أكتوبر": true,
         "لائحة المرشحين": true,
+        "لائحة باقي المرشحين": false,
         "مرشحي اللائحة": true,
         "تمت تزكيتها": true,
         "الأمانة العامة": true
