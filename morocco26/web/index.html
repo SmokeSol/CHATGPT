@@ -1,1 +1,108 @@
-SHOULD_NOT_USE
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlas 395 — Intelligence électorale territoriale</title>
+<meta name="description" content="Atlas 395 — projection probabiliste, territoriale et documentée des élections législatives marocaines de 2026.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080c13'/><g fill='none' stroke='%23ffa24d' stroke-width='2'><rect x='9' y='9' width='14' height='14'/><rect x='9' y='9' width='14' height='14' transform='rotate(45 16 16)'/></g></svg>">
+</head>
+<body>
+<div class="zellige" aria-hidden="true"></div>
+<div class="shell">
+<header class="top">
+  <div class="top-row">
+    <div class="mark">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="none" stroke="#ffa24d" stroke-width="1.25"><rect x="7.5" y="7.5" width="17" height="17"/><rect x="7.5" y="7.5" width="17" height="17" transform="rotate(45 16 16)"/></g>
+        <circle cx="16" cy="16" r="2.4" fill="#6e8bff"/>
+      </svg>
+      <div><div class="wordmark atlas-wordmark">ATLAS <span>395</span></div><small>Intelligence électorale territoriale · Maroc 2026</small></div>
+    </div>
+    <div class="top-spacer"></div>
+    <div class="meta-cell"><span class="eyebrow">Dernière actualisation</span><b id="meta-asof">—</b></div>
+    <div class="meta-cell"><span class="eyebrow">Périmètre</span><b>395 sièges</b></div>
+    <div class="meta-cell"><span class="eyebrow">Scrutin</span><b>23 septembre 2026</b></div>
+  </div>
+  <div class="atlas-status">
+    <div class="atlas-status-mark"></div>
+    <b>Projection structurelle de référence</b>
+    <div class="sep"></div>
+    <small id="status-detail">Projection territoriale avant intégration des candidatures et signaux politiques 2026 validés.</small>
+  </div>
+  <div class="kpis" id="kpis"></div>
+  <nav class="views" id="nav" role="tablist" aria-label="Vues d'Atlas 395"></nav>
+</header>
+
+<main>
+<section class="view active" id="view-overview" role="tabpanel">
+  <div class="view-head atlas-view-head">
+    <div><span class="section-kicker">Situation nationale</span><h2>Rapport de forces et incertitude territoriale</h2><p>Une lecture nationale construite à partir des 92 circonscriptions locales et des 12 circonscriptions régionales. Les intervalles affichent l'incertitude, pas une marge d'erreur éditoriale.</p></div>
+    <div class="edition-badge"><span>VERSION DE RÉFÉRENCE</span><b id="edition-date">—</b></div>
+  </div>
+  <div class="overview-grid">
+    <div class="panel national-board">
+      <div class="panel-head"><h3>Projection nationale des sièges</h3><div class="grow"></div><span class="eyebrow">395 sièges</span></div>
+      <div class="panel-body" id="national-board"></div>
+    </div>
+    <div class="panel map-overview-panel">
+      <div class="panel-head"><h3>Carte de l'incertitude territoriale</h3><div class="grow"></div><span class="eyebrow">92 circonscriptions</span></div>
+      <div class="panel-body"><svg class="cartogram atlas-cartogram" id="overview-map" role="img" aria-label="Cartogramme des 92 circonscriptions locales selon leur niveau d'incertitude"></svg><div class="atlas-legend" id="overview-legend"></div><p class="note">Cartogramme schématique : une tuile représente une circonscription. La position sert à la lecture régionale et ne constitue pas une frontière géographique.</p></div>
+    </div>
+    <div class="panel watch-panel">
+      <div class="panel-head"><h3>Territoires les plus ouverts</h3><div class="grow"></div><span class="eyebrow">Incertitude relative</span></div>
+      <div class="rows" id="open-territories"></div>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="view-territories" role="tabpanel">
+  <div class="view-head"><div><span class="section-kicker">Lecture territoriale</span><h2>Carte électorale des 92 circonscriptions locales</h2><p>Explorez chaque territoire : projection moyenne de sièges, probabilité d'obtenir au moins un siège, historique récent et état des informations 2026.</p></div></div>
+  <div class="filters">
+    <label class="search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.5-4.5"/></svg><input type="search" id="q" placeholder="Rechercher une circonscription…"></label>
+    <select id="region-filter" aria-label="Filtrer par région"></select>
+    <div class="chipset" id="uncertainty-chips"></div>
+    <div class="top-spacer"></div>
+    <button class="chip" id="toggle-table" aria-pressed="false">Vue tableau</button>
+  </div>
+  <div class="map-layout atlas-map-layout">
+    <div class="panel"><div class="panel-head"><h3>Cartogramme territorial</h3><div class="grow"></div><span class="eyebrow" id="map-count">—</span></div><div class="panel-body"><svg class="cartogram" id="territory-map"></svg><div class="atlas-legend" id="territory-legend"></div></div></div>
+    <div class="panel" id="territory-card"><div class="panel-head"><h3>Lecture de la circonscription</h3><div class="grow"></div><span class="eyebrow">Projection actuelle</span></div><div id="territory-card-body"><div class="card-empty">Sélectionnez une circonscription.</div></div></div>
+    <div class="rank-col"><div class="panel"><div class="panel-head"><h3>Plus forte incertitude</h3><div class="grow"></div><span class="eyebrow">10 territoires</span></div><div class="rows" id="uncertainty-ranking"></div></div></div>
+  </div>
+  <div class="panel" id="table-panel" style="display:none;margin-top:14px"><div class="panel-head"><h3>Les 92 circonscriptions</h3><div class="grow"></div><span class="eyebrow" id="table-count">—</span></div><div class="tbl-wrap"><table id="territory-table"></table></div></div>
+</section>
+
+<section class="view" id="view-parties" role="tabpanel">
+  <div class="view-head"><div><span class="section-kicker">Forces politiques</span><h2>Empreinte nationale et territoires d'appui</h2><p>Pour chaque parti : distribution nationale des sièges, évolution de l'empreinte électorale locale et circonscriptions qui contribuent le plus à sa position actuelle.</p></div></div>
+  <div class="surface-layout atlas-party-layout">
+    <div class="panel"><div class="panel-head"><h3>Parti</h3><div class="grow"></div><span class="eyebrow">Sélection</span></div><div class="party-list" id="party-list"></div></div>
+    <div id="party-stage"></div>
+  </div>
+</section>
+
+<section class="view" id="view-signals" role="tabpanel">
+  <div class="view-head"><div><span class="section-kicker">Veille 2026</span><h2>Ce qui est documenté — et ce qui change réellement la projection</h2><p>Atlas distingue les informations repérées dans les sources de celles qui sont suffisamment confirmées pour modifier la projection. Une nouvelle information peut être pertinente sans produire d'effet chiffré immédiat.</p></div></div>
+  <div class="signal-kpis" id="signal-kpis"></div>
+  <div class="signal-callout" id="signal-callout"></div>
+  <div class="panel" style="margin-top:14px"><div class="panel-head"><h3>Signaux documentés</h3><div class="grow"></div><span class="eyebrow">Impact sur la projection</span></div><div class="panel-body" id="signal-events"></div></div>
+  <div class="panel" style="margin-top:14px"><div class="panel-head"><h3>Couverture des sources</h3><div class="grow"></div><span class="eyebrow">État de consultation</span></div><div class="source-grid-premium" id="source-grid"></div></div>
+</section>
+
+<section class="view" id="view-history" role="tabpanel">
+  <div class="view-head"><div><span class="section-kicker">Historique des projections</span><h2>Ce qu'Atlas indiquait à chaque date</h2><p>Chaque version publiée reste conservée. Les nouvelles informations enrichissent la projection sans réécrire les versions antérieures.</p></div></div>
+  <div class="history-rail" id="history-rail"></div>
+  <div class="two-col" style="margin-top:14px">
+    <div class="panel"><div class="panel-head"><h3>Principes de lecture</h3></div><div class="panel-body principles"><div><b>Territorial d'abord</b><span>La projection nationale est l'addition de simulations produites circonscription par circonscription.</span></div><div><b>Incertitude visible</b><span>Les fourchettes sont affichées plutôt que masquées derrière un chiffre unique.</span></div><div><b>Sources séparées de leurs effets</b><span>Une information documentée ne modifie la projection que lorsqu'elle satisfait les critères de validation prévus.</span></div><div><b>Historique conservé</b><span>Aucune version passée n'est réécrite après coup.</span></div></div></div>
+    <div class="panel"><div class="panel-head"><h3>Limites de la version actuelle</h3></div><div class="panel-body"><ul class="limits-fr"><li>La projection de référence prolonge la structure électorale observée jusqu'en 2021 et n'intègre pas encore les candidatures 2026.</li><li>Les volumes locaux d'inscrits utilisés dans la simulation ne constituent pas des chiffres officiels 2026.</li><li>L'incertitude est calibrée sur l'historique disponible et reste hétérogène selon les partis et les territoires.</li><li>Les changements de listes, de candidatures et d'alliances confirmés en 2026 seront intégrés dans une version ultérieure.</li></ul></div></div>
+  </div>
+</section>
+</main>
+<footer class="atlas-footer"><div>ATLAS 395 · Intelligence électorale territoriale</div><div>Maroc · Législatives 2026</div></footer>
+</div>
+<div class="fatal" id="fatal" hidden></div>
+<script src="/app.js" defer></script>
+</body>
+</html>

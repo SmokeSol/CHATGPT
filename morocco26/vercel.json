@@ -7,6 +7,7 @@
     {"source": "/app", "destination": "/web/index.html"},
     {"source": "/styles.css", "destination": "/web/styles.css"},
     {"source": "/app.js", "destination": "/web/app.js"},
+    {"source": "/assets/(.*)", "destination": "/web/assets/$1"},
     {"source": "/data/(.*)", "destination": "/web/data/$1"}
   ]
 }

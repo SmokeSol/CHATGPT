@@ -34,7 +34,24 @@ jobs:
       - name: Validate Atlas views
         run: python morocco26/scripts/validate_atlas395_views.py
       - name: Check UI syntax
-        run: node --check morocco26/web/app.js
+        shell: bash
+        run: |
+          node --check morocco26/web/app.js
+          for f in morocco26/web/assets/*.js; do
+            node --check "$f"
+          done
+      - name: Check final-reader language surface
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          html = Path('morocco26/web/index.html').read_text(encoding='utf-8').lower()
+          forbidden = ['f-1','b2','unknown','locked','read only','github','monte carlo','llm','agentic','time machine']
+          bad = [x for x in forbidden if x in html]
+          if bad:
+              raise SystemExit('Forbidden final-reader terms in HTML: ' + ', '.join(bad))
+          print('ATLAS395_READER_LANGUAGE_OK')
+          PY
       - name: Enforce one-way write boundary
         shell: bash
         run: |
