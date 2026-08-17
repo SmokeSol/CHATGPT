@@ -1,0 +1,85 @@
+name: Atlas 395 — Institutional frontend smoke
+
+on:
+  push:
+    branches: [atlas395-v0]
+    paths:
+      - 'morocco26/web/**'
+      - '.github/workflows/atlas395-institutional-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Wait for institutional production release
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://atlas-395-rescue-20260817.vercel.app/'
+          for attempt in $(seq 1 30); do
+            code=$(curl -sS -L -o /tmp/index.html -w '%{http_code}' --max-time 40 "$URL" || true)
+            echo "attempt=$attempt http=$code bytes=$(wc -c </tmp/index.html 2>/dev/null || echo 0)"
+            if [ "$code" = '200' ] && grep -Fq 'Intelligence électorale territoriale · Maroc 2026' /tmp/index.html && grep -Fq 'Rapport de forces et incertitude territoriale' /tmp/index.html; then
+              echo "PUBLIC=$URL" >> "$GITHUB_ENV"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo 'INSTITUTIONAL_FRONT_NOT_VISIBLE'
+          exit 1
+
+      - name: Verify institutional assets and current evidence layer
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --max-time 60 "${PUBLIC}app.js" -o /tmp/app.js
+          curl -fsSL --max-time 60 "${PUBLIC}assets/institutional.js" -o /tmp/institutional.js
+          curl -fsSL --max-time 60 "${PUBLIC}assets/candidates.js" -o /tmp/candidates.js
+          curl -fsSL --max-time 60 "${PUBLIC}data/atlas_v1.json" -o /tmp/atlas.json
+          grep -Fq '/assets/institutional.js' /tmp/app.js
+          grep -Fq 'Candidatures documentées par circonscription' /tmp/institutional.js
+          grep -Fq 'RÉFÉRENCE CONSERVÉE' /tmp/institutional.js
+          node --check /tmp/app.js
+          node --check /tmp/institutional.js
+          node --check /tmp/candidates.js
+          python - <<'PY'
+          import json
+          x=json.load(open('/tmp/atlas.json',encoding='utf-8'))
+          c=x['coverage']
+          assert c['canonical_local_territories']==92
+          assert c['arabic_identity_coverage']==92
+          assert c['candidate_records_after_official_pjd_merge']==546
+          assert c['missing_after_merge']==[]
+          assert x['forecast']['immutable'] is True
+          print('DATA_LAYER=PASS')
+          PY
+
+      - name: Verify rendered executive interface in Chromium
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=40000 --dump-dom "$PUBLIC" > /tmp/dom.html
+          grep -Fq 'ATLAS <span>395</span>' /tmp/dom.html
+          grep -Fq 'Intelligence électorale territoriale · Maroc 2026' /tmp/dom.html
+          grep -Fq 'Rapport de forces et incertitude territoriale' /tmp/dom.html
+          grep -Fq 'Carte de l’incertitude territoriale' /tmp/dom.html || grep -Fq "Carte de l'incertitude territoriale" /tmp/dom.html
+          grep -Fq 'Candidatures documentées par circonscription' /tmp/dom.html
+          grep -Fq 'Intelligence territoriale · Candidatures 2026' /tmp/dom.html
+          grep -Fq 'RÉFÉRENCE CONSERVÉE' /tmp/dom.html
+          grep -Fq 'territoires bilingues' /tmp/dom.html
+          grep -Fq 'Méthode' /tmp/dom.html
+          grep -Fq 'Veille 2026' /tmp/dom.html
+          ! grep -Fqi 'intelligence artificielle' /tmp/dom.html
+          ! grep -Fqi "mettre l'IA" /tmp/dom.html
+          ! grep -Fqi 'LLM' /tmp/dom.html
+          ! grep -Fqi 'E_reason' /tmp/dom.html
+          ! grep -Fqi 'E_full' /tmp/dom.html
+          ! grep -Fqi 'Arabic Native' /tmp/dom.html
+          ! grep -Fq 'AUCUN DELTA APPLIQUÉ' /tmp/dom.html
+          echo 'INSTITUTIONAL_FRONTEND_SMOKE=PASS' >> "$GITHUB_STEP_SUMMARY"
