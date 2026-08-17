@@ -10,11 +10,10 @@ party page publication date is pre-cutoff and the document contains prospective
 """
 from __future__ import annotations
 
-import hashlib,html,json,os,re,time,unicodedata
+import hashlib,html,json,os,re,time
 from datetime import datetime,timezone
 from io import BytesIO
 from pathlib import Path
-from typing import Any
 from urllib.parse import urljoin,urlparse
 import requests
 from bs4 import BeautifulSoup
@@ -25,7 +24,7 @@ ER=ROOT/'morocco26/data/goal100/e_reason'
 REG=ER/'e_reason_source_registry_v1.json'
 RID=os.environ.get('E_REASON_PPS2016_RUN_ID') or 'pps2016_'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
 OUT=ER/'evidence/pps_2016_candidate_lists'/RID; RAW=OUT/'raw'; TEXT=OUT/'text'; RAW.mkdir(parents=True,exist_ok=False); TEXT.mkdir(parents=True,exist_ok=True)
-S=requests.Session(); S.headers.update({'User-Agent':'Atlas395-EReason-PPS2016/1.0','Accept':'*/*','Accept-Language':'ar,fr;q=0.8,en;q=0.5'})
+S=requests.Session(); S.headers.update({'User-Agent':'Atlas395-EReason-PPS2016/1.1','Accept':'*/*','Accept-Language':'ar,fr;q=0.8,en;q=0.5'})
 CUTOFF=datetime(2016,10,6,22,59,59,tzinfo=timezone.utc)
 CATEGORY='https://pps.ma/category/%D9%85%D8%B1%D8%B4%D8%AD%D9%8A-%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85-%D9%88-%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D9%8A%D8%A9/'
 SEEDS=[CATEGORY,CATEGORY+'page/2/?filter_by=featured',CATEGORY+'feed/','https://pps.ma/wp-json/wp/v2/posts?after=2016-10-02T00:00:00&before=2016-10-07T00:00:00&per_page=100','https://pps.ma/wp-sitemap.xml','https://pps.ma/sitemap_index.xml']
@@ -60,7 +59,12 @@ def parse_dt(value):
  except Exception:return None
 def page_dates(text):
  vals=[]
- for pat in [r'"datePublished"\s*:\s*"([^"]+)"',r'property=["\']article:published_time["\'][^>]*content=["\']([^"\']+)',r'<time[^>]+datetime=["\']([^"\']+)']:
+ patterns=[
+  r'"datePublished"\s*:\s*"([^"]+)"',
+  r'property=["\']article:published_time["\'][^>]*content=["\']([^"\']+)',
+  r'<time[^>]+datetime=["\']([^"\']+)["\']',
+ ]
+ for pat in patterns:
   vals.extend(m.group(1) for m in re.finditer(pat,text,re.I))
  return sorted(set(vals))
 def extract_urls(text,base):
@@ -94,10 +98,9 @@ def main():
    rec.update(status=r.status_code,bytes=len(body),content_type=ct,sha256=h,path=p,dates=page_dates(text),candidate_context=is_candidate_context(text))
    links=extract_urls(text,str(r.url)); rec['links']=links
    for v in links:
-    low=v.lower();
+    low=v.lower()
     if low.endswith(STATIC_SUFFIXES):discovered.add(v)
     elif ('2016' in low or any(reg in clean_text(text) for reg in REGIONS)) and len(queue)<250 and v not in seen:queue.append(v)
-   # Parse REST JSON objects separately to recover rendered post content/links.
    if 'json' in ct:
     try:
      data=r.json(); objs=data if isinstance(data,list) else [data]
@@ -106,11 +109,12 @@ def main():
       dt=parse_dt(o.get('date_gmt') or o.get('date'))
       title=clean_text((o.get('title') or {}).get('rendered','')); content=(o.get('content') or {}).get('rendered',''); link=o.get('link')
       if dt and dt<=CUTOFF and dt>=datetime(2016,10,2,tzinfo=timezone.utc) and (any(x in title for x in REGIONS) or is_candidate_context(content)):
-       candidate_pages[str(link or u)+'#'+str(o.get('id'))]={'post_id':o.get('id'),'date':dt.isoformat(),'title':title,'link':link,'content':content,'urls':extract_urls(content,str(link or u))}
-       discovered.update(x for x in extract_urls(content,str(link or u)) if x.lower().endswith(STATIC_SUFFIXES))
+       urls=extract_urls(content,str(link or u))
+       candidate_pages[str(link or u)+'#'+str(o.get('id'))]={'post_id':o.get('id'),'date':dt.isoformat(),'title':title,'link':link,'content':content,'urls':urls}
+       discovered.update(x for x in urls if x.lower().endswith(STATIC_SUFFIXES))
     except Exception:pass
-   if rec['candidate_context'] and rec['dates']:
-    if any((parse_dt(x) and parse_dt(x)<=CUTOFF) for x in rec['dates']):candidate_pages[u]={'date_candidates':rec['dates'],'title':None,'link':u,'content':text,'urls':links}
+   if rec['candidate_context'] and rec['dates'] and any((parse_dt(x) and parse_dt(x)<=CUTOFF) for x in rec['dates']):
+    candidate_pages[u]={'date_candidates':rec['dates'],'title':None,'link':u,'content':text,'urls':links}
   except Exception as e:rec['error']=f'{type(e).__name__}: {e}'
   fetches.append(rec)
  static=[]
@@ -123,15 +127,14 @@ def main():
    if r.ok and body.startswith(b'%PDF'):rec['pdf']=inspect_pdf(body,h)
   except Exception as e:rec['error']=f'{type(e).__name__}: {e}'
   static.append(rec)
- # Link each static asset to pre-cutoff candidate pages mechanically.
  for s in static:
   parents=[]
   for key,p in candidate_pages.items():
    if s['url'] in p.get('urls',[]):parents.append({'page_key':key,'date':p.get('date') or p.get('date_candidates'),'title':p.get('title'),'link':p.get('link')})
   s['precutoff_candidate_page_parents']=parents
   pdf=s.get('pdf') or {}
-  s['admissible_candidate_evidence']=bool(parents and s.get('status')==200 and (not pdf.get('outcome_terms')))
- payload={'schema_version':'1.0','run_id':RID,'created_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),'cutoff_utc':CUTOFF.isoformat(),'source_class':'T1_OFFICIAL_PARTY','qualified_domain':'pps.ma','fetches':fetches,'candidate_pages':candidate_pages,'static_assets':static,'counts':{'fetches':len(fetches),'candidate_pages':len(candidate_pages),'static_assets':len(static),'admissible_static_assets':sum(bool(x.get('admissible_candidate_evidence')) for x in static)},'invariants':{'outcomes_unsealed':False,'predictive_judgments_generated':False,'forecast_delta_generated':False,'F1_created':False}}
+  s['admissible_candidate_evidence']=bool(parents and s.get('status')==200 and not pdf.get('outcome_terms'))
+ payload={'schema_version':'1.1','run_id':RID,'created_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),'cutoff_utc':CUTOFF.isoformat(),'source_class':'T1_OFFICIAL_PARTY','qualified_domain':'pps.ma','fetches':fetches,'candidate_pages':candidate_pages,'static_assets':static,'counts':{'fetches':len(fetches),'candidate_pages':len(candidate_pages),'static_assets':len(static),'admissible_static_assets':sum(bool(x.get('admissible_candidate_evidence')) for x in static)},'invariants':{'outcomes_unsealed':False,'predictive_judgments_generated':False,'forecast_delta_generated':False,'F1_created':False}}
  (OUT/'run_manifest.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  (ER/'pps_2016_candidate_lists_latest.json').write_text(json.dumps({'schema_version':'1.0','latest_run_id':RID,'latest_manifest':str((OUT/'run_manifest.json').relative_to(ROOT))},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  print(json.dumps({'run_id':RID,'counts':payload['counts'],'assets':[{'url':x['url'],'bytes':x['bytes'],'pdf':x['pdf'],'parents':x['precutoff_candidate_page_parents'],'admissible':x['admissible_candidate_evidence']} for x in static]},ensure_ascii=False,indent=2))
