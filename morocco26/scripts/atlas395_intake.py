@@ -26,9 +26,9 @@ from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("Africa/Casablanca")
 UA = "Mozilla/5.0 (compatible; Atlas395-DailyWatch/0.5; +public-election-monitoring)"
-TIMEOUT = 18
+TIMEOUT = 12
 MAX_BYTES = 5 * 1024 * 1024
-DISCOVERY_PATHS = ("/sitemap.xml", "/sitemap_index.xml", "/wp-sitemap.xml", "/feed", "/feed.xml", "/rss", "/rss.xml")
+DISCOVERY_PATHS = ("/sitemap.xml", "/sitemap_index.xml", "/wp-sitemap.xml", "/feed", "/rss.xml")
 
 KEYWORDS = (
     "election", "élection", "elections", "élections", "legislative", "législative",
@@ -42,6 +42,10 @@ PARTY_TERMS = ("rni", "pam", "pjd", "usfp", "pps", "istiqlal", "mouvement popula
 
 def now_local() -> datetime:
     return datetime.now(TZ)
+
+
+def load(path: Path):
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def dump(path: Path, value) -> None:
@@ -151,7 +155,7 @@ def xml_links(base: str, body: bytes, domains: set[str], cutoff: datetime) -> tu
             d = parse_date(last)
             if host_allowed(u, domains) and ((d and d >= cutoff) or any(k in u.casefold() for k in KEYWORDS)):
                 pages.append(u)
-    else:  # RSS / Atom
+    else:
         for item in root.iter():
             t = item.tag.casefold()
             if t.endswith("item") or t.endswith("entry"):
@@ -179,7 +183,16 @@ def relevant(title: str, text: str, url: str) -> tuple[bool, int]:
 
 
 def collect(surface: dict, out_dir: Path, days_back: int, max_per_source: int) -> dict:
-    now = now_local(); cutoff = now - timedelta(days=days_back)
+    now = now_local(); day = now.date().isoformat(); day_path = out_dir / "runs" / f"{day}.json"
+    # A committed daily intake is immutable. Reruns reuse it rather than creating
+    # a second web observation set for the same official date.
+    if day_path.exists():
+        existing = load(day_path)
+        dump(out_dir / "latest.json", existing)
+        print(f"ATLAS395_INTAKE_REUSE date={day} detections={existing.get('detection_count',0)}")
+        return existing
+
+    cutoff = now - timedelta(days=days_back)
     observations, probes = [], []
     rows = [x for x in surface.get("surfaces", []) if x.get("surface_family") == "B2_SOURCE_REGISTRY_V1" and x.get("claim_eligible") and x.get("access_status") == "ACTIVE"]
     for row in sorted(rows, key=lambda x: x.get("source_id", "")):
@@ -239,13 +252,10 @@ def collect(surface: dict, out_dir: Path, days_back: int, max_per_source: int) -
         "probe_count":len(probes), "probe_failures":sum(1 for p in probes if p["error"]),
         "contract":{"product_watch_only":True,"writes_science":False,"may_change_forecast":False,"validation_required_before_forecast_effect":True},
     }
-    day = now.date().isoformat()
-    day_path = out_dir / "runs" / f"{day}.json"
-    if not day_path.exists():
-        dump(day_path, payload)
+    dump(day_path, payload)
     dump(out_dir / "latest.json", payload)
     index_path = out_dir / "index.json"
-    index = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else {"runs":[]}
+    index = load(index_path) if index_path.exists() else {"runs":[]}
     if not any(x.get("date") == day for x in index["runs"]):
         index["runs"].append({"date":day,"run_at":payload["run_at"],"detections":payload["detection_count"],"active_sources":payload["active_sources_scanned"]})
         index["runs"].sort(key=lambda x:x["date"])
@@ -260,7 +270,7 @@ def main() -> None:
     ap.add_argument("--days-back", type=int, default=4)
     ap.add_argument("--max-per-source", type=int, default=30)
     args = ap.parse_args()
-    surface = json.loads(Path(args.surface).read_text(encoding="utf-8"))
+    surface = load(Path(args.surface))
     result = collect(surface, Path(args.out), args.days_back, args.max_per_source)
     print(f"ATLAS395_INTAKE_OK sources={result['active_sources_scanned']} detections={result['detection_count']} probes={result['probe_count']} failures={result['probe_failures']}")
 
