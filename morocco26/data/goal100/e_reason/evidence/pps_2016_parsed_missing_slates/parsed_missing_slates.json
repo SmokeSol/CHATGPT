@@ -1,0 +1,1243 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-17T23:25:33+00:00",
+  "status": "PARTIAL_VALID",
+  "target_missing_ge3_districts": [
+    "ain-sebaa-hay-mohammadi",
+    "berrechid",
+    "casablanca-anfa",
+    "chtouka-ait-baha",
+    "el-gharb",
+    "essaouira",
+    "figuig",
+    "khemisset-oulmes",
+    "khouribga",
+    "mohammedia",
+    "moulay-rachid",
+    "sidi-bernoussi",
+    "sidi-kacem",
+    "tiflet-rommani"
+  ],
+  "territory_rows": [
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "mohammedia",
+      "historical_id_constituency": 527,
+      "historical_constituency": "Mohammadia",
+      "historical_region": "Casablanca - Settat",
+      "seats": 3,
+      "candidate_count": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "pdf_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+      "parent_page_url": "https://pps.ma/10495/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-05"
+      ],
+      "evidence_excerpt": {
+        "page": 7,
+        "territory_pattern": "المحمدية",
+        "candidate_geometry_bins": [
+          {
+            "bin_from_left": 0,
+            "raw_words": [
+              "ﺪﺒﻋ",
+              "رﺎﻃإ",
+              "ﺪﻤﺼﻟا",
+              "ﺔﻛﺮﺸﺑ",
+              "ﺔﺻﺎﺧ",
+              "ﻲﻘﻴﻘﺣ"
+            ],
+            "logical_name": "عبد إطار الصمد بشركة خاصة حقيقي"
+          },
+          {
+            "bin_from_left": 1,
+            "raw_words": [
+              "ﺪﻤﺣأ",
+              "ﺮﻃﺆﻣ",
+              "يﻮﺑﺮﺗ",
+              "ﻲﺤﻴﺒﺼﻟا"
+            ],
+            "logical_name": "أحمد مؤطر تربوي الصبيحي"
+          },
+          {
+            "bin_from_left": 2,
+            "raw_words": [
+              "ﺪﻤ(cid:22)",
+              "ﻲﻄﻳوﺮﻏ"
+            ],
+            "logical_name": ")22:dic(مد غرويطي"
+          }
+        ]
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "sidi-bernoussi",
+      "historical_id_constituency": 524,
+      "historical_constituency": "Sidi-Bernoussi",
+      "historical_region": "Casablanca - Settat",
+      "seats": 3,
+      "candidate_count": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "pdf_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+      "parent_page_url": "https://pps.ma/10495/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-05"
+      ],
+      "evidence_excerpt": {
+        "page": 12,
+        "territory_pattern": "سيديالبرنوصي",
+        "candidate_geometry_bins": [
+          {
+            "bin_from_left": 0,
+            "raw_words": [
+              "يﺪﻬﳌا",
+              "ﺦﻳﺮﻓا"
+            ],
+            "logical_name": "املهدي افريخ"
+          },
+          {
+            "bin_from_left": 1,
+            "raw_words": [
+              "ﻦﺴﺣ",
+              "دﻮﻤﺻ"
+            ],
+            "logical_name": "حسن صمود"
+          },
+          {
+            "bin_from_left": 2,
+            "raw_words": [
+              "ﻰﻔﻄﺼﳌا",
+              "غاﺮﻓ"
+            ],
+            "logical_name": "املصطفى فراغ"
+          }
+        ]
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "figuig",
+      "historical_id_constituency": 586,
+      "historical_constituency": "Figuig",
+      "historical_region": "Oriental",
+      "seats": 3,
+      "candidate_count": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "pdf_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+      "parent_page_url": "https://pps.ma/10453/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "evidence_excerpt": {
+        "page": 2,
+        "territory_pattern": "فجيج",
+        "candidate_geometry_bins": [
+          {
+            "bin_from_left": 0,
+            "raw_words": [
+              "ƒﺸﺒﻟا",
+              "يوﺎﺣر"
+            ],
+            "logical_name": "البشƒ رحاوي"
+          },
+          {
+            "bin_from_left": 1,
+            "raw_words": [
+              "دﻮﻌﺴﻣ",
+              "سﺎﻛﺮﺣ"
+            ],
+            "logical_name": "مسعود حركاس"
+          },
+          {
+            "bin_from_left": 2,
+            "raw_words": [
+              "ﺮﻳﺪﻣ",
+              "ﺔﻴﺻﻮﺼﺧ",
+              "ﺪﻤ(cid:22)",
+              "ﻲﺟﻮﻏاﺪﻴﺑ",
+              "ﺶﻴﻠﻴﻌﺑ",
+              "ﲔﺳﺪﻨﻬﻤﻠﻟ",
+              "ﺔﺳرﺪﲟ"
+            ],
+            "logical_name": "مدير خصوصية )22:dic(مد بيداغوجي بعيليش للمهندسني مبدرسة"
+          }
+        ]
+      }
+    }
+  ],
+  "candidate_rows": [
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "mohammedia",
+      "historical_id_constituency": 527,
+      "historical_constituency": "Mohammadia",
+      "candidate_name_ar": ")22:dic(مد غرويطي",
+      "candidate_name_ar_normalized": "22 مد غرويطي",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_COLUMN",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "display_column_from_right": 1,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:23:09+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+        "parent_page_url": "https://pps.ma/10495/",
+        "page": 7,
+        "archived_excerpt": {
+          "page": 7,
+          "territory_pattern": "المحمدية",
+          "candidate_geometry_bins": [
+            {
+              "bin_from_left": 0,
+              "raw_words": [
+                "ﺪﺒﻋ",
+                "رﺎﻃإ",
+                "ﺪﻤﺼﻟا",
+                "ﺔﻛﺮﺸﺑ",
+                "ﺔﺻﺎﺧ",
+                "ﻲﻘﻴﻘﺣ"
+              ],
+              "logical_name": "عبد إطار الصمد بشركة خاصة حقيقي"
+            },
+            {
+              "bin_from_left": 1,
+              "raw_words": [
+                "ﺪﻤﺣأ",
+                "ﺮﻃﺆﻣ",
+                "يﻮﺑﺮﺗ",
+                "ﻲﺤﻴﺒﺼﻟا"
+              ],
+              "logical_name": "أحمد مؤطر تربوي الصبيحي"
+            },
+            {
+              "bin_from_left": 2,
+              "raw_words": [
+                "ﺪﻤ(cid:22)",
+                "ﻲﻄﻳوﺮﻏ"
+              ],
+              "logical_name": ")22:dic(مد غرويطي"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "mohammedia",
+      "historical_id_constituency": 527,
+      "historical_constituency": "Mohammadia",
+      "candidate_name_ar": "أحمد مؤطر تربوي الصبيحي",
+      "candidate_name_ar_normalized": "احمد مؤطر تربوي الصبيحي",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_COLUMN",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "display_column_from_right": 2,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:23:09+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+        "parent_page_url": "https://pps.ma/10495/",
+        "page": 7,
+        "archived_excerpt": {
+          "page": 7,
+          "territory_pattern": "المحمدية",
+          "candidate_geometry_bins": [
+            {
+              "bin_from_left": 0,
+              "raw_words": [
+                "ﺪﺒﻋ",
+                "رﺎﻃإ",
+                "ﺪﻤﺼﻟا",
+                "ﺔﻛﺮﺸﺑ",
+                "ﺔﺻﺎﺧ",
+                "ﻲﻘﻴﻘﺣ"
+              ],
+              "logical_name": "عبد إطار الصمد بشركة خاصة حقيقي"
+            },
+            {
+              "bin_from_left": 1,
+              "raw_words": [
+                "ﺪﻤﺣأ",
+                "ﺮﻃﺆﻣ",
+                "يﻮﺑﺮﺗ",
+                "ﻲﺤﻴﺒﺼﻟا"
+              ],
+              "logical_name": "أحمد مؤطر تربوي الصبيحي"
+            },
+            {
+              "bin_from_left": 2,
+              "raw_words": [
+                "ﺪﻤ(cid:22)",
+                "ﻲﻄﻳوﺮﻏ"
+              ],
+              "logical_name": ")22:dic(مد غرويطي"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "mohammedia",
+      "historical_id_constituency": 527,
+      "historical_constituency": "Mohammadia",
+      "candidate_name_ar": "عبد إطار الصمد بشركة خاصة حقيقي",
+      "candidate_name_ar_normalized": "عبد اطار الصمد بشركة خاصة حقيقي",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_COLUMN",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "display_column_from_right": 3,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:23:09+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+        "parent_page_url": "https://pps.ma/10495/",
+        "page": 7,
+        "archived_excerpt": {
+          "page": 7,
+          "territory_pattern": "المحمدية",
+          "candidate_geometry_bins": [
+            {
+              "bin_from_left": 0,
+              "raw_words": [
+                "ﺪﺒﻋ",
+                "رﺎﻃإ",
+                "ﺪﻤﺼﻟا",
+                "ﺔﻛﺮﺸﺑ",
+                "ﺔﺻﺎﺧ",
+                "ﻲﻘﻴﻘﺣ"
+              ],
+              "logical_name": "عبد إطار الصمد بشركة خاصة حقيقي"
+            },
+            {
+              "bin_from_left": 1,
+              "raw_words": [
+                "ﺪﻤﺣأ",
+                "ﺮﻃﺆﻣ",
+                "يﻮﺑﺮﺗ",
+                "ﻲﺤﻴﺒﺼﻟا"
+              ],
+              "logical_name": "أحمد مؤطر تربوي الصبيحي"
+            },
+            {
+              "bin_from_left": 2,
+              "raw_words": [
+                "ﺪﻤ(cid:22)",
+                "ﻲﻄﻳوﺮﻏ"
+              ],
+              "logical_name": ")22:dic(مد غرويطي"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "sidi-bernoussi",
+      "historical_id_constituency": 524,
+      "historical_constituency": "Sidi-Bernoussi",
+      "candidate_name_ar": "املصطفى فراغ",
+      "candidate_name_ar_normalized": "املصطفي فراغ",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_COLUMN",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "display_column_from_right": 1,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:23:09+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+        "parent_page_url": "https://pps.ma/10495/",
+        "page": 12,
+        "archived_excerpt": {
+          "page": 12,
+          "territory_pattern": "سيديالبرنوصي",
+          "candidate_geometry_bins": [
+            {
+              "bin_from_left": 0,
+              "raw_words": [
+                "يﺪﻬﳌا",
+                "ﺦﻳﺮﻓا"
+              ],
+              "logical_name": "املهدي افريخ"
+            },
+            {
+              "bin_from_left": 1,
+              "raw_words": [
+                "ﻦﺴﺣ",
+                "دﻮﻤﺻ"
+              ],
+              "logical_name": "حسن صمود"
+            },
+            {
+              "bin_from_left": 2,
+              "raw_words": [
+                "ﻰﻔﻄﺼﳌا",
+                "غاﺮﻓ"
+              ],
+              "logical_name": "املصطفى فراغ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "sidi-bernoussi",
+      "historical_id_constituency": 524,
+      "historical_constituency": "Sidi-Bernoussi",
+      "candidate_name_ar": "حسن صمود",
+      "candidate_name_ar_normalized": "حسن صمود",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_COLUMN",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "display_column_from_right": 2,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:23:09+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+        "parent_page_url": "https://pps.ma/10495/",
+        "page": 12,
+        "archived_excerpt": {
+          "page": 12,
+          "territory_pattern": "سيديالبرنوصي",
+          "candidate_geometry_bins": [
+            {
+              "bin_from_left": 0,
+              "raw_words": [
+                "يﺪﻬﳌا",
+                "ﺦﻳﺮﻓا"
+              ],
+              "logical_name": "املهدي افريخ"
+            },
+            {
+              "bin_from_left": 1,
+              "raw_words": [
+                "ﻦﺴﺣ",
+                "دﻮﻤﺻ"
+              ],
+              "logical_name": "حسن صمود"
+            },
+            {
+              "bin_from_left": 2,
+              "raw_words": [
+                "ﻰﻔﻄﺼﳌا",
+                "غاﺮﻓ"
+              ],
+              "logical_name": "املصطفى فراغ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "sidi-bernoussi",
+      "historical_id_constituency": 524,
+      "historical_constituency": "Sidi-Bernoussi",
+      "candidate_name_ar": "املهدي افريخ",
+      "candidate_name_ar_normalized": "املهدي افريخ",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_COLUMN",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "display_column_from_right": 3,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:23:09+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+        "parent_page_url": "https://pps.ma/10495/",
+        "page": 12,
+        "archived_excerpt": {
+          "page": 12,
+          "territory_pattern": "سيديالبرنوصي",
+          "candidate_geometry_bins": [
+            {
+              "bin_from_left": 0,
+              "raw_words": [
+                "يﺪﻬﳌا",
+                "ﺦﻳﺮﻓا"
+              ],
+              "logical_name": "املهدي افريخ"
+            },
+            {
+              "bin_from_left": 1,
+              "raw_words": [
+                "ﻦﺴﺣ",
+                "دﻮﻤﺻ"
+              ],
+              "logical_name": "حسن صمود"
+            },
+            {
+              "bin_from_left": 2,
+              "raw_words": [
+                "ﻰﻔﻄﺼﳌا",
+                "غاﺮﻓ"
+              ],
+              "logical_name": "املصطفى فراغ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "figuig",
+      "historical_id_constituency": 586,
+      "historical_constituency": "Figuig",
+      "candidate_name_ar": "مدير خصوصية )22:dic(مد بيداغوجي بعيليش للمهندسني مبدرسة",
+      "candidate_name_ar_normalized": "مدير خصوصية 22 مد بيداغوجي بعيليش للمهندسني مبدرسة",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_COLUMN",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "display_column_from_right": 1,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:23:09+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+        "parent_page_url": "https://pps.ma/10453/",
+        "page": 2,
+        "archived_excerpt": {
+          "page": 2,
+          "territory_pattern": "فجيج",
+          "candidate_geometry_bins": [
+            {
+              "bin_from_left": 0,
+              "raw_words": [
+                "ƒﺸﺒﻟا",
+                "يوﺎﺣر"
+              ],
+              "logical_name": "البشƒ رحاوي"
+            },
+            {
+              "bin_from_left": 1,
+              "raw_words": [
+                "دﻮﻌﺴﻣ",
+                "سﺎﻛﺮﺣ"
+              ],
+              "logical_name": "مسعود حركاس"
+            },
+            {
+              "bin_from_left": 2,
+              "raw_words": [
+                "ﺮﻳﺪﻣ",
+                "ﺔﻴﺻﻮﺼﺧ",
+                "ﺪﻤ(cid:22)",
+                "ﻲﺟﻮﻏاﺪﻴﺑ",
+                "ﺶﻴﻠﻴﻌﺑ",
+                "ﲔﺳﺪﻨﻬﻤﻠﻟ",
+                "ﺔﺳرﺪﲟ"
+              ],
+              "logical_name": "مدير خصوصية )22:dic(مد بيداغوجي بعيليش للمهندسني مبدرسة"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "figuig",
+      "historical_id_constituency": 586,
+      "historical_constituency": "Figuig",
+      "candidate_name_ar": "مسعود حركاس",
+      "candidate_name_ar_normalized": "مسعود حركاس",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_COLUMN",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "display_column_from_right": 2,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:23:09+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+        "parent_page_url": "https://pps.ma/10453/",
+        "page": 2,
+        "archived_excerpt": {
+          "page": 2,
+          "territory_pattern": "فجيج",
+          "candidate_geometry_bins": [
+            {
+              "bin_from_left": 0,
+              "raw_words": [
+                "ƒﺸﺒﻟا",
+                "يوﺎﺣر"
+              ],
+              "logical_name": "البشƒ رحاوي"
+            },
+            {
+              "bin_from_left": 1,
+              "raw_words": [
+                "دﻮﻌﺴﻣ",
+                "سﺎﻛﺮﺣ"
+              ],
+              "logical_name": "مسعود حركاس"
+            },
+            {
+              "bin_from_left": 2,
+              "raw_words": [
+                "ﺮﻳﺪﻣ",
+                "ﺔﻴﺻﻮﺼﺧ",
+                "ﺪﻤ(cid:22)",
+                "ﻲﺟﻮﻏاﺪﻴﺑ",
+                "ﺶﻴﻠﻴﻌﺑ",
+                "ﲔﺳﺪﻨﻬﻤﻠﻟ",
+                "ﺔﺳرﺪﲟ"
+              ],
+              "logical_name": "مدير خصوصية )22:dic(مد بيداغوجي بعيليش للمهندسني مبدرسة"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "figuig",
+      "historical_id_constituency": 586,
+      "historical_constituency": "Figuig",
+      "candidate_name_ar": "البشƒ رحاوي",
+      "candidate_name_ar_normalized": "البش رحاوي",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_COLUMN",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "display_column_from_right": 3,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:23:09+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+        "parent_page_url": "https://pps.ma/10453/",
+        "page": 2,
+        "archived_excerpt": {
+          "page": 2,
+          "territory_pattern": "فجيج",
+          "candidate_geometry_bins": [
+            {
+              "bin_from_left": 0,
+              "raw_words": [
+                "ƒﺸﺒﻟا",
+                "يوﺎﺣر"
+              ],
+              "logical_name": "البشƒ رحاوي"
+            },
+            {
+              "bin_from_left": 1,
+              "raw_words": [
+                "دﻮﻌﺴﻣ",
+                "سﺎﻛﺮﺣ"
+              ],
+              "logical_name": "مسعود حركاس"
+            },
+            {
+              "bin_from_left": 2,
+              "raw_words": [
+                "ﺮﻳﺪﻣ",
+                "ﺔﻴﺻﻮﺼﺧ",
+                "ﺪﻤ(cid:22)",
+                "ﻲﺟﻮﻏاﺪﻴﺑ",
+                "ﺶﻴﻠﻴﻌﺑ",
+                "ﲔﺳﺪﻨﻬﻤﻠﻟ",
+                "ﺔﺳرﺪﲟ"
+              ],
+              "logical_name": "مدير خصوصية )22:dic(مد بيداغوجي بعيليش للمهندسني مبدرسة"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "failures": [
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 5,
+      "constituency_id": "khouribga",
+      "historical_constituency": "Khouribga",
+      "seats": 6,
+      "matched_territory_pattern": "خريبكة",
+      "selected_large_font_words": 0,
+      "bins": [
+        {
+          "bin_from_left": 0,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 1,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 2,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 3,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 4,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 5,
+          "raw_words": [],
+          "logical_name": ""
+        }
+      ],
+      "errors": [
+        "NOT_EXACTLY_ONE_MULTIWORD_NAME_PER_SEAT_COLUMN",
+        "DUPLICATE_OR_EMPTY_CANDIDATE"
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 9,
+      "constituency_id": "berrechid",
+      "historical_constituency": "Berrechid",
+      "seats": 4,
+      "matched_territory_pattern": "برشيد",
+      "selected_large_font_words": 0,
+      "bins": [
+        {
+          "bin_from_left": 0,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 1,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 2,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 3,
+          "raw_words": [],
+          "logical_name": ""
+        }
+      ],
+      "errors": [
+        "NOT_EXACTLY_ONE_MULTIWORD_NAME_PER_SEAT_COLUMN",
+        "DUPLICATE_OR_EMPTY_CANDIDATE"
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 13,
+      "constituency_id": "ain-sebaa-hay-mohammadi",
+      "historical_constituency": "Aïn-Sebaâ - Hay-Mohammadi",
+      "seats": 4,
+      "matched_territory_pattern": "عينالسبعالحيالمحمدي",
+      "selected_large_font_words": 0,
+      "bins": [
+        {
+          "bin_from_left": 0,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 1,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 2,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 3,
+          "raw_words": [],
+          "logical_name": ""
+        }
+      ],
+      "errors": [
+        "NOT_EXACTLY_ONE_MULTIWORD_NAME_PER_SEAT_COLUMN",
+        "DUPLICATE_OR_EMPTY_CANDIDATE"
+      ]
+    }
+  ],
+  "page_diagnostics": [
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 1,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 2,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 3,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 4,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 5,
+      "constituency_id": "khouribga",
+      "historical_constituency": "Khouribga",
+      "seats": 6,
+      "matched_territory_pattern": "خريبكة",
+      "selected_large_font_words": 0,
+      "bins": [
+        {
+          "bin_from_left": 0,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 1,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 2,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 3,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 4,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 5,
+          "raw_words": [],
+          "logical_name": ""
+        }
+      ],
+      "errors": [
+        "NOT_EXACTLY_ONE_MULTIWORD_NAME_PER_SEAT_COLUMN",
+        "DUPLICATE_OR_EMPTY_CANDIDATE"
+      ]
+    },
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 6,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 1,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 2,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 3,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 4,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 5,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 6,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 7,
+      "constituency_id": "mohammedia",
+      "historical_constituency": "Mohammadia",
+      "seats": 3,
+      "matched_territory_pattern": "المحمدية",
+      "selected_large_font_words": 12,
+      "bins": [
+        {
+          "bin_from_left": 0,
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "رﺎﻃإ",
+            "ﺪﻤﺼﻟا",
+            "ﺔﻛﺮﺸﺑ",
+            "ﺔﺻﺎﺧ",
+            "ﻲﻘﻴﻘﺣ"
+          ],
+          "logical_name": "عبد إطار الصمد بشركة خاصة حقيقي"
+        },
+        {
+          "bin_from_left": 1,
+          "raw_words": [
+            "ﺪﻤﺣأ",
+            "ﺮﻃﺆﻣ",
+            "يﻮﺑﺮﺗ",
+            "ﻲﺤﻴﺒﺼﻟا"
+          ],
+          "logical_name": "أحمد مؤطر تربوي الصبيحي"
+        },
+        {
+          "bin_from_left": 2,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﻲﻄﻳوﺮﻏ"
+          ],
+          "logical_name": ")22:dic(مد غرويطي"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 8,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 9,
+      "constituency_id": "berrechid",
+      "historical_constituency": "Berrechid",
+      "seats": 4,
+      "matched_territory_pattern": "برشيد",
+      "selected_large_font_words": 0,
+      "bins": [
+        {
+          "bin_from_left": 0,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 1,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 2,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 3,
+          "raw_words": [],
+          "logical_name": ""
+        }
+      ],
+      "errors": [
+        "NOT_EXACTLY_ONE_MULTIWORD_NAME_PER_SEAT_COLUMN",
+        "DUPLICATE_OR_EMPTY_CANDIDATE"
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 10,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 11,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 12,
+      "constituency_id": "sidi-bernoussi",
+      "historical_constituency": "Sidi-Bernoussi",
+      "seats": 3,
+      "matched_territory_pattern": "سيديالبرنوصي",
+      "selected_large_font_words": 6,
+      "bins": [
+        {
+          "bin_from_left": 0,
+          "raw_words": [
+            "يﺪﻬﳌا",
+            "ﺦﻳﺮﻓا"
+          ],
+          "logical_name": "املهدي افريخ"
+        },
+        {
+          "bin_from_left": 1,
+          "raw_words": [
+            "ﻦﺴﺣ",
+            "دﻮﻤﺻ"
+          ],
+          "logical_name": "حسن صمود"
+        },
+        {
+          "bin_from_left": 2,
+          "raw_words": [
+            "ﻰﻔﻄﺼﳌا",
+            "غاﺮﻓ"
+          ],
+          "logical_name": "املصطفى فراغ"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 13,
+      "constituency_id": "ain-sebaa-hay-mohammadi",
+      "historical_constituency": "Aïn-Sebaâ - Hay-Mohammadi",
+      "seats": 4,
+      "matched_territory_pattern": "عينالسبعالحيالمحمدي",
+      "selected_large_font_words": 0,
+      "bins": [
+        {
+          "bin_from_left": 0,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 1,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 2,
+          "raw_words": [],
+          "logical_name": ""
+        },
+        {
+          "bin_from_left": 3,
+          "raw_words": [],
+          "logical_name": ""
+        }
+      ],
+      "errors": [
+        "NOT_EXACTLY_ONE_MULTIWORD_NAME_PER_SEAT_COLUMN",
+        "DUPLICATE_OR_EMPTY_CANDIDATE"
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 14,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 15,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 16,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "souss-massa",
+      "page": 1,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "souss-massa",
+      "page": 2,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "souss-massa",
+      "page": 3,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "souss-massa",
+      "page": 4,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "souss-massa",
+      "page": 5,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "souss-massa",
+      "page": 6,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "souss-massa",
+      "page": 7,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "oriental",
+      "page": 1,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "oriental",
+      "page": 2,
+      "constituency_id": "figuig",
+      "historical_constituency": "Figuig",
+      "seats": 3,
+      "matched_territory_pattern": "فجيج",
+      "selected_large_font_words": 11,
+      "bins": [
+        {
+          "bin_from_left": 0,
+          "raw_words": [
+            "ƒﺸﺒﻟا",
+            "يوﺎﺣر"
+          ],
+          "logical_name": "البشƒ رحاوي"
+        },
+        {
+          "bin_from_left": 1,
+          "raw_words": [
+            "دﻮﻌﺴﻣ",
+            "سﺎﻛﺮﺣ"
+          ],
+          "logical_name": "مسعود حركاس"
+        },
+        {
+          "bin_from_left": 2,
+          "raw_words": [
+            "ﺮﻳﺪﻣ",
+            "ﺔﻴﺻﻮﺼﺧ",
+            "ﺪﻤ(cid:22)",
+            "ﻲﺟﻮﻏاﺪﻴﺑ",
+            "ﺶﻴﻠﻴﻌﺑ",
+            "ﲔﺳﺪﻨﻬﻤﻠﻟ",
+            "ﺔﺳرﺪﲟ"
+          ],
+          "logical_name": "مدير خصوصية )22:dic(مد بيداغوجي بعيليش للمهندسني مبدرسة"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "region": "oriental",
+      "page": 3,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "oriental",
+      "page": 4,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "oriental",
+      "page": 5,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "oriental",
+      "page": 6,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "oriental",
+      "page": 7,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    },
+    {
+      "region": "oriental",
+      "page": 8,
+      "territory_candidates": [],
+      "status": "SKIP_TERRITORY_NOT_UNIQUE"
+    }
+  ],
+  "counts": {
+    "target_missing_ge3": 14,
+    "territories_recovered": 3,
+    "candidate_rows": 9,
+    "recovered_districts_with_at_least_three_verified_candidate_identities": 3
+  },
+  "invariants": {
+    "candidate_rank_inferred_from_layout": false,
+    "failed_pages_promoted": false,
+    "source_only_T1_pre_cutoff": true,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "F1_created": false
+  }
+}
