@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "amendment_id": "M26-GOAL100-E-COLLECT-V1.1-HUMAN-SEED",
+  "effective_at": "2026-08-17T18:17:00+01:00",
+  "timezone": "Africa/Casablanca",
+  "parent_experiment": "M26-GOAL100-E-COLLECT-V1",
+  "governance_decision": "User explicitly prioritizes Atlas V1 delivery speed over measuring autonomous source discovery versus human discovery.",
+  "scientific_reclassification": {
+    "abandoned_claim": "The current run will NOT be used to estimate whether the agent autonomously discovers better source URLs than a human.",
+    "retained_question": "Given permitted source surfaces, including human-provided seeds, can an Arabic-native multi-agent collector convert them into correct, provenance-complete, bilingual, canonical electoral evidence that deterministic B2 could not use?",
+    "future_human_vs_llm_comparison": "Reserve human-versus-LLM experimental contrast for E_reason and later predictive residual reasoning, where the comparison is more decision-relevant."
+  },
+  "human_seed_policy": {
+    "allowed": true,
+    "allowed_at_any_collection_stage": true,
+    "must_record_origin": true,
+    "origin_values": ["HUMAN_SEED", "AGENT_DISCOVERY", "REPO_EXISTING"],
+    "human_seed_is_not_evidence_by_itself": true,
+    "evidence_must_still_pass_source_policy": true,
+    "no_scientific_credit_for_discovery_origin": true
+  },
+  "initial_human_seeds": [
+    {
+      "seed_id": "HSEED-MEDIAS24-ELECTION-ASSETS",
+      "url": "https://assets.medias24.com/elections/",
+      "source_class": "MEDIAS24",
+      "purpose": [
+        "enumerate structured election assets and interactive-data payloads",
+        "recover historical candidate/constituency/office/party-switch evidence where available",
+        "recover current 2026 candidate and territory evidence where available",
+        "identify reusable canonical Arabic/Latin aliases",
+        "map asset provenance back to Médias24 publication context"
+      ],
+      "instruction": "Explore deeply, including referenced JSON/CSV/JS/data endpoints and archived versions when accessible. Treat the root URL as a discovery surface, not automatic factual proof. Every accepted fact still requires a hashable allowed-source artifact and temporal-cutoff compliance."
+    }
+  ],
+  "run_reuse_policy": {
+    "if_v1_run_already_started": "Do not delete or rewrite it. Preserve its run directory and mark it SUPERSEDED_FOR_DISCOVERY_ABLATION. Existing collected evidence may be reused in V1.1 only if provenance is complete and each record is revalidated under the V1.1 source and evidence rules.",
+    "no_restart_required_for_valid_work": true
+  },
+  "unchanged_constraints": [
+    "F-1 immutable",
+    "F0 immutable",
+    "B2 immutable",
+    "no forecast delta in E_collect",
+    "no coefficient changes",
+    "no E_reason or E_full execution",
+    "Arabic raw text preserved",
+    "ambiguity remains explicit",
+    "allowed evidence sources remain official/institutional Moroccan sources, official Moroccan party sites, Médias24, and archives of those same domains",
+    "historical cutoff discipline remains mandatory",
+    "independent adjudication remains mandatory"
+  ],
+  "product_priority": "After the 92+16 quality benchmark is adjudicated, proceed directly to production-wide Atlas V1 collection using all qualified human and agent discovered source surfaces."
+}
