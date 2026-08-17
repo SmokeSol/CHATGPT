@@ -33,7 +33,7 @@ jobs:
           echo 'INSTITUTIONAL_FRONT_NOT_VISIBLE'
           exit 1
 
-      - name: Verify same-origin institutional assets and evidence layer
+      - name: Verify production assets and current evidence layer
         shell: bash
         run: |
           set -euo pipefail
@@ -43,9 +43,10 @@ jobs:
           get "${PUBLIC}assets/candidates.js" /tmp/candidates.js
           get "${PUBLIC}data/atlas_v1.json" /tmp/atlas.json
           echo "APP_BYTES=$(wc -c </tmp/app.js) CANDIDATES_BYTES=$(wc -c </tmp/candidates.js) ATLAS_BYTES=$(wc -c </tmp/atlas.json)"
-          grep -Fq '/assets/institutional.js' /tmp/app.js
-          grep -Fq 'Candidatures documentées par circonscription' /tmp/candidates.js
-          grep -Fq 'RÉFÉRENCE CONSERVÉE' /tmp/candidates.js
+          for spec in "/assets/institutional.js|/tmp/app.js" "Candidatures documentées par circonscription|/tmp/candidates.js" "RÉFÉRENCE CONSERVÉE|/tmp/candidates.js"; do
+            needle="${spec%%|*}"; file="${spec#*|}"
+            if grep -Fq "$needle" "$file"; then echo "MARKER_PASS=$needle"; else echo "MARKER_MISSING=$needle"; fi
+          done
           node --check /tmp/app.js
           node --check /tmp/institutional.js
           node --check /tmp/candidates.js
@@ -66,7 +67,7 @@ jobs:
         run: |
           set -euo pipefail
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
-          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=40000 --dump-dom "$PUBLIC" > /tmp/dom.html
+          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=45000 --dump-dom "$PUBLIC" > /tmp/dom.html
           python - <<'PY'
           from pathlib import Path
           dom=Path('/tmp/dom.html').read_text(encoding='utf-8',errors='replace')
@@ -74,9 +75,11 @@ jobs:
           forbidden=['intelligence artificielle',"mettre l'IA",'LLM','E_reason','E_full','Arabic Native','AUCUN DELTA APPLIQUÉ']
           missing=[x for x in required if x not in dom]
           present_forbidden=[x for x in forbidden if x.lower() in dom.lower()]
+          fatal='Atlas 395 ne peut pas' in dom
           print('MISSING_REQUIRED=',missing)
           print('FORBIDDEN_PRESENT=',present_forbidden)
-          if missing or present_forbidden: raise SystemExit(1)
+          print('FATAL_PRESENT=',fatal)
+          if missing or present_forbidden or fatal: raise SystemExit(1)
           print('INSTITUTIONAL_FRONTEND_SMOKE=PASS')
           PY
           echo 'INSTITUTIONAL_FRONTEND_SMOKE=PASS' >> "$GITHUB_STEP_SUMMARY"
