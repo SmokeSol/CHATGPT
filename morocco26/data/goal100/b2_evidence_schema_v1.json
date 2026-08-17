@@ -1,0 +1,378 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "M26-GOAL100-B2-EVIDENCE-SCHEMA-V1",
+  "title": "MOROCCO//26 B2 structured evidence record",
+  "description": "Append-only, non-agentic, provenance-complete evidence unit. Critical facts remain inadmissible until the frozen verification rule is satisfied.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "claim_key",
+    "evidence_class",
+    "evidence_type",
+    "subject",
+    "territorial_scope",
+    "claim",
+    "time",
+    "source",
+    "verification",
+    "extraction",
+    "admissibility",
+    "integrity"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^b2_[0-9a-f]{64}$"
+    },
+    "supersedes_record_id": {
+      "type": ["string", "null"],
+      "pattern": "^b2_[0-9a-f]{64}$"
+    },
+    "claim_key": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 512
+    },
+    "evidence_class": {
+      "enum": [
+        "BALLOT_AND_LEGAL_FACT",
+        "STRUCTURAL_POLITICAL_FACT",
+        "OBJECTIVE_CAMPAIGN_EVENT"
+      ]
+    },
+    "evidence_type": {
+      "enum": [
+        "LIST_REGISTERED",
+        "LIST_REJECTED",
+        "CANDIDATE_REGISTERED",
+        "CANDIDATE_WITHDRAWN",
+        "CANDIDATE_DISQUALIFIED",
+        "CANDIDATE_RANK",
+        "CANDIDATE_BIRTHDATE",
+        "FORMAL_ALLIANCE",
+        "INCUMBENT_STATUS",
+        "PARTY_SWITCH",
+        "ELECTED_OFFICE",
+        "PARTY_OFFICE",
+        "FORMAL_ENDORSEMENT",
+        "FORMAL_DEFECTION",
+        "CAMPAIGN_LAUNCH",
+        "FORMAL_COALITION_EVENT",
+        "OFFICIAL_INVESTIGATION",
+        "OFFICIAL_SANCTION",
+        "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"
+      ]
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["subject_type", "canonical_id", "canonical_label"],
+      "properties": {
+        "subject_type": {
+          "enum": ["CANDIDATE", "LIST", "PARTY", "ALLIANCE", "OFFICE_HOLDER", "EVENT"]
+        },
+        "canonical_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "canonical_label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "candidate_id": {
+          "type": ["string", "null"],
+          "maxLength": 256
+        },
+        "party_id": {
+          "type": ["string", "null"],
+          "maxLength": 64
+        },
+        "previous_party_id": {
+          "type": ["string", "null"],
+          "maxLength": 64
+        },
+        "list_id": {
+          "type": ["string", "null"],
+          "maxLength": 256
+        }
+      }
+    },
+    "territorial_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scope_type", "country"],
+      "properties": {
+        "scope_type": {
+          "enum": ["NATIONAL", "REGIONAL", "LOCAL"]
+        },
+        "country": {
+          "const": "MA"
+        },
+        "region_id": {
+          "type": ["string", "null"],
+          "maxLength": 128
+        },
+        "constituency_id": {
+          "type": ["string", "null"],
+          "maxLength": 128
+        },
+        "mapping_method": {
+          "enum": [
+            "CERTIFIED_EXACT_ID",
+            "REVIEWED_ALIAS",
+            "NATIONAL_NOT_APPLICABLE",
+            "UNRESOLVED"
+          ]
+        },
+        "mapping_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["predicate", "canonical_value", "assertion_text"],
+      "properties": {
+        "predicate": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 128
+        },
+        "canonical_value": {
+          "type": ["string", "number", "integer", "boolean", "object", "array", "null"]
+        },
+        "unit": {
+          "type": ["string", "null"],
+          "maxLength": 64
+        },
+        "assertion_text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "language": {
+          "enum": ["ar", "fr", "en", "zgh", "other"]
+        }
+      }
+    },
+    "time": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["event_at", "published_at", "first_observed_at", "timezone"],
+      "properties": {
+        "event_at": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "published_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "first_observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "corrected_at": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "timezone": {
+          "const": "Africa/Casablanca"
+        },
+        "timestamp_precision": {
+          "enum": ["SECOND", "MINUTE", "HOUR", "DAY", "UNKNOWN"]
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_tier",
+        "publisher",
+        "source_locator",
+        "publication_type",
+        "independence_cluster"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "source_tier": {
+          "enum": ["T0", "T1", "T2", "T3", "T4"]
+        },
+        "publisher": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "source_locator": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        },
+        "publication_type": {
+          "enum": [
+            "OFFICIAL_TABLE",
+            "OFFICIAL_GAZETTE",
+            "OFFICIAL_NOTICE",
+            "PRESS_RELEASE",
+            "NEWS_ARTICLE",
+            "VIDEO_TRANSCRIPT",
+            "SOCIAL_POST",
+            "ARCHIVE_COPY"
+          ]
+        },
+        "independence_cluster": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "archive_locator": {
+          "type": ["string", "null"],
+          "maxLength": 2048
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "corroborating_record_ids", "conflicting_record_ids", "critical_double_entry"],
+      "properties": {
+        "status": {
+          "enum": [
+            "VERIFIED_AUTHORITATIVE",
+            "CORROBORATED_INDEPENDENT",
+            "SINGLE_SOURCE_PENDING",
+            "CONFLICTED",
+            "REJECTED"
+          ]
+        },
+        "corroborating_record_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^b2_[0-9a-f]{64}$"
+          }
+        },
+        "conflicting_record_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^b2_[0-9a-f]{64}$"
+          }
+        },
+        "critical_double_entry": {
+          "enum": ["MATCHED", "NOT_REQUIRED", "PENDING", "FAILED"]
+        },
+        "verification_note": {
+          "type": ["string", "null"],
+          "maxLength": 2000
+        }
+      }
+    },
+    "extraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "extractor_version", "llm_used"],
+      "properties": {
+        "method": {
+          "enum": [
+            "STRUCTURED_API",
+            "HTML_TABLE_PARSER",
+            "PDF_TABLE_PARSER",
+            "DETERMINISTIC_REGEX",
+            "HUMAN_DOUBLE_ENTRY",
+            "MANUAL_TRANSCRIPTION_RECONCILED"
+          ]
+        },
+        "extractor_version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "llm_used": {
+          "const": false
+        },
+        "field_locations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 512
+          }
+        }
+      }
+    },
+    "admissibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "forecast_role", "reason_codes"],
+      "properties": {
+        "state": {
+          "enum": ["ADMISSIBLE", "PENDING", "EXCLUDED", "SUPERSEDED"]
+        },
+        "forecast_role": {
+          "enum": ["MECHANICAL", "PREDICTIVE_CALIBRATED", "REPORTING_ONLY", "NONE"]
+        },
+        "reason_codes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "PASS",
+              "POST_CUTOFF",
+              "SOURCE_TIER_INSUFFICIENT",
+              "CORROBORATION_MISSING",
+              "CRITICAL_DOUBLE_ENTRY_MISSING",
+              "TERRITORY_UNRESOLVED",
+              "IDENTITY_UNRESOLVED",
+              "CONFLICTED",
+              "DUPLICATE_WIRE_COPY",
+              "PROHIBITED_EVIDENCE_CLASS",
+              "PREDICTIVE_COEFFICIENT_NOT_CALIBRATED",
+              "SUPERSEDED_BY_CORRECTION"
+            ]
+          }
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["document_sha256", "content_sha256", "claim_sha256", "canonical_record_sha256"],
+      "properties": {
+        "document_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "claim_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "canonical_record_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}
