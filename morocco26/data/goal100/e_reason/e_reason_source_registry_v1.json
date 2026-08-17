@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "registry_id": "M26-E-REASON-SOURCE-REGISTRY-V1",
   "created_at": "2026-08-17T23:22:00+01:00",
   "policy": "morocco26/data/goal100/e_reason/e_reason_source_policy_v1.json",
@@ -36,6 +36,35 @@
         "Search snippets are discovery only and are not evidence.",
         "Current migrated static files are accepted only as archival mirrors of a pre-cutoff first-party attachment when the historical article, attachment filename and document content jointly establish provenance.",
         "No post-cutoff election result, winner/loser statement, or elected-member outcome may enter an E_reason packet.",
+        "Party nomination facts are labelled PARTY_ANNOUNCED unless a T0 source establishes legal registration."
+      ]
+    },
+    {
+      "domain": "pps.ma",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "qualification_status": "QUALIFIED_BEFORE_EXTRACTION",
+      "qualification_basis": [
+        "The site identifies itself as the official website of Morocco's Parti du Progres et du Socialisme (PPS).",
+        "The site exposes a historical category explicitly dedicated to PPS candidates for the 7 October 2016 legislative election, with region-level entries dated 3 October 2016 and first-party download links labelled as candidate lists.",
+        "This use is limited to first-party candidate/list and formal-endorsement facts permitted by the frozen T1 source policy."
+      ],
+      "qualification_evidence": [
+        {
+          "url": "https://pps.ma/",
+          "observed_title": "حزب التقدم و الإشتراكية",
+          "observed_at": "2026-08-17"
+        },
+        {
+          "url": "https://pps.ma/category/%D9%85%D8%B1%D8%B4%D8%AD%D9%8A-%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84%D8%AA%D9%82%D8%AF%D9%85-%D9%88-%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%D9%8A%D8%A9/",
+          "published_entries_observed": "2016-10-03",
+          "observed_title": "مرشحي حزب التقدم و الاشتراكية",
+          "candidate_fact_extraction_performed_before_qualification": false
+        }
+      ],
+      "restrictions": [
+        "Search-engine snippets observed before qualification are discovery-only and must not be used as candidate evidence.",
+        "Candidate facts must be extracted only from official PPS pages or attached/static first-party documents whose publication/provenance is pre-cutoff or mechanically established as an archival mirror of pre-cutoff material.",
+        "No post-cutoff deputy/election-result page may be used to reconstruct 2016 candidate identities.",
         "Party nomination facts are labelled PARTY_ANNOUNCED unless a T0 source establishes legal registration."
       ]
     }
