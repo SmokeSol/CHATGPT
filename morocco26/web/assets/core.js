@@ -75,7 +75,7 @@ async function boot(){
   try{
     const [snapshot,national,constituencies,parties,evidence,methodology] = await Promise.all([
       load('current_snapshot.json'), load('national_projection.json'), load('constituency_cards.json'),
-      load('party_cards.json'), load('evidence_index.json'), load('methodology_state.json')
+      load('party_cards.json'), load('evidence_index.json'), load('public_methodology.json')
     ]);
     D = {snapshot,national,constituencies,parties,evidence,methodology};
     selectedTerritory = [...constituencies.constituencies].sort((a,b)=>b.uncertainty.value-a.uncertainty.value)[0]?.constituency_id;
@@ -131,7 +131,7 @@ function renderMethodology(){
   if(!$('#method-version')) return;
   const m = D.methodology?.public_methodology || {};
   const draws = Number(m.draws || D.snapshot?.draws || 0);
-  $('#method-version').textContent = m.reference_status || 'Gelée';
+  $('#method-version').textContent = m.reference_status || 'Enregistrée';
   $('#method-version-date').textContent = m.reference_date ? `depuis le ${dateFr(m.reference_date)}` : 'avant le scrutin';
   $('#method-draws').textContent = draws ? draws.toLocaleString('fr-FR') : '50 000';
   $('#method-seats').textContent = Number(m.total_seats || 395).toLocaleString('fr-FR');
