@@ -19,7 +19,9 @@ echo "Atlas Daily source: branch=$SCIENCE_BRANCH ref=$SCIENCE_REF snapshot=$SNAP
 
 # Product-side autonomous watch. The product policy is stricter than the frozen
 # scientific source registry: institutional/official sources plus Médias24 only.
-python morocco26/scripts/atlas395_intake.py \
+# Arabic source paths are normalized from IRI to an ASCII request URI without
+# changing the source-facing URL retained in Atlas provenance.
+python morocco26/scripts/atlas395_intake_uri.py \
   --surface "$GOAL100/b2_deterministic_acquisition_surface.json" \
   --policy "$SOURCE_POLICY" \
   --out "$INTAKE_DIR" \
