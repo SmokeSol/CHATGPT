@@ -22,7 +22,8 @@ jobs:
         with: {python-version: "3.12"}
       - run: python morocco26/scripts/validate_e_reason_prereg.py
       - run: python -m pip install --disable-pip-version-check requests==2.32.4 beautifulsoup4==4.13.4
-      - run: python morocco26/scripts/e_reason_audit_pps_2016_pdf_provenance.py
+      - name: Audit latest exact PPS regional PDF probe
+        run: python morocco26/scripts/e_reason_audit_pps_2016_pdf_provenance.py
       - run: python morocco26/scripts/validate_e_reason_prereg.py
       - name: Commit audit
         run: |
