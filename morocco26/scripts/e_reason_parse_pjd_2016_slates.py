@@ -5,8 +5,8 @@ The Excel PDFs expose deterministic table cells but store Arabic glyphs in
 visual character order. Each Arabic cell is converted to logical order by one
 mechanical whole-cell reversal. A small frozen set of presentation-artifact
 repairs observed by comparing the same cell with the independent pypdf text
-layer is then applied (e.g. امل->الم, هللا->الله). Candidate identity is still
-accepted only if the repaired sequence is independently present in pypdf text.
+layer is then applied. Identity comparison uses Unicode NFKC and Arabic codepoint
+canonicalization, never fuzzy person-name matching.
 """
 from __future__ import annotations
 
@@ -14,39 +14,15 @@ import html,json,re,unicodedata,hashlib
 from collections import defaultdict
 from datetime import datetime,timezone
 from pathlib import Path
-
 import pdfplumber
 
 ROOT=Path(__file__).resolve().parents[2]
 ER=ROOT/'morocco26/data/goal100/e_reason'
 LATEST=ER/'pjd_2016_documents_latest.json'; CROSS=ER/'evidence/arabic_2016_crosswalk/crosswalk.json'; ADM=ER/'evidence/pjd_2016_admissibility/decision.json'; OUT=ER/'evidence/pjd_2016_parsed_slates'
 TABLE_SETTINGS={'vertical_strategy':'lines','horizontal_strategy':'lines','intersection_tolerance':5,'snap_tolerance':3,'join_tolerance':3}
-
-# Previously audited historical spellings/typos. Values are the stable identity
-# IDs from the accepted Arabic layer; they affect territory identity only.
-TERRITORY_ALIASES={
- 'اسا الزالك':'assa-zag','اسا الزاك':'assa-zag','الناضور':'nador','الناظور':'nador',
- 'الدرويش':'driouch','الدريوش':'driouch','سيدي افني':'sidi-ifni','الفقيه بنصالح':'fquih-ben-salah',
- 'ابن امسيك':'ben-m-sick','ابن مسيك':'ben-m-sick','طنجة اصيلا':'tanger-assilah','طنجة اصيلة':'tanger-assilah',
- 'بزو واوزغت':'bzou-ouaouizeght','بزو واويزغت':'bzou-ouaouizeght',
-}
-
-# These are not semantic substitutions. They are recurrent PDF Arabic shaping /
-# visual-order artefacts demonstrated against the independent pypdf extraction
-# of the very same pre-cutoff PDFs.
-PRESENTATION_REPAIRS=(
-    ('امل','الم'),
-    ('هللا','الله'),
-    ('موالي','مولاي'),
-)
-
-# Whole-territory visual-order artefacts whose corrected first-party spelling is
-# independently visible in pypdf text / accepted Arabic identity layer.
-TERRITORY_CANONICAL_REPAIRS={
-    'سال المدينة':'سلا المدينة',
-    'طنجة اصيال':'طنجة اصيلا',
-    'ازيالل دمنات':'ازيلال دمنات',
-}
+TERRITORY_ALIASES={'اسا الزالك':'assa-zag','اسا الزاك':'assa-zag','الناضور':'nador','الناظور':'nador','الدرويش':'driouch','الدريوش':'driouch','سيدي افني':'sidi-ifni','الفقيه بنصالح':'fquih-ben-salah','ابن امسيك':'ben-m-sick','ابن مسيك':'ben-m-sick','طنجة اصيلا':'tanger-assilah','طنجة اصيلة':'tanger-assilah','بزو واوزغت':'bzou-ouaouizeght','بزو واويزغت':'bzou-ouaouizeght'}
+PRESENTATION_REPAIRS=(('امل','الم'),('هللا','الله'),('موالي','مولاي'))
+TERRITORY_CANONICAL_REPAIRS={'سال المدينة':'سلا المدينة','طنجة اصيال':'طنجة اصيلا','ازيالل دمنات':'ازيلال دمنات'}
 
 def clean(v): return '' if v is None else ' '.join(str(v).replace('\n',' ').split())
 def logical_ar(v): return clean(v)[::-1].strip()
@@ -56,7 +32,11 @@ def repair_presentation(s):
     return x
 
 def norm_ar(s):
-    x=html.unescape(repair_presentation(s)); x=unicodedata.normalize('NFC',x).replace('ـ','')
+    x=html.unescape(repair_presentation(s))
+    # NFKC collapses Arabic presentation-form codepoints produced by PDF font
+    # encodings. Character-variant mapping below is Unicode-only, not semantic.
+    x=unicodedata.normalize('NFKC',x).replace('ـ','')
+    x=x.translate(str.maketrans({'ی':'ي','ى':'ي','ک':'ك','ۀ':'ة','ہ':'ه'}))
     x=re.sub(r'[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED]','',x)
     x=re.sub(r'[أإآٱ]','ا',x)
     x=re.sub(r'[^\u0600-\u06FF0-9]+',' ',x)
@@ -72,9 +52,7 @@ def build_territory_index(cross):
     for n,cid in TERRITORY_ALIASES.items(): idx[compact_ar(n)].add(cid)
     return idx,by
 def resolve_territory(value,idx,by):
-    repaired=repair_presentation(value)
-    n=norm_ar(repaired); key=compact_ar(repaired)
-    c=idx.get(key,set())
+    repaired=repair_presentation(value); n=norm_ar(repaired); key=compact_ar(repaired); c=idx.get(key,set())
     if len(c)!=1:
         canonical=TERRITORY_CANONICAL_REPAIRS.get(n)
         if canonical: c=idx.get(compact_ar(canonical),set())
@@ -112,12 +90,11 @@ def main():
             if tr is None: failure.append('TERRITORY_UNRESOLVED')
             seats=raw['seats_pdf']; hist=int(tr['historical_seats_2016']) if tr else None
             if tr and hist!=seats: failure.append(f'SEAT_MISMATCH_PDF_{seats}_TAFRA_{hist}')
-            names_pre={rank:logical_ar(cells[6-rank]) for rank in range(1,7) if cells[6-rank]}
-            names={rank:repair_presentation(name) for rank,name in names_pre.items()}
+            names_pre={rank:logical_ar(cells[6-rank]) for rank in range(1,7) if cells[6-rank]}; names={rank:repair_presentation(name) for rank,name in names_pre.items()}
             expected=set(range(1,seats+1)); actual=set(names)
             if actual!=expected: failure.append(f'RANK_SET_MISMATCH_expected_{sorted(expected)}_actual_{sorted(actual)}')
             if len({compact_ar(x) for x in names.values() if compact_ar(x)})!=seats: failure.append('CANDIDATE_IDENTITY_DUPLICATE_OR_EMPTY')
-            unverified=[{'rank':rank,'pre_repair':names_pre[rank],'name':name} for rank,name in names.items() if compact_ar(name) not in doc_compact]
+            unverified=[{'rank':rank,'pre_repair':names_pre[rank],'name':name,'normalized_compact':compact_ar(name)} for rank,name in names.items() if compact_ar(name) not in doc_compact]
             if unverified: failure.append('CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT')
             if failure:
                 failures.append({'article_id':doc['article_id'],'page':raw['page'],'row':raw['row_index_on_page'],'territory_visual_raw':cells[7],'territory_logical_pre_repair':territory_pre,'territory_logical':territory_logical,'territory_normalized':tnorm,'unverified_candidates':unverified,'failures':failure,'cells_visual_raw':cells,'names_logical_pre_repair':names_pre,'names_logical':names}); continue
@@ -132,7 +109,6 @@ def main():
     for c in candidates: byterrit[c['constituency_id']].append(c)
     identity_ge3=sum(len({x['candidate_name_ar_normalized'] for x in xs})>=3 for xs in byterrit.values()); enriched=len({c['constituency_id'] for c in candidates if c['FORMAL_ENDORSEMENT']})
     status='FAIL_CLOSED_DIAGNOSTIC_PERSISTED' if failures else ('PASS' if identity_ge3>=70 and enriched>=50 else 'PARTIAL_VALID')
-    payload={'schema_version':'2.1','created_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),'status':status,'documents':[d['article_id'] for d in docs],'territory_rows':territories,'candidate_rows':candidates,'failures':failures,'counts':{'territories_parsed':len(territories),'candidate_rows':len(candidates),'districts_with_at_least_three_verified_candidate_identities':identity_ge3,'districts_with_formal_endorsement_enrichment':enriched,'required_identity_districts':70,'required_enriched_districts':50,'identity_gate_pass':identity_ge3>=70,'enriched_gate_pass':enriched>=50},'document_diagnostics':docdiag,'invariants':{'visual_to_logical_transform':'WHOLE_CELL_CODEPOINT_REVERSAL','presentation_repairs':list(PRESENTATION_REPAIRS),'candidate_identity_requires_independent_pypdf_text_match':True,'failed_rows_promoted':False,'outcomes_unsealed':False,'predictive_judgments_generated':False,'forecast_delta_generated':False,'F1_created':False}}
-    OUT.mkdir(parents=True,exist_ok=True); (OUT/'parsed_slates.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    print(json.dumps({'status':status,'counts':payload['counts'],'failure_count':len(failures),'failure_sample':failures[:10]},ensure_ascii=False,indent=2)); return 0
+    payload={'schema_version':'2.2','created_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),'status':status,'documents':[d['article_id'] for d in docs],'territory_rows':territories,'candidate_rows':candidates,'failures':failures,'counts':{'territories_parsed':len(territories),'candidate_rows':len(candidates),'districts_with_at_least_three_verified_candidate_identities':identity_ge3,'districts_with_formal_endorsement_enrichment':enriched,'required_identity_districts':70,'required_enriched_districts':50,'identity_gate_pass':identity_ge3>=70,'enriched_gate_pass':enriched>=50},'document_diagnostics':docdiag,'invariants':{'visual_to_logical_transform':'WHOLE_CELL_CODEPOINT_REVERSAL','unicode_identity_normalization':'NFKC_PLUS_ARABIC_CODEPOINT_VARIANTS','presentation_repairs':list(PRESENTATION_REPAIRS),'candidate_identity_requires_independent_pypdf_text_match':True,'person_name_fuzzy_matching':False,'failed_rows_promoted':False,'outcomes_unsealed':False,'predictive_judgments_generated':False,'forecast_delta_generated':False,'F1_created':False}}
+    OUT.mkdir(parents=True,exist_ok=True); (OUT/'parsed_slates.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8'); print(json.dumps({'status':status,'counts':payload['counts'],'failure_count':len(failures),'failure_sample':failures[:10]},ensure_ascii=False,indent=2)); return 0
 if __name__=='__main__': raise SystemExit(main())
