@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "M26-E-REASON-OUTPUT-SCHEMA-V1",
+  "title": "E_reason blinded territorial residual judgment",
+  "type": "object",
+  "required": [
+    "run_id",
+    "condition_id",
+    "anonymous_election_id",
+    "anonymous_territory_id",
+    "packet_sha256",
+    "model_or_human_id",
+    "judgments",
+    "attempt_number",
+    "created_at"
+  ],
+  "properties": {
+    "run_id": {"type":"string"},
+    "condition_id": {"enum":["C1_RULE_ONLY","C2_LLM_RESIDUAL","H1_REAL_HUMAN_RESIDUAL"]},
+    "anonymous_election_id": {"type":"string"},
+    "anonymous_territory_id": {"type":"string"},
+    "packet_sha256": {"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "model_or_human_id": {"type":"string"},
+    "attempt_number": {"type":"integer","minimum":1},
+    "created_at": {"type":"string"},
+    "judgments": {
+      "type":"array",
+      "minItems":9,
+      "maxItems":9,
+      "items": {
+        "type":"object",
+        "required":["anonymous_party_id","ordinal_score","evidence_feature_ids","abstain","confidence"],
+        "properties": {
+          "anonymous_party_id":{"type":"string"},
+          "ordinal_score":{"type":"integer","enum":[-2,-1,0,1,2]},
+          "evidence_feature_ids":{"type":"array","items":{"type":"string"}},
+          "abstain":{"type":"boolean"},
+          "confidence":{"type":"number","minimum":0,"maximum":1},
+          "brief_reason":{"type":"string","maxLength":280}
+        },
+        "additionalProperties":false
+      }
+    }
+  },
+  "additionalProperties":false
+}
