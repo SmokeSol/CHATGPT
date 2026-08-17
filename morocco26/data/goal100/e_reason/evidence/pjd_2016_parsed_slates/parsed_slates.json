@@ -1,74 +1,2135 @@
 {
-  "schema_version": "1.1",
-  "created_at": "2026-08-17T22:58:47+00:00",
+  "schema_version": "2.0",
+  "created_at": "2026-08-17T23:04:04+00:00",
   "status": "FAIL_CLOSED_DIAGNOSTIC_PERSISTED",
   "documents": [
     "RABAT_FES_MARRAKECH",
     "SOUTH_SOUSS_ORIENT",
     "LIST_3"
   ],
-  "territory_rows": [],
-  "candidate_rows": [],
+  "territory_rows": [
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "constituency_id": "rabat-chellah",
+      "territory_visual_raw_ar": "ةلاش طابرلا",
+      "territory_logical_ar": "الرباط شالة",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 513,
+      "historical_constituency": "Rabat - Challah",
+      "historical_region": "Rabat - Salé - Kénitra",
+      "seats": 3,
+      "candidate_count": 3,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "constituency_id": "skhirate-temara",
+      "territory_visual_raw_ar": "ةرامت تاريخصلا",
+      "territory_logical_ar": "الصخيرات تمارة",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 516,
+      "historical_constituency": "Skhirate - Témara",
+      "historical_region": "Rabat - Salé - Kénitra",
+      "seats": 4,
+      "candidate_count": 4,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "constituency_id": "el-hajeb",
+      "territory_visual_raw_ar": "بجاحلا",
+      "territory_logical_ar": "الحاجب",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 575,
+      "historical_constituency": "El-Hajeb",
+      "historical_region": "Fès - Meknès",
+      "seats": 2,
+      "candidate_count": 2,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "constituency_id": "fes-nord",
+      "territory_visual_raw_ar": "ةيلامشلا ساف",
+      "territory_logical_ar": "فاس الشمالية",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 549,
+      "historical_constituency": "Fès-Chamalia",
+      "historical_region": "Fès - Meknès",
+      "seats": 4,
+      "candidate_count": 4,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "constituency_id": "taza",
+      "territory_visual_raw_ar": "ةزات",
+      "territory_logical_ar": "تازة",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 541,
+      "historical_constituency": "Taza",
+      "historical_region": "Fès - Meknès",
+      "seats": 5,
+      "candidate_count": 5,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "constituency_id": "sefrou",
+      "territory_visual_raw_ar": "ورفص",
+      "territory_logical_ar": "صفرو",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 552,
+      "historical_constituency": "Sefrou",
+      "historical_region": "Fès - Meknès",
+      "seats": 3,
+      "candidate_count": 3,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "constituency_id": "taounate-tissa",
+      "territory_visual_raw_ar": "ةسيت تانوات",
+      "territory_logical_ar": "تاونات تيسة",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 543,
+      "historical_constituency": "Taounate - Tissa",
+      "historical_region": "Fès - Meknès",
+      "seats": 3,
+      "candidate_count": 3,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "constituency_id": "karia-ghafsay",
+      "territory_visual_raw_ar": "ياسفغ ةيرقلا",
+      "territory_logical_ar": "القرية غفساي",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 544,
+      "historical_constituency": "Karia - Rhafsai",
+      "historical_region": "Fès - Meknès",
+      "seats": 3,
+      "candidate_count": 3,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "constituency_id": "ifrane",
+      "territory_visual_raw_ar": "نارفإ",
+      "territory_logical_ar": "إفران",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 576,
+      "historical_constituency": "Ifrane",
+      "historical_region": "Fès - Meknès",
+      "seats": 2,
+      "candidate_count": 2,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "constituency_id": "safi",
+      "territory_visual_raw_ar": "يفسآ",
+      "territory_logical_ar": "آسفي",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 589,
+      "historical_constituency": "Safi",
+      "historical_region": "Marrakech - Safi",
+      "seats": 6,
+      "candidate_count": 6,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "constituency_id": "al-haouz",
+      "territory_visual_raw_ar": "زوحلا",
+      "territory_logical_ar": "الحوز",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 570,
+      "historical_constituency": "Al-Haouz",
+      "historical_region": "Marrakech - Safi",
+      "seats": 4,
+      "candidate_count": 4,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "sidi-slimane",
+      "territory_visual_raw_ar": "ناميلس يديس",
+      "territory_logical_ar": "سيدي سليمان",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 562,
+      "historical_constituency": "Sidi Slimane",
+      "historical_region": "Rabat - Salé - Kénitra",
+      "seats": 3,
+      "candidate_count": 3,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "sidi-bennour",
+      "territory_visual_raw_ar": "رونب يديس",
+      "territory_logical_ar": "سيدي بنور",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 591,
+      "historical_constituency": "Sidi Bennour",
+      "historical_region": "Casablanca - Settat",
+      "seats": 4,
+      "candidate_count": 4,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "hay-hassani",
+      "territory_visual_raw_ar": "ينسحلا يحلا",
+      "territory_logical_ar": "الحي الحسني",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 522,
+      "historical_constituency": "Hay-Hassani",
+      "historical_region": "Casablanca - Settat",
+      "seats": 3,
+      "candidate_count": 3,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "nouaceur",
+      "territory_visual_raw_ar": "رصاونلا",
+      "territory_logical_ar": "النواصر",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 528,
+      "historical_constituency": "Nouaceur",
+      "historical_region": "Casablanca - Settat",
+      "seats": 3,
+      "candidate_count": 3,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "fquih-ben-salah",
+      "territory_visual_raw_ar": "حلاصنب هيقفلا",
+      "territory_logical_ar": "الفقيه بنصالح",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 548,
+      "historical_constituency": "Fquih Ben Salah",
+      "historical_region": "Beni-Mellal - Khénifra",
+      "seats": 4,
+      "candidate_count": 4,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "fahs-anjra",
+      "territory_visual_raw_ar": "ةرجنأ صحفلا",
+      "territory_logical_ar": "الفحص أنجرة",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 598,
+      "historical_constituency": "Fahs - Anjra",
+      "historical_region": "Tanger - Tétouan - Al Hoceima",
+      "seats": 2,
+      "candidate_count": 2,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "tetouan",
+      "territory_visual_raw_ar": "ناوطت",
+      "territory_logical_ar": "تطوان",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 599,
+      "historical_constituency": "Tétouan",
+      "historical_region": "Tanger - Tétouan - Al Hoceima",
+      "seats": 5,
+      "candidate_count": 5,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "chefchaouen",
+      "territory_visual_raw_ar": "نواشفش",
+      "territory_logical_ar": "شفشاون",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 602,
+      "historical_constituency": "Chefchaouen",
+      "historical_region": "Tanger - Tétouan - Al Hoceima",
+      "seats": 4,
+      "candidate_count": 4,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "tinghir",
+      "territory_visual_raw_ar": "ريغنت",
+      "territory_logical_ar": "تنغير",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 538,
+      "historical_constituency": "Tinghir",
+      "historical_region": "Drâa - Tafilalet",
+      "seats": 3,
+      "candidate_count": 3,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "zagora",
+      "territory_visual_raw_ar": "ةروكاز",
+      "territory_logical_ar": "زاكورة",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 537,
+      "historical_constituency": "Zagora",
+      "historical_region": "Drâa - Tafilalet",
+      "seats": 3,
+      "candidate_count": 3,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "midelt",
+      "territory_visual_raw_ar": "تلديم",
+      "territory_logical_ar": "ميدلت",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 579,
+      "historical_constituency": "Midelt",
+      "historical_region": "Drâa - Tafilalet",
+      "seats": 3,
+      "candidate_count": 3,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "al-fida-mers-sultan",
+      "territory_visual_raw_ar": "ناطلسلا سرم ءادفلا",
+      "territory_logical_ar": "الفداء مرس السلطان",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 520,
+      "historical_constituency": "Al-Fida - Mers-Sultan",
+      "historical_region": "Casablanca - Settat",
+      "seats": 3,
+      "candidate_count": 3,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "bzou-ouaouizeght",
+      "territory_visual_raw_ar": "تغزواو وزب",
+      "territory_logical_ar": "بزو واوزغت",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 546,
+      "historical_constituency": "Bzou - Ouaouizaght",
+      "historical_region": "Beni-Mellal - Khénifra",
+      "seats": 3,
+      "candidate_count": 3,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "constituency_id": "rehamna",
+      "territory_visual_raw_ar": "ةنماحرلا",
+      "territory_logical_ar": "الرحامنة",
+      "territory_resolution": "MECHANICAL_VISUAL_TO_LOGICAL_PLUS_EXACT_ARABIC",
+      "historical_id_constituency": 571,
+      "historical_constituency": "Rehamna",
+      "historical_region": "Marrakech - Safi",
+      "seats": 3,
+      "candidate_count": 3,
+      "formal_endorsement": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    }
+  ],
+  "candidate_rows": [
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "rabat-chellah",
+      "historical_id_constituency": 513,
+      "historical_constituency": "Rabat - Challah",
+      "candidate_rank": 1,
+      "candidate_name_ar": "سليمان العمراني",
+      "candidate_name_ar_visual_raw": "ينارمعلا ناميلس",
+      "candidate_name_ar_normalized": "سليمان العمراني",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "rabat-chellah",
+      "historical_id_constituency": 513,
+      "historical_constituency": "Rabat - Challah",
+      "candidate_rank": 2,
+      "candidate_name_ar": "عبد الرحيم لقراع",
+      "candidate_name_ar_visual_raw": "عارقل ميحرلا دبع",
+      "candidate_name_ar_normalized": "عبد الرحيم لقراع",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "rabat-chellah",
+      "historical_id_constituency": 513,
+      "historical_constituency": "Rabat - Challah",
+      "candidate_rank": 3,
+      "candidate_name_ar": "محمد طاهري",
+      "candidate_name_ar_visual_raw": "يرهاط دمحم",
+      "candidate_name_ar_normalized": "محمد طاهري",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "skhirate-temara",
+      "historical_id_constituency": 516,
+      "historical_constituency": "Skhirate - Témara",
+      "candidate_rank": 1,
+      "candidate_name_ar": "موح رجدالي",
+      "candidate_name_ar_visual_raw": "يلادجر حوم",
+      "candidate_name_ar_normalized": "موح رجدالي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "skhirate-temara",
+      "historical_id_constituency": 516,
+      "historical_constituency": "Skhirate - Témara",
+      "candidate_rank": 2,
+      "candidate_name_ar": "عبد العزيز لعايض",
+      "candidate_name_ar_visual_raw": "ضياعل زيزعلا دبع",
+      "candidate_name_ar_normalized": "عبد العزيز لعايض",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "skhirate-temara",
+      "historical_id_constituency": 516,
+      "historical_constituency": "Skhirate - Témara",
+      "candidate_rank": 3,
+      "candidate_name_ar": "سميرة الهاشمي",
+      "candidate_name_ar_visual_raw": "يمشاهلا ةريمس",
+      "candidate_name_ar_normalized": "سميرة الهاشمي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "skhirate-temara",
+      "historical_id_constituency": 516,
+      "historical_constituency": "Skhirate - Témara",
+      "candidate_rank": 4,
+      "candidate_name_ar": "سعد حازم",
+      "candidate_name_ar_visual_raw": "مزاح دعس",
+      "candidate_name_ar_normalized": "سعد حازم",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 4,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "el-hajeb",
+      "historical_id_constituency": 575,
+      "historical_constituency": "El-Hajeb",
+      "candidate_rank": 1,
+      "candidate_name_ar": "خالد البوقرعي",
+      "candidate_name_ar_visual_raw": "يعرقوبلا دلاخ",
+      "candidate_name_ar_normalized": "خالد البوقرعي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "el-hajeb",
+      "historical_id_constituency": 575,
+      "historical_constituency": "El-Hajeb",
+      "candidate_rank": 2,
+      "candidate_name_ar": "حوسة عزيزي",
+      "candidate_name_ar_visual_raw": "يزيزع ةسوح",
+      "candidate_name_ar_normalized": "حوسة عزيزي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "fes-nord",
+      "historical_id_constituency": 549,
+      "historical_constituency": "Fès-Chamalia",
+      "candidate_rank": 1,
+      "candidate_name_ar": "عمر الفاس ي",
+      "candidate_name_ar_visual_raw": "ي سافلا رمع",
+      "candidate_name_ar_normalized": "عمر الفاس ي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "fes-nord",
+      "historical_id_constituency": 549,
+      "historical_constituency": "Fès-Chamalia",
+      "candidate_rank": 2,
+      "candidate_name_ar": "عبد الواحد بوحرشة",
+      "candidate_name_ar_visual_raw": "ةشرحوب دحاولا دبع",
+      "candidate_name_ar_normalized": "عبد الواحد بوحرشة",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "fes-nord",
+      "historical_id_constituency": 549,
+      "historical_constituency": "Fès-Chamalia",
+      "candidate_rank": 3,
+      "candidate_name_ar": "إلهام الوالي",
+      "candidate_name_ar_visual_raw": "يلاولا ماهلإ",
+      "candidate_name_ar_normalized": "الهام الوالي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "fes-nord",
+      "historical_id_constituency": 549,
+      "historical_constituency": "Fès-Chamalia",
+      "candidate_rank": 4,
+      "candidate_name_ar": "محمد الكبيري",
+      "candidate_name_ar_visual_raw": "يريبكلا دمحم",
+      "candidate_name_ar_normalized": "محمد الكبيري",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 4,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "taza",
+      "historical_id_constituency": 541,
+      "historical_constituency": "Taza",
+      "candidate_rank": 1,
+      "candidate_name_ar": "جمال مسعودي",
+      "candidate_name_ar_visual_raw": "يدوعسم لامج",
+      "candidate_name_ar_normalized": "جمال مسعودي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "taza",
+      "historical_id_constituency": 541,
+      "historical_constituency": "Taza",
+      "candidate_rank": 2,
+      "candidate_name_ar": "أحمد العبادي",
+      "candidate_name_ar_visual_raw": "يدابعلا دمحأ",
+      "candidate_name_ar_normalized": "احمد العبادي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "taza",
+      "historical_id_constituency": 541,
+      "historical_constituency": "Taza",
+      "candidate_rank": 3,
+      "candidate_name_ar": "أحمد اليندوزي",
+      "candidate_name_ar_visual_raw": "يزودنيلا دمحأ",
+      "candidate_name_ar_normalized": "احمد اليندوزي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "taza",
+      "historical_id_constituency": 541,
+      "historical_constituency": "Taza",
+      "candidate_rank": 4,
+      "candidate_name_ar": "أحمد بودرة",
+      "candidate_name_ar_visual_raw": "ةردوب دمحأ",
+      "candidate_name_ar_normalized": "احمد بودرة",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 4,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "taza",
+      "historical_id_constituency": 541,
+      "historical_constituency": "Taza",
+      "candidate_rank": 5,
+      "candidate_name_ar": "صفاء زريق",
+      "candidate_name_ar_visual_raw": "قيرز ءافص",
+      "candidate_name_ar_normalized": "صفاء زريق",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 5,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "sefrou",
+      "historical_id_constituency": 552,
+      "historical_constituency": "Sefrou",
+      "candidate_rank": 1,
+      "candidate_name_ar": "إدريس مسكين",
+      "candidate_name_ar_visual_raw": "نيكسم سيردإ",
+      "candidate_name_ar_normalized": "ادريس مسكين",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "sefrou",
+      "historical_id_constituency": 552,
+      "historical_constituency": "Sefrou",
+      "candidate_rank": 2,
+      "candidate_name_ar": "محمد العابد",
+      "candidate_name_ar_visual_raw": "دباعلا دمحم",
+      "candidate_name_ar_normalized": "محمد العابد",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "sefrou",
+      "historical_id_constituency": 552,
+      "historical_constituency": "Sefrou",
+      "candidate_rank": 3,
+      "candidate_name_ar": "حسن الزويري",
+      "candidate_name_ar_visual_raw": "يريوزلا نسح",
+      "candidate_name_ar_normalized": "حسن الزويري",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "taounate-tissa",
+      "historical_id_constituency": 543,
+      "historical_constituency": "Taounate - Tissa",
+      "candidate_rank": 1,
+      "candidate_name_ar": "بوشتى بوصوف",
+      "candidate_name_ar_visual_raw": "فوصوب ىتشوب",
+      "candidate_name_ar_normalized": "بوشتى بوصوف",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "taounate-tissa",
+      "historical_id_constituency": 543,
+      "historical_constituency": "Taounate - Tissa",
+      "candidate_rank": 2,
+      "candidate_name_ar": "عبدالحق السطي",
+      "candidate_name_ar_visual_raw": "يطسلا قحلادبع",
+      "candidate_name_ar_normalized": "عبدالحق السطي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "taounate-tissa",
+      "historical_id_constituency": 543,
+      "historical_constituency": "Taounate - Tissa",
+      "candidate_rank": 3,
+      "candidate_name_ar": "مصطفى الفيزازي",
+      "candidate_name_ar_visual_raw": "يزازيفلا ىفطصم",
+      "candidate_name_ar_normalized": "مصطفى الفيزازي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "karia-ghafsay",
+      "historical_id_constituency": 544,
+      "historical_constituency": "Karia - Rhafsai",
+      "candidate_rank": 1,
+      "candidate_name_ar": "نور الدين اقشيبل",
+      "candidate_name_ar_visual_raw": "لبيشقا نيدلا رون",
+      "candidate_name_ar_normalized": "نور الدين اقشيبل",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "karia-ghafsay",
+      "historical_id_constituency": 544,
+      "historical_constituency": "Karia - Rhafsai",
+      "candidate_rank": 2,
+      "candidate_name_ar": "حميد الفشتالي",
+      "candidate_name_ar_visual_raw": "يلاتشفلا ديمح",
+      "candidate_name_ar_normalized": "حميد الفشتالي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "karia-ghafsay",
+      "historical_id_constituency": 544,
+      "historical_constituency": "Karia - Rhafsai",
+      "candidate_rank": 3,
+      "candidate_name_ar": "كيمية العياش ي",
+      "candidate_name_ar_visual_raw": "ي شايعلا ةيميك",
+      "candidate_name_ar_normalized": "كيمية العياش ي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "ifrane",
+      "historical_id_constituency": 576,
+      "historical_constituency": "Ifrane",
+      "candidate_rank": 1,
+      "candidate_name_ar": "أحمد الراشدي",
+      "candidate_name_ar_visual_raw": "يدشارلا دمحأ",
+      "candidate_name_ar_normalized": "احمد الراشدي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "ifrane",
+      "historical_id_constituency": 576,
+      "historical_constituency": "Ifrane",
+      "candidate_rank": 2,
+      "candidate_name_ar": "امحمد بحري",
+      "candidate_name_ar_visual_raw": "يرحب دمحما",
+      "candidate_name_ar_normalized": "امحمد بحري",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "safi",
+      "historical_id_constituency": 589,
+      "historical_constituency": "Safi",
+      "candidate_rank": 1,
+      "candidate_name_ar": "إدريس الثمري",
+      "candidate_name_ar_visual_raw": "يرمثلا سيردإ",
+      "candidate_name_ar_normalized": "ادريس الثمري",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "safi",
+      "historical_id_constituency": 589,
+      "historical_constituency": "Safi",
+      "candidate_rank": 2,
+      "candidate_name_ar": "حسن عديلي",
+      "candidate_name_ar_visual_raw": "يليدع نسح",
+      "candidate_name_ar_normalized": "حسن عديلي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "safi",
+      "historical_id_constituency": 589,
+      "historical_constituency": "Safi",
+      "candidate_rank": 3,
+      "candidate_name_ar": "عبداللطيف بوجنان",
+      "candidate_name_ar_visual_raw": "نانجوب فيطللادبع",
+      "candidate_name_ar_normalized": "عبداللطيف بوجنان",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "safi",
+      "historical_id_constituency": 589,
+      "historical_constituency": "Safi",
+      "candidate_rank": 4,
+      "candidate_name_ar": "عبدالجليل لبداوي",
+      "candidate_name_ar_visual_raw": "يوادبل ليلجلادبع",
+      "candidate_name_ar_normalized": "عبدالجليل لبداوي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 4,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "safi",
+      "historical_id_constituency": 589,
+      "historical_constituency": "Safi",
+      "candidate_rank": 5,
+      "candidate_name_ar": "عبداللطيف عبدان",
+      "candidate_name_ar_visual_raw": "نادبع فيطللادبع",
+      "candidate_name_ar_normalized": "عبداللطيف عبدان",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 5,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "safi",
+      "historical_id_constituency": 589,
+      "historical_constituency": "Safi",
+      "candidate_rank": 6,
+      "candidate_name_ar": "ابراهيم بنحيلي",
+      "candidate_name_ar_visual_raw": "يليحنب ميهاربا",
+      "candidate_name_ar_normalized": "ابراهيم بنحيلي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 6,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "al-haouz",
+      "historical_id_constituency": 570,
+      "historical_constituency": "Al-Haouz",
+      "candidate_rank": 1,
+      "candidate_name_ar": "مراد الكورش",
+      "candidate_name_ar_visual_raw": "شروكلا دارم",
+      "candidate_name_ar_normalized": "مراد الكورش",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "al-haouz",
+      "historical_id_constituency": 570,
+      "historical_constituency": "Al-Haouz",
+      "candidate_rank": 2,
+      "candidate_name_ar": "صالح نجمي",
+      "candidate_name_ar_visual_raw": "يمجن حلاص",
+      "candidate_name_ar_normalized": "صالح نجمي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "al-haouz",
+      "historical_id_constituency": 570,
+      "historical_constituency": "Al-Haouz",
+      "candidate_rank": 3,
+      "candidate_name_ar": "عبدالنبي اعراب",
+      "candidate_name_ar_visual_raw": "بارعا يبنلادبع",
+      "candidate_name_ar_normalized": "عبدالنبي اعراب",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "al-haouz",
+      "historical_id_constituency": 570,
+      "historical_constituency": "Al-Haouz",
+      "candidate_rank": 4,
+      "candidate_name_ar": "محمد ادبومسعود",
+      "candidate_name_ar_visual_raw": "دوعسموبدا دمحم",
+      "candidate_name_ar_normalized": "محمد ادبومسعود",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 4,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "sidi-slimane",
+      "historical_id_constituency": 562,
+      "historical_constituency": "Sidi Slimane",
+      "candidate_rank": 1,
+      "candidate_name_ar": "محمد الحفياني",
+      "candidate_name_ar_visual_raw": "ينايفحلا دمحم",
+      "candidate_name_ar_normalized": "محمد الحفياني",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "sidi-slimane",
+      "historical_id_constituency": 562,
+      "historical_constituency": "Sidi Slimane",
+      "candidate_rank": 2,
+      "candidate_name_ar": "كريم ميس",
+      "candidate_name_ar_visual_raw": "سيم ميرك",
+      "candidate_name_ar_normalized": "كريم ميس",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "sidi-slimane",
+      "historical_id_constituency": 562,
+      "historical_constituency": "Sidi Slimane",
+      "candidate_rank": 3,
+      "candidate_name_ar": "سميرة علوش",
+      "candidate_name_ar_visual_raw": "شولع ةريمس",
+      "candidate_name_ar_normalized": "سميرة علوش",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "sidi-bennour",
+      "historical_id_constituency": 591,
+      "historical_constituency": "Sidi Bennour",
+      "candidate_rank": 1,
+      "candidate_name_ar": "مصطفى الخلفي",
+      "candidate_name_ar_visual_raw": "يفلخلا ىفطصم",
+      "candidate_name_ar_normalized": "مصطفى الخلفي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "sidi-bennour",
+      "historical_id_constituency": 591,
+      "historical_constituency": "Sidi Bennour",
+      "candidate_rank": 2,
+      "candidate_name_ar": "محمد عبدالحق",
+      "candidate_name_ar_visual_raw": "قحلادبع دمحم",
+      "candidate_name_ar_normalized": "محمد عبدالحق",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "sidi-bennour",
+      "historical_id_constituency": 591,
+      "historical_constituency": "Sidi Bennour",
+      "candidate_rank": 3,
+      "candidate_name_ar": "حميد يافيد",
+      "candidate_name_ar_visual_raw": "ديفاي ديمح",
+      "candidate_name_ar_normalized": "حميد يافيد",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "sidi-bennour",
+      "historical_id_constituency": 591,
+      "historical_constituency": "Sidi Bennour",
+      "candidate_rank": 4,
+      "candidate_name_ar": "يوسف الحنصالي",
+      "candidate_name_ar_visual_raw": "يلاصنحلا فسوي",
+      "candidate_name_ar_normalized": "يوسف الحنصالي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 4,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "hay-hassani",
+      "historical_id_constituency": 522,
+      "historical_constituency": "Hay-Hassani",
+      "candidate_rank": 1,
+      "candidate_name_ar": "أمينة ماء العينين",
+      "candidate_name_ar_visual_raw": "نينيعلا ءام ةنيمأ",
+      "candidate_name_ar_normalized": "امينة ماء العينين",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "hay-hassani",
+      "historical_id_constituency": 522,
+      "historical_constituency": "Hay-Hassani",
+      "candidate_rank": 2,
+      "candidate_name_ar": "أحمد جدار",
+      "candidate_name_ar_visual_raw": "رادج دمحأ",
+      "candidate_name_ar_normalized": "احمد جدار",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "hay-hassani",
+      "historical_id_constituency": 522,
+      "historical_constituency": "Hay-Hassani",
+      "candidate_rank": 3,
+      "candidate_name_ar": "محمد حيسون",
+      "candidate_name_ar_visual_raw": "نوسيح دمحم",
+      "candidate_name_ar_normalized": "محمد حيسون",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "nouaceur",
+      "historical_id_constituency": 528,
+      "historical_constituency": "Nouaceur",
+      "candidate_rank": 1,
+      "candidate_name_ar": "عبداللطيف رشيد",
+      "candidate_name_ar_visual_raw": "ديشر فيطللادبع",
+      "candidate_name_ar_normalized": "عبداللطيف رشيد",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "nouaceur",
+      "historical_id_constituency": 528,
+      "historical_constituency": "Nouaceur",
+      "candidate_rank": 2,
+      "candidate_name_ar": "رشيد بوطالب",
+      "candidate_name_ar_visual_raw": "بلاطوب ديشر",
+      "candidate_name_ar_normalized": "رشيد بوطالب",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "nouaceur",
+      "historical_id_constituency": 528,
+      "historical_constituency": "Nouaceur",
+      "candidate_rank": 3,
+      "candidate_name_ar": "سفيان عزيزي",
+      "candidate_name_ar_visual_raw": "يزيزع نايفس",
+      "candidate_name_ar_normalized": "سفيان عزيزي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "fquih-ben-salah",
+      "historical_id_constituency": 548,
+      "historical_constituency": "Fquih Ben Salah",
+      "candidate_rank": 1,
+      "candidate_name_ar": "بوعبيد لبيدة",
+      "candidate_name_ar_visual_raw": "ةديبل ديبعوب",
+      "candidate_name_ar_normalized": "بوعبيد لبيدة",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "fquih-ben-salah",
+      "historical_id_constituency": 548,
+      "historical_constituency": "Fquih Ben Salah",
+      "candidate_rank": 2,
+      "candidate_name_ar": "عبدالكريم النماوي",
+      "candidate_name_ar_visual_raw": "يوامنلا ميركلادبع",
+      "candidate_name_ar_normalized": "عبدالكريم النماوي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "fquih-ben-salah",
+      "historical_id_constituency": 548,
+      "historical_constituency": "Fquih Ben Salah",
+      "candidate_rank": 3,
+      "candidate_name_ar": "خليل الناجي",
+      "candidate_name_ar_visual_raw": "يجانلا ليلخ",
+      "candidate_name_ar_normalized": "خليل الناجي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "fquih-ben-salah",
+      "historical_id_constituency": 548,
+      "historical_constituency": "Fquih Ben Salah",
+      "candidate_rank": 4,
+      "candidate_name_ar": "عبدالقادر مبروك",
+      "candidate_name_ar_visual_raw": "كوربم رداقلادبع",
+      "candidate_name_ar_normalized": "عبدالقادر مبروك",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 4,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "fahs-anjra",
+      "historical_id_constituency": 598,
+      "historical_constituency": "Fahs - Anjra",
+      "candidate_rank": 1,
+      "candidate_name_ar": "سعاد بولعيش الحجراوي",
+      "candidate_name_ar_visual_raw": "يوارجحلا شيعلوب داعس",
+      "candidate_name_ar_normalized": "سعاد بولعيش الحجراوي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "fahs-anjra",
+      "historical_id_constituency": 598,
+      "historical_constituency": "Fahs - Anjra",
+      "candidate_rank": 2,
+      "candidate_name_ar": "محمد السعيدي الهيشو",
+      "candidate_name_ar_visual_raw": "وشيهلا يديعسلا دمحم",
+      "candidate_name_ar_normalized": "محمد السعيدي الهيشو",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "tetouan",
+      "historical_id_constituency": 599,
+      "historical_constituency": "Tétouan",
+      "candidate_rank": 1,
+      "candidate_name_ar": "محمد إدعمار",
+      "candidate_name_ar_visual_raw": "رامعدإ دمحم",
+      "candidate_name_ar_normalized": "محمد ادعمار",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "tetouan",
+      "historical_id_constituency": 599,
+      "historical_constituency": "Tétouan",
+      "candidate_rank": 2,
+      "candidate_name_ar": "عادل بنونة",
+      "candidate_name_ar_visual_raw": "ةنونب لداع",
+      "candidate_name_ar_normalized": "عادل بنونة",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "tetouan",
+      "historical_id_constituency": 599,
+      "historical_constituency": "Tétouan",
+      "candidate_rank": 3,
+      "candidate_name_ar": "أحمد بوخبزة",
+      "candidate_name_ar_visual_raw": "ةزبخوب دمحأ",
+      "candidate_name_ar_normalized": "احمد بوخبزة",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "tetouan",
+      "historical_id_constituency": 599,
+      "historical_constituency": "Tétouan",
+      "candidate_rank": 4,
+      "candidate_name_ar": "محمد بنهميش",
+      "candidate_name_ar_visual_raw": "شيمهنب دمحم",
+      "candidate_name_ar_normalized": "محمد بنهميش",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 4,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "tetouan",
+      "historical_id_constituency": 599,
+      "historical_constituency": "Tétouan",
+      "candidate_rank": 5,
+      "candidate_name_ar": "نجاة حمرية",
+      "candidate_name_ar_visual_raw": "ةيرمح ةاجن",
+      "candidate_name_ar_normalized": "نجاة حمرية",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 5,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "chefchaouen",
+      "historical_id_constituency": 602,
+      "historical_constituency": "Chefchaouen",
+      "candidate_rank": 1,
+      "candidate_name_ar": "أحمد أيتونة",
+      "candidate_name_ar_visual_raw": "ةنوتيأ دمحأ",
+      "candidate_name_ar_normalized": "احمد ايتونة",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "chefchaouen",
+      "historical_id_constituency": 602,
+      "historical_constituency": "Chefchaouen",
+      "candidate_rank": 2,
+      "candidate_name_ar": "محمد السفياني",
+      "candidate_name_ar_visual_raw": "ينايفسلا دمحم",
+      "candidate_name_ar_normalized": "محمد السفياني",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "chefchaouen",
+      "historical_id_constituency": 602,
+      "historical_constituency": "Chefchaouen",
+      "candidate_rank": 3,
+      "candidate_name_ar": "محمد مصباح",
+      "candidate_name_ar_visual_raw": "حابصم دمحم",
+      "candidate_name_ar_normalized": "محمد مصباح",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "chefchaouen",
+      "historical_id_constituency": 602,
+      "historical_constituency": "Chefchaouen",
+      "candidate_rank": 4,
+      "candidate_name_ar": "سعيدة البوحديدي",
+      "candidate_name_ar_visual_raw": "يديدحوبلا ةديعس",
+      "candidate_name_ar_normalized": "سعيدة البوحديدي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 4,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "tinghir",
+      "historical_id_constituency": 538,
+      "historical_constituency": "Tinghir",
+      "candidate_rank": 1,
+      "candidate_name_ar": "أحمد صدقي",
+      "candidate_name_ar_visual_raw": "يقدص دمحأ",
+      "candidate_name_ar_normalized": "احمد صدقي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "tinghir",
+      "historical_id_constituency": 538,
+      "historical_constituency": "Tinghir",
+      "candidate_rank": 2,
+      "candidate_name_ar": "محمد ابن تيزي",
+      "candidate_name_ar_visual_raw": "يزيت نبا دمحم",
+      "candidate_name_ar_normalized": "محمد ابن تيزي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "tinghir",
+      "historical_id_constituency": 538,
+      "historical_constituency": "Tinghir",
+      "candidate_rank": 3,
+      "candidate_name_ar": "يوسف بوكا",
+      "candidate_name_ar_visual_raw": "اكوب فسوي",
+      "candidate_name_ar_normalized": "يوسف بوكا",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "zagora",
+      "historical_id_constituency": 537,
+      "historical_constituency": "Zagora",
+      "candidate_rank": 1,
+      "candidate_name_ar": "لحسن واعرى",
+      "candidate_name_ar_visual_raw": "ىرعاو نسحل",
+      "candidate_name_ar_normalized": "لحسن واعرى",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "zagora",
+      "historical_id_constituency": 537,
+      "historical_constituency": "Zagora",
+      "candidate_rank": 2,
+      "candidate_name_ar": "عبد الرحمان الصوفي",
+      "candidate_name_ar_visual_raw": "يفوصلا نامحرلا دبع",
+      "candidate_name_ar_normalized": "عبد الرحمان الصوفي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "zagora",
+      "historical_id_constituency": 537,
+      "historical_constituency": "Zagora",
+      "candidate_rank": 3,
+      "candidate_name_ar": "عمر النكزي",
+      "candidate_name_ar_visual_raw": "يزكنلا رمع",
+      "candidate_name_ar_normalized": "عمر النكزي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "midelt",
+      "historical_id_constituency": 579,
+      "historical_constituency": "Midelt",
+      "candidate_rank": 1,
+      "candidate_name_ar": "عمر احمين",
+      "candidate_name_ar_visual_raw": "نيمحا رمع",
+      "candidate_name_ar_normalized": "عمر احمين",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "midelt",
+      "historical_id_constituency": 579,
+      "historical_constituency": "Midelt",
+      "candidate_rank": 2,
+      "candidate_name_ar": "الفاضلي",
+      "candidate_name_ar_visual_raw": "يلضافلا",
+      "candidate_name_ar_normalized": "الفاضلي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "midelt",
+      "historical_id_constituency": 579,
+      "historical_constituency": "Midelt",
+      "candidate_rank": 3,
+      "candidate_name_ar": "العزوزي",
+      "candidate_name_ar_visual_raw": "يزوزعلا",
+      "candidate_name_ar_normalized": "العزوزي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "al-fida-mers-sultan",
+      "historical_id_constituency": 520,
+      "historical_constituency": "Al-Fida - Mers-Sultan",
+      "candidate_rank": 1,
+      "candidate_name_ar": "جواد العراقي",
+      "candidate_name_ar_visual_raw": "يقارعلا داوج",
+      "candidate_name_ar_normalized": "جواد العراقي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "al-fida-mers-sultan",
+      "historical_id_constituency": 520,
+      "historical_constituency": "Al-Fida - Mers-Sultan",
+      "candidate_rank": 2,
+      "candidate_name_ar": "الفاطمي الرميد",
+      "candidate_name_ar_visual_raw": "ديمرلا يمطافلا",
+      "candidate_name_ar_normalized": "الفاطمي الرميد",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "al-fida-mers-sultan",
+      "historical_id_constituency": 520,
+      "historical_constituency": "Al-Fida - Mers-Sultan",
+      "candidate_rank": 3,
+      "candidate_name_ar": "عبد الرحيم الدرعي",
+      "candidate_name_ar_visual_raw": "يعردلا ميحرلا دبع",
+      "candidate_name_ar_normalized": "عبد الرحيم الدرعي",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "bzou-ouaouizeght",
+      "historical_id_constituency": 546,
+      "historical_constituency": "Bzou - Ouaouizaght",
+      "candidate_rank": 1,
+      "candidate_name_ar": "عبد النبي أبو العرب",
+      "candidate_name_ar_visual_raw": "برعلا وبأ يبنلا دبع",
+      "candidate_name_ar_normalized": "عبد النبي ابو العرب",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "bzou-ouaouizeght",
+      "historical_id_constituency": 546,
+      "historical_constituency": "Bzou - Ouaouizaght",
+      "candidate_rank": 2,
+      "candidate_name_ar": "محمد كسوة",
+      "candidate_name_ar_visual_raw": "ةوسك دمحم",
+      "candidate_name_ar_normalized": "محمد كسوة",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "bzou-ouaouizeght",
+      "historical_id_constituency": 546,
+      "historical_constituency": "Bzou - Ouaouizaght",
+      "candidate_rank": 3,
+      "candidate_name_ar": "مصطفى أبغاض",
+      "candidate_name_ar_visual_raw": "ضاغبأ ىفطصم",
+      "candidate_name_ar_normalized": "مصطفى ابغاض",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "rehamna",
+      "historical_id_constituency": 571,
+      "historical_constituency": "Rehamna",
+      "candidate_rank": 1,
+      "candidate_name_ar": "عبد الخاليد البصري",
+      "candidate_name_ar_visual_raw": "يرصبلا ديلاخلا دبع",
+      "candidate_name_ar_normalized": "عبد الخاليد البصري",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "rehamna",
+      "historical_id_constituency": 571,
+      "historical_constituency": "Rehamna",
+      "candidate_rank": 2,
+      "candidate_name_ar": "محمد الجوهري",
+      "candidate_name_ar_visual_raw": "يرهوجلا دمحم",
+      "candidate_name_ar_normalized": "محمد الجوهري",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    },
+    {
+      "year": 2016,
+      "party": "PJD",
+      "constituency_id": "rehamna",
+      "historical_id_constituency": 571,
+      "historical_constituency": "Rehamna",
+      "candidate_rank": 3,
+      "candidate_name_ar": "رضوان لعطاعطة",
+      "candidate_name_ar_visual_raw": "ةطعاطعل ناوضر",
+      "candidate_name_ar_normalized": "رضوان لعطاعطة",
+      "identity_cross_verified_in_pypdf_text": true,
+      "CANDIDATE_REGISTERED_RANK": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "transport": "MIGRATED_STATIC_ARCHIVAL_MIRROR"
+    }
+  ],
   "failures": [
     {
       "article_id": "RABAT_FES_MARRAKECH",
       "page": 1,
       "row": 2,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةنيدملا الس",
-      "territory_normalized": "ةنيدملا الس",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "ةنيدلما لاس",
+      "territory_logical": "سال املدينة",
+      "territory_normalized": "سال املدينة",
+      "unverified_candidates": [
+        {
+          "rank": 1,
+          "name": "عبد اإلله ابن كيران"
+        },
+        {
+          "rank": 2,
+          "name": "جامع املعتصم"
+        }
       ],
-      "cells": [
+      "failures": [
+        "TERRITORY_UNRESOLVED",
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "ميهاربإ نبا زيزع",
         "نتيوزا دمحم",
-        "مصتعملا عماج",
-        "ناريك نبا هلإلا دبع",
+        "مصتعلما عماج",
+        "ناريك نبا هللإا دبع",
         "4",
-        "ةنيدملا الس",
-        "الس",
-        "ةرطينقلا - الس - طابرلا",
+        "ةنيدلما لاس",
+        "لاس",
+        "ةرطينقلا - لاس - طابرلا",
         "1"
-      ]
-    },
-    {
-      "article_id": "RABAT_FES_MARRAKECH",
-      "page": 1,
-      "row": 3,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةلاش طابرلا",
-      "territory_normalized": "ةلاش طابرلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "",
-        "يرهاط دمحم",
-        "عارقل ميحرلا دبع",
-        "ينارمعلا ناميلس",
-        "3",
-        "ةلاش طابرلا",
-        "طابرلا",
-        "ةرطينقلا - الس - طابرلا",
-        "2"
-      ]
+      "names_logical": {
+        "1": "عبد اإلله ابن كيران",
+        "2": "جامع املعتصم",
+        "3": "محمد ازويتن",
+        "4": "عزيز ابن إبراهيم"
+      }
     },
     {
       "article_id": "RABAT_FES_MARRAKECH",
       "page": 1,
       "row": 4,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةديدجلا الس",
-      "territory_normalized": "ةديدجلا الس",
+      "territory_visual_raw": "ةديدجلا لاس",
+      "territory_logical": "سال الجديدة",
+      "territory_normalized": "سال الجديدة",
+      "unverified_candidates": [],
       "failures": [
         "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
+      "cells_visual_raw": [
         "",
         "",
         "",
@@ -76,23 +2137,29 @@
         "يبرغ فسوي",
         "ةرامعا رداقلا دبع",
         "3",
-        "ةديدجلا الس",
-        "الس",
-        "ةرطينقلا - الس - طابرلا",
+        "ةديدجلا لاس",
+        "لاس",
+        "ةرطينقلا - لاس - طابرلا",
         "3"
-      ]
+      ],
+      "names_logical": {
+        "1": "عبد القادر اعمارة",
+        "2": "يوسف غربي",
+        "3": "عز العرب حليمي"
+      }
     },
     {
       "article_id": "RABAT_FES_MARRAKECH",
       "page": 1,
       "row": 5,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "طيحملا طابرلا",
-      "territory_normalized": "طيحملا طابرلا",
+      "territory_visual_raw": "طيحلما طابرلا",
+      "territory_logical": "الرباط املحيط",
+      "territory_normalized": "الرباط املحيط",
+      "unverified_candidates": [],
       "failures": [
         "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
+      "cells_visual_raw": [
         "",
         "",
         "رابص ةكرابما",
@@ -100,263 +2167,143 @@
         "بوقعي نبا فيطللا دبع",
         "يقيدص دمحم",
         "4",
-        "طيحملا طابرلا",
+        "طيحلما طابرلا",
         "طابرلا",
-        "ةرطينقلا - الس - طابرلا",
+        "ةرطينقلا - لاس - طابرلا",
         "4"
-      ]
-    },
-    {
-      "article_id": "RABAT_FES_MARRAKECH",
-      "page": 1,
-      "row": 6,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةرامت تاريخصلا",
-      "territory_normalized": "ةرامت تاريخصلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "مزاح دعس",
-        "يمشاهلا ةريمس",
-        "ضياعل زيزعلا دبع",
-        "يلادجر حوم",
-        "4",
-        "ةرامت تاريخصلا",
-        "ةرامت تاريخصلا",
-        "ةرطينقلا - الس - طابرلا",
-        "5"
-      ]
+      "names_logical": {
+        "1": "محمد صديقي",
+        "2": "عبد اللطيف ابن يعقوب",
+        "3": "عبد الصمد أبوزاهير",
+        "4": "امباركة صبار"
+      }
     },
     {
       "article_id": "RABAT_FES_MARRAKECH",
       "page": 1,
       "row": 7,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةيبونجلا ساف",
-      "territory_normalized": "ةيبونجلا ساف",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "ةيبونجلا ساف",
+      "territory_logical": "فاس الجنوبية",
+      "territory_normalized": "فاس الجنوبية",
+      "unverified_candidates": [
+        {
+          "rank": 1,
+          "name": "إدريس األزمي اإلدريس ي"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "ييخ دمحم",
         "حيصف ةجيدخ",
         "يثراحلا دمحم",
-        "ي سيردإلا يمزألا سيردإ",
+        "ي سيردلإا يمزلأا سيردإ",
         "4",
         "ةيبونجلا ساف",
         "ساف",
         "سانكم - ساف",
         "6"
-      ]
+      ],
+      "names_logical": {
+        "1": "إدريس األزمي اإلدريس ي",
+        "2": "محمد الحارثي",
+        "3": "خديجة فصيح",
+        "4": "محمد خيي"
+      }
     },
     {
       "article_id": "RABAT_FES_MARRAKECH",
       "page": 1,
       "row": 8,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "سانكم",
-      "territory_normalized": "سانكم",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "سانكم",
+      "territory_logical": "مكناس",
+      "territory_normalized": "مكناس",
+      "unverified_candidates": [
+        {
+          "rank": 1,
+          "name": "عبد هللا بووانو"
+        },
+        {
+          "rank": 3,
+          "name": "عبد السالم الخالدي"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "نيوزلا دلاخ",
         "تاكرب ىده",
         "حرف ديشر",
-        "يدلاخلا مالسلا دبع",
+        "يدلاخلا ملاسلا دبع",
         "يودع يلقصلا سيردإ",
-        "وناووب هللا دبع",
+        "وناووب الله دبع",
         "6",
         "سانكم",
         "سانكم",
         "سانكم - ساف",
         "7"
-      ]
-    },
-    {
-      "article_id": "RABAT_FES_MARRAKECH",
-      "page": 1,
-      "row": 9,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "بجاحلا",
-      "territory_normalized": "بجاحلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "",
-        "",
-        "يزيزع ةسوح",
-        "يعرقوبلا دلاخ",
-        "2",
-        "بجاحلا",
-        "بجاحلا",
-        "سانكم - ساف",
-        "8"
-      ]
-    },
-    {
-      "article_id": "RABAT_FES_MARRAKECH",
-      "page": 1,
-      "row": 10,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةيلامشلا ساف",
-      "territory_normalized": "ةيلامشلا ساف",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
-      ],
-      "cells": [
-        "",
-        "",
-        "يريبكلا دمحم",
-        "يلاولا ماهلإ",
-        "ةشرحوب دحاولا دبع",
-        "ي سافلا رمع",
-        "4",
-        "ةيلامشلا ساف",
-        "ساف",
-        "سانكم - ساف",
-        "9"
-      ]
-    },
-    {
-      "article_id": "RABAT_FES_MARRAKECH",
-      "page": 1,
-      "row": 11,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةزات",
-      "territory_normalized": "ةزات",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
-      ],
-      "cells": [
-        "",
-        "قيرز ءافص",
-        "ةردوب دمحأ",
-        "يزودنيلا دمحأ",
-        "يدابعلا دمحأ",
-        "يدوعسم لامج",
-        "5",
-        "ةزات",
-        "ةزات",
-        "سانكم - ساف",
-        "10"
-      ]
-    },
-    {
-      "article_id": "RABAT_FES_MARRAKECH",
-      "page": 1,
-      "row": 12,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ورفص",
-      "territory_normalized": "ورفص",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
-      ],
-      "cells": [
-        "",
-        "",
-        "",
-        "يريوزلا نسح",
-        "دباعلا دمحم",
-        "نيكسم سيردإ",
-        "3",
-        "ورفص",
-        "ورفص",
-        "سانكم - ساف",
-        "11"
-      ]
+      "names_logical": {
+        "1": "عبد هللا بووانو",
+        "2": "إدريس الصقلي عدوي",
+        "3": "عبد السالم الخالدي",
+        "4": "رشيد فرح",
+        "5": "هدى بركات",
+        "6": "خالد الزوين"
+      }
     },
     {
       "article_id": "RABAT_FES_MARRAKECH",
       "page": 1,
       "row": 13,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "بوقعي يالوم",
-      "territory_normalized": "بوقعي يالوم",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "بوقعي يلاوم",
+      "territory_logical": "موالي يعقوب",
+      "territory_normalized": "موالي يعقوب",
+      "unverified_candidates": [
+        {
+          "rank": 2,
+          "name": "الجياللي الدومة"
+        }
       ],
-      "cells": [
+      "failures": [
+        "TERRITORY_UNRESOLVED",
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "",
         "",
-        "ةمودلا يلاليجلا",
+        "ةمودلا يللايجلا",
         "فسوي دمحم",
         "2",
-        "بوقعي يالوم",
-        "بوقعي يالوم",
+        "بوقعي يلاوم",
+        "بوقعي يلاوم",
         "سانكم - ساف",
         "12"
-      ]
-    },
-    {
-      "article_id": "RABAT_FES_MARRAKECH",
-      "page": 1,
-      "row": 14,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةسيت تانوات",
-      "territory_normalized": "ةسيت تانوات",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "",
-        "يزازيفلا ىفطصم",
-        "يطسلا قحلادبع",
-        "فوصوب ىتشوب",
-        "3",
-        "ةسيت تانوات",
-        "تانوات",
-        "سانكم - ساف",
-        "13"
-      ]
-    },
-    {
-      "article_id": "RABAT_FES_MARRAKECH",
-      "page": 1,
-      "row": 15,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ياسفغ ةيرقلا",
-      "territory_normalized": "ياسفغ ةيرقلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
-      ],
-      "cells": [
-        "",
-        "",
-        "",
-        "ي شايعلا ةيميك",
-        "يلاتشفلا ديمح",
-        "لبيشقا نيدلا رون",
-        "3",
-        "ياسفغ ةيرقلا",
-        "تانوات",
-        "سانكم - ساف",
-        "14"
-      ]
+      "names_logical": {
+        "1": "محمد يوسف",
+        "2": "الجياللي الدومة"
+      }
     },
     {
       "article_id": "RABAT_FES_MARRAKECH",
       "page": 1,
       "row": 16,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ناملوب",
-      "territory_normalized": "ناملوب",
+      "territory_visual_raw": "نالموب",
+      "territory_logical": "بوملان",
+      "territory_normalized": "بوملان",
+      "unverified_candidates": [],
       "failures": [
         "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
+      "cells_visual_raw": [
         "",
         "",
         "",
@@ -364,47 +2311,29 @@
         "طياطوأ دمحم",
         "ي سيردا دمحم",
         "3",
-        "ناملوب",
-        "ناملوب",
+        "نالموب",
+        "نالموب",
         "سانكم - ساف",
         "15"
-      ]
-    },
-    {
-      "article_id": "RABAT_FES_MARRAKECH",
-      "page": 1,
-      "row": 17,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "نارفإ",
-      "territory_normalized": "نارفا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "",
-        "",
-        "يرحب دمحما",
-        "يدشارلا دمحأ",
-        "2",
-        "نارفإ",
-        "نارفإ",
-        "سانكم - ساف",
-        "16"
-      ]
+      "names_logical": {
+        "1": "محمد ادريس ي",
+        "2": "محمد أوطايط",
+        "3": "محمد ربيع"
+      }
     },
     {
       "article_id": "RABAT_FES_MARRAKECH",
       "page": 1,
       "row": 18,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةرانملا",
-      "territory_normalized": "ةرانملا",
+      "territory_visual_raw": "ةرانلما",
+      "territory_logical": "املنارة",
+      "territory_normalized": "املنارة",
+      "unverified_candidates": [],
       "failures": [
         "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
+      "cells_visual_raw": [
         "",
         "",
         "",
@@ -412,336 +2341,303 @@
         "ةلفوت دمحم",
         "دياقلب يبرعلا دمحم",
         "3",
-        "ةرانملا",
+        "ةرانلما",
         "شكارم",
         "يفسآ - شكارم",
         "17"
-      ]
+      ],
+      "names_logical": {
+        "1": "محمد العربي بلقايد",
+        "2": "محمد توفلة",
+        "3": "عبد الرزاق أحلوش"
+      }
     },
     {
       "article_id": "RABAT_FES_MARRAKECH",
       "page": 2,
       "row": 2,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "يلع نب فسوي يديس ةنيدملا",
-      "territory_normalized": "يلع نب فسوي يديس ةنيدملا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "يلع نب فسوي يديس ةنيدلما",
+      "territory_logical": "املدينة سيدي يوسف بن علي",
+      "territory_normalized": "املدينة سيدي يوسف بن علي",
+      "unverified_candidates": [
+        {
+          "rank": 2,
+          "name": "موالي البشير طوبا"
+        }
       ],
-      "cells": [
+      "failures": [
+        "TERRITORY_UNRESOLVED",
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "",
         "ميشغل نسح",
-        "ابوط ريشبلا يالوم",
+        "ابوط ريشبلا يلاوم",
         "ناميلس نب سنوي",
         "3",
-        "يلع نب فسوي يديس ةنيدملا",
+        "يلع نب فسوي يديس ةنيدلما",
         "شكارم",
         "يفسآ - شكارم",
         "18"
-      ]
+      ],
+      "names_logical": {
+        "1": "يونس بن سليمان",
+        "2": "موالي البشير طوبا",
+        "3": "حسن لغشيم"
+      }
     },
     {
       "article_id": "RABAT_FES_MARRAKECH",
       "page": 2,
       "row": 3,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ليخنلا زيلج",
-      "territory_normalized": "ليخنلا زيلج",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "ليخنلا زيلج",
+      "territory_logical": "جليز النخيل",
+      "territory_normalized": "جليز النخيل",
+      "unverified_candidates": [
+        {
+          "rank": 2,
+          "name": "أمينة العمراني اإلدريس ي"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "",
         "ضاير تيأ فسوي",
-        "ي سيردإلا ينارمعلا ةنيمأ",
+        "ي سيردلإا ينارمعلا ةنيمأ",
         "جابقلا دامح",
         "3",
         "ليخنلا زيلج",
         "شكارم",
         "يفسآ - شكارم",
         "19"
-      ]
-    },
-    {
-      "article_id": "RABAT_FES_MARRAKECH",
-      "page": 2,
-      "row": 4,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "يفسآ",
-      "territory_normalized": "يفسا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "يليحنب ميهاربا",
-        "نادبع فيطللادبع",
-        "يوادبل ليلجلادبع",
-        "نانجوب فيطللادبع",
-        "يليدع نسح",
-        "يرمثلا سيردإ",
-        "6",
-        "يفسآ",
-        "يفسآ",
-        "يفسآ - شكارم",
-        "20"
-      ]
+      "names_logical": {
+        "1": "حماد القباج",
+        "2": "أمينة العمراني اإلدريس ي",
+        "3": "يوسف أيت رياض"
+      }
     },
     {
       "article_id": "RABAT_FES_MARRAKECH",
       "page": 2,
       "row": 5,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةنغارسلا ةعلق",
-      "territory_normalized": "ةنغارسلا ةعلق",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "ةنغارسلا ةعلق",
+      "territory_logical": "قلعة السراغنة",
+      "territory_normalized": "قلعة السراغنة",
+      "unverified_candidates": [
+        {
+          "rank": 1,
+          "name": "بلعيد أعلوالل"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "كرابم ينوتيزلا",
         "مجان ديشر",
         "طيسابلا ديشر",
-        "لالولعأ ديعلب",
+        "للاولعأ ديعلب",
         "4",
         "ةنغارسلا ةعلق",
         "ةنغارسلا ةعلق",
         "يفسآ - شكارم",
         "21"
-      ]
-    },
-    {
-      "article_id": "RABAT_FES_MARRAKECH",
-      "page": 2,
-      "row": 6,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "زوحلا",
-      "territory_normalized": "زوحلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "دوعسموبدا دمحم",
-        "بارعا يبنلادبع",
-        "يمجن حلاص",
-        "شروكلا دارم",
-        "4",
-        "زوحلا",
-        "زوحلا",
-        "يفسآ - شكارم",
-        "22"
-      ]
+      "names_logical": {
+        "1": "بلعيد أعلوالل",
+        "2": "رشيد الباسيط",
+        "3": "رشيد ناجم",
+        "4": "الزيتوني مبارك"
+      }
     },
     {
       "article_id": "RABAT_FES_MARRAKECH",
       "page": 2,
       "row": 7,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةواشيش",
-      "territory_normalized": "ةواشيش",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "ةواشيش",
+      "territory_logical": "شيشاوة",
+      "territory_normalized": "شيشاوة",
+      "unverified_candidates": [
+        {
+          "rank": 2,
+          "name": "السعدية املختاري"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "تاكرب دمحم",
         "تاريخلا وبأ ديماح",
-        "يراتخملا ةيدعسلا",
+        "يراتخلما ةيدعسلا",
         "يفوصلا ةزمح",
         "4",
         "ةواشيش",
         "ةواشيش",
         "يفسآ - شكارم",
         "23"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 1,
-      "row": 2,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ناميلس يديس",
-      "territory_normalized": "ناميلس يديس",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "",
-        "شولع ةريمس",
-        "سيم ميرك",
-        "ينايفحلا دمحم",
-        "3",
-        "ناميلس يديس",
-        "ناميلس يديس",
-        "ةرطينقلا - الس - طابرلا",
-        "1"
-      ]
+      "names_logical": {
+        "1": "حمزة الصوفي",
+        "2": "السعدية املختاري",
+        "3": "حاميد أبو الخيرات",
+        "4": "محمد بركات"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 1,
       "row": 3,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ي صونربلا يديس",
-      "territory_normalized": "ي صونربلا يديس",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "ي صونربلا يديس",
+      "territory_logical": "سيدي البرنوص ي",
+      "territory_normalized": "سيدي البرنوص ي",
+      "unverified_candidates": [
+        {
+          "rank": 2,
+          "name": "عبد املجيد أيت العديلة"
+        }
       ],
-      "cells": [
+      "failures": [
+        "TERRITORY_UNRESOLVED",
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "",
         "دورب نسح",
-        "ةليدعلا تيأ ديجملا دبع",
+        "ةليدعلا تيأ ديجلما دبع",
         "ميتي دمحم",
         "3",
         "ي صونربلا يديس",
         "ي صونربلا يديس",
         "تاطس - ءاضيبلا رادلا",
         "2"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 1,
-      "row": 4,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "رونب يديس",
-      "territory_normalized": "رونب يديس",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "يلاصنحلا فسوي",
-        "ديفاي ديمح",
-        "قحلادبع دمحم",
-        "يفلخلا ىفطصم",
-        "4",
-        "رونب يديس",
-        "رونب يديس",
-        "تاطس - ءاضيبلا رادلا",
-        "3"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 1,
-      "row": 5,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ينسحلا يحلا",
-      "territory_normalized": "ينسحلا يحلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
-      ],
-      "cells": [
-        "",
-        "",
-        "",
-        "نوسيح دمحم",
-        "رادج دمحأ",
-        "نينيعلا ءام ةنيمأ",
-        "3",
-        "ينسحلا يحلا",
-        "ينسحلا يحلا",
-        "تاطس - ءاضيبلا رادلا",
-        "4"
-      ]
+      "names_logical": {
+        "1": "محمد يتيم",
+        "2": "عبد املجيد أيت العديلة",
+        "3": "حسن برود"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 1,
       "row": 6,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةديدجلا",
-      "territory_normalized": "ةديدجلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "ةديدجلا",
+      "territory_logical": "الجديدة",
+      "territory_normalized": "الجديدة",
+      "unverified_candidates": [
+        {
+          "rank": 1,
+          "name": "أبو زيد املقرئ اإلدريس ي"
+        },
+        {
+          "rank": 2,
+          "name": "عبد املجيد بوشبكة"
+        },
+        {
+          "rank": 3,
+          "name": "املصطفى مرشيد"
+        },
+        {
+          "rank": 5,
+          "name": "سعيد املرواكي"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "يمزع ميحرلا دبع",
-        "يكاورملا ديعس",
+        "يكاورلما ديعس",
         "ةحلموب رابجلا دبع",
-        "ديشرم ىفطصملا",
-        "ةكبشوب ديجملا دبع",
-        "ي سيردإلا ئرقملا ديز وبأ",
+        "ديشرم ىفطصلما",
+        "ةكبشوب ديجلما دبع",
+        "ي سيردلإا ئرقلما ديز وبأ",
         "6",
         "ةديدجلا",
         "ةديدجلا",
         "تاطس - ءاضيبلا رادلا",
         "5"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 1,
-      "row": 7,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "رصاونلا",
-      "territory_normalized": "رصاونلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "",
-        "يزيزع نايفس",
-        "بلاطوب ديشر",
-        "ديشر فيطللادبع",
-        "3",
-        "رصاونلا",
-        "رصاونلا",
-        "تاطس - ءاضيبلا رادلا",
-        "6"
-      ]
+      "names_logical": {
+        "1": "أبو زيد املقرئ اإلدريس ي",
+        "2": "عبد املجيد بوشبكة",
+        "3": "املصطفى مرشيد",
+        "4": "عبد الجبار بوملحة",
+        "5": "سعيد املرواكي",
+        "6": "عبد الرحيم عزمي"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 1,
       "row": 8,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "كيسما نبا",
-      "territory_normalized": "كيسما نبا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "كيسما نبا",
+      "territory_logical": "ابن امسيك",
+      "territory_normalized": "ابن امسيك",
+      "unverified_candidates": [
+        {
+          "rank": 1,
+          "name": "عبد املجيد جوبيج"
+        },
+        {
+          "rank": 3,
+          "name": "عبد املجيد مزور"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "",
-        "روزم ديجملا دبع",
+        "روزم ديجلما دبع",
         "يناشك ديعس",
-        "جيبوج ديجملا دبع",
+        "جيبوج ديجلما دبع",
         "3",
         "كيسما نبا",
         "كيسما نبا",
         "تاطس - ءاضيبلا رادلا",
         "7"
-      ]
+      ],
+      "names_logical": {
+        "1": "عبد املجيد جوبيج",
+        "2": "سعيد كشاني",
+        "3": "عبد املجيد مزور"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 1,
       "row": 9,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "تاطس",
-      "territory_normalized": "تاطس",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "تاطس",
+      "territory_logical": "سطات",
+      "territory_normalized": "سطات",
+      "unverified_candidates": [
+        {
+          "rank": 6,
+          "name": "املاجيدي"
+        }
       ],
-      "cells": [
-        "يديجاملا",
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
+        "يديجالما",
         "نيساي نيدلارون",
         "يعيرشلا يبرعلا",
         "ينامحدلا ىفطصم",
@@ -752,163 +2648,105 @@
         "تاطس",
         "تاطس - ءاضيبلا رادلا",
         "8"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 1,
-      "row": 10,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "حلاصنب هيقفلا",
-      "territory_normalized": "حلاصنب هيقفلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "كوربم رداقلادبع",
-        "يجانلا ليلخ",
-        "يوامنلا ميركلادبع",
-        "ةديبل ديبعوب",
-        "4",
-        "حلاصنب هيقفلا",
-        "حلاصنب هيقفلا",
-        "ةرفينخ - لالم ينب",
-        "9"
-      ]
+      "names_logical": {
+        "1": "حسن حارس",
+        "2": "محمد الحراري",
+        "3": "مصطفى الدحماني",
+        "4": "العربي الشريعي",
+        "5": "نورالدين ياسين",
+        "6": "املاجيدي"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 1,
       "row": 11,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "اليصأ ةجنط",
-      "territory_normalized": "اليصا ةجنط",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "لايصأ ةجنط",
+      "territory_logical": "طنجة أصيال",
+      "territory_normalized": "طنجة اصيال",
+      "unverified_candidates": [
+        {
+          "rank": 2,
+          "name": "سمير عبد املولى"
+        }
       ],
-      "cells": [
+      "failures": [
+        "TERRITORY_UNRESOLVED",
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "ريقفأ دمحم",
         "وحورب فيطللادبع",
         "ييخ دمحم",
-        "ىلوملا دبع ريمس",
+        "ىلولما دبع ريمس",
         "فيلوب بيجن",
         "5",
-        "اليصأ ةجنط",
-        "اليصأ ةجنط",
+        "لايصأ ةجنط",
+        "لايصأ ةجنط",
         "ةميسحلا - ناوطت - ةجنط",
         "10"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 1,
-      "row": 12,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةرجنأ صحفلا",
-      "territory_normalized": "ةرجنا صحفلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "",
-        "",
-        "وشيهلا يديعسلا دمحم",
-        "يوارجحلا شيعلوب داعس",
-        "2",
-        "ةرجنأ صحفلا",
-        "ةرجنأ صحفلا",
-        "ةميسحلا - ناوطت - ةجنط",
-        "11"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 1,
-      "row": 13,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ناوطت",
-      "territory_normalized": "ناوطت",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
-      ],
-      "cells": [
-        "",
-        "ةيرمح ةاجن",
-        "شيمهنب دمحم",
-        "ةزبخوب دمحأ",
-        "ةنونب لداع",
-        "رامعدإ دمحم",
-        "5",
-        "ناوطت",
-        "ناوطت",
-        "ةميسحلا - ناوطت - ةجنط",
-        "12"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 1,
-      "row": 14,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "نواشفش",
-      "territory_normalized": "نواشفش",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
-      ],
-      "cells": [
-        "",
-        "",
-        "يديدحوبلا ةديعس",
-        "حابصم دمحم",
-        "ينايفسلا دمحم",
-        "ةنوتيأ دمحأ",
-        "4",
-        "نواشفش",
-        "نواشفش",
-        "ةميسحلا - ناوطت - ةجنط",
-        "13"
-      ]
+      "names_logical": {
+        "1": "نجيب بوليف",
+        "2": "سمير عبد املولى",
+        "3": "محمد خيي",
+        "4": "عبداللطيف بروحو",
+        "5": "محمد أفقير"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 1,
       "row": 15,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "نازو",
-      "territory_normalized": "نازو",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "نازو",
+      "territory_logical": "وزان",
+      "territory_normalized": "وزان",
+      "unverified_candidates": [
+        {
+          "rank": 1,
+          "name": "عبد الحليم عالوي"
+        },
+        {
+          "rank": 2,
+          "name": "محمد املرابط"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "",
         "ونينبا ديلخ",
-        "طبارملا دمحم",
-        "يوالع ميلحلا دبع",
+        "طبارلما دمحم",
+        "يولاع ميلحلا دبع",
         "3",
         "نازو",
         "نازو",
         "ةميسحلا - ناوطت - ةجنط",
         "14"
-      ]
+      ],
+      "names_logical": {
+        "1": "عبد الحليم عالوي",
+        "2": "محمد املرابط",
+        "3": "خليد ابنينو"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 1,
       "row": 16,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "قدينفلا قيضملا",
-      "territory_normalized": "قدينفلا قيضملا",
+      "territory_visual_raw": "قدينفلا قيضلما",
+      "territory_logical": "املضيق الفنيدق",
+      "territory_normalized": "املضيق الفنيدق",
+      "unverified_candidates": [],
       "failures": [
         "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
+      "cells_visual_raw": [
         "",
         "",
         "",
@@ -916,170 +2754,154 @@
         "يناميلسلا دمحم",
         "قورق دمحم",
         "2",
-        "قدينفلا قيضملا",
-        "قدينفلا قيضملا",
+        "قدينفلا قيضلما",
+        "قدينفلا قيضلما",
         "ةميسحلا - ناوطت - ةجنط",
         "15"
-      ]
+      ],
+      "names_logical": {
+        "1": "محمد قروق",
+        "2": "محمد السليماني"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 1,
       "row": 17,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ينفإ يديس",
-      "territory_normalized": "ينفا يديس",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "ينفإ يديس",
+      "territory_logical": "سيدي إفني",
+      "territory_normalized": "سيدي افني",
+      "unverified_candidates": [
+        {
+          "rank": 2,
+          "name": "موالي محمد الواصيفي"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "",
         "",
-        "يفيصاولا دمحم يالوم",
+        "يفيصاولا دمحم يلاوم",
         "سيرموب رمع",
         "2",
         "ينفإ يديس",
         "ينفإ يديس",
         "نون داو - ميملك",
         "16"
-      ]
+      ],
+      "names_logical": {
+        "1": "عمر بومريس",
+        "2": "موالي محمد الواصيفي"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 2,
       "row": 2,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةيديشرلا",
-      "territory_normalized": "ةيديشرلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "ةيديشرلا",
+      "territory_logical": "الرشيدية",
+      "territory_normalized": "الرشيدية",
+      "unverified_candidates": [
+        {
+          "rank": 1,
+          "name": "عبد هللا هناوي"
+        },
+        {
+          "rank": 2,
+          "name": "عبد السالم برجي"
+        },
+        {
+          "rank": 5,
+          "name": "محمد املترجي"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
-        "يجرتملا دمحم",
+        "يجرتلما دمحم",
         "يليضفلا ىفطصم",
         "يقرعلا دمحم",
-        "يجرب مالسلا دبع",
-        "يوانه هللا دبع",
+        "يجرب ملاسلا دبع",
+        "يوانه الله دبع",
         "5",
         "ةيديشرلا",
         "ةيديشرلا",
-        "تلاليفات ةعرد",
+        "تللايفات ةعرد",
         "17"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 2,
-      "row": 3,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ريغنت",
-      "territory_normalized": "ريغنت",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "",
-        "اكوب فسوي",
-        "يزيت نبا دمحم",
-        "يقدص دمحأ",
-        "3",
-        "ريغنت",
-        "ريغنت",
-        "تلاليفات ةعرد",
-        "18"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 2,
-      "row": 4,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةروكاز",
-      "territory_normalized": "ةروكاز",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
-      ],
-      "cells": [
-        "",
-        "",
-        "",
-        "يزكنلا رمع",
-        "يفوصلا نامحرلا دبع",
-        "ىرعاو نسحل",
-        "3",
-        "ةروكاز",
-        "ةروكاز",
-        "تلاليفات ةعرد",
-        "19"
-      ]
+      "names_logical": {
+        "1": "عبد هللا هناوي",
+        "2": "عبد السالم برجي",
+        "3": "محمد العرقي",
+        "4": "مصطفى الفضيلي",
+        "5": "محمد املترجي"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 2,
       "row": 5,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "تازازرو",
-      "territory_normalized": "تازازرو",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "تازازرو",
+      "territory_logical": "ورزازات",
+      "territory_normalized": "ورزازات",
+      "unverified_candidates": [
+        {
+          "rank": 2,
+          "name": "الحسين املعين"
+        },
+        {
+          "rank": 3,
+          "name": "عبدهللا مومن"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "",
-        "نموم هللادبع",
-        "نيعملا نيسحلا",
+        "نموم اللهدبع",
+        "نيعلما نيسحلا",
         "قداصلا ديعسلا",
         "3",
         "تازازرو",
         "تازازرو",
-        "تلاليفات ةعرد",
+        "تللايفات ةعرد",
         "20"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 2,
-      "row": 6,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "تلديم",
-      "territory_normalized": "تلديم",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "",
-        "يزوزعلا",
-        "يلضافلا",
-        "نيمحا رمع",
-        "3",
-        "تلديم",
-        "تلديم",
-        "تلاليفات ةعرد",
-        "21"
-      ]
+      "names_logical": {
+        "1": "السعيد الصادق",
+        "2": "الحسين املعين",
+        "3": "عبدهللا مومن"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 2,
       "row": 7,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "شئارعلا",
-      "territory_normalized": "شئارعلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "شئارعلا",
+      "territory_logical": "العرائش",
+      "territory_normalized": "العرائش",
+      "unverified_candidates": [
+        {
+          "rank": 4,
+          "name": "عبد السالم النباص"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
-        "صابنلا مالسلا دبع",
+        "صابنلا ملاسلا دبع",
         "يلوضف ديعس",
         "نوريخ ديعس",
         "يوادمحلا دمحم",
@@ -1088,71 +2910,74 @@
         "شئارعلا",
         "ةميسحلا - ناوطت - ةجنط",
         "22"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 2,
-      "row": 8,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ناطلسلا سرم ءادفلا",
-      "territory_normalized": "ناطلسلا سرم ءادفلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "",
-        "يعردلا ميحرلا دبع",
-        "ديمرلا يمطافلا",
-        "يقارعلا داوج",
-        "3",
-        "ناطلسلا سرم ءادفلا",
-        "ناطلسلا سرم ءادفلا",
-        "تاطس - ءاضيبلا رادلا",
-        "23"
-      ]
+      "names_logical": {
+        "1": "محمد الحمداوي",
+        "2": "سعيد خيرون",
+        "3": "سعيد فضولي",
+        "4": "عبد السالم النباص"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 2,
       "row": 9,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ناميلسنب",
-      "territory_normalized": "ناميلسنب",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "ناميلسنب",
+      "territory_logical": "بنسليمان",
+      "territory_normalized": "بنسليمان",
+      "unverified_candidates": [
+        {
+          "rank": 2,
+          "name": "موالي إسماعيل لطف هللا"
+        },
+        {
+          "rank": 3,
+          "name": "الحسن ملدن"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "",
-        "ندمل نسحلا",
-        "هللا فطل ليعامسإ يالوم",
+        "ندلم نسحلا",
+        "الله فطل ليعامسإ يلاوم",
         "لولجنب دمحم",
         "3",
         "ناميلسنب",
         "ناميلسنب",
         "تاطس - ءاضيبلا رادلا",
         "24"
-      ]
+      ],
+      "names_logical": {
+        "1": "محمد بنجلول",
+        "2": "موالي إسماعيل لطف هللا",
+        "3": "الحسن ملدن"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 2,
       "row": 10,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "قشلا نيع",
-      "territory_normalized": "قشلا نيع",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
+      "territory_visual_raw": "قشلا نيع",
+      "territory_logical": "عين الشق",
+      "territory_normalized": "عين الشق",
+      "unverified_candidates": [
+        {
+          "rank": 3,
+          "name": "عبداملالك لكحيلي"
+        }
       ],
-      "cells": [
+      "failures": [
+        "CANDIDATE_NOT_CROSS_VERIFIED_IN_PYPDF_TEXT"
+      ],
+      "cells_visual_raw": [
         "",
         "",
         "",
-        "يليحكل كلاملادبع",
+        "يليحكل كلالمادبع",
         "يرصانلا فيطللا دبع",
         "ليبقلا ديشر",
         "3",
@@ -1160,19 +2985,25 @@
         "قشلا نيع",
         "تاطس - ءاضيبلا رادلا",
         "25"
-      ]
+      ],
+      "names_logical": {
+        "1": "رشيد القبيل",
+        "2": "عبد اللطيف الناصري",
+        "3": "عبداملالك لكحيلي"
+      }
     },
     {
       "article_id": "LIST_3",
       "page": 2,
       "row": 11,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "تانمد لاليزأ",
-      "territory_normalized": "تانمد لاليزا",
+      "territory_visual_raw": "تانمد للايزأ",
+      "territory_logical": "أزيالل دمنات",
+      "territory_normalized": "ازيالل دمنات",
+      "unverified_candidates": [],
       "failures": [
         "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
+      "cells_visual_raw": [
         "",
         "",
         "",
@@ -1180,66 +3011,23 @@
         "ينايدلا دمحم",
         "نيكوكت دلاخ",
         "3",
-        "تانمد لاليزأ",
-        "لاليزأ",
-        "ةرفينخ - لالم ينب",
+        "تانمد للايزأ",
+        "للايزأ",
+        "ةرفينخ - للام ينب",
         "26"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 2,
-      "row": 12,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "تغزواو وزب",
-      "territory_normalized": "تغزواو وزب",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
       ],
-      "cells": [
-        "",
-        "",
-        "",
-        "ضاغبأ ىفطصم",
-        "ةوسك دمحم",
-        "برعلا وبأ يبنلا دبع",
-        "3",
-        "تغزواو وزب",
-        "لاليزأ",
-        "ةرفينخ - لالم ينب",
-        "27"
-      ]
-    },
-    {
-      "article_id": "LIST_3",
-      "page": 2,
-      "row": 13,
-      "extraction_mode": "NATIVE_RTL",
-      "territory_raw": "ةنماحرلا",
-      "territory_normalized": "ةنماحرلا",
-      "failures": [
-        "TERRITORY_UNRESOLVED"
-      ],
-      "cells": [
-        "",
-        "",
-        "",
-        "ةطعاطعل ناوضر",
-        "يرهوجلا دمحم",
-        "يرصبلا ديلاخلا دبع",
-        "3",
-        "ةنماحرلا",
-        "ةنماحرلا",
-        "يفسآ - شكارم",
-        "28"
-      ]
+      "names_logical": {
+        "1": "خالد تكوكين",
+        "2": "محمد الدياني",
+        "3": "لحسن أتفان"
+      }
     }
   ],
   "counts": {
-    "territories_parsed": 0,
-    "candidate_rows": 0,
-    "districts_with_at_least_three_verified_candidate_identities": 0,
-    "districts_with_formal_endorsement_enrichment": 0,
+    "territories_parsed": 25,
+    "candidate_rows": 85,
+    "districts_with_at_least_three_verified_candidate_identities": 22,
+    "districts_with_formal_endorsement_enrichment": 25,
     "required_identity_districts": 70,
     "required_enriched_districts": 50,
     "identity_gate_pass": false,
@@ -1249,32 +3037,33 @@
     {
       "article_id": "RABAT_FES_MARRAKECH",
       "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "text_sha256": "f71db70a95f9ff7594b92063bb0526ee50165b62971d3858529e0d452084fb6e",
       "diagnostics": [
         {
           "page": 1,
-          "extraction_mode": "NATIVE_RTL",
+          "extraction_mode": "VISUAL_TABLE_CELLS",
           "table_rows": 19,
           "table_cells": 199,
-          "sample": [
+          "sample_raw": [
             [
-              "ةحئاللا يحشرم يقاب",
+              "ةحئلالا يحشرم يقاب",
               "",
               "",
               "",
               "",
-              "ةحئاللا ليكو",
-              "ددع دعاقملا",
-              "ةيباختنالا ةرئادلا",
-              "وأ ميلقإلا وأ ةلامعلا ةعطاقم ةلامع",
+              "ةحئلالا ليكو",
+              "ددع دعاقلما",
+              "ةيباختنلاا ةرئادلا",
+              "وأ ميلقلإا وأ ةلامعلا ةعطاقم ةلامع",
               "ةهجلا",
               "ت.ر"
             ],
             [
-              "6 ةبترملا",
-              "5 ةبترملا",
-              "4 ةبترملا",
-              "3 ةبترملا",
-              "2 ةبترملا",
+              "6 ةبترلما",
+              "5 ةبترلما",
+              "4 ةبترلما",
+              "3 ةبترلما",
+              "2 ةبترلما",
               "",
               "",
               "",
@@ -1287,12 +3076,12 @@
               "",
               "ميهاربإ نبا زيزع",
               "نتيوزا دمحم",
-              "مصتعملا عماج",
-              "ناريك نبا هلإلا دبع",
+              "مصتعلما عماج",
+              "ناريك نبا هللإا دبع",
               "4",
-              "ةنيدملا الس",
-              "الس",
-              "ةرطينقلا - الس - طابرلا",
+              "ةنيدلما لاس",
+              "لاس",
+              "ةرطينقلا - لاس - طابرلا",
               "1"
             ],
             [
@@ -1305,36 +3094,90 @@
               "3",
               "ةلاش طابرلا",
               "طابرلا",
-              "ةرطينقلا - الس - طابرلا",
+              "ةرطينقلا - لاس - طابرلا",
+              "2"
+            ]
+          ],
+          "sample_logical": [
+            [
+              "باقي مرشحي الالئحة",
+              "",
+              "",
+              "",
+              "",
+              "وكيل الالئحة",
+              "املقاعد عدد",
+              "الدائرة االنتخابية",
+              "عمالة مقاطعة العمالة أو اإلقليم أو",
+              "الجهة",
+              "ر.ت"
+            ],
+            [
+              "املرتبة 6",
+              "املرتبة 5",
+              "املرتبة 4",
+              "املرتبة 3",
+              "املرتبة 2",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "عزيز ابن إبراهيم",
+              "محمد ازويتن",
+              "جامع املعتصم",
+              "عبد اإلله ابن كيران",
+              "4",
+              "سال املدينة",
+              "سال",
+              "الرباط - سال - القنيطرة",
+              "1"
+            ],
+            [
+              "",
+              "",
+              "",
+              "محمد طاهري",
+              "عبد الرحيم لقراع",
+              "سليمان العمراني",
+              "3",
+              "الرباط شالة",
+              "الرباط",
+              "الرباط - سال - القنيطرة",
               "2"
             ]
           ]
         },
         {
           "page": 2,
-          "extraction_mode": "NATIVE_RTL",
+          "extraction_mode": "VISUAL_TABLE_CELLS",
           "table_rows": 8,
           "table_cells": 78,
-          "sample": [
+          "sample_raw": [
             [
-              "ةحئاللا يحشرم يقاب",
+              "ةحئلالا يحشرم يقاب",
               "",
               "",
               "",
               "",
-              "ةحئاللا ليكو",
-              "ددع دعاقملا",
-              "ةيباختنالا ةرئادلا",
-              "وأ ميلقإلا وأ ةلامعلا ةعطاقم ةلامع",
+              "ةحئلالا ليكو",
+              "ددع دعاقلما",
+              "ةيباختنلاا ةرئادلا",
+              "وأ ميلقلإا وأ ةلامعلا ةعطاقم ةلامع",
               "ةهجلا",
               "ت.ر"
             ],
             [
-              "6 ةبترملا",
-              "5 ةبترملا",
-              "4 ةبترملا",
-              "3 ةبترملا",
-              "2 ةبترملا",
+              "6 ةبترلما",
+              "5 ةبترلما",
+              "4 ةبترلما",
+              "3 ةبترلما",
+              "2 ةبترلما",
               "",
               "",
               "",
@@ -1347,10 +3190,10 @@
               "",
               "",
               "ميشغل نسح",
-              "ابوط ريشبلا يالوم",
+              "ابوط ريشبلا يلاوم",
               "ناميلس نب سنوي",
               "3",
-              "يلع نب فسوي يديس ةنيدملا",
+              "يلع نب فسوي يديس ةنيدلما",
               "شكارم",
               "يفسآ - شكارم",
               "18"
@@ -1360,12 +3203,66 @@
               "",
               "",
               "ضاير تيأ فسوي",
-              "ي سيردإلا ينارمعلا ةنيمأ",
+              "ي سيردلإا ينارمعلا ةنيمأ",
               "جابقلا دامح",
               "3",
               "ليخنلا زيلج",
               "شكارم",
               "يفسآ - شكارم",
+              "19"
+            ]
+          ],
+          "sample_logical": [
+            [
+              "باقي مرشحي الالئحة",
+              "",
+              "",
+              "",
+              "",
+              "وكيل الالئحة",
+              "املقاعد عدد",
+              "الدائرة االنتخابية",
+              "عمالة مقاطعة العمالة أو اإلقليم أو",
+              "الجهة",
+              "ر.ت"
+            ],
+            [
+              "املرتبة 6",
+              "املرتبة 5",
+              "املرتبة 4",
+              "املرتبة 3",
+              "املرتبة 2",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "حسن لغشيم",
+              "موالي البشير طوبا",
+              "يونس بن سليمان",
+              "3",
+              "املدينة سيدي يوسف بن علي",
+              "مراكش",
+              "مراكش - آسفي",
+              "18"
+            ],
+            [
+              "",
+              "",
+              "",
+              "يوسف أيت رياض",
+              "أمينة العمراني اإلدريس ي",
+              "حماد القباج",
+              "3",
+              "جليز النخيل",
+              "مراكش",
+              "مراكش - آسفي",
               "19"
             ]
           ]
@@ -1375,28 +3272,29 @@
     {
       "article_id": "SOUTH_SOUSS_ORIENT",
       "pdf_sha256": "48878329a2849f980bf65b6b2e1ef1a68836c71aa5fb0eaee05421822a9e8143",
+      "text_sha256": "06c804625a2e34b6d663d9bffa1c052e525c7e8aacca37c3a3f9193b7c6908a9",
       "diagnostics": [
         {
           "page": 1,
-          "extraction_mode": "NATIVE_RTL",
+          "extraction_mode": "VISUAL_TABLE_CELLS",
           "table_rows": 16,
           "table_cells": 136,
-          "sample": [
+          "sample_raw": [
             [
-              "ةحئاللا يحشرم يقاب",
+              "ةحئلالا يحشرم يقاب",
               "",
               "",
-              "ةحئاللا ليكو",
-              "ددع دعاقملا",
-              "ةيباختنالا ةرئادلا",
-              "وأ ميلقإلا وأ ةلامعلا ةعطاقم ةلامع",
+              "ةحئلالا ليكو",
+              "ددع دعاقلما",
+              "ةيباختنلاا ةرئادلا",
+              "وأ ميلقلإا وأ ةلامعلا ةعطاقم ةلامع",
               "ةهجلا",
               "ت.ر"
             ],
             [
-              "4 ةبترملا",
-              "3 ةبترملا",
-              "2 ةبترملا",
+              "4 ةبترلما",
+              "3 ةبترلما",
+              "2 ةبترلما",
               "",
               "",
               "",
@@ -1407,7 +3305,7 @@
             [
               "",
               "يويدهم دمحم",
-              "ي ضالبأ ةجيدخ",
+              "ي ضلابأ ةجيدخ",
               "فيعضلا ميهاربإ",
               "3",
               "نويعلا",
@@ -1426,29 +3324,75 @@
               "ءارمحلا ةيقاسلا _ نويعلا",
               "2"
             ]
+          ],
+          "sample_logical": [
+            [
+              "باقي مرشحي الالئحة",
+              "",
+              "",
+              "وكيل الالئحة",
+              "املقاعد عدد",
+              "الدائرة االنتخابية",
+              "عمالة مقاطعة العمالة أو اإلقليم أو",
+              "الجهة",
+              "ر.ت"
+            ],
+            [
+              "املرتبة 4",
+              "املرتبة 3",
+              "املرتبة 2",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "محمد مهديوي",
+              "خديجة أبالض ي",
+              "إبراهيم الضعيف",
+              "3",
+              "العيون",
+              "العيون",
+              "العيون _ الساقية الحمراء",
+              "1"
+            ],
+            [
+              "",
+              "",
+              "محمد هول",
+              "عالي الرزمة",
+              "2",
+              "طرفاية",
+              "طرفاية",
+              "العيون _ الساقية الحمراء",
+              "2"
+            ]
           ]
         },
         {
           "page": 2,
-          "extraction_mode": "NATIVE_RTL",
+          "extraction_mode": "VISUAL_TABLE_CELLS",
           "table_rows": 12,
           "table_cells": 100,
-          "sample": [
+          "sample_raw": [
             [
-              "ةحئاللا يحشرم يقاب",
+              "ةحئلالا يحشرم يقاب",
               "",
               "",
-              "ةحئاللا ليكو",
-              "ددع دعاقملا",
-              "ةيباختنالا ةرئادلا",
-              "وأ ميلقإلا وأ ةلامعلا ةعطاقم ةلامع",
+              "ةحئلالا ليكو",
+              "ددع دعاقلما",
+              "ةيباختنلاا ةرئادلا",
+              "وأ ميلقلإا وأ ةلامعلا ةعطاقم ةلامع",
               "ةهجلا",
               "ت.ر"
             ],
             [
-              "4 ةبترملا",
-              "3 ةبترملا",
-              "2 ةبترملا",
+              "4 ةبترلما",
+              "3 ةبترلما",
+              "2 ةبترلما",
               "",
               "",
               "",
@@ -1469,13 +3413,59 @@
             ],
             [
               "ي شاكنلا ىفطصم",
-              "يرابوأ هللادبع",
+              "يرابوأ اللهدبع",
               "يركوش ليعامسا",
-              "يكولاملا حلاص",
+              "يكولالما حلاص",
               "4",
               "نانتوادإ ريداكأ",
               "نانتوادإ ريداكأ",
               "ةسام - سوس",
+              "16"
+            ]
+          ],
+          "sample_logical": [
+            [
+              "باقي مرشحي الالئحة",
+              "",
+              "",
+              "وكيل الالئحة",
+              "املقاعد عدد",
+              "الدائرة االنتخابية",
+              "عمالة مقاطعة العمالة أو اإلقليم أو",
+              "الجهة",
+              "ر.ت"
+            ],
+            [
+              "املرتبة 4",
+              "املرتبة 3",
+              "املرتبة 2",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "عمر بوفي",
+              "محمد الراجي",
+              "2",
+              "طاطا",
+              "طاطا",
+              "سوس - ماسة",
+              "15"
+            ],
+            [
+              "مصطفى النكاش ي",
+              "عبدهللا أوباري",
+              "اسماعيل شوكري",
+              "صالح املالوكي",
+              "4",
+              "أكادير إداوتنان",
+              "أكادير إداوتنان",
+              "سوس - ماسة",
               "16"
             ]
           ]
@@ -1485,32 +3475,33 @@
     {
       "article_id": "LIST_3",
       "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "text_sha256": "d3d92aed83f23d071b500ae8351f76c2eef41c6cc11ea342daf99d88ba3d0c77",
       "diagnostics": [
         {
           "page": 1,
-          "extraction_mode": "NATIVE_RTL",
+          "extraction_mode": "VISUAL_TABLE_CELLS",
           "table_rows": 18,
           "table_cells": 188,
-          "sample": [
+          "sample_raw": [
             [
-              "ةحئاللا يحشرم يقاب",
+              "ةحئلالا يحشرم يقاب",
               "",
               "",
               "",
               "",
-              "ةحئاللا ليكو",
-              "ددع دعاقملا",
-              "ةيباختنالا ةرئادلا",
-              "وأ ميلقإلا وأ ةلامعلا ةعطاقم ةلامع",
+              "ةحئلالا ليكو",
+              "ددع دعاقلما",
+              "ةيباختنلاا ةرئادلا",
+              "وأ ميلقلإا وأ ةلامعلا ةعطاقم ةلامع",
               "ةهجلا",
               "ت.ر"
             ],
             [
-              "6 ةبترملا",
-              "5 ةبترملا",
-              "4 ةبترملا",
-              "3 ةبترملا",
-              "2 ةبترملا",
+              "6 ةبترلما",
+              "5 ةبترلما",
+              "4 ةبترلما",
+              "3 ةبترلما",
+              "2 ةبترلما",
               "",
               "",
               "",
@@ -1528,7 +3519,7 @@
               "3",
               "ناميلس يديس",
               "ناميلس يديس",
-              "ةرطينقلا - الس - طابرلا",
+              "ةرطينقلا - لاس - طابرلا",
               "1"
             ],
             [
@@ -1536,7 +3527,7 @@
               "",
               "",
               "دورب نسح",
-              "ةليدعلا تيأ ديجملا دبع",
+              "ةليدعلا تيأ ديجلما دبع",
               "ميتي دمحم",
               "3",
               "ي صونربلا يديس",
@@ -1544,33 +3535,27 @@
               "تاطس - ءاضيبلا رادلا",
               "2"
             ]
-          ]
-        },
-        {
-          "page": 2,
-          "extraction_mode": "NATIVE_RTL",
-          "table_rows": 14,
-          "table_cells": 144,
-          "sample": [
+          ],
+          "sample_logical": [
             [
-              "ةحئاللا يحشرم يقاب",
+              "باقي مرشحي الالئحة",
               "",
               "",
               "",
               "",
-              "ةحئاللا ليكو",
-              "ددع دعاقملا",
-              "ةيباختنالا ةرئادلا",
-              "وأ ميلقإلا وأ ةلامعلا ةعطاقم ةلامع",
-              "ةهجلا",
-              "ت.ر"
+              "وكيل الالئحة",
+              "املقاعد عدد",
+              "الدائرة االنتخابية",
+              "عمالة مقاطعة العمالة أو اإلقليم أو",
+              "الجهة",
+              "ر.ت"
             ],
             [
-              "6 ةبترملا",
-              "5 ةبترملا",
-              "4 ةبترملا",
-              "3 ةبترملا",
-              "2 ةبترملا",
+              "املرتبة 6",
+              "املرتبة 5",
+              "املرتبة 4",
+              "املرتبة 3",
+              "املرتبة 2",
               "",
               "",
               "",
@@ -1580,15 +3565,75 @@
             ],
             [
               "",
-              "يجرتملا دمحم",
+              "",
+              "",
+              "سميرة علوش",
+              "كريم ميس",
+              "محمد الحفياني",
+              "3",
+              "سيدي سليمان",
+              "سيدي سليمان",
+              "الرباط - سال - القنيطرة",
+              "1"
+            ],
+            [
+              "",
+              "",
+              "",
+              "حسن برود",
+              "عبد املجيد أيت العديلة",
+              "محمد يتيم",
+              "3",
+              "سيدي البرنوص ي",
+              "سيدي البرنوص ي",
+              "الدار البيضاء - سطات",
+              "2"
+            ]
+          ]
+        },
+        {
+          "page": 2,
+          "extraction_mode": "VISUAL_TABLE_CELLS",
+          "table_rows": 14,
+          "table_cells": 144,
+          "sample_raw": [
+            [
+              "ةحئلالا يحشرم يقاب",
+              "",
+              "",
+              "",
+              "",
+              "ةحئلالا ليكو",
+              "ددع دعاقلما",
+              "ةيباختنلاا ةرئادلا",
+              "وأ ميلقلإا وأ ةلامعلا ةعطاقم ةلامع",
+              "ةهجلا",
+              "ت.ر"
+            ],
+            [
+              "6 ةبترلما",
+              "5 ةبترلما",
+              "4 ةبترلما",
+              "3 ةبترلما",
+              "2 ةبترلما",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "يجرتلما دمحم",
               "يليضفلا ىفطصم",
               "يقرعلا دمحم",
-              "يجرب مالسلا دبع",
-              "يوانه هللا دبع",
+              "يجرب ملاسلا دبع",
+              "يوانه الله دبع",
               "5",
               "ةيديشرلا",
               "ةيديشرلا",
-              "تلاليفات ةعرد",
+              "تللايفات ةعرد",
               "17"
             ],
             [
@@ -1601,7 +3646,61 @@
               "3",
               "ريغنت",
               "ريغنت",
-              "تلاليفات ةعرد",
+              "تللايفات ةعرد",
+              "18"
+            ]
+          ],
+          "sample_logical": [
+            [
+              "باقي مرشحي الالئحة",
+              "",
+              "",
+              "",
+              "",
+              "وكيل الالئحة",
+              "املقاعد عدد",
+              "الدائرة االنتخابية",
+              "عمالة مقاطعة العمالة أو اإلقليم أو",
+              "الجهة",
+              "ر.ت"
+            ],
+            [
+              "املرتبة 6",
+              "املرتبة 5",
+              "املرتبة 4",
+              "املرتبة 3",
+              "املرتبة 2",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "محمد املترجي",
+              "مصطفى الفضيلي",
+              "محمد العرقي",
+              "عبد السالم برجي",
+              "عبد هللا هناوي",
+              "5",
+              "الرشيدية",
+              "الرشيدية",
+              "درعة تافياللت",
+              "17"
+            ],
+            [
+              "",
+              "",
+              "",
+              "يوسف بوكا",
+              "محمد ابن تيزي",
+              "أحمد صدقي",
+              "3",
+              "تنغير",
+              "تنغير",
+              "درعة تافياللت",
               "18"
             ]
           ]
@@ -1610,6 +3709,8 @@
     }
   ],
   "invariants": {
+    "visual_to_logical_transform": "WHOLE_CELL_CODEPOINT_REVERSAL",
+    "candidate_identity_requires_independent_pypdf_text_match": true,
     "failed_rows_promoted": false,
     "outcomes_unsealed": false,
     "predictive_judgments_generated": false,
