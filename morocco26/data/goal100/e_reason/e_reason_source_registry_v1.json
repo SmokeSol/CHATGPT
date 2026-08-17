@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "registry_id": "M26-E-REASON-SOURCE-REGISTRY-V1",
+  "created_at": "2026-08-17T23:22:00+01:00",
+  "policy": "morocco26/data/goal100/e_reason/e_reason_source_policy_v1.json",
+  "entries": [
+    {
+      "domain": "pjd.ma",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "qualification_status": "QUALIFIED_BEFORE_EXTRACTION",
+      "qualification_basis": [
+        "The site identifies itself as the official website of Morocco's Justice and Development Party (Parti de la Justice et du Developpement / Hizb al-Adala wa al-Tanmia).",
+        "The historical pages are first-party party-secretariat announcements and attachments concerning the party's own 2016 nominations.",
+        "This use is limited to party-controlled nomination/list facts permitted by the frozen T1 source policy."
+      ],
+      "qualification_evidence": [
+        {
+          "url": "https://www.pjd.ma/",
+          "observed_title": "الموقع الإلكتروني لحزب العدالة و التنمية",
+          "observed_at": "2026-08-17T23:22:00+01:00"
+        },
+        {
+          "url": "https://www.pjd.ma/74975-38982.html",
+          "published_at_source": "2016-09-15T06:00:00+01:00",
+          "observed_title": "لائحة المرشحين للدوائر الانتخابية جهات الرباط وفاس ومراكش",
+          "attachment_name": "jht_lrbt_wfs_wmrksh.pdf"
+        },
+        {
+          "url": "https://www.pjd.ma/74973-38983.html",
+          "published_at_source": "2016-09-15T06:00:00+01:00",
+          "observed_title": "لائحة المرشحين للدوائر الانتخابيةاللائحة 3",
+          "attachment_name": "ldf_3.pdf"
+        }
+      ],
+      "restrictions": [
+        "Search snippets are discovery only and are not evidence.",
+        "Current migrated static files are accepted only as archival mirrors of a pre-cutoff first-party attachment when the historical article, attachment filename and document content jointly establish provenance.",
+        "No post-cutoff election result, winner/loser statement, or elected-member outcome may enter an E_reason packet.",
+        "Party nomination facts are labelled PARTY_ANNOUNCED unless a T0 source establishes legal registration."
+      ]
+    }
+  ]
+}
