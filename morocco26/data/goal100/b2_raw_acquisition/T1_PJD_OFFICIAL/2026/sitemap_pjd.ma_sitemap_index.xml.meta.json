@@ -1,0 +1,21 @@
+{
+  "source_id": "T1_PJD_OFFICIAL",
+  "bucket": "2026",
+  "original_url": "https://pjd.ma/sitemap_index.xml",
+  "final_url": "https://pjd.ma/sitemap_index.xml",
+  "retrieved_at": "2026-08-17T10:45:08+01:00",
+  "http_status": 200,
+  "content_type": "text/xml; charset=UTF-8",
+  "content_length": 14414,
+  "etag": null,
+  "last_modified": "Mon, 17 Aug 2026 09:42:37 GMT",
+  "sha256": "78f483f56ac63a8d69df45fa9721d2c395c296cbfdd176c357f352ebfbd66f5d",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

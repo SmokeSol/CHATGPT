@@ -1,0 +1,21 @@
+{
+  "source_id": "HF_CHAMBER_MEMBERS_MULTIYEAR",
+  "bucket": "data",
+  "original_url": "https://huggingface.co/datasets/electricsheepafrica/africa-membres-de-la-chambre-des-representants-du-maroc-2007-2011-2016-2021/resolve/main/data/test-00000-of-00001.parquet",
+  "final_url": "https://us.aws.cdn.hf.co/xet-bridge-us/69ef868d31a237a48b9f1796/b2714b1e1bc954df2000a8cab94cfee031b3329ab01e48d4adb73af32974dad6?X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27test-00000-of-00001.parquet%3B+filename%3D%22test-00000-of-00001.parquet%22%3B&user_id=public&Expires=1786963028&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjllZjg2OGQzMWEyMzdhNDhiOWYxNzk2L2IyNzE0YjFlMWJjOTU0ZGYyMDAwYThjYWI5NGNmZWUwMzFiMzMyOWFiMDFlNDhkNGFkYjczYWYzMjk3NGRhZDZcXD9YLVhldC1DYXMtVWlkPXB1YmxpYyZyZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPWlubGluZSUzQitmaWxlbmFtZSUyQSUzRFVURi04JTI3JTI3dGVzdC0wMDAwMC1vZi0wMDAwMS5wYXJxdWV0JTNCK2ZpbGVuYW1lJTNEJTIydGVzdC0wMDAwMC1vZi0wMDAwMS5wYXJxdWV0JTIyJTNCJnVzZXJfaWQ9cHVibGljIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJFcG9jaFRpbWUiOjE3ODY5NjMwMjh9fX1dfQ__&Signature=MEQCIGoZjLjbcITnvC%7EEFGBw87J0vFyNkNbMWVNR9qiaguUcAiBMdY2BCQVP5jtG7fPdj05fqBJuMVXcyjpr3nlLJ%7E3ziQ__&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F",
+  "retrieved_at": "2026-08-17T10:39:41+01:00",
+  "http_status": 200,
+  "content_type": "application/octet-stream",
+  "content_length": 32143,
+  "etag": "\"b2714b1e1bc954df2000a8cab94cfee031b3329ab01e48d4adb73af32974dad6\"",
+  "last_modified": null,
+  "sha256": "c4bae75e6ae7959d6d36d8654e0e4e85737928120d5ef0e5efef76eb9725f165",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

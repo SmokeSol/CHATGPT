@@ -1,0 +1,21 @@
+{
+  "source_id": "HF_CHAMBER_MEMBERS_MULTIYEAR",
+  "bucket": "index",
+  "original_url": "https://huggingface.co/api/datasets/electricsheepafrica/africa-membres-de-la-chambre-des-representants-du-maroc-2007-2011-2016-2021",
+  "final_url": "https://huggingface.co/api/datasets/electricsheepafrica/africa-membres-de-la-chambre-des-representants-du-maroc-2007-2011-2016-2021",
+  "retrieved_at": "2026-08-17T10:39:40+01:00",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "content_length": 2321,
+  "etag": "W/\"911-GCE18NHkcatcqaMk1Cal7kF7nl0\"",
+  "last_modified": null,
+  "sha256": "349b412763c41a8b073255fb2a79c29b35df64fd5a4a887070d6988656dcba6e",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

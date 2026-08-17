@@ -1,0 +1,25 @@
+{
+  "dataset_name": "membres-de-la-chambre-des-representants-du-maroc-2007-2011-2016-2021",
+  "slug": "africa-membres-de-la-chambre-des-representants-du-maroc-2007-2011-2016-2021",
+  "source_url": "https://open.africa/dataset/5d84fa5f-144e-4a93-9dc8-de25a4267561/resource/7a0830a0-c4d0-4929-8028-a41b6822be6d/download/parlement-elus-tafra-1-6-0.xlsx",
+  "license": "cc-by",
+  "organization": "TAFRA",
+  "prep_report": {
+    "original_rows": 1654,
+    "original_cols": 24,
+    "dropped_cols": [
+      "idsouspref",
+      "souspref",
+      "procedureremplacement"
+    ],
+    "duplicates_removed": 0,
+    "type_casts": {
+      "dateentree": "datetime",
+      "datesortie": "datetime"
+    },
+    "final_rows": 1654,
+    "final_cols": 23
+  },
+  "processed_at": "2026-04-27T15:53:47.713697",
+  "source": "OpenAfrica"
+}

@@ -1,0 +1,21 @@
+{
+  "source_id": "T2_SNRTNEWS",
+  "bucket": "2026",
+  "original_url": "https://snrtnews.com/fr/article/anis-birou-a-nokta-ila-satr-nous-avons-tranche-90-des-investitures-du-rni-148741",
+  "final_url": "https://snrtnews.com/fr/article/anis-birou-a-nokta-ila-satr-nous-avons-tranche-90-des-investitures-du-rni-148741",
+  "retrieved_at": "2026-08-17T10:45:40+01:00",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "content_length": 200746,
+  "etag": null,
+  "last_modified": null,
+  "sha256": "a094f57a99926aa906d646b73a3f09ce4a162c3de5d869bbfee65af6cc20288a",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

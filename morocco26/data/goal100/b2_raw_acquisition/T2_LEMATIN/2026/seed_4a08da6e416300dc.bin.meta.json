@@ -1,0 +1,21 @@
+{
+  "source_id": "T2_LEMATIN",
+  "bucket": "2026",
+  "original_url": "https://lematin.ma/nation/financement-electoral-2026-lenveloppe-publique-portee-a-450-mdh/352161",
+  "final_url": "https://lematin.ma/nation/financement-electoral-2026-lenveloppe-publique-portee-a-450-mdh/352161",
+  "retrieved_at": "2026-08-17T10:45:38+01:00",
+  "http_status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "content_length": 270494,
+  "etag": null,
+  "last_modified": "Mon, 17 Aug 2026 09:43:06 GMT",
+  "sha256": "4a08da6e416300dccf10d4a6702b003c8f35a88c4cd27f5dd7af113c492f0dcb",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

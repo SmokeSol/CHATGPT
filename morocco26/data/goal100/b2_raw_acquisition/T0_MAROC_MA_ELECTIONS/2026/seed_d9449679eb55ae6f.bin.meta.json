@@ -1,0 +1,21 @@
+{
+  "source_id": "T0_MAROC_MA_ELECTIONS",
+  "bucket": "2026",
+  "original_url": "https://maroc.ma/fr/actualites/la-date-des-elections-des-membres-de-la-chambre-des-representants-fixee-au-mercredi-23-septembre-2026",
+  "final_url": "https://maroc.ma/fr/actualites/la-date-des-elections-des-membres-de-la-chambre-des-representants-fixee-au-mercredi-23-septembre-2026",
+  "retrieved_at": "2026-08-17T10:43:09+01:00",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "content_length": 58379,
+  "etag": null,
+  "last_modified": "Mon, 17 Aug 2026 09:00:29 GMT",
+  "sha256": "d9449679eb55ae6f0935d263146538b8c4487560d568dadea3bd2289d30e77e6",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

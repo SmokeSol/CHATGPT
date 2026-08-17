@@ -1,0 +1,21 @@
+{
+  "source_id": "T1_PPS_OFFICIAL",
+  "bucket": "2026",
+  "original_url": "https://pps.ma/sitemap.xml",
+  "final_url": "https://pps.ma/wp-sitemap.xml",
+  "retrieved_at": "2026-08-17T10:45:13+01:00",
+  "http_status": 200,
+  "content_type": "application/xml; charset=UTF-8",
+  "content_length": 970,
+  "etag": null,
+  "last_modified": null,
+  "sha256": "70b1ce3bb128876a5c48cadc1123c8bd8cc93eb49d8f63bd26c59e4ffdd37dd7",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

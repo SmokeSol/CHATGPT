@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "diagnostic_id": "M26-GOAL100-B2-VALIDATOR-CONSISTENCY-V1",
+  "generated_at": "2026-08-17T11:03:48+01:00",
+  "method": "Each validator runs twice: against the working tree and against a line-ending-normalized copy. No validator is modified, and no gate criterion is weakened.",
+  "text_files_normalized_for_comparison": 267,
+  "observed_gate_state": {
+    "next_gate": "B2-3-HISTORICAL-FEATURE-PANEL",
+    "gate_status": {
+      "B2-0-PROTOCOL-FROZEN": "CLOSED",
+      "B2-1-SOURCE-UNIVERSE-FROZEN": "CLOSED",
+      "B2-2-IDENTITY-TERRITORY-CROSSWALK": "CLOSED",
+      "B2-3-HISTORICAL-FEATURE-PANEL": "OPEN",
+      "B2-4-2026-BALLOT-ROSTER": "OPEN",
+      "B2-5-PROVENANCE-CONFLICT-AUDIT": "OPEN",
+      "B2-6-EFFECT-CALIBRATION": "OPEN",
+      "B2-7-B2-FROZEN": "OPEN",
+      "B2-8-F0-COUNTERFACTUAL-SIMULATION": "LOCKED"
+    },
+    "closed_gates": [
+      "B2-0-PROTOCOL-FROZEN",
+      "B2-1-SOURCE-UNIVERSE-FROZEN",
+      "B2-2-IDENTITY-TERRITORY-CROSSWALK"
+    ],
+    "phase": "B2_IDENTITY_TERRITORY_CERTIFIED_HISTORICAL_PANEL_PENDING"
+  },
+  "line_ending_evidence": {
+    "available": true,
+    "artifact": "morocco26/data/goal100/forecasts/F-1/forecast.json",
+    "worktree_contains_crlf": true,
+    "worktree_sha256": "8c3ee52b45b3190572037b27461e6552a704142d3178cbe97345299280d2fa29",
+    "lf_normalized_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "git_blob_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "manifest_declared_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "declared_matches_git_blob": true,
+    "declared_matches_worktree": false,
+    "git_core_autocrlf": "true"
+  },
+  "validators": [
+    {
+      "validator": "validate_b2_protocol",
+      "asserts_gate_state_of": "B2-1-SOURCE-UNIVERSE-FROZEN",
+      "pinned_expectation": "every gate after B2-1 is OPEN and next_gate is B2-2",
+      "as_checked_out": {
+        "exit_code": 1,
+        "first_line": "B2_PROTOCOL_FAIL: B2-2-IDENTITY-TERRITORY-CROSSWALK prematurely closed after source PASS",
+        "passed": false
+      },
+      "line_ending_normalized": {
+        "exit_code": 1,
+        "first_line": "B2_PROTOCOL_FAIL: B2-2-IDENTITY-TERRITORY-CROSSWALK prematurely closed after source PASS",
+        "passed": false
+      },
+      "classification": "STALE_ASSERTION_AFTER_LEGITIMATE_TRANSITION",
+      "category": "A_STALE_ASSERTION",
+      "is_repository_defect": true,
+      "superseded_by_closed_gates": [
+        "B2-2-IDENTITY-TERRITORY-CROSSWALK"
+      ],
+      "explanation": "The validator pins the point-in-time state at B2-1-SOURCE-UNIVERSE-FROZEN closure (every gate after B2-1 is OPEN and next_gate is B2-2). That state was legitimately superseded when B2-2-IDENTITY-TERRITORY-CROSSWALK closed against its own certificate."
+    },
+    {
+      "validator": "validate_b2_source_universe",
+      "asserts_gate_state_of": "B2-1-SOURCE-UNIVERSE-FROZEN",
+      "pinned_expectation": "next_gate is B2-2-IDENTITY-TERRITORY-CROSSWALK",
+      "as_checked_out": {
+        "exit_code": 1,
+        "first_line": "B2_SOURCE_VALIDATION_FAIL: next B2 gate is not B2-2",
+        "passed": false
+      },
+      "line_ending_normalized": {
+        "exit_code": 1,
+        "first_line": "B2_SOURCE_VALIDATION_FAIL: next B2 gate is not B2-2",
+        "passed": false
+      },
+      "classification": "STALE_ASSERTION_AFTER_LEGITIMATE_TRANSITION",
+      "category": "A_STALE_ASSERTION",
+      "is_repository_defect": true,
+      "superseded_by_closed_gates": [
+        "B2-2-IDENTITY-TERRITORY-CROSSWALK"
+      ],
+      "explanation": "The validator pins the point-in-time state at B2-1-SOURCE-UNIVERSE-FROZEN closure (next_gate is B2-2-IDENTITY-TERRITORY-CROSSWALK). That state was legitimately superseded when B2-2-IDENTITY-TERRITORY-CROSSWALK closed against its own certificate."
+    },
+    {
+      "validator": "validate_goal100_tracking",
+      "asserts_gate_state_of": null,
+      "pinned_expectation": "registered F-1 artifact hashes match the snapshot manifest",
+      "as_checked_out": {
+        "exit_code": 1,
+        "first_line": "FMINUS1_REGISTRATION_FAIL: forecast hash mismatch",
+        "passed": false
+      },
+      "line_ending_normalized": {
+        "exit_code": 1,
+        "first_line": "FMINUS1_REGISTRATION_FAIL: recorded model commit is unavailable: Command '['git', 'cat-file', '-e', '18f685769c7e601887467c96428f445511f7ad29^{commit}']' returned non-zero exit status 128.",
+        "passed": false
+      },
+      "classification": "ENVIRONMENT_LINE_ENDING",
+      "category": "E_LOCAL_CHECKOUT_ARTIFACT",
+      "is_repository_defect": false,
+      "residual_failure_under_lf": "FMINUS1_REGISTRATION_FAIL: recorded model commit is unavailable: Command '['git', 'cat-file', '-e', '18f685769c7e601887467c96428f445511f7ad29^{commit}']' returned non-zero exit status 128.",
+      "explanation": "The raw-byte hash failure disappears once line endings are normalized, so the digest difference describes the checkout, not the content."
+    },
+    {
+      "validator": "validate_b2_historical_panel",
+      "asserts_gate_state_of": "B2-3-HISTORICAL-FEATURE-PANEL",
+      "pinned_expectation": "panel and certificate satisfy the B2-3 contract",
+      "as_checked_out": {
+        "exit_code": 0,
+        "first_line": "B2_HISTORICAL_PANEL_VALIDATION_PASS",
+        "passed": true
+      },
+      "line_ending_normalized": {
+        "exit_code": 0,
+        "first_line": "B2_HISTORICAL_PANEL_VALIDATION_PASS",
+        "passed": true
+      },
+      "classification": "CONSISTENT",
+      "category": null,
+      "is_repository_defect": false
+    },
+    {
+      "validator": "validate_anti_drift",
+      "asserts_gate_state_of": null,
+      "pinned_expectation": "north-star and phase invariants hold",
+      "as_checked_out": {
+        "exit_code": 0,
+        "first_line": "ANTI_DRIFT_PASS",
+        "passed": true
+      },
+      "line_ending_normalized": {
+        "exit_code": 0,
+        "first_line": "ANTI_DRIFT_PASS",
+        "passed": true
+      },
+      "classification": "CONSISTENT",
+      "category": null,
+      "is_repository_defect": false
+    }
+  ],
+  "counts": {
+    "total": 5,
+    "consistent": 2,
+    "environment_artifacts": 1,
+    "stale_assertions": 2,
+    "requires_human_review": 0
+  },
+  "proposed_amendments": [
+    {
+      "validator": "validate_b2_protocol",
+      "status": "PROPOSED_NOT_APPLIED",
+      "required_form": "versioned successor validator, e.g. <name>_v1_1.py, preserving every other check",
+      "permitted_change": "Replace the point-in-time expectation 'every gate after B2-1 is OPEN and next_gate is B2-2' with an assertion that the gate sequence is monotonic: a gate may be CLOSED only with its required artifact present and PASS.",
+      "forbidden_change": "Removing, loosening or skipping any coverage, hash, leakage or claim-count check.",
+      "superseded_by_closed_gates": [
+        "B2-2-IDENTITY-TERRITORY-CROSSWALK"
+      ]
+    },
+    {
+      "validator": "validate_b2_source_universe",
+      "status": "PROPOSED_NOT_APPLIED",
+      "required_form": "versioned successor validator, e.g. <name>_v1_1.py, preserving every other check",
+      "permitted_change": "Replace the point-in-time expectation 'next_gate is B2-2-IDENTITY-TERRITORY-CROSSWALK' with an assertion that the gate sequence is monotonic: a gate may be CLOSED only with its required artifact present and PASS.",
+      "forbidden_change": "Removing, loosening or skipping any coverage, hash, leakage or claim-count check.",
+      "superseded_by_closed_gates": [
+        "B2-2-IDENTITY-TERRITORY-CROSSWALK"
+      ]
+    }
+  ],
+  "F_minus_1_integrity": "INTACT",
+  "repair_policy": "No registered F-1 artifact is modified by this diagnostic.",
+  "canonical_diagnostic_sha256": "5b310a741ea54a5d9f9d26914ede97c8520beea2037afa89c75a01e0f5631c7e"
+}

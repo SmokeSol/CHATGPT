@@ -1,0 +1,1780 @@
+
+
+<!doctype html>
+<html lang="ar" xml:lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>&#x627;&#x644;&#x645;&#x645;&#x644;&#x643;&#x629; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A;&#x629; - &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</title>
+
+    <!-- Force no caching -->
+
+    <!-- Bootstrap CSS with cache busting -->
+    <link rel="stylesheet" href="/NewTheme/css/bootstrap/bootstrap.rtl.min.css?v=VhmVB1lmzejsorhk4ur4-T9LaDqcPcb4h3HBJL3tZAs">
+    <link rel="stylesheet" type="text/css" href="/NewTheme/css/layout.min.css?v=SFVOINdfD7kzvTnvdt6gvledYN5WaDF5ZYoAvj2-N-4">
+    <link rel="stylesheet" type="text/css" href="/NewTheme/css/fonts.min.css?v=FOzMbJdr9rLcjHJ8-FBIW7lwIm75fHmcw5SzzkOqpGQ">
+    <!-- Using your renamed style-v2.css with asp-append-version -->
+    <link rel="stylesheet" type="text/css" href="/NewTheme/css/style-v2.min.css?v=t5k3rk9Rx_PR0IjxZ4i7TeRLao2hJc3dnLewu6Au_nQ">
+    <link rel="stylesheet" type="text/css" href="/NewTheme/css/variables.min.css?v=Dn9yYSwxaqd_YZAsVyBRFbxM15Bnvlc-qs_BdSrf2ak">
+    <link rel="stylesheet" href="/NewTheme/css/pagination.min.css?v=38FSbOhtBMSBI_AmkbwqMEgoaU-SsqZipAKfi5mIfs4">
+    <link rel="stylesheet" href="/NewTheme/css/jqueryDataTable/datatables.min.css?v=nuV4Zrpu0t2H-z2TjobnMd6bwA1hm5hZCTRLn6T_H94">
+    <!-- Accessibility styles -->
+    <link rel="stylesheet" href="/NewTheme/css/accessibility.min.css?v=QGJeclSvtrwL9d7j6wNCMxzU0mXz2xtcZ7cDGgDEqU0">
+
+    <!-- External CDN resources -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- AI Chat Button Styles -->
+    <link rel="stylesheet" type="text/css" href="/NewTheme/css/ai-chat-button.css?v=nQhI0GhpdPbIIvsKj0rULWALAPuAqOdoYe4_-PgM0eQ">
+</head>
+
+<body class="container-RTL">
+<div class="container-fluid" id="header" role="banner">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">&#x62A;&#x62E;&#x637;&#x64A; &#x625;&#x644;&#x649; &#x627;&#x644;&#x645;&#x62D;&#x62A;&#x648;&#x649; &#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;</a>
+
+    <h1 class="visually-hidden">&#x627;&#x644;&#x645;&#x645;&#x644;&#x643;&#x629; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A;&#x629; - &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</h1>
+
+    <!-- Live region for screen reader announcements -->
+    <div id="sr-announcer" class="visually-hidden" aria-live="polite" aria-atomic="true" lang="ar"></div>
+
+    <div class="container-xxl social-langue-container">
+        <div class="logo float-start">
+                <a class="navbar-brand logo-container" href="/" aria-label="&#x634;&#x639;&#x627;&#x631; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x644;&#x644;&#x645;&#x645;&#x644;&#x643;&#x629; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A;&#x629;" lang="ar">
+                    <img src="NewTheme/images/logo-image.png" class="img-fluid" alt="&#x634;&#x639;&#x627;&#x631; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x644;&#x644;&#x645;&#x645;&#x644;&#x643;&#x629; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A;&#x629;" lang="ar">
+                <img src="NewTheme/images/cour-constitutionnelle-ar.png" class="img-fluid" alt="" aria-hidden="true">
+            </a>
+        </div>
+
+        <div class="social float-end">
+            <!-- Linkedin -->
+                <a href="https://www.linkedin.com/company/cour-constitutionnelle" aria-label="&#x632;&#x64A;&#x627;&#x631;&#x629; &#x635;&#x641;&#x62D;&#x62A;&#x646;&#x627; &#x639;&#x644;&#x649; &#x644;&#x64A;&#x646;&#x643;&#x62F; &#x625;&#x646; - &#x64A;&#x641;&#x62A;&#x62D; &#x641;&#x64A; &#x646;&#x627;&#x641;&#x630;&#x629; &#x62C;&#x62F;&#x64A;&#x62F;&#x629;">
+                <i class="icon-linkedin" aria-hidden="true"></i>
+            </a>
+                <a href="https://www.facebook.com/people/Cour-constitutionnelle-du-MAROC/61576080636386/" class="mx-1" aria-label="&#x632;&#x64A;&#x627;&#x631;&#x629; &#x635;&#x641;&#x62D;&#x62A;&#x646;&#x627; &#x639;&#x644;&#x649; &#x641;&#x64A;&#x633;&#x628;&#x648;&#x643; - &#x64A;&#x641;&#x62A;&#x62D; &#x641;&#x64A; &#x646;&#x627;&#x641;&#x630;&#x629; &#x62C;&#x62F;&#x64A;&#x62F;&#x629;">
+                    <i class="icon-facebook" aria-hidden="true"></i>
+                </a>
+            <!-- lang -->
+    
+            <!-- Language switcher buttons -->
+                <div class="language-buttons d-flex gap-2 mt-1" role="group" aria-label="&#x62A;&#x63A;&#x64A;&#x64A;&#x631; &#x644;&#x63A;&#x629; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639; &#x625;&#x644;&#x649;">
+                    <button id="language-switch-button-en-US"
+                            class="btn-link btn-lang ms-1"
+                            data-value="en-US"
+                            style="color: var(--bs-primary) !important;"
+                                aria-label="&#x62A;&#x63A;&#x64A;&#x64A;&#x631; &#x644;&#x63A;&#x629; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639; &#x625;&#x644;&#x649; English"
+                            lang="en">
+                        <span>English</span>
+                        <i class="fa-solid fa-globe mx-1" aria-hidden="true"></i>
+                    </button>
+                    <button id="language-switch-button-fr-FR"
+                            class="btn-link btn-lang ms-1"
+                            data-value="fr-FR"
+                            style="color: var(--bs-primary) !important;"
+                                aria-label="&#x62A;&#x63A;&#x64A;&#x64A;&#x631; &#x644;&#x63A;&#x629; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639; &#x625;&#x644;&#x649; Fran&#xE7;ais"
+                            lang="fr">
+                        <span>Fran&#xE7;ais</span>
+                        <i class="fa-solid fa-globe mx-1" aria-hidden="true"></i>
+                    </button>
+                    <button id="language-switch-button-es-ES"
+                            class="btn-link btn-lang ms-1"
+                            data-value="es-ES"
+                            style="color: var(--bs-primary) !important;"
+                                aria-label="&#x62A;&#x63A;&#x64A;&#x64A;&#x631; &#x644;&#x63A;&#x629; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639; &#x625;&#x644;&#x649; Espa&#xF1;ol"
+                            lang="es">
+                        <span>Espa&#xF1;ol</span>
+                        <i class="fa-solid fa-globe mx-1" aria-hidden="true"></i>
+                    </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MENU -->
+
+        <div class="container-fluid" id="nav">
+            <div class="container-xxl">
+                <nav class="navbar navbar-expand-lg navbar-light container-xxl" aria-label="&#x627;&#x644;&#x642;&#x627;&#x626;&#x645;&#x629; &#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;&#x629; &#x644;&#x644;&#x645;&#x648;&#x642;&#x639;">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar"
+                            aria-controls="offcanvasNavbar"
+                            aria-expanded="false"
+                            aria-label="&#x641;&#x62A;&#x62D; &#x642;&#x627;&#x626;&#x645;&#x629; &#x627;&#x644;&#x62A;&#x646;&#x642;&#x644;">
+                        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="language-switch-mobile-button language-buttons d-flex gap-2" role="group" aria-label="&#x62A;&#x63A;&#x64A;&#x64A;&#x631; &#x644;&#x63A;&#x629; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639; &#x625;&#x644;&#x649;">
+                            <button id="language-switch-button-mobile-en-US"
+                                    class="btn-link btn-lang ms-1"
+                                    data-value="en-US"
+                                    aria-label="&#x62A;&#x63A;&#x64A;&#x64A;&#x631; &#x644;&#x63A;&#x629; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639; &#x625;&#x644;&#x649; English"
+                                    lang="en">
+                                <span>EN</span>
+                                <i class="fa-solid fa-globe mx-1" aria-hidden="true"></i>
+                            </button>
+                            <button id="language-switch-button-mobile-fr-FR"
+                                    class="btn-link btn-lang ms-1"
+                                    data-value="fr-FR"
+                                    aria-label="&#x62A;&#x63A;&#x64A;&#x64A;&#x631; &#x644;&#x63A;&#x629; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639; &#x625;&#x644;&#x649; Fran&#xE7;ais"
+                                    lang="fr">
+                                <span>FR</span>
+                                <i class="fa-solid fa-globe mx-1" aria-hidden="true"></i>
+                            </button>
+                            <button id="language-switch-button-mobile-es-ES"
+                                    class="btn-link btn-lang ms-1"
+                                    data-value="es-ES"
+                                    aria-label="&#x62A;&#x63A;&#x64A;&#x64A;&#x631; &#x644;&#x63A;&#x629; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639; &#x625;&#x644;&#x649; Espa&#xF1;ol"
+                                    lang="es">
+                                <span>ES</span>
+                                <i class="fa-solid fa-globe mx-1" aria-hidden="true"></i>
+                            </button>
+                    </div>
+                    <div class="offcanvas  offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                         aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header flex-column align-items-center justify-content-center">
+                            <button type="button" class="btn-close text-reset" style="font-size: 1em;padding:0 0 0 0;"
+                                    data-bs-dismiss="offcanvas" aria-label="&#x623;&#x63A;&#x644;&#x642;">
+                            </button>
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                                <a class="navbar-brand" href="/" aria-label="&#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x644;&#x644;&#x645;&#x645;&#x644;&#x643;&#x629; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A;&#x629; - &#x627;&#x644;&#x635;&#x641;&#x62D;&#x629; &#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;&#x629;" lang="ar">
+                                    <img src="NewTheme/images/logo-image.png" class="img-fluid" alt="&#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x644;&#x644;&#x645;&#x645;&#x644;&#x643;&#x629; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A;&#x629; - &#x627;&#x644;&#x635;&#x641;&#x62D;&#x629; &#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;&#x629;" lang="ar">
+                                    <img width="150px" src="NewTheme/images/cour-constitutionnelle-ar.png" class="img-fluid" alt="" aria-hidden="true">
+                                </a>
+                            </h5>
+                        </div>
+                        <div class="offcanvas-body">
+                                <form class="form-inline-mobile mt-0" method="get" action="/Search" role="search">
+                                    <input class="form-control-mobile"
+                                           style="background: none;" placeholder="&#x625;&#x628;&#x62D;&#x62B; &#x641;&#x64A; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639;..."
+                                           aria-label="&#x625;&#x628;&#x62D;&#x62B; &#x641;&#x64A; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639;..." id="searchText" name="searchText"/>
+
+                                    <button type="submit" class="search-input-button" style="left: 33px;" aria-label="&#x627;&#x644;&#x628;&#x62D;&#x62B; &#x641;&#x64A; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639;">
+                                        <span class="visually-hidden">&#x627;&#x644;&#x628;&#x62D;&#x62B; &#x641;&#x64A; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639;</span>
+                                    </button>
+                                </form>
+                            <ul class="navbar-nav">
+
+                                <!-- home -->
+                                <li class="nav-item dropdown megamenu-li dmenu home-nav-item">
+                                    <div class="the-menu-item ">
+                                        <a href="/" class="nav-link home" aria-label="&#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;&#x629;">
+                                            <span class="mobile-home-title">&#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;&#x629;</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <!-- End Mega Menu -->
+
+
+                                <!-- Other Menu Items -->
+                                    <li class="nav-item">
+                                        <div class="the-menu-item">
+                                            <a class="nav-link text-black" href="Article?id=1&amp;tp=tx&amp;CC=1&amp;Page=Intro" aria-haspopup="true" aria-expanded="false" id="dropdown-menu-1">
+                                                &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;
+
+                                                <span class="arrow-down-span-1" aria-hidden="true">
+                                                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                                </span>
+                                            </a>
+                                            <span class="arrow-down-span-2" aria-hidden="true">
+                                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <!-- megamenu -->
+                                        <div class="dropdown-menu megamenu sm-menu border-top "
+                                             aria-labelledby="dropdown-menu-1">
+                                            <!-- Mega Menu Content -->
+
+                                                <div class="row">
+                                                        <div
+                                                            class="mega-menu-item col-sm-12 col-lg-4 border-right mb-2">
+                                                                    <span>
+                                                                        <img src="/NewTheme/images/mega-menu-icons/megamenu-icons-1.png" alt="" aria-hidden="true">
+                                                                    </span>
+                                                                <div class="mega-text">
+                                                                    <a href="/Article?id=1&amp;tp=tx&amp;CC=1&amp;Page=Intro">
+                                                                        <h6>&#x62A;&#x642;&#x62F;&#x64A;&#x645;</h6>
+                                                                    </a>
+                                                                    <p class="text-muted">&#x646;&#x628;&#x630;&#x629; &#x62A;&#x627;&#x631;&#x64A;&#x62E;&#x64A;&#x629; &#x60C; &#x62A;&#x623;&#x644;&#x64A;&#x641; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629;&#x60C; &#x627;&#x62E;&#x62A;&#x635;&#x627;&#x635;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629;&#x60C; &#x633;&#x64A;&#x631;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629;</p>
+                                                                </div>
+                                                        </div>
+                                                        <div
+                                                            class="mega-menu-item col-sm-12 col-lg-4 border-right mb-2">
+                                                                    <span>
+                                                                        <img src="/NewTheme/images/mega-menu-icons/megamenu-icons-2.png" alt="" aria-hidden="true">
+                                                                    </span>
+                                                                <div class="mega-text">
+                                                                    <a href="/Article?id=2&amp;tp=tx&amp;CC=1&amp;Page=President">
+                                                                        <h6>&#x627;&#x644;&#x631;&#x626;&#x64A;&#x633; </h6>
+                                                                    </a>
+                                                                    <p class="text-muted">&#x64A;&#x639;&#x64A;&#x646; &#x627;&#x644;&#x645;&#x644;&#x643; &#x631;&#x626;&#x64A;&#x633; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x645;&#x646; &#x628;&#x64A;&#x646; &#x627;&#x644;&#x623;&#x639;&#x636;&#x627;&#x621; &#x627;&#x644;&#x630;&#x64A;&#x646; &#x62A;&#x62A;&#x623;&#x644;&#x641; &#x645;&#x646;&#x647;&#x645;</p>
+                                                                </div>
+                                                        </div>
+                                                        <div
+                                                            class="mega-menu-item col-sm-12 col-lg-4 border-right mb-2">
+                                                                    <span>
+                                                                        <img src="/NewTheme/images/mega-menu-icons/megamenu-icons-3.png" alt="" aria-hidden="true">
+                                                                    </span>
+                                                                <div class="mega-text">
+                                                                    <a href="/Membres?Id=2026&amp;CC=1&amp;Page=Membre">
+                                                                        <h6>&#x627;&#x644;&#x623;&#x639;&#x636;&#x627;&#x621;</h6>
+                                                                    </a>
+                                                                    <p class="text-muted">&#x62A;&#x62A;&#x623;&#x644;&#x641; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x645;&#x646; &#x625;&#x62B;&#x646;&#x64A; &#x639;&#x634;&#x631; &#x639;&#x636;&#x648;&#x627;&#x64B;</p>
+                                                                </div>
+                                                        </div>
+                                                        <div
+                                                            class="mega-menu-item col-sm-12 col-lg-4 border-right mb-2">
+                                                                    <span>
+                                                                        <img src="/NewTheme/images/mega-menu-icons/megamenu-icons-4.png" alt="" aria-hidden="true">
+                                                                    </span>
+                                                                <div class="mega-text">
+                                                                    <a href="/Article?id=138&amp;tp=tx&amp;CC=1&amp;Page=Cadre-Consti">
+                                                                        <h6>&#x627;&#x644;&#x625;&#x637;&#x627;&#x631; &#x627;&#x644;&#x642;&#x627;&#x646;&#x648;&#x646;&#x64A;</h6>
+                                                                    </a>
+                                                                    <p class="text-muted">&#x627;&#x644;&#x625;&#x637;&#x627;&#x631; &#x627;&#x644;&#x642;&#x627;&#x646;&#x648;&#x646;&#x64A; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</p>
+                                                                </div>
+                                                        </div>
+                                                        <div
+                                                            class="mega-menu-item col-sm-12 col-lg-4 border-right mb-2">
+                                                                    <span>
+                                                                        <img src="/NewTheme/images/mega-menu-icons/megamenu-icons-5.png" alt="" aria-hidden="true">
+                                                                    </span>
+                                                                <div class="mega-text">
+                                                                    <a href="/Article?id=4&amp;tp=tx&amp;CC=1&amp;Page=Orga-Admin">
+                                                                        <h6>&#x627;&#x644;&#x62A;&#x646;&#x638;&#x64A;&#x645; &#x627;&#x644;&#x625;&#x62F;&#x627;&#x631;&#x64A;</h6>
+                                                                    </a>
+                                                                    <p class="text-muted">&#x627;&#x644;&#x62A;&#x646;&#x638;&#x64A;&#x645; &#x627;&#x644;&#x625;&#x62F;&#x627;&#x631;&#x64A; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</p>
+                                                                </div>
+                                                        </div>
+
+                                                        <div
+                                                            class="mega-menu-item col-sm-12 col-lg-4 border-right mb-2">
+                                                                    <span>
+                                                                        <img src="/NewTheme/images/mega-menu-icons/megamenu-icons-6.png" alt="megamenu-icons-6.png">
+                                                                    </span>
+                                                                <div class="mega-text">
+                                                                    <a href="/galeryetvideo?CC=1&amp;Page=Multimedia">
+                                                                        <h6>&#x627;&#x644;&#x645;&#x643;&#x62A;&#x628;&#x629; &#x645;&#x62A;&#x639;&#x62F;&#x62F;&#x629; &#x627;&#x644;&#x648;&#x633;&#x627;&#x626;&#x637;</h6>
+                                                                    </a>
+                                                                        <div class="mega-sub-link">
+                                                                                <a href="/Galery?CAT=30&amp;CC=1&amp;Page=Multimedia" class="text-muted"
+                                                                                   style="color: var(--bs-secondary-color) !important;">
+                                                                                    &#x645;&#x643;&#x62A;&#x628;&#x629; &#x627;&#x644;&#x635;&#x648;&#x631;
+                                                                                </a>
+                                                                                <a href="/Videos?CA=31&amp;CC=1&amp;Page=Multimedia" class="text-muted"
+                                                                                   style="color: var(--bs-secondary-color) !important;">
+                                                                                    &#x645;&#x643;&#x62A;&#x628;&#x629; &#x627;&#x644;&#x641;&#x64A;&#x62F;&#x64A;&#x648;
+                                                                                </a>
+                                                                        </div>
+                                                                </div>
+
+                                                        </div>
+                                                </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="the-menu-item">
+                                            <a class="nav-link text-black" href="/Decisions?Inst=4&amp;CC=2&amp;Page=Decision" aria-haspopup="true" aria-expanded="false" id="dropdown-menu-2">
+                                                &#x627;&#x644;&#x642;&#x631;&#x627;&#x631;&#x627;&#x62A;
+
+                                                <span class="arrow-down-span-1" aria-hidden="true">
+                                                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                                </span>
+                                            </a>
+                                            <span class="arrow-down-span-2" aria-hidden="true">
+                                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <!-- megamenu -->
+                                        <div class="dropdown-menu megamenu sm-menu border-top "
+                                             aria-labelledby="dropdown-menu-2">
+                                            <!-- Mega Menu Content -->
+
+                                                <div class="row p-4">
+
+                                                        <div
+                                                            class="mega-menu-item-2 col-sm-12 col-lg-4 border-right mb-2">
+                                                                <div class="mega-text-2">
+                                                                    <h6 class="w-100 p-3">
+                                                                        <a href="/Decisions?Inst=4&amp;CC=2&amp;Page=Decision"
+                                                                           class="mega-menu-item-anchor">&#x642;&#x631;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</a>
+                                                                    </h6>
+                                                                    <ul>
+                                                                                <li>
+                                                                                    <a style="color:#747171 !important" href="/Decisions?Inst=4&amp;CC=2&amp;spec=100&amp;Page=Decision">&#x627;&#x644;&#x645;&#x631;&#x627;&#x642;&#x628;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a style="color:#747171 !important" href="/Decisions?Inst=4&amp;CC=2&amp;spec=200&amp;Page=Decision">&#x627;&#x644;&#x645;&#x646;&#x627;&#x632;&#x639;&#x627;&#x62A; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62E;&#x627;&#x628;&#x64A;&#x629;</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a style="color:#747171 !important" href="/Decisions?Inst=4&amp;CC=2&amp;spec=300&amp;Page=Decision">&#x627;&#x62E;&#x62A;&#x635;&#x627;&#x635;&#x627;&#x62A; &#x627;&#x62E;&#x631;&#x649;</a>
+                                                                                </li>
+                                                                    </ul>
+
+
+                                                                </div>
+
+                                                        </div>
+                                                        <div
+                                                            class="mega-menu-item-2 col-sm-12 col-lg-4 border-right mb-2">
+                                                                <div class="mega-text-2">
+                                                                    <h6 class="w-100 p-3">
+                                                                        <a href="/Decisions?Inst=3&amp;CC=2&amp;Page=Decision"
+                                                                           class="mega-menu-item-anchor">&#x642;&#x631;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62C;&#x644;&#x633; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;</a>
+                                                                    </h6>
+                                                                    <ul>
+                                                                                <li>
+                                                                                    <a style="color:#747171 !important" href="/Decisions?Inst=3&amp;CC=2&amp;spec=100&amp;Page=Decision">&#x627;&#x644;&#x645;&#x631;&#x627;&#x642;&#x628;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a style="color:#747171 !important" href="/Decisions?Inst=3&amp;CC=2&amp;spec=200&amp;Page=Decision">&#x627;&#x644;&#x645;&#x646;&#x627;&#x632;&#x639;&#x627;&#x62A; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62E;&#x627;&#x628;&#x64A;&#x629;</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a style="color:#747171 !important" href="/Decisions?Inst=3&amp;CC=2&amp;spec=300&amp;Page=Decision">&#x627;&#x62E;&#x62A;&#x635;&#x627;&#x635;&#x627;&#x62A; &#x627;&#x62E;&#x631;&#x649;</a>
+                                                                                </li>
+                                                                    </ul>
+
+
+                                                                </div>
+
+                                                        </div>
+                                                        <div
+                                                            class="mega-menu-item-2 col-sm-12 col-lg-4 border-right mb-2">
+                                                                <div class="mega-text-2">
+                                                                    <h6 class="w-100 p-3">
+                                                                        <a href="/Decisions?Inst=2&amp;CC=2&amp;Page=Decision"
+                                                                           class="mega-menu-item-anchor">&#x645;&#x642;&#x631;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x63A;&#x631;&#x641;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</a>
+                                                                    </h6>
+                                                                    <ul>
+                                                                                <li>
+                                                                                    <a style="color:#747171 !important" href="/Decisions?Inst=2&amp;CC=2&amp;spec=100&amp;Page=Decision">&#x627;&#x644;&#x645;&#x631;&#x627;&#x642;&#x628;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a style="color:#747171 !important" href="/Decisions?Inst=2&amp;CC=2&amp;spec=200&amp;Page=Decision">&#x627;&#x644;&#x645;&#x646;&#x627;&#x632;&#x639;&#x627;&#x62A; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62E;&#x627;&#x628;&#x64A;&#x629;</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a style="color:#747171 !important" href="/Decisions?Inst=2&amp;CC=2&amp;spec=300&amp;Page=Decision">&#x627;&#x62E;&#x62A;&#x635;&#x627;&#x635;&#x627;&#x62A; &#x627;&#x62E;&#x631;&#x649;</a>
+                                                                                </li>
+                                                                    </ul>
+
+
+                                                                </div>
+
+                                                        </div>
+                                                </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="the-menu-item">
+                                            <a class="nav-link text-black" href="/Activite?CC=3&amp;Page=Activite" aria-haspopup="true" aria-expanded="false" id="dropdown-menu-3">
+                                                &#x627;&#x644;&#x623;&#x646;&#x634;&#x637;&#x629; &#x648;&#x627;&#x644;&#x639;&#x644;&#x627;&#x642;&#x627;&#x62A; &#x627;&#x644;&#x62E;&#x627;&#x631;&#x62C;&#x64A;&#x629;
+
+                                                <span class="arrow-down-span-1" aria-hidden="true">
+                                                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                                </span>
+                                            </a>
+                                            <span class="arrow-down-span-2" aria-hidden="true">
+                                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <!-- megamenu -->
+                                        <div class="dropdown-menu megamenu sm-menu border-top "
+                                             aria-labelledby="dropdown-menu-3">
+                                            <!-- Mega Menu Content -->
+
+                                                <div class="row">
+
+                                                        <div
+                                                            class="mega-menu-item col-sm-12 col-lg-4 border-right mb-2">
+                                                                    <span>
+                                                                        <img src="/NewTheme/images/mega-menu-icons/menu_img_7.png" alt="menu_img_7.png">
+                                                                    </span>
+                                                                <div class="mega-text">
+                                                                    <a href="/Activite?CC=3&amp;Page=Activite">
+                                                                        <h6>&#x627;&#x644;&#x623;&#x646;&#x634;&#x637;&#x629;</h6>
+                                                                    </a>
+                                                                        <div class="mega-sub-link">
+                                                                        </div>
+                                                                </div>
+
+                                                        </div>
+                                                        <div
+                                                            class="mega-menu-item col-sm-12 col-lg-4 border-right mb-2">
+                                                                    <span>
+                                                                        <img src="/NewTheme/images/mega-menu-icons/menu_img_8.png" alt="menu_img_8.png">
+                                                                    </span>
+                                                                <div class="mega-text">
+                                                                    <a href="/article?id=9&amp;tp=cc">
+                                                                        <h6>&#x647;&#x64A;&#x626;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x627;&#x643;&#x645; &#x648;&#x627;&#x644;&#x645;&#x62C;&#x627;&#x644;&#x633; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</h6>
+                                                                    </a>
+                                                                        <div class="mega-sub-link">
+                                                                        </div>
+                                                                </div>
+
+                                                        </div>
+                                                </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="the-menu-item">
+                                            <a class="nav-link text-black" href="/Publication?CC=4&amp;Page=Publication" aria-haspopup="true" aria-expanded="false" id="dropdown-menu-4">
+                                                &#x627;&#x644;&#x627;&#x635;&#x62F;&#x627;&#x631;&#x627;&#x62A;
+
+                                                <span class="arrow-down-span-1" aria-hidden="true">
+                                                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                                </span>
+                                            </a>
+                                            <span class="arrow-down-span-2" aria-hidden="true">
+                                                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <!-- megamenu -->
+                                        <div class="dropdown-menu megamenu sm-menu border-top "
+                                             aria-labelledby="dropdown-menu-4">
+                                            <!-- Mega Menu Content -->
+
+                                                <div class="row">
+
+                                                        <div
+                                                            class="mega-menu-item col-sm-12 col-lg-4 border-right mb-2">
+                                                                    <span>
+                                                                        <img src="/NewTheme/images/mega-menu-icons/img-slider-dis-01.png" alt="img-slider-dis-01.png">
+                                                                    </span>
+                                                                <div class="mega-text">
+                                                                    <a href="/Publication?CC=26&amp;Page=Publication">
+                                                                        <h6>&#x627;&#x644;&#x645;&#x62C;&#x644;&#x629;</h6>
+                                                                    </a>
+                                                                        <div class="mega-sub-link">
+                                                                        </div>
+                                                                </div>
+
+                                                        </div>
+                                                        <div
+                                                            class="mega-menu-item col-sm-12 col-lg-4 border-right mb-2">
+                                                                    <span>
+                                                                        <img src="/NewTheme/images/mega-menu-icons/pub_1_1.jpg" alt="pub_1_1.jpg">
+                                                                    </span>
+                                                                <div class="mega-text">
+                                                                    <a href="/Publication?CC=27&amp;Page=Publication">
+                                                                        <h6>&#x627;&#x635;&#x62F;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629;</h6>
+                                                                    </a>
+                                                                        <div class="mega-sub-link">
+                                                                        </div>
+                                                                </div>
+
+                                                        </div>
+                                                </div>
+                                        </div>
+                                    </li>
+
+
+                            </ul>
+                                <form class="form-inline d-md-flex justify-content-center align-items-center" method="get" role="search" action="/Search">
+                                    <input class="form-control mr-sm-2 search" placeholder="&#x625;&#x628;&#x62D;&#x62B; &#x641;&#x64A; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639;..."
+                                           aria-label="&#x625;&#x628;&#x62D;&#x62B; &#x641;&#x64A; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639;..." id="searchText" name="searchText" style="background: none">
+                                    <button type="submit" class="search-input-button" style="left: 37px" aria-label="&#x627;&#x644;&#x628;&#x62D;&#x62B; &#x641;&#x64A; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639;">
+                                        <span class="visually-hidden">&#x627;&#x644;&#x628;&#x62D;&#x62B; &#x641;&#x64A; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639;</span>
+                                    </button>
+                                </form>
+
+                            <div class="offcanvas-mobile-footer">
+                                <hr class="my-3 w-75"/>
+                                <div class="align-self-center">
+                                    <div class="social-mobile">
+                                        <a href="https://www.linkedin.com/company/cour-constitutionnelle" aria-label="&#x62A;&#x627;&#x628;&#x639;&#x646;&#x627; &#x639;&#x644;&#x649; &#x644;&#x64A;&#x646;&#x643;&#x62F; &#x625;&#x646; - &#x64A;&#x641;&#x62A;&#x62D; &#x641;&#x64A; &#x646;&#x627;&#x641;&#x630;&#x629; &#x62C;&#x62F;&#x64A;&#x62F;&#x629;">
+                                            <i class="icon-linkedin" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/people/Cour-constitutionnelle-du-MAROC/61576080636386/"
+                                            aria-label="&#x62A;&#x627;&#x628;&#x639;&#x646;&#x627; &#x639;&#x644;&#x649; &#x641;&#x64A;&#x633;&#x628;&#x648;&#x643; - &#x64A;&#x641;&#x62A;&#x62D; &#x641;&#x64A; &#x646;&#x627;&#x641;&#x630;&#x629; &#x62C;&#x62F;&#x64A;&#x62F;&#x629;">
+                                            <i class="icon-facebook" aria-hidden="true"></i>
+                                        </a>
+                                        <!-- lang -->
+                                            <button id="language-switch-button-footer-en-US"
+                                                    class="btn-link btn-lang ms-1"
+                                                    data-value="en-US"
+                                                    style="color: var(--bs-primary) !important;"
+                                                    aria-label="&#x62A;&#x63A;&#x64A;&#x64A;&#x631; &#x644;&#x63A;&#x629; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639; &#x625;&#x644;&#x649; English"
+                                                    lang="en">
+                                                <span>English</span>
+                                                <i class="fa-solid fa-globe mx-1" aria-hidden="true"></i>
+                                            </button>
+                                            <button id="language-switch-button-footer-fr-FR"
+                                                    class="btn-link btn-lang ms-1"
+                                                    data-value="fr-FR"
+                                                    style="color: var(--bs-primary) !important;"
+                                                    aria-label="&#x62A;&#x63A;&#x64A;&#x64A;&#x631; &#x644;&#x63A;&#x629; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639; &#x625;&#x644;&#x649; Fran&#xE7;ais"
+                                                    lang="fr">
+                                                <span>Fran&#xE7;ais</span>
+                                                <i class="fa-solid fa-globe mx-1" aria-hidden="true"></i>
+                                            </button>
+                                            <button id="language-switch-button-footer-es-ES"
+                                                    class="btn-link btn-lang ms-1"
+                                                    data-value="es-ES"
+                                                    style="color: var(--bs-primary) !important;"
+                                                    aria-label="&#x62A;&#x63A;&#x64A;&#x64A;&#x631; &#x644;&#x63A;&#x629; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639; &#x625;&#x644;&#x649; Espa&#xF1;ol"
+                                                    lang="es">
+                                                <span>Espa&#xF1;ol</span>
+                                                <i class="fa-solid fa-globe mx-1" aria-hidden="true"></i>
+                                            </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+<!-- END MENU -->
+
+<!-- END HEADER -->
+
+
+<!-- BODY  -->
+<div class="container-fluid body" role="main" id="main-content" tabindex="-1" aria-label="&#x627;&#x644;&#x645;&#x62D;&#x62A;&#x648;&#x649; &#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A; &#x644;&#x644;&#x635;&#x641;&#x62D;&#x629;">
+    <div class="container-xxl">
+        <div id="top-carosel-last-activies-bar" class="row">
+            
+
+    <div class="col-lg-8 col-12">
+        <div id="bootstrapCarousel" class="carousel slide" data-bs-interval="4000" role="region" aria-roledescription="&#x639;&#x631;&#x636; &#x622;&#x62E;&#x631; &#x627;&#x644;&#x623;&#x646;&#x634;&#x637;&#x629; - &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x627;&#x644;&#x623;&#x633;&#x647;&#x645; &#x644;&#x644;&#x62A;&#x646;&#x642;&#x644;" aria-label="&#x639;&#x631;&#x636; &#x622;&#x62E;&#x631; &#x627;&#x644;&#x623;&#x646;&#x634;&#x637;&#x629; - &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x627;&#x644;&#x623;&#x633;&#x647;&#x645; &#x644;&#x644;&#x62A;&#x646;&#x642;&#x644;">
+
+            <div class="carousel-inner" aria-live="off">
+                    <div class="carousel-item active" role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/305_Activite_29072026_031751.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x633;&#x641;&#x64A;&#x631; &#x641;&#x631;&#x646;&#x633;&#x627; &#x628;&#x627;&#x644;&#x645;&#x63A;&#x631;&#x628; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x645;&#x62C;&#x627;&#x645;&#x644;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;"
+                             loading="eager">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=305&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x633;&#x641;&#x64A;&#x631; &#x641;&#x631;&#x646;&#x633;&#x627; &#x628;&#x627;&#x644;&#x645;&#x63A;&#x631;&#x628; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x645;&#x62C;&#x627;&#x645;&#x644;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/304_Activite_23072026_032316_slider.jpeg"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x648;&#x641;&#x62F; &#x639;&#x646; &#x62C;&#x645;&#x639;&#x64A;&#x629; &#x645;&#x628;&#x627;&#x62F;&#x631;&#x629; &#x637;&#x627;&#x631;&#x642; &#x628;&#x646; &#x632;&#x64A;&#x627;&#x62F; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; "
+                             loading="eager">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=304&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x648;&#x641;&#x62F; &#x639;&#x646; &#x62C;&#x645;&#x639;&#x64A;&#x629; &#x645;&#x628;&#x627;&#x62F;&#x631;&#x629; &#x637;&#x627;&#x631;&#x642; &#x628;&#x646; &#x632;&#x64A;&#x627;&#x62F; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; 
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/302_Activite_14072026_123526.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x62A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x641;&#x648;&#x62C;&#x627;&#x64B; &#x645;&#x646; &#x627;&#x644;&#x645;&#x62A;&#x62F;&#x631;&#x628;&#x64A;&#x646; &#x628;&#x627;&#x644;&#x645;&#x639;&#x647;&#x62F; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A; &#x644;&#x644;&#x62A;&#x643;&#x648;&#x64A;&#x646; &#x648;&#x627;&#x644;&#x623;&#x628;&#x62D;&#x627;&#x62B; &#x648;&#x627;&#x644;&#x62F;&#x631;&#x627;&#x633;&#x627;&#x62A; &#x627;&#x644;&#x62F;&#x628;&#x644;&#x648;&#x645;&#x627;&#x633;&#x64A;&#x629;"
+                             loading="eager">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=302&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x62A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x641;&#x648;&#x62C;&#x627;&#x64B; &#x645;&#x646; &#x627;&#x644;&#x645;&#x62A;&#x62F;&#x631;&#x628;&#x64A;&#x646; &#x628;&#x627;&#x644;&#x645;&#x639;&#x647;&#x62F; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A; &#x644;&#x644;&#x62A;&#x643;&#x648;&#x64A;&#x646; &#x648;&#x627;&#x644;&#x623;&#x628;&#x62D;&#x627;&#x62B; &#x648;&#x627;&#x644;&#x62F;&#x631;&#x627;&#x633;&#x627;&#x62A; &#x627;&#x644;&#x62F;&#x628;&#x644;&#x648;&#x645;&#x627;&#x633;&#x64A;&#x629;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/299_Activite_03072026_023424.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x633;&#x641;&#x64A;&#x631;&#x629; &#x627;&#x644;&#x645;&#x645;&#x644;&#x643;&#x629; &#x627;&#x644;&#x623;&#x631;&#x62F;&#x646;&#x64A;&#x629; &#x627;&#x644;&#x647;&#x627;&#x634;&#x645;&#x64A;&#x629; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x645;&#x62C;&#x627;&#x645;&#x644;&#x629; &#x644;&#x631;&#x626;&#x64A;&#x633; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;"
+                             loading="eager">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=299&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x633;&#x641;&#x64A;&#x631;&#x629; &#x627;&#x644;&#x645;&#x645;&#x644;&#x643;&#x629; &#x627;&#x644;&#x623;&#x631;&#x62F;&#x646;&#x64A;&#x629; &#x627;&#x644;&#x647;&#x627;&#x634;&#x645;&#x64A;&#x629; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x645;&#x62C;&#x627;&#x645;&#x644;&#x629; &#x644;&#x631;&#x626;&#x64A;&#x633; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/298_Activite_03072026_023012_slider.jpeg"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x62A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x648;&#x641;&#x62F;&#x627; &#x639;&#x646; &quot;&#x627;&#x644;&#x646;&#x62E;&#x628;&#x629; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A;&#x629; &#x644;&#x644;&#x642;&#x627;&#x62F;&#x629; &#x627;&#x644;&#x634;&#x628;&#x627;&#x628;&quot;"
+                             loading="eager">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=298&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x62A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x648;&#x641;&#x62F;&#x627; &#x639;&#x646; &quot;&#x627;&#x644;&#x646;&#x62E;&#x628;&#x629; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A;&#x629; &#x644;&#x644;&#x642;&#x627;&#x62F;&#x629; &#x627;&#x644;&#x634;&#x628;&#x627;&#x628;&quot;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/297_Activite_02072026_020411.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x62A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x648;&#x641;&#x62F;&#x627; &#x645;&#x646; &#x627;&#x644;&#x628;&#x631;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x64A;&#x646; &#x648;&#x627;&#x644;&#x641;&#x627;&#x639;&#x644;&#x64A;&#x646; &#x627;&#x644;&#x633;&#x64A;&#x627;&#x633;&#x64A;&#x64A;&#x646; &#x627;&#x644;&#x634;&#x628;&#x627;&#x628; &#x627;&#x644;&#x641;&#x631;&#x646;&#x633;&#x64A;&#x64A;&#x646;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=297&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x62A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x648;&#x641;&#x62F;&#x627; &#x645;&#x646; &#x627;&#x644;&#x628;&#x631;&#x644;&#x645;&#x627;&#x646;&#x64A;&#x64A;&#x646; &#x648;&#x627;&#x644;&#x641;&#x627;&#x639;&#x644;&#x64A;&#x646; &#x627;&#x644;&#x633;&#x64A;&#x627;&#x633;&#x64A;&#x64A;&#x646; &#x627;&#x644;&#x634;&#x628;&#x627;&#x628; &#x627;&#x644;&#x641;&#x631;&#x646;&#x633;&#x64A;&#x64A;&#x646;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/296_Activite_01072026_030550_slider.jpeg"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x631;&#x626;&#x64A;&#x633; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x64A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x648;&#x641;&#x62F;&#x627;&#x64B; &#x637;&#x644;&#x627;&#x628;&#x64A;&#x627;&#x64B; &#x645;&#x646; &#x62C;&#x627;&#x645;&#x639;&#x629; &#x645;&#x62D;&#x645;&#x62F; &#x627;&#x644;&#x62E;&#x627;&#x645;&#x633;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=296&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x631;&#x626;&#x64A;&#x633; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x64A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x648;&#x641;&#x62F;&#x627;&#x64B; &#x637;&#x644;&#x627;&#x628;&#x64A;&#x627;&#x64B; &#x645;&#x646; &#x62C;&#x627;&#x645;&#x639;&#x629; &#x645;&#x62D;&#x645;&#x62F; &#x627;&#x644;&#x62E;&#x627;&#x645;&#x633;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/295_Activite_25062026_050204_slider.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x633;&#x641;&#x64A;&#x631; &#x627;&#x644;&#x64A;&#x645;&#x646; &#x64A;&#x62B;&#x645;&#x646; &#x627;&#x644;&#x62A;&#x62C;&#x631;&#x628;&#x629; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A;&#x629; &#x641;&#x64A; &#x645;&#x62C;&#x627;&#x644; &#x627;&#x644;&#x642;&#x636;&#x627;&#x621; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A; &#x62E;&#x644;&#x627;&#x644; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x645;&#x62C;&#x627;&#x645;&#x644;&#x629;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=295&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x633;&#x641;&#x64A;&#x631; &#x627;&#x644;&#x64A;&#x645;&#x646; &#x64A;&#x62B;&#x645;&#x646; &#x627;&#x644;&#x62A;&#x62C;&#x631;&#x628;&#x629; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A;&#x629; &#x641;&#x64A; &#x645;&#x62C;&#x627;&#x644; &#x627;&#x644;&#x642;&#x636;&#x627;&#x621; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A; &#x62E;&#x644;&#x627;&#x644; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x645;&#x62C;&#x627;&#x645;&#x644;&#x629;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/293_Activite_05062026_022405.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x648;&#x641;&#x62F; &#x637;&#x644;&#x627;&#x628;&#x64A; &#x641;&#x631;&#x646;&#x643;&#x641;&#x648;&#x646;&#x64A; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=293&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x648;&#x641;&#x62F; &#x637;&#x644;&#x627;&#x628;&#x64A; &#x641;&#x631;&#x646;&#x643;&#x641;&#x648;&#x646;&#x64A; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/292_Activite_05062026_115426_slider.jpg"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x62C;&#x644;&#x627;&#x644;&#x629; &#x627;&#x644;&#x645;&#x644;&#x643; &#x64A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x627;&#x644;&#x623;&#x639;&#x636;&#x627;&#x621; &#x627;&#x644;&#x645;&#x639;&#x64A;&#x646;&#x64A;&#x646; &#x628;&#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=292&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x62C;&#x644;&#x627;&#x644;&#x629; &#x627;&#x644;&#x645;&#x644;&#x643; &#x64A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x627;&#x644;&#x623;&#x639;&#x636;&#x627;&#x621; &#x627;&#x644;&#x645;&#x639;&#x64A;&#x646;&#x64A;&#x646; &#x628;&#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/290_Activite_20052026_025947_slider.png"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x637;&#x644;&#x628;&#x629; &#x645;&#x646; &#x62C;&#x627;&#x645;&#x639;&#x629; &#x623;&#x648;&#x637;&#x627;&#x648;&#x627; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=290&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x637;&#x644;&#x628;&#x629; &#x645;&#x646; &#x62C;&#x627;&#x645;&#x639;&#x629; &#x623;&#x648;&#x637;&#x627;&#x648;&#x627; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/289_Activite_04052026_124609.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x642;&#x627;&#x636;&#x64A;&#x627;&#x62A; &#x645;&#x646; &#x62F;&#x648;&#x644; &#x635;&#x62F;&#x64A;&#x642;&#x629; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x644;&#x645;&#x642;&#x631; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=289&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x642;&#x627;&#x636;&#x64A;&#x627;&#x62A; &#x645;&#x646; &#x62F;&#x648;&#x644; &#x635;&#x62F;&#x64A;&#x642;&#x629; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x644;&#x645;&#x642;&#x631; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/288_Activite_01042026_044545_slider.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x627;&#x633;&#x62A;&#x642;&#x628;&#x627;&#x644; &#x633;&#x641;&#x64A;&#x631; &#x645;&#x645;&#x644;&#x643;&#x629; &#x628;&#x644;&#x62C;&#x64A;&#x643;&#x627; &#x628;&#x645;&#x642;&#x631; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=288&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x627;&#x633;&#x62A;&#x642;&#x628;&#x627;&#x644; &#x633;&#x641;&#x64A;&#x631; &#x645;&#x645;&#x644;&#x643;&#x629; &#x628;&#x644;&#x62C;&#x64A;&#x643;&#x627; &#x628;&#x645;&#x642;&#x631; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/287_Activite_24032026_043323_slider.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x637;&#x644;&#x628;&#x629; &#x645;&#x646; &#x62C;&#x627;&#x645;&#x639;&#x629; &#x643;&#x627;&#x631;&#x648;&#x644;&#x64A; &#x63A;&#x627;&#x633;&#x628;&#x627;&#x631; &#x628;&#x628;&#x648;&#x62F;&#x627;&#x628;&#x633;&#x62A; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=287&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x637;&#x644;&#x628;&#x629; &#x645;&#x646; &#x62C;&#x627;&#x645;&#x639;&#x629; &#x643;&#x627;&#x631;&#x648;&#x644;&#x64A; &#x63A;&#x627;&#x633;&#x628;&#x627;&#x631; &#x628;&#x628;&#x648;&#x62F;&#x627;&#x628;&#x633;&#x62A; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/286_Activite_10032026_015224_slider.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x627;&#x644;&#x62A;&#x639;&#x627;&#x648;&#x646; &#x645;&#x639; &#x627;&#x644;&#x627;&#x62A;&#x62D;&#x627;&#x62F; &#x627;&#x644;&#x623;&#x648;&#x631;&#x648;&#x628;&#x64A;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=286&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x627;&#x644;&#x62A;&#x639;&#x627;&#x648;&#x646; &#x645;&#x639; &#x627;&#x644;&#x627;&#x62A;&#x62D;&#x627;&#x62F; &#x627;&#x644;&#x623;&#x648;&#x631;&#x648;&#x628;&#x64A;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/285_Activite_13022026_100552_slider.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x631;&#x626;&#x64A;&#x633; &#x627;&#x644;&#x645;&#x62C;&#x644;&#x633; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A; &#x627;&#x644;&#x62A;&#x634;&#x627;&#x62F;&#x64A; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=285&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x631;&#x626;&#x64A;&#x633; &#x627;&#x644;&#x645;&#x62C;&#x644;&#x633; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A; &#x627;&#x644;&#x62A;&#x634;&#x627;&#x62F;&#x64A; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/284_Activite_08022026_110958_slider.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x645;&#x634;&#x627;&#x631;&#x643;&#x629; &#x631;&#x626;&#x64A;&#x633; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x641;&#x64A; &quot;&#x627;&#x62C;&#x62A;&#x645;&#x627;&#x639; &#x627;&#x644;&#x642;&#x627;&#x647;&#x631;&#x629; &#x627;&#x644;&#x62A;&#x627;&#x633;&#x639; &#x631;&#x641;&#x64A;&#x639; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x649;&quot;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=284&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x645;&#x634;&#x627;&#x631;&#x643;&#x629; &#x631;&#x626;&#x64A;&#x633; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x641;&#x64A; &quot;&#x627;&#x62C;&#x62A;&#x645;&#x627;&#x639; &#x627;&#x644;&#x642;&#x627;&#x647;&#x631;&#x629; &#x627;&#x644;&#x62A;&#x627;&#x633;&#x639; &#x631;&#x641;&#x64A;&#x639; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x648;&#x649;&quot;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/283_Activite_05022026_065939_slider.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x648;&#x641;&#x62F; &#x639;&#x646; &#x627;&#x644;&#x634;&#x628;&#x64A;&#x628;&#x629; &#x627;&#x644;&#x627;&#x634;&#x62A;&#x631;&#x627;&#x643;&#x64A;&#x629; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x645;&#x64A;&#x62F;&#x627;&#x646;&#x64A;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=283&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x648;&#x641;&#x62F; &#x639;&#x646; &#x627;&#x644;&#x634;&#x628;&#x64A;&#x628;&#x629; &#x627;&#x644;&#x627;&#x634;&#x62A;&#x631;&#x627;&#x643;&#x64A;&#x629; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x645;&#x64A;&#x62F;&#x627;&#x646;&#x64A;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/282_Activite_03022026_052308_slider.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x637;&#x644;&#x628;&#x629; &#x635;&#x64A;&#x646;&#x64A;&#x648;&#x646; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=282&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x637;&#x644;&#x628;&#x629; &#x635;&#x64A;&#x646;&#x64A;&#x648;&#x646; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item " role="group" aria-roledescription="slide">
+                        <i class="carousel-gradient-shadow" aria-hidden="true"></i>
+
+                        <img src="/Images/281_Activite_11122025_104536_slider.webp"
+                             class="d-block w-100"
+                             alt="&#x635;&#x648;&#x631;&#x629; &#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x627;&#x633;&#x62A;&#x642;&#x628;&#x627;&#x644; &#x648;&#x641;&#x62F;&#x64A;&#x646; &#x637;&#x644;&#x627;&#x628;&#x64A;&#x64A;&#x646; &#x645;&#x646; &#x641;&#x627;&#x633; &#x648;&#x627;&#x644;&#x631;&#x628;&#x627;&#x637; &#x628;&#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;"
+                             loading="lazy">
+
+                        <div class="carousel-caption d-block">
+                            <a href="Article?id=281&amp;tp=tx&amp;Page=Activite" class="text-white text-decoration-none">
+                                &#x627;&#x633;&#x62A;&#x642;&#x628;&#x627;&#x644; &#x648;&#x641;&#x62F;&#x64A;&#x646; &#x637;&#x644;&#x627;&#x628;&#x64A;&#x64A;&#x646; &#x645;&#x646; &#x641;&#x627;&#x633; &#x648;&#x627;&#x644;&#x631;&#x628;&#x627;&#x637; &#x628;&#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;
+                            </a>
+                        </div>
+                    </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#bootstrapCarousel" data-bs-slide="prev" aria-label="&#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x627;&#x644;&#x633;&#x627;&#x628;&#x642;">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">&#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x627;&#x644;&#x633;&#x627;&#x628;&#x642;</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#bootstrapCarousel" data-bs-slide="next" aria-label="&#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x627;&#x644;&#x62A;&#x627;&#x644;&#x64A;">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">&#x627;&#x644;&#x646;&#x634;&#x627;&#x637; &#x627;&#x644;&#x62A;&#x627;&#x644;&#x64A;</span>
+            </button>
+
+        </div>
+    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        var myCarousel = document.querySelector('#bootstrapCarousel');
+        if (!myCarousel) return;
+
+        var options = { interval: 4000, pause: 'hover', wrap: true };
+        var carousel;
+
+        if (bootstrap.Carousel && typeof bootstrap.Carousel.getOrCreateInstance === 'function') {
+            carousel = bootstrap.Carousel.getOrCreateInstance(myCarousel, options);
+        } else {
+            try {
+                carousel = bootstrap.Carousel.getInstance(myCarousel) || new bootstrap.Carousel(myCarousel, options);
+            }
+            catch (err) {
+                console.error('Carousel init error', err);
+                carousel = new bootstrap.Carousel(myCarousel, options);
+            }
+        }
+
+        try { carousel.cycle(); } catch (err) { console.error('Carousel cycle error', err); }
+
+        let isSliding = false;
+
+        myCarousel.addEventListener('slide.bs.carousel', function (e) {
+            if (isSliding) {
+                e.preventDefault();
+                return;
+            }
+            isSliding = true;
+        });
+
+        myCarousel.addEventListener('slid.bs.carousel', function (e) {
+            isSliding = false;
+
+            var itemsCount = myCarousel.querySelectorAll('.carousel-item').length;
+
+            if (e.to >= 4 && itemsCount > 4) {
+                carousel.pause();
+                console.log("Autoplay stopped at slide index: " + e.to);
+            }
+            else {
+                carousel.cycle();
+            }
+        });
+
+        var controls = myCarousel.querySelectorAll('.carousel-control-prev, .carousel-control-next');
+
+        controls.forEach(btn => {
+            btn.addEventListener('click', function () {
+                carousel.pause();
+            });
+        });
+
+    });
+</script>
+
+            
+
+    <div class="col-lg-4 col-12">
+        <div class="list-group news" role="region" aria-label="&#x623;&#x646;&#x634;&#x637;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629;">
+            <div class="d-flex justify-content-between align-items-center" style="border-bottom: 1px solid #0074727f;">
+                <!-- Right-aligned section title -->
+                <h2 class="title text-end  fw-bold m-0 pb-2" style="border-bottom: 4px solid #007473; color:#007473;">
+                    &#x623;&#x646;&#x634;&#x637;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629;
+                </h2>
+
+                <!-- Left-aligned link -->
+                <a href="/Activite?CC=3&Page=Activite" class="readmore home_heading text-danger fw-bold text-decoration-underline m-0 pb-2">
+                    &#x62C;&#x645;&#x64A;&#x639; &#x627;&#x644;&#x623;&#x646;&#x634;&#x637;&#x629;
+                </a>
+            </div>
+                <a href=Article?id=305&amp;tp=tx&amp;Page=Activite class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1" aria-level="3">&#x633;&#x641;&#x64A;&#x631; &#x641;&#x631;&#x646;&#x633;&#x627; &#x628;&#x627;&#x644;&#x645;&#x63A;&#x631;&#x628; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x645;&#x62C;&#x627;&#x645;&#x644;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</h5>
+                    </div>
+                    <small class="text-muted icon-calendar">
+29 &#x64A;&#x648;&#x644;&#x64A;&#x648;&#x632; 2026                    </small>
+                </a>
+                <a href=Article?id=304&amp;tp=tx&amp;Page=Activite class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1" aria-level="3">&#x648;&#x641;&#x62F; &#x639;&#x646; &#x62C;&#x645;&#x639;&#x64A;&#x629; &#x645;&#x628;&#x627;&#x62F;&#x631;&#x629; &#x637;&#x627;&#x631;&#x642; &#x628;&#x646; &#x632;&#x64A;&#x627;&#x62F; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; </h5>
+                    </div>
+                    <small class="text-muted icon-calendar">
+23 &#x64A;&#x648;&#x644;&#x64A;&#x648;&#x632; 2026                    </small>
+                </a>
+                <a href=Article?id=302&amp;tp=tx&amp;Page=Activite class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1" aria-level="3">&#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x62A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x641;&#x648;&#x62C;&#x627;&#x64B; &#x645;&#x646; &#x627;&#x644;&#x645;&#x62A;&#x62F;&#x631;&#x628;&#x64A;&#x646; &#x628;&#x627;&#x644;&#x645;&#x639;&#x647;&#x62F; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A; &#x644;&#x644;&#x62A;&#x643;&#x648;&#x64A;&#x646; &#x648;&#x627;&#x644;&#x623;&#x628;&#x62D;&#x627;&#x62B; &#x648;&#x627;&#x644;&#x62F;&#x631;&#x627;&#x633;&#x627;&#x62A; &#x627;&#x644;&#x62F;&#x628;&#x644;&#x648;&#x645;&#x627;&#x633;&#x64A;&#x629;</h5>
+                    </div>
+                    <small class="text-muted icon-calendar">
+14 &#x64A;&#x648;&#x644;&#x64A;&#x648;&#x632; 2026                    </small>
+                </a>
+                <a href=Article?id=298&amp;tp=tx&amp;Page=Activite class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1" aria-level="3">&#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x62A;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x648;&#x641;&#x62F;&#x627; &#x639;&#x646; &quot;&#x627;&#x644;&#x646;&#x62E;&#x628;&#x629; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A;&#x629; &#x644;&#x644;&#x642;&#x627;&#x62F;&#x629; &#x627;&#x644;&#x634;&#x628;&#x627;&#x628;&quot;</h5>
+                    </div>
+                    <small class="text-muted icon-calendar">
+03 &#x64A;&#x648;&#x644;&#x64A;&#x648;&#x632; 2026                    </small>
+                </a>
+                <a href=Article?id=299&amp;tp=tx&amp;Page=Activite class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1" aria-level="3">&#x633;&#x641;&#x64A;&#x631;&#x629; &#x627;&#x644;&#x645;&#x645;&#x644;&#x643;&#x629; &#x627;&#x644;&#x623;&#x631;&#x62F;&#x646;&#x64A;&#x629; &#x627;&#x644;&#x647;&#x627;&#x634;&#x645;&#x64A;&#x629; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x645;&#x62C;&#x627;&#x645;&#x644;&#x629; &#x644;&#x631;&#x626;&#x64A;&#x633; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</h5>
+                    </div>
+                    <small class="text-muted icon-calendar">
+03 &#x64A;&#x648;&#x644;&#x64A;&#x648;&#x632; 2026                    </small>
+                </a>
+
+        </div>
+    </div>
+
+        </div>
+        <div id="top-title-bar" class="row">
+            <div class="container-xxl top-titlebar">
+                <span>
+                    
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid body-section">
+        <div class="container-xxl">
+            <div class="row">
+                <!-- begin sidebar -->
+                <div class="col-lg-4 col-12sidebar order-1 order-md-1 order-sm-1 order-lg-0" role="complementary" aria-label="&#x627;&#x644;&#x642;&#x627;&#x626;&#x645;&#x629; &#x627;&#x644;&#x62C;&#x627;&#x646;&#x628;&#x64A;&#x629; - &#x631;&#x648;&#x627;&#x628;&#x637; &#x633;&#x631;&#x64A;&#x639;&#x629;">
+                    
+
+
+        <div class="cours-list" role="region" aria-label="&#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;">
+            <div class="wrap-title">
+                <h2 class="title">&#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</h2>
+            </div>
+
+            <div class="list-group cours">
+
+                        <a href="Article?id=1&amp;tp=tx&amp;CC=1&amp;Page=Intro" class="list-group-item list-group-item-action">
+                            <div class="icons icon-presentation">&#x62A;&#x642;&#x62F;&#x64A;&#x645;</div>
+                        </a>
+                        <a href="Article?id=2&amp;tp=tx&amp;CC=1&amp;Page=President" class="list-group-item list-group-item-action">
+                            <div class="icons icon-president">&#x627;&#x644;&#x631;&#x626;&#x64A;&#x633; </div>
+                        </a>
+                        <a href="Membres?Id=2026&amp;CC=1&amp;Page=Membre" class="list-group-item list-group-item-action">
+                            <div class="icons icon-membre">&#x627;&#x644;&#x623;&#x639;&#x636;&#x627;&#x621;</div>
+                        </a>
+                        <a href="Article?id=4&amp;tp=tx&amp;CC=1&amp;Page=Orga-Admin" class="list-group-item list-group-item-action">
+                            <div class="icons icon-organisation">&#x627;&#x644;&#x62A;&#x646;&#x638;&#x64A;&#x645; &#x627;&#x644;&#x625;&#x62F;&#x627;&#x631;&#x64A;</div>
+                        </a>
+                        <a href="Article?id=138&amp;tp=tx&amp;CC=1&amp;Page=Cadre-Consti" class="list-group-item list-group-item-action">
+                            <div class="icons icon-cadre">&#x627;&#x644;&#x625;&#x637;&#x627;&#x631; &#x627;&#x644;&#x642;&#x627;&#x646;&#x648;&#x646;&#x64A;</div>
+                        </a>
+                    <a href="/galeryetvideo?CC=1&amp;Page=Multimedia" class="list-group-item list-group-item-action">
+                        <div class="icons icon-mediatique">&#x627;&#x644;&#x645;&#x643;&#x62A;&#x628;&#x629; &#x645;&#x62A;&#x639;&#x62F;&#x62F;&#x629; &#x627;&#x644;&#x648;&#x633;&#x627;&#x626;&#x637;</div>
+                    </a>
+            </div>
+        </div>
+
+
+            <div class="cours-list">
+                <div class="wrap-title">
+                    <h2 class="title">&#x645;&#x631;&#x627;&#x62C;&#x639; &#x642;&#x627;&#x646;&#x648;&#x646;&#x64A;&#x629; &#x648; &#x62A;&#x646;&#x638;&#x64A;&#x645;&#x64A;&#x629;</h2>
+                </div>
+                <div class="list-group cours">
+                                    <a href="Article?id=8&amp;tp=ac&amp;Page=REF" class="list-group-item list-group-item-action" aria-current="true">
+                                        <div class="icons icon-1">&#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;</div>
+                                    </a>
+                                    <a href="/article?id=20&amp;tp=ac&amp;Page=REF" class="list-group-item list-group-item-action" aria-current="true">
+                                        <div class="icons icon-1">&#x627;&#x644;&#x642;&#x648;&#x627;&#x646;&#x64A;&#x646; &#x627;&#x644;&#x62A;&#x646;&#x638;&#x64A;&#x645;&#x64A;&#x629;</div>
+                                    </a>
+                                    <a href="/article?id=53&amp;tp=li&amp;Page=REF" class="list-group-item list-group-item-action" aria-current="true">
+                                        <div class="icons icon-1">&#x627;&#x644;&#x623;&#x646;&#x638;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x627;&#x62E;&#x644;&#x64A;&#x629;</div>
+                                    </a>
+                </div>
+            </div>
+
+
+    <div class="embed-responsive embed-responsive-16by9">
+        <div class="wrap-title">
+             <h2 class="title">&#x627;&#x644;&#x648;&#x633;&#x627;&#x626;&#x637; &#x627;&#x644;&#x645;&#x62A;&#x639;&#x62F;&#x62F;&#x629;</h2>
+        </div>
+        <iframe loading="lazy" height="220" src="https://www.youtube.com/embed/ujvLmcYKvUU"
+                title="YouTube video player"
+                allowfullscreen>
+        </iframe>
+    </div>
+
+
+    <div class="cours-list specialite" role="region" aria-label="&#x627;&#x62E;&#x62A;&#x635;&#x627;&#x635;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629;">
+        <div class="wrap-title">
+            <h2 class="title">&#x627;&#x62E;&#x62A;&#x635;&#x627;&#x635;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629;</h2>
+        </div>
+        <div class="list-group cours">
+                        <a href="/article?id=54&amp;tp=tx&amp;Page=SPEC" class="list-group-item list-group-item-action">
+                            <div class="icons icon-1"> &#x627;&#x644;&#x645;&#x631;&#x627;&#x642;&#x628;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; </div >
+                        </a>
+                        <a href="/article?id=55&amp;tp=tx&amp;CC=6&amp;Page=SPEC" class="list-group-item list-group-item-action">
+                            <div class="icons icon-2"> &#x627;&#x644;&#x62F;&#x641;&#x639; &#x628;&#x639;&#x62F;&#x645; &#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x642;&#x627;&#x646;&#x648;&#x646; </div >
+                        </a>
+                        <a href="Article?id=56&amp;tp=tx&amp;CC=6&amp;Page=SPEC" class="list-group-item list-group-item-action">
+                            <div class="icons icon-3"> &#x627;&#x644;&#x645;&#x646;&#x627;&#x632;&#x639;&#x627;&#x62A; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62E;&#x627;&#x628;&#x64A;&#x629; </div >
+                        </a>
+                        <a href="/article?id=57&amp;tp=tx&amp;Page=SPEC" class="list-group-item list-group-item-action">
+                            <div class="icons icon-4"> &#x627;&#x62E;&#x62A;&#x635;&#x627;&#x635;&#x627;&#x62A; &#x627;&#x62E;&#x631;&#x649; </div >
+                        </a>
+
+        </div>
+        <ul>
+
+        </ul>
+    </div>
+
+
+
+<div class="distr">
+    <div class="wrap-title">
+        <h2 class="title">&#x625;&#x635;&#x62F;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629;</h2>
+    </div>
+    <div id="carouseldistru" class="carousel slide" aria-roledescription="carousel" aria-label="&#x639;&#x631;&#x636; &#x627;&#x635;&#x62F;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; - &#x627;&#x633;&#x62A;&#x62E;&#x62F;&#x645; &#x627;&#x644;&#x623;&#x633;&#x647;&#x645; &#x644;&#x644;&#x62A;&#x646;&#x642;&#x644;" >
+        <div class="carousel-inner" aria-live="polite">
+
+
+                <div class="carousel-item active" role="group" aria-roledescription="slide">
+                    <a href="Pdf?id=240&amp;tp=pd&amp;Page=Publication" aria-label="&#x639;&#x631;&#x636; &#x62A;&#x641;&#x627;&#x635;&#x64A;&#x644; &#x627;&#x644;&#x627;&#x635;&#x62F;&#x627;&#x631; &#x645;&#x62C;&#x644;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;">
+                        <img src="/Images/240_couv-Revue-2019-2023.webp" class="d-block w-100" alt="&#x63A;&#x644;&#x627;&#x641; &#x627;&#x644;&#x627;&#x635;&#x62F;&#x627;&#x631; &#x645;&#x62C;&#x644;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <span class="first-title">&#x645;&#x62C;&#x644;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</span>
+                            <span class="second-title">&#x645;&#x62C;&#x645;&#x648;&#x639;&#x629; &#x642;&#x631;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; 2019-2023</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item" role="group" aria-roledescription="slide">
+                    <a href="Article?Id=128&amp;tp=pd&amp;Page=Publication" aria-label="&#x639;&#x631;&#x636; &#x62A;&#x641;&#x627;&#x635;&#x64A;&#x644; &#x627;&#x644;&#x627;&#x635;&#x62F;&#x627;&#x631; &#x645;&#x62C;&#x644;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;">
+                        <img src="/Images/128_glf_mjl_lmhkm_ldstwry.webp" class="d-block w-100" alt="&#x63A;&#x644;&#x627;&#x641; &#x627;&#x644;&#x627;&#x635;&#x62F;&#x627;&#x631; &#x645;&#x62C;&#x644;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <span class="first-title">&#x645;&#x62C;&#x644;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</span>
+                            <span class="second-title">&#x642;&#x631;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; 2017-2018</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item" role="group" aria-roledescription="slide">
+                    <a href="Pdf?id=165&amp;tp=pd&amp;Page=Publication" aria-label="&#x639;&#x631;&#x636; &#x62A;&#x641;&#x627;&#x635;&#x64A;&#x644; &#x627;&#x644;&#x627;&#x635;&#x62F;&#x627;&#x631; &#x645;&#x62C;&#x644;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;">
+                        <img src="/Images/revueicone14_0_0.webp" class="d-block w-100" alt="&#x63A;&#x644;&#x627;&#x641; &#x627;&#x644;&#x627;&#x635;&#x62F;&#x627;&#x631; &#x645;&#x62C;&#x644;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <span class="first-title">&#x645;&#x62C;&#x644;&#x629; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</span>
+                            <span class="second-title">&#x642;&#x631;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62C;&#x644;&#x633; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A; 2016 &#x648;&#x627;&#x644;&#x623;&#x634;&#x647;&#x631; &#x627;&#x644;&#x62B;&#x644;&#x627;&#x62B;&#x629; &#x627;&#x644;&#x623;&#x648;&#x644;&#x649; &#x645;&#x646; &#x633;&#x646;&#x629; 2017</span>
+                        </div>
+                    </a>
+                </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouseldistru" data-bs-slide="prev" aria-label="&#x627;&#x644;&#x627;&#x635;&#x62F;&#x627;&#x631; &#x627;&#x644;&#x633;&#x627;&#x628;&#x642;">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">&#x627;&#x644;&#x627;&#x635;&#x62F;&#x627;&#x631; &#x627;&#x644;&#x633;&#x627;&#x628;&#x642;</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouseldistru" data-bs-slide="next" aria-label="&#x627;&#x644;&#x627;&#x635;&#x62F;&#x627;&#x631; &#x627;&#x644;&#x62A;&#x627;&#x644;&#x64A;">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">&#x627;&#x644;&#x627;&#x635;&#x62F;&#x627;&#x631; &#x627;&#x644;&#x62A;&#x627;&#x644;&#x64A;</span>
+        </button>
+    </div>
+</div>
+                </div>
+                <!-- end sidebar -->
+
+
+                <!-- begin post content -->
+                <div class="col-lg-8 col-12 cour_constitutionnelle_body order-0 order-md-0 order-sm-0 order-lg-1">
+                    
+
+
+
+<div class="last-decision-container">
+    <div class="wrap-title">
+        <h2 class="title">&#x642;&#x631;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</h2>
+    </div>
+        <form enctype="multipart/form-data" method="post" action="/Decisions?Inst=4">
+            <div class="row g-3 filter">
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                    <select class="form-select" aria-label="&#x627;&#x644;&#x648;&#x644;&#x648;&#x62C; &#x62D;&#x633;&#x628; &#x627;&#x644;&#x62A;&#x627;&#x631;&#x64A;&#x62E;" id="an" name="an">
+                        <option value="" selected>&#x627;&#x644;&#x648;&#x644;&#x648;&#x62C; &#x62D;&#x633;&#x628; &#x627;&#x644;&#x62A;&#x627;&#x631;&#x64A;&#x62E;</option>
+                                <option value="2026"> 2026 </option>
+                                <option value="2025"> 2025 </option>
+                                <option value="2024"> 2024 </option>
+                                <option value="2023"> 2023 </option>
+                                <option value="2022"> 2022 </option>
+                                <option value="2021"> 2021 </option>
+                                <option value="2020"> 2020 </option>
+                                <option value="2019"> 2019 </option>
+                                <option value="2018"> 2018 </option>
+                                <option value="2017"> 2017 </option>
+                    </select>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                    <input type="text" class="form-control" placeholder="&#x627;&#x644;&#x648;&#x644;&#x648;&#x62C; &#x62D;&#x633;&#x628; &#x631;&#x642;&#x645; &#x627;&#x644;&#x642;&#x631;&#x627;&#x631;"
+                           aria-label="&#x627;&#x644;&#x648;&#x644;&#x648;&#x62C; &#x62D;&#x633;&#x628; &#x631;&#x642;&#x645; &#x627;&#x644;&#x642;&#x631;&#x627;&#x631;" id="NumDec" name="NumDec" value="">
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                    <select class="form-select" aria-label="&#x627;&#x644;&#x648;&#x644;&#x648;&#x62C; &#x62D;&#x633;&#x628; &#x627;&#x644;&#x645;&#x648;&#x636;&#x648;&#x639;" id="spec" name="spec">
+                        <option value="" selected>&#x627;&#x644;&#x648;&#x644;&#x648;&#x62C; &#x62D;&#x633;&#x628; &#x627;&#x644;&#x645;&#x648;&#x636;&#x648;&#x639;</option>
+                        <option value="100" class="option_parent">&#x627;&#x644;&#x645;&#x631;&#x627;&#x642;&#x628;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</option>
+                        <option value="10">&#x645;&#x637;&#x627;&#x628;&#x642;&#x629; &#x627;&#x644;&#x642;&#x648;&#x627;&#x646;&#x64A;&#x646; &#x627;&#x644;&#x62A;&#x646;&#x638;&#x64A;&#x645;&#x64A;&#x629; &#x644;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631; </option>
+                        <option value="30">&#x645;&#x637;&#x627;&#x628;&#x642;&#x629; &#x627;&#x644;&#x623;&#x646;&#x638;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x627;&#x62E;&#x644;&#x64A;&#x629; &#x644;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;</option>
+                        <option value="5">&#x645;&#x637;&#x627;&#x628;&#x642;&#x629; &#x627;&#x644;&#x642;&#x648;&#x627;&#x646;&#x64A;&#x646; &#x627;&#x644;&#x639;&#x627;&#x62F;&#x64A;&#x629; &#x644;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631; </option>
+                        <option value="200" class="option_parent">&#x627;&#x644;&#x645;&#x646;&#x627;&#x632;&#x639;&#x627;&#x62A; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62E;&#x627;&#x628;&#x64A;&#x629; </option>
+                        <option value="2">&#x627;&#x644;&#x645;&#x646;&#x627;&#x632;&#x639;&#x627;&#x62A; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62E;&#x627;&#x628;&#x64A;&#x629; (&#x645;&#x62C;&#x644;&#x633; &#x627;&#x644;&#x646;&#x648;&#x627;&#x628;) </option>
+                        <option value="9">&#x627;&#x644;&#x645;&#x646;&#x627;&#x632;&#x639;&#x627;&#x62A; &#x627;&#x644;&#x627;&#x646;&#x62A;&#x62E;&#x627;&#x628;&#x64A;&#x629; (&#x645;&#x62C;&#x644;&#x633; &#x627;&#x644;&#x645;&#x633;&#x62A;&#x634;&#x627;&#x631;&#x64A;&#x646;) </option>
+                        <option value="300" class="option_parent">&#x627;&#x62E;&#x62A;&#x635;&#x627;&#x635;&#x627;&#x62A; &#x623;&#x62E;&#x631;&#x649;</option>
+                        <option value="13">&#x645;&#x631;&#x627;&#x642;&#x628;&#x629; &#x635;&#x62D;&#x629; &#x639;&#x645;&#x644;&#x64A;&#x627;&#x62A; &#x627;&#x644;&#x627;&#x633;&#x62A;&#x641;&#x62A;&#x627;&#x621;</option>
+                        <option value="3">&#x62A;&#x63A;&#x64A;&#x64A;&#x631; &#x646;&#x635;&#x648;&#x635; &#x62A;&#x634;&#x631;&#x64A;&#x639;&#x64A;&#x629; &#x645;&#x646; &#x62D;&#x64A;&#x62B; &#x627;&#x644;&#x634;&#x643;&#x644; &#x628;&#x645;&#x631;&#x633;&#x648;&#x645; </option>
+                        <option value="28">&#x627;&#x644;&#x646;&#x638;&#x631; &#x641;&#x64A; &#x62F;&#x641;&#x639; &#x627;&#x644;&#x62D;&#x643;&#x648;&#x645;&#x629; &#x628;&#x639;&#x62F;&#x645; &#x642;&#x628;&#x648;&#x644; &#x627;&#x642;&#x62A;&#x631;&#x627;&#x62D; &#x627;&#x648; &#x62A;&#x639;&#x62F;&#x64A;&#x644; &#x62A;&#x631;&#x649; &#x623;&#x646;&#x647; &#x644;&#x627; &#x64A;&#x62F;&#x62E;&#x644; &#x641;&#x64A; &#x645;&#x62C;&#x627;&#x644; &#x627;&#x644;&#x642;&#x627;&#x646;&#x648;&#x646;</option>
+                        <option value="31">&#x62D;&#x627;&#x644;&#x627;&#x62A; &#x623;&#x62E;&#x631;&#x649;</option>
+                    </select>
+                </div>
+                <div class="col-sm-6 col-md-2 col-lg-2">
+                    <input type="text" class="form-control" id="TxtLibre" name="TxtLibre" value="" placeholder="&#x628;&#x62D;&#x62B; &#x62D;&#x631;" aria-label="&#x628;&#x62D;&#x62B; &#x62D;&#x631;">
+                </div>
+                <div class="col-12 col-md-1 col-lg-1">
+                    <button type="submit"
+                            id="btn_submit-listing-decisions" class="search-button btn btn-primary mb-3" aria-label="&#x628;&#x62D;&#x62B; &#x62D;&#x631;">
+                        <span class="visually-hidden">&#x628;&#x62D;&#x62B; &#x62D;&#x631;</span>
+                    </button>
+                </div>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LM7aRX-hSpJvRaMAQL-T7l_cjAj_wtTD9gK7nGgBeiWE7mvII3Fot0u0Lpf_VwL7eKAizDrgM7nxyG--z0tCxGkBpi2BTKTHbrWRMtUQoMC2Q_2LP9t0XykqHFBd1FRXfs-rTw49qQ0p5HCElbQ2Dg" /></form>
+
+    <div class="row decision mt-4">
+        <div class="col">
+            <div id="carouseldecision" class="carousel slide carousel-fade">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row decision-header bg-green">
+                            <div class="col-12 col-md-6">
+                                <span class="icon-mar">&#x642;&#x631;&#x627;&#x631; &#x631;&#x642;&#x645; :</span> <span>280/26</span>
+                            </div>
+                            <div class="col-12 col-md-6 date">
+                                <span>&#x62A;&#x627;&#x631;&#x64A;&#x62E; &#x635;&#x62F;&#x648;&#x631; &#x627;&#x644;&#x642;&#x631;&#x627;&#x631; : </span> <span>2026/08/10</span>
+                            </div>
+                        </div>
+                        <a href="./Decision?id=2144&Page=Decision" class="row corps bg-gray" style="pointer-events: auto;">
+                            <div class="col article-content" data-db-content="true">
+
+                                <p style="text-align:justify"><strong>أولا- </strong>تصرح بشغور المقعدين اللذين كانا يشغلهما كل من السيد زكرياء القدميري العزيزي والسيدة لطيفة اعبوث بمجلس النواب؛</p>
+
+
+                            </div>
+                        </a>
+                    </div>
+
+                        <div class="carousel-item ">
+                            <div class="row decision-header bg-green">
+                                <div class="col-12 col-md-6">
+                                    <span class="icon-mar">&#x642;&#x631;&#x627;&#x631; &#x631;&#x642;&#x645; :</span> <span>279/26</span>
+                                </div>
+                                <div class="col-12 col-md-6 date">
+                                    <span>&#x62A;&#x627;&#x631;&#x64A;&#x62E; &#x635;&#x62F;&#x648;&#x631; &#x627;&#x644;&#x642;&#x631;&#x627;&#x631; : </span> <span>2026/08/10</span>
+                                </div>
+                            </div>
+                            <a href="./Decision?id=2143&Page=Decision" class="row corps bg-gray" style="pointer-events: auto;">
+                                <div class="col article-content" data-db-content="true">
+
+                                    <p style="text-align:justify"><strong>أولا-</strong> تصرح بأن مقتضيات الظهير الشريف الصادر في 11 ربيع الأول 1360(9 أبريل 1941)، في الاعتراف بأن الجمعية المدعوة &quot;جمعية قدماء تلامذة المدرسة الثانوية الإسلامية بفاس&quot; هي من المصلحة العمومية، تندرج في مجال اختصاص السلطة التنظيمية؛</p>
+
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="row decision-header bg-green">
+                                <div class="col-12 col-md-6">
+                                    <span class="icon-mar">&#x642;&#x631;&#x627;&#x631; &#x631;&#x642;&#x645; :</span> <span>278/26</span>
+                                </div>
+                                <div class="col-12 col-md-6 date">
+                                    <span>&#x62A;&#x627;&#x631;&#x64A;&#x62E; &#x635;&#x62F;&#x648;&#x631; &#x627;&#x644;&#x642;&#x631;&#x627;&#x631; : </span> <span>2026/08/10</span>
+                                </div>
+                            </div>
+                            <a href="./Decision?id=2142&Page=Decision" class="row corps bg-gray" style="pointer-events: auto;">
+                                <div class="col article-content" data-db-content="true">
+
+                                    <p style="text-align:justify">تصرح:<br />
+<strong>أولا-</strong> بأن ما ورد &nbsp;في البند (ج) من الملحق رقم 2، في القانون التنظيمي رقم 026.26، القاضي بتغيير وتتميم القانون التنظيمي رقم 02.12، المتعلق بالتعيين في المناصب العليا، تطبيقاً لأحكام الفصلين 49 و92 من الدستور، من إدراج &nbsp;المحافظين القضائيين العامين ضمن المناصب السامية، التي يتم التعيين فيها بمرسوم في مجلس الحكومة، مخالف للدستور، ويمكن فصله عن باقي مواد القانون التنظيمي المعروض، ويجوز بالتالي، تطبيقا للفقرة الثانية من المادة 27 من القانون التنظيمي المتعلق بالمحكمة الدستورية، نشر هذا القانون التنظيمي، بعد حذف منصب &quot;المحافظون القضائيون العامون&quot; من لائحة المناصب العليا التي يتم التداول بشأنها في المجلس الحكومي؛&nbsp;</p>
+
+<p style="text-align:justify"><strong>ثانيا-</strong> بأن باقي أحكام القانون التنظيمي المعروض، ليس فيها ما يخالف الدستور؛</p>
+
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="row decision-header bg-green">
+                                <div class="col-12 col-md-6">
+                                    <span class="icon-mar">&#x642;&#x631;&#x627;&#x631; &#x631;&#x642;&#x645; :</span> <span>277/26</span>
+                                </div>
+                                <div class="col-12 col-md-6 date">
+                                    <span>&#x62A;&#x627;&#x631;&#x64A;&#x62E; &#x635;&#x62F;&#x648;&#x631; &#x627;&#x644;&#x642;&#x631;&#x627;&#x631; : </span> <span>2026/08/10</span>
+                                </div>
+                            </div>
+                            <a href="./Decision?id=2141&Page=Decision" class="row corps bg-gray" style="pointer-events: auto;">
+                                <div class="col article-content" data-db-content="true">
+
+                                    <p style="text-align:justify"><strong>أولا-</strong>&nbsp;تصرح بتعذر البت في الإحالة الرامية إلى النظر في مطابقة القانون رقم 66.23 المتعلق بتنظيم مهنة المحاماة للدستور، على حالها؛</p>
+
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="row decision-header bg-green">
+                                <div class="col-12 col-md-6">
+                                    <span class="icon-mar">&#x642;&#x631;&#x627;&#x631; &#x631;&#x642;&#x645; :</span> <span>276/26</span>
+                                </div>
+                                <div class="col-12 col-md-6 date">
+                                    <span>&#x62A;&#x627;&#x631;&#x64A;&#x62E; &#x635;&#x62F;&#x648;&#x631; &#x627;&#x644;&#x642;&#x631;&#x627;&#x631; : </span> <span>2026/08/05</span>
+                                </div>
+                            </div>
+                            <a href="./Decision?id=2140&Page=Decision" class="row corps bg-gray" style="pointer-events: auto;">
+                                <div class="col article-content" data-db-content="true">
+
+                                    <p dir="rtl" style="text-align:justify">التصريح بشغور المقعد الذي كان يشغله السيد امبارك حمية، المنتخب عضوا بمجلس النواب؛&nbsp;</p>
+
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="row decision-header bg-green">
+                                <div class="col-12 col-md-6">
+                                    <span class="icon-mar">&#x642;&#x631;&#x627;&#x631; &#x631;&#x642;&#x645; :</span> <span>275/26</span>
+                                </div>
+                                <div class="col-12 col-md-6 date">
+                                    <span>&#x62A;&#x627;&#x631;&#x64A;&#x62E; &#x635;&#x62F;&#x648;&#x631; &#x627;&#x644;&#x642;&#x631;&#x627;&#x631; : </span> <span>2026/08/05</span>
+                                </div>
+                            </div>
+                            <a href="./Decision?id=2139&Page=Decision" class="row corps bg-gray" style="pointer-events: auto;">
+                                <div class="col article-content" data-db-content="true">
+
+                                    <p dir="rtl" style="text-align:justify">التصريح بشغور المقعدين اللذين كانا يشغلهما كل من السيدة ريم شباط والسيد عمرو اووجيل، المنتخبين عضوين بمجلس النواب؛&nbsp;</p>
+
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="row decision-header bg-green">
+                                <div class="col-12 col-md-6">
+                                    <span class="icon-mar">&#x642;&#x631;&#x627;&#x631; &#x631;&#x642;&#x645; :</span> <span>274/26</span>
+                                </div>
+                                <div class="col-12 col-md-6 date">
+                                    <span>&#x62A;&#x627;&#x631;&#x64A;&#x62E; &#x635;&#x62F;&#x648;&#x631; &#x627;&#x644;&#x642;&#x631;&#x627;&#x631; : </span> <span>2026/07/28</span>
+                                </div>
+                            </div>
+                            <a href="./Decision?id=2138&Page=Decision" class="row corps bg-gray" style="pointer-events: auto;">
+                                <div class="col article-content" data-db-content="true">
+
+                                    <p>التصريح بشغور المقعد الذي كان يشغله السيد إدريس السنتيسي، المنتخب عضوا بمجلس النواب؛&nbsp;</p>
+
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="row decision-header bg-green">
+                                <div class="col-12 col-md-6">
+                                    <span class="icon-mar">&#x642;&#x631;&#x627;&#x631; &#x631;&#x642;&#x645; :</span> <span>273/26</span>
+                                </div>
+                                <div class="col-12 col-md-6 date">
+                                    <span>&#x62A;&#x627;&#x631;&#x64A;&#x62E; &#x635;&#x62F;&#x648;&#x631; &#x627;&#x644;&#x642;&#x631;&#x627;&#x631; : </span> <span>2026/07/28</span>
+                                </div>
+                            </div>
+                            <a href="./Decision?id=2137&Page=Decision" class="row corps bg-gray" style="pointer-events: auto;">
+                                <div class="col article-content" data-db-content="true">
+
+                                    <p>التصريح بشغور المقعد الذي كانت تشغله السيدة زينب السيمو، المنتخبة عضوا بمجلس النواب؛</p>
+
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="row decision-header bg-green">
+                                <div class="col-12 col-md-6">
+                                    <span class="icon-mar">&#x642;&#x631;&#x627;&#x631; &#x631;&#x642;&#x645; :</span> <span>272/26</span>
+                                </div>
+                                <div class="col-12 col-md-6 date">
+                                    <span>&#x62A;&#x627;&#x631;&#x64A;&#x62E; &#x635;&#x62F;&#x648;&#x631; &#x627;&#x644;&#x642;&#x631;&#x627;&#x631; : </span> <span>2026/07/16</span>
+                                </div>
+                            </div>
+                            <a href="./Decision?id=2136&Page=Decision" class="row corps bg-gray" style="pointer-events: auto;">
+                                <div class="col article-content" data-db-content="true">
+
+                                    <p style="text-align:justify">التصريح بشغور المقعدين اللذين كان يشغلهما السيدان عبد المجيد الفاسي الفهري وخليد حاتمي، المنتخبين عضوين بمجلس النواب؛&nbsp;</p>
+
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class="row decision-header bg-green">
+                                <div class="col-12 col-md-6">
+                                    <span class="icon-mar">&#x642;&#x631;&#x627;&#x631; &#x631;&#x642;&#x645; :</span> <span>271/26</span>
+                                </div>
+                                <div class="col-12 col-md-6 date">
+                                    <span>&#x62A;&#x627;&#x631;&#x64A;&#x62E; &#x635;&#x62F;&#x648;&#x631; &#x627;&#x644;&#x642;&#x631;&#x627;&#x631; : </span> <span>2026/07/16</span>
+                                </div>
+                            </div>
+                            <a href="./Decision?id=2135&Page=Decision" class="row corps bg-gray" style="pointer-events: auto;">
+                                <div class="col article-content" data-db-content="true">
+
+                                    <p style="text-align:justify">التصريح بشغور المقعد الذي كان يشغله السيد أحمد الدهي، المنتخب عضوا بمجلس النواب؛&nbsp;</p>
+
+
+                                </div>
+                            </a>
+                        </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouseldecision" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">&#x627;&#x644;&#x633;&#x627;&#x628;&#x642;</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouseldecision" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">&#x627;&#x644;&#x62A;&#x627;&#x644;&#x64A;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="decisions">
+    <div class="row">
+        <div class="col">
+            <div class="wrap-title text-center">
+                <h2 class="title">&#x627;&#x644;&#x642;&#x631;&#x627;&#x631;&#x627;&#x62A; &#x62D;&#x633;&#x628; &#x627;&#x644;&#x633;&#x646;&#x648;&#x627;&#x62A;</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion" id="decisions-accordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <span>&#x641;&#x647;&#x631;&#x633; &#x642;&#x631;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</span>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#decisions-accordion">
+                <div class="accordion-body">
+                    <div class="bg-gray text-center dicision-years">
+                                <a href="/Decisions?an=2026&Inst=4" class="btn btn-light">2026</a>
+                                <a href="/Decisions?an=2025&Inst=4" class="btn btn-light">2025</a>
+                                <a href="/Decisions?an=2024&Inst=4" class="btn btn-light">2024</a>
+                                <a href="/Decisions?an=2023&Inst=4" class="btn btn-light">2023</a>
+                                <a href="/Decisions?an=2022&Inst=4" class="btn btn-light">2022</a>
+                                <a href="/Decisions?an=2021&Inst=4" class="btn btn-light">2021</a>
+                                <a href="/Decisions?an=2020&Inst=4" class="btn btn-light">2020</a>
+                                <a href="/Decisions?an=2019&Inst=4" class="btn btn-light">2019</a>
+                                <a href="/Decisions?an=2018&Inst=4" class="btn btn-light">2018</a>
+                                <a href="/Decisions?an=2017&Inst=4" class="btn btn-light">2017</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <span>&#x641;&#x647;&#x631;&#x633; &#x642;&#x631;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62C;&#x644;&#x633; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;</span>
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#decisions-accordion">
+                <div class="accordion-body">
+                    <div class="bg-gray text-center dicision-years">
+                                <a href="/Decisions?an=2017&Inst=3" class="btn btn-light">2017</a>
+                                <a href="/Decisions?an=2016&Inst=3" class="btn btn-light">2016</a>
+                                <a href="/Decisions?an=2015&Inst=3" class="btn btn-light">2015</a>
+                                <a href="/Decisions?an=2014&Inst=3" class="btn btn-light">2014</a>
+                                <a href="/Decisions?an=2013&Inst=3" class="btn btn-light">2013</a>
+                                <a href="/Decisions?an=2012&Inst=3" class="btn btn-light">2012</a>
+                                <a href="/Decisions?an=2011&Inst=3" class="btn btn-light">2011</a>
+                                <a href="/Decisions?an=2010&Inst=3" class="btn btn-light">2010</a>
+                                <a href="/Decisions?an=2009&Inst=3" class="btn btn-light">2009</a>
+                                <a href="/Decisions?an=2008&Inst=3" class="btn btn-light">2008</a>
+                                <a href="/Decisions?an=2007&Inst=3" class="btn btn-light">2007</a>
+                                <a href="/Decisions?an=2006&Inst=3" class="btn btn-light">2006</a>
+                                <a href="/Decisions?an=2005&Inst=3" class="btn btn-light">2005</a>
+                                <a href="/Decisions?an=2004&Inst=3" class="btn btn-light">2004</a>
+                                <a href="/Decisions?an=2003&Inst=3" class="btn btn-light">2003</a>
+                                <a href="/Decisions?an=2002&Inst=3" class="btn btn-light">2002</a>
+                                <a href="/Decisions?an=2001&Inst=3" class="btn btn-light">2001</a>
+                                <a href="/Decisions?an=2000&Inst=3" class="btn btn-light">2000</a>
+                                <a href="/Decisions?an=1999&Inst=3" class="btn btn-light">1999</a>
+                                <a href="/Decisions?an=1998&Inst=3" class="btn btn-light">1998</a>
+                                <a href="/Decisions?an=1997&Inst=3" class="btn btn-light">1997</a>
+                                <a href="/Decisions?an=1996&Inst=3" class="btn btn-light">1996</a>
+                                <a href="/Decisions?an=1995&Inst=3" class="btn btn-light">1995</a>
+                                <a href="/Decisions?an=1994&Inst=3" class="btn btn-light">1994</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <span>&#x641;&#x647;&#x631;&#x633; &#x642;&#x631;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x63A;&#x631;&#x641;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; </span>
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#decisions-accordion">
+                <div class="accordion-body">
+
+                    <div class="bg-gray text-center dicision-years">
+
+                                <a href="/Decisions?an=1994&Inst=2" class="btn btn-light">1994</a>
+                                <a href="/Decisions?an=1993&Inst=2" class="btn btn-light">1993</a>
+                                <a href="/Decisions?an=1992&Inst=2" class="btn btn-light">1992</a>
+                                <a href="/Decisions?an=1991&Inst=2" class="btn btn-light">1991</a>
+                                <a href="/Decisions?an=1990&Inst=2" class="btn btn-light">1990</a>
+                                <a href="/Decisions?an=1989&Inst=2" class="btn btn-light">1989</a>
+                                <a href="/Decisions?an=1988&Inst=2" class="btn btn-light">1988</a>
+                                <a href="/Decisions?an=1987&Inst=2" class="btn btn-light">1987</a>
+                                <a href="/Decisions?an=1986&Inst=2" class="btn btn-light">1986</a>
+                                <a href="/Decisions?an=1985&Inst=2" class="btn btn-light">1985</a>
+                                <a href="/Decisions?an=1984&Inst=2" class="btn btn-light">1984</a>
+                                <a href="/Decisions?an=1983&Inst=2" class="btn btn-light">1983</a>
+                                <a href="/Decisions?an=1982&Inst=2" class="btn btn-light">1982</a>
+                                <a href="/Decisions?an=1981&Inst=2" class="btn btn-light">1981</a>
+                                <a href="/Decisions?an=1980&Inst=2" class="btn btn-light">1980</a>
+                                <a href="/Decisions?an=1979&Inst=2" class="btn btn-light">1979</a>
+                                <a href="/Decisions?an=1978&Inst=2" class="btn btn-light">1978</a>
+                                <a href="/Decisions?an=1977&Inst=2" class="btn btn-light">1977</a>
+                                <a href="/Decisions?an=1972&Inst=2" class="btn btn-light">1972</a>
+                                <a href="/Decisions?an=1971&Inst=2" class="btn btn-light">1971</a>
+                                <a href="/Decisions?an=1970&Inst=2" class="btn btn-light">1970</a>
+                                <a href="/Decisions?an=1965&Inst=2" class="btn btn-light">1965</a>
+                                <a href="/Decisions?an=1964&Inst=2" class="btn btn-light">1964</a>
+                                <a href="/Decisions?an=1963&Inst=2" class="btn btn-light">1963</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="activite">
+    <div class="wrap-title text-center d-grid ">
+        <div class="row">
+            <h2 class="title wrap-title col-12 col-md-8 mb-0" style="width: fit-content;">
+                &#x627;&#x644;&#x623;&#x646;&#x634;&#x637;&#x629; &#x648;&#x627;&#x644;&#x639;&#x644;&#x627;&#x642;&#x627;&#x62A; &#x627;&#x644;&#x62E;&#x627;&#x631;&#x62C;&#x64A;&#x629;
+            </h2>
+            <a href="/Activite?CC=3&Page=Activite" class="col-12 col-md-4">&#x62C;&#x645;&#x64A;&#x639; &#x627;&#x644;&#x623;&#x646;&#x634;&#x637;&#x629;</a>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <a href="Article?id=305&amp;tp=tx&amp;Page=Activite" class="d-flex flex-md-row justify-content-start activite-anchor flex-column">
+            <div class="col-md-4 mb-3 mb-md-0 p-0 activite-image">
+                <img src="/Images/305Activite_29072026_031844.jpeg" class="img-fluid" alt="&#x635;&#x648;&#x631;&#x629; &#x633;&#x641;&#x64A;&#x631; &#x641;&#x631;&#x646;&#x633;&#x627; &#x628;&#x627;&#x644;&#x645;&#x63A;&#x631;&#x628; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x645;&#x62C;&#x627;&#x645;&#x644;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;">
+            </div>
+            <div class="col-md-8">
+                <div class="text">
+                    <small
+                        class="text-muted d-block mb-2 icon-calendar">
+                        29 &#x64A;&#x648;&#x644;&#x64A;&#x648;&#x632; 2026
+                    </small>
+                    <h4 aria-level="3">&#x633;&#x641;&#x64A;&#x631; &#x641;&#x631;&#x646;&#x633;&#x627; &#x628;&#x627;&#x644;&#x645;&#x63A;&#x631;&#x628; &#x641;&#x64A; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x645;&#x62C;&#x627;&#x645;&#x644;&#x629; &#x644;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</h4>
+                    <p style="text-align: justify">&#x641;&#x64A; &#x625;&#x637;&#x627;&#x631; &#x632;&#x64A;&#x627;&#x631;&#x629; &#x645;&#x62C;&#x627;&#x645;&#x644;&#x629;&#x60C; &#x627;&#x633;&#x62A;&#x642;&#x628;&#x644; &#x627;&#x644;&#x633;&#x64A;&#x62F; &#x645;&#x62D;&#x645;&#x62F; &#x623;&#x645;&#x64A;&#x646; &#x628;&#x646;&#x639;&#x628;&#x62F; &#x627;&#x644;&#x644;&#x647; &#x631;&#x626;&#x64A;&#x633; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x64A;&#x648;&#x645; &#x627;&#x644;&#x623;&#x631;&#x628;&#x639;&#x627;&#x621; 29 &#x64A;&#x648;&#x644;&#x64A;&#x648; 2026&#x60C; &#x628;&#x645;&#x642;&#x631; &#x647;&#x630;&#x647; &#x627;&#x644;&#x623;&#x62E;&#x64A;&#x631;&#x629; &#x627;&#x644;&#x633;&#x64A;&#x62F; Philippe LALLIOT&#x60C; &#x633;&#x641;&#x64A;&#x631; &#x627;&#x644;&#x62C;&#x645;&#x647;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x641;&#x631;&#x646;&#x633;&#x64A;&#x629; &#x628;&#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="cours-list-links">
+        <div class="wrap-title text-center">
+            <h2 class="title">&#x631;&#x648;&#x627;&#x628;&#x637; &#x645;&#x62A;&#x646;&#x648;&#x639;&#x629;</h2>
+        </div>
+
+            <div class="row links">
+                <div class="col-md-3 col-sm-6" style="margin-bottom:.4rem;">
+                    <a href="Article?id=8&tp=ac&Page=REF" class="text-center d-block">
+                        <div class="icons icon-l-1">
+                            <img src="./NewTheme/images/icon-l-1.png" alt="" aria-hidden="true">
+                            <span>&#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;</span>
+
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom:.4rem;">
+                    <a href="article?id=20&tp=ac&Page=REF" class="text-center d-block">
+                        <div class="icons icon-l-2">
+                            <img src="./NewTheme/images/icon-l-2.png" alt="" aria-hidden="true">
+                            <span>&#x627;&#x644;&#x642;&#x648;&#x627;&#x646;&#x64A;&#x646; &#x627;&#x644;&#x62A;&#x646;&#x638;&#x64A;&#x645;&#x64A;&#x629;</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom:.4rem;">
+                    <a href="article?id=53&tp=li&Page=REF" class="text-center d-block">
+                        <div class="icons icon-l-3">
+                            <img src="./NewTheme/images/icon-l-3.png" alt="" aria-hidden="true">
+                            <span>&#x627;&#x644;&#x623;&#x646;&#x638;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x627;&#x62E;&#x644;&#x64A;&#x629;</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom:.4rem;">
+                    <a href="#" class="text-center d-block">
+                        <div class="icons icon-l-4">
+                            <img src="./NewTheme/images/icon-l-4.png" alt="" aria-hidden="true">
+                            <span>&#x627;&#x644;&#x625;&#x62C;&#x62A;&#x647;&#x627;&#x62F;&#x627;&#x62A; &#x627;&#x644;&#x642;&#x636;&#x627;&#x626;&#x64A;&#x629;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+        <div class="row links">
+            <div class="col-md-3 col-sm-6" style="margin-bottom:.4rem;">
+                <a href="galeryetvideo?CC=1&Page=Multimedia" class="text-center d-block">
+                    <div class="icons icon-l-5">
+                        <img src="./NewTheme/images/icon-l-5.png" alt="" aria-hidden="true">
+                        <span>&#x627;&#x644;&#x648;&#x633;&#x627;&#x626;&#x637; &#x627;&#x644;&#x645;&#x62A;&#x639;&#x62F;&#x62F;&#x629;</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6" style="margin-bottom:.4rem;">
+                <a href="article?id=8&tp=pr&Page=CP" class="text-center d-block">
+                    <div class="icons icon-l-6">
+                        <img src="./NewTheme/images/icon-l-6.png" alt="" aria-hidden="true">
+                        <span>&#x628;&#x64A;&#x627;&#x646;&#x627;&#x62A; &#x648; &#x628;&#x644;&#x627;&#x63A;&#x627;&#x62A; &#x635;&#x62D;&#x641;&#x64A;&#x629;</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6" style="margin-bottom:.4rem;">
+                <a href="article?id=9&tp=cc&Page=CP" class="text-center d-block">
+                    <div class="icons icon-l-7">
+                        <img src="./NewTheme/images/icon-l-7.png" alt="" aria-hidden="true">
+                        <span>&#x645;&#x62C;&#x627;&#x644;&#x633; &#x648; &#x645;&#x62D;&#x627;&#x643;&#x645; &#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6" style="margin-bottom:.4rem;">
+                <a href="Liens?Page=CP" class="text-center d-block">
+                    <div class="icons icon-l-8">
+                        <img src="./NewTheme/images/icon-l-8.png" alt="" aria-hidden="true">
+                        <span>&#x631;&#x648;&#x627;&#x628;&#x637; &#x647;&#x627;&#x645;&#x629;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                </div>
+
+                <!-- end post content -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- END BODY -->
+
+<!-- FOOTER -->
+
+        <div class="container-fluid" id="footer" role="contentinfo">
+            <div class="container-xxl">
+                <div class="footer">
+                    <div class="footer-menu row">
+                        <div class="col footer-logo" style="grid-area: c-1;">
+                            <img src="NewTheme/images/logo-footer.png" class="img-responsive" alt="&#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x644;&#x644;&#x645;&#x645;&#x644;&#x643;&#x629; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A;&#x629; - &#x627;&#x644;&#x635;&#x641;&#x62D;&#x629; &#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A;&#x629;" lang="ar">
+                        </div>
+                            <div class="col" style="grid-area: c-2;">
+                                <span class="heading">&#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</span>
+                                <ul>
+                                        <li>
+                                            <a href="Article?id=1&amp;tp=tx&amp;CC=1&amp;Page=Intro">&#x62A;&#x642;&#x62F;&#x64A;&#x645;</a>
+                                        </li>
+                                        <li>
+                                            <a href="Article?id=2&amp;tp=tx&amp;CC=1&amp;Page=President">&#x627;&#x644;&#x631;&#x626;&#x64A;&#x633; </a>
+                                        </li>
+                                        <li>
+                                            <a href="Membres?Id=2026&amp;CC=1&amp;Page=Membre">&#x627;&#x644;&#x623;&#x639;&#x636;&#x627;&#x621;</a>
+                                        </li>
+                                        <li>
+                                            <a href="Article?id=138&amp;tp=tx&amp;CC=1&amp;Page=Cadre-Consti">&#x627;&#x644;&#x625;&#x637;&#x627;&#x631; &#x627;&#x644;&#x642;&#x627;&#x646;&#x648;&#x646;&#x64A;</a>
+                                        </li>
+                                        <li>
+                                            <a href="Article?id=4&amp;tp=tx&amp;CC=1&amp;Page=Orga-Admin">&#x627;&#x644;&#x62A;&#x646;&#x638;&#x64A;&#x645; &#x627;&#x644;&#x625;&#x62F;&#x627;&#x631;&#x64A;</a>
+                                        </li>
+                                        <li>
+                                            <a href="/galeryetvideo?CC=1&amp;Page=Multimedia">&#x627;&#x644;&#x645;&#x643;&#x62A;&#x628;&#x629; &#x645;&#x62A;&#x639;&#x62F;&#x62F;&#x629; &#x627;&#x644;&#x648;&#x633;&#x627;&#x626;&#x637;</a>
+                                        </li>
+
+                                </ul>
+                            </div>
+                            <div class="col" style="grid-area: c-3;">
+                                <span class="heading">&#x627;&#x644;&#x642;&#x631;&#x627;&#x631;&#x627;&#x62A;</span>
+                                <ul>
+                                        <li>
+                                            <a href="/Decisions?Inst=4&amp;CC=2&amp;Page=Decision">&#x642;&#x631;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Decisions?Inst=3&amp;CC=2&amp;Page=Decision">&#x642;&#x631;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62C;&#x644;&#x633; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Decisions?Inst=2&amp;CC=2&amp;Page=Decision">&#x645;&#x642;&#x631;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x63A;&#x631;&#x641;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</a>
+                                        </li>
+
+                                </ul>
+                            </div>
+                            <div class="col" style="grid-area: c-4;">
+                                <span class="heading">&#x627;&#x644;&#x623;&#x646;&#x634;&#x637;&#x629; &#x648;&#x627;&#x644;&#x639;&#x644;&#x627;&#x642;&#x627;&#x62A; &#x627;&#x644;&#x62E;&#x627;&#x631;&#x62C;&#x64A;&#x629;</span>
+                                <ul>
+                                        <li>
+                                            <a href="/Activite?CC=3&amp;Page=Activite">&#x627;&#x644;&#x623;&#x646;&#x634;&#x637;&#x629;</a>
+                                        </li>
+                                        <li>
+                                            <a href="/article?id=9&amp;tp=cc">&#x647;&#x64A;&#x626;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x627;&#x643;&#x645; &#x648;&#x627;&#x644;&#x645;&#x62C;&#x627;&#x644;&#x633; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629;</a>
+                                        </li>
+
+                                </ul>
+                            </div>
+                            <div class="col" style="grid-area: c-5;">
+                                <span class="heading">&#x627;&#x644;&#x627;&#x635;&#x62F;&#x627;&#x631;&#x627;&#x62A;</span>
+                                <ul>
+                                        <li>
+                                            <a href="/Publication?CC=26&amp;Page=Publication">&#x627;&#x644;&#x645;&#x62C;&#x644;&#x629;</a>
+                                        </li>
+                                        <li>
+                                            <a href="/Publication?CC=27&amp;Page=Publication">&#x627;&#x635;&#x62F;&#x627;&#x631;&#x627;&#x62A; &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629;</a>
+                                        </li>
+
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100" style="background-color: #f3f1f1;">
+                <div class="copyright-footer  container-xxl">
+                    <div class="row" style="width: 100%;">
+                        <div class="col-12 col-md-6 copyright-firstcolumn">
+                            <a href="/siteMap">&#x62E;&#x631;&#x64A;&#x637;&#x629; &#x627;&#x644;&#x645;&#x648;&#x642;&#x639;</a><span aria-hidden="true">-</span>
+                            <a href="/liens">&#x631;&#x648;&#x627;&#x628;&#x637; &#x647;&#x627;&#x645;&#x629;</a><span aria-hidden="true">-</span>
+                            <a href="/contact?Page=Contact">&#x625;&#x62A;&#x635;&#x644; &#x628;&#x646;&#x627;</a>
+                        </div>
+                        <div class="col-12 col-md-6 copyright-lastcolumn justify-content-end d-flex">
+                            &#x627;&#x644;&#x645;&#x62D;&#x643;&#x645;&#x629; &#x627;&#x644;&#x62F;&#x633;&#x62A;&#x648;&#x631;&#x64A;&#x629; &#x627;&#x644;&#x645;&#x63A;&#x631;&#x628;&#x64A;&#x629; &#x62C;&#x645;&#x64A;&#x639; &#x627;&#x644;&#x62D;&#x642;&#x648;&#x642; &#x645;&#x62D;&#x641;&#x648;&#x638;&#x629; 2023
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- END FOOTER -->
+
+<script src="NewTheme/js/bootstrap/bootstrap.bundle.min.js?v=JDJ424DHaphTAZCH6UKdhuZNr9MC6j5HTngeLbi7vPs"></script>
+<script src="NewTheme/js/jquery/jquery-3.7.0.min.js?v=QWyyFSV9jN5mD9wvmLM4sImHsnAIgHpO8k3kJn0wsj4"></script>
+<script src="NewTheme/js/script-v2.js?v=LmlaMAdy-tsL91rG9Od6HUWSDMj6ql3IBadQWzfiDok"></script>
+<script src="NewTheme/js/jquery/jquery.dataTables.min.js?v=e_mMFdL1W8NybDm86AnDABvZAgKg7kUVdQYRaEk7l04"></script>
+<!-- AI Chat Button Configuration & Script -->
+<script src="NewTheme/js/ai-chat-config.js?v=eY_m_L-tZpWuv_DO4jl1tmlMMDTwjQ5k6MoKAmSc2P4"></script>
+<script src="NewTheme/js/ai-chat-button.js?v=r4REScaK8zwozlQ8javNQnQ2M3uj_a6B5HHJ3b3y-O4"></script>
+<!-- Accessibility enhancements -->
+<script src="NewTheme/js/accessibility.js?v=mpUaLQjSI3k19Yc2P3fI8HEHQd442o24kwJpU9n9NTc"></script>
+<script type="application/javascript">
+    const currentCulture = "ar-MA";
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XKSJNP26XX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-XKSJNP26XX');
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.btn-lang');
+
+        buttons.forEach(button => {
+            // Add ripple effect
+            button.addEventListener('click', function (e) {
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+
+                const x = e.clientX - e.target.getBoundingClientRect().left;
+                const y = e.clientY - e.target.getBoundingClientRect().top;
+
+                ripple.style.left = `${x}px`;
+                ripple.style.top = `${y}px`;
+
+                // Remove ripple after animation completes
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+
+                // Toggle active state for language buttons
+                buttons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                // Add additional feedback for screen readers
+                const feedbackMsg = document.createElement('span');
+                feedbackMsg.classList.add('sr-only');
+                feedbackMsg.textContent = 'Language selected';
+                feedbackMsg.setAttribute('aria-live', 'polite');
+                this.appendChild(feedbackMsg);
+
+                setTimeout(() => {
+                    feedbackMsg.remove();
+                }, 1000);
+            });
+        });
+    });
+</script>
+
+
+
+
+</body>
+
+</html>

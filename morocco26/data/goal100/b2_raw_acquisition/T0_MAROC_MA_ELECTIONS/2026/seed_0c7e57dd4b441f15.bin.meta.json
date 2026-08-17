@@ -1,0 +1,21 @@
+{
+  "source_id": "T0_MAROC_MA_ELECTIONS",
+  "bucket": "2026",
+  "original_url": "https://maroc.ma/fr/actualites/les-preparatifs-des-elections-du-23-septembre-au-coeur-de-deux-reunions-avec-les-chefs-et-cadres-des",
+  "final_url": "https://maroc.ma/fr/actualites/les-preparatifs-des-elections-du-23-septembre-au-coeur-de-deux-reunions-avec-les-chefs-et-cadres-des",
+  "retrieved_at": "2026-08-17T10:43:30+01:00",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "content_length": 59627,
+  "etag": null,
+  "last_modified": "Mon, 17 Aug 2026 09:25:04 GMT",
+  "sha256": "0c7e57dd4b441f15272b149e2401b495bd7563a9e4ca9ca5215f54322dda84a9",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

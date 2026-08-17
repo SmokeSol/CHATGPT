@@ -1,0 +1,944 @@
+{
+  "schema_version": "1.0",
+  "surface_id": "M26-GOAL100-B2-ACQUISITION-SURFACE-V1",
+  "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "generated_at": "2026-08-17T11:03:35+01:00",
+  "derivation": "Every entry is derived from a document already committed to the repository. No source was discovered, searched for or added, and the frozen universe is not widened.",
+  "determinism": {
+    "llm_used": false,
+    "source_discovery": false,
+    "semantic_selection": false
+  },
+  "families": {
+    "B2_SOURCE_REGISTRY_V1": {
+      "governs": "B2 claim records about the 2026 contest",
+      "frozen_at": "2026-08-17T07:34:00+01:00",
+      "source_universe_sha256": "8aa331e941ab892997b68a04b91b5b2147c9561f717a3ca976122dbb1ba44d32",
+      "entries": 19,
+      "claim_eligible_entries": 11,
+      "temporal_reach": {
+        "literal_years_in_templates": [
+          2025,
+          2026
+        ],
+        "publication_floor_years": [
+          2025
+        ],
+        "election_years_expressible": [
+          2026
+        ],
+        "election_years_not_expressible": [
+          2002,
+          2007,
+          2011,
+          2016,
+          2021
+        ],
+        "interpretation": "The frozen templates name only 2026 election terms and set a publication floor in 2025. They cannot express a query for a pre-2025 cycle, so the B2 claim registry carries no historical acquisition surface."
+      }
+    },
+    "HISTORICAL_INGEST_PROVENANCE": {
+      "governs": "historical panel inputs for 2011/2016/2021",
+      "is_b2_claim_surface": false,
+      "entries": 6,
+      "note": "Recorded provenance of already-ingested panel inputs. Using it is an ingest act under the historical pipeline, not a B2 claim-collection act."
+    }
+  },
+  "surfaces": [
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T0_CHAMBRE_REPRESENTANTS",
+      "tier": "T0",
+      "publisher": "Chambre des représentants",
+      "independence_cluster": "STATE_PARLIAMENT",
+      "root_domains": [
+        "chambredesrepresentants.ma",
+        "www.chambredesrepresentants.ma"
+      ],
+      "seed_urls": [
+        "https://www.chambredesrepresentants.ma/"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "REFERENCE_ONLY",
+      "claim_eligible": false,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": "just a moment",
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": false,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T0_CONSTITUTIONAL_COURT",
+      "tier": "T0",
+      "publisher": "Cour constitutionnelle du Royaume du Maroc",
+      "independence_cluster": "STATE_CONSTITUTIONAL_COURT",
+      "root_domains": [
+        "courconstitutionnelle.ma",
+        "www.courconstitutionnelle.ma"
+      ],
+      "seed_urls": [
+        "https://www.courconstitutionnelle.ma/"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "ACTIVE",
+      "claim_eligible": true,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": null,
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": true,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T0_LISTES_ELECTORALES",
+      "tier": "T0",
+      "publisher": "Service public des listes électorales générales",
+      "independence_cluster": "STATE_INTERIOR_ELECTORAL_ROLL",
+      "root_domains": [
+        "listeselectorales.ma",
+        "www.listeselectorales.ma"
+      ],
+      "seed_urls": [
+        "https://www.listeselectorales.ma/"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "REFERENCE_ONLY",
+      "claim_eligible": false,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": "just a moment",
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": false,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T0_MAROC_MA_ELECTIONS",
+      "tier": "T0",
+      "publisher": "Portail officiel du Royaume du Maroc / communiqués publics",
+      "independence_cluster": "STATE_MAROC_MA_MAP",
+      "root_domains": [
+        "maroc.ma",
+        "www.maroc.ma"
+      ],
+      "seed_urls": [
+        "https://maroc.ma/fr/actualites/la-date-des-elections-des-membres-de-la-chambre-des-representants-fixee-au-mercredi-23-septembre-2026",
+        "https://maroc.ma/fr/actualites/les-preparatifs-des-elections-du-23-septembre-au-coeur-de-deux-reunions-avec-les-chefs-et-cadres-des"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "ACTIVE",
+      "claim_eligible": true,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": null,
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": true,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T0_SGG_LEGISLATION",
+      "tier": "T0",
+      "publisher": "Secrétariat général du gouvernement",
+      "independence_cluster": "STATE_SGG",
+      "root_domains": [
+        "sgg.gov.ma",
+        "www.sgg.gov.ma"
+      ],
+      "seed_urls": [
+        "https://www.sgg.gov.ma/arabe/Legislation.aspx",
+        "https://www.sgg.gov.ma/Portals/1/textesconsolides/27_11.pdf"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "INACTIVE",
+      "claim_eligible": false,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": null,
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": false,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T1_ISTIQLAL_OFFICIAL",
+      "tier": "T1",
+      "publisher": "Parti de l'Istiqlal",
+      "independence_cluster": "PARTY_ISTIQLAL",
+      "root_domains": [
+        "istiqlal.info",
+        "www.istiqlal.info"
+      ],
+      "seed_urls": [
+        "https://www.istiqlal.info/"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "ACTIVE",
+      "claim_eligible": true,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": null,
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": true,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T1_MP_OFFICIAL",
+      "tier": "T1",
+      "publisher": "Mouvement Populaire",
+      "independence_cluster": "PARTY_MP",
+      "root_domains": [
+        "alharaka.ma",
+        "www.alharaka.ma"
+      ],
+      "seed_urls": [
+        "https://alharaka.ma/"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "ACTIVE",
+      "claim_eligible": true,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": null,
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": true,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T1_PAM_OFFICIAL",
+      "tier": "T1",
+      "publisher": "Parti Authenticité et Modernité",
+      "independence_cluster": "PARTY_PAM",
+      "root_domains": [
+        "pam.ma",
+        "www.pam.ma"
+      ],
+      "seed_urls": [
+        "https://pam.ma/"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "REFERENCE_ONLY",
+      "claim_eligible": false,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": "captcha",
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": false,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T1_PJD_OFFICIAL",
+      "tier": "T1",
+      "publisher": "Parti de la Justice et du Développement",
+      "independence_cluster": "PARTY_PJD",
+      "root_domains": [
+        "pjd.ma",
+        "www.pjd.ma"
+      ],
+      "seed_urls": [
+        "https://www.pjd.ma/",
+        "https://www.pjd.ma/229786-%D8%A7%D9%84%D9%84%D8%A7%D8%A6%D8%AD%D8%A9-%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%D8%A9-%D9%84%D9%88%D9%83%D9%84%D8%A7%D8%A1-%D9%88%D9%88%D9%83%D9%8A%D9%84%D8%A7%D8%AA-%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84.html"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "ACTIVE",
+      "claim_eligible": true,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": null,
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": true,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T1_PPS_OFFICIAL",
+      "tier": "T1",
+      "publisher": "Parti du Progrès et du Socialisme",
+      "independence_cluster": "PARTY_PPS",
+      "root_domains": [
+        "pps.ma",
+        "www.pps.ma"
+      ],
+      "seed_urls": [
+        "https://pps.ma/",
+        "https://pps.ma/30495/"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "ACTIVE",
+      "claim_eligible": true,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": null,
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": true,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T1_RNI_OFFICIAL",
+      "tier": "T1",
+      "publisher": "Rassemblement National des Indépendants",
+      "independence_cluster": "PARTY_RNI",
+      "root_domains": [
+        "rni.ma",
+        "www.rni.ma"
+      ],
+      "seed_urls": [
+        "https://rni.ma/"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "REFERENCE_ONLY",
+      "claim_eligible": false,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": "just a moment",
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": false,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T1_UC_OFFICIAL",
+      "tier": "T1",
+      "publisher": "Union Constitutionnelle",
+      "independence_cluster": "PARTY_UC",
+      "root_domains": [
+        "possible.ma",
+        "www.possible.ma"
+      ],
+      "seed_urls": [
+        "https://www.possible.ma/"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "ACTIVE",
+      "claim_eligible": true,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": null,
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": true,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T1_USFP_OFFICIAL",
+      "tier": "T1",
+      "publisher": "Union Socialiste des Forces Populaires",
+      "independence_cluster": "PARTY_USFP",
+      "root_domains": [
+        "usfp.ma",
+        "www.usfp.ma"
+      ],
+      "seed_urls": [
+        "https://www.usfp.ma/"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "REFERENCE_ONLY",
+      "claim_eligible": false,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": "captcha",
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": false,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T2_HESPRESS",
+      "tier": "T2",
+      "publisher": "Hespress",
+      "independence_cluster": "MEDIA_HESPRESS",
+      "root_domains": [
+        "hespress.com",
+        "www.hespress.com"
+      ],
+      "seed_urls": [
+        "https://www.hespress.com/1623196-1623196.html"
+      ],
+      "path_exclusions": [
+        "/poll"
+      ],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "ACTIVE",
+      "claim_eligible": true,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": null,
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": true,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T2_LE360",
+      "tier": "T2",
+      "publisher": "Le360",
+      "independence_cluster": "MEDIA_LE360",
+      "root_domains": [
+        "le360.ma",
+        "www.le360.ma",
+        "fr.le360.ma",
+        "ar.le360.ma",
+        "es.le360.ma"
+      ],
+      "seed_urls": [
+        "https://fr.le360.ma/politique/legislatives-2026-listiqlal-devoile-une-premiere-liste-de-70-candidats-dans-10-regions_5FBR3RVX3VCPDJTLXGMJBRNEFE/"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "ACTIVE",
+      "claim_eligible": true,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": null,
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": true,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T2_LEMATIN",
+      "tier": "T2",
+      "publisher": "Le Matin",
+      "independence_cluster": "MEDIA_LEMATIN",
+      "root_domains": [
+        "lematin.ma",
+        "www.lematin.ma"
+      ],
+      "seed_urls": [
+        "https://lematin.ma/nation/financement-electoral-2026-lenveloppe-publique-portee-a-450-mdh/352161"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "ACTIVE",
+      "claim_eligible": true,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": null,
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": true,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T2_MEDIAS24",
+      "tier": "T2",
+      "publisher": "Médias24",
+      "independence_cluster": "MEDIA_MEDIAS24",
+      "root_domains": [
+        "medias24.com",
+        "www.medias24.com"
+      ],
+      "seed_urls": [
+        "https://medias24.com/2026/06/05/legislatives-2026-le-rni-devoile-une-liste-de-89-candidats-1693575/"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "INACTIVE",
+      "claim_eligible": false,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": "just a moment",
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": false,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T2_SNRTNEWS",
+      "tier": "T2",
+      "publisher": "SNRTnews",
+      "independence_cluster": "MEDIA_SNRT_PUBLIC_BROADCASTER",
+      "root_domains": [
+        "snrtnews.com",
+        "www.snrtnews.com"
+      ],
+      "seed_urls": [
+        "https://snrtnews.com/fr/article/anis-birou-a-nokta-ila-satr-nous-avons-tranche-90-des-investitures-du-rni-148741"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "ACTIVE",
+      "claim_eligible": true,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": null,
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": true,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "B2_SOURCE_REGISTRY_V1",
+      "source_id": "T2_TELQUEL",
+      "tier": "T2",
+      "publisher": "TelQuel / TelQuel Arabi",
+      "independence_cluster": "MEDIA_TELQUEL",
+      "root_domains": [
+        "telquel.ma",
+        "www.telquel.ma",
+        "ar.telquel.ma"
+      ],
+      "seed_urls": [
+        "https://ar.telquel.ma/",
+        "https://telquel.ma/"
+      ],
+      "path_exclusions": [],
+      "allowed_query_templates": [
+        "Q01_FIXED_SEED_AND_SAME_DOMAIN_LINK_SCAN",
+        "Q02_SITEMAP_BOUNDED_SCAN",
+        "Q03_EXACT_ENTITY_TERRITORY_SCAN",
+        "Q05_CORRECTION_AND_SUPERSESSION_SCAN"
+      ],
+      "election_years_potentially_covered": [
+        2026
+      ],
+      "expected_format": [
+        "text/html",
+        "application/pdf"
+      ],
+      "access_status": "INACTIVE",
+      "claim_eligible": false,
+      "last_probe_http_status": null,
+      "last_probe_challenge_marker": "captcha",
+      "archive_capability": "RAW_BYTES_PLUS_SHA256_PER_FROZEN_ARCHIVE_RULE",
+      "parser_availability": "HTML_TABLE_OR_DETERMINISTIC_REGEX_ONLY",
+      "deterministic_enumeration_possible": false,
+      "notes": "Only ACTIVE routes may create B2 candidate records. REFERENCE_ONLY and INACTIVE routes are enumerated for completeness and yield BLOCKED_SOURCE, never absence."
+    },
+    {
+      "surface_family": "HISTORICAL_INGEST_PROVENANCE",
+      "source_id": "HF_CHAMBER_MEMBERS_MULTIYEAR",
+      "tier": "ALREADY_REFERENCED_PANEL_INPUT",
+      "publisher": "huggingface.co",
+      "independence_cluster": "TAFRA_DERIVED_MEMBER_DATA",
+      "root_domains": [
+        "huggingface.co"
+      ],
+      "dataset_name": "electricsheepafrica/africa-membres-de-la-chambre-des-representants-du-maroc-2007-2011-2016-2021",
+      "loader_recorded_in": "morocco26/scripts/goal75_observed_2021.py",
+      "loader": "HUGGINGFACE_DATASETS",
+      "resolution_route": "/api/datasets/electricsheepafrica/africa-membres-de-la-chambre-des-representants-du-maroc-2007-2011-2016-2021",
+      "partition_field": "parlement",
+      "already_extracted_partitions": [
+        "2021-2026"
+      ],
+      "election_years_potentially_covered": [
+        2007,
+        2011,
+        2016,
+        2021
+      ],
+      "expected_format": [
+        "application/json",
+        "text/csv",
+        "application/vnd.ms-excel"
+      ],
+      "access_status": "REFERENCED_BUT_ONLY_2021_PARTITION_EXTRACTED",
+      "granularity": "MEMBER_LEVEL_ELECTED_PERSONS",
+      "supplies_input_classes": [
+        "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
+      ],
+      "archive_capability": "RAW_BYTES_PLUS_SHA256",
+      "parser_availability": "STRUCTURED_JSON_OR_CSV_DETERMINISTIC",
+      "deterministic_enumeration_possible": true,
+      "notes": "The committed ingest script loads this exact identifier and keeps only parlement=='2021-2026'. The remaining legislature partitions are already inside the same recorded dataset, so reading them reuses recorded provenance rather than widening the source universe."
+    },
+    {
+      "surface_family": "HISTORICAL_INGEST_PROVENANCE",
+      "source_id": "OPENAFRICA_RESULTS_2002_PROBE_ONLY",
+      "tier": "PROBE_ONLY_NOT_AUTHORIZED_AS_MODEL_INPUT",
+      "publisher": "open.africa",
+      "independence_cluster": "TAFRA_OPEN_AFRICA",
+      "root_domains": [
+        "open.africa"
+      ],
+      "seed_urls": [
+        "https://open.africa/dataset/863697f2-bffa-4607-afe7-2c38d6b78adf/resource/19018416-2921-4abf-87a2-463160892f07/download/parlement-elections-2002-1-0.xlsx"
+      ],
+      "election_years_potentially_covered": [
+        2002
+      ],
+      "access_status": "PROBED_NOT_AUTHORIZED",
+      "granularity": "LIST_LEVEL_PARTY_VOTES_PER_CONSTITUENCY",
+      "supplies_input_classes": [],
+      "deterministic_enumeration_possible": true,
+      "notes": "TAFRA warns that primary coverage is incomplete, the secondary source has errors, and small-party results are unavailable."
+    },
+    {
+      "surface_family": "HISTORICAL_INGEST_PROVENANCE",
+      "source_id": "OPENAFRICA_RESULTS_2007_PROBE_ONLY",
+      "tier": "PROBE_ONLY_NOT_AUTHORIZED_AS_MODEL_INPUT",
+      "publisher": "open.africa",
+      "independence_cluster": "TAFRA_OPEN_AFRICA",
+      "root_domains": [
+        "open.africa"
+      ],
+      "seed_urls": [
+        "https://open.africa/dataset/1f48eeec-ff94-46a2-ae8e-ed56b66dd529/resource/0ec47fad-4f8a-4753-b107-82b0cc76d94c/download/parlement-elections-2007-1-0.xlsx"
+      ],
+      "election_years_potentially_covered": [
+        2007
+      ],
+      "access_status": "PROBED_NOT_AUTHORIZED",
+      "granularity": "LIST_LEVEL_PARTY_VOTES_PER_CONSTITUENCY",
+      "supplies_input_classes": [],
+      "deterministic_enumeration_possible": true,
+      "notes": "TAFRA archived copy of the official elections2007.gov.ma results."
+    },
+    {
+      "surface_family": "HISTORICAL_INGEST_PROVENANCE",
+      "source_id": "OPENAFRICA_RESULTS_2011",
+      "tier": "ALREADY_INGESTED_PANEL_INPUT",
+      "publisher": "open.africa",
+      "independence_cluster": "TAFRA_OPEN_AFRICA",
+      "root_domains": [
+        "open.africa"
+      ],
+      "seed_urls": [
+        "https://open.africa/dataset/cb7a294b-9569-4647-b35e-3b1cb6c8028e/resource/59229632-d062-4e1a-afff-b344b6afdae7/download/parlement-elections-2011-1-0.xlsx"
+      ],
+      "election_years_potentially_covered": [
+        2011
+      ],
+      "expected_format": [
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      ],
+      "access_status": "ALREADY_ACQUIRED",
+      "local_raw_path": "data/goal100/historical/raw/parlement-elections-2011-1-0.xlsx",
+      "local_raw_sha256": "2152a4581364da51ebff3afa6320d334e2e180aa4319399a033b296fe94e7f8c",
+      "granularity": "LIST_LEVEL_PARTY_VOTES_PER_CONSTITUENCY",
+      "supplies_input_classes": [
+        "HISTORICAL_LIST_PRESENCE_TARGET_YEAR"
+      ],
+      "archive_capability": "RAW_FILE_RETAINED_AND_HASHED",
+      "parser_availability": "XLSX_DETERMINISTIC_TABLE_PARSER_ALREADY_EXECUTED",
+      "deterministic_enumeration_possible": true,
+      "notes": "Already ingested under M26-GOAL100-TAFRA-HISTORY-V1; carries no candidate-level rows."
+    },
+    {
+      "surface_family": "HISTORICAL_INGEST_PROVENANCE",
+      "source_id": "OPENAFRICA_RESULTS_2016",
+      "tier": "ALREADY_INGESTED_PANEL_INPUT",
+      "publisher": "open.africa",
+      "independence_cluster": "TAFRA_OPEN_AFRICA",
+      "root_domains": [
+        "open.africa"
+      ],
+      "seed_urls": [
+        "https://open.africa/dataset/6bf3208e-7e01-456f-9ed8-ff8977e49585/resource/6c4000e1-5359-43fd-b941-399af34ee54a/download/parlement-elections-2016-1-1.xlsx"
+      ],
+      "election_years_potentially_covered": [
+        2016
+      ],
+      "expected_format": [
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      ],
+      "access_status": "ALREADY_ACQUIRED",
+      "local_raw_path": "data/goal100/historical/raw/parlement-elections-2016-1-1.xlsx",
+      "local_raw_sha256": "38f3031b423957050d7c32f0d521952b397f5f41f8f224f30faeb5d7c56b1ba9",
+      "granularity": "LIST_LEVEL_PARTY_VOTES_PER_CONSTITUENCY",
+      "supplies_input_classes": [
+        "HISTORICAL_LIST_PRESENCE_TARGET_YEAR"
+      ],
+      "archive_capability": "RAW_FILE_RETAINED_AND_HASHED",
+      "parser_availability": "XLSX_DETERMINISTIC_TABLE_PARSER_ALREADY_EXECUTED",
+      "deterministic_enumeration_possible": true,
+      "notes": "Already ingested under M26-GOAL100-TAFRA-HISTORY-V1; carries no candidate-level rows."
+    },
+    {
+      "surface_family": "HISTORICAL_INGEST_PROVENANCE",
+      "source_id": "OPENAFRICA_RESULTS_2021",
+      "tier": "ALREADY_INGESTED_PANEL_INPUT",
+      "publisher": "open.africa",
+      "independence_cluster": "TAFRA_OPEN_AFRICA",
+      "root_domains": [
+        "open.africa"
+      ],
+      "seed_urls": [
+        "https://open.africa/dataset/595d69a4-c7fc-4e9d-beeb-5d7fc9ec78e5/resource/cf341829-cd2c-4baa-b679-2b2ee1c1e333/download/parlement-elections-2021-1-0.xlsx"
+      ],
+      "election_years_potentially_covered": [
+        2021
+      ],
+      "expected_format": [
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      ],
+      "access_status": "ALREADY_ACQUIRED",
+      "local_raw_path": "data/goal100/historical/raw/parlement-elections-2021-1-0.xlsx",
+      "local_raw_sha256": "ffef1b78ae6b2dd4397e8837e094e991d9630787870b5724ee2bed5931374545",
+      "granularity": "LIST_LEVEL_PARTY_VOTES_PER_CONSTITUENCY",
+      "supplies_input_classes": [
+        "HISTORICAL_LIST_PRESENCE_TARGET_YEAR"
+      ],
+      "archive_capability": "RAW_FILE_RETAINED_AND_HASHED",
+      "parser_availability": "XLSX_DETERMINISTIC_TABLE_PARSER_ALREADY_EXECUTED",
+      "deterministic_enumeration_possible": true,
+      "notes": "Already ingested under M26-GOAL100-TAFRA-HISTORY-V1; carries no candidate-level rows."
+    }
+  ],
+  "historical_gap_routes": {
+    "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR": {
+      "required_for": [
+        "B2_P01",
+        "B2_P02",
+        "B2_P03",
+        "B2_P04"
+      ],
+      "missing_years": [
+        2011,
+        2016
+      ],
+      "candidate_route": "OPENAFRICA_CHAMBER_MEMBERS_MULTIYEAR",
+      "route_status": "RECORDED_PROVENANCE_NOT_YET_EXTRACTED_FOR_THESE_YEARS"
+    },
+    "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR": {
+      "required_for": [
+        "B2_M02",
+        "B2_P01",
+        "B2_P02",
+        "B2_P03",
+        "B2_P04",
+        "B2_P05",
+        "B2_P06"
+      ],
+      "missing_years": [
+        2011,
+        2016,
+        2021
+      ],
+      "candidate_route": null,
+      "route_status": "NO_RECORDED_PROVENANCE_IN_EITHER_FAMILY"
+    }
+  },
+  "prohibited_expansions": [
+    "Adding a domain, dataset or endpoint not already recorded in the repository.",
+    "Using a search engine or LLM to locate an alternative source.",
+    "Treating a REFERENCE_ONLY or INACTIVE route's inaccessibility as evidence of absence."
+  ],
+  "canonical_surface_sha256": "d51c5b7ff0fceec2e2f5ab439abb23ffbe369d7040c795e0b28fa336b8803059"
+}

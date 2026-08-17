@@ -1,0 +1,1192 @@
+{
+  "schema_version": "1.0",
+  "panel_id": "M26-GOAL100-B2-HISTORICAL-PANEL-V1",
+  "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "dictionary_id": "M26-GOAL100-B2-FEATURE-DICTIONARY-V1",
+  "generated_at": "2026-08-17T10:11:22+01:00",
+  "gate": "FAIL",
+  "determinism": {
+    "llm_used": false,
+    "network_access": false,
+    "source_discovery": false,
+    "extraction_method": "DETERMINISTIC_STRUCTURED_JOIN"
+  },
+  "calibration_contract": {
+    "fit_transition": "2011_TO_2016",
+    "validation_transition": "2016_TO_2021",
+    "feature_creation_cutoff": "Each historical feature must use only information publicly available before the relevant historical election cutoff.",
+    "core_panel_minimum_coverage_each_transition": 0.8,
+    "binary_feature_minimum_positive_instances": 30,
+    "regularization_grid": [
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0,
+      30.0,
+      100.0
+    ],
+    "selection_metric_order": [
+      "vote Energy Score improvement versus persistence",
+      "turnout CRPS non-degradation",
+      "seat-event Brier/log-score non-degradation",
+      "lower coefficient norm",
+      "stronger regularization"
+    ],
+    "mandatory_failure": "A feature failing coverage/support remains exactly zero in F0. No hand-set sign or magnitude is permitted.",
+    "effect_cap": "Norm cap at the fit-transition empirical 90th percentile of absolute persistence residuals, published before 2026 feature application."
+  },
+  "input_inventory": {
+    "HISTORICAL_LIST_PRESENCE_TARGET_YEAR": {
+      "available_years": [
+        2011,
+        2016,
+        2021
+      ],
+      "instances_by_year": {
+        "2011": 1748,
+        "2016": 1343,
+        "2021": 1472
+      },
+      "provenance": "b2_identity_crosswalk.lists (scope=local)",
+      "semantics": "POSITIVE_VOTE_LIST_OBSERVED_IN_CANONICAL_RESULT",
+      "absence_semantics": "NA_NOT_ZERO"
+    },
+    "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR": {
+      "available_years": [
+        2021
+      ],
+      "instances_by_year": {
+        "2021": 305
+      },
+      "provenance": "b2_identity_crosswalk.people_2021 (scope=local)",
+      "semantics": "ELECTION_OUTCOME_OF_ITS_OWN_CYCLE",
+      "leakage_rule": "Admissible only as prior-cycle incumbency for a strictly later cutoff."
+    },
+    "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": "scan of ingested TAFRA canonical rows for candidate-level columns",
+      "observed_columns_by_year": {
+        "2011": [
+          "constituency",
+          "id_constituency",
+          "id_prefprov",
+          "id_region",
+          "invalid_reported",
+          "list_type",
+          "party_vote_sum",
+          "prefprov",
+          "region",
+          "registered_reported",
+          "seats",
+          "turnout_rate_reported",
+          "votes",
+          "year"
+        ],
+        "2016": [
+          "constituency",
+          "id_constituency",
+          "id_prefprov",
+          "id_region",
+          "invalid_reported",
+          "list_type",
+          "party_vote_sum",
+          "prefprov",
+          "region",
+          "registered_reported",
+          "seats",
+          "turnout_rate_reported",
+          "votes",
+          "year"
+        ],
+        "2021": [
+          "constituency",
+          "id_constituency",
+          "id_prefprov",
+          "id_region",
+          "invalid_reported",
+          "list_type",
+          "party_vote_sum",
+          "prefprov",
+          "region",
+          "registered_reported",
+          "seats",
+          "turnout_rate_reported",
+          "votes",
+          "year"
+        ]
+      },
+      "detection_markers": [
+        "birthdate",
+        "candidate",
+        "candidate_name",
+        "candidats",
+        "date_naissance",
+        "head_candidate",
+        "idcandidat",
+        "idperson",
+        "nom_candidat",
+        "ordre",
+        "rang",
+        "rank",
+        "tete_de_liste"
+      ]
+    },
+    "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_LIST_REJECTION_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_PARTY_OFFICE_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    },
+    "HISTORICAL_PARTY_SWITCH_TARGET_YEAR": {
+      "available_years": [],
+      "instances_by_year": {},
+      "provenance": null,
+      "reason": "No ingested repository dataset provides this input class."
+    }
+  },
+  "evidence_type_to_input_class": {
+    "LIST_REGISTERED": "HISTORICAL_LIST_PRESENCE_TARGET_YEAR",
+    "LIST_REJECTED": "HISTORICAL_LIST_REJECTION_TARGET_YEAR",
+    "CANDIDATE_REGISTERED": "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+    "CANDIDATE_RANK": "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+    "CANDIDATE_BIRTHDATE": "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
+    "CANDIDATE_WITHDRAWN": "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
+    "CANDIDATE_DISQUALIFIED": "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+    "FORMAL_ALLIANCE": "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
+    "INCUMBENT_STATUS": "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
+    "PARTY_SWITCH": "HISTORICAL_PARTY_SWITCH_TARGET_YEAR",
+    "ELECTED_OFFICE": "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
+    "PARTY_OFFICE": "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
+    "FORMAL_ENDORSEMENT": "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
+    "FORMAL_DEFECTION": "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+    "CAMPAIGN_LAUNCH": "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
+    "OFFICIAL_INVESTIGATION": "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+    "OFFICIAL_SANCTION": "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR",
+    "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY": "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR"
+  },
+  "transitions": [
+    {
+      "transition_id": "2011_TO_2016",
+      "role": "FIT",
+      "prior_year": 2011,
+      "target_year": 2016,
+      "information_cutoff_rule": "Each historical feature must use only information publicly available before the relevant historical election cutoff.",
+      "territories_in_scope": 92,
+      "features": [
+        {
+          "feature_id": "B2_M01_BALLOT_LIST_PRESENT",
+          "entity": "PARTY_LIST_X_CONTEST",
+          "forecast_role": "MECHANICAL",
+          "source_evidence_types": [
+            "LIST_REGISTERED",
+            "LIST_REJECTED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_LIST_PRESENCE_TARGET_YEAR",
+            "HISTORICAL_LIST_REJECTION_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_LIST_REJECTION_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "NOT_APPLICABLE"
+        },
+        {
+          "feature_id": "B2_M02_CANDIDATE_REGISTERED_RANK",
+          "entity": "CANDIDATE_X_LIST_X_CONTEST",
+          "forecast_role": "MECHANICAL",
+          "source_evidence_types": [
+            "CANDIDATE_REGISTERED",
+            "CANDIDATE_RANK"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "NOT_APPLICABLE"
+        },
+        {
+          "feature_id": "B2_M03_CANDIDATE_BIRTHDATE",
+          "entity": "CANDIDATE",
+          "forecast_role": "MECHANICAL",
+          "source_evidence_types": [
+            "CANDIDATE_BIRTHDATE"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "NOT_APPLICABLE"
+        },
+        {
+          "feature_id": "B2_M04_CANDIDATE_WITHDRAWN_OR_DISQUALIFIED",
+          "entity": "CANDIDATE_X_CONTEST",
+          "forecast_role": "MECHANICAL",
+          "source_evidence_types": [
+            "CANDIDATE_WITHDRAWN",
+            "CANDIDATE_DISQUALIFIED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+            "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+            "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "NOT_APPLICABLE"
+        },
+        {
+          "feature_id": "B2_M05_FORMAL_LIST_ALLIANCE",
+          "entity": "LIST_X_CONTEST",
+          "forecast_role": "MECHANICAL",
+          "source_evidence_types": [
+            "FORMAL_ALLIANCE"
+          ],
+          "required_inputs": [
+            "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "NOT_APPLICABLE"
+        },
+        {
+          "feature_id": "B2_P01_INCUMBENT_SAME_PARTY_SAME_DISTRICT",
+          "entity": "PARTY_X_LOCAL_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "INCUMBENT_STATUS",
+            "CANDIDATE_REGISTERED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P02_INCUMBENT_SAME_PARTY_MOVED_DISTRICT",
+          "entity": "PARTY_X_LOCAL_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "INCUMBENT_STATUS",
+            "CANDIDATE_REGISTERED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P03_INCUMBENT_PARTY_SWITCH_IN",
+          "entity": "PARTY_X_LOCAL_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "INCUMBENT_STATUS",
+            "PARTY_SWITCH",
+            "CANDIDATE_REGISTERED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
+            "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
+            "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P04_INCUMBENT_PARTY_SWITCH_OUT",
+          "entity": "PARTY_X_LOCAL_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "INCUMBENT_STATUS",
+            "PARTY_SWITCH",
+            "CANDIDATE_REGISTERED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
+            "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
+            "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P05_LOCAL_EXECUTIVE_OFFICE",
+          "entity": "PARTY_X_LOCAL_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "ELECTED_OFFICE",
+            "CANDIDATE_REGISTERED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P06_NATIONAL_OR_REGIONAL_PARTY_OFFICE",
+          "entity": "PARTY_X_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "PARTY_OFFICE",
+            "CANDIDATE_REGISTERED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_PARTY_OFFICE_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_PARTY_OFFICE_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P07_FORMAL_ENDORSEMENT",
+          "entity": "PARTY_OR_CANDIDATE_X_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "FORMAL_ENDORSEMENT"
+          ],
+          "required_inputs": [
+            "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P08_FORMAL_DEFECTION",
+          "entity": "PARTY_X_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "FORMAL_DEFECTION",
+            "PARTY_SWITCH"
+          ],
+          "required_inputs": [
+            "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+            "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+            "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_R01_CAMPAIGN_LAUNCH_REPORTED",
+          "entity": "PARTY_OR_LIST_X_CONTEST",
+          "forecast_role": "REPORTING_ONLY_PENDING_EVENT_CALIBRATION",
+          "source_evidence_types": [
+            "CAMPAIGN_LAUNCH"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_REPORTING_ONLY"
+        },
+        {
+          "feature_id": "B2_R02_OFFICIAL_SANCTION_OR_INVESTIGATION",
+          "entity": "CANDIDATE_OR_PARTY_X_CONTEST",
+          "forecast_role": "REPORTING_ONLY_PENDING_EVENT_CALIBRATION",
+          "source_evidence_types": [
+            "OFFICIAL_INVESTIGATION",
+            "OFFICIAL_SANCTION"
+          ],
+          "required_inputs": [
+            "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+            "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+            "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_REPORTING_ONLY"
+        },
+        {
+          "feature_id": "B2_R03_VERIFIED_DEATH_OR_INCAPACITY",
+          "entity": "CANDIDATE_X_CONTEST",
+          "forecast_role": "MECHANICAL_IF_LEGAL_EFFECT_VERIFIED_OTHERWISE_REPORTING",
+          "source_evidence_types": [
+            "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"
+          ],
+          "required_inputs": [
+            "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "NOT_APPLICABLE_OR_LOCKED_ZERO"
+        }
+      ],
+      "counts": {
+        "features_total": 16,
+        "features_identifiable": 0,
+        "features_not_identifiable": 16,
+        "mechanical_identifiable": 0,
+        "predictive_identifiable": 0,
+        "reporting_identifiable": 0
+      },
+      "core_predictive_panel_coverage": 0.0,
+      "mechanical_panel_coverage": 0.0,
+      "core_predictive_panel_meets_minimum": false,
+      "features_meeting_support_minimum": []
+    },
+    {
+      "transition_id": "2016_TO_2021",
+      "role": "VALIDATION",
+      "prior_year": 2016,
+      "target_year": 2021,
+      "information_cutoff_rule": "Each historical feature must use only information publicly available before the relevant historical election cutoff.",
+      "territories_in_scope": 92,
+      "features": [
+        {
+          "feature_id": "B2_M01_BALLOT_LIST_PRESENT",
+          "entity": "PARTY_LIST_X_CONTEST",
+          "forecast_role": "MECHANICAL",
+          "source_evidence_types": [
+            "LIST_REGISTERED",
+            "LIST_REJECTED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_LIST_PRESENCE_TARGET_YEAR",
+            "HISTORICAL_LIST_REJECTION_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_LIST_REJECTION_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "NOT_APPLICABLE"
+        },
+        {
+          "feature_id": "B2_M02_CANDIDATE_REGISTERED_RANK",
+          "entity": "CANDIDATE_X_LIST_X_CONTEST",
+          "forecast_role": "MECHANICAL",
+          "source_evidence_types": [
+            "CANDIDATE_REGISTERED",
+            "CANDIDATE_RANK"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "NOT_APPLICABLE"
+        },
+        {
+          "feature_id": "B2_M03_CANDIDATE_BIRTHDATE",
+          "entity": "CANDIDATE",
+          "forecast_role": "MECHANICAL",
+          "source_evidence_types": [
+            "CANDIDATE_BIRTHDATE"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "NOT_APPLICABLE"
+        },
+        {
+          "feature_id": "B2_M04_CANDIDATE_WITHDRAWN_OR_DISQUALIFIED",
+          "entity": "CANDIDATE_X_CONTEST",
+          "forecast_role": "MECHANICAL",
+          "source_evidence_types": [
+            "CANDIDATE_WITHDRAWN",
+            "CANDIDATE_DISQUALIFIED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+            "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+            "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "NOT_APPLICABLE"
+        },
+        {
+          "feature_id": "B2_M05_FORMAL_LIST_ALLIANCE",
+          "entity": "LIST_X_CONTEST",
+          "forecast_role": "MECHANICAL",
+          "source_evidence_types": [
+            "FORMAL_ALLIANCE"
+          ],
+          "required_inputs": [
+            "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "NOT_APPLICABLE"
+        },
+        {
+          "feature_id": "B2_P01_INCUMBENT_SAME_PARTY_SAME_DISTRICT",
+          "entity": "PARTY_X_LOCAL_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "INCUMBENT_STATUS",
+            "CANDIDATE_REGISTERED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P02_INCUMBENT_SAME_PARTY_MOVED_DISTRICT",
+          "entity": "PARTY_X_LOCAL_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "INCUMBENT_STATUS",
+            "CANDIDATE_REGISTERED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P03_INCUMBENT_PARTY_SWITCH_IN",
+          "entity": "PARTY_X_LOCAL_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "INCUMBENT_STATUS",
+            "PARTY_SWITCH",
+            "CANDIDATE_REGISTERED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
+            "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
+            "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P04_INCUMBENT_PARTY_SWITCH_OUT",
+          "entity": "PARTY_X_LOCAL_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "INCUMBENT_STATUS",
+            "PARTY_SWITCH",
+            "CANDIDATE_REGISTERED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
+            "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
+            "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P05_LOCAL_EXECUTIVE_OFFICE",
+          "entity": "PARTY_X_LOCAL_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "ELECTED_OFFICE",
+            "CANDIDATE_REGISTERED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P06_NATIONAL_OR_REGIONAL_PARTY_OFFICE",
+          "entity": "PARTY_X_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "PARTY_OFFICE",
+            "CANDIDATE_REGISTERED"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_PARTY_OFFICE_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+            "HISTORICAL_PARTY_OFFICE_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P07_FORMAL_ENDORSEMENT",
+          "entity": "PARTY_OR_CANDIDATE_X_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "FORMAL_ENDORSEMENT"
+          ],
+          "required_inputs": [
+            "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_P08_FORMAL_DEFECTION",
+          "entity": "PARTY_X_CONTEST",
+          "forecast_role": "PREDICTIVE_AFTER_CALIBRATION",
+          "source_evidence_types": [
+            "FORMAL_DEFECTION",
+            "PARTY_SWITCH"
+          ],
+          "required_inputs": [
+            "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+            "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+            "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_UNTIL_HISTORICAL_CALIBRATION_PASS"
+        },
+        {
+          "feature_id": "B2_R01_CAMPAIGN_LAUNCH_REPORTED",
+          "entity": "PARTY_OR_LIST_X_CONTEST",
+          "forecast_role": "REPORTING_ONLY_PENDING_EVENT_CALIBRATION",
+          "source_evidence_types": [
+            "CAMPAIGN_LAUNCH"
+          ],
+          "required_inputs": [
+            "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_REPORTING_ONLY"
+        },
+        {
+          "feature_id": "B2_R02_OFFICIAL_SANCTION_OR_INVESTIGATION",
+          "entity": "CANDIDATE_OR_PARTY_X_CONTEST",
+          "forecast_role": "REPORTING_ONLY_PENDING_EVENT_CALIBRATION",
+          "source_evidence_types": [
+            "OFFICIAL_INVESTIGATION",
+            "OFFICIAL_SANCTION"
+          ],
+          "required_inputs": [
+            "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+            "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+            "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "LOCKED_ZERO_REPORTING_ONLY"
+        },
+        {
+          "feature_id": "B2_R03_VERIFIED_DEATH_OR_INCAPACITY",
+          "entity": "CANDIDATE_X_CONTEST",
+          "forecast_role": "MECHANICAL_IF_LEGAL_EFFECT_VERIFIED_OTHERWISE_REPORTING",
+          "source_evidence_types": [
+            "VERIFIED_CANDIDATE_DEATH_OR_INCAPACITY"
+          ],
+          "required_inputs": [
+            "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR"
+          ],
+          "missing_inputs": [
+            "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR"
+          ],
+          "identifiable": false,
+          "territories_covered": 0,
+          "coverage_fraction": 0.0,
+          "positive_instances": 0,
+          "support_meets_minimum": false,
+          "cells_na": 92,
+          "na_policy": "MISSING_IS_NA_NEVER_ZERO",
+          "coefficient_state": "NOT_APPLICABLE_OR_LOCKED_ZERO"
+        }
+      ],
+      "counts": {
+        "features_total": 16,
+        "features_identifiable": 0,
+        "features_not_identifiable": 16,
+        "mechanical_identifiable": 0,
+        "predictive_identifiable": 0,
+        "reporting_identifiable": 0
+      },
+      "core_predictive_panel_coverage": 0.0,
+      "mechanical_panel_coverage": 0.0,
+      "core_predictive_panel_meets_minimum": false,
+      "features_meeting_support_minimum": []
+    }
+  ],
+  "observed_diagnostics": [
+    {
+      "diagnostic_id": "OBSERVED_POSITIVE_LOCAL_LIST_PRESENCE",
+      "transition_id": "2011_TO_2016",
+      "target_year": 2016,
+      "satisfies_feature": null,
+      "closest_feature": "B2_M01_BALLOT_LIST_PRESENT",
+      "why_not_a_feature": "B2_M01 requires a certified full-coverage authoritative ballot table so that rejected/absent lists can be set to 0. The corpus only carries positive vote observations, which establish presence but never absence.",
+      "territories_covered": 92,
+      "coverage_fraction": 1.0,
+      "positive_instances": 1343,
+      "distinct_parties": 27,
+      "min_lists_per_covered_territory": 9,
+      "max_lists_per_covered_territory": 24
+    },
+    {
+      "diagnostic_id": "OBSERVED_POSITIVE_LOCAL_LIST_PRESENCE",
+      "transition_id": "2016_TO_2021",
+      "target_year": 2021,
+      "satisfies_feature": null,
+      "closest_feature": "B2_M01_BALLOT_LIST_PRESENT",
+      "why_not_a_feature": "B2_M01 requires a certified full-coverage authoritative ballot table so that rejected/absent lists can be set to 0. The corpus only carries positive vote observations, which establish presence but never absence.",
+      "territories_covered": 92,
+      "coverage_fraction": 1.0,
+      "positive_instances": 1472,
+      "distinct_parties": 30,
+      "min_lists_per_covered_territory": 7,
+      "max_lists_per_covered_territory": 25
+    }
+  ],
+  "matrix": {
+    "row_count": 2815,
+    "feature_cell_count": 0,
+    "diagnostic_cell_count": 2815,
+    "canonical_rows_sha256": "1f9992ad752024cd83a73f3cffa9a6a5c6f506fc8e376fab3925ddbfe34293dc",
+    "storage": "DERIVED_NOT_DUPLICATED",
+    "derivation": {
+      "source_artifact": "morocco26/data/goal100/b2_identity_crosswalk.json",
+      "source_field": "lists",
+      "filter": "scope == 'local' and year == transition.target_year",
+      "emit": "one cell per (territory_id, party_code) with value 1",
+      "sort": "lexicographic by (territory_id, party_code)",
+      "absence_rule": "unobserved pairs are NA and are never emitted as 0",
+      "rebuild_command": "python morocco26/scripts/goal100_build_b2_historical_panel.py"
+    }
+  },
+  "leakage_controls": {
+    "target_outcome_used_in_feature_creation": false,
+    "elected_roster_used_as_candidate_roster": false,
+    "elected_roster_used_for_own_cycle_incumbency": false,
+    "absence_converted_to_zero": false,
+    "note": "people_2021 is the outcome of the 2021 cycle. It is never used to build a 2016->2021 feature and is never treated as a candidate roster."
+  },
+  "missing_input_classes": [
+    "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
+    "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
+    "HISTORICAL_CANDIDATE_DISQUALIFICATION_TARGET_YEAR",
+    "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+    "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+    "HISTORICAL_CANDIDATE_WITHDRAWAL_TARGET_YEAR",
+    "HISTORICAL_DEATH_OR_INCAPACITY_TARGET_YEAR",
+    "HISTORICAL_ELECTED_MEMBERS_PRIOR_YEAR",
+    "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR",
+    "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+    "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
+    "HISTORICAL_LIST_REJECTION_TARGET_YEAR",
+    "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
+    "HISTORICAL_OFFICIAL_INVESTIGATION_TARGET_YEAR",
+    "HISTORICAL_OFFICIAL_SANCTION_TARGET_YEAR",
+    "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
+    "HISTORICAL_PARTY_SWITCH_TARGET_YEAR"
+  ],
+  "input_hashes": {
+    "feature_dictionary": {
+      "path": "morocco26/data/goal100/b2_feature_dictionary_v1.json",
+      "sha256": "0275edfc19dabd8c10a2dec26eb685c6bcc5ce0ff0a6a550a76fa9b5cc50914b"
+    },
+    "historical_2011": {
+      "path": "morocco26/data/goal100/historical/tafra_legislative_2011_canonical.json",
+      "sha256": "4abad6a4eb1d3da378477646722c4e6ed39ae0ae259028c3c77ee0956cff3af8"
+    },
+    "historical_2016": {
+      "path": "morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json",
+      "sha256": "aed76c3059aef8894bdcede98553e5feb127781dd6a572c364335ce7d81926dd"
+    },
+    "historical_2021": {
+      "path": "morocco26/data/goal100/historical/tafra_legislative_2021_canonical.json",
+      "sha256": "74a6fa2b28e88edc081beb4f7c072e7b8d47d97a34dbbf8ae7df3a418cf8e03e"
+    },
+    "identity_certificate": {
+      "path": "morocco26/data/goal100/b2_identity_territory_certificate.json",
+      "sha256": "053cc051add2b1abb9098dceb0bc2fec7a0a76c4f113b99a13ecb2090674bd68"
+    },
+    "identity_crosswalk": {
+      "path": "morocco26/data/goal100/b2_identity_crosswalk.json",
+      "sha256": "dbc603b6ece204cad21d1df626532b8585fbe9df92a8565b79606035e6de78c2"
+    },
+    "protocol": {
+      "path": "morocco26/data/goal100/b2_protocol_v1.json",
+      "sha256": "28c080a821325a925e539835accc6d97ea6512b8edcfd78d0b025f08dd2f5e55"
+    }
+  },
+  "failures": [
+    {
+      "kind": "CORE_PREDICTIVE_PANEL_COVERAGE_BELOW_MINIMUM",
+      "transition_id": "2011_TO_2016",
+      "observed_coverage": 0.0,
+      "required_coverage": 0.8,
+      "identifiable_predictive_features": 0
+    },
+    {
+      "kind": "CORE_PREDICTIVE_PANEL_COVERAGE_BELOW_MINIMUM",
+      "transition_id": "2016_TO_2021",
+      "observed_coverage": 0.0,
+      "required_coverage": 0.8,
+      "identifiable_predictive_features": 0
+    }
+  ],
+  "canonical_panel_sha256": "fe91b5a71237eae536e691bbeff21d4bb7fcc7ef3c6c98673172929df60eee2f"
+}

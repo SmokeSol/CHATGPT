@@ -1,0 +1,21 @@
+{
+  "source_id": "T1_MP_OFFICIAL",
+  "bucket": "2026",
+  "original_url": "https://alharaka.ma/wp-sitemap.xml",
+  "final_url": "https://alharaka.ma/sitemap_index.xml",
+  "retrieved_at": "2026-08-17T10:45:06+01:00",
+  "http_status": 200,
+  "content_type": "text/xml; charset=UTF-8",
+  "content_length": 1412,
+  "etag": null,
+  "last_modified": null,
+  "sha256": "533ac2e7a1cedc8b08176ece25970654a922d456c660e3329f391bc1234d03d4",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

@@ -1,0 +1,21 @@
+{
+  "source_id": "T1_UC_OFFICIAL",
+  "bucket": "2026",
+  "original_url": "https://possible.ma/sitemap.xml",
+  "final_url": "https://possible.ma/sitemap.xml",
+  "retrieved_at": "2026-08-17T10:45:22+01:00",
+  "http_status": 200,
+  "content_type": "text/xml; charset=UTF-8",
+  "content_length": 1382,
+  "etag": null,
+  "last_modified": null,
+  "sha256": "48e593a95c64938fe1785d1ddc4548b06c1df9575463e1664c62da7388c168bc",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

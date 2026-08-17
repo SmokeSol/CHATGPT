@@ -1,0 +1,21 @@
+{
+  "source_id": "T2_SNRTNEWS",
+  "bucket": "2026",
+  "original_url": "https://snrtnews.com/sitemap.xml",
+  "final_url": "https://snrtnews.com/sitemap.xml",
+  "retrieved_at": "2026-08-17T10:45:40+01:00",
+  "http_status": 200,
+  "content_type": "application/xml; charset=utf-8",
+  "content_length": 510,
+  "etag": "W/\"1fe-+fCco+0mbXxdb7U0eFK5AoLwPAk\"",
+  "last_modified": null,
+  "sha256": "736fc8d80a8c60915cbeb63f911785af8d255d5e41b0952d06eb863162c15429",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "github_run_id": null,
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.0)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}
