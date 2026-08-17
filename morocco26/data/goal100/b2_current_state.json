@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "state_id": "M26-GOAL100-B2-CURRENT-V1",
+  "as_of": "2026-08-17T07:16:21+01:00",
+  "phase": "B2_PROTOCOL_FROZEN_SOURCE_UNIVERSE_PENDING",
+  "parent_snapshot": {
+    "snapshot_id": "F-1",
+    "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "status": "REGISTERED_IMMUTABLE"
+  },
+  "protocol": {
+    "id": "M26-GOAL100-B2-PROTOCOL-V1",
+    "status": "FROZEN_PRE_COLLECTION",
+    "frozen_at": "2026-08-17T07:16:21+01:00",
+    "evidence_schema": "morocco26/data/goal100/b2_evidence_schema_v1.json",
+    "feature_dictionary": "morocco26/data/goal100/b2_feature_dictionary_v1.json"
+  },
+  "collection": {
+    "status": "LOCKED",
+    "reason": "B2-1 source universe is not yet frozen.",
+    "evidence_records": 0,
+    "admissible_records": 0,
+    "conflicted_records": 0,
+    "evidence_cutoff": null
+  },
+  "coefficients": {
+    "mechanical": "NOT_APPLICABLE",
+    "predictive": "ALL_EXACTLY_ZERO_PENDING_HISTORICAL_CALIBRATION",
+    "reporting_only": "ZERO"
+  },
+  "gates": {
+    "closed": ["B2-0-PROTOCOL-FROZEN"],
+    "open": [
+      "B2-1-SOURCE-UNIVERSE-FROZEN",
+      "B2-2-IDENTITY-TERRITORY-CROSSWALK",
+      "B2-3-HISTORICAL-FEATURE-PANEL",
+      "B2-4-2026-BALLOT-ROSTER",
+      "B2-5-PROVENANCE-CONFLICT-AUDIT",
+      "B2-6-EFFECT-CALIBRATION",
+      "B2-7-B2-FROZEN"
+    ],
+    "locked": [
+      "B2-8-F0-COUNTERFACTUAL-SIMULATION",
+      "E-COLLECT-PREREGISTERED",
+      "E-REASON-PREREGISTERED",
+      "E-FULL-PREREGISTERED"
+    ]
+  },
+  "anti_drift": {
+    "F_minus_1_hash_must_match": true,
+    "collection_before_source_freeze_forbidden": true,
+    "predictive_shift_before_calibration_forbidden": true,
+    "polls_excluded_in_V1": true,
+    "LLM_semantic_evidence_forbidden": true,
+    "agentic_experiment_locked": true,
+    "missing_never_silently_zero": true,
+    "conflicts_never_silently_resolved": true
+  },
+  "next_action_exact": "Freeze b2_source_registry.json with authoritative/official and independent professional source entries plus deterministic query/page templates, then run the source-universe smoke test before creating the first claim record."
+}
