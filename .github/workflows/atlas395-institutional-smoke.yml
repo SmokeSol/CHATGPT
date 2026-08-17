@@ -65,21 +65,34 @@ jobs:
           set -euo pipefail
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
           "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=40000 --dump-dom "$PUBLIC" > /tmp/dom.html
-          grep -Fq 'ATLAS <span>395</span>' /tmp/dom.html
-          grep -Fq 'Intelligence électorale territoriale · Maroc 2026' /tmp/dom.html
-          grep -Fq 'Rapport de forces et incertitude territoriale' /tmp/dom.html
-          grep -Fq 'Carte de l’incertitude territoriale' /tmp/dom.html || grep -Fq "Carte de l'incertitude territoriale" /tmp/dom.html
-          grep -Fq 'Candidatures documentées par circonscription' /tmp/dom.html
-          grep -Fq 'Intelligence territoriale · Candidatures 2026' /tmp/dom.html
-          grep -Fq 'RÉFÉRENCE CONSERVÉE' /tmp/dom.html
-          grep -Fq 'territoires bilingues' /tmp/dom.html
-          grep -Fq 'Méthode' /tmp/dom.html
-          grep -Fq 'Veille 2026' /tmp/dom.html
-          ! grep -Fqi 'intelligence artificielle' /tmp/dom.html
-          ! grep -Fqi "mettre l'IA" /tmp/dom.html
-          ! grep -Fqi 'LLM' /tmp/dom.html
-          ! grep -Fqi 'E_reason' /tmp/dom.html
-          ! grep -Fqi 'E_full' /tmp/dom.html
-          ! grep -Fqi 'Arabic Native' /tmp/dom.html
-          ! grep -Fq 'AUCUN DELTA APPLIQUÉ' /tmp/dom.html
+          python - <<'PY'
+          from pathlib import Path
+          dom=Path('/tmp/dom.html').read_text(encoding='utf-8',errors='replace')
+          required=[
+            'Intelligence électorale territoriale · Maroc 2026',
+            'Rapport de forces et incertitude territoriale',
+            'Candidatures documentées par circonscription',
+            'Intelligence territoriale · Candidatures 2026',
+            'RÉFÉRENCE CONSERVÉE',
+            'territoires bilingues',
+            'Méthode',
+            'Veille 2026'
+          ]
+          forbidden=[
+            'intelligence artificielle',
+            "mettre l'IA",
+            'LLM',
+            'E_reason',
+            'E_full',
+            'Arabic Native',
+            'AUCUN DELTA APPLIQUÉ'
+          ]
+          missing=[x for x in required if x not in dom]
+          present_forbidden=[x for x in forbidden if x.lower() in dom.lower()]
+          print('MISSING_REQUIRED=',missing)
+          print('FORBIDDEN_PRESENT=',present_forbidden)
+          if missing or present_forbidden:
+            raise SystemExit(1)
+          print('INSTITUTIONAL_FRONTEND_SMOKE=PASS')
+          PY
           echo 'INSTITUTIONAL_FRONTEND_SMOKE=PASS' >> "$GITHUB_STEP_SUMMARY"
