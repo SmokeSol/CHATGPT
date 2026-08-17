@@ -1,0 +1,98 @@
+name: morocco26-b2-identity-crosswalk-v1-1
+
+on:
+  push:
+    branches: [morocco26-b2]
+    paths:
+      - 'morocco26/data/goal100/b2_identity_protocol_v1_1.json'
+      - 'morocco26/data/goal100/fil_ariane_events/A022.json'
+      - 'morocco26/scripts/goal100_preserve_b2_identity_failure.py'
+      - 'morocco26/scripts/goal100_build_b2_identity_crosswalk_v1_2.py'
+      - 'morocco26/scripts/goal100_append_b2_identity_alias_amendment.py'
+      - 'morocco26/scripts/validate_b2_identity_crosswalk_v1_1.py'
+      - '.github/workflows/morocco26-b2-identity-crosswalk-v1-1.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-b2-identity-crosswalk-v1-1
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  preserve-rerun-certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-b2
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile exact amendment chain
+        run: |
+          python -m py_compile \
+            morocco26/scripts/goal100_preserve_b2_identity_failure.py \
+            morocco26/scripts/goal100_build_b2_identity_crosswalk_v1_2.py \
+            morocco26/scripts/goal100_append_b2_identity_alias_amendment.py \
+            morocco26/scripts/validate_b2_identity_crosswalk_v1_1.py \
+            morocco26/scripts/goal100_finalize_b2_identity_event.py
+
+      - name: Verify pre-amendment B2 and source gates
+        run: |
+          python morocco26/scripts/validate_b2_protocol.py
+          python morocco26/scripts/validate_b2_source_universe.py
+
+      - name: Preserve failed V1 attempt by immutable commit and hashes
+        run: python morocco26/scripts/goal100_preserve_b2_identity_failure.py
+
+      - name: Append exact reviewed amendment A022 before rerun
+        run: python morocco26/scripts/goal100_append_b2_identity_alias_amendment.py
+
+      - name: Execute identity protocol V1.1
+        id: build
+        continue-on-error: true
+        run: python morocco26/scripts/goal100_build_b2_identity_crosswalk_v1_2.py
+
+      - name: Append a second failed identity attempt if needed
+        if: always()
+        run: python morocco26/scripts/goal100_finalize_b2_identity_event.py
+
+      - name: Enforce all V1 checks plus the exact V1.1 amendment
+        id: enforce
+        continue-on-error: true
+        run: python morocco26/scripts/validate_b2_identity_crosswalk_v1_1.py
+
+      - name: Revalidate registered F-1 and Goal75 after B2-2 PASS
+        if: steps.enforce.outcome == 'success'
+        run: |
+          python morocco26/scripts/validate_b2_identity_crosswalk_v1_1.py
+          python morocco26/scripts/validate_goal100_tracking.py
+          python morocco26/scripts/validate_anti_drift.py
+
+      - name: Persist amendment, failure archive and PASS or FAIL evidence
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/b2_identity_failures \
+            morocco26/data/goal100/b2_identity_crosswalk.json \
+            morocco26/data/goal100/b2_identity_territory_certificate.json \
+            morocco26/data/goal100/b2_gate_registry.json \
+            morocco26/data/goal100/b2_current_state.json \
+            morocco26/data/goal100/fil_ariane_events \
+            morocco26/FIL_ARIANE.md
+          git commit -m 'milestone(morocco26): record B2 identity V1.1 gate result' || true
+          git pull --rebase origin morocco26-b2
+          git push origin HEAD:morocco26-b2
+
+      - name: Fail closed if B2-2 V1.1 did not pass
+        if: steps.enforce.outcome != 'success'
+        run: |
+          echo 'B2-2 V1.1 remains OPEN; all evidence was persisted.'
+          exit 1
