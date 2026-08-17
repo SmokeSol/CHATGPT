@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "M26-GOAL100-E-REASON-V1",
+  "experiment_name": "Leakage-controlled residual reasoning ablation",
+  "preregistered_at": "2026-08-17T21:42:17+01:00",
+  "timezone": "Africa/Casablanca",
+  "branch": "morocco26-e-reason",
+  "exact_parent_commit_sha": "1f6403f80d1516de7c407d1a3ddebbbbd0f9c9b5",
+  "causal_question": "Given the same verified pre-election evidence and the same frozen structural baseline, does constrained LLM residual reasoning improve territorial party vote-share forecasts beyond both no residual and a deterministic rule-only residual?",
+  "scientific_scope": {
+    "unit": "local_constituency_x_party_bucket",
+    "territories": 92,
+    "party_buckets": [
+      "RNI",
+      "PAM",
+      "PI",
+      "PJD",
+      "USFP",
+      "MP",
+      "UC",
+      "PPS",
+      "OTHER"
+    ],
+    "development_election": 2016,
+    "locked_component_holdout_election": 2021,
+    "ultimate_prospective_test": 2026,
+    "interpretation_limit": "The 2021 test is a component-level locked holdout for E_reason. It is not described as a pristine whole-system holdout because the structural Bstar family was previously selected using the 2016-to-2021 transition."
+  },
+  "frozen_ancestry": {
+    "F_minus_1_distribution_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "B2_freeze_certificate_sha256": "eab248d63051643600d0b2220f269b587302c4631fe24a7760fd971277fd88e1",
+    "F0_forecast_artifact_sha256": "fbe5197999f20d0612bc0c66e1954b5c611b11208e43a72eb5494a03b1e40d3f",
+    "F0_distribution_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "e_collect_v1_tree_sha": "3ed6691656154b0a578716d2002fd188d288143e",
+    "rule": "F-1, B2, F0 and every artifact below morocco26/data/goal100/e_collect at the exact parent commit are immutable. New E_reason artifacts are additive only."
+  },
+  "conditions": [
+    {
+      "id": "C0_NO_RESIDUAL",
+      "description": "Frozen structural Bstar forecast without any candidate/event residual.",
+      "role": "primary baseline"
+    },
+    {
+      "id": "C1_RULE_ONLY",
+      "description": "Deterministic residual score computed only from the preregistered structured feature rubric.",
+      "role": "non-LLM reasoning baseline"
+    },
+    {
+      "id": "C2_LLM_RESIDUAL",
+      "description": "One-pass constrained LLM ordinal residual judgment from the same anonymized evidence packet. No browsing, no names, no election year, no outcome access.",
+      "role": "agentic reasoning treatment"
+    },
+    {
+      "id": "H1_REAL_HUMAN_RESIDUAL",
+      "description": "Optional genuine human-expert arm using the identical anonymized packet and output schema.",
+      "role": "secondary benchmark",
+      "required_for_initial_promotion": false,
+      "prohibition": "Synthetic personas, LLM simulations of humans, or assistant guesses may never be labelled human judgments."
+    }
+  ],
+  "execution_order": [
+    "Commit and validate this preregistration before any predictive judgment or forecast delta.",
+    "Collect and archive only pre-cutoff evidence.",
+    "Build complete 2016 and 2021 evidence packets with missingness explicit.",
+    "Create a secret random anonymization mapping; commit only its SHA-256 before judgments.",
+    "Freeze 2016 packets; generate C1 and C2 development judgments; calibrate residual scale on 2016 only.",
+    "Freeze 2021 packets and residual scales; generate C1 and C2 holdout judgments without outcome access.",
+    "Commit and hash all 2021 judgments before unsealing the 2021 outcomes.",
+    "Unseal, score, bootstrap, and issue a terminal promotion or no-promotion certificate.",
+    "Only if every promotion criterion passes may a separate 2026 application run create an F1 candidate. F0 is never overwritten."
+  ],
+  "forbidden_actions": [
+    "Modify Atlas production or UI.",
+    "Modify or rewrite F-1, B2, F0 or frozen E_collect artifacts.",
+    "Use any post-cutoff fact in a historical input packet.",
+    "Expose historical election year, real territory name, real party label, candidate name, result, winner, seat allocation or post-election description to C2.",
+    "Tune prompts, feature weights, residual grid, thresholds or scoring rules after viewing 2021 outcomes.",
+    "Drop low-coverage districts or party cells after outcomes are known.",
+    "Convert model confidence into factual verification.",
+    "Create or promote F1 after a failed or indeterminate gate."
+  ],
+  "terminal_states": [
+    "E_REASON_PROMOTE",
+    "E_REASON_NO_PROMOTION",
+    "E_REASON_DATA_INSUFFICIENT",
+    "E_REASON_LEAKAGE_INVALIDATED",
+    "E_REASON_EXECUTION_BLOCKED"
+  ],
+  "linked_contracts": {
+    "information_set": "morocco26/data/goal100/e_reason/e_reason_information_set_v1.json",
+    "source_policy": "morocco26/data/goal100/e_reason/e_reason_source_policy_v1.json",
+    "historical_cutoffs": "morocco26/data/goal100/e_reason/e_reason_historical_cutoffs_v1.json",
+    "conditions": "morocco26/data/goal100/e_reason/e_reason_conditions_v1.json",
+    "output_schema": "morocco26/data/goal100/e_reason/e_reason_output_schema_v1.json",
+    "scoring": "morocco26/data/goal100/e_reason/e_reason_scoring_contract_v1.json",
+    "leakage": "morocco26/data/goal100/e_reason/e_reason_leakage_control_v1.json",
+    "promotion": "morocco26/data/goal100/e_reason/e_reason_promotion_criteria_v1.json"
+  }
+}
