@@ -1,0 +1,1774 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "ATLAS395-ARABIC-TERRITORY-CROSSWALK-V1",
+  "created_at": "2026-08-17T17:46:47+00:00",
+  "status": "CONTROLLER_ACCEPTED_PRODUCT_IDENTITY_LAYER",
+  "scope": "IDENTITY_ONLY_NO_FORECAST_EFFECT",
+  "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+  "canonical_geometry_path": "morocco26/data/constituencies_goal75.csv",
+  "counts": {
+    "source_rows": 92,
+    "canonical_ids": 92,
+    "resolved": 92,
+    "ambiguous": 0,
+    "duplicate_ids": 0,
+    "duplicate_arabic_match_keys": 0
+  },
+  "validation": {
+    "row_index_and_source_form_exact_match": true,
+    "strict_92_to_92_bijection": true,
+    "all_seat_magnitudes_from_frozen_geometry": true,
+    "F0_modified": false,
+    "B2_modified": false
+  },
+  "records": [
+    {
+      "row_index": 1,
+      "constituency_id": "tanger-assilah",
+      "name_ar": "طنجة أصيلة",
+      "name_ar_source_form": "طنجة أصيلة",
+      "name_ar_match_key": "طنجة اصيلة",
+      "name_fr": "Tanger-Assilah",
+      "region_ar": "جهة طنجة تطوان الحسيمة",
+      "region_fr": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 5,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 2,
+      "constituency_id": "fahs-anjra",
+      "name_ar": "الفحص أنجرة",
+      "name_ar_source_form": "الفحص أنجرة",
+      "name_ar_match_key": "الفحص انجرة",
+      "name_fr": "Fahs-Anjra",
+      "region_ar": "جهة طنجة تطوان الحسيمة",
+      "region_fr": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 3,
+      "constituency_id": "tetouan",
+      "name_ar": "تطوان",
+      "name_ar_source_form": "تطوان",
+      "name_ar_match_key": "تطوان",
+      "name_fr": "Tétouan",
+      "region_ar": "جهة طنجة تطوان الحسيمة",
+      "region_fr": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 5,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 4,
+      "constituency_id": "m-diq-fnideq",
+      "name_ar": "المضيق الفنيدق",
+      "name_ar_source_form": "المضيق الفنيدق",
+      "name_ar_match_key": "المضيق الفنيدق",
+      "name_fr": "M'diq-Fnideq",
+      "region_ar": "جهة طنجة تطوان الحسيمة",
+      "region_fr": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 5,
+      "constituency_id": "larache",
+      "name_ar": "العرائش",
+      "name_ar_source_form": "العرائش",
+      "name_ar_match_key": "العرائش",
+      "name_fr": "Larache",
+      "region_ar": "جهة طنجة تطوان الحسيمة",
+      "region_fr": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 6,
+      "constituency_id": "chefchaouen",
+      "name_ar": "شفشاون",
+      "name_ar_source_form": "شفشاون",
+      "name_ar_match_key": "شفشاون",
+      "name_fr": "Chefchaouen",
+      "region_ar": "جهة طنجة تطوان الحسيمة",
+      "region_fr": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 7,
+      "constituency_id": "ouezzane",
+      "name_ar": "وزان",
+      "name_ar_source_form": "وزان",
+      "name_ar_match_key": "وزان",
+      "name_fr": "Ouezzane",
+      "region_ar": "جهة طنجة تطوان الحسيمة",
+      "region_fr": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 8,
+      "constituency_id": "al-hoceima",
+      "name_ar": "الحسيمة",
+      "name_ar_source_form": "الحسيمة",
+      "name_ar_match_key": "الحسيمة",
+      "name_fr": "Al Hoceïma",
+      "region_ar": "جهة طنجة تطوان الحسيمة",
+      "region_fr": "Tanger-Tétouan-Al Hoceïma",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 9,
+      "constituency_id": "oujda-angad",
+      "name_ar": "وجدة أنجاد",
+      "name_ar_source_form": "وجدة أنجاد",
+      "name_ar_match_key": "وجدة انجاد",
+      "name_fr": "Oujda-Angad",
+      "region_ar": "جهة الشرق",
+      "region_fr": "Oriental",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 10,
+      "constituency_id": "jerada",
+      "name_ar": "جرادة",
+      "name_ar_source_form": "جرادة",
+      "name_ar_match_key": "جرادة",
+      "name_fr": "Jerada",
+      "region_ar": "جهة الشرق",
+      "region_fr": "Oriental",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 11,
+      "constituency_id": "berkane",
+      "name_ar": "بركان",
+      "name_ar_source_form": "بركان",
+      "name_ar_match_key": "بركان",
+      "name_fr": "Berkane",
+      "region_ar": "جهة الشرق",
+      "region_fr": "Oriental",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 12,
+      "constituency_id": "taourirt",
+      "name_ar": "تاوريرت",
+      "name_ar_source_form": "تاوريرت",
+      "name_ar_match_key": "تاوريرت",
+      "name_fr": "Taourirt",
+      "region_ar": "جهة الشرق",
+      "region_fr": "Oriental",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 13,
+      "constituency_id": "figuig",
+      "name_ar": "فجيج بوعرفة",
+      "name_ar_source_form": "فجيج بوعرفة",
+      "name_ar_match_key": "فجيج بوعرفة",
+      "name_fr": "Figuig",
+      "region_ar": "جهة الشرق",
+      "region_fr": "Oriental",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 14,
+      "constituency_id": "nador",
+      "name_ar": "الناظور",
+      "name_ar_source_form": "الناظور",
+      "name_ar_match_key": "الناظور",
+      "name_fr": "Nador",
+      "region_ar": "جهة الشرق",
+      "region_fr": "Oriental",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 15,
+      "constituency_id": "driouch",
+      "name_ar": "الدرويش",
+      "name_ar_source_form": "الدرويش",
+      "name_ar_match_key": "الدرويش",
+      "name_fr": "Driouch",
+      "region_ar": "جهة الشرق",
+      "region_fr": "Oriental",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 16,
+      "constituency_id": "guercif",
+      "name_ar": "جرسيف",
+      "name_ar_source_form": "جرسيف",
+      "name_ar_match_key": "جرسيف",
+      "name_fr": "Guercif",
+      "region_ar": "جهة الشرق",
+      "region_fr": "Oriental",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 17,
+      "constituency_id": "fes-nord",
+      "name_ar": "فاس الشمالية",
+      "name_ar_source_form": "فاس الشمالية",
+      "name_ar_match_key": "فاس الشمالية",
+      "name_fr": "Fès-Nord",
+      "region_ar": "جهة فاس مكناس",
+      "region_fr": "Fès-Meknès",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 18,
+      "constituency_id": "fes-sud",
+      "name_ar": "فاس الجنوبية",
+      "name_ar_source_form": "فاس الجنوبية",
+      "name_ar_match_key": "فاس الجنوبية",
+      "name_fr": "Fès-Sud",
+      "region_ar": "جهة فاس مكناس",
+      "region_fr": "Fès-Meknès",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 19,
+      "constituency_id": "meknes",
+      "name_ar": "مكناس",
+      "name_ar_source_form": "مكناس",
+      "name_ar_match_key": "مكناس",
+      "name_fr": "Meknès",
+      "region_ar": "جهة فاس مكناس",
+      "region_fr": "Fès-Meknès",
+      "seats": 6,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 20,
+      "constituency_id": "el-hajeb",
+      "name_ar": "الحاجب",
+      "name_ar_source_form": "الحاجب",
+      "name_ar_match_key": "الحاجب",
+      "name_fr": "El Hajeb",
+      "region_ar": "جهة فاس مكناس",
+      "region_fr": "Fès-Meknès",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 21,
+      "constituency_id": "ifrane",
+      "name_ar": "إفران",
+      "name_ar_source_form": "إفران",
+      "name_ar_match_key": "افران",
+      "name_fr": "Ifrane",
+      "region_ar": "جهة فاس مكناس",
+      "region_fr": "Fès-Meknès",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 22,
+      "constituency_id": "moulay-yaacoub",
+      "name_ar": "مولاي يعقوب",
+      "name_ar_source_form": "مولاي يعقوب",
+      "name_ar_match_key": "مولاي يعقوب",
+      "name_fr": "Moulay Yaâcoub",
+      "region_ar": "جهة فاس مكناس",
+      "region_fr": "Fès-Meknès",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 23,
+      "constituency_id": "sefrou",
+      "name_ar": "صفرو",
+      "name_ar_source_form": "صفرو",
+      "name_ar_match_key": "صفرو",
+      "name_fr": "Séfrou",
+      "region_ar": "جهة فاس مكناس",
+      "region_fr": "Fès-Meknès",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 24,
+      "constituency_id": "boulemane",
+      "name_ar": "بولمان",
+      "name_ar_source_form": "بولمان",
+      "name_ar_match_key": "بولمان",
+      "name_fr": "Boulemane",
+      "region_ar": "جهة فاس مكناس",
+      "region_fr": "Fès-Meknès",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 25,
+      "constituency_id": "taza",
+      "name_ar": "تازة",
+      "name_ar_source_form": "تازة",
+      "name_ar_match_key": "تازة",
+      "name_fr": "Taza",
+      "region_ar": "جهة فاس مكناس",
+      "region_fr": "Fès-Meknès",
+      "seats": 5,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 26,
+      "constituency_id": "taounate-tissa",
+      "name_ar": "تاونات تيسة",
+      "name_ar_source_form": "تاونات تيسة",
+      "name_ar_match_key": "تاونات تيسة",
+      "name_fr": "Taounate-Tissa",
+      "region_ar": "جهة فاس مكناس",
+      "region_fr": "Fès-Meknès",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 27,
+      "constituency_id": "karia-ghafsay",
+      "name_ar": "القرية غفساي",
+      "name_ar_source_form": "القرية غفساي",
+      "name_ar_match_key": "القرية غفساي",
+      "name_fr": "Karia-Ghafsay",
+      "region_ar": "جهة فاس مكناس",
+      "region_fr": "Fès-Meknès",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 28,
+      "constituency_id": "rabat-ocean",
+      "name_ar": "الرباط – المحيط",
+      "name_ar_source_form": "الرباط &#8211; المحيط",
+      "name_ar_match_key": "الرباط المحيط",
+      "name_fr": "Rabat-Océan",
+      "region_ar": "جهة الرباط سلا القنيطرة",
+      "region_fr": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 29,
+      "constituency_id": "rabat-chellah",
+      "name_ar": "الرباط – شالة",
+      "name_ar_source_form": "الرباط &#8211; شالة",
+      "name_ar_match_key": "الرباط شالة",
+      "name_fr": "Rabat-Chellah",
+      "region_ar": "جهة الرباط سلا القنيطرة",
+      "region_fr": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 30,
+      "constituency_id": "sale-medina",
+      "name_ar": "سلا المدينة",
+      "name_ar_source_form": "سلا المدينة",
+      "name_ar_match_key": "سلا المدينة",
+      "name_fr": "Salé-Médina",
+      "region_ar": "جهة الرباط سلا القنيطرة",
+      "region_fr": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 31,
+      "constituency_id": "sale-el-jadida",
+      "name_ar": "سلا الجديدة",
+      "name_ar_source_form": "سلا الجديدة",
+      "name_ar_match_key": "سلا الجديدة",
+      "name_fr": "Salé-El Jadida",
+      "region_ar": "جهة الرباط سلا القنيطرة",
+      "region_fr": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 32,
+      "constituency_id": "skhirate-temara",
+      "name_ar": "الصخيرات -تمارة",
+      "name_ar_source_form": "الصخيرات -تمارة",
+      "name_ar_match_key": "الصخيرات تمارة",
+      "name_fr": "Skhirate-Témara",
+      "region_ar": "جهة الرباط سلا القنيطرة",
+      "region_fr": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 33,
+      "constituency_id": "kenitra",
+      "name_ar": "القنيطرة",
+      "name_ar_source_form": "القنيطرة",
+      "name_ar_match_key": "القنيطرة",
+      "name_fr": "Kénitra",
+      "region_ar": "جهة الرباط سلا القنيطرة",
+      "region_fr": "Rabat-Salé-Kénitra",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 34,
+      "constituency_id": "el-gharb",
+      "name_ar": "الغرب",
+      "name_ar_source_form": "الغرب",
+      "name_ar_match_key": "الغرب",
+      "name_fr": "El Gharb",
+      "region_ar": "جهة الرباط سلا القنيطرة",
+      "region_fr": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 35,
+      "constituency_id": "khemisset-oulmes",
+      "name_ar": "الخميسات – أولماس",
+      "name_ar_source_form": "الخميسات &#8211; أولماس",
+      "name_ar_match_key": "الخميسات اولماس",
+      "name_fr": "Khémisset-Oulmès",
+      "region_ar": "جهة الرباط سلا القنيطرة",
+      "region_fr": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 36,
+      "constituency_id": "tiflet-rommani",
+      "name_ar": "تيفلت – الرماني",
+      "name_ar_source_form": "تيفلت &#8211; الرماني",
+      "name_ar_match_key": "تيفلت الرماني",
+      "name_fr": "Tiflet-Rommani",
+      "region_ar": "جهة الرباط سلا القنيطرة",
+      "region_fr": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 37,
+      "constituency_id": "sidi-kacem",
+      "name_ar": "سيدي قاسم",
+      "name_ar_source_form": "سيدي قاسم",
+      "name_ar_match_key": "سيدي قاسم",
+      "name_fr": "Sidi Kacem",
+      "region_ar": "جهة الرباط سلا القنيطرة",
+      "region_fr": "Rabat-Salé-Kénitra",
+      "seats": 5,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 38,
+      "constituency_id": "sidi-slimane",
+      "name_ar": "سيدي سليمان",
+      "name_ar_source_form": "سيدي سليمان",
+      "name_ar_match_key": "سيدي سليمان",
+      "name_fr": "Sidi Slimane",
+      "region_ar": "جهة الرباط سلا القنيطرة",
+      "region_fr": "Rabat-Salé-Kénitra",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 39,
+      "constituency_id": "casablanca-anfa",
+      "name_ar": "الدار البيضاء آنفا",
+      "name_ar_source_form": "الدار البيضاء آنفا",
+      "name_ar_match_key": "الدار البيضاء انفا",
+      "name_fr": "Casablanca-Anfa",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 40,
+      "constituency_id": "al-fida-mers-sultan",
+      "name_ar": "الفداء مرس السلطان",
+      "name_ar_source_form": "الفداء مرس السلطان",
+      "name_ar_match_key": "الفداء مرس السلطان",
+      "name_fr": "Al Fida-Mers Sultan",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 41,
+      "constituency_id": "ain-sebaa-hay-mohammadi",
+      "name_ar": "عين السبع الحي المحمدي",
+      "name_ar_source_form": "عين السبع الحي المحمدي",
+      "name_ar_match_key": "عين السبع الحي المحمدي",
+      "name_fr": "Aïn Sebaâ-Hay Mohammadi",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 42,
+      "constituency_id": "hay-hassani",
+      "name_ar": "الحي الحسني",
+      "name_ar_source_form": "الحي الحسني",
+      "name_ar_match_key": "الحي الحسني",
+      "name_fr": "Hay Hassani",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 43,
+      "constituency_id": "ain-chock",
+      "name_ar": "عين الشق",
+      "name_ar_source_form": "عين الشق",
+      "name_ar_match_key": "عين الشق",
+      "name_fr": "Aïn Chock",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 44,
+      "constituency_id": "sidi-bernoussi",
+      "name_ar": "سيدي البرنوصي",
+      "name_ar_source_form": "سيدي البرنوصي",
+      "name_ar_match_key": "سيدي البرنوصي",
+      "name_fr": "Sidi Bernoussi",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 45,
+      "constituency_id": "ben-m-sick",
+      "name_ar": "ابن مسيك",
+      "name_ar_source_form": "ابن مسيك",
+      "name_ar_match_key": "ابن مسيك",
+      "name_fr": "Ben M'sick",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 46,
+      "constituency_id": "moulay-rachid",
+      "name_ar": "مولاي رشيد",
+      "name_ar_source_form": "مولاي رشيد",
+      "name_ar_match_key": "مولاي رشيد",
+      "name_fr": "Moulay Rachid",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 47,
+      "constituency_id": "nouaceur",
+      "name_ar": "النواصر",
+      "name_ar_source_form": "النواصر",
+      "name_ar_match_key": "النواصر",
+      "name_fr": "Nouaceur",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 48,
+      "constituency_id": "mediouna",
+      "name_ar": "مديونة",
+      "name_ar_source_form": "مديونة",
+      "name_ar_match_key": "مديونة",
+      "name_fr": "Médiouna",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 49,
+      "constituency_id": "mohammedia",
+      "name_ar": "المحمدية",
+      "name_ar_source_form": "المحمدية",
+      "name_ar_match_key": "المحمدية",
+      "name_fr": "Mohammédia",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 50,
+      "constituency_id": "settat",
+      "name_ar": "سطات",
+      "name_ar_source_form": "سطات",
+      "name_ar_match_key": "سطات",
+      "name_fr": "Settat",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 6,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 51,
+      "constituency_id": "berrechid",
+      "name_ar": "برشيد",
+      "name_ar_source_form": "برشيد",
+      "name_ar_match_key": "برشيد",
+      "name_fr": "Berrechid",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 52,
+      "constituency_id": "el-jadida",
+      "name_ar": "الجديدة",
+      "name_ar_source_form": "الجديدة",
+      "name_ar_match_key": "الجديدة",
+      "name_fr": "El Jadida",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 6,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 53,
+      "constituency_id": "sidi-bennour",
+      "name_ar": "سيدي بنور",
+      "name_ar_source_form": "سيدي بنور",
+      "name_ar_match_key": "سيدي بنور",
+      "name_fr": "Sidi Bennour",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 54,
+      "constituency_id": "benslimane",
+      "name_ar": "بنسليمان",
+      "name_ar_source_form": "بنسليمان",
+      "name_ar_match_key": "بنسليمان",
+      "name_fr": "Benslimane",
+      "region_ar": "جهة الدار البيضاء سطات",
+      "region_fr": "Casablanca-Settat",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 55,
+      "constituency_id": "medina-sidi-youssef",
+      "name_ar": "المدينة – سيدي يوسف بن علي",
+      "name_ar_source_form": "المدينة &#8211; سيدي يوسف بن علي",
+      "name_ar_match_key": "المدينة سيدي يوسف بن علي",
+      "name_fr": "Medina-Sidi Youssef",
+      "region_ar": "جهة مراكش آسفي",
+      "region_fr": "Marrakech-Safi",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 56,
+      "constituency_id": "gueliz-nakhil",
+      "name_ar": "جليز – النخيل",
+      "name_ar_source_form": "جليز &#8211; النخيل",
+      "name_ar_match_key": "جليز النخيل",
+      "name_fr": "Guéliz-Nakhil",
+      "region_ar": "جهة مراكش آسفي",
+      "region_fr": "Marrakech-Safi",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 57,
+      "constituency_id": "menara",
+      "name_ar": "المنارة",
+      "name_ar_source_form": "المنارة",
+      "name_ar_match_key": "المنارة",
+      "name_fr": "Menara",
+      "region_ar": "جهة مراكش آسفي",
+      "region_fr": "Marrakech-Safi",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 58,
+      "constituency_id": "chichaoua",
+      "name_ar": "شيشاوة",
+      "name_ar_source_form": "شيشاوة",
+      "name_ar_match_key": "شيشاوة",
+      "name_fr": "Chichaoua",
+      "region_ar": "جهة مراكش آسفي",
+      "region_fr": "Marrakech-Safi",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 59,
+      "constituency_id": "al-haouz",
+      "name_ar": "الحوز",
+      "name_ar_source_form": "الحوز",
+      "name_ar_match_key": "الحوز",
+      "name_fr": "Al Haouz",
+      "region_ar": "جهة مراكش آسفي",
+      "region_fr": "Marrakech-Safi",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 60,
+      "constituency_id": "el-kelaa-des-sraghna",
+      "name_ar": "قلعة السراغنة",
+      "name_ar_source_form": "قلعة السراغنة",
+      "name_ar_match_key": "قلعة السراغنة",
+      "name_fr": "El Kelâa des Sraghna",
+      "region_ar": "جهة مراكش آسفي",
+      "region_fr": "Marrakech-Safi",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 61,
+      "constituency_id": "essaouira",
+      "name_ar": "الصويرة",
+      "name_ar_source_form": "الصويرة",
+      "name_ar_match_key": "الصويرة",
+      "name_fr": "Essaouira",
+      "region_ar": "جهة مراكش آسفي",
+      "region_fr": "Marrakech-Safi",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 62,
+      "constituency_id": "rehamna",
+      "name_ar": "الرحامنة",
+      "name_ar_source_form": "الرحامنة",
+      "name_ar_match_key": "الرحامنة",
+      "name_fr": "Rehamna",
+      "region_ar": "جهة مراكش آسفي",
+      "region_fr": "Marrakech-Safi",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 63,
+      "constituency_id": "youssoufia",
+      "name_ar": "اليوسفية",
+      "name_ar_source_form": "اليوسفية",
+      "name_ar_match_key": "اليوسفية",
+      "name_fr": "Youssoufia",
+      "region_ar": "جهة مراكش آسفي",
+      "region_fr": "Marrakech-Safi",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 64,
+      "constituency_id": "safi",
+      "name_ar": "آسفي",
+      "name_ar_source_form": "آسفي",
+      "name_ar_match_key": "اسفي",
+      "name_fr": "Safi",
+      "region_ar": "جهة مراكش آسفي",
+      "region_fr": "Marrakech-Safi",
+      "seats": 6,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 65,
+      "constituency_id": "beni-mellal",
+      "name_ar": "بني ملال",
+      "name_ar_source_form": "بني ملال",
+      "name_ar_match_key": "بني ملال",
+      "name_fr": "Béni-Mellal",
+      "region_ar": "جهة بني ملال خنيفرة",
+      "region_fr": "Béni Mellal-Khénifra",
+      "seats": 6,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 66,
+      "constituency_id": "bzou-ouaouizeght",
+      "name_ar": "بزو – واويزغت",
+      "name_ar_source_form": "بزو &#8211; واويزغت",
+      "name_ar_match_key": "بزو واويزغت",
+      "name_fr": "Bzou-Ouaouizeght",
+      "region_ar": "جهة بني ملال خنيفرة",
+      "region_fr": "Béni Mellal-Khénifra",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 67,
+      "constituency_id": "azilal-demnate",
+      "name_ar": "أزيلال – دمنات",
+      "name_ar_source_form": "أزيلال &#8211; دمنات",
+      "name_ar_match_key": "ازيلال دمنات",
+      "name_fr": "Azilal-Demnate",
+      "region_ar": "جهة بني ملال خنيفرة",
+      "region_fr": "Béni Mellal-Khénifra",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 68,
+      "constituency_id": "fquih-ben-salah",
+      "name_ar": "الفقيه بن صالح",
+      "name_ar_source_form": "الفقيه بن صالح",
+      "name_ar_match_key": "الفقيه بن صالح",
+      "name_fr": "Fquih Ben Salah",
+      "region_ar": "جهة بني ملال خنيفرة",
+      "region_fr": "Béni Mellal-Khénifra",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 69,
+      "constituency_id": "khenifra",
+      "name_ar": "خنيفرة",
+      "name_ar_source_form": "خنيفرة",
+      "name_ar_match_key": "خنيفرة",
+      "name_fr": "Khénifra",
+      "region_ar": "جهة بني ملال خنيفرة",
+      "region_fr": "Béni Mellal-Khénifra",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 70,
+      "constituency_id": "khouribga",
+      "name_ar": "خريبكة",
+      "name_ar_source_form": "خريبكة",
+      "name_ar_match_key": "خريبكة",
+      "name_fr": "Khouribga",
+      "region_ar": "جهة بني ملال خنيفرة",
+      "region_fr": "Béni Mellal-Khénifra",
+      "seats": 6,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 71,
+      "constituency_id": "errachidia",
+      "name_ar": "الرشيدية",
+      "name_ar_source_form": "الرشيدية",
+      "name_ar_match_key": "الرشيدية",
+      "name_fr": "Errachidia",
+      "region_ar": "جهة درعة تافيلالت",
+      "region_fr": "Drâa-Tafilalet",
+      "seats": 5,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 72,
+      "constituency_id": "midelt",
+      "name_ar": "ميدلت",
+      "name_ar_source_form": "ميدلت",
+      "name_ar_match_key": "ميدلت",
+      "name_fr": "Midelt",
+      "region_ar": "جهة درعة تافيلالت",
+      "region_fr": "Drâa-Tafilalet",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 73,
+      "constituency_id": "ouarzazate",
+      "name_ar": "ورزازات",
+      "name_ar_source_form": "ورزازات",
+      "name_ar_match_key": "ورزازات",
+      "name_fr": "Ouarzazate",
+      "region_ar": "جهة درعة تافيلالت",
+      "region_fr": "Drâa-Tafilalet",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 74,
+      "constituency_id": "zagora",
+      "name_ar": "زاكورة",
+      "name_ar_source_form": "زاكورة",
+      "name_ar_match_key": "زاكورة",
+      "name_fr": "Zagora",
+      "region_ar": "جهة درعة تافيلالت",
+      "region_fr": "Drâa-Tafilalet",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 75,
+      "constituency_id": "tinghir",
+      "name_ar": "تنغير",
+      "name_ar_source_form": "تنغير",
+      "name_ar_match_key": "تنغير",
+      "name_fr": "Tinghir",
+      "region_ar": "جهة درعة تافيلالت",
+      "region_fr": "Drâa-Tafilalet",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 76,
+      "constituency_id": "agadir-ida-outanane",
+      "name_ar": "أكادير إداوتنان",
+      "name_ar_source_form": "أكادير إداوتنان",
+      "name_ar_match_key": "اكادير اداوتنان",
+      "name_fr": "Agadir Ida-Outanane",
+      "region_ar": "جهة سوس ماسة",
+      "region_fr": "Souss-Massa",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 77,
+      "constituency_id": "inezgane-ait-melloul",
+      "name_ar": "إنزكان آيت ملول",
+      "name_ar_source_form": "إنزكان آيت ملول",
+      "name_ar_match_key": "انزكان ايت ملول",
+      "name_fr": "Inezgane-Aït Melloul",
+      "region_ar": "جهة سوس ماسة",
+      "region_fr": "Souss-Massa",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 78,
+      "constituency_id": "chtouka-ait-baha",
+      "name_ar": "شتوكة آيت باها",
+      "name_ar_source_form": "شتوكة آيت باها",
+      "name_ar_match_key": "شتوكة ايت باها",
+      "name_fr": "Chtouka-Aït Baha",
+      "region_ar": "جهة سوس ماسة",
+      "region_fr": "Souss-Massa",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 79,
+      "constituency_id": "taroudant-sud",
+      "name_ar": "تارودانت الجنوبية",
+      "name_ar_source_form": "تارودانت الجنوبية",
+      "name_ar_match_key": "تارودانت الجنوبية",
+      "name_fr": "Taroudant-Sud",
+      "region_ar": "جهة سوس ماسة",
+      "region_fr": "Souss-Massa",
+      "seats": 4,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 80,
+      "constituency_id": "taroudant-nord",
+      "name_ar": "تارودانت الشمالية",
+      "name_ar_source_form": "تارودانت الشمالية",
+      "name_ar_match_key": "تارودانت الشمالية",
+      "name_fr": "Taroudant-Nord",
+      "region_ar": "جهة سوس ماسة",
+      "region_fr": "Souss-Massa",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 81,
+      "constituency_id": "tiznit",
+      "name_ar": "تيزنيت",
+      "name_ar_source_form": "تيزنيت",
+      "name_ar_match_key": "تيزنيت",
+      "name_fr": "Tiznit",
+      "region_ar": "جهة سوس ماسة",
+      "region_fr": "Souss-Massa",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 82,
+      "constituency_id": "tata",
+      "name_ar": "طاطا",
+      "name_ar_source_form": "طاطا",
+      "name_ar_match_key": "طاطا",
+      "name_fr": "Tata",
+      "region_ar": "جهة سوس ماسة",
+      "region_fr": "Souss-Massa",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 83,
+      "constituency_id": "guelmim",
+      "name_ar": "كلميم",
+      "name_ar_source_form": "كلميم",
+      "name_ar_match_key": "كلميم",
+      "name_fr": "Guelmim",
+      "region_ar": "جهة كلميم واد نون",
+      "region_fr": "Guelmim-Oued Noun",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 84,
+      "constituency_id": "sidi-ifni",
+      "name_ar": "سيدي افني",
+      "name_ar_source_form": "سيدي افني",
+      "name_ar_match_key": "سيدي افني",
+      "name_fr": "Sidi Ifni",
+      "region_ar": "جهة كلميم واد نون",
+      "region_fr": "Guelmim-Oued Noun",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 85,
+      "constituency_id": "tan-tan",
+      "name_ar": "طانطان",
+      "name_ar_source_form": "طانطان",
+      "name_ar_match_key": "طانطان",
+      "name_fr": "Tan-Tan",
+      "region_ar": "جهة كلميم واد نون",
+      "region_fr": "Guelmim-Oued Noun",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 86,
+      "constituency_id": "assa-zag",
+      "name_ar": "أسا الزاك",
+      "name_ar_source_form": "أسا الزاك",
+      "name_ar_match_key": "اسا الزاك",
+      "name_fr": "Assa-Zag",
+      "region_ar": "جهة كلميم واد نون",
+      "region_fr": "Guelmim-Oued Noun",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 87,
+      "constituency_id": "laayoune",
+      "name_ar": "العيون",
+      "name_ar_source_form": "العيون",
+      "name_ar_match_key": "العيون",
+      "name_fr": "Laâyoune",
+      "region_ar": "جهة العيون الساقية الحمراء",
+      "region_fr": "Laâyoune-Sakia El Hamra",
+      "seats": 3,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 88,
+      "constituency_id": "boujdour",
+      "name_ar": "بوجدور",
+      "name_ar_source_form": "بوجدور",
+      "name_ar_match_key": "بوجدور",
+      "name_fr": "Boujdour",
+      "region_ar": "جهة العيون الساقية الحمراء",
+      "region_fr": "Laâyoune-Sakia El Hamra",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 89,
+      "constituency_id": "tarfaya",
+      "name_ar": "طرفاية",
+      "name_ar_source_form": "طرفاية",
+      "name_ar_match_key": "طرفاية",
+      "name_fr": "Tarfaya",
+      "region_ar": "جهة العيون الساقية الحمراء",
+      "region_fr": "Laâyoune-Sakia El Hamra",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 90,
+      "constituency_id": "es-semara",
+      "name_ar": "السمارة",
+      "name_ar_source_form": "السمارة",
+      "name_ar_match_key": "السمارة",
+      "name_fr": "Es-Semara",
+      "region_ar": "جهة العيون الساقية الحمراء",
+      "region_fr": "Laâyoune-Sakia El Hamra",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 91,
+      "constituency_id": "oued-eddahab",
+      "name_ar": "وادي الذهب",
+      "name_ar_source_form": "وادي الذهب",
+      "name_ar_match_key": "وادي الذهب",
+      "name_fr": "Oued Eddahab",
+      "region_ar": "جهة الداخلة وادي الذهب",
+      "region_fr": "Dakhla-Oued Eddahab",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    },
+    {
+      "row_index": 92,
+      "constituency_id": "aousserd",
+      "name_ar": "أوسرد",
+      "name_ar_source_form": "أوسرد",
+      "name_ar_match_key": "اوسرد",
+      "name_fr": "Aousserd",
+      "region_ar": "جهة الداخلة وادي الذهب",
+      "region_fr": "Dakhla-Oued Eddahab",
+      "seats": 2,
+      "status": "CONTROLLER_ACCEPTED_BILINGUAL_IDENTITY",
+      "resolution_method": "NATIVE_ARABIC_ONE_TO_ONE_CANONICAL_CROSSWALK_V1",
+      "source_refs": [
+        "morocco26/data/goal100/b2_2026_ballot_roster.json",
+        "morocco26/data/constituencies_goal75.csv"
+      ],
+      "source_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+      "forecast_effect": "NONE_IDENTITY_ONLY"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "state_id": "M26-E-COLLECT-V1.1-EXECUTION",
+  "as_of": "2026-08-17T17:46:47+00:00",
+  "status": "ARABIC_NATIVE_PRODUCTION_LAYER_BUILT",
+  "human_seeded_discovery": true,
+  "medias24_run_id": "medias24_db_32051248846_1",
+  "outputs": {
+    "arabic_crosswalk": "morocco26/data/goal100/e_collect/arabic_territory_crosswalk_v1.json",
+    "pjd_bilingual_roster": "morocco26/data/goal100/e_collect/pjd_2026_bilingual_roster_v1.json",
+    "atlas_snapshot": "morocco26/data/atlas_v1/atlas_v1_snapshot.json",
+    "web_snapshot": "morocco26/web/data/atlas_v1.json"
+  },
+  "coverage": {
+    "canonical_local_territories": 92,
+    "arabic_identity_coverage": 92,
+    "medias24_candidate_records_raw": 544,
+    "candidate_records_after_official_pjd_merge": 546,
+    "medias24_local_territories_with_records": 91,
+    "local_territories_with_records_after_merge": 92,
+    "missing_from_medias24_local_records": [
+      "karia-ghafsay"
+    ],
+    "missing_after_merge": [],
+    "pjd_rows": 92,
+    "parties": 9
+  },
+  "remaining_scientific_work": [
+    "Independent record-level adjudication of candidate evidence",
+    "Historical 16-class recovery and cutoff audit",
+    "E_reason preregistration before any forecast effect"
+  ],
+  "remaining_product_work": [
+    "Render the Atlas V1 evidence layer in the public UI",
+    "Automate timestamped daily editions",
+    "Expand official-source corroboration and source URLs"
+  ],
+  "protected": {
+    "F0_sha256": "fbe5197999f20d0612bc0c66e1954b5c611b11208e43a72eb5494a03b1e40d3f",
+    "B2_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+    "F0_modified": false,
+    "B2_modified": false,
+    "coefficients_modified": false,
+    "forecast_delta_authorized": false
+  }
+}
