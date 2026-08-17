@@ -22,6 +22,7 @@ on:
       - 'morocco26/data/goal100/fil_ariane_events/A019.json'
       - 'morocco26/scripts/goal100_append_b2_ariane.py'
       - 'morocco26/scripts/goal100_append_b2_integration_fix.py'
+      - 'morocco26/scripts/finalize_f0_hashes.py'
       - 'morocco26/scripts/validate_b2_protocol.py'
       - 'morocco26/scripts/validate_b2_post_f0.py'
       - 'morocco26/scripts/validate_registered_fminus1_post_squash.py'
@@ -54,6 +55,7 @@ jobs:
           python -m py_compile \
             morocco26/scripts/goal100_append_b2_ariane.py \
             morocco26/scripts/goal100_append_b2_integration_fix.py \
+            morocco26/scripts/finalize_f0_hashes.py \
             morocco26/scripts/validate_b2_protocol.py \
             morocco26/scripts/validate_b2_post_f0.py \
             morocco26/scripts/validate_registered_fminus1_post_squash.py \
@@ -63,6 +65,12 @@ jobs:
         run: |
           python morocco26/scripts/goal100_append_b2_ariane.py
           python morocco26/scripts/goal100_append_b2_integration_fix.py
+
+      - name: Finalize F0 integrity hashes when F0 exists
+        run: |
+          if [ -f morocco26/data/goal100/forecasts/F0/forecast.json ]; then
+            python morocco26/scripts/finalize_f0_hashes.py
+          fi
 
       - name: Validate frozen B2 protocol or post-F0 transition
         run: |
@@ -77,11 +85,23 @@ jobs:
           python morocco26/scripts/validate_goal100_tracking.py
           python morocco26/scripts/validate_anti_drift.py
 
-      - name: Commit the append-only journal transition
+      - name: Commit deterministic integrity finalization
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+SmokeSol@users.noreply.github.com'
-          git add morocco26/FIL_ARIANE.md
-          git commit -m 'tracking(morocco26): record B2 protocol freeze and integration correction' || true
+          git add \
+            morocco26/FIL_ARIANE.md \
+            morocco26/data/goal100/b2_effect_calibration.json \
+            morocco26/data/goal100/b2_freeze_certificate.json \
+            morocco26/data/goal100/b2_current_state.json \
+            morocco26/data/goal100/forecast_registry.json \
+            morocco26/data/goal100/f0_registration_certificate.json \
+            morocco26/data/goal100/forecasts/F0 \
+            morocco26/data/goal100/snapshots/F0
+          if git diff --cached --quiet; then
+            echo 'No deterministic integrity changes.'
+            exit 0
+          fi
+          git commit -m 'integrity: finalize F0 hashes'
           git pull --rebase origin morocco26-b2
           git push origin HEAD:morocco26-b2
