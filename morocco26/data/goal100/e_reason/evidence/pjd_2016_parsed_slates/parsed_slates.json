@@ -1,0 +1,1619 @@
+{
+  "schema_version": "1.1",
+  "created_at": "2026-08-17T22:58:47+00:00",
+  "status": "FAIL_CLOSED_DIAGNOSTIC_PERSISTED",
+  "documents": [
+    "RABAT_FES_MARRAKECH",
+    "SOUTH_SOUSS_ORIENT",
+    "LIST_3"
+  ],
+  "territory_rows": [],
+  "candidate_rows": [],
+  "failures": [
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 2,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةنيدملا الس",
+      "territory_normalized": "ةنيدملا الس",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "ميهاربإ نبا زيزع",
+        "نتيوزا دمحم",
+        "مصتعملا عماج",
+        "ناريك نبا هلإلا دبع",
+        "4",
+        "ةنيدملا الس",
+        "الس",
+        "ةرطينقلا - الس - طابرلا",
+        "1"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 3,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةلاش طابرلا",
+      "territory_normalized": "ةلاش طابرلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "يرهاط دمحم",
+        "عارقل ميحرلا دبع",
+        "ينارمعلا ناميلس",
+        "3",
+        "ةلاش طابرلا",
+        "طابرلا",
+        "ةرطينقلا - الس - طابرلا",
+        "2"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 4,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةديدجلا الس",
+      "territory_normalized": "ةديدجلا الس",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "يميلح برعلا زع",
+        "يبرغ فسوي",
+        "ةرامعا رداقلا دبع",
+        "3",
+        "ةديدجلا الس",
+        "الس",
+        "ةرطينقلا - الس - طابرلا",
+        "3"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 5,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "طيحملا طابرلا",
+      "territory_normalized": "طيحملا طابرلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "رابص ةكرابما",
+        "ريهازوبأ دمصلا دبع",
+        "بوقعي نبا فيطللا دبع",
+        "يقيدص دمحم",
+        "4",
+        "طيحملا طابرلا",
+        "طابرلا",
+        "ةرطينقلا - الس - طابرلا",
+        "4"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 6,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةرامت تاريخصلا",
+      "territory_normalized": "ةرامت تاريخصلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "مزاح دعس",
+        "يمشاهلا ةريمس",
+        "ضياعل زيزعلا دبع",
+        "يلادجر حوم",
+        "4",
+        "ةرامت تاريخصلا",
+        "ةرامت تاريخصلا",
+        "ةرطينقلا - الس - طابرلا",
+        "5"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 7,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةيبونجلا ساف",
+      "territory_normalized": "ةيبونجلا ساف",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "ييخ دمحم",
+        "حيصف ةجيدخ",
+        "يثراحلا دمحم",
+        "ي سيردإلا يمزألا سيردإ",
+        "4",
+        "ةيبونجلا ساف",
+        "ساف",
+        "سانكم - ساف",
+        "6"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 8,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "سانكم",
+      "territory_normalized": "سانكم",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "نيوزلا دلاخ",
+        "تاكرب ىده",
+        "حرف ديشر",
+        "يدلاخلا مالسلا دبع",
+        "يودع يلقصلا سيردإ",
+        "وناووب هللا دبع",
+        "6",
+        "سانكم",
+        "سانكم",
+        "سانكم - ساف",
+        "7"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 9,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "بجاحلا",
+      "territory_normalized": "بجاحلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "",
+        "يزيزع ةسوح",
+        "يعرقوبلا دلاخ",
+        "2",
+        "بجاحلا",
+        "بجاحلا",
+        "سانكم - ساف",
+        "8"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 10,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةيلامشلا ساف",
+      "territory_normalized": "ةيلامشلا ساف",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "يريبكلا دمحم",
+        "يلاولا ماهلإ",
+        "ةشرحوب دحاولا دبع",
+        "ي سافلا رمع",
+        "4",
+        "ةيلامشلا ساف",
+        "ساف",
+        "سانكم - ساف",
+        "9"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 11,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةزات",
+      "territory_normalized": "ةزات",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "قيرز ءافص",
+        "ةردوب دمحأ",
+        "يزودنيلا دمحأ",
+        "يدابعلا دمحأ",
+        "يدوعسم لامج",
+        "5",
+        "ةزات",
+        "ةزات",
+        "سانكم - ساف",
+        "10"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 12,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ورفص",
+      "territory_normalized": "ورفص",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "يريوزلا نسح",
+        "دباعلا دمحم",
+        "نيكسم سيردإ",
+        "3",
+        "ورفص",
+        "ورفص",
+        "سانكم - ساف",
+        "11"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 13,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "بوقعي يالوم",
+      "territory_normalized": "بوقعي يالوم",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "",
+        "ةمودلا يلاليجلا",
+        "فسوي دمحم",
+        "2",
+        "بوقعي يالوم",
+        "بوقعي يالوم",
+        "سانكم - ساف",
+        "12"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 14,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةسيت تانوات",
+      "territory_normalized": "ةسيت تانوات",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "يزازيفلا ىفطصم",
+        "يطسلا قحلادبع",
+        "فوصوب ىتشوب",
+        "3",
+        "ةسيت تانوات",
+        "تانوات",
+        "سانكم - ساف",
+        "13"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 15,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ياسفغ ةيرقلا",
+      "territory_normalized": "ياسفغ ةيرقلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "ي شايعلا ةيميك",
+        "يلاتشفلا ديمح",
+        "لبيشقا نيدلا رون",
+        "3",
+        "ياسفغ ةيرقلا",
+        "تانوات",
+        "سانكم - ساف",
+        "14"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 16,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ناملوب",
+      "territory_normalized": "ناملوب",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "عيبر دمحم",
+        "طياطوأ دمحم",
+        "ي سيردا دمحم",
+        "3",
+        "ناملوب",
+        "ناملوب",
+        "سانكم - ساف",
+        "15"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 17,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "نارفإ",
+      "territory_normalized": "نارفا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "",
+        "يرحب دمحما",
+        "يدشارلا دمحأ",
+        "2",
+        "نارفإ",
+        "نارفإ",
+        "سانكم - ساف",
+        "16"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 1,
+      "row": 18,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةرانملا",
+      "territory_normalized": "ةرانملا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "شولحأ قازرلا دبع",
+        "ةلفوت دمحم",
+        "دياقلب يبرعلا دمحم",
+        "3",
+        "ةرانملا",
+        "شكارم",
+        "يفسآ - شكارم",
+        "17"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 2,
+      "row": 2,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "يلع نب فسوي يديس ةنيدملا",
+      "territory_normalized": "يلع نب فسوي يديس ةنيدملا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "ميشغل نسح",
+        "ابوط ريشبلا يالوم",
+        "ناميلس نب سنوي",
+        "3",
+        "يلع نب فسوي يديس ةنيدملا",
+        "شكارم",
+        "يفسآ - شكارم",
+        "18"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 2,
+      "row": 3,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ليخنلا زيلج",
+      "territory_normalized": "ليخنلا زيلج",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "ضاير تيأ فسوي",
+        "ي سيردإلا ينارمعلا ةنيمأ",
+        "جابقلا دامح",
+        "3",
+        "ليخنلا زيلج",
+        "شكارم",
+        "يفسآ - شكارم",
+        "19"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 2,
+      "row": 4,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "يفسآ",
+      "territory_normalized": "يفسا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "يليحنب ميهاربا",
+        "نادبع فيطللادبع",
+        "يوادبل ليلجلادبع",
+        "نانجوب فيطللادبع",
+        "يليدع نسح",
+        "يرمثلا سيردإ",
+        "6",
+        "يفسآ",
+        "يفسآ",
+        "يفسآ - شكارم",
+        "20"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 2,
+      "row": 5,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةنغارسلا ةعلق",
+      "territory_normalized": "ةنغارسلا ةعلق",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "كرابم ينوتيزلا",
+        "مجان ديشر",
+        "طيسابلا ديشر",
+        "لالولعأ ديعلب",
+        "4",
+        "ةنغارسلا ةعلق",
+        "ةنغارسلا ةعلق",
+        "يفسآ - شكارم",
+        "21"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 2,
+      "row": 6,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "زوحلا",
+      "territory_normalized": "زوحلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "دوعسموبدا دمحم",
+        "بارعا يبنلادبع",
+        "يمجن حلاص",
+        "شروكلا دارم",
+        "4",
+        "زوحلا",
+        "زوحلا",
+        "يفسآ - شكارم",
+        "22"
+      ]
+    },
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "page": 2,
+      "row": 7,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةواشيش",
+      "territory_normalized": "ةواشيش",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "تاكرب دمحم",
+        "تاريخلا وبأ ديماح",
+        "يراتخملا ةيدعسلا",
+        "يفوصلا ةزمح",
+        "4",
+        "ةواشيش",
+        "ةواشيش",
+        "يفسآ - شكارم",
+        "23"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 2,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ناميلس يديس",
+      "territory_normalized": "ناميلس يديس",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "شولع ةريمس",
+        "سيم ميرك",
+        "ينايفحلا دمحم",
+        "3",
+        "ناميلس يديس",
+        "ناميلس يديس",
+        "ةرطينقلا - الس - طابرلا",
+        "1"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 3,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ي صونربلا يديس",
+      "territory_normalized": "ي صونربلا يديس",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "دورب نسح",
+        "ةليدعلا تيأ ديجملا دبع",
+        "ميتي دمحم",
+        "3",
+        "ي صونربلا يديس",
+        "ي صونربلا يديس",
+        "تاطس - ءاضيبلا رادلا",
+        "2"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 4,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "رونب يديس",
+      "territory_normalized": "رونب يديس",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "يلاصنحلا فسوي",
+        "ديفاي ديمح",
+        "قحلادبع دمحم",
+        "يفلخلا ىفطصم",
+        "4",
+        "رونب يديس",
+        "رونب يديس",
+        "تاطس - ءاضيبلا رادلا",
+        "3"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 5,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ينسحلا يحلا",
+      "territory_normalized": "ينسحلا يحلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "نوسيح دمحم",
+        "رادج دمحأ",
+        "نينيعلا ءام ةنيمأ",
+        "3",
+        "ينسحلا يحلا",
+        "ينسحلا يحلا",
+        "تاطس - ءاضيبلا رادلا",
+        "4"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 6,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةديدجلا",
+      "territory_normalized": "ةديدجلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "يمزع ميحرلا دبع",
+        "يكاورملا ديعس",
+        "ةحلموب رابجلا دبع",
+        "ديشرم ىفطصملا",
+        "ةكبشوب ديجملا دبع",
+        "ي سيردإلا ئرقملا ديز وبأ",
+        "6",
+        "ةديدجلا",
+        "ةديدجلا",
+        "تاطس - ءاضيبلا رادلا",
+        "5"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 7,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "رصاونلا",
+      "territory_normalized": "رصاونلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "يزيزع نايفس",
+        "بلاطوب ديشر",
+        "ديشر فيطللادبع",
+        "3",
+        "رصاونلا",
+        "رصاونلا",
+        "تاطس - ءاضيبلا رادلا",
+        "6"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 8,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "كيسما نبا",
+      "territory_normalized": "كيسما نبا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "روزم ديجملا دبع",
+        "يناشك ديعس",
+        "جيبوج ديجملا دبع",
+        "3",
+        "كيسما نبا",
+        "كيسما نبا",
+        "تاطس - ءاضيبلا رادلا",
+        "7"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 9,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "تاطس",
+      "territory_normalized": "تاطس",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "يديجاملا",
+        "نيساي نيدلارون",
+        "يعيرشلا يبرعلا",
+        "ينامحدلا ىفطصم",
+        "يرارحلا دمحم",
+        "سراح نسح",
+        "6",
+        "تاطس",
+        "تاطس",
+        "تاطس - ءاضيبلا رادلا",
+        "8"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 10,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "حلاصنب هيقفلا",
+      "territory_normalized": "حلاصنب هيقفلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "كوربم رداقلادبع",
+        "يجانلا ليلخ",
+        "يوامنلا ميركلادبع",
+        "ةديبل ديبعوب",
+        "4",
+        "حلاصنب هيقفلا",
+        "حلاصنب هيقفلا",
+        "ةرفينخ - لالم ينب",
+        "9"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 11,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "اليصأ ةجنط",
+      "territory_normalized": "اليصا ةجنط",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "ريقفأ دمحم",
+        "وحورب فيطللادبع",
+        "ييخ دمحم",
+        "ىلوملا دبع ريمس",
+        "فيلوب بيجن",
+        "5",
+        "اليصأ ةجنط",
+        "اليصأ ةجنط",
+        "ةميسحلا - ناوطت - ةجنط",
+        "10"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 12,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةرجنأ صحفلا",
+      "territory_normalized": "ةرجنا صحفلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "",
+        "وشيهلا يديعسلا دمحم",
+        "يوارجحلا شيعلوب داعس",
+        "2",
+        "ةرجنأ صحفلا",
+        "ةرجنأ صحفلا",
+        "ةميسحلا - ناوطت - ةجنط",
+        "11"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 13,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ناوطت",
+      "territory_normalized": "ناوطت",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "ةيرمح ةاجن",
+        "شيمهنب دمحم",
+        "ةزبخوب دمحأ",
+        "ةنونب لداع",
+        "رامعدإ دمحم",
+        "5",
+        "ناوطت",
+        "ناوطت",
+        "ةميسحلا - ناوطت - ةجنط",
+        "12"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 14,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "نواشفش",
+      "territory_normalized": "نواشفش",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "يديدحوبلا ةديعس",
+        "حابصم دمحم",
+        "ينايفسلا دمحم",
+        "ةنوتيأ دمحأ",
+        "4",
+        "نواشفش",
+        "نواشفش",
+        "ةميسحلا - ناوطت - ةجنط",
+        "13"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 15,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "نازو",
+      "territory_normalized": "نازو",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "ونينبا ديلخ",
+        "طبارملا دمحم",
+        "يوالع ميلحلا دبع",
+        "3",
+        "نازو",
+        "نازو",
+        "ةميسحلا - ناوطت - ةجنط",
+        "14"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 16,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "قدينفلا قيضملا",
+      "territory_normalized": "قدينفلا قيضملا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "",
+        "يناميلسلا دمحم",
+        "قورق دمحم",
+        "2",
+        "قدينفلا قيضملا",
+        "قدينفلا قيضملا",
+        "ةميسحلا - ناوطت - ةجنط",
+        "15"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 1,
+      "row": 17,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ينفإ يديس",
+      "territory_normalized": "ينفا يديس",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "",
+        "يفيصاولا دمحم يالوم",
+        "سيرموب رمع",
+        "2",
+        "ينفإ يديس",
+        "ينفإ يديس",
+        "نون داو - ميملك",
+        "16"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 2,
+      "row": 2,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةيديشرلا",
+      "territory_normalized": "ةيديشرلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "يجرتملا دمحم",
+        "يليضفلا ىفطصم",
+        "يقرعلا دمحم",
+        "يجرب مالسلا دبع",
+        "يوانه هللا دبع",
+        "5",
+        "ةيديشرلا",
+        "ةيديشرلا",
+        "تلاليفات ةعرد",
+        "17"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 2,
+      "row": 3,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ريغنت",
+      "territory_normalized": "ريغنت",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "اكوب فسوي",
+        "يزيت نبا دمحم",
+        "يقدص دمحأ",
+        "3",
+        "ريغنت",
+        "ريغنت",
+        "تلاليفات ةعرد",
+        "18"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 2,
+      "row": 4,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةروكاز",
+      "territory_normalized": "ةروكاز",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "يزكنلا رمع",
+        "يفوصلا نامحرلا دبع",
+        "ىرعاو نسحل",
+        "3",
+        "ةروكاز",
+        "ةروكاز",
+        "تلاليفات ةعرد",
+        "19"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 2,
+      "row": 5,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "تازازرو",
+      "territory_normalized": "تازازرو",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "نموم هللادبع",
+        "نيعملا نيسحلا",
+        "قداصلا ديعسلا",
+        "3",
+        "تازازرو",
+        "تازازرو",
+        "تلاليفات ةعرد",
+        "20"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 2,
+      "row": 6,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "تلديم",
+      "territory_normalized": "تلديم",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "يزوزعلا",
+        "يلضافلا",
+        "نيمحا رمع",
+        "3",
+        "تلديم",
+        "تلديم",
+        "تلاليفات ةعرد",
+        "21"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 2,
+      "row": 7,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "شئارعلا",
+      "territory_normalized": "شئارعلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "صابنلا مالسلا دبع",
+        "يلوضف ديعس",
+        "نوريخ ديعس",
+        "يوادمحلا دمحم",
+        "4",
+        "شئارعلا",
+        "شئارعلا",
+        "ةميسحلا - ناوطت - ةجنط",
+        "22"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 2,
+      "row": 8,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ناطلسلا سرم ءادفلا",
+      "territory_normalized": "ناطلسلا سرم ءادفلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "يعردلا ميحرلا دبع",
+        "ديمرلا يمطافلا",
+        "يقارعلا داوج",
+        "3",
+        "ناطلسلا سرم ءادفلا",
+        "ناطلسلا سرم ءادفلا",
+        "تاطس - ءاضيبلا رادلا",
+        "23"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 2,
+      "row": 9,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ناميلسنب",
+      "territory_normalized": "ناميلسنب",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "ندمل نسحلا",
+        "هللا فطل ليعامسإ يالوم",
+        "لولجنب دمحم",
+        "3",
+        "ناميلسنب",
+        "ناميلسنب",
+        "تاطس - ءاضيبلا رادلا",
+        "24"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 2,
+      "row": 10,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "قشلا نيع",
+      "territory_normalized": "قشلا نيع",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "يليحكل كلاملادبع",
+        "يرصانلا فيطللا دبع",
+        "ليبقلا ديشر",
+        "3",
+        "قشلا نيع",
+        "قشلا نيع",
+        "تاطس - ءاضيبلا رادلا",
+        "25"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 2,
+      "row": 11,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "تانمد لاليزأ",
+      "territory_normalized": "تانمد لاليزا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "نافتأ نسحل",
+        "ينايدلا دمحم",
+        "نيكوكت دلاخ",
+        "3",
+        "تانمد لاليزأ",
+        "لاليزأ",
+        "ةرفينخ - لالم ينب",
+        "26"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 2,
+      "row": 12,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "تغزواو وزب",
+      "territory_normalized": "تغزواو وزب",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "ضاغبأ ىفطصم",
+        "ةوسك دمحم",
+        "برعلا وبأ يبنلا دبع",
+        "3",
+        "تغزواو وزب",
+        "لاليزأ",
+        "ةرفينخ - لالم ينب",
+        "27"
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "page": 2,
+      "row": 13,
+      "extraction_mode": "NATIVE_RTL",
+      "territory_raw": "ةنماحرلا",
+      "territory_normalized": "ةنماحرلا",
+      "failures": [
+        "TERRITORY_UNRESOLVED"
+      ],
+      "cells": [
+        "",
+        "",
+        "",
+        "ةطعاطعل ناوضر",
+        "يرهوجلا دمحم",
+        "يرصبلا ديلاخلا دبع",
+        "3",
+        "ةنماحرلا",
+        "ةنماحرلا",
+        "يفسآ - شكارم",
+        "28"
+      ]
+    }
+  ],
+  "counts": {
+    "territories_parsed": 0,
+    "candidate_rows": 0,
+    "districts_with_at_least_three_verified_candidate_identities": 0,
+    "districts_with_formal_endorsement_enrichment": 0,
+    "required_identity_districts": 70,
+    "required_enriched_districts": 50,
+    "identity_gate_pass": false,
+    "enriched_gate_pass": false
+  },
+  "document_diagnostics": [
+    {
+      "article_id": "RABAT_FES_MARRAKECH",
+      "pdf_sha256": "e31432ce1467c314da4e1a142daae57c4f0d80a1575f7e2d10737adb59811bd3",
+      "diagnostics": [
+        {
+          "page": 1,
+          "extraction_mode": "NATIVE_RTL",
+          "table_rows": 19,
+          "table_cells": 199,
+          "sample": [
+            [
+              "ةحئاللا يحشرم يقاب",
+              "",
+              "",
+              "",
+              "",
+              "ةحئاللا ليكو",
+              "ددع دعاقملا",
+              "ةيباختنالا ةرئادلا",
+              "وأ ميلقإلا وأ ةلامعلا ةعطاقم ةلامع",
+              "ةهجلا",
+              "ت.ر"
+            ],
+            [
+              "6 ةبترملا",
+              "5 ةبترملا",
+              "4 ةبترملا",
+              "3 ةبترملا",
+              "2 ةبترملا",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "ميهاربإ نبا زيزع",
+              "نتيوزا دمحم",
+              "مصتعملا عماج",
+              "ناريك نبا هلإلا دبع",
+              "4",
+              "ةنيدملا الس",
+              "الس",
+              "ةرطينقلا - الس - طابرلا",
+              "1"
+            ],
+            [
+              "",
+              "",
+              "",
+              "يرهاط دمحم",
+              "عارقل ميحرلا دبع",
+              "ينارمعلا ناميلس",
+              "3",
+              "ةلاش طابرلا",
+              "طابرلا",
+              "ةرطينقلا - الس - طابرلا",
+              "2"
+            ]
+          ]
+        },
+        {
+          "page": 2,
+          "extraction_mode": "NATIVE_RTL",
+          "table_rows": 8,
+          "table_cells": 78,
+          "sample": [
+            [
+              "ةحئاللا يحشرم يقاب",
+              "",
+              "",
+              "",
+              "",
+              "ةحئاللا ليكو",
+              "ددع دعاقملا",
+              "ةيباختنالا ةرئادلا",
+              "وأ ميلقإلا وأ ةلامعلا ةعطاقم ةلامع",
+              "ةهجلا",
+              "ت.ر"
+            ],
+            [
+              "6 ةبترملا",
+              "5 ةبترملا",
+              "4 ةبترملا",
+              "3 ةبترملا",
+              "2 ةبترملا",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "ميشغل نسح",
+              "ابوط ريشبلا يالوم",
+              "ناميلس نب سنوي",
+              "3",
+              "يلع نب فسوي يديس ةنيدملا",
+              "شكارم",
+              "يفسآ - شكارم",
+              "18"
+            ],
+            [
+              "",
+              "",
+              "",
+              "ضاير تيأ فسوي",
+              "ي سيردإلا ينارمعلا ةنيمأ",
+              "جابقلا دامح",
+              "3",
+              "ليخنلا زيلج",
+              "شكارم",
+              "يفسآ - شكارم",
+              "19"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "article_id": "SOUTH_SOUSS_ORIENT",
+      "pdf_sha256": "48878329a2849f980bf65b6b2e1ef1a68836c71aa5fb0eaee05421822a9e8143",
+      "diagnostics": [
+        {
+          "page": 1,
+          "extraction_mode": "NATIVE_RTL",
+          "table_rows": 16,
+          "table_cells": 136,
+          "sample": [
+            [
+              "ةحئاللا يحشرم يقاب",
+              "",
+              "",
+              "ةحئاللا ليكو",
+              "ددع دعاقملا",
+              "ةيباختنالا ةرئادلا",
+              "وأ ميلقإلا وأ ةلامعلا ةعطاقم ةلامع",
+              "ةهجلا",
+              "ت.ر"
+            ],
+            [
+              "4 ةبترملا",
+              "3 ةبترملا",
+              "2 ةبترملا",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "يويدهم دمحم",
+              "ي ضالبأ ةجيدخ",
+              "فيعضلا ميهاربإ",
+              "3",
+              "نويعلا",
+              "نويعلا",
+              "ءارمحلا ةيقاسلا _ نويعلا",
+              "1"
+            ],
+            [
+              "",
+              "",
+              "لوه دمحم",
+              "ةمزرلا يلاع",
+              "2",
+              "ةيافرط",
+              "ةيافرط",
+              "ءارمحلا ةيقاسلا _ نويعلا",
+              "2"
+            ]
+          ]
+        },
+        {
+          "page": 2,
+          "extraction_mode": "NATIVE_RTL",
+          "table_rows": 12,
+          "table_cells": 100,
+          "sample": [
+            [
+              "ةحئاللا يحشرم يقاب",
+              "",
+              "",
+              "ةحئاللا ليكو",
+              "ددع دعاقملا",
+              "ةيباختنالا ةرئادلا",
+              "وأ ميلقإلا وأ ةلامعلا ةعطاقم ةلامع",
+              "ةهجلا",
+              "ت.ر"
+            ],
+            [
+              "4 ةبترملا",
+              "3 ةبترملا",
+              "2 ةبترملا",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "يفوب رمع",
+              "يجارلا دمحم",
+              "2",
+              "اطاط",
+              "اطاط",
+              "ةسام - سوس",
+              "15"
+            ],
+            [
+              "ي شاكنلا ىفطصم",
+              "يرابوأ هللادبع",
+              "يركوش ليعامسا",
+              "يكولاملا حلاص",
+              "4",
+              "نانتوادإ ريداكأ",
+              "نانتوادإ ريداكأ",
+              "ةسام - سوس",
+              "16"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "article_id": "LIST_3",
+      "pdf_sha256": "9ba803c5223dd902a7e95b3495908191eb83a3dfb1a7308bad7550386bcb409a",
+      "diagnostics": [
+        {
+          "page": 1,
+          "extraction_mode": "NATIVE_RTL",
+          "table_rows": 18,
+          "table_cells": 188,
+          "sample": [
+            [
+              "ةحئاللا يحشرم يقاب",
+              "",
+              "",
+              "",
+              "",
+              "ةحئاللا ليكو",
+              "ددع دعاقملا",
+              "ةيباختنالا ةرئادلا",
+              "وأ ميلقإلا وأ ةلامعلا ةعطاقم ةلامع",
+              "ةهجلا",
+              "ت.ر"
+            ],
+            [
+              "6 ةبترملا",
+              "5 ةبترملا",
+              "4 ةبترملا",
+              "3 ةبترملا",
+              "2 ةبترملا",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "",
+              "",
+              "شولع ةريمس",
+              "سيم ميرك",
+              "ينايفحلا دمحم",
+              "3",
+              "ناميلس يديس",
+              "ناميلس يديس",
+              "ةرطينقلا - الس - طابرلا",
+              "1"
+            ],
+            [
+              "",
+              "",
+              "",
+              "دورب نسح",
+              "ةليدعلا تيأ ديجملا دبع",
+              "ميتي دمحم",
+              "3",
+              "ي صونربلا يديس",
+              "ي صونربلا يديس",
+              "تاطس - ءاضيبلا رادلا",
+              "2"
+            ]
+          ]
+        },
+        {
+          "page": 2,
+          "extraction_mode": "NATIVE_RTL",
+          "table_rows": 14,
+          "table_cells": 144,
+          "sample": [
+            [
+              "ةحئاللا يحشرم يقاب",
+              "",
+              "",
+              "",
+              "",
+              "ةحئاللا ليكو",
+              "ددع دعاقملا",
+              "ةيباختنالا ةرئادلا",
+              "وأ ميلقإلا وأ ةلامعلا ةعطاقم ةلامع",
+              "ةهجلا",
+              "ت.ر"
+            ],
+            [
+              "6 ةبترملا",
+              "5 ةبترملا",
+              "4 ةبترملا",
+              "3 ةبترملا",
+              "2 ةبترملا",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            [
+              "",
+              "يجرتملا دمحم",
+              "يليضفلا ىفطصم",
+              "يقرعلا دمحم",
+              "يجرب مالسلا دبع",
+              "يوانه هللا دبع",
+              "5",
+              "ةيديشرلا",
+              "ةيديشرلا",
+              "تلاليفات ةعرد",
+              "17"
+            ],
+            [
+              "",
+              "",
+              "",
+              "اكوب فسوي",
+              "يزيت نبا دمحم",
+              "يقدص دمحأ",
+              "3",
+              "ريغنت",
+              "ريغنت",
+              "تلاليفات ةعرد",
+              "18"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "invariants": {
+    "failed_rows_promoted": false,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "forecast_delta_generated": false,
+    "F1_created": false
+  }
+}
