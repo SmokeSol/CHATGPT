@@ -1,0 +1,469 @@
+{
+  "schema_version": "3.0",
+  "run_id": "iframe_discovery_32075086258_1",
+  "created_at": "2026-08-17T22:17:39+00:00",
+  "cutoff_utc": "20161006225959",
+  "method": "CURRENT_CMS_LEGACY_GUID_DISCOVERY_THEN_PRE_CUTOFF_WAYBACK_RECURSION",
+  "current_sources_are_candidate_evidence": false,
+  "current_discovery_rows": [
+    {
+      "url": "https://medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+      "origin": "LIVE_ARTICLE_ADDRESS_ONLY",
+      "status": 403,
+      "bytes": 5948,
+      "sha256": "55a8098c095e99ae6168c78720114b16287be06b56578359b095a815f4aa0ecc",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/55a8098c095e99ae6168c78720114b16287be06b56578359b095a815f4aa0ecc.html",
+      "post_ids": [],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts?slug=legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes&per_page=10",
+      "origin": "WP_EXACT_SLUG",
+      "status": 200,
+      "bytes": 18708,
+      "sha256": "a458a215416f147c0b20592a35652264f0a0e6399df352aafc54f4933499501d",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/a458a215416f147c0b20592a35652264f0a0e6399df352aafc54f4933499501d.json",
+      "post_ids": [
+        868469
+      ],
+      "legacy_guids": [
+        "https://prod.medias24.push.ma/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/"
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/search?search=legislatives%20carte%20interactive&per_page=100",
+      "origin": "WP_SEARCH",
+      "status": 200,
+      "bytes": 8079,
+      "sha256": "5ae48d3d3ab8e8a1b32a519eeb211c99a4cd1edce29b9156a8255319662b3731",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/5ae48d3d3ab8e8a1b32a519eeb211c99a4cd1edce29b9156a8255319662b3731.json",
+      "post_ids": [
+        1089995,
+        1087834,
+        868432,
+        1086715,
+        868599,
+        868442,
+        1095584,
+        1090439,
+        1088871,
+        1088868,
+        1088124,
+        1087809,
+        1087506,
+        1087167,
+        1086662,
+        1081121
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/search?search=legislatives%20candidats%20rabat%20sale%20marrakech&per_page=100",
+      "origin": "WP_SEARCH",
+      "status": null,
+      "bytes": 0,
+      "sha256": null,
+      "archive_path": null,
+      "post_ids": [],
+      "legacy_guids": [],
+      "error": "ReadTimeout: HTTPSConnectionPool(host='medias24.com', port=443): Read timed out. (read timeout=40)",
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/868432?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 17307,
+      "sha256": "874404f6c10c52a62cf5e67a07dace735629981195ddc547d0c1a1b62be9dc10",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/874404f6c10c52a62cf5e67a07dace735629981195ddc547d0c1a1b62be9dc10.json",
+      "post_ids": [
+        868432,
+        868432
+      ],
+      "legacy_guids": [
+        "https://prod.medias24.push.ma/2016/09/26/legislatives-la-bataille-de-sale-carte-interactive/"
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/868442?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 15297,
+      "sha256": "3400965d97ed5d6345a2be4a36c944ddb2dd3f6327fcb0b409b083d34450998b",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/3400965d97ed5d6345a2be4a36c944ddb2dd3f6327fcb0b409b083d34450998b.json",
+      "post_ids": [
+        868442,
+        868442
+      ],
+      "legacy_guids": [
+        "https://prod.medias24.push.ma/2016/09/27/legislatives-les-candidats-de-rabat-carte/"
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/868469?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 18706,
+      "sha256": "73ff0d5ac5d5b1628c553971167832e57c2b02bd437f465712e4950206b3271e",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/73ff0d5ac5d5b1628c553971167832e57c2b02bd437f465712e4950206b3271e.json",
+      "post_ids": [
+        868469,
+        868469
+      ],
+      "legacy_guids": [
+        "https://prod.medias24.push.ma/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/"
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/868599?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 19236,
+      "sha256": "1e5280b6ce126882e4e1b9e7042e1dbb6853274de08878af12a6cc651ca42774",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/1e5280b6ce126882e4e1b9e7042e1dbb6853274de08878af12a6cc651ca42774.json",
+      "post_ids": [
+        868599,
+        868599
+      ],
+      "legacy_guids": [
+        "https://prod.medias24.push.ma/2016/10/05/programmes-candidats-sociologie-electorale-ce-quil-faut-savoir-sur-les-legislatives/"
+      ],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1081121?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 404,
+      "bytes": 107,
+      "sha256": "346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a.json",
+      "post_ids": [
+        1081121
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1086662?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 18412,
+      "sha256": "6295ace710b0aa232d0f21307ee8446500b0ac6666556f33abdd8d510b420591",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/6295ace710b0aa232d0f21307ee8446500b0ac6666556f33abdd8d510b420591.json",
+      "post_ids": [
+        1086662,
+        1086662
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1086715?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 19694,
+      "sha256": "9c8d7360740532baef0f5b64ab8b48f2e6e87d8056de11f69998ad2ff47474f9",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/9c8d7360740532baef0f5b64ab8b48f2e6e87d8056de11f69998ad2ff47474f9.json",
+      "post_ids": [
+        1086715,
+        1086715
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1087167?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 404,
+      "bytes": 107,
+      "sha256": "346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a.json",
+      "post_ids": [
+        1087167
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1087506?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 18263,
+      "sha256": "59188af21399d223985ca4d2e7cbcf751945523d6446c8c081b4908494f102d1",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/59188af21399d223985ca4d2e7cbcf751945523d6446c8c081b4908494f102d1.json",
+      "post_ids": [
+        1087506,
+        1087506
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1087809?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 404,
+      "bytes": 107,
+      "sha256": "346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a.json",
+      "post_ids": [
+        1087809
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1087834?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 20715,
+      "sha256": "c399b7529352f86086ded8d6e5e2bb410413d220d000501602b7d069efa0f8c8",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/c399b7529352f86086ded8d6e5e2bb410413d220d000501602b7d069efa0f8c8.json",
+      "post_ids": [
+        1087834,
+        1087834
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1088124?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 404,
+      "bytes": 107,
+      "sha256": "346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a.json",
+      "post_ids": [
+        1088124
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1088868?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 404,
+      "bytes": 107,
+      "sha256": "346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a.json",
+      "post_ids": [
+        1088868
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1088871?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 404,
+      "bytes": 107,
+      "sha256": "346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/346716f01a3c7eec1f3146f389e8e1938515bfbf2d23c31e160b601847039f7a.json",
+      "post_ids": [
+        1088871
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1089995?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 19270,
+      "sha256": "dcf8a06ef2764a844f7ff1a5bddfa66cf9dbda65d2d7e90fbfefa3d8442fbbc8",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/dcf8a06ef2764a844f7ff1a5bddfa66cf9dbda65d2d7e90fbfefa3d8442fbbc8.json",
+      "post_ids": [
+        1089995,
+        1089995
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1090439?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 18295,
+      "sha256": "2a78392c3795a2bafd5b7e599f95ab5dcb7140ffb2dff128544d76228396af6f",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/2a78392c3795a2bafd5b7e599f95ab5dcb7140ffb2dff128544d76228396af6f.json",
+      "post_ids": [
+        1090439,
+        1090439
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://medias24.com/wp-json/wp/v2/posts/1095584?context=view",
+      "origin": "WP_POST_BY_ID",
+      "status": 200,
+      "bytes": 18536,
+      "sha256": "73b784b80906c6d955d9e5c2d42d81eccbb9650270a48c6102af9a012037cb4a",
+      "archive_path": "morocco26/data/goal100/e_reason/evidence/iframe_discovery/iframe_discovery_32075086258_1/current_discovery_only/73b784b80906c6d955d9e5c2d42d81eccbb9650270a48c6102af9a012037cb4a.json",
+      "post_ids": [
+        1095584,
+        1095584
+      ],
+      "legacy_guids": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    }
+  ],
+  "legacy_page_urls": [
+    "https://prod.medias24.push.ma/2016/09/26/legislatives-la-bataille-de-sale-carte-interactive/",
+    "https://prod.medias24.push.ma/2016/09/27/legislatives-les-candidats-de-rabat-carte/",
+    "https://prod.medias24.push.ma/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+    "https://prod.medias24.push.ma/2016/10/05/programmes-candidats-sociologie-electorale-ce-quil-faut-savoir-sur-les-legislatives/"
+  ],
+  "legacy_page_rows": [
+    {
+      "url": "https://prod.medias24.push.ma/2016/09/26/legislatives-la-bataille-de-sale-carte-interactive/",
+      "origin": "LEGACY_CMS_GUID",
+      "cdx_rows": [],
+      "cdx_diagnostics": [
+        {
+          "query_url": "https://prod.medias24.push.ma/2016/09/26/legislatives-la-bataille-de-sale-carte-interactive/",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "query_url": "http://prod.medias24.push.ma/2016/09/26/legislatives-la-bataille-de-sale-carte-interactive/",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        }
+      ],
+      "selected_snapshot": null,
+      "snapshot_status": null,
+      "snapshot_bytes": 0,
+      "snapshot_sha256": null,
+      "snapshot_path": null,
+      "embedded_urls": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://prod.medias24.push.ma/2016/09/27/legislatives-les-candidats-de-rabat-carte/",
+      "origin": "LEGACY_CMS_GUID",
+      "cdx_rows": [],
+      "cdx_diagnostics": [
+        {
+          "query_url": "https://prod.medias24.push.ma/2016/09/27/legislatives-les-candidats-de-rabat-carte/",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "query_url": "http://prod.medias24.push.ma/2016/09/27/legislatives-les-candidats-de-rabat-carte/",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        }
+      ],
+      "selected_snapshot": null,
+      "snapshot_status": null,
+      "snapshot_bytes": 0,
+      "snapshot_sha256": null,
+      "snapshot_path": null,
+      "embedded_urls": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://prod.medias24.push.ma/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+      "origin": "LEGACY_CMS_GUID",
+      "cdx_rows": [],
+      "cdx_diagnostics": [
+        {
+          "query_url": "https://prod.medias24.push.ma/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "query_url": "http://prod.medias24.push.ma/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        }
+      ],
+      "selected_snapshot": null,
+      "snapshot_status": null,
+      "snapshot_bytes": 0,
+      "snapshot_sha256": null,
+      "snapshot_path": null,
+      "embedded_urls": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    },
+    {
+      "url": "https://prod.medias24.push.ma/2016/10/05/programmes-candidats-sociologie-electorale-ce-quil-faut-savoir-sur-les-legislatives/",
+      "origin": "LEGACY_CMS_GUID",
+      "cdx_rows": [],
+      "cdx_diagnostics": [
+        {
+          "query_url": "https://prod.medias24.push.ma/2016/10/05/programmes-candidats-sociologie-electorale-ce-quil-faut-savoir-sur-les-legislatives/",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        },
+        {
+          "query_url": "http://prod.medias24.push.ma/2016/10/05/programmes-candidats-sociologie-electorale-ce-quil-faut-savoir-sur-les-legislatives/",
+          "status": 200,
+          "bytes": 3,
+          "rows": 0,
+          "error": null
+        }
+      ],
+      "selected_snapshot": null,
+      "snapshot_status": null,
+      "snapshot_bytes": 0,
+      "snapshot_sha256": null,
+      "snapshot_path": null,
+      "embedded_urls": [],
+      "error": null,
+      "admissible_candidate_evidence": false
+    }
+  ],
+  "embedded_urls_from_admissible_pages": [],
+  "embedded_rows": [],
+  "admissible_precutoff_page_count": 0,
+  "admissible_precutoff_embed_count": 0,
+  "admissible_precutoff_pages": [],
+  "admissible_precutoff_embeds": [],
+  "predictive_judgments_generated": false,
+  "forecast_delta_generated": false,
+  "F1_created": false
+}
