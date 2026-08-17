@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "release_id": "ATLAS395-V1-PUBLIC-2026-08-17",
+  "released_at": "2026-08-17T19:42:00+01:00",
+  "timezone": "Africa/Casablanca",
+  "status": "PUBLIC_RELEASE_VERIFIED",
+  "public_url": "https://atlas-395-rescue-20260817.vercel.app/",
+  "deployment": {
+    "platform": "Vercel",
+    "project_name": "atlas-395-rescue-20260817",
+    "production_deployment_id": "dpl_6ozyY6oWGxRfgFWDh42s9GKcCNmZ",
+    "deployed_application": "standalone Atlas V1 SPA with same-origin data proxies",
+    "data_source_commit": "668a82d09ccdc4b2047f87784427b57cf49e9e9a"
+  },
+  "verification": {
+    "github_actions_run_id": 32056140114,
+    "github_actions_job_id": 95466624075,
+    "result": "PASS",
+    "public_html_http_200": true,
+    "same_origin_atlas_v1_api_pass": true,
+    "same_origin_f0_api_pass": true,
+    "chromium_render_pass": true,
+    "fatal_loading_error_absent": true
+  },
+  "product_coverage": {
+    "canonical_local_territories": 92,
+    "arabic_identity_coverage": 92,
+    "medias24_candidate_records_raw": 544,
+    "candidate_records_after_official_pjd_merge": 546,
+    "medias24_local_territories_with_records": 91,
+    "local_territories_with_records_after_merge": 92,
+    "missing_after_merge": [],
+    "pjd_rows": 92,
+    "structured_parties": 9
+  },
+  "scientific_boundary": {
+    "forecast_snapshot": "F0",
+    "forecast_immutable": true,
+    "forecast_artifact_sha256": "fbe5197999f20d0612bc0c66e1954b5c611b11208e43a72eb5494a03b1e40d3f",
+    "b2_roster_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+    "candidate_signal_impact": "NOT_CALIBRATED",
+    "forecast_delta_applied": false,
+    "coefficients_modified": false,
+    "e_reason_executed": false,
+    "e_full_executed": false
+  },
+  "released_capabilities": [
+    "F0 national seat-distribution overview",
+    "Arabic/French bilingual search",
+    "92-territory canonical Arabic identity layer",
+    "candidate filtering by party and region",
+    "candidate and nomination evidence cards",
+    "party-level F0 and candidate coverage view",
+    "methodology and immutable-source audit trail",
+    "responsive desktop and mobile interface"
+  ],
+  "next_scientific_step": "Independently adjudicate the collected evidence and preregister E_reason before assigning any predictive effect to 2026 candidates or signals."
+}
