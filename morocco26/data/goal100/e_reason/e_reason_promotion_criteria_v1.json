@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-E-REASON-PROMOTION-V1",
+  "frozen_at": "2026-08-17T21:42:17+01:00",
+  "principle": "Promotion requires measurable out-of-development improvement, zero leakage, and no material deterioration in seat or probabilistic performance. Narrative plausibility receives zero credit.",
+  "data_sufficiency_gate": {
+    "all_territories_present": 92,
+    "all_party_cells_present": 828,
+    "minimum_districts_with_at_least_three_verified_candidate_identities": 70,
+    "minimum_districts_with_at_least_one_enriched_candidate_fact": 50,
+    "required_in_both_2016_and_2021": true,
+    "failure_state": "E_REASON_DATA_INSUFFICIENT"
+  },
+  "hard_validity_gates": [
+    "Preregistration validator PASS before any judgment.",
+    "Immutable-path diff guard PASS.",
+    "Historical publication cutoffs PASS.",
+    "Packet anonymization scan PASS.",
+    "Outcome-seal and mapping-seal PASS.",
+    "Exactly 92 valid judgment objects per executed condition and election.",
+    "No post-hoc exclusions or threshold changes."
+  ],
+  "predictive_gates_for_C2": {
+    "vs_C0_primary_relative_improvement_min": 0.02,
+    "vs_C0_bootstrap_probability_better_min": 0.95,
+    "vs_C1_primary_relative_improvement_min": 0.005,
+    "vs_C1_bootstrap_probability_better_min": 0.9,
+    "mean_energy_score_relative_degradation_max": 0.01,
+    "local_seat_national_MAE_degradation_max_seats": 2,
+    "top_party_accuracy_absolute_degradation_max": 0.01
+  },
+  "development_sanity_gate": {
+    "C2_2016_must_not_be_worse_than_C0_primary_relative": 0.01,
+    "purpose": "Reject a reasoner that cannot even fit the development election under the frozen calibration grid."
+  },
+  "promotion_state_if_all_pass": "E_REASON_PROMOTE",
+  "failure_state_if_valid_but_not_all_pass": "E_REASON_NO_PROMOTION",
+  "consequence": {
+    "E_REASON_PROMOTE": "Authorize a separately certified 2026 application using the fully frozen packet schema, C2 prompt, ordinal mapping and lambda. This authorizes an F1 candidate, not rewriting F0.",
+    "otherwise": "F0 remains the official forecast; no F1 is created."
+  },
+  "human_arm_rule": "H1 is not required for initial C2 promotion. No claim about human superiority, parity or inferiority is allowed unless H1 is genuinely executed and scored."
+}
