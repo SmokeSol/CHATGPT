@@ -1,0 +1,154 @@
+name: morocco26-b2-reconcile
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - '.github/workflows/morocco26-b2-reconcile.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-b2-reconcile-complete
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      B2_BRANCH: morocco26-b2-structured-evidence
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet requests
+
+      - name: Wait for bootstrap branch
+        run: |
+          for attempt in $(seq 1 50); do
+            git fetch origin --prune
+            if git ls-remote --exit-code --heads origin "$B2_BRANCH" >/dev/null 2>&1; then
+              git switch -C "$B2_BRANCH" "origin/$B2_BRANCH"
+              exit 0
+            fi
+            echo "Waiting for B2 branch: $attempt/50"
+            sleep 10
+          done
+          exit 1
+
+      - name: Import all current B2 phase executors
+        run: |
+          git checkout origin/morocco26-fminus1-run -- \
+            morocco26/scripts/goal100_bootstrap_b2_v1.py \
+            morocco26/scripts/goal100_extend_b2_v1.py \
+            morocco26/scripts/goal100_prepare_b2_collection_queue.py \
+            morocco26/scripts/goal100_install_b2_source_watch.py
+
+      - name: Reconcile protocols, compilers, queues and watch
+        run: |
+          python morocco26/scripts/goal100_bootstrap_b2_v1.py
+          python morocco26/scripts/goal100_extend_b2_v1.py
+          python morocco26/scripts/goal100_prepare_b2_collection_queue.py
+          python morocco26/scripts/goal100_install_b2_source_watch.py
+          python morocco26/scripts/goal100_b2_source_watch.py
+
+      - name: Validate fail-closed state
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/goal100_validate_b2_v1.py
+          python -m py_compile \
+            morocco26/scripts/goal100_build_b2_features_v1.py \
+            morocco26/scripts/goal100_backtest_b2_residual_v1.py \
+            morocco26/scripts/goal100_b2_source_watch.py
+          set +e
+          python morocco26/scripts/goal100_backtest_b2_residual_v1.py
+          backtest_code=$?
+          set -e
+          if [ "$backtest_code" -ne 2 ]; then
+            echo "Expected historical-panel block exit 2, got $backtest_code" >&2
+            exit 1
+          fi
+          python - <<'PY'
+          import csv, hashlib, json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          root=Path('morocco26')
+          b=root/'data'/'goal100'/'b2'/'v1'
+          bootstrap=json.loads((b/'b2_bootstrap_status.json').read_text(encoding='utf-8'))
+          extension=json.loads((b/'b2_extension_status.json').read_text(encoding='utf-8'))
+          queue=json.loads((b/'collection_queue_certificate.json').read_text(encoding='utf-8'))
+          residual=json.loads((b/'b2_residual_backtest.json').read_text(encoding='utf-8'))
+          watches=sorted((b/'source_watch').glob('*.json'))
+          assert bootstrap['status'] in {'PASS_SCAFFOLD_READY','PASS_SCAFFOLD_BLOCKED_BY_F_MINUS_1'}
+          assert extension['status']=='PASS_PROTOCOLS_AND_COMPILER_READY'
+          assert queue['gate']=='PASS' and queue['contests']['total']==104 and queue['contests']['seats']==395
+          assert residual['gate']=='BLOCKED_MISSING_HISTORICAL_FEATURE_PANEL'
+          assert residual['2026_data_used_for_fit'] is False and residual['F0_unlocked'] is False
+          assert watches
+          watch=json.loads(watches[-1].read_text(encoding='utf-8'))
+          assert watch['evidence_rows_created']==0 and watch['interpretation_performed'] is False
+          ledger=b/'evidence_ledger.ndjson'
+          evidence_rows=sum(bool(x.strip()) for x in ledger.read_text(encoding='utf-8').splitlines())
+          status={
+            'schema_version':'1.0',
+            'reconciliation_id':'M26-GOAL100-B2-RECONCILIATION-V1',
+            'created_at':datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+            'gate':'PASS',
+            'B2_branch':'morocco26-b2-structured-evidence',
+            'F_minus_1_preflight_ready':json.loads((b/'b2_preflight.json').read_text(encoding='utf-8'))['ready_for_b2_non_agentic_scaffold'],
+            'protocol_and_schema':'PASS',
+            'deterministic_feature_compiler':'PASS_COMPILED',
+            'collection_queue':{'contests':104,'seats':395,'tasks':queue['collection_tasks'],'all_unknown':True},
+            'source_watch':{'snapshots':len(watches),'latest':str(watches[-1]),'evidence_rows_created':0},
+            'evidence_rows':evidence_rows,
+            'historical_residual_backtest':'BLOCKED_MISSING_HISTORICAL_FEATURE_PANEL',
+            'non_legal_coefficients':'ALL_ZERO',
+            'F0_created':False,
+            'agentic_status':'LOCKED',
+            'next_action':'Resolve exact official endpoints and ingest first Tier-A atomic list/candidate evidence; backfill historical feature panel in parallel.'
+          }
+          (b/'b2_reconciliation_status.json').write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(status,ensure_ascii=False,indent=2))
+          PY
+
+      - name: Commit reconciled B2 state with retry
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/b2/v1 \
+            morocco26/data/goal100/gate_registry.json \
+            morocco26/data/goal100/current_state.json \
+            morocco26/scripts/goal100_bootstrap_b2_v1.py \
+            morocco26/scripts/goal100_extend_b2_v1.py \
+            morocco26/scripts/goal100_prepare_b2_collection_queue.py \
+            morocco26/scripts/goal100_install_b2_source_watch.py \
+            morocco26/scripts/goal100_validate_b2_v1.py \
+            morocco26/scripts/goal100_freeze_b2_v1.py \
+            morocco26/scripts/goal100_build_b2_features_v1.py \
+            morocco26/scripts/goal100_backtest_b2_residual_v1.py \
+            morocco26/scripts/goal100_b2_source_watch.py \
+            .github/workflows/morocco26-b2-structured-evidence.yml \
+            .github/workflows/morocco26-b2-source-watch.yml \
+            morocco26/FIL_D_ARIANE.md \
+            morocco26/FIL_ARIANE.md 2>/dev/null || true
+          git commit -m 'milestone(morocco26): reconcile complete non-agentic B2 scaffold and collection system' || true
+          for attempt in 1 2 3; do
+            git fetch origin "$B2_BRANCH"
+            git rebase "origin/$B2_BRANCH" || { git rebase --abort; exit 1; }
+            if git push origin HEAD:"$B2_BRANCH"; then exit 0; fi
+            echo "Push race; retry $attempt/3"
+            sleep 5
+          done
+          exit 1
+
+      - name: Print final B2 machine state
+        run: cat morocco26/data/goal100/b2/v1/b2_reconciliation_status.json
