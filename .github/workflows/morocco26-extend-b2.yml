@@ -1,0 +1,102 @@
+name: morocco26-extend-b2
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - 'morocco26/scripts/goal100_extend_b2_v1.py'
+      - '.github/workflows/morocco26-extend-b2.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-extend-b2-v1
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  extend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      B2_BRANCH: morocco26-b2-structured-evidence
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Wait for and checkout B2 branch
+        run: |
+          for attempt in $(seq 1 30); do
+            git fetch origin --prune
+            if git ls-remote --exit-code --heads origin "$B2_BRANCH" >/dev/null 2>&1; then
+              git switch -C "$B2_BRANCH" "origin/$B2_BRANCH"
+              exit 0
+            fi
+            echo "B2 branch not available yet; attempt $attempt/30"
+            sleep 10
+          done
+          echo 'B2 branch was not created by the bootstrap workflow' >&2
+          exit 1
+
+      - name: Bring extension implementation from source branch
+        run: |
+          git checkout origin/morocco26-fminus1-run -- morocco26/scripts/goal100_extend_b2_v1.py
+
+      - name: Extend deterministic B2 layer
+        run: python morocco26/scripts/goal100_extend_b2_v1.py
+
+      - name: Validate unchanged anti-drift and B2 contracts
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/goal100_validate_b2_v1.py
+          python -m py_compile \
+            morocco26/scripts/goal100_build_b2_features_v1.py \
+            morocco26/scripts/goal100_backtest_b2_residual_v1.py
+
+      - name: Verify missing historical data blocks rather than fabricates weights
+        run: |
+          set +e
+          python morocco26/scripts/goal100_backtest_b2_residual_v1.py
+          code=$?
+          set -e
+          if [ "$code" -ne 2 ]; then
+            echo "Expected fail-closed backtest exit 2, got $code" >&2
+            exit 1
+          fi
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('morocco26/data/goal100/b2/v1/b2_residual_backtest.json')
+          r=json.loads(p.read_text(encoding='utf-8'))
+          assert r['gate']=='BLOCKED_MISSING_HISTORICAL_FEATURE_PANEL'
+          assert r['2026_data_used_for_fit'] is False
+          assert r['F0_unlocked'] is False
+          assert all(float(v)==0 for v in r['coefficients'].values())
+          print('B2_RESIDUAL_FAIL_CLOSED_PASS')
+          PY
+
+      - name: Commit extension to B2 branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/b2/v1 \
+            morocco26/scripts/goal100_extend_b2_v1.py \
+            morocco26/scripts/goal100_build_b2_features_v1.py \
+            morocco26/scripts/goal100_backtest_b2_residual_v1.py \
+            morocco26/FIL_D_ARIANE.md \
+            morocco26/FIL_ARIANE.md 2>/dev/null || true
+          git commit -m 'feat(morocco26): add deterministic B2 features and fail-closed residual backtest' || true
+          git push origin HEAD:"$B2_BRANCH"
+
+      - name: Print status
+        run: |
+          cat morocco26/data/goal100/b2/v1/b2_extension_status.json
+          cat morocco26/data/goal100/b2/v1/b2_residual_backtest.json
