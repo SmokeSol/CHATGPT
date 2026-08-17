@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "edition_id": "2026-08-17",
+  "product_version": "V0.5",
+  "published_at": "2026-08-17T12:48:48+01:00",
+  "science_ref": "87f258f791372a60f40c0b4a0f904ebde1e51f2c",
+  "forecast_snapshot": "F-1",
+  "source_data_cutoff": "2026-08-16T22:43:00+01:00",
+  "projection_changed_since_previous": false,
+  "territories_changed_since_previous": 0,
+  "new_documented_signals_since_previous": 1,
+  "evidence_as_of": "2026-08-17T11:50:58+01:00",
+  "files": {
+    "current_snapshot.json": "c4ea016f13a3ec4c2dc7bd038b9d70e26a8ae132e4c1073cbc973c9c0bcc31c9",
+    "national_projection.json": "41a6bfa68c287c8b0b0e59bd253b32d6afeae9e63b355e121b017d8412f6130a",
+    "constituency_cards.json": "a8387b6c89acb5cc52c90f9d82bd9d7a54b0cbbfe8a5a3b0da860700039d450d",
+    "party_cards.json": "92c94fd5124c6a90f9d8b5d2e89e181d55c82a09d111d9e7ad0ea3f2066e319b",
+    "evidence_index.json": "26cc05860db48dd0307bb9b45c49971d821e9e3949fc40aa326e6cdc4baa6a9b",
+    "methodology_state.json": "fd3c8b2ddc0f0ce63092b0b1ce6f8307e377b97cdea2fa9f3cd1320633927d28",
+    "change_log.json": "2cf124cbce46e35cb4736dd554b0e0c3279ac74162edbd5c4bc54fcf6c990f32",
+    "snapshot_manifest.json": "21295b4c344bde081c7471f82085ffae19cb56572376b86814b333735c4d1c0f"
+  },
+  "immutability": "OFFICIAL_EDITION_FILES_ARE_APPEND_ONLY_AND_NEVER_OVERWRITTEN",
+  "canonical_sha256": "5ded33657b7f007deca1ade520ad6a2a6c258468415a232fea8efd59a2d2e0a6"
+}

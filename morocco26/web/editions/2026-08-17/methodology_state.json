@@ -1,0 +1,114 @@
+{
+  "snapshot": {
+    "product": "ATLAS 395",
+    "snapshot_id": "F-1",
+    "snapshot_class": "STRUCTURAL_PROBABILISTIC_FORECAST",
+    "created_at": "2026-08-16T22:43:00+01:00",
+    "data_cutoff": "2026-08-16T22:43:00+01:00",
+    "protocol_id": "M26-GOAL100-FMINUS1-PROTOCOL-V1.1",
+    "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "status": "FROZEN",
+    "draws": 50000,
+    "geometry": {
+      "local_constituencies": 92,
+      "local_seats": 305,
+      "regional_constituencies": 12,
+      "regional_seats": 90,
+      "total_seats": 395
+    },
+    "evidence_state": {
+      "candidate": "NONE_STRUCTURAL_ONLY",
+      "event": "NONE_STRUCTURAL_ONLY",
+      "registered_N": "LATENT_CONSTRAINED_NOT_OFFICIAL"
+    },
+    "timeline": [
+      {
+        "id": "F-1",
+        "status": "FROZEN",
+        "created_at": "2026-08-16T22:43:00+01:00",
+        "class": "STRUCTURAL_PROBABILISTIC_FORECAST",
+        "sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1"
+      },
+      {
+        "id": "F0",
+        "status": "NOT_CREATED"
+      },
+      {
+        "id": "E_collect",
+        "status": "LOCKED"
+      },
+      {
+        "id": "E_reason",
+        "status": "LOCKED"
+      },
+      {
+        "id": "E_full",
+        "status": "LOCKED"
+      }
+    ],
+    "known_limitations": [
+      "F-1 persists the 2021 structural mean and contains no 2026 candidate, defection, endorsement or event adjustment.",
+      "Local registered-voter counts are latent constrained draws, not official 2026 local counts.",
+      "Robust Uncertainty V2 was introduced after a prior-predictive legal-feasibility failure and before any forecast artifact; V1 and the failed executions remain preserved.",
+      "Vote uncertainty meets aggregate componentwise coverage thresholds; party-level historical coverage remains heterogeneous and is published in uncertainty_calibration_v2.json.",
+      "For a binding exact-remainder tie, F-1 marginalizes unknown candidate-age ordering using a frozen exchangeable prior; verified ages may replace it only in a later immutable snapshot.",
+      "The invalid-ballot/valid-vote fraction is a shrunk 2011 structural persistence without an additional F-1 shock.",
+      "The regional ballot uses a structural bridge from local innovations because only 2021 supplies the current regional-list ballot.",
+      "Only lists with positive 2021 votes are eligible in F-1; verified 2026 list changes belong to B2/F0 or later snapshots."
+    ],
+    "read_only_contract": true
+  },
+  "model": {
+    "forecast_label": "STRUCTURAL_ONLY_NO_CANDIDATE_EVENT_OR_AGENTIC_ADJUSTMENT",
+    "calibration_status": "ROBUST_AGGREGATE_COVERAGE_CALIBRATED_2026_UNTOUCHED",
+    "party_buckets": [
+      "RNI",
+      "PAM",
+      "PI",
+      "PJD",
+      "USFP",
+      "MP",
+      "UC",
+      "PPS",
+      "OTHER"
+    ],
+    "national_projection_origin": "Aggregation of territorial Monte Carlo simulations in frozen F-1 artifact."
+  },
+  "certification": {
+    "forecast_hash_verified": true,
+    "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "expected_forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "draws": 50000,
+    "local_constituencies": 92,
+    "regional_constituencies": 12,
+    "total_seats": 395
+  },
+  "b2": {
+    "phase": "B2_IDENTITY_TERRITORY_CERTIFIED_HISTORICAL_PANEL_PENDING",
+    "closed_gates": [
+      "B2-0-PROTOCOL-FROZEN",
+      "B2-1-SOURCE-UNIVERSE-FROZEN",
+      "B2-2-IDENTITY-TERRITORY-CROSSWALK"
+    ],
+    "open_gates": [
+      "B2-3-HISTORICAL-FEATURE-PANEL",
+      "B2-4-2026-BALLOT-ROSTER",
+      "B2-5-PROVENANCE-CONFLICT-AUDIT",
+      "B2-6-EFFECT-CALIBRATION",
+      "B2-7-B2-FROZEN"
+    ],
+    "locked_gates": [
+      "B2-8-F0-COUNTERFACTUAL-SIMULATION",
+      "E-COLLECT-PREREGISTERED",
+      "E-REASON-PREREGISTERED",
+      "E-FULL-PREREGISTERED"
+    ],
+    "predictive_coefficients": "ALL_EXACTLY_ZERO_PENDING_HISTORICAL_CALIBRATION"
+  },
+  "scientific_separation": {
+    "atlas_views_are_model_inputs": false,
+    "atlas_writes_scientific_artifacts": false,
+    "unknown_preserved": true,
+    "f_minus_1_mutable": false
+  }
+}
