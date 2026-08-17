@@ -1,0 +1,46 @@
+name: Atlas 395 — Daily Scheduler
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 5 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atlas395-v05-publish
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: atlas395-v0
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Publish the official Atlas daily edition
+        run: bash morocco26/scripts/atlas395_daily_publish.sh
+      - name: Check reader interface syntax
+        shell: bash
+        run: |
+          node --check morocco26/web/app.js
+          for f in morocco26/web/assets/*.js; do node --check "$f"; done
+      - name: Enforce product-only write boundary
+        shell: bash
+        run: |
+          bad="$(git status --porcelain | awk '{print $2}' | grep -Ev '^morocco26/web/(data|editions)/' || true)"
+          if [ -n "$bad" ]; then echo "Daily publisher modified forbidden paths:"; echo "$bad"; exit 1; fi
+      - name: Commit daily edition
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- morocco26/web/data morocco26/web/editions)" ]; then echo "No daily product changes."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/web/data morocco26/web/editions
+          git commit -m "atlas395: publish daily edition $(TZ=Africa/Casablanca date +%F)"
+          git push origin HEAD:atlas395-v0
