@@ -1,0 +1,81 @@
+name: morocco26-b2-source-universe
+
+on:
+  push:
+    branches: [morocco26-b2]
+    paths:
+      - 'morocco26/data/goal100/b2_source_registry.json'
+      - 'morocco26/scripts/goal100_probe_b2_source_universe.py'
+      - 'morocco26/scripts/validate_b2_source_universe.py'
+      - 'morocco26/scripts/validate_b2_protocol.py'
+      - '.github/workflows/morocco26-b2-source-universe.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-b2-source-universe
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  probe-freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-b2
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet requests
+
+      - name: Compile source-universe gate
+        run: |
+          python -m py_compile \
+            morocco26/scripts/goal100_probe_b2_source_universe.py \
+            morocco26/scripts/validate_b2_source_universe.py \
+            morocco26/scripts/validate_b2_protocol.py
+
+      - name: Verify pre-probe B2 protocol boundary
+        run: python morocco26/scripts/validate_b2_protocol.py
+
+      - name: Probe frozen sources and apply bounded transition only on PASS
+        run: python morocco26/scripts/goal100_probe_b2_source_universe.py
+
+      - name: Enforce B2-1 source-universe gate
+        id: enforce
+        continue-on-error: true
+        run: python morocco26/scripts/validate_b2_source_universe.py
+
+      - name: Validate full registered and B2 state after PASS
+        if: steps.enforce.outcome == 'success'
+        run: |
+          python morocco26/scripts/validate_b2_protocol.py
+          python morocco26/scripts/validate_goal100_tracking.py
+          python morocco26/scripts/validate_anti_drift.py
+
+      - name: Persist PASS or FAIL evidence append-only
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+SmokeSol@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/b2_source_registry.json \
+            morocco26/data/goal100/b2_source_universe_probe.json \
+            morocco26/data/goal100/b2_source_universe_certificate.json \
+            morocco26/data/goal100/b2_gate_registry.json \
+            morocco26/data/goal100/b2_current_state.json \
+            morocco26/data/goal100/fil_ariane_events \
+            morocco26/FIL_ARIANE.md
+          git commit -m 'milestone(morocco26): record B2 source-universe smoke result' || true
+          git pull --rebase origin morocco26-b2
+          git push origin HEAD:morocco26-b2
+
+      - name: Fail closed if B2-1 did not pass
+        if: steps.enforce.outcome != 'success'
+        run: |
+          echo 'B2-1 source universe remains OPEN; evidence was persisted.'
+          exit 1
