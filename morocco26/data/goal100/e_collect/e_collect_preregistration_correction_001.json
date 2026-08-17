@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "correction_id": "M26-E-COLLECT-PREREG-CORRECTION-001",
+  "recorded_at": "2026-08-17T17:25:00+01:00",
+  "status": "PRE_EXECUTION_HASH_CORRECTION",
+  "reason": "The first CI validation exposed that the preregistration recorded an incorrect SHA-256 for the already-frozen 92-row B2 Arabic roster. The repository file itself was never modified.",
+  "affected_protected_artifact": "morocco26/data/goal100/b2_2026_ballot_roster.json",
+  "git_blob_sha1": "f707f9ebf112d25f68db77815be155d3e078ebd3",
+  "incorrect_recorded_sha256": "b702b92929f7271c0309c0e3a8d4336b6e1bd79ee87a222b0cf834bc37c767ac",
+  "correct_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+  "discovery": {
+    "workflow": "morocco26-e-collect-prereg",
+    "run_id": 32045440419,
+    "ci_observed_sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86"
+  },
+  "scientific_impact": "NONE",
+  "checks": {
+    "agentic_execution_started": false,
+    "collector_run_id_exists": false,
+    "roster_content_modified": false,
+    "f0_modified": false,
+    "b2_modified": false,
+    "source_policy_changed": false,
+    "scoring_contract_changed": false,
+    "benchmark_membership_changed": false
+  },
+  "supersession_rule": "This correction supersedes only the erroneous recorded roster digest and dependent preregistration hashes. The causal question, test membership, thresholds, source policy and scoring rules are unchanged."
+}

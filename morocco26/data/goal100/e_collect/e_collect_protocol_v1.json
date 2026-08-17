@@ -21,7 +21,7 @@
   "frozen_test_corpus": {
     "arabic_roster": {
       "path": "morocco26/data/goal100/b2_2026_ballot_roster.json",
-      "sha256": "b702b92929f7271c0309c0e3a8d4336b6e1bd79ee87a222b0cf834bc37c767ac",
+      "sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
       "rows": 92,
       "baseline_resolved": 0,
       "rule": "All 92 rows are evaluated. No row may be dropped, replaced, translated into a new test row, or silently corrected."

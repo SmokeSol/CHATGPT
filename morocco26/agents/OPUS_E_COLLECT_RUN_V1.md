@@ -52,7 +52,7 @@ Do **not** broaden to all 2026 parties yet.
 ### Corpus A: 92 Arabic PJD rows
 Input is exactly:
 `morocco26/data/goal100/b2_2026_ballot_roster.json`
-SHA-256: `b702b92929f7271c0309c0e3a8d4336b6e1bd79ee87a222b0cf834bc37c767ac`
+SHA-256: `b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86`
 
 For every one of the 92 rows:
 1. preserve its source Arabic strings;
