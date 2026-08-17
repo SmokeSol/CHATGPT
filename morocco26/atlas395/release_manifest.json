@@ -1,11 +1,16 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "product": "Atlas 395",
   "current_version": "V0.5",
-  "release_name": "Atlas Daily",
+  "release_name": "Atlas Daily Intelligence",
   "released_on": "2026-08-17",
   "status": "LIVE",
   "capabilities": [
+    "autonomous_public_source_intake",
+    "whitelisted_same_domain_discovery",
+    "sitemap_rss_atom_and_internal_link_scanning",
+    "append_only_daily_intake_archive",
+    "detected_signal_quarantine_without_automatic_forecast_effect",
     "official_daily_editions",
     "immutable_daily_history",
     "day_over_day_projection_diff",
@@ -14,6 +19,14 @@
     "read_only_scientific_handoff",
     "premium_institutional_reader_ui"
   ],
+  "daily_operating_model": {
+    "execution": "GitHub Actions scheduled job; no persistent server required",
+    "source_universe": "Latest certified B2 acquisition surface used only as an Atlas Intake whitelist",
+    "intake_output": "morocco26/atlas395/intake/",
+    "forecast_source": "Latest physically present and hash-valid snapshot registered on morocco26-b2",
+    "publication_output": "morocco26/web/data/ and immutable morocco26/web/editions/YYYY-MM-DD/",
+    "automatic_forecast_mutation_from_intake": false
+  },
   "promotion_policy": {
     "V1": "Promote when a new 2026 probabilistic forecast snapshot is registered under the scientific protocol and the product can expose validated 2026 information effects without changing historical editions.",
     "V2": "Promote when daily evidence propagation and movement analysis are stable enough to rank meaningful 24h/7d territorial changes.",
@@ -22,6 +35,8 @@
   "scientific_boundary": {
     "atlas_may_write_scientific_artifacts": false,
     "atlas_daily_reads_science_branch": true,
+    "atlas_intake_writes_science_branch": false,
+    "atlas_intake_may_change_forecast": false,
     "official_daily_editions_are_immutable": true
   }
 }
