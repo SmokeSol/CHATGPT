@@ -198,3 +198,13 @@ de `core.autocrlf=true`. Intégrité F-1 : `INTACT`. Aucun artefact F-1 n'a ét�
 **Prochaine action exacte :** décider entre (a) un amendement versionné de l'univers de sources ouvrant une
 surface historique de rosters de candidats, et (b) le maintien de `C_UNIDENTIFIABLE_UNDER_FROZEN_PROTOCOL`.
 Dans les deux cas aucun coefficient prédictif ne bouge et `B2-4` reste le prochain gate exécutable.
+
+### 2026-08-17 11:28 +01 — North Star V2 / Atlas 395
+
+**Changement de North Star versionné.** Le contrat produit canonique devient `morocco26/NORTH_STAR.md` (`MOROCCO//26 — NORTH STAR V2`, direction gelée le 2026-08-17). Atlas 395 devient la couche produit : une intelligence électorale probabiliste, territory-first, sourcée, versionnée et falsifiable, qui doit répondre continuellement à quatre questions : ce que nous savons, la source, ce que l'information change réellement et le niveau d'incertitude.
+
+**Aucune réécriture scientifique.** Le North Star historique conservé en tête de ce fichier reste l'objectif scientifique original. F-1 reste immuable ; le protocole B2 V1.1, ses seuils, son backtest, ses coefficients et ses stop rules ne sont pas modifiés par cette évolution produit. L'expérience reste `F-1 → B2 → F0 → E_collect → E_reason → E_full → élection → falsification hors échantillon`.
+
+**Séparation produit / science.** Les futures surfaces Atlas 395 doivent être des vues dérivées READ-ONLY quand elles sont peu coûteuses à produire. Elles ne deviennent jamais des entrées modèle, ne modifient jamais les preuves sources ni un snapshot gelé, et ne doivent pas retarder B2-3/B2-4 ou l'expérience agentique.
+
+**Priorité d'exécution.** Finir B2 V1.1/B2-4 en parallèle d'un Atlas 395 V0 dérivé de F-1 ; ensuite produire F0, activer `What Changed?`, puis atteindre et geler `E_collect`, `E_reason` et `E_full` avant l'élection.
