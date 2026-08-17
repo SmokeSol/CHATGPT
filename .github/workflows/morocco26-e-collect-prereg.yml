@@ -1,0 +1,24 @@
+name: morocco26-e-collect-prereg
+
+on:
+  push:
+    branches:
+      - morocco26-e-collect
+    paths:
+      - 'morocco26/data/goal100/e_collect/**'
+      - 'morocco26/data/goal100/b2_2026_ballot_roster.json'
+      - 'morocco26/data/goal100/forecasts/F0/forecast.json'
+      - 'morocco26/scripts/validate_e_collect_prereg.py'
+      - '.github/workflows/morocco26-e-collect-prereg.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-preregistration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate frozen E_collect preregistration
+        run: python morocco26/scripts/validate_e_collect_prereg.py
