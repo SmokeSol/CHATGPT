@@ -1,0 +1,18 @@
+{
+  "source_id": "H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS",
+  "bucket": "cdx/2011",
+  "original_url": "https://web.archive.org/cdx/search/cdx?url=www.usfp.ma%2F*&output=json&from=20110101&to=20111125&limit=2000",
+  "final_url": "https://web.archive.org/cdx/search/cdx?url=www.usfp.ma%2F*&output=json&from=20110101&to=20111125&limit=2000",
+  "retrieved_at": "2026-08-17T11:49:18+01:00",
+  "http_status": 200,
+  "content_type": "application/json",
+  "content_length": 158893,
+  "sha256": "c9f914fdd2006793ec70e13bbd0ac06dc21c7de06a817e166b844c554f8b087e",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.1)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

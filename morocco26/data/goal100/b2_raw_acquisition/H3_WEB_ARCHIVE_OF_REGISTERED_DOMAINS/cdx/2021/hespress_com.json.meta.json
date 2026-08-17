@@ -1,0 +1,18 @@
+{
+  "source_id": "H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS",
+  "bucket": "cdx/2021",
+  "original_url": "https://web.archive.org/cdx/search/cdx?url=hespress.com%2F*&output=json&from=20210101&to=20210908&limit=2000",
+  "final_url": "https://web.archive.org/cdx/search/cdx?url=hespress.com%2F*&output=json&from=20210101&to=20210908&limit=2000",
+  "retrieved_at": "2026-08-17T11:37:18+01:00",
+  "http_status": 200,
+  "content_type": "application/json",
+  "content_length": 696671,
+  "sha256": "0524a61d8693186bacd95b22cfe318b8d26b79ad0706af952ab926228eebf7eb",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.1)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

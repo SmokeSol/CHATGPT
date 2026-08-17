@@ -1,0 +1,18 @@
+{
+  "source_id": "H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS",
+  "bucket": "cdx/2011",
+  "original_url": "https://web.archive.org/cdx/search/cdx?url=www.lematin.ma%2F*&output=json&from=20110101&to=20111125&limit=2000",
+  "final_url": "https://web.archive.org/cdx/search/cdx?url=www.lematin.ma%2F*&output=json&from=20110101&to=20111125&limit=2000",
+  "retrieved_at": "2026-08-17T11:44:26+01:00",
+  "http_status": 200,
+  "content_type": "application/json",
+  "content_length": 333283,
+  "sha256": "da481147f508aa034317e3c8633966f20e802a71c2f5a57cae51c20845608fc1",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.1)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

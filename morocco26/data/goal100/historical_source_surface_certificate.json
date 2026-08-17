@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.1",
+  "certificate_id": "M26-GOAL100-B2-HISTORICAL-SOURCE-SURFACE-CERTIFICATE-V1.1",
+  "amendment_id": "M26-GOAL100-B2-HISTORICAL-SOURCE-SURFACE-V1.1",
+  "certified_at": "2026-08-17T11:14:31+01:00",
+  "gate": "PASS",
+  "source_surface_path": "morocco26/data/goal100/historical_source_surface_v1_1.json",
+  "source_surface_sha256": "e0fe3585d24ca50fe023b1d7747ae2dba4f0be946dbe86b6a56e33caebf158df",
+  "acquisition_protocol_path": "morocco26/data/goal100/historical_acquisition_protocol_v1_1.json",
+  "acquisition_protocol_sha256": "d5cb946bb641b342bc5907ee98007a02edc73bfe0fcbbf351a393a5585d23fe8",
+  "frozen_before_acquisition": true,
+  "checks": [
+    {
+      "check": "FEATURE_DEFINITIONS_UNCHANGED",
+      "expected": "M26-GOAL100-B2-FEATURE-DICTIONARY-V1",
+      "observed": "M26-GOAL100-B2-FEATURE-DICTIONARY-V1",
+      "passed": true,
+      "feature_count": 16,
+      "feature_dictionary_sha256": "a5e09c41cab9c77d97bc4f585039948a771d96a273a22ed37b0078a347bc6c08"
+    },
+    {
+      "check": "THRESHOLDS_UNCHANGED",
+      "coverage_threshold": 0.8,
+      "support_threshold": 30,
+      "fit_transition": "2011_TO_2016",
+      "validation_transition": "2016_TO_2021",
+      "passed": true
+    },
+    {
+      "check": "OUTCOMES_UNSEEN_BY_ACQUISITION_SYSTEM",
+      "outcome_signals_consulted": [],
+      "passed": true,
+      "note": "Roots were frozen at class level before any content inspection."
+    },
+    {
+      "check": "F_MINUS_1_UNCHANGED",
+      "declared_forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+      "manifest_forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+      "worktree_raw_sha256": "8c3ee52b45b3190572037b27461e6552a704142d3178cbe97345299280d2fa29",
+      "passed": true,
+      "note": "Compared against the snapshot manifest and protocol parent. The worktree raw digest may differ under a CRLF checkout without indicating any content change."
+    },
+    {
+      "check": "NO_PREDICTIVE_COEFFICIENT_CHANGED",
+      "state_value": "ALL_EXACTLY_ZERO_PENDING_HISTORICAL_CALIBRATION",
+      "panel_value": "ALL_PREDICTIVE_COEFFICIENTS_REMAIN_EXACTLY_ZERO",
+      "passed": true
+    },
+    {
+      "check": "NO_LLM_EXTRACTION_ALLOWED",
+      "extraction_rule": {
+        "llm_used": false,
+        "semantic_extraction_forbidden": true,
+        "permitted_methods": [
+          "STRUCTURED_API",
+          "HTML_TABLE_PARSER",
+          "PDF_TABLE_PARSER",
+          "DETERMINISTIC_REGEX",
+          "MANUAL_TRANSCRIPTION_RECONCILED"
+        ],
+        "unparsable_state": "UNPARSABLE_NONAGENTIC"
+      },
+      "passed": true
+    },
+    {
+      "check": "HISTORICAL_YEARS_NOW_EXPRESSIBLE",
+      "v1_expressible": [
+        2026
+      ],
+      "v1_1_expressible": [
+        2011,
+        2016,
+        2021
+      ],
+      "required": [
+        2016,
+        2021
+      ],
+      "passed": true
+    },
+    {
+      "check": "V1_REGISTRY_NOT_EDITED",
+      "v1_registry_sha256": "2e19e36b679d176a0e1ef7732d5a6e497968fbe18225208069323e7c97d77bd5",
+      "v1_status": "FROZEN_COLLECTION_ENABLED_BOUNDED",
+      "passed": true,
+      "note": "The amendment is a separate artifact; V1 remains frozen and unmodified."
+    },
+    {
+      "check": "B2_3_ATTEMPT_HISTORY_PRESERVED",
+      "attempts_archived": [
+        "panel_14f4ddb3748c0c38",
+        "panel_50f21891dae089a5",
+        "panel_8ed118cce63a5caf",
+        "panel_b2411a45ee07e178",
+        "panel_fe91b5a71237eae5"
+      ],
+      "passed": true
+    },
+    {
+      "check": "E_COLLECT_NOT_EXECUTED",
+      "agentic_experiment_locked": true,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "b2_3_state_at_freeze": {
+    "gate": "FAIL",
+    "features_identifiable": [
+      {
+        "transition_id": "2011_TO_2016",
+        "identifiable": 0
+      },
+      {
+        "transition_id": "2016_TO_2021",
+        "identifiable": 0
+      }
+    ],
+    "core_predictive_coverage": [
+      {
+        "transition_id": "2011_TO_2016",
+        "coverage": 0.0
+      },
+      {
+        "transition_id": "2016_TO_2021",
+        "coverage": 0.0
+      }
+    ],
+    "blocking_input_classes": 16
+  },
+  "scientific_boundary": "This certificate authorizes a wider deterministic acquisition surface only. It certifies no fact, no feature value, no coefficient and no forecast quantity.",
+  "canonical_certificate_sha256": "01c52e3ec3ae30eebfda30b95726ee85af69f31f5ec3f4175a4bd876c7cb4eec"
+}

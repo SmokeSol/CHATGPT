@@ -1,0 +1,18 @@
+{
+  "source_id": "H1_OPENAFRICA_CATALOG",
+  "bucket": "catalog",
+  "original_url": "https://open.africa/api/3/action/package_search?q=parlement&rows=100&start=0",
+  "final_url": "https://open.africa/api/3/action/package_search?q=parlement&rows=100&start=0",
+  "retrieved_at": "2026-08-17T11:26:33+01:00",
+  "http_status": 200,
+  "content_type": "application/json;charset=utf-8",
+  "content_length": 11446,
+  "sha256": "505001f5d435ce3ec6fbffaee68c9938334f6fd87b9f910ca2588cbc9f9e6421",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.1)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

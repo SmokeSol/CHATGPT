@@ -1,0 +1,18 @@
+{
+  "source_id": "H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS",
+  "bucket": "cdx/2011",
+  "original_url": "https://web.archive.org/cdx/search/cdx?url=alharaka.ma%2F*&output=json&from=20110101&to=20111125&limit=2000",
+  "final_url": "https://web.archive.org/cdx/search/cdx?url=alharaka.ma%2F*&output=json&from=20110101&to=20111125&limit=2000",
+  "retrieved_at": "2026-08-17T11:26:36+01:00",
+  "http_status": 200,
+  "content_type": "application/json",
+  "content_length": 178756,
+  "sha256": "bbdebade4f9b4342ea81b3682aa2c43787bc95001fbcf4f36d53e3e41427e76b",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.1)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

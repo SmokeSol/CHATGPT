@@ -1,0 +1,18 @@
+{
+  "source_id": "H2_HUGGINGFACE_ELECTRICSHEEPAFRICA",
+  "bucket": "catalog",
+  "original_url": "https://huggingface.co/api/datasets?author=electricsheepafrica&search=chambre&limit=1000",
+  "final_url": "https://huggingface.co/api/datasets?author=electricsheepafrica&search=chambre&limit=1000",
+  "retrieved_at": "2026-08-17T11:32:31+01:00",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "content_length": 15941,
+  "sha256": "c754c2bd495cd919eb022adcd51a6b6088aea9c683d28ddd43299550a5d03649",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.1)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

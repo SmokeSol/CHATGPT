@@ -208,3 +208,46 @@ Dans les deux cas aucun coefficient prédictif ne bouge et `B2-4` reste le proch
 **Séparation produit / science.** Les futures surfaces Atlas 395 doivent être des vues dérivées READ-ONLY quand elles sont peu coûteuses à produire. Elles ne deviennent jamais des entrées modèle, ne modifient jamais les preuves sources ni un snapshot gelé, et ne doivent pas retarder B2-3/B2-4 ou l'expérience agentique.
 
 **Priorité d'exécution.** Finir B2 V1.1/B2-4 en parallèle d'un Atlas 395 V0 dérivé de F-1 ; ensuite produire F0, activer `What Changed?`, puis atteindre et geler `E_collect`, `E_reason` et `E_full` avant l'élection.
+
+### 2026-08-17 — Amendement V1.1 de la surface de sources historiques et exécution B2-4
+
+**Diagnostic structurel.** Le registre de sources B2 V1 n'exprime que
+`[2026]` alors que B2-3 exige
+`[2016, 2021]`. C'est une omission définitionnelle de V1, pas une
+mesure d'indisponibilité des données historiques.
+
+**Amendement V1.1 gelé AVANT acquisition.** `M26-GOAL100-B2-HISTORICAL-SOURCE-SURFACE-V1.1`, portée
+`ACQUISITION_SURFACE_DEFINITIONS_ONLY`, hash `e0fe3585d24ca50fe023b1d7747ae2dba4f0be946dbe86b6a56e33caebf158df`. Trois surfaces ajoutées au
+niveau racine/classe avant toute inspection de contenu, selon deux tests indépendants du résultat :
+racine déjà présente dans la provenance du dépôt, ou miroir d'archive d'un domaine déjà enregistré. Les
+10 contrôles du certificat passent : dictionnaire de features inchangé, seuils inchangés (0,8 / 30),
+F-1 inchangé, aucun coefficient modifié, extraction LLM interdite, registre V1 non édité.
+
+**Acquisition exécutée.** Surfaces : `H1_OPENAFRICA_CATALOG`, `H2_HUGGINGFACE_ELECTRICSHEEPAFRICA`, `H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS`.
+Bloquées : `H1_OPENAFRICA_CATALOG`, `H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS`. Tronquées : `H2_HUGGINGFACE_ELECTRICSHEEPAFRICA`, `H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS`. Aucun jeu de données de roster de candidats marocains n'a
+été trouvé parmi `1093` noms énumérés.
+
+**Couverture B2-3 avant/après.** Inchangée : identifiables `0/16` (fit) et
+`0/16` (validation) ; couverture prédictive centrale
+`0.0` / `0.0` contre un seuil de
+`0.8` non affaibli. Le blocage résiduel dominant reste
+`HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR`.
+
+**État terminal B2-3 : `B2_3_DATA_BLOCKED_NONAGENTIC`.** Motif : Exhaustion is not established. Blocked or failing surfaces: ['H1_OPENAFRICA_CATALOG', 'H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS']. Truncated enumerations: ['H2_HUGGINGFACE_ELECTRICSHEEPAFRICA', 'H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS']. Pre-cutoff archived material reachable but not deterministically parsable into the required input classes: 11258 captures.
+L'exhaustion n'est revendiquée que si chaque surface est intégralement énumérée et joignable ; une
+énumération tronquée ou une route bloquée ne peut jamais fonder une affirmation d'absence.
+
+**B2-4 exécuté.** Table de roster 2026 analysée déterministiquement : `92` lignes,
+92 circonscriptions distinctes, 0 ligne malformée. Territoires résolus
+`0/92` : la table est en
+arabe et le crosswalk certifié ne porte que des alias latins. Aucune translittération n'a été inventée.
+Double saisie critique vérifiée : `0` ligne(s) ; source unique T1
+non autoritative. Gate `B2-4` reste `OPEN`, `0` claim B2 créé.
+
+**Réservé pour E_collect.** `16` classes d'entrée et
+`92` lignes 2026 non résolues. `E_collect` n'a pas
+été exécuté.
+
+**Prochain gate machine :** `B2-3-HISTORICAL-FEATURE-PANEL` reste le gate bloquant ; `B2-4` requiert soit
+une source T0 autoritative, soit un amendement versionné d'alias territoriaux arabes revus un par un.
+Coefficients exactement nuls, `B2_FROZEN = false`, `F0_CREATED = false`.

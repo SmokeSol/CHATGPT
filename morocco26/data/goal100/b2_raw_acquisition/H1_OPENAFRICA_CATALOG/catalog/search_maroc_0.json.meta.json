@@ -1,0 +1,18 @@
+{
+  "source_id": "H1_OPENAFRICA_CATALOG",
+  "bucket": "catalog",
+  "original_url": "https://open.africa/api/3/action/package_search?q=maroc&rows=100&start=0",
+  "final_url": "https://open.africa/api/3/action/package_search?q=maroc&rows=100&start=0",
+  "retrieved_at": "2026-08-17T11:26:33+01:00",
+  "http_status": 200,
+  "content_type": "application/json;charset=utf-8",
+  "content_length": 84292,
+  "sha256": "2a29aab24a295c32d5bb2bc00d46409c87b046b5681d48fe5584fd45a5b92396",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.1)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS",
+  "bucket": "cdx/2016",
+  "original_url": "https://web.archive.org/cdx/search/cdx?url=medias24.com%2F*&output=json&from=20160101&to=20161007&limit=2000",
+  "final_url": "https://web.archive.org/cdx/search/cdx?url=medias24.com%2F*&output=json&from=20160101&to=20161007&limit=2000",
+  "retrieved_at": "2026-08-17T11:33:58+01:00",
+  "http_status": 200,
+  "content_type": "application/json",
+  "content_length": 16526,
+  "sha256": "c09baf0579617bc5785ce67fc93a56424677c3506d8520adce17a4d5cb8c8089",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.1)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

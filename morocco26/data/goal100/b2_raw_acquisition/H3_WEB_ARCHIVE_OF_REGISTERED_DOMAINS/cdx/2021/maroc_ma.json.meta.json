@@ -1,0 +1,18 @@
+{
+  "source_id": "H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS",
+  "bucket": "cdx/2021",
+  "original_url": "https://web.archive.org/cdx/search/cdx?url=maroc.ma%2F*&output=json&from=20210101&to=20210908&limit=2000",
+  "final_url": "https://web.archive.org/cdx/search/cdx?url=maroc.ma%2F*&output=json&from=20210101&to=20210908&limit=2000",
+  "retrieved_at": "2026-08-17T11:41:00+01:00",
+  "http_status": 200,
+  "content_type": "application/json",
+  "content_length": 1631340,
+  "sha256": "ea591fa1510ca7a699bcfaa5601fde27a1842fb7b2e27dc98737bb14f6ed8fd5",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.1)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

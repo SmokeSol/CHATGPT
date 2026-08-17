@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "registry_id": "M26-GOAL100-B2-GATES-V1",
-  "as_of": "2026-08-17T11:04:43+01:00",
+  "as_of": "2026-08-17T11:50:58+01:00",
   "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
   "status_vocabulary": [
     "CLOSED",
@@ -41,10 +41,10 @@
       "required_artifact": "morocco26/data/goal100/b2_historical_panel_certificate.json",
       "closure_criterion": "Same-cutoff candidate/list feature panel covers at least 80% of 92 local territories in both 2011->2016 and 2016->2021; feature support counts are published.",
       "last_attempt": {
-        "certified_at": "2026-08-17T11:04:43+01:00",
+        "certified_at": "2026-08-17T11:50:58+01:00",
         "result": "FAIL",
         "certificate": "morocco26/data/goal100/b2_historical_panel_certificate.json",
-        "panel_sha256": "f5047decc2296a401dd1539ced0a29ebd204c01f296e44fc0b6b5284d1a0c915",
+        "panel_sha256": "3b8e7150b026c9c9fc35c7cd1eb66bd56437342f1879ade41e1aae69e95570a2",
         "blocking_missing_input_classes": [
           "HISTORICAL_CAMPAIGN_LAUNCH_TARGET_YEAR",
           "HISTORICAL_CANDIDATE_BIRTHDATE_TARGET_YEAR",
@@ -69,7 +69,16 @@
       "id": "B2-4-2026-BALLOT-ROSTER",
       "status": "OPEN",
       "required_artifact": "morocco26/data/goal100/b2_2026_ballot_certificate.json",
-      "closure_criterion": "Authoritative coverage of all 92 local and 12 regional contests, with list presence, candidates/ranks and effective withdrawals/disqualifications; missing official coverage remains explicit."
+      "closure_criterion": "Authoritative coverage of all 92 local and 12 regional contests, with list presence, candidates/ranks and effective withdrawals/disqualifications; missing official coverage remains explicit.",
+      "last_attempt": {
+        "certified_at": "2026-08-17T11:17:35+01:00",
+        "result": "FAIL",
+        "certificate": "morocco26/data/goal100/b2_2026_ballot_certificate.json",
+        "roster_sha256": "b702b92929f7271c0309c0e3a8d4336b6e1bd79ee87a222b0cf834bc37c767ac",
+        "rows_parsed": 92,
+        "verified_double_entry_rows": 0,
+        "territory_coverage_fraction": 0.0
+      }
     },
     {
       "id": "B2-5-PROVENANCE-CONFLICT-AUDIT",

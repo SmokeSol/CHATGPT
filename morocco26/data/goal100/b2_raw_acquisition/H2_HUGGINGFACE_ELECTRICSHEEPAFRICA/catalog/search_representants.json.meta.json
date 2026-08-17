@@ -1,0 +1,18 @@
+{
+  "source_id": "H2_HUGGINGFACE_ELECTRICSHEEPAFRICA",
+  "bucket": "catalog",
+  "original_url": "https://huggingface.co/api/datasets?author=electricsheepafrica&search=representants&limit=1000",
+  "final_url": "https://huggingface.co/api/datasets?author=electricsheepafrica&search=representants&limit=1000",
+  "retrieved_at": "2026-08-17T11:32:33+01:00",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "content_length": 1657,
+  "sha256": "c1fda038f640d86006c5f67506e0ee0da2fdbea25a04cc31558b860447de27b6",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.1)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

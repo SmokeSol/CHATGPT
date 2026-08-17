@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.1",
+  "amendment_id": "M26-GOAL100-B2-HISTORICAL-SOURCE-SURFACE-V1.1",
+  "supersedes": null,
+  "amends": "M26-GOAL100-B2-SOURCES-V1",
+  "amendment_scope": "ACQUISITION_SURFACE_DEFINITIONS_ONLY",
+  "status": "FROZEN_PRE_ACQUISITION",
+  "frozen_at": "2026-08-17T11:14:31+01:00",
+  "trigger_measurement": {
+    "v1_election_years_expressible": [
+      2026
+    ],
+    "v1_publication_floor_years": [
+      2025
+    ],
+    "b2_3_required_years": [
+      2016,
+      2021
+    ],
+    "prior_state_years": [
+      2011
+    ],
+    "diagnosis": "The V1 registry is structurally 2026-only and cannot express the 2016/2021 acquisition problem B2-3 requires. This is a definitional omission in V1, not a measurement that historical data is unobtainable."
+  },
+  "eligibility_tests": [
+    "ROOT_ALREADY_IN_REPOSITORY_PROVENANCE",
+    "ARCHIVE_MIRROR_OF_DOMAIN_ALREADY_IN_FROZEN_REGISTRY"
+  ],
+  "anti_overfit_declaration": {
+    "outcome_signals_consulted": [],
+    "residual_errors_consulted": false,
+    "party_results_consulted": false,
+    "feature_performance_consulted": false,
+    "selection_is_outcome_independent": true,
+    "roots_frozen_before_content_inspection": true,
+    "statement": "Sources were added at root/class level before any content was inspected. The question asked was which surface can establish the frozen factual input classes before the relevant cutoff, never which surface would explain an observed result."
+  },
+  "time_contract": {
+    "election_cutoffs": {
+      "2011": "2011-11-25T00:00:00+01:00",
+      "2016": "2016-10-07T00:00:00+01:00",
+      "2021": "2021-09-08T00:00:00+01:00"
+    },
+    "rule": "A historical fact is admissible only if publicly available before the cutoff of the election being predicted. Historical truth alone is insufficient.",
+    "failure_state": "UNKNOWN_AT_CUTOFF",
+    "retrospective_biography_rule": "A retrospective source never manufactures pre-election knowledge."
+  },
+  "sources": [
+    {
+      "source_id": "H1_OPENAFRICA_CATALOG",
+      "source_class": "OPEN_DATA_CATALOG_ALREADY_IN_PROVENANCE",
+      "root": "open.africa",
+      "eligibility_basis": "ROOT_ALREADY_IN_REPOSITORY_PROVENANCE",
+      "provenance_evidence": [
+        "morocco26/data/goal100/historical/historical_ingest_manifest.json"
+      ],
+      "years": [
+        2011,
+        2016,
+        2021
+      ],
+      "rationale": "The 2011/2016/2021 legislative result files already ingested by M26-GOAL100-TAFRA-HISTORY-V1 come from this catalog. V1 never declared the catalog itself as an enumerable surface, only three individual download URLs.",
+      "expected_format": [
+        "application/json",
+        "text/csv",
+        "application/vnd.ms-excel",
+        "xlsx"
+      ],
+      "admissibility_basis": "ALREADY_ACCEPTED_PANEL_INPUT_PROVENANCE",
+      "deterministic_enumeration_method": {
+        "method": "CKAN_ACTION_API",
+        "routes": [
+          "/api/3/action/package_search?q={term}&rows={rows}&start={start}",
+          "/api/3/action/package_show?id={dataset}"
+        ],
+        "fixed_terms": [
+          "maroc",
+          "morocco",
+          "elections",
+          "parlement",
+          "candidat"
+        ],
+        "rows_per_page": 100,
+        "max_pages_per_term": 5,
+        "ordering": "lexicographic by package name",
+        "selection_rule": "Packages are retained by exact substring match on the fixed terms only. No semantic ranking, no relevance judgment, no LLM."
+      },
+      "cutoff_rule": "Dataset contents must describe an election at or before its own year; see time_contract."
+    },
+    {
+      "source_id": "H2_HUGGINGFACE_ELECTRICSHEEPAFRICA",
+      "source_class": "DATASET_HOST_ALREADY_IN_PROVENANCE",
+      "root": "huggingface.co",
+      "organization": "electricsheepafrica",
+      "eligibility_basis": "ROOT_ALREADY_IN_REPOSITORY_PROVENANCE",
+      "provenance_evidence": [
+        "morocco26/data/goal75/observed_elected_2021.json"
+      ],
+      "years": [
+        2011,
+        2016,
+        2021
+      ],
+      "rationale": "The 395 elected 2021 rows and the recovered 2011/2016 legislatures come from this organization. V1 never declared the organization as an enumerable surface, only one dataset identifier.",
+      "expected_format": [
+        "application/json",
+        "parquet",
+        "text/csv"
+      ],
+      "admissibility_basis": "ALREADY_ACCEPTED_PANEL_INPUT_PROVENANCE",
+      "deterministic_enumeration_method": {
+        "method": "HUGGINGFACE_HTTP_API",
+        "routes": [
+          "/api/datasets?author={organization}&limit={limit}",
+          "/api/datasets/{dataset}",
+          "/datasets/{dataset}/resolve/main/{file}"
+        ],
+        "limit": 1000,
+        "ordering": "lexicographic by dataset id",
+        "selection_rule": "All datasets of the recorded organization are enumerated; retention is by exact substring match on fixed terms. No semantic ranking, no LLM.",
+        "fixed_terms": [
+          "maroc",
+          "morocco",
+          "chambre",
+          "representants",
+          "candidat",
+          "election"
+        ]
+      },
+      "cutoff_rule": "Dataset contents must describe an election at or before its own year; see time_contract."
+    },
+    {
+      "source_id": "H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS",
+      "source_class": "ARCHIVE_MIRROR_OF_ALREADY_REGISTERED_DOMAIN",
+      "root": "web.archive.org",
+      "eligibility_basis": "ARCHIVE_MIRROR_OF_DOMAIN_ALREADY_IN_FROZEN_REGISTRY",
+      "mirrored_domains": [
+        "alharaka.ma",
+        "ar.le360.ma",
+        "ar.telquel.ma",
+        "chambredesrepresentants.ma",
+        "courconstitutionnelle.ma",
+        "es.le360.ma",
+        "fr.le360.ma",
+        "hespress.com",
+        "istiqlal.info",
+        "le360.ma",
+        "lematin.ma",
+        "listeselectorales.ma",
+        "maroc.ma",
+        "medias24.com",
+        "pam.ma",
+        "pjd.ma",
+        "possible.ma",
+        "pps.ma",
+        "rni.ma",
+        "sgg.gov.ma",
+        "snrtnews.com",
+        "telquel.ma",
+        "usfp.ma",
+        "www.alharaka.ma",
+        "www.chambredesrepresentants.ma",
+        "www.courconstitutionnelle.ma",
+        "www.hespress.com",
+        "www.istiqlal.info",
+        "www.le360.ma",
+        "www.lematin.ma",
+        "www.listeselectorales.ma",
+        "www.maroc.ma",
+        "www.medias24.com",
+        "www.pam.ma",
+        "www.pjd.ma",
+        "www.possible.ma",
+        "www.pps.ma",
+        "www.rni.ma",
+        "www.sgg.gov.ma",
+        "www.snrtnews.com",
+        "www.telquel.ma",
+        "www.usfp.ma"
+      ],
+      "years": [
+        2011,
+        2016,
+        2021
+      ],
+      "rationale": "The frozen protocol already contemplates ARCHIVE_COPY as a publication type and archive_locator as a source field. This introduces no new publisher: it can only return snapshots of domains that are already inside the frozen registry, which is what makes pre-cutoff availability provable rather than assumed.",
+      "expected_format": [
+        "text/html",
+        "application/pdf",
+        "text/xml"
+      ],
+      "admissibility_basis": "FROZEN_SCHEMA_PUBLICATION_TYPE_ARCHIVE_COPY",
+      "deterministic_enumeration_method": {
+        "method": "WAYBACK_CDX_API",
+        "routes": [
+          "/cdx/search/cdx?url={domain}{path_wildcard}&output=json&from={from_ts}&to={to_ts}&limit={limit}",
+          "/web/{timestamp}id_/{original_url}"
+        ],
+        "path_wildcard": "*",
+        "limit": 2000,
+        "ordering": "lexicographic by (original url, timestamp)",
+        "selection_rule": "Snapshots are selected only by domain membership in the frozen registry and by capture timestamp strictly before the relevant election cutoff. Content is never used to decide whether to retrieve."
+      },
+      "cutoff_rule": "Only captures with timestamp strictly before the election cutoff establish pre-cutoff availability. A later capture of an earlier fact is UNKNOWN_AT_CUTOFF."
+    }
+  ],
+  "immutable_under_this_amendment": [
+    "b2_feature_dictionary_v1.json",
+    "feature definitions and prediction targets",
+    "fit/validation split 2011->2016 / 2016->2021",
+    "core panel coverage threshold 0.8",
+    "binary feature minimum support 30",
+    "residual backtest and scoring rules",
+    "all predictive coefficients (exactly zero)",
+    "party crosswalk and territory geometry",
+    "F-1 and the registered 2026 forecast"
+  ],
+  "extraction_rule": {
+    "llm_used": false,
+    "semantic_extraction_forbidden": true,
+    "permitted_methods": [
+      "STRUCTURED_API",
+      "HTML_TABLE_PARSER",
+      "PDF_TABLE_PARSER",
+      "DETERMINISTIC_REGEX",
+      "MANUAL_TRANSCRIPTION_RECONCILED"
+    ],
+    "unparsable_state": "UNPARSABLE_NONAGENTIC"
+  },
+  "e_collect_boundary": "E_collect remains LOCKED and is not executed by this amendment.",
+  "canonical_surface_sha256": "e0fe3585d24ca50fe023b1d7747ae2dba4f0be946dbe86b6a56e33caebf158df"
+}

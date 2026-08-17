@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-GOAL100-B2-2026-BALLOT-CERTIFICATE-V1",
+  "gate_id": "B2-4-2026-BALLOT-ROSTER",
+  "certified_at": "2026-08-17T11:17:35+01:00",
+  "gate": "FAIL",
+  "roster_path": "morocco26/data/goal100/b2_2026_ballot_roster.json",
+  "roster_sha256": "b702b92929f7271c0309c0e3a8d4336b6e1bd79ee87a222b0cf834bc37c767ac",
+  "determinism": {
+    "llm_used": false,
+    "semantic_selection": false
+  },
+  "rows_parsed": 92,
+  "constituencies_covered": 0,
+  "certified_local_constituencies": 92,
+  "territory_coverage_fraction": 0.0,
+  "parties_covered": [
+    "PJD"
+  ],
+  "party_source_map": {
+    "PJD": "T1_PJD_OFFICIAL"
+  },
+  "verified_double_entry_rows": 0,
+  "single_source_rows": 0,
+  "ambiguous_deterministic_match_rows": 92,
+  "conflict_rows": 0,
+  "unknown_rows": 0,
+  "blocked_source_documents": 10,
+  "source_class_breakdown": {
+    "T0_authoritative_structured_tables": 0,
+    "T1_party_official": 1,
+    "T2_media": 0
+  },
+  "b2_claim_records_created": 0,
+  "coefficients_after_gate": "ALL_PREDICTIVE_COEFFICIENTS_REMAIN_EXACTLY_ZERO",
+  "failures": [
+    {
+      "kind": "NO_ROW_SATISFIES_CRITICAL_DOUBLE_ENTRY",
+      "verified_rows": 0,
+      "rule": "T1 single-source rows cannot become verified evidence."
+    },
+    {
+      "kind": "TERRITORY_COVERAGE_INCOMPLETE",
+      "observed": 0.0,
+      "required": 1.0,
+      "note": "B2-4 requires authoritative coverage of all 92 local and 12 regional contests."
+    }
+  ],
+  "scientific_boundary": "This certificate reports parsed roster structure and corroboration state only. It certifies no candidacy, no ballot presence and no predictive quantity.",
+  "canonical_certificate_sha256": "9c3d97b6a8204f4b184ab074b2df77657befbc40080dad5afc5be1ccec8877ec"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS",
+  "bucket": "cdx/2011",
+  "original_url": "https://web.archive.org/cdx/search/cdx?url=chambredesrepresentants.ma%2F*&output=json&from=20110101&to=20111125&limit=2000",
+  "final_url": "https://web.archive.org/cdx/search/cdx?url=chambredesrepresentants.ma%2F*&output=json&from=20110101&to=20111125&limit=2000",
+  "retrieved_at": "2026-08-17T11:34:38+01:00",
+  "http_status": 200,
+  "content_type": "application/json",
+  "content_length": 3,
+  "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.1)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

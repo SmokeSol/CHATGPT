@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.1",
+  "protocol_id": "M26-GOAL100-B2-HISTORICAL-ACQUISITION-PROTOCOL-V1.1",
+  "parent_protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "status": "FROZEN_PRE_ACQUISITION",
+  "frozen_at": "2026-08-17T11:14:31+01:00",
+  "source_surface_id": "M26-GOAL100-B2-HISTORICAL-SOURCE-SURFACE-V1.1",
+  "source_surface_sha256": "e0fe3585d24ca50fe023b1d7747ae2dba4f0be946dbe86b6a56e33caebf158df",
+  "acquisition_order": {
+    "rule": "Priority follows the frozen feature/input dependency graph, never forecast impact.",
+    "primary": {
+      "input_class": "HISTORICAL_CANDIDATE_ROSTER_TARGET_YEAR",
+      "years": [
+        2016,
+        2021
+      ],
+      "reason": "Sole dominant blocker: it is the only blocker for B2_P01 and B2_P02 and appears in 14 of 32 feature-by-transition cells.",
+      "fields_sought": [
+        "candidate identity",
+        "party",
+        "constituency",
+        "list rank where structured",
+        "source",
+        "pre-cutoff timestamp validity"
+      ]
+    },
+    "secondary": [
+      "HISTORICAL_CANDIDATE_RANK_TARGET_YEAR",
+      "HISTORICAL_PARTY_SWITCH_TARGET_YEAR",
+      "HISTORICAL_LOCAL_OFFICE_HOLDING_TARGET_YEAR",
+      "HISTORICAL_PARTY_OFFICE_TARGET_YEAR",
+      "HISTORICAL_FORMAL_DEFECTION_TARGET_YEAR",
+      "HISTORICAL_FORMAL_ENDORSEMENT_TARGET_YEAR",
+      "HISTORICAL_FORMAL_ALLIANCE_TARGET_YEAR"
+    ]
+  },
+  "record_states": [
+    "VERIFIED",
+    "UNKNOWN",
+    "UNKNOWN_AT_CUTOFF",
+    "BLOCKED_SOURCE",
+    "UNPARSABLE_NONAGENTIC",
+    "AMBIGUOUS_DETERMINISTIC_MATCH"
+  ],
+  "absence_rule": "Non-retrieval is never absence and never a false value.",
+  "identity_rule": "Territory and party resolution uses the certified crosswalk only; no fuzzy matching.",
+  "vault_rule": "Every retrieved object enters the immutable raw vault with its retrieval digest.",
+  "termination_states": [
+    "B2_3_BACKTEST_UNLOCKED",
+    "B2_3_DATA_BLOCKED_NONAGENTIC",
+    "B2_3_UNIDENTIFIABLE_AFTER_V1_1_EXHAUSTION"
+  ],
+  "canonical_protocol_sha256": "d5cb946bb641b342bc5907ee98007a02edc73bfe0fcbbf351a393a5585d23fe8"
+}

@@ -1,0 +1,18 @@
+{
+  "source_id": "H1_OPENAFRICA_CATALOG",
+  "bucket": "catalog",
+  "original_url": "https://open.africa/api/3/action/package_search?q=morocco&rows=100&start=0",
+  "final_url": "https://open.africa/api/3/action/package_search?q=morocco&rows=100&start=0",
+  "retrieved_at": "2026-08-17T11:32:30+01:00",
+  "http_status": 200,
+  "content_type": "application/json;charset=utf-8",
+  "content_length": 205003,
+  "sha256": "15157ce8d88de0eb882e67c77ac6357ce4bddd94f1a9298792167835de49109e",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.1)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}

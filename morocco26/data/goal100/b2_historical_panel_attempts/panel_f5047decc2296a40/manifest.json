@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "archived_at": "2026-08-17T11:50:58+01:00",
+  "prior_panel_sha256": "f5047decc2296a401dd1539ced0a29ebd204c01f296e44fc0b6b5284d1a0c915",
+  "prior_gate": "FAIL",
+  "prior_certified_at": "2026-08-17T11:04:43+01:00",
+  "prior_features_identifiable": [
+    {
+      "transition_id": "2011_TO_2016",
+      "features_identifiable": 0
+    },
+    {
+      "transition_id": "2016_TO_2021",
+      "features_identifiable": 0
+    }
+  ],
+  "reason": "Superseded by a later B2-3 execution; retained because a gate attempt is evidence."
+}
