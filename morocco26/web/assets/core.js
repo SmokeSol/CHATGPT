@@ -53,10 +53,10 @@ const CARTOGRAM_CELLS = {
 
 const NAV = [
   ['overview','Synthèse nationale',''],
+  ['methodology','Méthodologie',''],
   ['territories','Carte territoriale','92'],
   ['parties','Partis','9'],
   ['signals','Signaux 2026',''],
-  ['methodology','Méthodologie',''],
   ['history','Historique','']
 ];
 let D = {};
@@ -128,21 +128,12 @@ function renderHeader(){
 }
 
 function renderMethodology(){
-  if(!$('#method-snapshot')) return;
-  const m = D.methodology || {};
-  const c = m.current_checkpoint || {};
-  const reserved = c.reserved_for_e_collect || m.agentic_experiment?.reserved_for_e_collect || {};
-  const draws = Number(c.draws || D.snapshot?.draws || 0);
-  $('#method-snapshot').textContent = c.snapshot_id || 'F0';
-  $('#method-snapshot-date').textContent = c.created_at ? `gelé le ${dateFr(c.created_at)}` : 'version gelée';
-  $('#method-draws').textContent = draws ? draws.toLocaleString('fr-FR') : '—';
-  $('#method-cutoff').textContent = dateFr(c.data_cutoff || D.snapshot?.data_cutoff);
-  $('#method-facts-effect').textContent = c.distribution_equivalence_to_parent === 'EXACT' ? '0' : '—';
-  const historical = Number(reserved.historical_input_classes || 16);
-  const arabic = Number(reserved.unresolved_arabic_rows || 92);
-  $('#method-reserved').textContent = `${historical} + ${arabic}`;
-  $('#method-audit-snapshot').textContent = c.snapshot_id || 'F0';
-  $('#method-audit-status').textContent = c.status || 'REGISTERED_IMMUTABLE';
-  $('#method-audit-cutoff').textContent = c.data_cutoff || '—';
-  $('#method-audit-hash').textContent = c.forecast_artifact_sha256 || '—';
+  if(!$('#method-version')) return;
+  const m = D.methodology?.public_methodology || {};
+  const draws = Number(m.draws || D.snapshot?.draws || 0);
+  $('#method-version').textContent = m.reference_status || 'Gelée';
+  $('#method-version-date').textContent = m.reference_date ? `depuis le ${dateFr(m.reference_date)}` : 'avant le scrutin';
+  $('#method-draws').textContent = draws ? draws.toLocaleString('fr-FR') : '50 000';
+  $('#method-seats').textContent = Number(m.total_seats || 395).toLocaleString('fr-FR');
+  $('#method-manual-bonus').textContent = String(m.manual_party_bonus || 0);
 }
