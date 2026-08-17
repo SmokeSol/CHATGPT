@@ -133,3 +133,62 @@ Chaque entrée doit contenir, dans cet ordre :
 **Décision scientifique :** `F-1` est désormais enregistré comme prior structurel non agentique. Le registre passe à `F0`. Toutes les expériences agentiques restent `LOCKED`.
 
 **Prochaine action exacte :** geler `B2` — schéma, admissibilité, cutoff, provenance, transformations et tests de non-fuite — avant toute collecte de candidats, listes, défections, endorsements ou événements.
+
+
+### 2026-08-17 — Entrée A018 — Gel du protocole B2 non agentique avant collecte
+
+**Question/gate traité :** `B2-0-PROTOCOL-FROZEN` — Comment ajouter des faits politiques structurés à F-1 sans introduire de raisonnement agentique, de fuite temporelle ou d'effets arbitraires ?
+
+**Hypothèse avant test :** B2 doit séparer les contraintes mécaniques des features prédictives et verrouiller tous les coefficients prédictifs à zéro jusqu'à un backtest historique preregistré.
+
+**Actions et artefacts créés :**
+
+- `data/goal100/b2_protocol_v1.json` ;
+- `data/goal100/b2_evidence_schema_v1.json` ;
+- `data/goal100/b2_feature_dictionary_v1.json` ;
+- `data/goal100/b2_gate_registry.json` ;
+- `data/goal100/b2_source_registry.json` ;
+- `data/goal100/b2_current_state.json` ;
+- `data/goal100/fil_ariane_events/A018.json`.
+
+**Résultat machine :** protocole `M26-GOAL100-B2-PROTOCOL-V1` figé sur le parent `F-1` hashé `de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1`. `B2-0` est `CLOSED` ; collecte autorisée = `false` ; coefficients prédictifs = `ALL_ZERO` ; gates agentiques = `ALL_LOCKED`.
+
+**Écarts, échecs ou corrections :** aucun claim politique n’a été collecté avant le gel. Le cutoff final des preuves reste volontairement non fixé : il sera inscrit une seule fois dans le certificat `B2-FROZEN`, sans possibilité de backdating.
+
+**Décisions anti-drift :**
+
+- Opinion polls are excluded from B2 V1.
+- LLM semantic extraction, sentiment and narrative salience are forbidden.
+- Missing evidence is NA, not zero.
+- Conflicts are excluded, not resolved by judgment.
+- A feature with insufficient historical support remains exactly zero in F0.
+- F-1 is referenced by hash and can never be overwritten.
+
+**Décision scientifique :** B2 protocol is frozen but collection remains locked until the source universe and deterministic query templates pass B2-1.
+
+**Prochaine action exacte :** Research and freeze the source/domain/document allowlist, independence clusters, archive rules and deterministic query templates; only then create B2 evidence records.
+
+
+### 2026-08-17 — Entrée A019 — Correction du validateur de provenance après squash
+
+**Question/gate traité :** pourquoi le workflow B2 `32001601015` a-t-il échoué après que `B2_PROTOCOL_PASS` a été obtenu ?
+
+**Hypothèse avant test :** l’échec vient d’une règle d’intégration devenue fausse après le squash de la PR #8, et non d’une divergence des artefacts F-1.
+
+**Résultat machine :** `The original registered-state validator required the pre-squash model commit to be an ancestor of HEAD. A squash merge intentionally destroys that ancestry relation although the commit object, remote ref and all immutable artifact hashes remain available.`
+
+**Correction :** Require the recorded model commit object to exist and be reachable from a fetched repository ref, then execute every original artifact, manifest, legal, geometry, N92 and forecast-hash check unchanged.
+
+**Impact scientifique :** `NONE`. Forecast modifié = `false` ; protocole modifié = `false` ; seuil modifié = `false`.
+
+**Invariants conservés :**
+
+- F-1 forecast SHA-256 remains de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1.
+- No model parameter, seed, draw, probability or seat output is altered.
+- Goal75 remains immutable at 75%.
+- B2 predictive coefficients remain zero.
+- All agentic gates remain locked.
+
+**Décision scientifique :** correction d’ingénierie versionnée. Le validateur d’origine conserve tous les checks de hashes ; seule la condition d’ascendance, inapplicable après squash, est remplacée par existence + reachability dans une ref récupérée.
+
+**Prochaine action exacte :** Rerun the B2 protocol workflow, commit A018/A019 to FIL_ARIANE, and only after PASS proceed to freeze the B2 source universe.
