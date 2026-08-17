@@ -1,136 +1,35 @@
 {
-  "snapshot": {
-    "product": "ATLAS 395",
-    "snapshot_id": "F-1",
-    "snapshot_class": "STRUCTURAL_PROBABILISTIC_FORECAST",
-    "created_at": "2026-08-16T22:43:00+01:00",
-    "data_cutoff": "2026-08-16T22:43:00+01:00",
-    "protocol_id": "M26-GOAL100-FMINUS1-PROTOCOL-V1.1",
-    "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
-    "status": "FROZEN",
-    "draws": 50000,
-    "geometry": {
-      "local_constituencies": 92,
-      "local_seats": 305,
-      "regional_constituencies": 12,
-      "regional_seats": 90,
-      "total_seats": 395
-    },
-    "evidence_state": {
-      "candidate": "NONE_STRUCTURAL_ONLY",
-      "event": "NONE_STRUCTURAL_ONLY",
-      "registered_N": "LATENT_CONSTRAINED_NOT_OFFICIAL"
-    },
-    "read_only_contract": true
-  },
-  "current_checkpoint": {
-    "snapshot_id": "F0",
-    "snapshot_class": "PRELIMINARY_PROBABILISTIC_FORECAST",
-    "status": "REGISTERED_IMMUTABLE",
-    "created_at": "2026-08-17T16:22:07+01:00",
+  "product": "ATLAS 395",
+  "public_methodology": {
+    "reference_status": "Gelée",
+    "reference_date": "2026-08-17T16:22:07+01:00",
     "data_cutoff": "2026-08-17T16:14:58+01:00",
     "draws": 50000,
-    "forecast_artifact_sha256": "fbe5197999f20d0612bc0c66e1954b5c611b11208e43a72eb5494a03b1e40d3f",
-    "distribution_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
-    "parent_snapshot_id": "F-1",
-    "distribution_equivalence_to_parent": "EXACT",
-    "mechanical_delta": "EXACT_ZERO",
-    "predictive_delta": "EXACT_ZERO",
-    "full_b2_delta": "EXACT_ZERO",
-    "b2_state": "FROZEN_NEGATIVE_RESULT",
-    "reserved_for_e_collect": {
-      "historical_input_classes": 16,
-      "unresolved_arabic_rows": 92
-    },
-    "interpretation_fr": "F0 est volontairement identique à la distribution F-1 : le protocole B2 n'a admis aucune contrainte mécanique 2026 et tous les coefficients prédictifs sont restés exactement nuls."
+    "total_seats": 395,
+    "local_constituencies": 92,
+    "regional_constituencies": 12,
+    "manual_party_bonus": 0,
+    "polls_used_in_current_projection": false,
+    "ai_used_to_adjust_reference_projection": false,
+    "old_versions_rewritten": false,
+    "missing_data_forced_to_zero": false,
+    "same_rules_for_all_parties": true,
+    "uncertainty_published": true,
+    "post_election_scoring_planned": true
   },
-  "timeline": [
-    {
-      "id": "F-1",
-      "status": "FROZEN",
-      "created_at": "2026-08-16T22:43:00+01:00",
-      "class": "STRUCTURAL_PROBABILISTIC_FORECAST",
-      "sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1"
-    },
-    {
-      "id": "B2",
-      "status": "FROZEN_NEGATIVE_RESULT",
-      "created_at": "2026-08-17T16:14:58+01:00"
-    },
-    {
-      "id": "F0",
-      "status": "REGISTERED_IMMUTABLE",
-      "created_at": "2026-08-17T16:22:07+01:00",
-      "class": "PRELIMINARY_PROBABILISTIC_FORECAST"
-    },
-    {
-      "id": "E_collect",
-      "status": "PREREGISTRATION_OPEN_EXECUTION_NOT_STARTED"
-    },
-    {
-      "id": "E_reason",
-      "status": "LOCKED"
-    },
-    {
-      "id": "E_full",
-      "status": "LOCKED"
-    }
-  ],
-  "model": {
-    "forecast_label": "STRUCTURAL_ONLY_NO_AGENTIC_ADJUSTMENT",
-    "party_buckets": [
-      "RNI",
-      "PAM",
-      "PI",
-      "PJD",
-      "USFP",
-      "MP",
-      "UC",
-      "PPS",
-      "OTHER"
-    ],
-    "national_projection_origin": "Agrégation de 50 000 simulations territoriales cohérentes couvrant les 395 sièges.",
-    "uncertainty_visible": true,
-    "polls_in_current_protocol": false
+  "current_public_interpretation": {
+    "projection_changed_by_new_2026_facts": false,
+    "reason_fr": "Des informations politiques 2026 ont déjà été repérées, mais aucune n'a encore satisfait toutes les conditions nécessaires pour justifier une modification chiffrée de la projection de référence.",
+    "concrete_example_fr": "Une liste structurée de 92 lignes en arabe a été repérée. Elle n'a pas été transformée en ajustement électoral tant que l'identité territoriale et l'effet à appliquer ne pouvaient pas être établis avec une rigueur suffisante."
   },
-  "b2": {
-    "status": "FROZEN_NEGATIVE_RESULT",
-    "evidence_cutoff": "2026-08-17T16:14:58+01:00",
-    "historical_panel_result": "B2_3_DATA_BLOCKED_NONAGENTIC",
-    "historical_coverage": {
-      "2011_TO_2016": 0.0,
-      "2016_TO_2021": 0.0,
-      "required": 0.8
-    },
-    "ballot_roster_result": "B2_4_FAIL",
-    "rows_parsed": 92,
-    "rows_verified": 0,
-    "provenance_audit": "PASS_EMPTY_ADMISSIBLE_SET",
-    "mechanical_constraints_admitted": 0,
-    "predictive_coefficients": "ALL_EXACTLY_ZERO",
-    "missingness_preserved": true,
-    "semantic_guessing_used": false,
-    "agentic_input_used": false
+  "source_principles": {
+    "institutional_sources": "Établissent les règles, décisions officielles et faits relevant d'une autorité publique.",
+    "party_official_sources": "Documentent ce que chaque parti annonce lui-même, sans être automatiquement considérées comme confirmation indépendante.",
+    "authorized_media": "Médias24 est utilisé pour la veille et la corroboration ; une publication médiatique ne modifie jamais seule la projection.",
+    "party_neutrality": "Les mêmes critères de source, de date et de vérification s'appliquent quel que soit le parti concerné."
   },
-  "agentic_experiment": {
-    "e_collect_preregistration": "OPEN",
-    "e_collect_execution": "NOT_STARTED",
-    "e_reason": "LOCKED",
-    "e_full": "LOCKED",
-    "reserved_for_e_collect": {
-      "historical_input_classes": 16,
-      "unresolved_arabic_rows": 92
-    },
-    "purpose_fr": "Mesurer séparément si une IA de collecte trouve de l'information vérifiable que la baseline déterministe n'a pas su exploiter, puis tester si cette information améliore réellement les prévisions."
-  },
-  "scientific_separation": {
-    "atlas_views_are_model_inputs": false,
-    "atlas_writes_scientific_artifacts": false,
-    "unknown_preserved": true,
-    "f_minus_1_mutable": false,
-    "f0_mutable": false,
-    "old_forecasts_rewritten": false,
-    "manual_party_bonus_allowed": false,
-    "agentic_information_in_f0": false
+  "next_public_experiment": {
+    "title": "Tester si l'IA apporte réellement quelque chose",
+    "description_fr": "La prochaine étape mesurera d'abord si une IA peut retrouver et vérifier des informations que la procédure classique n'a pas su exploiter, notamment dans les sources arabophones. Une étape séparée testera ensuite si, à information identique, l'IA raisonne mieux. Le gain devra être traçable et mesurable par rapport à la référence existante."
   }
 }
