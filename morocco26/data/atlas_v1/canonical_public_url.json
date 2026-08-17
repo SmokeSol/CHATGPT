@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "product": "ATLAS 395",
+  "status": "CANONICAL_PUBLIC_URL_VERIFIED",
+  "canonical_public_url": "https://atlas-395-maroc-2026.vercel.app/",
+  "verified_at": "2026-08-17T21:23:05+01:00",
+  "audit_workflow": "Atlas 395 — Canonical Vercel URL audit",
+  "audit_run_id": 32065468276,
+  "audit_result": "PASS",
+  "verification": {
+    "http_base": 200,
+    "http_atlas_v1_data": 200,
+    "browser_render": "PASS",
+    "invalid_date_present": false,
+    "fatal_loading_error_present": false,
+    "institutional_surface_present": true,
+    "public_tabs": [
+      "Synthèse",
+      "Carte territoriale",
+      "Candidatures",
+      "Partis",
+      "Veille 2026",
+      "Méthode",
+      "Historique"
+    ],
+    "rendered_reference_date": "17 août 2026"
+  },
+  "intelligence_layer": {
+    "forecast_snapshot": "F0",
+    "forecast_immutable": true,
+    "canonical_local_territories": 92,
+    "arabic_identity_coverage": 92,
+    "candidate_records": 546,
+    "territories_with_candidate_records": 92,
+    "missing_territories": []
+  },
+  "scope_note": "This URL contains the complete Atlas intelligence and institutional presentation developed and validated to date. Predictive candidate/signal effects are not yet calibrated; future E_reason/E_full work is not claimed as already present."
+}
