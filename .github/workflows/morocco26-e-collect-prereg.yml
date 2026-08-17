@@ -20,5 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Show protected artifact hashes
+        run: |
+          sha256sum morocco26/data/goal100/b2_2026_ballot_roster.json
+          sha256sum morocco26/data/goal100/forecasts/F0/forecast.json
       - name: Validate frozen E_collect preregistration
         run: python morocco26/scripts/validate_e_collect_prereg.py
