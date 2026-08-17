@@ -1,0 +1,18 @@
+{
+  "source_id": "H3_WEB_ARCHIVE_OF_REGISTERED_DOMAINS",
+  "bucket": "cdx/2021",
+  "original_url": "https://web.archive.org/cdx/search/cdx?url=www.possible.ma%2F*&output=json&from=20210101&to=20210908&limit=2000",
+  "final_url": "https://web.archive.org/cdx/search/cdx?url=www.possible.ma%2F*&output=json&from=20210101&to=20210908&limit=2000",
+  "retrieved_at": "2026-08-17T11:53:01+01:00",
+  "http_status": 200,
+  "content_type": "application/json",
+  "content_length": 251836,
+  "sha256": "a4cb4a6624dc9ed5f3f1b4707e88bb8fe0265e61ea1ac0c3017be3504632bd88",
+  "environment": {
+    "platform": "Windows",
+    "python": "3.13.14",
+    "runner": "LOCAL",
+    "user_agent": "Mozilla/5.0 (compatible; MOROCCO26-B2-acquirer/1.1)"
+  },
+  "immutability": "RAW_BYTES_NEVER_REPLACED_BY_PARSER_OUTPUT"
+}
