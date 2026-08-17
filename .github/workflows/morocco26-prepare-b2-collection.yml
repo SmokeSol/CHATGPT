@@ -1,0 +1,87 @@
+name: morocco26-prepare-b2-collection
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - 'morocco26/scripts/goal100_prepare_b2_collection_queue.py'
+      - '.github/workflows/morocco26-prepare-b2-collection.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-prepare-b2-collection-v1
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      B2_BRANCH: morocco26-b2-structured-evidence
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Wait for B2 branch and checkout
+        run: |
+          for attempt in $(seq 1 40); do
+            git fetch origin --prune
+            if git ls-remote --exit-code --heads origin "$B2_BRANCH" >/dev/null 2>&1; then
+              git switch -C "$B2_BRANCH" "origin/$B2_BRANCH"
+              exit 0
+            fi
+            echo "Waiting for B2 bootstrap: $attempt/40"
+            sleep 10
+          done
+          exit 1
+
+      - name: Import queue generator from source branch
+        run: git checkout origin/morocco26-fminus1-run -- morocco26/scripts/goal100_prepare_b2_collection_queue.py
+
+      - name: Generate 104-contest collection universe
+        run: python morocco26/scripts/goal100_prepare_b2_collection_queue.py
+
+      - name: Validate invariants and non-evidence boundary
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/goal100_validate_b2_v1.py
+          python - <<'PY'
+          import csv, json
+          from pathlib import Path
+          b=Path('morocco26/data/goal100/b2/v1')
+          cert=json.loads((b/'collection_queue_certificate.json').read_text(encoding='utf-8'))
+          assert cert['gate']=='PASS'
+          assert cert['contests']=={'local':92,'regional':12,'total':104,'seats':395}
+          assert cert['claims_created']==0 and cert['evidence_rows_created']==0
+          with (b/'collection_queue.csv').open(encoding='utf-8',newline='') as f:
+              rows=list(csv.DictReader(f))
+          assert rows and all(r['status']=='OPEN_UNKNOWN' for r in rows)
+          with (b/'coverage_matrix.csv').open(encoding='utf-8',newline='') as f:
+              coverage=list(csv.DictReader(f))
+          assert len(coverage)==len(rows)
+          assert all(r['coverage_status']=='UNKNOWN' for r in coverage)
+          print('B2_COLLECTION_QUEUE_PASS',len(rows))
+          PY
+
+      - name: Commit queue to B2 branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/b2/v1 \
+            morocco26/scripts/goal100_prepare_b2_collection_queue.py \
+            morocco26/FIL_D_ARIANE.md \
+            morocco26/FIL_ARIANE.md 2>/dev/null || true
+          git commit -m 'data(morocco26): prepare exhaustive 104-contest B2 collection queue' || true
+          git push origin HEAD:"$B2_BRANCH"
+
+      - name: Print certificate
+        run: cat morocco26/data/goal100/b2/v1/collection_queue_certificate.json
