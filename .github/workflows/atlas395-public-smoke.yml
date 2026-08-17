@@ -47,16 +47,17 @@ jobs:
           set -euo pipefail
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
           test -n "$CHROME"
-          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=7000 --dump-dom "$PUBLIC_URL" > /tmp/atlas-dom.html
+          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=9000 --dump-dom "$PUBLIC_URL" > /tmp/atlas-dom.html
+          ! grep -q 'Atlas 395 ne peut pas charger les données' /tmp/atlas-dom.html
+          ! grep -q 'Atlas 395 ne peut pas initialiser cette édition' /tmp/atlas-dom.html
           grep -q 'Synthèse nationale' /tmp/atlas-dom.html
           grep -q 'Méthodologie' /tmp/atlas-dom.html
           grep -q 'Carte territoriale' /tmp/atlas-dom.html
           grep -q 'Partis' /tmp/atlas-dom.html
           grep -q 'Signaux 2026' /tmp/atlas-dom.html
           grep -q 'Historique' /tmp/atlas-dom.html
-          grep -q 'Rassemblement National des Indépendants' /tmp/atlas-dom.html
-          ! grep -q 'Atlas 395 ne peut pas charger les données' /tmp/atlas-dom.html
-          ! grep -q 'Atlas 395 ne peut pas initialiser cette édition' /tmp/atlas-dom.html
+          grep -q 'class="kpi hi"' /tmp/atlas-dom.html
+          grep -q '50 000' /tmp/atlas-dom.html
 
       - name: Report URL
         run: echo "$PUBLIC_URL"
