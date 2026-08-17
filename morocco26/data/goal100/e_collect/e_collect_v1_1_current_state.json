@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "state_id": "M26-E-COLLECT-V1.1-CURRENT",
+  "as_of": "2026-08-17T18:17:00+01:00",
+  "branch": "morocco26-e-collect",
+  "status": "HUMAN_SEEDED_COLLECTION_AUTHORIZED",
+  "supersedes_for_active_execution": "M26-GOAL100-E-COLLECT-V1 autonomous-discovery attribution objective",
+  "does_not_rewrite": [
+    "M26-GOAL100-E-COLLECT-V1 frozen artifacts",
+    "B2",
+    "F-1",
+    "F0"
+  ],
+  "active_amendment": "morocco26/data/goal100/e_collect/e_collect_v1_1_human_seed_amendment.json",
+  "active_runbook": "morocco26/agents/OPUS_E_COLLECT_RUN_V1_1.md",
+  "priority_seed": "https://assets.medias24.com/elections/",
+  "scientific_role": "quality/coverage/provenance gate for agent-assisted collection; not human-vs-agent URL discovery comparison",
+  "product_role": "accelerate Arabic-native verified evidence collection directly toward Atlas V1",
+  "human_vs_llm_next_valid_target": "E_reason and predictive residual reasoning after the evidence layer is sufficiently complete",
+  "forecast_policy": "F0 remains immutable and no collected 2026 signal changes forecast probabilities until a separately preregistered reasoning/calibration experiment authorizes a new snapshot."
+}
