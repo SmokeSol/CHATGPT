@@ -61,6 +61,7 @@ jobs:
           git add \
             morocco26/data/goal100/b2_historical_panel.json \
             morocco26/data/goal100/b2_historical_panel_certificate.json \
+            morocco26/data/goal100/b2_historical_panel_attempts \
             morocco26/data/goal100/b2_gate_registry.json \
             morocco26/data/goal100/b2_current_state.json \
             morocco26/data/goal100/fil_ariane_events \
