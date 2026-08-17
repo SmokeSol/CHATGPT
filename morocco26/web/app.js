@@ -104,7 +104,7 @@
       <div class="method-test-body"><p>Après le 23 septembre 2026, Atlas comparera les résultats effectivement observés aux distributions publiées avant le scrutin. L'évaluation portera à la fois sur la précision territoriale et sur la qualité probabiliste des estimations.</p><div class="method-score-grid"><div><b>Calibration</b><span>Vérifier si les probabilités annoncées correspondent à la fréquence des événements observés.</span></div><div><b>Précision territoriale</b><span>Mesurer les écarts de voix et de sièges circonscription par circonscription.</span></div><div><b>Couverture de l'incertitude</b><span>Évaluer la fréquence à laquelle les résultats observés se situent dans les intervalles publiés.</span></div></div></div>
     </section>`;}
 
-  const v='20260817-1758';
+  const v='20260817-1848';
   const files=['/assets/core.js','/assets/territories.js','/assets/parties.js','/assets/daily.js','/assets/map.js'];
   let i=0;
   const next=()=>{if(i>=files.length)return;const s=document.createElement('script');s.src=`${files[i++]}?v=${v}`;s.onload=next;s.onerror=()=>{const f=document.querySelector('#fatal');if(f){f.hidden=false;f.textContent='Atlas 395 ne peut pas initialiser cette édition.'}};document.head.appendChild(s)};
