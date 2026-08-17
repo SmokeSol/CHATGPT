@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-GOAL100-F0-SIMULATION-CERTIFICATE-V1",
+  "snapshot_id": "F0",
+  "certified_at": "2026-08-17T16:22:07+01:00",
+  "gate_id": "B2-8-F0-COUNTERFACTUAL-SIMULATION",
+  "gate": "PASS_IDENTITY_REPLAY_PROOF",
+  "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "execution_mode": "EXACT_IDENTITY_REPLAY_OF_REGISTERED_F_MINUS_1_DRAWS",
+  "fresh_stochastic_resimulation": false,
+  "parent_execution": {
+    "snapshot_id": "F-1",
+    "registered_forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "coherent_elections": 50000,
+    "local_contests": 92,
+    "regional_contests": 12,
+    "contests_per_election": 104,
+    "contest_draws": 5200000,
+    "house_seats_every_draw": 395
+  },
+  "counterfactual_execution": {
+    "coherent_elections_evaluated": 50000,
+    "contest_draws_evaluated": 5200000,
+    "draw_transform": "IDENTITY",
+    "proof": "Frozen B2 admits zero mechanical constraints and its numeric effect vector is exactly zero. Applying B2 to each registered F-1 draw maps every draw to itself; therefore the exact 50,000-draw counterfactual ensemble is the registered F-1 ensemble.",
+    "new_randomness_consumed": false,
+    "legal_allocator_rerun_required": false,
+    "legal_allocator_rerun_reason": "No vote, turnout, list-support, candidate-rank, candidate-age or legal-allocation input changes under frozen B2."
+  },
+  "ablations": {
+    "parent_f_minus_1": {
+      "distribution_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1"
+    },
+    "mechanical_only": {
+      "constraints_applied": 0,
+      "distribution_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+      "delta": "EXACT_ZERO"
+    },
+    "calibrated_residual_only": {
+      "promoted_features": 0,
+      "all_coefficients_zero": true,
+      "distribution_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+      "delta": "EXACT_ZERO"
+    },
+    "full_b2": {
+      "distribution_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+      "delta": "EXACT_ZERO"
+    }
+  },
+  "checks": {
+    "b2_freeze_certificate_sha256": "eab248d63051643600d0b2220f269b587302c4631fe24a7760fd971277fd88e1",
+    "f_minus_1_hash_match": true,
+    "minimum_50000_coherent_elections": true,
+    "house_seats_every_draw_395": true,
+    "mechanical_ablation_reported": true,
+    "predictive_ablation_reported": true,
+    "full_b2_ablation_reported": true,
+    "forecast_distribution_exact_parent_equivalence": true,
+    "F_minus_1_rewritten": false,
+    "agentic_input_used": false,
+    "llm_semantic_evidence_used": false
+  },
+  "interpretation": "This is an exact counterfactual replay proof, not a claim of a fresh Monte Carlo run. A fresh run would add only Monte Carlo noise because the frozen B2 transformation is identically zero. The registered 50,000 coherent F-1 elections are therefore the exact F0 counterfactual sample."
+}

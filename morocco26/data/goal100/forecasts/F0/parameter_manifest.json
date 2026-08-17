@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "F0",
+  "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "model_code_commit": "18f685769c7e601887467c96428f445511f7ad29",
+  "b2_closure_commit": "90f237a51b3f91a083e4cb59e69530137d1eb381",
+  "parent_parameter_manifest": {
+    "path": "morocco26/data/goal100/forecasts/F-1/parameter_manifest.json",
+    "sha256": "3d7b31e3c0d0dffd1ea3aa716cc993251eb66d9f60456477d136f7a938591658"
+  },
+  "counterfactual_transform": {
+    "type": "IDENTITY",
+    "mechanical_constraints_admitted": 0,
+    "predictive_coefficients": {
+      "path": "morocco26/data/goal100/b2_coefficients.json",
+      "sha256": "018ed64fc2c058aec4458d63e592cdef4d17549ceb7ea874d69b9c7666dee092",
+      "all_numeric_coefficients_exactly_zero": true
+    },
+    "fresh_model_fit": false,
+    "fresh_hyperparameter_selection": false,
+    "fresh_effect_cap_estimation": false,
+    "narrative_or_hand_set_effect": false
+  },
+  "legal_allocator": {
+    "version_sha256": "0567fe6e456b1f73083d53c6dbd9444e88ac5641cf53dafef445a7df17e087bd",
+    "changed_from_parent": false,
+    "new_legal_constraints_applied": 0
+  },
+  "geometry": {
+    "certificate_sha256": "71b70f575c87221d45a80d3eb9b3dbb668d0884943e05084506ba2bbeaf911ba",
+    "changed_from_parent": false
+  },
+  "registered_N_state": "LATENT_CONSTRAINED_NOT_OFFICIAL",
+  "N_model_changed_from_parent": false,
+  "uncertainty_model_changed_from_parent": false,
+  "runtime": {
+    "mode": "DECLARATIVE_IDENTITY_COUNTERFACTUAL",
+    "new_forecast_engine_code": false,
+    "reason": "No B2 mechanical constraint or calibrated residual is admissible, so the F0 transformation is the identity over the already registered coherent F-1 election ensemble."
+  },
+  "agentic": {
+    "collection_used": false,
+    "reasoning_used": false,
+    "semantic_entity_resolution_used": false,
+    "llm_feature_used": false
+  }
+}

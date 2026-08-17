@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "F0",
+  "snapshot_class": "PRELIMINARY_PROBABILISTIC_FORECAST",
+  "registration_state": "REGISTERED_IMMUTABLE_PRELIMINARY_FORECAST",
+  "registered_at": "2026-08-17T16:22:07+01:00",
+  "registration_parent_commit": "90f237a51b3f91a083e4cb59e69530137d1eb381",
+  "source_artifact_root": "morocco26/data/goal100/forecasts/F0",
+  "source_snapshot_manifest": {
+    "path": "morocco26/data/goal100/forecasts/F0/snapshot_manifest.json",
+    "sha256": "8a929e3af6bcaddc00ddcd3e06bf6d43a4c2a30331061706ec2f0dbc5c49c541"
+  },
+  "immutable_artifacts": {
+    "forecast": {
+      "path": "morocco26/data/goal100/forecasts/F0/forecast.json",
+      "sha256": "fbe5197999f20d0612bc0c66e1954b5c611b11208e43a72eb5494a03b1e40d3f",
+      "distribution_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+      "distribution_equivalence_to_parent": "EXACT"
+    },
+    "data_manifest": {
+      "path": "morocco26/data/goal100/forecasts/F0/data_manifest.json",
+      "sha256": "f563b32e374be3b89888d4a719fb40e5cadd204be3c7e2f2f68720fa6ab72918"
+    },
+    "parameter_manifest": {
+      "path": "morocco26/data/goal100/forecasts/F0/parameter_manifest.json",
+      "sha256": "ac87b08bc66c21bbe6971305ae171e2ef3be18c302e5e5786b2315dd58c2ea47"
+    },
+    "rng_manifest": {
+      "path": "morocco26/data/goal100/forecasts/F0/rng_seed_manifest.json",
+      "sha256": "64bfa2170511d412b72360ffc12fd990387efbd0f89ea910c6d13c6ec3a0b491"
+    },
+    "simulation_certificate": {
+      "path": "morocco26/data/goal100/forecasts/F0/simulation_certificate.json",
+      "sha256": "487dad7a3a2be2fecd02d55c36fe9b899e54ff9467b59f23717b3400412961e2"
+    }
+  },
+  "b2_freeze_certificate": {
+    "path": "morocco26/data/goal100/b2_freeze_certificate.json",
+    "sha256": "eab248d63051643600d0b2220f269b587302c4631fe24a7760fd971277fd88e1"
+  },
+  "model_code_commit": "18f685769c7e601887467c96428f445511f7ad29",
+  "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "monte_carlo_draws": 50000,
+  "counterfactual_execution_mode": "EXACT_IDENTITY_REPLAY_OF_REGISTERED_F_MINUS_1_DRAWS",
+  "legal_allocator_version": "0567fe6e456b1f73083d53c6dbd9444e88ac5641cf53dafef445a7df17e087bd",
+  "geometry_certificate_hash": "71b70f575c87221d45a80d3eb9b3dbb668d0884943e05084506ba2bbeaf911ba",
+  "calibration_status": "B2_FAIL_CLOSED_ZERO_EFFECT_EXACT_PARENT_DISTRIBUTION",
+  "candidate_evidence_state": "B2_FROZEN_ZERO_ADMISSIBLE_MECHANICAL_CLAIMS",
+  "event_evidence_state": "B2_FROZEN_NO_PROMOTED_PREDICTIVE_EVENTS",
+  "registered_N_state": "LATENT_CONSTRAINED_NOT_OFFICIAL",
+  "agentic_exclusion": {
+    "e_collect_executed": false,
+    "e_reason_executed": false,
+    "e_full_executed": false
+  },
+  "known_limitations": [
+    "F0 is preliminary and intentionally distribution-identical to F-1 because B2 failed its frozen historical calibration and authoritative roster gates.",
+    "No 2026 ballot change is mechanically admitted; missing or unresolved roster information remains NA rather than absence.",
+    "The 92 parsed Arabic PJD rows remain unresolved under B2 and are not transliterated or semantically guessed.",
+    "Sixteen historical input classes plus the 92 unresolved Arabic rows remain reserved for E_collect.",
+    "Local registered-voter counts remain latent constrained draws rather than official 2026 local counts.",
+    "No agentic collection, reasoning or free-form LLM feature is present in F0."
+  ]
+}

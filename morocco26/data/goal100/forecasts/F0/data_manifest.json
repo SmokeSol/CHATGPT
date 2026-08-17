@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "F0",
+  "data_cutoff": "2026-08-17T16:14:58+01:00",
+  "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "parent_snapshot": {
+    "snapshot_id": "F-1",
+    "forecast_sha256": "de97880beb662e8940b038d8664b383ce23a7db66560101b95f9dd73ae0407a1",
+    "data_manifest": {
+      "path": "morocco26/data/goal100/forecasts/F-1/data_manifest.json",
+      "sha256": "ce1547352eca7815121bdfa9b5a298265db2ffd06454cd28abc7fc35b4375067"
+    }
+  },
+  "b2_frozen_inputs": {
+    "freeze_certificate": {
+      "path": "morocco26/data/goal100/b2_freeze_certificate.json",
+      "sha256": "eab248d63051643600d0b2220f269b587302c4631fe24a7760fd971277fd88e1"
+    },
+    "coefficients": {
+      "path": "morocco26/data/goal100/b2_coefficients.json",
+      "sha256": "018ed64fc2c058aec4458d63e592cdef4d17549ceb7ea874d69b9c7666dee092"
+    },
+    "provenance_audit": {
+      "path": "morocco26/data/goal100/b2_provenance_audit.json",
+      "sha256": "19fa18b0c72bdb3060b2f73e6a2df90bb819ded8dae3a14ae9928a52eb90285a"
+    },
+    "effect_calibration": {
+      "path": "morocco26/data/goal100/b2_effect_calibration.json",
+      "sha256": "0cfde9d2ad5876b93263acd3a09d997e382ad759b8c828db53e384748ad25c11"
+    },
+    "outcome_certificate": {
+      "path": "morocco26/data/goal100/b2_v1_1_outcome_certificate.json",
+      "canonical_sha256": "f75b82dc7c0dbc4e430e137f6c2cd80f081f805858d53d0d51bba8008aefd02a"
+    },
+    "admissible_claim_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "candidate_evidence_state": "B2_FROZEN_ZERO_ADMISSIBLE_MECHANICAL_CLAIMS",
+  "event_evidence_state": "B2_FROZEN_NO_PROMOTED_PREDICTIVE_EVENTS",
+  "historical_feature_state": "B2_3_DATA_BLOCKED_NONAGENTIC",
+  "ballot_roster_state": "B2_4_FAIL",
+  "reserved_for_e_collect": {
+    "historical_input_classes": 16,
+    "unresolved_arabic_roster_rows": 92,
+    "e_collect_executed": false
+  },
+  "immutability": {
+    "f_minus_1_rewritten": false,
+    "b2_frozen_before_f0": true,
+    "late_evidence_backdated": false
+  }
+}

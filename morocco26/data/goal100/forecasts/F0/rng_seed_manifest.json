@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "F0",
+  "protocol_id": "M26-GOAL100-B2-PROTOCOL-V1",
+  "draws": 50000,
+  "inheritance": {
+    "parent_snapshot": "F-1",
+    "parent_rng_manifest_path": "morocco26/data/goal100/forecasts/F-1/rng_seed_manifest.json",
+    "parent_rng_manifest_sha256": "9008407fff5617e46f9547524cf20021aa08ad5727a8904099c67bca240bb71c",
+    "randomness_consumed_for_f0_transform": false,
+    "rule": "F0 applies an identity transform to each registered F-1 draw. No seed is advanced and no new random draw is permitted or required."
+  },
+  "seeds": {
+    "N92": 26092351,
+    "national_vote": 26092352,
+    "regional_vote": 26092353,
+    "local_vote": 26092354,
+    "national_turnout": 26092355,
+    "regional_turnout": 26092356,
+    "local_turnout": 26092357,
+    "vote_rounding": 26092358,
+    "statutory_age_prior": 26092360
+  },
+  "seed_equivalence": "EXACT_PARENT_INHERITANCE"
+}
