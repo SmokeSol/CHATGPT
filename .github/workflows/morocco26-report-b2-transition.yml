@@ -1,0 +1,129 @@
+name: morocco26-report-b2-transition
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - '.github/workflows/morocco26-report-b2-transition.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-report-b2-transition-v1
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    env:
+      B2_BRANCH: morocco26-b2-structured-evidence
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Wait for completed historical probe
+        run: |
+          for attempt in $(seq 1 150); do
+            git fetch origin --prune
+            if git ls-remote --exit-code --heads origin "$B2_BRANCH" >/dev/null 2>&1; then
+              git switch -C "$B2_BRANCH" "origin/$B2_BRANCH"
+              if [ -f morocco26/data/goal100/b2/v1/historical_identifiability_probe.json ]; then
+                python - <<'PY'
+                import json
+                from pathlib import Path
+                p=json.loads(Path('morocco26/data/goal100/b2/v1/historical_identifiability_probe.json').read_text(encoding='utf-8'))
+                raise SystemExit(0 if p.get('gate')=='BLOCKED_HISTORICAL_FEATURE_BACKFILL_REQUIRED' else 1)
+                PY
+                if [ "$?" -eq 0 ]; then exit 0; fi
+              fi
+            fi
+            git switch -C morocco26-fminus1-run origin/morocco26-fminus1-run >/dev/null 2>&1 || true
+            echo "Waiting for full B2 transition: $attempt/150"
+            sleep 10
+          done
+          exit 1
+
+      - name: Build transition report from B2 evidence
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          b=Path('morocco26/data/goal100/b2/v1')
+          pre=json.loads((b/'b2_preflight.json').read_text(encoding='utf-8'))
+          opened=json.loads((b/'b2_phase_open_certificate.json').read_text(encoding='utf-8'))
+          hist=json.loads((b/'historical_identifiability_probe.json').read_text(encoding='utf-8'))
+          queue=json.loads((b/'collection_queue_certificate.json').read_text(encoding='utf-8'))
+          recon=json.loads((b/'b2_reconciliation_status.json').read_text(encoding='utf-8'))
+          report={
+            'schema_version':'1.0',
+            'report_id':'M26-GOAL100-B2-TRANSITION-REPORT-V1',
+            'created_at':datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+            'gate':'PASS_B2_PHASE_OPEN_WITH_IDENTIFIED_BACKFILL_BLOCKER',
+            'branch':'morocco26-b2-structured-evidence',
+            'F_minus_1_preflight_ready':pre['ready_for_b2_non_agentic_scaffold'],
+            'B2_phase_open_gate':opened['gate'],
+            'B2_frozen':False,
+            'F0_created':False,
+            'agentic_status':'ALL_LOCKED',
+            'current_collection':{
+              'contests':queue['contests'],
+              'tasks':queue['collection_tasks'],
+              'initial_coverage':'ALL_UNKNOWN',
+              'evidence_rows':opened['evidence_rows'],
+              'source_watch_snapshots':opened['source_watch_snapshots']
+            },
+            'historical_identifiability':{
+              'gate':hist['gate'],
+              'transitions':hist['forecast_transitions_available'],
+              'common_territories':hist['common_local_territories'],
+              'predictive_features_identified':len(hist['predictive_features_with_nonzero_historical_coverage']),
+              'backfill_tasks':hist['historical_backfill_tasks'],
+              'non_legal_coefficients':'ALL_ZERO'
+            },
+            'scientific_result':'The B2 collection system is operational, but the current repository cannot identify candidate/network/event coefficients historically. No adjusted F0 may be claimed until source-backed historical backfill and the frozen residual backtest pass.',
+            'next_action':'Backfill 2016/2021 head-candidate, incumbency and party-switch features first; resolve current Tier-A filing/candidate endpoints in parallel.'
+          }
+          Path('/tmp/b2_transition_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          Path('/tmp/b2_transition_comment.md').write_text(f'''## B2 machine checkpoint\n\n- Gate: `{report['gate']}`\n- F-1 prerequisite: `{report['F_minus_1_preflight_ready']}`\n- B2: open, **not frozen**\n- Current collection universe: 104 contests / 395 seats / {report['current_collection']['tasks']} tasks; initial coverage remains `UNKNOWN`\n- Historical transitions available: 2011→2016 and 2016→2021 over 92 territories\n- Historically identified candidate/network/event features: **0**\n- Historical backfill queue: **{report['historical_identifiability']['backfill_tasks']}** tasks\n- Non-legal B2 coefficients: **all zero**\n- F0: not created\n- Agentic arms: all locked\n\n**Next:** backfill 2016/2021 head candidates, incumbents and party switches; resolve current Tier-A filing/candidate endpoints in parallel.\n''',encoding='utf-8')
+          print(json.dumps(report,ensure_ascii=False,indent=2))
+          PY
+
+      - name: Comment or create B2 pull request
+        run: |
+          pr=$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$B2_BRANCH" --state open --json number --jq '.[0].number // empty')
+          if [ -z "$pr" ]; then
+            gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$B2_BRANCH" --draft \
+              --title 'MOROCCO//26: B2 structured non-agentic evidence layer' \
+              --body-file /tmp/b2_transition_comment.md
+            pr=$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$B2_BRANCH" --state open --json number --jq '.[0].number')
+          fi
+          gh pr comment "$pr" --repo "$GITHUB_REPOSITORY" --body-file /tmp/b2_transition_comment.md
+          echo "B2_PR=$pr" >> "$GITHUB_ENV"
+
+      - name: Mirror transition report on orchestration branch
+        run: |
+          git switch -C morocco26-fminus1-run origin/morocco26-fminus1-run
+          mkdir -p morocco26/data/goal100
+          cp /tmp/b2_transition_report.json morocco26/data/goal100/b2_transition_report.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/b2_transition_report.json
+          git commit -m 'tracking(morocco26): mirror B2 transition checkpoint' || true
+          git pull --rebase origin morocco26-fminus1-run
+          git push origin HEAD:morocco26-fminus1-run
+
+      - name: Print final report
+        run: |
+          cat /tmp/b2_transition_report.json
+          echo "B2 PR: #$B2_PR"
