@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "product": "Atlas 395",
+  "current_version": "V0.5",
+  "release_name": "Atlas Daily",
+  "released_on": "2026-08-17",
+  "status": "LIVE",
+  "capabilities": [
+    "official_daily_editions",
+    "immutable_daily_history",
+    "day_over_day_projection_diff",
+    "day_over_day_documented_signal_diff",
+    "automatic_latest_registered_forecast_selection",
+    "read_only_scientific_handoff",
+    "premium_institutional_reader_ui"
+  ],
+  "promotion_policy": {
+    "V1": "Promote when a new 2026 probabilistic forecast snapshot is registered under the scientific protocol and the product can expose validated 2026 information effects without changing historical editions.",
+    "V2": "Promote when daily evidence propagation and movement analysis are stable enough to rank meaningful 24h/7d territorial changes.",
+    "V3": "Promote when national scenario analysis, decisive-territory decomposition and pre-election war-room views are production-ready."
+  },
+  "scientific_boundary": {
+    "atlas_may_write_scientific_artifacts": false,
+    "atlas_daily_reads_science_branch": true,
+    "official_daily_editions_are_immutable": true
+  }
+}
