@@ -108,7 +108,7 @@
       <div class="method-state-grid">
         <div><span>Projection</span><b id="method-snapshot">F0</b><small id="method-snapshot-date">version gelée</small></div>
         <div><span>Scénarios</span><b id="method-draws">50 000</b><small>élections complètes simulées</small></div>
-        <div><span>Effet B2</span><b id="method-b2-effect">0</b><small>ajustement chiffré admis</small></div>
+        <div><span>Effet des faits 2026</span><b id="method-b2-effect">0</b><small>ajustement chiffré admis</small></div>
         <div><span>Test réservé</span><b id="method-reserved">16 + 92</b><small>classes historiques + lignes arabes</small></div>
       </div>
     </aside>
@@ -124,7 +124,7 @@
     <article class="method-step"><div class="n">2</div><h3>Mesurer l'incertitude</h3><p>Atlas ne produit pas un seul futur. Il simule 50 000 élections cohérentes pour montrer les résultats plausibles et leur fréquence.</p></article>
     <article class="method-step"><div class="n">3</div><h3>Geler une référence</h3><p>La projection de base est enregistrée avec sa date, ses données et ses paramètres. Elle ne pourra pas être corrigée après coup.</p></article>
     <article class="method-step"><div class="n">4</div><h3>Ajouter les faits avec discipline</h3><p>Candidatures, retraits, alliances ou changements de parti ne modifient les chiffres que s'ils passent des règles définies à l'avance.</p></article>
-    <article class="method-step"><div class="n">5</div><h3>Mettre l'IA à l'épreuve</h3><p>L'IA est un concurrent de la baseline, pas son auteur. On mesurera si elle trouve ou exploite une information qui améliore réellement les prévisions.</p></article>
+    <article class="method-step"><div class="n">5</div><h3>Mettre l'IA à l'épreuve</h3><p>L'IA est un concurrent de la référence, pas son auteur. On mesurera si elle trouve ou exploite une information qui améliore réellement les prévisions.</p></article>
   </div>
 
   <div class="method-grid">
@@ -136,7 +136,7 @@
         <div class="method-rule"><div class="rule-icon">03</div><b>L'échec est conservé</b><p>Un test qui échoue n'est pas effacé. Son résultat reste visible et devient une information sur les limites du système.</p></div>
         <div class="method-rule"><div class="rule-icon">04</div><b>Les anciennes versions sont intouchables</b><p>Chaque projection publiée est conservée. Une nouvelle information crée une nouvelle version, jamais une réécriture du passé.</p></div>
         <div class="method-rule"><div class="rule-icon">05</div><b>L'incertitude est affichée</b><p>Les fourchettes et probabilités sont montrées au lieu de transformer une estimation incertaine en chiffre présenté comme certain.</p></div>
-        <div class="method-rule"><div class="rule-icon">06</div><b>L'IA n'a aucun passe-droit</b><p>Une analyse brillante ou un récit plausible n'obtient aucune valeur scientifique sans amélioration mesurable par rapport à la baseline.</p></div>
+        <div class="method-rule"><div class="rule-icon">06</div><b>L'IA n'a aucun passe-droit</b><p>Une analyse brillante ou un récit plausible n'obtient aucune valeur scientifique sans amélioration mesurable par rapport à la référence.</p></div>
       </div>
     </section>
 
@@ -148,20 +148,20 @@
         <div class="method-rule"><div class="rule-icon">S</div><b>La provenance compte, pas le camp</b><p>Une information est évaluée selon sa source, sa date et sa vérifiabilité, pas selon le parti qu'elle avantage ou désavantage.</p></div>
         <div class="method-rule"><div class="rule-icon">P</div><b>Pas de sondages dans ce protocole</b><p>Les sondages sont exclus de la version actuelle tant qu'une méthode séparée d'intégration n'a pas été gelée et testée.</p></div>
         <div class="method-rule"><div class="rule-icon">↺</div><b>Pas de correction rétrospective</b><p>Un mauvais pronostic ne pourra pas être « réparé » une fois le résultat connu. Il restera un mauvais pronostic.</p></div>
-        <div class="method-rule"><div class="rule-icon">AI</div><b>Baseline sans IA</b><p>La première référence est construite sans raisonnement agentique afin que la valeur éventuelle de l'IA puisse être mesurée séparément.</p></div>
+        <div class="method-rule"><div class="rule-icon">AI</div><b>La référence est construite sans IA</b><p>La première référence est établie sans raisonnement autonome afin que la valeur éventuelle de l'IA puisse être mesurée séparément.</p></div>
       </div>
     </section>
   </div>
 
   <section class="method-current">
     <div class="method-current-head">
-      <div><span class="section-kicker">Exemple concret de discipline</span><h3>Pourquoi F0 n'a pas bougé par rapport à la projection précédente</h3><p class="lead">Nous avons essayé d'ajouter des informations politiques réelles de 2026 à la baseline. Le pipeline déterministe a rencontré des données utiles — notamment un fichier de 92 lignes en arabe — mais n'a pas pu les relier avec assez de certitude aux territoires certifiés ni démontrer historiquement l'effet des informations manquantes. La règle fixée à l'avance était simple : <strong>pas de preuve suffisante = pas d'effet chiffré.</strong></p></div>
+      <div><span class="section-kicker">Exemple concret de discipline</span><h3>Pourquoi F0 n'a pas bougé par rapport à la projection précédente</h3><p class="lead">Nous avons essayé d'ajouter des informations politiques réelles de 2026 à la référence. La procédure automatique stricte a rencontré des données utiles — notamment un fichier de 92 lignes en arabe — mais n'a pas pu les relier avec assez de certitude aux territoires certifiés ni démontrer historiquement l'effet des informations manquantes. La règle fixée à l'avance était simple : <strong>pas de preuve suffisante = pas d'effet chiffré.</strong></p></div>
       <div class="method-zero"><span>Modification de la distribution</span><b>0</b></div>
     </div>
     <div class="method-chain">
-      <div class="method-chain-card"><span>F-1</span><b>Baseline structurelle</b><p>Historique électoral + règles + incertitude territoriale.</p></div>
+      <div class="method-chain-card"><span>Référence</span><b>Projection structurelle</b><p>Historique électoral + règles + incertitude territoriale.</p></div>
       <div class="method-chain-arrow">→</div>
-      <div class="method-chain-card"><span>B2</span><b>Test des faits 2026</b><p>Des informations ont été trouvées, mais aucune n'a franchi toutes les conditions permettant de modifier la projection.</p></div>
+      <div class="method-chain-card"><span>Test 2026</span><b>Vérification des faits nouveaux</b><p>Des informations ont été trouvées, mais aucune n'a franchi toutes les conditions permettant de modifier la projection.</p></div>
       <div class="method-chain-arrow">→</div>
       <div class="method-chain-card"><span>F0</span><b>Même distribution, nouvelle étape scientifique</b><p>Le système a préféré conserver les chiffres plutôt que d'inventer un effet. F0 devient le témoin gelé contre lequel l'IA sera testée.</p></div>
     </div>
@@ -181,13 +181,13 @@
     </section>
     <section class="panel">
       <div class="panel-head"><h3>Ce qui vient ensuite : le test de l'IA</h3></div>
-      <div class="method-next"><h4>L'IA doit maintenant battre une référence qui ne bouge plus.</h4><p>La prochaine expérience, appelée <strong>E_collect</strong>, testera si une IA peut retrouver et vérifier des informations que le pipeline classique n'a pas su exploiter — notamment dans les sources arabophones. Elle ne recevra aucun crédit parce qu'elle « comprend mieux » un texte : son apport devra être traçable, vérifiable et, à terme, améliorer la qualité des prévisions.</p><p>Ensuite seulement, une seconde expérience testera le raisonnement : à information identique, l'IA sait-elle tirer une meilleure conclusion que la méthode déterministe ? Cette séparation permet de distinguer <strong>mieux chercher</strong> de <strong>mieux raisonner</strong>.</p></div>
+      <div class="method-next"><h4>L'IA doit maintenant battre une référence qui ne bouge plus.</h4><p>La prochaine expérience testera si une IA peut retrouver et vérifier des informations que la procédure classique n'a pas su exploiter — notamment dans les sources arabophones. Elle ne recevra aucun crédit parce qu'elle « comprend mieux » un texte : son apport devra être traçable, vérifiable et, à terme, améliorer la qualité des prévisions.</p><p>Ensuite seulement, une seconde expérience testera le raisonnement : à information identique, l'IA sait-elle tirer une meilleure conclusion que la méthode déterministe ? Cette séparation permet de distinguer <strong>mieux chercher</strong> de <strong>mieux raisonner</strong>.</p></div>
     </section>
   </div>
 
   <section class="method-test">
     <div class="method-test-title"><span class="section-kicker">Le test qui compte</span><h3>Le 23 septembre, le réel tranche.</h3><p>Une méthodologie n'est utile que si elle accepte d'être jugée par ce qui s'est réellement passé.</p></div>
-    <div class="method-test-body"><p>Après le scrutin, Atlas comparera les résultats observés aux probabilités enregistrées avant le vote. On ne jugera pas seulement si le « bon parti » est arrivé devant : on regardera si les probabilités étaient bien calibrées, si les fourchettes étaient raisonnables et si une couche d'IA a réellement amélioré les résultats par rapport à la baseline.</p><div class="method-score-grid"><div><b>Territoire par territoire</b><span>Comparer les sièges et rapports de forces observés aux distributions publiées.</span></div><div><b>Probabilités, pas slogans</b><span>Une prévision à 70 % n'est pas une certitude : elle doit se comporter comme une probabilité.</span></div><div><b>IA contre baseline</b><span>La question finale est mesurable : l'IA fait-elle mieux que F0, ou non ?</span></div></div></div>
+    <div class="method-test-body"><p>Après le scrutin, Atlas comparera les résultats observés aux probabilités enregistrées avant le vote. On ne jugera pas seulement si le « bon parti » est arrivé devant : on regardera si les probabilités étaient bien calibrées, si les fourchettes étaient raisonnables et si une couche d'IA a réellement amélioré les résultats par rapport à la référence.</p><div class="method-score-grid"><div><b>Territoire par territoire</b><span>Comparer les sièges et rapports de forces observés aux distributions publiées.</span></div><div><b>Probabilités, pas slogans</b><span>Une prévision à 70 % n'est pas une certitude : elle doit se comporter comme une probabilité.</span></div><div><b>IA contre référence</b><span>La question finale est mesurable : l'IA fait-elle mieux que F0, ou non ?</span></div></div></div>
   </section>
 
   <details class="method-audit">
