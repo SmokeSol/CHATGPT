@@ -1,0 +1,196 @@
+{
+  "candidats": {
+    "create_sql": "CREATE TABLE candidats (\n      id              TEXT PRIMARY KEY,\n      name            TEXT NOT NULL,\n      party           TEXT NOT NULL,\n      regionKey       TEXT NOT NULL,\n      region          TEXT NOT NULL DEFAULT '',\n      circonscription TEXT NOT NULL DEFAULT '',\n      role            TEXT NOT NULL DEFAULT '',\n      status          TEXT NOT NULL DEFAULT 'declare',\n      image           TEXT NOT NULL DEFAULT '',\n      source          TEXT NOT NULL DEFAULT '',\n      updatedAt       TEXT NOT NULL DEFAULT '',\n      search_text     TEXT NOT NULL DEFAULT ''\n    )",
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "name",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "party",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "regionKey",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "region",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "''",
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "circonscription",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "''",
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "role",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "''",
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "status",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "'declare'",
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "image",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "''",
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "source",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "''",
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "updatedAt",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "''",
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "search_text",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "''",
+        "pk": 0
+      }
+    ],
+    "row_count": 544
+  },
+  "circonscriptions": {
+    "create_sql": "CREATE TABLE circonscriptions (\n      regionKey       TEXT NOT NULL,\n      region          TEXT NOT NULL,\n      circonscription TEXT NOT NULL,\n      seats           INTEGER NOT NULL DEFAULT 0,\n      hasGeometry     TEXT NOT NULL DEFAULT 'no',\n      PRIMARY KEY (regionKey, circonscription)\n    )",
+    "columns": [
+      {
+        "cid": 0,
+        "name": "regionKey",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "region",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "circonscription",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 2
+      },
+      {
+        "cid": 3,
+        "name": "seats",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": "0",
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "hasGeometry",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "'no'",
+        "pk": 0
+      }
+    ],
+    "row_count": 101
+  },
+  "partis": {
+    "create_sql": "CREATE TABLE partis (\n      code      TEXT PRIMARY KEY,\n      name      TEXT NOT NULL,\n      logo      TEXT NOT NULL DEFAULT '',\n      color     TEXT NOT NULL DEFAULT '',\n      sortOrder INTEGER NOT NULL DEFAULT 0\n    )",
+    "columns": [
+      {
+        "cid": 0,
+        "name": "code",
+        "type": "TEXT",
+        "notnull": 0,
+        "dflt_value": null,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "name",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": null,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "logo",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "''",
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "color",
+        "type": "TEXT",
+        "notnull": 1,
+        "dflt_value": "''",
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "sortOrder",
+        "type": "INTEGER",
+        "notnull": 1,
+        "dflt_value": "0",
+        "pk": 0
+      }
+    ],
+    "row_count": 9
+  }
+}

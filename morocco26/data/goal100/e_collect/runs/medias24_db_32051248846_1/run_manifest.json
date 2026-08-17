@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "run_id": "medias24_db_32051248846_1",
+  "collector": "CHATGPT_MEDIAS24_SQLITE_EXTRACTOR_V1",
+  "created_at": "2026-08-17T17:38:56+00:00",
+  "sources": [
+    {
+      "requested_url": "https://assets.medias24.com/elections/",
+      "final_url": "https://assets.medias24.com/elections/",
+      "retrieved_at": "2026-08-17T17:38:55+00:00",
+      "status_code": 200,
+      "content_type": "text/html",
+      "content_length": 60567,
+      "sha256": "7b9825c18eecef5fb54c3e5434381e2a86818cde882c26299d80c458ace39679",
+      "archived_path": "morocco26/data/goal100/e_collect/runs/medias24_db_32051248846_1/raw/7b9825c18eecef5fb54c3e5434381e2a86818cde882c26299d80c458ace39679.html"
+    },
+    {
+      "requested_url": "https://assets.medias24.com/elections/data/elections.db",
+      "final_url": "https://assets.medias24.com/elections/data/elections.db",
+      "retrieved_at": "2026-08-17T17:38:56+00:00",
+      "status_code": 200,
+      "content_type": "",
+      "content_length": 270336,
+      "sha256": "d268cbbde34328f6bbfe207bf21f26919149fc111f24105255321395b25162ea",
+      "archived_path": "morocco26/data/goal100/e_collect/runs/medias24_db_32051248846_1/raw/d268cbbde34328f6bbfe207bf21f26919149fc111f24105255321395b25162ea.db"
+    }
+  ],
+  "sqlite_tables": {
+    "candidats": 544,
+    "circonscriptions": 101,
+    "partis": 9
+  },
+  "counts": {
+    "parties": 9,
+    "circonscriptions": 101,
+    "candidates": 544,
+    "crosswalk_resolved": 91,
+    "crosswalk_review_required": 0,
+    "crosswalk_unresolved": 10,
+    "candidate_territories_with_records": 91
+  },
+  "integrity": {
+    "F0_sha256_before": "fbe5197999f20d0612bc0c66e1954b5c611b11208e43a72eb5494a03b1e40d3f",
+    "B2_roster_sha256_before": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86",
+    "forecast_effect_authorized": false,
+    "coefficients_modified": false
+  }
+}

@@ -1,0 +1,709 @@
+[
+  {
+    "regionKey": "beni",
+    "region": "Béni Mellal-Khénifra",
+    "circonscription": "Azilal",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "beni",
+    "region": "Béni Mellal-Khénifra",
+    "circonscription": "Azilal-Demnate",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "beni",
+    "region": "Béni Mellal-Khénifra",
+    "circonscription": "Béni Mellal",
+    "seats": 6,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "beni",
+    "region": "Béni Mellal-Khénifra",
+    "circonscription": "Bzou-Ouaouizeght",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "beni",
+    "region": "Béni Mellal-Khénifra",
+    "circonscription": "Fquih Ben Salah",
+    "seats": 4,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "beni",
+    "region": "Béni Mellal-Khénifra",
+    "circonscription": "Khénifra",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "beni",
+    "region": "Béni Mellal-Khénifra",
+    "circonscription": "Khouribga",
+    "seats": 6,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Aïn Chock",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Al Fida-Mers Sultan",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Ben M'sik",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Ben Slimane",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Berrechid",
+    "seats": 4,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Casablanca",
+    "seats": 23,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Casablanca-Anfa",
+    "seats": 4,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "El Jadida",
+    "seats": 6,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Hay Hassani",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Aïn Sebaâ-Hay Mohammadi",
+    "seats": 4,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Médiouna",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Mohammedia",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Nouaceur",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Settat",
+    "seats": 6,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Sidi Bennour",
+    "seats": 4,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Sidi Bernoussi",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "casa",
+    "region": "Casablanca-Settat",
+    "circonscription": "Sidi Othmane-Moulay Rachid",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "dakhla",
+    "region": "Dakhla-Oued Ed-Dahab",
+    "circonscription": "Aousserd",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "dakhla",
+    "region": "Dakhla-Oued Ed-Dahab",
+    "circonscription": "Oued Ed-Dahab",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "draa",
+    "region": "Drâa-Tafilalet",
+    "circonscription": "Errachidia",
+    "seats": 5,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "draa",
+    "region": "Drâa-Tafilalet",
+    "circonscription": "Midelt",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "draa",
+    "region": "Drâa-Tafilalet",
+    "circonscription": "Ouarzazate",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "draa",
+    "region": "Drâa-Tafilalet",
+    "circonscription": "Tinghir",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "draa",
+    "region": "Drâa-Tafilalet",
+    "circonscription": "Zagora",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "fes",
+    "region": "Fès-Meknès",
+    "circonscription": "Boulemane",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "fes",
+    "region": "Fès-Meknès",
+    "circonscription": "El Hajeb",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "fes",
+    "region": "Fès-Meknès",
+    "circonscription": "Fès",
+    "seats": 8,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "fes",
+    "region": "Fès-Meknès",
+    "circonscription": "Fès-Nord",
+    "seats": 4,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "fes",
+    "region": "Fès-Meknès",
+    "circonscription": "Fès-Sud",
+    "seats": 4,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "fes",
+    "region": "Fès-Meknès",
+    "circonscription": "Ifrane",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "fes",
+    "region": "Fès-Meknès",
+    "circonscription": "El Karia-Ghafsai",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "fes",
+    "region": "Fès-Meknès",
+    "circonscription": "Meknès",
+    "seats": 6,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "fes",
+    "region": "Fès-Meknès",
+    "circonscription": "Moulay Yacoub",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "fes",
+    "region": "Fès-Meknès",
+    "circonscription": "Sefrou",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "fes",
+    "region": "Fès-Meknès",
+    "circonscription": "Taounate",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "fes",
+    "region": "Fès-Meknès",
+    "circonscription": "Taounate-Tissa",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "fes",
+    "region": "Fès-Meknès",
+    "circonscription": "Taza",
+    "seats": 5,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "guelmim",
+    "region": "Guelmim-Oued Noun",
+    "circonscription": "Assa-Zag",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "guelmim",
+    "region": "Guelmim-Oued Noun",
+    "circonscription": "Guelmim",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "guelmim",
+    "region": "Guelmim-Oued Noun",
+    "circonscription": "Sidi Ifni",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "guelmim",
+    "region": "Guelmim-Oued Noun",
+    "circonscription": "Tan-Tan",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "oriental",
+    "region": "L'Oriental",
+    "circonscription": "Berkane",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "oriental",
+    "region": "L'Oriental",
+    "circonscription": "Driouch",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "oriental",
+    "region": "L'Oriental",
+    "circonscription": "Figuig",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "oriental",
+    "region": "L'Oriental",
+    "circonscription": "Guercif",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "oriental",
+    "region": "L'Oriental",
+    "circonscription": "Jerada",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "oriental",
+    "region": "L'Oriental",
+    "circonscription": "Nador",
+    "seats": 4,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "oriental",
+    "region": "L'Oriental",
+    "circonscription": "Oujda-Angad",
+    "seats": 4,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "oriental",
+    "region": "L'Oriental",
+    "circonscription": "Taourirt",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "laayoune",
+    "region": "Laâyoune-Sakia El Hamra",
+    "circonscription": "Boujdour",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "laayoune",
+    "region": "Laâyoune-Sakia El Hamra",
+    "circonscription": "Es-Semara",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "laayoune",
+    "region": "Laâyoune-Sakia El Hamra",
+    "circonscription": "Laâyoune",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "laayoune",
+    "region": "Laâyoune-Sakia El Hamra",
+    "circonscription": "Tarfaya",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "marrakech",
+    "region": "Marrakech-Safi",
+    "circonscription": "Chichaoua",
+    "seats": 4,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "marrakech",
+    "region": "Marrakech-Safi",
+    "circonscription": "Al Haouz",
+    "seats": 4,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "marrakech",
+    "region": "Marrakech-Safi",
+    "circonscription": "Essaouira",
+    "seats": 4,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "marrakech",
+    "region": "Marrakech-Safi",
+    "circonscription": "Gueliz",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "marrakech",
+    "region": "Marrakech-Safi",
+    "circonscription": "El Kelâa Des-Sraghna",
+    "seats": 4,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "marrakech",
+    "region": "Marrakech-Safi",
+    "circonscription": "Marrakech",
+    "seats": 9,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "marrakech",
+    "region": "Marrakech-Safi",
+    "circonscription": "Ménara",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "marrakech",
+    "region": "Marrakech-Safi",
+    "circonscription": "Rehamna",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "marrakech",
+    "region": "Marrakech-Safi",
+    "circonscription": "Safi",
+    "seats": 6,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "marrakech",
+    "region": "Marrakech-Safi",
+    "circonscription": "Sidi Youssef Ben Ali",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "marrakech",
+    "region": "Marrakech-Safi",
+    "circonscription": "Youssoufia",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Kénitra",
+    "seats": 4,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Kénitra - El Gharb",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Khémisset",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Khémisset-Oulmès",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Rabat",
+    "seats": 7,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Rabat-Chellah",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Rabat-Océan",
+    "seats": 4,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Salé",
+    "seats": 7,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Salé Médina",
+    "seats": 4,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Salé Nouvelle",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Sidi Kacem",
+    "seats": 5,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Sidi Slimane",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Skhirate-Témara",
+    "seats": 4,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "rabat",
+    "region": "Rabat-Salé-Kénitra",
+    "circonscription": "Tiflet-Rommani",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "souss",
+    "region": "Souss-Massa",
+    "circonscription": "Agadir Ida-Outanane",
+    "seats": 4,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "souss",
+    "region": "Souss-Massa",
+    "circonscription": "Chtouka-Aït Baha",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "souss",
+    "region": "Souss-Massa",
+    "circonscription": "Inezgane-Aït Melloul",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "souss",
+    "region": "Souss-Massa",
+    "circonscription": "Taroudant",
+    "seats": 7,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "souss",
+    "region": "Souss-Massa",
+    "circonscription": "Taroudant Nord",
+    "seats": 3,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "souss",
+    "region": "Souss-Massa",
+    "circonscription": "Taroudant Sud",
+    "seats": 4,
+    "hasGeometry": "no"
+  },
+  {
+    "regionKey": "souss",
+    "region": "Souss-Massa",
+    "circonscription": "Tata",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "souss",
+    "region": "Souss-Massa",
+    "circonscription": "Tiznit",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "tanger",
+    "region": "Tanger-Tétouan-Al Hoceïma",
+    "circonscription": "Al Hoceïma",
+    "seats": 4,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "tanger",
+    "region": "Tanger-Tétouan-Al Hoceïma",
+    "circonscription": "Chefchaouen",
+    "seats": 4,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "tanger",
+    "region": "Tanger-Tétouan-Al Hoceïma",
+    "circonscription": "Fahs-Anjra",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "tanger",
+    "region": "Tanger-Tétouan-Al Hoceïma",
+    "circonscription": "Larache",
+    "seats": 4,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "tanger",
+    "region": "Tanger-Tétouan-Al Hoceïma",
+    "circonscription": "M'diq-Fnideq",
+    "seats": 2,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "tanger",
+    "region": "Tanger-Tétouan-Al Hoceïma",
+    "circonscription": "Ouezzane",
+    "seats": 3,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "tanger",
+    "region": "Tanger-Tétouan-Al Hoceïma",
+    "circonscription": "Tanger-Assilah",
+    "seats": 5,
+    "hasGeometry": "yes"
+  },
+  {
+    "regionKey": "tanger",
+    "region": "Tanger-Tétouan-Al Hoceïma",
+    "circonscription": "Tétouan",
+    "seats": 5,
+    "hasGeometry": "yes"
+  }
+]

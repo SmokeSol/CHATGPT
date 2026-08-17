@@ -1,0 +1,65 @@
+[
+  {
+    "code": "RNI",
+    "name": "Rassemblement national des indépendants",
+    "logo": "logos-partis/logo_RNI.png",
+    "color": "#006C84",
+    "sortOrder": 1
+  },
+  {
+    "code": "PAM",
+    "name": "Parti authenticité et modernité",
+    "logo": "logos-partis/logo_PAM.png",
+    "color": "#003B46",
+    "sortOrder": 2
+  },
+  {
+    "code": "PI",
+    "name": "Parti de l'Istiqlal",
+    "logo": "logos-partis/logo_istiqlal.png",
+    "color": "#F1D3BC",
+    "sortOrder": 3
+  },
+  {
+    "code": "USFP",
+    "name": "Union socialiste des forces populaires",
+    "logo": "logos-partis/logo_USFP.png",
+    "color": "#E99787",
+    "sortOrder": 4
+  },
+  {
+    "code": "PJD",
+    "name": "Parti de la justice et du développement",
+    "logo": "logos-partis/logo_PJD.png",
+    "color": "#07575B",
+    "sortOrder": 5
+  },
+  {
+    "code": "MP",
+    "name": "Mouvement populaire",
+    "logo": "logos-partis/logo_MP.png",
+    "color": "#8E9B97",
+    "sortOrder": 6
+  },
+  {
+    "code": "PPS",
+    "name": "Parti du progrès et du socialisme",
+    "logo": "logos-partis/logo_PPS.png",
+    "color": "#66A5AD",
+    "sortOrder": 7
+  },
+  {
+    "code": "UC",
+    "name": "Union constitutionnelle",
+    "logo": "logos-partis/logo_UC.png",
+    "color": "#537072",
+    "sortOrder": 8
+  },
+  {
+    "code": "FGD",
+    "name": "Fédération de la gauche démocratique",
+    "logo": "logos-partis/logo_FGD.png",
+    "color": "#336B87",
+    "sortOrder": 9
+  }
+]
