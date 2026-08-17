@@ -1,0 +1,70 @@
+name: morocco26-e-reason-arabic-2016-crosswalk
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [morocco26-e-reason]
+    paths:
+      - "morocco26/scripts/e_reason_bridge_arabic_2016_crosswalk.py"
+      - ".github/workflows/morocco26-e-reason-arabic-2016-crosswalk.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: morocco26-e-reason-arabic-2016-crosswalk
+  cancel-in-progress: true
+
+jobs:
+  bridge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Validate E_reason preregistration
+        run: python morocco26/scripts/validate_e_reason_prereg.py
+      - name: Fetch controller-accepted Arabic identity layer
+        run: |
+          git fetch origin morocco26-e-collect:refs/remotes/origin/morocco26-e-collect
+          mkdir -p "$RUNNER_TEMP/e_reason_identity_input"
+          git show origin/morocco26-e-collect:morocco26/data/goal100/e_collect/arabic_territory_crosswalk_v1.json > "$RUNNER_TEMP/e_reason_identity_input/arabic_territory_crosswalk_v1.json"
+          python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          p=Path(os.environ['RUNNER_TEMP'])/'e_reason_identity_input/arabic_territory_crosswalk_v1.json'
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['artifact_id']=='ATLAS395-ARABIC-TERRITORY-CROSSWALK-V1'
+          assert d['status']=='CONTROLLER_ACCEPTED_PRODUCT_IDENTITY_LAYER'
+          assert d['scope']=='IDENTITY_ONLY_NO_FORECAST_EFFECT'
+          assert d['counts']['resolved']==92 and d['validation']['strict_92_to_92_bijection'] is True
+          print('source_sha256='+hashlib.sha256(p.read_bytes()).hexdigest())
+          PY
+      - name: Bridge Arabic identities to frozen TAFRA 2016
+        run: python morocco26/scripts/e_reason_bridge_arabic_2016_crosswalk.py "$RUNNER_TEMP/e_reason_identity_input/arabic_territory_crosswalk_v1.json"
+      - name: Validate bridge invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('morocco26/data/goal100/e_reason/evidence/arabic_2016_crosswalk/crosswalk.json').read_text(encoding='utf-8'))
+          assert d['invariants']['imports_2026_seat_magnitude'] is False
+          assert d['invariants']['imports_2026_candidates'] is False
+          assert d['invariants']['imports_forecast_information'] is False
+          assert d['invariants']['outcomes_unsealed'] is False
+          print(json.dumps({'status':d['status'],**d['counts']},ensure_ascii=False,indent=2))
+          PY
+      - run: python morocco26/scripts/validate_e_reason_prereg.py
+      - name: Commit bridge diagnostic
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/data/goal100/e_reason/evidence/arabic_2016_crosswalk/crosswalk.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "experiment(e-reason): freeze Arabic-to-TAFRA 2016 identity bridge"
+          git pull --rebase origin morocco26-e-reason
+          git push origin HEAD:morocco26-e-reason
