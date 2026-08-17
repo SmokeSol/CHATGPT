@@ -4,6 +4,7 @@ on:
   push:
     branches: [atlas395-v0]
     paths:
+      - 'morocco26/web/**'
       - '.github/workflows/atlas395-ship-now.yml'
   workflow_dispatch:
 
@@ -27,6 +28,7 @@ jobs:
           test -f morocco26/web/assets/core.js
           test -f morocco26/web/assets/methodology.css
           test -f morocco26/web/data/current_snapshot.json
+          test -f morocco26/web/data/methodology_state.json
           grep -q 'view-overview' morocco26/web/index.html
           grep -q 'view-methodology' morocco26/web/index.html
           grep -q 'view-territories' morocco26/web/index.html
@@ -34,6 +36,7 @@ jobs:
           grep -q 'view-signals' morocco26/web/index.html
           grep -q 'view-history' morocco26/web/index.html
           grep -q "\['methodology','Méthodologie'" morocco26/web/assets/core.js
+          grep -q 'Une projection territoriale, probabiliste et traçable' morocco26/web/app.js
 
       - name: Package full reader app
         shell: bash
@@ -57,7 +60,7 @@ jobs:
           test -n "$url"
           echo "url=$url" >> "$GITHUB_OUTPUT"
           echo "ATLAS_URL=$url" >> "$GITHUB_ENV"
-          echo "## Atlas 395 complet" >> "$GITHUB_STEP_SUMMARY"
+          echo "## Atlas 395 complet — version institutionnelle" >> "$GITHUB_STEP_SUMMARY"
           echo "$url" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Verify published files
@@ -65,11 +68,15 @@ jobs:
         run: |
           set -euo pipefail
           curl -fsSL --max-time 20 "$ATLAS_URL" -o /tmp/live-index.html
+          curl -fsSL --max-time 20 "${ATLAS_URL}app.js" -o /tmp/live-app.js
           curl -fsSL --max-time 20 "${ATLAS_URL}assets/core.js" -o /tmp/live-core.js
           curl -fsSL --max-time 20 "${ATLAS_URL}data/current_snapshot.json" -o /tmp/live-snapshot.json
+          curl -fsSL --max-time 20 "${ATLAS_URL}data/methodology_state.json" -o /tmp/live-methodology.json
           grep -q 'view-overview' /tmp/live-index.html
           grep -q 'view-methodology' /tmp/live-index.html
           grep -q "\['methodology','Méthodologie'" /tmp/live-core.js
+          grep -q 'Une projection territoriale, probabiliste et traçable' /tmp/live-app.js
+          ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|tester l.IA|IA contre' /tmp/live-methodology.json
 
       - name: Verify rendered full Atlas in Chrome
         shell: bash
@@ -83,7 +90,10 @@ jobs:
           grep -Fq 'Partis' /tmp/live-dom.html
           grep -Fq 'Signaux 2026' /tmp/live-dom.html
           grep -Fq 'Historique' /tmp/live-dom.html
+          grep -Fq 'Une projection territoriale, probabiliste et traçable' /tmp/live-dom.html
+          grep -Fq 'Neutralité et gouvernance des données' /tmp/live-dom.html
           grep -Fq 'class="kpi hi"' /tmp/live-dom.html
+          ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|tester l.IA|IA contre référence|mettre l.IA' /tmp/live-dom.html
           ! grep -Fq 'Atlas 395 ne peut pas charger les données' /tmp/live-dom.html
           ! grep -Fq 'Atlas 395 ne peut pas initialiser cette édition' /tmp/live-dom.html
           echo "VERIFIED_FULL_ATLAS_URL=$ATLAS_URL"
