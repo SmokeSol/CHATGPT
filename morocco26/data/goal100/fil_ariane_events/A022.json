@@ -1,0 +1,33 @@
+{
+  "event_id": "A022",
+  "date": "2026-08-17T07:58:11+01:00",
+  "title": "Amendement exact de l’alias régional Dakhla",
+  "phase": "P7_B2_STRUCTURED_EVIDENCE_LAYER",
+  "gate": "B2-2-IDENTITY-TERRITORY-CROSSWALK",
+  "status": "PROTOCOL_AMENDMENT_PRE_REEXECUTION",
+  "failed_run": 32003523080,
+  "failed_commit": "7b08117b1fb987cdc2925e882527c5d3920ccc78",
+  "failed_crosswalk_canonical_sha256": "92d4d75bc1f2ca2e4e9873e8dddc0b0e9e7e4b0ec247c060e3e3ddb6311e6b13",
+  "observed_failure": {
+    "class": "UNRESOLVED_REGION",
+    "count": 2,
+    "source_label": "Dakhla-Oued Eddahab",
+    "authoritative_label": "Dakhla-Oued Ed-Dahab",
+    "contexts": ["closure:oued-eddahab", "closure:aousserd"]
+  },
+  "amendment": {
+    "protocol_id": "M26-GOAL100-B2-IDENTITY-PROTOCOL-V1.1",
+    "normalized_alias": "dakhla oued eddahab",
+    "canonical_target_id": "reg-dakhla-oued-ed-dahab",
+    "scope": "ONE_EXACT_REVIEWED_REGION_ALIAS_ONLY"
+  },
+  "scientific_impact": "NONE",
+  "forecast_changed": false,
+  "B2_claims_changed": false,
+  "feature_dictionary_changed": false,
+  "coefficient_changed": false,
+  "threshold_changed": false,
+  "fuzzy_matching_enabled": false,
+  "preservation": "The failed crosswalk, certificate, event and journal state remain immutable at commit 7b08117 and are indexed by b2_identity_failures/run_32003523080/manifest.json before rerun.",
+  "next_action_exact": "Preserve the failed attempt by hashes, execute identity protocol V1.1, and close B2-2 only if every prior criterion passes with zero unresolved mappings and zero admitted legacy 2026 candidates."
+}
