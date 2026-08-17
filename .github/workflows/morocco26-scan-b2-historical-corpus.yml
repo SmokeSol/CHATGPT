@@ -1,0 +1,87 @@
+name: morocco26-scan-b2-historical-corpus
+
+on:
+  push:
+    branches: [morocco26-fminus1-run]
+    paths:
+      - 'morocco26/scripts/goal100_scan_b2_historical_candidate_corpus.py'
+      - '.github/workflows/morocco26-scan-b2-historical-corpus.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: morocco26-scan-b2-historical-corpus-v1
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 130
+    env:
+      B2_BRANCH: morocco26-b2-structured-evidence
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-fminus1-run
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet openpyxl
+
+      - name: Wait for B2 transition report
+        run: |
+          for attempt in $(seq 1 180); do
+            git fetch origin --prune
+            if git ls-remote --exit-code --heads origin "$B2_BRANCH" >/dev/null 2>&1; then
+              git switch -C "$B2_BRANCH" "origin/$B2_BRANCH"
+              if [ -f morocco26/data/goal100/b2/v1/b2_transition_report.json ]; then
+                exit 0
+              fi
+            fi
+            git switch -C morocco26-fminus1-run origin/morocco26-fminus1-run >/dev/null 2>&1 || true
+            echo "Waiting for transactional B2 transition: $attempt/180"
+            sleep 10
+          done
+          exit 1
+
+      - name: Import and execute corpus inventory
+        run: |
+          git checkout origin/morocco26-fminus1-run -- morocco26/scripts/goal100_scan_b2_historical_candidate_corpus.py
+          python morocco26/scripts/goal100_scan_b2_historical_candidate_corpus.py
+
+      - name: Validate no automatic historical closure
+        run: |
+          python morocco26/scripts/validate_anti_drift.py
+          python morocco26/scripts/goal100_validate_b2_v1.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          b=Path('morocco26/data/goal100/b2/v1')
+          r=json.loads((b/'historical_candidate_corpus_inventory.json').read_text(encoding='utf-8'))
+          assert r['gate'] in {'PASS_INVENTORY_MATCHES_FOUND','PASS_NO_CANDIDATE_CORPUS_FOUND'}
+          assert r['forecast_eligible_files']==0
+          assert r['historical_gap_closed'] is False
+          hist=json.loads((b/'historical_identifiability_probe.json').read_text(encoding='utf-8'))
+          assert hist['gate']=='BLOCKED_HISTORICAL_FEATURE_BACKFILL_REQUIRED'
+          print('B2_CORPUS_SCAN_BOUNDARY_PASS',r['schema_keyword_candidate_files'])
+          PY
+
+      - name: Commit corpus inventory
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'research(morocco26): inventory existing historical candidate corpus' || true
+          for attempt in 1 2 3; do
+            git fetch origin "$B2_BRANCH"
+            git rebase "origin/$B2_BRANCH" || { git rebase --abort; exit 1; }
+            if git push origin HEAD:"$B2_BRANCH"; then exit 0; fi
+            sleep 5
+          done
+          exit 1
+
+      - name: Print inventory summary
+        run: cat morocco26/data/goal100/b2/v1/historical_candidate_corpus_inventory.json
