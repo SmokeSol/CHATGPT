@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "M26-E-REASON-SOURCE-POLICY-V1",
+  "frozen_at": "2026-08-17T21:42:17+01:00",
+  "inherits": {
+    "path": "morocco26/data/goal100/e_collect/e_collect_source_policy_v1.json",
+    "git_blob_sha": "640d0b8547dab47659c99188381bf9df96a2af69"
+  },
+  "allowed_source_classes": [
+    "T0_OFFICIAL_INSTITUTIONAL",
+    "T1_OFFICIAL_PARTY",
+    "M24_MEDIAS24"
+  ],
+  "language_policy": "Arabic and French are equally admissible; language never changes evidentiary rank.",
+  "archive_policy": "Archives of an allowed domain are transport evidence only. The original domain, original publication date, capture date and content hash must be preserved.",
+  "historical_article_update_rule": "A live page published before cutoff but updated after cutoff is not automatically admissible. Use a pre-cutoff archive, a versioned static asset, or reject any section whose pre-cutoff existence cannot be established.",
+  "search_snippet_rule": "Search snippets are discovery only and never evidence.",
+  "outcome_source_separation": "Pages or files containing target-election results, elected-member lists, victory/defeat language or post-election analyses are held in the sealed outcome partition and excluded from packet construction.",
+  "new_source_rule": "No new source class may be added during execution. A new domain is usable only if it objectively fits T0 or T1 and its qualification is logged before extraction."
+}
