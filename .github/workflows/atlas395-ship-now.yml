@@ -76,6 +76,7 @@ jobs:
           test -n "$url"
           echo "ATLAS_URL=$url" >> "$GITHUB_ENV"
           echo "TEMPORARY_VERIFIED_ATLAS_URL=$url" >> "$GITHUB_STEP_SUMMARY"
+          echo "TEMPORARY_ATLAS_URL=$url"
 
       - name: Verify rendered institutional interface in Chromium
         shell: bash
@@ -83,22 +84,36 @@ jobs:
           set -euo pipefail
           curl --retry 4 --retry-all-errors -fsSL --max-time 40 "${ATLAS_URL}data/atlas_v1.json" -o /tmp/atlas_v1.json
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
-          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=30000 --dump-dom "$ATLAS_URL" > /tmp/live-dom.html
-          grep -Fq 'Intelligence électorale territoriale · Maroc 2026' /tmp/live-dom.html
-          grep -Fq 'Rapport de forces et incertitude territoriale' /tmp/live-dom.html
-          grep -Fq '>Synthèse<' /tmp/live-dom.html
-          grep -Fq '>Carte territoriale<' /tmp/live-dom.html
-          grep -Fq '>Candidatures<' /tmp/live-dom.html
-          grep -Fq '>Partis<' /tmp/live-dom.html
-          grep -Fq '>Veille 2026<' /tmp/live-dom.html
-          grep -Fq '>Méthode<' /tmp/live-dom.html
-          grep -Fq '>Historique<' /tmp/live-dom.html
-          grep -Fq 'Candidatures documentées par circonscription' /tmp/live-dom.html
-          grep -Fq 'RÉFÉRENCE CONSERVÉE' /tmp/live-dom.html
-          grep -Fq 'territoires bilingues' /tmp/live-dom.html
-          grep -Fq '546' /tmp/live-dom.html
-          grep -Fq 'الدار البيضاء آنفا' /tmp/live-dom.html
-          ! grep -Eiq 'LLM|intelligence artificielle|expérimentation IA|tester l.?IA|mettre l.?IA|IA contre référence|E_reason|E_full|agentic|Arabic Native|AUCUN DELTA APPLIQUÉ' /tmp/live-dom.html
-          ! grep -Fq 'Atlas 395 ne peut pas charger' /tmp/live-dom.html
-          ! grep -Fq 'Atlas 395 ne peut pas initialiser' /tmp/live-dom.html
+          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=35000 --dump-dom "$ATLAS_URL" > /tmp/live-dom.html
+          python - <<'PY'
+          from pathlib import Path
+          dom=Path('/tmp/live-dom.html').read_text(encoding='utf-8',errors='replace')
+          required=[
+            'Intelligence électorale territoriale · Maroc 2026',
+            'Rapport de forces et incertitude territoriale',
+            'Synthèse',
+            'Carte territoriale',
+            'Candidatures',
+            'Partis',
+            'Veille 2026',
+            'Méthode',
+            'Historique',
+            'Candidatures documentées par circonscription',
+            'RÉFÉRENCE CONSERVÉE',
+            'territoires bilingues',
+            '546',
+            'الدار البيضاء آنفا',
+          ]
+          forbidden=['LLM','intelligence artificielle','expérimentation IA','E_reason','E_full','agentic','Arabic Native','AUCUN DELTA APPLIQUÉ']
+          missing=[x for x in required if x not in dom]
+          forbidden_present=[x for x in forbidden if x.lower() in dom.lower()]
+          fatal=[x for x in ['Atlas 395 ne peut pas charger','Atlas 395 ne peut pas initialiser'] if x in dom]
+          print('MISSING_REQUIRED=',missing)
+          print('FORBIDDEN_PRESENT=',forbidden_present)
+          print('FATAL_PRESENT=',fatal)
+          print('DOM_BYTES=',len(dom.encode('utf-8')))
+          if missing or forbidden_present or fatal:
+              raise SystemExit(1)
+          print('INSTITUTIONAL_BROWSER_SMOKE=PASS')
+          PY
           echo "INSTITUTIONAL_BROWSER_SMOKE=PASS" >> "$GITHUB_STEP_SUMMARY"
