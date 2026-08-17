@@ -17,17 +17,31 @@ function probColor(v){if(v>=.75)return'#6e8bff';if(v>=.5)return'#536ac2';if(v>=.
 function renderSignals(){
   const e=D.evidence,w=e.wave1||{},sources=e.sources||[];
   $('#signal-kpis').innerHTML=[
-    [sources.length,'sources suivies'],[w.documents_acquired??'—','documents acquis'],[w.sources_claim_eligible??'—','sources directement exploitables'],[(e.events||[]).length,'signaux documentés']
+    [sources.length,'sources suivies'],[w.documents_acquired??'—','documents acquis'],[w.sources_claim_eligible??'—','sources accessibles surveillées'],[(e.events||[]).length,'signaux documentés']
   ].map(([v,l])=>`<div class="signal-kpi"><b>${v}</b><span>${l}</span></div>`).join('');
-  $('#signal-callout').innerHTML=`<b>La projection de référence reste inchangée.</b><p>Aucune information 2026 n'a encore franchi l'ensemble des vérifications nécessaires pour produire une modification chiffrée. Atlas préfère afficher une absence d'impact plutôt qu'introduire une hypothèse non confirmée.</p>`;
+  $('#signal-callout').innerHTML=`<b>La projection de référence reste inchangée.</b><p>Aucune information 2026 n'a encore franchi l'ensemble des vérifications nécessaires pour produire une modification chiffrée. Atlas préfère afficher une absence d'impact plutôt qu'introduire une hypothèse non confirmée.</p><p>Un article de presse sert uniquement à détecter ou corroborer une information. Il ne peut jamais modifier seul la projection.</p>`;
   const evs=e.events||[];
   $('#signal-events').innerHTML=evs.length?evs.map(x=>{
     const origin=SOURCE_NAMES[x.source]||'Source documentée';
-    const summary=x.id==='PJD_ROSTER_SURFACE_WAVE1'?'Une liste structurée de candidatures a été repérée sur une source officielle du PJD.':'Information documentée en cours de qualification';
-    const detail=x.id==='PJD_ROSTER_SURFACE_WAVE1'?'93 lignes ont été identifiées. Une confirmation indépendante reste nécessaire avant toute intégration dans la projection.':"Cette information est conservée dans la veille et ne sera intégrée à la projection qu’après validation.";
+    const code=String(x.source||'');
+    const isPress=code.startsWith('T2_');
+    const isParty=code.startsWith('T1_');
+    const summary=x.id==='PJD_ROSTER_SURFACE_WAVE1'
+      ?'Une liste structurée de candidatures a été repérée sur une source officielle du PJD.'
+      :(isPress?'Signal de presse détecté — confirmation requise':isParty?'Annonce partisane détectée — confirmation requise':'Information institutionnelle en cours de qualification');
+    const detail=x.id==='PJD_ROSTER_SURFACE_WAVE1'
+      ?'93 lignes ont été identifiées. Une confirmation indépendante reste nécessaire avant toute intégration dans la projection.'
+      :(isPress?'Cette publication est conservée comme piste de veille. Elle doit être confirmée par une source primaire ou par des sources réellement indépendantes avant toute utilisation.':isParty?'Cette publication établit ce que le parti annonce, mais pas à elle seule la validation juridique ou factuelle de l’information.':'Cette information reste hors du calcul jusqu’à validation de son autorité, de son identité et de son périmètre territorial.');
     return`<div class="signal-event"><div class="origin">${esc(origin)}</div><div><h4>${esc(summary)}</h4><p>${esc(detail)}</p></div><div class="impact-none">Aucune incidence sur la projection</div></div>`;
   }).join(''):`<p class="note">Aucun signal documenté n'est encore suffisamment confirmé pour modifier la projection.</p>`;
-  $('#source-grid').innerHTML=sources.map(s=>{const st=sourceState(s.states||{});return`<div class="source-card-premium"><b>${esc(SOURCE_NAMES[s.source]||'Source documentée')}</b><span>${st.detail}</span><div class="state"><i class="state-dot ${st.cls}"></i>${st.label}</div></div>`}).join('');
+  $('#source-grid').innerHTML=sources.map(s=>{const st=sourceState(s.states||{});return`<div class="source-card-premium"><b>${esc(SOURCE_NAMES[s.source]||'Source documentée')}</b><span>${esc(sourceRole(s.source))} · ${st.detail}</span><div class="state"><i class="state-dot ${st.cls}"></i>${st.label}</div></div>`}).join('');
+}
+function sourceRole(code){
+  const c=String(code||'');
+  if(c.startsWith('T0_'))return'Source institutionnelle';
+  if(c.startsWith('T1_'))return'Source officielle d’un parti — déclaration intéressée';
+  if(c.startsWith('T2_'))return'Presse — veille et corroboration uniquement';
+  return'Source documentaire';
 }
 function sourceState(states){
   const a=Number(states.ACQUIRED||0), er=Number(states.FETCH_ERROR||0), bl=Number(states.BLOCKED_SOURCE||0);
@@ -43,4 +57,3 @@ function renderHistory(){
   const s=D.snapshot, d=dateFr(s.created_at);
   $('#history-rail').innerHTML=`<article class="history-card-premium current"><span class="date">${d}</span><h3>Projection structurelle de référence</h3><p>Première projection nationale entièrement territorialisée : 395 sièges couverts dans chaque scénario simulé.</p><span class="status">Version enregistrée</span></article><article class="history-card-premium future"><span class="date">Prochaine étape</span><h3>Projection enrichie 2026</h3><p>Intégration des candidatures, changements de parti et autres informations validées lorsqu'elles deviennent suffisamment documentées.</p><span class="status">À venir</span></article><article class="history-card-premium future"><span class="date">Après le 23 septembre 2026</span><h3>Évaluation de la projection</h3><p>Comparaison des résultats observés aux distributions publiées avant le scrutin, circonscription par circonscription.</p><span class="status">Après scrutin</span></article>`;
 }
-
