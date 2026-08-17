@@ -18,6 +18,45 @@
     });
   }
 
+  function activateView(id){
+    const target=document.querySelector(`#view-${id}`);
+    if(!target)return false;
+    document.querySelectorAll('#nav button[data-view]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.view===id)));
+    document.querySelectorAll('main .view').forEach(v=>v.classList.toggle('active',v===target));
+    if(location.hash!==`#${id}`)history.replaceState(null,'',`#${id}`);
+    try{window.scrollTo({top:0,behavior:'smooth'})}catch(_){window.scrollTo(0,0)}
+    return true;
+  }
+
+  function installNavigationFallback(){
+    const nav=document.querySelector('#nav');
+    if(!nav||nav.dataset.institutionalNavBound==='1')return;
+    nav.dataset.institutionalNavBound='1';
+    nav.addEventListener('click',event=>{
+      const button=event.target.closest('button[data-view]');
+      if(!button||!nav.contains(button))return;
+      event.preventDefault();
+      event.stopPropagation();
+      activateView(button.dataset.view);
+    });
+    nav.addEventListener('keydown',event=>{
+      if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
+      const tabs=[...nav.querySelectorAll('button[data-view]')];
+      const current=Math.max(0,tabs.indexOf(document.activeElement));
+      let next=current;
+      if(event.key==='ArrowLeft')next=(current-1+tabs.length)%tabs.length;
+      if(event.key==='ArrowRight')next=(current+1)%tabs.length;
+      if(event.key==='Home')next=0;
+      if(event.key==='End')next=tabs.length-1;
+      event.preventDefault();tabs[next]?.focus();tabs[next]&&activateView(tabs[next].dataset.view);
+    });
+  }
+
+  function applyInitialHash(){
+    const id=location.hash.replace(/^#/,'');
+    if(id&&document.querySelector(`#view-${id}`))activateView(id);
+  }
+
   function polishCandidates(){
     const view=document.querySelector('#view-candidates');
     if(!view)return;
@@ -66,6 +105,7 @@
     relabelTab('methodology','Méthode');
     relabelTab('history','Historique');
     reorderNavigation();
+    installNavigationFallback();
 
     const status=document.querySelector('#status-detail');
     if(status && /F0|couche factuelle|delta|V1/i.test(status.textContent)){
@@ -77,10 +117,12 @@
   let scheduled=false;
   const schedule=()=>{
     if(scheduled)return;scheduled=true;
-    requestAnimationFrame(()=>{scheduled=false;polishGlobal();});
+    requestAnimationFrame(()=>{scheduled=false;polishGlobal();applyInitialHash();});
   };
   const observer=new MutationObserver(schedule);
   observer.observe(document.documentElement,{subtree:true,childList:true,characterData:true});
   document.addEventListener('DOMContentLoaded',schedule,{once:true});
+  window.addEventListener('hashchange',applyInitialHash);
+  window.ATLAS_INSTITUTIONAL_READY=true;
   schedule();
 })();
