@@ -1,0 +1,86 @@
+name: Atlas 395 — Canonical Vercel URL audit
+
+on:
+  push:
+    branches: [atlas395-v0]
+    paths:
+      - '.github/workflows/atlas395-canonical-url-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Audit Atlas Vercel aliases
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+          candidates=(
+            'https://atlas-395-v1.vercel.app/'
+            'https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/'
+            'https://atlas395-maroc-2026.vercel.app/'
+            'https://atlas-395-maroc-2026.vercel.app/'
+            'https://atlas-395-rescue-20260817.vercel.app/'
+          )
+          FOUND=''
+          for URL in "${candidates[@]}"; do
+            echo "=== $URL ==="
+            base_code=$(curl -sS -L -o /tmp/base.html -w '%{http_code}' --max-time 30 "$URL" || true)
+            data_code=$(curl -sS -L -o /tmp/atlas.json -w '%{http_code}' --max-time 30 "${URL}data/atlas_v1.json" || true)
+            echo "HTTP_BASE=$base_code HTTP_DATA=$data_code BASE_BYTES=$(wc -c </tmp/base.html 2>/dev/null || echo 0) DATA_BYTES=$(wc -c </tmp/atlas.json 2>/dev/null || echo 0)"
+            [ "$base_code" = 200 ] || continue
+            [ "$data_code" = 200 ] || continue
+            if ! python - <<'PY'
+          import json
+          try:
+              x=json.load(open('/tmp/atlas.json',encoding='utf-8'))
+              c=x['coverage']
+              assert c['canonical_local_territories']==92
+              assert c['arabic_identity_coverage']==92
+              assert c['candidate_records_after_official_pjd_merge']==546
+              assert c['local_territories_with_records_after_merge']==92
+              assert c['missing_after_merge']==[]
+              assert x['forecast']['immutable'] is True
+          except Exception as e:
+              print('DATA_GATE_FAIL',repr(e))
+              raise SystemExit(1)
+          print('DATA_GATE_PASS')
+          PY
+            then continue; fi
+            "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=35000 --dump-dom "$URL" >/tmp/dom.html 2>/tmp/chrome.err || true
+            if python - <<'PY'
+          from pathlib import Path
+          d=Path('/tmp/dom.html').read_text(encoding='utf-8',errors='replace')
+          required=[
+            'Intelligence électorale territoriale · Maroc 2026',
+            'Candidatures documentées par circonscription',
+            'Synthèse','Carte territoriale','Candidatures','Partis','Veille 2026','Méthode','Historique',
+            '17 août 2026','546','الدار البيضاء آنفا'
+          ]
+          forbidden=['Invalid Date','Atlas 395 ne peut pas charger','Atlas 395 ne peut pas initialiser']
+          missing=[x for x in required if x not in d]
+          bad=[x for x in forbidden if x in d]
+          print('DOM_BYTES=',len(d.encode('utf-8')),'MISSING=',missing,'BAD=',bad)
+          if missing or bad: raise SystemExit(1)
+          print('FINAL_SURFACE_PASS')
+          PY
+            then
+              FOUND="$URL"
+              echo "CANONICAL_FINAL_URL=$URL"
+              break
+            fi
+          done
+          test -n "$FOUND" || { echo 'NO_CANONICAL_FINAL_URL_FOUND'; exit 1; }
+          echo "CANONICAL_FINAL_URL=$FOUND" >> "$GITHUB_ENV"
+          {
+            echo '### Canonical Atlas 395 Vercel URL'
+            echo "- URL: **$FOUND**"
+            echo '- Data: **92 territories / 546 candidate records / 92 Arabic identities**'
+            echo '- Forecast: **F0 immutable**'
+            echo '- UI: **institutional final surface, 7 tabs, valid 17 August 2026 date**'
+          } >> "$GITHUB_STEP_SUMMARY"
