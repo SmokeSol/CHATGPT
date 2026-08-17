@@ -38,7 +38,7 @@ jobs:
       - name: Enforce one-way write boundary
         shell: bash
         run: |
-          bad="$(git diff --name-only | grep -v '^morocco26/web/data/' || true)"
+          bad="$(git status --porcelain | awk '{print $2}' | grep -v '^morocco26/web/data/' || true)"
           if [ -n "$bad" ]; then
             echo "Atlas generator modified forbidden paths:"
             echo "$bad"
@@ -47,7 +47,7 @@ jobs:
       - name: Commit generated views
         shell: bash
         run: |
-          if git diff --quiet -- morocco26/web/data; then
+          if [ -z "$(git status --porcelain -- morocco26/web/data)" ]; then
             echo "No derived view changes."
             exit 0
           fi
