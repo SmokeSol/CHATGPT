@@ -27,6 +27,7 @@ CUTOFF='2016-10-06T22:59:59+00:00'
 PRE_PHRASES=[
     'اقتراع يوم 7 أكتوبر',
     'لائحة المرشحين',
+    'لائحة باقي المرشحين',
     'مرشحي اللائحة',
     'تمت تزكيتها',
     'الأمانة العامة',
@@ -74,12 +75,7 @@ def pdf_hrefs(text: str, base_expected: str):
             continue
         basename=Path(urlparse(href).path).name
         stem=Path(basename).stem.casefold()
-        rows.append({
-            'href':href,
-            'basename':basename,
-            'expected_exact_basename':basename.casefold()==base_expected.casefold(),
-            'expected_migration_variant':stem in {expected_stem,expected_stem+'_0'},
-        })
+        rows.append({'href':href,'basename':basename,'expected_exact_basename':basename.casefold()==base_expected.casefold(),'expected_migration_variant':stem in {expected_stem,expected_stem+'_0'}})
     return rows
 
 
@@ -103,104 +99,35 @@ def main():
         aid=article['id']; doc=docs.get(aid)
         if not doc:
             continue
-        html_path=ROOT/article['current_page']['path']
-        pdf_path=ROOT/doc['raw_path']
-        text_path=ROOT/doc['text_path']
-        htext=html_path.read_text(encoding='utf-8',errors='replace')
-        ptext=text_path.read_text(encoding='utf-8',errors='replace')
-        reader=PdfReader(str(pdf_path))
-        metadata={str(k):str(v) for k,v in (reader.metadata or {}).items()}
-        creation=parse_pdf_date(metadata.get('/CreationDate'))
-        modification=parse_pdf_date(metadata.get('/ModDate'))
-        dates=html_dates(htext)
-        hrefs=pdf_hrefs(htext,article['expected_attachment'])
-        expected_stem=Path(article['expected_attachment']).stem.casefold()
+        html_path=ROOT/article['current_page']['path']; pdf_path=ROOT/doc['raw_path']; text_path=ROOT/doc['text_path']
+        htext=html_path.read_text(encoding='utf-8',errors='replace'); ptext=text_path.read_text(encoding='utf-8',errors='replace')
+        reader=PdfReader(str(pdf_path)); metadata={str(k):str(v) for k,v in (reader.metadata or {}).items()}
+        creation=parse_pdf_date(metadata.get('/CreationDate')); modification=parse_pdf_date(metadata.get('/ModDate'))
+        dates=html_dates(htext); hrefs=pdf_hrefs(htext,article['expected_attachment'])
         linked=[x for x in hrefs if x['expected_exact_basename'] or x['expected_migration_variant']]
-        page_hashes=[]
-        extracted=[]
+        page_hashes=[]; extracted=[]
         for page in reader.pages:
-            t=page.extract_text() or ''
-            extracted.append(t)
-            page_hashes.append(hashlib.sha256(t.encode('utf-8')).hexdigest())
+            t=page.extract_text() or ''; extracted.append(t); page_hashes.append(hashlib.sha256(t.encode('utf-8')).hexdigest())
         combined='\n'.join(extracted)
-        phrase_hits={p:(p in combined or p in ptext) for p in PRE_PHRASES}
-        post_hits={p:(p in combined or p in ptext) for p in POST_TERMS}
+        phrase_hits={p:(p in combined or p in ptext) for p in PRE_PHRASES}; post_hits={p:(p in combined or p in ptext) for p in POST_TERMS}
         publication_pre_cutoff=False
         for value in dates:
             try:
                 dt=datetime.fromisoformat(value.replace('Z','+00:00'))
                 if dt.tzinfo is None: dt=dt.replace(tzinfo=timezone.utc)
                 if dt.astimezone(timezone.utc)<=datetime.fromisoformat(CUTOFF): publication_pre_cutoff=True
-            except Exception:
-                pass
-        metadata_pre_cutoff=None
-        if creation:
-            metadata_pre_cutoff=datetime.fromisoformat(creation)<=datetime.fromisoformat(CUTOFF)
-        mechanical_pass=(
-            publication_pre_cutoff
-            and bool(linked)
-            and phrase_hits['اقتراع يوم 7 أكتوبر']
-            and phrase_hits['لائحة المرشحين']
-            and not any(post_hits.values())
-        )
+            except Exception: pass
+        metadata_pre_cutoff=datetime.fromisoformat(creation)<=datetime.fromisoformat(CUTOFF) if creation else None
+        has_slate_wording=phrase_hits['لائحة المرشحين'] or phrase_hits['لائحة باقي المرشحين']
+        mechanical_pass=(publication_pre_cutoff and bool(linked) and metadata_pre_cutoff is True and phrase_hits['اقتراع يوم 7 أكتوبر'] and has_slate_wording and phrase_hits['مرشحي اللائحة'] and phrase_hits['الأمانة العامة'] and not any(post_hits.values()))
         rows.append({
-            'article_id':aid,
-            'official_article_url':article['url'],
-            'article_published_at_declared':article['published_at_source'],
-            'html_detected_publication_dates':dates,
-            'publication_pre_cutoff':publication_pre_cutoff,
-            'expected_attachment':article['expected_attachment'],
-            'pdf_links_on_current_official_article':hrefs,
-            'expected_attachment_linked':bool(linked),
-            'mirror_url':doc['url'],
-            'mirror_basename':Path(urlparse(doc['url']).path).name,
-            'pdf_sha256':sha256(pdf_path),
-            'pdf_bytes':pdf_path.stat().st_size,
-            'page_count':len(reader.pages),
-            'pdf_metadata':metadata,
-            'pdf_creation_date_parsed_utc_assumption':creation,
-            'pdf_modification_date_parsed_utc_assumption':modification,
-            'pdf_creation_pre_cutoff_if_present':metadata_pre_cutoff,
-            'pdf_trailer_id':trailer_id(reader),
-            'extracted_text_sha256':hashlib.sha256(combined.encode('utf-8')).hexdigest(),
-            'page_text_sha256':page_hashes,
-            'pre_election_phrase_hits':phrase_hits,
-            'post_election_outcome_term_hits':post_hits,
-            'mechanical_provenance_checks_pass':mechanical_pass,
-            'admissibility_promoted_by_this_audit':False,
+            'article_id':aid,'official_article_url':article['url'],'article_published_at_declared':article['published_at_source'],'html_detected_publication_dates':dates,'publication_pre_cutoff':publication_pre_cutoff,
+            'expected_attachment':article['expected_attachment'],'pdf_links_on_current_official_article':hrefs,'expected_attachment_linked':bool(linked),'mirror_url':doc['url'],'mirror_basename':Path(urlparse(doc['url']).path).name,
+            'pdf_sha256':sha256(pdf_path),'pdf_bytes':pdf_path.stat().st_size,'page_count':len(reader.pages),'pdf_metadata':metadata,'pdf_creation_date_parsed_utc_assumption':creation,'pdf_modification_date_parsed_utc_assumption':modification,'pdf_creation_pre_cutoff_if_present':metadata_pre_cutoff,'pdf_trailer_id':trailer_id(reader),
+            'extracted_text_sha256':hashlib.sha256(combined.encode('utf-8')).hexdigest(),'page_text_sha256':page_hashes,'pre_election_phrase_hits':phrase_hits,'post_election_outcome_term_hits':post_hits,'mechanical_provenance_checks_pass':mechanical_pass,'admissibility_promoted_by_this_audit':False,
         })
-    payload={
-        'schema_version':'1.0',
-        'created_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),
-        'source_manifest':str(manifest_path.relative_to(ROOT)),
-        'purpose':'PROVENANCE_AUDIT_ONLY_NO_AUTOMATIC_PROMOTION',
-        'documents_audited':len(rows),
-        'mechanical_pass_count':sum(r['mechanical_provenance_checks_pass'] for r in rows),
-        'all_mechanical_checks_pass':bool(rows) and all(r['mechanical_provenance_checks_pass'] for r in rows),
-        'rows':rows,
-        'invariants':{
-            'predictive_judgments_generated':False,
-            'forecast_delta_generated':False,
-            'outcomes_unsealed':False,
-            'F1_created':False,
-        },
-    }
-    OUT.mkdir(parents=True,exist_ok=True)
-    (OUT/'audit.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    print(json.dumps({
-        'documents_audited':payload['documents_audited'],
-        'mechanical_pass_count':payload['mechanical_pass_count'],
-        'all_mechanical_checks_pass':payload['all_mechanical_checks_pass'],
-        'rows':[{
-            'article_id':r['article_id'],
-            'published_dates':r['html_detected_publication_dates'],
-            'attachment_linked':r['expected_attachment_linked'],
-            'creation':r['pdf_creation_date_parsed_utc_assumption'],
-            'creation_pre_cutoff':r['pdf_creation_pre_cutoff_if_present'],
-            'page_count':r['page_count'],
-            'mechanical_pass':r['mechanical_provenance_checks_pass'],
-        } for r in rows]
-    },ensure_ascii=False,indent=2))
+    payload={'schema_version':'1.1','created_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),'source_manifest':str(manifest_path.relative_to(ROOT)),'purpose':'PROVENANCE_AUDIT_ONLY_NO_AUTOMATIC_PROMOTION','documents_audited':len(rows),'mechanical_pass_count':sum(r['mechanical_provenance_checks_pass'] for r in rows),'all_mechanical_checks_pass':bool(rows) and all(r['mechanical_provenance_checks_pass'] for r in rows),'rows':rows,'invariants':{'predictive_judgments_generated':False,'forecast_delta_generated':False,'outcomes_unsealed':False,'F1_created':False}}
+    OUT.mkdir(parents=True,exist_ok=True); (OUT/'audit.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps({'documents_audited':payload['documents_audited'],'mechanical_pass_count':payload['mechanical_pass_count'],'all_mechanical_checks_pass':payload['all_mechanical_checks_pass'],'rows':[{'article_id':r['article_id'],'published_dates':r['html_detected_publication_dates'],'attachment_linked':r['expected_attachment_linked'],'creation':r['pdf_creation_date_parsed_utc_assumption'],'creation_pre_cutoff':r['pdf_creation_pre_cutoff_if_present'],'page_count':r['page_count'],'mechanical_pass':r['mechanical_provenance_checks_pass']} for r in rows]},ensure_ascii=False,indent=2))
 
-if __name__=='__main__':
-    main()
+if __name__=='__main__': main()
