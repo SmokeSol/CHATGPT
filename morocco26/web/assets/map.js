@@ -3,8 +3,21 @@ function renderLegend(id){const counts={HIGH:0,MEDIUM:0,LOW:0};D.constituencies.
 function drawCartogram(svgId,cards,colorFn,onClick,selectedId=null,visibleSet=null){const svg=document.getElementById(svgId);if(!svg)return;const assignments=cartogramAssignments(cards);const r=19.5,sx=43,sy=34.5,ox=30,oy=28;const pts=(x,y)=>[[x-r,y],[x-r/2,y-r*.86],[x+r/2,y-r*.86],[x+r,y],[x+r/2,y+r*.86],[x-r/2,y+r*.86]].map(p=>p.join(',')).join(' ');const maxCol=Math.max(...assignments.map(x=>x.col),0),maxRow=Math.max(...assignments.map(x=>x.row),0);const width=ox*2+maxCol*sx+sx+r,height=oy*2+maxRow*sy+sy+r;svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.setAttribute('preserveAspectRatio','xMidYMid meet');svg.innerHTML=assignments.map(({card,col,row})=>{const x=ox+col*sx+(row%2?sx/2:0),y=oy+row*sy,dim=visibleSet&&!visibleSet.has(card.constituency_id),sel=selectedId===card.constituency_id,txt=abbr(card.name);return`<g class="hex atlas-hex ${dim?'dimmed':''} ${sel?'selected':''}" data-id="${esc(card.constituency_id)}"><title>${esc(card.name)} — ${esc(card.region)}</title><polygon points="${pts(x,y)}" fill="${colorFn(card)}"></polygon><text x="${x}" y="${y+2.6}">${esc(txt)}</text></g>`}).join('');svg.querySelectorAll('.hex').forEach(g=>g.addEventListener('click',()=>onClick?.(g.dataset.id)))}
 function cartogramAssignments(cards){const regs=[...new Set(cards.map(c=>c.region))];const exact=regs.every(r=>ATLAS_CARTOGRAM_CELLS[r])&&Object.keys(ATLAS_CARTOGRAM_CELLS).every(r=>cards.some(c=>c.region===r));if(!exact)return cards.map((card,i)=>({card,col:i%14,row:Math.floor(i/14)}));const out=[];for(const[region,cells]of Object.entries(ATLAS_CARTOGRAM_CELLS)){const list=cards.filter(c=>c.region===region).sort((a,b)=>a.name.localeCompare(b.name,'fr'));list.forEach((card,i)=>{const[col,row]=cells[i]||[0,0];out.push({card,col,row})})}return out}
 function abbr(name){return String(name||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^A-Za-z0-9 ]/g,' ').split(/\s+/).filter(Boolean).slice(0,2).map(x=>x.slice(0,2).toUpperCase()).join('')}
+function atlasBootOnce(){
+  if(window.ATLAS_BOOT_STARTED)return;
+  window.ATLAS_BOOT_STARTED=true;
+  Promise.resolve().then(()=>boot());
+}
+function atlasBootWhenPresentationReady(){
+  const started=Date.now();
+  const wait=()=>{
+    if(window.ATLAS_INSTITUTIONAL_READY||Date.now()-started>3000)return atlasBootOnce();
+    setTimeout(wait,20);
+  };
+  wait();
+}
 const atlasV1Script=document.createElement('script');
-atlasV1Script.src='/assets/candidates.js?v=20260817-1848';
-atlasV1Script.onload=()=>boot();
-atlasV1Script.onerror=()=>{console.warn('Atlas V1 candidates module unavailable');boot()};
+atlasV1Script.src='/assets/candidates.js?v=20260817-2027';
+atlasV1Script.onload=atlasBootWhenPresentationReady;
+atlasV1Script.onerror=()=>{console.warn('Atlas V1 candidates module unavailable');atlasBootWhenPresentationReady()};
 document.head.appendChild(atlasV1Script);
