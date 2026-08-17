@@ -39,7 +39,7 @@ jobs:
           set -euo pipefail
           for path in app.js assets/core.js assets/map.js assets/candidates.js assets/institutional.js data/atlas_v1.json; do
             echo "--- HEAD $path ---"
-            curl -sSI --max-time 30 "${PUBLIC}${path}" | sed -n '1,14p'
+            (curl -sSI --max-time 30 "${PUBLIC}${path}" | sed -n '1,14p') || true
           done
           curl -fsSL --max-time 60 "${PUBLIC}app.js" -o /tmp/app.js
           curl -fsSL --max-time 60 "${PUBLIC}assets/institutional.js" -o /tmp/institutional.js
