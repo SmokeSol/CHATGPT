@@ -96,3 +96,5 @@ jobs:
           print('INSTITUTIONAL_FRONTEND_SMOKE=PASS')
           PY
           echo 'INSTITUTIONAL_FRONTEND_SMOKE=PASS' >> "$GITHUB_STEP_SUMMARY"
+
+# Reverification trigger after switching dynamic JavaScript to same-origin Vercel assets.
