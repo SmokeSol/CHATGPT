@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "run_id": "pjd2016_discovery_32076761112_1",
+  "created_at": "2026-08-17T22:36:42+00:00",
+  "query_window": {
+    "after": "2016-07-01T00:00:00",
+    "before": "2016-10-07T00:00:00"
+  },
+  "search_terms": [
+    "مرشحي",
+    "المرشحين",
+    "باقي مرشحي",
+    "لوائح",
+    "تزكية",
+    "7 أكتوبر"
+  ],
+  "diagnostics": [
+    {
+      "term": "مرشحي",
+      "page": 1,
+      "status": 200,
+      "bytes": 187763,
+      "rows": 0,
+      "total": null,
+      "total_pages": null,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "term": "المرشحين",
+      "page": 1,
+      "status": 200,
+      "bytes": 187763,
+      "rows": 0,
+      "total": null,
+      "total_pages": null,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "term": "باقي مرشحي",
+      "page": 1,
+      "status": 200,
+      "bytes": 187763,
+      "rows": 0,
+      "total": null,
+      "total_pages": null,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "term": "لوائح",
+      "page": 1,
+      "status": 200,
+      "bytes": 187763,
+      "rows": 0,
+      "total": null,
+      "total_pages": null,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "term": "تزكية",
+      "page": 1,
+      "status": 200,
+      "bytes": 187763,
+      "rows": 0,
+      "total": null,
+      "total_pages": null,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "term": "7 أكتوبر",
+      "page": 1,
+      "status": 200,
+      "bytes": 187763,
+      "rows": 0,
+      "total": null,
+      "total_pages": null,
+      "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    }
+  ],
+  "unique_posts_scanned": 0,
+  "candidate_related_posts": 0,
+  "unique_pdf_links": 0,
+  "posts": [],
+  "pdf_inventory": [],
+  "current_cms_is_admissible_candidate_evidence": false,
+  "predictive_judgments_generated": false,
+  "forecast_delta_generated": false,
+  "outcomes_unsealed": false,
+  "F1_created": false
+}
