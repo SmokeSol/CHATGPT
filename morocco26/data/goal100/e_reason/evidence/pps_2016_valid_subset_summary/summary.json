@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-17T23:41:55+00:00",
+  "source_status": "PARTIAL_VALID",
+  "source_schema_version": "4.1",
+  "candidate_rows": 60,
+  "districts_with_candidates": 23,
+  "districts_with_at_least_three_verified_candidate_identities": 12,
+  "districts_with_enriched_fact": 23,
+  "failure_pages_excluded": 39,
+  "unresolved_header_pages": 30,
+  "districts": [
+    {
+      "constituency_id": "benslimane",
+      "candidate_count": 3,
+      "at_least_three": true,
+      "enriched": true,
+      "historical_constituency": "Benslimane"
+    },
+    {
+      "constituency_id": "boujdour",
+      "candidate_count": 2,
+      "at_least_three": false,
+      "enriched": true,
+      "historical_constituency": "Boujdour"
+    },
+    {
+      "constituency_id": "boulemane",
+      "candidate_count": 3,
+      "at_least_three": true,
+      "enriched": true,
+      "historical_constituency": "Boulemane"
+    },
+    {
+      "constituency_id": "el-gharb",
+      "candidate_count": 3,
+      "at_least_three": true,
+      "enriched": true,
+      "historical_constituency": "El-Gharb"
+    },
+    {
+      "constituency_id": "es-semara",
+      "candidate_count": 2,
+      "at_least_three": false,
+      "enriched": true,
+      "historical_constituency": "Es-Smara"
+    },
+    {
+      "constituency_id": "fes-sud",
+      "candidate_count": 4,
+      "at_least_three": true,
+      "enriched": true,
+      "historical_constituency": "Fès-Janoubia"
+    },
+    {
+      "constituency_id": "fquih-ben-salah",
+      "candidate_count": 4,
+      "at_least_three": true,
+      "enriched": true,
+      "historical_constituency": "Fquih Ben Salah"
+    },
+    {
+      "constituency_id": "gueliz-nakhil",
+      "candidate_count": 3,
+      "at_least_three": true,
+      "enriched": true,
+      "historical_constituency": "Guéliz - Annakhil"
+    },
+    {
+      "constituency_id": "guelmim",
+      "candidate_count": 2,
+      "at_least_three": false,
+      "enriched": true,
+      "historical_constituency": "Guelmim"
+    },
+    {
+      "constituency_id": "guercif",
+      "candidate_count": 2,
+      "at_least_three": false,
+      "enriched": true,
+      "historical_constituency": "Guercif"
+    },
+    {
+      "constituency_id": "hay-hassani",
+      "candidate_count": 3,
+      "at_least_three": true,
+      "enriched": true,
+      "historical_constituency": "Hay-Hassani"
+    },
+    {
+      "constituency_id": "jerada",
+      "candidate_count": 2,
+      "at_least_three": false,
+      "enriched": true,
+      "historical_constituency": "Jerada"
+    },
+    {
+      "constituency_id": "laayoune",
+      "candidate_count": 3,
+      "at_least_three": true,
+      "enriched": true,
+      "historical_constituency": "Laâyoune"
+    },
+    {
+      "constituency_id": "m-diq-fnideq",
+      "candidate_count": 2,
+      "at_least_three": false,
+      "enriched": true,
+      "historical_constituency": "M'Diq - Fnideq"
+    },
+    {
+      "constituency_id": "mediouna",
+      "candidate_count": 2,
+      "at_least_three": false,
+      "enriched": true,
+      "historical_constituency": "Médiouna"
+    },
+    {
+      "constituency_id": "menara",
+      "candidate_count": 3,
+      "at_least_three": true,
+      "enriched": true,
+      "historical_constituency": "Ménara"
+    },
+    {
+      "constituency_id": "nouaceur",
+      "candidate_count": 3,
+      "at_least_three": true,
+      "enriched": true,
+      "historical_constituency": "Nouaceur"
+    },
+    {
+      "constituency_id": "rabat-chellah",
+      "candidate_count": 3,
+      "at_least_three": true,
+      "enriched": true,
+      "historical_constituency": "Rabat - Challah"
+    },
+    {
+      "constituency_id": "sidi-bernoussi",
+      "candidate_count": 3,
+      "at_least_three": true,
+      "enriched": true,
+      "historical_constituency": "Sidi-Bernoussi"
+    },
+    {
+      "constituency_id": "taourirt",
+      "candidate_count": 2,
+      "at_least_three": false,
+      "enriched": true,
+      "historical_constituency": "Taourirt"
+    },
+    {
+      "constituency_id": "tarfaya",
+      "candidate_count": 2,
+      "at_least_three": false,
+      "enriched": true,
+      "historical_constituency": "Tarfaya"
+    },
+    {
+      "constituency_id": "tiznit",
+      "candidate_count": 2,
+      "at_least_three": false,
+      "enriched": true,
+      "historical_constituency": "Tiznit"
+    },
+    {
+      "constituency_id": "youssoufia",
+      "candidate_count": 2,
+      "at_least_three": false,
+      "enriched": true,
+      "historical_constituency": "Youssoufia"
+    }
+  ],
+  "invariants": {
+    "outcomes_unsealed": false,
+    "F1_created": false
+  }
+}
