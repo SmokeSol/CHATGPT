@@ -10,7 +10,6 @@
     "regional_constituencies": 12,
     "manual_party_bonus": 0,
     "polls_used_in_current_projection": false,
-    "ai_used_to_adjust_reference_projection": false,
     "old_versions_rewritten": false,
     "missing_data_forced_to_zero": false,
     "same_rules_for_all_parties": true,
@@ -19,17 +18,16 @@
   },
   "current_public_interpretation": {
     "projection_changed_by_new_2026_facts": false,
-    "reason_fr": "Des informations politiques 2026 ont déjà été repérées, mais aucune n'a encore satisfait toutes les conditions nécessaires pour justifier une modification chiffrée de la projection de référence.",
-    "concrete_example_fr": "Une liste structurée de 92 lignes en arabe a été repérée. Elle n'a pas été transformée en ajustement électoral tant que l'identité territoriale et l'effet à appliquer ne pouvaient pas être établis avec une rigueur suffisante."
+    "reason_fr": "Des informations 2026 ont été documentées, mais aucune n'a encore satisfait toutes les conditions nécessaires pour justifier une modification chiffrée de la projection de référence."
   },
   "source_principles": {
     "institutional_sources": "Établissent les règles, décisions officielles et faits relevant d'une autorité publique.",
-    "party_official_sources": "Documentent ce que chaque parti annonce lui-même, sans être automatiquement considérées comme confirmation indépendante.",
+    "party_official_sources": "Documentent les annonces officielles des partis sans constituer, à elles seules, une confirmation indépendante.",
     "authorized_media": "Médias24 est utilisé pour la veille et la corroboration ; une publication médiatique ne modifie jamais seule la projection.",
-    "party_neutrality": "Les mêmes critères de source, de date et de vérification s'appliquent quel que soit le parti concerné."
+    "party_neutrality": "Les mêmes critères de source, de date et de vérification s'appliquent à toutes les forces politiques."
   },
-  "next_public_experiment": {
-    "title": "Tester si l'IA apporte réellement quelque chose",
-    "description_fr": "La prochaine étape mesurera d'abord si une IA peut retrouver et vérifier des informations que la procédure classique n'a pas su exploiter, notamment dans les sources arabophones. Une étape séparée testera ensuite si, à information identique, l'IA raisonne mieux. Le gain devra être traçable et mesurable par rapport à la référence existante."
+  "evaluation_framework": {
+    "principle_fr": "La projection sera évaluée après le scrutin à partir des résultats effectivement observés, sans réécriture des versions publiées avant le vote.",
+    "dimensions": ["calibration des probabilités", "précision territoriale", "écart sur les sièges", "couverture des intervalles d'incertitude"]
   }
 }
