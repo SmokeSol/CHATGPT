@@ -8,6 +8,10 @@ on:
       - 'morocco26/scripts/e_reason_build_blind_development_bundle.py'
       - 'morocco26/data/goal100/e_reason/c2_prompt_v1.md'
       - '.github/workflows/morocco26-e-reason-build-development-blind.yml'
+  pull_request:
+    branches:
+      - morocco26-e-reason
+    types: [opened, synchronize, reopened]
   workflow_dispatch:
 
 permissions:
@@ -21,7 +25,7 @@ jobs:
   build-freeze:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout exact branch state
+      - name: Checkout exact scientific branch state
         uses: actions/checkout@v4
         with:
           ref: morocco26-e-reason
