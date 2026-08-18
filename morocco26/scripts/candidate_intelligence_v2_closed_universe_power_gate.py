@@ -49,13 +49,10 @@ def norm_ar(value: Any) -> str:
     s = unicodedata.normalize("NFKC", s)
     s = s.replace("ـ", "")
     s = AR_DIACRITICS.sub("", s)
-    # Arabic/PDF-safe orthographic normalization. This is entity resolution,
-    # not evidence generation; raw source strings remain preserved.
     s = re.sub(r"[إأآٱ]", "ا", s)
     s = s.replace("ى", "ي")
     s = s.replace("ؤ", "و").replace("ئ", "ي")
     s = s.replace("هللا", "الله")
-    # Common bidi/text-extraction reversal of definite article in the official PDF.
     s = re.sub(r"\bامل", "الم", s)
     s = re.sub(r"\bاإل", "ال", s)
     s = re.sub(r"\s+ي\b", "ي", s)
@@ -79,8 +76,7 @@ def load_raw() -> pd.DataFrame:
     if not files:
         raise RuntimeError(f"no archived Chamber parquet files under {RAW}")
     frames = [pd.read_parquet(p) for p in files]
-    df = pd.concat(frames, ignore_index=True)
-    return df
+    return pd.concat(frames, ignore_index=True)
 
 
 def first_col(df: pd.DataFrame, *names: str) -> str:
@@ -111,7 +107,6 @@ def elected_universe(df: pd.DataFrame, parliament: str) -> tuple[pd.DataFrame, d
 
     p = df[df[cols["parliament"]].astype(str).str.strip().eq(parliament)].copy()
     p = p[p[cols["entry_reason"]].astype(str).str.casefold().str.strip().eq("elu")].copy()
-    # Same frozen universe rule used by the existing B2 member parser.
     if len(p) != 395:
         raise RuntimeError(f"closed elected universe {parliament} must contain 395 rows, got {len(p)}")
     return p, cols
@@ -135,7 +130,6 @@ def classify_roster(rows: list[dict[str, Any]], universe: pd.DataFrame, cols: di
     name_col = cols["name_ar"] if arabic else cols["name_lat"]
     source_name_key = "candidate_name_ar" if arabic else "candidate_name_fr"
     norm = norm_ar if arabic else norm_lat
-
     idx: dict[str, list[int]] = defaultdict(list)
     for ix, raw in universe[name_col].fillna("").astype(str).items():
         n = norm(raw)
@@ -147,12 +141,7 @@ def classify_roster(rows: list[dict[str, Any]], universe: pd.DataFrame, cols: di
         raw_name = row[source_name_key]
         n = norm(raw_name)
         hits = idx.get(n, [])
-        item = {
-            **row,
-            "feature_id": "V2_HEAD_PRIOR_CYCLE_MP",
-            "candidate_name_normalized": n,
-            "closed_universe_size": 395,
-        }
+        item = {**row, "feature_id": "V2_HEAD_PRIOR_CYCLE_MP", "candidate_name_normalized": n, "closed_universe_size": 395}
         if len(hits) == 1:
             m = universe.loc[hits[0]]
             item.update({
@@ -164,25 +153,15 @@ def classify_roster(rows: list[dict[str, Any]], universe: pd.DataFrame, cols: di
                 "prior_member_party_source": (None if "party" not in cols or pd.isna(m[cols["party"]]) else str(m[cols["party"]])),
             })
         elif len(hits) > 1:
-            item.update({
-                "feature_state": "UNKNOWN",
-                "identity_method": "EXACT_NORMALIZED_COLLISION",
-                "collision_count": len(hits),
-            })
+            item.update({"feature_state": "UNKNOWN", "identity_method": "EXACT_NORMALIZED_COLLISION", "collision_count": len(hits)})
         else:
             score, best = best_similarity(raw_name, universe, name_col, norm)
             item["nearest_prior_name"] = best
             item["nearest_name_similarity"] = round(score, 6)
             if score >= FUZZY_UNKNOWN_GUARD:
-                item.update({
-                    "feature_state": "UNKNOWN",
-                    "identity_method": "NO_EXACT_MATCH_HIGH_SIMILARITY_GUARD",
-                })
+                item.update({"feature_state": "UNKNOWN", "identity_method": "NO_EXACT_MATCH_HIGH_SIMILARITY_GUARD"})
             else:
-                item.update({
-                    "feature_state": "VERIFIED_FALSE",
-                    "identity_method": "NO_MATCH_IN_COMPLETE_395_MEMBER_UNIVERSE_WITH_LOW_SIMILARITY_GUARD",
-                })
+                item.update({"feature_state": "VERIFIED_FALSE", "identity_method": "NO_MATCH_IN_COMPLETE_395_MEMBER_UNIVERSE_WITH_LOW_SIMILARITY_GUARD"})
         out.append(item)
     return out
 
@@ -212,16 +191,13 @@ def main() -> int:
     df = load_raw()
     u11, c11 = elected_universe(df, "2011-2016")
     u16, c16 = elected_universe(df, "2016-2021")
-
     rows16 = classify_roster(roster16["rows"], u11, c11, arabic=True)
     rows21 = classify_roster(roster21["rows"], u16, c16, arabic=False)
     write_jsonl(DETAIL16, rows16)
     write_jsonl(DETAIL21, rows21)
-
     s16 = summary(rows16, len(roster16["rows"]))
     s21 = summary(rows21, len(roster21["rows"]))
     model_gate = s16["coverage_gate"] and s21["coverage_gate"] and s16["support_gate"] and s21["support_gate"]
-
     result = {
         "schema_version": "1.0",
         "gate_id": "M26-CANDIDATE-INTELLIGENCE-V2-CLOSED-UNIVERSE-POWER-GATE-V1",
@@ -231,13 +207,13 @@ def main() -> int:
             "entity": "PARTY_X_LOCAL_CONTEST_HEAD",
             "definition": "Whether the focal party's pre-election local head of list is present in the complete elected-member universe of the immediately prior House legislature.",
             "relationship_to_B2": "NEW_NARROWER_V2_FEATURE; it does not replace or rewrite B2_P01, which counted all registered candidates.",
-            "coefficient_authorized": false,
+            "coefficient_authorized": False,
         },
         "thresholds": {
             "minimum_known_coverage_each_transition": MIN_COVERAGE,
             "minimum_positive_instances_each_transition": MIN_POSITIVE,
             "fuzzy_unknown_guard": FUZZY_UNKNOWN_GUARD,
-            "unknown_is_false": false,
+            "unknown_is_false": False,
         },
         "2011_TO_2016": s16,
         "2016_TO_2021": s21,
@@ -245,8 +221,8 @@ def main() -> int:
             "prior_universe_2011_2016_rows": len(u11),
             "prior_universe_2016_2021_rows": len(u16),
             "parquet_files": [p.name for p in sorted(RAW.glob("*.parquet"))],
-            "network_used": false,
-            "forecast_modified": false,
+            "network_used": False,
+            "forecast_modified": False,
         },
         "reasoner_gate": {
             "status": "NOT_EVALUATED_BY_THIS_SINGLE_FEATURE_GATE",
