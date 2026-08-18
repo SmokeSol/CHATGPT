@@ -1,0 +1,292 @@
+name: Morocco26 E_reason score locked 2021 holdout
+
+on:
+  push:
+    branches: [morocco26-e-reason]
+    paths:
+      - '.github/workflows/morocco26-e-reason-score-2021-primary.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: morocco26-e-reason-score-2021
+  cancel-in-progress: false
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout frozen experiment branch
+        uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+          fetch-depth: 0
+
+      - name: Install frozen numerical runtime
+        run: python -m pip install --disable-pip-version-check --quiet numpy
+
+      - name: Verify C2 pre-unseal receipt and download sealed mapping
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          e=Path('morocco26/data/goal100/e_reason')
+          r=json.loads((e/'judgments/holdout/c2_opus5/preunseal_receipt.json').read_text())
+          assert r['status']=='PASS_C2_HOLDOUT_FROZEN_READY_FOR_OUTCOME_UNSEAL'
+          assert r['recorded_before_outcome_unseal'] is True
+          assert r['integrity']['c2_judgments_file_sha256']=='03b630c5a6c07ca32443a4fc3ba43ff30cb08d32c0f7634e78a34752f8e06446'
+          assert r['c1_c2_preunseal_comparison']['same_nonzero_cell_partition'] is True
+          assert r['c1_c2_preunseal_comparison']['different_cells']==47
+          print('C2_PREUNSEAL_RECEIPT_PASS')
+          PY
+          ARTIFACT_ID=$(python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path('morocco26/data/goal100/e_reason/blind/holdout/mapping_artifact_locator.json').read_text())
+          print(x['artifact_id'])
+          PY
+          )
+          mkdir -p "$RUNNER_TEMP/e_reason_mapping"
+          gh api -H 'Accept: application/vnd.github+json' "/repos/${GITHUB_REPOSITORY}/actions/artifacts/${ARTIFACT_ID}/zip" > "$RUNNER_TEMP/mapping.zip"
+          unzip -q "$RUNNER_TEMP/mapping.zip" -d "$RUNNER_TEMP/e_reason_mapping"
+          test -f "$RUNNER_TEMP/e_reason_mapping/holdout_mapping.json"
+
+      - name: Execute frozen share and probabilistic scoring contract
+        env:
+          MAPPING_PATH: ${{ runner.temp }}/e_reason_mapping/holdout_mapping.json
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from __future__ import annotations
+          import csv, hashlib, importlib.util, json, math, os
+          from pathlib import Path
+          import numpy as np
+
+          ROOT=Path('morocco26')
+          E=ROOT/'data/goal100/e_reason'
+          H=ROOT/'data/goal100/historical'
+          OUT=E/'scoring/holdout_2021'
+          RESULT=OUT/'score_v1.json'
+          if RESULT.exists():
+              raise SystemExit('score_v1 already exists; refusing regeneration')
+
+          def read_json(p): return json.loads(Path(p).read_text(encoding='utf-8'))
+          def sha_file(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+          # Load the already-frozen implementation primitives used to build the holdout baseline.
+          spec=importlib.util.spec_from_file_location('holdout_builder', ROOT/'scripts/e_reason_build_blind_holdout_bundle.py')
+          hb=importlib.util.module_from_spec(spec); spec.loader.exec_module(hb)
+          PARTIES=hb.PARTIES
+
+          scoring=read_json(E/'e_reason_scoring_contract_v1.json')
+          promotion=read_json(E/'e_reason_promotion_criteria_v1.json')
+          freeze=read_json(E/'lambda_freeze_v1.json')
+          receipt=read_json(E/'judgments/holdout/c2_opus5/preunseal_receipt.json')
+          bundle=read_json(E/'blind/holdout/blind_bundle.json')
+          bmanifest=read_json(E/'blind/holdout/bundle_manifest.json')
+          c1manifest=read_json(E/'judgments/holdout/c1_rule_only/c1_judgment_manifest.json')
+          mapping=read_json(Path(os.environ['MAPPING_PATH']))
+
+          assert scoring['primary_metric']['name']=='macro_party_share_RMSE'
+          assert scoring['uncertainty_test']['method']=='paired bootstrap by constituency'
+          assert scoring['uncertainty_test']['replicates']==10000
+          assert scoring['uncertainty_test']['seed']==260817
+          assert freeze['status']=='FROZEN_BEFORE_2021_JUDGMENTS'
+          assert float(freeze['lambda_C1'])==0.3 and float(freeze['lambda_C2'])==0.3
+          assert bundle['bundle_sha256']==bmanifest['bundle_sha256']==receipt['bundle_sha256']
+          assert c1manifest['bundle_sha256']==bundle['bundle_sha256']
+          assert mapping['real_election']==2021 and mapping['anonymous_election_id']==bundle['anonymous_election_id']
+          assert hashlib.sha256(Path(os.environ['MAPPING_PATH']).read_bytes()).hexdigest()==bmanifest['mapping_sha256']
+
+          consts=hb.load_constituencies()
+          y21raw=read_json(H/'tafra_legislative_2021_canonical.json')
+          y21rows=[r for r in y21raw['rows'] if str(r.get('list_type','')).lower() in {'locale','local'}]
+          assert len(y21rows)==92
+          m21=hb.match_rows(consts,y21rows)
+
+          CORE=hb.CORE
+          def observed_share(row):
+              raw=row.get('votes',{})
+              total=sum(float(v or 0) for v in raw.values())
+              if total<=0: raise RuntimeError('zero target vote total')
+              out={p:float(raw.get(p,0) or 0)/total for p in CORE}
+              out['OTHER']=sum(float(v or 0) for k,v in raw.items() if k not in CORE)/total
+              return np.array([out[p] for p in PARTIES],dtype=float)
+
+          # Load frozen C1 judgments.
+          c1=[json.loads(s) for s in (E/'judgments/holdout/c1_rule_only/c1_judgments.jsonl').read_text().splitlines() if s.strip()]
+          assert len(c1)==92
+          c1_by_tid={x['anonymous_territory_id']:x for x in c1}
+          pkt_by_tid={x['anonymous_territory_id']:x for x in bundle['packets']}
+          assert len(pkt_by_tid)==92
+
+          preds={'C0':{},'C1':{},'C2':{}}
+          obs={}
+          z_audit={'c1':{'0':0,'1':0,'2':0},'c2':{'0':0,'1':0,'2':0},'different_cells':0}
+          territory_order=[]
+          for c in consts:
+              cid=c['constituency_id']; territory_order.append(cid)
+              tid=mapping['territories'][cid]
+              pkt=pkt_by_tid[tid]
+              by_anon={x['anonymous_party_id']:x for x in pkt['parties']}
+              js={j['anonymous_party_id']:j for j in c1_by_tid[tid]['judgments']}
+              base=np.zeros(9); z1=np.zeros(9); z2=np.zeros(9)
+              for i,p in enumerate(PARTIES):
+                  aid=mapping['parties'][p]
+                  base[i]=float(by_anon[aid]['baseline_vote_share'])
+                  z1[i]=float(js[aid]['ordinal_score'])
+                  # Frozen Opus5 receipt certifies: identical nonzero partition/signs;
+                  # 47 C1 +2 incumbency cells become C2 +1, 12 C1 +1 cells remain +1.
+                  z2[i]=1.0 if z1[i]>0 else 0.0
+                  z_audit['c1'][str(int(z1[i]))]=z_audit['c1'].get(str(int(z1[i])),0)+1
+                  z_audit['c2'][str(int(z2[i]))]=z_audit['c2'].get(str(int(z2[i])),0)+1
+                  if z1[i]!=z2[i]: z_audit['different_cells']+=1
+              assert abs(base.sum()-1.0)<1e-8
+              def adjust(z,lam):
+                  cen=z-z.mean(); raw=base*np.exp(float(lam)*cen); return raw/raw.sum()
+              preds['C0'][cid]=base
+              preds['C1'][cid]=adjust(z1,freeze['lambda_C1'])
+              preds['C2'][cid]=adjust(z2,freeze['lambda_C2'])
+              obs[cid]=observed_share(m21[cid])
+
+          assert z_audit['c1']=={'0':769,'1':12,'2':47}
+          assert z_audit['c2']=={'0':769,'1':59,'2':0}
+          assert z_audit['different_cells']==47
+
+          def metrics(P):
+              errs=[]; l1=[]; top=[]; per_sq=[]
+              for cid in territory_order:
+                  d=P[cid]-obs[cid]
+                  errs.extend(d.tolist())
+                  l1.append(float(np.abs(d).sum()))
+                  top.append(int(np.argmax(P[cid])==np.argmax(obs[cid])))
+                  per_sq.append(float(np.mean(d*d)))
+              return {
+                  'macro_party_share_RMSE':float(np.sqrt(np.mean(np.square(errs)))),
+                  'mean_constituency_L1':float(np.mean(l1)),
+                  'top_party_accuracy':float(np.mean(top)),
+                  'per_constituency_mean_squared_error':per_sq,
+              }
+
+          met={k:metrics(v) for k,v in preds.items()}
+
+          # One frozen paired constituency bootstrap draw matrix, reused for every comparison.
+          B=int(scoring['uncertainty_test']['replicates']); seed=int(scoring['uncertainty_test']['seed'])
+          rng=np.random.default_rng(seed)
+          idx=rng.integers(0,len(territory_order),size=(B,len(territory_order)))
+          sq={k:np.array(v['per_constituency_mean_squared_error'],dtype=float) for k,v in met.items()}
+          boot_rmse={k:np.sqrt(sq[k][idx].mean(axis=1)) for k in sq}
+          def comparison(treatment,control):
+              point=met[treatment]['macro_party_share_RMSE']-met[control]['macro_party_share_RMSE']
+              delta=boot_rmse[treatment]-boot_rmse[control]
+              rel=(met[control]['macro_party_share_RMSE']-met[treatment]['macro_party_share_RMSE'])/met[control]['macro_party_share_RMSE']
+              return {
+                  'treatment':treatment,'control':control,
+                  'point_delta_RMSE_treatment_minus_control':float(point),
+                  'relative_improvement':float(rel),
+                  'bootstrap_probability_treatment_better':float(np.mean(delta<0)),
+                  'percentile_95_interval_delta':[float(np.quantile(delta,.025)),float(np.quantile(delta,.975))],
+              }
+          comps={
+              'C1_MINUS_C0':comparison('C1','C0'),
+              'C2_MINUS_C0':comparison('C2','C0'),
+              'C2_MINUS_C1':comparison('C2','C1'),
+          }
+
+          # Frozen Bstar uncertainty draws + identical residual transform for energy score.
+          rows11=hb.load_local(2011); rows16=hb.load_local(2016)
+          m11=hb.match_rows(consts,rows11); m16=hb.match_rows(consts,rows16)
+          shifts={cid:hb.centre_clr(hb.clr(m16[cid])-hb.clr(m11[cid])) for cid in territory_order}
+          residuals=np.stack([shifts[cid] for cid in sorted(territory_order)])
+          residuals=hb.centre_clr(residuals-residuals.mean(axis=0,keepdims=True))
+          erng=np.random.default_rng(hb.SEED)
+          di1=erng.integers(0,len(territory_order),size=hb.N_SAMPLES)
+          di2=erng.integers(0,len(territory_order),size=hb.N_SAMPLES)
+          def es(samples,y,pair):
+              a=np.sqrt(np.clip(samples,0,1)); b=np.sqrt(np.clip(pair,0,1)); yy=np.sqrt(np.clip(y,0,1))
+              return float(np.linalg.norm(a-yy,axis=1).mean()-.5*np.linalg.norm(a-b,axis=1).mean())
+          escores={k:[] for k in preds}
+          mean_match_max=0.0
+          for c in consts:
+              cid=c['constituency_id']; tid=mapping['territories'][cid]
+              js={j['anonymous_party_id']:j for j in c1_by_tid[tid]['judgments']}
+              z1=np.array([float(js[mapping['parties'][p]]['ordinal_score']) for p in PARTIES])
+              z2=(z1>0).astype(float)
+              pred_z=hb.centre_clr(hb.clr(m16[cid]))
+              s1=hb.inv_clr(pred_z+residuals[di1]); s2=hb.inv_clr(pred_z+residuals[di2])
+              mean_match_max=max(mean_match_max,float(np.max(np.abs(s1.mean(axis=0)-preds['C0'][cid]))))
+              for k,z,lam in [('C0',np.zeros(9),0.0),('C1',z1,freeze['lambda_C1']),('C2',z2,freeze['lambda_C2'])]:
+                  cen=z-z.mean(); fac=np.exp(float(lam)*cen)
+                  a=s1*fac; a=a/a.sum(axis=1,keepdims=True)
+                  b=s2*fac; b=b/b.sum(axis=1,keepdims=True)
+                  escores[k].append(es(a,obs[cid],b))
+          assert mean_match_max<2e-10, mean_match_max
+          energy={k:{'mean_energy_score':float(np.mean(v))} for k,v in escores.items()}
+          energy['C2']['relative_degradation_vs_C0']=(energy['C2']['mean_energy_score']-energy['C0']['mean_energy_score'])/energy['C0']['mean_energy_score']
+          energy['C2']['relative_degradation_vs_C1']=(energy['C2']['mean_energy_score']-energy['C1']['mean_energy_score'])/energy['C1']['mean_energy_score']
+
+          g=promotion['predictive_gates_for_C2']
+          gate_primary={
+              'vs_C0_relative_improvement_pass':comps['C2_MINUS_C0']['relative_improvement']>=float(g['vs_C0_primary_relative_improvement_min']),
+              'vs_C0_bootstrap_probability_pass':comps['C2_MINUS_C0']['bootstrap_probability_treatment_better']>=float(g['vs_C0_bootstrap_probability_better_min']),
+              'vs_C1_relative_improvement_pass':comps['C2_MINUS_C1']['relative_improvement']>=float(g['vs_C1_primary_relative_improvement_min']),
+              'vs_C1_bootstrap_probability_pass':comps['C2_MINUS_C1']['bootstrap_probability_treatment_better']>=float(g['vs_C1_bootstrap_probability_better_min']),
+              'top_party_accuracy_degradation_pass':(met['C0']['top_party_accuracy']-met['C2']['top_party_accuracy'])<=float(g['top_party_accuracy_absolute_degradation_max']),
+              'energy_degradation_vs_C0_pass':energy['C2']['relative_degradation_vs_C0']<=float(g['mean_energy_score_relative_degradation_max']),
+          }
+
+          result={
+              'schema_version':'1.0',
+              'result_id':'M26-E-REASON-HOLDOUT-2021-SCORE-V1',
+              'experiment_id':'M26-GOAL100-E-REASON-V1',
+              'reporting_label':scoring['holdout']['reporting_label'],
+              'outcome_year':2021,
+              'outcome_unsealed_after_c2_freeze':True,
+              'mapping_sha256':sha_file(Path(os.environ['MAPPING_PATH'])),
+              'outcome_file_sha256':sha_file(H/'tafra_legislative_2021_canonical.json'),
+              'bundle_sha256':bundle['bundle_sha256'],
+              'c2_judgments_preunseal_sha256':receipt['integrity']['c2_judgments_file_sha256'],
+              'lambda_C1':freeze['lambda_C1'],'lambda_C2':freeze['lambda_C2'],
+              'panel':{'territories':92,'party_cells':828},
+              'z_audit':z_audit,
+              'metrics':{k:{kk:vv for kk,vv in v.items() if kk!='per_constituency_mean_squared_error'} for k,v in met.items()},
+              'comparisons':comps,
+              'probabilistic':energy,
+              'promotion_gates_evaluated':gate_primary,
+              'seat_MAE_gate_status':'NOT_NEEDED_FOR_TERMINAL_DECISION_IF_ANY_MANDATORY_PRIMARY_GATE_FAILS',
+              'implementation_note':'Mechanical execution of the preregistered formulas, lambda values, 10,000 paired constituency bootstrap replicates and seed; no parameter or threshold was selected after outcome access.',
+          }
+          primary_all=all(gate_primary[k] for k in ['vs_C0_relative_improvement_pass','vs_C0_bootstrap_probability_pass','vs_C1_relative_improvement_pass','vs_C1_bootstrap_probability_pass'])
+          result['mandatory_primary_C2_gates_all_pass']=primary_all
+          result['terminal_decision_determined_by_primary_gates']='E_REASON_NO_PROMOTION' if not primary_all else 'PENDING_REMAINING_SECONDARY_SEAT_GATE'
+          OUT.mkdir(parents=True,exist_ok=True)
+          RESULT.write_text(json.dumps(result,ensure_ascii=False,sort_keys=True,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps({
+              'C0_RMSE':met['C0']['macro_party_share_RMSE'],
+              'C1_RMSE':met['C1']['macro_party_share_RMSE'],
+              'C2_RMSE':met['C2']['macro_party_share_RMSE'],
+              'C2_vs_C0_rel':comps['C2_MINUS_C0']['relative_improvement'],
+              'C2_vs_C1_rel':comps['C2_MINUS_C1']['relative_improvement'],
+              'C2_vs_C0_p':comps['C2_MINUS_C0']['bootstrap_probability_treatment_better'],
+              'C2_vs_C1_p':comps['C2_MINUS_C1']['bootstrap_probability_treatment_better'],
+              'primary_all_pass':primary_all,
+          },sort_keys=True))
+          PY
+
+      - name: Freeze scoring result in Git
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/e_reason/scoring/holdout_2021/score_v1.json
+          git diff --cached --check
+          git commit -m 'experiment(e-reason): freeze locked 2021 holdout score'
+          git fetch origin morocco26-e-reason
+          git rebase origin/morocco26-e-reason
+          git push origin HEAD:morocco26-e-reason
