@@ -1,0 +1,41 @@
+name: Candidate Intelligence V2 Reconciled Data Power Gate
+on:
+  push:
+    branches: [morocco26-e-reason]
+    paths:
+      - 'morocco26/scripts/candidate_intelligence_v2_reconciled_power_gate.py'
+      - 'morocco26/data/goal100/e_collect/candidate_intelligence_v2/identity_overrides_v1.json'
+      - 'morocco26/data/goal100/e_collect/candidate_intelligence_v2/2016/pjd_explicit_prior_mp_claims_v1.json'
+      - 'morocco26/data/goal100/e_collect/candidate_intelligence_v2/2021/pjd_explicit_prior_mp_claims_v1.json'
+      - '.github/workflows/candidate-intelligence-v2-reconciled-power-gate.yml'
+  pull_request:
+    branches: [morocco26-e-reason]
+    paths:
+      - 'morocco26/scripts/candidate_intelligence_v2_reconciled_trigger.txt'
+      - 'morocco26/scripts/candidate_intelligence_v2_reconciled_power_gate.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check pandas pyarrow
+      - run: python morocco26/scripts/candidate_intelligence_v2_reconciled_power_gate.py
+      - run: cat morocco26/data/goal100/e_collect/candidate_intelligence_v2/candidate_intelligence_v2_reconciled_power_gate_v1.json
+      - run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/2016/pjd_reconciled_head_prior_mp_v1.jsonl
+          git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/2021/pjd_reconciled_head_prior_mp_v1.jsonl
+          git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/candidate_intelligence_v2_reconciled_power_gate_v1.json
+          git commit -m 'gate(candidate-intel): record reconciled data power gate' || exit 0
+          git pull --rebase origin morocco26-e-reason
+          git push origin HEAD:morocco26-e-reason
