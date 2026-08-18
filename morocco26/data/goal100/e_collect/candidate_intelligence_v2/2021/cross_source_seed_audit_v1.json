@@ -33,7 +33,7 @@
   "medias24_objective_feature_rate": 1.0,
   "medias24_rows_with_objective_feature_lead": 59,
   "next_gate": "Scale extraction across full pre-election 2021/2016 source surfaces, then aggregate candidate facts to party x constituency and run support/missingness/predictive backtest before E_reason V2.",
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "scientific_interpretation": "This sample measures recoverability and independent cross-source verifiability, not predictive effect. It cannot update F0 and does not validate a coefficient.",
   "seed_parties": {
     "PAM": 10,
@@ -44,5 +44,147 @@
   "seed_rows": 59,
   "seed_territories": 49,
   "status": "OFFLINE_CROSS_SOURCE_AUDIT_COMPLETE",
-  "verification_rule": "Only unique exact normalized TAFRA 2016 member-name matches (or exact matches safely disambiguated by territory/party) receive CROSS_SOURCE_VERIFIED. Fuzzy matches never count."
+  "unresolved_name_variant_diagnostic": {
+    "by_class": {
+      "HIGH_NAME_VARIANT_DIAGNOSTIC": 11,
+      "VERY_HIGH_NAME_VARIANT_DIAGNOSTIC": 2
+    },
+    "exact_plus_variant_diagnostic_rate": 0.5932203389830508,
+    "exact_plus_variant_diagnostic_rows": 35,
+    "examples": [
+      {
+        "candidate": "Hassan Haris",
+        "diagnostic": "HIGH_NAME_VARIANT_DIAGNOSTIC",
+        "party": "PJD",
+        "sequence": 0.96,
+        "suggested_name": "HASSAN HARRIS",
+        "suggested_party": "PJD",
+        "suggested_territory": "settat",
+        "territory_id": "settat"
+      },
+      {
+        "candidate": "Abdallah Bouanou",
+        "diagnostic": "HIGH_NAME_VARIANT_DIAGNOSTIC",
+        "party": "PJD",
+        "sequence": 0.9375,
+        "suggested_name": "ABDELLAH BOUANOU",
+        "suggested_party": "PJD",
+        "suggested_territory": "meknes",
+        "territory_id": "meknes"
+      },
+      {
+        "candidate": "Mohamed Toufla",
+        "diagnostic": "HIGH_NAME_VARIANT_DIAGNOSTIC",
+        "party": "PJD",
+        "sequence": 0.933333,
+        "suggested_name": "MOHAMED TOUFALLA",
+        "suggested_party": "PJD",
+        "suggested_territory": "menara",
+        "territory_id": "marrakech-menara"
+      },
+      {
+        "candidate": "Abdelkhaled El Basri",
+        "diagnostic": "HIGH_NAME_VARIANT_DIAGNOSTIC",
+        "party": "PJD",
+        "sequence": 0.95,
+        "suggested_name": "ABDELKHALID EL BASRI",
+        "suggested_party": "PJD",
+        "suggested_territory": "rehamna",
+        "territory_id": "rhamna"
+      },
+      {
+        "candidate": "Mohamed Merzouk",
+        "diagnostic": "HIGH_NAME_VARIANT_DIAGNOSTIC",
+        "party": "PJD",
+        "sequence": 0.933333,
+        "suggested_name": "MOHAMED MARZOUK",
+        "suggested_party": "PJD",
+        "suggested_territory": "beni-mellal",
+        "territory_id": "beni-mellal"
+      },
+      {
+        "candidate": "Mohamed Drissi",
+        "diagnostic": "HIGH_NAME_VARIANT_DIAGNOSTIC",
+        "party": "PJD",
+        "sequence": 0.962963,
+        "suggested_name": "MOHAMMED DRISS",
+        "suggested_party": "PJD",
+        "suggested_territory": "boulemane",
+        "territory_id": "errachidia"
+      },
+      {
+        "candidate": "Azouha El Arrak",
+        "diagnostic": "HIGH_NAME_VARIANT_DIAGNOSTIC",
+        "party": "PJD",
+        "sequence": 0.967742,
+        "suggested_name": "AZZOUHA EL ARRAK",
+        "suggested_party": "PJD",
+        "suggested_territory": "oued-eddahab",
+        "territory_id": "oued-eddahab"
+      },
+      {
+        "candidate": "Salah Eddine Aboulghali",
+        "diagnostic": "VERY_HIGH_NAME_VARIANT_DIAGNOSTIC",
+        "party": "PAM",
+        "sequence": 0.977778,
+        "suggested_name": "SALAHEDDINE ABOULGHALI",
+        "suggested_party": "PAM",
+        "suggested_territory": "mediouna",
+        "territory_id": "mediouna"
+      },
+      {
+        "candidate": "Mohammed Benatia",
+        "diagnostic": "HIGH_NAME_VARIANT_DIAGNOSTIC",
+        "party": "PAM",
+        "sequence": 0.967742,
+        "suggested_name": "MOHAMED BENATTIA",
+        "suggested_party": "PAM",
+        "suggested_territory": "sale-el-jadida",
+        "territory_id": "sale-el-jadida"
+      },
+      {
+        "candidate": "Rachid El Fayeq",
+        "diagnostic": "HIGH_NAME_VARIANT_DIAGNOSTIC",
+        "party": "RNI",
+        "sequence": 0.933333,
+        "suggested_name": "RACHID EL FAYEK",
+        "suggested_party": "RNI",
+        "suggested_territory": "fes-sud",
+        "territory_id": "fes-sud"
+      },
+      {
+        "candidate": "Hamdi Ouissi",
+        "diagnostic": "HIGH_NAME_VARIANT_DIAGNOSTIC",
+        "party": "RNI",
+        "sequence": 0.96,
+        "suggested_name": "HAMDI OUAISSI",
+        "suggested_party": "USFP",
+        "suggested_territory": "assa-zag",
+        "territory_id": "assa-zag"
+      },
+      {
+        "candidate": "Mustapha Raddad",
+        "diagnostic": "HIGH_NAME_VARIANT_DIAGNOSTIC",
+        "party": "RNI",
+        "sequence": 0.933333,
+        "suggested_name": "MUSTAPHA REDDAD",
+        "suggested_party": "RNI",
+        "suggested_territory": "bzou-ouaouizeght",
+        "territory_id": "bzou-ouaouizeght"
+      },
+      {
+        "candidate": "Abdelaziz Lachhab",
+        "diagnostic": "VERY_HIGH_NAME_VARIANT_DIAGNOSTIC",
+        "party": "PI",
+        "sequence": 0.971429,
+        "suggested_name": "ABDELAZIZ LACHEHAB",
+        "suggested_party": "PI",
+        "suggested_territory": "ouezzane",
+        "territory_id": "ouezzane"
+      }
+    ],
+    "rows": 13,
+    "warning": "These rows remain UNRESOLVED and are not counted as CROSS_SOURCE_VERIFIED. The diagnostic estimates how much of exact-match loss is plausibly orthographic/transliteration noise."
+  },
+  "verification_rule": "Only unique exact normalized TAFRA 2016 member-name matches (or exact matches safely disambiguated by territory/party) receive CROSS_SOURCE_VERIFIED. Fuzzy/name-variant diagnostics never count as verified."
 }
