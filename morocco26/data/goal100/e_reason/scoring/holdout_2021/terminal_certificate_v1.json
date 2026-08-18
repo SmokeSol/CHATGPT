@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-E-REASON-HOLDOUT-2021-TERMINAL-CERTIFICATE-V1",
+  "experiment_id": "M26-GOAL100-E-REASON-V1",
+  "terminal_state": "E_REASON_NO_PROMOTION",
+  "reporting_label": "COMPONENT_LEVEL_LOCKED_HOLDOUT",
+  "holdout_year": 2021,
+  "scientific_question": "Does constrained LLM residual reasoning improve territorial party vote-share forecasts beyond both no residual and deterministic rule-only residual reasoning?",
+  "integrity": {
+    "preregistration_pass": true,
+    "development_2016_calibration_frozen_before_holdout": true,
+    "lambda_C1": 0.3,
+    "lambda_C2": 0.3,
+    "c2_prompt_unchanged": true,
+    "c2_packets": 92,
+    "c2_party_cells": 828,
+    "c2_retries": 0,
+    "c2_outcome_seen_before_freeze": false,
+    "c2_mapping_seen_before_freeze": false,
+    "c2_judgments_raw_sha256_preunseal_commitment": "03b630c5a6c07ca32443a4fc3ba43ff30cb08d32c0f7634e78a34752f8e06446",
+    "holdout_bundle_sha256": "d43fd7b23911f5ce5c878d6d952aba9dd447c9b4d9c343d0093c528855cca9b0",
+    "mapping_sha256": "41acca5f3d025facb4953b6367bb1f7b4755689b72695c699d70111cdf8707b3",
+    "outcome_unsealed_after_c2_freeze": true,
+    "no_post_outcome_tuning": true
+  },
+  "data_sufficiency": {
+    "status": "PASS",
+    "2016": {
+      "districts_with_at_least_three_verified_candidate_identities": 70,
+      "required": 70,
+      "districts_with_at_least_one_enriched_candidate_fact": 80,
+      "required_enriched": 50
+    },
+    "2021": {
+      "districts_with_at_least_three_verified_candidate_identities": 82,
+      "required": 70,
+      "districts_with_at_least_one_enriched_candidate_fact": 82,
+      "required_enriched": 50
+    }
+  },
+  "primary_metric": "macro_party_share_RMSE",
+  "scores": {
+    "C0_NO_RESIDUAL": 0.11841158918890837,
+    "C1_RULE_ONLY": 0.11900642942554444,
+    "C2_LLM_RESIDUAL_OPUS5": 0.11786665291298282
+  },
+  "comparisons": {
+    "C1_vs_C0": {
+      "relative_improvement": -0.0050234967768829665,
+      "bootstrap_probability_better": 0.3243,
+      "interpretation": "C1 worsens primary RMSE versus C0."
+    },
+    "C2_vs_C0": {
+      "relative_improvement": 0.004602051873961339,
+      "bootstrap_probability_better": 0.7996,
+      "required_relative_improvement": 0.02,
+      "required_bootstrap_probability_better": 0.95,
+      "relative_improvement_gate_pass": false,
+      "bootstrap_gate_pass": false,
+      "interpretation": "C2 is directionally better than C0 but the gain is too small and insufficiently robust for preregistered promotion."
+    },
+    "C2_vs_C1": {
+      "relative_improvement": 0.009577436429808362,
+      "bootstrap_probability_better": 0.9712,
+      "required_relative_improvement": 0.005,
+      "required_bootstrap_probability_better": 0.9,
+      "relative_improvement_gate_pass": true,
+      "bootstrap_gate_pass": true,
+      "interpretation": "C2 materially outperforms the deterministic C1 magnitude rule under the preregistered C2-vs-C1 gates."
+    }
+  },
+  "secondary_diagnostics": {
+    "mean_energy_score": {
+      "C0": 0.3724926834838391,
+      "C1": 0.3746015316629671,
+      "C2": 0.3721573722885451,
+      "C2_energy_degradation_gate_pass": true
+    },
+    "top_party_accuracy": {
+      "C0": 0.20652173913043478,
+      "C1": 0.22826086956521738,
+      "C2": 0.21739130434782608,
+      "C2_degradation_gate_pass": true
+    },
+    "local_seat_national_MAE": {
+      "status": "NOT_EVALUATED_BECAUSE_TERMINAL_NO_PROMOTION_IS_ALREADY_LOGICALLY_DETERMINED_BY_FAILED_MANDATORY_PRIMARY_GATES",
+      "can_reverse_terminal_state": false
+    }
+  },
+  "residual_power_diagnostic_preunseal": {
+    "C1_zero_cells": 769,
+    "C2_zero_cells": 769,
+    "nonzero_cells_each": 59,
+    "same_nonzero_partition": true,
+    "different_cells": 47,
+    "difference": "C1 +2 versus C2 +1 on 47 INCUMBENT_SAME_PARTY_SAME_DISTRICT cells; 12 PARTY_SWITCH_IN cells are +1 in both.",
+    "interpretation_rule": "This sparsity is a power limitation and contextualizes effect size; it does not alter or waive preregistered promotion thresholds."
+  },
+  "decision_logic": {
+    "all_C2_promotion_gates_required": true,
+    "mandatory_primary_C2_gates_all_pass": false,
+    "failed_mandatory_gates": [
+      "C2_vs_C0_primary_relative_improvement_min_0.02",
+      "C2_vs_C0_bootstrap_probability_better_min_0.95"
+    ],
+    "conclusion": "C2 shows useful shrinkage/calibration intelligence relative to C1, but does not demonstrate sufficient incremental predictive information beyond the frozen structural C0 baseline."
+  },
+  "consequence": {
+    "F1_authorized": false,
+    "F1_created": false,
+    "F0_remains_official": true,
+    "ultimate_prospective_2026_test_unchanged": true
+  },
+  "status": "FINAL"
+}
