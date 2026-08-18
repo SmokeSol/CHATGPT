@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "amendment_id": "M26-ASV2-ENGINEERING-AMENDMENT-V3",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "FROZEN_BEFORE_REAL_LLM_VOTES",
+  "scientific_thresholds_changed": false,
+  "target_outcomes_used": false,
+  "changes": [
+    {
+      "item": "historical_packet_target_seat_magnitude",
+      "decision": "OMIT_FROM_LLM_PACKET",
+      "reason": "Primary AS2 task is turnout and vote-share transition. A clean target-year pre-election seat-roll source is not required for this task and is not uniformly frozen for both historical years. Omitting it symmetrically avoids touching target-outcome containers merely to recover seat magnitude. Seat diagnostics remain post-judgment scoring outputs."
+    },
+    {
+      "item": "historical_llm_batch_size",
+      "decision": 32,
+      "reason": "Exactly the protocol maximum. Four fixed batches per 128-archetype territory; batching has no semantic feedback or cross-batch state."
+    },
+    {
+      "item": "anonymous_party_panel",
+      "decision": "FIXED_NINE_PARTY_PANEL_FROM_FROZEN_E_REASON_MAPPING",
+      "reason": "Use the same nine-party panel in every territory rather than conditioning the choice set on incomplete candidate-identity coverage."
+    },
+    {
+      "item": "political_context_surface",
+      "decision": "SANITIZED_E_REASON_FEATURES_ONLY",
+      "reason": "Copy only blinded feature_id/status/value/conflict from the already-frozen E_reason political packets. Do not expose baseline probabilities, evidence counts, source URLs, raw names, mapping material, or documentation-density metadata to the voter judge."
+    },
+    {
+      "item": "negative_control_shuffle",
+      "decision": "DETERMINISTIC_DENSITY_STRATIFIED_DERANGEMENT_FROZEN_BEFORE_JUDGMENT",
+      "reason": "Shuffle only the common political-context card across territories within year, preserving each territory's voter population and previous-election political anchor. Match context-density strata and require no territory to receive its own context."
+    }
+  ],
+  "interpretation_constraint": "The severe 2016 context-discrimination warning remains mandatory. Historical AS2 performance cannot be presented as clean evidence of candidate-level causal reasoning when the supplied context lacks cross-party discrimination."
+}
