@@ -2,7 +2,7 @@ name: Morocco26 E_reason TEMP locked 2021 holdout
 
 on:
   pull_request:
-    branches: [morocco26-e-reason]
+    branches: [main]
     types: [opened, synchronize, reopened]
 
 permissions:
