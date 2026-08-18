@@ -22,6 +22,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: morocco26-e-reason
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -32,4 +33,5 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/identity_diagnostic_v1.json
           git commit -m 'analysis(candidate-intel): record identity diagnostic' || exit 0
+          git pull --rebase origin morocco26-e-reason
           git push origin HEAD:morocco26-e-reason
