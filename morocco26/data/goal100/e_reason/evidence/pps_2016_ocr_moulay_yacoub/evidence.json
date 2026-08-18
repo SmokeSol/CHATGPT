@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-18T08:09:08+00:00",
+  "status": "PASS",
+  "source_artifact": "morocco26/data/goal100/e_reason/evidence/pps_2016_final_two_page_ocr/diagnostic.json",
+  "source_pdf_sha256": "ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375",
+  "territory_rows": [
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "moulay-yaacoub",
+      "historical_id_constituency": 551,
+      "historical_constituency": "Moulay-Yacoub",
+      "historical_region": "Fès - Meknès",
+      "seats": 2,
+      "candidate_count": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "identity_verification": "TARGETED_OCR_EXACT_HEADER_PLUS_HIGH_CONFIDENCE_NAME_BAND"
+    }
+  ],
+  "candidate_rows": [
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "moulay-yaacoub",
+      "historical_id_constituency": 551,
+      "historical_constituency": "Moulay-Yacoub",
+      "candidate_name_ar": "اسامة البياز",
+      "candidate_name_ar_normalized": "اسامة البياز",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "identity_verification": "TARGETED_OCR_EXACT_HEADER_PLUS_HIGH_CONFIDENCE_NAME_BAND",
+      "poster_display_order_only": 1,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-18T08:06:55+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375",
+        "parent_page_url": "https://pps.ma/10462/",
+        "pdf_page": 3,
+        "raster_sha256": "e09fb0d9882bb9a83cb2edb40c326599d9d9f8f4662cfde22366bdd0411519a5",
+        "header_tokens": [
+          {
+            "text": "مولاي",
+            "normalized": "مولاي",
+            "conf": 91.0,
+            "left": 484,
+            "top": 599
+          },
+          {
+            "text": "يعقوب",
+            "normalized": "يعقوب",
+            "conf": 91.0,
+            "left": 304,
+            "top": 612
+          }
+        ],
+        "ocr_text_excerpt": "مولاي يعقوب | الانتخابات التشريعية - 07 اكتوبر2016",
+        "candidate_tokens": [
+          {
+            "text": "اسامة",
+            "normalized": "اسامة",
+            "conf": 92.0,
+            "left": 1373,
+            "top": 1732,
+            "width": 134,
+            "height": 50
+          },
+          {
+            "text": "البياز",
+            "normalized": "البياز",
+            "conf": 88.0,
+            "left": 1265,
+            "top": 1732,
+            "width": 92,
+            "height": 65
+          }
+        ]
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "moulay-yaacoub",
+      "historical_id_constituency": 551,
+      "historical_constituency": "Moulay-Yacoub",
+      "candidate_name_ar": "محمد النوايتي",
+      "candidate_name_ar_normalized": "محمد النوايتي",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "identity_verification": "TARGETED_OCR_EXACT_HEADER_PLUS_HIGH_CONFIDENCE_NAME_BAND",
+      "poster_display_order_only": 2,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-18T08:06:55+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375",
+        "parent_page_url": "https://pps.ma/10462/",
+        "pdf_page": 3,
+        "raster_sha256": "e09fb0d9882bb9a83cb2edb40c326599d9d9f8f4662cfde22366bdd0411519a5",
+        "header_tokens": [
+          {
+            "text": "مولاي",
+            "normalized": "مولاي",
+            "conf": 91.0,
+            "left": 484,
+            "top": 599
+          },
+          {
+            "text": "يعقوب",
+            "normalized": "يعقوب",
+            "conf": 91.0,
+            "left": 304,
+            "top": 612
+          }
+        ],
+        "ocr_text_excerpt": "مولاي يعقوب | الانتخابات التشريعية - 07 اكتوبر2016",
+        "candidate_tokens": [
+          {
+            "text": "محمد",
+            "normalized": "محمد",
+            "conf": 95.0,
+            "left": 708,
+            "top": 1727,
+            "width": 107,
+            "height": 74
+          },
+          {
+            "text": "النوايتى",
+            "normalized": "النوايتي",
+            "conf": 87.0,
+            "left": 491,
+            "top": 1727,
+            "width": 190,
+            "height": 74
+          }
+        ]
+      }
+    }
+  ],
+  "counts": {
+    "territories": 1,
+    "candidate_rows": 2,
+    "districts_with_at_least_three_candidate_capacity_when_added_to_existing_two_PJD": 1
+  },
+  "invariants": {
+    "ocr_page_promoted": 3,
+    "other_ocr_pages_promoted": false,
+    "exact_header_required": true,
+    "minimum_word_confidence": 85,
+    "candidate_count_equals_historical_seats": true,
+    "candidate_rank_inferred": false,
+    "person_name_fuzzy_matching": false,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "F1_created": false
+  }
+}
