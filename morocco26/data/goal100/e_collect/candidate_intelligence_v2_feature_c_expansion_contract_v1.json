@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-CANDIDATE-INTELLIGENCE-V2-FEATURE-C-EXPANSION-V1",
+  "frozen_at": "2026-08-18T20:42:00+01:00",
+  "status": "FROZEN_BEFORE_FEATURE_C_POWER_AND_PREDICTIVE_RESULT",
+  "scientific_status": "POST_2021_EXPLORATORY_MODEL_DEVELOPMENT",
+  "motivation": "The collision-safe A+B deterministic model selected maximum ridge regularization and produced only negligible retrospective validation improvement. Test a more specific objective local-organization feature already present in the same pre-election closed universe before considering any LLM treatment.",
+  "feature_C": {
+    "id": "V2_HEAD_ELECTED_AS_LOCAL_LIST_HEAD_2015",
+    "entity": "PARTY_X_LOCAL_CONTEST_HEAD",
+    "data_type": "BOOLEAN",
+    "definition": "The focal legislative head of list is resolved to an elected 2015 communal-council member whose elections.ma/TAFRA record has teteDeListe=1.",
+    "source": "same complete TAFRA copy of elections.ma communal elected-member universe used for feature B",
+    "missing_rule": "UNKNOWN remains UNKNOWN when candidate identity is not collision-resolved. A candidate verified absent from the complete elected-member universe is FALSE.",
+    "no_subjective_scores": true
+  },
+  "power_gate": {
+    "minimum_known_territories_each_transition": 74,
+    "minimum_positive_instances_each_transition": 30,
+    "unknown_is_false": false
+  },
+  "candidate_models_if_C_passes": [
+    "A_PLUS_B",
+    "A_PLUS_C",
+    "A_PLUS_B_PLUS_C"
+  ],
+  "candidate_models_if_C_fails": ["A_PLUS_B"],
+  "model_selection": {
+    "outcome_data_allowed": "2016 fit transition only",
+    "criterion": "lowest leave-one-region-out PJD share RMSE on 2011_TO_2016",
+    "ridge_grid": [0.01, 0.1, 1.0, 10.0, 100.0],
+    "tie_break_1": "fewer features",
+    "tie_break_2": "stronger regularization",
+    "interactions": false,
+    "intercept": false
+  },
+  "validation": {
+    "transition": "2016_TO_2021",
+    "blind": false,
+    "rule": "Apply the single model family and ridge value selected exclusively on 2016 without alteration. Report PJD and all-party metrics plus paired bootstrap; do not choose among model families after inspecting 2021."
+  },
+  "forbidden": [
+    "Select feature C because of its 2021 performance",
+    "Use 2021 to choose model family or ridge strength",
+    "Add an interaction after seeing results",
+    "Add a national PJD intercept",
+    "Invoke an LLM before deterministic feature expansion is measured",
+    "Modify F0"
+  ]
+}
