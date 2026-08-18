@@ -28,6 +28,11 @@ jobs:
           test -f morocco26/data/goal100/e_reason/judgments/development/c1_c2_preunseal_equivalence_receipt_v1.json
           test -f morocco26/data/goal100/e_reason/judgments/development/c1_rule_only/c1_judgment_manifest.json
 
+      - name: Install numerical runtime only
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --quiet numpy
+
       - name: Calibrate on 2016 and freeze lambdas
         run: |
           set -euo pipefail
