@@ -1,0 +1,49 @@
+{
+  "audit_id": "M26-CANDIDATE-INTEL-V2-2016-CROSS-SOURCE-SEED-V1",
+  "cross_source_derived_feature_counts": {
+    "INCUMBENT_PARTY_SWITCH_IN": 2,
+    "INCUMBENT_SAME_PARTY_SAME_DISTRICT": 9,
+    "PRIOR_CYCLE_MP": 11
+  },
+  "cross_source_verified_parties": {
+    "PI": 1,
+    "PJD": 5,
+    "RNI": 5
+  },
+  "cross_source_verified_rate": 0.3548387096774194,
+  "cross_source_verified_rows": 11,
+  "m24_objective_feature_lead_counts": {
+    "LOCAL_OR_REGIONAL_OFFICE_MENTION": 8,
+    "MINISTER_OR_FORMER_MINISTER_MENTION": 2,
+    "PARLIAMENTARY_MANDATE_MENTION": 2,
+    "PARTY_OR_NATIONAL_OFFICE_MENTION": 9,
+    "PARTY_SWITCH_OR_OTHER_PARTY_MENTION": 3
+  },
+  "match_modes": {
+    "EXACT_UNIQUE": 11,
+    "NO_EXACT_MATCH": 20
+  },
+  "name_variant_diagnostic": {
+    "by_class": {
+      "HIGH_NAME_VARIANT_DIAGNOSTIC": 4,
+      "VERY_HIGH_NAME_VARIANT_DIAGNOSTIC": 1
+    },
+    "exact_plus_variant_rate": 0.5161290322580645,
+    "exact_plus_variant_rows": 16,
+    "rows": 5,
+    "warning": "Variant rows remain unresolved and do not count as verified."
+  },
+  "next_gate": "Use verified 2011→2016 and 2016→2021 candidate facts to build party×constituency features, then test coverage/support and predictive value before fitting any effect.",
+  "schema_version": "1.0",
+  "scientific_interpretation": "This is a recoverability/identity audit for the 2011→2016 transition, not a predictive backtest and not authority to change F0.",
+  "seed_parties": {
+    "PAM": 1,
+    "PI": 1,
+    "PJD": 20,
+    "RNI": 9
+  },
+  "seed_rows": 31,
+  "seed_territories": 26,
+  "status": "OFFLINE_CROSS_SOURCE_AUDIT_COMPLETE",
+  "verification_rule": "Only unique exact normalized matches against the frozen TAFRA 2011 local elected-member panel count as cross-source verified."
+}
