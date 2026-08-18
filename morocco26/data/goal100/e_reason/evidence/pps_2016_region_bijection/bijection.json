@@ -1,14 +1,18 @@
 {
-  "schema_version": "1.0",
-  "created_at": "2026-08-18T06:44:45+00:00",
-  "status": "FAIL_CLOSED",
+  "schema_version": "1.1",
+  "created_at": "2026-08-18T06:50:55+00:00",
+  "status": "PASS_92_TO_92_IDENTITY_BIJECTION_DIAGNOSTIC",
   "counts": {
     "regional_pdfs": 12,
     "pdf_pages": 92,
     "canonical_districts": 92,
-    "unique_assigned_constituency_ids": 73,
-    "exact_or_high_confidence_pages": 52,
-    "bijection_only_pages": 21
+    "assigned_pages": 92,
+    "unique_assigned_constituency_ids": 92,
+    "exact_or_high_confidence_pages": 65,
+    "bijection_only_pages": 27
+  },
+  "filing_region_override": {
+    "ouezzane": "fes-meknes"
   },
   "regions": [
     {
@@ -16,7 +20,7 @@
       "status": "BIJECTION_SOLVED",
       "page_count": 6,
       "canonical_district_count": 6,
-      "assignment_total_score": 4.396349,
+      "assignment_total_score": 4.446265,
       "exact_or_high_confidence_pages": 3,
       "bijection_only_pages": 3,
       "pages": [
@@ -34,21 +38,25 @@
             "فاعل جمعوي",
             "مساعد صيد",
             "عضو جماعة سيدي بولخلف",
-            "عبد اليد الرابحي"
+            "عبد اليد الرابحي",
+            "مدير اداري",
+            "فاعل جمعوي",
+            "عضو",
+            "بني ملال خنيفرة"
           ],
           "assigned_constituency_id": "beni-mellal",
           "historical_constituency": "Béni-Mellal",
           "historical_seats_2016": 6,
-          "assignment_score": 0.49994,
-          "page_local_second_score": 0.49994,
-          "page_local_margin": 0.0,
+          "assignment_score": 0.538312,
+          "page_local_second_score": 0.533303,
+          "page_local_margin": 0.005008,
           "matched_pair": {
-            "line_index": 6,
-            "header_line": "مقاول",
+            "line_index": 15,
+            "header_line": "بني ملال خنيفرة",
             "variant": "بني ملال",
-            "raw_score": 0.5
+            "raw_score": 0.538462
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 2,
@@ -64,7 +72,11 @@
             "مولاي رشيد السملا",
             "عضو اللجنة المركزية للحزب",
             "مستشار جماعي",
-            "فاعل جمعوي"
+            "فاعل جمعوي",
+            "وكيل اللائحة",
+            "بوعبيد خطابي",
+            "عدل",
+            "رئيس جماعة اهل المربع"
           ],
           "assigned_constituency_id": "fquih-ben-salah",
           "historical_constituency": "Fquih Ben Salah",
@@ -94,7 +106,11 @@
             "لتادلة ازيلال سابقا",
             "رئيس جماعة بني حسان",
             "فاعل جمعوي",
-            "عضو بجماعة واويزغت"
+            "عضو بجماعة واويزغت",
+            "صالح ديان",
+            "مستشار جماعي حاليا",
+            "استاذ سابق،برلما",
+            "عضو اللس الجهوي سابقا"
           ],
           "assigned_constituency_id": "bzou-ouaouizeght",
           "historical_constituency": "Bzou - Ouaouizaght",
@@ -124,21 +140,25 @@
             "الساعيد وبي",
             "عامل",
             "جمال العمراوي",
-            "صباغ"
+            "صباغ",
+            "وكيل اللائحة",
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "الدا"
           ],
           "assigned_constituency_id": "azilal-demnate",
           "historical_constituency": "Azilal - Demnate",
           "historical_seats_2016": 3,
-          "assignment_score": 0.521639,
+          "assignment_score": 0.533183,
           "page_local_second_score": 0.461518,
-          "page_local_margin": 0.060121,
+          "page_local_margin": 0.071665,
           "matched_pair": {
-            "line_index": 10,
-            "header_line": "جمال العمراوي",
+            "line_index": 15,
+            "header_line": "الدا",
             "variant": "ازيلال دمنات",
-            "raw_score": 0.521739
+            "raw_score": 0.533333
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 5,
@@ -154,21 +174,25 @@
             "ايوب السعيدي",
             "طالب",
             "خليد برايجي",
-            "فنان تشكيلي"
+            "فنان تشكيلي",
+            "وكيل اللائحة",
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "الدا"
           ],
           "assigned_constituency_id": "khouribga",
           "historical_constituency": "Khouribga",
           "historical_seats_2016": 6,
           "assignment_score": 0.3749,
-          "page_local_second_score": 0.39999,
-          "page_local_margin": -0.02509,
+          "page_local_second_score": 0.444324,
+          "page_local_margin": -0.069424,
           "matched_pair": {
             "line_index": 10,
             "header_line": "خليد برايجي",
             "variant": "خريبكة",
             "raw_score": 0.375
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 6,
@@ -184,7 +208,11 @@
             "فاعل جمعوي",
             "رئيس جماعة سابق",
             "لطيفة معديني",
-            "منسقة منتدي"
+            "منسقة منتدي",
+            "المناصفة والمساواة بخنيفرة",
+            "فاعلة",
+            "فؤاد حج",
+            "اطار عا"
           ],
           "assigned_constituency_id": "khenifra",
           "historical_constituency": "Khénifra",
@@ -225,7 +253,8 @@
             "استاذة",
             "اختصاصي",
             "و العقلي للكبار و ا",
-            "وكيل اللائحة"
+            "وكيل اللائحة",
+            "1 23 09 16 14 27"
           ],
           "assigned_constituency_id": "ain-chock",
           "historical_constituency": "Aïn-Chock",
@@ -251,7 +280,7 @@
           "page_local_second_score": 0.0,
           "page_local_margin": 0.0,
           "matched_pair": null,
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 3,
@@ -266,6 +295,9 @@
             "تاجر",
             "فاعل جمعوي",
             "سي",
+            "تاجر",
+            "فاعل جمعوي",
+            "يونس بادر",
             "تاجر",
             "فاعل جمعوي"
           ],
@@ -297,7 +329,11 @@
             "مسؤول نقابي و سياسي",
             "عضو",
             "مقاطعة الحي الحسني",
-            "عبد العزيز العباسي"
+            "عبد العزيز العباسي",
+            "ممون الحفلات",
+            "فاعل جمعوي",
+            "عضو",
+            "مقاطعة الحي الحسني"
           ],
           "assigned_constituency_id": "hay-hassani",
           "historical_constituency": "Hay-Hassani",
@@ -327,7 +363,8 @@
             "طبيبة",
             "وكيلة اللائحة",
             "عماد لعبوبي",
-            "ممول حفلات"
+            "ممول حفلات",
+            "1 23 09 16 13 23"
           ],
           "assigned_constituency_id": "al-fida-mers-sultan",
           "historical_constituency": "Al-Fida - Mers-Sultan",
@@ -341,7 +378,7 @@
             "variant": "الفداء مرس السلطان",
             "raw_score": 0.592593
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 6,
@@ -357,7 +394,10 @@
             "عصام شوق",
             "دكتور",
             "عبد اللطيف السعدي",
-            "ديبلوماسي سابق"
+            "ديبلوماسي سابق",
+            "خب",
+            "وكيل اللائحة",
+            "1 25 09 16 21 27"
           ],
           "assigned_constituency_id": "sidi-bennour",
           "historical_constituency": "Sidi Bennour",
@@ -371,7 +411,7 @@
             "variant": "سيدي بنور",
             "raw_score": 0.461538
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 7,
@@ -387,7 +427,8 @@
             "عبد الصمد حقيقي",
             "اطار بشركة خاصة",
             "خب",
-            "وكيل اللائحة"
+            "وكيل اللائحة",
+            "1 25 09 16 19 04"
           ],
           "assigned_constituency_id": "mohammedia",
           "historical_constituency": "Mohammadia",
@@ -417,7 +458,11 @@
             "طارق المسعودي",
             "مسؤول تجاري",
             "احمد لحوال",
-            "مدير شركة"
+            "مدير شركة",
+            "كاتب الفرع ا",
+            "للحزب بالنواصر",
+            "وكيل اللائحة",
+            "1 23 09 16 10 01"
           ],
           "assigned_constituency_id": "nouaceur",
           "historical_constituency": "Nouaceur",
@@ -447,7 +492,11 @@
             "عزالدين كريمي",
             "مس",
             "وكيل اللائحة",
-            "المصطفي فهيم"
+            "المصطفي فهيم",
+            "اطار بشركة",
+            "امنة الحاجي",
+            "تاجرة",
+            "1 22 09 16 14 23"
           ],
           "assigned_constituency_id": "berrechid",
           "historical_constituency": "Berrechid",
@@ -477,7 +526,9 @@
             "بوشعيب موساوي",
             "مقاول",
             "كريم الزيادي",
-            "مدير شركة"
+            "مدير شركة",
+            "وكيل اللائحة",
+            "1 20 09 16 16 25"
           ],
           "assigned_constituency_id": "benslimane",
           "historical_constituency": "Benslimane",
@@ -507,7 +558,11 @@
             "عضو باللس ا",
             "رئيس جماعة مكارطو",
             "مقاول",
-            "رئيس جماعة بوكركوح"
+            "رئيس جماعة بوكركوح",
+            "الحاج عبد السلام جبلي",
+            "فلاح",
+            "مستشار جماعي بجماعة",
+            "عين الضربان لحلاف"
           ],
           "assigned_constituency_id": "casablanca-anfa",
           "historical_constituency": "Casablanca - Anfa",
@@ -521,7 +576,7 @@
             "variant": "الدار البيضاء انفا",
             "raw_score": 0.722222
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 12,
@@ -537,7 +592,9 @@
             "المهدي افريخ",
             "مس",
             "المصطفي فراغ",
-            "مدير عام"
+            "مدير عام",
+            "وكيل اللائحة",
+            "1 21 09 16 16 26"
           ],
           "assigned_constituency_id": "sidi-bernoussi",
           "historical_constituency": "Sidi-Bernoussi",
@@ -567,7 +624,10 @@
             "مدير وكالة",
             "وكيل اللائحة",
             "لطيفة بلعرش",
-            "تقنية"
+            "تقنية",
+            "مسعود ا",
+            "متقاعد",
+            "1 23 09 16 14 08"
           ],
           "assigned_constituency_id": "ain-sebaa-hay-mohammadi",
           "historical_constituency": "Aïn-Sebaâ - Hay-Mohammadi",
@@ -597,7 +657,8 @@
             "بوشعيب المليح",
             "مستخدم بشركة خاصة",
             "رئيس جمعية قاطني دور الصفيح بمديونة",
-            "وكيل اللائحة"
+            "وكيل اللائحة",
+            "1 20 09 16 17 42"
           ],
           "assigned_constituency_id": "mediouna",
           "historical_constituency": "Médiouna",
@@ -627,7 +688,11 @@
             "عضو اللجنة المركزية للحزب",
             "فتيحة دهاب",
             "فاعلة جمعوية",
-            "خالد الكرزون"
+            "خالد الكرزون",
+            "طبيب اخصائي",
+            "امراض النساء والولادة",
+            "عضو اللجنة المركزية للحزب",
+            "وكيل اللائحة"
           ],
           "assigned_constituency_id": "el-jadida",
           "historical_constituency": "El-Jadida",
@@ -641,7 +706,7 @@
             "variant": "الجديدة",
             "raw_score": 0.545455
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 16,
@@ -653,7 +718,7 @@
           "page_local_second_score": 0.0,
           "page_local_margin": 0.0,
           "matched_pair": null,
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         }
       ]
     },
@@ -719,7 +784,7 @@
             "variant": "اوسرد",
             "raw_score": 0.444444
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         }
       ]
     },
@@ -746,7 +811,11 @@
             "فاعل جمعوي",
             "موحي بغاط",
             "عضو اللس",
-            "الجماعي لحصيا"
+            "الجماعي لحصيا",
+            "فاعل جمعوي",
+            "الحسين عدنان",
+            "موظف",
+            "النائب ا"
           ],
           "assigned_constituency_id": "tinghir",
           "historical_constituency": "Tinghir",
@@ -776,7 +845,11 @@
             "وكيل اللائحة",
             "رجل اعمال",
             "فؤاد الورزازي",
-            "مدير مؤسسة سياحية"
+            "مدير مؤسسة سياحية",
+            "فاعل جمعوي",
+            "يوسف ياسين",
+            "متقاعد",
+            "رئيس الجماعة القروية"
           ],
           "assigned_constituency_id": "zagora",
           "historical_constituency": "Zagora",
@@ -806,7 +879,11 @@
             "مفتش",
             "مستشار ببلدية الريش",
             "رئيس سابق لبلدية الريش",
-            "موحي اوكدا"
+            "موحي اوكدا",
+            "مقاول",
+            "فاعل جمعوي",
+            "وكيل اللائحة",
+            "1 21 09 16 12 04"
           ],
           "assigned_constituency_id": "midelt",
           "historical_constituency": "Midelt",
@@ -836,7 +913,11 @@
             "يوسف البوها",
             "استاذ",
             "فاعل جمعوي",
-            "عبد ا"
+            "عبد ا",
+            "رجل اعمال",
+            "نائب رئيس جهة درعة تافيلالت",
+            "فاعل جمعوي",
+            "رئيس سابق لغرفة التجارة والصناعة"
           ],
           "assigned_constituency_id": "ouarzazate",
           "historical_constituency": "Ouarzazate",
@@ -866,7 +947,11 @@
             "اعمال حرة",
             "عمر الزعيم",
             "نائب رئيس جهة درعة تافيلالت",
-            "عضو غرفة التجارة"
+            "عضو غرفة التجارة",
+            "و الصناعة و الخدمات",
+            "عضو جماعة مولاي علي الشريف",
+            "عضو اللجنة المركزية للحزب",
+            "وكيل اللائحة"
           ],
           "assigned_constituency_id": "errachidia",
           "historical_constituency": "Errachidia",
@@ -880,15 +965,395 @@
             "variant": "الرشيدية",
             "raw_score": 0.5
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         }
       ]
     },
     {
       "region_slug": "fes-meknes",
-      "status": "PAGE_COUNT_MISMATCH",
+      "status": "BIJECTION_SOLVED",
       "page_count": 12,
-      "canonical_district_count": 11
+      "canonical_district_count": 12,
+      "assignment_total_score": 10.414533,
+      "exact_or_high_confidence_pages": 9,
+      "bijection_only_pages": 3,
+      "pages": [
+        {
+          "page": 1,
+          "header_lines": [
+            "رجل اعمال",
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "ا",
+            "الدا",
+            "فاس الشمالية",
+            "عبد ا",
+            "مستثمر",
+            "عزيز معين",
+            "مستثمر",
+            "ليلي الليمو",
+            "طالبة",
+            "الحسن ساعو",
+            "موظف",
+            "وكيل اللائحة",
+            "1 19 09 16 11 34"
+          ],
+          "assigned_constituency_id": "fes-nord",
+          "historical_constituency": "Fès-Chamalia",
+          "historical_seats_2016": 4,
+          "assignment_score": 0.99995,
+          "page_local_second_score": 0.636314,
+          "page_local_margin": 0.363636,
+          "matched_pair": {
+            "line_index": 5,
+            "header_line": "فاس الشمالية",
+            "variant": "فاس الشمالية",
+            "raw_score": 1.0
+          },
+          "assignment_method": "EXACT_HEADER"
+        },
+        {
+          "page": 2,
+          "header_lines": [
+            "فاطمة السما",
+            "ممرضة",
+            "عبد ا",
+            "استاذ جامعي",
+            "بوشتي لبيض",
+            "منعش عقاري",
+            "وكيل اللائحة",
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "الدا",
+            "مكناس",
+            "ياسين حيدة",
+            "تاجر",
+            "الحاج العربي بابا الحجامي",
+            "تاجر",
+            "نور الدين المدا"
+          ],
+          "assigned_constituency_id": "meknes",
+          "historical_constituency": "Meknès",
+          "historical_seats_2016": 6,
+          "assignment_score": 0.9999,
+          "page_local_second_score": 0.59991,
+          "page_local_margin": 0.39999,
+          "matched_pair": {
+            "line_index": 10,
+            "header_line": "مكناس",
+            "variant": "مكناس",
+            "raw_score": 1.0
+          },
+          "assignment_method": "EXACT_HEADER"
+        },
+        {
+          "page": 3,
+          "header_lines": [
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "الدا",
+            "مو",
+            "اسامة البياز",
+            "تقني متخصص",
+            "فاعل جمعوي",
+            "طالب جامعي",
+            "فاعل جمعوي",
+            "وكيل اللائحة",
+            "1 20 09 16 10 15"
+          ],
+          "assigned_constituency_id": "ifrane",
+          "historical_constituency": "Ifrane",
+          "historical_seats_2016": 2,
+          "assignment_score": 0.444424,
+          "page_local_second_score": 0.59998,
+          "page_local_margin": -0.155556,
+          "matched_pair": {
+            "line_index": 2,
+            "header_line": "الدا",
+            "variant": "افران",
+            "raw_score": 0.444444
+          },
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
+        },
+        {
+          "page": 4,
+          "header_lines": [
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "ا",
+            "الدا",
+            "وزان",
+            "احمد الكوراري",
+            "فلاح مستشار جماعي",
+            "استاذ متقاعد",
+            "سعيد الشرعي",
+            "رجل اعمال",
+            "وكيل اللائحة",
+            "1 19 09 16 11 16"
+          ],
+          "assigned_constituency_id": "ouezzane",
+          "historical_constituency": "Ouezzane",
+          "historical_seats_2016": 3,
+          "assignment_score": 0.99996,
+          "page_local_second_score": 0.59997,
+          "page_local_margin": 0.39999,
+          "matched_pair": {
+            "line_index": 4,
+            "header_line": "وزان",
+            "variant": "وزان",
+            "raw_score": 1.0
+          },
+          "assignment_method": "EXACT_HEADER"
+        },
+        {
+          "page": 5,
+          "header_lines": [
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "الدا",
+            "فلاح",
+            "حسن السعودي",
+            "تاجر",
+            "وكيل اللائحة",
+            "1 17 09 16 10 37"
+          ],
+          "assigned_constituency_id": "moulay-yaacoub",
+          "historical_constituency": "Moulay-Yacoub",
+          "historical_seats_2016": 2,
+          "assignment_score": 0.470588,
+          "page_local_second_score": 0.49995,
+          "page_local_margin": -0.029362,
+          "matched_pair": {
+            "line_index": 0,
+            "header_line": "المعقول",
+            "variant": "مولاي يعقوب",
+            "raw_score": 0.470588
+          },
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
+        },
+        {
+          "page": 6,
+          "header_lines": [
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "الدا",
+            "الحاجب",
+            "فلاح",
+            "ملود امرد",
+            "متقاعد",
+            "وكيل اللائحة",
+            "1 17 09 16 10 08"
+          ],
+          "assigned_constituency_id": "el-hajeb",
+          "historical_constituency": "El-Hajeb",
+          "historical_seats_2016": 2,
+          "assignment_score": 0.99997,
+          "page_local_second_score": 0.470588,
+          "page_local_margin": 0.529382,
+          "matched_pair": {
+            "line_index": 3,
+            "header_line": "الحاجب",
+            "variant": "الحاجب",
+            "raw_score": 1.0
+          },
+          "assignment_method": "EXACT_HEADER"
+        },
+        {
+          "page": 7,
+          "header_lines": [
+            "رجل اعمال",
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "ا",
+            "الدا",
+            "القرية غفساي",
+            "تاجر",
+            "نو الدين الحوسني",
+            "تاجر",
+            "عبد الرحمان هيدور",
+            "مدير شركة",
+            "وكيل اللائحة",
+            "1 19 09 16 11 29"
+          ],
+          "assigned_constituency_id": "karia-ghafsay",
+          "historical_constituency": "Karia - Rhafsai",
+          "historical_seats_2016": 3,
+          "assignment_score": 0.99995,
+          "page_local_second_score": 0.59996,
+          "page_local_margin": 0.39999,
+          "matched_pair": {
+            "line_index": 5,
+            "header_line": "القرية غفساي",
+            "variant": "القرية غفساي",
+            "raw_score": 1.0
+          },
+          "assignment_method": "EXACT_HEADER"
+        },
+        {
+          "page": 8,
+          "header_lines": [
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "ا",
+            "الدا",
+            "بولمان",
+            "هشام سريوي",
+            "تقني متخصص",
+            "رشيد مهداوي",
+            "استاذ",
+            "رشيد حمو",
+            "وكيل عام للتامين",
+            "وكيل اللائحة",
+            "1 21 09 16 10 17"
+          ],
+          "assigned_constituency_id": "boulemane",
+          "historical_constituency": "Boulemane",
+          "historical_seats_2016": 3,
+          "assignment_score": 0.99996,
+          "page_local_second_score": 0.59997,
+          "page_local_margin": 0.39999,
+          "matched_pair": {
+            "line_index": 4,
+            "header_line": "بولمان",
+            "variant": "بولمان",
+            "raw_score": 1.0
+          },
+          "assignment_method": "EXACT_HEADER"
+        },
+        {
+          "page": 9,
+          "header_lines": [
+            "عبد الرزاق المنصور",
+            "موظف",
+            "رئيس جماعة تايناست",
+            "عزوز كريمة",
+            "تاجر",
+            "النائب ا",
+            "رضوان زريول",
+            "مقاول",
+            "الكاتب المحلي للحزب بتازة",
+            "عبد الخالق حمامي",
+            "مدير مؤسسة تعليمية",
+            "مستشار بجماعة سيدي علي بورقبة",
+            "عمر شلاح",
+            "متقاعد",
+            "رئيس جماعة تيزي وسلي",
+            "وكيل اللائحة"
+          ],
+          "assigned_constituency_id": "taza",
+          "historical_constituency": "Taza",
+          "historical_seats_2016": 5,
+          "assignment_score": 0.49996,
+          "page_local_second_score": 0.49996,
+          "page_local_margin": 0.0,
+          "matched_pair": {
+            "line_index": 4,
+            "header_line": "تاجر",
+            "variant": "تازة",
+            "raw_score": 0.5
+          },
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
+        },
+        {
+          "page": 10,
+          "header_lines": [
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "ا",
+            "الدا",
+            "تاونات تيسة",
+            "عبد اللطيف العباسي",
+            "مدلك طبي",
+            "مستشار جماعي",
+            "بجماعة بوعادل",
+            "عبد النبي امسياح",
+            "فلاح",
+            "مستشار جماعي",
+            "بجماعة اولاد عياد",
+            "عبد ا",
+            "تاجر",
+            "مستشار جماعي ببلدية تاونات"
+          ],
+          "assigned_constituency_id": "taounate-tissa",
+          "historical_constituency": "Taounate - Tissa",
+          "historical_seats_2016": 3,
+          "assignment_score": 0.99996,
+          "page_local_second_score": 0.59997,
+          "page_local_margin": 0.39999,
+          "matched_pair": {
+            "line_index": 4,
+            "header_line": "تاونات تيسة",
+            "variant": "تاونات تيسة",
+            "raw_score": 1.0
+          },
+          "assignment_method": "EXACT_HEADER"
+        },
+        {
+          "page": 11,
+          "header_lines": [
+            "رجل اعمال",
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "ا",
+            "الدا",
+            "صفرو",
+            "مقاول",
+            "حميد لمش",
+            "مستشار بجماعة عين تمكناي",
+            "ادريس بوطاهر",
+            "رئيس بلدية ايموزار كندر",
+            "وكيل اللائحة",
+            "1 23 09 16 14 05"
+          ],
+          "assigned_constituency_id": "sefrou",
+          "historical_constituency": "Sefrou",
+          "historical_seats_2016": 3,
+          "assignment_score": 0.99995,
+          "page_local_second_score": 0.59996,
+          "page_local_margin": 0.39999,
+          "matched_pair": {
+            "line_index": 5,
+            "header_line": "صفرو",
+            "variant": "صفرو",
+            "raw_score": 1.0
+          },
+          "assignment_method": "EXACT_HEADER"
+        },
+        {
+          "page": 12,
+          "header_lines": [
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "ا",
+            "الدا",
+            "فاس الجنوبية",
+            "عبد الحق مولودي",
+            "مس",
+            "نادية ابو عبد ا",
+            "استاذة",
+            "يوسف لمسيح",
+            "عضو اللجنة المركزية للحزب",
+            "حاصل علي ا",
+            "فاعل جمعوي",
+            "عزالدين العمارتي",
+            "عضو اللجنة المركزية للحزب",
+            "حاصل علي ا"
+          ],
+          "assigned_constituency_id": "fes-sud",
+          "historical_constituency": "Fès-Janoubia",
+          "historical_seats_2016": 4,
+          "assignment_score": 0.99996,
+          "page_local_second_score": 0.636324,
+          "page_local_margin": 0.363636,
+          "matched_pair": {
+            "line_index": 4,
+            "header_line": "فاس الجنوبية",
+            "variant": "فاس الجنوبية",
+            "raw_score": 1.0
+          },
+          "assignment_method": "EXACT_HEADER"
+        }
+      ]
     },
     {
       "region_slug": "guelmim-oued-noun",
@@ -913,7 +1378,11 @@
             "عضو غرفة التجارة والصناعة",
             "والخدمات بجهة كلميم وادنون",
             "رئيس سابق لغرفة التجارة والصناعة",
-            "والخدمات بجهة كلميم السمارة"
+            "والخدمات بجهة كلميم السمارة",
+            "نعيمة كريم",
+            "مستشارة بجماعة ايت الرخا",
+            "حاصلة علي الاجازة",
+            "وكيل اللائحة"
           ],
           "assigned_constituency_id": "sidi-ifni",
           "historical_constituency": "Sidi Ifni",
@@ -927,7 +1396,7 @@
             "variant": "سيدي افني",
             "raw_score": 0.5
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 2,
@@ -943,7 +1412,8 @@
             "فاعلة جمعوية",
             "المنسقة ا",
             "المناصفة و المساواة بطانطان",
-            "وكيلة اللائحة"
+            "وكيلة اللائحة",
+            "1 21 09 16 14 07"
           ],
           "assigned_constituency_id": "tan-tan",
           "historical_constituency": "Tan-Tan",
@@ -973,7 +1443,9 @@
             "فاعل جمعوي",
             "استاذ",
             "فاعل جمعوي",
-            "نقابي"
+            "نقابي",
+            "وكيل اللائحة",
+            "1 19 09 16 09 47"
           ],
           "assigned_constituency_id": "guelmim",
           "historical_constituency": "Guelmim",
@@ -1014,7 +1486,7 @@
             "variant": "اسا الزاك",
             "raw_score": 0.5
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         }
       ]
     },
@@ -1041,7 +1513,9 @@
             "حاصل علي الاجازة",
             "تخصص تسي",
             "الركيبي بن الطالب",
-            "حاصل علي الماس"
+            "حاصل علي الماس",
+            "وكيل اللائحة",
+            "1 25 09 16 19 50"
           ],
           "assigned_constituency_id": "es-semara",
           "historical_constituency": "Es-Smara",
@@ -1071,7 +1545,10 @@
             "حبيبة بلا",
             "طالبة",
             "هشام رءوف",
-            "تاجر"
+            "تاجر",
+            "فاعل جمعوي",
+            "وكيل اللائحة",
+            "1 27 09 16 14 53"
           ],
           "assigned_constituency_id": "laayoune",
           "historical_constituency": "Laâyoune",
@@ -1101,7 +1578,8 @@
             "مولاي مولود الزاهي",
             "تاجر",
             "فاعل جمعوي",
-            "وكيل اللائحة"
+            "وكيل اللائحة",
+            "1 22 09 16 14 49"
           ],
           "assigned_constituency_id": "boujdour",
           "historical_constituency": "Boujdour",
@@ -1131,7 +1609,9 @@
             "فاعل جمعوي وحقوقي",
             "مليكة خوبر",
             "تاجرة",
-            "فاعلة جمعوية"
+            "فاعلة جمعوية",
+            "وكيل اللائحة",
+            "1 22 09 16 14 39"
           ],
           "assigned_constituency_id": "tarfaya",
           "historical_constituency": "Tarfaya",
@@ -1154,7 +1634,7 @@
       "status": "BIJECTION_SOLVED",
       "page_count": 10,
       "canonical_district_count": 10,
-      "assignment_total_score": 9.352491,
+      "assignment_total_score": 9.443874,
       "exact_or_high_confidence_pages": 9,
       "bijection_only_pages": 1,
       "pages": [
@@ -1172,14 +1652,18 @@
             "انيس حرشي",
             "صيدلا",
             "عزيزة رفوق",
-            "طبيبة"
+            "طبيبة",
+            "عضو اللجنة المركزية للحزب",
+            "المنسقة ا",
+            "و المساواة بمراكش",
+            "وكيلة اللائحة"
           ],
           "assigned_constituency_id": "gueliz-nakhil",
           "historical_constituency": "Guéliz - Annakhil",
           "historical_seats_2016": 3,
           "assignment_score": 0.99995,
-          "page_local_second_score": 0.545415,
-          "page_local_margin": 0.454535,
+          "page_local_second_score": 0.666537,
+          "page_local_margin": 0.333413,
           "matched_pair": {
             "line_index": 5,
             "header_line": "جليز النخيل",
@@ -1202,7 +1686,11 @@
             "شاعر",
             "فاعل حقوقي و جمعوي",
             "موظف",
-            "عضو اللجنة المركزية للحزب"
+            "عضو اللجنة المركزية للحزب",
+            "مولاي عبد العزيز المعيار الادريسي",
+            "الكاتب الجهوي للجامعة الوطنية للتعليم",
+            "فاعل حقوقي و جمعوي",
+            "وكيل اللائحة"
           ],
           "assigned_constituency_id": "medina-sidi-youssef",
           "historical_constituency": "Médina - Sidi-Youssef-Ben-Ali",
@@ -1232,7 +1720,11 @@
             "حميد الشاوي",
             "عامل",
             "عضو بجماعة",
-            "اسيف المال"
+            "اسيف المال",
+            "الحسين بن لكطو",
+            "مقاول",
+            "عضو بجماعة مزوضة",
+            "وكيل اللائحة"
           ],
           "assigned_constituency_id": "chichaoua",
           "historical_constituency": "Chichaoua",
@@ -1262,7 +1754,11 @@
             "ادريس العلام",
             "رجل اعمال",
             "مصطفي حديدو",
-            "استاذ جامعي"
+            "استاذ جامعي",
+            "عبد العا",
+            "استاذ جامعي",
+            "رئيس جماعة اولاد زراد",
+            "رئيس"
           ],
           "assigned_constituency_id": "el-kelaa-des-sraghna",
           "historical_constituency": "El-Kelâa-des-Sraghna",
@@ -1292,21 +1788,25 @@
             "طبيب",
             "رشيد حمامة",
             "جباص",
-            "رشيد"
+            "رشيد",
+            "تاجر، رئيس جماعة الغيات",
+            "عضو غرفة التجارة",
+            "والصناعة والخدمات",
+            "مراكش اسفي"
           ],
           "assigned_constituency_id": "safi",
           "historical_constituency": "Safi",
           "historical_seats_2016": 6,
-          "assignment_score": 0.352911,
+          "assignment_score": 0.444294,
           "page_local_second_score": 0.533243,
-          "page_local_margin": -0.180332,
+          "page_local_margin": -0.088949,
           "matched_pair": {
-            "line_index": 3,
-            "header_line": "المصطفي الكانو",
+            "line_index": 15,
+            "header_line": "مراكش اسفي",
             "variant": "اسفي",
-            "raw_score": 0.352941
+            "raw_score": 0.444444
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 6,
@@ -1322,7 +1822,11 @@
             "احمد علا",
             "استاذ",
             "وكيل اللائحة",
-            "عبد العا"
+            "عبد العا",
+            "استاذ",
+            "سم",
+            "مستخدمة",
+            "1 23 09 16 13 09"
           ],
           "assigned_constituency_id": "al-haouz",
           "historical_constituency": "Al-Haouz",
@@ -1352,7 +1856,9 @@
             "يوسف",
             "فلاح",
             "عبداللطيف بوداد",
-            "مساعد تاجر"
+            "مساعد تاجر",
+            "وكيل اللائحة",
+            "1 22 09 16 14 58"
           ],
           "assigned_constituency_id": "rehamna",
           "historical_constituency": "Rehamna",
@@ -1382,7 +1888,11 @@
             "عضو اللس ا",
             "رئيس جماعة اكرض",
             "عزالدين الزريويل",
-            "استاذ"
+            "استاذ",
+            "مستشار جماعي",
+            "فاعل جمعوي",
+            "احمد اشالا",
+            "تاجر"
           ],
           "assigned_constituency_id": "essaouira",
           "historical_constituency": "Essaouira",
@@ -1412,7 +1922,10 @@
             "تاجر",
             "فاعل جمعوي",
             "عبد اليد العساوي",
-            "فلاح"
+            "فلاح",
+            "رئيس جماعة ايت ايمور",
+            "وكيل اللائحة",
+            "1 22 09 16 13 07"
           ],
           "assigned_constituency_id": "menara",
           "historical_constituency": "Ménara",
@@ -1442,7 +1955,8 @@
             "هشام البقا",
             "رئيس جماعة سيدي شيكر",
             "عضو بالغرفة الفلاحية",
-            "وكيل اللائحة"
+            "وكيل اللائحة",
+            "1 21 09 16 14 06"
           ],
           "assigned_constituency_id": "youssoufia",
           "historical_constituency": "Youssoufia",
@@ -1512,7 +2026,11 @@
             "فاعل جمعوي",
             "البش",
             "عامل",
-            "فاعل جمعوي"
+            "فاعل جمعوي",
+            "مدير بيداغوجي بمدرسة",
+            "خصوصية للمهندسين",
+            "استاذ متعاقد",
+            "حاصل علي دكتوراه"
           ],
           "assigned_constituency_id": "figuig",
           "historical_constituency": "Figuig",
@@ -1542,7 +2060,11 @@
             "تقني",
             "الكاتب الجهوي",
             "للحزب بجهة الشرق",
-            "عدل"
+            "عدل",
+            "ميمون عاقل",
+            "مقاول",
+            "وكيل اللائحة",
+            "1 20 09 16 15 25"
           ],
           "assigned_constituency_id": "oujda-angad",
           "historical_constituency": "Oujda - Angad",
@@ -1556,7 +2078,7 @@
             "variant": "وجدة انجاد",
             "raw_score": 0.454545
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 4,
@@ -1572,14 +2094,18 @@
             "عضو بجماعة ا",
             "احمد حلوزي",
             "تاجر",
-            "فاعل جمعوي"
+            "فاعل جمعوي",
+            "عمر شوحو",
+            "تاجر",
+            "النائب ا",
+            "عضو اللس الاقليمي للدريوش"
           ],
           "assigned_constituency_id": "driouch",
           "historical_constituency": "Driouch",
           "historical_seats_2016": 3,
           "assignment_score": 0.857093,
-          "page_local_second_score": 0.545415,
-          "page_local_margin": 0.311678,
+          "page_local_second_score": 0.571289,
+          "page_local_margin": 0.285804,
           "matched_pair": {
             "line_index": 5,
             "header_line": "الدريوش",
@@ -1602,14 +2128,18 @@
             "فريد عزاوي",
             "مس",
             "النائب الثالث لرئيس جماعة",
-            "بني سيدال الجبل"
+            "بني سيدال الجبل",
+            "احمد الحدوتي",
+            "موظف بمؤسسة بنكية",
+            "مستشار بجماعة احدادا",
+            "رجل اعمال"
           ],
           "assigned_constituency_id": "nador",
           "historical_constituency": "Nador",
           "historical_seats_2016": 4,
           "assignment_score": 0.99996,
-          "page_local_second_score": 0.545425,
-          "page_local_margin": 0.454535,
+          "page_local_second_score": 0.555436,
+          "page_local_margin": 0.444524,
           "matched_pair": {
             "line_index": 4,
             "header_line": "الناظور",
@@ -1632,7 +2162,9 @@
             "موظف",
             "خليد عزوزي",
             "مدير ومس",
-            "النائب الثا"
+            "النائب الثا",
+            "وكيل اللائحة",
+            "1 19 09 16 14 25"
           ],
           "assigned_constituency_id": "berkane",
           "historical_constituency": "Berkane",
@@ -1662,7 +2194,8 @@
             "فاعل جمعوي",
             "احمد ازيرار",
             "استاذ و باحث جامعي",
-            "وكيل اللائحة"
+            "وكيل اللائحة",
+            "1 19 09 16 14 36"
           ],
           "assigned_constituency_id": "taourirt",
           "historical_constituency": "Taourirt",
@@ -1713,7 +2246,7 @@
       "status": "BIJECTION_SOLVED",
       "page_count": 11,
       "canonical_district_count": 11,
-      "assignment_total_score": 9.588904,
+      "assignment_total_score": 9.640686,
       "exact_or_high_confidence_pages": 8,
       "bijection_only_pages": 3,
       "pages": [
@@ -1731,21 +2264,25 @@
             "طبيب",
             "فاعل جمعوي",
             "استاذ جامعي",
-            "عضو المكتب السياسي للحزب"
+            "عضو المكتب السياسي للحزب",
+            "النائب ا",
+            "الرباط سلا القنيطرة",
+            "مستشار بجماعة سلا",
+            "رجل اعمال"
           ],
-          "assigned_constituency_id": "sale-medina",
-          "historical_constituency": "Salé - Médina",
-          "historical_seats_2016": 4,
-          "assignment_score": 0.466607,
-          "page_local_second_score": 0.571359,
-          "page_local_margin": -0.104752,
+          "assigned_constituency_id": "sale-el-jadida",
+          "historical_constituency": "Salé - Al-Jadida",
+          "historical_seats_2016": 3,
+          "assignment_score": 0.518389,
+          "page_local_second_score": 0.666597,
+          "page_local_margin": -0.148208,
           "matched_pair": {
-            "line_index": 6,
-            "header_line": "مستشار بمقاطعة لمريسية",
-            "variant": "سلا المدينة",
-            "raw_score": 0.466667
+            "line_index": 13,
+            "header_line": "الرباط سلا القنيطرة",
+            "variant": "سلا الجديدة",
+            "raw_score": 0.518519
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 2,
@@ -1761,7 +2298,8 @@
             "رئيس جماعة دار بلعامري",
             "عبد ا",
             "مقاول",
-            "وكيل اللائحة"
+            "وكيل اللائحة",
+            "1 17 09 16 10 38"
           ],
           "assigned_constituency_id": "sidi-slimane",
           "historical_constituency": "Sidi Slimane",
@@ -1791,7 +2329,11 @@
             "المعقول",
             "صوتوا بوضع علامة علي الكتاب",
             "الدا",
-            "سيدي قاسم"
+            "سيدي قاسم",
+            "رشيد معرو",
+            "استاذ",
+            "رئيس جماعة لمرابيح",
+            "عبد اللطيف اقويدر"
           ],
           "assigned_constituency_id": "sidi-kacem",
           "historical_constituency": "Sidi-Kacem",
@@ -1821,7 +2363,11 @@
             "عضو اللس",
             "الجماعي لوالماس",
             "عضو بالغرفة الفلاحية",
-            "عضو باللس الجماعي"
+            "عضو باللس الجماعي",
+            "لمع الطلبة",
+            "الحبيب حسيني",
+            "رئيس جماعة ايت يدين",
+            "عضو بالغرفة الفلاحية"
           ],
           "assigned_constituency_id": "khemisset-oulmes",
           "historical_constituency": "Khémisset - Oulmès",
@@ -1835,7 +2381,7 @@
             "variant": "الخميسات اولماس",
             "raw_score": 0.642857
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 5,
@@ -1851,7 +2397,11 @@
             "عضو المكتب السياسي للحزب",
             "وكيل اللائحة",
             "عزيز لبيب",
-            "مهندس رئيس بوزارة التجهيز"
+            "مهندس رئيس بوزارة التجهيز",
+            "و النقل واللوجستيك",
+            "مهدي الداودي",
+            "اطار بصندوق ا",
+            "1 25 09 16 21 54"
           ],
           "assigned_constituency_id": "rabat-ocean",
           "historical_constituency": "Rabat - El Mouhit",
@@ -1881,7 +2431,9 @@
             "عبد اليد الزوان",
             "استاذ",
             "رشيد ا",
-            "موظف"
+            "موظف",
+            "وكيل اللائحة",
+            "1 19 09 16 16 14"
           ],
           "assigned_constituency_id": "rabat-chellah",
           "historical_constituency": "Rabat - Challah",
@@ -1911,6 +2463,10 @@
             "بعين عتيق",
             "فاعل جمعوي",
             "صلاح الدين فضلي",
+            "رجل اعمال",
+            "تقني",
+            "فاعل جمعوي",
+            "زه",
             "رجل اعمال"
           ],
           "assigned_constituency_id": "skhirate-temara",
@@ -1941,7 +2497,11 @@
             "فاعل جمعوي",
             "الطيب بنفايدة",
             "فلاح",
-            "نور الدين الخيال"
+            "نور الدين الخيال",
+            "مس",
+            "كوتش و مرافق نفسي",
+            "رئيس مركز للكوتشينغ",
+            "و الاستشارة بالقنيطرة"
           ],
           "assigned_constituency_id": "el-gharb",
           "historical_constituency": "El-Gharb",
@@ -1971,7 +2531,11 @@
             "استاذ متقاعد",
             "فاعل جمعوي",
             "عبد القادر جنان",
-            "استاذ"
+            "استاذ",
+            "فاعل جمعوي",
+            "عائشة بنمحمدي",
+            "استاذة جامعية",
+            "فاعلة جمعوية"
           ],
           "assigned_constituency_id": "kenitra",
           "historical_constituency": "Kénitra",
@@ -2001,14 +2565,17 @@
             "عبد ا",
             "رئيس تعاونية فلاحية",
             "فاعل جمعاوي",
-            "الطيبي بنحميدان"
+            "الطيبي بنحميدان",
+            "كاتب اللس الجماعي",
+            "وكيل اللائحة",
+            "1 17 09 16 11 00"
           ],
           "assigned_constituency_id": "tiflet-rommani",
           "historical_constituency": "Tifelt - Rommani",
           "historical_seats_2016": 3,
           "assignment_score": 0.99996,
-          "page_local_second_score": 0.49993,
-          "page_local_margin": 0.50003,
+          "page_local_second_score": 0.518399,
+          "page_local_margin": 0.481561,
           "matched_pair": {
             "line_index": 4,
             "header_line": "تيفلت الرماني",
@@ -2033,19 +2600,19 @@
             "وكيل اللائحة",
             "1 22 09 16 12 16"
           ],
-          "assigned_constituency_id": "sale-el-jadida",
-          "historical_constituency": "Salé - Al-Jadida",
-          "historical_seats_2016": 3,
+          "assigned_constituency_id": "sale-medina",
+          "historical_constituency": "Salé - Médina",
+          "historical_seats_2016": 4,
           "assignment_score": 0.47994,
           "page_local_second_score": 0.47994,
           "page_local_margin": 0.0,
           "matched_pair": {
             "line_index": 6,
             "header_line": "هشام ولد الداغرية",
-            "variant": "سلا الجديدة",
+            "variant": "سلا المدينة",
             "raw_score": 0.48
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         }
       ]
     },
@@ -2072,7 +2639,9 @@
             "تقني فلاحي",
             "ابراهيم تكزرت",
             "رجل اعمال",
-            "مهندس طبي"
+            "مهندس طبي",
+            "وكيل اللائحة",
+            "1 22 09 16 16 45"
           ],
           "assigned_constituency_id": "chtouka-ait-baha",
           "historical_constituency": "Chtouka - Aït-Baha",
@@ -2086,7 +2655,7 @@
             "variant": "شتوكة ايت باها",
             "raw_score": 0.555556
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 2,
@@ -2102,7 +2671,11 @@
             "حسن اومريبط",
             "مدير مؤسسة تعليمية عمومية",
             "الكاتب ا",
-            "للحرب باكادير اداوتنان"
+            "للحرب باكادير اداوتنان",
+            "كاتب صحفي حاصل علي اجازة",
+            "وكيل اللائحة",
+            "اسماء هومام",
+            "طبيبة دكتورة"
           ],
           "assigned_constituency_id": "agadir-ida-outanane",
           "historical_constituency": "Agadir - Ida-ou-Tanane",
@@ -2116,7 +2689,7 @@
             "variant": "اكادير اداوتنان",
             "raw_score": 0.7
           },
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 3,
@@ -2128,7 +2701,7 @@
           "page_local_second_score": 0.0,
           "page_local_margin": 0.0,
           "matched_pair": null,
-          "assignment_method": "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
         },
         {
           "page": 4,
@@ -2144,7 +2717,11 @@
             "استاذ التعليم الابتدائي",
             "ناشط جمعوي و اعلامي",
             "عبد اللطيف اشكري",
-            "تاجر"
+            "تاجر",
+            "رئيس جماعة سيدي بوعل",
+            "فاعل جمعوي",
+            "وكيل اللائحة",
+            "1 21 09 16 14 44"
           ],
           "assigned_constituency_id": "taroudant-nord",
           "historical_constituency": "Taroudannt - Chamalia",
@@ -2174,7 +2751,10 @@
             "حسن اكزول",
             "مقاول",
             "عبد ا",
-            "مقاول"
+            "مقاول",
+            "فاعل جمعوي",
+            "وكيل اللائحة",
+            "1 22 09 16 17 08"
           ],
           "assigned_constituency_id": "taroudant-sud",
           "historical_constituency": "Taroudannt - Al-Janoubia",
@@ -2233,7 +2813,9 @@
             "اسماعيل بلشيش",
             "ممرض",
             "رئيس شبكة افوس لهيئات",
-            "التمع المد"
+            "التمع المد",
+            "فاعل جمعوي",
+            "1 24 09 16 12 34"
           ],
           "assigned_constituency_id": "tata",
           "historical_constituency": "Tata",
@@ -2253,13 +2835,245 @@
     },
     {
       "region_slug": "tanger-tetouan-al-hoceima",
-      "status": "PAGE_COUNT_MISMATCH",
+      "status": "BIJECTION_SOLVED",
       "page_count": 7,
-      "canonical_district_count": 8
+      "canonical_district_count": 7,
+      "assignment_total_score": 5.603966,
+      "exact_or_high_confidence_pages": 4,
+      "bijection_only_pages": 3,
+      "pages": [
+        {
+          "page": 1,
+          "header_lines": [
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "الدا",
+            "طنجة",
+            "حياة لاس",
+            "مقاولة",
+            "خب",
+            "هشام ايعثمانن",
+            "كاتب الفرع المحلي",
+            "بني مكادة",
+            "غزلان المعموري",
+            "وكيلة اللائحة",
+            "استاذة جامعية",
+            "عضو المكتب السياسي للحزب",
+            "طالب",
+            "منسق القطاع الطلابي"
+          ],
+          "assigned_constituency_id": "tanger-assilah",
+          "historical_constituency": "Tanger - Assilah",
+          "historical_seats_2016": 5,
+          "assignment_score": 0.461398,
+          "page_local_second_score": 0.5,
+          "page_local_margin": -0.038602,
+          "matched_pair": {
+            "line_index": 14,
+            "header_line": "طالب",
+            "variant": "طنجة اصيلة",
+            "raw_score": 0.461538
+          },
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
+        },
+        {
+          "page": 2,
+          "header_lines": [
+            "رجل اعمال",
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "ا",
+            "الدا",
+            "وزان",
+            "رجل اعمال",
+            "استاذ متقاعد",
+            "سعيد الشرعي",
+            "رجل اعمال",
+            "وكيل اللائحة",
+            "1 17 09 16 10 56"
+          ],
+          "assigned_constituency_id": "fahs-anjra",
+          "historical_constituency": "Fahs - Anjra",
+          "historical_seats_2016": 2,
+          "assignment_score": 0.428531,
+          "page_local_second_score": 0.545415,
+          "page_local_margin": -0.116883,
+          "matched_pair": {
+            "line_index": 4,
+            "header_line": "الدا",
+            "variant": "الفحص انجرة",
+            "raw_score": 0.428571
+          },
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
+        },
+        {
+          "page": 3,
+          "header_lines": [
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "الدا",
+            "الحسيمة",
+            "الخاضر ابكس",
+            "متقاعد",
+            "احمد الشريك",
+            "اطار تربوي متقاعد",
+            "مشرف بالمحافظة العقارية",
+            "احمد الدويري",
+            "رئيس جماعة شقران",
+            "مفوض قضائي",
+            "نائب رئيس اللس الجهوي",
+            "للمفوضين القضائيين باستئنافية وجدة",
+            "وكيل اللائحة",
+            "1 19 09 16 13 24"
+          ],
+          "assigned_constituency_id": "al-hoceima",
+          "historical_constituency": "Al-Hoceïma",
+          "historical_seats_2016": 4,
+          "assignment_score": 0.99997,
+          "page_local_second_score": 0.545435,
+          "page_local_margin": 0.454535,
+          "matched_pair": {
+            "line_index": 3,
+            "header_line": "الحسيمة",
+            "variant": "الحسيمة",
+            "raw_score": 1.0
+          },
+          "assignment_method": "EXACT_HEADER"
+        },
+        {
+          "page": 4,
+          "header_lines": [
+            "رجل اعمال",
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "ا",
+            "الدا",
+            "العرا",
+            "ثرية فليفلا",
+            "مستخدمة",
+            "مقاول",
+            "وكيل اللائحة",
+            "عامل",
+            "يوسف الكنفاوي",
+            "مس",
+            "1 19 09 16 11 25"
+          ],
+          "assigned_constituency_id": "larache",
+          "historical_constituency": "Larache",
+          "historical_seats_2016": 4,
+          "assignment_score": 0.714236,
+          "page_local_second_score": 0.49999,
+          "page_local_margin": 0.214246,
+          "matched_pair": {
+            "line_index": 5,
+            "header_line": "العرا",
+            "variant": "العرائش",
+            "raw_score": 0.714286
+          },
+          "assignment_method": "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
+        },
+        {
+          "page": 5,
+          "header_lines": [
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "الدا",
+            "المضيق الفنيدق",
+            "علي امنيول",
+            "منعش عقاري",
+            "رئيس جماعة مرتيل",
+            "يونس العياشي",
+            "مستخدم",
+            "مستشار جماعي بالمضيق",
+            "وكيل اللائحة",
+            "1 23 09 16 12 57"
+          ],
+          "assigned_constituency_id": "m-diq-fnideq",
+          "historical_constituency": "M'Diq - Fnideq",
+          "historical_seats_2016": 2,
+          "assignment_score": 0.99997,
+          "page_local_second_score": 0.555486,
+          "page_local_margin": 0.444484,
+          "matched_pair": {
+            "line_index": 3,
+            "header_line": "المضيق الفنيدق",
+            "variant": "المضيق الفنيدق",
+            "raw_score": 1.0
+          },
+          "assignment_method": "EXACT_HEADER"
+        },
+        {
+          "page": 6,
+          "header_lines": [
+            "ابراهيم بنصبيح",
+            "رئيس جماعة",
+            "زاوية سيدي قاسم",
+            "فلاح",
+            "رئيس جماعة ازلا",
+            "فلاح",
+            "وكيل اللائحة",
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "الدا",
+            "تطوان",
+            "احمد اشرنان",
+            "رئيس جماعة الواد",
+            "متقاعد",
+            "المصطفي الزناكي",
+            "نائب رئيس جماعة عين لحصن"
+          ],
+          "assigned_constituency_id": "tetouan",
+          "historical_constituency": "Tétouan",
+          "historical_seats_2016": 5,
+          "assignment_score": 0.9999,
+          "page_local_second_score": 0.592453,
+          "page_local_margin": 0.407447,
+          "matched_pair": {
+            "line_index": 10,
+            "header_line": "تطوان",
+            "variant": "تطوان",
+            "raw_score": 1.0
+          },
+          "assignment_method": "EXACT_HEADER"
+        },
+        {
+          "page": 7,
+          "header_lines": [
+            "المعقول",
+            "صوتوا بوضع علامة علي الكتاب",
+            "ا",
+            "الدا",
+            "شفشاون",
+            "الحسين اورياغل",
+            "تاجر",
+            "الطيب الميمو",
+            "مقاول",
+            "وكيل اللائحة",
+            "مصطفي احموت",
+            "استاذ",
+            "حامد السرغيني",
+            "بحار",
+            "1 20 09 16 12 21"
+          ],
+          "assigned_constituency_id": "chefchaouen",
+          "historical_constituency": "Chefchaouen",
+          "historical_seats_2016": 4,
+          "assignment_score": 0.99996,
+          "page_local_second_score": 0.545425,
+          "page_local_margin": 0.454535,
+          "matched_pair": {
+            "line_index": 4,
+            "header_line": "شفشاون",
+            "variant": "شفشاون",
+            "raw_score": 1.0
+          },
+          "assignment_method": "EXACT_HEADER"
+        }
+      ]
     }
   ],
   "invariants": {
-    "assignment_scope": "IDENTITY_ONLY_WITHIN_REGION",
+    "assignment_scope": "IDENTITY_ONLY_WITHIN_OFFICIAL_FILING_BUNDLE",
     "candidate_facts_generated": false,
     "bijection_only_assignments_promoted": false,
     "outcomes_unsealed": false,
