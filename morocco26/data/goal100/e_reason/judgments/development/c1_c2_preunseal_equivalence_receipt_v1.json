@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "M26-E-REASON-C1-C2-DEV-PREUNSEAL-EQUIVALENCE-V1",
+  "experiment_id": "M26-GOAL100-E-REASON-V1",
+  "stage": "BEFORE_2016_OUTCOME_UNSEAL",
+  "comparison_scope": {
+    "packets": 92,
+    "party_cells": 828,
+    "bundle_sha256": "19706fa27cd436dc51820b98bf84948a5a83068948206596e77f280296d0d2ca"
+  },
+  "c1": {
+    "condition_id": "C1_RULE_ONLY",
+    "status": "PASS_C1_JUDGMENTS_FROZEN_READY_FOR_2016_CALIBRATION",
+    "score_distribution": {"-2":0,"-1":0,"0":706,"1":122,"2":0}
+  },
+  "c2": {
+    "condition_id": "C2_LLM_RESIDUAL",
+    "run_id": "M26-E-REASON-C2-DEV-OPUS5-V1",
+    "model_or_human_id": "OPUS-5",
+    "judgment_manifest_sha256": "74d325b68f6b9ebb2edd51261728bf9bf65fe7473b2c2f2281e59880546e3d9c",
+    "status": "PASS_C2_JUDGMENTS_FROZEN_READY_FOR_2016_CALIBRATION",
+    "score_distribution": {"-2":0,"-1":0,"0":706,"1":122,"2":0}
+  },
+  "comparison": {
+    "ordinal_score_cells_identical": 828,
+    "ordinal_score_cells_different": 0,
+    "cellwise_ordinal_score_equivalence": true,
+    "implication_for_2016_lambda_selection": "Because C1 and C2 ordinal residual vectors are identical for every development cell and the same baseline/transform/lambda grid are preregistered, lambda_C1 and lambda_C2 must select identically on 2016 under the frozen tie rule.",
+    "does_not_prejudge_2021": true
+  },
+  "outcomes_seen_before_comparison": false,
+  "mapping_seen_before_comparison": false,
+  "next_allowed_action": "UNSEAL_2016_FOR_FROZEN_LAMBDA_SELECTION_THEN_BUILD_HOLDOUT_2021_PACKETS"
+}
