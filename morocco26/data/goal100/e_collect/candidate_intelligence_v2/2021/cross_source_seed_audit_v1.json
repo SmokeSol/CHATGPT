@@ -1,0 +1,48 @@
+{
+  "audit_id": "M26-CANDIDATE-INTEL-V2-2021-CROSS-SOURCE-SEED-V1",
+  "comparison_anchor": {
+    "e_reason_v1_2021_directional_nonzero_cells": 59,
+    "e_reason_v1_2021_party_cells": 828
+  },
+  "cross_source_derived_feature_counts": {
+    "INCUMBENT_PARTY_SWITCH_IN": 2,
+    "INCUMBENT_SAME_PARTY_MOVED_DISTRICT": 2,
+    "INCUMBENT_SAME_PARTY_SAME_DISTRICT": 18,
+    "PRIOR_CYCLE_MP": 22
+  },
+  "cross_source_verified_parties": {
+    "PAM": 4,
+    "PI": 4,
+    "PJD": 9,
+    "RNI": 5
+  },
+  "cross_source_verified_rate": 0.3728813559322034,
+  "cross_source_verified_rows": 22,
+  "cross_source_verified_territories": 22,
+  "m24_feature_lead_counts": {
+    "FORMER_MINISTER_OR_NATIONAL_OFFICE_MENTION": 2,
+    "LOCAL_OR_REGIONAL_OFFICE_MENTION": 34,
+    "PARLIAMENTARY_MANDATE_MENTION": 58,
+    "PARTY_OR_PARLIAMENTARY_OFFICE_MENTION": 12,
+    "PRIOR_OR_OTHER_PARTY_MENTION": 46
+  },
+  "match_modes": {
+    "EXACT_UNIQUE": 22,
+    "NO_EXACT_MATCH": 37
+  },
+  "medias24_objective_feature_rate": 1.0,
+  "medias24_rows_with_objective_feature_lead": 59,
+  "next_gate": "Scale extraction across full pre-election 2021/2016 source surfaces, then aggregate candidate facts to party x constituency and run support/missingness/predictive backtest before E_reason V2.",
+  "schema_version": "1.0",
+  "scientific_interpretation": "This sample measures recoverability and independent cross-source verifiability, not predictive effect. It cannot update F0 and does not validate a coefficient.",
+  "seed_parties": {
+    "PAM": 10,
+    "PI": 11,
+    "PJD": 25,
+    "RNI": 13
+  },
+  "seed_rows": 59,
+  "seed_territories": 49,
+  "status": "OFFLINE_CROSS_SOURCE_AUDIT_COMPLETE",
+  "verification_rule": "Only unique exact normalized TAFRA 2016 member-name matches (or exact matches safely disambiguated by territory/party) receive CROSS_SOURCE_VERIFIED. Fuzzy matches never count."
+}
