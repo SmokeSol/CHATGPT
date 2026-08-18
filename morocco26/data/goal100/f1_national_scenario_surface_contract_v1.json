@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-GOAL100-F1-NATIONAL-SCENARIO-SURFACE-V1",
+  "frozen_on": "2026-08-18",
+  "status": "FROZEN_BEFORE_SCENARIO_SURFACE_EXECUTION",
+  "scientific_role": "Replace the invalid unconditional-probability architecture with an explicit national-state-conditioned conventional forecast surface.",
+  "parent_diagnostics": {
+    "national_conditioning_2011_TO_2016_actual_share_RMSE_improvement": 0.11003051756499437,
+    "national_conditioning_2016_TO_2021_actual_share_RMSE_improvement": 0.29537822062691355,
+    "national_conditioning_2011_TO_2016_topS_overlap_gain": 0.06358695652173907,
+    "national_conditioning_2016_TO_2021_topS_overlap_gain": 0.13514492753623186,
+    "territorial_residual_transfer": "FAIL",
+    "interpretation": "National state is a major missing variable, but the remaining territorial error law is regime-dependent."
+  },
+  "2026_base": {
+    "territorial_vote_prior": "2021 local and regional vote composition",
+    "registered_N": "Frozen local_N_posterior centre values; latent, not official 2026 local registered counts.",
+    "turnout": "Retain F-1 structural 2021 turnout mean for the deterministic scenario surface. Turnout uncertainty remains a separate conventional module; it is not inferred from national vote scenarios because 2021 local registered counts are unavailable for a clean historical national-turnout conditioning test.",
+    "valid_vote_fraction": "Same frozen F-1 valid-vote observation model.",
+    "ballot_support": "2021 observed positive-vote lists only, exactly as the frozen F-1 provisional support. This is NOT the final 2026 ballot.",
+    "legal_allocator": "Current frozen 2026 quotient/remainder allocator."
+  },
+  "national_scenarios": [
+    {
+      "id": "NO_SWING_2021",
+      "definition": "Use the 2021 national 9-bucket composition unchanged."
+    },
+    {
+      "id": "REPLAY_2011_TO_2016",
+      "definition": "Apply the historical national multiplicative share ratio 2016/2011 to the 2021 national composition, then renormalize. This is a stress replay, not a probability or prediction."
+    },
+    {
+      "id": "REPLAY_2016_TO_2021",
+      "definition": "Apply the historical national multiplicative share ratio 2021/2016 to the 2021 national composition, then renormalize. This is a stress replay, not a probability or prediction."
+    }
+  ],
+  "territorial_styles_each_national_scenario": [
+    {
+      "id": "CENTRAL_PROPORTIONAL_SWING",
+      "definition": "For every territory, multiply 2021 local shares by scenario_national_share / 2021_national_share and renormalize."
+    },
+    {
+      "id": "REPLAY_2011_TO_2016_TERRITORIAL_RESIDUAL",
+      "definition": "Add in CLR space the territory-specific residual left after oracle national proportional swing in 2011_TO_2016, mapped to the same canonical territory."
+    },
+    {
+      "id": "REPLAY_2016_TO_2021_TERRITORIAL_RESIDUAL",
+      "definition": "Add in CLR space the territory-specific residual left after oracle national proportional swing in 2016_TO_2021, mapped to the same canonical territory."
+    }
+  ],
+  "regional_bridge": "Apply the national proportional swing to the 2021 regional ballot and add the mean local CLR residual of the selected territorial style within the region. There is no historical pre-2021 regional-system transition, so regional residual replay is explicitly a structural bridge, not calibrated evidence.",
+  "seat_surface": {
+    "kind": "DETERMINISTIC_CONDITIONAL_STRESS_SURFACE_NOT_PROBABILITY_FORECAST",
+    "local_seats": 305,
+    "regional_seats": 90,
+    "house_seats": 395,
+    "outputs": [
+      "national 9-bucket scenario vector",
+      "national 395-seat bucket totals for each territorial style",
+      "local 305-seat and regional 90-seat decomposition",
+      "min/max 395-seat envelope across the three territorial styles for each national scenario",
+      "per-territory conditional vote shares and seats"
+    ]
+  },
+  "promotion_boundary": {
+    "may_be_called_F1_final_forecast": false,
+    "reason": "No 2026 legal ballot certification and no defensible probabilities over national scenarios.",
+    "valid_label": "F1_CONDITIONAL_SCENARIO_SURFACE_PROVISIONAL",
+    "next_required_data": [
+      "certified 2026 legal ballot/list presence",
+      "later official local registered counts if published",
+      "any defensible national polling/nowcast information if it becomes available"
+    ]
+  },
+  "candidate_and_agent_layers": {
+    "candidate_delta": "SUSPENDED until after the conventional conditional baseline is frozen for a given national scenario.",
+    "E_reason": "SUSPENDED. Any future test must be incremental to the scenario-conditioned conventional baseline, not to F0 persistence."
+  },
+  "forbidden": [
+    "Assign probabilities to the three national scenarios from the two historical transitions",
+    "Call historical stress replay a 2026 prediction",
+    "Treat the 2021 list universe as the final 2026 ballot",
+    "Use transformed residual metrics as primary if actual-share/seat performance worsens",
+    "Reopen E_reason before this conventional architecture is settled"
+  ]
+}
