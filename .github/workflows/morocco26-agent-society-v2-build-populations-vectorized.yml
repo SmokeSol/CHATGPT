@@ -17,7 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: morocco26-agent-society-v2
+          ref: 84de285dc43e19b8f553872dba57cab1cb1c04ce
+          fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
