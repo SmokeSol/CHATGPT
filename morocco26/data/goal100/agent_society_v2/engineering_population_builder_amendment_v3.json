@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0",
+  "amendment_id":"M26-ASV2-POPULATION-BUILDER-ENGINEERING-V3",
+  "experiment_id":"M26-AGENT-SOCIETY-V2-001",
+  "classification":"ENGINEERING_ONLY_NO_SCIENTIFIC_CHANGE",
+  "recorded_before_real_llm_votes":true,
+  "target_outcomes_used":false,
+  "change":"Stop vectorized IPF when maximum one-way target error is <=2e-10 instead of pursuing 2e-12, cap iterations at 250, and evaluate four deterministic support candidates per constituency.",
+  "rationale":"The frozen acceptance gate already requires raking error <=5e-10 and political marginal error <=1e-9. Computing two additional decimal orders does not alter scientific acceptance and only wastes runtime.",
+  "unchanged":["all target marginals","128 archetypes","ESS >=64","max weight <=0.10","demographic error <=0.005","political error <=1e-9","no target outcome use"],
+  "failure_rule":"Fail closed if no tested support satisfies all original frozen gates.",
+  "status":"FROZEN_BEFORE_GATE_ALIGNED_RERUN"
+}
