@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Map PPS-2016 pages to constituencies using direct title evidence only.
 
-Unlike the regional bijection diagnostic, this mapper never assigns a page by
-remainder. It accepts only an exact canonical/observed Arabic title form found
-in a spatial top-area group, an exact logical PDF line, or (for page 1) the PDF
-metadata title. Short official poster forms such as اشتوكة and وجدة are frozen
-as identity aliases. Duplicate direct titles are reported rather than forced
-onto missing districts. No candidate or outcome fact is generated here.
+Unlike the regional bijection diagnostic, this mapper never assigns by
+remainder. A page resolves only when a complete canonical or audited observed
+Arabic title form exactly equals a spatial top-area group, a logical PDF line,
+or the page-1 PDF metadata title. Short but complete first-party poster titles
+such as اشتوكة and وجدة are allowed; generic fragments such as سيدي, بني م or
+الدا are forbidden. Duplicate direct titles are marked unsafe rather than
+forced onto missing districts. No candidate or outcome fact is generated.
 """
 from __future__ import annotations
 
@@ -37,24 +38,26 @@ REGION_MATCH = {
     "dakhla-oued-ed-dahab": "dakhla oued ed dahab",
 }
 
-# Observed first-party poster title spellings/abbreviations. These are identity
-# normalizations only; they contain no candidate, seat or outcome information.
+# Complete observed first-party title forms only. No prefix or generic fragment
+# is accepted. These aliases encode identity and nothing predictive.
 DIRECT_ALIASES = {
     "chtouka-ait-baha": ["اشتوكة", "شتوكة ايت باها"],
     "oujda-angad": ["وجدة", "وجدة انجاد"],
     "agadir-ida-outanane": ["اكادير اداوتنان", "باكادير اداوتنان"],
     "khemisset-oulmes": ["الخميسات", "الخميسات اولماس"],
     "khouribga": ["خريبكة"],
-    "beni-mellal": ["بني ملال", "بني م"],
-    "sidi-ifni": ["سيدي افني", "سيدي"],
+    "beni-mellal": ["بني ملال"],
+    "sidi-ifni": ["سيدي افني"],
     "inezgane-ait-melloul": ["انزكان ايت ملول", "انزكان"],
     "moulay-rachid": ["مولاي رشيد"],
     "sale-el-jadida": ["سلا الجديدة", "سال الجديدة"],
     "ouezzane": ["وزان"],
     "ifrane": ["افران", "إفران"],
     "moulay-yaacoub": ["مولاي يعقوب"],
-    "casablanca-anfa": ["الدار البيضاء انفا", "انفا"],
+    "casablanca-anfa": ["الدار البيضاء انفا"],
 }
+
+SOURCE_PRIORITY = {"PDF_METADATA_TITLE_PAGE1": 0, "PDFPLUMBER_TOP_GROUP": 1, "PYPDF_LINE": 2}
 
 
 def clean(value: object) -> str:
@@ -111,8 +114,9 @@ def spatial_top_groups(page) -> list[dict[str, Any]]:
 
 def candidate_records(records: list[dict], region_slug: str) -> list[dict]:
     result = [r for r in records if norm_latin(r.get("historical_region")) == REGION_MATCH[region_slug]]
-    # Ouezzane is duplicated in the official Fès and Tanger bundles; direct
-    # mapping reports both occurrences and never substitutes Fahs-Anjra.
+    # Ouezzane is visibly duplicated in both official filing bundles. Both pages
+    # are reported, but neither becomes safe direct evidence because of duplicate
+    # direct identity.
     if region_slug == "fes-meknes":
         result += [r for r in records if r["source_2026_constituency_id"] == "ouezzane"]
     return result
@@ -149,37 +153,37 @@ def main() -> int:
                         sc = compact(source.get("text"))
                         for variant in variants[cid]:
                             vc = compact(variant)
-                            if not sc or not vc:
-                                continue
-                            exact = sc == vc
-                            contained = vc in sc or sc in vc
-                            # Short forms are accepted only when explicitly listed
-                            # for that CID; generic canonical partials are not.
-                            explicit_alias = variant in {norm_ar(x) for x in DIRECT_ALIASES.get(cid, [])}
-                            if exact or (explicit_alias and contained and min(len(sc), len(vc)) >= 4):
-                                hits.append({"constituency_id": cid, "historical_constituency": record["historical_constituency"], "historical_seats_2016": int(record["historical_seats_2016"]), "variant": variant, "exact": exact, "source": source})
+                            if sc and vc and sc == vc:
+                                hits.append({"constituency_id": cid, "historical_constituency": record["historical_constituency"], "historical_seats_2016": int(record["historical_seats_2016"]), "variant": variant, "exact": True, "source": source})
                 by_cid: dict[str, list[dict]] = defaultdict(list)
                 for hit in hits:
                     by_cid[hit["constituency_id"]].append(hit)
                 if len(by_cid) == 1:
                     cid = next(iter(by_cid))
-                    best = sorted(by_cid[cid], key=lambda h: (not h["exact"], h["source"].get("source") != "PDFPLUMBER_TOP_GROUP", len(h["variant"])), reverse=False)[0]
+                    best = sorted(by_cid[cid], key=lambda h: (SOURCE_PRIORITY.get(h["source"].get("source"), 9), -len(compact(h["variant"])), h["source"].get("line_index", 999)))[0]
+                    assignment = {"constituency_id": cid, "historical_constituency": best["historical_constituency"], "historical_seats_2016": best["historical_seats_2016"], "method": "DIRECT_EXACT_PAGE_IDENTITY", "evidence": best}
                     status = "DIRECT_EXACT_PAGE_IDENTITY"
-                    assignment = {"constituency_id": cid, "historical_constituency": best["historical_constituency"], "historical_seats_2016": best["historical_seats_2016"], "method": status, "evidence": best}
                 else:
                     assignment = None
                     status = "UNRESOLVED_NO_DIRECT_TITLE" if not by_cid else "AMBIGUOUS_MULTIPLE_DIRECT_TITLES"
                 pages.append({"region": region, "page": page_no, "pdf_sha256": doc["sha256"], "status": status, "assignment": assignment, "direct_hits_by_constituency": by_cid, "pypdf_lines": logical_lines[:24], "spatial_top_groups": [x for x in sources if x["source"] == "PDFPLUMBER_TOP_GROUP"], "metadata_title_page1": metadata_title if page_no == 1 else None})
 
     resolved = [p for p in pages if p["assignment"]]
-    counts_by_cid = defaultdict(int)
+    counts_by_cid: dict[str, int] = defaultdict(int)
     for page in resolved:
         counts_by_cid[page["assignment"]["constituency_id"]] += 1
-    duplicates = [{"constituency_id": cid, "direct_page_count": n, "pages": [{"region": p["region"], "page": p["page"]} for p in resolved if p["assignment"]["constituency_id"] == cid]} for cid, n in counts_by_cid.items() if n > 1]
-    payload = {"schema_version": "1.0", "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "status": "PASS_PARTIAL_DIRECT_PAGE_IDENTITY", "counts": {"pdf_pages": len(pages), "directly_resolved_pages": len(resolved), "unique_direct_constituency_ids": len(counts_by_cid), "unresolved_pages": sum(not p["assignment"] for p in pages), "duplicate_direct_constituency_ids": len(duplicates)}, "duplicate_direct_titles": duplicates, "pages": pages, "invariants": {"remainder_bijection_used": False, "candidate_facts_generated": False, "outcomes_unsealed": False, "predictive_judgments_generated": False, "F1_created": False}}
+    duplicate_ids = {cid for cid, count in counts_by_cid.items() if count > 1}
+    duplicates = [{"constituency_id": cid, "direct_page_count": counts_by_cid[cid], "pages": [{"region": p["region"], "page": p["page"]} for p in resolved if p["assignment"]["constituency_id"] == cid]} for cid in sorted(duplicate_ids)]
+    for page in pages:
+        cid = (page.get("assignment") or {}).get("constituency_id")
+        page["direct_identity_safe"] = bool(cid and cid not in duplicate_ids)
+        if cid in duplicate_ids:
+            page["status"] = "DUPLICATE_DIRECT_TITLE_UNSAFE"
+    safe = [p for p in pages if p["direct_identity_safe"]]
+    payload = {"schema_version": "1.1", "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "status": "PASS_PARTIAL_DIRECT_PAGE_IDENTITY", "counts": {"pdf_pages": len(pages), "directly_resolved_pages_before_duplicate_filter": len(resolved), "safe_direct_pages": len(safe), "safe_unique_constituency_ids": len({p["assignment"]["constituency_id"] for p in safe}), "unresolved_or_unsafe_pages": len(pages) - len(safe), "duplicate_direct_constituency_ids": len(duplicates)}, "duplicate_direct_titles": duplicates, "pages": pages, "invariants": {"remainder_bijection_used": False, "full_exact_title_equality_required": True, "duplicate_titles_promoted": False, "candidate_facts_generated": False, "outcomes_unsealed": False, "predictive_judgments_generated": False, "F1_created": False}}
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "direct_map.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"status": payload["status"], "counts": payload["counts"], "duplicates": duplicates, "new_alias_resolutions": [{"region": p["region"], "page": p["page"], "cid": p["assignment"]["constituency_id"], "source": p["assignment"]["evidence"]["source"]} for p in resolved if p["assignment"]["evidence"]["variant"] in {norm_ar(x) for xs in DIRECT_ALIASES.values() for x in xs}]}, ensure_ascii=False, indent=2))
+    print(json.dumps({"status": payload["status"], "counts": payload["counts"], "duplicates": duplicates, "safe_new_alias_resolutions": [{"region": p["region"], "page": p["page"], "cid": p["assignment"]["constituency_id"], "source": p["assignment"]["evidence"]["source"]} for p in safe if p["assignment"]["evidence"]["variant"] in {norm_ar(x) for xs in DIRECT_ALIASES.values() for x in xs}]}, ensure_ascii=False, indent=2))
     return 0
 
 
