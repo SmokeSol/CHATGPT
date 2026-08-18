@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-GOAL100-F1-PARTY-MARGINAL-TRANSFER-V1",
+  "frozen_on": "2026-08-18",
+  "status": "FROZEN_BEFORE_PARTY_MARGINAL_TRANSFER_EXECUTION",
+  "scientific_role": "Diagnose whether party-specific forecast-error marginals are temporally transportable before constructing any joint 2026 uncertainty law.",
+  "parent_contract": "M26-GOAL100-F1-BASELINE-REBUILD-V1",
+  "point_mean": "V0_PERSIST",
+  "crossfit": [
+    "Fit residual marginals on 2011_TO_2016 and evaluate on 2016_TO_2021.",
+    "Fit residual marginals on 2016_TO_2021 and evaluate on 2011_TO_2016."
+  ],
+  "parties": ["RNI","PAM","PI","PJD","USFP","MP","UC","PPS","OTHER"],
+  "candidate_families": [
+    {
+      "id": "SHARE_SIGNED_EMPIRICAL",
+      "definition": "For each party, estimate signed residual quantiles of next_share - prior_share on the training transition. Add the 10/90 and 2.5/97.5 percentiles to the held-out prior share and clip to [0,1]."
+    },
+    {
+      "id": "SHARE_ABS_SYMMETRIC",
+      "definition": "For each party, estimate 80% and 95% quantiles of abs(next_share-prior_share) on the training transition and use symmetric intervals around the held-out persistence mean, clipped to [0,1]."
+    },
+    {
+      "id": "LOGIT_SIGNED_EMPIRICAL",
+      "definition": "For each party, estimate signed residual quantiles of logit(next_share)-logit(prior_share), apply them to the held-out prior logit, then map interval endpoints back to actual share space. Coverage is always evaluated in actual shares."
+    }
+  ],
+  "quantile_method": "numpy linear empirical quantile on exactly 92 training territories per party; no post-hoc widening.",
+  "coverage_gates_each_party_each_heldout_transition": {
+    "nominal_80_floor": 0.7182,
+    "nominal_95_floor": 0.9054,
+    "derivation": "nominal - 1.96*sqrt(nominal*(1-nominal)/92)"
+  },
+  "selection": [
+    "Eligibility requires every one of 9 parties to clear both coverage floors in both held-out transitions.",
+    "Among eligible families choose lowest mean absolute calibration error across party x transition x {80,95}.",
+    "Then choose lower mean 95% interval width.",
+    "Then deterministic family order as listed above."
+  ],
+  "f0_reference": {
+    "selected_scale": 2.0,
+    "mean_width80": 0.34154530427562074,
+    "mean_width95": 0.5445930074002108,
+    "aggregate_coverage80": 0.7717391304347826,
+    "aggregate_coverage95": 0.9118357487922706
+  },
+  "interpretation": {
+    "PASS": "At least one marginal family transfers by party in both directions. Proceed to a separate frozen shared-dependence/copula construction for joint seat simulation.",
+    "FAIL": "No party-marginal error law is temporally transportable under these nonparametric families. Do not widen globally and do not reopen E_reason; move to a regime/scenario envelope with explicit non-stationarity."
+  },
+  "forbidden": [
+    "Change F0",
+    "Tune quantiles after seeing held-out coverage",
+    "Drop a difficult party from the gate",
+    "Use centered-logit RMSE as a substitute for actual-share coverage",
+    "Invoke an LLM",
+    "Use 2026 outcomes"
+  ]
+}
