@@ -1,0 +1,1091 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-18T06:52:12+00:00",
+  "counts": {
+    "territories": 92,
+    "two_party_ge3_ceiling": 77,
+    "required_ge3_districts": 70,
+    "remaining_after_perfect_pps": 0,
+    "districts_needing_one_third_party_identity": 15
+  },
+  "districts_needing_third_party_identity": [
+    {
+      "constituency_id": "jerada",
+      "historical_constituency": "Jerada",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "taourirt",
+      "historical_constituency": "Taourirt",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "guercif",
+      "historical_constituency": "Guercif",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "mediouna",
+      "historical_constituency": "Médiouna",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "youssoufia",
+      "historical_constituency": "Youssoufia",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "tiznit",
+      "historical_constituency": "Tiznit",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "tata",
+      "historical_constituency": "Tata",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "guelmim",
+      "historical_constituency": "Guelmim",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "tan-tan",
+      "historical_constituency": "Tan-Tan",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "assa-zag",
+      "historical_constituency": "Assa-Zag",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "boujdour",
+      "historical_constituency": "Boujdour",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "tarfaya",
+      "historical_constituency": "Tarfaya",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "es-semara",
+      "historical_constituency": "Es-Smara",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "oued-eddahab",
+      "historical_constituency": "Oued-Ed-Dahab",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "aousserd",
+      "historical_constituency": "Aousserd",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    }
+  ],
+  "all_districts": [
+    {
+      "constituency_id": "tanger-assilah",
+      "historical_constituency": "Tanger - Assilah",
+      "historical_seats_2016": 5,
+      "pjd_verified_identities": 5,
+      "full_pps_assumed_identities": 5,
+      "two_party_identity_count_upper_bound": 10,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "fahs-anjra",
+      "historical_constituency": "Fahs - Anjra",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 2,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "tetouan",
+      "historical_constituency": "Tétouan",
+      "historical_seats_2016": 5,
+      "pjd_verified_identities": 5,
+      "full_pps_assumed_identities": 5,
+      "two_party_identity_count_upper_bound": 10,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "m-diq-fnideq",
+      "historical_constituency": "M'Diq - Fnideq",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 2,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "larache",
+      "historical_constituency": "Larache",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 4,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 8,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "chefchaouen",
+      "historical_constituency": "Chefchaouen",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 4,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 8,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "ouezzane",
+      "historical_constituency": "Ouezzane",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "al-hoceima",
+      "historical_constituency": "Al-Hoceïma",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "oujda-angad",
+      "historical_constituency": "Oujda - Angad",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "jerada",
+      "historical_constituency": "Jerada",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "berkane",
+      "historical_constituency": "Berkane",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "taourirt",
+      "historical_constituency": "Taourirt",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "figuig",
+      "historical_constituency": "Figuig",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "nador",
+      "historical_constituency": "Nador",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "driouch",
+      "historical_constituency": "Driouch",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "guercif",
+      "historical_constituency": "Guercif",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "fes-nord",
+      "historical_constituency": "Fès-Chamalia",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 4,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 8,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "fes-sud",
+      "historical_constituency": "Fès-Janoubia",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 4,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 8,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "meknes",
+      "historical_constituency": "Meknès",
+      "historical_seats_2016": 6,
+      "pjd_verified_identities": 6,
+      "full_pps_assumed_identities": 6,
+      "two_party_identity_count_upper_bound": 12,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "el-hajeb",
+      "historical_constituency": "El-Hajeb",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 2,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "ifrane",
+      "historical_constituency": "Ifrane",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 2,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "moulay-yaacoub",
+      "historical_constituency": "Moulay-Yacoub",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 2,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "sefrou",
+      "historical_constituency": "Sefrou",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "boulemane",
+      "historical_constituency": "Boulemane",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "taza",
+      "historical_constituency": "Taza",
+      "historical_seats_2016": 5,
+      "pjd_verified_identities": 5,
+      "full_pps_assumed_identities": 5,
+      "two_party_identity_count_upper_bound": 10,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "taounate-tissa",
+      "historical_constituency": "Taounate - Tissa",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "karia-ghafsay",
+      "historical_constituency": "Karia - Rhafsai",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "rabat-ocean",
+      "historical_constituency": "Rabat - El Mouhit",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 4,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 8,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "rabat-chellah",
+      "historical_constituency": "Rabat - Challah",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "sale-medina",
+      "historical_constituency": "Salé - Médina",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 4,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 8,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "sale-el-jadida",
+      "historical_constituency": "Salé - Al-Jadida",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "skhirate-temara",
+      "historical_constituency": "Skhirate - Témara",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 4,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 8,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "kenitra",
+      "historical_constituency": "Kénitra",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "el-gharb",
+      "historical_constituency": "El-Gharb",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "khemisset-oulmes",
+      "historical_constituency": "Khémisset - Oulmès",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "tiflet-rommani",
+      "historical_constituency": "Tifelt - Rommani",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "sidi-kacem",
+      "historical_constituency": "Sidi-Kacem",
+      "historical_seats_2016": 5,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 5,
+      "two_party_identity_count_upper_bound": 5,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "sidi-slimane",
+      "historical_constituency": "Sidi Slimane",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "casablanca-anfa",
+      "historical_constituency": "Casablanca - Anfa",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "al-fida-mers-sultan",
+      "historical_constituency": "Al-Fida - Mers-Sultan",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "ain-sebaa-hay-mohammadi",
+      "historical_constituency": "Aïn-Sebaâ - Hay-Mohammadi",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "hay-hassani",
+      "historical_constituency": "Hay-Hassani",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "ain-chock",
+      "historical_constituency": "Aïn-Chock",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "sidi-bernoussi",
+      "historical_constituency": "Sidi-Bernoussi",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "ben-m-sick",
+      "historical_constituency": "Ben-M'sick",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "moulay-rachid",
+      "historical_constituency": "Moulay-Rachid",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "nouaceur",
+      "historical_constituency": "Nouaceur",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "mediouna",
+      "historical_constituency": "Médiouna",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "mohammedia",
+      "historical_constituency": "Mohammadia",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "settat",
+      "historical_constituency": "Settat",
+      "historical_seats_2016": 6,
+      "pjd_verified_identities": 6,
+      "full_pps_assumed_identities": 6,
+      "two_party_identity_count_upper_bound": 12,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "berrechid",
+      "historical_constituency": "Berrechid",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "el-jadida",
+      "historical_constituency": "El-Jadida",
+      "historical_seats_2016": 6,
+      "pjd_verified_identities": 6,
+      "full_pps_assumed_identities": 6,
+      "two_party_identity_count_upper_bound": 12,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "sidi-bennour",
+      "historical_constituency": "Sidi Bennour",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 4,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 8,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "benslimane",
+      "historical_constituency": "Benslimane",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "medina-sidi-youssef",
+      "historical_constituency": "Médina - Sidi-Youssef-Ben-Ali",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "gueliz-nakhil",
+      "historical_constituency": "Guéliz - Annakhil",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "menara",
+      "historical_constituency": "Ménara",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "chichaoua",
+      "historical_constituency": "Chichaoua",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 4,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 8,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "al-haouz",
+      "historical_constituency": "Al-Haouz",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 4,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 8,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "el-kelaa-des-sraghna",
+      "historical_constituency": "El-Kelâa-des-Sraghna",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 4,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 8,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "essaouira",
+      "historical_constituency": "Essaouira",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "rehamna",
+      "historical_constituency": "Rehamna",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "youssoufia",
+      "historical_constituency": "Youssoufia",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "safi",
+      "historical_constituency": "Safi",
+      "historical_seats_2016": 6,
+      "pjd_verified_identities": 6,
+      "full_pps_assumed_identities": 6,
+      "two_party_identity_count_upper_bound": 12,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "beni-mellal",
+      "historical_constituency": "Béni-Mellal",
+      "historical_seats_2016": 6,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 6,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "bzou-ouaouizeght",
+      "historical_constituency": "Bzou - Ouaouizaght",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "azilal-demnate",
+      "historical_constituency": "Azilal - Demnate",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "fquih-ben-salah",
+      "historical_constituency": "Fquih Ben Salah",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 4,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 8,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "khenifra",
+      "historical_constituency": "Khénifra",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "khouribga",
+      "historical_constituency": "Khouribga",
+      "historical_seats_2016": 6,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 6,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "errachidia",
+      "historical_constituency": "Errachidia",
+      "historical_seats_2016": 5,
+      "pjd_verified_identities": 5,
+      "full_pps_assumed_identities": 5,
+      "two_party_identity_count_upper_bound": 10,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "midelt",
+      "historical_constituency": "Midelt",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "ouarzazate",
+      "historical_constituency": "Ouarzazate",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "zagora",
+      "historical_constituency": "Zagora",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "tinghir",
+      "historical_constituency": "Tinghir",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 3,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 6,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "agadir-ida-outanane",
+      "historical_constituency": "Agadir - Ida-ou-Tanane",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "inezgane-ait-melloul",
+      "historical_constituency": "Inézgane - Aït-Melloul",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "chtouka-ait-baha",
+      "historical_constituency": "Chtouka - Aït-Baha",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "taroudant-sud",
+      "historical_constituency": "Taroudannt - Al-Janoubia",
+      "historical_seats_2016": 4,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 4,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "taroudant-nord",
+      "historical_constituency": "Taroudannt - Chamalia",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "tiznit",
+      "historical_constituency": "Tiznit",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "tata",
+      "historical_constituency": "Tata",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "guelmim",
+      "historical_constituency": "Guelmim",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "sidi-ifni",
+      "historical_constituency": "Sidi Ifni",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 2,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 4,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "tan-tan",
+      "historical_constituency": "Tan-Tan",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "assa-zag",
+      "historical_constituency": "Assa-Zag",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "laayoune",
+      "historical_constituency": "Laâyoune",
+      "historical_seats_2016": 3,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 3,
+      "two_party_identity_count_upper_bound": 3,
+      "two_party_passes_three": true,
+      "needs_third_party_identity": false
+    },
+    {
+      "constituency_id": "boujdour",
+      "historical_constituency": "Boujdour",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "tarfaya",
+      "historical_constituency": "Tarfaya",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "es-semara",
+      "historical_constituency": "Es-Smara",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "oued-eddahab",
+      "historical_constituency": "Oued-Ed-Dahab",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    },
+    {
+      "constituency_id": "aousserd",
+      "historical_constituency": "Aousserd",
+      "historical_seats_2016": 2,
+      "pjd_verified_identities": 0,
+      "full_pps_assumed_identities": 2,
+      "two_party_identity_count_upper_bound": 2,
+      "two_party_passes_three": false,
+      "needs_third_party_identity": true
+    }
+  ],
+  "invariants": {
+    "hypothetical_only": true,
+    "candidate_facts_generated": false,
+    "outcomes_unsealed": false,
+    "F1_created": false
+  }
+}
