@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-CANDIDATE-INTELLIGENCE-V2-PREDICTIVE-CONTRACT-V1",
+  "frozen_at": "2026-08-18T20:30:00+01:00",
+  "status": "FROZEN_BEFORE_FEATURE_SPECIFIC_PREDICTIVE_SCORING",
+  "scientific_status": "RETROSPECTIVE_VALIDATION_ONLY_2021_ALREADY_BURNED",
+  "purpose": "Test whether the two power-qualified candidate attributes contain predictive information beyond the structural persistence baseline before designing any LLM reasoning treatment.",
+  "eligibility": {
+    "required_prior_gate": "PASS_REASONER_POWER_COLLISION_SAFE",
+    "if_prior_gate_fails": "STOP_NO_PREDICTIVE_FIT",
+    "forecast_authority": false,
+    "may_modify_F0": false
+  },
+  "scope": {
+    "party": "PJD_ONLY",
+    "reason": "Only PJD currently has a closed, collision-audited historical head-of-list panel at the required coverage. No coefficient may be extrapolated to the other eight party buckets.",
+    "fit_transition": "2011_TO_2016",
+    "validation_transition": "2016_TO_2021",
+    "validation_is_blind": false
+  },
+  "features": [
+    {
+      "id": "V2_HEAD_PRIOR_CYCLE_MP",
+      "type": "BINARY",
+      "source": "collision/audit-resolved complete prior House universe"
+    },
+    {
+      "id": "V2_HEAD_ELECTED_LOCAL_COUNCIL_2015",
+      "type": "BINARY",
+      "source": "collision/audit-resolved complete TAFRA/elections.ma 2015 communal elected-member universe"
+    }
+  ],
+  "model": {
+    "target": "PJD territorial vote-share residual relative to the frozen structural baseline, represented on the logit scale",
+    "intercept": false,
+    "feature_centering": "Within each transition, subtract the fit-transition feature means frozen from 2011_TO_2016; validation reuses those fit means without recentering on 2021.",
+    "interaction_terms": false,
+    "reason_no_interaction": "With two binary features, an unrestricted interaction can approximate a four-cell lookup table and would reduce the future C1-vs-C2 reasoning question to deterministic memorization.",
+    "regularization": "RIDGE_L2",
+    "ridge_grid": [0.01, 0.1, 1.0, 10.0, 100.0],
+    "hyperparameter_selection": "Leave-one-region-out cross-validation inside 2011_TO_2016 only; choose lowest mean held-out PJD squared error, ties favor stronger regularization.",
+    "coefficient_signs": "UNCONSTRAINED_LEARNED_FROM_FIT_ONLY",
+    "manual_weights_forbidden": true
+  },
+  "forecast_transform": {
+    "pjd_update": "q_i = logistic(logit(p_i_C0) + beta_A*(A_i-mean_A_fit) + beta_B*(B_i-mean_B_fit))",
+    "other_parties": "Scale every non-PJD C0 share proportionally by (1-q_i)/(1-p_i_C0) so each territory remains a valid composition.",
+    "effect_cap": "Cap absolute PJD logit shift at the 90th percentile of absolute fit-transition PJD persistence logit residuals, computed on fit data only and frozen before validation application."
+  },
+  "baselines": {
+    "2016": "Frozen 2011 territorial persistence baseline used by E_reason development builder.",
+    "2021": "Frozen Bstar V0 structural baseline reproduced by e_reason_build_blind_holdout_bundle.py using only 2011 and 2016 outcomes."
+  },
+  "metrics": {
+    "primary": [
+      "PJD_RMSE_ON_COMMON_PANEL",
+      "ALL_PARTY_COMPOSITION_RMSE_ON_COMMON_PANEL"
+    ],
+    "secondary": [
+      "PJD_MAE_ON_COMMON_PANEL",
+      "ALL_PARTY_COMPOSITION_L1_ON_COMMON_PANEL"
+    ],
+    "uncertainty": "Paired bootstrap by territory, 10000 replicates, seed 260818."
+  },
+  "interpretation_rules": {
+    "positive_retrospective_signal": "Validation improvement has the favorable sign on both primary metrics and paired bootstrap P(model better) >= 0.90 for PJD RMSE.",
+    "weak_signal": "Point estimate improves but P(model better) < 0.90, or only one primary metric improves.",
+    "no_signal": "PJD validation RMSE does not improve over C0.",
+    "important": "No outcome of this retrospective test can retroactively restore 2021 as a blind holdout or authorize deployment."
+  },
+  "forbidden": [
+    "Use 2021 outcomes to select alpha, features, signs, transforms, aliases or effect caps",
+    "Add a national PJD intercept",
+    "Add feature interaction after inspecting validation performance",
+    "Transfer fitted coefficients to non-PJD parties",
+    "Invoke an LLM before this deterministic candidate-intelligence baseline is measured",
+    "Modify F0"
+  ]
+}
