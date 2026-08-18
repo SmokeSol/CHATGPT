@@ -1,26 +1,24 @@
 {
-  "schema_version":"1.0",
+  "schema_version":"1.1",
   "amendment_id":"M26-ASV2-RICH-INFORMATION-GATE-AND-COMPRESSION-AMENDMENT-V1",
   "experiment_id":"M26-AGENT-SOCIETY-V2-001",
   "status":"FROZEN_BEFORE_ANY_REAL_ASV2_LLM_OUTPUT",
   "reason":"User required approximately 10x enrichment and faster execution. Raw-field multiplication alone is insufficient; effective information and compression fidelity must be demonstrated before LLM calls.",
-  "scientific_integrity": {
-    "real_llm_outputs_seen":false,
-    "target_outcomes_used":false,
-    "historical_promotion_thresholds_changed":false,
-    "F0_changed":false
-  },
+  "scientific_integrity":{"real_llm_outputs_seen":false,"target_outcomes_used":false,"historical_promotion_thresholds_changed":false,"F0_changed":false},
   "x10_richness_gate": {
-    "R0_reference_observed_demographic_fields":6,
-    "R1_observed_raw_fields_min":60,
+    "R0_reference_social_fields":5,
+    "R0_shared_prior_vote_field_excluded_from_richness_ratio":true,
+    "R1_observed_raw_social_fields_min":60,
+    "R1_selected_observed_raw_social_fields":61,
+    "surface_dimension_ratio_actual":12.2,
     "surface_dimension_ratio_min":10.0,
     "distinct_information_families_min":7,
     "families_required":["demography_household","education_language","labour_economic","migration_mobility","housing_material","socioeconomic","pre_election_attitudes"],
-    "effective_rank_definition":"exp(-sum_j p_j*log(p_j)), where p_j are normalized squared singular values of the weighted standardized sparse design matrix after deterministic one-hot encoding and removal of zero-variance columns",
+    "effective_rank_definition":"exp(-sum_j p_j*log(p_j)), where p_j are normalized positive eigenvalues of the weighted correlation matrix of a deterministic encoded adult-voter sample after zero-variance removal",
     "effective_rank_R1_vs_R0_ratio_min":3.0,
     "effective_rank_R1_absolute_min":20.0,
-    "interpretation":"The promised x10 refers to source-backed state dimensions; a separate >=3x effective-rank gate prevents highly redundant columns from masquerading as information enrichment.",
-    "missingness_rule":"A field with >80% structural/nonresponse missingness cannot count toward the 60-field gate unless missing/not-applicable is itself substantively defined and source-coded.",
+    "interpretation":"The promised x10 refers to source-backed social-state dimensions; a separate >=3x effective-rank gate prevents highly redundant columns from masquerading as information enrichment.",
+    "missingness_rule":"A field with >80% structural/nonresponse missingness cannot count toward the >=60 observed-field gate unless missing/not-applicable is itself substantively defined and source-coded.",
     "leakage_scan_required":true,
     "failure_state":"ASV2_RICH_INFORMATION_NOT_MATERIALLY_RICHER"
   },
@@ -28,26 +26,13 @@
     "purpose":"Avoid doubling Opus workload to 256 archetypes unless the richer joint population actually requires it.",
     "candidate_support_sizes":[128,256],
     "select_smallest_support_that_passes_all_fidelity_gates":true,
-    "fidelity_gates": {
-      "key_univariate_marginal_max_absolute_error_pp":0.5,
-      "top_dependency_pair_joint_cell_max_absolute_error_pp":1.0,
-      "effective_rank_retention_min":0.95,
-      "continuous_or_index_mean_standardized_error_max":0.05,
-      "continuous_or_index_sd_relative_error_max":0.05,
-      "effective_sample_size_fraction_min":0.75,
-      "max_single_archetype_weight":0.05
-    },
+    "fidelity_gates":{"key_univariate_marginal_max_absolute_error_pp":0.5,"top_dependency_pair_joint_cell_max_absolute_error_pp":1.0,"effective_rank_retention_min":0.95,"continuous_or_index_mean_standardized_error_max":0.05,"continuous_or_index_sd_relative_error_max":0.05,"effective_sample_size_fraction_min":0.75,"max_single_archetype_weight":0.05},
     "if_128_passes":"Use 128 archetypes per constituency as the primary RICH handoff; 256 is unnecessary and remains sensitivity-only.",
     "if_128_fails_and_256_passes":"Use 256 archetypes per constituency.",
     "if_256_fails":"ASV2_RICH_POPULATION_COMPRESSION_INSUFFICIENT",
     "expected_output_rows_if_128":47104,
     "expected_output_rows_if_256":94208
   },
-  "split_geography_upgrade": {
-    "old_minimal_behavior":"19 split constituencies could inherit whole-prefecture/province demographic profiles.",
-    "rich_behavior":"Whole-prefecture fallback is not sufficient for ASV2-RICH. Each split constituency must be constrained from an explicit sourced commune/arrondissement composition, or the RICH geography gate fails for that territory.",
-    "required_split_territories":19,
-    "failure_state":"ASV2_RICH_SPLIT_GEOGRAPHY_UNRESOLVED"
-  },
+  "split_geography_upgrade":{"old_minimal_behavior":"19 split constituencies could inherit whole-prefecture/province demographic profiles.","rich_behavior":"Whole-prefecture fallback is not sufficient for ASV2-RICH. Each split constituency must be constrained from an explicit sourced commune/arrondissement composition, or the RICH geography gate fails for that territory.","required_split_territories":19,"failure_state":"ASV2_RICH_SPLIT_GEOGRAPHY_UNRESOLVED"},
   "next_action":"Run the pre-outcome microfoundation/effective-rank audit on the real RGPH person-household join, then resolve the 19 split geographies and build R1-R3."
 }
