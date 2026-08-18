@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-ASV2-CANDIDATE-PARTY-POWER-CERTIFICATE-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "frozen_requirement": "At least 70 constituencies with verified candidate identities from at least three distinct parties in each historical benchmark election.",
+  "target_outcomes_used_for_recovery_or_gate": false,
+  "threshold_changed": false,
+  "e_reason_artifacts_modified": false,
+  "2016": {
+    "initial_districts_ge_3_candidate_parties": 0,
+    "bounded_recovery_waves": [
+      "morocco26/data/goal100/agent_society_v2/acquisition/2016_candidate_party_augmented_wave1.json",
+      "morocco26/data/goal100/agent_society_v2/acquisition/2016_candidate_party_augmented_wave2.json",
+      "morocco26/data/goal100/agent_society_v2/acquisition/2016_candidate_party_augmented_wave3.json"
+    ],
+    "augmented_records_total": 172,
+    "invalid_records": 0,
+    "districts_ge_3_candidate_parties": 70,
+    "required": 70,
+    "gate_pass": true,
+    "terminal_audit_workflow_run_id": 32160009661,
+    "terminal_audit_artifact_id": 9333214372,
+    "terminal_audit_artifact_digest": "sha256:efd3e6a433b7d1534946ffbde8575ba01fe1237e713962fd0dc1d58a9e41cc35",
+    "acquisition_status": "STOPPED_AT_FIRST_FROZEN_GATE_PASS"
+  },
+  "2021": {
+    "certified_head_list_candidate_rows": 508,
+    "resolved_canonical_districts": 82,
+    "districts_ge_3_candidate_parties": 82,
+    "required": 70,
+    "gate_pass": true,
+    "source_gate": "morocco26/data/goal100/e_reason/evidence/2021_head_list_rank_enrichment/gate.json"
+  },
+  "overall_gate_pass": true,
+  "status": "PASS_HISTORICAL_CANDIDATE_PARTY_POWER_GATE",
+  "next_allowed_action": "Complete demographic synthetic-population certification and then issue the combined ASV2 data-power certificate. No further 2016 candidate recovery is authorized unless a later integrity defect invalidates one of the frozen records."
+}
