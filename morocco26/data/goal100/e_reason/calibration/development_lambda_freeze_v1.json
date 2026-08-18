@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "M26-E-REASON-DEVELOPMENT-LAMBDA-FREEZE-V1",
+  "experiment_id": "M26-GOAL100-E-REASON-V1",
+  "created_at": "2026-08-18T11:46:26.487345+00:00",
+  "development_election": 2016,
+  "status": "PASS_DEVELOPMENT_CALIBRATION_LAMBDAS_FROZEN",
+  "boundary": {
+    "c1_frozen_before_unseal": true,
+    "c2_frozen_before_unseal": true,
+    "mapping_unsealed_after_judgment_freeze": true,
+    "mapping_sha_matches_prejudgment_seal": true,
+    "holdout_2021_opened": false,
+    "prompt_modified_after_c2_freeze": false
+  },
+  "provenance": {
+    "mapping_recovery_workflow_run_id": 32133040357,
+    "mapping_recovery_artifact_id": 9322901305,
+    "mapping_artifact_digest": "2194c11c16c6a6c9660c749771b0bf91eab37bcd6c25f1a41cc21b14d6b2ce63",
+    "source_blind_bundle_commit": "4604caba2cd12d4346c18f13825436bca3cb9e0e",
+    "mapping_canonical_sha256": "ed7777b7b493c32eef8daf993f1d6a108a903a05b4534e6e7b146588b488f3db",
+    "c1_judgments_raw_sha256": "8f7b26a3d8ad827362d99270df27319f8bc1e87266e28bb74d511069b622417c",
+    "c2_judgments_raw_sha256": "defa5ffd7ca1ce44a9d23c692087c105f273f04eb1eb13f570aa8fa99759c9a4",
+    "c2_manifest_raw_sha256": "74d325b68f6b9ebb2edd51261728bf9bf65fe7473b2c2f2281e59880546e3d9c",
+    "outcome_2016_raw_sha256": "e74855c1cc66657327b5d91559cfb7eb574dcc4fbf0879c948ebd63a856ff774",
+    "conditions_raw_sha256": "acc166e49c5131580a252fbc27bfe27c01fb523bf5f8dc701b361e2bdb58799c",
+    "scoring_contract_raw_sha256": "93d644e6a176e28479ae201f4400a8bdb40e57f24f1098f50a790134472f7d64"
+  },
+  "panel": {"territories": 92, "party_buckets": 9, "cells": 828},
+  "lambda_grid": [0.0, 0.025, 0.05, 0.075, 0.1, 0.15, 0.2, 0.3],
+  "primary_RMSE": {
+    "C0": 0.08850462894692873,
+    "C1": [0.08850462894693681, 0.08827210958779558, 0.08805478079789435, 0.08785321175107572, 0.08766796439737272, 0.08734863707375601, 0.08710109017807982, 0.08683736674031693],
+    "C2": [0.08850462894693681, 0.08827210958779558, 0.08805478079789435, 0.08785321175107572, 0.08766796439737272, 0.08734863707375601, 0.08710109017807982, 0.08683736674031693]
+  },
+  "selected": {"lambda_C1": 0.3, "lambda_C2": 0.3, "C1_RMSE": 0.08683736674031693, "C2_RMSE": 0.08683736674031693},
+  "development_equivalence": {"C1_C2_ordinal_cells_equal": true, "equal_cells": 828, "different_cells": 0},
+  "next_allowed_action": "BUILD_AND_SEAL_2021_HOLDOUT_PACKETS_USING_FROZEN_LAMBDAS_AND_UNCHANGED_C1_C2_RULES_WITHOUT_OPENING_2021_OUTCOMES"
+}
