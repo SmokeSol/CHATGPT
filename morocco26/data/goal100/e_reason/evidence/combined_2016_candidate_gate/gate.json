@@ -1,44 +1,49 @@
 {
-  "schema_version": "3.0",
-  "created_at": "2026-08-18T07:47:49+00:00",
+  "schema_version": "4.0",
+  "created_at": "2026-08-18T08:09:49+00:00",
   "year": 2016,
   "source_artifacts": {
     "PJD": "morocco26/data/goal100/e_reason/evidence/pjd_2016_parsed_slates/parsed_slates.json",
     "PPS_TYPO": "morocco26/data/goal100/e_reason/evidence/pps_2016_typographic_identities/parsed_identities.json",
     "PPS_DIRECT": "morocco26/data/goal100/e_reason/evidence/pps_2016_direct_typographic_extension/extension.json",
+    "PPS_OCR_FINAL": "morocco26/data/goal100/e_reason/evidence/pps_2016_ocr_moulay_yacoub/evidence.json",
     "PPS_LEGACY_FALLBACK": "morocco26/data/goal100/e_reason/evidence/pps_2016_parsed_missing_slates/parsed_missing_slates.json"
   },
   "source_statuses": {
     "PJD": "FAIL_CLOSED_DIAGNOSTIC_PERSISTED",
     "PPS_TYPO": "PARTIAL_VALID",
     "PPS_DIRECT": "PARTIAL_VALID",
+    "PPS_OCR_FINAL": "PASS",
     "PPS_LEGACY_FALLBACK": "PARTIAL_VALID"
   },
   "source_schema_versions": {
     "PJD": "3.0",
     "PPS_TYPO": "1.0",
     "PPS_DIRECT": "1.0",
+    "PPS_OCR_FINAL": "1.0",
     "PPS_LEGACY_FALLBACK": "4.1"
   },
-  "authoritative_pps_typographic_territories": 73,
+  "authoritative_pps_territories": 74,
   "base_pps_typographic_territories": 65,
   "direct_pps_typographic_territories": 8,
+  "targeted_pps_ocr_territories": 1,
   "counts": {
     "source_valid_candidate_rows": {
       "PJD": 176,
       "PPS_TYPO": 203,
       "PPS_DIRECT": 33,
+      "PPS_OCR_FINAL": 2,
       "PPS_LEGACY_FALLBACK": 0
     },
-    "candidate_rows_before_dedupe": 412,
+    "candidate_rows_before_dedupe": 414,
     "districts_with_any_candidate": 85,
-    "districts_with_at_least_three_verified_candidate_identities": 69,
+    "districts_with_at_least_three_verified_candidate_identities": 70,
     "required_identity_districts": 70,
     "districts_with_at_least_one_enriched_candidate_fact": 85,
     "required_enriched_districts": 50,
-    "identity_gate_pass": false,
+    "identity_gate_pass": true,
     "enriched_gate_pass": true,
-    "data_sufficiency_gate_pass": false
+    "data_sufficiency_gate_pass": true
   },
   "districts": [
     {
@@ -56,6 +61,7 @@
         "PJD": 0,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 4,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -98,6 +104,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -148,6 +155,7 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -188,6 +196,7 @@
         "PJD": 3,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -225,6 +234,7 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -285,6 +295,7 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -325,6 +336,7 @@
         "PJD": 3,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -362,6 +374,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -414,6 +427,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -464,6 +478,7 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -499,6 +514,7 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -539,6 +555,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -571,6 +588,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -623,6 +641,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -675,6 +694,7 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -737,6 +757,7 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -797,6 +818,7 @@
         "PJD": 0,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 3,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -832,6 +854,7 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -867,6 +890,7 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -904,6 +928,7 @@
         "PJD": 2,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -944,6 +969,7 @@
         "PJD": 6,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -996,6 +1022,7 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1058,6 +1085,7 @@
         "PJD": 5,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 5,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1128,6 +1156,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1158,6 +1187,7 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1198,6 +1228,7 @@
         "PJD": 2,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1230,6 +1261,7 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1292,6 +1324,7 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1352,6 +1385,7 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1389,6 +1423,7 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1451,6 +1486,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1501,6 +1537,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1531,6 +1568,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1563,6 +1601,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1613,6 +1652,7 @@
         "PJD": 2,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1643,6 +1683,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1675,6 +1716,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1725,6 +1767,7 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1765,6 +1808,7 @@
         "PJD": 0,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 3,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1800,6 +1844,7 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1835,6 +1880,7 @@
         "PJD": 0,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 6,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1885,6 +1931,7 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1920,6 +1967,7 @@
         "PJD": 4,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1962,6 +2010,7 @@
         "PJD": 2,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2004,6 +2053,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2054,6 +2104,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2086,6 +2137,7 @@
         "PJD": 6,
         "PPS_TYPO": 6,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2168,6 +2220,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2220,6 +2273,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2270,6 +2324,7 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2292,19 +2347,22 @@
     },
     {
       "constituency_id": "moulay-yaacoub",
-      "verified_distinct_candidate_identities": 2,
-      "identity_coverage_pass": false,
+      "verified_distinct_candidate_identities": 4,
+      "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
       "pipelines": [
-        "PJD"
+        "PJD",
+        "PPS_OCR_FINAL"
       ],
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 2,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2317,6 +2375,16 @@
           "party": "PJD",
           "identity": "الجياللي الدومة",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "اسامة البياز",
+          "pipeline": "PPS_OCR_FINAL"
+        },
+        {
+          "party": "PPS",
+          "identity": "محمد النوايتي",
+          "pipeline": "PPS_OCR_FINAL"
         }
       ]
     },
@@ -2335,6 +2403,7 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2377,6 +2446,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2429,6 +2499,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2479,6 +2550,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2511,6 +2583,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2561,6 +2634,7 @@
         "PJD": 0,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 4,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2603,6 +2677,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2655,6 +2730,7 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2717,6 +2793,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2767,6 +2844,7 @@
         "PJD": 6,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2817,6 +2895,7 @@
         "PJD": 4,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2859,6 +2938,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2911,6 +2991,7 @@
         "PJD": 6,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 6,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2991,6 +3072,7 @@
         "PJD": 4,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3033,6 +3115,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3085,6 +3168,7 @@
         "PJD": 2,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 2,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3125,6 +3209,7 @@
         "PJD": 0,
         "PPS_TYPO": 5,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3172,6 +3257,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3224,6 +3310,7 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3284,6 +3371,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3314,6 +3402,7 @@
         "PJD": 5,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3361,6 +3450,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3411,6 +3501,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3441,6 +3532,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3471,6 +3563,7 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3506,6 +3599,7 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3546,6 +3640,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3576,6 +3671,7 @@
         "PJD": 5,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3623,6 +3719,7 @@
         "PJD": 5,
         "PPS_TYPO": 5,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3693,6 +3790,7 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3730,6 +3828,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3780,6 +3879,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3810,6 +3910,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3842,6 +3943,7 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3878,10 +3980,11 @@
       ]
     }
   ],
-  "status": "E_REASON_2016_COLLECTION_PARTIAL",
+  "status": "E_REASON_2016_COLLECTION_GATE_PASS",
   "invariants": {
     "direct_extension_nonoverlap_verified": true,
-    "same_pps_territory_legacy_not_unioned_when_typographic_available": true,
+    "targeted_ocr_scope_verified": true,
+    "same_pps_territory_legacy_not_unioned_when_authoritative_available": true,
     "outcomes_unsealed": false,
     "predictive_judgments_generated": false,
     "forecast_delta_generated": false,

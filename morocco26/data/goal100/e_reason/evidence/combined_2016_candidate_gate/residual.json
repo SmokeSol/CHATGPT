@@ -1,23 +1,24 @@
 {
   "schema_version": "1.0",
-  "created_at": "2026-08-18T07:47:50+00:00",
-  "gate_status": "E_REASON_2016_COLLECTION_PARTIAL",
+  "created_at": "2026-08-18T08:09:49+00:00",
+  "gate_status": "E_REASON_2016_COLLECTION_GATE_PASS",
   "gate_counts": {
     "source_valid_candidate_rows": {
       "PJD": 176,
       "PPS_TYPO": 203,
       "PPS_DIRECT": 33,
+      "PPS_OCR_FINAL": 2,
       "PPS_LEGACY_FALLBACK": 0
     },
-    "candidate_rows_before_dedupe": 412,
+    "candidate_rows_before_dedupe": 414,
     "districts_with_any_candidate": 85,
-    "districts_with_at_least_three_verified_candidate_identities": 69,
+    "districts_with_at_least_three_verified_candidate_identities": 70,
     "required_identity_districts": 70,
     "districts_with_at_least_one_enriched_candidate_fact": 85,
     "required_enriched_districts": 50,
-    "identity_gate_pass": false,
+    "identity_gate_pass": true,
     "enriched_gate_pass": true,
-    "data_sufficiency_gate_pass": false
+    "data_sufficiency_gate_pass": true
   },
   "residual_with_any_candidate_below_three": [
     {
@@ -27,6 +28,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -55,6 +57,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -83,6 +86,7 @@
         "PJD": 2,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -111,6 +115,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -139,6 +144,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -167,6 +173,7 @@
         "PJD": 2,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -195,6 +202,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -223,6 +231,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -245,40 +254,13 @@
       ]
     },
     {
-      "constituency_id": "moulay-yaacoub",
-      "verified_distinct_candidate_identities": 2,
-      "pipeline_identity_counts": {
-        "PJD": 2,
-        "PPS_TYPO": 0,
-        "PPS_DIRECT": 0,
-        "PPS_LEGACY_FALLBACK": 0
-      },
-      "parties": [
-        "PJD"
-      ],
-      "pipelines": [
-        "PJD"
-      ],
-      "candidate_keys": [
-        {
-          "party": "PJD",
-          "identity": "محمد يوسف",
-          "pipeline": "PJD"
-        },
-        {
-          "party": "PJD",
-          "identity": "الجياللي الدومة",
-          "pipeline": "PJD"
-        }
-      ]
-    },
-    {
       "constituency_id": "oued-eddahab",
       "verified_distinct_candidate_identities": 2,
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -307,6 +289,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -335,6 +318,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -363,6 +347,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -391,6 +376,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -419,6 +405,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -447,6 +434,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -469,7 +457,7 @@
       ]
     }
   ],
-  "residual_count": 16,
+  "residual_count": 15,
   "nearest_to_pass": [
     {
       "constituency_id": "boujdour",
@@ -478,6 +466,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -506,6 +495,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -534,6 +524,7 @@
         "PJD": 2,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -562,6 +553,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -590,6 +582,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -618,6 +611,7 @@
         "PJD": 2,
         "PPS_TYPO": 0,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -646,6 +640,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -674,6 +669,7 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -696,40 +692,13 @@
       ]
     },
     {
-      "constituency_id": "moulay-yaacoub",
-      "verified_distinct_candidate_identities": 2,
-      "pipeline_identity_counts": {
-        "PJD": 2,
-        "PPS_TYPO": 0,
-        "PPS_DIRECT": 0,
-        "PPS_LEGACY_FALLBACK": 0
-      },
-      "parties": [
-        "PJD"
-      ],
-      "pipelines": [
-        "PJD"
-      ],
-      "candidate_keys": [
-        {
-          "party": "PJD",
-          "identity": "محمد يوسف",
-          "pipeline": "PJD"
-        },
-        {
-          "party": "PJD",
-          "identity": "الجياللي الدومة",
-          "pipeline": "PJD"
-        }
-      ]
-    },
-    {
       "constituency_id": "oued-eddahab",
       "verified_distinct_candidate_identities": 2,
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "parties": [
@@ -747,6 +716,35 @@
         {
           "party": "PPS",
           "identity": "9c5ec42148b563697f5d5f6b91ea22191b338f2b45dbcedf3c87b9ac57ab2a7f",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "tan-tan",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_OCR_FINAL": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "زينب ابوه",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "a1e591ad753cb94172a49599f1984fa109486e724dc3cf281411eae089432aa5",
           "pipeline": "PPS_TYPO"
         }
       ]
