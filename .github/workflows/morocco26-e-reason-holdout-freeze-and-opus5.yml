@@ -1,6 +1,11 @@
 name: Morocco26 E_reason holdout freeze and Opus5 handoff
 
 on:
+  push:
+    branches:
+      - morocco26-e-reason
+    paths:
+      - '.github/workflows/morocco26-e-reason-holdout-freeze-and-opus5.yml'
   pull_request:
     branches:
       - morocco26-e-reason
