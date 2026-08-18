@@ -1,0 +1,760 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-18T07:47:50+00:00",
+  "gate_status": "E_REASON_2016_COLLECTION_PARTIAL",
+  "gate_counts": {
+    "source_valid_candidate_rows": {
+      "PJD": 176,
+      "PPS_TYPO": 203,
+      "PPS_DIRECT": 33,
+      "PPS_LEGACY_FALLBACK": 0
+    },
+    "candidate_rows_before_dedupe": 412,
+    "districts_with_any_candidate": 85,
+    "districts_with_at_least_three_verified_candidate_identities": 69,
+    "required_identity_districts": 70,
+    "districts_with_at_least_one_enriched_candidate_fact": 85,
+    "required_enriched_districts": 50,
+    "identity_gate_pass": false,
+    "enriched_gate_pass": true,
+    "data_sufficiency_gate_pass": false
+  },
+  "residual_with_any_candidate_below_three": [
+    {
+      "constituency_id": "boujdour",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عمار وعموا",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "دبلوم الدراسات اجلامعية العامة",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "es-semara",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "الركيبي بن الطالب",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "سعيد هل عبد الرحمان",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "fahs-anjra",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 2,
+        "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PJD"
+      ],
+      "pipelines": [
+        "PJD"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PJD",
+          "identity": "سعاد بولعيش الحجراوي",
+          "pipeline": "PJD"
+        },
+        {
+          "party": "PJD",
+          "identity": "محمد السعيدي الهيشو",
+          "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "guelmim",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عبد الباقي مناضل",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "48cbd442028ac127f7b6322a0cc3625f6115252638db0c37c39fd1c424bbf20a",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "guercif",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "حسن مستكري",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "جمال بن عثمان",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "ifrane",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 2,
+        "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PJD"
+      ],
+      "pipelines": [
+        "PJD"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PJD",
+          "identity": "احمد الراشدي",
+          "pipeline": "PJD"
+        },
+        {
+          "party": "PJD",
+          "identity": "امحمد بحري",
+          "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "jerada",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عمر بوخلخال",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "خالد ماموني",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "mediouna",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "مصطفي صديق",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "بوشعيب املليح",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "moulay-yaacoub",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 2,
+        "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PJD"
+      ],
+      "pipelines": [
+        "PJD"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PJD",
+          "identity": "محمد يوسف",
+          "pipeline": "PJD"
+        },
+        {
+          "party": "PJD",
+          "identity": "الجياللي الدومة",
+          "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "oued-eddahab",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عمر الشرقاوي",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "9c5ec42148b563697f5d5f6b91ea22191b338f2b45dbcedf3c87b9ac57ab2a7f",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "tan-tan",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "زينب ابوه",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "a1e591ad753cb94172a49599f1984fa109486e724dc3cf281411eae089432aa5",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "taourirt",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "احمد ازيرار",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "وديع عطاف",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "tarfaya",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "سيدي بويا ماء العينني",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "مليكة خوبر",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "tata",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "اسماعيل بلشيش",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "87d2b956d5af307617c6bf2b51a58fe74d2924e1052f50a2730b7a024e556bf6",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "tiznit",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "احلسن بومهدي",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "احلسني فريد",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "youssoufia",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "املصطفي العزوزي",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "c5a802238ae6d8ea2d4649408c6d49c2d56c77724e36965f46a42c3fda06fa02",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    }
+  ],
+  "residual_count": 16,
+  "nearest_to_pass": [
+    {
+      "constituency_id": "boujdour",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عمار وعموا",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "دبلوم الدراسات اجلامعية العامة",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "es-semara",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "الركيبي بن الطالب",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "سعيد هل عبد الرحمان",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "fahs-anjra",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 2,
+        "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PJD"
+      ],
+      "pipelines": [
+        "PJD"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PJD",
+          "identity": "سعاد بولعيش الحجراوي",
+          "pipeline": "PJD"
+        },
+        {
+          "party": "PJD",
+          "identity": "محمد السعيدي الهيشو",
+          "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "guelmim",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عبد الباقي مناضل",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "48cbd442028ac127f7b6322a0cc3625f6115252638db0c37c39fd1c424bbf20a",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "guercif",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "حسن مستكري",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "جمال بن عثمان",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "ifrane",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 2,
+        "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PJD"
+      ],
+      "pipelines": [
+        "PJD"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PJD",
+          "identity": "احمد الراشدي",
+          "pipeline": "PJD"
+        },
+        {
+          "party": "PJD",
+          "identity": "امحمد بحري",
+          "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "jerada",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عمر بوخلخال",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "خالد ماموني",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "mediouna",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "مصطفي صديق",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "بوشعيب املليح",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "moulay-yaacoub",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 2,
+        "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PJD"
+      ],
+      "pipelines": [
+        "PJD"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PJD",
+          "identity": "محمد يوسف",
+          "pipeline": "PJD"
+        },
+        {
+          "party": "PJD",
+          "identity": "الجياللي الدومة",
+          "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "oued-eddahab",
+      "verified_distinct_candidate_identities": 2,
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_TYPO"
+      ],
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عمر الشرقاوي",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "9c5ec42148b563697f5d5f6b91ea22191b338f2b45dbcedf3c87b9ac57ab2a7f",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    }
+  ],
+  "invariants": {
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "F1_created": false
+  }
+}
