@@ -148,4 +148,4 @@ Write `outputs/c2_judgments.jsonl`, `outputs/c2_all_attempts.jsonl`, `outputs/c2
       - name: Report handoff artifact
         run: echo "OPUS5_HOLDOUT_ARTIFACT_ID=${{ steps.opus_upload.outputs.artifact-id }}"
 
-# registered-workflow trigger v3
+# registered-workflow trigger v4
