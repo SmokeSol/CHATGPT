@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "M26-ASV2-RICH-FEATURE-MANIFEST-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "FROZEN_BEFORE_ANY_REAL_ASV2_LLM_OUTPUT",
+  "target_voter_dimensions_min": 60,
+  "target_effective_information_ratio_vs_R0_min": 10.0,
+  "archetypes_per_constituency": 256,
+  "source_families": ["RGPH2014_INDIVIDUAL_MICRODATA","RGPH2014_HOUSEHOLD_MICRODATA","RGPH_DERIVED_HOUSEHOLD","ENCDM2014_SES_DONOR","AFROBAROMETER_PRE_ELECTION_ATTITUDE_DONOR","PRIOR_ELECTION_ANCHOR","HCP_PRE_ELECTION_LABOUR_CONTEXT"],
+  "allowed_families": {"demographic_household": ["age","sex","marital_status","household_relationship","household_composition","urban_rural"],"education": ["education_level","schooling_status","literacy_status","diploma_group"],"labour": ["activity_status","occupation_group","professional_status","industry","workplace_geography","commute_mode"],"housing_material": ["dwelling_type","construction_materials","rooms","tenure","water","sanitation","energy","household_assets","digital_access","road_access"],"socioeconomic_latent": ["consumption_decile","poverty_risk","vulnerability_risk","budget_shares"],"generic_pre_election_attitudes": ["economic_conditions","living_conditions","material_deprivation","political_discussion","democratic_norms","institutional_trust","corruption_perception","government_performance","local_responsiveness","internet_use"],"political_anchor": ["prior_vote_or_abstention"]},
+  "forbidden": ["religion","ethnicity","tribe","raw language identity","nationality","party closeness","direct vote intention","named future vote preference","real personal voter data","microtargeting identifiers","target-election outcome","post-cutoff facts"],
+  "epistemic_labels": {"RGPH": "observed anonymized microdata profile","ENCDM": "statistically matched latent socioeconomic donor; not an observed fact about that synthetic person","AFROBAROMETER": "statistically matched pre-election attitude donor; not an observed fact about that synthetic person"},
+  "pass_rule": "safe_feature_count >= 60 AND effective_rank_ratio_vs_R0 >= 10.0 AND ESS >= 128 in every constituency AND max_weight <= 0.05 AND no forbidden field is present"
+}

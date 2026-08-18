@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "amendment_id": "M26-ASV2-RICH-GEOGRAPHY-ROBUSTNESS-AMENDMENT-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "FROZEN_BEFORE_ANY_REAL_ASV2_LLM_OUTPUT",
+  "reason": "RGPH2014 anonymized microdata geography is province/prefecture level and some electoral constituencies split those units or use later administrative subdivisions. The official Collectivites-Territoriales PDF endpoint timed out repeatedly and is not used as an excuse to invent boundaries.",
+  "rule": {"all_92_population_required": true,"geography_confidence_labels": ["DIRECT_MICRODATA_ADMIN","PARENT_PROXY_SPLIT_CONSTITUENCY","PARENT_PROXY_LEGACY_2014_ADMIN","PARENT_PROXY_NAME_CONTAINMENT"],"historical_scoring_required": ["ALL_92","DIRECT_MICRODATA_ADMIN_ONLY"],"promotion_interpretation": "A positive result that disappears or reverses on the DIRECT_MICRODATA_ADMIN_ONLY subset is not considered robust evidence for Agent Society.","no_random_geographic_differentiation": true,"no_invented_commune_assignment": true},
+  "scientific_boundary": "This is an input-quality robustness amendment made before any real ASV2 LLM output. It does not change C0, target outcomes, LLM model, prompt, or the existing historical RMSE thresholds."
+}
