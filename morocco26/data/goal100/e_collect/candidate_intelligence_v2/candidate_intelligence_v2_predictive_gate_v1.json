@@ -1,0 +1,556 @@
+{
+  "beta": {
+    "V2_HEAD_ELECTED_LOCAL_COUNCIL_2015": -0.010285615658781222,
+    "V2_HEAD_PRIOR_CYCLE_MP": -0.0006112107843338584
+  },
+  "contract_id": "M26-CANDIDATE-INTELLIGENCE-V2-PREDICTIVE-CONTRACT-V1",
+  "effect_cap_abs_logit_shift": 0.9583251076825043,
+  "feature_means_fit": {
+    "V2_HEAD_ELECTED_LOCAL_COUNCIL_2015": 0.581081081081081,
+    "V2_HEAD_PRIOR_CYCLE_MP": 0.43243243243243246
+  },
+  "fit_2011_TO_2016": {
+    "C0": {
+      "ALL_PARTY_L1": 0.5630251779187325,
+      "ALL_PARTY_RMSE": 0.08875066507310134,
+      "PJD_MAE": 0.07601582631010391,
+      "PJD_RMSE": 0.09197001495668347
+    },
+    "model": {
+      "ALL_PARTY_L1": 0.5630309040239642,
+      "ALL_PARTY_RMSE": 0.08875825473813993,
+      "PJD_MAE": 0.07598007692563076,
+      "PJD_RMSE": 0.09198266701759476
+    }
+  },
+  "forecast_modified": false,
+  "implementation_note": "All feature definitions and the deterministic model contract were frozen before this feature-specific retrospective scoring. 2021 is not a blind holdout.",
+  "llm_invoked": false,
+  "panel": {
+    "fit_2016_territories": 74,
+    "fit_territory_ids": [
+      "agadir-ida-outanane",
+      "ain-sebaa-hay-mohammadi",
+      "al-haouz",
+      "aousserd",
+      "assa-zag",
+      "ben-m-sick",
+      "beni-mellal",
+      "berkane",
+      "boujdour",
+      "boulemane",
+      "chefchaouen",
+      "chichaoua",
+      "chtouka-ait-baha",
+      "driouch",
+      "el-hajeb",
+      "el-jadida",
+      "el-kelaa-des-sraghna",
+      "errachidia",
+      "es-semara",
+      "fahs-anjra",
+      "fes-nord",
+      "fes-sud",
+      "figuig",
+      "fquih-ben-salah",
+      "gueliz-nakhil",
+      "guelmim",
+      "guercif",
+      "hay-hassani",
+      "ifrane",
+      "inezgane-ait-melloul",
+      "jerada",
+      "karia-ghafsay",
+      "kenitra",
+      "khemisset-oulmes",
+      "laayoune",
+      "m-diq-fnideq",
+      "medina-sidi-youssef",
+      "meknes",
+      "menara",
+      "midelt",
+      "mohammedia",
+      "moulay-yaacoub",
+      "nador",
+      "nouaceur",
+      "ouarzazate",
+      "oued-eddahab",
+      "ouezzane",
+      "oujda-angad",
+      "rabat-chellah",
+      "rabat-ocean",
+      "safi",
+      "sale-el-jadida",
+      "sale-medina",
+      "sefrou",
+      "settat",
+      "sidi-bennour",
+      "sidi-bernoussi",
+      "sidi-ifni",
+      "sidi-slimane",
+      "skhirate-temara",
+      "tan-tan",
+      "tanger-assilah",
+      "taounate-tissa",
+      "taourirt",
+      "tarfaya",
+      "taroudant-nord",
+      "taroudant-sud",
+      "tata",
+      "taza",
+      "tetouan",
+      "tiflet-rommani",
+      "tinghir",
+      "tiznit",
+      "zagora"
+    ],
+    "validation_2021_territories": 74,
+    "validation_territory_ids": [
+      "agadir-ida-outanane",
+      "ain-chock",
+      "ain-sebaa-hay-mohammadi",
+      "al-fida-mers-sultan",
+      "al-haouz",
+      "al-hoceima",
+      "assa-zag",
+      "azilal-demnate",
+      "ben-m-sick",
+      "beni-mellal",
+      "benslimane",
+      "berrechid",
+      "boujdour",
+      "boulemane",
+      "bzou-ouaouizeght",
+      "casablanca-anfa",
+      "chichaoua",
+      "driouch",
+      "el-gharb",
+      "el-jadida",
+      "el-kelaa-des-sraghna",
+      "es-semara",
+      "essaouira",
+      "fahs-anjra",
+      "fes-sud",
+      "figuig",
+      "gueliz-nakhil",
+      "guelmim",
+      "guercif",
+      "hay-hassani",
+      "ifrane",
+      "inezgane-ait-melloul",
+      "jerada",
+      "karia-ghafsay",
+      "kenitra",
+      "khemisset-oulmes",
+      "laayoune",
+      "larache",
+      "medina-sidi-youssef",
+      "mediouna",
+      "meknes",
+      "menara",
+      "midelt",
+      "mohammedia",
+      "moulay-rachid",
+      "moulay-yaacoub",
+      "oued-eddahab",
+      "ouezzane",
+      "oujda-angad",
+      "rabat-chellah",
+      "rabat-ocean",
+      "rehamna",
+      "safi",
+      "sale-el-jadida",
+      "sale-medina",
+      "sefrou",
+      "sidi-bennour",
+      "sidi-bernoussi",
+      "sidi-slimane",
+      "skhirate-temara",
+      "tan-tan",
+      "tanger-assilah",
+      "taounate-tissa",
+      "taourirt",
+      "tarfaya",
+      "taroudant-nord",
+      "taroudant-sud",
+      "tata",
+      "taza",
+      "tetouan",
+      "tiflet-rommani",
+      "tinghir",
+      "tiznit",
+      "youssoufia"
+    ]
+  },
+  "result_id": "M26-CANDIDATE-INTELLIGENCE-V2-PREDICTIVE-GATE-V1",
+  "ridge_cv": [
+    {
+      "alpha": 0.01,
+      "folds": [
+        {
+          "PJD_RMSE": 0.03861774941709215,
+          "n": 2,
+          "region": "Béni Mellal-Khénifra"
+        },
+        {
+          "PJD_RMSE": 0.09875769381903246,
+          "n": 9,
+          "region": "Casablanca-Settat"
+        },
+        {
+          "PJD_RMSE": 0.15748641688730008,
+          "n": 2,
+          "region": "Dakhla-Oued Eddahab"
+        },
+        {
+          "PJD_RMSE": 0.08514313007344759,
+          "n": 5,
+          "region": "Drâa-Tafilalet"
+        },
+        {
+          "PJD_RMSE": 0.08533984120296836,
+          "n": 11,
+          "region": "Fès-Meknès"
+        },
+        {
+          "PJD_RMSE": 0.07755316667043034,
+          "n": 4,
+          "region": "Guelmim-Oued Noun"
+        },
+        {
+          "PJD_RMSE": 0.13306446917607634,
+          "n": 4,
+          "region": "Laâyoune-Sakia El Hamra"
+        },
+        {
+          "PJD_RMSE": 0.11152608852969896,
+          "n": 7,
+          "region": "Marrakech-Safi"
+        },
+        {
+          "PJD_RMSE": 0.06671417771820365,
+          "n": 8,
+          "region": "Oriental"
+        },
+        {
+          "PJD_RMSE": 0.058916486633299806,
+          "n": 9,
+          "region": "Rabat-Salé-Kénitra"
+        },
+        {
+          "PJD_RMSE": 0.12981457913802796,
+          "n": 7,
+          "region": "Souss-Massa"
+        },
+        {
+          "PJD_RMSE": 0.10196321528000822,
+          "n": 6,
+          "region": "Tanger-Tétouan-Al Hoceïma"
+        }
+      ],
+      "mean_heldout_PJD_RMSE": 0.0962724404723026
+    },
+    {
+      "alpha": 0.1,
+      "folds": [
+        {
+          "PJD_RMSE": 0.03857565286422117,
+          "n": 2,
+          "region": "Béni Mellal-Khénifra"
+        },
+        {
+          "PJD_RMSE": 0.09870967058102506,
+          "n": 9,
+          "region": "Casablanca-Settat"
+        },
+        {
+          "PJD_RMSE": 0.1574848717428431,
+          "n": 2,
+          "region": "Dakhla-Oued Eddahab"
+        },
+        {
+          "PJD_RMSE": 0.08512639175424609,
+          "n": 5,
+          "region": "Drâa-Tafilalet"
+        },
+        {
+          "PJD_RMSE": 0.08532561899418799,
+          "n": 11,
+          "region": "Fès-Meknès"
+        },
+        {
+          "PJD_RMSE": 0.0775577908904519,
+          "n": 4,
+          "region": "Guelmim-Oued Noun"
+        },
+        {
+          "PJD_RMSE": 0.13306527065109167,
+          "n": 4,
+          "region": "Laâyoune-Sakia El Hamra"
+        },
+        {
+          "PJD_RMSE": 0.11144798958735032,
+          "n": 7,
+          "region": "Marrakech-Safi"
+        },
+        {
+          "PJD_RMSE": 0.06669972223234778,
+          "n": 8,
+          "region": "Oriental"
+        },
+        {
+          "PJD_RMSE": 0.05893927271929636,
+          "n": 9,
+          "region": "Rabat-Salé-Kénitra"
+        },
+        {
+          "PJD_RMSE": 0.12975086770925223,
+          "n": 7,
+          "region": "Souss-Massa"
+        },
+        {
+          "PJD_RMSE": 0.1019610820969266,
+          "n": 6,
+          "region": "Tanger-Tétouan-Al Hoceïma"
+        }
+      ],
+      "mean_heldout_PJD_RMSE": 0.09624706039695159
+    },
+    {
+      "alpha": 1.0,
+      "folds": [
+        {
+          "PJD_RMSE": 0.03817799192974735,
+          "n": 2,
+          "region": "Béni Mellal-Khénifra"
+        },
+        {
+          "PJD_RMSE": 0.09825916762790618,
+          "n": 9,
+          "region": "Casablanca-Settat"
+        },
+        {
+          "PJD_RMSE": 0.15747065777171848,
+          "n": 2,
+          "region": "Dakhla-Oued Eddahab"
+        },
+        {
+          "PJD_RMSE": 0.08496929655679719,
+          "n": 5,
+          "region": "Drâa-Tafilalet"
+        },
+        {
+          "PJD_RMSE": 0.08519269763754364,
+          "n": 11,
+          "region": "Fès-Meknès"
+        },
+        {
+          "PJD_RMSE": 0.07760144216345448,
+          "n": 4,
+          "region": "Guelmim-Oued Noun"
+        },
+        {
+          "PJD_RMSE": 0.13307285928622511,
+          "n": 4,
+          "region": "Laâyoune-Sakia El Hamra"
+        },
+        {
+          "PJD_RMSE": 0.11071353864515134,
+          "n": 7,
+          "region": "Marrakech-Safi"
+        },
+        {
+          "PJD_RMSE": 0.06656417453054878,
+          "n": 8,
+          "region": "Oriental"
+        },
+        {
+          "PJD_RMSE": 0.05915384492725207,
+          "n": 9,
+          "region": "Rabat-Salé-Kénitra"
+        },
+        {
+          "PJD_RMSE": 0.12914871059823957,
+          "n": 7,
+          "region": "Souss-Massa"
+        },
+        {
+          "PJD_RMSE": 0.10194126687670178,
+          "n": 6,
+          "region": "Tanger-Tétouan-Al Hoceïma"
+        }
+      ],
+      "mean_heldout_PJD_RMSE": 0.096008743341414
+    },
+    {
+      "alpha": 10.0,
+      "folds": [
+        {
+          "PJD_RMSE": 0.035665803535524024,
+          "n": 2,
+          "region": "Béni Mellal-Khénifra"
+        },
+        {
+          "PJD_RMSE": 0.09554050825844405,
+          "n": 9,
+          "region": "Casablanca-Settat"
+        },
+        {
+          "PJD_RMSE": 0.15739745748375047,
+          "n": 2,
+          "region": "Dakhla-Oued Eddahab"
+        },
+        {
+          "PJD_RMSE": 0.08401851510070805,
+          "n": 5,
+          "region": "Drâa-Tafilalet"
+        },
+        {
+          "PJD_RMSE": 0.08440995432080978,
+          "n": 11,
+          "region": "Fès-Meknès"
+        },
+        {
+          "PJD_RMSE": 0.07787579601075993,
+          "n": 4,
+          "region": "Guelmim-Oued Noun"
+        },
+        {
+          "PJD_RMSE": 0.13312153715819108,
+          "n": 4,
+          "region": "Laâyoune-Sakia El Hamra"
+        },
+        {
+          "PJD_RMSE": 0.10621213307002123,
+          "n": 7,
+          "region": "Marrakech-Safi"
+        },
+        {
+          "PJD_RMSE": 0.06574923237804779,
+          "n": 8,
+          "region": "Oriental"
+        },
+        {
+          "PJD_RMSE": 0.06047991772151881,
+          "n": 9,
+          "region": "Rabat-Salé-Kénitra"
+        },
+        {
+          "PJD_RMSE": 0.12533174290113486,
+          "n": 7,
+          "region": "Souss-Massa"
+        },
+        {
+          "PJD_RMSE": 0.10182994380329718,
+          "n": 6,
+          "region": "Tanger-Tétouan-Al Hoceïma"
+        }
+      ],
+      "mean_heldout_PJD_RMSE": 0.09456174807008845
+    },
+    {
+      "alpha": 100.0,
+      "folds": [
+        {
+          "PJD_RMSE": 0.03182209033731164,
+          "n": 2,
+          "region": "Béni Mellal-Khénifra"
+        },
+        {
+          "PJD_RMSE": 0.09177788386255203,
+          "n": 9,
+          "region": "Casablanca-Settat"
+        },
+        {
+          "PJD_RMSE": 0.1573460143107107,
+          "n": 2,
+          "region": "Dakhla-Oued Eddahab"
+        },
+        {
+          "PJD_RMSE": 0.08269527414638311,
+          "n": 5,
+          "region": "Drâa-Tafilalet"
+        },
+        {
+          "PJD_RMSE": 0.08338395319466951,
+          "n": 11,
+          "region": "Fès-Meknès"
+        },
+        {
+          "PJD_RMSE": 0.07829003395200614,
+          "n": 4,
+          "region": "Guelmim-Oued Noun"
+        },
+        {
+          "PJD_RMSE": 0.13319850060280114,
+          "n": 4,
+          "region": "Laâyoune-Sakia El Hamra"
+        },
+        {
+          "PJD_RMSE": 0.09979027266254956,
+          "n": 7,
+          "region": "Marrakech-Safi"
+        },
+        {
+          "PJD_RMSE": 0.06463588241224884,
+          "n": 8,
+          "region": "Oriental"
+        },
+        {
+          "PJD_RMSE": 0.06240577893506699,
+          "n": 9,
+          "region": "Rabat-Salé-Kénitra"
+        },
+        {
+          "PJD_RMSE": 0.11945036714969501,
+          "n": 7,
+          "region": "Souss-Massa"
+        },
+        {
+          "PJD_RMSE": 0.10170478287052798,
+          "n": 6,
+          "region": "Tanger-Tétouan-Al Hoceïma"
+        }
+      ],
+      "mean_heldout_PJD_RMSE": 0.0925341205681514
+    }
+  ],
+  "schema_version": "1.0",
+  "scientific_status": "RETROSPECTIVE_VALIDATION_ONLY_2021_ALREADY_BURNED",
+  "selected_alpha": 100.0,
+  "terminal_interpretation": "POSITIVE_RETROSPECTIVE_SIGNAL",
+  "validation_2016_TO_2021": {
+    "C0": {
+      "ALL_PARTY_L1": 0.7492500973254975,
+      "ALL_PARTY_RMSE": 0.1185065570902744,
+      "PJD_MAE": 0.15325087892474715,
+      "PJD_RMSE": 0.18238449632309647
+    },
+    "model": {
+      "ALL_PARTY_L1": 0.7491044094843611,
+      "ALL_PARTY_RMSE": 0.11846990176019649,
+      "PJD_MAE": 0.15313537881497674,
+      "PJD_RMSE": 0.18218341605134736
+    }
+  },
+  "validation_comparisons": {
+    "ALL_PARTY_RMSE": {
+      "bootstrap_probability_model_better": 0.9677,
+      "percentile_95_interval_delta": [
+        -7.424854589999121e-05,
+        2.313952891197155e-06
+      ],
+      "point_delta_model_minus_C0": -3.6655330077906e-05,
+      "relative_improvement": 0.00030931056456212104
+    },
+    "PJD_RMSE": {
+      "bootstrap_probability_model_better": 0.9593,
+      "percentile_95_interval_delta": [
+        -0.0004002948925559843,
+        2.6689762606677685e-05
+      ],
+      "point_delta_model_minus_C0": -0.00020108027174911558,
+      "relative_improvement": 0.0011025074817373694
+    }
+  }
+}
