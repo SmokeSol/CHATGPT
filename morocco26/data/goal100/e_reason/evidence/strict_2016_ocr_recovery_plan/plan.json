@@ -1,0 +1,436 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-18T08:17:38+00:00",
+  "strict_gate_status": "E_REASON_2016_STRICT_INTEGRITY_PARTIAL",
+  "strict_gate_counts": {
+    "candidate_rows_before_dedupe": 381,
+    "districts_with_any_candidate": 80,
+    "districts_with_at_least_three_verified_candidate_identities": 64,
+    "required_identity_districts": 70,
+    "districts_with_at_least_one_enriched_candidate_fact": 80,
+    "required_enriched_districts": 50,
+    "identity_gate_pass": false,
+    "enriched_gate_pass": true,
+    "data_sufficiency_gate_pass": false
+  },
+  "rows": [
+    {
+      "constituency_id": "fahs-anjra",
+      "historical_constituency": "Fahs - Anjra",
+      "historical_region": "Tanger - Tétouan - Al Hoceima",
+      "historical_seats_2016": 2,
+      "pjd_identities": 2,
+      "pps_typographic_identities": 0,
+      "one_more_pps_identity_can_close": true,
+      "closure_reasons": [
+        "TWO_PJD_IDENTITIES_NEED_ONE_INDEPENDENT_PPS_IDENTITY"
+      ],
+      "pps_typographic_page": null,
+      "pps_pdf_sha256": null,
+      "pps_parent_page_url": null,
+      "existing_candidate_keys": [
+        {
+          "party": "PJD",
+          "identity": "سعاد بولعيش الحجراوي",
+          "pipeline": "PJD"
+        },
+        {
+          "party": "PJD",
+          "identity": "محمد السعيدي الهيشو",
+          "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "ifrane",
+      "historical_constituency": "Ifrane",
+      "historical_region": "Fès - Meknès",
+      "historical_seats_2016": 2,
+      "pjd_identities": 2,
+      "pps_typographic_identities": 0,
+      "one_more_pps_identity_can_close": true,
+      "closure_reasons": [
+        "TWO_PJD_IDENTITIES_NEED_ONE_INDEPENDENT_PPS_IDENTITY"
+      ],
+      "pps_typographic_page": null,
+      "pps_pdf_sha256": null,
+      "pps_parent_page_url": null,
+      "existing_candidate_keys": [
+        {
+          "party": "PJD",
+          "identity": "احمد الراشدي",
+          "pipeline": "PJD"
+        },
+        {
+          "party": "PJD",
+          "identity": "امحمد بحري",
+          "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "sidi-ifni",
+      "historical_constituency": "Sidi Ifni",
+      "historical_region": "Guelmim - Oued-Noun",
+      "historical_seats_2016": 2,
+      "pjd_identities": 2,
+      "pps_typographic_identities": 0,
+      "one_more_pps_identity_can_close": true,
+      "closure_reasons": [
+        "TWO_PJD_IDENTITIES_NEED_ONE_INDEPENDENT_PPS_IDENTITY"
+      ],
+      "pps_typographic_page": null,
+      "pps_pdf_sha256": null,
+      "pps_parent_page_url": null,
+      "existing_candidate_keys": [
+        {
+          "party": "PJD",
+          "identity": "عمر بومريس",
+          "pipeline": "PJD"
+        },
+        {
+          "party": "PJD",
+          "identity": "مولاي محمد الواصيفي",
+          "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "boujdour",
+      "historical_constituency": "Boujdour",
+      "historical_region": "Laâyoune - Sakia-El-Hamra",
+      "historical_seats_2016": 2,
+      "pjd_identities": 0,
+      "pps_typographic_identities": 2,
+      "one_more_pps_identity_can_close": false,
+      "closure_reasons": [],
+      "pps_typographic_page": 3,
+      "pps_pdf_sha256": "78374d706b52063a9a2d68479a54087fc4589a63508f9008bee162a6fb60c8cd",
+      "pps_parent_page_url": "https://pps.ma/10532/",
+      "existing_candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عمار وعموا",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "دبلوم الدراسات اجلامعية العامة",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "es-semara",
+      "historical_constituency": "Es-Smara",
+      "historical_region": "Laâyoune - Sakia-El-Hamra",
+      "historical_seats_2016": 2,
+      "pjd_identities": 0,
+      "pps_typographic_identities": 2,
+      "one_more_pps_identity_can_close": false,
+      "closure_reasons": [],
+      "pps_typographic_page": 1,
+      "pps_pdf_sha256": "78374d706b52063a9a2d68479a54087fc4589a63508f9008bee162a6fb60c8cd",
+      "pps_parent_page_url": "https://pps.ma/10532/",
+      "existing_candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "الركيبي بن الطالب",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "سعيد هل عبد الرحمان",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "guelmim",
+      "historical_constituency": "Guelmim",
+      "historical_region": "Guelmim - Oued-Noun",
+      "historical_seats_2016": 2,
+      "pjd_identities": 0,
+      "pps_typographic_identities": 2,
+      "one_more_pps_identity_can_close": false,
+      "closure_reasons": [],
+      "pps_typographic_page": 3,
+      "pps_pdf_sha256": "b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270",
+      "pps_parent_page_url": "https://pps.ma/10528/",
+      "existing_candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عبد الباقي مناضل",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "48cbd442028ac127f7b6322a0cc3625f6115252638db0c37c39fd1c424bbf20a",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "guercif",
+      "historical_constituency": "Guercif",
+      "historical_region": "Oriental",
+      "historical_seats_2016": 2,
+      "pjd_identities": 0,
+      "pps_typographic_identities": 2,
+      "one_more_pps_identity_can_close": false,
+      "closure_reasons": [],
+      "pps_typographic_page": 1,
+      "pps_pdf_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+      "pps_parent_page_url": "https://pps.ma/10453/",
+      "existing_candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "حسن مستكري",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "جمال بن عثمان",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "jerada",
+      "historical_constituency": "Jerada",
+      "historical_region": "Oriental",
+      "historical_seats_2016": 2,
+      "pjd_identities": 0,
+      "pps_typographic_identities": 2,
+      "one_more_pps_identity_can_close": false,
+      "closure_reasons": [],
+      "pps_typographic_page": 8,
+      "pps_pdf_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+      "pps_parent_page_url": "https://pps.ma/10453/",
+      "existing_candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عمر بوخلخال",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "خالد ماموني",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "mediouna",
+      "historical_constituency": "Médiouna",
+      "historical_region": "Casablanca - Settat",
+      "historical_seats_2016": 2,
+      "pjd_identities": 0,
+      "pps_typographic_identities": 2,
+      "one_more_pps_identity_can_close": false,
+      "closure_reasons": [],
+      "pps_typographic_page": 14,
+      "pps_pdf_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+      "pps_parent_page_url": "https://pps.ma/10495/",
+      "existing_candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "مصطفي صديق",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "بوشعيب املليح",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "oued-eddahab",
+      "historical_constituency": "Oued-Ed-Dahab",
+      "historical_region": "Dakhla - Oued Ed-Dahab",
+      "historical_seats_2016": 2,
+      "pjd_identities": 0,
+      "pps_typographic_identities": 2,
+      "one_more_pps_identity_can_close": false,
+      "closure_reasons": [],
+      "pps_typographic_page": 1,
+      "pps_pdf_sha256": "b7a1a41ea7b8e05e6935fe37bf617dde3d515ed1707457cffc95f5deb625f431",
+      "pps_parent_page_url": "https://pps.ma/10535/",
+      "existing_candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عمر الشرقاوي",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "9c5ec42148b563697f5d5f6b91ea22191b338f2b45dbcedf3c87b9ac57ab2a7f",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "tan-tan",
+      "historical_constituency": "Tan-Tan",
+      "historical_region": "Guelmim - Oued-Noun",
+      "historical_seats_2016": 2,
+      "pjd_identities": 0,
+      "pps_typographic_identities": 2,
+      "one_more_pps_identity_can_close": false,
+      "closure_reasons": [],
+      "pps_typographic_page": 2,
+      "pps_pdf_sha256": "b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270",
+      "pps_parent_page_url": "https://pps.ma/10528/",
+      "existing_candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "زينب ابوه",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "a1e591ad753cb94172a49599f1984fa109486e724dc3cf281411eae089432aa5",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "taourirt",
+      "historical_constituency": "Taourirt",
+      "historical_region": "Oriental",
+      "historical_seats_2016": 2,
+      "pjd_identities": 0,
+      "pps_typographic_identities": 2,
+      "one_more_pps_identity_can_close": false,
+      "closure_reasons": [],
+      "pps_typographic_page": 7,
+      "pps_pdf_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+      "pps_parent_page_url": "https://pps.ma/10453/",
+      "existing_candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "احمد ازيرار",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "وديع عطاف",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "tarfaya",
+      "historical_constituency": "Tarfaya",
+      "historical_region": "Laâyoune - Sakia-El-Hamra",
+      "historical_seats_2016": 2,
+      "pjd_identities": 0,
+      "pps_typographic_identities": 2,
+      "one_more_pps_identity_can_close": false,
+      "closure_reasons": [],
+      "pps_typographic_page": 4,
+      "pps_pdf_sha256": "78374d706b52063a9a2d68479a54087fc4589a63508f9008bee162a6fb60c8cd",
+      "pps_parent_page_url": "https://pps.ma/10532/",
+      "existing_candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "سيدي بويا ماء العينني",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "مليكة خوبر",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "tata",
+      "historical_constituency": "Tata",
+      "historical_region": "Souss - Massa",
+      "historical_seats_2016": 2,
+      "pjd_identities": 0,
+      "pps_typographic_identities": 2,
+      "one_more_pps_identity_can_close": false,
+      "closure_reasons": [],
+      "pps_typographic_page": 7,
+      "pps_pdf_sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+      "pps_parent_page_url": "https://pps.ma/10521/",
+      "existing_candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "اسماعيل بلشيش",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "87d2b956d5af307617c6bf2b51a58fe74d2924e1052f50a2730b7a024e556bf6",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "tiznit",
+      "historical_constituency": "Tiznit",
+      "historical_region": "Souss - Massa",
+      "historical_seats_2016": 2,
+      "pjd_identities": 0,
+      "pps_typographic_identities": 2,
+      "one_more_pps_identity_can_close": false,
+      "closure_reasons": [],
+      "pps_typographic_page": 6,
+      "pps_pdf_sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+      "pps_parent_page_url": "https://pps.ma/10521/",
+      "existing_candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "احلسن بومهدي",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "احلسني فريد",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    },
+    {
+      "constituency_id": "youssoufia",
+      "historical_constituency": "Youssoufia",
+      "historical_region": "Marrakech - Safi",
+      "historical_seats_2016": 2,
+      "pjd_identities": 0,
+      "pps_typographic_identities": 2,
+      "one_more_pps_identity_can_close": false,
+      "closure_reasons": [],
+      "pps_typographic_page": 10,
+      "pps_pdf_sha256": "d099034a46b7008d40ea580d4d9ce452834f74e41d644fd7cdb77e4c741c8bcb",
+      "pps_parent_page_url": "https://pps.ma/10509/",
+      "existing_candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "املصطفي العزوزي",
+          "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PPS",
+          "identity": "c5a802238ae6d8ea2d4649408c6d49c2d56c77724e36965f46a42c3fda06fa02",
+          "pipeline": "PPS_TYPO"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "residual_districts": 16,
+    "one_more_existing_pps_identity_can_close": 3,
+    "pjd_two_identity_targets": 3,
+    "pps_two_with_ge3_seats_targets": 0
+  },
+  "invariants": {
+    "candidate_identities_promoted": false,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "F1_created": false
+  }
+}
