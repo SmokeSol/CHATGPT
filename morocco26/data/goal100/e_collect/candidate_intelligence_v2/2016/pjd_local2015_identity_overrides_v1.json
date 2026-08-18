@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "M26-CANDIDATE-INTEL-V2-PJD-LOCAL2015-IDENTITY-OVERRIDES-V1",
+  "purpose": "Resolve only the 21 name-variant UNKNOWN rows produced by the closed 2015 communal elected-member universe. These decisions affect identity resolution only, never political effect size.",
+  "source_universe": {
+    "dataset": "TAFRA communes-elus-2015-1-0.xlsx copied from elections.ma",
+    "sha256": "8b5e6d23756087409a77fbaa00c0e25428c699245dbc3241d280b914600fd341"
+  },
+  "rules": {
+    "SAFE_ALIAS": "Allowed only when the candidate string and a closed-universe name are a mechanical orthographic variant and contextual party/geography or a distinctive identity supports the same person.",
+    "CONFIRMED_NO_ALIAS": "Used only after inspecting the nearest closed-universe candidates and finding no compatible identity; remains VERIFIED_FALSE because the communal universe is complete.",
+    "no_fuzzy_promotion": true
+  },
+  "decisions": [
+    {"current_name":"عبد القادر اعمارة","status":"CONFIRMED_NO_ALIAS","reason":"nearest candidates have different surnames and incompatible parties/geographies"},
+    {"current_name":"محمد البصير","status":"SAFE_ALIAS","closed_universe_name":"محمد لبصير","reason":"single-letter article variant; PJD elected member in Khémisset province, compatible with Tiflet-Rommani"},
+    {"current_name":"محمد يتيم","status":"CONFIRMED_NO_ALIAS","reason":"nearest names are distinct persons; no compatible PJD identity in the closed universe"},
+    {"current_name":"مصطفى الخلفي","status":"CONFIRMED_NO_ALIAS","reason":"nearest same-surname-like rows are different persons/parties/geographies"},
+    {"current_name":"أمينة ماء العينين","status":"SAFE_ALIAS","closed_universe_name":"ءامنة ماء العينين","reason":"distinctive full name with initial hamza spelling variant; PJD elected member"},
+    {"current_name":"عبد اللطيف رشيد","status":"SAFE_ALIAS","closed_universe_name":"عبداللطيف رشيد","reason":"whitespace-only compound-name variant; PJD elected member in Nouaceur"},
+    {"current_name":"عبد املجيد جوبيج","status":"SAFE_ALIAS","closed_universe_name":"عبدالمجيد جوبيج","reason":"PDF extraction plus compound-name whitespace variant; PJD elected member in Ben M'Sick"},
+    {"current_name":"إدريس األزمي اإلدريس ي","status":"SAFE_ALIAS","closed_universe_name":"ادريس الازمي الادريسي","reason":"PDF bidi/hamza/spacing normalization; PJD elected member in Fès"},
+    {"current_name":"عمر الفاس ي","status":"CONFIRMED_NO_ALIAS","reason":"nearest names are different surnames and parties/geographies"},
+    {"current_name":"نور الدين اقشيبل","status":"SAFE_ALIAS","closed_universe_name":"نور الدين قشيبل","reason":"initial-alef surname variant; PJD president in Taounate province, compatible with Karia-Ghafsay"},
+    {"current_name":"لحسن الداودي","status":"CONFIRMED_NO_ALIAS","reason":"nearest names are distinct people outside the candidate context"},
+    {"current_name":"مصطفى بن بالل","status":"SAFE_ALIAS","closed_universe_name":"مصطفى بن بلال","reason":"orthographic alif variant; PJD elected member in Boujdour"},
+    {"current_name":"امربيه أبا عقيل","status":"SAFE_ALIAS","closed_universe_name":"امربيه اباعقيل","reason":"spacing/hamza variant; PJD vice-president in Aousserd"},
+    {"current_name":"عبد هللا النجامي","status":"CONFIRMED_NO_ALIAS","reason":"nearest candidates have different surnames and incompatible geography"},
+    {"current_name":"حمزة الصوفي","status":"SAFE_ALIAS","closed_universe_name":"حمز الصوفي","reason":"final-ta marbuta/alef-like given-name truncation; unique PJD president in Chichaoua province"},
+    {"current_name":"عبد هللا هناوي","status":"SAFE_ALIAS","closed_universe_name":"عبدالله هناوي","reason":"whitespace-only compound-name variant; PJD president of Errachidia municipality"},
+    {"current_name":"أحمد صدقي","status":"CONFIRMED_NO_ALIAS","reason":"nearest same-looking record belongs to another party and province; no compatible PJD identity"},
+    {"current_name":"عمر احمين","status":"CONFIRMED_NO_ALIAS","reason":"nearest names are different people; no compatible PJD/local geography identity"},
+    {"current_name":"احميدة املحجوبي","status":"SAFE_ALIAS","closed_universe_name":"احميدة محجوبي","reason":"PDF definite-article artifact; PJD elected member in Taourirt province"},
+    {"current_name":"بلقاسم اليوسفي","status":"SAFE_ALIAS","closed_universe_name":"بلقاسم يوسفي","reason":"optional definite article; PJD president in Guercif province"},
+    {"current_name":"مصطفى الزيتي","status":"CONFIRMED_NO_ALIAS","reason":"nearest names have different surnames/parties/geographies"}
+  ]
+}
