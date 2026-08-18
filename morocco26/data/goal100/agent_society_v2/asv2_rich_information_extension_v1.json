@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "extension_id": "M26-ASV2-RICH-INFORMATION-EXTENSION-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "FROZEN_BEFORE_ANY_REAL_ASV2_LLM_OUTPUT",
+  "trigger": "The outcome-free R2 input audit produced 81 safe fields and an effective-information ratio of 8.909497618455376 versus R0, below the pre-frozen 10.0 gate.",
+  "scientific_decision": "Do not lower the x10 threshold. Add substantively interpretable, previously unused variables from the already catalogued RGPH2014 individual/household files and ENCDM2014 household donor file.",
+  "added_dimensions": 44,
+  "families": {
+    "observed_RGPH_person": ["study location", "study commute mode", "three vocational-diploma granularities"],
+    "observed_RGPH_household": ["water-point distance band", "water-fetch duration"],
+    "ENCDM_latent_household_SES": ["expenditure level and per-person level", "national and within-milieu position", "head marital/diploma/activity/profession/sector/status", "top-level and detailed consumption-budget shares"]
+  },
+  "epistemic_boundary": "RGPH fields are observed only for anonymous source microdata profiles. ENCDM fields are statistically matched latent household characteristics and must be labelled as such in every handoff; they are not observed facts about a real person.",
+  "forbidden_fields_explicitly_not_added": ["nationality", "language", "local language", "disability", "religion", "ethnicity", "tribe", "party closeness", "direct vote intention", "named future preference", "target-election outcome", "post-cutoff facts"],
+  "unchanged": ["10.0 effective-rank ratio gate", "60 safe-field minimum", "256 archetypes per constituency", "ESS >= 128", "max weight <= 0.05", "all 92 constituencies", "F0", "historical outcomes excluded", "no real LLM outputs"]
+}
