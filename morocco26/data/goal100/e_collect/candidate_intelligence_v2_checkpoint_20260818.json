@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "checkpoint_id": "M26-CANDIDATE-INTELLIGENCE-V2-CHECKPOINT-20260818",
+  "created_at": "2026-08-18T17:43:00+01:00",
+  "status": "GO_FULL_HISTORICAL_RECOVERY_NOT_YET_GO_MODEL",
+  "protected_state": {
+    "F0_immutable": true,
+    "E_reason_V1_terminal": "E_REASON_NO_PROMOTION",
+    "forecast_delta_authorized": false,
+    "subjective_score_ingestion_allowed": false
+  },
+  "current_2026_candidate_surface": {
+    "candidate_records": 546,
+    "local_territories_covered": 92,
+    "local_territories_total": 92,
+    "parties": 9,
+    "source_core": "Medias24 elections SQLite plus official PJD merge",
+    "conclusion": "Candidate discovery/territory coverage is no longer the principal bottleneck."
+  },
+  "2021_recoverability": {
+    "pjd_full_page_manual_lower_bound": {
+      "local_candidate_rows_observed": 91,
+      "rows_with_at_least_one_objective_political_feature_lower_bound": 82,
+      "objective_feature_rate_lower_bound": 0.9010989010989011,
+      "explicit_parliamentary_mandate_mentions_counted": 38,
+      "note": "The 38-count alone exceeds the frozen B2 minimum-positive-instance threshold of 30 for a binary predictive feature family."
+    },
+    "cross_source_seed": {
+      "rows": 59,
+      "territories": 49,
+      "parties": 4,
+      "rows_cross_source_verified_exact": 22,
+      "exact_verification_rate": 0.3728813559322034,
+      "additional_high_or_very_high_name_variant_diagnostics": 13,
+      "exact_plus_variant_diagnostic_rows": 35,
+      "exact_plus_variant_diagnostic_rate": 0.5932203389830508,
+      "derived_verified_features": {
+        "PRIOR_CYCLE_MP": 22,
+        "INCUMBENT_SAME_PARTY_SAME_DISTRICT": 18,
+        "INCUMBENT_SAME_PARTY_MOVED_DISTRICT": 2,
+        "INCUMBENT_PARTY_SWITCH_IN": 2
+      },
+      "warning": "Name-variant diagnostics remain unresolved and are never counted as verified."
+    }
+  },
+  "2016_recoverability": {
+    "cross_source_seed": {
+      "rows": 31,
+      "territories": 26,
+      "parties": 4,
+      "rows_cross_source_verified_exact": 11,
+      "exact_verification_rate": 0.3548387096774194,
+      "additional_high_or_very_high_name_variant_diagnostics": 5,
+      "exact_plus_variant_diagnostic_rows": 16,
+      "exact_plus_variant_diagnostic_rate": 0.5161290322580645,
+      "derived_verified_features": {
+        "PRIOR_CYCLE_MP": 11,
+        "INCUMBENT_SAME_PARTY_SAME_DISTRICT": 9,
+        "INCUMBENT_PARTY_SWITCH_IN": 2
+      }
+    },
+    "pre_election_source_surface_indicators": {
+      "PJD_heads_announced_initially": 74,
+      "PJD_heads_announced_after_update": 85,
+      "RNI_heads_announced": 81,
+      "PAM_local_constituencies_reported": 91,
+      "PAM_outgoing_MPs_reconducted": 16,
+      "PAM_new_candidates_from_other_parties_reported": 6,
+      "PAM_commune_presidents_reported_leaving_for_other_parties": 13,
+      "Medias24_estimate_outgoing_MPs_rerunning_all_parties_range": [200, 250],
+      "interpretation": "The fit transition has substantial observable incumbency/switch support in the public pre-election source surface; exact candidate-level recovery is still required before fitting."
+    }
+  },
+  "comparison_to_E_reason_V1": {
+    "old_2021_party_cells": 828,
+    "old_2021_directional_nonzero_cells": 59,
+    "old_directional_density": 0.07125603864734299,
+    "diagnosis": "The V1 bundle's sparsity was materially acquisition/gating-induced. Public pre-election candidate information existed at much higher density and diversity than the bundle admitted."
+  },
+  "power_gate": {
+    "reuse_frozen_B2_core_panel_minimum_coverage_each_transition": 0.8,
+    "reuse_frozen_B2_binary_feature_minimum_positive_instances": 30,
+    "required_before_any_model_fit": [
+      "candidate identities resolved with provenance",
+      "feature state encoded VERIFIED_TRUE / VERIFIED_FALSE / UNKNOWN / CONFLICTED; UNKNOWN never equals FALSE",
+      "support and missingness reported per feature separately for 2011→2016 and 2016→2021",
+      "no hand-set sign or magnitude",
+      "no LLM reasoning run before the power audit passes"
+    ]
+  },
+  "holdout_integrity_note": {
+    "2021_status": "BURNED_AS_PRISTINE_HOLDOUT",
+    "reason": "2021 outcomes were already unsealed and analyzed in E_reason V1 and subsequent diagnostics.",
+    "implication": "Any Candidate Intelligence V2 2016→2021 evaluation is retrospective validation, not a pristine new holdout. It must be reported as such. The 2026 election remains the true live out-of-sample test for a frozen 2026 forecast snapshot."
+  },
+  "network_execution_note": {
+    "github_actions_medias24_historical_fetch": "BLOCKED_403",
+    "scientific_effect": "NONE",
+    "resolution": "Use source extraction through available readable transport, persist source-derived ledgers with provenance, then perform identity/feature crosschecks offline in the repository. Do not infer data absence from the runner block."
+  },
+  "next_action_exact": "Scale the candidate ledger to the full recoverable 2016 and 2021 pre-election source surfaces, independently adjudicate identity and feature states, aggregate to party×constituency features, and run the frozen support/missingness power gate. Do not run E_reason V2 before that gate passes."
+}
