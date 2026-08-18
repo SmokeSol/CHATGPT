@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-GOAL100-F1-BASELINE-REBUILD-V1",
+  "frozen_on": "2026-08-18",
+  "status": "FROZEN_BEFORE_F1_HIERARCHICAL_UNCERTAINTY_EXECUTION",
+  "scientific_role": "Conventional baseline rebuild. E_reason promotion is suspended until this layer passes.",
+  "immutable_parent": "F0 remains an immutable preliminary historical snapshot and is not rewritten.",
+  "diagnosis": [
+    "F0 mean family V0_PERSIST survived the historical mean-model hindcast; attempted transported global/regional CLR swings were worse.",
+    "F0 uncertainty V2 was selected on aggregate componentwise coverage and can hide severe party-level undercoverage/overcoverage.",
+    "F0/F-1 ballot support is provisional and historically anchored until a certified 2026 legal ballot snapshot exists.",
+    "E_reason was tested before the conventional baseline had completed its post-selection uncertainty refit and final ballot support update.",
+    "A transformed residual metric may not be used as a primary target if it degrades actual vote-share or seat-relevant performance."
+  ],
+  "mean_layer": {
+    "family": "V0_PERSIST",
+    "reason": "Keep the only point-mean family that survived the frozen 2016_TO_2021 hindcast. Do not invent a subjective national-dynamics point shift.",
+    "national_state": "National swing is modeled as a zero-mean latent uncertainty factor, not as an unvalidated point correction."
+  },
+  "uncertainty_layer": {
+    "representation": "9-bucket CLR composition",
+    "party_buckets": ["RNI","PAM","PI","PJD","USFP","MP","UC","PPS","OTHER"],
+    "historical_transitions": ["2011_TO_2016","2016_TO_2021"],
+    "decomposition": "For each transition: CLR innovation = transition-wide national vector + territory-centered deviation.",
+    "candidate_family": "For a held-out transition, generate zero-mean national shock z * national_vector_from_other_transition and independently bootstrap territory-centered residual vectors from the other transition.",
+    "national_scale_grid": [0.5,1.0,1.5,2.0],
+    "territorial_scale_grid": [0.75,1.0,1.25,1.5],
+    "crossfit": "Symmetric leave-one-transition-out development: each historical transition is held out once. This is post-2021 model development, not a new blind validation.",
+    "draws_per_territory_candidate": 2048,
+    "seed": 26081826,
+    "robust_simplex_floor": 0.0005,
+    "robust_simplex_cap": "Same historical max + 0.05 rule as uncertainty V2.",
+    "selection": [
+      "Eligibility first: every party must clear the sampling-tolerance coverage floors in each held-out transition.",
+      "Then minimize mean absolute party calibration error across 80% and 95% intervals.",
+      "Then lower proper Energy Score on sqrt-compositions.",
+      "Then lower mean 95% interval width (sharpness).",
+      "Then smaller total scale as deterministic tie-breaker."
+    ],
+    "coverage_floor_derivation": "nominal - 1.96*sqrt(nominal*(1-nominal)/92)",
+    "coverage80_party_floor": 0.7182,
+    "coverage95_party_floor": 0.9054,
+    "sharpness_comparator": "Selected F1 mean 95% width must be strictly lower than F0 uncertainty V2 selected width; equality/failure is not an improvement.",
+    "f0_v2_reference": {
+      "selected_scale": 2.0,
+      "mean_energy_score": 0.36166884643288155,
+      "mean_interval_width_95": 0.5445930074002108,
+      "coverage80_aggregate": 0.7717391304347826,
+      "coverage95_aggregate": 0.9118357487922706,
+      "worst_party_coverage80": 0.29347826086956524,
+      "worst_party_coverage95": 0.6739130434782609
+    }
+  },
+  "ballot_layer": {
+    "current_state": "PROVISIONAL",
+    "rule": "Announced/investiture rosters may inform provisional support diagnostics but cannot replace the legal ballot. Final F1 seat publication requires a certified 2026 ballot/list-presence snapshot.",
+    "no_unknown_equals_absent": true,
+    "minor_list_rule": "Do not silently assume the 2021 minor-list universe is the final 2026 universe."
+  },
+  "forecast_metrics": {
+    "vote_primary": ["energy_score_on_actual_share_simplex","actual_share_RMSE"],
+    "calibration": ["party_specific_80_coverage","party_specific_95_coverage","interval_width"],
+    "seat_primary_when_ballot_certified": "ranked_probability_score_over_seat_counts",
+    "secondary": ["top_S_or_win_Brier","last_seat_margin_diagnostics"],
+    "forbidden_primary_metric": "centered_logit_residual_RMSE_when_it_conflicts_with_actual_share_performance"
+  },
+  "promotion_order": [
+    "F1 conventional mean/uncertainty preflight",
+    "F1 historical uncertainty development and refit",
+    "2026 legal ballot/list support certification",
+    "F1 provisional then frozen 2026 vote/seat distribution",
+    "Only then reopen deterministic candidate/list delta and E_reason incremental tests"
+  ],
+  "forbidden": [
+    "Modify F0",
+    "Use subjective national-dynamics scores",
+    "Declare calibration from aggregate coverage alone",
+    "Treat Medias24 announced candidates as the final legal ballot without certification",
+    "Tune an E_reason feature after seeing its 2021 outcome inside the same experiment",
+    "Invoke an LLM before F1 baseline preflight passes"
+  ]
+}
