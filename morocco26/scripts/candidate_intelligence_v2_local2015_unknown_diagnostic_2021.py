@@ -36,7 +36,7 @@ def parse_xlsx(data):
    mx=max(vals,default=-1);rows.append([vals.get(i,'') for i in range(mx+1)])
   hdr=rows[0];return [dict(zip(hdr,r+['']*(len(hdr)-len(r)))) for r in rows[1:]]
 def main():
- unknown=[json.loads(x) for x in DETAIL.read_text(encoding='utf-8').splitlines() if x.strip() and json.loads(x).get('council_member_state')=='UNKNOWN']
+ unknown=[json.loads(line) for line in DETAIL.read_text(encoding='utf-8').splitlines() if line.strip() and json.loads(line).get('council_member_state')=='UNKNOWN']
  resp=requests.get(URL,timeout=90,headers={'User-Agent':'M26-CandidateIntel/1.0'});resp.raise_for_status();rows=parse_xlsx(resp.content);names=defaultdict(list)
  for r in rows:
   n=nar(r.get('prenomNom'))
@@ -51,6 +51,11 @@ def main():
   top=[]
   for sc,n,rs in ranked[:3]:
    top.append({'score':round(sc,6),'normalized_name':n,'rows':[{k:r.get(k,'') for k in ('prenomNom','parti','commune','prefProv','role','teteDeListe')} for r in rs[:8]]})
-  out.append({'territory_id':x['territory_id'],'candidate_name_fr':x['candidate_name_fr'],'candidate_name_ar':x['candidate_name_ar'],'source_id':x.get('source_id'),'top_candidates':top})
- OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8');print(json.dumps({'unknown_rows':len(out)},ensure_ascii=False))
+  item={'territory_id':x['territory_id'],'candidate_name_fr':x['candidate_name_fr'],'candidate_name_ar':x['candidate_name_ar'],'source_id':x.get('source_id'),'top_candidates':top}; out.append(item)
+  def fmt(t):
+   if not t:return '-'
+   rr=t['rows'][0] if t.get('rows') else {}
+   return f"{t['normalized_name']}|{rr.get('parti','')}|{rr.get('prefProv','')}|{rr.get('commune','')}|{rr.get('role','')}|{t['score']}"
+  print('DIAG21\t'+x['territory_id']+'\t'+x['candidate_name_fr']+'\t'+x['candidate_name_ar']+'\tTOP1='+fmt(top[0] if top else None)+'\tTOP2='+fmt(top[1] if len(top)>1 else None))
+ OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8');print('UNKNOWN_ROWS='+str(len(out)))
 if __name__=='__main__':main()
