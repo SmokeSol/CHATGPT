@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "created_at": "2026-08-17T23:33:42+00:00",
+  "schema_version": "1.1",
+  "created_at": "2026-08-18T06:53:44+00:00",
   "year": 2016,
   "source_artifacts": {
     "PJD": "morocco26/data/goal100/e_reason/evidence/pjd_2016_parsed_slates/parsed_slates.json",
@@ -10,12 +10,20 @@
     "PJD": "FAIL_CLOSED_DIAGNOSTIC_PERSISTED",
     "PPS": "PARTIAL_VALID"
   },
+  "source_schema_versions": {
+    "PJD": "3.0",
+    "PPS": "4.1"
+  },
   "counts": {
-    "candidate_rows_before_dedupe": 185,
-    "districts_with_any_candidate": 52,
-    "districts_with_at_least_three_verified_candidate_identities": 46,
+    "source_valid_candidate_rows": {
+      "PJD": 176,
+      "PPS": 60
+    },
+    "candidate_rows_before_dedupe": 236,
+    "districts_with_any_candidate": 62,
+    "districts_with_at_least_three_verified_candidate_identities": 47,
     "required_identity_districts": 70,
-    "districts_with_at_least_one_enriched_candidate_fact": 52,
+    "districts_with_at_least_one_enriched_candidate_fact": 62,
     "required_enriched_districts": 50,
     "identity_gate_pass": false,
     "enriched_gate_pass": true,
@@ -33,20 +41,24 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "رشيد القبيل",
+          "identity": "رشيد القبيل",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد اللطيف الناصري",
+          "identity": "عبد اللطيف الناصري",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبدالمالك لكحيلي",
+          "identity": "عبدالمالك لكحيلي",
           "pipeline": "PJD"
         }
       ]
@@ -62,20 +74,24 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "جواد العراقي",
+          "identity": "جواد العراقي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "الفاطمي الرميد",
+          "identity": "الفاطمي الرميد",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد الرحيم الدرعي",
+          "identity": "عبد الرحيم الدرعي",
           "pipeline": "PJD"
         }
       ]
@@ -91,25 +107,29 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 4,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "مراد الكورش",
+          "identity": "مراد الكورش",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "صالح نجمي",
+          "identity": "صالح نجمي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبدالنبي اعراب",
+          "identity": "عبدالنبي اعراب",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد ادبومسعود",
+          "identity": "محمد ادبومسعود",
           "pipeline": "PJD"
         }
       ]
@@ -125,20 +145,24 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "خالد تكوكين",
+          "identity": "خالد تكوكين",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد الدياني",
+          "identity": "محمد الدياني",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "لحسن اتفان",
+          "identity": "لحسن اتفان",
           "pipeline": "PJD"
         }
       ]
@@ -154,79 +178,153 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد المجيد جوبيج",
+          "identity": "عبد المجيد جوبيج",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "سعيد كشاني",
+          "identity": "سعيد كشاني",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد المجيد مزور",
+          "identity": "عبد المجيد مزور",
           "pipeline": "PJD"
         }
       ]
     },
     {
       "constituency_id": "benslimane",
-      "verified_distinct_candidate_identities": 3,
+      "verified_distinct_candidate_identities": 6,
       "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
       "pipelines": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 3
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد بنجلول",
+          "identity": "محمد بنجلول",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "مولاي اسماعيل لطف الله",
+          "identity": "مولاي اسماعيل لطف الله",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "الحسن ملدن",
+          "identity": "الحسن ملدن",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "كرمي الزيادي",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "احمد غفور",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "بوشعيب موساوي",
+          "pipeline": "PPS"
+        }
+      ]
+    },
+    {
+      "constituency_id": "boujdour",
+      "verified_distinct_candidate_identities": 2,
+      "identity_coverage_pass": false,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS": 2
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عمار وعموا",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "موالي مولود الزاهي",
+          "pipeline": "PPS"
         }
       ]
     },
     {
       "constituency_id": "boulemane",
-      "verified_distinct_candidate_identities": 3,
+      "verified_distinct_candidate_identities": 6,
       "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
       "pipelines": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 3
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد ادريس ي",
+          "identity": "محمد ادريس ي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد اوطايط",
+          "identity": "محمد اوطايط",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد ربيع",
+          "identity": "محمد ربيع",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "رشيد حمو",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "هشام سريوي",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "رشيد مهداوي",
+          "pipeline": "PPS"
         }
       ]
     },
@@ -241,20 +339,24 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد النبي ابو العرب",
+          "identity": "عبد النبي ابو العرب",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد كسوة",
+          "identity": "محمد كسوة",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "مصطفي ابغاض",
+          "identity": "مصطفي ابغاض",
           "pipeline": "PJD"
         }
       ]
@@ -270,25 +372,29 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 4,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "احمد ايتونة",
+          "identity": "احمد ايتونة",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد السفياني",
+          "identity": "محمد السفياني",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد مصباح",
+          "identity": "محمد مصباح",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "سعيدة البوحديدي",
+          "identity": "سعيدة البوحديدي",
           "pipeline": "PJD"
         }
       ]
@@ -304,25 +410,29 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 4,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "حمزة الصوفي",
+          "identity": "حمزة الصوفي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "السعدية المختاري",
+          "identity": "السعدية المختاري",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "حاميد ابو الخيرات",
+          "identity": "حاميد ابو الخيرات",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد بركات",
+          "identity": "محمد بركات",
           "pipeline": "PJD"
         }
       ]
@@ -338,20 +448,24 @@
       "pipelines": [
         "PPS"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS": 3
+      },
       "candidate_keys": [
         {
           "party": "PPS",
-          "name_ar_normalized": "مس مؤسسة جتارية",
+          "identity": "نور الدين اخليال",
           "pipeline": "PPS"
         },
         {
           "party": "PPS",
-          "name_ar_normalized": "رضوان ا",
+          "identity": "رضوان ا",
           "pipeline": "PPS"
         },
         {
           "party": "PPS",
-          "name_ar_normalized": "الطيب بنفايدة",
+          "identity": "الطيب بنفايدة",
           "pipeline": "PPS"
         }
       ]
@@ -367,15 +481,19 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 2,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "خالد البوقرعي",
+          "identity": "خالد البوقرعي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "حوسة عزيزي",
+          "identity": "حوسة عزيزي",
           "pipeline": "PJD"
         }
       ]
@@ -391,35 +509,39 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 6,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "ابو زيد المقرئ االدريس ي",
+          "identity": "ابو زيد المقرئ االدريس ي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد المجيد بوشبكة",
+          "identity": "عبد المجيد بوشبكة",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "المصطفي مرشيد",
+          "identity": "المصطفي مرشيد",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد الجبار بوملحة",
+          "identity": "عبد الجبار بوملحة",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "سعيد المرواكي",
+          "identity": "سعيد المرواكي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد الرحيم عزمي",
+          "identity": "عبد الرحيم عزمي",
           "pipeline": "PJD"
         }
       ]
@@ -435,25 +557,29 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 4,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "بلعيد اعلوالل",
+          "identity": "بلعيد اعلوالل",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "رشيد الباسيط",
+          "identity": "رشيد الباسيط",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "رشيد ناجم",
+          "identity": "رشيد ناجم",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "الزيتوني مبارك",
+          "identity": "الزيتوني مبارك",
           "pipeline": "PJD"
         }
       ]
@@ -469,31 +595,63 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 5,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد الله هناوي",
+          "identity": "عبد الله هناوي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد السالم برجي",
+          "identity": "عبد السالم برجي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد العرقي",
+          "identity": "محمد العرقي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "مصطفي الفضيلي",
+          "identity": "مصطفي الفضيلي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد المترجي",
+          "identity": "محمد المترجي",
           "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "es-semara",
+      "verified_distinct_candidate_identities": 2,
+      "identity_coverage_pass": false,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS": 2
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "سعيد هل عبد الرحمان",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "الركيبي بن الطالب",
+          "pipeline": "PPS"
         }
       ]
     },
@@ -508,15 +666,19 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 2,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "سعاد بولعيش الحجراوي",
+          "identity": "سعاد بولعيش الحجراوي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد السعيدي الهيشو",
+          "identity": "محمد السعيدي الهيشو",
           "pipeline": "PJD"
         }
       ]
@@ -532,181 +694,306 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 4,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "عمر الفاس ي",
+          "identity": "عمر الفاس ي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد الواحد بوحرشة",
+          "identity": "عبد الواحد بوحرشة",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "الهام الوالي",
+          "identity": "الهام الوالي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد الكبيري",
+          "identity": "محمد الكبيري",
           "pipeline": "PJD"
         }
       ]
     },
     {
       "constituency_id": "fes-sud",
-      "verified_distinct_candidate_identities": 4,
+      "verified_distinct_candidate_identities": 8,
       "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
-      ],
-      "pipelines": [
-        "PJD"
-      ],
-      "candidate_keys": [
-        {
-          "party": "PJD",
-          "name_ar_normalized": "ادريس االزمي االدريس ي",
-          "pipeline": "PJD"
-        },
-        {
-          "party": "PJD",
-          "name_ar_normalized": "محمد الحارثي",
-          "pipeline": "PJD"
-        },
-        {
-          "party": "PJD",
-          "name_ar_normalized": "خديجة فصيح",
-          "pipeline": "PJD"
-        },
-        {
-          "party": "PJD",
-          "name_ar_normalized": "محمد خيي",
-          "pipeline": "PJD"
-        }
-      ]
-    },
-    {
-      "constituency_id": "figuig",
-      "verified_distinct_candidate_identities": 3,
-      "identity_coverage_pass": true,
-      "enriched_candidate_fact_present": true,
-      "parties": [
+        "PJD",
         "PPS"
       ],
       "pipelines": [
+        "PJD",
         "PPS"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 4,
+        "PPS": 4
+      },
       "candidate_keys": [
+        {
+          "party": "PJD",
+          "identity": "ادريس االزمي االدريس ي",
+          "pipeline": "PJD"
+        },
+        {
+          "party": "PJD",
+          "identity": "محمد الحارثي",
+          "pipeline": "PJD"
+        },
+        {
+          "party": "PJD",
+          "identity": "خديجة فصيح",
+          "pipeline": "PJD"
+        },
+        {
+          "party": "PJD",
+          "identity": "محمد خيي",
+          "pipeline": "PJD"
+        },
         {
           "party": "PPS",
-          "name_ar_normalized": "مدير بيداغوجي مبدرسة",
+          "identity": "عزالدين العمارتي",
           "pipeline": "PPS"
         },
         {
           "party": "PPS",
-          "name_ar_normalized": "مسعود حركاس",
+          "identity": "عبد احلق مولودي",
           "pipeline": "PPS"
         },
         {
           "party": "PPS",
-          "name_ar_normalized": "البش رحاوي",
+          "identity": "فاعل جمعوي",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "يوسف ملسيح",
           "pipeline": "PPS"
         }
       ]
     },
     {
       "constituency_id": "fquih-ben-salah",
-      "verified_distinct_candidate_identities": 4,
+      "verified_distinct_candidate_identities": 8,
       "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
       "pipelines": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 4,
+        "PPS": 4
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "بوعبيد لبيدة",
+          "identity": "بوعبيد لبيدة",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبدالكريم النماوي",
+          "identity": "عبدالكريم النماوي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "خليل الناجي",
+          "identity": "خليل الناجي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبدالقادر مبروك",
+          "identity": "عبدالقادر مبروك",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "بوعبيد خطابي",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "مستشار جماعي",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "الوطنية للعدول الرباط",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "ربيع يد",
+          "pipeline": "PPS"
         }
       ]
     },
     {
       "constituency_id": "gueliz-nakhil",
-      "verified_distinct_candidate_identities": 3,
+      "verified_distinct_candidate_identities": 6,
       "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
       "pipelines": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 3
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "حماد القباج",
+          "identity": "حماد القباج",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "امينة العمراني االدريس ي",
+          "identity": "امينة العمراني االدريس ي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "يوسف ايت رياض",
+          "identity": "يوسف ايت رياض",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "عزيزة رفوق",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "انيس حرشي",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "هشام انفور",
+          "pipeline": "PPS"
+        }
+      ]
+    },
+    {
+      "constituency_id": "guelmim",
+      "verified_distinct_candidate_identities": 2,
+      "identity_coverage_pass": false,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS": 2
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عبد الباقي مناضل",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "مد بتسعيد",
+          "pipeline": "PPS"
+        }
+      ]
+    },
+    {
+      "constituency_id": "guercif",
+      "verified_distinct_candidate_identities": 2,
+      "identity_coverage_pass": false,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS": 2
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "جمال بن عثمان",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "حسن مستكري",
+          "pipeline": "PPS"
         }
       ]
     },
     {
       "constituency_id": "hay-hassani",
-      "verified_distinct_candidate_identities": 3,
+      "verified_distinct_candidate_identities": 6,
       "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
       "pipelines": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 3
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "امينة ماء العينين",
+          "identity": "امينة ماء العينين",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "احمد جدار",
+          "identity": "احمد جدار",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد حيسون",
+          "identity": "محمد حيسون",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "ياسني الزهراوي",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "مصطفي منضور",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "عبد العزيز العباسي",
+          "pipeline": "PPS"
         }
       ]
     },
@@ -721,16 +1008,48 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 2,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "احمد الراشدي",
+          "identity": "احمد الراشدي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "امحمد بحري",
+          "identity": "امحمد بحري",
           "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "jerada",
+      "verified_distinct_candidate_identities": 2,
+      "identity_coverage_pass": false,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS": 2
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "عمر بوخلخال",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "خالد ماموني",
+          "pipeline": "PPS"
         }
       ]
     },
@@ -745,21 +1064,58 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "نور الدين اقشيبل",
+          "identity": "نور الدين اقشيبل",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "حميد الفشتالي",
+          "identity": "حميد الفشتالي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "كيمية العياش ي",
+          "identity": "كيمية العياش ي",
           "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "laayoune",
+      "verified_distinct_candidate_identities": 3,
+      "identity_coverage_pass": true,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS": 3
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "هشام رءوف",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "البتول ابيش",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "حبيبة بلا",
+          "pipeline": "PPS"
         }
       ]
     },
@@ -774,50 +1130,70 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 4,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد الحمداوي",
+          "identity": "محمد الحمداوي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "سعيد خيرون",
+          "identity": "سعيد خيرون",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "سعيد فضولي",
+          "identity": "سعيد فضولي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد السالم النباص",
+          "identity": "عبد السالم النباص",
           "pipeline": "PJD"
         }
       ]
     },
     {
       "constituency_id": "m-diq-fnideq",
-      "verified_distinct_candidate_identities": 2,
-      "identity_coverage_pass": false,
+      "verified_distinct_candidate_identities": 4,
+      "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
       "pipelines": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 2,
+        "PPS": 2
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد قروق",
+          "identity": "محمد قروق",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد السليماني",
+          "identity": "محمد السليماني",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "علي امنيول",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "يونس العياشي",
+          "pipeline": "PPS"
         }
       ]
     },
@@ -832,21 +1208,53 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "يونس بن سليمان",
+          "identity": "يونس بن سليمان",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "مولاي البشير طوبا",
+          "identity": "مولاي البشير طوبا",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "حسن لغشيم",
+          "identity": "حسن لغشيم",
           "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "mediouna",
+      "verified_distinct_candidate_identities": 2,
+      "identity_coverage_pass": false,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS": 2
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "مصطفي صديق",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "بوشعيب املليح",
+          "pipeline": "PPS"
         }
       ]
     },
@@ -861,65 +1269,90 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 6,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد الله بووانو",
+          "identity": "عبد الله بووانو",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "ادريس الصقلي عدوي",
+          "identity": "ادريس الصقلي عدوي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد السالم الخالدي",
+          "identity": "عبد السالم الخالدي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "رشيد فرح",
+          "identity": "رشيد فرح",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "هدي بركات",
+          "identity": "هدي بركات",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "خالد الزوين",
+          "identity": "خالد الزوين",
           "pipeline": "PJD"
         }
       ]
     },
     {
       "constituency_id": "menara",
-      "verified_distinct_candidate_identities": 3,
+      "verified_distinct_candidate_identities": 6,
       "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
       "pipelines": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 3
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد العربي بلقايد",
+          "identity": "محمد العربي بلقايد",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد توفلة",
+          "identity": "محمد توفلة",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد الرزاق احلوش",
+          "identity": "عبد الرزاق احلوش",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "عبد اجمليد العساوي",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "عبد الرحمان ابو الكرم",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "ادريس حيدرة",
+          "pipeline": "PPS"
         }
       ]
     },
@@ -934,20 +1367,24 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "عمر احمين",
+          "identity": "عمر احمين",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "الفاضلي",
+          "identity": "الفاضلي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "العزوزي",
+          "identity": "العزوزي",
           "pipeline": "PJD"
         }
       ]
@@ -963,45 +1400,70 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 2,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد يوسف",
+          "identity": "محمد يوسف",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "الجياللي الدومة",
+          "identity": "الجياللي الدومة",
           "pipeline": "PJD"
         }
       ]
     },
     {
       "constituency_id": "nouaceur",
-      "verified_distinct_candidate_identities": 3,
+      "verified_distinct_candidate_identities": 6,
       "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
       "pipelines": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 3
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "عبداللطيف رشيد",
+          "identity": "عبداللطيف رشيد",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "رشيد بوطالب",
+          "identity": "رشيد بوطالب",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "سفيان عزيزي",
+          "identity": "سفيان عزيزي",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "احمد حلوال",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "صدرالدين شوقي",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "طارق املسعودي",
+          "pipeline": "PPS"
         }
       ]
     },
@@ -1016,20 +1478,24 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "السعيد الصادق",
+          "identity": "السعيد الصادق",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "الحسين المعين",
+          "identity": "الحسين المعين",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبدالله مومن",
+          "identity": "عبدالله مومن",
           "pipeline": "PJD"
         }
       ]
@@ -1045,50 +1511,75 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد الحليم عالوي",
+          "identity": "عبد الحليم عالوي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد المرابط",
+          "identity": "محمد المرابط",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "خليد ابنينو",
+          "identity": "خليد ابنينو",
           "pipeline": "PJD"
         }
       ]
     },
     {
       "constituency_id": "rabat-chellah",
-      "verified_distinct_candidate_identities": 3,
+      "verified_distinct_candidate_identities": 6,
       "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
       "pipelines": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 3
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "سليمان العمراني",
+          "identity": "سليمان العمراني",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد الرحيم لقراع",
+          "identity": "عبد الرحيم لقراع",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد طاهري",
+          "identity": "محمد طاهري",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "رشيد ا طرسي",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "ليلي العواد",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "عبد اجمليد الزوان",
+          "pipeline": "PPS"
         }
       ]
     },
@@ -1103,25 +1594,29 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 4,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد صديقي",
+          "identity": "محمد صديقي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد اللطيف ابن يعقوب",
+          "identity": "عبد اللطيف ابن يعقوب",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد الصمد ابوزاهير",
+          "identity": "عبد الصمد ابوزاهير",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "امباركة صبار",
+          "identity": "امباركة صبار",
           "pipeline": "PJD"
         }
       ]
@@ -1137,20 +1632,24 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد الخاليد البصري",
+          "identity": "عبد الخاليد البصري",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد الجوهري",
+          "identity": "محمد الجوهري",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "رضوان لعطاعطة",
+          "identity": "رضوان لعطاعطة",
           "pipeline": "PJD"
         }
       ]
@@ -1166,35 +1665,39 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 6,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "ادريس الثمري",
+          "identity": "ادريس الثمري",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "حسن عديلي",
+          "identity": "حسن عديلي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبداللطيف بوجنان",
+          "identity": "عبداللطيف بوجنان",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبدالجليل لبداوي",
+          "identity": "عبدالجليل لبداوي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبداللطيف عبدان",
+          "identity": "عبداللطيف عبدان",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "ابراهيم بنحيلي",
+          "identity": "ابراهيم بنحيلي",
           "pipeline": "PJD"
         }
       ]
@@ -1210,25 +1713,29 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 4,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد االله ابن كيران",
+          "identity": "عبد االله ابن كيران",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "جامع المعتصم",
+          "identity": "جامع المعتصم",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد ازويتن",
+          "identity": "محمد ازويتن",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عزيز ابن ابراهيم",
+          "identity": "عزيز ابن ابراهيم",
           "pipeline": "PJD"
         }
       ]
@@ -1244,20 +1751,24 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "ادريس مسكين",
+          "identity": "ادريس مسكين",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد العابد",
+          "identity": "محمد العابد",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "حسن الزويري",
+          "identity": "حسن الزويري",
           "pipeline": "PJD"
         }
       ]
@@ -1273,35 +1784,39 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 6,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "حسن حارس",
+          "identity": "حسن حارس",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد الحراري",
+          "identity": "محمد الحراري",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "مصطفي الدحماني",
+          "identity": "مصطفي الدحماني",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "العربي الشريعي",
+          "identity": "العربي الشريعي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "نورالدين ياسين",
+          "identity": "نورالدين ياسين",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "الماجيدي",
+          "identity": "الماجيدي",
           "pipeline": "PJD"
         }
       ]
@@ -1317,25 +1832,29 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 4,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "مصطفي الخلفي",
+          "identity": "مصطفي الخلفي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد عبدالحق",
+          "identity": "محمد عبدالحق",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "حميد يافيد",
+          "identity": "حميد يافيد",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "يوسف الحنصالي",
+          "identity": "يوسف الحنصالي",
           "pipeline": "PJD"
         }
       ]
@@ -1353,35 +1872,39 @@
         "PJD",
         "PPS"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 3
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد يتيم",
+          "identity": "محمد يتيم",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد المجيد ايت العديلة",
+          "identity": "عبد المجيد ايت العديلة",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "حسن برود",
+          "identity": "حسن برود",
           "pipeline": "PJD"
         },
         {
           "party": "PPS",
-          "name_ar_normalized": "املصطفي فراغ",
+          "identity": "املصطفي فراغ",
           "pipeline": "PPS"
         },
         {
           "party": "PPS",
-          "name_ar_normalized": "حسن صمود",
+          "identity": "حسن صمود",
           "pipeline": "PPS"
         },
         {
           "party": "PPS",
-          "name_ar_normalized": "املهدي افريخ",
+          "identity": "املهدي افريخ",
           "pipeline": "PPS"
         }
       ]
@@ -1397,15 +1920,19 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 2,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "عمر بومريس",
+          "identity": "عمر بومريس",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "مولاي محمد الواصيفي",
+          "identity": "مولاي محمد الواصيفي",
           "pipeline": "PJD"
         }
       ]
@@ -1421,20 +1948,24 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد الحفياني",
+          "identity": "محمد الحفياني",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "كريم ميس",
+          "identity": "كريم ميس",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "سميرة علوش",
+          "identity": "سميرة علوش",
           "pipeline": "PJD"
         }
       ]
@@ -1450,25 +1981,29 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 4,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "موح رجدالي",
+          "identity": "موح رجدالي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد العزيز لعايض",
+          "identity": "عبد العزيز لعايض",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "سميرة الهاشمي",
+          "identity": "سميرة الهاشمي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "سعد حازم",
+          "identity": "سعد حازم",
           "pipeline": "PJD"
         }
       ]
@@ -1484,30 +2019,34 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 5,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "نجيب بوليف",
+          "identity": "نجيب بوليف",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "سمير عبد المولي",
+          "identity": "سمير عبد المولي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد خيي",
+          "identity": "محمد خيي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبداللطيف بروحو",
+          "identity": "عبداللطيف بروحو",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد افقير",
+          "identity": "محمد افقير",
           "pipeline": "PJD"
         }
       ]
@@ -1523,21 +2062,81 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "بوشتي بوصوف",
+          "identity": "بوشتي بوصوف",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبدالحق السطي",
+          "identity": "عبدالحق السطي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "مصطفي الفيزازي",
+          "identity": "مصطفي الفيزازي",
           "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "taourirt",
+      "verified_distinct_candidate_identities": 2,
+      "identity_coverage_pass": false,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS": 2
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "احمد ازيرار",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "وديع عطاف",
+          "pipeline": "PPS"
+        }
+      ]
+    },
+    {
+      "constituency_id": "tarfaya",
+      "verified_distinct_candidate_identities": 2,
+      "identity_coverage_pass": false,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS": 2
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "سيدي بويا ماء العينني",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "مليكة خوبر",
+          "pipeline": "PPS"
         }
       ]
     },
@@ -1552,30 +2151,34 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 5,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "جمال مسعودي",
+          "identity": "جمال مسعودي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "احمد العبادي",
+          "identity": "احمد العبادي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "احمد اليندوزي",
+          "identity": "احمد اليندوزي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "احمد بودرة",
+          "identity": "احمد بودرة",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "صفاء زريق",
+          "identity": "صفاء زريق",
           "pipeline": "PJD"
         }
       ]
@@ -1591,30 +2194,34 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 5,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد ادعمار",
+          "identity": "محمد ادعمار",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عادل بنونة",
+          "identity": "عادل بنونة",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "احمد بوخبزة",
+          "identity": "احمد بوخبزة",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد بنهميش",
+          "identity": "محمد بنهميش",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "نجاة حمرية",
+          "identity": "نجاة حمرية",
           "pipeline": "PJD"
         }
       ]
@@ -1630,21 +2237,81 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "احمد صدقي",
+          "identity": "احمد صدقي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "محمد ابن تيزي",
+          "identity": "محمد ابن تيزي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "يوسف بوكا",
+          "identity": "يوسف بوكا",
           "pipeline": "PJD"
+        }
+      ]
+    },
+    {
+      "constituency_id": "tiznit",
+      "verified_distinct_candidate_identities": 2,
+      "identity_coverage_pass": false,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS": 2
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "احلسن بومهدي",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "احلسني فريد",
+          "pipeline": "PPS"
+        }
+      ]
+    },
+    {
+      "constituency_id": "youssoufia",
+      "verified_distinct_candidate_identities": 2,
+      "identity_coverage_pass": false,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS": 2
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "املصطفي العزوزي",
+          "pipeline": "PPS"
+        },
+        {
+          "party": "PPS",
+          "identity": "هشام البقا",
+          "pipeline": "PPS"
         }
       ]
     },
@@ -1659,20 +2326,24 @@
       "pipelines": [
         "PJD"
       ],
+      "pipeline_identity_counts": {
+        "PJD": 3,
+        "PPS": 0
+      },
       "candidate_keys": [
         {
           "party": "PJD",
-          "name_ar_normalized": "لحسن واعري",
+          "identity": "لحسن واعري",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عبد الرحمان الصوفي",
+          "identity": "عبد الرحمان الصوفي",
           "pipeline": "PJD"
         },
         {
           "party": "PJD",
-          "name_ar_normalized": "عمر النكزي",
+          "identity": "عمر النكزي",
           "pipeline": "PJD"
         }
       ]
