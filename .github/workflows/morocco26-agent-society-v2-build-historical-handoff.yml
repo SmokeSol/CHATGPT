@@ -46,6 +46,8 @@ jobs:
           test -f /tmp/asv2/pop/populations/2016_population_v1.json
           test -f /tmp/asv2/pop/populations/2021_population_v1.json
           test -f /tmp/asv2/map/holdout_mapping.json
+          ln -sf /tmp/asv2/src/dev.json /tmp/dev.json
+          ln -sf /tmp/asv2/src/hold.json /tmp/hold.json
       - name: Build and seal judge/public and private/orchestrator packages
         run: |
           python /tmp/asv2/build.py \
