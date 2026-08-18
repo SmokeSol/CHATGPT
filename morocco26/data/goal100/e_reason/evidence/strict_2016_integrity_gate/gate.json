@@ -1,8 +1,8 @@
 {
-  "schema_version": "2.0",
-  "created_at": "2026-08-18T08:32:57+00:00",
+  "schema_version": "3.0",
+  "created_at": "2026-08-18T08:45:49+00:00",
   "year": 2016,
-  "status": "E_REASON_2016_STRICT_INTEGRITY_PARTIAL",
+  "status": "E_REASON_2016_STRICT_INTEGRITY_GATE_PASS",
   "excluded_layers": {
     "PPS_DIRECT": "EXCLUDED_WHOLE_LAYER_AFTER_NON_PERSON_PHRASES_WERE_OBSERVED_AMONG_COUNTED_IDENTITIES",
     "PPS_LEGACY_FALLBACK": "EXCLUDED_FROM_STRICT_AUDIT_TO_AVOID_LAYOUT_HEURISTIC_DEPENDENCE"
@@ -12,18 +12,20 @@
     "PPS_TYPO": "morocco26/data/goal100/e_reason/evidence/pps_2016_typographic_identities/parsed_identities.json",
     "PPS_OCR_MOULAY": "morocco26/data/goal100/e_reason/evidence/pps_2016_ocr_moulay_yacoub/evidence.json",
     "PPS_CROSSMODAL": "morocco26/data/goal100/e_reason/evidence/strict_2016_ifrane_sidi_crossmodal_candidates/evidence.json",
-    "PPS_CROSSMODAL_DIAGNOSTIC": "morocco26/data/goal100/e_reason/evidence/strict_2016_ifrane_sidi_embedded_name_diagnostic/diagnostic.json"
+    "PPS_CROSSMODAL_DIAGNOSTIC": "morocco26/data/goal100/e_reason/evidence/strict_2016_ifrane_sidi_embedded_name_diagnostic/diagnostic.json",
+    "PJD_SOUTH_CERTIFIED": "morocco26/data/goal100/e_reason/evidence/strict_2016_pjd_south_residual/evidence.json",
+    "PJD_SOUTH_CERTIFICATE": "morocco26/data/goal100/e_reason/evidence/strict_2016_pjd_south_residual/certificate.json"
   },
   "counts": {
-    "candidate_rows_before_dedupe": 384,
+    "candidate_rows_before_dedupe": 392,
     "districts_with_any_candidate": 80,
-    "districts_with_at_least_three_verified_candidate_identities": 66,
+    "districts_with_at_least_three_verified_candidate_identities": 70,
     "required_identity_districts": 70,
     "districts_with_at_least_one_enriched_candidate_fact": 80,
     "required_enriched_districts": 50,
-    "identity_gate_pass": false,
+    "identity_gate_pass": true,
     "enriched_gate_pass": true,
-    "data_sufficiency_gate_pass": false
+    "data_sufficiency_gate_pass": true
   },
   "residual_below_three": [
     {
@@ -33,7 +35,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -55,7 +58,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -77,7 +81,8 @@
         "PJD": 2,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -99,7 +104,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -115,57 +121,14 @@
       ]
     },
     {
-      "constituency_id": "guercif",
-      "verified_distinct_candidate_identities": 2,
-      "pipeline_identity_counts": {
-        "PJD": 0,
-        "PPS_TYPO": 2,
-        "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
-      },
-      "candidate_keys": [
-        {
-          "party": "PPS",
-          "identity": "حسن مستكري",
-          "pipeline": "PPS_TYPO"
-        },
-        {
-          "party": "PPS",
-          "identity": "جمال بن عثمان",
-          "pipeline": "PPS_TYPO"
-        }
-      ]
-    },
-    {
-      "constituency_id": "jerada",
-      "verified_distinct_candidate_identities": 2,
-      "pipeline_identity_counts": {
-        "PJD": 0,
-        "PPS_TYPO": 2,
-        "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
-      },
-      "candidate_keys": [
-        {
-          "party": "PPS",
-          "identity": "عمر بوخلخال",
-          "pipeline": "PPS_TYPO"
-        },
-        {
-          "party": "PPS",
-          "identity": "خالد ماموني",
-          "pipeline": "PPS_TYPO"
-        }
-      ]
-    },
-    {
       "constituency_id": "mediouna",
       "verified_distinct_candidate_identities": 2,
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -187,7 +150,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -209,7 +173,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -225,35 +190,14 @@
       ]
     },
     {
-      "constituency_id": "taourirt",
-      "verified_distinct_candidate_identities": 2,
-      "pipeline_identity_counts": {
-        "PJD": 0,
-        "PPS_TYPO": 2,
-        "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
-      },
-      "candidate_keys": [
-        {
-          "party": "PPS",
-          "identity": "احمد ازيرار",
-          "pipeline": "PPS_TYPO"
-        },
-        {
-          "party": "PPS",
-          "identity": "وديع عطاف",
-          "pipeline": "PPS_TYPO"
-        }
-      ]
-    },
-    {
       "constituency_id": "tarfaya",
       "verified_distinct_candidate_identities": 2,
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -275,7 +219,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -291,35 +236,14 @@
       ]
     },
     {
-      "constituency_id": "tiznit",
-      "verified_distinct_candidate_identities": 2,
-      "pipeline_identity_counts": {
-        "PJD": 0,
-        "PPS_TYPO": 2,
-        "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
-      },
-      "candidate_keys": [
-        {
-          "party": "PPS",
-          "identity": "احلسن بومهدي",
-          "pipeline": "PPS_TYPO"
-        },
-        {
-          "party": "PPS",
-          "identity": "احلسني فريد",
-          "pipeline": "PPS_TYPO"
-        }
-      ]
-    },
-    {
       "constituency_id": "youssoufia",
       "verified_distinct_candidate_identities": 2,
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -345,7 +269,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -389,7 +314,8 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -423,7 +349,8 @@
         "PJD": 3,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -452,7 +379,8 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -506,7 +434,8 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -540,7 +469,8 @@
         "PJD": 3,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -569,7 +499,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -613,7 +544,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -657,7 +589,8 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -686,7 +619,8 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -720,7 +654,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -744,7 +679,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -788,7 +724,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -832,7 +769,8 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -886,7 +824,8 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -940,7 +879,8 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -969,7 +909,8 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -998,7 +939,8 @@
         "PJD": 2,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1032,7 +974,8 @@
         "PJD": 6,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1076,7 +1019,8 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1130,7 +1074,8 @@
         "PJD": 5,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1169,7 +1114,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1193,7 +1139,8 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1227,7 +1174,8 @@
         "PJD": 2,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1251,7 +1199,8 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1305,7 +1254,8 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1359,7 +1309,8 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1388,7 +1339,8 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1442,7 +1394,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1486,7 +1439,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1503,14 +1457,15 @@
     },
     {
       "constituency_id": "guercif",
-      "verified_distinct_candidate_identities": 2,
-      "identity_coverage_pass": false,
+      "verified_distinct_candidate_identities": 4,
+      "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 2
       },
       "candidate_keys": [
         {
@@ -1522,6 +1477,16 @@
           "party": "PPS",
           "identity": "جمال بن عثمان",
           "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PJD",
+          "identity": "بلقاسم اليوسفي",
+          "pipeline": "PJD_SOUTH_CERTIFIED"
+        },
+        {
+          "party": "PJD",
+          "identity": "أحمد عزوزي",
+          "pipeline": "PJD_SOUTH_CERTIFIED"
         }
       ]
     },
@@ -1534,7 +1499,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1578,7 +1544,8 @@
         "PJD": 2,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 1
+        "PPS_CROSSMODAL": 1,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1600,14 +1567,15 @@
     },
     {
       "constituency_id": "jerada",
-      "verified_distinct_candidate_identities": 2,
-      "identity_coverage_pass": false,
+      "verified_distinct_candidate_identities": 4,
+      "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 2
       },
       "candidate_keys": [
         {
@@ -1619,6 +1587,16 @@
           "party": "PPS",
           "identity": "خالد ماموني",
           "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PJD",
+          "identity": "عبد العزيز بنعائشة",
+          "pipeline": "PJD_SOUTH_CERTIFIED"
+        },
+        {
+          "party": "PJD",
+          "identity": "مصطفى العلوي",
+          "pipeline": "PJD_SOUTH_CERTIFIED"
         }
       ]
     },
@@ -1631,7 +1609,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1675,7 +1654,8 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1709,7 +1689,8 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1738,7 +1719,8 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1767,7 +1749,8 @@
         "PJD": 4,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1801,7 +1784,8 @@
         "PJD": 2,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1835,7 +1819,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1879,7 +1864,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1903,7 +1889,8 @@
         "PJD": 6,
         "PPS_TYPO": 6,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -1977,7 +1964,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2021,7 +2009,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2065,7 +2054,8 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2094,7 +2084,8 @@
         "PJD": 2,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 2,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2128,7 +2119,8 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2162,7 +2154,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2206,7 +2199,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2250,7 +2244,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2274,7 +2269,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2318,7 +2314,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2362,7 +2359,8 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2416,7 +2414,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2460,7 +2459,8 @@
         "PJD": 6,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2504,7 +2504,8 @@
         "PJD": 4,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2538,7 +2539,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2582,7 +2584,8 @@
         "PJD": 6,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2626,7 +2629,8 @@
         "PJD": 4,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2660,7 +2664,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2704,7 +2709,8 @@
         "PJD": 2,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 2
+        "PPS_CROSSMODAL": 2,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2738,7 +2744,8 @@
         "PJD": 0,
         "PPS_TYPO": 5,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2777,7 +2784,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2821,7 +2829,8 @@
         "PJD": 4,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2875,7 +2884,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2899,7 +2909,8 @@
         "PJD": 5,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2938,7 +2949,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -2975,14 +2987,15 @@
     },
     {
       "constituency_id": "taourirt",
-      "verified_distinct_candidate_identities": 2,
-      "identity_coverage_pass": false,
+      "verified_distinct_candidate_identities": 4,
+      "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 2
       },
       "candidate_keys": [
         {
@@ -2994,6 +3007,16 @@
           "party": "PPS",
           "identity": "وديع عطاف",
           "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PJD",
+          "identity": "احميدة المحجوبي",
+          "pipeline": "PJD_SOUTH_CERTIFIED"
+        },
+        {
+          "party": "PJD",
+          "identity": "محمد نجمي",
+          "pipeline": "PJD_SOUTH_CERTIFIED"
         }
       ]
     },
@@ -3006,7 +3029,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -3030,7 +3054,8 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -3059,7 +3084,8 @@
         "PJD": 0,
         "PPS_TYPO": 4,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -3093,7 +3119,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -3117,7 +3144,8 @@
         "PJD": 5,
         "PPS_TYPO": 0,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -3156,7 +3184,8 @@
         "PJD": 5,
         "PPS_TYPO": 5,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -3220,7 +3249,8 @@
         "PJD": 0,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -3249,7 +3279,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -3286,14 +3317,15 @@
     },
     {
       "constituency_id": "tiznit",
-      "verified_distinct_candidate_identities": 2,
-      "identity_coverage_pass": false,
+      "verified_distinct_candidate_identities": 4,
+      "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 2
       },
       "candidate_keys": [
         {
@@ -3305,6 +3337,16 @@
           "party": "PPS",
           "identity": "احلسني فريد",
           "pipeline": "PPS_TYPO"
+        },
+        {
+          "party": "PJD",
+          "identity": "ابراهيم بوغضن",
+          "pipeline": "PJD_SOUTH_CERTIFIED"
+        },
+        {
+          "party": "PJD",
+          "identity": "عبد الجبار القسطلاني",
+          "pipeline": "PJD_SOUTH_CERTIFIED"
         }
       ]
     },
@@ -3317,7 +3359,8 @@
         "PJD": 0,
         "PPS_TYPO": 2,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -3341,7 +3384,8 @@
         "PJD": 3,
         "PPS_TYPO": 3,
         "PPS_OCR_MOULAY": 0,
-        "PPS_CROSSMODAL": 0
+        "PPS_CROSSMODAL": 0,
+        "PJD_SOUTH_CERTIFIED": 0
       },
       "candidate_keys": [
         {
@@ -3381,6 +3425,7 @@
     "direct_extension_rows_counted": false,
     "legacy_fallback_rows_counted": false,
     "crossmodal_rows_reverified_against_frozen_diagnostic": true,
+    "pjd_south_rows_reverified_against_certificate_hash_and_source_text": true,
     "outcomes_unsealed": false,
     "predictive_judgments_generated": false,
     "forecast_delta_generated": false,
