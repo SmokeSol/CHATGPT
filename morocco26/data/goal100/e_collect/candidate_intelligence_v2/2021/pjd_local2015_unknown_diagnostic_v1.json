@@ -1,0 +1,954 @@
+[
+  {
+    "candidate_name_ar": "رضى الحكيم بناني",
+    "candidate_name_fr": "Reda Hakim Bennani",
+    "source_id": "CASA_2021",
+    "territory_id": "hay-hassani",
+    "top_candidates": [
+      {
+        "normalized_name": "رضي لحكيم بناني",
+        "rows": [
+          {
+            "commune": "Hay-Hassani (Arrond.)",
+            "parti": "PJD",
+            "prefProv": "Casablanca",
+            "prenomNom": "رضى لحكيم بناني",
+            "role": "vice président 5",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.967742
+      },
+      {
+        "normalized_name": "راضية الدحماني",
+        "rows": [
+          {
+            "commune": "Kalaat Bouqorra",
+            "parti": "PI",
+            "prefProv": "Ouezzane",
+            "prenomNom": "راضية الدحماني",
+            "role": "conseiller",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.733333
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "عبد المجيد أيت لعديلة",
+    "candidate_name_fr": "Abdelmajid Ait Laadila",
+    "source_id": "CASA_2021",
+    "territory_id": "sidi-bernoussi",
+    "top_candidates": [
+      {
+        "normalized_name": "عبد المجيد ايت العديلة",
+        "rows": [
+          {
+            "commune": "Sidi Bernoussi (Arrond.)",
+            "parti": "PJD",
+            "prefProv": "Casablanca",
+            "prenomNom": "عبد المجيد ايت العديلة",
+            "role": "conseiller",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.976744
+      },
+      {
+        "normalized_name": "عبد المجيد ايت القاضي",
+        "rows": [
+          {
+            "commune": "Ménara (Arrond.)",
+            "parti": "PJD",
+            "prefProv": "Marrakech",
+            "prenomNom": "عبد المجيد ايت القاضي",
+            "role": "vice président 1",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.809524
+      },
+      {
+        "normalized_name": "عبد المجيد ايت القايد",
+        "rows": [
+          {
+            "commune": "Igli",
+            "parti": "PI",
+            "prefProv": "Taroudannt",
+            "prenomNom": "عبد المجيد ايت القائد",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.809524
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "الفاطمي الرميد",
+    "candidate_name_fr": "El Fatmi Ramid",
+    "source_id": "CASA_2021",
+    "territory_id": "al-fida-mers-sultan",
+    "top_candidates": [
+      {
+        "normalized_name": "الفاطمي رميد",
+        "rows": [
+          {
+            "commune": "Al-Fida (Arrond.)",
+            "parti": "PJD",
+            "prefProv": "Casablanca",
+            "prenomNom": "الفاطمي رميد",
+            "role": "président",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.923077
+      },
+      {
+        "normalized_name": "الفاطمي الريبة",
+        "rows": [
+          {
+            "commune": "Laamamra",
+            "parti": "PJD",
+            "prefProv": "Safi",
+            "prenomNom": "الفاطمي الريبة",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.857143
+      },
+      {
+        "normalized_name": "الفاطمي الزكوري",
+        "rows": [
+          {
+            "commune": "Jnane Bouih",
+            "parti": "UC",
+            "prefProv": "Youssoufia",
+            "prenomNom": "الفاطمي الزكوري",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.827586
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "محمد بنجلون",
+    "candidate_name_fr": "Mohammed Benjalloul",
+    "source_id": "CASA_2021",
+    "territory_id": "benslimane",
+    "top_candidates": [
+      {
+        "normalized_name": "محمد بنجلول",
+        "rows": [
+          {
+            "commune": "Bouznika (Mun.)",
+            "parti": "PJD",
+            "prefProv": "Benslimane",
+            "prenomNom": "محمد بنجلول",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.909091
+      },
+      {
+        "normalized_name": "محمد بنجدو",
+        "rows": [
+          {
+            "commune": "Ameur Seflia",
+            "parti": "UC",
+            "prefProv": "Kénitra",
+            "prenomNom": "محمد بنجدو",
+            "role": "vice président 4",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.857143
+      },
+      {
+        "normalized_name": "محمد جلوني",
+        "rows": [
+          {
+            "commune": "Biougra (Mun.)",
+            "parti": "PAM",
+            "prefProv": "Chtouka - Aït-Baha",
+            "prenomNom": "محمد جلوني",
+            "role": "vice président 2",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.857143
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "مصطفى الخلفي",
+    "candidate_name_fr": "Mustapha El Khalfi",
+    "source_id": "CASA_2021",
+    "territory_id": "sidi-bennour",
+    "top_candidates": [
+      {
+        "normalized_name": "المصطفي الخلفي",
+        "rows": [
+          {
+            "commune": "Lamrasla",
+            "parti": "MP",
+            "prefProv": "Safi",
+            "prenomNom": "المصطفى الخلفي",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.923077
+      },
+      {
+        "normalized_name": "المصطفي الخلوفي",
+        "rows": [
+          {
+            "commune": "Skhour Rehamna",
+            "parti": "PAM",
+            "prefProv": "Rehamna",
+            "prenomNom": "المصطفى الخلوفي",
+            "role": "vice président 5",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.888889
+      },
+      {
+        "normalized_name": "مصطفي البلي",
+        "rows": [
+          {
+            "commune": "Haddada",
+            "parti": "PJD",
+            "prefProv": "Kénitra",
+            "prenomNom": "مصطفى البلي",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.869565
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "عبد الرحيم عزمي",
+    "candidate_name_fr": "Abderrahim Azmi",
+    "source_id": "CASA_2021",
+    "territory_id": "el-jadida",
+    "top_candidates": [
+      {
+        "normalized_name": "عبدالرحيم عزمي",
+        "rows": [
+          {
+            "commune": "El Jadida (Mun.)",
+            "parti": "PJD",
+            "prefProv": "El-Jadida",
+            "prenomNom": "عبدالرحيم عزمي",
+            "role": "vice président 1",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.965517
+      },
+      {
+        "normalized_name": "عبد الرحيم عميد",
+        "rows": [
+          {
+            "commune": "Souk El Arbaa (Mun.)",
+            "parti": "USFP",
+            "prefProv": "Kénitra",
+            "prenomNom": "عبد الرحيم عميد",
+            "role": "vice président 2",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.933333
+      },
+      {
+        "normalized_name": "عبد الرحيم معمري",
+        "rows": [
+          {
+            "commune": "Tisqi",
+            "parti": "PAM",
+            "prefProv": "Azilal",
+            "prenomNom": "عبد الرحيم معمري",
+            "role": "président",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.903226
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "مصطفى العلوي",
+    "candidate_name_fr": "Mustapha Alaoui",
+    "source_id": "CASA_2021",
+    "territory_id": "berrechid",
+    "top_candidates": [
+      {
+        "normalized_name": "مصطفي العلواني",
+        "rows": [
+          {
+            "commune": "Sidi Jaber",
+            "parti": "USFP",
+            "prefProv": "Beni-Mellal",
+            "prenomNom": "مصطفى العلواني",
+            "role": "vice président 2",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.923077
+      },
+      {
+        "normalized_name": "المصطفي العلوي",
+        "rows": [
+          {
+            "commune": "Jerada (Mun.)",
+            "parti": "PJD",
+            "prefProv": "Jerada",
+            "prenomNom": "المصطفى العلوي",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.923077
+      },
+      {
+        "normalized_name": "مصطفي العزوزي",
+        "rows": [
+          {
+            "commune": "Zeghanghane (Mun.)",
+            "parti": "MP",
+            "prefProv": "Nador",
+            "prenomNom": "مصطفى العزوزي",
+            "role": "vice secrétaire du conseil",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.88
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "محمد توفلا",
+    "candidate_name_fr": "Mohamed Toufla",
+    "source_id": "MARRAKECH_2021",
+    "territory_id": "menara",
+    "top_candidates": [
+      {
+        "normalized_name": "محمد توفلة",
+        "rows": [
+          {
+            "commune": "Ménara (Arrond.)",
+            "parti": "PJD",
+            "prefProv": "Marrakech",
+            "prenomNom": "محمد توفلة",
+            "role": "président",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.9
+      },
+      {
+        "normalized_name": "محمد فلاح",
+        "rows": [
+          {
+            "commune": "Bouznika (Mun.)",
+            "parti": "MDS",
+            "prefProv": "Benslimane",
+            "prenomNom": "محمد فلاح",
+            "role": "conseiller",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.842105
+      },
+      {
+        "normalized_name": "محمد لوفا",
+        "rows": [
+          {
+            "commune": "Mouarid",
+            "parti": "USFP",
+            "prefProv": "Essaouira",
+            "prenomNom": "محمد لوفا",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.842105
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "عبد الخالد البصري",
+    "candidate_name_fr": "Abdelkhaled El Basri",
+    "source_id": "MARRAKECH_2021",
+    "territory_id": "rehamna",
+    "top_candidates": [
+      {
+        "normalized_name": "عبد الخاليد البصري",
+        "rows": [
+          {
+            "commune": "Ben Guerir (Mun.)",
+            "parti": "PJD",
+            "prefProv": "Rehamna",
+            "prenomNom": "عبد الخاليد البصري",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.971429
+      },
+      {
+        "normalized_name": "عبد الخالق النصاري",
+        "rows": [
+          {
+            "commune": "Assahrij",
+            "parti": "PJD",
+            "prefProv": "El-Kelâa-des-Sraghna",
+            "prenomNom": "عبد الخالق النصاري",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.857143
+      },
+      {
+        "normalized_name": "عبدالخالق البلوري",
+        "rows": [
+          {
+            "commune": "Oulad Chbana",
+            "parti": "USFP",
+            "prefProv": "Settat",
+            "prenomNom": "عبدالخالق البلوري",
+            "role": "vice président 2",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.823529
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "حمزة الصوفي",
+    "candidate_name_fr": "Hamza Soufi",
+    "source_id": "MARRAKECH_2021",
+    "territory_id": "chichaoua",
+    "top_candidates": [
+      {
+        "normalized_name": "حمز الصوفي",
+        "rows": [
+          {
+            "commune": "Timezgadiouine",
+            "parti": "PJD",
+            "prefProv": "Chichaoua",
+            "prenomNom": "حمز الصوفي",
+            "role": "président",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.952381
+      },
+      {
+        "normalized_name": "محمد الصوفي",
+        "rows": [
+          {
+            "commune": "Taghzoute N'Ait Atta",
+            "parti": "PAM",
+            "prefProv": "Tinghir",
+            "prenomNom": "محمد الصوفي",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.818182
+      },
+      {
+        "normalized_name": "احمد الصوفي",
+        "rows": [
+          {
+            "commune": "Skhour Rehamna",
+            "parti": "RNI",
+            "prefProv": "Rehamna",
+            "prenomNom": "احمد الصوفي",
+            "role": "secrétaire du conseil",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.818182
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "وفاء لمحمدي",
+    "candidate_name_fr": "Ouafae Lmhamdi",
+    "source_id": "RABAT_2021_A",
+    "territory_id": "tiflet-rommani",
+    "top_candidates": [
+      {
+        "normalized_name": "وفاء المحمدي",
+        "rows": [
+          {
+            "commune": "Tiflet (Mun.)",
+            "parti": "PJD",
+            "prefProv": "Khémisset",
+            "prenomNom": "وفاء المحمدي",
+            "role": "conseiller",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.956522
+      },
+      {
+        "normalized_name": "وفاء الحمامي",
+        "rows": [
+          {
+            "commune": "Ziaida",
+            "parti": "PPS",
+            "prefProv": "Benslimane",
+            "prenomNom": "وفاء الحمامي",
+            "role": "vice président 4",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.782609
+      },
+      {
+        "normalized_name": "فاطمة لمحمدي",
+        "rows": [
+          {
+            "commune": "Sidi Ali Bel Quassem",
+            "parti": "MP",
+            "prefProv": "Taourirt",
+            "prenomNom": "فاطمة لمحمدي",
+            "role": "vice président 4",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.782609
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "إبراهيم شويخ",
+    "candidate_name_fr": "Ibrahim Chouikh",
+    "source_id": "RABAT_2021_A",
+    "territory_id": "el-gharb",
+    "top_candidates": [
+      {
+        "normalized_name": "ابراهيم الشويخ",
+        "rows": [
+          {
+            "commune": "Lalla Mimouna",
+            "parti": "PJD",
+            "prefProv": "Kénitra",
+            "prenomNom": "ابراهيم الشويخ",
+            "role": "président",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.923077
+      },
+      {
+        "normalized_name": "ابراهيم اشعوي",
+        "rows": [
+          {
+            "commune": "Lalla Aaziza",
+            "parti": "PAM",
+            "prefProv": "Chichaoua",
+            "prenomNom": "ابراهيم اشعوي",
+            "role": "vice secrétaire du conseil",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.88
+      },
+      {
+        "normalized_name": "ابراهيم بوي",
+        "rows": [
+          {
+            "commune": "Krifate",
+            "parti": "MP",
+            "prefProv": "Fquih Ben Salah",
+            "prenomNom": "ابراهيم بوي",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.869565
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "الطيبي إلهامي",
+    "candidate_name_fr": "Taibi Ilhami",
+    "source_id": "RABAT_2021_B",
+    "territory_id": "khemisset-oulmes",
+    "top_candidates": [
+      {
+        "normalized_name": "الطيبي الهاشمي",
+        "rows": [
+          {
+            "commune": "Ain Sbit",
+            "parti": "PI",
+            "prefProv": "Khémisset",
+            "prenomNom": "الطيبي الهاشمي",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.962963
+      },
+      {
+        "normalized_name": "العربي الهاشمي",
+        "rows": [
+          {
+            "commune": "Sidi Yahya El Gharb (Mun.)",
+            "parti": "PJD",
+            "prefProv": "Sidi Slimane",
+            "prenomNom": "العربي الهاشمي",
+            "role": "conseiller",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.814815
+      },
+      {
+        "normalized_name": "الطيبي الطيب",
+        "rows": [
+          {
+            "commune": "Sidi M'Hamed Ou Marzouq",
+            "parti": "RNI",
+            "prefProv": "Essaouira",
+            "prenomNom": "الطيبي الطيب",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.8
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "أمينة بن عبد الوهاب",
+    "candidate_name_fr": "Amina Ben Abdelouahab",
+    "source_id": "TANGER_2021",
+    "territory_id": "tetouan",
+    "top_candidates": [
+      {
+        "normalized_name": "امينة ابن عبد الوهاب",
+        "rows": [
+          {
+            "commune": "Tétouan (Mun.)",
+            "parti": "PJD",
+            "prefProv": "Tétouan",
+            "prenomNom": "امينة ابن عبد الوهاب",
+            "role": "vice président 4",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.974359
+      },
+      {
+        "normalized_name": "امينة بندبدوب",
+        "rows": [
+          {
+            "commune": "Es-sifa",
+            "parti": "MP",
+            "prefProv": "Errachidia",
+            "prenomNom": "امينة بندبدوب",
+            "role": "conseiller",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.75
+      },
+      {
+        "normalized_name": "سميرة بنعبد الله",
+        "rows": [
+          {
+            "commune": "Jnan El Ouard (Arrond.)",
+            "parti": "PJD",
+            "prefProv": "Fès",
+            "prenomNom": "سميرة بنعبد الله",
+            "role": "vice secrétaire du conseil",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.742857
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "نبيل الأندلسي",
+    "candidate_name_fr": "Nabil Andaloussi",
+    "source_id": "TANGER_2021",
+    "territory_id": "al-hoceima",
+    "top_candidates": [
+      {
+        "normalized_name": "نبيل الاندلوسي",
+        "rows": [
+          {
+            "commune": "Al Hoceima (Mun.)",
+            "parti": "PJD",
+            "prefProv": "Al Hoceima",
+            "prenomNom": "نبيل الاندلوسي",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.962963
+      },
+      {
+        "normalized_name": "نبيل الغالبي",
+        "rows": [
+          {
+            "commune": "Hssaine (Arrond.)",
+            "parti": "PJD",
+            "prefProv": "Salé",
+            "prenomNom": "نبيل الغالبي",
+            "role": "conseiller",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.8
+      },
+      {
+        "normalized_name": "نبيل الملياني",
+        "rows": [
+          {
+            "commune": "M'Garto",
+            "parti": "PI",
+            "prefProv": "Settat",
+            "prenomNom": "نبيل الملياني",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.769231
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "جمال المسعودي",
+    "candidate_name_fr": "Jamal Massaoudi",
+    "source_id": "FES_2021",
+    "territory_id": "taza",
+    "top_candidates": [
+      {
+        "normalized_name": "جمال مسعودي",
+        "rows": [
+          {
+            "commune": "Taza (Mun.)",
+            "parti": "PJD",
+            "prefProv": "Taza",
+            "prenomNom": "جمال مسعودي",
+            "role": "président",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.916667
+      },
+      {
+        "normalized_name": "جميلة المسعودي",
+        "rows": [
+          {
+            "commune": "El Marsa (Mun.)",
+            "parti": "PI",
+            "prefProv": "Laâyoune",
+            "prenomNom": "جميلة المسعودي",
+            "role": "vice président 5",
+            "teteDeListe": "0"
+          }
+        ],
+        "score": 0.888889
+      },
+      {
+        "normalized_name": "جمال المساوي",
+        "rows": [
+          {
+            "commune": "Imzouren (Mun.)",
+            "parti": "PAM",
+            "prefProv": "Al Hoceima",
+            "prenomNom": "جمال المساوي",
+            "role": "vice président 4",
+            "teteDeListe": "1"
+          },
+          {
+            "commune": "Imzouren (Mun.)",
+            "parti": "USFP",
+            "prefProv": "Al Hoceima",
+            "prenomNom": "جمال المساوي",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.88
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "عبد الله الهامل",
+    "candidate_name_fr": "Abdallah Hamel",
+    "source_id": "PJD_2026_FULL_IDENTITY_ONLY",
+    "territory_id": "oujda-angad",
+    "top_candidates": [
+      {
+        "normalized_name": "عبد الله هامل",
+        "rows": [
+          {
+            "commune": "Oujda (Mun.)",
+            "parti": "PJD",
+            "prefProv": "Oujda - Angad",
+            "prenomNom": "عبد الله هامل",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.928571
+      },
+      {
+        "normalized_name": "عبد الله اعلام",
+        "rows": [
+          {
+            "commune": "Tanougha",
+            "parti": "PAM",
+            "prefProv": "Beni-Mellal",
+            "prenomNom": "عبد الله اعلام",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.896552
+      },
+      {
+        "normalized_name": "عبد الله لهميل",
+        "rows": [
+          {
+            "commune": "Bir Tam Tam",
+            "parti": "MP",
+            "prefProv": "Sefrou",
+            "prenomNom": "عبد الله لهميل",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.896552
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "خالد تيكوكين",
+    "candidate_name_fr": "Khalid Tikoukine",
+    "source_id": "PJD_2026_FULL_IDENTITY_ONLY",
+    "territory_id": "azilal-demnate",
+    "top_candidates": [
+      {
+        "normalized_name": "خاليد تكوكين",
+        "rows": [
+          {
+            "commune": "Tabant",
+            "parti": "PJD",
+            "prefProv": "Azilal",
+            "prenomNom": "خاليد تكوكين",
+            "role": "président",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.916667
+      },
+      {
+        "normalized_name": "خالد بيروكي",
+        "rows": [
+          {
+            "commune": "M'Ramer",
+            "parti": "PI",
+            "prefProv": "Essaouira",
+            "prenomNom": "خالد بيروكي",
+            "role": "président",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.782609
+      },
+      {
+        "normalized_name": "خاليد كويس",
+        "rows": [
+          {
+            "commune": "Boumaiz",
+            "parti": "PJD",
+            "prefProv": "Sidi Slimane",
+            "prenomNom": "خاليد كويس",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.727273
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "محمد اد أحمد",
+    "candidate_name_fr": "Mohammed Id Ahmed",
+    "source_id": "SOUSS_BRANCH_2015_ID",
+    "territory_id": "tata",
+    "top_candidates": [
+      {
+        "normalized_name": "محمد اداحمد",
+        "rows": [
+          {
+            "commune": "Tissint",
+            "parti": "PJD",
+            "prefProv": "Tata",
+            "prenomNom": "محمد اداحمد",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.956522
+      },
+      {
+        "normalized_name": "محمد اداد",
+        "rows": [
+          {
+            "commune": "Ouarzazate (Mun.)",
+            "parti": "RNI",
+            "prefProv": "Ouarzazate",
+            "prenomNom": "محمد اداد",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.857143
+      },
+      {
+        "normalized_name": "محمد ايت احماد",
+        "rows": [
+          {
+            "commune": "Moulay Brahim",
+            "parti": "PAM",
+            "prefProv": "Al-Haouz",
+            "prenomNom": "محمد ايت احماد",
+            "role": "vice président 1",
+            "teteDeListe": "1"
+          },
+          {
+            "commune": "Anzi",
+            "parti": "RNI",
+            "prefProv": "Tiznit",
+            "prenomNom": "محمد ايت احماد",
+            "role": "conseiller",
+            "teteDeListe": "1"
+          }
+        ],
+        "score": 0.846154
+      }
+    ]
+  }
+]
