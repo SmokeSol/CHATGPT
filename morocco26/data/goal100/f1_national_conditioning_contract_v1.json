@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-GOAL100-F1-NATIONAL-CONDITIONING-V1",
+  "frozen_on": "2026-08-18",
+  "status": "FROZEN_BEFORE_NATIONAL_CONDITIONING_AUDIT",
+  "scientific_role": "Determine whether the dominant non-stationarity is national-state uncertainty and whether territorial residuals become transportable conditional on the national result.",
+  "parents": [
+    "M26-GOAL100-F1-BASELINE-REBUILD-V1",
+    "M26-GOAL100-F1-PARTY-MARGINAL-TRANSFER-V1"
+  ],
+  "important": "The national result used in historical evaluation is an ORACLE diagnostic and can never be used as a 2026 forecast input unless supplied as an explicit scenario. This experiment does not claim to predict the 2026 national vote.",
+  "party_buckets": ["RNI","PAM","PI","PJD","USFP","MP","UC","PPS","OTHER"],
+  "transitions": ["2011_TO_2016","2016_TO_2021"],
+  "national_share_definition": "Sum 9-bucket vote counts across the 92 local constituencies, then normalize to the national 9-bucket simplex.",
+  "conditional_mean": {
+    "method": "COMPOSITIONAL_PROPORTIONAL_SWING",
+    "definition": "For each party bucket p, ratio_p = national_next_share_p / national_prior_share_p using epsilon=0.0005. For each territory d, conditional_raw_dp = prior_local_share_dp * ratio_p; renormalize over the 9 buckets.",
+    "epsilon": 0.0005,
+    "point_mean_comparator": "V0_PERSIST local prior share"
+  },
+  "diagnostics": [
+    "Actual-share RMSE and MAE: persistence versus oracle-national conditional mean, pooled and by party.",
+    "Top-party accuracy and top-S set accuracy where S is the historical constituency magnitude available in the canonical mapping.",
+    "Fraction of persistence squared error removed by knowing the national state."
+  ],
+  "territorial_residual_transfer": {
+    "residual": "actual_next_share - oracle_national_conditional_mean in actual share space",
+    "crossfit": [
+      "Fit territorial residual marginals on 2011_TO_2016, evaluate intervals around the oracle-national 2021 conditional mean.",
+      "Fit territorial residual marginals on 2016_TO_2021, evaluate intervals around the oracle-national 2016 conditional mean."
+    ],
+    "families": [
+      "SHARE_SIGNED_EMPIRICAL",
+      "SHARE_ABS_SYMMETRIC"
+    ],
+    "coverage80_party_floor": 0.7182,
+    "coverage95_party_floor": 0.9054,
+    "eligibility": "Every party must clear both coverage floors in both held-out transitions.",
+    "selection": "Lowest calibration error, then narrower 95% width."
+  },
+  "interpretation": {
+    "CONDITIONAL_TRANSFER_PASS": "National-state uncertainty is the principal regime variable and territorial residual uncertainty is sufficiently transportable conditional on it. F1 should become a national-scenario-conditioned forecast surface, not one unconditional distribution.",
+    "CONDITIONAL_POINT_GAIN_BUT_RESIDUAL_FAIL": "National state explains substantial point error but territorial residual law remains non-stationary. Publish national-scenario seat surfaces with a conservative pooled territorial envelope, not calibrated unconditional probabilities.",
+    "NO_CONDITIONAL_GAIN": "National conditioning does not materially improve the structural mean; revisit territorial baseline specification before any candidate or agent layer."
+  },
+  "forbidden": [
+    "Call oracle national shares a forecast",
+    "Assign probabilities to national scenarios from these two historical transitions",
+    "Tune the proportional-swing mapping after seeing held-out results",
+    "Reopen E_reason before the conventional conditional baseline is settled",
+    "Use transformed residual improvement if actual-share performance worsens"
+  ]
+}
