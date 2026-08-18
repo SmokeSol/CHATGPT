@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-ASV2-RICH-SOURCE-CATALOG-CERTIFICATE-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "PASS_SOURCE_CATALOG_READY",
+  "real_asv2_llm_outputs_seen": false,
+  "target_election_outcomes_loaded_by_audit": false,
+  "workflow_run_id": 32180340792,
+  "artifact_id": 9340534457,
+  "artifact_zip_sha256": "445ab762593438446904b34bd908ec6e6a632c53b51af1de48a7649e24e966d1",
+  "inner_hashes": {
+    "richness_feasibility.json": "602a469350fe0f7eeade9c558ed180d901d9c87dd6e38e8740d329a257f4b812",
+    "source_fetch_audit.json": "ab626a3a90a760d1c14112b9c22a0465fe06e9e191b7cdbb1f25f4417a2855f5",
+    "variable_catalog.json": "d9841e5ae5eac40442b299ec0d361db6262e0a9d1e59caf6691b1105f4f826ca"
+  },
+  "parsed_sources": 11,
+  "sources": {
+    "rgph2014_individual_dta": {"rows":3341426,"columns":48,"size_bytes":200532997,"sha256":"62dbbfc69073d52841fc3a7096113ce1342a3baec2e7e620e0f3309393fdda77"},
+    "rgph2014_household_dta": {"rows":730099,"columns":42,"size_bytes":39442553,"sha256":"0c630cfaf65d02e1b2e37d8b81c0c2704f28db80115f13942d3ac0e75665319f"},
+    "rgph2014_metadata": {"sha256":"253a7853bc984f7736808dcca840e97156b41c99ed440151005ce4c5d136a296"},
+    "rgph2014_communal_households": {"rows_approx":1981,"columns":51,"sha256":"2fde794a15d0d98889875316666d918f1044f8055610bfb909d056a15fe878a1"},
+    "rgph2014_communal_individuals": {"rows_approx":1982,"columns":171,"sha256":"c20c1f7d08c1089bf4610f81a0eac89516a278fddb24b8577588284e2fc9a2d0"},
+    "rgph2014_mobility_transport": {"rows_approx":1982,"columns_max":221,"sha256":"ed3c24c0c9dba69cac98c03bf27235211ffdf66e6edd97a84b61d9f0c64aa957"},
+    "encdm2014_household_sav": {"rows":15970,"columns":792,"sha256":"6a3d6bbbde529254baa09a8a6171ea32c05aed1ca7e9568a3056eb69b8987dca"},
+    "encdm2014_individual_sav": {"rows":75691,"columns":16,"sha256":"b0706767fafd2c077382258f9173653f88e8d8124f64925f654120c5894a64f3"},
+    "encdm2014_metadata": {"sha256":"765caa42a29e840be57d541a1aafafa676d3fa7049392af919694789b3243650"},
+    "afrobarometer_morocco_r6": {"rows":1200,"columns":334,"sha256":"1ab8a01626244a094e97f874791576cc40270f21d135183d2e4b25ab41fa5a8d"},
+    "afrobarometer_morocco_r8": {"rows":1200,"columns":377,"sha256":"5e0c8c70bb9e8488eb51866ca225a0babd5fcbf33bc0441238f8688e01a265f3"}
+  },
+  "conclusion": "The source universe is materially richer than the >=60-dimension ASV2-RICH requirement. Raw column count is only a feasibility ceiling; the effective-information gate and leakage/ablation audits remain mandatory before any real LLM execution."
+}
