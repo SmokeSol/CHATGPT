@@ -1,40 +1,86 @@
 {
-  "schema_version": "2.0",
-  "created_at": "2026-08-18T07:01:00+00:00",
+  "schema_version": "3.0",
+  "created_at": "2026-08-18T07:45:48+00:00",
   "year": 2016,
   "source_artifacts": {
     "PJD": "morocco26/data/goal100/e_reason/evidence/pjd_2016_parsed_slates/parsed_slates.json",
     "PPS_TYPO": "morocco26/data/goal100/e_reason/evidence/pps_2016_typographic_identities/parsed_identities.json",
+    "PPS_DIRECT": "morocco26/data/goal100/e_reason/evidence/pps_2016_direct_typographic_extension/extension.json",
     "PPS_LEGACY_FALLBACK": "morocco26/data/goal100/e_reason/evidence/pps_2016_parsed_missing_slates/parsed_missing_slates.json"
   },
   "source_statuses": {
     "PJD": "FAIL_CLOSED_DIAGNOSTIC_PERSISTED",
     "PPS_TYPO": "PARTIAL_VALID",
+    "PPS_DIRECT": "PARTIAL_VALID",
     "PPS_LEGACY_FALLBACK": "PARTIAL_VALID"
   },
   "source_schema_versions": {
     "PJD": "3.0",
     "PPS_TYPO": "1.0",
+    "PPS_DIRECT": "1.0",
     "PPS_LEGACY_FALLBACK": "4.1"
   },
-  "authoritative_pps_typographic_territories": 65,
+  "authoritative_pps_typographic_territories": 73,
+  "base_pps_typographic_territories": 65,
+  "direct_pps_typographic_territories": 8,
   "counts": {
     "source_valid_candidate_rows": {
       "PJD": 176,
       "PPS_TYPO": 203,
+      "PPS_DIRECT": 33,
       "PPS_LEGACY_FALLBACK": 0
     },
-    "candidate_rows_before_dedupe": 379,
-    "districts_with_any_candidate": 80,
-    "districts_with_at_least_three_verified_candidate_identities": 63,
+    "candidate_rows_before_dedupe": 412,
+    "districts_with_any_candidate": 85,
+    "districts_with_at_least_three_verified_candidate_identities": 69,
     "required_identity_districts": 70,
-    "districts_with_at_least_one_enriched_candidate_fact": 80,
+    "districts_with_at_least_one_enriched_candidate_fact": 85,
     "required_enriched_districts": 50,
     "identity_gate_pass": false,
     "enriched_gate_pass": true,
     "data_sufficiency_gate_pass": false
   },
   "districts": [
+    {
+      "constituency_id": "agadir-ida-outanane",
+      "verified_distinct_candidate_identities": 4,
+      "identity_coverage_pass": true,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_DIRECT"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 0,
+        "PPS_DIRECT": 4,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "حسن اومريبط",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "للحرب باكادير اداوتنان",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "aee7ef4535cdd6906bee3874bb4eb8bd1dc4bbca0867f70de771ef36bb66b4ba",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "القانون العام",
+          "pipeline": "PPS_DIRECT"
+        }
+      ]
+    },
     {
       "constituency_id": "ain-chock",
       "verified_distinct_candidate_identities": 6,
@@ -51,6 +97,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -100,6 +147,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -139,6 +187,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -175,6 +224,7 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -234,6 +284,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -273,6 +324,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -309,6 +361,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -360,6 +413,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -409,6 +463,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -443,6 +498,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -482,6 +538,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -513,6 +570,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -564,6 +622,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -615,6 +674,7 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -676,6 +736,7 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -722,6 +783,41 @@
       ]
     },
     {
+      "constituency_id": "chtouka-ait-baha",
+      "verified_distinct_candidate_identities": 3,
+      "identity_coverage_pass": true,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_DIRECT"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 0,
+        "PPS_DIRECT": 3,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "ابراهيم تكزرت",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "احمد الكعبوز",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "2a66c75bc2dee3bf4f940c52ba2931bfdc7a33976794f6ccc0f8af4dc1f66d36",
+          "pipeline": "PPS_DIRECT"
+        }
+      ]
+    },
+    {
       "constituency_id": "driouch",
       "verified_distinct_candidate_identities": 3,
       "identity_coverage_pass": true,
@@ -735,6 +831,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -769,6 +866,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -805,6 +903,7 @@
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -844,6 +943,7 @@
       "pipeline_identity_counts": {
         "PJD": 6,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -895,6 +995,7 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -942,18 +1043,21 @@
     },
     {
       "constituency_id": "errachidia",
-      "verified_distinct_candidate_identities": 5,
+      "verified_distinct_candidate_identities": 10,
       "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
       "pipelines": [
-        "PJD"
+        "PJD",
+        "PPS_DIRECT"
       ],
       "pipeline_identity_counts": {
         "PJD": 5,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 5,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -981,6 +1085,31 @@
           "party": "PJD",
           "identity": "محمد المترجي",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "عمر الزعيم",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "06469cec7d2f4a56e89bbe7c44562c4c2be907d1d9a734fc1d751e1b25d6ae56",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "املصطفي الكوط",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "عمر معمر",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "و الصناعة و اخلدمات",
+          "pipeline": "PPS_DIRECT"
         }
       ]
     },
@@ -998,6 +1127,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1027,6 +1157,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1066,6 +1197,7 @@
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1097,6 +1229,7 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1158,6 +1291,7 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1217,6 +1351,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1253,6 +1388,7 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1314,6 +1450,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1363,6 +1500,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1392,6 +1530,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1423,6 +1562,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1472,6 +1612,7 @@
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1501,6 +1642,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1532,6 +1674,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1581,6 +1724,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1607,6 +1751,41 @@
       ]
     },
     {
+      "constituency_id": "khemisset-oulmes",
+      "verified_distinct_candidate_identities": 3,
+      "identity_coverage_pass": true,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_DIRECT"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 0,
+        "PPS_DIRECT": 3,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "0b08e9374d5c09cb08748f6e7387a31bf67f21695c7612328aa5cacbc55f0df5",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "35e1b22f50e5b558103653b34897d17ca8fda10ba09e55aad3716d6f8c5cbd1e",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "احلبيب حسيني",
+          "pipeline": "PPS_DIRECT"
+        }
+      ]
+    },
+    {
       "constituency_id": "khenifra",
       "verified_distinct_candidate_identities": 3,
       "identity_coverage_pass": true,
@@ -1620,6 +1799,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1641,6 +1821,56 @@
       ]
     },
     {
+      "constituency_id": "khouribga",
+      "verified_distinct_candidate_identities": 6,
+      "identity_coverage_pass": true,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_DIRECT"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 0,
+        "PPS_DIRECT": 6,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "8a63c614e963070b4800f43a383b68ee09baa73fc15293486a1611dc89cdcd58",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "خليد برايجي",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "ايوب السعيدي",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "df157d26e382ec7a0b87f090d6dc794d34bd5e79cdc5a5309ddfddbde4e4a294",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "منصف الرفيق",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "عبدالغني نبوتي",
+          "pipeline": "PPS_DIRECT"
+        }
+      ]
+    },
+    {
       "constituency_id": "laayoune",
       "verified_distinct_candidate_identities": 3,
       "identity_coverage_pass": true,
@@ -1654,6 +1884,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1688,6 +1919,7 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1729,6 +1961,7 @@
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1770,6 +2003,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1819,6 +2053,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1850,6 +2085,7 @@
       "pipeline_identity_counts": {
         "PJD": 6,
         "PPS_TYPO": 6,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1931,6 +2167,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -1982,6 +2219,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2031,6 +2269,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2065,6 +2304,7 @@
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2094,6 +2334,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2135,6 +2376,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2186,6 +2428,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2235,6 +2478,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2266,6 +2510,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2302,6 +2547,46 @@
       ]
     },
     {
+      "constituency_id": "oujda-angad",
+      "verified_distinct_candidate_identities": 4,
+      "identity_coverage_pass": true,
+      "enriched_candidate_fact_present": true,
+      "parties": [
+        "PPS"
+      ],
+      "pipelines": [
+        "PPS_DIRECT"
+      ],
+      "pipeline_identity_counts": {
+        "PJD": 0,
+        "PPS_TYPO": 0,
+        "PPS_DIRECT": 4,
+        "PPS_LEGACY_FALLBACK": 0
+      },
+      "candidate_keys": [
+        {
+          "party": "PPS",
+          "identity": "ميمون عاقل",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "عبد الرحيم بنعلي",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "عبد املومن خالد",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "9289b81fad5776be27217749ca1b078badc25ed5fe321a214487b75051f2a3cf",
+          "pipeline": "PPS_DIRECT"
+        }
+      ]
+    },
+    {
       "constituency_id": "rabat-chellah",
       "verified_distinct_candidate_identities": 6,
       "identity_coverage_pass": true,
@@ -2317,6 +2602,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2368,6 +2654,7 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2429,6 +2716,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2478,6 +2766,7 @@
       "pipeline_identity_counts": {
         "PJD": 6,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2527,6 +2816,7 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2568,6 +2858,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2605,18 +2896,21 @@
     },
     {
       "constituency_id": "settat",
-      "verified_distinct_candidate_identities": 6,
+      "verified_distinct_candidate_identities": 12,
       "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
       "pipelines": [
-        "PJD"
+        "PJD",
+        "PPS_DIRECT"
       ],
       "pipeline_identity_counts": {
         "PJD": 6,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 6,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2649,6 +2943,36 @@
           "party": "PJD",
           "identity": "الماجيدي",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "امنيلي سعيد",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "احلاج عبد السالم جبلي",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "حجاج مزابي",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "1eb1c635a4816eb1dc9dd6920cc231ad9e6eee9689b947b24c905aa81f4097db",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "حلسن طلحة",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "b521c5f170edd7d5eda1b9c171e2ff9ea9ecd7f88c6d557443f85876de684f48",
+          "pipeline": "PPS_DIRECT"
         }
       ]
     },
@@ -2666,6 +2990,7 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2707,6 +3032,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2744,18 +3070,21 @@
     },
     {
       "constituency_id": "sidi-ifni",
-      "verified_distinct_candidate_identities": 2,
-      "identity_coverage_pass": false,
+      "verified_distinct_candidate_identities": 4,
+      "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "parties": [
-        "PJD"
+        "PJD",
+        "PPS"
       ],
       "pipelines": [
-        "PJD"
+        "PJD",
+        "PPS_DIRECT"
       ],
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 2,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2768,6 +3097,16 @@
           "party": "PJD",
           "identity": "مولاي محمد الواصيفي",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "مبارك البطاح",
+          "pipeline": "PPS_DIRECT"
+        },
+        {
+          "party": "PPS",
+          "identity": "نعيمة كرمي",
+          "pipeline": "PPS_DIRECT"
         }
       ]
     },
@@ -2785,6 +3124,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 5,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2831,6 +3171,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2882,6 +3223,7 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2941,6 +3283,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -2970,6 +3313,7 @@
       "pipeline_identity_counts": {
         "PJD": 5,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3016,6 +3360,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3065,6 +3410,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3094,6 +3440,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3123,6 +3470,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3157,6 +3505,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3196,6 +3545,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3225,6 +3575,7 @@
       "pipeline_identity_counts": {
         "PJD": 5,
         "PPS_TYPO": 0,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3271,6 +3622,7 @@
       "pipeline_identity_counts": {
         "PJD": 5,
         "PPS_TYPO": 5,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3340,6 +3692,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3376,6 +3729,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3425,6 +3779,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3454,6 +3809,7 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3485,6 +3841,7 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
+        "PPS_DIRECT": 0,
         "PPS_LEGACY_FALLBACK": 0
       },
       "candidate_keys": [
@@ -3523,7 +3880,8 @@
   ],
   "status": "E_REASON_2016_COLLECTION_PARTIAL",
   "invariants": {
-    "same_pps_territory_not_unioned_across_parsers": true,
+    "direct_extension_nonoverlap_verified": true,
+    "same_pps_territory_legacy_not_unioned_when_typographic_available": true,
     "outcomes_unsealed": false,
     "predictive_judgments_generated": false,
     "forecast_delta_generated": false,
