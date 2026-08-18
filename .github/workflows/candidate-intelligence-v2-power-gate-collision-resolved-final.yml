@@ -7,6 +7,7 @@ on:
       - 'morocco26/scripts/candidate_intelligence_v2_predictive_gate_v1.py'
       - 'morocco26/scripts/candidate_intelligence_v2_feature_c_power_gate.py'
       - 'morocco26/scripts/candidate_intelligence_v2_multipart_head_power_gate.py'
+      - 'morocco26/scripts/candidate_intelligence_v2_multipart_head_power_gate_v2.py'
       - 'morocco26/data/goal100/e_collect/candidate_intelligence_v2/local2015_collision_resolution_v1.json'
       - 'morocco26/data/goal100/e_collect/candidate_intelligence_v2_predictive_contract_v1.json'
       - 'morocco26/data/goal100/e_collect/candidate_intelligence_v2_feature_c_expansion_contract_v1.json'
@@ -20,6 +21,7 @@ on:
       - 'morocco26/scripts/candidate_intelligence_v2_predictive_gate_v1.py'
       - 'morocco26/scripts/candidate_intelligence_v2_feature_c_power_gate.py'
       - 'morocco26/scripts/candidate_intelligence_v2_multipart_head_power_gate.py'
+      - 'morocco26/scripts/candidate_intelligence_v2_multipart_head_power_gate_v2.py'
   workflow_dispatch:
 permissions:
   contents: write
@@ -38,7 +40,7 @@ jobs:
       - run: python morocco26/scripts/candidate_intelligence_v2_power_gate_collision_resolved_final.py
       - run: python morocco26/scripts/candidate_intelligence_v2_predictive_gate_v1.py
       - run: python morocco26/scripts/candidate_intelligence_v2_feature_c_power_gate.py
-      - run: python morocco26/scripts/candidate_intelligence_v2_multipart_head_power_gate.py
+      - run: python morocco26/scripts/candidate_intelligence_v2_multipart_head_power_gate_v2.py
       - run: cat morocco26/data/goal100/e_collect/candidate_intelligence_v2/candidate_intelligence_v2_multipart_head_power_gate_v1.json
       - run: |
           git config user.name 'github-actions[bot]'
@@ -49,6 +51,7 @@ jobs:
           git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/candidate_intelligence_v2_multipart_head_power_gate_v1.json
           git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/multipart/2016_head_prior_mp_features_v1.jsonl
           git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/multipart/2021_head_prior_mp_features_v1.jsonl
-          git commit -m 'gate(candidate-intel): record PJD RNI head power audit' || exit 0
+          git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/multipart/2021_unresolved_territory_heads_excluded_v1.json
+          git commit -m 'gate(candidate-intel): record resolved-territory PJD RNI head power audit' || exit 0
           git pull --rebase origin morocco26-e-reason
           git push origin HEAD:morocco26-e-reason
