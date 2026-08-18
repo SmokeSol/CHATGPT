@@ -1,0 +1,20 @@
+{
+  "schema_version":"1.0",
+  "amendment_id":"M26-ASV2-POPULATION-BUILDER-ENGINEERING-V4",
+  "experiment_id":"M26-AGENT-SOCIETY-V2-001",
+  "classification":"ENGINEERING_BUG_FIX_NO_SCIENTIFIC_CHANGE",
+  "recorded_before_real_llm_votes":true,
+  "target_outcomes_used":false,
+  "bugs_found":[
+    "The support generator allocated nearly equal archetype counts to every positive prior political state, irrespective of its frozen probability mass. With high abstention concentration this mechanically forced large row weights and made ESS>=64 unattainable even when a valid 128-support representation exists.",
+    "HCP administrative labels include spelling/prefix variants (e.g. prefecture d'arrondissements, Taroudant/Taroudannt, Agadir Ida-Outanan variants) that were not normalized by the first parser.",
+    "Some HCP cells use a dash for an absent/zero numeric entry; the first parser attempted float('-')."
+  ],
+  "corrections":[
+    "Allocate the 128 support-row counts across positive prior political states by deterministic largest-remainder rounding of their already-frozen prior masses, with minimum one row per positive state.",
+    "Apply deterministic administrative-label normalization/fuzzy resolution with uniqueness checks; no electoral outcome is used.",
+    "Interpret HCP dash/blank numeric cells as zero only inside a marginal that must still have positive normalizable total; otherwise fail closed."
+  ],
+  "unchanged":["128 archetypes","all HCP target marginals","all prior-election party and abstention masses","IPF transform","ESS>=64","max row weight<=0.10","demographic error<=0.005","political error<=1e-9","no target outcome use"],
+  "status":"FROZEN_BEFORE_CORRECTED_RERUN"
+}
