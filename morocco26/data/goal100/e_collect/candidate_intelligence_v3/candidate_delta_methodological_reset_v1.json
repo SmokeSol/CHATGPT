@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "reset_id": "M26-CANDIDATE-INTELLIGENCE-V3-CANDIDATE-DELTA-METHODOLOGICAL-RESET-V1",
+  "created_at": "2026-08-18T22:10:00+01:00",
+  "status": "CANONICAL_SCOPE_CORRECTION_AND_NEW_DESIGN",
+  "supersedes_interpretation_not_results": {
+    "preserved_result": "The frozen V2 experiment validly rejects the tested common additive effect of static head-of-list incumbency across the PJD/RNI panel.",
+    "invalid_overreach": "The result does not reject candidate intelligence as a class, does not reject party-specific effects, does not test list composition, and does not test a constrained LLM reasoner on a rich transition surface.",
+    "corrected_terminal_label": "KILL_UNIVERSAL_STATIC_INCUMBENCY_BONUS_NOT_CANDIDATE_INTELLIGENCE"
+  },
+  "root_cause_audit": [
+    {
+      "id": "WRONG_ESTIMAND",
+      "finding": "The project question was whether changing candidate/list quality adds predictive information. V2 instead estimated whether a single static indicator, head already being an MP in the same party and district, deserves one common additive coefficient.",
+      "fix": "Estimate list upgrade/downgrade relative to the previous election, not candidate level in isolation."
+    },
+    {
+      "id": "STATIC_FEATURE_DUPLICATES_C0",
+      "finding": "An incumbent exists largely because the party previously won enough votes to elect one. C0 already contains that prior territorial strength, so M1 is endogenous to and substantially redundant with the baseline.",
+      "fix": "Condition on the prior electoral risk set and compare retention, replacement, gain and loss of candidate assets within otherwise comparable party-territory cells."
+    },
+    {
+      "id": "WRONG_UNIT_AND_OUTCOME",
+      "finding": "Moroccan local legislative votes accrue to a party list, while V2 attached one head-level bit to party vote-share RMSE. It ignored list depth and the seat-producing rank/last-seat margin.",
+      "fix": "Use party-list x territory x transition as the unit. Primary outcomes are seat/top-S probability and last-seat rank margin; vote-share residual is secondary."
+    },
+    {
+      "id": "FORCED_HOMOGENEITY",
+      "finding": "V2 forced one coefficient across PJD and RNI and prohibited interactions. The validation then produced nearly symmetric opposite party effects, PJD +0.6405% and RNI -0.6405%, which is evidence against the common-coefficient specification, not evidence that every candidate effect is zero.",
+      "fix": "Pre-specify hierarchical partial pooling with party-specific slopes and election-level variation; never infer a universal bonus from one pooled coefficient."
+    },
+    {
+      "id": "PSEUDOREPLICATION",
+      "finding": "137 territorial cells are not 137 independent replications of cross-election transportability. V2 had one fit transition and two parties; cell-level bootstrap overstated the effective replication available for a general political effect.",
+      "fix": "Cluster uncertainty by territory and party-election, require simulation-based minimum detectable effect analysis, and distinguish territorial sample size from the number of independent party-election regimes."
+    },
+    {
+      "id": "NONSTATIONARY_REGIMES",
+      "finding": "2016 and 2021 differ in national party shocks, candidate-selection strategies and electoral context. A coefficient learned from one transition cannot be presumed invariant in the next.",
+      "fix": "Model party-national swing and election regime explicitly, use partial pooling, and seek an additional historical transition before making a transportability claim."
+    },
+    {
+      "id": "SELECTION_AND_DOCUMENTATION",
+      "finding": "PJD/RNI were selected because clean head rosters were available. This is not a representative sample of parties or candidate-selection mechanisms, and public documentation remains correlated with salience.",
+      "fix": "Define a closed sampling frame, measure coverage as a process, retain UNKNOWN/CONFLICTED states, and require comparable roster standards for every included party."
+    },
+    {
+      "id": "BURNED_2021",
+      "finding": "2021 is no longer a confirmatory holdout. Historical identity recovery and any new model development using 2021 are discovery work, even when evidence itself is pre-election.",
+      "fix": "Label all 2021 work retrospective/exploratory. The next genuinely falsifiable test is a model frozen before the 2026 result, or an older untouched transition if one can be recovered before inspection."
+    },
+    {
+      "id": "WRONG_LLM_ROLE",
+      "finding": "A reasoner cannot demonstrate intelligence when the packet contains one or two binary statuses and the deterministic arm already exhausts them.",
+      "fix": "Invoke an LLM only after a deterministic list-transition graph exists and a pre-outcome contrast audit shows many cases where constrained reasoning can legitimately diverge from a fixed rule."
+    }
+  ],
+  "replacement_experiment": {
+    "name": "CANDIDATE_LIST_DELTA_V1",
+    "scientific_status": "NEW_EXPERIMENT_REQUIRES_EX_ANTE_FREEZE_BEFORE_2026_SCORING",
+    "unit": "party_list_x_local_territory_x_election_transition",
+    "estimand": "Incremental change in a party-list's territorial competitiveness associated with an upgrade or downgrade of its candidate/list assets relative to its own previous list, conditional on structural baseline and party-national swing.",
+    "risk_sets": [
+      "Prior seat-winning party-territory cells: retained incumbent/list assets versus replacement or loss.",
+      "Prior non-winning party-territory cells: verified acquisition of an incumbent/notable/local executive versus no acquisition.",
+      "Switch events: switch-in paired with the corresponding switch-out where identities and territories are verified."
+    ],
+    "delta_features": [
+      "HEAD_RETAINED_SAME_PARTY_SAME_TERRITORY",
+      "HEAD_INCUMBENT_LOST_OR_REPLACED",
+      "PRIOR_MP_GAIN_MINUS_LOSS_ON_FULL_LIST",
+      "SWITCH_IN_MINUS_SWITCH_OUT",
+      "LOCAL_EXECUTIVE_GAIN_MINUS_LOSS",
+      "PARTY_OFFICE_GAIN_MINUS_LOSS",
+      "FORMER_MINISTER_OR_NATIONAL_OFFICE_GAIN_MINUS_LOSS",
+      "VERIFIED_LIST_DEPTH_CHANGE",
+      "FORMAL_ALLIANCE_OR_ENDORSEMENT_CHANGE"
+    ],
+    "outcomes": {
+      "primary": [
+        "Brier/log loss for winning at least one local seat",
+        "Brier/log loss for finishing inside the district's top-S lists",
+        "error in last-seat rank margin"
+      ],
+      "secondary": [
+        "party vote-share residual versus C0",
+        "within-party national-swing-adjusted vote-share change",
+        "rank change"
+      ]
+    },
+    "model": {
+      "structure": "Hierarchical partial pooling with global, party-specific and election-specific effects fixed ex ante.",
+      "baseline_comparisons": [
+        "C0 structural only",
+        "candidate-delta only",
+        "C0 plus candidate-delta"
+      ],
+      "forbidden": [
+        "Universal hand-set candidate bonus",
+        "UNKNOWN equals zero",
+        "Selecting interactions after inspecting 2021 performance",
+        "Cell-level bootstrap presented as cross-election replication",
+        "Calling a static attribute a candidate effect without conditioning on the prior risk set"
+      ]
+    },
+    "uncertainty_and_power": {
+      "bootstrap": "Cluster by local territory and preserve all party cells from the same territory together; report party-election sensitivity separately.",
+      "power": "Simulation-based minimum detectable effect under observed prevalence, clustering, class balance and baseline error; no count-only >=30 shortcut.",
+      "transportability_requirement": "A general-effect claim requires more than one fit party-election regime. Recover an older transition and/or expand to equivalently measured parties; otherwise remain exploratory until prospective 2026 scoring."
+    },
+    "llm_gate": {
+      "authorized_now": false,
+      "requirements": [
+        "Deterministic delta panel complete and frozen",
+        "Coverage/missingness audit passes",
+        "Contrast audit proves a non-degenerate C1-versus-C2 surface",
+        "Prompt and scoring rules frozen before 2026 outcomes"
+      ],
+      "intended_role": "Judge ambiguous combinations and magnitude of verified list changes; never invent evidence, coefficients or outcomes."
+    }
+  },
+  "immediate_execution_order": [
+    "Build identity-linked list-transition graph for 2011->2016, 2016->2021 and prospectively 2021->2026.",
+    "Separate prior winners, prior non-winners and switch pairs into explicit risk sets.",
+    "Measure delta-feature prevalence, discordance, missingness and clustered MDE before model fitting.",
+    "Recover at least one additional historical transition or explicitly mark historical modeling as exploratory.",
+    "Freeze the 2026 candidate-delta model, thresholds and LLM gate before election outcomes.",
+    "Keep F0 unchanged unless the prospective promotion gate passes."
+  ],
+  "forecast_status": {
+    "F0_modified": false,
+    "candidate_intelligence_hypothesis": "REOPENED_WITH_CORRECTED_ESTIMAND",
+    "opus_invoked": false,
+    "current_operational_decision": "DO_NOT_USE_STATIC_INCUMBENCY_BONUS; PROCEED_TO_LIST_DELTA_PANEL"
+  }
+}
