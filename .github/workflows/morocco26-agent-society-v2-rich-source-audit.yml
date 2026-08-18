@@ -28,5 +28,16 @@ jobs:
           PY
       - name: Build variable catalog and feasibility report
         run: python /tmp/asv2rich/src/catalog.py --manifest /tmp/asv2rich/src/manifest.json --rawdir /tmp/asv2rich/raw --outdir /tmp/asv2rich/out
+      - name: Verify and stage attitude donors
+        run: |
+          set -euo pipefail
+          test "$(sha256sum /tmp/asv2rich/raw/afrobarometer_morocco_r6.bin | cut -d' ' -f1)" = "1ab8a01626244a094e97f874791576cc40270f21d135183d2e4b25ab41fa5a8d"
+          test "$(sha256sum /tmp/asv2rich/raw/afrobarometer_morocco_r8.bin | cut -d' ' -f1)" = "5e0c8c70bb9e8488eb51866ca225a0babd5fcbf33bc0441238f8688e01a265f3"
+          mkdir -p /tmp/asv2rich/donors
+          cp /tmp/asv2rich/raw/afrobarometer_morocco_r6.bin /tmp/asv2rich/donors/afro_r6.sav
+          cp /tmp/asv2rich/raw/afrobarometer_morocco_r8.bin /tmp/asv2rich/donors/afro_r8.sav
+          sha256sum /tmp/asv2rich/donors/* > /tmp/asv2rich/donors/SHA256SUMS
       - uses: actions/upload-artifact@v4
         with: {name: asv2-rich-source-catalog-v2, path: /tmp/asv2rich/out/, retention-days: 30}
+      - uses: actions/upload-artifact@v4
+        with: {name: asv2-rich-afrobarometer-donors-v1, path: /tmp/asv2rich/donors/, retention-days: 90}
