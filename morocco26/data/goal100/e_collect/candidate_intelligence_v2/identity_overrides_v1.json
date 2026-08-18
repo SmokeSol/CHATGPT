@@ -12,5 +12,8 @@
     {"current_name":"نجيب بوليف","prior_name":"محمد نجيب بوليف","status":"SAFE_ALIAS","rule":"prior registry includes additional common given name Mohamed; unique candidate identity","territory_id":"tanger-assilah"},
     {"current_name":"املصطفى القوري","status":"CONFIRMED_NO_ALIAS","rule":"nearest prior name has a different surname; keep non-match rather than fuzzy-promote","territory_id":"berkane"}
   ],
-  "2021":[]
+  "2021":[
+    {"current_name":"Mohcine Moufidi","prior_name":"MOHSSEN MOUFIDI","status":"SAFE_ALIAS","rule":"first-name transliteration variant; identical unique surname; explicit pre-election outgoing-MP claim","territory_id":"moulay-rachid"},
+    {"current_name":"Souad Boulaich","prior_name":"SOUAD BOULAICH EL HAJRAOUI","status":"SAFE_ALIAS","rule":"short source name versus full registry name; official 2016 PJD source independently identifies Souad Boulaich El Hajraoui as parliamentarian","territory_id":"fahs-anjra"}
+  ]
 }
