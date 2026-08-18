@@ -1,0 +1,3141 @@
+{
+  "2016": [
+    {
+      "row_order": 1,
+      "territory_id": "sale-medina",
+      "candidate_name_ar": "عبد الإله ابن كيران",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عبد الاله ابن كيران",
+      "best": {
+        "score": 0.808333,
+        "sequence": 0.944444,
+        "jaccard": 0.4,
+        "name": "عبد الإله بنكيران",
+        "party": "PJD",
+        "territory": "Salé - Médina"
+      },
+      "runner_up_score": 0.632576,
+      "gap": 0.175758
+    },
+    {
+      "row_order": 2,
+      "territory_id": "rabat-chellah",
+      "candidate_name_ar": "سليمان العمراني",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "سليمان العمراني",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "سليمان العمراني",
+        "party": "PJD",
+        "territory": "Khouribga"
+      },
+      "runner_up_score": 0.545455,
+      "gap": 0.454545
+    },
+    {
+      "row_order": 3,
+      "territory_id": "kenitra",
+      "candidate_name_ar": "عزيز رباح",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عزيز رباح",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "عزيز رباح",
+        "party": "PJD",
+        "territory": "Kénitra"
+      },
+      "runner_up_score": 0.583333,
+      "gap": 0.416667
+    },
+    {
+      "row_order": 4,
+      "territory_id": "sale-el-jadida",
+      "candidate_name_ar": "عبد القادر اعمارة",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عبد القادر اعمارة",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "عبد القادر اعمارة",
+        "party": "PJD",
+        "territory": "Salé - Al-Jadida"
+      },
+      "runner_up_score": 0.6875,
+      "gap": 0.3125
+    },
+    {
+      "row_order": 5,
+      "territory_id": "rabat-ocean",
+      "candidate_name_ar": "محمد صديقي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "محمد صديقي",
+      "best": {
+        "score": 0.666667,
+        "sequence": 0.777778,
+        "jaccard": 0.333333,
+        "name": "محمد خيي",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.635965,
+      "gap": 0.030702
+    },
+    {
+      "row_order": 6,
+      "territory_id": "skhirate-temara",
+      "candidate_name_ar": "موح رجدالي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "موح رجدالي",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "موح رجدالي",
+        "party": "PJD",
+        "territory": "Skhirate - Témara"
+      },
+      "runner_up_score": 0.571429,
+      "gap": 0.428571
+    },
+    {
+      "row_order": 7,
+      "territory_id": "khemisset-oulmes",
+      "candidate_name_ar": "عبد هللا بنحمو",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عبد الله بنحمو",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "عبد الله بنحمو",
+        "party": "PJD",
+        "territory": "Khémisset - Oulmès"
+      },
+      "runner_up_score": 0.74569,
+      "gap": 0.25431
+    },
+    {
+      "row_order": 8,
+      "territory_id": "tiflet-rommani",
+      "candidate_name_ar": "محمد البصير",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "محمد البصير",
+      "best": {
+        "score": 0.69697,
+        "sequence": 0.818182,
+        "jaccard": 0.333333,
+        "name": "محمد الميري",
+        "party": "MDS",
+        "territory": "Boulemane"
+      },
+      "runner_up_score": 0.683333,
+      "gap": 0.013636
+    },
+    {
+      "row_order": 9,
+      "territory_id": "sidi-slimane",
+      "candidate_name_ar": "محمد الحفياني",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "محمد الحفياني",
+      "best": {
+        "score": 0.694444,
+        "sequence": 0.814815,
+        "jaccard": 0.333333,
+        "name": "محمد السليماني",
+        "party": "PJD",
+        "territory": "M'Diq - Fnideq"
+      },
+      "runner_up_score": 0.67029,
+      "gap": 0.024155
+    },
+    {
+      "row_order": 10,
+      "territory_id": "mohammedia",
+      "candidate_name_ar": "سعد الدين العثماني",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "سعد الدين العثماني",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "سعد الدين العثماني",
+        "party": "PJD",
+        "territory": "Mohammadia"
+      },
+      "runner_up_score": 0.55,
+      "gap": 0.45
+    },
+    {
+      "row_order": 11,
+      "territory_id": "sidi-bernoussi",
+      "candidate_name_ar": "محمد يتيم",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "محمد يتيم",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "محمد يتيم",
+        "party": "PJD",
+        "territory": "Sidi-Bernoussi"
+      },
+      "runner_up_score": 0.70098,
+      "gap": 0.29902
+    },
+    {
+      "row_order": 12,
+      "territory_id": "ain-sebaa-hay-mohammadi",
+      "candidate_name_ar": "عبد العزيز عماري",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عبد العزيز عماري",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "عبد العزيز عماري",
+        "party": "PJD",
+        "territory": "Aïn-Sebaâ - Hay-Mohammadi"
+      },
+      "runner_up_score": 0.715909,
+      "gap": 0.284091
+    },
+    {
+      "row_order": 13,
+      "territory_id": "sidi-bennour",
+      "candidate_name_ar": "مصطفى الخلفي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "مصطفي الخلفي",
+      "best": {
+        "score": 0.645833,
+        "sequence": 0.75,
+        "jaccard": 0.333333,
+        "name": "مصطفى العمري",
+        "party": "RNI",
+        "territory": "Errachidia"
+      },
+      "runner_up_score": 0.560606,
+      "gap": 0.085227
+    },
+    {
+      "row_order": 14,
+      "territory_id": "hay-hassani",
+      "candidate_name_ar": "أمينة ماء العينين",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "امينة ماء العينين",
+      "best": {
+        "score": 0.755952,
+        "sequence": 0.785714,
+        "jaccard": 0.666667,
+        "name": "ماء العينين",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.441176,
+      "gap": 0.314776
+    },
+    {
+      "row_order": 15,
+      "territory_id": "el-jadida",
+      "candidate_name_ar": "أبو زيد املقرئ اإلدريس ي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "ابو زيد المقري الدريسي",
+      "best": {
+        "score": 0.883333,
+        "sequence": 0.977778,
+        "jaccard": 0.6,
+        "name": "ابو زيد المقري الادريسي",
+        "party": "PJD",
+        "territory": "El-Jadida"
+      },
+      "runner_up_score": 0.525,
+      "gap": 0.358333
+    },
+    {
+      "row_order": 16,
+      "territory_id": "nouaceur",
+      "candidate_name_ar": "عبد اللطيف رشيد",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عبد اللطيف رشيد",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "عبد اللطيف رشيد",
+        "party": "PJD",
+        "territory": "Nouaceur"
+      },
+      "runner_up_score": 0.802419,
+      "gap": 0.197581
+    },
+    {
+      "row_order": 17,
+      "territory_id": "ben-m-sick",
+      "candidate_name_ar": "عبد املجيد جوبيج",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عبد المجيد جوبيج",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "عبد المجيد جوبيج",
+        "party": "PJD",
+        "territory": "Ben-M'sick"
+      },
+      "runner_up_score": 0.698529,
+      "gap": 0.301471
+    },
+    {
+      "row_order": 18,
+      "territory_id": "settat",
+      "candidate_name_ar": "حسن حارس",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "حسن حارس",
+      "best": {
+        "score": 0.75,
+        "sequence": 0.888889,
+        "jaccard": 0.333333,
+        "name": "حسن الحارس",
+        "party": "PJD",
+        "territory": "Settat"
+      },
+      "runner_up_score": 0.645833,
+      "gap": 0.104167
+    },
+    {
+      "row_order": 19,
+      "territory_id": "fes-sud",
+      "candidate_name_ar": "إدريس األزمي اإلدريس ي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "ادريس الزمي الدريسي",
+      "best": {
+        "score": 0.594758,
+        "sequence": 0.709677,
+        "jaccard": 0.25,
+        "name": "إدريس الثمري",
+        "party": "PJD",
+        "territory": "Safi"
+      },
+      "runner_up_score": 0.535294,
+      "gap": 0.059464
+    },
+    {
+      "row_order": 20,
+      "territory_id": "meknes",
+      "candidate_name_ar": "عبد هللا بووانو",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عبد الله بووانو",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "عبد الله بووانو",
+        "party": "PJD",
+        "territory": "Meknès"
+      },
+      "runner_up_score": 0.693966,
+      "gap": 0.306034
+    },
+    {
+      "row_order": 21,
+      "territory_id": "el-hajeb",
+      "candidate_name_ar": "خالد البوقرعي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "خالد البوقرعي",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "خالد البوقرعي",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.560606,
+      "gap": 0.439394
+    },
+    {
+      "row_order": 22,
+      "territory_id": "fes-nord",
+      "candidate_name_ar": "عمر الفاس ي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عمر الفاسي",
+      "best": {
+        "score": 0.628788,
+        "sequence": 0.727273,
+        "jaccard": 0.333333,
+        "name": "عمر السنتيسي",
+        "party": "PI",
+        "territory": "Salé - Al-Jadida"
+      },
+      "runner_up_score": 0.608333,
+      "gap": 0.020455
+    },
+    {
+      "row_order": 23,
+      "territory_id": "taza",
+      "candidate_name_ar": "جمال مسعودي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "جمال مسعودي",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "جمال مسعودي",
+        "party": "PJD",
+        "territory": "Taza"
+      },
+      "runner_up_score": 0.560606,
+      "gap": 0.439394
+    },
+    {
+      "row_order": 24,
+      "territory_id": "sefrou",
+      "candidate_name_ar": "إدريس مسكين",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "ادريس مسكين",
+      "best": {
+        "score": 0.605072,
+        "sequence": 0.695652,
+        "jaccard": 0.333333,
+        "name": "إدريس الثمري",
+        "party": "PJD",
+        "territory": "Safi"
+      },
+      "runner_up_score": 0.583333,
+      "gap": 0.021739
+    },
+    {
+      "row_order": 25,
+      "territory_id": "moulay-yaacoub",
+      "candidate_name_ar": "محمد يوسف",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "محمد يوسف",
+      "best": {
+        "score": 0.612745,
+        "sequence": 0.705882,
+        "jaccard": 0.333333,
+        "name": "محمد خيي",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.612745,
+      "gap": 0.0
+    },
+    {
+      "row_order": 26,
+      "territory_id": "taounate-tissa",
+      "candidate_name_ar": "بوشتى بوصوف",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "بوشتي بوصوف",
+      "best": {
+        "score": 0.357143,
+        "sequence": 0.47619,
+        "jaccard": 0.0,
+        "name": "بشرى برجال",
+        "party": "UC",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.352823,
+      "gap": 0.00432
+    },
+    {
+      "row_order": 27,
+      "territory_id": "karia-ghafsay",
+      "candidate_name_ar": "نور الدين اقشيبل",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "نور الدين اقشيبل",
+      "best": {
+        "score": 0.6875,
+        "sequence": 0.75,
+        "jaccard": 0.5,
+        "name": "نور الدين الازرق",
+        "party": "RNI",
+        "territory": "Salé - Médina"
+      },
+      "runner_up_score": 0.675,
+      "gap": 0.0125
+    },
+    {
+      "row_order": 28,
+      "territory_id": "boulemane",
+      "candidate_name_ar": "محمد ادريس ي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "محمد ادريسي",
+      "best": {
+        "score": 0.654762,
+        "sequence": 0.761905,
+        "jaccard": 0.333333,
+        "name": "محمد اجدية",
+        "party": "USFP",
+        "territory": "Safi"
+      },
+      "runner_up_score": 0.654762,
+      "gap": 0.0
+    },
+    {
+      "row_order": 29,
+      "territory_id": "ifrane",
+      "candidate_name_ar": "أحمد الراشدي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "احمد الراشدي",
+      "best": {
+        "score": 0.67029,
+        "sequence": 0.782609,
+        "jaccard": 0.333333,
+        "name": "أحمد الزيدي",
+        "party": "USFP",
+        "territory": "Benslimane"
+      },
+      "runner_up_score": 0.645833,
+      "gap": 0.024457
+    },
+    {
+      "row_order": 30,
+      "territory_id": "beni-mellal",
+      "candidate_name_ar": "لحسن الداودي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "لحسن الداودي",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "لحسن الداودي",
+        "party": "PJD",
+        "territory": "Béni-Mellal"
+      },
+      "runner_up_score": 0.654762,
+      "gap": 0.345238
+    },
+    {
+      "row_order": 31,
+      "territory_id": "fquih-ben-salah",
+      "candidate_name_ar": "بوعبيد لبيدة",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "بوعبيد لبيدة",
+      "best": {
+        "score": 0.5,
+        "sequence": 0.666667,
+        "jaccard": 0.0,
+        "name": "سعيد بنحميدة",
+        "party": "PJD",
+        "territory": "Fès-Janoubia"
+      },
+      "runner_up_score": 0.409091,
+      "gap": 0.090909
+    },
+    {
+      "row_order": 32,
+      "territory_id": "tanger-assilah",
+      "candidate_name_ar": "نجيب بوليف",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "نجيب بوليف",
+      "best": {
+        "score": 0.766667,
+        "sequence": 0.8,
+        "jaccard": 0.666667,
+        "name": "محمد نجيب بوليف",
+        "party": "PJD",
+        "territory": "Tanger - Assilah"
+      },
+      "runner_up_score": 0.4375,
+      "gap": 0.329167
+    },
+    {
+      "row_order": 33,
+      "territory_id": "fahs-anjra",
+      "candidate_name_ar": "سعاد بولعيش الحجراوي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "سعاد بولعيش الحجراوي",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "سعاد بولعيش الحجراوي",
+        "party": "PJD",
+        "territory": "Fahs - Anjra"
+      },
+      "runner_up_score": 0.45,
+      "gap": 0.55
+    },
+    {
+      "row_order": 34,
+      "territory_id": "tetouan",
+      "candidate_name_ar": "محمد إدعمار",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "محمد ادعمار",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "محمد ادعمار",
+        "party": "PJD",
+        "territory": "Tétouan"
+      },
+      "runner_up_score": 0.714912,
+      "gap": 0.285088
+    },
+    {
+      "row_order": 35,
+      "territory_id": "chefchaouen",
+      "candidate_name_ar": "نبيل الشليح",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "نبيل الشليح",
+      "best": {
+        "score": 0.533333,
+        "sequence": 0.6,
+        "jaccard": 0.333333,
+        "name": "نبيل صبري",
+        "party": "USFP",
+        "territory": "Khénifra"
+      },
+      "runner_up_score": 0.456522,
+      "gap": 0.076812
+    },
+    {
+      "row_order": 36,
+      "territory_id": "ouezzane",
+      "candidate_name_ar": "عبد الحليم عالوي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عبد الحليم عالوي",
+      "best": {
+        "score": 0.828125,
+        "sequence": 0.9375,
+        "jaccard": 0.5,
+        "name": "عبد الحليم علاوي",
+        "party": "PJD",
+        "territory": "Ouezzane"
+      },
+      "runner_up_score": 0.623529,
+      "gap": 0.204596
+    },
+    {
+      "row_order": 37,
+      "territory_id": "m-diq-fnideq",
+      "candidate_name_ar": "محمد قروق",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "محمد قروق",
+      "best": {
+        "score": 0.612745,
+        "sequence": 0.705882,
+        "jaccard": 0.333333,
+        "name": "محمد عبو",
+        "party": "RNI",
+        "territory": "Taounate - Tissa"
+      },
+      "runner_up_score": 0.612745,
+      "gap": 0.0
+    },
+    {
+      "row_order": 38,
+      "territory_id": "laayoune",
+      "candidate_name_ar": "إبراهيم الضعيف",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "ابراهيم الضعيف",
+      "best": {
+        "score": 0.638889,
+        "sequence": 0.740741,
+        "jaccard": 0.333333,
+        "name": "ابراهيم شكيلي",
+        "party": "PAM",
+        "territory": "Skhirate - Témara"
+      },
+      "runner_up_score": 0.619048,
+      "gap": 0.019841
+    },
+    {
+      "row_order": 39,
+      "territory_id": "tarfaya",
+      "candidate_name_ar": "عالي الرزمة",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عالي الرزمة",
+      "best": {
+        "score": 0.48,
+        "sequence": 0.64,
+        "jaccard": 0.0,
+        "name": "الحسين الرحوية",
+        "party": "UC",
+        "territory": "Kénitra"
+      },
+      "runner_up_score": 0.477273,
+      "gap": 0.002727
+    },
+    {
+      "row_order": 40,
+      "territory_id": "es-semara",
+      "candidate_name_ar": "لحبيب الكنتاوي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "لحبيب الكنتاوي",
+      "best": {
+        "score": 0.638889,
+        "sequence": 0.740741,
+        "jaccard": 0.333333,
+        "name": "حمزة الكنتاوي",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.580645,
+      "gap": 0.058244
+    },
+    {
+      "row_order": 41,
+      "territory_id": "boujdour",
+      "candidate_name_ar": "مصطفى بن بالل",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "مصطفي بن بالل",
+      "best": {
+        "score": 0.5425,
+        "sequence": 0.64,
+        "jaccard": 0.25,
+        "name": "مصطفى العمري",
+        "party": "RNI",
+        "territory": "Errachidia"
+      },
+      "runner_up_score": 0.519022,
+      "gap": 0.023478
+    },
+    {
+      "row_order": 42,
+      "territory_id": "oued-eddahab",
+      "candidate_name_ar": "عزوها العراك",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عزوها العراك",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "عزوها العراك",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.4375,
+      "gap": 0.5625
+    },
+    {
+      "row_order": 43,
+      "territory_id": "aousserd",
+      "candidate_name_ar": "امربيه أبا عقيل",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "امربيه ابا عقيل",
+      "best": {
+        "score": 0.413793,
+        "sequence": 0.551724,
+        "jaccard": 0.0,
+        "name": "رشيدة اسماعيلي",
+        "party": "RNI",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.403846,
+      "gap": 0.009947
+    },
+    {
+      "row_order": 44,
+      "territory_id": "guelmim",
+      "candidate_name_ar": "عبد هللا النجامي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عبد الله النجامي",
+      "best": {
+        "score": 0.734375,
+        "sequence": 0.8125,
+        "jaccard": 0.5,
+        "name": "عبد الله البقالي",
+        "party": "PI",
+        "territory": "Larache"
+      },
+      "runner_up_score": 0.725,
+      "gap": 0.009375
+    },
+    {
+      "row_order": 45,
+      "territory_id": "tan-tan",
+      "candidate_name_ar": "بحار بوجمعة",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "بحار بوجمعة",
+      "best": {
+        "score": 0.5,
+        "sequence": 0.666667,
+        "jaccard": 0.0,
+        "name": "امبارك بوعيدة",
+        "party": "RNI",
+        "territory": "Guelmim"
+      },
+      "runner_up_score": 0.428571,
+      "gap": 0.071429
+    },
+    {
+      "row_order": 46,
+      "territory_id": "sidi-ifni",
+      "candidate_name_ar": "عمر بومريس",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عمر بومريس",
+      "best": {
+        "score": 0.533333,
+        "sequence": 0.6,
+        "jaccard": 0.333333,
+        "name": "عمر كردودي",
+        "party": "RNI",
+        "territory": "Safi"
+      },
+      "runner_up_score": 0.533333,
+      "gap": 0.0
+    },
+    {
+      "row_order": 47,
+      "territory_id": "assa-zag",
+      "candidate_name_ar": "شغالي حريش",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "شغالي حريش",
+      "best": {
+        "score": 0.461538,
+        "sequence": 0.615385,
+        "jaccard": 0.0,
+        "name": "عبد اللطيف حرشيش",
+        "party": "UC",
+        "territory": "Aïn-Sebaâ - Hay-Mohammadi"
+      },
+      "runner_up_score": 0.394737,
+      "gap": 0.066802
+    },
+    {
+      "row_order": 48,
+      "territory_id": "agadir-ida-outanane",
+      "candidate_name_ar": "صالح املالوكي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "صالح المالوكي",
+      "best": {
+        "score": 0.611111,
+        "sequence": 0.814815,
+        "jaccard": 0.0,
+        "name": "الحبيب المالكي",
+        "party": "USFP",
+        "territory": "Khouribga"
+      },
+      "runner_up_score": 0.519231,
+      "gap": 0.09188
+    },
+    {
+      "row_order": 49,
+      "territory_id": "inezgane-ait-melloul",
+      "candidate_name_ar": "رمضان بوعشرة",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "رمضان بوعشرة",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "رمضان بوعشرة",
+        "party": "PJD",
+        "territory": "Inézgane - Aït-Melloul"
+      },
+      "runner_up_score": 0.42,
+      "gap": 0.58
+    },
+    {
+      "row_order": 50,
+      "territory_id": "taroudant-sud",
+      "candidate_name_ar": "محمد أوريش",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "محمد اوريش",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "محمد أوريش",
+        "party": "PJD",
+        "territory": "Taroudannt - Al-Janoubia"
+      },
+      "runner_up_score": 0.683333,
+      "gap": 0.316667
+    },
+    {
+      "row_order": 51,
+      "territory_id": "taroudant-nord",
+      "candidate_name_ar": "مصطفى الكردي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "مصطفي الكردي",
+      "best": {
+        "score": 0.708333,
+        "sequence": 0.833333,
+        "jaccard": 0.333333,
+        "name": "مصطفى العمري",
+        "party": "RNI",
+        "territory": "Errachidia"
+      },
+      "runner_up_score": 0.602564,
+      "gap": 0.105769
+    },
+    {
+      "row_order": 52,
+      "territory_id": "chtouka-ait-baha",
+      "candidate_name_ar": "محمد لشكر",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "محمد لشكر",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "محمد لشكر",
+        "party": "PJD",
+        "territory": "Chtouka - Aït-Baha"
+      },
+      "runner_up_score": 0.635965,
+      "gap": 0.364035
+    },
+    {
+      "row_order": 53,
+      "territory_id": "tiznit",
+      "candidate_name_ar": "ابراهيم بوغضن",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "ابراهيم بوغضن",
+      "best": {
+        "score": 0.638889,
+        "sequence": 0.740741,
+        "jaccard": 0.333333,
+        "name": "ابراهيم تاكونت",
+        "party": "PA",
+        "territory": "Azilal - Demnate"
+      },
+      "runner_up_score": 0.583333,
+      "gap": 0.055556
+    },
+    {
+      "row_order": 54,
+      "territory_id": "tata",
+      "candidate_name_ar": "محمد الراجي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "محمد الراجي",
+      "best": {
+        "score": 0.708333,
+        "sequence": 0.833333,
+        "jaccard": 0.333333,
+        "name": "محمد الزهراوي",
+        "party": "USFP",
+        "territory": "El-Jadida"
+      },
+      "runner_up_score": 0.69697,
+      "gap": 0.011364
+    },
+    {
+      "row_order": 55,
+      "territory_id": "menara",
+      "candidate_name_ar": "محمد العربي بلقايد",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "محمد العربي بلقايد",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "محمد العربي بلقائد",
+        "party": "PJD",
+        "territory": "Ménara"
+      },
+      "runner_up_score": 0.725,
+      "gap": 0.275
+    },
+    {
+      "row_order": 56,
+      "territory_id": "medina-sidi-youssef",
+      "candidate_name_ar": "يونس بن سليمان",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "يونس بن سليمان",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "يونس بن سليمان",
+        "party": "PJD",
+        "territory": "Médina - Sidi-Youssef-Ben-Ali"
+      },
+      "runner_up_score": 0.5,
+      "gap": 0.5
+    },
+    {
+      "row_order": 57,
+      "territory_id": "gueliz-nakhil",
+      "candidate_name_ar": "حماد القباج",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "حماد القباج",
+      "best": {
+        "score": 0.628788,
+        "sequence": 0.727273,
+        "jaccard": 0.333333,
+        "name": "طارق القباج",
+        "party": "USFP",
+        "territory": "Agadir - Ida-ou-Tanane"
+      },
+      "runner_up_score": 0.584239,
+      "gap": 0.044549
+    },
+    {
+      "row_order": 58,
+      "territory_id": "safi",
+      "candidate_name_ar": "إدريس الثمري",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "ادريس الثمري",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "إدريس الثمري",
+        "party": "PJD",
+        "territory": "Safi"
+      },
+      "runner_up_score": 0.628788,
+      "gap": 0.371212
+    },
+    {
+      "row_order": 59,
+      "territory_id": "el-kelaa-des-sraghna",
+      "candidate_name_ar": "بلعيد أعلوالل",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "بلعيد اعلوالل",
+      "best": {
+        "score": 0.775641,
+        "sequence": 0.923077,
+        "jaccard": 0.333333,
+        "name": "بلعيد اعلولال",
+        "party": "PJD",
+        "territory": "El-Kelâa-des-Sraghna"
+      },
+      "runner_up_score": 0.444444,
+      "gap": 0.331197
+    },
+    {
+      "row_order": 60,
+      "territory_id": "al-haouz",
+      "candidate_name_ar": "مراد الكورش",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "مراد الكورش",
+      "best": {
+        "score": 0.797619,
+        "sequence": 0.952381,
+        "jaccard": 0.333333,
+        "name": "مراد لكورش",
+        "party": "PJD",
+        "territory": "Al-Haouz"
+      },
+      "runner_up_score": 0.5,
+      "gap": 0.297619
+    },
+    {
+      "row_order": 61,
+      "territory_id": "chichaoua",
+      "candidate_name_ar": "حمزة الصوفي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "حمزة الصوفي",
+      "best": {
+        "score": 0.645833,
+        "sequence": 0.75,
+        "jaccard": 0.333333,
+        "name": "حمزة الكنتاوي",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.571429,
+      "gap": 0.074405
+    },
+    {
+      "row_order": 62,
+      "territory_id": "errachidia",
+      "candidate_name_ar": "عبد هللا هناوي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عبد الله هناوي",
+      "best": {
+        "score": 0.74569,
+        "sequence": 0.827586,
+        "jaccard": 0.5,
+        "name": "عبد الله اوباري",
+        "party": "PJD",
+        "territory": "Agadir - Ida-ou-Tanane"
+      },
+      "runner_up_score": 0.736111,
+      "gap": 0.009579
+    },
+    {
+      "row_order": 63,
+      "territory_id": "tinghir",
+      "candidate_name_ar": "أحمد صدقي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "احمد صدقي",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "احمد صدقي",
+        "party": "PJD",
+        "territory": "Tinghir"
+      },
+      "runner_up_score": 0.666667,
+      "gap": 0.333333
+    },
+    {
+      "row_order": 64,
+      "territory_id": "zagora",
+      "candidate_name_ar": "لحسن واعرى",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "لحسن واعري",
+      "best": {
+        "score": 0.72619,
+        "sequence": 0.857143,
+        "jaccard": 0.333333,
+        "name": "لحسن بنواري",
+        "party": "USFP",
+        "territory": "Tiznit"
+      },
+      "runner_up_score": 0.560606,
+      "gap": 0.165584
+    },
+    {
+      "row_order": 65,
+      "territory_id": "ouarzazate",
+      "candidate_name_ar": "السعيد الصادق",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "السعيد الصادق",
+      "best": {
+        "score": 0.638889,
+        "sequence": 0.740741,
+        "jaccard": 0.333333,
+        "name": "السعيد الزعزاع",
+        "party": "RNI",
+        "territory": "Azilal - Demnate"
+      },
+      "runner_up_score": 0.5625,
+      "gap": 0.076389
+    },
+    {
+      "row_order": 66,
+      "territory_id": "midelt",
+      "candidate_name_ar": "عمر احمين",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عمر احمين",
+      "best": {
+        "score": 0.583333,
+        "sequence": 0.666667,
+        "jaccard": 0.333333,
+        "name": "عمر حجيرة",
+        "party": "PI",
+        "territory": "Oujda - Angad"
+      },
+      "runner_up_score": 0.557018,
+      "gap": 0.026316
+    },
+    {
+      "row_order": 67,
+      "territory_id": "oujda-angad",
+      "candidate_name_ar": "عبد هللا هامل",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عبد الله هامل",
+      "best": {
+        "score": 0.714286,
+        "sequence": 0.785714,
+        "jaccard": 0.5,
+        "name": "عبد الله الهادف",
+        "party": "PI",
+        "territory": "Sidi-Kacem"
+      },
+      "runner_up_score": 0.693966,
+      "gap": 0.02032
+    },
+    {
+      "row_order": 68,
+      "territory_id": "berkane",
+      "candidate_name_ar": "املصطفى القوري",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "المصطفي القوري",
+      "best": {
+        "score": 0.733333,
+        "sequence": 0.866667,
+        "jaccard": 0.333333,
+        "name": "المصطفى المنصوري",
+        "party": "RNI",
+        "territory": "Nador"
+      },
+      "runner_up_score": 0.72619,
+      "gap": 0.007143
+    },
+    {
+      "row_order": 69,
+      "territory_id": "nador",
+      "candidate_name_ar": "فاروق الطاهري",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "فاروق الطاهري",
+      "best": {
+        "score": 0.602564,
+        "sequence": 0.692308,
+        "jaccard": 0.333333,
+        "name": "رشيدة الطاهري",
+        "party": "PPS",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.48,
+      "gap": 0.122564
+    },
+    {
+      "row_order": 70,
+      "territory_id": "driouch",
+      "candidate_name_ar": "محمد لحرش",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "محمد لحرش",
+      "best": {
+        "score": 0.714912,
+        "sequence": 0.842105,
+        "jaccard": 0.333333,
+        "name": "محمد لحموش",
+        "party": "MP",
+        "territory": "Khémisset - Oulmès"
+      },
+      "runner_up_score": 0.666667,
+      "gap": 0.048246
+    },
+    {
+      "row_order": 71,
+      "territory_id": "taourirt",
+      "candidate_name_ar": "احميدة املحجوبي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "احميدة المحجوبي",
+      "best": {
+        "score": 0.555556,
+        "sequence": 0.740741,
+        "jaccard": 0.0,
+        "name": "محمد الحجوجي",
+        "party": "PAM",
+        "territory": "Ouezzane"
+      },
+      "runner_up_score": 0.5,
+      "gap": 0.055556
+    },
+    {
+      "row_order": 72,
+      "territory_id": "jerada",
+      "candidate_name_ar": "عبد العزيز بنعائشة",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "عبد العزيز بنعايشة",
+      "best": {
+        "score": 0.742647,
+        "sequence": 0.823529,
+        "jaccard": 0.5,
+        "name": "عبد العزيز عماري",
+        "party": "PJD",
+        "territory": "Aïn-Sebaâ - Hay-Mohammadi"
+      },
+      "runner_up_score": 0.682143,
+      "gap": 0.060504
+    },
+    {
+      "row_order": 73,
+      "territory_id": "guercif",
+      "candidate_name_ar": "بلقاسم اليوسفي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "بلقاسم اليوسفي",
+      "best": {
+        "score": 0.4375,
+        "sequence": 0.583333,
+        "jaccard": 0.0,
+        "name": "الهام والي",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.42,
+      "gap": 0.0175
+    },
+    {
+      "row_order": 74,
+      "territory_id": "figuig",
+      "candidate_name_ar": "مصطفى الزيتي",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_EXACT_ARABIC",
+      "query_norm": "مصطفي الزيتي",
+      "best": {
+        "score": 0.645833,
+        "sequence": 0.75,
+        "jaccard": 0.333333,
+        "name": "مصطفى العمري",
+        "party": "RNI",
+        "territory": "Errachidia"
+      },
+      "runner_up_score": 0.602564,
+      "gap": 0.043269
+    }
+  ],
+  "2021": [
+    {
+      "row_order": 1,
+      "territory_id": "casablanca-anfa",
+      "candidate_name_fr": "Bassima Hakkaoui",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "bassima hakkaoui",
+      "best": {
+        "score": 0.532258,
+        "sequence": 0.709677,
+        "jaccard": 0.0,
+        "name": "BELASSAL CHAOUI",
+        "party": "UC",
+        "territory": "El-Gharb"
+      },
+      "runner_up_score": 0.482143,
+      "gap": 0.050115
+    },
+    {
+      "row_order": 2,
+      "territory_id": "ben-m-sick",
+      "candidate_name_fr": "Abdelmjid Mazour",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abdelmjid mazour",
+      "best": {
+        "score": 0.545455,
+        "sequence": 0.727273,
+        "jaccard": 0.0,
+        "name": "ABDELMAJID JOUBIJ",
+        "party": "PJD",
+        "territory": "Ben-M'sick"
+      },
+      "runner_up_score": 0.5,
+      "gap": 0.045455
+    },
+    {
+      "row_order": 3,
+      "territory_id": "ain-sebaa-hay-mohammadi",
+      "candidate_name_fr": "Hakima Fasli",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "hakima fasli",
+      "best": {
+        "score": 0.546371,
+        "sequence": 0.645161,
+        "jaccard": 0.25,
+        "name": "HAKIMA BEL-KASSAOUI",
+        "party": "MP",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.461538,
+      "gap": 0.084833
+    },
+    {
+      "row_order": 4,
+      "territory_id": "ain-chock",
+      "candidate_name_fr": "Abdelaziz El Omari",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abdelaziz el omari",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "ABDELAZIZ EL OMARI",
+        "party": "PJD",
+        "territory": "Aïn-Sebaâ - Hay-Mohammadi"
+      },
+      "runner_up_score": 0.756579,
+      "gap": 0.243421
+    },
+    {
+      "row_order": 5,
+      "territory_id": "hay-hassani",
+      "candidate_name_fr": "Reda Hakim Bennani",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "reda hakim bennani",
+      "best": {
+        "score": 0.441176,
+        "sequence": 0.588235,
+        "jaccard": 0.0,
+        "name": "ABDELHAK ENNAJHI",
+        "party": "PJD",
+        "territory": "Casablanca - Anfa"
+      },
+      "runner_up_score": 0.423077,
+      "gap": 0.0181
+    },
+    {
+      "row_order": 6,
+      "territory_id": "moulay-rachid",
+      "candidate_name_fr": "Mohcine Moufidi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohcine moufidi",
+      "best": {
+        "score": 0.683333,
+        "sequence": 0.8,
+        "jaccard": 0.333333,
+        "name": "MOHSSEN MOUFIDI",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.5,
+      "gap": 0.183333
+    },
+    {
+      "row_order": 7,
+      "territory_id": "sidi-bernoussi",
+      "candidate_name_fr": "Abdelmajid Ait Laadila",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abdelmajid ait laadila",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "ABDELMAJID AIT LAADILA",
+        "party": "PJD",
+        "territory": "Sidi-Bernoussi"
+      },
+      "runner_up_score": 0.524038,
+      "gap": 0.475962
+    },
+    {
+      "row_order": 8,
+      "territory_id": "al-fida-mers-sultan",
+      "candidate_name_fr": "El Fatmi Ramid",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "el fatmi ramid",
+      "best": {
+        "score": 0.483871,
+        "sequence": 0.645161,
+        "jaccard": 0.0,
+        "name": "ABDELLATIF RACHID",
+        "party": "PJD",
+        "territory": "Nouaceur"
+      },
+      "runner_up_score": 0.451389,
+      "gap": 0.032482
+    },
+    {
+      "row_order": 9,
+      "territory_id": "mohammedia",
+      "candidate_name_fr": "Najib Bakkali",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "najib bakkali",
+      "best": {
+        "score": 0.5,
+        "sequence": 0.666667,
+        "jaccard": 0.0,
+        "name": "ISMAIL BEKKALI",
+        "party": "PI",
+        "territory": "Chefchaouen"
+      },
+      "runner_up_score": 0.471591,
+      "gap": 0.028409
+    },
+    {
+      "row_order": 10,
+      "territory_id": "nouaceur",
+      "candidate_name_fr": "Said Hjiej",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "said hjiej",
+      "best": {
+        "score": 0.533333,
+        "sequence": 0.6,
+        "jaccard": 0.333333,
+        "name": "SAID NMILI",
+        "party": "PPS",
+        "territory": "Settat"
+      },
+      "runner_up_score": 0.520833,
+      "gap": 0.0125
+    },
+    {
+      "row_order": 11,
+      "territory_id": "settat",
+      "candidate_name_fr": "Hassan Haris",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "hassan haris",
+      "best": {
+        "score": 0.803333,
+        "sequence": 0.96,
+        "jaccard": 0.333333,
+        "name": "HASSAN HARRIS",
+        "party": "PJD",
+        "territory": "Settat"
+      },
+      "runner_up_score": 0.735507,
+      "gap": 0.067826
+    },
+    {
+      "row_order": 12,
+      "territory_id": "benslimane",
+      "candidate_name_fr": "Mohammed Benjalloul",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed benjalloul",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "MOHAMMED BENJALLOUL",
+        "party": "PJD",
+        "territory": "Benslimane"
+      },
+      "runner_up_score": 0.62064,
+      "gap": 0.37936
+    },
+    {
+      "row_order": 13,
+      "territory_id": "sidi-bennour",
+      "candidate_name_fr": "Mustapha El Khalfi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mustapha el khalfi",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "MUSTAPHA EL KHALFI",
+        "party": "PJD",
+        "territory": "Sidi Bennour"
+      },
+      "runner_up_score": 0.75,
+      "gap": 0.25
+    },
+    {
+      "row_order": 14,
+      "territory_id": "el-jadida",
+      "candidate_name_fr": "Abderrahim Azmi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abderrahim azmi",
+      "best": {
+        "score": 0.692708,
+        "sequence": 0.8125,
+        "jaccard": 0.333333,
+        "name": "ABDERRAHIM ATMOUN",
+        "party": "PAM",
+        "territory": "Khouribga"
+      },
+      "runner_up_score": 0.674242,
+      "gap": 0.018466
+    },
+    {
+      "row_order": 15,
+      "territory_id": "berrechid",
+      "candidate_name_fr": "Mustapha Alaoui",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mustapha alaoui",
+      "best": {
+        "score": 0.698864,
+        "sequence": 0.848485,
+        "jaccard": 0.25,
+        "name": "MUSTAPHA EL KAOURI",
+        "party": "PJD",
+        "territory": "Berkane"
+      },
+      "runner_up_score": 0.692708,
+      "gap": 0.006155
+    },
+    {
+      "row_order": 16,
+      "territory_id": "mediouna",
+      "candidate_name_fr": "Hicham Messaadi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "hicham messaadi",
+      "best": {
+        "score": 0.600575,
+        "sequence": 0.689655,
+        "jaccard": 0.333333,
+        "name": "HICHAM SAANANE",
+        "party": "PI",
+        "territory": "Safi"
+      },
+      "runner_up_score": 0.548851,
+      "gap": 0.051724
+    },
+    {
+      "row_order": 17,
+      "territory_id": "rabat-chellah",
+      "candidate_name_fr": "Mohamed Tahiri",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed tahiri",
+      "best": {
+        "score": 0.694444,
+        "sequence": 0.814815,
+        "jaccard": 0.333333,
+        "name": "MOHAMED KARIM",
+        "party": "PAM",
+        "territory": "Safi"
+      },
+      "runner_up_score": 0.683333,
+      "gap": 0.011111
+    },
+    {
+      "row_order": 18,
+      "territory_id": "rabat-ocean",
+      "candidate_name_fr": "Saad Eddine El Otmani",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "saad eddine el otmani",
+      "best": {
+        "score": 0.755952,
+        "sequence": 0.952381,
+        "jaccard": 0.166667,
+        "name": "SAADEDDINE EL OTHMANI",
+        "party": "PJD",
+        "territory": "Mohammadia"
+      },
+      "runner_up_score": 0.515351,
+      "gap": 0.240602
+    },
+    {
+      "row_order": 19,
+      "territory_id": "sale-medina",
+      "candidate_name_fr": "Nabil Cheikhi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "nabil cheikhi",
+      "best": {
+        "score": 0.520833,
+        "sequence": 0.583333,
+        "jaccard": 0.333333,
+        "name": "NABIL SABRI",
+        "party": "USFP",
+        "territory": "Khénifra"
+      },
+      "runner_up_score": 0.461538,
+      "gap": 0.059295
+    },
+    {
+      "row_order": 20,
+      "territory_id": "sale-el-jadida",
+      "candidate_name_fr": "Youssef Gharbi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "youssef gharbi",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "YOUSSEF GHARBI",
+        "party": "PJD",
+        "territory": "Salé - Al-Jadida"
+      },
+      "runner_up_score": 0.694444,
+      "gap": 0.305556
+    },
+    {
+      "row_order": 21,
+      "territory_id": "tiflet-rommani",
+      "candidate_name_fr": "Ouafae Lmhamdi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "ouafae lmhamdi",
+      "best": {
+        "score": 0.565476,
+        "sequence": 0.642857,
+        "jaccard": 0.333333,
+        "name": "OUAFAE BEKKALI",
+        "party": "RNI",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.465517,
+      "gap": 0.099959
+    },
+    {
+      "row_order": 22,
+      "territory_id": "sidi-kacem",
+      "candidate_name_fr": "Abdellah Ben Abdeslam",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abdallah ben abdeslam",
+      "best": {
+        "score": 0.604167,
+        "sequence": 0.722222,
+        "jaccard": 0.25,
+        "name": "ABDELLAH ADEBDA",
+        "party": "PAM",
+        "territory": "Boujdour"
+      },
+      "runner_up_score": 0.588462,
+      "gap": 0.015705
+    },
+    {
+      "row_order": 23,
+      "territory_id": "kenitra",
+      "candidate_name_fr": "Mustapha Ibrahimi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mustapha ibrahimi",
+      "best": {
+        "score": 0.628788,
+        "sequence": 0.727273,
+        "jaccard": 0.333333,
+        "name": "MOHAMMED IBRAHIMI",
+        "party": "PAM",
+        "territory": "Berkane"
+      },
+      "runner_up_score": 0.615591,
+      "gap": 0.013196
+    },
+    {
+      "row_order": 24,
+      "territory_id": "el-gharb",
+      "candidate_name_fr": "Ibrahim Chouikh",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "ibrahim chouikh",
+      "best": {
+        "score": 0.807471,
+        "sequence": 0.965517,
+        "jaccard": 0.333333,
+        "name": "BRAHIM CHOUIKH",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.594758,
+      "gap": 0.212713
+    },
+    {
+      "row_order": 25,
+      "territory_id": "khemisset-oulmes",
+      "candidate_name_fr": "Taibi Ilhami",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "taibi ilhami",
+      "best": {
+        "score": 0.456522,
+        "sequence": 0.608696,
+        "jaccard": 0.0,
+        "name": "RITA HATIMI",
+        "party": "MP",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.45,
+      "gap": 0.006522
+    },
+    {
+      "row_order": 26,
+      "territory_id": "skhirate-temara",
+      "candidate_name_fr": "Slimane El Amrani",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "slimane el amrani",
+      "best": {
+        "score": 0.844086,
+        "sequence": 0.903226,
+        "jaccard": 0.666667,
+        "name": "SLIMANE AMRANI",
+        "party": "PJD",
+        "territory": "Rabat - Challah"
+      },
+      "runner_up_score": 0.579412,
+      "gap": 0.264674
+    },
+    {
+      "row_order": 27,
+      "territory_id": "sidi-slimane",
+      "candidate_name_fr": "Mohammed El Ayadi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed el ayadi",
+      "best": {
+        "score": 0.786765,
+        "sequence": 0.882353,
+        "jaccard": 0.5,
+        "name": "MOHAMED EL HAFYANI",
+        "party": "PJD",
+        "territory": "Sidi Slimane"
+      },
+      "runner_up_score": 0.761364,
+      "gap": 0.025401
+    },
+    {
+      "row_order": 28,
+      "territory_id": "fes-nord",
+      "candidate_name_fr": "Mohammed El Harti",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed el harti",
+      "best": {
+        "score": 0.788306,
+        "sequence": 0.967742,
+        "jaccard": 0.25,
+        "name": "MOHAMMED ELHARTI",
+        "party": "PJD",
+        "territory": "Fès-Janoubia"
+      },
+      "runner_up_score": 0.761364,
+      "gap": 0.026943
+    },
+    {
+      "row_order": 29,
+      "territory_id": "fes-sud",
+      "candidate_name_fr": "Driss Azami Idrissi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "driss azami idrissi",
+      "best": {
+        "score": 0.727907,
+        "sequence": 0.837209,
+        "jaccard": 0.4,
+        "name": "DRISS EL AZAMI EL IDRISS",
+        "party": "PJD",
+        "territory": "Fès-Janoubia"
+      },
+      "runner_up_score": 0.5125,
+      "gap": 0.215407
+    },
+    {
+      "row_order": 30,
+      "territory_id": "meknes",
+      "candidate_name_fr": "Abdallah Bouanou",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abdallah bouanou",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "ABDELLAH BOUANOU",
+        "party": "PJD",
+        "territory": "Meknès"
+      },
+      "runner_up_score": 0.656863,
+      "gap": 0.343137
+    },
+    {
+      "row_order": 31,
+      "territory_id": "taza",
+      "candidate_name_fr": "Jamal Massaoudi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "jamal massaoudi",
+      "best": {
+        "score": 0.783333,
+        "sequence": 0.933333,
+        "jaccard": 0.333333,
+        "name": "JAMAL MESSAOUDI",
+        "party": "PJD",
+        "territory": "Taza"
+      },
+      "runner_up_score": 0.5625,
+      "gap": 0.220833
+    },
+    {
+      "row_order": 32,
+      "territory_id": "taounate-tissa",
+      "candidate_name_fr": "Said El Aarabi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "said el aarabi",
+      "best": {
+        "score": 0.585714,
+        "sequence": 0.714286,
+        "jaccard": 0.2,
+        "name": "RACHID EL ABDI",
+        "party": "PAM",
+        "territory": "Salé - Médina"
+      },
+      "runner_up_score": 0.585714,
+      "gap": 0.0
+    },
+    {
+      "row_order": 33,
+      "territory_id": "karia-ghafsay",
+      "candidate_name_fr": "Said Chakir",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "said chakir",
+      "best": {
+        "score": 0.628788,
+        "sequence": 0.727273,
+        "jaccard": 0.333333,
+        "name": "SAID NACIRI",
+        "party": "PAM",
+        "territory": "Casablanca - Anfa"
+      },
+      "runner_up_score": 0.583333,
+      "gap": 0.045455
+    },
+    {
+      "row_order": 34,
+      "territory_id": "boulemane",
+      "candidate_name_fr": "Mustapha Belafdil",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mustapha belafdil",
+      "best": {
+        "score": 0.6625,
+        "sequence": 0.8,
+        "jaccard": 0.25,
+        "name": "MUSTAPHA EL KHALFI",
+        "party": "PJD",
+        "territory": "Sidi Bennour"
+      },
+      "runner_up_score": 0.653409,
+      "gap": 0.009091
+    },
+    {
+      "row_order": 35,
+      "territory_id": "sefrou",
+      "candidate_name_fr": "Driss Meskine",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "driss meskine",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "DRISS MESKINE",
+        "party": "PJD",
+        "territory": "Sefrou"
+      },
+      "runner_up_score": 0.583333,
+      "gap": 0.416667
+    },
+    {
+      "row_order": 36,
+      "territory_id": "ifrane",
+      "candidate_name_fr": "Ahmed Rachidi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "ahmed rachidi",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "AHMED RACHIDI",
+        "party": "PJD",
+        "territory": "Ifrane"
+      },
+      "runner_up_score": 0.645833,
+      "gap": 0.354167
+    },
+    {
+      "row_order": 37,
+      "territory_id": "moulay-yaacoub",
+      "candidate_name_fr": "Mohamed Youssef",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed youssef",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "MOHAMED YOUSSEF",
+        "party": "PJD",
+        "territory": "Moulay-Yacoub"
+      },
+      "runner_up_score": 0.683333,
+      "gap": 0.316667
+    },
+    {
+      "row_order": 38,
+      "territory_id": "el-hajeb",
+      "candidate_name_fr": "Mourad Sahsah",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mourad sahsah",
+      "best": {
+        "score": 0.565476,
+        "sequence": 0.642857,
+        "jaccard": 0.333333,
+        "name": "MOURAD LAGOURCH",
+        "party": "PJD",
+        "territory": "Al-Haouz"
+      },
+      "runner_up_score": 0.444444,
+      "gap": 0.121032
+    },
+    {
+      "row_order": 39,
+      "territory_id": "medina-sidi-youssef",
+      "candidate_name_fr": "Mohamed Larbi Belgaid",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed larbi belgaid",
+      "best": {
+        "score": 0.839286,
+        "sequence": 0.952381,
+        "jaccard": 0.5,
+        "name": "MOHAMED LARBI BELCAID",
+        "party": "PJD",
+        "territory": "Ménara"
+      },
+      "runner_up_score": 0.635366,
+      "gap": 0.20392
+    },
+    {
+      "row_order": 40,
+      "territory_id": "menara",
+      "candidate_name_fr": "Mohamed Toufla",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed toufla",
+      "best": {
+        "score": 0.783333,
+        "sequence": 0.933333,
+        "jaccard": 0.333333,
+        "name": "MOHAMED TOUFALLA",
+        "party": "PJD",
+        "territory": "Ménara"
+      },
+      "runner_up_score": 0.75,
+      "gap": 0.033333
+    },
+    {
+      "row_order": 41,
+      "territory_id": "gueliz-nakhil",
+      "candidate_name_fr": "Youssef Ait El Haj",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "youssef ait el haj",
+      "best": {
+        "score": 0.668699,
+        "sequence": 0.780488,
+        "jaccard": 0.333333,
+        "name": "YOUSSEF AIT LHAJ LAHCEN",
+        "party": "PJD",
+        "territory": "Guéliz - Annakhil"
+      },
+      "runner_up_score": 0.55,
+      "gap": 0.118699
+    },
+    {
+      "row_order": 42,
+      "territory_id": "el-kelaa-des-sraghna",
+      "candidate_name_fr": "Rachid El Basset",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "rachid el basset",
+      "best": {
+        "score": 0.705645,
+        "sequence": 0.774194,
+        "jaccard": 0.5,
+        "name": "RACHID EL FAYEK",
+        "party": "RNI",
+        "territory": "Fès-Janoubia"
+      },
+      "runner_up_score": 0.675,
+      "gap": 0.030645
+    },
+    {
+      "row_order": 43,
+      "territory_id": "safi",
+      "candidate_name_fr": "Reda Bougmazi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "reda bougmazi",
+      "best": {
+        "score": 0.805556,
+        "sequence": 0.962963,
+        "jaccard": 0.333333,
+        "name": "REDA BOUGEMAZI",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.4375,
+      "gap": 0.368056
+    },
+    {
+      "row_order": 44,
+      "territory_id": "rehamna",
+      "candidate_name_fr": "Abdelkhaled El Basri",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abdelkhaled el basri",
+      "best": {
+        "score": 0.8375,
+        "sequence": 0.95,
+        "jaccard": 0.5,
+        "name": "ABDELKHALID EL BASRI",
+        "party": "PJD",
+        "territory": "Rehamna"
+      },
+      "runner_up_score": 0.635366,
+      "gap": 0.202134
+    },
+    {
+      "row_order": 45,
+      "territory_id": "youssoufia",
+      "candidate_name_fr": "Moulay Rachid El Hachimi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "moulay rachid el hachimi",
+      "best": {
+        "score": 0.573684,
+        "sequence": 0.631579,
+        "jaccard": 0.4,
+        "name": "RACHID EL ABDI",
+        "party": "PAM",
+        "territory": "Salé - Médina"
+      },
+      "runner_up_score": 0.561538,
+      "gap": 0.012146
+    },
+    {
+      "row_order": 46,
+      "territory_id": "al-haouz",
+      "candidate_name_fr": "Saleh Najmi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "saleh najmi",
+      "best": {
+        "score": 0.487179,
+        "sequence": 0.538462,
+        "jaccard": 0.333333,
+        "name": "SALEH AOURHEBAL",
+        "party": "PI",
+        "territory": "Khénifra"
+      },
+      "runner_up_score": 0.428571,
+      "gap": 0.058608
+    },
+    {
+      "row_order": 47,
+      "territory_id": "chichaoua",
+      "candidate_name_fr": "Hamza Soufi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "hamza soufi",
+      "best": {
+        "score": 0.770833,
+        "sequence": 0.916667,
+        "jaccard": 0.333333,
+        "name": "HAMZA ESSOUFI",
+        "party": "PJD",
+        "territory": "Chichaoua"
+      },
+      "runner_up_score": 0.477273,
+      "gap": 0.293561
+    },
+    {
+      "row_order": 48,
+      "territory_id": "essaouira",
+      "candidate_name_fr": "Sami El Kharouaa",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "sami el kharouaa",
+      "best": {
+        "score": 0.51875,
+        "sequence": 0.625,
+        "jaccard": 0.2,
+        "name": "AHMED EL GHAZOUI",
+        "party": "PPS",
+        "territory": "Sidi-Kacem"
+      },
+      "runner_up_score": 0.504545,
+      "gap": 0.014205
+    },
+    {
+      "row_order": 49,
+      "territory_id": "tanger-assilah",
+      "candidate_name_fr": "Mohammed Amahjour",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed amahjour",
+      "best": {
+        "score": 0.692708,
+        "sequence": 0.8125,
+        "jaccard": 0.333333,
+        "name": "MOHAMMED HAMDAOUI",
+        "party": "PJD",
+        "territory": "Larache"
+      },
+      "runner_up_score": 0.683333,
+      "gap": 0.009375
+    },
+    {
+      "row_order": 50,
+      "territory_id": "fahs-anjra",
+      "candidate_name_fr": "Souad Boulaich",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "souad boulaich",
+      "best": {
+        "score": 0.65,
+        "sequence": 0.7,
+        "jaccard": 0.5,
+        "name": "SOUAD BOULAICH EL HAJRAOUI",
+        "party": "PJD",
+        "territory": "Fahs - Anjra"
+      },
+      "runner_up_score": 0.602564,
+      "gap": 0.047436
+    },
+    {
+      "row_order": 51,
+      "territory_id": "tetouan",
+      "candidate_name_fr": "Amina Ben Abdelouahab",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "amina ben abdelouahab",
+      "best": {
+        "score": 0.495946,
+        "sequence": 0.594595,
+        "jaccard": 0.2,
+        "name": "SAAD BEN ZEROUAL",
+        "party": "PAM",
+        "territory": "Sidi-Kacem"
+      },
+      "runner_up_score": 0.486486,
+      "gap": 0.009459
+    },
+    {
+      "row_order": 52,
+      "territory_id": "m-diq-fnideq",
+      "candidate_name_fr": "Abderrahim Ennaou",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abderrahim ennaou",
+      "best": {
+        "score": 0.70098,
+        "sequence": 0.823529,
+        "jaccard": 0.333333,
+        "name": "ABDERRAHIM ATMOUN",
+        "party": "PAM",
+        "territory": "Khouribga"
+      },
+      "runner_up_score": 0.640476,
+      "gap": 0.060504
+    },
+    {
+      "row_order": 53,
+      "territory_id": "al-hoceima",
+      "candidate_name_fr": "Nabil Andaloussi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "nabil andaloussi",
+      "best": {
+        "score": 0.527778,
+        "sequence": 0.592593,
+        "jaccard": 0.333333,
+        "name": "NABIL SABRI",
+        "party": "USFP",
+        "territory": "Khénifra"
+      },
+      "runner_up_score": 0.45,
+      "gap": 0.077778
+    },
+    {
+      "row_order": 54,
+      "territory_id": "larache",
+      "candidate_name_fr": "Said Khairoun",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "said khairoun",
+      "best": {
+        "score": 0.602564,
+        "sequence": 0.692308,
+        "jaccard": 0.333333,
+        "name": "SAID CHBAATOU",
+        "party": "RNI",
+        "territory": "Midelt"
+      },
+      "runner_up_score": 0.583333,
+      "gap": 0.019231
+    },
+    {
+      "row_order": 55,
+      "territory_id": "ouezzane",
+      "candidate_name_fr": "Abdelhalim El Allaoui",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abdelhalim el allaoui",
+      "best": {
+        "score": 0.635366,
+        "sequence": 0.780488,
+        "jaccard": 0.2,
+        "name": "ABDELHAKIM EL AHMADI",
+        "party": "MP",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.626923,
+      "gap": 0.008443
+    },
+    {
+      "row_order": 56,
+      "territory_id": "agadir-ida-outanane",
+      "candidate_name_fr": "Mohammed Bakiri",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed bakiri",
+      "best": {
+        "score": 0.694444,
+        "sequence": 0.814815,
+        "jaccard": 0.333333,
+        "name": "MOHAMED KARIM",
+        "party": "PAM",
+        "territory": "Safi"
+      },
+      "runner_up_score": 0.683333,
+      "gap": 0.011111
+    },
+    {
+      "row_order": 57,
+      "territory_id": "tiznit",
+      "candidate_name_fr": "Mohamed Amekraz",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed amekraz",
+      "best": {
+        "score": 0.704023,
+        "sequence": 0.827586,
+        "jaccard": 0.333333,
+        "name": "MOHAMED AMRHAR",
+        "party": "MDS",
+        "territory": "Taza"
+      },
+      "runner_up_score": 0.683333,
+      "gap": 0.02069
+    },
+    {
+      "row_order": 58,
+      "territory_id": "inezgane-ait-melloul",
+      "candidate_name_fr": "Ahmed Aderrak",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "ahmed aderrak",
+      "best": {
+        "score": 1.0,
+        "sequence": 1.0,
+        "jaccard": 1.0,
+        "name": "AHMED ADERRAK",
+        "party": "PJD",
+        "territory": "Inézgane - Aït-Melloul"
+      },
+      "runner_up_score": 0.583333,
+      "gap": 0.416667
+    },
+    {
+      "row_order": 59,
+      "territory_id": "chtouka-ait-baha",
+      "candidate_name_fr": "Ahmed Boutgourine",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "ahmed boutgourine",
+      "best": {
+        "score": 0.565476,
+        "sequence": 0.642857,
+        "jaccard": 0.333333,
+        "name": "AHMED TOUMI",
+        "party": "PI",
+        "territory": "El-Kelâa-des-Sraghna"
+      },
+      "runner_up_score": 0.565476,
+      "gap": 0.0
+    },
+    {
+      "row_order": 60,
+      "territory_id": "taroudant-nord",
+      "candidate_name_fr": "Mhamed Ait Bella Selmane",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mhamed ait bella selmane",
+      "best": {
+        "score": 0.512195,
+        "sequence": 0.682927,
+        "jaccard": 0.0,
+        "name": "MOHAMED BELHASSAN",
+        "party": "PI",
+        "territory": "Errachidia"
+      },
+      "runner_up_score": 0.503205,
+      "gap": 0.00899
+    },
+    {
+      "row_order": 61,
+      "territory_id": "taroudant-sud",
+      "candidate_name_fr": "Brahim Ajnine",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "brahim ajnine",
+      "best": {
+        "score": 0.623333,
+        "sequence": 0.72,
+        "jaccard": 0.333333,
+        "name": "BRAHIM DAAIF",
+        "party": "PJD",
+        "territory": "Laâyoune"
+      },
+      "runner_up_score": 0.533333,
+      "gap": 0.09
+    },
+    {
+      "row_order": 62,
+      "territory_id": "tata",
+      "candidate_name_fr": "Mohammed Id Ahmed",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed id ahmed",
+      "best": {
+        "score": 0.643145,
+        "sequence": 0.774194,
+        "jaccard": 0.25,
+        "name": "MOHAMED IDAOMAR",
+        "party": "PJD",
+        "territory": "Tétouan"
+      },
+      "runner_up_score": 0.625,
+      "gap": 0.018145
+    },
+    {
+      "row_order": 63,
+      "territory_id": "oujda-angad",
+      "candidate_name_fr": "Abdallah Hamel",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abdallah hamel",
+      "best": {
+        "score": 0.779762,
+        "sequence": 0.928571,
+        "jaccard": 0.333333,
+        "name": "ABDELLAH HAMAL",
+        "party": "PJD",
+        "territory": "Oujda - Angad"
+      },
+      "runner_up_score": 0.672619,
+      "gap": 0.107143
+    },
+    {
+      "row_order": 64,
+      "territory_id": "nador",
+      "candidate_name_fr": "Farouk Tahiri",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "farouk tahiri",
+      "best": {
+        "score": 0.779762,
+        "sequence": 0.928571,
+        "jaccard": 0.333333,
+        "name": "FAROUK ATTAHIRI",
+        "party": "PJD",
+        "territory": "Nador"
+      },
+      "runner_up_score": 0.623333,
+      "gap": 0.156429
+    },
+    {
+      "row_order": 65,
+      "territory_id": "guercif",
+      "candidate_name_fr": "Abdelouafi Meziane",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abdelouafi meziane",
+      "best": {
+        "score": 0.541667,
+        "sequence": 0.722222,
+        "jaccard": 0.0,
+        "name": "ABDELJALIL MESKINE",
+        "party": "PJD",
+        "territory": "Taroudannt - Al-Janoubia"
+      },
+      "runner_up_score": 0.471429,
+      "gap": 0.070238
+    },
+    {
+      "row_order": 66,
+      "territory_id": "berkane",
+      "candidate_name_fr": "Rafik Oubachir",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "rafik oubachir",
+      "best": {
+        "score": 0.45,
+        "sequence": 0.6,
+        "jaccard": 0.0,
+        "name": "RAMDANE BOUACHRA",
+        "party": "PJD",
+        "territory": "Inézgane - Aït-Melloul"
+      },
+      "runner_up_score": 0.444444,
+      "gap": 0.005556
+    },
+    {
+      "row_order": 67,
+      "territory_id": "driouch",
+      "candidate_name_fr": "Hakim Zerrouk",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "hakim zerrouk",
+      "best": {
+        "score": 0.4375,
+        "sequence": 0.583333,
+        "jaccard": 0.0,
+        "name": "HALIM FOUAD",
+        "party": "PAM",
+        "territory": "Béni-Mellal"
+      },
+      "runner_up_score": 0.428571,
+      "gap": 0.008929
+    },
+    {
+      "row_order": 68,
+      "territory_id": "jerada",
+      "candidate_name_fr": "Taoufik Ouchbel",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "taoufik ouchbel",
+      "best": {
+        "score": 0.567204,
+        "sequence": 0.645161,
+        "jaccard": 0.333333,
+        "name": "TAOUFIK MAIMOUNI",
+        "party": "PAM",
+        "territory": "Chefchaouen"
+      },
+      "runner_up_score": 0.565476,
+      "gap": 0.001728
+    },
+    {
+      "row_order": 69,
+      "territory_id": "figuig",
+      "candidate_name_fr": "Lahcen Tajmouati",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "lahcen tajmouati",
+      "best": {
+        "score": 0.652299,
+        "sequence": 0.758621,
+        "jaccard": 0.333333,
+        "name": "LAHCEN DAOUDI",
+        "party": "PJD",
+        "territory": "Béni-Mellal"
+      },
+      "runner_up_score": 0.600575,
+      "gap": 0.051724
+    },
+    {
+      "row_order": 70,
+      "territory_id": "taourirt",
+      "candidate_name_fr": "Hmida Mahjoubi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "hmida mahjoubi",
+      "best": {
+        "score": 0.519231,
+        "sequence": 0.692308,
+        "jaccard": 0.0,
+        "name": "HAMID OUAHBI",
+        "party": "PAM",
+        "territory": "Agadir - Ida-ou-Tanane"
+      },
+      "runner_up_score": 0.5,
+      "gap": 0.019231
+    },
+    {
+      "row_order": 71,
+      "territory_id": "beni-mellal",
+      "candidate_name_fr": "Mohamed Merzouk",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed merzouk",
+      "best": {
+        "score": 0.783333,
+        "sequence": 0.933333,
+        "jaccard": 0.333333,
+        "name": "MOHAMED MARZOUK",
+        "party": "PJD",
+        "territory": "Béni-Mellal"
+      },
+      "runner_up_score": 0.683333,
+      "gap": 0.1
+    },
+    {
+      "row_order": 72,
+      "territory_id": "azilal-demnate",
+      "candidate_name_fr": "Khalid Tikoukine",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "khalid tikoukine",
+      "best": {
+        "score": 0.547794,
+        "sequence": 0.647059,
+        "jaccard": 0.25,
+        "name": "KHALID EL BOUKARAI",
+        "party": "PJD",
+        "territory": "El-Hajeb"
+      },
+      "runner_up_score": 0.503676,
+      "gap": 0.044118
+    },
+    {
+      "row_order": 73,
+      "territory_id": "bzou-ouaouizeght",
+      "candidate_name_fr": "Abdessamad Laassouli",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abdessamad laassouli",
+      "best": {
+        "score": 0.61036,
+        "sequence": 0.702703,
+        "jaccard": 0.333333,
+        "name": "ABDESSAMAD HAIKER",
+        "party": "PJD",
+        "territory": "Casablanca - Anfa"
+      },
+      "runner_up_score": 0.583333,
+      "gap": 0.027027
+    },
+    {
+      "row_order": 74,
+      "territory_id": "fquih-ben-salah",
+      "candidate_name_fr": "Bouabida Lida",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "bouabida lida",
+      "best": {
+        "score": 0.692308,
+        "sequence": 0.923077,
+        "jaccard": 0.0,
+        "name": "BOUABID LBIDA",
+        "party": "PJD",
+        "territory": "Fquih Ben Salah"
+      },
+      "runner_up_score": 0.42,
+      "gap": 0.272308
+    },
+    {
+      "row_order": 75,
+      "territory_id": "khouribga",
+      "candidate_name_fr": "Rachid Said",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "rachid said",
+      "best": {
+        "score": 0.605072,
+        "sequence": 0.695652,
+        "jaccard": 0.333333,
+        "name": "RACHID TAMEK",
+        "party": "PAM",
+        "territory": "Assa-Zag"
+      },
+      "runner_up_score": 0.6025,
+      "gap": 0.002572
+    },
+    {
+      "row_order": 76,
+      "territory_id": "khenifra",
+      "candidate_name_fr": "Rachid El Hachimi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "rachid el hachimi",
+      "best": {
+        "score": 0.705645,
+        "sequence": 0.774194,
+        "jaccard": 0.5,
+        "name": "RACHID EL ABDI",
+        "party": "PAM",
+        "territory": "Salé - Médina"
+      },
+      "runner_up_score": 0.6875,
+      "gap": 0.018145
+    },
+    {
+      "row_order": 77,
+      "territory_id": "errachidia",
+      "candidate_name_fr": "Mohamed Drissi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed drissi",
+      "best": {
+        "score": 0.805556,
+        "sequence": 0.962963,
+        "jaccard": 0.333333,
+        "name": "MOHAMMED DRISS",
+        "party": "PJD",
+        "territory": "Boulemane"
+      },
+      "runner_up_score": 0.672619,
+      "gap": 0.132937
+    },
+    {
+      "row_order": 78,
+      "territory_id": "ouarzazate",
+      "candidate_name_fr": "Said Essadik",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "said essadik",
+      "best": {
+        "score": 0.7225,
+        "sequence": 0.88,
+        "jaccard": 0.25,
+        "name": "SAID ES-SADEK",
+        "party": "PJD",
+        "territory": "Ouarzazate"
+      },
+      "runner_up_score": 0.563333,
+      "gap": 0.159167
+    },
+    {
+      "row_order": 79,
+      "territory_id": "zagora",
+      "candidate_name_fr": "Abderrahman Essoufi",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abderrahman essoufi",
+      "best": {
+        "score": 0.666667,
+        "sequence": 0.777778,
+        "jaccard": 0.333333,
+        "name": "ABDERRAHMAN HARFI",
+        "party": "UC",
+        "territory": "Sidi-Kacem"
+      },
+      "runner_up_score": 0.615132,
+      "gap": 0.051535
+    },
+    {
+      "row_order": 80,
+      "territory_id": "tinghir",
+      "candidate_name_fr": "Abdelouahed Seddiki",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abdelouahed seddiki",
+      "best": {
+        "score": 0.683333,
+        "sequence": 0.8,
+        "jaccard": 0.333333,
+        "name": "ABDELOUAHED RADI",
+        "party": "USFP",
+        "territory": "Sidi Slimane"
+      },
+      "runner_up_score": 0.5875,
+      "gap": 0.095833
+    },
+    {
+      "row_order": 81,
+      "territory_id": "midelt",
+      "candidate_name_fr": "Lahbib Choubani",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "lahbib choubani",
+      "best": {
+        "score": 0.633333,
+        "sequence": 0.733333,
+        "jaccard": 0.333333,
+        "name": "FATIHA CHOUBANI",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.465517,
+      "gap": 0.167816
+    },
+    {
+      "row_order": 82,
+      "territory_id": "oued-eddahab",
+      "candidate_name_fr": "Azouha El Arrak",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "azouha el arrak",
+      "best": {
+        "score": 0.850806,
+        "sequence": 0.967742,
+        "jaccard": 0.5,
+        "name": "AZZOUHA EL ARRAK",
+        "party": "PJD",
+        "territory": "Oued-Ed-Dahab"
+      },
+      "runner_up_score": 0.5,
+      "gap": 0.350806
+    },
+    {
+      "row_order": 83,
+      "territory_id": "aousserd",
+      "candidate_name_fr": "Boussif Lmami",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "boussif lmami",
+      "best": {
+        "score": 0.444444,
+        "sequence": 0.592593,
+        "jaccard": 0.0,
+        "name": "YOUSSEF GHARBI",
+        "party": "PJD",
+        "territory": "Salé - Al-Jadida"
+      },
+      "runner_up_score": 0.428571,
+      "gap": 0.015873
+    },
+    {
+      "row_order": 84,
+      "territory_id": "laayoune",
+      "candidate_name_fr": "Mohamed Lamine Dida",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed lamine dida",
+      "best": {
+        "score": 0.704457,
+        "sequence": 0.883721,
+        "jaccard": 0.166667,
+        "name": "MOHAMMED EL AMINE DAIEDDA",
+        "party": "MP",
+        "territory": "Oued-Ed-Dahab"
+      },
+      "runner_up_score": 0.576786,
+      "gap": 0.127672
+    },
+    {
+      "row_order": 85,
+      "territory_id": "boujdour",
+      "candidate_name_fr": "Mustapha Ben Bilal",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mustapha ben bilal",
+      "best": {
+        "score": 0.607955,
+        "sequence": 0.727273,
+        "jaccard": 0.25,
+        "name": "MUSTAPHA BAITAS",
+        "party": "RNI",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.591667,
+      "gap": 0.016288
+    },
+    {
+      "row_order": 86,
+      "territory_id": "es-semara",
+      "candidate_name_fr": "Mohamed Fadil Omari",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed fadil omari",
+      "best": {
+        "score": 0.698864,
+        "sequence": 0.848485,
+        "jaccard": 0.25,
+        "name": "MOHAMED FADILI",
+        "party": "MP",
+        "territory": "Driouch"
+      },
+      "runner_up_score": 0.636029,
+      "gap": 0.062834
+    },
+    {
+      "row_order": 87,
+      "territory_id": "tarfaya",
+      "candidate_name_fr": "Mohamed Ali El Bachra",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mohamed ali el bachra",
+      "best": {
+        "score": 0.652632,
+        "sequence": 0.736842,
+        "jaccard": 0.4,
+        "name": "MOHAMED EL-HEJIRA",
+        "party": "PAM",
+        "territory": "Karia - Rhafsai"
+      },
+      "runner_up_score": 0.638462,
+      "gap": 0.01417
+    },
+    {
+      "row_order": 88,
+      "territory_id": "sidi-ifni",
+      "candidate_name_fr": "Abdallah Moustabchir",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "abdallah moustabchir",
+      "best": {
+        "score": 0.597619,
+        "sequence": 0.685714,
+        "jaccard": 0.333333,
+        "name": "ABDELLAH ABERKI",
+        "party": "PAM",
+        "territory": "Tan-Tan"
+      },
+      "runner_up_score": 0.596491,
+      "gap": 0.001128
+    },
+    {
+      "row_order": 89,
+      "territory_id": "guelmim",
+      "candidate_name_fr": "Mnina Mouden",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mnina mouden",
+      "best": {
+        "score": 0.692308,
+        "sequence": 0.923077,
+        "jaccard": 0.0,
+        "name": "MANINA MOUADEN",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.5,
+      "gap": 0.192308
+    },
+    {
+      "row_order": 90,
+      "territory_id": "tan-tan",
+      "candidate_name_fr": "Mae El Ainain Abid",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "mae el ainain abid",
+      "best": {
+        "score": 0.5,
+        "sequence": 0.619048,
+        "jaccard": 0.142857,
+        "name": "MOHAMMED EL AMINE DAIEDDA",
+        "party": "MP",
+        "territory": "Oued-Ed-Dahab"
+      },
+      "runner_up_score": 0.438725,
+      "gap": 0.061275
+    },
+    {
+      "row_order": 91,
+      "territory_id": "assa-zag",
+      "candidate_name_fr": "Houssine Hrich",
+      "current_party": "PJD",
+      "candidate_role": "HEAD_OF_LOCAL_LIST",
+      "identity_status": "SOURCE_LATIN",
+      "query_norm": "houssine hrich",
+      "best": {
+        "score": 0.580645,
+        "sequence": 0.774194,
+        "jaccard": 0.0,
+        "name": "LAHOUCINE HARRICH",
+        "party": "PJD",
+        "territory": "Liste nationale"
+      },
+      "runner_up_score": 0.46875,
+      "gap": 0.111895
+    }
+  ]
+}
