@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "M26-ASV2-AS2-OUTPUT-SCHEMA-V2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "anonymous_election_id",
+    "anonymous_territory_id",
+    "condition_id",
+    "batch_id",
+    "weighted_archetype_id",
+    "turnout_probability",
+    "conditional_party_probabilities",
+    "reason_codes"
+  ],
+  "properties": {
+    "anonymous_election_id": {"type": "string", "minLength": 1},
+    "anonymous_territory_id": {"type": "string", "minLength": 1},
+    "condition_id": {"type": "string", "pattern": "^C_[A-F0-9]{8}$"},
+    "batch_id": {"type": "string", "minLength": 1},
+    "weighted_archetype_id": {"type": "string", "pattern": "^A[0-9]{3}$"},
+    "turnout_probability": {"type": "number", "minimum": 0, "maximum": 1},
+    "conditional_party_probabilities": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}
+    },
+    "reason_codes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "PRIOR_VOTE_INERTIA",
+          "PRIOR_ABSTENTION_INERTIA",
+          "TURNOUT_TRANSITION",
+          "DEMOGRAPHIC_LATENT_PRIOR",
+          "INCUMBENCY",
+          "PARTY_SWITCH",
+          "LOCAL_OR_REGIONAL_OFFICE",
+          "PARTY_OR_NATIONAL_OFFICE",
+          "FORMER_MP_OR_MINISTER",
+          "ENDORSEMENT_OR_ALLIANCE",
+          "WITHDRAWAL_SANCTION_OR_INCAPACITY",
+          "OTHER_VERIFIED_CONTEXT",
+          "NO_DIRECTIONAL_EVIDENCE"
+        ]
+      }
+    }
+  }
+}
