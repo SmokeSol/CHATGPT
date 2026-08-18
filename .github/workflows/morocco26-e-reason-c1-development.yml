@@ -1,10 +1,6 @@
 name: Morocco26 E_reason C1 blinded development
 
 on:
-  pull_request:
-    branches:
-      - morocco26-e-reason
-    types: [opened, synchronize, reopened]
   workflow_dispatch:
 
 permissions:
@@ -26,12 +22,23 @@ jobs:
           python morocco26/scripts/validate_e_reason_prereg.py
           test -f morocco26/data/goal100/e_reason/judgments/development/c2_opus5_freeze_receipt_v1.json
 
+      - name: Detect existing frozen C1
+        id: frozen
+        run: |
+          if test -f morocco26/data/goal100/e_reason/judgments/development/c1_rule_only/c1_judgment_manifest.json; then
+            echo 'already=true' >> "$GITHUB_OUTPUT"
+            echo 'C1_ALREADY_FROZEN_REFUSING_REGENERATION'
+          else
+            echo 'already=false' >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Generate deterministic blinded C1 judgments
+        if: steps.frozen.outputs.already != 'true'
         run: |
           set -euo pipefail
           python morocco26/scripts/e_reason_generate_c1_development.py
 
-      - name: Assert no target outcome or mapping access is encoded
+      - name: Assert frozen C1 validity
         run: |
           set -euo pipefail
           python - <<'PY'
@@ -47,16 +54,13 @@ jobs:
           print('C1_FREEZE_GUARD_PASS')
           PY
 
-      - name: Commit C1 frozen judgments
+      - name: Commit first C1 freeze only
+        if: steps.frozen.outputs.already != 'true'
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add morocco26/data/goal100/e_reason/judgments/development/c1_rule_only/
           git diff --cached --check
-          if git diff --cached --quiet; then
-            echo 'No C1 artifacts to commit.'
-            exit 0
-          fi
           git commit -m 'experiment(e-reason): freeze blinded C1 development judgments'
           git push origin HEAD:morocco26-e-reason
