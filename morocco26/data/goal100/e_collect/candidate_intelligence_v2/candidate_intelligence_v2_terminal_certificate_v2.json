@@ -1,0 +1,48 @@
+{
+  "2021_blind_status": "RETROSPECTIVE_NOT_BLIND",
+  "F0_modified": false,
+  "certificate_id": "M26-CANDIDATE-INTELLIGENCE-V2-TERMINAL-CERTIFICATE-V2",
+  "llm_invoked": false,
+  "next_action": "Stop E_reason V2 candidate-intelligence layer and do not invoke Opus on it; preserve data as exploratory evidence and keep F0 unchanged.",
+  "no_more_post_result_feature_search_inside_this_experiment": true,
+  "power_gate": {
+    "M1_positive_2016": 45,
+    "M1_positive_2021": 30,
+    "audited_identity_resolutions": 8,
+    "eligible_features": [
+      "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT"
+    ],
+    "known_2016": 137,
+    "known_2021": 138,
+    "status": "PASS_MULTIPART_HEAD_POWER"
+  },
+  "predictive_gate": {
+    "PJD_relative_improvement": 0.006404693012756067,
+    "RNI_relative_improvement": -0.006405410005738399,
+    "beta": {
+      "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": 0.2168189655392286
+    },
+    "bootstrap_probability_model_better": 0.512,
+    "fit_cells": 137,
+    "material_signal_gate": {
+      "bootstrap_probability_ge_0_90": false,
+      "both_parties_point_improve": false,
+      "pass": false,
+      "pooled_relative_improvement_ge_0_5pct": false
+    },
+    "pooled_relative_improvement": -8.332044920497578e-05,
+    "selected_alpha": 100.0,
+    "terminal_decision": "KILL_E_REASON_V2_CANDIDATE_LAYER",
+    "terminal_interpretation": "NO_RETROSPECTIVE_PREDICTIVE_SIGNAL",
+    "validation_cells": 123
+  },
+  "prior_diagnostics": {
+    "PJD_only_PJD_relative_improvement": 0.0011025074817373694,
+    "PJD_only_terminal_interpretation": "POSITIVE_RETROSPECTIVE_SIGNAL",
+    "feature_C_status": "FAIL_FEATURE_C_DATA_POWER"
+  },
+  "purpose": "Final deterministic GO/KILL decision after audited 2021 identity resolution; no further identity resolution or feature expansion is authorized inside this experiment.",
+  "schema_version": "2.0",
+  "terminal_decision": "KILL_E_REASON_V2_CANDIDATE_LAYER",
+  "terminal_status": "TERMINAL_NO_GO"
+}

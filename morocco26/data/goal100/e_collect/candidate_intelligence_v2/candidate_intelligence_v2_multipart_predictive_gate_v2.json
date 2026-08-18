@@ -1,0 +1,433 @@
+{
+  "2021_is_blind_holdout": false,
+  "beta": {
+    "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": 0.2168189655392286
+  },
+  "contract_id": "M26-CANDIDATE-INTELLIGENCE-V2-MULTIPART-HEAD-V1",
+  "eligible_features": [
+    "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT"
+  ],
+  "feature_means_2016_by_party": {
+    "PJD": {
+      "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": 0.3611111111111111
+    },
+    "RNI": {
+      "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": 0.2923076923076923
+    }
+  },
+  "fit_2011_TO_2016": {
+    "by_party": {
+      "PJD": {
+        "C0_RMSE": 0.09081682729417694,
+        "model_RMSE": 0.08855382984093568,
+        "n": 72,
+        "relative_improvement": 0.024918261523394502
+      },
+      "RNI": {
+        "C0_RMSE": 0.07986354264539994,
+        "model_RMSE": 0.07831170026242326,
+        "n": 65,
+        "relative_improvement": 0.019431173869496013
+      }
+    },
+    "n": 137,
+    "pooled_C0_MAE": 0.06473160482414472,
+    "pooled_C0_RMSE": 0.08579453364564808,
+    "pooled_model_MAE": 0.06352552895789222,
+    "pooled_model_RMSE": 0.08385054361293334,
+    "pooled_relative_improvement": 0.02265867008198778
+  },
+  "fit_cells": 137,
+  "fit_cells_by_party": {
+    "PJD": 72,
+    "RNI": 65
+  },
+  "forecast_modified": false,
+  "implementation_note": "Party-specific national residual means are removed only during 2016 fitting; no party intercept or national swing is carried into 2021 validation. Feature means and coefficients are frozen from 2016 only.",
+  "llm_invoked": false,
+  "material_signal_gate": {
+    "bootstrap_probability_ge_0_90": false,
+    "both_parties_point_improve": false,
+    "pass": false,
+    "pooled_relative_improvement_ge_0_5pct": false
+  },
+  "power_gate_result_id": "M26-CANDIDATE-INTELLIGENCE-V2-MULTIPART-HEAD-POWER-GATE-V4",
+  "result_id": "M26-CANDIDATE-INTELLIGENCE-V2-MULTIPART-PREDICTIVE-GATE-V1",
+  "ridge_cv": [
+    {
+      "alpha": 0.01,
+      "folds": [
+        {
+          "n": 6,
+          "pooled_RMSE": 0.0966481087127287,
+          "region": "Béni Mellal-Khénifra"
+        },
+        {
+          "n": 22,
+          "pooled_RMSE": 0.06988951607806598,
+          "region": "Casablanca-Settat"
+        },
+        {
+          "n": 3,
+          "pooled_RMSE": 0.1196452831103184,
+          "region": "Dakhla-Oued Eddahab"
+        },
+        {
+          "n": 8,
+          "pooled_RMSE": 0.12719458695813687,
+          "region": "Drâa-Tafilalet"
+        },
+        {
+          "n": 22,
+          "pooled_RMSE": 0.1164696122540325,
+          "region": "Fès-Meknès"
+        },
+        {
+          "n": 7,
+          "pooled_RMSE": 0.10212191868069895,
+          "region": "Guelmim-Oued Noun"
+        },
+        {
+          "n": 6,
+          "pooled_RMSE": 0.15422407257258763,
+          "region": "Laâyoune-Sakia El Hamra"
+        },
+        {
+          "n": 16,
+          "pooled_RMSE": 0.10248373203957356,
+          "region": "Marrakech-Safi"
+        },
+        {
+          "n": 13,
+          "pooled_RMSE": 0.0781605373228335,
+          "region": "Oriental"
+        },
+        {
+          "n": 17,
+          "pooled_RMSE": 0.09481512917956149,
+          "region": "Rabat-Salé-Kénitra"
+        },
+        {
+          "n": 9,
+          "pooled_RMSE": 0.12236127590072955,
+          "region": "Souss-Massa"
+        },
+        {
+          "n": 8,
+          "pooled_RMSE": 0.11238970128216441,
+          "region": "Tanger-Tétouan-Al Hoceïma"
+        }
+      ],
+      "pooled_heldout_RMSE": 0.1041517436989796
+    },
+    {
+      "alpha": 0.1,
+      "folds": [
+        {
+          "n": 6,
+          "pooled_RMSE": 0.09640039599355878,
+          "region": "Béni Mellal-Khénifra"
+        },
+        {
+          "n": 22,
+          "pooled_RMSE": 0.06980843971693404,
+          "region": "Casablanca-Settat"
+        },
+        {
+          "n": 3,
+          "pooled_RMSE": 0.11974294098146944,
+          "region": "Dakhla-Oued Eddahab"
+        },
+        {
+          "n": 8,
+          "pooled_RMSE": 0.12704093173489397,
+          "region": "Drâa-Tafilalet"
+        },
+        {
+          "n": 22,
+          "pooled_RMSE": 0.11623913010601326,
+          "region": "Fès-Meknès"
+        },
+        {
+          "n": 7,
+          "pooled_RMSE": 0.10212513455951873,
+          "region": "Guelmim-Oued Noun"
+        },
+        {
+          "n": 6,
+          "pooled_RMSE": 0.15425358915706694,
+          "region": "Laâyoune-Sakia El Hamra"
+        },
+        {
+          "n": 16,
+          "pooled_RMSE": 0.10219516379981713,
+          "region": "Marrakech-Safi"
+        },
+        {
+          "n": 13,
+          "pooled_RMSE": 0.07805482961912019,
+          "region": "Oriental"
+        },
+        {
+          "n": 17,
+          "pooled_RMSE": 0.09448929605486381,
+          "region": "Rabat-Salé-Kénitra"
+        },
+        {
+          "n": 9,
+          "pooled_RMSE": 0.12230066807742085,
+          "region": "Souss-Massa"
+        },
+        {
+          "n": 8,
+          "pooled_RMSE": 0.11214385477700266,
+          "region": "Tanger-Tétouan-Al Hoceïma"
+        }
+      ],
+      "pooled_heldout_RMSE": 0.10398752986775413
+    },
+    {
+      "alpha": 1.0,
+      "folds": [
+        {
+          "n": 6,
+          "pooled_RMSE": 0.09401613505642066,
+          "region": "Béni Mellal-Khénifra"
+        },
+        {
+          "n": 22,
+          "pooled_RMSE": 0.06907163882481587,
+          "region": "Casablanca-Settat"
+        },
+        {
+          "n": 3,
+          "pooled_RMSE": 0.12069414732786542,
+          "region": "Dakhla-Oued Eddahab"
+        },
+        {
+          "n": 8,
+          "pooled_RMSE": 0.1255694809317664,
+          "region": "Drâa-Tafilalet"
+        },
+        {
+          "n": 22,
+          "pooled_RMSE": 0.1140257746743689,
+          "region": "Fès-Meknès"
+        },
+        {
+          "n": 7,
+          "pooled_RMSE": 0.10216125514910432,
+          "region": "Guelmim-Oued Noun"
+        },
+        {
+          "n": 6,
+          "pooled_RMSE": 0.15454186802032147,
+          "region": "Laâyoune-Sakia El Hamra"
+        },
+        {
+          "n": 16,
+          "pooled_RMSE": 0.09946924329043996,
+          "region": "Marrakech-Safi"
+        },
+        {
+          "n": 13,
+          "pooled_RMSE": 0.07704493746294339,
+          "region": "Oriental"
+        },
+        {
+          "n": 17,
+          "pooled_RMSE": 0.09138485926556653,
+          "region": "Rabat-Salé-Kénitra"
+        },
+        {
+          "n": 9,
+          "pooled_RMSE": 0.12173828452022471,
+          "region": "Souss-Massa"
+        },
+        {
+          "n": 8,
+          "pooled_RMSE": 0.10981567473370946,
+          "region": "Tanger-Tétouan-Al Hoceïma"
+        }
+      ],
+      "pooled_heldout_RMSE": 0.10243518815363066
+    },
+    {
+      "alpha": 10.0,
+      "folds": [
+        {
+          "n": 6,
+          "pooled_RMSE": 0.07690675078879745,
+          "region": "Béni Mellal-Khénifra"
+        },
+        {
+          "n": 22,
+          "pooled_RMSE": 0.06614531446570163,
+          "region": "Casablanca-Settat"
+        },
+        {
+          "n": 3,
+          "pooled_RMSE": 0.12817875880533539,
+          "region": "Dakhla-Oued Eddahab"
+        },
+        {
+          "n": 8,
+          "pooled_RMSE": 0.11541258522181944,
+          "region": "Drâa-Tafilalet"
+        },
+        {
+          "n": 22,
+          "pooled_RMSE": 0.098480188473215,
+          "region": "Fès-Meknès"
+        },
+        {
+          "n": 7,
+          "pooled_RMSE": 0.10273688312034267,
+          "region": "Guelmim-Oued Noun"
+        },
+        {
+          "n": 6,
+          "pooled_RMSE": 0.15686091971914407,
+          "region": "Laâyoune-Sakia El Hamra"
+        },
+        {
+          "n": 16,
+          "pooled_RMSE": 0.08281974541223897,
+          "region": "Marrakech-Safi"
+        },
+        {
+          "n": 13,
+          "pooled_RMSE": 0.07022648914118355,
+          "region": "Oriental"
+        },
+        {
+          "n": 17,
+          "pooled_RMSE": 0.07111223277216333,
+          "region": "Rabat-Salé-Kénitra"
+        },
+        {
+          "n": 9,
+          "pooled_RMSE": 0.11894442771133822,
+          "region": "Souss-Massa"
+        },
+        {
+          "n": 8,
+          "pooled_RMSE": 0.09554553821004572,
+          "region": "Tanger-Tétouan-Al Hoceïma"
+        }
+      ],
+      "pooled_heldout_RMSE": 0.09291155943248207
+    },
+    {
+      "alpha": 100.0,
+      "folds": [
+        {
+          "n": 6,
+          "pooled_RMSE": 0.04320187485895207,
+          "region": "Béni Mellal-Khénifra"
+        },
+        {
+          "n": 22,
+          "pooled_RMSE": 0.07237570882494593,
+          "region": "Casablanca-Settat"
+        },
+        {
+          "n": 3,
+          "pooled_RMSE": 0.14811819854988356,
+          "region": "Dakhla-Oued Eddahab"
+        },
+        {
+          "n": 8,
+          "pooled_RMSE": 0.09731505039474454,
+          "region": "Drâa-Tafilalet"
+        },
+        {
+          "n": 22,
+          "pooled_RMSE": 0.0708868124819325,
+          "region": "Fès-Meknès"
+        },
+        {
+          "n": 7,
+          "pooled_RMSE": 0.10654034266918512,
+          "region": "Guelmim-Oued Noun"
+        },
+        {
+          "n": 6,
+          "pooled_RMSE": 0.16349733637316233,
+          "region": "Laâyoune-Sakia El Hamra"
+        },
+        {
+          "n": 16,
+          "pooled_RMSE": 0.06780004587736504,
+          "region": "Marrakech-Safi"
+        },
+        {
+          "n": 13,
+          "pooled_RMSE": 0.059511651182161354,
+          "region": "Oriental"
+        },
+        {
+          "n": 17,
+          "pooled_RMSE": 0.05046710657537087,
+          "region": "Rabat-Salé-Kénitra"
+        },
+        {
+          "n": 9,
+          "pooled_RMSE": 0.12225059737823037,
+          "region": "Souss-Massa"
+        },
+        {
+          "n": 8,
+          "pooled_RMSE": 0.08717646217038179,
+          "region": "Tanger-Tétouan-Al Hoceïma"
+        }
+      ],
+      "pooled_heldout_RMSE": 0.084430455784566
+    }
+  ],
+  "schema_version": "1.0",
+  "scientific_status": "POST_2021_EXPLORATORY_MODEL_DEVELOPMENT",
+  "selected_alpha": 100.0,
+  "target_residual_means_2016_by_party_removed_for_fit_only": {
+    "PJD": 0.2874072962199116,
+    "RNI": -1.6170371134788744
+  },
+  "terminal_decision": "KILL_E_REASON_V2_CANDIDATE_LAYER",
+  "terminal_interpretation": "NO_RETROSPECTIVE_PREDICTIVE_SIGNAL",
+  "validation_2016_TO_2021": {
+    "by_party": {
+      "PJD": {
+        "C0_RMSE": 0.16443069164205992,
+        "model_RMSE": 0.16337756354021737,
+        "n": 64,
+        "relative_improvement": 0.006404693012756067
+      },
+      "RNI": {
+        "C0_RMSE": 0.17293449429712104,
+        "model_RMSE": 0.17404221063722913,
+        "n": 59,
+        "relative_improvement": -0.006405410005738399
+      }
+    },
+    "n": 123,
+    "pooled_C0_MAE": 0.13808784971698315,
+    "pooled_C0_RMSE": 0.1685632970880521,
+    "pooled_model_MAE": 0.1374392636189985,
+    "pooled_model_RMSE": 0.16857734185768494,
+    "pooled_relative_improvement": -8.332044920497578e-05
+  },
+  "validation_bootstrap": {
+    "bootstrap_probability_model_better": 0.512,
+    "percentile_95_interval_delta_model_minus_C0": [
+      -0.002892674253961632,
+      0.0029600411944625087
+    ],
+    "replicates": 10000,
+    "seed": 260818
+  },
+  "validation_cells": 123,
+  "validation_cells_by_party": {
+    "PJD": 64,
+    "RNI": 59
+  }
+}
