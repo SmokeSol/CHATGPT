@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "freeze_id": "M26-ASV2-PRE-LLM-CONTRACT-FREEZE-V2",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "FROZEN_BEFORE_ANY_REAL_ASV2_LLM_VOTE",
+  "real_llm_votes_seen": false,
+  "target_outcomes_used_for_contract_change": false,
+  "scientific_thresholds_changed": false,
+  "supersedes": {
+    "prompt": "as2_prompt_v1.md",
+    "output_schema": "as2_output_schema_v1.json"
+  },
+  "active_contract": {
+    "prompt": "as2_prompt_v2.md",
+    "output_schema": "as2_output_schema_v2.json"
+  },
+  "reason_for_v2": "Prevent condition-label leakage: the LLM judge must not know which historical arm receives authentic versus density-matched shuffled political context. Both arms are exposed under opaque condition IDs and judged identically.",
+  "immutable_execution_rules": {
+    "model": "OPUS-5",
+    "deterministic_primary_pass": true,
+    "retry_schema_invalid_only": true,
+    "semantic_feedback_on_retry": false,
+    "fresh_context_each_batch": true,
+    "max_archetypes_per_batch": 32,
+    "target_outcome_access_before_judgment_freeze": false,
+    "outside_information": false
+  },
+  "next_allowed_action": "Build and cryptographically freeze the blinded historical AS2 handoff using V2 prompt/schema and private condition mapping."
+}
