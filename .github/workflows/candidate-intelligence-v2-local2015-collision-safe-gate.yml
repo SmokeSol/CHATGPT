@@ -5,6 +5,11 @@ on:
     paths:
       - 'morocco26/scripts/candidate_intelligence_v2_local2015_collision_safe_gate.py'
       - '.github/workflows/candidate-intelligence-v2-local2015-collision-safe-gate.yml'
+  pull_request:
+    branches: [morocco26-e-reason]
+    paths:
+      - 'morocco26/scripts/candidate_intelligence_v2_collision_safe_trigger.txt'
+      - 'morocco26/scripts/candidate_intelligence_v2_local2015_collision_safe_gate.py'
   workflow_dispatch:
 permissions:
   contents: write
