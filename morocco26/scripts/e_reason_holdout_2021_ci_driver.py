@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Hermetic CI driver for the frozen E_reason 2021 holdout. Never reads target outcomes."""
 from __future__ import annotations
-import argparse, csv, hashlib, importlib.util, json, shutil, sys, tempfile
-from collections import Counter, defaultdict
+import argparse,csv,hashlib,importlib.util,json,shutil,sys,tempfile
+from collections import Counter,defaultdict
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; E=ROOT/"data"/"goal100"/"e_reason"; SCRIPTS=ROOT/"scripts"; HOLDOUT=E/"blind"/"holdout"; C1=E/"judgments"/"holdout"/"c1_rule_only"
 SOURCE_ROSTER=E/"evidence"/"2021_head_list_rank_enrichment"/"enriched_candidate_roster.json"; SOURCE_GATE=E/"evidence"/"2021_head_list_rank_enrichment"/"gate.json"; RESOLUTION_GATE=E/"holdout_territory_resolution_gate_v1.json"; CONST=ROOT/"data"/"constituencies_goal75.csv"
@@ -23,25 +23,23 @@ def validate_preconditions():
  if (HOLDOUT/"outcome.json").exists(): die("forbidden holdout outcome exists")
  if rg.get("status")!="FROZEN_BEFORE_2021_HOLDOUT_JUDGMENTS" or rg.get("target_outcome_seen") is not False or rg.get("mapping_seen") is not False: die("territory-resolution gate invalid")
 def prepare_effective_evidence(tmp):
- rg=read_json(RESOLUTION_GATE); rows=read_json(SOURCE_ROSTER); sg=read_json(SOURCE_GATE); aliases=rg["accepted_aliases"]; exclusions=set(rg["ambiguous_exclusions"])
+ rg=read_json(RESOLUTION_GATE); rows=read_json(SOURCE_ROSTER); sg=read_json(SOURCE_GATE); aliases=rg["accepted_aliases"]; overrides=rg.get("canonical_id_overrides",{}); exclusions=set(rg["ambiguous_exclusions"])
  with CONST.open(encoding="utf-8",newline="") as f: valid={r["constituency_id"] for r in csv.DictReader(f)}
  if len(valid)!=92 or len(rows)!=508: die("frozen constituency/roster cardinality changed")
- # First pass: after applying the already-frozen aliases, enumerate every residual collection-ID mismatch at once.
  invalid=defaultdict(list)
  for r in rows:
   src=str(r.get("district_source")); res=str(r.get("territory_resolution"))
   if src in exclusions: continue
-  cid=aliases[src] if (res!="EXACT_NORMALIZED" and src in aliases) else r.get("territory_id")
+  cid=overrides.get(src,aliases[src] if (res!="EXACT_NORMALIZED" and src in aliases) else r.get("territory_id"))
   if cid not in valid: invalid[(src,str(cid),res)].append(str(r.get("party_bucket")))
  if invalid:
-  print("HOLDOUT_COLLECTION_ID_MISMATCH_GROUPS",len(invalid))
-  for (src,cid,res),parties in sorted(invalid.items()): print("HOLDOUT_COLLECTION_ID_MISMATCH",json.dumps({"district_source":src,"collection_territory_id":cid,"resolution":res,"rows":len(parties),"parties":sorted(parties)},ensure_ascii=False,sort_keys=True))
-  die("collection-to-frozen territory ID crosswalk incomplete; diagnostic emitted")
+  for (src,cid,res),parties in sorted(invalid.items()): print("HOLDOUT_COLLECTION_ID_MISMATCH",json.dumps({"district_source":src,"collection_territory_id":cid,"resolution":res,"rows":len(parties)},ensure_ascii=False,sort_keys=True))
+  die("collection-to-frozen territory ID crosswalk incomplete")
  accepted=[]; counts=Counter(); excluded=0
  for r in rows:
   if int(r.get("year",0) or 0)!=2021: die("unexpected year")
   src=str(r.get("district_source")); res=str(r.get("territory_resolution")); rr=dict(r)
-  if res=="EXACT_NORMALIZED": cid=rr.get("territory_id"); counts["exact"]+=1
+  if res=="EXACT_NORMALIZED": cid=overrides.get(src,rr.get("territory_id")); rr["territory_id"]=cid; counts["exact"]+=1
   elif src in aliases: cid=aliases[src]; rr["territory_id"]=cid; rr["territory_resolution"]="EXACT_NORMALIZED"; counts["alias"]+=1
   elif src in exclusions: excluded+=1; continue
   else: die(f"non-exact territory not frozen in gate: {src!r}")
@@ -58,7 +56,7 @@ def run_frozen_builder(secret,roster,gate):
  finally: sys.argv=old
 def patch_public_provenance(roster):
  rg=read_json(RESOLUTION_GATE); exp=rg["expected_counts_after_gate"]; mp=HOLDOUT/"bundle_manifest.json"; m=read_json(mp)
- m["feature_input"]={"source_collection_gate_sha256":sha_file(SOURCE_GATE),"source_enriched_roster_sha256":sha_file(SOURCE_ROSTER),"territory_resolution_gate_sha256":sha_file(RESOLUTION_GATE),"effective_accepted_roster_sha256":sha_file(roster),"source_candidate_facts":508,"accepted_candidate_facts":exp["accepted_candidate_rows"],"excluded_ambiguous_candidate_rows":exp["excluded_ambiguous_rows"],"resolved_districts":exp["accepted_canonical_districts"],"missing_unobserved_features":True,"resolution_policy":"FROZEN_EXACT_OR_EXPLICIT_ALIAS_ELSE_MISSING"}; mp.write_text(json.dumps(m,ensure_ascii=False,sort_keys=True,indent=2)+"\n",encoding="utf-8")
+ m["feature_input"]={"source_collection_gate_sha256":sha_file(SOURCE_GATE),"source_enriched_roster_sha256":sha_file(SOURCE_ROSTER),"territory_resolution_gate_sha256":sha_file(RESOLUTION_GATE),"effective_accepted_roster_sha256":sha_file(roster),"source_candidate_facts":508,"accepted_candidate_facts":exp["accepted_candidate_rows"],"excluded_ambiguous_candidate_rows":exp["excluded_ambiguous_rows"],"resolved_districts":exp["accepted_canonical_districts"],"missing_unobserved_features":True,"resolution_policy":"FROZEN_EXACT_WITH_CANONICAL_ID_OVERRIDES_OR_EXPLICIT_ALIAS_ELSE_MISSING"}; mp.write_text(json.dumps(m,ensure_ascii=False,sort_keys=True,indent=2)+"\n",encoding="utf-8")
  sp=HOLDOUT/"mapping_seal.json"; s=read_json(sp); s["territory_resolution_gate_sha256"]=sha_file(RESOLUTION_GATE); sp.write_text(json.dumps(s,ensure_ascii=False,sort_keys=True,indent=2)+"\n",encoding="utf-8")
 def validate_bundle():
  m=read_json(HOLDOUT/"bundle_manifest.json"); s=read_json(HOLDOUT/"mapping_seal.json"); bsha,core=canonical_core_sha(HOLDOUT/"blind_bundle.json"); psha=sha_file(E/"c2_prompt_v1.md"); rgsha=sha_file(RESOLUTION_GATE)
