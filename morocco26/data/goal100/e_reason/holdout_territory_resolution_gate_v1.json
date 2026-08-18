@@ -1,59 +1,26 @@
 {
-  "schema_version": "1.0",
-  "experiment_id": "M26-GOAL100-E-REASON-V1",
-  "gate_id": "M26-E-REASON-HOLDOUT-TERRITORY-RESOLUTION-V1",
-  "status": "FROZEN_BEFORE_2021_HOLDOUT_JUDGMENTS",
-  "frozen_at": "2026-08-18T13:44:00+01:00",
-  "target_outcome_seen": false,
-  "mapping_seen": false,
-  "basis": "Frozen 92-territory constituency reference plus the already-frozen pre-election 2021 enriched candidate roster only; no target outcome or post-election information.",
-  "source_resolution_counts": {
-    "EXACT_NORMALIZED": 381,
-    "FUZZY_CONSERVATIVE": 82,
-    "UNRESOLVED": 45
+  "schema_version":"1.0",
+  "experiment_id":"M26-GOAL100-E-REASON-V1",
+  "gate_id":"M26-E-REASON-HOLDOUT-TERRITORY-RESOLUTION-V1",
+  "status":"FROZEN_BEFORE_2021_HOLDOUT_JUDGMENTS",
+  "frozen_at":"2026-08-18T13:44:00+01:00",
+  "target_outcome_seen":false,
+  "mapping_seen":false,
+  "basis":"Frozen 92-territory constituency reference plus the already-frozen pre-election 2021 enriched candidate roster only; no target outcome or post-election information.",
+  "source_resolution_counts":{"EXACT_NORMALIZED":381,"FUZZY_CONSERVATIVE":82,"UNRESOLVED":45},
+  "policy":"EXACT_NORMALIZED rows pass with their collection territory_id unless district_source is an exact key in canonical_id_overrides. A non-exact row passes only when district_source is an exact key in accepted_aliases. Any other non-exact row fails closed, except the explicitly listed ambiguous source which is excluded from candidate evidence and therefore remains MISSING in the complete 92x9 panel.",
+  "canonical_id_overrides":{
+    "Agadir Ida Ou Tanane":"agadir-ida-outanane",
+    "Es Smara":"es-semara",
+    "Guéliz - Annakhil":"gueliz-nakhil",
+    "Moulay Yacoub":"moulay-yaacoub",
+    "Médina (Sidi Youssef Ben Ali)":"medina-sidi-youssef"
   },
-  "policy": "EXACT_NORMALIZED rows pass unchanged. A non-exact row passes only when district_source is an exact key in accepted_aliases and is rewritten to that frozen constituency_id. Any other non-exact row fails closed, except the explicitly listed ambiguous source which is excluded from candidate evidence and therefore remains MISSING in the complete 92x9 panel.",
-  "accepted_aliases": {
-    "Anfa": "casablanca-anfa",
-    "Ben Msik": "ben-m-sick",
-    "Ben Slimane": "benslimane",
-    "El Fida - Mers Sultan": "al-fida-mers-sultan",
-    "El Kelaa Sraghna": "el-kelaa-des-sraghna",
-    "Fès Nord": "fes-nord",
-    "Fès Sud": "fes-sud",
-    "Jrada": "jerada",
-    "Khemisset-Ouelmes": "khemisset-oulmes",
-    "Kénitra": "kenitra",
-    "Mohammedia": "mohammedia",
-    "M’Diq-Fnidq": "m-diq-fnideq",
-    "Oued Eddahab": "oued-eddahab",
-    "Rabat Chellah": "rabat-chellah",
-    "Rabat Océan": "rabat-ocean",
-    "Sala Jadida": "sale-el-jadida",
-    "Sidi Kecem": "sidi-kacem",
-    "Taounate - Tissa old": "taounate-tissa",
-    "Taroudant Nord": "taroudant-nord",
-    "Tiflet Romani": "tiflet-rommani"
+  "accepted_aliases":{
+    "Anfa":"casablanca-anfa","Ben Msik":"ben-m-sick","Ben Slimane":"benslimane","El Fida - Mers Sultan":"al-fida-mers-sultan","El Kelaa Sraghna":"el-kelaa-des-sraghna","Fès Nord":"fes-nord","Fès Sud":"fes-sud","Jrada":"jerada","Khemisset-Ouelmes":"khemisset-oulmes","Kénitra":"kenitra","Mohammedia":"mohammedia","M’Diq-Fnidq":"m-diq-fnideq","Oued Eddahab":"oued-eddahab","Rabat Chellah":"rabat-chellah","Rabat Océan":"rabat-ocean","Sala Jadida":"sale-el-jadida","Sidi Kecem":"sidi-kacem","Taounate - Tissa old":"taounate-tissa","Taroudant Nord":"taroudant-nord","Tiflet Romani":"tiflet-rommani"
   },
-  "ambiguous_exclusions": {
-    "Azilal-Bzou-Ouaouizart": {
-      "rows": 6,
-      "candidate_constituencies": [
-        "bzou-ouaouizeght",
-        "azilal-demnate"
-      ],
-      "reason": "The source label conflates tokens from two distinct frozen 3-seat constituencies. No deterministic outcome-free bijection is established, so the six candidate-evidence rows are excluded rather than guessed."
-    }
-  },
-  "expected_counts_after_gate": {
-    "accepted_exact_rows": 381,
-    "accepted_alias_rows": 121,
-    "accepted_candidate_rows": 502,
-    "excluded_ambiguous_rows": 6,
-    "accepted_canonical_districts": 81,
-    "holdout_packets": 92,
-    "holdout_party_cells": 828
-  },
-  "missingness_rule": "Excluded or absent candidate evidence never drops a territory-party cell and never creates a negative residual; its features remain explicit MISSING under the frozen information-set contract.",
-  "next_allowed_action": "BUILD_AND_FREEZE_BLINDED_2021_HOLDOUT_THEN_FREEZE_C1_AND_RUN_C2_WITHOUT_OUTCOME_ACCESS"
+  "ambiguous_exclusions":{"Azilal-Bzou-Ouaouizart":{"rows":6,"candidate_constituencies":["bzou-ouaouizeght","azilal-demnate"],"reason":"The source label conflates tokens from two distinct frozen 3-seat constituencies. No deterministic outcome-free bijection is established, so the six candidate-evidence rows are excluded rather than guessed."}},
+  "expected_counts_after_gate":{"accepted_exact_rows":381,"accepted_alias_rows":121,"accepted_candidate_rows":502,"excluded_ambiguous_rows":6,"accepted_canonical_districts":81,"holdout_packets":92,"holdout_party_cells":828},
+  "missingness_rule":"Excluded or absent candidate evidence never drops a territory-party cell and never creates a negative residual; its features remain explicit MISSING under the frozen information-set contract.",
+  "next_allowed_action":"BUILD_AND_FREEZE_BLINDED_2021_HOLDOUT_THEN_FREEZE_C1_AND_RUN_C2_WITHOUT_OUTCOME_ACCESS"
 }
