@@ -3,7 +3,7 @@
   "gate_id": "M26-CANDIDATE-INTEL-V2-LOCAL2015-COLLISION-SAFE-GATE-V1",
   "identity_rule": "TRUE requires either a globally unique normalized closed-universe name or exactly one PJD council identity in the same election region among same-name homonyms. Multi-identity collisions remain UNKNOWN.",
   "reasoner_gate_invalidated_until_recomputed": true,
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "source_rows": 31482,
   "source_sha256": "8b5e6d23756087409a77fbaa00c0e25428c699245dbc3241d280b914600fd341",
   "status": "FAIL_COLLISION_SAFE_LOCAL2015_DATA_POWER",
@@ -22,7 +22,144 @@
         "VERIFIED_FALSE": 29,
         "VERIFIED_TRUE": 40
       },
-      "support_gate": true
+      "support_gate": true,
+      "unknown_rows": [
+        {
+          "candidate_name_ar": "محمد ادريس ي",
+          "candidate_rows": [
+            {
+              "commune": "El Ksiba (Mun.)",
+              "party": "MP",
+              "prefProv": "Beni-Mellal",
+              "region": "Beni-Mellal - Khénifra",
+              "role": "conseiller"
+            },
+            {
+              "commune": "Tinejdad (Mun.)",
+              "party": "PRV",
+              "prefProv": "Errachidia",
+              "region": "Drâa - Tafilalet",
+              "role": "conseiller"
+            },
+            {
+              "commune": "Sidi Allal El Bahraoui (Mun.)",
+              "party": "RNI",
+              "prefProv": "Khémisset",
+              "region": "Rabat - Salé - Kénitra",
+              "role": "secrétaire du conseil"
+            }
+          ],
+          "method": "UNRESOLVED_HOMONYM_COLLISION",
+          "pjd_same_region_communes": [],
+          "pjd_same_region_rows": 0,
+          "raw_name_match_rows": 3,
+          "resolved_name_ar": "محمد ادريس ي",
+          "territory_id": "boulemane"
+        },
+        {
+          "candidate_name_ar": "عبد الحليم عالوي",
+          "method": "UNRESOLVED_HIGH_SIMILARITY_NO_EXACT_IDENTITY",
+          "nearest_name": "عبد الحليم علاوي",
+          "nearest_similarity": 0.9375,
+          "pjd_same_region_communes": [],
+          "pjd_same_region_rows": 0,
+          "raw_name_match_rows": 0,
+          "resolved_name_ar": "عبد الحليم عالوي",
+          "territory_id": "ouezzane"
+        },
+        {
+          "candidate_name_ar": "محمد لشكر",
+          "candidate_rows": [
+            {
+              "commune": "Dar El Hamra",
+              "party": "USFP",
+              "prefProv": "Sefrou",
+              "region": "Fès - Meknès",
+              "role": "président"
+            },
+            {
+              "commune": "Ait Amira",
+              "party": "PJD",
+              "prefProv": "Chtouka - Aït-Baha",
+              "region": "Souss - Massa",
+              "role": "conseiller"
+            },
+            {
+              "commune": "Ouad Essafa",
+              "party": "PJD",
+              "prefProv": "Chtouka - Aït-Baha",
+              "region": "Souss - Massa",
+              "role": "conseiller"
+            },
+            {
+              "commune": "Argana",
+              "party": "PI",
+              "prefProv": "Taroudannt",
+              "region": "Souss - Massa",
+              "role": "secrétaire du conseil"
+            },
+            {
+              "commune": "Ammelne",
+              "party": "RNI",
+              "prefProv": "Tiznit",
+              "region": "Souss - Massa",
+              "role": "vice président 3"
+            }
+          ],
+          "method": "UNRESOLVED_HOMONYM_COLLISION",
+          "pjd_same_region_communes": [
+            "ait amira",
+            "ouad essafa"
+          ],
+          "pjd_same_region_rows": 2,
+          "raw_name_match_rows": 5,
+          "resolved_name_ar": "محمد لشكر",
+          "territory_id": "chtouka-ait-baha"
+        },
+        {
+          "candidate_name_ar": "مراد الكورش",
+          "method": "UNRESOLVED_HIGH_SIMILARITY_NO_EXACT_IDENTITY",
+          "nearest_name": "مراد لكورش",
+          "nearest_similarity": 0.952381,
+          "pjd_same_region_communes": [],
+          "pjd_same_region_rows": 0,
+          "raw_name_match_rows": 0,
+          "resolved_name_ar": "مراد الكورش",
+          "territory_id": "al-haouz"
+        },
+        {
+          "candidate_name_ar": "محمد لحرش",
+          "candidate_rows": [
+            {
+              "commune": "Sidi Mohammed Ben Rahal",
+              "party": "MP",
+              "prefProv": "Settat",
+              "region": "Casablanca - Settat",
+              "role": "vice secrétaire du conseil"
+            },
+            {
+              "commune": "Bouchfaa",
+              "party": "PJD",
+              "prefProv": "Taza",
+              "region": "Fès - Meknès",
+              "role": "vice président 3"
+            },
+            {
+              "commune": "Gteter",
+              "party": "UC",
+              "prefProv": "Taourirt",
+              "region": "Oriental",
+              "role": "vice président 1"
+            }
+          ],
+          "method": "UNRESOLVED_HOMONYM_COLLISION",
+          "pjd_same_region_communes": [],
+          "pjd_same_region_rows": 0,
+          "raw_name_match_rows": 3,
+          "resolved_name_ar": "محمد لحرش",
+          "territory_id": "driouch"
+        }
+      ]
     },
     "2021": {
       "coverage_gate": false,
@@ -34,7 +171,59 @@
         "VERIFIED_FALSE": 26,
         "VERIFIED_TRUE": 46
       },
-      "support_gate": true
+      "support_gate": true,
+      "unknown_rows": [
+        {
+          "candidate_name_ar": "محمد عيادي",
+          "candidate_rows": [
+            {
+              "commune": "Taddart",
+              "party": "USFP",
+              "prefProv": "Guercif",
+              "region": "Oriental",
+              "role": "conseiller"
+            },
+            {
+              "commune": "Ain Sfa",
+              "party": "PAM",
+              "prefProv": "Oujda - Angad",
+              "region": "Oriental",
+              "role": "conseiller"
+            }
+          ],
+          "method": "UNRESOLVED_HOMONYM_COLLISION",
+          "pjd_same_region_communes": [],
+          "pjd_same_region_rows": 0,
+          "raw_name_match_rows": 2,
+          "resolved_name_ar": "محمد عيادي",
+          "territory_id": "sidi-slimane"
+        },
+        {
+          "candidate_name_ar": "محمد مرزوق",
+          "candidate_rows": [
+            {
+              "commune": "Tanant",
+              "party": "MDS",
+              "prefProv": "Azilal",
+              "region": "Beni-Mellal - Khénifra",
+              "role": "conseiller"
+            },
+            {
+              "commune": "Kasbat Ben Mchich",
+              "party": "PAM",
+              "prefProv": "Berrechid",
+              "region": "Casablanca - Settat",
+              "role": "conseiller"
+            }
+          ],
+          "method": "UNRESOLVED_HOMONYM_COLLISION",
+          "pjd_same_region_communes": [],
+          "pjd_same_region_rows": 0,
+          "raw_name_match_rows": 2,
+          "resolved_name_ar": "محمد مرزوق",
+          "territory_id": "beni-mellal"
+        }
+      ]
     }
   }
 }
