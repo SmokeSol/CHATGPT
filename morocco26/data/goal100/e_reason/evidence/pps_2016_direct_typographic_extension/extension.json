@@ -1,0 +1,4712 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-18T07:22:11+00:00",
+  "status": "PARTIAL_VALID",
+  "base_typographic_pages_excluded": 65,
+  "safe_direct_extension_pages": 9,
+  "territory_rows": [
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_constituency": "Khouribga",
+      "seats": 6,
+      "candidate_count": 6,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "pdf_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+      "parent_page_url": "https://pps.ma/10487/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "evidence_excerpt": {
+        "page": 5,
+        "direct_title_evidence": {
+          "constituency_id": "khouribga",
+          "historical_constituency": "Khouribga",
+          "historical_seats_2016": 6,
+          "variant": "خريبكة",
+          "exact": true,
+          "source": {
+            "source": "PYPDF_LINE",
+            "line_index": 16,
+            "text": "خريبكة"
+          }
+        },
+        "selected_typographic_groups": [
+          {
+            "raw_words_rtl": [
+              "دﺎﻤﺼﻟاﺪﺒﻋ",
+              "(cid:31)ﺎﻨﺧ"
+            ],
+            "logical_raw_text": "عبدالصماد خنا)13:dic(",
+            "readable_text_without_cid": "عبدالصماد خنا",
+            "candidate_name_ar_normalized": null,
+            "raw_has_fontmap_loss": true,
+            "font_sizes": [
+              12.62
+            ],
+            "max_font_size": 12.62,
+            "bbox": [
+              341.89,
+              336.22,
+              407.24,
+              348.84
+            ],
+            "center_x_fraction": 0.7626,
+            "top_fraction": 0.5084,
+            "tokens": [
+              "عبدالصماد",
+              "خنا"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "عبدالصماد خنا"
+            ],
+            "selection_score": 128.598443
+          },
+          {
+            "raw_words_rtl": [
+              "ﺪﻴﻠﺧ",
+              "ﻲﺠﻳاﺮﺑ"
+            ],
+            "logical_raw_text": "خليد برايجي",
+            "readable_text_without_cid": "خليد برايجي",
+            "candidate_name_ar_normalized": "خليد برايجي",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              11.0
+            ],
+            "max_font_size": 11.0,
+            "bbox": [
+              100.19,
+              483.02,
+              139.97,
+              494.02
+            ],
+            "center_x_fraction": 0.2445,
+            "top_fraction": 0.7304,
+            "tokens": [
+              "خليد",
+              "برايجي"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "خليد برايجي"
+            ],
+            "selection_score": 112.379562
+          },
+          {
+            "raw_words_rtl": [
+              "بﻮﻳأ",
+              "يﺪﻴﻌﺴﻟا"
+            ],
+            "logical_raw_text": "أيوب السعيدي",
+            "readable_text_without_cid": "أيوب السعيدي",
+            "candidate_name_ar_normalized": "ايوب السعيدي",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              11.0
+            ],
+            "max_font_size": 11.0,
+            "bbox": [
+              345.13,
+              484.02,
+              399.02,
+              495.02
+            ],
+            "center_x_fraction": 0.7575,
+            "top_fraction": 0.732,
+            "tokens": [
+              "ايوب",
+              "السعيدي"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "ايوب السعيدي"
+            ],
+            "selection_score": 112.37805
+          },
+          {
+            "raw_words_rtl": [
+              "ﺪﻴﻤﺣ",
+              "(cid:31)اوﺪﺣ"
+            ],
+            "logical_raw_text": "حميد حدوا)13:dic(",
+            "readable_text_without_cid": "حميد حدوا",
+            "candidate_name_ar_normalized": null,
+            "raw_has_fontmap_loss": true,
+            "font_sizes": [
+              11.0
+            ],
+            "max_font_size": 11.0,
+            "bbox": [
+              223.95,
+              484.02,
+              269.21,
+              495.02
+            ],
+            "center_x_fraction": 0.502,
+            "top_fraction": 0.732,
+            "tokens": [
+              "حميد",
+              "حدوا"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "حميد حدوا"
+            ],
+            "selection_score": 112.37805
+          },
+          {
+            "raw_words_rtl": [
+              "ﻒﺼﻨﻣ",
+              "ﻖﻴﻓﺮﻟا"
+            ],
+            "logical_raw_text": "منصف الرفيق",
+            "readable_text_without_cid": "منصف الرفيق",
+            "candidate_name_ar_normalized": "منصف الرفيق",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              11.0
+            ],
+            "max_font_size": 11.0,
+            "bbox": [
+              222.19,
+              322.52,
+              272.86,
+              333.52
+            ],
+            "center_x_fraction": 0.5039,
+            "top_fraction": 0.4877,
+            "tokens": [
+              "منصف",
+              "الرفيق"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "منصف الرفيق"
+            ],
+            "selection_score": 112.377725
+          },
+          {
+            "raw_words_rtl": [
+              "ﻲﻨﻐﻟاﺪﺒﻋ",
+              "ﻲﺗﻮﺒﻧ"
+            ],
+            "logical_raw_text": "عبدالغني نبوتي",
+            "readable_text_without_cid": "عبدالغني نبوتي",
+            "candidate_name_ar_normalized": "عبدالغني نبوتي",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              11.0
+            ],
+            "max_font_size": 11.0,
+            "bbox": [
+              93.54,
+              322.52,
+              146.62,
+              333.52
+            ],
+            "center_x_fraction": 0.2445,
+            "top_fraction": 0.4877,
+            "tokens": [
+              "عبدالغني",
+              "نبوتي"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "عبدالغني نبوتي"
+            ],
+            "selection_score": 112.377725
+          }
+        ]
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "settat",
+      "historical_constituency": "Settat",
+      "seats": 6,
+      "candidate_count": 6,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "pdf_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+      "parent_page_url": "https://pps.ma/10495/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-05"
+      ],
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "evidence_excerpt": {
+        "page": 11,
+        "direct_title_evidence": {
+          "constituency_id": "settat",
+          "historical_constituency": "Settat",
+          "historical_seats_2016": 6,
+          "variant": "سطات",
+          "exact": true,
+          "source": {
+            "source": "PYPDF_LINE",
+            "line_index": 27,
+            "text": "سطات"
+          }
+        },
+        "selected_typographic_groups": [
+          {
+            "raw_words_rtl": [
+              "ﻲﻠﻴﳕأ",
+              "ﺪﻴﻌﺳ"
+            ],
+            "logical_raw_text": "أمنيلي سعيد",
+            "readable_text_without_cid": "أمنيلي سعيد",
+            "candidate_name_ar_normalized": "امنيلي سعيد",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              12.85
+            ],
+            "max_font_size": 12.85,
+            "bbox": [
+              323.35,
+              303.16,
+              377.01,
+              316.01
+            ],
+            "center_x_fraction": 0.7129,
+            "top_fraction": 0.4584,
+            "tokens": [
+              "امنيلي",
+              "سعيد"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 129.848442
+          },
+          {
+            "raw_words_rtl": [
+              "جﺎﳊا",
+              "ﺪﺒﻋ",
+              "مﻼﺴﻟا",
+              "ﻲﻠﺒﺟ"
+            ],
+            "logical_raw_text": "احلاج عبد السالم جبلي",
+            "readable_text_without_cid": "احلاج عبد السالم جبلي",
+            "candidate_name_ar_normalized": "احلاج عبد السالم جبلي",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              12.0
+            ],
+            "max_font_size": 12.0,
+            "bbox": [
+              304.01,
+              460.27,
+              383.17,
+              472.27
+            ],
+            "center_x_fraction": 0.6995,
+            "top_fraction": 0.696,
+            "tokens": [
+              "احلاج",
+              "عبد",
+              "السالم",
+              "جبلي"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 121.41396
+          },
+          {
+            "raw_words_rtl": [
+              "جﺎﺠﺣ",
+              "ﻲﺑاﺰﻣ"
+            ],
+            "logical_raw_text": "حجاج مزابي",
+            "readable_text_without_cid": "حجاج مزابي",
+            "candidate_name_ar_normalized": "حجاج مزابي",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              11.02
+            ],
+            "max_font_size": 11.02,
+            "bbox": [
+              218.89,
+              459.8,
+              256.29,
+              470.82
+            ],
+            "center_x_fraction": 0.4837,
+            "top_fraction": 0.6953,
+            "tokens": [
+              "حجاج",
+              "مزابي"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "حجاج مزابي"
+            ],
+            "selection_score": 112.614672
+          },
+          {
+            "raw_words_rtl": [
+              "ﻒﺳﻮﻳ",
+              "(cid:127)ﺎﻴﻌﻟ"
+            ],
+            "logical_raw_text": "يوسف لعيا)721:dic(",
+            "readable_text_without_cid": "يوسف لعيا",
+            "candidate_name_ar_normalized": null,
+            "raw_has_fontmap_loss": true,
+            "font_sizes": [
+              11.02
+            ],
+            "max_font_size": 11.02,
+            "bbox": [
+              214.9,
+              278.93,
+              263.41,
+              289.94
+            ],
+            "center_x_fraction": 0.4869,
+            "top_fraction": 0.4218,
+            "tokens": [
+              "يوسف",
+              "لعيا"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "يوسف لعيا"
+            ],
+            "selection_score": 112.5118
+          },
+          {
+            "raw_words_rtl": [
+              "ﻦﺴﳊ",
+              "ﺔﺤﻠﻃ"
+            ],
+            "logical_raw_text": "حلسن طلحة",
+            "readable_text_without_cid": "حلسن طلحة",
+            "candidate_name_ar_normalized": "حلسن طلحة",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              11.02
+            ],
+            "max_font_size": 11.02,
+            "bbox": [
+              113.87,
+              459.3,
+              156.22,
+              470.32
+            ],
+            "center_x_fraction": 0.2749,
+            "top_fraction": 0.6946,
+            "tokens": [
+              "حلسن",
+              "طلحة"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 111.615428
+          },
+          {
+            "raw_words_rtl": [
+              "ﺪﻤŒ",
+              "ﻞﺿﺎﻔﻟا"
+            ],
+            "logical_raw_text": "Œمد الفاضل",
+            "readable_text_without_cid": "مد الفاضل",
+            "candidate_name_ar_normalized": null,
+            "raw_has_fontmap_loss": true,
+            "font_sizes": [
+              11.02
+            ],
+            "max_font_size": 11.02,
+            "bbox": [
+              109.79,
+              294.3,
+              159.3,
+              305.32
+            ],
+            "center_x_fraction": 0.2739,
+            "top_fraction": 0.4451,
+            "tokens": [
+              "مد",
+              "الفاضل"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 111.535054
+          }
+        ]
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "errachidia",
+      "historical_constituency": "Errachidia",
+      "seats": 5,
+      "candidate_count": 5,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "pdf_sha256": "105cac2f617546c4f4e687b02ebd6441b027830a1364372c3bc2767590676ba4",
+      "parent_page_url": "https://pps.ma/10515/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "evidence_excerpt": {
+        "page": 5,
+        "direct_title_evidence": {
+          "constituency_id": "errachidia",
+          "historical_constituency": "Errachidia",
+          "historical_seats_2016": 5,
+          "variant": "الرشيدية",
+          "exact": true,
+          "source": {
+            "source": "PYPDF_LINE",
+            "line_index": 20,
+            "text": "الرشيدية"
+          }
+        },
+        "selected_typographic_groups": [
+          {
+            "raw_words_rtl": [
+              "ﺮﻤﻋ",
+              "ﻢﻴﻋﺰﻟا"
+            ],
+            "logical_raw_text": "عمر الزعيم",
+            "readable_text_without_cid": "عمر الزعيم",
+            "candidate_name_ar_normalized": "عمر الزعيم",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              15.0
+            ],
+            "max_font_size": 15.0,
+            "bbox": [
+              227.54,
+              379.83,
+              278.76,
+              394.83
+            ],
+            "center_x_fraction": 0.5154,
+            "top_fraction": 0.5744,
+            "tokens": [
+              "عمر",
+              "الزعيم"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "عمر الزعيم"
+            ],
+            "selection_score": 152.46439
+          },
+          {
+            "raw_words_rtl": [
+              "ﺪﺒﻋ",
+              "ˆا",
+              "ﻰﺴﻴﻌﻨﺑ"
+            ],
+            "logical_raw_text": "عبد اˆ بنعيسى",
+            "readable_text_without_cid": "عبد ا بنعيسى",
+            "candidate_name_ar_normalized": null,
+            "raw_has_fontmap_loss": true,
+            "font_sizes": [
+              12.28
+            ],
+            "max_font_size": 12.28,
+            "bbox": [
+              84.34,
+              480.49,
+              145.04,
+              492.77
+            ],
+            "center_x_fraction": 0.2335,
+            "top_fraction": 0.7266,
+            "tokens": [
+              "عبد",
+              "ا",
+              "بنعيسي"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 124.183382
+          },
+          {
+            "raw_words_rtl": [
+              "ﻰﻔﻄﺼﳌا",
+              "طﻮﻜﻟا"
+            ],
+            "logical_raw_text": "املصطفى الكوط",
+            "readable_text_without_cid": "املصطفى الكوط",
+            "candidate_name_ar_normalized": "املصطفي الكوط",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              12.28
+            ],
+            "max_font_size": 12.28,
+            "bbox": [
+              346.95,
+              311.5,
+              416.43,
+              323.78
+            ],
+            "center_x_fraction": 0.7771,
+            "top_fraction": 0.4711,
+            "tokens": [
+              "املصطفي",
+              "الكوط"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 124.161052
+          },
+          {
+            "raw_words_rtl": [
+              "ﺮﻤﻋ",
+              "ﺮﻤﻌﻣ"
+            ],
+            "logical_raw_text": "عمر معمر",
+            "readable_text_without_cid": "عمر معمر",
+            "candidate_name_ar_normalized": "عمر معمر",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              12.0
+            ],
+            "max_font_size": 12.0,
+            "bbox": [
+              366.46,
+              481.64,
+              404.92,
+              493.64
+            ],
+            "center_x_fraction": 0.7852,
+            "top_fraction": 0.7284,
+            "tokens": [
+              "عمر",
+              "معمر"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "عمر معمر"
+            ],
+            "selection_score": 122.381647
+          },
+          {
+            "raw_words_rtl": [
+              "و",
+              "ﺔﻋﺎﻨﺼﻟا",
+              "و",
+              "تﺎﻣﺪﳋا"
+            ],
+            "logical_raw_text": "و الصناعة و اخلدمات",
+            "readable_text_without_cid": "و الصناعة و اخلدمات",
+            "candidate_name_ar_normalized": "و الصناعة و اخلدمات",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              12.0
+            ],
+            "max_font_size": 12.0,
+            "bbox": [
+              213.52,
+              432.41,
+              292.8,
+              444.41
+            ],
+            "center_x_fraction": 0.5154,
+            "top_fraction": 0.6539,
+            "tokens": [
+              "و",
+              "الصناعة",
+              "و",
+              "اخلدمات"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 121.456092
+          }
+        ]
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "sidi-ifni",
+      "historical_constituency": "Sidi Ifni",
+      "seats": 2,
+      "candidate_count": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "pdf_sha256": "b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270",
+      "parent_page_url": "https://pps.ma/10528/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "evidence_excerpt": {
+        "page": 1,
+        "direct_title_evidence": {
+          "constituency_id": "sidi-ifni",
+          "historical_constituency": "Sidi Ifni",
+          "historical_seats_2016": 2,
+          "variant": "سيدي افني",
+          "exact": true,
+          "source": {
+            "source": "PDF_METADATA_TITLE_PAGE1",
+            "text": "سيدي افني"
+          }
+        },
+        "selected_typographic_groups": [
+          {
+            "raw_words_rtl": [
+              "كرﺎﺒﻣ",
+              "حﺎﻄﺒﻟا"
+            ],
+            "logical_raw_text": "مبارك البطاح",
+            "readable_text_without_cid": "مبارك البطاح",
+            "candidate_name_ar_normalized": "مبارك البطاح",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              18.0
+            ],
+            "max_font_size": 18.0,
+            "bbox": [
+              290.57,
+              363.54,
+              363.01,
+              381.54
+            ],
+            "center_x_fraction": 0.6653,
+            "top_fraction": 0.5498,
+            "tokens": [
+              "مبارك",
+              "البطاح"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "مبارك البطاح"
+            ],
+            "selection_score": 182.439755
+          },
+          {
+            "raw_words_rtl": [
+              "ﺔﻤﻴﻌﻧ",
+              "ﱘﺮﻛ"
+            ],
+            "logical_raw_text": "نعيمة كرمي",
+            "readable_text_without_cid": "نعيمة كرمي",
+            "candidate_name_ar_normalized": "نعيمة كرمي",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              14.0
+            ],
+            "max_font_size": 14.0,
+            "bbox": [
+              116.6,
+              423.65,
+              172.43,
+              437.65
+            ],
+            "center_x_fraction": 0.2942,
+            "top_fraction": 0.6407,
+            "tokens": [
+              "نعيمة",
+              "كرمي"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 141.469341
+          }
+        ]
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "oujda-angad",
+      "historical_constituency": "Oujda - Angad",
+      "seats": 4,
+      "candidate_count": 4,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "pdf_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+      "parent_page_url": "https://pps.ma/10453/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "evidence_excerpt": {
+        "page": 3,
+        "direct_title_evidence": {
+          "constituency_id": "oujda-angad",
+          "historical_constituency": "Oujda - Angad",
+          "historical_seats_2016": 4,
+          "variant": "وجدة",
+          "exact": true,
+          "source": {
+            "source": "PYPDF_LINE",
+            "line_index": 4,
+            "text": "وجدة"
+          }
+        },
+        "selected_typographic_groups": [
+          {
+            "raw_words_rtl": [
+              "نﻮﻤﻴﻣ",
+              "ﻞﻗﺎﻋ"
+            ],
+            "logical_raw_text": "ميمون عاقل",
+            "readable_text_without_cid": "ميمون عاقل",
+            "candidate_name_ar_normalized": "ميمون عاقل",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              18.0
+            ],
+            "max_font_size": 18.0,
+            "bbox": [
+              318.87,
+              394.16,
+              395.8,
+              412.16
+            ],
+            "center_x_fraction": 0.7275,
+            "top_fraction": 0.5961,
+            "tokens": [
+              "ميمون",
+              "عاقل"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "ميمون عاقل"
+            ],
+            "selection_score": 182.486055
+          },
+          {
+            "raw_words_rtl": [
+              "ﺪﺒﻋ",
+              "ﻢﻴﺣﺮﻟا",
+              "ﻲﻠﻌﻨﺑ"
+            ],
+            "logical_raw_text": "عبد الرحيم بنعلي",
+            "readable_text_without_cid": "عبد الرحيم بنعلي",
+            "candidate_name_ar_normalized": "عبد الرحيم بنعلي",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              14.0
+            ],
+            "max_font_size": 14.0,
+            "bbox": [
+              131.16,
+              308.03,
+              203.7,
+              322.03
+            ],
+            "center_x_fraction": 0.3409,
+            "top_fraction": 0.4658,
+            "tokens": [
+              "عبد",
+              "الرحيم",
+              "بنعلي"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "عبد الرحيم بنعلي"
+            ],
+            "selection_score": 142.355818
+          },
+          {
+            "raw_words_rtl": [
+              "ﺪﺒﻋ",
+              "ﻦﻣﻮﳌا",
+              "ﺪﻟﺎﺧ"
+            ],
+            "logical_raw_text": "عبد املومن خالد",
+            "readable_text_without_cid": "عبد املومن خالد",
+            "candidate_name_ar_normalized": "عبد املومن خالد",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              12.0
+            ],
+            "max_font_size": 12.0,
+            "bbox": [
+              192.96,
+              476.89,
+              254.99,
+              488.89
+            ],
+            "center_x_fraction": 0.456,
+            "top_fraction": 0.7212,
+            "tokens": [
+              "عبد",
+              "املومن",
+              "خالد"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 121.388831
+          },
+          {
+            "raw_words_rtl": [
+              "ﺪﻤ‡",
+              "يوارﺪﻟا"
+            ],
+            "logical_raw_text": "‡مد الدراوي",
+            "readable_text_without_cid": "مد الدراوي",
+            "candidate_name_ar_normalized": null,
+            "raw_has_fontmap_loss": true,
+            "font_sizes": [
+              12.0
+            ],
+            "max_font_size": 12.0,
+            "bbox": [
+              85.73,
+              480.22,
+              138.21,
+              492.22
+            ],
+            "center_x_fraction": 0.228,
+            "top_fraction": 0.7262,
+            "tokens": [
+              "مد",
+              "الدراوي"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 121.383791
+          }
+        ]
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khemisset-oulmes",
+      "historical_constituency": "Khémisset - Oulmès",
+      "seats": 3,
+      "candidate_count": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "pdf_sha256": "441db18568d49d5f75ac06311cfeed44fed04e6786f5e6e58f63fe15dbb57ba4",
+      "parent_page_url": "https://pps.ma/10475/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "evidence_excerpt": {
+        "page": 4,
+        "direct_title_evidence": {
+          "constituency_id": "khemisset-oulmes",
+          "historical_constituency": "Khémisset - Oulmès",
+          "historical_seats_2016": 3,
+          "variant": "الخميسات",
+          "exact": true,
+          "source": {
+            "source": "PYPDF_LINE",
+            "line_index": 5,
+            "text": "الخميسات"
+          }
+        },
+        "selected_typographic_groups": [
+          {
+            "raw_words_rtl": [
+              "ﺪﻤ(cid:22)",
+              "تﺎﺟﻮﺑ"
+            ],
+            "logical_raw_text": ")22:dic(مد بوجات",
+            "readable_text_without_cid": "مد بوجات",
+            "candidate_name_ar_normalized": null,
+            "raw_has_fontmap_loss": true,
+            "font_sizes": [
+              14.0
+            ],
+            "max_font_size": 14.0,
+            "bbox": [
+              82.88,
+              412.13,
+              140.67,
+              426.13
+            ],
+            "center_x_fraction": 0.2276,
+            "top_fraction": 0.6232,
+            "tokens": [
+              "مد",
+              "بوجات"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 141.486762
+          },
+          {
+            "raw_words_rtl": [
+              "(cid:1)ﻼﻴﳉا",
+              "ﺪﻳﺎﺑ"
+            ],
+            "logical_raw_text": "اجليال)1:dic( بايد",
+            "readable_text_without_cid": "اجليال بايد",
+            "candidate_name_ar_normalized": null,
+            "raw_has_fontmap_loss": true,
+            "font_sizes": [
+              14.0
+            ],
+            "max_font_size": 14.0,
+            "bbox": [
+              203.4,
+              413.13,
+              254.81,
+              427.13
+            ],
+            "center_x_fraction": 0.4664,
+            "top_fraction": 0.6248,
+            "tokens": [
+              "اجليال",
+              "بايد"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 141.485249
+          },
+          {
+            "raw_words_rtl": [
+              "ﺐﻴﺒﳊا",
+              "ﻲﻨﻴﺴﺣ"
+            ],
+            "logical_raw_text": "احلبيب حسيني",
+            "readable_text_without_cid": "احلبيب حسيني",
+            "candidate_name_ar_normalized": "احلبيب حسيني",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              14.0
+            ],
+            "max_font_size": 14.0,
+            "bbox": [
+              330.95,
+              414.07,
+              395.61,
+              428.07
+            ],
+            "center_x_fraction": 0.7396,
+            "top_fraction": 0.6262,
+            "tokens": [
+              "احلبيب",
+              "حسيني"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 141.483833
+          }
+        ]
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "chtouka-ait-baha",
+      "historical_constituency": "Chtouka - Aït-Baha",
+      "seats": 3,
+      "candidate_count": 3,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "pdf_sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+      "parent_page_url": "https://pps.ma/10521/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "evidence_excerpt": {
+        "page": 1,
+        "direct_title_evidence": {
+          "constituency_id": "chtouka-ait-baha",
+          "historical_constituency": "Chtouka - Aït-Baha",
+          "historical_seats_2016": 3,
+          "variant": "اشتوكة",
+          "exact": true,
+          "source": {
+            "source": "PYPDF_LINE",
+            "line_index": 4,
+            "text": "اشتوكة"
+          }
+        },
+        "selected_typographic_groups": [
+          {
+            "raw_words_rtl": [
+              "ﻢﻴﻫاﺮﺑإ",
+              "ترﺰﻜﺗ"
+            ],
+            "logical_raw_text": "إبراهيم تكزرت",
+            "readable_text_without_cid": "إبراهيم تكزرت",
+            "candidate_name_ar_normalized": "ابراهيم تكزرت",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              16.0
+            ],
+            "max_font_size": 16.0,
+            "bbox": [
+              325.33,
+              413.69,
+              401.23,
+              429.69
+            ],
+            "center_x_fraction": 0.7396,
+            "top_fraction": 0.6256,
+            "tokens": [
+              "ابراهيم",
+              "تكزرت"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "ابراهيم تكزرت"
+            ],
+            "selection_score": 162.484412
+          },
+          {
+            "raw_words_rtl": [
+              "ﺪﻤﺣأ",
+              "زﻮﺒﻌﻜﻟا"
+            ],
+            "logical_raw_text": "أحمد الكعبوز",
+            "readable_text_without_cid": "أحمد الكعبوز",
+            "candidate_name_ar_normalized": "احمد الكعبوز",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              14.0
+            ],
+            "max_font_size": 14.0,
+            "bbox": [
+              201.16,
+              416.8,
+              259.47,
+              430.8
+            ],
+            "center_x_fraction": 0.4689,
+            "top_fraction": 0.6303,
+            "tokens": [
+              "احمد",
+              "الكعبوز"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "احمد الكعبوز"
+            ],
+            "selection_score": 142.479704
+          },
+          {
+            "raw_words_rtl": [
+              "ﺪﻤ(cid:157)",
+              "ﻚﻴﻠﻣوأ"
+            ],
+            "logical_raw_text": ")751:dic(مد أومليك",
+            "readable_text_without_cid": "مد أومليك",
+            "candidate_name_ar_normalized": null,
+            "raw_has_fontmap_loss": true,
+            "font_sizes": [
+              14.0
+            ],
+            "max_font_size": 14.0,
+            "bbox": [
+              83.96,
+              416.8,
+              147.33,
+              430.8
+            ],
+            "center_x_fraction": 0.2354,
+            "top_fraction": 0.6303,
+            "tokens": [
+              "مد",
+              "اومليك"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 141.479704
+          }
+        ]
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "agadir-ida-outanane",
+      "historical_constituency": "Agadir - Ida-ou-Tanane",
+      "seats": 4,
+      "candidate_count": 4,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "pdf_sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+      "parent_page_url": "https://pps.ma/10521/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ],
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "evidence_excerpt": {
+        "page": 2,
+        "direct_title_evidence": {
+          "constituency_id": "agadir-ida-outanane",
+          "historical_constituency": "Agadir - Ida-ou-Tanane",
+          "historical_seats_2016": 4,
+          "variant": "باكادير اداوتنان",
+          "exact": true,
+          "source": {
+            "source": "PYPDF_LINE",
+            "line_index": 17,
+            "text": "باكادير اداوتنان"
+          }
+        },
+        "selected_typographic_groups": [
+          {
+            "raw_words_rtl": [
+              "ﻦﺴﺣ",
+              "ﻂﺒﻳﺮﻣوا"
+            ],
+            "logical_raw_text": "حسن اومريبط",
+            "readable_text_without_cid": "حسن اومريبط",
+            "candidate_name_ar_normalized": "حسن اومريبط",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              17.0
+            ],
+            "max_font_size": 17.0,
+            "bbox": [
+              318.62,
+              398.51,
+              395.38,
+              415.51
+            ],
+            "center_x_fraction": 0.7268,
+            "top_fraction": 0.6026,
+            "tokens": [
+              "حسن",
+              "اومريبط"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "حسن اومريبط"
+            ],
+            "selection_score": 172.492645
+          },
+          {
+            "raw_words_rtl": [
+              "بﺮﺤﻠﻟ",
+              "ﺮﻳدﺎﻛﺄﺑ",
+              "نﺎﻨﺗوادإ"
+            ],
+            "logical_raw_text": "للحرب بأكادير إداوتنان",
+            "readable_text_without_cid": "للحرب بأكادير إداوتنان",
+            "candidate_name_ar_normalized": "للحرب باكادير اداوتنان",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              14.0
+            ],
+            "max_font_size": 14.0,
+            "bbox": [
+              306.52,
+              445.08,
+              405.06,
+              459.08
+            ],
+            "center_x_fraction": 0.7243,
+            "top_fraction": 0.6731,
+            "tokens": [
+              "للحرب",
+              "باكادير",
+              "اداوتنان"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [
+              "للحرب باكادير اداوتنان"
+            ],
+            "selection_score": 142.436941
+          },
+          {
+            "raw_words_rtl": [
+              "ﺐﺗﺎﻜﻟا",
+              "ﻲﻤﻴﻠﻗ‹ا"
+            ],
+            "logical_raw_text": "الكاتب ا‹قليمي",
+            "readable_text_without_cid": "الكاتب ا قليمي",
+            "candidate_name_ar_normalized": null,
+            "raw_has_fontmap_loss": true,
+            "font_sizes": [
+              14.0
+            ],
+            "max_font_size": 14.0,
+            "bbox": [
+              320.13,
+              430.08,
+              393.86,
+              444.08
+            ],
+            "center_x_fraction": 0.7268,
+            "top_fraction": 0.6504,
+            "tokens": [
+              "الكاتب",
+              "ا",
+              "قليمي"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 141.459615
+          },
+          {
+            "raw_words_rtl": [
+              "نﻮﻧﺎﻘﻟا",
+              "مﺎﻌﻟا"
+            ],
+            "logical_raw_text": "القانون العام",
+            "readable_text_without_cid": "القانون العام",
+            "candidate_name_ar_normalized": "القانون العام",
+            "raw_has_fontmap_loss": false,
+            "font_sizes": [
+              14.0
+            ],
+            "max_font_size": 14.0,
+            "bbox": [
+              321.51,
+              475.07,
+              377.07,
+              489.07
+            ],
+            "center_x_fraction": 0.7111,
+            "top_fraction": 0.7184,
+            "tokens": [
+              "القانون",
+              "العام"
+            ],
+            "non_name_hits": [],
+            "phrase_block": false,
+            "occupation_block": false,
+            "name_like": true,
+            "independent_pypdf_line_matches": [],
+            "selection_score": 141.391592
+          }
+        ]
+      }
+    }
+  ],
+  "candidate_rows": [
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_constituency": "Khouribga",
+      "candidate_name_ar": null,
+      "candidate_name_ar_normalized": null,
+      "candidate_identity_key": "8a63c614e963070b4800f43a383b68ee09baa73fc15293486a1611dc89cdcd58",
+      "candidate_text_status": "RAW_GLYPH_IDENTITY_FONTMAP_LOSS",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 1,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+        "parent_page_url": "https://pps.ma/10487/",
+        "page": 5,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "khouribga",
+            "historical_constituency": "Khouribga",
+            "historical_seats_2016": 6,
+            "variant": "خريبكة",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 16,
+              "text": "خريبكة"
+            }
+          },
+          "bbox": [
+            341.89,
+            336.22,
+            407.24,
+            348.84
+          ],
+          "raw_words_rtl": [
+            "دﺎﻤﺼﻟاﺪﺒﻋ",
+            "(cid:31)ﺎﻨﺧ"
+          ],
+          "logical_raw_text": "عبدالصماد خنا)13:dic(",
+          "font_sizes": [
+            12.62
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_constituency": "Khouribga",
+      "candidate_name_ar": "خليد برايجي",
+      "candidate_name_ar_normalized": "خليد برايجي",
+      "candidate_identity_key": "ca23d05da01e4d37966cf69c43395bb182f9615782800577b3bb24c18d4d4919",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 2,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+        "parent_page_url": "https://pps.ma/10487/",
+        "page": 5,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "khouribga",
+            "historical_constituency": "Khouribga",
+            "historical_seats_2016": 6,
+            "variant": "خريبكة",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 16,
+              "text": "خريبكة"
+            }
+          },
+          "bbox": [
+            100.19,
+            483.02,
+            139.97,
+            494.02
+          ],
+          "raw_words_rtl": [
+            "ﺪﻴﻠﺧ",
+            "ﻲﺠﻳاﺮﺑ"
+          ],
+          "logical_raw_text": "خليد برايجي",
+          "font_sizes": [
+            11.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_constituency": "Khouribga",
+      "candidate_name_ar": "ايوب السعيدي",
+      "candidate_name_ar_normalized": "ايوب السعيدي",
+      "candidate_identity_key": "8b38b52ce3445f9bde3208458d77e211b19334fad006431e8e5d60e69cf07895",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 3,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+        "parent_page_url": "https://pps.ma/10487/",
+        "page": 5,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "khouribga",
+            "historical_constituency": "Khouribga",
+            "historical_seats_2016": 6,
+            "variant": "خريبكة",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 16,
+              "text": "خريبكة"
+            }
+          },
+          "bbox": [
+            345.13,
+            484.02,
+            399.02,
+            495.02
+          ],
+          "raw_words_rtl": [
+            "بﻮﻳأ",
+            "يﺪﻴﻌﺴﻟا"
+          ],
+          "logical_raw_text": "أيوب السعيدي",
+          "font_sizes": [
+            11.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_constituency": "Khouribga",
+      "candidate_name_ar": null,
+      "candidate_name_ar_normalized": null,
+      "candidate_identity_key": "df157d26e382ec7a0b87f090d6dc794d34bd5e79cdc5a5309ddfddbde4e4a294",
+      "candidate_text_status": "RAW_GLYPH_IDENTITY_FONTMAP_LOSS",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 4,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+        "parent_page_url": "https://pps.ma/10487/",
+        "page": 5,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "khouribga",
+            "historical_constituency": "Khouribga",
+            "historical_seats_2016": 6,
+            "variant": "خريبكة",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 16,
+              "text": "خريبكة"
+            }
+          },
+          "bbox": [
+            223.95,
+            484.02,
+            269.21,
+            495.02
+          ],
+          "raw_words_rtl": [
+            "ﺪﻴﻤﺣ",
+            "(cid:31)اوﺪﺣ"
+          ],
+          "logical_raw_text": "حميد حدوا)13:dic(",
+          "font_sizes": [
+            11.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_constituency": "Khouribga",
+      "candidate_name_ar": "منصف الرفيق",
+      "candidate_name_ar_normalized": "منصف الرفيق",
+      "candidate_identity_key": "b3f7f4d3a659ccda8a301b849dc04041842431ac4f249b3eb4efa629dd2f289e",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 5,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+        "parent_page_url": "https://pps.ma/10487/",
+        "page": 5,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "khouribga",
+            "historical_constituency": "Khouribga",
+            "historical_seats_2016": 6,
+            "variant": "خريبكة",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 16,
+              "text": "خريبكة"
+            }
+          },
+          "bbox": [
+            222.19,
+            322.52,
+            272.86,
+            333.52
+          ],
+          "raw_words_rtl": [
+            "ﻒﺼﻨﻣ",
+            "ﻖﻴﻓﺮﻟا"
+          ],
+          "logical_raw_text": "منصف الرفيق",
+          "font_sizes": [
+            11.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khouribga",
+      "historical_constituency": "Khouribga",
+      "candidate_name_ar": "عبدالغني نبوتي",
+      "candidate_name_ar_normalized": "عبدالغني نبوتي",
+      "candidate_identity_key": "4c4f9252d5666d764038304a13ece519653da2aad9b98701abe60455777808cb",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 6,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "bcab8923dd612a6cbeae64d03effc34ca8b869546b910b7f86dac267a0538a1b",
+        "parent_page_url": "https://pps.ma/10487/",
+        "page": 5,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "khouribga",
+            "historical_constituency": "Khouribga",
+            "historical_seats_2016": 6,
+            "variant": "خريبكة",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 16,
+              "text": "خريبكة"
+            }
+          },
+          "bbox": [
+            93.54,
+            322.52,
+            146.62,
+            333.52
+          ],
+          "raw_words_rtl": [
+            "ﻲﻨﻐﻟاﺪﺒﻋ",
+            "ﻲﺗﻮﺒﻧ"
+          ],
+          "logical_raw_text": "عبدالغني نبوتي",
+          "font_sizes": [
+            11.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "settat",
+      "historical_constituency": "Settat",
+      "candidate_name_ar": "امنيلي سعيد",
+      "candidate_name_ar_normalized": "امنيلي سعيد",
+      "candidate_identity_key": "82005c0b4306329f10f81764dd185d1a003fa8fa775404647461bb7440e32e68",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 1,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+        "parent_page_url": "https://pps.ma/10495/",
+        "page": 11,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "settat",
+            "historical_constituency": "Settat",
+            "historical_seats_2016": 6,
+            "variant": "سطات",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 27,
+              "text": "سطات"
+            }
+          },
+          "bbox": [
+            323.35,
+            303.16,
+            377.01,
+            316.01
+          ],
+          "raw_words_rtl": [
+            "ﻲﻠﻴﳕأ",
+            "ﺪﻴﻌﺳ"
+          ],
+          "logical_raw_text": "أمنيلي سعيد",
+          "font_sizes": [
+            12.85
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "settat",
+      "historical_constituency": "Settat",
+      "candidate_name_ar": "احلاج عبد السالم جبلي",
+      "candidate_name_ar_normalized": "احلاج عبد السالم جبلي",
+      "candidate_identity_key": "d17ed1476b7da3cbbbb664136db4cbbb3bd5a593034648e75cf7d40c4fdf2442",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 2,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+        "parent_page_url": "https://pps.ma/10495/",
+        "page": 11,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "settat",
+            "historical_constituency": "Settat",
+            "historical_seats_2016": 6,
+            "variant": "سطات",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 27,
+              "text": "سطات"
+            }
+          },
+          "bbox": [
+            304.01,
+            460.27,
+            383.17,
+            472.27
+          ],
+          "raw_words_rtl": [
+            "جﺎﳊا",
+            "ﺪﺒﻋ",
+            "مﻼﺴﻟا",
+            "ﻲﻠﺒﺟ"
+          ],
+          "logical_raw_text": "احلاج عبد السالم جبلي",
+          "font_sizes": [
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "settat",
+      "historical_constituency": "Settat",
+      "candidate_name_ar": "حجاج مزابي",
+      "candidate_name_ar_normalized": "حجاج مزابي",
+      "candidate_identity_key": "c9e3643e1cc25af31bd868e52fb3f1bd3de9a6f1c1bc8cc7f6726c6cd154ded0",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 3,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+        "parent_page_url": "https://pps.ma/10495/",
+        "page": 11,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "settat",
+            "historical_constituency": "Settat",
+            "historical_seats_2016": 6,
+            "variant": "سطات",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 27,
+              "text": "سطات"
+            }
+          },
+          "bbox": [
+            218.89,
+            459.8,
+            256.29,
+            470.82
+          ],
+          "raw_words_rtl": [
+            "جﺎﺠﺣ",
+            "ﻲﺑاﺰﻣ"
+          ],
+          "logical_raw_text": "حجاج مزابي",
+          "font_sizes": [
+            11.02
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "settat",
+      "historical_constituency": "Settat",
+      "candidate_name_ar": null,
+      "candidate_name_ar_normalized": null,
+      "candidate_identity_key": "1eb1c635a4816eb1dc9dd6920cc231ad9e6eee9689b947b24c905aa81f4097db",
+      "candidate_text_status": "RAW_GLYPH_IDENTITY_FONTMAP_LOSS",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 4,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+        "parent_page_url": "https://pps.ma/10495/",
+        "page": 11,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "settat",
+            "historical_constituency": "Settat",
+            "historical_seats_2016": 6,
+            "variant": "سطات",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 27,
+              "text": "سطات"
+            }
+          },
+          "bbox": [
+            214.9,
+            278.93,
+            263.41,
+            289.94
+          ],
+          "raw_words_rtl": [
+            "ﻒﺳﻮﻳ",
+            "(cid:127)ﺎﻴﻌﻟ"
+          ],
+          "logical_raw_text": "يوسف لعيا)721:dic(",
+          "font_sizes": [
+            11.02
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "settat",
+      "historical_constituency": "Settat",
+      "candidate_name_ar": "حلسن طلحة",
+      "candidate_name_ar_normalized": "حلسن طلحة",
+      "candidate_identity_key": "98e8468402c032524b06592e05464b66e440c01e566d9fbe7decd9149bb79f0a",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 5,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+        "parent_page_url": "https://pps.ma/10495/",
+        "page": 11,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "settat",
+            "historical_constituency": "Settat",
+            "historical_seats_2016": 6,
+            "variant": "سطات",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 27,
+              "text": "سطات"
+            }
+          },
+          "bbox": [
+            113.87,
+            459.3,
+            156.22,
+            470.32
+          ],
+          "raw_words_rtl": [
+            "ﻦﺴﳊ",
+            "ﺔﺤﻠﻃ"
+          ],
+          "logical_raw_text": "حلسن طلحة",
+          "font_sizes": [
+            11.02
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "settat",
+      "historical_constituency": "Settat",
+      "candidate_name_ar": null,
+      "candidate_name_ar_normalized": null,
+      "candidate_identity_key": "b521c5f170edd7d5eda1b9c171e2ff9ea9ecd7f88c6d557443f85876de684f48",
+      "candidate_text_status": "RAW_GLYPH_IDENTITY_FONTMAP_LOSS",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 6,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "6ddd012c5db52383efb9aa32060af9f960eb4bb94fbab8ac28e70e51d49ab689",
+        "parent_page_url": "https://pps.ma/10495/",
+        "page": 11,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "settat",
+            "historical_constituency": "Settat",
+            "historical_seats_2016": 6,
+            "variant": "سطات",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 27,
+              "text": "سطات"
+            }
+          },
+          "bbox": [
+            109.79,
+            294.3,
+            159.3,
+            305.32
+          ],
+          "raw_words_rtl": [
+            "ﺪﻤŒ",
+            "ﻞﺿﺎﻔﻟا"
+          ],
+          "logical_raw_text": "Œمد الفاضل",
+          "font_sizes": [
+            11.02
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "errachidia",
+      "historical_constituency": "Errachidia",
+      "candidate_name_ar": "عمر الزعيم",
+      "candidate_name_ar_normalized": "عمر الزعيم",
+      "candidate_identity_key": "82c428fafee2ea07e8b26538de68aa376d5c1a34076b46f96d447481f911146b",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 1,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "105cac2f617546c4f4e687b02ebd6441b027830a1364372c3bc2767590676ba4",
+        "parent_page_url": "https://pps.ma/10515/",
+        "page": 5,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "errachidia",
+            "historical_constituency": "Errachidia",
+            "historical_seats_2016": 5,
+            "variant": "الرشيدية",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 20,
+              "text": "الرشيدية"
+            }
+          },
+          "bbox": [
+            227.54,
+            379.83,
+            278.76,
+            394.83
+          ],
+          "raw_words_rtl": [
+            "ﺮﻤﻋ",
+            "ﻢﻴﻋﺰﻟا"
+          ],
+          "logical_raw_text": "عمر الزعيم",
+          "font_sizes": [
+            15.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "errachidia",
+      "historical_constituency": "Errachidia",
+      "candidate_name_ar": null,
+      "candidate_name_ar_normalized": null,
+      "candidate_identity_key": "06469cec7d2f4a56e89bbe7c44562c4c2be907d1d9a734fc1d751e1b25d6ae56",
+      "candidate_text_status": "RAW_GLYPH_IDENTITY_FONTMAP_LOSS",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 2,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "105cac2f617546c4f4e687b02ebd6441b027830a1364372c3bc2767590676ba4",
+        "parent_page_url": "https://pps.ma/10515/",
+        "page": 5,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "errachidia",
+            "historical_constituency": "Errachidia",
+            "historical_seats_2016": 5,
+            "variant": "الرشيدية",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 20,
+              "text": "الرشيدية"
+            }
+          },
+          "bbox": [
+            84.34,
+            480.49,
+            145.04,
+            492.77
+          ],
+          "raw_words_rtl": [
+            "ﺪﺒﻋ",
+            "ˆا",
+            "ﻰﺴﻴﻌﻨﺑ"
+          ],
+          "logical_raw_text": "عبد اˆ بنعيسى",
+          "font_sizes": [
+            12.28
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "errachidia",
+      "historical_constituency": "Errachidia",
+      "candidate_name_ar": "املصطفي الكوط",
+      "candidate_name_ar_normalized": "املصطفي الكوط",
+      "candidate_identity_key": "37248128f1f7acab147618acb1bd51b1122025ee9793b6d2f54d0c64150df1fb",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 3,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "105cac2f617546c4f4e687b02ebd6441b027830a1364372c3bc2767590676ba4",
+        "parent_page_url": "https://pps.ma/10515/",
+        "page": 5,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "errachidia",
+            "historical_constituency": "Errachidia",
+            "historical_seats_2016": 5,
+            "variant": "الرشيدية",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 20,
+              "text": "الرشيدية"
+            }
+          },
+          "bbox": [
+            346.95,
+            311.5,
+            416.43,
+            323.78
+          ],
+          "raw_words_rtl": [
+            "ﻰﻔﻄﺼﳌا",
+            "طﻮﻜﻟا"
+          ],
+          "logical_raw_text": "املصطفى الكوط",
+          "font_sizes": [
+            12.28
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "errachidia",
+      "historical_constituency": "Errachidia",
+      "candidate_name_ar": "عمر معمر",
+      "candidate_name_ar_normalized": "عمر معمر",
+      "candidate_identity_key": "fad6cbd2da34dd51c4023a530bbaf0dbb54b00ea30d323dc681aa930ca9632bb",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 4,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "105cac2f617546c4f4e687b02ebd6441b027830a1364372c3bc2767590676ba4",
+        "parent_page_url": "https://pps.ma/10515/",
+        "page": 5,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "errachidia",
+            "historical_constituency": "Errachidia",
+            "historical_seats_2016": 5,
+            "variant": "الرشيدية",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 20,
+              "text": "الرشيدية"
+            }
+          },
+          "bbox": [
+            366.46,
+            481.64,
+            404.92,
+            493.64
+          ],
+          "raw_words_rtl": [
+            "ﺮﻤﻋ",
+            "ﺮﻤﻌﻣ"
+          ],
+          "logical_raw_text": "عمر معمر",
+          "font_sizes": [
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "errachidia",
+      "historical_constituency": "Errachidia",
+      "candidate_name_ar": "و الصناعة و اخلدمات",
+      "candidate_name_ar_normalized": "و الصناعة و اخلدمات",
+      "candidate_identity_key": "e1fae5d5cb389b2994328ffcc9ba8dc53bda0dabffd5207422f70ff36e1adec0",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 5,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "105cac2f617546c4f4e687b02ebd6441b027830a1364372c3bc2767590676ba4",
+        "parent_page_url": "https://pps.ma/10515/",
+        "page": 5,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "errachidia",
+            "historical_constituency": "Errachidia",
+            "historical_seats_2016": 5,
+            "variant": "الرشيدية",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 20,
+              "text": "الرشيدية"
+            }
+          },
+          "bbox": [
+            213.52,
+            432.41,
+            292.8,
+            444.41
+          ],
+          "raw_words_rtl": [
+            "و",
+            "ﺔﻋﺎﻨﺼﻟا",
+            "و",
+            "تﺎﻣﺪﳋا"
+          ],
+          "logical_raw_text": "و الصناعة و اخلدمات",
+          "font_sizes": [
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "sidi-ifni",
+      "historical_constituency": "Sidi Ifni",
+      "candidate_name_ar": "مبارك البطاح",
+      "candidate_name_ar_normalized": "مبارك البطاح",
+      "candidate_identity_key": "ea892c947aa1a44fa62a565f38592c90a8a31a594622d02c8908037711ce998f",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 1,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270",
+        "parent_page_url": "https://pps.ma/10528/",
+        "page": 1,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "sidi-ifni",
+            "historical_constituency": "Sidi Ifni",
+            "historical_seats_2016": 2,
+            "variant": "سيدي افني",
+            "exact": true,
+            "source": {
+              "source": "PDF_METADATA_TITLE_PAGE1",
+              "text": "سيدي افني"
+            }
+          },
+          "bbox": [
+            290.57,
+            363.54,
+            363.01,
+            381.54
+          ],
+          "raw_words_rtl": [
+            "كرﺎﺒﻣ",
+            "حﺎﻄﺒﻟا"
+          ],
+          "logical_raw_text": "مبارك البطاح",
+          "font_sizes": [
+            18.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "sidi-ifni",
+      "historical_constituency": "Sidi Ifni",
+      "candidate_name_ar": "نعيمة كرمي",
+      "candidate_name_ar_normalized": "نعيمة كرمي",
+      "candidate_identity_key": "e83174c5b2f3a60dac4fc01b9cbe34e02c0d9078b821fe9ee238d6724cd2038a",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 2,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270",
+        "parent_page_url": "https://pps.ma/10528/",
+        "page": 1,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "sidi-ifni",
+            "historical_constituency": "Sidi Ifni",
+            "historical_seats_2016": 2,
+            "variant": "سيدي افني",
+            "exact": true,
+            "source": {
+              "source": "PDF_METADATA_TITLE_PAGE1",
+              "text": "سيدي افني"
+            }
+          },
+          "bbox": [
+            116.6,
+            423.65,
+            172.43,
+            437.65
+          ],
+          "raw_words_rtl": [
+            "ﺔﻤﻴﻌﻧ",
+            "ﱘﺮﻛ"
+          ],
+          "logical_raw_text": "نعيمة كرمي",
+          "font_sizes": [
+            14.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "oujda-angad",
+      "historical_constituency": "Oujda - Angad",
+      "candidate_name_ar": "ميمون عاقل",
+      "candidate_name_ar_normalized": "ميمون عاقل",
+      "candidate_identity_key": "afff8d4d6e49d721df4cfd5c73dd676d7218880c612db183ec6534341476afd9",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 1,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+        "parent_page_url": "https://pps.ma/10453/",
+        "page": 3,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "oujda-angad",
+            "historical_constituency": "Oujda - Angad",
+            "historical_seats_2016": 4,
+            "variant": "وجدة",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 4,
+              "text": "وجدة"
+            }
+          },
+          "bbox": [
+            318.87,
+            394.16,
+            395.8,
+            412.16
+          ],
+          "raw_words_rtl": [
+            "نﻮﻤﻴﻣ",
+            "ﻞﻗﺎﻋ"
+          ],
+          "logical_raw_text": "ميمون عاقل",
+          "font_sizes": [
+            18.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "oujda-angad",
+      "historical_constituency": "Oujda - Angad",
+      "candidate_name_ar": "عبد الرحيم بنعلي",
+      "candidate_name_ar_normalized": "عبد الرحيم بنعلي",
+      "candidate_identity_key": "c8f9922c4f992ebf83a2df7b5b057d130bc1e0d6b06e5c311a563500a9ad542d",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 2,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+        "parent_page_url": "https://pps.ma/10453/",
+        "page": 3,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "oujda-angad",
+            "historical_constituency": "Oujda - Angad",
+            "historical_seats_2016": 4,
+            "variant": "وجدة",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 4,
+              "text": "وجدة"
+            }
+          },
+          "bbox": [
+            131.16,
+            308.03,
+            203.7,
+            322.03
+          ],
+          "raw_words_rtl": [
+            "ﺪﺒﻋ",
+            "ﻢﻴﺣﺮﻟا",
+            "ﻲﻠﻌﻨﺑ"
+          ],
+          "logical_raw_text": "عبد الرحيم بنعلي",
+          "font_sizes": [
+            14.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "oujda-angad",
+      "historical_constituency": "Oujda - Angad",
+      "candidate_name_ar": "عبد املومن خالد",
+      "candidate_name_ar_normalized": "عبد املومن خالد",
+      "candidate_identity_key": "160bcc356d8cb42464136003dc08a3625cd738968b09bfb13b7d494990052f56",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 3,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+        "parent_page_url": "https://pps.ma/10453/",
+        "page": 3,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "oujda-angad",
+            "historical_constituency": "Oujda - Angad",
+            "historical_seats_2016": 4,
+            "variant": "وجدة",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 4,
+              "text": "وجدة"
+            }
+          },
+          "bbox": [
+            192.96,
+            476.89,
+            254.99,
+            488.89
+          ],
+          "raw_words_rtl": [
+            "ﺪﺒﻋ",
+            "ﻦﻣﻮﳌا",
+            "ﺪﻟﺎﺧ"
+          ],
+          "logical_raw_text": "عبد املومن خالد",
+          "font_sizes": [
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "oujda-angad",
+      "historical_constituency": "Oujda - Angad",
+      "candidate_name_ar": null,
+      "candidate_name_ar_normalized": null,
+      "candidate_identity_key": "9289b81fad5776be27217749ca1b078badc25ed5fe321a214487b75051f2a3cf",
+      "candidate_text_status": "RAW_GLYPH_IDENTITY_FONTMAP_LOSS",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 4,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "9a3be0e2cd1b50555dcb68d757cfb22735fc33f2614c2429d3545234fe17f457",
+        "parent_page_url": "https://pps.ma/10453/",
+        "page": 3,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "oujda-angad",
+            "historical_constituency": "Oujda - Angad",
+            "historical_seats_2016": 4,
+            "variant": "وجدة",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 4,
+              "text": "وجدة"
+            }
+          },
+          "bbox": [
+            85.73,
+            480.22,
+            138.21,
+            492.22
+          ],
+          "raw_words_rtl": [
+            "ﺪﻤ‡",
+            "يوارﺪﻟا"
+          ],
+          "logical_raw_text": "‡مد الدراوي",
+          "font_sizes": [
+            12.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khemisset-oulmes",
+      "historical_constituency": "Khémisset - Oulmès",
+      "candidate_name_ar": null,
+      "candidate_name_ar_normalized": null,
+      "candidate_identity_key": "0b08e9374d5c09cb08748f6e7387a31bf67f21695c7612328aa5cacbc55f0df5",
+      "candidate_text_status": "RAW_GLYPH_IDENTITY_FONTMAP_LOSS",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 1,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "441db18568d49d5f75ac06311cfeed44fed04e6786f5e6e58f63fe15dbb57ba4",
+        "parent_page_url": "https://pps.ma/10475/",
+        "page": 4,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "khemisset-oulmes",
+            "historical_constituency": "Khémisset - Oulmès",
+            "historical_seats_2016": 3,
+            "variant": "الخميسات",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 5,
+              "text": "الخميسات"
+            }
+          },
+          "bbox": [
+            82.88,
+            412.13,
+            140.67,
+            426.13
+          ],
+          "raw_words_rtl": [
+            "ﺪﻤ(cid:22)",
+            "تﺎﺟﻮﺑ"
+          ],
+          "logical_raw_text": ")22:dic(مد بوجات",
+          "font_sizes": [
+            14.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khemisset-oulmes",
+      "historical_constituency": "Khémisset - Oulmès",
+      "candidate_name_ar": null,
+      "candidate_name_ar_normalized": null,
+      "candidate_identity_key": "35e1b22f50e5b558103653b34897d17ca8fda10ba09e55aad3716d6f8c5cbd1e",
+      "candidate_text_status": "RAW_GLYPH_IDENTITY_FONTMAP_LOSS",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 2,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "441db18568d49d5f75ac06311cfeed44fed04e6786f5e6e58f63fe15dbb57ba4",
+        "parent_page_url": "https://pps.ma/10475/",
+        "page": 4,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "khemisset-oulmes",
+            "historical_constituency": "Khémisset - Oulmès",
+            "historical_seats_2016": 3,
+            "variant": "الخميسات",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 5,
+              "text": "الخميسات"
+            }
+          },
+          "bbox": [
+            203.4,
+            413.13,
+            254.81,
+            427.13
+          ],
+          "raw_words_rtl": [
+            "(cid:1)ﻼﻴﳉا",
+            "ﺪﻳﺎﺑ"
+          ],
+          "logical_raw_text": "اجليال)1:dic( بايد",
+          "font_sizes": [
+            14.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "khemisset-oulmes",
+      "historical_constituency": "Khémisset - Oulmès",
+      "candidate_name_ar": "احلبيب حسيني",
+      "candidate_name_ar_normalized": "احلبيب حسيني",
+      "candidate_identity_key": "278a1508d8cb1ab154bd54c7f0d32b55d731ae092fea6505ec48733498d2faf5",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 3,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "441db18568d49d5f75ac06311cfeed44fed04e6786f5e6e58f63fe15dbb57ba4",
+        "parent_page_url": "https://pps.ma/10475/",
+        "page": 4,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "khemisset-oulmes",
+            "historical_constituency": "Khémisset - Oulmès",
+            "historical_seats_2016": 3,
+            "variant": "الخميسات",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 5,
+              "text": "الخميسات"
+            }
+          },
+          "bbox": [
+            330.95,
+            414.07,
+            395.61,
+            428.07
+          ],
+          "raw_words_rtl": [
+            "ﺐﻴﺒﳊا",
+            "ﻲﻨﻴﺴﺣ"
+          ],
+          "logical_raw_text": "احلبيب حسيني",
+          "font_sizes": [
+            14.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "chtouka-ait-baha",
+      "historical_constituency": "Chtouka - Aït-Baha",
+      "candidate_name_ar": "ابراهيم تكزرت",
+      "candidate_name_ar_normalized": "ابراهيم تكزرت",
+      "candidate_identity_key": "d3ce5dfa3f8d6383019d7b2d3300e2a5d737b64eb246ddc536404c8389b1e87b",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 1,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+        "parent_page_url": "https://pps.ma/10521/",
+        "page": 1,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "chtouka-ait-baha",
+            "historical_constituency": "Chtouka - Aït-Baha",
+            "historical_seats_2016": 3,
+            "variant": "اشتوكة",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 4,
+              "text": "اشتوكة"
+            }
+          },
+          "bbox": [
+            325.33,
+            413.69,
+            401.23,
+            429.69
+          ],
+          "raw_words_rtl": [
+            "ﻢﻴﻫاﺮﺑإ",
+            "ترﺰﻜﺗ"
+          ],
+          "logical_raw_text": "إبراهيم تكزرت",
+          "font_sizes": [
+            16.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "chtouka-ait-baha",
+      "historical_constituency": "Chtouka - Aït-Baha",
+      "candidate_name_ar": "احمد الكعبوز",
+      "candidate_name_ar_normalized": "احمد الكعبوز",
+      "candidate_identity_key": "805464341c3aeb32d201941634423e89b9eecd252d481140e7f794bb6e87a9ea",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 2,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+        "parent_page_url": "https://pps.ma/10521/",
+        "page": 1,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "chtouka-ait-baha",
+            "historical_constituency": "Chtouka - Aït-Baha",
+            "historical_seats_2016": 3,
+            "variant": "اشتوكة",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 4,
+              "text": "اشتوكة"
+            }
+          },
+          "bbox": [
+            201.16,
+            416.8,
+            259.47,
+            430.8
+          ],
+          "raw_words_rtl": [
+            "ﺪﻤﺣأ",
+            "زﻮﺒﻌﻜﻟا"
+          ],
+          "logical_raw_text": "أحمد الكعبوز",
+          "font_sizes": [
+            14.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "chtouka-ait-baha",
+      "historical_constituency": "Chtouka - Aït-Baha",
+      "candidate_name_ar": null,
+      "candidate_name_ar_normalized": null,
+      "candidate_identity_key": "2a66c75bc2dee3bf4f940c52ba2931bfdc7a33976794f6ccc0f8af4dc1f66d36",
+      "candidate_text_status": "RAW_GLYPH_IDENTITY_FONTMAP_LOSS",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 3,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+        "parent_page_url": "https://pps.ma/10521/",
+        "page": 1,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "chtouka-ait-baha",
+            "historical_constituency": "Chtouka - Aït-Baha",
+            "historical_seats_2016": 3,
+            "variant": "اشتوكة",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 4,
+              "text": "اشتوكة"
+            }
+          },
+          "bbox": [
+            83.96,
+            416.8,
+            147.33,
+            430.8
+          ],
+          "raw_words_rtl": [
+            "ﺪﻤ(cid:157)",
+            "ﻚﻴﻠﻣوأ"
+          ],
+          "logical_raw_text": ")751:dic(مد أومليك",
+          "font_sizes": [
+            14.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "agadir-ida-outanane",
+      "historical_constituency": "Agadir - Ida-ou-Tanane",
+      "candidate_name_ar": "حسن اومريبط",
+      "candidate_name_ar_normalized": "حسن اومريبط",
+      "candidate_identity_key": "7864d512e24ff61c0c5939d7ab5581528a2f88bf4538c30a67bf29f7f43a4c25",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 1,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+        "parent_page_url": "https://pps.ma/10521/",
+        "page": 2,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "agadir-ida-outanane",
+            "historical_constituency": "Agadir - Ida-ou-Tanane",
+            "historical_seats_2016": 4,
+            "variant": "باكادير اداوتنان",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 17,
+              "text": "باكادير اداوتنان"
+            }
+          },
+          "bbox": [
+            318.62,
+            398.51,
+            395.38,
+            415.51
+          ],
+          "raw_words_rtl": [
+            "ﻦﺴﺣ",
+            "ﻂﺒﻳﺮﻣوا"
+          ],
+          "logical_raw_text": "حسن اومريبط",
+          "font_sizes": [
+            17.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "agadir-ida-outanane",
+      "historical_constituency": "Agadir - Ida-ou-Tanane",
+      "candidate_name_ar": "للحرب باكادير اداوتنان",
+      "candidate_name_ar_normalized": "للحرب باكادير اداوتنان",
+      "candidate_identity_key": "0b9b08391ca6660ecbd72ed5fd0e3e3cad0d7541cc460df8f8f10f56a5c76488",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 2,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+        "parent_page_url": "https://pps.ma/10521/",
+        "page": 2,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "agadir-ida-outanane",
+            "historical_constituency": "Agadir - Ida-ou-Tanane",
+            "historical_seats_2016": 4,
+            "variant": "باكادير اداوتنان",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 17,
+              "text": "باكادير اداوتنان"
+            }
+          },
+          "bbox": [
+            306.52,
+            445.08,
+            405.06,
+            459.08
+          ],
+          "raw_words_rtl": [
+            "بﺮﺤﻠﻟ",
+            "ﺮﻳدﺎﻛﺄﺑ",
+            "نﺎﻨﺗوادإ"
+          ],
+          "logical_raw_text": "للحرب بأكادير إداوتنان",
+          "font_sizes": [
+            14.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "agadir-ida-outanane",
+      "historical_constituency": "Agadir - Ida-ou-Tanane",
+      "candidate_name_ar": null,
+      "candidate_name_ar_normalized": null,
+      "candidate_identity_key": "aee7ef4535cdd6906bee3874bb4eb8bd1dc4bbca0867f70de771ef36bb66b4ba",
+      "candidate_text_status": "RAW_GLYPH_IDENTITY_FONTMAP_LOSS",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 3,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+        "parent_page_url": "https://pps.ma/10521/",
+        "page": 2,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "agadir-ida-outanane",
+            "historical_constituency": "Agadir - Ida-ou-Tanane",
+            "historical_seats_2016": 4,
+            "variant": "باكادير اداوتنان",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 17,
+              "text": "باكادير اداوتنان"
+            }
+          },
+          "bbox": [
+            320.13,
+            430.08,
+            393.86,
+            444.08
+          ],
+          "raw_words_rtl": [
+            "ﺐﺗﺎﻜﻟا",
+            "ﻲﻤﻴﻠﻗ‹ا"
+          ],
+          "logical_raw_text": "الكاتب ا‹قليمي",
+          "font_sizes": [
+            14.0
+          ]
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "agadir-ida-outanane",
+      "historical_constituency": "Agadir - Ida-ou-Tanane",
+      "candidate_name_ar": "القانون العام",
+      "candidate_name_ar_normalized": "القانون العام",
+      "candidate_identity_key": "76a8c4bcad2a5f3df95414d955661370fe6b110b45b104d45646af9d2c041597",
+      "candidate_text_status": "HUMAN_READABLE",
+      "identity_verification": "ADMISSIBLE_T1_TYPOGRAPHIC_NAME_GROUP_ON_DIRECT_TITLE_PAGE",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED_FROM_POSTER_LAYOUT",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "poster_display_order_only": 4,
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "retrieval_time": "2026-08-17T23:31:25+00:00",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "336bbda75c1ce892529e1de3d4c7167b461fcf6afd8f89a481170fa6888a6570",
+        "parent_page_url": "https://pps.ma/10521/",
+        "page": 2,
+        "archived_excerpt": {
+          "direct_title_evidence": {
+            "constituency_id": "agadir-ida-outanane",
+            "historical_constituency": "Agadir - Ida-ou-Tanane",
+            "historical_seats_2016": 4,
+            "variant": "باكادير اداوتنان",
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 17,
+              "text": "باكادير اداوتنان"
+            }
+          },
+          "bbox": [
+            321.51,
+            475.07,
+            377.07,
+            489.07
+          ],
+          "raw_words_rtl": [
+            "نﻮﻧﺎﻘﻟا",
+            "مﺎﻌﻟا"
+          ],
+          "logical_raw_text": "القانون العام",
+          "font_sizes": [
+            14.0
+          ]
+        }
+      }
+    }
+  ],
+  "failures": [
+    {
+      "region": "fes-meknes",
+      "page": 9,
+      "constituency_id": "taza",
+      "historical_constituency": "Taza",
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "direct_title_evidence": {
+        "constituency_id": "taza",
+        "historical_constituency": "Taza",
+        "historical_seats_2016": 5,
+        "variant": "تازة",
+        "exact": true,
+        "source": {
+          "source": "PYPDF_LINE",
+          "line_index": 20,
+          "text": "تازة"
+        }
+      },
+      "seats": 5,
+      "eligible_group_count": 3,
+      "selected_groups": [
+        {
+          "raw_words_rtl": [
+            "ﺮﻤﻋ",
+            "حﻼﺷ"
+          ],
+          "logical_raw_text": "عمر شالح",
+          "readable_text_without_cid": "عمر شالح",
+          "candidate_name_ar_normalized": "عمر شالح",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            13.86
+          ],
+          "max_font_size": 13.86,
+          "bbox": [
+            231.33,
+            376.23,
+            273.74,
+            390.08
+          ],
+          "center_x_fraction": 0.5141,
+          "top_fraction": 0.5689,
+          "tokens": [
+            "عمر",
+            "شالح"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 140.058942
+        },
+        {
+          "raw_words_rtl": [
+            "ﺪﺒﻋ",
+            "قازﺮﻟا",
+            "رﻮﺼﻨﳌا"
+          ],
+          "logical_raw_text": "عبد الرزاق املنصور",
+          "readable_text_without_cid": "عبد الرزاق املنصور",
+          "candidate_name_ar_normalized": "عبد الرزاق املنصور",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            10.39
+          ],
+          "max_font_size": 10.39,
+          "bbox": [
+            343.52,
+            297.0,
+            403.73,
+            307.39
+          ],
+          "center_x_fraction": 0.7606,
+          "top_fraction": 0.4491,
+          "tokens": [
+            "عبد",
+            "الرزاق",
+            "املنصور"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 105.23913
+        },
+        {
+          "raw_words_rtl": [
+            "زوﺰﻋ",
+            "ﺔﳝﺮﻛ"
+          ],
+          "logical_raw_text": "عزوز كرمية",
+          "readable_text_without_cid": "عزوز كرمية",
+          "candidate_name_ar_normalized": "عزوز كرمية",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            10.39
+          ],
+          "max_font_size": 10.39,
+          "bbox": [
+            118.27,
+            295.27,
+            157.87,
+            305.66
+          ],
+          "center_x_fraction": 0.2811,
+          "top_fraction": 0.4465,
+          "tokens": [
+            "عزوز",
+            "كرمية"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 105.23651
+        }
+      ],
+      "errors": [
+        "SELECTED_3_NE_SEATS_5"
+      ]
+    }
+  ],
+  "page_diagnostics": [
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 5,
+      "constituency_id": "khouribga",
+      "historical_constituency": "Khouribga",
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "direct_title_evidence": {
+        "constituency_id": "khouribga",
+        "historical_constituency": "Khouribga",
+        "historical_seats_2016": 6,
+        "variant": "خريبكة",
+        "exact": true,
+        "source": {
+          "source": "PYPDF_LINE",
+          "line_index": 16,
+          "text": "خريبكة"
+        }
+      },
+      "seats": 6,
+      "eligible_group_count": 7,
+      "selected_groups": [
+        {
+          "raw_words_rtl": [
+            "دﺎﻤﺼﻟاﺪﺒﻋ",
+            "(cid:31)ﺎﻨﺧ"
+          ],
+          "logical_raw_text": "عبدالصماد خنا)13:dic(",
+          "readable_text_without_cid": "عبدالصماد خنا",
+          "candidate_name_ar_normalized": null,
+          "raw_has_fontmap_loss": true,
+          "font_sizes": [
+            12.62
+          ],
+          "max_font_size": 12.62,
+          "bbox": [
+            341.89,
+            336.22,
+            407.24,
+            348.84
+          ],
+          "center_x_fraction": 0.7626,
+          "top_fraction": 0.5084,
+          "tokens": [
+            "عبدالصماد",
+            "خنا"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "عبدالصماد خنا"
+          ],
+          "selection_score": 128.598443
+        },
+        {
+          "raw_words_rtl": [
+            "ﺪﻴﻠﺧ",
+            "ﻲﺠﻳاﺮﺑ"
+          ],
+          "logical_raw_text": "خليد برايجي",
+          "readable_text_without_cid": "خليد برايجي",
+          "candidate_name_ar_normalized": "خليد برايجي",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            11.0
+          ],
+          "max_font_size": 11.0,
+          "bbox": [
+            100.19,
+            483.02,
+            139.97,
+            494.02
+          ],
+          "center_x_fraction": 0.2445,
+          "top_fraction": 0.7304,
+          "tokens": [
+            "خليد",
+            "برايجي"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "خليد برايجي"
+          ],
+          "selection_score": 112.379562
+        },
+        {
+          "raw_words_rtl": [
+            "بﻮﻳأ",
+            "يﺪﻴﻌﺴﻟا"
+          ],
+          "logical_raw_text": "أيوب السعيدي",
+          "readable_text_without_cid": "أيوب السعيدي",
+          "candidate_name_ar_normalized": "ايوب السعيدي",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            11.0
+          ],
+          "max_font_size": 11.0,
+          "bbox": [
+            345.13,
+            484.02,
+            399.02,
+            495.02
+          ],
+          "center_x_fraction": 0.7575,
+          "top_fraction": 0.732,
+          "tokens": [
+            "ايوب",
+            "السعيدي"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "ايوب السعيدي"
+          ],
+          "selection_score": 112.37805
+        },
+        {
+          "raw_words_rtl": [
+            "ﺪﻴﻤﺣ",
+            "(cid:31)اوﺪﺣ"
+          ],
+          "logical_raw_text": "حميد حدوا)13:dic(",
+          "readable_text_without_cid": "حميد حدوا",
+          "candidate_name_ar_normalized": null,
+          "raw_has_fontmap_loss": true,
+          "font_sizes": [
+            11.0
+          ],
+          "max_font_size": 11.0,
+          "bbox": [
+            223.95,
+            484.02,
+            269.21,
+            495.02
+          ],
+          "center_x_fraction": 0.502,
+          "top_fraction": 0.732,
+          "tokens": [
+            "حميد",
+            "حدوا"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "حميد حدوا"
+          ],
+          "selection_score": 112.37805
+        },
+        {
+          "raw_words_rtl": [
+            "ﻒﺼﻨﻣ",
+            "ﻖﻴﻓﺮﻟا"
+          ],
+          "logical_raw_text": "منصف الرفيق",
+          "readable_text_without_cid": "منصف الرفيق",
+          "candidate_name_ar_normalized": "منصف الرفيق",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            11.0
+          ],
+          "max_font_size": 11.0,
+          "bbox": [
+            222.19,
+            322.52,
+            272.86,
+            333.52
+          ],
+          "center_x_fraction": 0.5039,
+          "top_fraction": 0.4877,
+          "tokens": [
+            "منصف",
+            "الرفيق"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "منصف الرفيق"
+          ],
+          "selection_score": 112.377725
+        },
+        {
+          "raw_words_rtl": [
+            "ﻲﻨﻐﻟاﺪﺒﻋ",
+            "ﻲﺗﻮﺒﻧ"
+          ],
+          "logical_raw_text": "عبدالغني نبوتي",
+          "readable_text_without_cid": "عبدالغني نبوتي",
+          "candidate_name_ar_normalized": "عبدالغني نبوتي",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            11.0
+          ],
+          "max_font_size": 11.0,
+          "bbox": [
+            93.54,
+            322.52,
+            146.62,
+            333.52
+          ],
+          "center_x_fraction": 0.2445,
+          "top_fraction": 0.4877,
+          "tokens": [
+            "عبدالغني",
+            "نبوتي"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "عبدالغني نبوتي"
+          ],
+          "selection_score": 112.377725
+        }
+      ],
+      "errors": []
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 11,
+      "constituency_id": "settat",
+      "historical_constituency": "Settat",
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "direct_title_evidence": {
+        "constituency_id": "settat",
+        "historical_constituency": "Settat",
+        "historical_seats_2016": 6,
+        "variant": "سطات",
+        "exact": true,
+        "source": {
+          "source": "PYPDF_LINE",
+          "line_index": 27,
+          "text": "سطات"
+        }
+      },
+      "seats": 6,
+      "eligible_group_count": 10,
+      "selected_groups": [
+        {
+          "raw_words_rtl": [
+            "ﻲﻠﻴﳕأ",
+            "ﺪﻴﻌﺳ"
+          ],
+          "logical_raw_text": "أمنيلي سعيد",
+          "readable_text_without_cid": "أمنيلي سعيد",
+          "candidate_name_ar_normalized": "امنيلي سعيد",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            12.85
+          ],
+          "max_font_size": 12.85,
+          "bbox": [
+            323.35,
+            303.16,
+            377.01,
+            316.01
+          ],
+          "center_x_fraction": 0.7129,
+          "top_fraction": 0.4584,
+          "tokens": [
+            "امنيلي",
+            "سعيد"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 129.848442
+        },
+        {
+          "raw_words_rtl": [
+            "جﺎﳊا",
+            "ﺪﺒﻋ",
+            "مﻼﺴﻟا",
+            "ﻲﻠﺒﺟ"
+          ],
+          "logical_raw_text": "احلاج عبد السالم جبلي",
+          "readable_text_without_cid": "احلاج عبد السالم جبلي",
+          "candidate_name_ar_normalized": "احلاج عبد السالم جبلي",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            12.0
+          ],
+          "max_font_size": 12.0,
+          "bbox": [
+            304.01,
+            460.27,
+            383.17,
+            472.27
+          ],
+          "center_x_fraction": 0.6995,
+          "top_fraction": 0.696,
+          "tokens": [
+            "احلاج",
+            "عبد",
+            "السالم",
+            "جبلي"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 121.41396
+        },
+        {
+          "raw_words_rtl": [
+            "جﺎﺠﺣ",
+            "ﻲﺑاﺰﻣ"
+          ],
+          "logical_raw_text": "حجاج مزابي",
+          "readable_text_without_cid": "حجاج مزابي",
+          "candidate_name_ar_normalized": "حجاج مزابي",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            11.02
+          ],
+          "max_font_size": 11.02,
+          "bbox": [
+            218.89,
+            459.8,
+            256.29,
+            470.82
+          ],
+          "center_x_fraction": 0.4837,
+          "top_fraction": 0.6953,
+          "tokens": [
+            "حجاج",
+            "مزابي"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "حجاج مزابي"
+          ],
+          "selection_score": 112.614672
+        },
+        {
+          "raw_words_rtl": [
+            "ﻒﺳﻮﻳ",
+            "(cid:127)ﺎﻴﻌﻟ"
+          ],
+          "logical_raw_text": "يوسف لعيا)721:dic(",
+          "readable_text_without_cid": "يوسف لعيا",
+          "candidate_name_ar_normalized": null,
+          "raw_has_fontmap_loss": true,
+          "font_sizes": [
+            11.02
+          ],
+          "max_font_size": 11.02,
+          "bbox": [
+            214.9,
+            278.93,
+            263.41,
+            289.94
+          ],
+          "center_x_fraction": 0.4869,
+          "top_fraction": 0.4218,
+          "tokens": [
+            "يوسف",
+            "لعيا"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "يوسف لعيا"
+          ],
+          "selection_score": 112.5118
+        },
+        {
+          "raw_words_rtl": [
+            "ﻦﺴﳊ",
+            "ﺔﺤﻠﻃ"
+          ],
+          "logical_raw_text": "حلسن طلحة",
+          "readable_text_without_cid": "حلسن طلحة",
+          "candidate_name_ar_normalized": "حلسن طلحة",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            11.02
+          ],
+          "max_font_size": 11.02,
+          "bbox": [
+            113.87,
+            459.3,
+            156.22,
+            470.32
+          ],
+          "center_x_fraction": 0.2749,
+          "top_fraction": 0.6946,
+          "tokens": [
+            "حلسن",
+            "طلحة"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 111.615428
+        },
+        {
+          "raw_words_rtl": [
+            "ﺪﻤŒ",
+            "ﻞﺿﺎﻔﻟا"
+          ],
+          "logical_raw_text": "Œمد الفاضل",
+          "readable_text_without_cid": "مد الفاضل",
+          "candidate_name_ar_normalized": null,
+          "raw_has_fontmap_loss": true,
+          "font_sizes": [
+            11.02
+          ],
+          "max_font_size": 11.02,
+          "bbox": [
+            109.79,
+            294.3,
+            159.3,
+            305.32
+          ],
+          "center_x_fraction": 0.2739,
+          "top_fraction": 0.4451,
+          "tokens": [
+            "مد",
+            "الفاضل"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 111.535054
+        }
+      ],
+      "errors": []
+    },
+    {
+      "region": "draa-tafilalet",
+      "page": 5,
+      "constituency_id": "errachidia",
+      "historical_constituency": "Errachidia",
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "direct_title_evidence": {
+        "constituency_id": "errachidia",
+        "historical_constituency": "Errachidia",
+        "historical_seats_2016": 5,
+        "variant": "الرشيدية",
+        "exact": true,
+        "source": {
+          "source": "PYPDF_LINE",
+          "line_index": 20,
+          "text": "الرشيدية"
+        }
+      },
+      "seats": 5,
+      "eligible_group_count": 7,
+      "selected_groups": [
+        {
+          "raw_words_rtl": [
+            "ﺮﻤﻋ",
+            "ﻢﻴﻋﺰﻟا"
+          ],
+          "logical_raw_text": "عمر الزعيم",
+          "readable_text_without_cid": "عمر الزعيم",
+          "candidate_name_ar_normalized": "عمر الزعيم",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            15.0
+          ],
+          "max_font_size": 15.0,
+          "bbox": [
+            227.54,
+            379.83,
+            278.76,
+            394.83
+          ],
+          "center_x_fraction": 0.5154,
+          "top_fraction": 0.5744,
+          "tokens": [
+            "عمر",
+            "الزعيم"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "عمر الزعيم"
+          ],
+          "selection_score": 152.46439
+        },
+        {
+          "raw_words_rtl": [
+            "ﺪﺒﻋ",
+            "ˆا",
+            "ﻰﺴﻴﻌﻨﺑ"
+          ],
+          "logical_raw_text": "عبد اˆ بنعيسى",
+          "readable_text_without_cid": "عبد ا بنعيسى",
+          "candidate_name_ar_normalized": null,
+          "raw_has_fontmap_loss": true,
+          "font_sizes": [
+            12.28
+          ],
+          "max_font_size": 12.28,
+          "bbox": [
+            84.34,
+            480.49,
+            145.04,
+            492.77
+          ],
+          "center_x_fraction": 0.2335,
+          "top_fraction": 0.7266,
+          "tokens": [
+            "عبد",
+            "ا",
+            "بنعيسي"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 124.183382
+        },
+        {
+          "raw_words_rtl": [
+            "ﻰﻔﻄﺼﳌا",
+            "طﻮﻜﻟا"
+          ],
+          "logical_raw_text": "املصطفى الكوط",
+          "readable_text_without_cid": "املصطفى الكوط",
+          "candidate_name_ar_normalized": "املصطفي الكوط",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            12.28
+          ],
+          "max_font_size": 12.28,
+          "bbox": [
+            346.95,
+            311.5,
+            416.43,
+            323.78
+          ],
+          "center_x_fraction": 0.7771,
+          "top_fraction": 0.4711,
+          "tokens": [
+            "املصطفي",
+            "الكوط"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 124.161052
+        },
+        {
+          "raw_words_rtl": [
+            "ﺮﻤﻋ",
+            "ﺮﻤﻌﻣ"
+          ],
+          "logical_raw_text": "عمر معمر",
+          "readable_text_without_cid": "عمر معمر",
+          "candidate_name_ar_normalized": "عمر معمر",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            12.0
+          ],
+          "max_font_size": 12.0,
+          "bbox": [
+            366.46,
+            481.64,
+            404.92,
+            493.64
+          ],
+          "center_x_fraction": 0.7852,
+          "top_fraction": 0.7284,
+          "tokens": [
+            "عمر",
+            "معمر"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "عمر معمر"
+          ],
+          "selection_score": 122.381647
+        },
+        {
+          "raw_words_rtl": [
+            "و",
+            "ﺔﻋﺎﻨﺼﻟا",
+            "و",
+            "تﺎﻣﺪﳋا"
+          ],
+          "logical_raw_text": "و الصناعة و اخلدمات",
+          "readable_text_without_cid": "و الصناعة و اخلدمات",
+          "candidate_name_ar_normalized": "و الصناعة و اخلدمات",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            12.0
+          ],
+          "max_font_size": 12.0,
+          "bbox": [
+            213.52,
+            432.41,
+            292.8,
+            444.41
+          ],
+          "center_x_fraction": 0.5154,
+          "top_fraction": 0.6539,
+          "tokens": [
+            "و",
+            "الصناعة",
+            "و",
+            "اخلدمات"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 121.456092
+        }
+      ],
+      "errors": []
+    },
+    {
+      "region": "fes-meknes",
+      "page": 9,
+      "constituency_id": "taza",
+      "historical_constituency": "Taza",
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "direct_title_evidence": {
+        "constituency_id": "taza",
+        "historical_constituency": "Taza",
+        "historical_seats_2016": 5,
+        "variant": "تازة",
+        "exact": true,
+        "source": {
+          "source": "PYPDF_LINE",
+          "line_index": 20,
+          "text": "تازة"
+        }
+      },
+      "seats": 5,
+      "eligible_group_count": 3,
+      "selected_groups": [
+        {
+          "raw_words_rtl": [
+            "ﺮﻤﻋ",
+            "حﻼﺷ"
+          ],
+          "logical_raw_text": "عمر شالح",
+          "readable_text_without_cid": "عمر شالح",
+          "candidate_name_ar_normalized": "عمر شالح",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            13.86
+          ],
+          "max_font_size": 13.86,
+          "bbox": [
+            231.33,
+            376.23,
+            273.74,
+            390.08
+          ],
+          "center_x_fraction": 0.5141,
+          "top_fraction": 0.5689,
+          "tokens": [
+            "عمر",
+            "شالح"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 140.058942
+        },
+        {
+          "raw_words_rtl": [
+            "ﺪﺒﻋ",
+            "قازﺮﻟا",
+            "رﻮﺼﻨﳌا"
+          ],
+          "logical_raw_text": "عبد الرزاق املنصور",
+          "readable_text_without_cid": "عبد الرزاق املنصور",
+          "candidate_name_ar_normalized": "عبد الرزاق املنصور",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            10.39
+          ],
+          "max_font_size": 10.39,
+          "bbox": [
+            343.52,
+            297.0,
+            403.73,
+            307.39
+          ],
+          "center_x_fraction": 0.7606,
+          "top_fraction": 0.4491,
+          "tokens": [
+            "عبد",
+            "الرزاق",
+            "املنصور"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 105.23913
+        },
+        {
+          "raw_words_rtl": [
+            "زوﺰﻋ",
+            "ﺔﳝﺮﻛ"
+          ],
+          "logical_raw_text": "عزوز كرمية",
+          "readable_text_without_cid": "عزوز كرمية",
+          "candidate_name_ar_normalized": "عزوز كرمية",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            10.39
+          ],
+          "max_font_size": 10.39,
+          "bbox": [
+            118.27,
+            295.27,
+            157.87,
+            305.66
+          ],
+          "center_x_fraction": 0.2811,
+          "top_fraction": 0.4465,
+          "tokens": [
+            "عزوز",
+            "كرمية"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 105.23651
+        }
+      ],
+      "errors": [
+        "SELECTED_3_NE_SEATS_5"
+      ]
+    },
+    {
+      "region": "guelmim-oued-noun",
+      "page": 1,
+      "constituency_id": "sidi-ifni",
+      "historical_constituency": "Sidi Ifni",
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "direct_title_evidence": {
+        "constituency_id": "sidi-ifni",
+        "historical_constituency": "Sidi Ifni",
+        "historical_seats_2016": 2,
+        "variant": "سيدي افني",
+        "exact": true,
+        "source": {
+          "source": "PDF_METADATA_TITLE_PAGE1",
+          "text": "سيدي افني"
+        }
+      },
+      "seats": 2,
+      "eligible_group_count": 6,
+      "selected_groups": [
+        {
+          "raw_words_rtl": [
+            "كرﺎﺒﻣ",
+            "حﺎﻄﺒﻟا"
+          ],
+          "logical_raw_text": "مبارك البطاح",
+          "readable_text_without_cid": "مبارك البطاح",
+          "candidate_name_ar_normalized": "مبارك البطاح",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            18.0
+          ],
+          "max_font_size": 18.0,
+          "bbox": [
+            290.57,
+            363.54,
+            363.01,
+            381.54
+          ],
+          "center_x_fraction": 0.6653,
+          "top_fraction": 0.5498,
+          "tokens": [
+            "مبارك",
+            "البطاح"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "مبارك البطاح"
+          ],
+          "selection_score": 182.439755
+        },
+        {
+          "raw_words_rtl": [
+            "ﺔﻤﻴﻌﻧ",
+            "ﱘﺮﻛ"
+          ],
+          "logical_raw_text": "نعيمة كرمي",
+          "readable_text_without_cid": "نعيمة كرمي",
+          "candidate_name_ar_normalized": "نعيمة كرمي",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            14.0
+          ],
+          "max_font_size": 14.0,
+          "bbox": [
+            116.6,
+            423.65,
+            172.43,
+            437.65
+          ],
+          "center_x_fraction": 0.2942,
+          "top_fraction": 0.6407,
+          "tokens": [
+            "نعيمة",
+            "كرمي"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 141.469341
+        }
+      ],
+      "errors": []
+    },
+    {
+      "region": "oriental",
+      "page": 3,
+      "constituency_id": "oujda-angad",
+      "historical_constituency": "Oujda - Angad",
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "direct_title_evidence": {
+        "constituency_id": "oujda-angad",
+        "historical_constituency": "Oujda - Angad",
+        "historical_seats_2016": 4,
+        "variant": "وجدة",
+        "exact": true,
+        "source": {
+          "source": "PYPDF_LINE",
+          "line_index": 4,
+          "text": "وجدة"
+        }
+      },
+      "seats": 4,
+      "eligible_group_count": 6,
+      "selected_groups": [
+        {
+          "raw_words_rtl": [
+            "نﻮﻤﻴﻣ",
+            "ﻞﻗﺎﻋ"
+          ],
+          "logical_raw_text": "ميمون عاقل",
+          "readable_text_without_cid": "ميمون عاقل",
+          "candidate_name_ar_normalized": "ميمون عاقل",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            18.0
+          ],
+          "max_font_size": 18.0,
+          "bbox": [
+            318.87,
+            394.16,
+            395.8,
+            412.16
+          ],
+          "center_x_fraction": 0.7275,
+          "top_fraction": 0.5961,
+          "tokens": [
+            "ميمون",
+            "عاقل"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "ميمون عاقل"
+          ],
+          "selection_score": 182.486055
+        },
+        {
+          "raw_words_rtl": [
+            "ﺪﺒﻋ",
+            "ﻢﻴﺣﺮﻟا",
+            "ﻲﻠﻌﻨﺑ"
+          ],
+          "logical_raw_text": "عبد الرحيم بنعلي",
+          "readable_text_without_cid": "عبد الرحيم بنعلي",
+          "candidate_name_ar_normalized": "عبد الرحيم بنعلي",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            14.0
+          ],
+          "max_font_size": 14.0,
+          "bbox": [
+            131.16,
+            308.03,
+            203.7,
+            322.03
+          ],
+          "center_x_fraction": 0.3409,
+          "top_fraction": 0.4658,
+          "tokens": [
+            "عبد",
+            "الرحيم",
+            "بنعلي"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "عبد الرحيم بنعلي"
+          ],
+          "selection_score": 142.355818
+        },
+        {
+          "raw_words_rtl": [
+            "ﺪﺒﻋ",
+            "ﻦﻣﻮﳌا",
+            "ﺪﻟﺎﺧ"
+          ],
+          "logical_raw_text": "عبد املومن خالد",
+          "readable_text_without_cid": "عبد املومن خالد",
+          "candidate_name_ar_normalized": "عبد املومن خالد",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            12.0
+          ],
+          "max_font_size": 12.0,
+          "bbox": [
+            192.96,
+            476.89,
+            254.99,
+            488.89
+          ],
+          "center_x_fraction": 0.456,
+          "top_fraction": 0.7212,
+          "tokens": [
+            "عبد",
+            "املومن",
+            "خالد"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 121.388831
+        },
+        {
+          "raw_words_rtl": [
+            "ﺪﻤ‡",
+            "يوارﺪﻟا"
+          ],
+          "logical_raw_text": "‡مد الدراوي",
+          "readable_text_without_cid": "مد الدراوي",
+          "candidate_name_ar_normalized": null,
+          "raw_has_fontmap_loss": true,
+          "font_sizes": [
+            12.0
+          ],
+          "max_font_size": 12.0,
+          "bbox": [
+            85.73,
+            480.22,
+            138.21,
+            492.22
+          ],
+          "center_x_fraction": 0.228,
+          "top_fraction": 0.7262,
+          "tokens": [
+            "مد",
+            "الدراوي"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 121.383791
+        }
+      ],
+      "errors": []
+    },
+    {
+      "region": "rabat-sale-kenitra",
+      "page": 4,
+      "constituency_id": "khemisset-oulmes",
+      "historical_constituency": "Khémisset - Oulmès",
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "direct_title_evidence": {
+        "constituency_id": "khemisset-oulmes",
+        "historical_constituency": "Khémisset - Oulmès",
+        "historical_seats_2016": 3,
+        "variant": "الخميسات",
+        "exact": true,
+        "source": {
+          "source": "PYPDF_LINE",
+          "line_index": 5,
+          "text": "الخميسات"
+        }
+      },
+      "seats": 3,
+      "eligible_group_count": 6,
+      "selected_groups": [
+        {
+          "raw_words_rtl": [
+            "ﺪﻤ(cid:22)",
+            "تﺎﺟﻮﺑ"
+          ],
+          "logical_raw_text": ")22:dic(مد بوجات",
+          "readable_text_without_cid": "مد بوجات",
+          "candidate_name_ar_normalized": null,
+          "raw_has_fontmap_loss": true,
+          "font_sizes": [
+            14.0
+          ],
+          "max_font_size": 14.0,
+          "bbox": [
+            82.88,
+            412.13,
+            140.67,
+            426.13
+          ],
+          "center_x_fraction": 0.2276,
+          "top_fraction": 0.6232,
+          "tokens": [
+            "مد",
+            "بوجات"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 141.486762
+        },
+        {
+          "raw_words_rtl": [
+            "(cid:1)ﻼﻴﳉا",
+            "ﺪﻳﺎﺑ"
+          ],
+          "logical_raw_text": "اجليال)1:dic( بايد",
+          "readable_text_without_cid": "اجليال بايد",
+          "candidate_name_ar_normalized": null,
+          "raw_has_fontmap_loss": true,
+          "font_sizes": [
+            14.0
+          ],
+          "max_font_size": 14.0,
+          "bbox": [
+            203.4,
+            413.13,
+            254.81,
+            427.13
+          ],
+          "center_x_fraction": 0.4664,
+          "top_fraction": 0.6248,
+          "tokens": [
+            "اجليال",
+            "بايد"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 141.485249
+        },
+        {
+          "raw_words_rtl": [
+            "ﺐﻴﺒﳊا",
+            "ﻲﻨﻴﺴﺣ"
+          ],
+          "logical_raw_text": "احلبيب حسيني",
+          "readable_text_without_cid": "احلبيب حسيني",
+          "candidate_name_ar_normalized": "احلبيب حسيني",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            14.0
+          ],
+          "max_font_size": 14.0,
+          "bbox": [
+            330.95,
+            414.07,
+            395.61,
+            428.07
+          ],
+          "center_x_fraction": 0.7396,
+          "top_fraction": 0.6262,
+          "tokens": [
+            "احلبيب",
+            "حسيني"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 141.483833
+        }
+      ],
+      "errors": []
+    },
+    {
+      "region": "souss-massa",
+      "page": 1,
+      "constituency_id": "chtouka-ait-baha",
+      "historical_constituency": "Chtouka - Aït-Baha",
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "direct_title_evidence": {
+        "constituency_id": "chtouka-ait-baha",
+        "historical_constituency": "Chtouka - Aït-Baha",
+        "historical_seats_2016": 3,
+        "variant": "اشتوكة",
+        "exact": true,
+        "source": {
+          "source": "PYPDF_LINE",
+          "line_index": 4,
+          "text": "اشتوكة"
+        }
+      },
+      "seats": 3,
+      "eligible_group_count": 4,
+      "selected_groups": [
+        {
+          "raw_words_rtl": [
+            "ﻢﻴﻫاﺮﺑإ",
+            "ترﺰﻜﺗ"
+          ],
+          "logical_raw_text": "إبراهيم تكزرت",
+          "readable_text_without_cid": "إبراهيم تكزرت",
+          "candidate_name_ar_normalized": "ابراهيم تكزرت",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            16.0
+          ],
+          "max_font_size": 16.0,
+          "bbox": [
+            325.33,
+            413.69,
+            401.23,
+            429.69
+          ],
+          "center_x_fraction": 0.7396,
+          "top_fraction": 0.6256,
+          "tokens": [
+            "ابراهيم",
+            "تكزرت"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "ابراهيم تكزرت"
+          ],
+          "selection_score": 162.484412
+        },
+        {
+          "raw_words_rtl": [
+            "ﺪﻤﺣأ",
+            "زﻮﺒﻌﻜﻟا"
+          ],
+          "logical_raw_text": "أحمد الكعبوز",
+          "readable_text_without_cid": "أحمد الكعبوز",
+          "candidate_name_ar_normalized": "احمد الكعبوز",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            14.0
+          ],
+          "max_font_size": 14.0,
+          "bbox": [
+            201.16,
+            416.8,
+            259.47,
+            430.8
+          ],
+          "center_x_fraction": 0.4689,
+          "top_fraction": 0.6303,
+          "tokens": [
+            "احمد",
+            "الكعبوز"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "احمد الكعبوز"
+          ],
+          "selection_score": 142.479704
+        },
+        {
+          "raw_words_rtl": [
+            "ﺪﻤ(cid:157)",
+            "ﻚﻴﻠﻣوأ"
+          ],
+          "logical_raw_text": ")751:dic(مد أومليك",
+          "readable_text_without_cid": "مد أومليك",
+          "candidate_name_ar_normalized": null,
+          "raw_has_fontmap_loss": true,
+          "font_sizes": [
+            14.0
+          ],
+          "max_font_size": 14.0,
+          "bbox": [
+            83.96,
+            416.8,
+            147.33,
+            430.8
+          ],
+          "center_x_fraction": 0.2354,
+          "top_fraction": 0.6303,
+          "tokens": [
+            "مد",
+            "اومليك"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 141.479704
+        }
+      ],
+      "errors": []
+    },
+    {
+      "region": "souss-massa",
+      "page": 2,
+      "constituency_id": "agadir-ida-outanane",
+      "historical_constituency": "Agadir - Ida-ou-Tanane",
+      "territory_assignment_method": "DIRECT_EXACT_PAGE_IDENTITY",
+      "direct_title_evidence": {
+        "constituency_id": "agadir-ida-outanane",
+        "historical_constituency": "Agadir - Ida-ou-Tanane",
+        "historical_seats_2016": 4,
+        "variant": "باكادير اداوتنان",
+        "exact": true,
+        "source": {
+          "source": "PYPDF_LINE",
+          "line_index": 17,
+          "text": "باكادير اداوتنان"
+        }
+      },
+      "seats": 4,
+      "eligible_group_count": 16,
+      "selected_groups": [
+        {
+          "raw_words_rtl": [
+            "ﻦﺴﺣ",
+            "ﻂﺒﻳﺮﻣوا"
+          ],
+          "logical_raw_text": "حسن اومريبط",
+          "readable_text_without_cid": "حسن اومريبط",
+          "candidate_name_ar_normalized": "حسن اومريبط",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            17.0
+          ],
+          "max_font_size": 17.0,
+          "bbox": [
+            318.62,
+            398.51,
+            395.38,
+            415.51
+          ],
+          "center_x_fraction": 0.7268,
+          "top_fraction": 0.6026,
+          "tokens": [
+            "حسن",
+            "اومريبط"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "حسن اومريبط"
+          ],
+          "selection_score": 172.492645
+        },
+        {
+          "raw_words_rtl": [
+            "بﺮﺤﻠﻟ",
+            "ﺮﻳدﺎﻛﺄﺑ",
+            "نﺎﻨﺗوادإ"
+          ],
+          "logical_raw_text": "للحرب بأكادير إداوتنان",
+          "readable_text_without_cid": "للحرب بأكادير إداوتنان",
+          "candidate_name_ar_normalized": "للحرب باكادير اداوتنان",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            14.0
+          ],
+          "max_font_size": 14.0,
+          "bbox": [
+            306.52,
+            445.08,
+            405.06,
+            459.08
+          ],
+          "center_x_fraction": 0.7243,
+          "top_fraction": 0.6731,
+          "tokens": [
+            "للحرب",
+            "باكادير",
+            "اداوتنان"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [
+            "للحرب باكادير اداوتنان"
+          ],
+          "selection_score": 142.436941
+        },
+        {
+          "raw_words_rtl": [
+            "ﺐﺗﺎﻜﻟا",
+            "ﻲﻤﻴﻠﻗ‹ا"
+          ],
+          "logical_raw_text": "الكاتب ا‹قليمي",
+          "readable_text_without_cid": "الكاتب ا قليمي",
+          "candidate_name_ar_normalized": null,
+          "raw_has_fontmap_loss": true,
+          "font_sizes": [
+            14.0
+          ],
+          "max_font_size": 14.0,
+          "bbox": [
+            320.13,
+            430.08,
+            393.86,
+            444.08
+          ],
+          "center_x_fraction": 0.7268,
+          "top_fraction": 0.6504,
+          "tokens": [
+            "الكاتب",
+            "ا",
+            "قليمي"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 141.459615
+        },
+        {
+          "raw_words_rtl": [
+            "نﻮﻧﺎﻘﻟا",
+            "مﺎﻌﻟا"
+          ],
+          "logical_raw_text": "القانون العام",
+          "readable_text_without_cid": "القانون العام",
+          "candidate_name_ar_normalized": "القانون العام",
+          "raw_has_fontmap_loss": false,
+          "font_sizes": [
+            14.0
+          ],
+          "max_font_size": 14.0,
+          "bbox": [
+            321.51,
+            475.07,
+            377.07,
+            489.07
+          ],
+          "center_x_fraction": 0.7111,
+          "top_fraction": 0.7184,
+          "tokens": [
+            "القانون",
+            "العام"
+          ],
+          "non_name_hits": [],
+          "phrase_block": false,
+          "occupation_block": false,
+          "name_like": true,
+          "independent_pypdf_line_matches": [],
+          "selection_score": 141.391592
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "counts": {
+    "safe_direct_extension_pages": 9,
+    "territories_parsed": 8,
+    "candidate_rows": 33,
+    "districts_with_at_least_three_verified_candidate_identities": 7,
+    "failure_pages": 1
+  },
+  "invariants": {
+    "same_page_not_reparsed_from_base_typographic_artifact": true,
+    "direct_identity_safe_required": true,
+    "full_exact_title_equality_required": true,
+    "candidate_rank_inferred_from_layout": false,
+    "failed_pages_promoted": false,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "forecast_delta_generated": false,
+    "F1_created": false
+  }
+}
