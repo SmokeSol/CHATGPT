@@ -39,8 +39,12 @@ jobs:
           from pathlib import Path
           out = Path("${{ runner.temp }}/opus5_e_reason_c2_handoff")
           manifest = json.loads((out/'bundle_manifest.json').read_text())
-          bundle_sha = hashlib.sha256((out/'blind_bundle.json').read_bytes()).hexdigest()
+          bundle = json.loads((out/'blind_bundle.json').read_text())
+          declared_bundle_sha = bundle.pop('bundle_sha256')
+          canonical_core = json.dumps(bundle, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
+          bundle_sha = hashlib.sha256(canonical_core).hexdigest()
           prompt_sha = hashlib.sha256((out/'c2_prompt_v1.md').read_bytes()).hexdigest()
+          assert declared_bundle_sha == bundle_sha
           assert bundle_sha == manifest['bundle_sha256'], (bundle_sha, manifest['bundle_sha256'])
           assert prompt_sha == manifest['c2_prompt_sha256'], (prompt_sha, manifest['c2_prompt_sha256'])
           seal = json.loads((out/'mapping_seal.json').read_text())
@@ -50,6 +54,8 @@ jobs:
           assert seal['blind_bundle_sha256'] == bundle_sha
           assert seal['c2_prompt_sha256'] == prompt_sha
           assert seal['leakage_scan']['status'] == 'PASS'
+          assert len(bundle['packets']) == 92
+          assert sum(len(p['parties']) for p in bundle['packets']) == 828
           print('HANDOFF_INTEGRITY_PASS', bundle_sha, prompt_sha)
           PY
 
@@ -65,16 +71,19 @@ jobs:
 
           ## Frozen inputs
           - `blind_bundle.json`: exact blinded DEVELOPMENT input, 92 territory packets / 828 party cells.
-          - `bundle_manifest.json`: frozen packet hashes and bundle SHA-256.
+          - `bundle_manifest.json`: frozen packet hashes and bundle canonical-core SHA-256.
           - `mapping_seal.json`: proof that the hidden mapping was sealed before judgments; the mapping itself is unavailable to you.
           - `c2_prompt_v1.md`: exact frozen C2 treatment prompt. Use it verbatim.
           - `c2_prompt_freeze.json`: prompt freeze certificate.
           - `e_reason_output_schema_v1.json`: exact required output schema.
           - `e_reason_conditions_v1.json`: frozen experimental condition contract.
 
+          ## Integrity rule
+          `bundle_sha256` is the SHA-256 of canonical JSON of the bundle object BEFORE its self-hash field is added: remove top-level `bundle_sha256`, then JSON serialize with `ensure_ascii=false`, `sort_keys=true`, separators `(',', ':')`, UTF-8, and SHA-256. It must equal `19706fa27cd436dc51820b98bf84948a5a83068948206596e77f280296d0d2ca`.
+
           ## Your job
-          1. Verify the bundle SHA-256 equals `19706fa27cd436dc51820b98bf84948a5a83068948206596e77f280296d0d2ca`.
-          2. Verify the C2 prompt SHA-256 equals `188853304a6d20a385a055deac0d63ee57b97248f3aa386f5f1b7ae360a0b946`.
+          1. Verify the canonical-core bundle SHA-256 equals `19706fa27cd436dc51820b98bf84948a5a83068948206596e77f280296d0d2ca`.
+          2. Verify the C2 prompt file SHA-256 equals `188853304a6d20a385a055deac0d63ee57b97248f3aa386f5f1b7ae360a0b946`.
           3. Verify `mapping_seal.json` says `SEALED_BEFORE_ANY_PREDICTIVE_JUDGMENT`, mapping material is not committed and judge access is false, and leakage scan is PASS.
           4. Parse `blind_bundle.json`. There must be exactly 92 packets, each with exactly 9 anonymous parties.
           5. For each packet independently, execute the exact `SYSTEM PROMPT` and `USER INVOCATION TEMPLATE` from `c2_prompt_v1.md` with:
@@ -105,7 +114,6 @@ jobs:
           Your final human-readable response should contain only: terminal status, 92/92 valid count, retry count, bundle SHA, prompt SHA, judgment-manifest SHA, and output paths. No political interpretation.
           EOF
 
-          # Defense in depth: reject forbidden filenames/material inside handoff.
           if find "$OUT" -type f | grep -Ei '(outcome|result|mapping\.json$|historical.*2021|historical.*2016)' | grep -v 'mapping_seal.json' ; then
             echo 'Forbidden material in Opus handoff' >&2
             exit 1
