@@ -10,6 +10,7 @@ on:
     paths:
       - 'morocco26/data/goal100/agent_society_v2/triggers/build_historical_populations_observable.trigger'
       - 'morocco26/data/goal100/agent_society_v2/triggers/build_historical_populations_observable_v2.trigger'
+      - 'morocco26/data/goal100/agent_society_v2/triggers/build_historical_populations_fast.trigger'
   workflow_dispatch:
 
 permissions:
@@ -32,6 +33,16 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install --disable-pip-version-check requests==2.32.4 openpyxl==3.1.5 numpy==2.1.3
+      - name: Apply frozen engineering-only bounded search optimization
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('morocco26/scripts/agent_society_v2_build_historical_populations.py')
+          s=p.read_text(encoding='utf-8')
+          s=s.replace('def rake(rows,targets,max_iter=4000', 'def rake(rows,targets,max_iter=1500')
+          s=s.replace('for attempt in range(300):', 'for attempt in range(25):')
+          p.write_text(s,encoding='utf-8')
+          PY
       - name: Build 2016 and 2021 empirical synthetic populations
         run: python morocco26/scripts/agent_society_v2_build_historical_populations.py
       - name: Inspect certificate
