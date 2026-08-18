@@ -1,0 +1,45 @@
+name: Candidate Intelligence V2 Closed Universe Power Gate
+
+on:
+  push:
+    branches:
+      - morocco26-e-reason
+    paths:
+      - 'morocco26/data/goal100/e_collect/candidate_intelligence_v2/2016/pjd_closed_roster_v1.json'
+      - 'morocco26/data/goal100/e_collect/candidate_intelligence_v2/2021/pjd_closed_roster_v1.json'
+      - 'morocco26/scripts/candidate_intelligence_v2_closed_universe_power_gate.py'
+      - '.github/workflows/candidate-intelligence-v2-closed-universe-power-gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install offline parquet dependencies
+        run: python -m pip install --disable-pip-version-check pandas pyarrow
+      - name: Run closed-universe power gate
+        run: python morocco26/scripts/candidate_intelligence_v2_closed_universe_power_gate.py
+      - name: Show gate
+        run: cat morocco26/data/goal100/e_collect/candidate_intelligence_v2/candidate_intelligence_v2_closed_universe_power_gate_v1.json
+      - name: Commit append-only gate artifacts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/2016/pjd_closed_universe_incumbency_v1.jsonl
+          git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/2021/pjd_closed_universe_incumbency_v1.jsonl
+          git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/candidate_intelligence_v2_closed_universe_power_gate_v1.json
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'gate(candidate-intel): record closed-universe power gate'
+            git push origin HEAD:morocco26-e-reason
+          fi
