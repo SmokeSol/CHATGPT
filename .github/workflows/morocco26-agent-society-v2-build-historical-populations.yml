@@ -5,6 +5,10 @@ on:
     branches: [morocco26-agent-society-v2]
     paths:
       - 'morocco26/data/goal100/agent_society_v2/triggers/build_historical_populations.trigger'
+  pull_request:
+    branches: [morocco26-agent-society-v2]
+    paths:
+      - 'morocco26/data/goal100/agent_society_v2/triggers/build_historical_populations_observable.trigger'
   workflow_dispatch:
 
 permissions:
@@ -32,6 +36,7 @@ jobs:
       - name: Inspect certificate
         run: cat morocco26/data/goal100/agent_society_v2/population_certificate_v1.json
       - name: Commit certified population artifacts
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
