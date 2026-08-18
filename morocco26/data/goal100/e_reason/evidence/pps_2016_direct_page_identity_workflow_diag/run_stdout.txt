@@ -1,0 +1,190 @@
+{
+  "status": "PASS_PARTIAL_DIRECT_PAGE_IDENTITY",
+  "counts": {
+    "pdf_pages": 92,
+    "directly_resolved_pages": 66,
+    "unique_direct_constituency_ids": 62,
+    "unresolved_pages": 26,
+    "duplicate_direct_constituency_ids": 3
+  },
+  "duplicates": [
+    {
+      "constituency_id": "beni-mellal",
+      "direct_page_count": 2,
+      "pages": [
+        {
+          "region": "beni-mellal-khenifra",
+          "page": 1
+        },
+        {
+          "region": "beni-mellal-khenifra",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "constituency_id": "casablanca-anfa",
+      "direct_page_count": 3,
+      "pages": [
+        {
+          "region": "casablanca-settat",
+          "page": 5
+        },
+        {
+          "region": "casablanca-settat",
+          "page": 6
+        },
+        {
+          "region": "casablanca-settat",
+          "page": 15
+        }
+      ]
+    },
+    {
+      "constituency_id": "ouezzane",
+      "direct_page_count": 2,
+      "pages": [
+        {
+          "region": "fes-meknes",
+          "page": 4
+        },
+        {
+          "region": "tanger-tetouan-al-hoceima",
+          "page": 2
+        }
+      ]
+    }
+  ],
+  "new_alias_resolutions": [
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 1,
+      "cid": "beni-mellal",
+      "source": {
+        "source": "PYPDF_LINE",
+        "line_index": 15,
+        "text": "بني ملال خنيفرة"
+      }
+    },
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 4,
+      "cid": "beni-mellal",
+      "source": {
+        "source": "PYPDF_LINE",
+        "line_index": 16,
+        "text": "بني م"
+      }
+    },
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 5,
+      "cid": "khouribga",
+      "source": {
+        "source": "PYPDF_LINE",
+        "line_index": 16,
+        "text": "خريبكة"
+      }
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 5,
+      "cid": "casablanca-anfa",
+      "source": {
+        "source": "PYPDF_LINE",
+        "line_index": 3,
+        "text": "الدا"
+      }
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 6,
+      "cid": "casablanca-anfa",
+      "source": {
+        "source": "PYPDF_LINE",
+        "line_index": 4,
+        "text": "الدا"
+      }
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 15,
+      "cid": "casablanca-anfa",
+      "source": {
+        "source": "PYPDF_LINE",
+        "line_index": 3,
+        "text": "الدا"
+      }
+    },
+    {
+      "region": "fes-meknes",
+      "page": 4,
+      "cid": "ouezzane",
+      "source": {
+        "source": "PYPDF_LINE",
+        "line_index": 4,
+        "text": "وزان"
+      }
+    },
+    {
+      "region": "guelmim-oued-noun",
+      "page": 1,
+      "cid": "sidi-ifni",
+      "source": {
+        "source": "PYPDF_LINE",
+        "line_index": 3,
+        "text": "سيدي"
+      }
+    },
+    {
+      "region": "oriental",
+      "page": 3,
+      "cid": "oujda-angad",
+      "source": {
+        "source": "PYPDF_LINE",
+        "line_index": 4,
+        "text": "وجدة"
+      }
+    },
+    {
+      "region": "rabat-sale-kenitra",
+      "page": 4,
+      "cid": "khemisset-oulmes",
+      "source": {
+        "source": "PYPDF_LINE",
+        "line_index": 5,
+        "text": "الخميسات"
+      }
+    },
+    {
+      "region": "souss-massa",
+      "page": 1,
+      "cid": "chtouka-ait-baha",
+      "source": {
+        "source": "PYPDF_LINE",
+        "line_index": 4,
+        "text": "اشتوكة"
+      }
+    },
+    {
+      "region": "souss-massa",
+      "page": 2,
+      "cid": "agadir-ida-outanane",
+      "source": {
+        "source": "PYPDF_LINE",
+        "line_index": 17,
+        "text": "باكادير اداوتنان"
+      }
+    },
+    {
+      "region": "tanger-tetouan-al-hoceima",
+      "page": 2,
+      "cid": "ouezzane",
+      "source": {
+        "source": "PYPDF_LINE",
+        "line_index": 5,
+        "text": "وزان"
+      }
+    }
+  ]
+}

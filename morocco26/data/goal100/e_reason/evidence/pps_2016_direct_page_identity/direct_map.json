@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "created_at": "2026-08-18T07:09:26+00:00",
+  "created_at": "2026-08-18T07:11:12+00:00",
   "status": "PASS_PARTIAL_DIRECT_PAGE_IDENTITY",
   "counts": {
     "pdf_pages": 92,
@@ -2855,18 +2855,6 @@
             "constituency_id": "sidi-ifni",
             "historical_constituency": "Sidi Ifni",
             "historical_seats_2016": 2,
-            "variant": "سيدي",
-            "exact": true,
-            "source": {
-              "source": "PYPDF_LINE",
-              "line_index": 3,
-              "text": "سيدي"
-            }
-          },
-          {
-            "constituency_id": "sidi-ifni",
-            "historical_constituency": "Sidi Ifni",
-            "historical_seats_2016": 2,
             "variant": "سيدي افني",
             "exact": false,
             "source": {
@@ -2880,7 +2868,19 @@
             "historical_constituency": "Sidi Ifni",
             "historical_seats_2016": 2,
             "variant": "سيدي",
-            "exact": false,
+            "exact": true,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 3,
+              "text": "سيدي"
+            }
+          },
+          {
+            "constituency_id": "sidi-ifni",
+            "historical_constituency": "Sidi Ifni",
+            "historical_seats_2016": 2,
+            "variant": "سيدي افني",
+            "exact": true,
             "source": {
               "source": "PDF_METADATA_TITLE_PAGE1",
               "text": "سيدي افني"
@@ -2890,8 +2890,8 @@
             "constituency_id": "sidi-ifni",
             "historical_constituency": "Sidi Ifni",
             "historical_seats_2016": 2,
-            "variant": "سيدي افني",
-            "exact": true,
+            "variant": "سيدي",
+            "exact": false,
             "source": {
               "source": "PDF_METADATA_TITLE_PAGE1",
               "text": "سيدي افني"
@@ -4239,8 +4239,8 @@
             "constituency_id": "oujda-angad",
             "historical_constituency": "Oujda - Angad",
             "historical_seats_2016": 4,
-            "variant": "وجدة",
-            "exact": true,
+            "variant": "وجدة انجاد",
+            "exact": false,
             "source": {
               "source": "PYPDF_LINE",
               "line_index": 4,
@@ -4251,8 +4251,8 @@
             "constituency_id": "oujda-angad",
             "historical_constituency": "Oujda - Angad",
             "historical_seats_2016": 4,
-            "variant": "وجدة انجاد",
-            "exact": false,
+            "variant": "وجدة",
+            "exact": true,
             "source": {
               "source": "PYPDF_LINE",
               "line_index": 4,
@@ -5472,18 +5472,6 @@
             "constituency_id": "agadir-ida-outanane",
             "historical_constituency": "Agadir - Ida-ou-Tanane",
             "historical_seats_2016": 4,
-            "variant": "اكادير اداوتنان",
-            "exact": false,
-            "source": {
-              "source": "PYPDF_LINE",
-              "line_index": 11,
-              "text": "للحرب باكادير اداوتنان"
-            }
-          },
-          {
-            "constituency_id": "agadir-ida-outanane",
-            "historical_constituency": "Agadir - Ida-ou-Tanane",
-            "historical_seats_2016": 4,
             "variant": "باكادير اداوتنان",
             "exact": false,
             "source": {
@@ -5498,6 +5486,18 @@
             "historical_seats_2016": 4,
             "variant": "اكادير اداوتنان",
             "exact": false,
+            "source": {
+              "source": "PYPDF_LINE",
+              "line_index": 11,
+              "text": "للحرب باكادير اداوتنان"
+            }
+          },
+          {
+            "constituency_id": "agadir-ida-outanane",
+            "historical_constituency": "Agadir - Ida-ou-Tanane",
+            "historical_seats_2016": 4,
+            "variant": "باكادير اداوتنان",
+            "exact": true,
             "source": {
               "source": "PYPDF_LINE",
               "line_index": 17,
@@ -5508,8 +5508,8 @@
             "constituency_id": "agadir-ida-outanane",
             "historical_constituency": "Agadir - Ida-ou-Tanane",
             "historical_seats_2016": 4,
-            "variant": "باكادير اداوتنان",
-            "exact": true,
+            "variant": "اكادير اداوتنان",
+            "exact": false,
             "source": {
               "source": "PYPDF_LINE",
               "line_index": 17,
