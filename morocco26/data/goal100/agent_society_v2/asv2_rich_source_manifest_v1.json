@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "M26-ASV2-RICH-SOURCE-MANIFEST-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "PRE_LLM_SOURCE_ACQUISITION",
+  "sources": [
+    {"id":"rgph2014_individual_dta","url":"https://www.rgph2014.hcp.ma/file/210749/","format":"dta","role":"joint individual microdata","expected_large":true},
+    {"id":"rgph2014_household_dta","url":"https://www.rgph2014.hcp.ma/file/210748/","format":"dta","role":"joint household/housing microdata","expected_large":true},
+    {"id":"rgph2014_metadata","url":"https://www.rgph2014.hcp.ma/file/209590/","format":"auto","role":"official metadata/codebook","expected_large":false},
+    {"id":"rgph2014_communal_households","url":"https://www.rgph2014.hcp.ma/file/190480/","format":"xlsx","role":"communal household small-area constraints","expected_large":false},
+    {"id":"rgph2014_communal_individuals","url":"https://www.rgph2014.hcp.ma/file/190479/","format":"xlsx","role":"communal individual small-area constraints","expected_large":false},
+    {"id":"rgph2014_mobility_transport","url":"https://www.rgph2014.hcp.ma/file/213615/","format":"xlsx","role":"communal mobility/transport constraints","expected_large":false},
+    {"id":"encdm2014_household_sav","url":"https://www.hcp.ma/file/231078/","format":"sav","role":"household socioeconomic/consumption donor","expected_large":true},
+    {"id":"encdm2014_individual_sav","url":"https://www.hcp.ma/file/231079/","format":"sav","role":"individual socioeconomic donor","expected_large":true},
+    {"id":"encdm2014_metadata","url":"https://www.hcp.ma/file/231076/","format":"auto","role":"official ENCDM metadata","expected_large":false},
+    {"id":"afrobarometer_morocco_r6","url":"https://www.afrobarometer.org/wp-content/uploads/2022/02/mor_r6_data_eng.sav","format":"sav","role":"pre-2016 attitude donor; fieldwork Nov 2015","expected_large":false},
+    {"id":"afrobarometer_morocco_r8","url":"https://www.afrobarometer.org/wp-content/uploads/2023/03/afrobarometer_release-dataset_mor_r8_en_2023-03-01.sav","format":"sav","role":"pre-2021 attitude donor; fieldwork Feb 2021","expected_large":false}
+  ],
+  "optional_sources_not_required_for_first_pass": [
+    {"id":"arab_barometer_wave3_morocco","reason":"public but download workflow may require form; use only if accessible and all items pre-2016 cutoff"},
+    {"id":"arab_barometer_wave6_morocco","reason":"public but download workflow may require form; use only pre-election parts through Apr 2021"}
+  ],
+  "audit_outputs": ["source_fetch_audit.json","variable_catalog.json","richness_feasibility.json"],
+  "gate_purpose": "Determine exact usable dimensions and source compatibility before population construction; no target-election outcomes are loaded."
+}

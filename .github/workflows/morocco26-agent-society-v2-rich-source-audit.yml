@@ -1,0 +1,61 @@
+name: Morocco26 Agent Society V2 RICH source catalog
+
+on:
+  push:
+    branches:
+      - morocco26-agent-society-v2-rich-source-audit-trigger
+
+permissions:
+  contents: read
+
+jobs:
+  catalog:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - name: Install readers
+        run: |
+          python -m pip install --disable-pip-version-check -q pyreadstat openpyxl
+
+      - name: Fetch frozen manifest and parser from this commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/asv2rich/raw /tmp/asv2rich/out /tmp/asv2rich/src
+          api="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents"
+          for item in \
+            "manifest.json:morocco26/data/goal100/agent_society_v2/asv2_rich_source_manifest_v1.json" \
+            "catalog.py:morocco26/scripts/agent_society_v2_rich_source_catalog.py"; do
+            dst="${item%%:*}"; src="${item#*:}"
+            curl -fsSL -H "Authorization: Bearer ${GH_TOKEN}" -H "Accept: application/vnd.github.raw+json" "${api}/${src}?ref=${GITHUB_SHA}" -o "/tmp/asv2rich/src/${dst}"
+          done
+
+      - name: Download all public source files in parallel
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, subprocess, concurrent.futures, pathlib
+          m=json.load(open('/tmp/asv2rich/src/manifest.json')); raw=pathlib.Path('/tmp/asv2rich/raw')
+          def get(s):
+              out=raw/(s['id']+'.bin')
+              cmd=['curl','-fL','--retry','3','--retry-delay','2','--connect-timeout','20','--max-time','900','-A','Mozilla/5.0 (compatible; ASV2 academic source audit)',s['url'],'-o',str(out)]
+              p=subprocess.run(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+              return s['id'],p.returncode,p.stderr[-1000:]
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:
+              for f in concurrent.futures.as_completed([ex.submit(get,s) for s in m['sources']]):
+                  sid,rc,err=f.result(); print(sid,'OK' if rc==0 else 'FAIL',err if rc else '')
+          PY
+
+      - name: Build variable catalog and feasibility report
+        run: |
+          set -euo pipefail
+          python /tmp/asv2rich/src/catalog.py --manifest /tmp/asv2rich/src/manifest.json --rawdir /tmp/asv2rich/raw --outdir /tmp/asv2rich/out
+          cat /tmp/asv2rich/out/richness_feasibility.json
+
+      - name: Upload compact audit only
+        uses: actions/upload-artifact@v4
+        with:
+          name: asv2-rich-source-catalog-v1
+          path: /tmp/asv2rich/out/
+          retention-days: 30
