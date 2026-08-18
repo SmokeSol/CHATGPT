@@ -1,0 +1,11 @@
+{
+  "access_rule": "DO_NOT_DOWNLOAD_OR_EXPOSE_TO_C2_BEFORE_HOLDOUT_JUDGMENT_HASHES_FREEZE",
+  "artifact_id": "9325247866",
+  "artifact_name": "e-reason-holdout-secret-mapping",
+  "blind_bundle_sha256": "d43fd7b23911f5ce5c878d6d952aba9dd447c9b4d9c343d0093c528855cca9b0",
+  "locator_id": "M26-E-REASON-HOLDOUT-MAPPING-ARTIFACT-LOCATOR-V1",
+  "mapping_material_committed": false,
+  "mapping_sha256": "41acca5f3d025facb4953b6367bb1f7b4755689b72695c699d70111cdf8707b3",
+  "schema_version": "1.0",
+  "workflow_run_id": "32137812982"
+}
