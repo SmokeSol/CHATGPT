@@ -1,4 +1,4 @@
-trigger_id=M26-CANDIDATE-INTEL-V2-RECONCILED-DATA-POWER-GATE-20260818-R1
+trigger_id=M26-CANDIDATE-INTEL-V2-RECONCILED-DATA-POWER-GATE-20260818-R2
 base=morocco26-e-reason
 network_required=false
-purpose=explicit_mp_claim_plus_closed_universe_reconciliation
+purpose=explicit_mp_claim_plus_closed_universe_reconciliation_with_audited_2021_aliases
