@@ -1,0 +1,544 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-18T06:59:34+00:00",
+  "source_schema_version": "1.0",
+  "source_status": "PARTIAL_VALID",
+  "source_counts": {
+    "eligible_exact_or_high_territory_pages": 65,
+    "territories_parsed": 65,
+    "candidate_rows": 203,
+    "human_readable_candidate_rows": 145,
+    "raw_glyph_identity_rows": 58,
+    "districts_with_at_least_three_verified_candidate_identities": 50,
+    "failure_pages": 0
+  },
+  "districts_with_candidates": 65,
+  "districts_with_at_least_three": 50,
+  "districts": [
+    {
+      "constituency_id": "ain-chock",
+      "historical_constituency": "Aïn-Chock",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 1,
+      "raw_glyph": 2
+    },
+    {
+      "constituency_id": "ain-sebaa-hay-mohammadi",
+      "historical_constituency": "Aïn-Sebaâ - Hay-Mohammadi",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 2
+    },
+    {
+      "constituency_id": "al-haouz",
+      "historical_constituency": "Al-Haouz",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 1,
+      "raw_glyph": 3
+    },
+    {
+      "constituency_id": "al-hoceima",
+      "historical_constituency": "Al-Hoceïma",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "ben-m-sick",
+      "historical_constituency": "Ben-M'sick",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "benslimane",
+      "historical_constituency": "Benslimane",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "berkane",
+      "historical_constituency": "Berkane",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "berrechid",
+      "historical_constituency": "Berrechid",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "boujdour",
+      "historical_constituency": "Boujdour",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 2,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "boulemane",
+      "historical_constituency": "Boulemane",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "bzou-ouaouizeght",
+      "historical_constituency": "Bzou - Ouaouizaght",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 1,
+      "raw_glyph": 2
+    },
+    {
+      "constituency_id": "chefchaouen",
+      "historical_constituency": "Chefchaouen",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "chichaoua",
+      "historical_constituency": "Chichaoua",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "driouch",
+      "historical_constituency": "Driouch",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "el-gharb",
+      "historical_constituency": "El-Gharb",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "el-hajeb",
+      "historical_constituency": "El-Hajeb",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 1,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "el-kelaa-des-sraghna",
+      "historical_constituency": "El-Kelâa-des-Sraghna",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "es-semara",
+      "historical_constituency": "Es-Smara",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 2,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "essaouira",
+      "historical_constituency": "Essaouira",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 4,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "fes-nord",
+      "historical_constituency": "Fès-Chamalia",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 2
+    },
+    {
+      "constituency_id": "fes-sud",
+      "historical_constituency": "Fès-Janoubia",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "figuig",
+      "historical_constituency": "Figuig",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "fquih-ben-salah",
+      "historical_constituency": "Fquih Ben Salah",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 2
+    },
+    {
+      "constituency_id": "gueliz-nakhil",
+      "historical_constituency": "Guéliz - Annakhil",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "guelmim",
+      "historical_constituency": "Guelmim",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 1,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "guercif",
+      "historical_constituency": "Guercif",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 2,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "hay-hassani",
+      "historical_constituency": "Hay-Hassani",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "jerada",
+      "historical_constituency": "Jerada",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 2,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "karia-ghafsay",
+      "historical_constituency": "Karia - Rhafsai",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "kenitra",
+      "historical_constituency": "Kénitra",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 4,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "khenifra",
+      "historical_constituency": "Khénifra",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "laayoune",
+      "historical_constituency": "Laâyoune",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "m-diq-fnideq",
+      "historical_constituency": "M'Diq - Fnideq",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 2,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "medina-sidi-youssef",
+      "historical_constituency": "Médina - Sidi-Youssef-Ben-Ali",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 1,
+      "raw_glyph": 2
+    },
+    {
+      "constituency_id": "mediouna",
+      "historical_constituency": "Médiouna",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 2,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "meknes",
+      "historical_constituency": "Meknès",
+      "identity_count": 6,
+      "at_least_three": true,
+      "human_readable": 6,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "menara",
+      "historical_constituency": "Ménara",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "midelt",
+      "historical_constituency": "Midelt",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "mohammedia",
+      "historical_constituency": "Mohammadia",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "nador",
+      "historical_constituency": "Nador",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "nouaceur",
+      "historical_constituency": "Nouaceur",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "ouarzazate",
+      "historical_constituency": "Ouarzazate",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 0,
+      "raw_glyph": 3
+    },
+    {
+      "constituency_id": "oued-eddahab",
+      "historical_constituency": "Oued-Ed-Dahab",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 1,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "ouezzane",
+      "historical_constituency": "Ouezzane",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "rabat-chellah",
+      "historical_constituency": "Rabat - Challah",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "rabat-ocean",
+      "historical_constituency": "Rabat - El Mouhit",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "rehamna",
+      "historical_constituency": "Rehamna",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 1,
+      "raw_glyph": 2
+    },
+    {
+      "constituency_id": "sefrou",
+      "historical_constituency": "Sefrou",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 1,
+      "raw_glyph": 2
+    },
+    {
+      "constituency_id": "sidi-bernoussi",
+      "historical_constituency": "Sidi-Bernoussi",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "sidi-kacem",
+      "historical_constituency": "Sidi-Kacem",
+      "identity_count": 5,
+      "at_least_three": true,
+      "human_readable": 4,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "sidi-slimane",
+      "historical_constituency": "Sidi Slimane",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 1,
+      "raw_glyph": 2
+    },
+    {
+      "constituency_id": "skhirate-temara",
+      "historical_constituency": "Skhirate - Témara",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 2
+    },
+    {
+      "constituency_id": "tan-tan",
+      "historical_constituency": "Tan-Tan",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 1,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "taounate-tissa",
+      "historical_constituency": "Taounate - Tissa",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "taourirt",
+      "historical_constituency": "Taourirt",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 2,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "tarfaya",
+      "historical_constituency": "Tarfaya",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 2,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "taroudant-nord",
+      "historical_constituency": "Taroudannt - Chamalia",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 1,
+      "raw_glyph": 2
+    },
+    {
+      "constituency_id": "taroudant-sud",
+      "historical_constituency": "Taroudannt - Al-Janoubia",
+      "identity_count": 4,
+      "at_least_three": true,
+      "human_readable": 4,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "tata",
+      "historical_constituency": "Tata",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 1,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "tetouan",
+      "historical_constituency": "Tétouan",
+      "identity_count": 5,
+      "at_least_three": true,
+      "human_readable": 3,
+      "raw_glyph": 2
+    },
+    {
+      "constituency_id": "tiflet-rommani",
+      "historical_constituency": "Tifelt - Rommani",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "tinghir",
+      "historical_constituency": "Tinghir",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "tiznit",
+      "historical_constituency": "Tiznit",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 2,
+      "raw_glyph": 0
+    },
+    {
+      "constituency_id": "youssoufia",
+      "historical_constituency": "Youssoufia",
+      "identity_count": 2,
+      "at_least_three": false,
+      "human_readable": 1,
+      "raw_glyph": 1
+    },
+    {
+      "constituency_id": "zagora",
+      "historical_constituency": "Zagora",
+      "identity_count": 3,
+      "at_least_three": true,
+      "human_readable": 2,
+      "raw_glyph": 1
+    }
+  ],
+  "failure_pages": [],
+  "invariants": {
+    "outcomes_unsealed": false,
+    "F1_created": false
+  }
+}
