@@ -58,7 +58,7 @@ def robust_effective_rank(records, fields):
         nonmissing = s.notna()
         parse_rate = float(numeric[nonmissing].notna().mean()) if int(nonmissing.sum()) else 0.0
         if parse_rate >= 0.95:
-            x = numeric.replace([np.inf, -np.inf], np.nan).to_numpy(dtype=float)
+            x = numeric.replace([np.inf, -np.inf], np.nan).to_numpy(dtype=float, copy=True)
             finite = np.isfinite(x)
             med = float(np.nanmedian(x)) if finite.any() else 0.0
             x[~finite] = med
@@ -73,19 +73,19 @@ def robust_effective_rank(records, fields):
                 text = text.where(~text.isin(rare), "__RARE__")
             dum = pd.get_dummies(text, prefix=col, dtype=float)
             if dum.shape[1] > 1:
-                blocks.append(dum.to_numpy(dtype=float))
+                blocks.append(dum.to_numpy(dtype=float, copy=True))
     if not blocks:
         return {"effective_rank": 0.0, "encoded_columns": 0, "nonzero_eigenvalues": 0}
-    X = np.column_stack(blocks)
+    X = np.array(np.column_stack(blocks), dtype=float, copy=True)
     X[~np.isfinite(X)] = 0.0
     raw_var = np.var(X, axis=0)
-    X = X[:, raw_var > 1e-12]
+    X = np.array(X[:, raw_var > 1e-12], dtype=float, copy=True)
     if X.shape[1] > 800:
         order = np.argsort(np.var(X, axis=0))[::-1][:800]
-        X = X[:, order]
+        X = np.array(X[:, order], dtype=float, copy=True)
     X -= np.mean(X, axis=0, keepdims=True)
     sd = np.std(X, axis=0)
-    X = X[:, sd > 1e-10]
+    X = np.array(X[:, sd > 1e-10], dtype=float, copy=True)
     sd = np.std(X, axis=0)
     X /= sd
     C = (X.T @ X) / max(1, X.shape[0] - 1)
