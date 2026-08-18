@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-18T08:24:59+00:00",
+  "status": "DIAGNOSTIC_ONLY",
+  "pre_fixed_targets": [
+    "fahs-anjra",
+    "ifrane",
+    "sidi-ifni"
+  ],
+  "target_meta": [
+    {
+      "constituency_id": "fahs-anjra",
+      "historical_constituency": "Fahs - Anjra",
+      "historical_region": "Tanger - Tétouan - Al Hoceima",
+      "historical_seats_2016": 2,
+      "variants_compact_ar": [
+        "الفحصانجرة"
+      ],
+      "region_slug": "tanger-tetouan-al-hoceima",
+      "pdf_sha256": "1022006181a7491a938edfa31d5b3088b46058af9031d2935b27295421f6b27a",
+      "pdf_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32080529414_1/raw/1022006181a7491a938edfa31d5b3088b46058af9031d2935b27295421f6b27a.pdf",
+      "parent_page_url": "https://pps.ma/10446/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ]
+    },
+    {
+      "constituency_id": "ifrane",
+      "historical_constituency": "Ifrane",
+      "historical_region": "Fès - Meknès",
+      "historical_seats_2016": 2,
+      "variants_compact_ar": [
+        "افران"
+      ],
+      "region_slug": "fes-meknes",
+      "pdf_sha256": "ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375",
+      "pdf_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32080529414_1/raw/ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375.pdf",
+      "parent_page_url": "https://pps.ma/10462/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ]
+    },
+    {
+      "constituency_id": "sidi-ifni",
+      "historical_constituency": "Sidi Ifni",
+      "historical_region": "Guelmim - Oued-Noun",
+      "historical_seats_2016": 2,
+      "variants_compact_ar": [
+        "سيديافني"
+      ],
+      "region_slug": "guelmim-oued-noun",
+      "pdf_sha256": "b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270",
+      "pdf_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32080529414_1/raw/b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270.pdf",
+      "parent_page_url": "https://pps.ma/10528/",
+      "parent_page_timestamps": [
+        "2016-10-03",
+        "2016-10-04"
+      ]
+    }
+  ],
+  "exact_header_pages": [
+    {
+      "constituency_id": "ifrane",
+      "page": 5,
+      "header_exact_match": true,
+      "matched_variant_compact_ar": "افران",
+      "header_ocr_text": "| © 00/6017 1 علص. 22222 © | ل\n0 يي هرب لتقم لاشترسية معو 2 2\nشاعم ‎١ 50-0١‏ 5.0.0 ووق لوكي\n0 ع0 ذأ|3أع50 بلغع 2005185 نال الوط\n1 59 الدائرة الإنتخابية\nالاإنتخابات التشريعية - 07 اكتوبر2016 0\n1 إفران\nوكيل اللائحة\n020 16ل >-«صصيرل ‏\n",
+      "header_ocr_normalized": "00 6017 1 علص 22222 ل 0 يي هرب لتقم لاشترسية معو 2 2 شاعم ١ 50 0١ 5 0 0 ووق لوكي 0 ع0 ذا 3اع50 بلغع 2005185 نال الوط 1 59 الدائرة الانتخابية الاانتخابات التشريعية 07 اكتوبر2016 0 1 افران وكيل اللائحة 020 16ل صصيرل",
+      "image_size": [
+        1228,
+        1654
+      ],
+      "candidate_band_lines": [],
+      "all_high_conf_arabic_lines": [
+        {
+          "key": [
+            11,
+            1,
+            1
+          ],
+          "text": "وكيل اللائحة",
+          "normalized_ar": "وكيل اللائحة",
+          "compact_ar": "وكيلاللائحة",
+          "mean_conf": 92.5,
+          "min_conf": 92.0,
+          "top": 508,
+          "bottom": 555,
+          "left": 759,
+          "right": 968,
+          "words": [
+            {
+              "text": "وكيل",
+              "normalized_ar": "وكيل",
+              "conf": 93.0,
+              "left": 866,
+              "top": 508,
+              "width": 102,
+              "height": 47,
+              "block_num": 11,
+              "par_num": 1,
+              "line_num": 1
+            },
+            {
+              "text": "اللائحة",
+              "normalized_ar": "اللائحة",
+              "conf": 92.0,
+              "left": 759,
+              "top": 508,
+              "width": 97,
+              "height": 32,
+              "block_num": 11,
+              "par_num": 1,
+              "line_num": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "constituency_id": "sidi-ifni",
+      "page": 1,
+      "header_exact_match": true,
+      "matched_variant_compact_ar": "سيديافني",
+      "header_ocr_text": "| © 50 009/16 1 مفص.2222 2227 © | زل\n3 يبي خرب لتقمو اتشترصية جهعو 2 2\n\n- اه ‎١ 20-0٠‏ 00 وق رركو\n\n8 ع0 ذأ|3أع50 بلغع 2005185 نال الوط\nتكاس إزدك ارم ع مم كمد الدائرة الإنتخابية\nالاإنتخابات التشريعية - 07 اكتوبر2016 0\n8 سيدي إفني\nوكيل اللائحة\n",
+      "header_ocr_normalized": "50 009 16 1 مفص 2222 2227 زل 3 يبي خرب لتقمو اتشترصية جهعو 2 2 اه ١ 20 0٠ 00 وق رركو 8 ع0 ذا 3اع50 بلغع 2005185 نال الوط تكاس ازدك ارم ع مم كمد الدائرة الانتخابية الاانتخابات التشريعية 07 اكتوبر2016 0 8 سيدي افني وكيل اللائحة",
+      "image_size": [
+        1228,
+        1654
+      ],
+      "candidate_band_lines": [
+        {
+          "key": [
+            12,
+            1,
+            1
+          ],
+          "text": "6",
+          "normalized_ar": "6",
+          "compact_ar": "6",
+          "mean_conf": 33.0,
+          "min_conf": 33.0,
+          "top": 833,
+          "bottom": 884,
+          "left": 786,
+          "right": 892,
+          "words": [
+            {
+              "text": "6",
+              "normalized_ar": "6",
+              "conf": 33.0,
+              "left": 786,
+              "top": 833,
+              "width": 106,
+              "height": 51,
+              "block_num": 12,
+              "par_num": 1,
+              "line_num": 1
+            }
+          ]
+        },
+        {
+          "key": [
+            13,
+            1,
+            1
+          ],
+          "text": "و",
+          "normalized_ar": "و",
+          "compact_ar": "و",
+          "mean_conf": 41.0,
+          "min_conf": 41.0,
+          "top": 1277,
+          "bottom": 1548,
+          "left": 743,
+          "right": 1217,
+          "words": [
+            {
+              "text": "و",
+              "normalized_ar": "و",
+              "conf": 41.0,
+              "left": 743,
+              "top": 1277,
+              "width": 474,
+              "height": 271,
+              "block_num": 13,
+              "par_num": 1,
+              "line_num": 1
+            }
+          ]
+        }
+      ],
+      "all_high_conf_arabic_lines": []
+    }
+  ],
+  "counts": {
+    "targets": 3,
+    "targets_with_exact_header_page": 2,
+    "exact_header_pages": 2
+  },
+  "invariants": {
+    "target_set_fixed_before_ocr": true,
+    "qualified_pps_pdf_only": true,
+    "exact_header_required": true,
+    "candidate_identities_promoted": false,
+    "candidate_rank_inferred": false,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "F1_created": false
+  }
+}
