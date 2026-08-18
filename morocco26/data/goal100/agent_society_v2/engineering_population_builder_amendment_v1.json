@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "amendment_id": "M26-ASV2-POPULATION-BUILDER-ENGINEERING-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "classification": "ENGINEERING_ONLY_NO_SCIENTIFIC_CHANGE",
+  "recorded_before_real_llm_votes": true,
+  "target_outcomes_used": false,
+  "change": "Limit deterministic support search from 300 candidates per constituency to 25 and cap IPF iterations at 1500; select the least demographic-prior-dependent support among all successful candidates.",
+  "unchanged": [
+    "128 archetypes per constituency",
+    "all demographic target marginals",
+    "exact prior-election political mass target",
+    "maximum demographic marginal error 0.5 percentage points",
+    "political marginal tolerance 1e-9",
+    "effective archetype count >=64",
+    "maximum single archetype weight <=0.10",
+    "no target-election outcome use",
+    "no invented ideology or partisan-demographic prior"
+  ],
+  "failure_rule": "If no support among the bounded deterministic candidates satisfies every frozen gate, fail closed rather than expanding or weakening any gate.",
+  "status": "FROZEN_BEFORE_OPTIMIZED_RERUN"
+}
