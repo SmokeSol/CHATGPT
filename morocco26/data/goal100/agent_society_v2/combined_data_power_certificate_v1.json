@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-ASV2-COMBINED-DATA-POWER-CERTIFICATE-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "protocol_status_required": "PROTOCOL_FROZEN_BEFORE_ASV2_EXECUTION",
+  "target_outcomes_used_for_population_or_power_gates": false,
+  "thresholds_changed": false,
+  "gates": {
+    "candidate_party": {
+      "status": "PASS_HISTORICAL_CANDIDATE_PARTY_POWER_GATE",
+      "certificate_blob_sha": "70581f9eab0edbc8b0c77804bff4cf6329ae62fc",
+      "2016_districts_ge_3_verified_parties": 70,
+      "2021_districts_ge_3_verified_parties": 82,
+      "required_each_year": 70,
+      "pass": true
+    },
+    "context": {
+      "status": "PASS_FORMAL_CONTEXT_POWER_GATE_WITH_SEVERE_2016_DISCRIMINATIVE_WARNING",
+      "certificate_blob_sha": "bba9c810c927bd31735b95617f1e74cc727e046e",
+      "2016_districts_ge_2_nontrivial_families": 80,
+      "2021_districts_ge_2_nontrivial_families": 88,
+      "required_each_year": 50,
+      "pass": true,
+      "warning": "2016 formally passes density but has zero districts with >=2 cross-party discriminative context families. Retain this limitation in every interpretation."
+    },
+    "population": {
+      "status": "PASS",
+      "certificate_blob_sha": "4002fb0d8cd23cfedc0e69eb9b2bf77db10fae63",
+      "workflow_run_id": 32173550091,
+      "artifact_id": 9338194867,
+      "artifact_zip_sha256": "9ad2847b0cb1956bfe2e80570384fdeb184c94933f5cabee1e4c09ec12951b2a",
+      "2016_population_sha256": "c6e819a4e3b34199cb72c1f6a2005bf321be27e40ac2a4711d5d3244afd4235e",
+      "2021_population_sha256": "db9f9669020036fe7f219eca5173b0bf6c5074760956c49b72c8fbeafbe3a42e",
+      "2016": {"territories": 92, "min_ess": 100.83442591428567, "max_weight": 0.03536982073655264, "max_demo_error": 1.9830659336861345e-10, "pass": true},
+      "2021": {"territories": 92, "min_ess": 93.61618150692544, "max_weight": 0.02292874540282498, "max_demo_error": 1.9000245821132467e-10, "pass": true},
+      "frozen_requirements": {"territories": 92, "min_ess": 64, "max_weight": 0.10, "max_demo_error": 0.005, "national_fallback_weight_max": 0.20},
+      "national_fallback_weight": 0.0,
+      "pass": true
+    }
+  },
+  "overall_pass": true,
+  "status": "ASV2_DATA_POWER_PASS",
+  "next_allowed_action": "Build blinded historical AS2 and AS2_SHUFFLED_CONTEXT handoff packets under the frozen prompt/output contract. Do not expose target outcomes to the judge."
+}
