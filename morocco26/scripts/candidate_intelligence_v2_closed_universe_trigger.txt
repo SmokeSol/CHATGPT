@@ -1,4 +1,4 @@
-trigger_id=M26-CANDIDATE-INTEL-V2-LOCAL2015-2021-UNKNOWN-DIAGNOSTIC-20260818
+trigger_id=M26-CANDIDATE-INTEL-V2-LOCAL2015-2021-UNKNOWN-COMPACT-20260818
 base=morocco26-e-reason
 network_required=true
-purpose=diagnose_19_remaining_2021_local_council_identity_unknowns
+purpose=print_compact_context_for_19_remaining_2021_identity_unknowns
