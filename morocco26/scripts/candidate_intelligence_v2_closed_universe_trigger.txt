@@ -1,4 +1,4 @@
-trigger_id=M26-CANDIDATE-INTEL-V2-CLOSED-UNIVERSE-POWER-GATE-20260818-R2
+trigger_id=M26-CANDIDATE-INTEL-V2-RECONCILED-DATA-POWER-GATE-20260818-R1
 base=morocco26-e-reason
 network_required=false
-purpose=observable_closed_universe_true_false_gate_after_boolean_fix
+purpose=explicit_mp_claim_plus_closed_universe_reconciliation
