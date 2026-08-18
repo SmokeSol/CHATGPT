@@ -1,0 +1,52 @@
+name: Morocco26 E_reason package 2016 calibration public inputs
+
+on:
+  pull_request:
+    branches:
+      - morocco26-e-reason
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout scientific branch
+        uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+          fetch-depth: 1
+
+      - name: Assert judgments frozen before outcome package
+        run: |
+          set -euo pipefail
+          test -f morocco26/data/goal100/e_reason/judgments/development/c2_opus5_freeze_receipt_v1.json
+          test -f morocco26/data/goal100/e_reason/judgments/development/c1_c2_preunseal_equivalence_receipt_v1.json
+          test -f morocco26/data/goal100/e_reason/judgments/development/c1_rule_only/c1_judgment_manifest.json
+
+      - name: Package inputs
+        run: |
+          set -euo pipefail
+          OUT="$RUNNER_TEMP/e_reason_2016_calibration_public_inputs"
+          mkdir -p "$OUT"
+          cp morocco26/data/goal100/e_reason/blind/development/blind_bundle.json "$OUT/"
+          cp morocco26/data/goal100/e_reason/blind/development/bundle_manifest.json "$OUT/"
+          cp morocco26/data/goal100/e_reason/blind/development/mapping_seal.json "$OUT/"
+          cp morocco26/data/goal100/e_reason/e_reason_conditions_v1.json "$OUT/"
+          cp morocco26/data/goal100/e_reason/e_reason_scoring_contract_v1.json "$OUT/"
+          cp morocco26/data/goal100/historical/tafra_legislative_2011_canonical.json "$OUT/"
+          cp morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json "$OUT/"
+          cp morocco26/data/goal100/e_reason/judgments/development/c1_rule_only/c1_judgments.jsonl "$OUT/"
+          cp morocco26/data/goal100/e_reason/judgments/development/c1_rule_only/c1_judgment_manifest.json "$OUT/"
+          sha256sum "$OUT"/* > "$OUT/INPUT_SHA256SUMS.txt"
+
+      - name: Upload post-freeze calibration package
+        uses: actions/upload-artifact@v4
+        with:
+          name: e-reason-2016-calibration-public-inputs-post-freeze
+          path: ${{ runner.temp }}/e_reason_2016_calibration_public_inputs
+          retention-days: 30
+          if-no-files-found: error
