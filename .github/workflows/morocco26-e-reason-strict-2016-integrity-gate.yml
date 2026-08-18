@@ -5,6 +5,8 @@ on:
     branches: [morocco26-e-reason]
     paths:
       - "morocco26/scripts/e_reason_audit_strict_2016_integrity_gate.py"
+      - "morocco26/data/goal100/e_reason/evidence/strict_2016_ifrane_sidi_crossmodal_candidates/evidence.json"
+      - "morocco26/data/goal100/e_reason/evidence/strict_2016_ifrane_sidi_embedded_name_diagnostic/diagnostic.json"
       - ".github/workflows/morocco26-e-reason-strict-2016-integrity-gate.yml"
 permissions:
   contents: write
