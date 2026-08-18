@@ -1,0 +1,1085 @@
+{
+  "2021_is_blind_holdout": false,
+  "candidate_material_gate": {
+    "bootstrap_probability_C2_better": 0.7293,
+    "no_party_deterioration_beyond_limit": true,
+    "party_relative_improvements": {
+      "PJD": 0.00018240515788425316,
+      "RNI": 0.06947496840165014
+    },
+    "pass": false,
+    "pooled_relative_improvement": 0.055961106787209544
+  },
+  "cluster_bootstrap": {
+    "C1_vs_C0_centered_residual_RMSE": {
+      "bootstrap_probability_model_better": 1.0,
+      "cluster": "territory_id",
+      "clusters": 71,
+      "percentile_95_interval_delta_model_minus_comparator": [
+        -1.4000291907237175,
+        -0.5541704101051299
+      ],
+      "replicates": 10000,
+      "seed": 260818
+    },
+    "C2_vs_C1_centered_residual_RMSE": {
+      "bootstrap_probability_model_better": 0.7293,
+      "cluster": "territory_id",
+      "clusters": 71,
+      "percentile_95_interval_delta_model_minus_comparator": [
+        -0.2285567801123011,
+        0.15216545007007118
+      ],
+      "replicates": 10000,
+      "seed": 260818
+    }
+  },
+  "contract_id": "M26-CANDIDATE-INTELLIGENCE-V3-SYMMETRIC-TERRITORIAL-V1",
+  "f0_modified": false,
+  "fit_2011_TO_2016": {
+    "by_party": {
+      "PJD": {
+        "centered_residual_C2_vs_C1": {
+          "comparator_MAE": 0.41719822147997787,
+          "comparator_RMSE": 0.5534021821059844,
+          "model_MAE": 0.4257145295518721,
+          "model_RMSE": 0.5540216639543972,
+          "relative_improvement": -0.0011194062265085778
+        },
+        "n": 72,
+        "oracle_national_swing_share_C2_vs_C1": {
+          "comparator_MAE": 0.0647385135553608,
+          "comparator_RMSE": 0.07881821049499663,
+          "model_MAE": 0.06697411305439933,
+          "model_RMSE": 0.08156800979295413,
+          "relative_improvement": -0.03488786767281478
+        }
+      },
+      "RNI": {
+        "centered_residual_C2_vs_C1": {
+          "comparator_MAE": 1.7273469268202146,
+          "comparator_RMSE": 3.1082727779574593,
+          "model_MAE": 1.6476418184130701,
+          "model_RMSE": 3.0104065603663654,
+          "relative_improvement": 0.031485723609947995
+        },
+        "n": 65,
+        "oracle_national_swing_share_C2_vs_C1": {
+          "comparator_MAE": 0.06141079628116699,
+          "comparator_RMSE": 0.08082249192526418,
+          "model_MAE": 0.05279920430897412,
+          "model_RMSE": 0.07296580112080038,
+          "relative_improvement": 0.09720921264997386
+        }
+      }
+    },
+    "centered_residual": {
+      "C1_vs_C0": {
+        "comparator_MAE": 1.0562473895054318,
+        "comparator_RMSE": 2.2093890833797274,
+        "model_MAE": 1.0388016218238858,
+        "model_RMSE": 2.1782579664210804,
+        "relative_improvement": 0.014090373304020036
+      },
+      "C2_vs_C0": {
+        "comparator_MAE": 1.0562473895054318,
+        "comparator_RMSE": 2.2093890833797274,
+        "model_MAE": 1.0054610534641195,
+        "model_RMSE": 2.112122255973926,
+        "relative_improvement": 0.04402430886324981
+      },
+      "C2_vs_C1": {
+        "comparator_MAE": 1.0388016218238858,
+        "comparator_RMSE": 2.1782579664210804,
+        "model_MAE": 1.0054610534641195,
+        "model_RMSE": 2.112122255973926,
+        "relative_improvement": 0.030361743864440783
+      }
+    },
+    "n": 137,
+    "oracle_national_swing_share": {
+      "C1_vs_C0": {
+        "comparator_MAE": 0.061038745481485183,
+        "comparator_RMSE": 0.07662554940684004,
+        "model_MAE": 0.06315966959315206,
+        "model_RMSE": 0.07977542521148483,
+        "relative_improvement": -0.04110738296857961
+      },
+      "C2_vs_C0": {
+        "comparator_MAE": 0.061038745481485183,
+        "comparator_RMSE": 0.07662554940684004,
+        "model_MAE": 0.06024879138686183,
+        "model_RMSE": 0.07760563907440066,
+        "relative_improvement": -0.012790638046285028
+      },
+      "C2_vs_C1": {
+        "comparator_MAE": 0.06315966959315206,
+        "comparator_RMSE": 0.07977542521148483,
+        "model_MAE": 0.06024879138686183,
+        "model_RMSE": 0.07760563907440066,
+        "relative_improvement": 0.02719867843176094
+      }
+    }
+  },
+  "incremental_over_F0_identified": false,
+  "llm_invoked": false,
+  "models": {
+    "C1": {
+      "alpha": 10.0,
+      "beta": [
+        -0.1922795454491916,
+        -0.3141600378432086
+      ],
+      "beta_names": [
+        "centered_prior_logit_share",
+        "centered_prior_logit_share_x_RNI"
+      ],
+      "ridge_cv": [
+        {
+          "alpha": 0.01,
+          "folds": [
+            {
+              "centered_residual_RMSE": 0.9046438715028096,
+              "n": 6,
+              "region": "Béni Mellal-Khénifra"
+            },
+            {
+              "centered_residual_RMSE": 3.312619760810358,
+              "n": 22,
+              "region": "Casablanca-Settat"
+            },
+            {
+              "centered_residual_RMSE": 6.394014924380685,
+              "n": 3,
+              "region": "Dakhla-Oued Eddahab"
+            },
+            {
+              "centered_residual_RMSE": 1.054189506494591,
+              "n": 8,
+              "region": "Drâa-Tafilalet"
+            },
+            {
+              "centered_residual_RMSE": 0.8188670386838197,
+              "n": 22,
+              "region": "Fès-Meknès"
+            },
+            {
+              "centered_residual_RMSE": 0.5173265289637359,
+              "n": 7,
+              "region": "Guelmim-Oued Noun"
+            },
+            {
+              "centered_residual_RMSE": 4.3919431200913035,
+              "n": 6,
+              "region": "Laâyoune-Sakia El Hamra"
+            },
+            {
+              "centered_residual_RMSE": 0.8648795694362416,
+              "n": 16,
+              "region": "Marrakech-Safi"
+            },
+            {
+              "centered_residual_RMSE": 2.933412427167909,
+              "n": 13,
+              "region": "Oriental"
+            },
+            {
+              "centered_residual_RMSE": 0.8930598588855808,
+              "n": 17,
+              "region": "Rabat-Salé-Kénitra"
+            },
+            {
+              "centered_residual_RMSE": 0.8538686659997214,
+              "n": 9,
+              "region": "Souss-Massa"
+            },
+            {
+              "centered_residual_RMSE": 0.8551778103890881,
+              "n": 8,
+              "region": "Tanger-Tétouan-Al Hoceïma"
+            }
+          ],
+          "pooled_heldout_centered_residual_RMSE": 2.194934929955004
+        },
+        {
+          "alpha": 0.1,
+          "folds": [
+            {
+              "centered_residual_RMSE": 0.9046193973058895,
+              "n": 6,
+              "region": "Béni Mellal-Khénifra"
+            },
+            {
+              "centered_residual_RMSE": 3.3126680163458317,
+              "n": 22,
+              "region": "Casablanca-Settat"
+            },
+            {
+              "centered_residual_RMSE": 6.394164547674,
+              "n": 3,
+              "region": "Dakhla-Oued Eddahab"
+            },
+            {
+              "centered_residual_RMSE": 1.0542883516220405,
+              "n": 8,
+              "region": "Drâa-Tafilalet"
+            },
+            {
+              "centered_residual_RMSE": 0.8189618777791504,
+              "n": 22,
+              "region": "Fès-Meknès"
+            },
+            {
+              "centered_residual_RMSE": 0.5181063613723559,
+              "n": 7,
+              "region": "Guelmim-Oued Noun"
+            },
+            {
+              "centered_residual_RMSE": 4.391909969410152,
+              "n": 6,
+              "region": "Laâyoune-Sakia El Hamra"
+            },
+            {
+              "centered_residual_RMSE": 0.8648310144206393,
+              "n": 16,
+              "region": "Marrakech-Safi"
+            },
+            {
+              "centered_residual_RMSE": 2.9331419772695835,
+              "n": 13,
+              "region": "Oriental"
+            },
+            {
+              "centered_residual_RMSE": 0.8930109896952748,
+              "n": 17,
+              "region": "Rabat-Salé-Kénitra"
+            },
+            {
+              "centered_residual_RMSE": 0.8532330653002836,
+              "n": 9,
+              "region": "Souss-Massa"
+            },
+            {
+              "centered_residual_RMSE": 0.8550712643586539,
+              "n": 8,
+              "region": "Tanger-Tétouan-Al Hoceïma"
+            }
+          ],
+          "pooled_heldout_centered_residual_RMSE": 2.194913016703999
+        },
+        {
+          "alpha": 1.0,
+          "folds": [
+            {
+              "centered_residual_RMSE": 0.9043834192588244,
+              "n": 6,
+              "region": "Béni Mellal-Khénifra"
+            },
+            {
+              "centered_residual_RMSE": 3.3131382307882378,
+              "n": 22,
+              "region": "Casablanca-Settat"
+            },
+            {
+              "centered_residual_RMSE": 6.39562804920391,
+              "n": 3,
+              "region": "Dakhla-Oued Eddahab"
+            },
+            {
+              "centered_residual_RMSE": 1.0552740694935938,
+              "n": 8,
+              "region": "Drâa-Tafilalet"
+            },
+            {
+              "centered_residual_RMSE": 0.8198872613572339,
+              "n": 22,
+              "region": "Fès-Meknès"
+            },
+            {
+              "centered_residual_RMSE": 0.5258024528021251,
+              "n": 7,
+              "region": "Guelmim-Oued Noun"
+            },
+            {
+              "centered_residual_RMSE": 4.391603415683133,
+              "n": 6,
+              "region": "Laâyoune-Sakia El Hamra"
+            },
+            {
+              "centered_residual_RMSE": 0.8643630049161711,
+              "n": 16,
+              "region": "Marrakech-Safi"
+            },
+            {
+              "centered_residual_RMSE": 2.930532690611595,
+              "n": 13,
+              "region": "Oriental"
+            },
+            {
+              "centered_residual_RMSE": 0.8925472630516743,
+              "n": 17,
+              "region": "Rabat-Salé-Kénitra"
+            },
+            {
+              "centered_residual_RMSE": 0.8470974843041438,
+              "n": 9,
+              "region": "Souss-Massa"
+            },
+            {
+              "centered_residual_RMSE": 0.854024247794452,
+              "n": 8,
+              "region": "Tanger-Tétouan-Al Hoceïma"
+            }
+          ],
+          "pooled_heldout_centered_residual_RMSE": 2.194710288611059
+        },
+        {
+          "alpha": 10.0,
+          "folds": [
+            {
+              "centered_residual_RMSE": 0.9025934701995549,
+              "n": 6,
+              "region": "Béni Mellal-Khénifra"
+            },
+            {
+              "centered_residual_RMSE": 3.3170081562849063,
+              "n": 22,
+              "region": "Casablanca-Settat"
+            },
+            {
+              "centered_residual_RMSE": 6.407935277992615,
+              "n": 3,
+              "region": "Dakhla-Oued Eddahab"
+            },
+            {
+              "centered_residual_RMSE": 1.0646290132702736,
+              "n": 8,
+              "region": "Drâa-Tafilalet"
+            },
+            {
+              "centered_residual_RMSE": 0.8275117669043923,
+              "n": 22,
+              "region": "Fès-Meknès"
+            },
+            {
+              "centered_residual_RMSE": 0.5927006245067381,
+              "n": 7,
+              "region": "Guelmim-Oued Noun"
+            },
+            {
+              "centered_residual_RMSE": 4.3900665368437215,
+              "n": 6,
+              "region": "Laâyoune-Sakia El Hamra"
+            },
+            {
+              "centered_residual_RMSE": 0.8607647793898067,
+              "n": 16,
+              "region": "Marrakech-Safi"
+            },
+            {
+              "centered_residual_RMSE": 2.9103833372046464,
+              "n": 13,
+              "region": "Oriental"
+            },
+            {
+              "centered_residual_RMSE": 0.889097808594914,
+              "n": 17,
+              "region": "Rabat-Salé-Kénitra"
+            },
+            {
+              "centered_residual_RMSE": 0.7998397812381606,
+              "n": 9,
+              "region": "Souss-Massa"
+            },
+            {
+              "centered_residual_RMSE": 0.8447810712892293,
+              "n": 8,
+              "region": "Tanger-Tétouan-Al Hoceïma"
+            }
+          ],
+          "pooled_heldout_centered_residual_RMSE": 2.193605369756482
+        },
+        {
+          "alpha": 100.0,
+          "folds": [
+            {
+              "centered_residual_RMSE": 0.8965396437123504,
+              "n": 6,
+              "region": "Béni Mellal-Khénifra"
+            },
+            {
+              "centered_residual_RMSE": 3.3353945795232374,
+              "n": 22,
+              "region": "Casablanca-Settat"
+            },
+            {
+              "centered_residual_RMSE": 6.466672425609798,
+              "n": 3,
+              "region": "Dakhla-Oued Eddahab"
+            },
+            {
+              "centered_residual_RMSE": 1.11928850751393,
+              "n": 8,
+              "region": "Drâa-Tafilalet"
+            },
+            {
+              "centered_residual_RMSE": 0.8659968456748522,
+              "n": 22,
+              "region": "Fès-Meknès"
+            },
+            {
+              "centered_residual_RMSE": 0.8955647316306145,
+              "n": 7,
+              "region": "Guelmim-Oued Noun"
+            },
+            {
+              "centered_residual_RMSE": 4.393828534673262,
+              "n": 6,
+              "region": "Laâyoune-Sakia El Hamra"
+            },
+            {
+              "centered_residual_RMSE": 0.8474296054733169,
+              "n": 16,
+              "region": "Marrakech-Safi"
+            },
+            {
+              "centered_residual_RMSE": 2.828984451993144,
+              "n": 13,
+              "region": "Oriental"
+            },
+            {
+              "centered_residual_RMSE": 0.8733632993820987,
+              "n": 17,
+              "region": "Rabat-Salé-Kénitra"
+            },
+            {
+              "centered_residual_RMSE": 0.6218457136505112,
+              "n": 9,
+              "region": "Souss-Massa"
+            },
+            {
+              "centered_residual_RMSE": 0.7944553890445131,
+              "n": 8,
+              "region": "Tanger-Tétouan-Al Hoceïma"
+            }
+          ],
+          "pooled_heldout_centered_residual_RMSE": 2.1949190963135776
+        },
+        {
+          "alpha": 1000.0,
+          "folds": [
+            {
+              "centered_residual_RMSE": 0.8932225991054951,
+              "n": 6,
+              "region": "Béni Mellal-Khénifra"
+            },
+            {
+              "centered_residual_RMSE": 3.35859966374682,
+              "n": 22,
+              "region": "Casablanca-Settat"
+            },
+            {
+              "centered_residual_RMSE": 6.5380491252888975,
+              "n": 3,
+              "region": "Dakhla-Oued Eddahab"
+            },
+            {
+              "centered_residual_RMSE": 1.1919912525455074,
+              "n": 8,
+              "region": "Drâa-Tafilalet"
+            },
+            {
+              "centered_residual_RMSE": 0.923408455589189,
+              "n": 22,
+              "region": "Fès-Meknès"
+            },
+            {
+              "centered_residual_RMSE": 1.1869300892607342,
+              "n": 7,
+              "region": "Guelmim-Oued Noun"
+            },
+            {
+              "centered_residual_RMSE": 4.4069930549399015,
+              "n": 6,
+              "region": "Laâyoune-Sakia El Hamra"
+            },
+            {
+              "centered_residual_RMSE": 0.8402367942789952,
+              "n": 16,
+              "region": "Marrakech-Safi"
+            },
+            {
+              "centered_residual_RMSE": 2.7476849734903235,
+              "n": 13,
+              "region": "Oriental"
+            },
+            {
+              "centered_residual_RMSE": 0.8641311185606719,
+              "n": 17,
+              "region": "Rabat-Salé-Kénitra"
+            },
+            {
+              "centered_residual_RMSE": 0.49218387675452024,
+              "n": 9,
+              "region": "Souss-Massa"
+            },
+            {
+              "centered_residual_RMSE": 0.7355415453159824,
+              "n": 8,
+              "region": "Tanger-Tétouan-Al Hoceïma"
+            }
+          ],
+          "pooled_heldout_centered_residual_RMSE": 2.2054215712931082
+        }
+      ]
+    },
+    "C2": {
+      "alpha": 10.0,
+      "beta": [
+        -0.2444020811924639,
+        -0.30666626863144264,
+        0.3355987654146702,
+        0.6700154618971904,
+        0.24342206441260367,
+        0.3578680112590782
+      ],
+      "beta_names": [
+        "centered_prior_logit_share",
+        "centered_prior_logit_share_x_RNI",
+        "centered_retained_incumbent",
+        "centered_retained_incumbent_x_RNI",
+        "centered_retained_incumbent_x_centered_prior_strength",
+        "centered_retained_incumbent_x_centered_prior_strength_x_RNI"
+      ],
+      "ridge_cv": [
+        {
+          "alpha": 0.01,
+          "folds": [
+            {
+              "centered_residual_RMSE": 1.2003339899009051,
+              "n": 6,
+              "region": "Béni Mellal-Khénifra"
+            },
+            {
+              "centered_residual_RMSE": 3.1722844503348013,
+              "n": 22,
+              "region": "Casablanca-Settat"
+            },
+            {
+              "centered_residual_RMSE": 6.033947933266629,
+              "n": 3,
+              "region": "Dakhla-Oued Eddahab"
+            },
+            {
+              "centered_residual_RMSE": 1.1750699332153531,
+              "n": 8,
+              "region": "Drâa-Tafilalet"
+            },
+            {
+              "centered_residual_RMSE": 1.06745983401188,
+              "n": 22,
+              "region": "Fès-Meknès"
+            },
+            {
+              "centered_residual_RMSE": 0.9070069647374853,
+              "n": 7,
+              "region": "Guelmim-Oued Noun"
+            },
+            {
+              "centered_residual_RMSE": 4.171327068539627,
+              "n": 6,
+              "region": "Laâyoune-Sakia El Hamra"
+            },
+            {
+              "centered_residual_RMSE": 0.9942542734105332,
+              "n": 16,
+              "region": "Marrakech-Safi"
+            },
+            {
+              "centered_residual_RMSE": 2.818806130588882,
+              "n": 13,
+              "region": "Oriental"
+            },
+            {
+              "centered_residual_RMSE": 0.7901141669591676,
+              "n": 17,
+              "region": "Rabat-Salé-Kénitra"
+            },
+            {
+              "centered_residual_RMSE": 1.562616916448795,
+              "n": 9,
+              "region": "Souss-Massa"
+            },
+            {
+              "centered_residual_RMSE": 0.6340079918418875,
+              "n": 8,
+              "region": "Tanger-Tétouan-Al Hoceïma"
+            }
+          ],
+          "pooled_heldout_centered_residual_RMSE": 2.162137437208846
+        },
+        {
+          "alpha": 0.1,
+          "folds": [
+            {
+              "centered_residual_RMSE": 1.1973103619629941,
+              "n": 6,
+              "region": "Béni Mellal-Khénifra"
+            },
+            {
+              "centered_residual_RMSE": 3.172931873846017,
+              "n": 22,
+              "region": "Casablanca-Settat"
+            },
+            {
+              "centered_residual_RMSE": 6.035481435853119,
+              "n": 3,
+              "region": "Dakhla-Oued Eddahab"
+            },
+            {
+              "centered_residual_RMSE": 1.1740279629771955,
+              "n": 8,
+              "region": "Drâa-Tafilalet"
+            },
+            {
+              "centered_residual_RMSE": 1.062610718742877,
+              "n": 22,
+              "region": "Fès-Meknès"
+            },
+            {
+              "centered_residual_RMSE": 0.9006115380358546,
+              "n": 7,
+              "region": "Guelmim-Oued Noun"
+            },
+            {
+              "centered_residual_RMSE": 4.172132521529552,
+              "n": 6,
+              "region": "Laâyoune-Sakia El Hamra"
+            },
+            {
+              "centered_residual_RMSE": 0.9884306541292773,
+              "n": 16,
+              "region": "Marrakech-Safi"
+            },
+            {
+              "centered_residual_RMSE": 2.8190736448990807,
+              "n": 13,
+              "region": "Oriental"
+            },
+            {
+              "centered_residual_RMSE": 0.7896414661306765,
+              "n": 17,
+              "region": "Rabat-Salé-Kénitra"
+            },
+            {
+              "centered_residual_RMSE": 1.5570633694235905,
+              "n": 9,
+              "region": "Souss-Massa"
+            },
+            {
+              "centered_residual_RMSE": 0.6338092906840892,
+              "n": 8,
+              "region": "Tanger-Tétouan-Al Hoceïma"
+            }
+          ],
+          "pooled_heldout_centered_residual_RMSE": 2.1612581795014068
+        },
+        {
+          "alpha": 1.0,
+          "folds": [
+            {
+              "centered_residual_RMSE": 1.1735758221673331,
+              "n": 6,
+              "region": "Béni Mellal-Khénifra"
+            },
+            {
+              "centered_residual_RMSE": 3.1790610075846737,
+              "n": 22,
+              "region": "Casablanca-Settat"
+            },
+            {
+              "centered_residual_RMSE": 6.049751086224552,
+              "n": 3,
+              "region": "Dakhla-Oued Eddahab"
+            },
+            {
+              "centered_residual_RMSE": 1.1658902103743842,
+              "n": 8,
+              "region": "Drâa-Tafilalet"
+            },
+            {
+              "centered_residual_RMSE": 1.0378788665333147,
+              "n": 22,
+              "region": "Fès-Meknès"
+            },
+            {
+              "centered_residual_RMSE": 0.8428272594087947,
+              "n": 7,
+              "region": "Guelmim-Oued Noun"
+            },
+            {
+              "centered_residual_RMSE": 4.1797769958055015,
+              "n": 6,
+              "region": "Laâyoune-Sakia El Hamra"
+            },
+            {
+              "centered_residual_RMSE": 0.9466648084628174,
+              "n": 16,
+              "region": "Marrakech-Safi"
+            },
+            {
+              "centered_residual_RMSE": 2.821436421237839,
+              "n": 13,
+              "region": "Oriental"
+            },
+            {
+              "centered_residual_RMSE": 0.7876686844202497,
+              "n": 17,
+              "region": "Rabat-Salé-Kénitra"
+            },
+            {
+              "centered_residual_RMSE": 1.5092216015861688,
+              "n": 9,
+              "region": "Souss-Massa"
+            },
+            {
+              "centered_residual_RMSE": 0.6351905132196147,
+              "n": 8,
+              "region": "Tanger-Tétouan-Al Hoceïma"
+            }
+          ],
+          "pooled_heldout_centered_residual_RMSE": 2.1560844601345686
+        },
+        {
+          "alpha": 10.0,
+          "folds": [
+            {
+              "centered_residual_RMSE": 1.0788649635571324,
+              "n": 6,
+              "region": "Béni Mellal-Khénifra"
+            },
+            {
+              "centered_residual_RMSE": 3.2157308092647123,
+              "n": 22,
+              "region": "Casablanca-Settat"
+            },
+            {
+              "centered_residual_RMSE": 6.141031887026807,
+              "n": 3,
+              "region": "Dakhla-Oued Eddahab"
+            },
+            {
+              "centered_residual_RMSE": 1.135809844887188,
+              "n": 8,
+              "region": "Drâa-Tafilalet"
+            },
+            {
+              "centered_residual_RMSE": 0.9757411722097361,
+              "n": 22,
+              "region": "Fès-Meknès"
+            },
+            {
+              "centered_residual_RMSE": 0.5814969575767973,
+              "n": 7,
+              "region": "Guelmim-Oued Noun"
+            },
+            {
+              "centered_residual_RMSE": 4.227514111199629,
+              "n": 6,
+              "region": "Laâyoune-Sakia El Hamra"
+            },
+            {
+              "centered_residual_RMSE": 0.8324130342522065,
+              "n": 16,
+              "region": "Marrakech-Safi"
+            },
+            {
+              "centered_residual_RMSE": 2.8298719098866822,
+              "n": 13,
+              "region": "Oriental"
+            },
+            {
+              "centered_residual_RMSE": 0.7931019664415231,
+              "n": 17,
+              "region": "Rabat-Salé-Kénitra"
+            },
+            {
+              "centered_residual_RMSE": 1.2649410537778851,
+              "n": 9,
+              "region": "Souss-Massa"
+            },
+            {
+              "centered_residual_RMSE": 0.6651001179498673,
+              "n": 8,
+              "region": "Tanger-Tétouan-Al Hoceïma"
+            }
+          ],
+          "pooled_heldout_centered_residual_RMSE": 2.1483498022862575
+        },
+        {
+          "alpha": 100.0,
+          "folds": [
+            {
+              "centered_residual_RMSE": 0.9417580079577145,
+              "n": 6,
+              "region": "Béni Mellal-Khénifra"
+            },
+            {
+              "centered_residual_RMSE": 3.302562075689299,
+              "n": 22,
+              "region": "Casablanca-Settat"
+            },
+            {
+              "centered_residual_RMSE": 6.377710670996329,
+              "n": 3,
+              "region": "Dakhla-Oued Eddahab"
+            },
+            {
+              "centered_residual_RMSE": 1.133428865270934,
+              "n": 8,
+              "region": "Drâa-Tafilalet"
+            },
+            {
+              "centered_residual_RMSE": 0.9008145500552471,
+              "n": 22,
+              "region": "Fès-Meknès"
+            },
+            {
+              "centered_residual_RMSE": 0.7895630090021257,
+              "n": 7,
+              "region": "Guelmim-Oued Noun"
+            },
+            {
+              "centered_residual_RMSE": 4.338681301936722,
+              "n": 6,
+              "region": "Laâyoune-Sakia El Hamra"
+            },
+            {
+              "centered_residual_RMSE": 0.8100410747786322,
+              "n": 16,
+              "region": "Marrakech-Safi"
+            },
+            {
+              "centered_residual_RMSE": 2.8036892305676777,
+              "n": 13,
+              "region": "Oriental"
+            },
+            {
+              "centered_residual_RMSE": 0.8301167348927115,
+              "n": 17,
+              "region": "Rabat-Salé-Kénitra"
+            },
+            {
+              "centered_residual_RMSE": 0.7397713681417915,
+              "n": 9,
+              "region": "Souss-Massa"
+            },
+            {
+              "centered_residual_RMSE": 0.7226114085937876,
+              "n": 8,
+              "region": "Tanger-Tétouan-Al Hoceïma"
+            }
+          ],
+          "pooled_heldout_centered_residual_RMSE": 2.171887825660312
+        },
+        {
+          "alpha": 1000.0,
+          "folds": [
+            {
+              "centered_residual_RMSE": 0.8988470351882065,
+              "n": 6,
+              "region": "Béni Mellal-Khénifra"
+            },
+            {
+              "centered_residual_RMSE": 3.3544171322542327,
+              "n": 22,
+              "region": "Casablanca-Settat"
+            },
+            {
+              "centered_residual_RMSE": 6.526462535083501,
+              "n": 3,
+              "region": "Dakhla-Oued Eddahab"
+            },
+            {
+              "centered_residual_RMSE": 1.1932839388828635,
+              "n": 8,
+              "region": "Drâa-Tafilalet"
+            },
+            {
+              "centered_residual_RMSE": 0.9272422444630778,
+              "n": 22,
+              "region": "Fès-Meknès"
+            },
+            {
+              "centered_residual_RMSE": 1.1752640266438186,
+              "n": 7,
+              "region": "Guelmim-Oued Noun"
+            },
+            {
+              "centered_residual_RMSE": 4.3997247866748825,
+              "n": 6,
+              "region": "Laâyoune-Sakia El Hamra"
+            },
+            {
+              "centered_residual_RMSE": 0.8357885085039544,
+              "n": 16,
+              "region": "Marrakech-Safi"
+            },
+            {
+              "centered_residual_RMSE": 2.744923142396248,
+              "n": 13,
+              "region": "Oriental"
+            },
+            {
+              "centered_residual_RMSE": 0.8588889748115844,
+              "n": 17,
+              "region": "Rabat-Salé-Kénitra"
+            },
+            {
+              "centered_residual_RMSE": 0.5012630613293088,
+              "n": 9,
+              "region": "Souss-Massa"
+            },
+            {
+              "centered_residual_RMSE": 0.7264488259382016,
+              "n": 8,
+              "region": "Tanger-Tétouan-Al Hoceïma"
+            }
+          ],
+          "pooled_heldout_centered_residual_RMSE": 2.2022705417330535
+        }
+      ]
+    }
+  },
+  "oracle_national_swing_diagnostic": true,
+  "panel": {
+    "fit_by_party": {
+      "PJD": 72,
+      "RNI": 65
+    },
+    "fit_cells": 137,
+    "validation_by_party": {
+      "PJD": 64,
+      "RNI": 59
+    },
+    "validation_cells": 123
+  },
+  "prior_v2_general_kill_status": "SUPERSEDED_AS_OVERBROAD",
+  "result_id": "M26-CANDIDATE-INTELLIGENCE-V3-SYMMETRIC-TERRITORIAL-GATE-V1",
+  "schema_version": "1.0",
+  "scientific_status": "POST_2021_EXPLORATORY_SPECIFICATION_REPAIR",
+  "seat_level_claim": false,
+  "terminal_decision": "NO_PROMOTION_RESEARCH_SIGNAL_ONLY",
+  "terminal_interpretation": "POSITIVE_BUT_NOT_MATERIAL_CANDIDATE_SIGNAL",
+  "transition_moments": {
+    "2011_TO_2016": {
+      "PJD": {
+        "mean_m1": 0.3611111111111111,
+        "mean_prior_logit": -1.450036500088863,
+        "mean_raw_logit_change": 0.2874072962199116
+      },
+      "RNI": {
+        "mean_m1": 0.2923076923076923,
+        "mean_prior_logit": -2.2825544976846657,
+        "mean_raw_logit_change": -1.0856712459417484
+      }
+    },
+    "2016_TO_2021": {
+      "PJD": {
+        "mean_m1": 0.265625,
+        "mean_prior_logit": -1.2770833113071953,
+        "mean_raw_logit_change": -2.0943725229315158
+      },
+      "RNI": {
+        "mean_m1": 0.2033898305084746,
+        "mean_prior_logit": -3.1628556894025666,
+        "mean_raw_logit_change": 2.177787651659266
+      }
+    }
+  },
+  "validation_2016_TO_2021": {
+    "by_party": {
+      "PJD": {
+        "centered_residual_C2_vs_C1": {
+          "comparator_MAE": 0.44731503827138863,
+          "comparator_RMSE": 0.6972355089709994,
+          "model_MAE": 0.4745847003749478,
+          "model_RMSE": 0.697108329617903,
+          "relative_improvement": 0.00018240515788425316
+        },
+        "n": 64,
+        "oracle_national_swing_share_C2_vs_C1": {
+          "comparator_MAE": 0.016009571151848947,
+          "comparator_RMSE": 0.031107307055572964,
+          "model_MAE": 0.018726516349050107,
+          "model_RMSE": 0.034944044235055184,
+          "relative_improvement": -0.12333877608331442
+        }
+      },
+      "RNI": {
+        "centered_residual_C2_vs_C1": {
+          "comparator_MAE": 0.8984965172596089,
+          "comparator_RMSE": 1.5023458324174768,
+          "model_MAE": 0.9443340001482096,
+          "model_RMSE": 1.3979704031819218,
+          "relative_improvement": 0.06947496840165014
+        },
+        "n": 59,
+        "oracle_national_swing_share_C2_vs_C1": {
+          "comparator_MAE": 0.1305313166625012,
+          "comparator_RMSE": 0.15759354583561497,
+          "model_MAE": 0.16004993314339838,
+          "model_RMSE": 0.22604205109965367,
+          "relative_improvement": -0.43433571407446464
+        }
+      }
+    },
+    "centered_residual": {
+      "C1_vs_C0": {
+        "comparator_MAE": 1.1213242751951165,
+        "comparator_RMSE": 2.163281093956203,
+        "model_MAE": 0.6637354225015106,
+        "model_RMSE": 1.1556799558688369,
+        "relative_improvement": 0.4657744852956985
+      },
+      "C2_vs_C0": {
+        "comparator_MAE": 1.1213242751951165,
+        "comparator_RMSE": 2.163281093956203,
+        "model_MAE": 0.6999116002661873,
+        "model_RMSE": 1.0910068264466233,
+        "relative_improvement": 0.4956703363725179
+      },
+      "C2_vs_C1": {
+        "comparator_MAE": 0.6637354225015106,
+        "comparator_RMSE": 1.1556799558688369,
+        "model_MAE": 0.6999116002661873,
+        "model_RMSE": 1.0910068264466233,
+        "relative_improvement": 0.055961106787209544
+      }
+    },
+    "n": 123,
+    "oracle_national_swing_share": {
+      "C1_vs_C0": {
+        "comparator_MAE": 0.12504871795150438,
+        "comparator_RMSE": 0.18906976073457757,
+        "model_MAE": 0.07094276615289352,
+        "model_RMSE": 0.11142967255990947,
+        "relative_improvement": 0.4106425473487632
+      },
+      "C2_vs_C0": {
+        "comparator_MAE": 0.12504871795150438,
+        "comparator_RMSE": 0.18906976073457757,
+        "model_MAE": 0.0865157975756074,
+        "model_RMSE": 0.15856970054783412,
+        "relative_improvement": 0.1613164372147297
+      },
+      "C2_vs_C1": {
+        "comparator_MAE": 0.07094276615289352,
+        "comparator_RMSE": 0.11142967255990947,
+        "model_MAE": 0.0865157975756074,
+        "model_RMSE": 0.15856970054783412,
+        "relative_improvement": -0.42304735269306387
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "2021_blind_status": "RETROSPECTIVE_NOT_BLIND",
+  "candidate_material_gate": {
+    "bootstrap_probability_C2_better": 0.7293,
+    "no_party_deterioration_beyond_limit": true,
+    "party_relative_improvements": {
+      "PJD": 0.00018240515788425316,
+      "RNI": 0.06947496840165014
+    },
+    "pass": false,
+    "pooled_relative_improvement": 0.055961106787209544
+  },
+  "certificate_id": "M26-CANDIDATE-INTELLIGENCE-V3-TERMINAL-CERTIFICATE-V1",
+  "contract_id": "M26-CANDIDATE-INTELLIGENCE-V3-SYMMETRIC-TERRITORIAL-V1",
+  "corrected_test": "SYMMETRIC_NATIONAL_SWING_CONDITIONED_TERRITORIAL_DIAGNOSTIC",
+  "f0_modified": false,
+  "fit_cells": 137,
+  "incremental_over_F0_identified": false,
+  "llm_invoked": false,
+  "next_action": "If material, freeze a separate prospective 2026 local candidate-layer protocol. If not material, stop this retained-incumbency specification without generalizing to all candidate intelligence. A true incremental-over-F0 test still requires a symmetric historical F0/pseudo-F0 design.",
+  "power_support_status": "PASS_MULTIPART_HEAD_POWER",
+  "prior_v2_terminal_kill": "SUPERSEDED_AS_OVERBROAD_PRESERVE_NUMERIC_RESULT",
+  "schema_version": "1.0",
+  "terminal_decision": "NO_PROMOTION_RESEARCH_SIGNAL_ONLY",
+  "terminal_interpretation": "POSITIVE_BUT_NOT_MATERIAL_CANDIDATE_SIGNAL",
+  "validation_cells": 123
+}
