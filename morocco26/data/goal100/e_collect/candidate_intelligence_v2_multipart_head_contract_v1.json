@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-CANDIDATE-INTELLIGENCE-V2-MULTIPART-HEAD-V1",
+  "frozen_at": "2026-08-18T20:52:00+01:00",
+  "status": "FROZEN_BEFORE_MULTIPART_FEATURE_POWER_OR_PREDICTIVE_SCORING",
+  "scientific_status": "POST_2021_EXPLORATORY_MODEL_DEVELOPMENT",
+  "purpose": "Test whether candidate-level parliamentary continuity has measurable territorial predictive value when estimated on a larger, standardized head-of-list panel rather than PJD alone.",
+  "parties": ["PJD", "RNI"],
+  "why_only_these_parties": "Both have standardized pre-election head-of-list rosters in 2016 and certified explicit head-of-list records in 2021. Other parties are not added until an equivalent head-of-list identity standard is demonstrated.",
+  "roster_sources": {
+    "2016_PJD": "morocco26/data/goal100/e_collect/candidate_intelligence_v2/2016/pjd_closed_roster_v1.json",
+    "2016_RNI": "morocco26-agent-society-v2:morocco26/data/goal100/agent_society_v2/acquisition/2016_candidate_party_augmented_wave2.json; accept only RNI rows from the national 4 September head-list publication source",
+    "2021_PJD_RNI": "morocco26/data/goal100/e_reason/evidence/2021_head_list_rank_enrichment/enriched_candidate_roster.json; rank_evidence_status must equal EXPLICIT_CANDIDATS_TETES_DE_LISTE"
+  },
+  "features": [
+    {
+      "id": "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT",
+      "definition": "Head of list was elected in the immediately prior House cycle under the same party in the same certified local constituency."
+    },
+    {
+      "id": "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT",
+      "definition": "Head of list was elected in the immediately prior House cycle under the same party but not in the same local constituency, including a prior national-list seat."
+    },
+    {
+      "id": "M3_HEAD_PRIOR_MP_SWITCH_IN",
+      "definition": "Head of list was elected in the immediately prior House cycle under another party."
+    }
+  ],
+  "identity_resolution": {
+    "2016": "Arabic candidate name against the complete 395-member 2011-2016 House universe, with audited normalization; collisions remain UNKNOWN unless party/territory context resolves uniquely.",
+    "2021": "Latin candidate name against the complete 395-member 2016-2021 House universe, using exact normalized identity first. Existing certified prior-member linkage may corroborate; unresolved high-similarity names remain UNKNOWN.",
+    "unknown_is_false": false
+  },
+  "power_gate": {
+    "minimum_known_head_cells_each_transition": 120,
+    "minimum_known_head_cells_per_party_each_transition": 50,
+    "minimum_positive_instances_per_binary_feature_each_transition": 30,
+    "failed_feature_coefficient": 0.0
+  },
+  "predictive_model": {
+    "eligible_features": "Only features passing the frozen support gate in both transitions.",
+    "target": "Focal-party territorial vote-share residual versus C0 on the logit scale.",
+    "national_swing_control": "Within the 2016 fit transition, subtract the party-specific mean target residual before fitting; no party intercept is carried into validation.",
+    "feature_centering": "Center each feature using its 2016 party-specific mean; reuse those frozen party-specific means in 2021.",
+    "intercept": false,
+    "interactions": false,
+    "ridge_grid": [0.01, 0.1, 1.0, 10.0, 100.0],
+    "selection": "Leave-one-region-out cross-validation on 2011_TO_2016 only; lowest held-out focal-party share RMSE, ties stronger regularization.",
+    "validation": "Apply selected features, coefficients and alpha unchanged to 2016_TO_2021."
+  },
+  "metrics": {
+    "primary": "pooled focal-party RMSE across all known PJD/RNI head cells",
+    "secondary": ["PJD head-cell RMSE", "RNI head-cell RMSE", "pooled MAE"],
+    "bootstrap": "paired bootstrap over party-territory head cells, 10000 replicates, seed 260818"
+  },
+  "interpretation": {
+    "material_signal": "pooled relative RMSE improvement >= 0.5% and bootstrap P(model better) >= 0.90, with favorable sign for both PJD and RNI separately",
+    "weak_signal": "pooled improvement positive but material_signal fails",
+    "no_signal": "pooled validation RMSE is not improved"
+  },
+  "forbidden": [
+    "Use 2021 outcomes for identity matching, feature selection, support thresholds, alpha, signs or coefficients",
+    "Treat a generic candidate as a head of list",
+    "Lower the 30-positive feature support gate",
+    "Add PAM/PI after seeing 2021 performance inside this experiment",
+    "Add a party intercept",
+    "Invoke an LLM from this experiment before deterministic scoring is complete",
+    "Modify F0"
+  ]
+}
