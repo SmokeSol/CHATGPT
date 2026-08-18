@@ -15,6 +15,8 @@
   "forecast_delta_generated": true,
   "outcomes_unsealed": true,
   "terminal_state": "E_REASON_NO_PROMOTION",
+  "score_artifact": "morocco26/data/goal100/e_reason/scoring/holdout_2021/score_v1.json",
+  "score_artifact_git_blob_sha": "8ed638732972e02f99c6ae1a924fc3e973df8d47",
   "terminal_certificate": "morocco26/data/goal100/e_reason/scoring/holdout_2021/terminal_certificate_v1.json",
   "F1_authorized": false,
   "F1_created": false,
