@@ -1,0 +1,1118 @@
+{
+  "2011_TO_2016": {
+    "features": {
+      "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": {
+        "known": 137,
+        "positive": 45,
+        "states": {
+          "UNKNOWN": 8,
+          "VERIFIED_FALSE": 92,
+          "VERIFIED_TRUE": 45
+        },
+        "support_gate": true
+      },
+      "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": {
+        "known": 137,
+        "positive": 4,
+        "states": {
+          "UNKNOWN": 8,
+          "VERIFIED_FALSE": 133,
+          "VERIFIED_TRUE": 4
+        },
+        "support_gate": false
+      },
+      "M3_HEAD_PRIOR_MP_SWITCH_IN": {
+        "known": 140,
+        "positive": 1,
+        "states": {
+          "UNKNOWN": 5,
+          "VERIFIED_FALSE": 139,
+          "VERIFIED_TRUE": 1
+        },
+        "support_gate": false
+      }
+    },
+    "fully_known_all_features": 137,
+    "parties": {
+      "PJD": {
+        "fully_known_all_features": 72,
+        "per_party_gate": true,
+        "rows": 74
+      },
+      "RNI": {
+        "fully_known_all_features": 65,
+        "per_party_gate": true,
+        "rows": 71
+      }
+    },
+    "rows": 145,
+    "total_known_gate": true,
+    "unknown_rows": [
+      {
+        "candidate_name": "محمد أوريش",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "VERIFIED_FALSE"
+        },
+        "identity_method": "EXACT_NORMALIZED_UNIQUE",
+        "nearest": [],
+        "party": "PJD",
+        "territory_id": "taroudant-sud"
+      },
+      {
+        "candidate_name": "يونس بن سليمان",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "VERIFIED_FALSE"
+        },
+        "identity_method": "EXACT_NORMALIZED_UNIQUE",
+        "nearest": [],
+        "party": "PJD",
+        "territory_id": "medina-sidi-youssef"
+      },
+      {
+        "candidate_name": "مصطفى الإبراهيمي",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "مصطفى ابراهيمي",
+            "party": "PJD",
+            "score": 0.933333,
+            "territory_source": "Berkane"
+          },
+          {
+            "name": "حميد ابراهيمي",
+            "party": "MP",
+            "score": 0.758621,
+            "territory_source": "Béni-Mellal"
+          },
+          {
+            "name": "المصطفى الجاري",
+            "party": "UC",
+            "score": 0.733333,
+            "territory_source": "Sidi Slimane"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "khenifra"
+      },
+      {
+        "candidate_name": "حماد ايت باها",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "حماد ايت بها",
+            "party": "RNI",
+            "score": 0.96,
+            "territory_source": "Zagora"
+          },
+          {
+            "name": "احمد التهامي",
+            "party": "PAM",
+            "score": 0.64,
+            "territory_source": "M'Diq - Fnideq"
+          },
+          {
+            "name": "حميد ابراهيمي",
+            "party": "MP",
+            "score": 0.615385,
+            "territory_source": "Béni-Mellal"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "zagora"
+      },
+      {
+        "candidate_name": "سعيد شباعتو",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "سعيد شبعتو",
+            "party": "USFP",
+            "score": 0.952381,
+            "territory_source": "Midelt"
+          },
+          {
+            "name": "سعيد بعزيز",
+            "party": "PT",
+            "score": 0.666667,
+            "territory_source": "Guercif"
+          },
+          {
+            "name": "سعيد ضور",
+            "party": "PI",
+            "score": 0.631579,
+            "territory_source": "Chtouka - Aït-Baha"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "midelt"
+      },
+      {
+        "candidate_name": "حاميد البهجة",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "حميد البهجة",
+            "party": "RNI",
+            "score": 0.956522,
+            "territory_source": "Taroudannt - Chamalia"
+          },
+          {
+            "name": "حميد ابراهيمي",
+            "party": "MP",
+            "score": 0.64,
+            "territory_source": "Béni-Mellal"
+          },
+          {
+            "name": "احمد بريجة",
+            "party": "PAM",
+            "score": 0.636364,
+            "territory_source": "Sidi-Bernoussi"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "taroudant-sud"
+      },
+      {
+        "candidate_name": "محمد بوهدود",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "VERIFIED_FALSE"
+        },
+        "identity_method": "EXACT_NORMALIZED_UNIQUE",
+        "nearest": [],
+        "party": "RNI",
+        "territory_id": "taroudant-nord"
+      },
+      {
+        "candidate_name": "مصطفى تاضومانت",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "مصطفى تضومانت",
+            "party": "RNI",
+            "score": 0.962963,
+            "territory_source": "Tata"
+          },
+          {
+            "name": "المصطفى المخنتر",
+            "party": "MP",
+            "score": 0.689655,
+            "territory_source": "El-Jadida"
+          },
+          {
+            "name": "مصطفى العمري",
+            "party": "RNI",
+            "score": 0.615385,
+            "territory_source": "Errachidia"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "tata"
+      }
+    ]
+  },
+  "2016_TO_2021": {
+    "features": {
+      "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": {
+        "known": 130,
+        "positive": 22,
+        "states": {
+          "UNKNOWN": 26,
+          "VERIFIED_FALSE": 108,
+          "VERIFIED_TRUE": 22
+        },
+        "support_gate": false
+      },
+      "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": {
+        "known": 130,
+        "positive": 4,
+        "states": {
+          "UNKNOWN": 26,
+          "VERIFIED_FALSE": 126,
+          "VERIFIED_TRUE": 4
+        },
+        "support_gate": false
+      },
+      "M3_HEAD_PRIOR_MP_SWITCH_IN": {
+        "known": 130,
+        "positive": 7,
+        "states": {
+          "UNKNOWN": 26,
+          "VERIFIED_FALSE": 123,
+          "VERIFIED_TRUE": 7
+        },
+        "support_gate": false
+      }
+    },
+    "fully_known_all_features": 130,
+    "parties": {
+      "PJD": {
+        "fully_known_all_features": 66,
+        "per_party_gate": true,
+        "rows": 81
+      },
+      "RNI": {
+        "fully_known_all_features": 64,
+        "per_party_gate": true,
+        "rows": 75
+      }
+    },
+    "rows": 156,
+    "total_known_gate": true,
+    "unknown_rows": [
+      {
+        "candidate_name": "Hamza Soufi",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "HAMZA ESSOUFI",
+            "party": "PJD",
+            "score": 0.916667,
+            "territory_source": "Chichaoua"
+          },
+          {
+            "name": "AMAL BOUKIR",
+            "party": "PAM",
+            "score": 0.636364,
+            "territory_source": "Larache"
+          },
+          {
+            "name": "JAMAL MESSAOUDI",
+            "party": "PJD",
+            "score": 0.615385,
+            "territory_source": "Taza"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "chichaoua"
+      },
+      {
+        "candidate_name": "Ibrahim Chouikh",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "BRAHIM CHOUIKH",
+            "party": "PJD",
+            "score": 0.965517,
+            "territory_source": "Liste nationale"
+          },
+          {
+            "name": "IBRAHIM EL MOUHI",
+            "party": "PAM",
+            "score": 0.709677,
+            "territory_source": "Azilal - Demnate"
+          },
+          {
+            "name": "BRAHIM BOUAKHADEN",
+            "party": "PJD",
+            "score": 0.6875,
+            "territory_source": "Tiznit"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "el-gharb"
+      },
+      {
+        "candidate_name": "Mohamed Drissi",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "MOHAMMED DRISS",
+            "party": "PJD",
+            "score": 0.962963,
+            "territory_source": "Boulemane"
+          },
+          {
+            "name": "MOHAMED SADIKI",
+            "party": "PJD",
+            "score": 0.785714,
+            "territory_source": "Rabat - El Mouhit"
+          },
+          {
+            "name": "MOHAMED FADILI",
+            "party": "MP",
+            "score": 0.785714,
+            "territory_source": "Driouch"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "errachidia"
+      },
+      {
+        "candidate_name": "Mnina Moudden",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "MANINA MOUADEN",
+            "party": "PJD",
+            "score": 0.888889,
+            "territory_source": "Liste nationale"
+          },
+          {
+            "name": "NOURDIN MOUDIAN",
+            "party": "PI",
+            "score": 0.642857,
+            "territory_source": "Al-Hoceïma"
+          },
+          {
+            "name": "AMINA MAELAININE",
+            "party": "PJD",
+            "score": 0.551724,
+            "territory_source": "Hay-Hassani"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "guelmim"
+      },
+      {
+        "candidate_name": "Mohamed Lamine Dida",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "MOHAMMED EL AMINE DAIEDDA",
+            "party": "MP",
+            "score": 0.883721,
+            "territory_source": "Oued-Ed-Dahab"
+          },
+          {
+            "name": "MOHAMED LARBI BELCAID",
+            "party": "PJD",
+            "score": 0.7,
+            "territory_source": "Ménara"
+          },
+          {
+            "name": "MOHAMMED HAMDAOUI",
+            "party": "PJD",
+            "score": 0.685714,
+            "territory_source": "Larache"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "laayoune"
+      },
+      {
+        "candidate_name": "Mohamed Larbi Belgaid",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "MOHAMED LARBI BELCAID",
+            "party": "PJD",
+            "score": 0.952381,
+            "territory_source": "Ménara"
+          },
+          {
+            "name": "MOHAMED ELARBI AHNIN",
+            "party": "PPS",
+            "score": 0.780488,
+            "territory_source": "Tétouan"
+          },
+          {
+            "name": "MOHAMED LAARAJ",
+            "party": "MP",
+            "score": 0.685714,
+            "territory_source": "Al-Hoceïma"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "medina-sidi-youssef-ben-ali"
+      },
+      {
+        "candidate_name": "Mohamed Toufla",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "MOHAMED TOUFALLA",
+            "party": "PJD",
+            "score": 0.933333,
+            "territory_source": "Ménara"
+          },
+          {
+            "name": "MOHAMED TOUIL",
+            "party": "PJD",
+            "score": 0.888889,
+            "territory_source": "Liste nationale"
+          },
+          {
+            "name": "MOHAMED JOUDAR",
+            "party": "UC",
+            "score": 0.785714,
+            "territory_source": "Ben-M'sick"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "menara"
+      },
+      {
+        "candidate_name": "Farouk Tahiri",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "FAROUK ATTAHIRI",
+            "party": "PJD",
+            "score": 0.928571,
+            "territory_source": "Nador"
+          },
+          {
+            "name": "BADER TAHIRI",
+            "party": "RNI",
+            "score": 0.72,
+            "territory_source": "Meknès"
+          },
+          {
+            "name": "LOUBNA TAHIRI",
+            "party": "MP",
+            "score": 0.692308,
+            "territory_source": "Liste nationale"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "nador"
+      },
+      {
+        "candidate_name": "Saïd Essadik",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "SAID ES-SADEK",
+            "party": "PJD",
+            "score": 0.88,
+            "territory_source": "Ouarzazate"
+          },
+          {
+            "name": "ADIL ESSOUBAI",
+            "party": "MP",
+            "score": 0.64,
+            "territory_source": "Safi"
+          },
+          {
+            "name": "SAID TADLAOUI",
+            "party": "MP",
+            "score": 0.64,
+            "territory_source": "Mohammadia"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "ouarzazate"
+      },
+      {
+        "candidate_name": "Azouha El Arrak",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "AZZOUHA EL ARRAK",
+            "party": "PJD",
+            "score": 0.967742,
+            "territory_source": "Oued-Ed-Dahab"
+          },
+          {
+            "name": "AHMED ADERRAK",
+            "party": "PJD",
+            "score": 0.642857,
+            "territory_source": "Inézgane - Aït-Melloul"
+          },
+          {
+            "name": "RAHHOU EL HILAA",
+            "party": "PAM",
+            "score": 0.6,
+            "territory_source": "Tifelt - Rommani"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "oued-ed-dahab"
+      },
+      {
+        "candidate_name": "Abdallah Hamel",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "ABDELLAH HAMAL",
+            "party": "PJD",
+            "score": 0.928571,
+            "territory_source": "Oujda - Angad"
+          },
+          {
+            "name": "ABDELLAH GHAZI",
+            "party": "RNI",
+            "score": 0.785714,
+            "territory_source": "Tiznit"
+          },
+          {
+            "name": "ABDELLAH ABERKI",
+            "party": "PAM",
+            "score": 0.758621,
+            "territory_source": "Tan-Tan"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "oujda-angad"
+      },
+      {
+        "candidate_name": "Reda Bougmazi",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "REDA BOUGEMAZI",
+            "party": "PJD",
+            "score": 0.962963,
+            "territory_source": "Liste nationale"
+          },
+          {
+            "name": "AHMED TOUMI",
+            "party": "PI",
+            "score": 0.583333,
+            "territory_source": "El-Kelâa-des-Sraghna"
+          },
+          {
+            "name": "SAIDA AITBOUALI",
+            "party": "PI",
+            "score": 0.571429,
+            "territory_source": "Liste nationale"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "safi"
+      },
+      {
+        "candidate_name": "Mohammed El Ayadi",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "MOHAMED EL HAFYANI",
+            "party": "PJD",
+            "score": 0.882353,
+            "territory_source": "Sidi Slimane"
+          },
+          {
+            "name": "MOHAMED EL ATMANI",
+            "party": "PJD",
+            "score": 0.848485,
+            "territory_source": "Oujda - Angad"
+          },
+          {
+            "name": "MOHAMED EL BAKAOUI",
+            "party": "PI",
+            "score": 0.823529,
+            "territory_source": "Berkane"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "sidi-slimane"
+      },
+      {
+        "candidate_name": "Slimane El Amrani",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "SLIMANE AMRANI",
+            "party": "PJD",
+            "score": 0.903226,
+            "territory_source": "Rabat - Challah"
+          },
+          {
+            "name": "MOHAMED EL ATMANI",
+            "party": "PJD",
+            "score": 0.705882,
+            "territory_source": "Oujda - Angad"
+          },
+          {
+            "name": "IMANE BENRABIA",
+            "party": "PI",
+            "score": 0.645161,
+            "territory_source": "Liste nationale"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "skhirate-temara"
+      },
+      {
+        "candidate_name": "Jamal Massaoudi",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "JAMAL MESSAOUDI",
+            "party": "PJD",
+            "score": 0.933333,
+            "territory_source": "Taza"
+          },
+          {
+            "name": "ABDALLAH MESSAOUDI",
+            "party": "RNI",
+            "score": 0.727273,
+            "territory_source": "Agadir - Ida-ou-Tanane"
+          },
+          {
+            "name": "HAKIMA BEL-KASSAOUI",
+            "party": "MP",
+            "score": 0.705882,
+            "territory_source": "Liste nationale"
+          }
+        ],
+        "party": "PJD",
+        "territory_id": "taza"
+      },
+      {
+        "candidate_name": "Hamdi ouayssi",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "HAMDI OUAISSI",
+            "party": "USFP",
+            "score": 0.923077,
+            "territory_source": "Assa-Zag"
+          },
+          {
+            "name": "HAMID OUAHBI",
+            "party": "PAM",
+            "score": 0.72,
+            "territory_source": "Agadir - Ida-ou-Tanane"
+          },
+          {
+            "name": "MOHAMED BOUDESS",
+            "party": "PI",
+            "score": 0.642857,
+            "territory_source": "Taza"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "assa-zag"
+      },
+      {
+        "candidate_name": "Sidi Hmed Chiguer",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "SIDI AHMED CHIGUER",
+            "party": "PI",
+            "score": 0.971429,
+            "territory_source": "Es-Smara"
+          },
+          {
+            "name": "MOHAMED LACHGAR",
+            "party": "PJD",
+            "score": 0.5625,
+            "territory_source": "Chtouka - Aït-Baha"
+          },
+          {
+            "name": "MOHAMED CHROUROU",
+            "party": "PAM",
+            "score": 0.545455,
+            "territory_source": "Khémisset - Oulmès"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "es-smara"
+      },
+      {
+        "candidate_name": "Driss Chraïbi",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "DRISS CHTIBI",
+            "party": "USFP",
+            "score": 0.88,
+            "territory_source": "Sefrou"
+          },
+          {
+            "name": "DRISS KACHAL",
+            "party": "UC",
+            "score": 0.72,
+            "territory_source": "Meknès"
+          },
+          {
+            "name": "DRISS TEMRI",
+            "party": "PJD",
+            "score": 0.666667,
+            "territory_source": "Safi"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "hay-hassani"
+      },
+      {
+        "candidate_name": "Mustapha Toutou",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "MOSTAPHA TOUTOU",
+            "party": "PAM",
+            "score": 0.933333,
+            "territory_source": "Jerada"
+          },
+          {
+            "name": "MUSTAPHA TADOUMANT",
+            "party": "RNI",
+            "score": 0.787879,
+            "territory_source": "Tata"
+          },
+          {
+            "name": "MUSTAPHA ZITTI",
+            "party": "PJD",
+            "score": 0.758621,
+            "territory_source": "Figuig"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "jerada"
+      },
+      {
+        "candidate_name": "Mohamed Essimo",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "MOHAMED SIMOU",
+            "party": "MP",
+            "score": 0.888889,
+            "territory_source": "Larache"
+          },
+          {
+            "name": "MOHAMED BOUDESS",
+            "party": "PI",
+            "score": 0.758621,
+            "territory_source": "Taza"
+          },
+          {
+            "name": "MOHAMED KARIM",
+            "party": "PAM",
+            "score": 0.740741,
+            "territory_source": "Safi"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "larache"
+      },
+      {
+        "candidate_name": "Younes Benslimane",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "YOUNES BENSLIMAN",
+            "party": "PJD",
+            "score": 0.969697,
+            "territory_source": "Médina - Sidi-Youssef-Ben-Ali"
+          },
+          {
+            "name": "OUAFAE BEKKALI",
+            "party": "RNI",
+            "score": 0.516129,
+            "territory_source": "Liste nationale"
+          },
+          {
+            "name": "SAADIA BENSHILI",
+            "party": "USFP",
+            "score": 0.5,
+            "territory_source": "Liste nationale"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "medina-sidi-youssef-ben-ali"
+      },
+      {
+        "candidate_name": "Mohammed Houar",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "MOHAMED JOUDAR",
+            "party": "UC",
+            "score": 0.888889,
+            "territory_source": "Ben-M'sick"
+          },
+          {
+            "name": "MOHAMED CHROUROU",
+            "party": "PAM",
+            "score": 0.827586,
+            "territory_source": "Khémisset - Oulmès"
+          },
+          {
+            "name": "MOHAMED AMRHAR",
+            "party": "MDS",
+            "score": 0.814815,
+            "territory_source": "Taza"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "oujda-angad"
+      },
+      {
+        "candidate_name": "Mohamed Haidaoui",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "MOHAMMED HAMDAOUI",
+            "party": "PJD",
+            "score": 0.9375,
+            "territory_source": "Larache"
+          },
+          {
+            "name": "MOHAMED ZAHRAOUI",
+            "party": "USFP",
+            "score": 0.8125,
+            "territory_source": "El-Jadida"
+          },
+          {
+            "name": "MOHAMED ELHAMOUTI",
+            "party": "PAM",
+            "score": 0.787879,
+            "territory_source": "Al-Hoceïma"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "safi"
+      },
+      {
+        "candidate_name": "Mustapha Baytas",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "MUSTAPHA BAITAS",
+            "party": "RNI",
+            "score": 0.933333,
+            "territory_source": "Liste nationale"
+          },
+          {
+            "name": "MUSTAPHA EL HAYA",
+            "party": "PJD",
+            "score": 0.774194,
+            "territory_source": "Moulay-Rachid"
+          },
+          {
+            "name": "MUSTAPHA ZITTI",
+            "party": "PJD",
+            "score": 0.689655,
+            "territory_source": "Figuig"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "sidi-ifni"
+      },
+      {
+        "candidate_name": "Hassan Filali",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "HASSAN EL FILALI",
+            "party": "RNI",
+            "score": 0.896552,
+            "territory_source": "Tifelt - Rommani"
+          },
+          {
+            "name": "HASSAN AADILI",
+            "party": "PJD",
+            "score": 0.769231,
+            "territory_source": "Safi"
+          },
+          {
+            "name": "HASSAN LAENSER",
+            "party": "MP",
+            "score": 0.666667,
+            "territory_source": "Boulemane"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "tifelt-rommani"
+      },
+      {
+        "candidate_name": "Adi Khzou",
+        "feature_states": {
+          "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT": "UNKNOWN",
+          "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT": "UNKNOWN",
+          "M3_HEAD_PRIOR_MP_SWITCH_IN": "UNKNOWN"
+        },
+        "identity_method": "HIGH_SIMILARITY_UNKNOWN",
+        "nearest": [
+          {
+            "name": "ADDI KHEZOU",
+            "party": "RNI",
+            "score": 0.9,
+            "territory_source": "Tinghir"
+          },
+          {
+            "name": "ALI KAYOUH",
+            "party": "PI",
+            "score": 0.631579,
+            "territory_source": "Taroudannt - Al-Janoubia"
+          },
+          {
+            "name": "ADDI BOUARFA",
+            "party": "PAM",
+            "score": 0.571429,
+            "territory_source": "Errachidia"
+          }
+        ],
+        "party": "RNI",
+        "territory_id": "tinghir"
+      }
+    ]
+  },
+  "contract_id": "M26-CANDIDATE-INTELLIGENCE-V2-MULTIPART-HEAD-V1",
+  "coverage_gate": true,
+  "dedupe_artifact": "morocco26/data/goal100/e_collect/candidate_intelligence_v2/multipart/2021_head_roster_dedup_v3.json",
+  "dedupe_policy": "Same candidate duplicated by legacy/fuzzy and exact map labels is counted once, preferring exact territory resolution; conflicting identities fail closed.",
+  "eligible_features": [],
+  "failed_features_forced_zero": [
+    "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT",
+    "M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT",
+    "M3_HEAD_PRIOR_MP_SWITCH_IN"
+  ],
+  "forecast_modified": false,
+  "outcomes_used": false,
+  "result_id": "M26-CANDIDATE-INTELLIGENCE-V2-MULTIPART-HEAD-POWER-GATE-V3",
+  "rni2016_source_claimed_heads": 81,
+  "rni2016_source_rows_recovered": 71,
+  "schema_version": "1.3",
+  "status": "FAIL_MULTIPART_HEAD_POWER"
+}

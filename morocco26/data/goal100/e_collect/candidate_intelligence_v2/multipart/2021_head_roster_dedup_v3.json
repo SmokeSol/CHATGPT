@@ -1,0 +1,115 @@
+{
+  "final_rows": 156,
+  "party_counts": {
+    "PJD": 81,
+    "RNI": 75
+  },
+  "rule": "Within a party×territory cell, duplicate rows are collapsed only when candidate identity is identical; exact territory resolution dominates fuzzy/legacy duplicates. Conflicting candidate identities fail closed.",
+  "same_candidate_duplicate_rows_dropped": [
+    {
+      "candidate_name": "Bouchta Boussef",
+      "dropped_district_source": "Taounate - Tissa old",
+      "dropped_territory_match_score": 0.875,
+      "dropped_territory_resolution": "FUZZY_CONSERVATIVE",
+      "kept_district_source": "Taounate - Tissa",
+      "kept_territory_match_score": 1.0,
+      "kept_territory_resolution": "EXACT_NORMALIZED",
+      "party": "RNI",
+      "rule": "SAME_CANDIDATE_DUPLICATE_KEEP_BEST_TERRITORY_RESOLUTION",
+      "territory_id": "taounate-tissa"
+    },
+    {
+      "candidate_name": "Saïd El Aarabi",
+      "dropped_district_source": "Taounate - Tissa old",
+      "dropped_territory_match_score": 0.875,
+      "dropped_territory_resolution": "FUZZY_CONSERVATIVE",
+      "kept_district_source": "Taounate - Tissa",
+      "kept_territory_match_score": 1.0,
+      "kept_territory_resolution": "EXACT_NORMALIZED",
+      "party": "PJD",
+      "rule": "SAME_CANDIDATE_DUPLICATE_KEEP_BEST_TERRITORY_RESOLUTION",
+      "territory_id": "taounate-tissa"
+    }
+  ],
+  "schema_version": "1.0",
+  "unresolved_territory_rows_excluded": [
+    {
+      "candidate_name": "Mohamed Chebbak",
+      "district_source": "Anfa",
+      "party": "RNI",
+      "reason": "UNRESOLVED_TERRITORY_NOT_A_PARTY_X_TERRITORY_CELL"
+    },
+    {
+      "candidate_name": "Bassima Hakkaoui",
+      "district_source": "Anfa",
+      "party": "PJD",
+      "reason": "UNRESOLVED_TERRITORY_NOT_A_PARTY_X_TERRITORY_CELL"
+    },
+    {
+      "candidate_name": "Driss El Azami",
+      "district_source": "Fès Sud",
+      "party": "PJD",
+      "reason": "UNRESOLVED_TERRITORY_NOT_A_PARTY_X_TERRITORY_CELL"
+    },
+    {
+      "candidate_name": "Rachid Fayek",
+      "district_source": "Fès Sud",
+      "party": "RNI",
+      "reason": "UNRESOLVED_TERRITORY_NOT_A_PARTY_X_TERRITORY_CELL"
+    },
+    {
+      "candidate_name": "Mohamed El Harti",
+      "district_source": "Fès Nord",
+      "party": "PJD",
+      "reason": "UNRESOLVED_TERRITORY_NOT_A_PARTY_X_TERRITORY_CELL"
+    },
+    {
+      "candidate_name": "Thami Ouazzani",
+      "district_source": "Fès Nord",
+      "party": "RNI",
+      "reason": "UNRESOLVED_TERRITORY_NOT_A_PARTY_X_TERRITORY_CELL"
+    },
+    {
+      "candidate_name": "Abderrahim Ouaslem",
+      "district_source": "Rabat Océan",
+      "party": "RNI",
+      "reason": "UNRESOLVED_TERRITORY_NOT_A_PARTY_X_TERRITORY_CELL"
+    },
+    {
+      "candidate_name": "Saad-Eddine Elothmani",
+      "district_source": "Rabat Océan",
+      "party": "PJD",
+      "reason": "UNRESOLVED_TERRITORY_NOT_A_PARTY_X_TERRITORY_CELL"
+    },
+    {
+      "candidate_name": "Mustapha Ibrahimi",
+      "district_source": "Kénitra",
+      "party": "PJD",
+      "reason": "UNRESOLVED_TERRITORY_NOT_A_PARTY_X_TERRITORY_CELL"
+    },
+    {
+      "candidate_name": "Hatim Ben Rkia",
+      "district_source": "Kénitra",
+      "party": "RNI",
+      "reason": "UNRESOLVED_TERRITORY_NOT_A_PARTY_X_TERRITORY_CELL"
+    },
+    {
+      "candidate_name": "Mustapha Raddad",
+      "district_source": "Azilal-Bzou-Ouaouizart",
+      "party": "RNI",
+      "reason": "UNRESOLVED_TERRITORY_NOT_A_PARTY_X_TERRITORY_CELL"
+    },
+    {
+      "candidate_name": "Azilal-Ouaouizeght",
+      "district_source": "Azilal-Bzou-Ouaouizart",
+      "party": "PJD",
+      "reason": "UNRESOLVED_TERRITORY_NOT_A_PARTY_X_TERRITORY_CELL"
+    },
+    {
+      "candidate_name": "Mhamed Ait Bella Selmane",
+      "district_source": "Taroudant Nord",
+      "party": "PJD",
+      "reason": "UNRESOLVED_TERRITORY_NOT_A_PARTY_X_TERRITORY_CELL"
+    }
+  ]
+}

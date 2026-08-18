@@ -1,0 +1,13 @@
+{
+  "2021_is_blind_holdout": false,
+  "contract_id": "M26-CANDIDATE-INTELLIGENCE-V2-MULTIPART-HEAD-V1",
+  "eligible_features": [],
+  "forecast_modified": false,
+  "llm_invoked": false,
+  "power_gate_result_id": "M26-CANDIDATE-INTELLIGENCE-V2-MULTIPART-HEAD-POWER-GATE-V3",
+  "result_id": "M26-CANDIDATE-INTELLIGENCE-V2-MULTIPART-PREDICTIVE-GATE-V1",
+  "schema_version": "1.0",
+  "scientific_status": "POST_2021_EXPLORATORY_MODEL_DEVELOPMENT",
+  "terminal_decision": "NO_GO_E_REASON_V2_MULTIPART_POWER_INSUFFICIENT",
+  "terminal_interpretation": "NOT_RUN_POWER_GATE_FAILED"
+}

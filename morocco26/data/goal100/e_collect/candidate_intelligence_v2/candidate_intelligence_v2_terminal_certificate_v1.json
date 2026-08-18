@@ -1,0 +1,23 @@
+{
+  "F0_modified": false,
+  "certificate_id": "M26-CANDIDATE-INTELLIGENCE-V2-TERMINAL-CERTIFICATE-V1",
+  "llm_invoked": false,
+  "multipart_predictive_gate": null,
+  "next_action": "Stop E_reason V2 on this candidate-intelligence layer. Preserve the data as descriptive/exploratory evidence only; keep F0 unchanged.",
+  "power_gate": {
+    "eligible_features": [],
+    "known_2016": 137,
+    "known_2021": 130,
+    "status": "FAIL_MULTIPART_HEAD_POWER"
+  },
+  "prior_diagnostics": {
+    "PJD_only_terminal_interpretation": "POSITIVE_RETROSPECTIVE_SIGNAL",
+    "PJD_only_validation_PJD_relative_improvement": 0.0011025074817373694,
+    "feature_C_status": "FAIL_FEATURE_C_DATA_POWER"
+  },
+  "purpose": "Close the post-E_reason-V1 candidate-intelligence investigation with a deterministic GO/KILL decision before any LLM reasoning layer.",
+  "schema_version": "1.0",
+  "scientific_interpretation": "If GO: candidate-level parliamentary continuity has material retrospective territorial signal on a standardized two-party head-of-list panel, so a separately frozen E_reason V2 reasoning specification may be justified. If NO_GO: variation/coverage alone is not enough; do not invoke Opus on this candidate layer, and do not modify F0.",
+  "terminal_decision": "NO_GO_E_REASON_V2_MULTIPART_POWER_INSUFFICIENT",
+  "terminal_status": "TERMINAL_NO_GO"
+}
