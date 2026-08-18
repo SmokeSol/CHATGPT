@@ -1,0 +1,88 @@
+name: Morocco26 Agent Society V2 frozen scorer dry-run
+
+on:
+  pull_request:
+    branches: [morocco26-agent-society-v2]
+    paths:
+      - 'morocco26/data/goal100/agent_society_v2/triggers/scorer_dryrun.trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  dryrun:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      BASE_SHA: 5779cd09742dbc79bc7a9b4d5ee0aa588f1c4db1
+      PUBLIC_ARTIFACT_ID: '9338958480'
+      PRIVATE_ARTIFACT_ID: '9338959082'
+      POP_ARTIFACT_ID: '9338194867'
+      MAP2021_ARTIFACT_ID: '9325247866'
+    steps:
+      - name: Fetch frozen code/data and artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/asv2/{pub,priv,pop,map,src,out,dummy}
+          RAW="https://raw.githubusercontent.com/SmokeSol/CHATGPT/${BASE_SHA}"
+          for pair in \
+            "scorer.py:morocco26/scripts/agent_society_v2_score_historical.py" \
+            "contract.json:morocco26/data/goal100/agent_society_v2/historical_scoring_contract_v1.json" \
+            "out16.json:morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json" \
+            "out21.json:morocco26/data/goal100/historical/tafra_legislative_2021_canonical.json" \
+            "recon16.json:morocco26/data/goal100/e_reason/calibration/development_2016/identity_reconstruction_postfreeze_v1.json"; do
+              dst="${pair%%:*}"; src="${pair#*:}"; curl -fsSL -o "/tmp/asv2/src/$dst" "$RAW/$src"
+          done
+          python -m py_compile /tmp/asv2/src/scorer.py
+          curl -fsSL -L -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" -o /tmp/asv2/pub.zip "https://api.github.com/repos/SmokeSol/CHATGPT/actions/artifacts/${PUBLIC_ARTIFACT_ID}/zip"
+          unzip -q /tmp/asv2/pub.zip -d /tmp/asv2/pub
+          curl -fsSL -L -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" -o /tmp/asv2/priv.zip "https://api.github.com/repos/SmokeSol/CHATGPT/actions/artifacts/${PRIVATE_ARTIFACT_ID}/zip"
+          unzip -q /tmp/asv2/priv.zip -d /tmp/asv2/priv
+          curl -fsSL -L -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" -o /tmp/asv2/pop.zip "https://api.github.com/repos/SmokeSol/CHATGPT/actions/artifacts/${POP_ARTIFACT_ID}/zip"
+          unzip -q /tmp/asv2/pop.zip -d /tmp/asv2/pop
+          curl -fsSL -L -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" -o /tmp/asv2/map.zip "https://api.github.com/repos/SmokeSol/CHATGPT/actions/artifacts/${MAP2021_ARTIFACT_ID}/zip"
+          unzip -q /tmp/asv2/map.zip -d /tmp/asv2/map
+      - name: Generate deterministic prior-only dummy Opus output
+        run: |
+          python - <<'PY'
+          import json,zipfile,os
+          pub='/tmp/asv2/pub/opus5-agent-society-v2-historical-sealed.zip'
+          rows=[]
+          with zipfile.ZipFile(pub) as z:
+            for n in sorted(x for x in z.namelist() if x.startswith('packets/') and x.endswith('.json')):
+              p=json.loads(z.read(n)); c=p['common_territory_card']; probs=c['previous_election_conditional_party_shares']; u=c['previous_election_turnout_probability']
+              for a in p['voter_archetypes']:
+                rows.append({'anonymous_election_id':p['anonymous_election_id'],'anonymous_territory_id':p['anonymous_territory_id'],'condition_id':p['condition_id'],'batch_id':p['batch_id'],'weighted_archetype_id':a['weighted_archetype_id'],'turnout_probability':u,'conditional_party_probabilities':probs,'reason_codes':['PRIOR_VOTE_INERTIA']})
+          assert len(rows)==47104
+          os.makedirs('/tmp/asv2/dummy/outputs',exist_ok=True)
+          with open('/tmp/asv2/dummy/outputs/as2_all_outputs.jsonl','w') as f:
+            for r in rows:f.write(json.dumps(r,sort_keys=True,separators=(',',':'))+'\n')
+          json.dump({'output_rows':47104,'dryrun':True},open('/tmp/asv2/dummy/outputs/as2_output_manifest.json','w'))
+          json.dump({'terminal_status':'PASS_ASV2_HISTORICAL_VOTES_FROZEN_READY_FOR_SCORING','dryrun':True},open('/tmp/asv2/dummy/outputs/as2_terminal_report.json','w'))
+          with zipfile.ZipFile('/tmp/asv2/dummy-opus.zip','w',zipfile.ZIP_DEFLATED) as z:
+            for root,dirs,files in os.walk('/tmp/asv2/dummy'):
+              for fn in files:
+                p=os.path.join(root,fn);z.write(p,os.path.relpath(p,'/tmp/asv2/dummy'))
+          PY
+      - name: Run frozen scorer end-to-end
+        run: |
+          python /tmp/asv2/src/scorer.py \
+            --opuszip /tmp/asv2/dummy-opus.zip \
+            --publiczip /tmp/asv2/pub/opus5-agent-society-v2-historical-sealed.zip \
+            --privatezip /tmp/asv2/priv/agent-society-v2-historical-private-orchestrator.zip \
+            --outcome2016 /tmp/asv2/src/out16.json \
+            --outcome2021 /tmp/asv2/src/out21.json \
+            --recon2016 /tmp/asv2/src/recon16.json \
+            --map2021 /tmp/asv2/map/holdout_mapping.json \
+            --pop2021 /tmp/asv2/pop/populations/2021_population_v1.json \
+            --contract /tmp/asv2/src/contract.json \
+            --outdir /tmp/asv2/out
+          cat /tmp/asv2/out/historical_score_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: agent-society-v2-scorer-dryrun
+          path: /tmp/asv2/out/
