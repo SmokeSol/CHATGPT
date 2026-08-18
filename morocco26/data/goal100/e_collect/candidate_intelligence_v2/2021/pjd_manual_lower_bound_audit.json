@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "M26-CANDIDATE-INTEL-V2-PJD-2021-MANUAL-LOWER-BOUND",
+  "created_at": "2026-08-18T17:31:00+01:00",
+  "status": "PRELIMINARY_LOWER_BOUND_NOT_FINAL_ADJUDICATION",
+  "source": {
+    "publisher": "Medias24",
+    "url": "https://medias24.com/2021/08/14/voici-les-profils-des-candidats-du-pjd-pour-les-prochaines-legislatives/",
+    "published_at": "2021-08-14T12:38:00+01:00",
+    "pre_election_cutoff": true,
+    "article_claimed_scope": "92 local constituencies plus 12 regional lists"
+  },
+  "coding_rule": {
+    "unit": "local head-of-list profile",
+    "informative_if_any_objective_candidate_fact": [
+      "current or former parliamentary mandate",
+      "same-district or moved-district incumbency mention",
+      "communal/provincial/regional elected office",
+      "objectively named party office",
+      "minister/former minister or national parliamentary office",
+      "explicit prior-party/transhumance fact"
+    ],
+    "excluded_from_informative": [
+      "profession alone",
+      "education alone",
+      "generic prominence/notability",
+      "business ownership alone",
+      "media salience alone"
+    ],
+    "unknown_is_not_false": true
+  },
+  "observed_local_rows": 91,
+  "objective_feature_positive_lower_bound": 82,
+  "objective_feature_positive_rate_lower_bound": 0.9010989010989011,
+  "regional_tally": {
+    "Casablanca-Settat": {"observed": 16, "informative_lower_bound": 15},
+    "Rabat-Sale-Kenitra": {"observed": 11, "informative_lower_bound": 9},
+    "Fes-Meknes": {"observed": 11, "informative_lower_bound": 10},
+    "Marrakech-Safi": {"observed": 10, "informative_lower_bound": 10},
+    "Tanger-Tetouan-Al_Hoceima": {"observed": 7, "informative_lower_bound": 7},
+    "Souss-Massa": {"observed": 7, "informative_lower_bound": 7},
+    "Oriental": {"observed": 8, "informative_lower_bound": 5},
+    "Beni_Mellal-Khenifra": {"observed": 6, "informative_lower_bound": 5},
+    "Draa-Tafilalet": {"observed": 5, "informative_lower_bound": 5},
+    "Dakhla-Oued_Eddahab": {"observed": 2, "informative_lower_bound": 2},
+    "Laayoune-Sakia_El_Hamra": {"observed": 4, "informative_lower_bound": 3},
+    "Guelmim-Oued_Noun": {"observed": 4, "informative_lower_bound": 4}
+  },
+  "comparison_to_e_reason_v1": {
+    "old_holdout_party_cells": 828,
+    "old_holdout_directional_nonzero_cells": 59,
+    "old_directional_density": 0.07125603864734299,
+    "candidate_profile_informative_rate_lower_bound": 0.9010989010989011,
+    "raw_density_ratio_not_directly_comparable": 12.645930340845595,
+    "warning": "Candidate-record density and party-cell directional density have different denominators; the ratio is diagnostic only, not an effect size."
+  },
+  "interpretation": "The pre-election 2021 public source surface is demonstrably much richer in objective candidate attributes than the frozen E_reason V1 bundle. This supports the hypothesis that V1 sparsity was largely acquisition/gating-induced, while not yet proving that the recovered features are predictive.",
+  "next_required_steps": [
+    "independent extraction reproducibility",
+    "cross-source/T0 adjudication",
+    "map candidate facts to party x constituency features",
+    "true/false/unknown support audit",
+    "historical predictive calibration before any 2026 forecast use"
+  ]
+}
