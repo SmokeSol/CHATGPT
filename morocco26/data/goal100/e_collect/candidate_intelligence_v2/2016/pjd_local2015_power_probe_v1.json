@@ -1,0 +1,37 @@
+{
+  "V2_HEAD_ELECTED_LOCAL_COUNCIL_2015": {
+    "gate_pass": false,
+    "known": 53,
+    "known_gate": false,
+    "positive": 34,
+    "states": {
+      "UNKNOWN": 21,
+      "VERIFIED_FALSE": 19,
+      "VERIFIED_TRUE": 34
+    },
+    "support_gate": true
+  },
+  "V2_HEAD_LOCAL_COUNCIL_EXECUTIVE_2015": {
+    "gate_pass": false,
+    "known": 53,
+    "known_gate": false,
+    "positive": 23,
+    "states": {
+      "UNKNOWN": 21,
+      "VERIFIED_FALSE": 30,
+      "VERIFIED_TRUE": 23
+    },
+    "support_gate": false
+  },
+  "coefficient_authorized": false,
+  "forecast_modified": false,
+  "roster_rows": 74,
+  "schema_version": "1.0",
+  "source_rows": 31482,
+  "source_sha256": "8b5e6d23756087409a77fbaa00c0e25428c699245dbc3241d280b914600fd341",
+  "source_url": "https://open.africa/dataset/07a04224-c0ad-4861-9705-0518f5d49dbd/resource/7ae81ece-1b3d-4cdc-ac49-acd6ba37f6ea/download/communes-elus-2015-1-0.xlsx",
+  "thresholds": {
+    "known": 74,
+    "positive": 30
+  }
+}
