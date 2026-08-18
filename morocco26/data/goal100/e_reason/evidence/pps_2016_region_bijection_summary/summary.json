@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-18T06:46:53+00:00",
+  "source_status": "FAIL_CLOSED",
+  "source_counts": {
+    "regional_pdfs": 12,
+    "pdf_pages": 92,
+    "canonical_districts": 92,
+    "unique_assigned_constituency_ids": 73,
+    "exact_or_high_confidence_pages": 52,
+    "bijection_only_pages": 21
+  },
+  "regions": [
+    {
+      "region_slug": "beni-mellal-khenifra",
+      "status": "BIJECTION_SOLVED",
+      "page_count": 6,
+      "canonical_district_count": 6,
+      "assigned_pages": 6,
+      "exact_or_high_confidence_pages": 3,
+      "bijection_only_pages": 3,
+      "assigned_ids": [
+        "beni-mellal",
+        "fquih-ben-salah",
+        "bzou-ouaouizeght",
+        "azilal-demnate",
+        "khouribga",
+        "khenifra"
+      ]
+    },
+    {
+      "region_slug": "casablanca-settat",
+      "status": "BIJECTION_SOLVED",
+      "page_count": 16,
+      "canonical_district_count": 16,
+      "assigned_pages": 16,
+      "exact_or_high_confidence_pages": 10,
+      "bijection_only_pages": 6,
+      "assigned_ids": [
+        "ain-chock",
+        "moulay-rachid",
+        "ben-m-sick",
+        "hay-hassani",
+        "al-fida-mers-sultan",
+        "sidi-bennour",
+        "mohammedia",
+        "nouaceur",
+        "berrechid",
+        "benslimane",
+        "casablanca-anfa",
+        "sidi-bernoussi",
+        "ain-sebaa-hay-mohammadi",
+        "mediouna",
+        "el-jadida",
+        "settat"
+      ]
+    },
+    {
+      "region_slug": "dakhla-oued-ed-dahab",
+      "status": "BIJECTION_SOLVED",
+      "page_count": 2,
+      "canonical_district_count": 2,
+      "assigned_pages": 2,
+      "exact_or_high_confidence_pages": 1,
+      "bijection_only_pages": 1,
+      "assigned_ids": [
+        "oued-eddahab",
+        "aousserd"
+      ]
+    },
+    {
+      "region_slug": "draa-tafilalet",
+      "status": "BIJECTION_SOLVED",
+      "page_count": 5,
+      "canonical_district_count": 5,
+      "assigned_pages": 5,
+      "exact_or_high_confidence_pages": 4,
+      "bijection_only_pages": 1,
+      "assigned_ids": [
+        "tinghir",
+        "zagora",
+        "midelt",
+        "ouarzazate",
+        "errachidia"
+      ]
+    },
+    {
+      "region_slug": "fes-meknes",
+      "status": "PAGE_COUNT_MISMATCH",
+      "page_count": 12,
+      "canonical_district_count": 11,
+      "assigned_pages": 0,
+      "exact_or_high_confidence_pages": 0,
+      "bijection_only_pages": 0,
+      "assigned_ids": []
+    },
+    {
+      "region_slug": "guelmim-oued-noun",
+      "status": "BIJECTION_SOLVED",
+      "page_count": 4,
+      "canonical_district_count": 4,
+      "assigned_pages": 4,
+      "exact_or_high_confidence_pages": 2,
+      "bijection_only_pages": 2,
+      "assigned_ids": [
+        "sidi-ifni",
+        "tan-tan",
+        "guelmim",
+        "assa-zag"
+      ]
+    },
+    {
+      "region_slug": "laayoune-sakia-el-hamra",
+      "status": "BIJECTION_SOLVED",
+      "page_count": 4,
+      "canonical_district_count": 4,
+      "assigned_pages": 4,
+      "exact_or_high_confidence_pages": 4,
+      "bijection_only_pages": 0,
+      "assigned_ids": [
+        "es-semara",
+        "laayoune",
+        "boujdour",
+        "tarfaya"
+      ]
+    },
+    {
+      "region_slug": "marrakech-safi",
+      "status": "BIJECTION_SOLVED",
+      "page_count": 10,
+      "canonical_district_count": 10,
+      "assigned_pages": 10,
+      "exact_or_high_confidence_pages": 9,
+      "bijection_only_pages": 1,
+      "assigned_ids": [
+        "gueliz-nakhil",
+        "medina-sidi-youssef",
+        "chichaoua",
+        "el-kelaa-des-sraghna",
+        "safi",
+        "al-haouz",
+        "rehamna",
+        "essaouira",
+        "menara",
+        "youssoufia"
+      ]
+    },
+    {
+      "region_slug": "oriental",
+      "status": "BIJECTION_SOLVED",
+      "page_count": 8,
+      "canonical_district_count": 8,
+      "assigned_pages": 8,
+      "exact_or_high_confidence_pages": 7,
+      "bijection_only_pages": 1,
+      "assigned_ids": [
+        "guercif",
+        "figuig",
+        "oujda-angad",
+        "driouch",
+        "nador",
+        "berkane",
+        "taourirt",
+        "jerada"
+      ]
+    },
+    {
+      "region_slug": "rabat-sale-kenitra",
+      "status": "BIJECTION_SOLVED",
+      "page_count": 11,
+      "canonical_district_count": 11,
+      "assigned_pages": 11,
+      "exact_or_high_confidence_pages": 8,
+      "bijection_only_pages": 3,
+      "assigned_ids": [
+        "sale-medina",
+        "sidi-slimane",
+        "sidi-kacem",
+        "khemisset-oulmes",
+        "rabat-ocean",
+        "rabat-chellah",
+        "skhirate-temara",
+        "el-gharb",
+        "kenitra",
+        "tiflet-rommani",
+        "sale-el-jadida"
+      ]
+    },
+    {
+      "region_slug": "souss-massa",
+      "status": "BIJECTION_SOLVED",
+      "page_count": 7,
+      "canonical_district_count": 7,
+      "assigned_pages": 7,
+      "exact_or_high_confidence_pages": 4,
+      "bijection_only_pages": 3,
+      "assigned_ids": [
+        "chtouka-ait-baha",
+        "agadir-ida-outanane",
+        "inezgane-ait-melloul",
+        "taroudant-nord",
+        "taroudant-sud",
+        "tiznit",
+        "tata"
+      ]
+    },
+    {
+      "region_slug": "tanger-tetouan-al-hoceima",
+      "status": "PAGE_COUNT_MISMATCH",
+      "page_count": 7,
+      "canonical_district_count": 8,
+      "assigned_pages": 0,
+      "exact_or_high_confidence_pages": 0,
+      "bijection_only_pages": 0,
+      "assigned_ids": []
+    }
+  ],
+  "assignment_method_counts": {
+    "REGION_BIJECTION_ONLY_REQUIRES_AUDIT": 21,
+    "EXACT_HEADER": 51,
+    "HIGH_CONFIDENCE_HEADER": 1
+  },
+  "assigned_ids_total": 73,
+  "unique_assigned_ids": 73,
+  "duplicate_assignments": [],
+  "invariants": {
+    "evidence_promoted": false,
+    "outcomes_unsealed": false,
+    "F1_created": false
+  }
+}
