@@ -1,0 +1,27 @@
+{
+  "schema_version":"1.0",
+  "contract_id":"M26-CANDIDATE-INTELLIGENCE-V2-REASONER-POWER-CONTRACT-V1",
+  "frozen_at":"2026-08-18T18:20:00+01:00",
+  "status":"FROZEN_BEFORE_LOCAL2015_POWER_RESULT",
+  "purpose":"Prevent a repeat of E_reason V1, where C1 and C2 had too little admissible feature variation to identify incremental reasoning value.",
+  "feature_A":{"id":"V2_HEAD_PRIOR_CYCLE_MP","required_data_power_status":"PASS","already_observed_before_contract":true},
+  "feature_B_candidates":[
+    {"id":"V2_HEAD_LOCAL_COUNCIL_EXECUTIVE_2015","priority":1,"selection_rule":"Use if it passes the same historical coverage/support gates in both transitions."},
+    {"id":"V2_HEAD_ELECTED_LOCAL_COUNCIL_2015","priority":2,"selection_rule":"Use only if executive does not pass but council membership passes in both transitions."}
+  ],
+  "selection_rule":"Evaluate feature_B candidates in priority order. Selection depends only on preregistered data-power pass/fail, never on election outcome or predictive score.",
+  "data_power_requirements_per_feature":{"minimum_known_territories_each_transition":74,"minimum_positive_instances_each_transition":30,"unknown_is_false":false},
+  "joint_identifiability_requirements_each_transition":{
+    "minimum_joint_known_territories":74,
+    "maximum_absolute_phi":0.85,
+    "minimum_discordant_cells_A10_plus_A01":20,
+    "minimum_joint_patterns_with_at_least_5_cells":3,
+    "require_both_feature_values_present":true
+  },
+  "terminal_states":{
+    "PASS_REASONER_POWER":"Two independently varying feature families pass data power and joint identifiability in both transitions; a separate immutable E_reason V2 model/reasoner specification may then be frozen.",
+    "FAIL_REASONER_POWER":"Data may be useful for a deterministic model, but C1-vs-C2 reasoning contrast remains structurally underidentified; do not invoke an LLM treatment.",
+    "DATA_INSUFFICIENT":"Second feature family cannot achieve the frozen coverage/support gate without unresolved identities or missingness." 
+  },
+  "forbidden_before_pass":["Invoke Opus/LLM C2 treatment","fit post-hoc feature signs or magnitudes","modify F0","convert UNKNOWN to FALSE","select feature B based on predictive outcome"]
+}
