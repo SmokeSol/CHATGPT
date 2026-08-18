@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "experiment_id": "M26-AGENT-SOCIETY-V2-001",
   "branch": "morocco26-agent-society-v2",
-  "phase": "READY_FOR_BLINDED_HISTORICAL_LLM_HANDOFF",
+  "phase": "SEALED_HISTORICAL_HANDOFF_AWAITING_OPUS5_EXECUTION",
   "protocol_status": "FROZEN_BEFORE_ASV2_EXECUTION",
   "F0_status": "OFFICIAL_UNCHANGED",
   "real_llm_votes_generated": false,
@@ -16,11 +16,28 @@
     "population_2021_min_ess": 93.61618150692544,
     "national_demographic_fallback_weight": 0.0
   },
+  "historical_handoff": {
+    "status": "SEALED_READY_FOR_OPUS5",
+    "packet_count": 1472,
+    "output_rows_expected": 47104,
+    "public_zip_sha256": "9798dcb7c9b227322eb6b8158d4929e5536b8e0c4e41dc890d9b4cfeec063209",
+    "public_manifest_sha256": "fc019dabf0bb0a24302a119948fa68d06f6841608d748d31a500aa503283a92e",
+    "mapping_material_present": false,
+    "target_outcomes_present": false,
+    "conditions_semantically_blinded": true
+  },
+  "scoring": {
+    "contract_status": "FROZEN_BEFORE_ANY_REAL_ASV2_LLM_OUTPUT_IS_INSPECTED",
+    "dryrun_status": "PASS_END_TO_END_SCORER_DRYRUN",
+    "dryrun_rows_validated": 47104,
+    "terminal_states": ["ASV2_HISTORICAL_SANITY_PASS_READY_FOR_2026_FREEZE", "ASV2_KILL_BEFORE_2026"]
+  },
   "known_limitations": [
     "2016 formally passes the context-density gate but has zero districts with at least two cross-party discriminative context families.",
     "19 split constituencies use explicitly flagged whole prefecture/province HCP demographic fallback rather than exact constituency demographics.",
     "Ages 18-19 are deterministically approximated as 2/5 of the HCP 15-19 age band and require sensitivity analysis."
   ],
-  "next_allowed_action": "BUILD and freeze blinded AS2_LLM_INDEPENDENT and AS2_SHUFFLED_CONTEXT historical packets, freeze one prompt/output schema, contract-test on dummy packets only, then hand the sealed package to OPUS-5.",
-  "stop_rule": "Do not inspect target outcomes while constructing or judging historical ASV2 packets; do not modify prompt, model, aggregation or gates after real benchmark outputs are inspected."
+  "next_allowed_action": "Give only the sealed public historical handoff ZIP to OPUS-5. OPUS-5 must follow START_HERE_OPUS5.md verbatim, produce all 47,104 voter-condition outputs, freeze the output manifest and terminal report, and stop before scoring. Then run the already-frozen scorer without changing any contract element.",
+  "external_blocker": "OPUS-5 execution occurs outside this connected runtime. No further scientific or engineering decision is pending before that execution.",
+  "stop_rule": "Do not modify prompt, conditions, packet contents, model, aggregation, metrics or gates after any real ASV2 Opus-5 output is inspected."
 }
