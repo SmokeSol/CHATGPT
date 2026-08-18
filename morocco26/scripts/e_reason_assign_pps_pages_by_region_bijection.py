@@ -2,10 +2,12 @@
 """Audit a 92-page to 92-constituency identity bijection for PPS-2016 PDFs.
 
 The twelve official regional PDFs contain exactly one page per local
-constituency. This diagnostic compares only page-header Arabic text to the
-accepted Arabic identity bridge, then solves the maximum-weight one-to-one
-assignment separately inside each region. Low-score assignments remain marked
-BIJECTION_ONLY and are not automatically promoted by this script.
+constituency. Ouezzane is visibly filed inside the official `fes_meknes.pdf`
+asset although its frozen TAFRA region is Tanger-Tetouan-Al Hoceima; this
+first-party filing exception is handled explicitly and has no forecast effect.
+The script compares page-header Arabic text to the accepted identity bridge and
+solves a maximum-weight one-to-one assignment inside each filing bundle. Low-
+score assignments remain diagnostic only and are never promoted here.
 """
 from __future__ import annotations
 
@@ -40,6 +42,10 @@ REGION_MATCH = {
     "dakhla-oued-ed-dahab": "dakhla oued ed dahab",
 }
 
+# Identity-only filing exception proven by the official PDF itself: one page is
+# headed وزان inside fes_meknes.pdf. No seat, candidate or result is imported.
+FILING_REGION_OVERRIDE = {"ouezzane": "fes-meknes"}
+
 ALIASES = {
     "فجيج": "figuig",
     "فيجيج": "figuig",
@@ -47,6 +53,7 @@ ALIASES = {
     "شتوكة آيت باها": "chtouka-ait-baha",
     "انفا": "casablanca-anfa",
     "آنفا": "casablanca-anfa",
+    "وزان": "ouezzane",
     "سال المدينة": "sale-medina",
     "سلا المدينة": "sale-medina",
     "سال الجديدة": "sala-al-jadida",
@@ -85,12 +92,20 @@ def norm_latin(value: object) -> str:
     return " ".join(re.sub(r"[^a-z0-9]+", " ", text).split())
 
 
+def filing_region(record: dict) -> str | None:
+    cid = str(record["source_2026_constituency_id"])
+    if cid in FILING_REGION_OVERRIDE:
+        return FILING_REGION_OVERRIDE[cid]
+    region = norm_latin(record.get("historical_region"))
+    return next((slug for slug, canonical in REGION_MATCH.items() if canonical == region), None)
+
+
 def page_header(page) -> list[str]:
     text = page.extract_text() or ""
     lines = [norm_ar(line) for line in text.splitlines() if norm_ar(line)]
-    # Territory appears before candidate biographies. Twelve logical lines is a
-    # conservative bound and is recorded for audit.
-    return lines[:12]
+    # Territory normally appears before biographies. Sixteen lines covers the
+    # observed migrated font order while remaining a header-only diagnostic.
+    return lines[:16]
 
 
 def score_header(header: list[str], variants: set[str]) -> tuple[float, dict | None]:
@@ -108,7 +123,6 @@ def score_header(header: list[str], variants: set[str]) -> tuple[float, dict | N
                 score = 1.0 if vc == lc else min(len(vc), len(lc)) / max(len(vc), len(lc))
             else:
                 score = SequenceMatcher(None, lc, vc).ratio()
-            # Earlier header lines are slightly preferred only as a tie-breaker.
             adjusted = score - line_index * 1e-5
             if adjusted > best:
                 best = adjusted
@@ -117,7 +131,7 @@ def score_header(header: list[str], variants: set[str]) -> tuple[float, dict | N
 
 
 def max_assignment(weights: list[list[float]]) -> tuple[float, list[int]]:
-    """Bitmask dynamic program; regional n <= 16 so this is bounded."""
+    """Bitmask dynamic program; filing-bundle n <= 16 so this is bounded."""
     n = len(weights)
     if n == 0:
         return 0.0, []
@@ -159,25 +173,14 @@ def main() -> int:
     total_districts = 0
     for doc in sorted(probe["pdf_hits"], key=lambda x: x["region_slug"]):
         region_slug = doc["region_slug"]
-        canonical = [
-            r
-            for r in records
-            if norm_latin(r.get("historical_region")) == REGION_MATCH[region_slug]
-        ]
+        canonical = [r for r in records if filing_region(r) == region_slug]
         canonical.sort(key=lambda r: str(r["source_2026_constituency_id"]))
         reader = PdfReader(str(ROOT / doc["pdf"]["raw_path"]))
         headers = [page_header(page) for page in reader.pages]
         total_pages += len(headers)
         total_districts += len(canonical)
         if len(headers) != len(canonical):
-            region_results.append(
-                {
-                    "region_slug": region_slug,
-                    "status": "PAGE_COUNT_MISMATCH",
-                    "page_count": len(headers),
-                    "canonical_district_count": len(canonical),
-                }
-            )
+            region_results.append({"region_slug": region_slug, "status": "PAGE_COUNT_MISMATCH", "page_count": len(headers), "canonical_district_count": len(canonical)})
             continue
         weights: list[list[float]] = []
         pairs: list[list[dict | None]] = []
@@ -202,61 +205,21 @@ def main() -> int:
             elif selected_score >= 0.82 and selected_score - local_second >= 0.06:
                 method = "HIGH_CONFIDENCE_HEADER"
             else:
-                method = "REGION_BIJECTION_ONLY_REQUIRES_AUDIT"
-            pages.append(
-                {
-                    "page": page_index + 1,
-                    "header_lines": headers[page_index],
-                    "assigned_constituency_id": district["source_2026_constituency_id"],
-                    "historical_constituency": district["historical_constituency"],
-                    "historical_seats_2016": int(district["historical_seats_2016"]),
-                    "assignment_score": round(selected_score, 6),
-                    "page_local_second_score": round(local_second, 6),
-                    "page_local_margin": round(selected_score - local_second, 6),
-                    "matched_pair": pairs[page_index][district_index],
-                    "assignment_method": method,
-                }
-            )
-        region_results.append(
-            {
-                "region_slug": region_slug,
-                "status": "BIJECTION_SOLVED",
-                "page_count": len(headers),
-                "canonical_district_count": len(canonical),
-                "assignment_total_score": round(total_score, 6),
-                "exact_or_high_confidence_pages": sum(p["assignment_method"] != "REGION_BIJECTION_ONLY_REQUIRES_AUDIT" for p in pages),
-                "bijection_only_pages": sum(p["assignment_method"] == "REGION_BIJECTION_ONLY_REQUIRES_AUDIT" for p in pages),
-                "pages": pages,
-            }
-        )
+                method = "FILING_BIJECTION_ONLY_REQUIRES_AUDIT"
+            pages.append({"page": page_index + 1, "header_lines": headers[page_index], "assigned_constituency_id": district["source_2026_constituency_id"], "historical_constituency": district["historical_constituency"], "historical_seats_2016": int(district["historical_seats_2016"]), "assignment_score": round(selected_score, 6), "page_local_second_score": round(local_second, 6), "page_local_margin": round(selected_score - local_second, 6), "matched_pair": pairs[page_index][district_index], "assignment_method": method})
+        region_results.append({"region_slug": region_slug, "status": "BIJECTION_SOLVED", "page_count": len(headers), "canonical_district_count": len(canonical), "assignment_total_score": round(total_score, 6), "exact_or_high_confidence_pages": sum(p["assignment_method"] != "FILING_BIJECTION_ONLY_REQUIRES_AUDIT" for p in pages), "bijection_only_pages": sum(p["assignment_method"] == "FILING_BIJECTION_ONLY_REQUIRES_AUDIT" for p in pages), "pages": pages})
 
     solved = all(r.get("status") == "BIJECTION_SOLVED" for r in region_results)
-    unique_ids = {
-        p["assigned_constituency_id"]
-        for r in region_results
-        for p in r.get("pages", [])
-    }
+    assigned_ids = [p["assigned_constituency_id"] for r in region_results for p in r.get("pages", [])]
+    unique_ids = set(assigned_ids)
     payload = {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "status": "PASS_92_TO_92_IDENTITY_BIJECTION_DIAGNOSTIC" if solved and total_pages == 92 and len(unique_ids) == 92 else "FAIL_CLOSED",
-        "counts": {
-            "regional_pdfs": len(region_results),
-            "pdf_pages": total_pages,
-            "canonical_districts": total_districts,
-            "unique_assigned_constituency_ids": len(unique_ids),
-            "exact_or_high_confidence_pages": sum(r.get("exact_or_high_confidence_pages", 0) for r in region_results),
-            "bijection_only_pages": sum(r.get("bijection_only_pages", 0) for r in region_results),
-        },
+        "status": "PASS_92_TO_92_IDENTITY_BIJECTION_DIAGNOSTIC" if solved and total_pages == 92 and total_districts == 92 and len(assigned_ids) == 92 and len(unique_ids) == 92 else "FAIL_CLOSED",
+        "counts": {"regional_pdfs": len(region_results), "pdf_pages": total_pages, "canonical_districts": total_districts, "assigned_pages": len(assigned_ids), "unique_assigned_constituency_ids": len(unique_ids), "exact_or_high_confidence_pages": sum(r.get("exact_or_high_confidence_pages", 0) for r in region_results), "bijection_only_pages": sum(r.get("bijection_only_pages", 0) for r in region_results)},
+        "filing_region_override": FILING_REGION_OVERRIDE,
         "regions": region_results,
-        "invariants": {
-            "assignment_scope": "IDENTITY_ONLY_WITHIN_REGION",
-            "candidate_facts_generated": False,
-            "bijection_only_assignments_promoted": False,
-            "outcomes_unsealed": False,
-            "predictive_judgments_generated": False,
-            "F1_created": False,
-        },
+        "invariants": {"assignment_scope": "IDENTITY_ONLY_WITHIN_OFFICIAL_FILING_BUNDLE", "candidate_facts_generated": False, "bijection_only_assignments_promoted": False, "outcomes_unsealed": False, "predictive_judgments_generated": False, "F1_created": False},
     }
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "bijection.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
