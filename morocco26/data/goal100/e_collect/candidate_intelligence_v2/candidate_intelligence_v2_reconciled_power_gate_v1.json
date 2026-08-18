@@ -13,15 +13,15 @@
   },
   "2016_TO_2021": {
     "coverage_gate": true,
-    "gate_pass": false,
-    "positive_instances": 28,
+    "gate_pass": true,
+    "positive_instances": 30,
     "rows": 91,
     "states": {
       "UNKNOWN": 4,
-      "VERIFIED_FALSE": 59,
-      "VERIFIED_TRUE": 28
+      "VERIFIED_FALSE": 57,
+      "VERIFIED_TRUE": 30
     },
-    "support_gate": false,
+    "support_gate": true,
     "territories_known": 87
   },
   "coefficient_authorized": false,
@@ -31,7 +31,7 @@
   "note": "This gate establishes data power for one head-of-list incumbency feature only. It does not establish predictive value or LLM-reasoner value.",
   "reasoner_identifiability": "NOT_YET_PASSED_SINGLE_FEATURE_ONLY",
   "schema_version": "1.0",
-  "status": "FAIL_RECONCILED_HEAD_PRIOR_MP_DATA_POWER",
+  "status": "PASS_RECONCILED_HEAD_PRIOR_MP_DATA_POWER",
   "thresholds": {
     "minimum_known_territories_each_transition": 74,
     "minimum_positive_instances_each_transition": 30
