@@ -1,0 +1,33 @@
+name: morocco26-e-reason-pps-direct-page-summary
+on:
+  workflow_dispatch:
+  push:
+    branches: [morocco26-e-reason]
+    paths:
+      - "morocco26/scripts/e_reason_summarize_pps_direct_page_map.py"
+      - "morocco26/data/goal100/e_reason/evidence/pps_2016_direct_page_identity/direct_map.json"
+      - "morocco26/data/goal100/e_reason/evidence/combined_2016_candidate_gate/gate.json"
+      - ".github/workflows/morocco26-e-reason-pps-direct-page-summary.yml"
+permissions:
+  contents: write
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-e-reason, fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python morocco26/scripts/validate_e_reason_prereg.py
+      - run: python morocco26/scripts/e_reason_summarize_pps_direct_page_map.py
+      - run: python morocco26/scripts/validate_e_reason_prereg.py
+      - name: Commit summary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/data/goal100/e_reason/evidence/pps_2016_direct_page_identity_summary/summary.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "experiment(e-reason): freeze direct PPS page-map impact summary"
+          git pull --rebase origin morocco26-e-reason
+          git push origin HEAD:morocco26-e-reason
