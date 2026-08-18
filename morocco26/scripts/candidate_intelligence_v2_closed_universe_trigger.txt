@@ -1,4 +1,4 @@
-trigger_id=M26-CANDIDATE-INTEL-V2-LOCAL2015-2021-AUDITED-GATE-20260818
+trigger_id=M26-CANDIDATE-INTEL-V2-REASONER-POWER-GATE-20260818
 base=morocco26-e-reason
-network_required=true
-purpose=rerun_2021_local2015_power_gate_after_19_identity_adjudications
+network_required=false
+purpose=evaluate_two_feature_joint_identifiability_under_frozen_contract
