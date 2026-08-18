@@ -6,6 +6,12 @@ on:
       - 'morocco26/scripts/candidate_intelligence_v2_local2015_power_probe_2021.py'
       - 'morocco26/data/goal100/e_collect/candidate_intelligence_v2/2021/pjd_arabic_identity_bridge_74_v1.json'
       - '.github/workflows/candidate-intelligence-v2-local2015-probe-2021.yml'
+  pull_request:
+    branches: [morocco26-e-reason]
+    paths:
+      - 'morocco26/scripts/candidate_intelligence_v2_closed_universe_trigger.txt'
+      - 'morocco26/scripts/candidate_intelligence_v2_local2015_power_probe_2021.py'
+      - 'morocco26/data/goal100/e_collect/candidate_intelligence_v2/2021/pjd_arabic_identity_bridge_74_v1.json'
   workflow_dispatch:
 permissions:
   contents: write
