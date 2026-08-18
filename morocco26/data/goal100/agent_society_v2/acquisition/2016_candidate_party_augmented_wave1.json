@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "acquisition_id": "M26-ASV2-2016-CANDIDATE-PARTY-WAVE1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "target_outcome_used": false,
+  "rule": "Only explicit pre-election candidacy/head-list statements with named person, named party and resolved constituency are included. Ambiguous combined constituencies, merely proposed/unconfirmed candidacies, and all post-election result/elected-member sources are excluded.",
+  "records": [
+    {"constituency_id":"sale-medina","party":"MP","candidate":"Driss Sentissi","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"sale-medina","party":"RNI","candidate":"Noureddine Lazrak","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+
+    {"constituency_id":"al-hoceima","party":"PJD","candidate":"Najib Ouazzani","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"al-hoceima","party":"PI","candidate":"Noureddine Mediane","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"al-hoceima","party":"USFP","candidate":"Abdelhak Amghar","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"al-hoceima","party":"MP","candidate":"Mohamed Laâraj","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"al-hoceima","party":"PAM","candidate":"Mohamed El Hamouti","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+
+    {"constituency_id":"laayoune","party":"PI","candidate":"Hamdi Ould Rachid","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"laayoune","party":"PAM","candidate":"Mohamed Khatri El Joumani","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"laayoune","party":"USFP","candidate":"Hassan Derham","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"laayoune","party":"PJD","candidate":"Brahim Daif","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+
+    {"constituency_id":"kenitra","party":"PJD","candidate":"Aziz Rebbah","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"kenitra","party":"PAM","candidate":"Faouzi Chaâbi","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"kenitra","party":"RNI","candidate":"Bousselham Dich","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+
+    {"constituency_id":"tetouan","party":"RNI","candidate":"Rachid Talbi Alami","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"tetouan","party":"PI","candidate":"Achraf Abroun","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"tetouan","party":"PJD","candidate":"Abdessadek Idouguar","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+
+    {"constituency_id":"rabat-ocean","party":"FGD","candidate":"Omar Balafrej","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"rabat-ocean","party":"PJD","candidate":"Mohamed Sadiki","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"rabat-ocean","party":"RNI","candidate":"Abdelkader Tatou","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"rabat-ocean","party":"PAM","candidate":"Mohamed El Aouni","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+
+    {"constituency_id":"larache","party":"PI","candidate":"Abdellah Bakkali","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"larache","party":"PJD","candidate":"Mohamed Hamdaoui","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"larache","party":"RNI","candidate":"Abdelilah Hssissen","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"larache","party":"MP","candidate":"Mohamed Simou","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+
+    {"constituency_id":"taounate-tissa","party":"RNI","candidate":"Mohamed Abbou","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"taounate-tissa","party":"MP","candidate":"Driss Merroun","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+
+    {"constituency_id":"fes-nord","party":"USFP","candidate":"Yasser Jaouhar","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"fes-nord","party":"PAM","candidate":"Abdelaziz Lebbar","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"fes-nord","party":"RNI","candidate":"Hassan Tazi","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"fes-nord","party":"PI","candidate":"Mohamed Abdelwahab Al-Rafiki","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+
+    {"constituency_id":"fes-sud","party":"PJD","candidate":"Driss El Azami","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"fes-sud","party":"RNI","candidate":"Rachid El Faik","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"fes-sud","party":"PAM","candidate":"Mohamed Slaoui","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"fes-sud","party":"MP","candidate":"Ahmed Amimi","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"fes-sud","party":"USFP","candidate":"Abdelilah El Fassi Fihri","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+
+    {"constituency_id":"tanger-assilah","party":"PJD","candidate":"Najib Boulif","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"tanger-assilah","party":"PAM","candidate":"Fouad El Omari","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"tanger-assilah","party":"RNI","candidate":"Lahcen Bouhziz","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+
+    {"constituency_id":"mohammedia","party":"PJD","candidate":"Saâd Eddine El Othmani","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"mohammedia","party":"USFP","candidate":"Mehdi Mezouari","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"mohammedia","party":"RNI","candidate":"Mohamed El Atouani","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+
+    {"constituency_id":"ain-sebaa-hay-mohammadi","party":"PJD","candidate":"Abdelaziz El Omari","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"ain-sebaa-hay-mohammadi","party":"RNI","candidate":"Hassan Benomar","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+    {"constituency_id":"ain-sebaa-hay-mohammadi","party":"USFP","candidate":"Abdelmaqsoud Rachdi","source_url":"https://telquel.ma/2016/09/10/exclusif-qui-se-presente-ou-aux-legislatives-2016_1513067","published":"2016-09-10"},
+
+    {"constituency_id":"nouaceur","party":"PAM","candidate":"Choukri Abdelkrim","source_url":"https://ledesk.ma/enoff/les-tetes-de-liste-du-pam-designees-dans-les-circonscriptions-de-casablanca/","published":"2016-08-26"},
+    {"constituency_id":"mediouna","party":"PAM","candidate":"Salaheddine Aboughali","source_url":"https://ledesk.ma/enoff/les-tetes-de-liste-du-pam-designees-dans-les-circonscriptions-de-casablanca/","published":"2016-08-26"},
+    {"constituency_id":"sidi-bernoussi","party":"PAM","candidate":"Ahmed Brija","source_url":"https://ledesk.ma/enoff/les-tetes-de-liste-du-pam-designees-dans-les-circonscriptions-de-casablanca/","published":"2016-08-26"},
+
+    {"constituency_id":"rabat-chellah","party":"PAM","candidate":"Brahim El Joumani","source_url":"https://medias24.com/2016/08/19/legislatives-le-pam-a-designe-ses-tetes-de-liste-a-rabat/","published":"2016-08-19"},
+
+    {"constituency_id":"berrechid","party":"RNI","candidate":"Saber Kiaf","source_url":"https://www.berrechidnews.com/2016/09/8869.html","published":"2016-09-24"},
+    {"constituency_id":"berrechid","party":"PAM","candidate":"Noureddine El Baidi","source_url":"https://www.berrechidnews.com/2016/09/8869.html","published":"2016-09-24"},
+    {"constituency_id":"berrechid","party":"PI","candidate":"Zine El Abidine El Hawas","source_url":"https://www.berrechidnews.com/2016/09/8869.html","published":"2016-09-24"},
+    {"constituency_id":"berrechid","party":"PJD","candidate":"Mohamed Bouchnif","source_url":"https://www.berrechidnews.com/2016/09/8869.html","published":"2016-09-24"},
+    {"constituency_id":"berrechid","party":"USFP","candidate":"Farid Zaouaoui","source_url":"https://www.berrechidnews.com/2016/09/8869.html","published":"2016-09-24"},
+    {"constituency_id":"berrechid","party":"UC","candidate":"Abdelkarim Lemindaa","source_url":"https://www.berrechidnews.com/2016/09/8869.html","published":"2016-09-24"},
+    {"constituency_id":"berrechid","party":"MP","candidate":"Mohamed Metqi","source_url":"https://www.berrechidnews.com/2016/09/8869.html","published":"2016-09-24"},
+
+    {"constituency_id":"khouribga","party":"PI","candidate":"Lahcen Haddad","source_url":"https://medias24.com/2016/09/15/lahcen-haddad-tete-de-liste-de-listiqlal-a-khouribga/","published":"2016-09-15"},
+    {"constituency_id":"khouribga","party":"MP","candidate":"Abderrahim El Aalafi","source_url":"https://medias24.com/2016/09/15/lahcen-haddad-tete-de-liste-de-listiqlal-a-khouribga/","published":"2016-09-15"},
+    {"constituency_id":"khouribga","party":"PAM","candidate":"Abderrahim Atmoune","source_url":"https://medias24.com/2016/09/15/lahcen-haddad-tete-de-liste-de-listiqlal-a-khouribga/","published":"2016-09-15"},
+    {"constituency_id":"khouribga","party":"PJD","candidate":"Chargui El Ghalmi","source_url":"https://medias24.com/2016/09/15/lahcen-haddad-tete-de-liste-de-listiqlal-a-khouribga/","published":"2016-09-15"},
+
+    {"constituency_id":"guelmim","party":"RNI","candidate":"Mbarka Bouaida","source_url":"https://medias24.com/2016/09/04/legislatives-le-rni-devoile-81-tetes-de-liste/","published":"2016-09-04"},
+    {"constituency_id":"nador","party":"RNI","candidate":"Mustapha Mansouri","source_url":"https://medias24.com/2016/09/04/legislatives-le-rni-devoile-81-tetes-de-liste/","published":"2016-09-04"},
+    {"constituency_id":"meknes","party":"RNI","candidate":"Badr Tahri","source_url":"https://medias24.com/2016/09/04/legislatives-le-rni-devoile-81-tetes-de-liste/","published":"2016-09-04"},
+    {"constituency_id":"midelt","party":"RNI","candidate":"Saïd Chbaâtou","source_url":"https://medias24.com/2016/09/04/legislatives-le-rni-devoile-81-tetes-de-liste/","published":"2016-09-04"},
+    {"constituency_id":"ain-chock","party":"RNI","candidate":"Chafik Benkirane","source_url":"https://medias24.com/2016/09/04/legislatives-le-rni-devoile-81-tetes-de-liste/","published":"2016-09-04"}
+  ]
+}
