@@ -1,0 +1,21 @@
+{
+  "anonymous_election_id": "E_563101AA29400273",
+  "blind_bundle_sha256": "19706fa27cd436dc51820b98bf84948a5a83068948206596e77f280296d0d2ca",
+  "blind_packet_count": 92,
+  "blind_party_cells": 828,
+  "c2_prompt_sha256": "188853304a6d20a385a055deac0d63ee57b97248f3aa386f5f1b7ae360a0b946",
+  "created_at": "2026-08-18T10:23:48.640497+00:00",
+  "experiment_id": "M26-GOAL100-E-REASON-V1",
+  "leakage_scan": {
+    "scan_version": "1.0",
+    "status": "PASS",
+    "violations": []
+  },
+  "mapping_material_committed": false,
+  "mapping_material_judge_access": false,
+  "mapping_sha256": "ed7777b7b493c32eef8daf993f1d6a108a903a05b4534e6e7b146588b488f3db",
+  "schema_version": "1.0",
+  "seal_id": "M26-E-REASON-DEVELOPMENT-MAPPING-SEAL-V1",
+  "status": "SEALED_BEFORE_ANY_PREDICTIVE_JUDGMENT",
+  "unseal_rule": "MAPPING_MATERIAL_MAY_NOT_BE_EXPOSED_TO_C2_BEFORE_CORRESPONDING_JUDGMENT_HASHES_ARE_FROZEN"
+}

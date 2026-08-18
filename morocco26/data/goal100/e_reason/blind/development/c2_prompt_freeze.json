@@ -1,0 +1,9 @@
+{
+  "conditions_path": "morocco26/data/goal100/e_reason/e_reason_conditions_v1.json",
+  "output_schema_path": "morocco26/data/goal100/e_reason/e_reason_output_schema_v1.json",
+  "prompt_path": "morocco26/data/goal100/e_reason/c2_prompt_v1.md",
+  "prompt_sha256": "188853304a6d20a385a055deac0d63ee57b97248f3aa386f5f1b7ae360a0b946",
+  "schema_version": "1.0",
+  "semantic_edits_after_freeze": "FORBIDDEN_WITHOUT_NEW_EXPERIMENT_VERSION",
+  "status": "FROZEN_BEFORE_C2_JUDGMENT"
+}
