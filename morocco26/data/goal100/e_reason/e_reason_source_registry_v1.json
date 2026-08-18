@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "registry_id": "M26-E-REASON-SOURCE-REGISTRY-V1",
   "created_at": "2026-08-17T23:22:00+01:00",
   "policy": "morocco26/data/goal100/e_reason/e_reason_source_policy_v1.json",
@@ -62,6 +62,26 @@
         "Only assets reached from a pre-cutoff official pps.ma candidate page, or independently proven pre-cutoff first-party candidate material, are eligible.",
         "No generic content from the legacy domain is automatically admissible.",
         "No post-election outcomes may be used."
+      ]
+    },
+    {
+      "domain": "rni.ma",
+      "source_class": "T1_OFFICIAL_PARTY",
+      "qualification_status": "QUALIFIED_BEFORE_EXTRACTION",
+      "qualification_basis": [
+        "The domain identifies itself as the website of Morocco's Rassemblement National des Independants / التجمع الوطني للأحرار.",
+        "Independent institutional and organization metadata identify www.rni.ma as the RNI website.",
+        "Qualification is being frozen before any 2016 candidate identity is extracted from rni.ma."
+      ],
+      "qualification_evidence": [
+        {"url": "https://rni.ma/home/", "observed_title": "(RNI) الموقع الإلكتروني لحزب التجمع الوطني للأحرار", "observed_at": "2026-08-18", "candidate_fact_extraction_performed_before_qualification": false},
+        {"source": "Maroc.ma / RNI organization metadata", "observed_relation": "Rassemblement National des Independants political party", "observed_at": "2026-08-18"}
+      ],
+      "restrictions": [
+        "Only pre-cutoff 2016 first-party nomination/list material or mechanically proven archival mirrors of such material may enter E_reason.",
+        "Current pages modified after cutoff are discovery/provenance only unless their relevant 2016 content is independently versioned or archived before cutoff.",
+        "No target-election outcome, winner/loser statement or elected-member list may be used.",
+        "Search-engine snippets are discovery only and never candidate evidence."
       ]
     }
   ]
