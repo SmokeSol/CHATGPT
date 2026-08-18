@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-E-REASON-HISTORICAL-COLLECTION-CLOSURE-V1",
+  "created_at": "2026-08-18T08:48:05+00:00",
+  "status": "PASS",
+  "experiment_id": "M26-GOAL100-E-REASON-V1",
+  "branch": "morocco26-e-reason",
+  "gates": {
+    "2016": {
+      "path": "morocco26/data/goal100/e_reason/evidence/strict_2016_integrity_gate/gate.json",
+      "sha256": "fe54a986d1636a3c02827b15d49e07b57b0777255bdb74b8882372bc7c755429",
+      "status": "E_REASON_2016_STRICT_INTEGRITY_GATE_PASS",
+      "identity_districts": 70,
+      "required_identity_districts": 70,
+      "enriched_districts": 80,
+      "required_enriched_districts": 50,
+      "unsafe_layers_excluded": [
+        "PPS_DIRECT",
+        "PPS_LEGACY_FALLBACK"
+      ]
+    },
+    "2021": {
+      "path": "morocco26/data/goal100/e_reason/evidence/2021_head_list_rank_enrichment/gate.json",
+      "sha256": "5c36da3c746f49f43e31909386d07f676d1e1bb0953aaa01082d7eb237ee081b",
+      "status": "E_REASON_2021_COLLECTION_GATE_PASS",
+      "identity_districts": 82,
+      "required_identity_districts": 70,
+      "enriched_districts": 82,
+      "required_enriched_districts": 50
+    }
+  },
+  "collection_phase": "CLOSED_PASS",
+  "next_authorized_protocol_step": "BUILD_COMPLETE_2016_AND_2021_EVIDENCE_PACKETS_WITH_EXPLICIT_MISSINGNESS",
+  "invariants": {
+    "preregistration_not_rewritten": true,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "forecast_delta_generated": false,
+    "F1_created": false,
+    "F0_overwritten": false,
+    "Atlas_UI_modified": false
+  }
+}
