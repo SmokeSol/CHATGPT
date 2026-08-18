@@ -6,6 +6,12 @@ on:
     paths:
       - 'morocco26/scripts/candidate_intelligence_v2_identity_diagnostic.py'
       - '.github/workflows/candidate-intelligence-v2-identity-diagnostic.yml'
+  pull_request:
+    branches: [morocco26-e-reason]
+    paths:
+      - 'morocco26/scripts/candidate_intelligence_v2_identity_diag_trigger.txt'
+      - 'morocco26/scripts/candidate_intelligence_v2_identity_diagnostic.py'
+      - '.github/workflows/candidate-intelligence-v2-identity-diagnostic.yml'
   workflow_dispatch:
 permissions:
   contents: write
