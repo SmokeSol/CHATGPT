@@ -1,0 +1,58 @@
+{
+  "2011_TO_2016": {
+    "coverage_gate": true,
+    "known_coverage": 0.9054054054054054,
+    "known_true_false": 67,
+    "positive_instances": 24,
+    "roster_rows": 74,
+    "states": {
+      "UNKNOWN": 7,
+      "VERIFIED_FALSE": 43,
+      "VERIFIED_TRUE": 24
+    },
+    "support_gate": false
+  },
+  "2016_TO_2021": {
+    "coverage_gate": false,
+    "known_coverage": 0.7692307692307693,
+    "known_true_false": 70,
+    "positive_instances": 10,
+    "roster_rows": 91,
+    "states": {
+      "UNKNOWN": 21,
+      "VERIFIED_FALSE": 60,
+      "VERIFIED_TRUE": 10
+    },
+    "support_gate": false
+  },
+  "data_integrity": {
+    "forecast_modified": false,
+    "network_used": false,
+    "parquet_files": [
+      "data__test-00000-of-00001.parquet",
+      "data__train-00000-of-00001.parquet"
+    ],
+    "prior_universe_2011_2016_rows": 395,
+    "prior_universe_2016_2021_rows": 395
+  },
+  "feature": {
+    "coefficient_authorized": false,
+    "definition": "Whether the focal party's pre-election local head of list is present in the complete elected-member universe of the immediately prior House legislature.",
+    "entity": "PARTY_X_LOCAL_CONTEST_HEAD",
+    "feature_id": "V2_HEAD_PRIOR_CYCLE_MP",
+    "relationship_to_B2": "NEW_NARROWER_V2_FEATURE; it does not replace or rewrite B2_P01, which counted all registered candidates."
+  },
+  "gate_id": "M26-CANDIDATE-INTELLIGENCE-V2-CLOSED-UNIVERSE-POWER-GATE-V1",
+  "reasoner_gate": {
+    "rule": "A data-power PASS on one binary feature does not establish C1-vs-C2 reasoner identifiability; at least one additional independently varying feature family must be recovered and the prospective contrast surface audited before any LLM run.",
+    "status": "NOT_EVALUATED_BY_THIS_SINGLE_FEATURE_GATE"
+  },
+  "schema_version": "1.0",
+  "status": "FAIL_HEAD_INCUMBENCY_DATA_POWER",
+  "thresholds": {
+    "fuzzy_unknown_guard": 0.86,
+    "minimum_known_coverage_each_transition": 0.8,
+    "minimum_positive_instances_each_transition": 30,
+    "unknown_is_false": false
+  }
+}
