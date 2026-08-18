@@ -1,6 +1,4 @@
-# ChatGPT Projects
-
-This repository hosts projects built and maintained from ChatGPT/Codex workflows.
+# Projects
 
 ## MOROCCO//26
 
