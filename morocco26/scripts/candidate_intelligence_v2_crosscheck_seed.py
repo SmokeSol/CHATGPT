@@ -53,7 +53,6 @@ def feature_leads(profile: str) -> list[str]:
         out.append("PARTY_OR_PARLIAMENTARY_OFFICE_MENTION")
     if re.search(r"\bministre\b|ex-ministre|président du gouvernement|president du gouvernement", p):
         out.append("FORMER_MINISTER_OR_NATIONAL_OFFICE_MENTION")
-    # Prior party labels are valuable because current party is known from the row.
     for party in sorted(PARTIES):
         if party != "PI" and re.search(rf"\b{re.escape(party.lower())}\b", p):
             out.append("PRIOR_OR_OTHER_PARTY_MENTION")
@@ -94,7 +93,6 @@ def resolve_exact(seed: dict[str, Any], by_name: dict[str, list[dict[str, Any]]]
     if len(matches) == 1:
         return "EXACT_UNIQUE", matches[0]
     if len(matches) > 1:
-        # Safe deterministic disambiguation only if one row is in the seed territory.
         same_t = [r for r in matches if r.get("territory_id") == seed.get("territory_id")]
         if len(same_t) == 1:
             return "EXACT_TERRITORY_DISAMBIGUATED", same_t[0]
@@ -103,6 +101,22 @@ def resolve_exact(seed: dict[str, Any], by_name: dict[str, list[dict[str, Any]]]
             return "EXACT_PARTY_DISAMBIGUATED", same_p[0]
         return "EXACT_AMBIGUOUS", None
     return "NO_EXACT_MATCH", None
+
+
+def variant_diagnostic(item: dict[str, Any]) -> str | None:
+    """Classify close-name unresolved rows without promoting them to verified."""
+    f = item.get("fuzzy_diagnostic") or {}
+    seq = float(f.get("sequence") or 0.0)
+    score = float(f.get("score") or 0.0)
+    gap = float(f.get("gap") or 0.0)
+    same_party = f.get("suggested_party") == item.get("party")
+    same_territory = f.get("suggested_territory") == item.get("territory_id")
+    context = same_party or same_territory
+    if seq >= 0.97 and score >= 0.75 and context:
+        return "VERY_HIGH_NAME_VARIANT_DIAGNOSTIC"
+    if seq >= 0.93 and score >= 0.72 and gap >= 0.03 and context:
+        return "HIGH_NAME_VARIANT_DIAGNOSTIC"
+    return None
 
 
 def main() -> int:
@@ -154,6 +168,7 @@ def main() -> int:
         else:
             item["cross_source_status"] = "UNRESOLVED"
             item["fuzzy_diagnostic"] = best_fuzzy(seed["candidate"], prior)
+            item["name_variant_diagnostic"] = variant_diagnostic(item)
         details.append(item)
 
     DETAIL.parent.mkdir(parents=True, exist_ok=True)
@@ -161,8 +176,23 @@ def main() -> int:
 
     verified = sum(1 for x in details if x["cross_source_status"] == "CROSS_SOURCE_VERIFIED")
     objective = sum(1 for x in details if x["m24_objective_feature_leads"])
+    variant_counts = Counter(x.get("name_variant_diagnostic") for x in details if x.get("name_variant_diagnostic"))
+    variant_rows = sum(variant_counts.values())
+    examples = [
+        {
+            "candidate": x["candidate"],
+            "party": x["party"],
+            "territory_id": x["territory_id"],
+            "diagnostic": x.get("name_variant_diagnostic"),
+            "suggested_name": x.get("fuzzy_diagnostic", {}).get("suggested_name"),
+            "sequence": x.get("fuzzy_diagnostic", {}).get("sequence"),
+            "suggested_party": x.get("fuzzy_diagnostic", {}).get("suggested_party"),
+            "suggested_territory": x.get("fuzzy_diagnostic", {}).get("suggested_territory"),
+        }
+        for x in details if x.get("name_variant_diagnostic")
+    ]
     audit = {
-        "schema_version": "1.0",
+        "schema_version": "1.1",
         "audit_id": "M26-CANDIDATE-INTEL-V2-2021-CROSS-SOURCE-SEED-V1",
         "status": "OFFLINE_CROSS_SOURCE_AUDIT_COMPLETE",
         "seed_rows": len(seeds),
@@ -177,7 +207,15 @@ def main() -> int:
         "match_modes": dict(sorted(match_counts.items())),
         "m24_feature_lead_counts": dict(sorted(feature_counts.items())),
         "cross_source_derived_feature_counts": dict(sorted(derived.items())),
-        "verification_rule": "Only unique exact normalized TAFRA 2016 member-name matches (or exact matches safely disambiguated by territory/party) receive CROSS_SOURCE_VERIFIED. Fuzzy matches never count.",
+        "unresolved_name_variant_diagnostic": {
+            "rows": variant_rows,
+            "by_class": dict(sorted(variant_counts.items())),
+            "exact_plus_variant_diagnostic_rows": verified + variant_rows,
+            "exact_plus_variant_diagnostic_rate": (verified + variant_rows) / len(seeds) if seeds else 0.0,
+            "examples": examples,
+            "warning": "These rows remain UNRESOLVED and are not counted as CROSS_SOURCE_VERIFIED. The diagnostic estimates how much of exact-match loss is plausibly orthographic/transliteration noise."
+        },
+        "verification_rule": "Only unique exact normalized TAFRA 2016 member-name matches (or exact matches safely disambiguated by territory/party) receive CROSS_SOURCE_VERIFIED. Fuzzy/name-variant diagnostics never count as verified.",
         "scientific_interpretation": "This sample measures recoverability and independent cross-source verifiability, not predictive effect. It cannot update F0 and does not validate a coefficient.",
         "comparison_anchor": {"e_reason_v1_2021_directional_nonzero_cells": 59, "e_reason_v1_2021_party_cells": 828},
         "next_gate": "Scale extraction across full pre-election 2021/2016 source surfaces, then aggregate candidate facts to party x constituency and run support/missingness/predictive backtest before E_reason V2."
