@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "plan_id": "M26-ASV2-2016-CANDIDATE-PARTY-RECOVERY-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "reason": "Frozen ASV2 data-power gate requires at least 70 constituencies with verified candidate identities from at least three parties. Existing strict 2016 evidence has 70 constituencies with >=3 candidate identities but zero constituencies with >=3 distinct candidate parties; max distinct parties is two.",
+  "target_outcome_use": false,
+  "threshold_change_allowed": false,
+  "e_reason_artifacts_mutable": false,
+  "acquisition_scope": {
+    "primary": "Recover the pre-election RNI 2016 head-list roster embedded as two tables in the 4 September 2016 Medias24 article.",
+    "secondary": "After adding RNI, identify only the residual constituencies still below three verified parties and recover one or more additional pre-election head-list identities for those constituencies from dated party, press, or official sources.",
+    "forbidden": [
+      "post-election result pages used as candidate evidence",
+      "winner lists used to infer candidacy",
+      "generic re-collection of already sufficient 2021 evidence",
+      "lowering the 70-district or three-party thresholds"
+    ]
+  },
+  "primary_sources": [
+    {
+      "url": "https://medias24.com/2016/09/04/legislatives-le-rni-devoile-81-tetes-de-liste/",
+      "published": "2016-09-04",
+      "party": "RNI",
+      "declared_head_lists": 81,
+      "table_image_urls": [
+        "https://medias24.com/content/uploads/2016/09/rni_candidats_tableaux_1.jpg",
+        "https://medias24.com/content/uploads/2016/09/rni_tableaux_candidats_2.jpg"
+      ]
+    }
+  ],
+  "success_rule": "Re-run the frozen candidate-party coverage audit on the augmented ASV2-only evidence layer. PASS only if >=70 constituencies have >=3 distinct verified candidate parties. Otherwise continue only the bounded residual acquisition or terminate ASV2_DATA_POWER_INSUFFICIENT.",
+  "status": "FROZEN_BEFORE_RECOVERY_EXECUTION"
+}
