@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "M26-E-REASON-C2-DEV-OPUS5-FREEZE-RECEIPT-V1",
+  "experiment_id": "M26-GOAL100-E-REASON-V1",
+  "condition_id": "C2_LLM_RESIDUAL",
+  "run_id": "M26-E-REASON-C2-DEV-OPUS5-V1",
+  "model_or_human_id": "OPUS-5",
+  "source_bundle_commit": "4604caba2cd12d4346c18f13825436bca3cb9e0e",
+  "bundle_sha256": "19706fa27cd436dc51820b98bf84948a5a83068948206596e77f280296d0d2ca",
+  "c2_prompt_sha256": "188853304a6d20a385a055deac0d63ee57b97248f3aa386f5f1b7ae360a0b946",
+  "terminal_status": "PASS_C2_JUDGMENTS_FROZEN_READY_FOR_2016_CALIBRATION",
+  "validation": {
+    "valid_final_judgments": 92,
+    "expected_final_judgments": 92,
+    "judgment_cells": 828,
+    "total_attempts": 92,
+    "total_retries": 0,
+    "schema_and_semantic_errors_found_by_independent_receipt_check": 0,
+    "ordered_packet_hashes_match_manifest": true,
+    "ordered_canonical_judgment_hashes_match_manifest": true,
+    "terminal_manifest_raw_sha_matches": true,
+    "mapping_seen_by_judge": false,
+    "outcomes_seen_by_judge": false,
+    "web_used_by_judge": false
+  },
+  "score_distribution": {
+    "-2": 0,
+    "-1": 0,
+    "0": 706,
+    "+1": 122,
+    "+2": 0
+  },
+  "nonzero_evidence_pattern": {
+    "nonzero_cells": 122,
+    "all_nonzero_scores": 1,
+    "all_nonzero_cells_cite": ["FORMAL_ENDORSEMENT", "SOURCE_CONFLICT"],
+    "interpretation_at_freeze": "DESCRIPTIVE_ONLY_NO_OUTCOME_SCORING_YET"
+  },
+  "received_file_sha256_raw": {
+    "c2_terminal_report.json": "f315736921ba65fb2b00991bb992e8dbc244fea9db3dec888aaaec47dd5acf92",
+    "c2_all_attempts.jsonl": "f331f9a20b37b87bbf3bc3ea999637146c1123e9aca0a727e47ab03d051bf3b6",
+    "c2_judgment_manifest.json": "74d325b68f6b9ebb2edd51261728bf9bf65fe7473b2c2f2281e59880546e3d9c",
+    "c2_judgments.jsonl": "defa5ffd7ca1ce44a9d23c692087c105f273f04eb1eb13f570aa8fa99759c9a4"
+  },
+  "scientific_boundary": {
+    "development_outcome_opened_before_this_receipt": false,
+    "lambda_selected_before_this_receipt": false,
+    "holdout_packets_created_before_this_receipt": false,
+    "next_allowed_action": "GENERATE_AND_FREEZE_C1_DEVELOPMENT_JUDGMENTS_THEN_UNSEAL_2016_FOR_LAMBDA_CALIBRATION"
+  }
+}
