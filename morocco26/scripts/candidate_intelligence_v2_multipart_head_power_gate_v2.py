@@ -16,4 +16,5 @@ def main():
  f1=load_module('f1baseline',HERE/'goal100_f1_baseline_rebuild_v1.py');f1.main();f1r=json.loads(f1.OUT_DEV.read_text(encoding='utf-8'));print('F1_OBSERVABLE_RESULT='+json.dumps({'status':f1r['status'],'eligible_candidate_count':f1r['eligible_candidate_count'],'selected_candidate':f1r['selected_candidate']},sort_keys=True))
  marg=load_module('f1marginal',HERE/'goal100_f1_party_marginal_transfer_v1.py');marg.main()
  nat=load_module('f1national',HERE/'goal100_f1_national_conditioning_v1.py');nat.main()
+ surface=load_module('f1surface',HERE/'goal100_f1_national_scenario_surface_v1.py');surface.main()
 if __name__=='__main__':main()
