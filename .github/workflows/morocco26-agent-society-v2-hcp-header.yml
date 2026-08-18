@@ -1,0 +1,29 @@
+name: Morocco26 Agent Society V2 HCP header extract
+
+on:
+  pull_request:
+    branches: [morocco26-agent-society-v2]
+    paths:
+      - 'morocco26/data/goal100/agent_society_v2/triggers/hcp_header.trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-agent-society-v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check requests==2.32.4 openpyxl==3.1.5
+      - run: python morocco26/scripts/agent_society_v2_hcp2014_header_extract.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: asv2-hcp2014-header-extract
+          path: morocco26/data/goal100/agent_society_v2/audits/hcp2014_header_extract_v1.json
