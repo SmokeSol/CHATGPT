@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "M26-CANDIDATE-INTEL-V2-PJD-2021-PRIOR-MP-IDENTITY-RESOLUTION-V2",
+  "purpose": "Resolve the final four UNKNOWN states in V2_HEAD_PRIOR_CYCLE_MP for the 74-territory reasoner-power intersection. These decisions resolve identity/status only; they do not fit or alter any predictive effect.",
+  "closed_universe": "Complete 395 elected members of the 2016-2021 House legislature from the already archived TAFRA/Chamber parquet universe.",
+  "decisions": [
+    {
+      "territory_id": "rabat-ocean",
+      "candidate_name_fr": "Saad Eddine El Otmani",
+      "candidate_name_ar": "سعد الدين العثماني",
+      "state": "VERIFIED_TRUE",
+      "method": "EXACT_ARABIC_CLOSED_UNIVERSE",
+      "prior_name_lat": "SAADEDDINE EL OTHMANI",
+      "prior_party": "PJD",
+      "evidence": "Arabic diagnostic returned EXACT=1."
+    },
+    {
+      "territory_id": "el-gharb",
+      "candidate_name_fr": "Ibrahim Chouikh",
+      "candidate_name_ar": "إبراهيم شويخ",
+      "state": "VERIFIED_TRUE",
+      "method": "INDEPENDENT_PRE_ELECTION_PARLIAMENTARY_CORROBORATION_PLUS_CLOSED_UNIVERSE_VARIANT",
+      "evidence_urls": [
+        "https://www.machahidpress.com/%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D8%A5%D9%82%D9%84%D9%8A%D9%85%D9%8A%D8%A9-%D9%84%D9%84%D8%B9%D8%AF%D8%A7%D9%84%D8%A9%D8%AA%D8%B5%D8%AF%D8%B1-%D8%A8%D9%8A%D8%A7%D9%86-%D8%AA/",
+        "https://medias24.com/2021/08/14/voici-les-profils-des-candidats-du-pjd-pour-les-prochaines-legislatives/"
+      ],
+      "evidence": "The 2020 source explicitly identifies Ibrahim Chouikh as a parliamentarian and president of Lalla Mimouna. The 2021 pre-election profile independently identifies the same person as president of Lalla Mimouna. The Arabic closed-universe diagnostic found the corresponding Arabic-name variant but exposed a bilingual row-label inconsistency; the political identity is therefore resolved from independent context rather than the corrupted Latin label."
+    },
+    {
+      "territory_id": "sidi-slimane",
+      "candidate_name_fr": "Mohammed El Ayadi",
+      "candidate_name_ar": "محمد عيادي",
+      "state": "VERIFIED_FALSE",
+      "method": "NO_MATCH_IN_COMPLETE_CLOSED_UNIVERSE_PLUS_PRE_ELECTION_ROLE_CORROBORATION",
+      "evidence_urls": [
+        "https://medias24.com/2021/08/14/voici-les-profils-des-candidats-du-pjd-pour-les-prochaines-legislatives/"
+      ],
+      "evidence": "No exact Arabic match exists in the complete 395-member prior House universe; nearest Arabic candidate is a different person. The pre-election profile identifies El Ayadi as communications adviser to Saad Eddine El Otmani, not as an outgoing MP."
+    },
+    {
+      "territory_id": "laayoune",
+      "candidate_name_fr": "Mohamed Lamine Dida",
+      "candidate_name_ar": "محمد لمين ديدة",
+      "state": "VERIFIED_FALSE",
+      "method": "DISTINCT_HOMONYM_RESOLUTION_BY_PARTY_GEOGRAPHY_AND_CONCURRENT_LOCAL_OFFICE_HISTORY",
+      "evidence_urls": [
+        "https://www.pjd.ma/55077-28234.html",
+        "https://medias24.com/2021/08/14/voici-les-profils-des-candidats-du-pjd-pour-les-prochaines-legislatives/",
+        "https://aujourdhui.ma/politique/dakhla-des-tetes-de-listes-locales-chevronnees-en-lice-pour-les-legislatives-2016",
+        "https://www.hespress.com/%D8%A7%D9%84%D8%B3%D9%86%D8%A8%D9%84%D8%A9-%D8%AA%D8%AA%D8%B5%D8%AF%D9%91%D8%B1-%D9%86%D8%AA%D8%A7%D8%A6%D8%AC-%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA-%D9%88%D8%A7%D8%AF-316892.html"
+      ],
+      "evidence": "The focal PJD candidate was already a PJD regional secretary and elected regional/communal figure in Laayoune in 2015, and is described as such again in the 2021 pre-election profile. The prior House member with the similar name was the Mouvement Populaire candidate/member from Dakhla/Oued Eddahab, serving in Dakhla local politics and winning the Oued Eddahab seat in 2016. These are distinct homonymous political identities."
+    }
+  ],
+  "forecast_modified": false,
+  "unknown_converted_by_default": false
+}
