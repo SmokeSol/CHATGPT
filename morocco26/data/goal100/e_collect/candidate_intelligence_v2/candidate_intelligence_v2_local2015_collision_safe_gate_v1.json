@@ -1,0 +1,40 @@
+{
+  "forecast_modified": false,
+  "gate_id": "M26-CANDIDATE-INTEL-V2-LOCAL2015-COLLISION-SAFE-GATE-V1",
+  "identity_rule": "TRUE requires either a globally unique normalized closed-universe name or exactly one PJD council identity in the same election region among same-name homonyms. Multi-identity collisions remain UNKNOWN.",
+  "reasoner_gate_invalidated_until_recomputed": true,
+  "schema_version": "1.0",
+  "source_rows": 31482,
+  "source_sha256": "8b5e6d23756087409a77fbaa00c0e25428c699245dbc3241d280b914600fd341",
+  "status": "FAIL_COLLISION_SAFE_LOCAL2015_DATA_POWER",
+  "thresholds": {
+    "minimum_known": 74,
+    "minimum_positive": 30
+  },
+  "transitions": {
+    "2016": {
+      "coverage_gate": false,
+      "gate_pass": false,
+      "known": 69,
+      "positive": 40,
+      "states": {
+        "UNKNOWN": 5,
+        "VERIFIED_FALSE": 29,
+        "VERIFIED_TRUE": 40
+      },
+      "support_gate": true
+    },
+    "2021": {
+      "coverage_gate": false,
+      "gate_pass": false,
+      "known": 72,
+      "positive": 46,
+      "states": {
+        "UNKNOWN": 2,
+        "VERIFIED_FALSE": 26,
+        "VERIFIED_TRUE": 46
+      },
+      "support_gate": true
+    }
+  }
+}
