@@ -43,22 +43,20 @@ def parse_xlsx(data):
   hdr=rows[0]; return [dict(zip(hdr,r+['']*(len(hdr)-len(r)))) for r in rows[1:]]
 def load_regions():
  with CONST.open(encoding='utf-8',newline='') as f:return {r['constituency_id']:nlat(r['region']) for r in csv.DictReader(f)}
-def load_aliases(path,year):
- doc=json.loads(path.read_text(encoding='utf-8')); decisions=doc['decisions'] if year==2021 else doc['decisions']; out={}
- for d in decisions:
-  out[d['current_name']]={'status':d['status'],'closed_universe_name':d.get('closed_universe_name')}
+def load_aliases(path):
+ doc=json.loads(path.read_text(encoding='utf-8')); out={}
+ for d in doc['decisions']:out[d['current_name']]={'status':d['status'],'closed_universe_name':d.get('closed_universe_name')}
  return out
 def load_candidates(year):
  if year==2016:
-  rows=json.loads((CI/'2016'/'pjd_closed_roster_v1.json').read_text(encoding='utf-8'))['rows']; alias=load_aliases(CI/'2016'/'pjd_local2015_identity_overrides_v1.json',2016)
+  rows=json.loads((CI/'2016'/'pjd_closed_roster_v1.json').read_text(encoding='utf-8'))['rows']; alias=load_aliases(CI/'2016'/'pjd_local2015_identity_overrides_v1.json')
  else:
-  rows=json.loads((CI/'2021'/'pjd_arabic_identity_bridge_74_v1.json').read_text(encoding='utf-8'))['rows']; alias=load_aliases(CI/'2021'/'pjd_local2015_identity_overrides_v1.json',2021)
+  rows=json.loads((CI/'2021'/'pjd_arabic_identity_bridge_74_v1.json').read_text(encoding='utf-8'))['rows']; alias=load_aliases(CI/'2021'/'pjd_local2015_identity_overrides_v1.json')
  return rows,alias
 def uniq_rows(rows):
  seen={}
  for r in rows:
-  key=(nar(r.get('prenomNom')),str(r.get('parti','')).upper(),nlat(r.get('region')),nlat(r.get('prefProv')),nlat(r.get('commune')))
-  seen[key]=r
+  key=(nar(r.get('prenomNom')),str(r.get('parti','')).upper(),nlat(r.get('region')),nlat(r.get('prefProv')),nlat(r.get('commune'))); seen[key]=r
  return list(seen.values())
 def classify(year,source_rows,regions):
  candidates,aliases=load_candidates(year); idx=defaultdict(list)
@@ -68,8 +66,7 @@ def classify(year,source_rows,regions):
  all_names=list(idx); detail=[]
  for x in candidates:
   raw=x['candidate_name_ar']; ad=aliases.get(raw); resolved=ad.get('closed_universe_name') if ad and ad.get('status')=='SAFE_ALIAS' else raw; q=nar(resolved); rows=uniq_rows(idx.get(q,[])); target_region=regions[x['territory_id']]
-  pjd_same=[r for r in rows if str(r.get('parti','')).upper()=='PJD' and nlat(r.get('region'))==target_region]
-  pjd_same_communes={nlat(r.get('commune')) for r in pjd_same}
+  pjd_same=[r for r in rows if str(r.get('parti','')).upper()=='PJD' and nlat(r.get('region'))==target_region]; pjd_same_communes={nlat(r.get('commune')) for r in pjd_same}
   item={'year':year,'territory_id':x['territory_id'],'candidate_name_ar':raw,'resolved_name_ar':resolved,'target_region':target_region,'raw_name_match_rows':len(rows),'pjd_same_region_rows':len(pjd_same),'pjd_same_region_communes':sorted(pjd_same_communes)}
   if len(rows)==1:
    r=rows[0]; item.update({'state':'VERIFIED_TRUE','method':'UNIQUE_GLOBAL_NAME_IN_COMPLETE_UNIVERSE','source_party':r.get('parti'),'source_region':r.get('region'),'source_prefProv':r.get('prefProv'),'source_commune':r.get('commune'),'source_role':r.get('role')})
@@ -77,8 +74,7 @@ def classify(year,source_rows,regions):
    r=pjd_same[0]; item.update({'state':'VERIFIED_TRUE','method':'UNIQUE_PJD_SAME_REGION_IDENTITY_AMONG_HOMONYMS','source_party':'PJD','source_region':r.get('region'),'source_prefProv':r.get('prefProv'),'source_commune':r.get('commune'),'source_role':r.get('role'),'homonym_rows_global':len(rows)})
   elif rows:
    item.update({'state':'UNKNOWN','method':'UNRESOLVED_HOMONYM_COLLISION','homonym_rows_global':len(rows),'candidate_rows':[{'party':r.get('parti'),'region':r.get('region'),'prefProv':r.get('prefProv'),'commune':r.get('commune'),'role':r.get('role')} for r in rows[:12]]})
-  elif ad and ad.get('status')=='CONFIRMED_NO_ALIAS':
-   item.update({'state':'VERIFIED_FALSE','method':'AUDITED_CONFIRMED_NO_ALIAS_IN_COMPLETE_UNIVERSE'})
+  elif ad and ad.get('status')=='CONFIRMED_NO_ALIAS':item.update({'state':'VERIFIED_FALSE','method':'AUDITED_CONFIRMED_NO_ALIAS_IN_COMPLETE_UNIVERSE'})
   else:
    best=0.; bestn=None
    for n in all_names:
@@ -87,11 +83,11 @@ def classify(year,source_rows,regions):
    if best>=GUARD:item.update({'state':'UNKNOWN','method':'UNRESOLVED_HIGH_SIMILARITY_NO_EXACT_IDENTITY','nearest_name':bestn,'nearest_similarity':round(best,6)})
    else:item.update({'state':'VERIFIED_FALSE','method':'NO_MATCH_IN_COMPLETE_UNIVERSE_LOW_SIMILARITY','nearest_name':bestn,'nearest_similarity':round(best,6)})
   detail.append(item)
- st=Counter(x['state'] for x in detail); known=st['VERIFIED_TRUE']+st['VERIFIED_FALSE']; return {'rows':detail,'summary':{'states':dict(st),'known':known,'positive':st['VERIFIED_TRUE'],'coverage_gate':known>=MIN_KNOWN,'support_gate':st['VERIFIED_TRUE']>=MIN_POS,'gate_pass':known>=MIN_KNOWN and st['VERIFIED_TRUE']>=MIN_POS}}
+ st=Counter(x['state'] for x in detail); known=st['VERIFIED_TRUE']+st['VERIFIED_FALSE']; unknowns=[{k:r.get(k) for k in ('territory_id','candidate_name_ar','resolved_name_ar','method','raw_name_match_rows','pjd_same_region_rows','pjd_same_region_communes','nearest_name','nearest_similarity','candidate_rows') if k in r} for r in detail if r['state']=='UNKNOWN']
+ return {'rows':detail,'summary':{'states':dict(st),'known':known,'positive':st['VERIFIED_TRUE'],'coverage_gate':known>=MIN_KNOWN,'support_gate':st['VERIFIED_TRUE']>=MIN_POS,'gate_pass':known>=MIN_KNOWN and st['VERIFIED_TRUE']>=MIN_POS,'unknown_rows':unknowns}}
 def main():
  resp=requests.get(URL,timeout=90,allow_redirects=True,headers={'User-Agent':'M26-CandidateIntel/1.0'});resp.raise_for_status();data=resp.content;source=parse_xlsx(data);regions=load_regions(); results={str(y):classify(y,source,regions) for y in (2016,2021)}
- out={'schema_version':'1.0','gate_id':'M26-CANDIDATE-INTEL-V2-LOCAL2015-COLLISION-SAFE-GATE-V1','source_sha256':hashlib.sha256(data).hexdigest(),'source_rows':len(source),'identity_rule':'TRUE requires either a globally unique normalized closed-universe name or exactly one PJD council identity in the same election region among same-name homonyms. Multi-identity collisions remain UNKNOWN.','thresholds':{'minimum_known':MIN_KNOWN,'minimum_positive':MIN_POS},'transitions':{y:results[y]['summary'] for y in results},'status':'PASS_COLLISION_SAFE_LOCAL2015_DATA_POWER' if all(results[y]['summary']['gate_pass'] for y in results) else 'FAIL_COLLISION_SAFE_LOCAL2015_DATA_POWER','forecast_modified':False,'reasoner_gate_invalidated_until_recomputed':True}
- for y in results:
-  p=CI/y/'pjd_local2015_collision_safe_v1.jsonl';p.write_text('\n'.join(json.dumps(x,ensure_ascii=False,sort_keys=True) for x in results[y]['rows'])+'\n',encoding='utf-8')
+ out={'schema_version':'1.1','gate_id':'M26-CANDIDATE-INTEL-V2-LOCAL2015-COLLISION-SAFE-GATE-V1','source_sha256':hashlib.sha256(data).hexdigest(),'source_rows':len(source),'identity_rule':'TRUE requires either a globally unique normalized closed-universe name or exactly one PJD council identity in the same election region among same-name homonyms. Multi-identity collisions remain UNKNOWN.','thresholds':{'minimum_known':MIN_KNOWN,'minimum_positive':MIN_POS},'transitions':{y:results[y]['summary'] for y in results},'status':'PASS_COLLISION_SAFE_LOCAL2015_DATA_POWER' if all(results[y]['summary']['gate_pass'] for y in results) else 'FAIL_COLLISION_SAFE_LOCAL2015_DATA_POWER','forecast_modified':False,'reasoner_gate_invalidated_until_recomputed':True}
+ for y in results:(CI/y/'pjd_local2015_collision_safe_v1.jsonl').write_text('\n'.join(json.dumps(x,ensure_ascii=False,sort_keys=True) for x in results[y]['rows'])+'\n',encoding='utf-8')
  OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8'); print(json.dumps(out,ensure_ascii=False,indent=2,sort_keys=True))
 if __name__=='__main__':main()
