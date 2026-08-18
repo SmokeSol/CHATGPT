@@ -1,0 +1,590 @@
+{
+  "schema_version": "1.0",
+  "source_url": "https://open.africa/dataset/07a04224-c0ad-4861-9705-0518f5d49dbd/resource/7ae81ece-1b3d-4cdc-ac49-acd6ba37f6ea/download/communes-elus-2015-1-0.xlsx",
+  "final_url": "https://s3-eu-west-1.amazonaws.com/cfa-openafrica/resources/7ae81ece-1b3d-4cdc-ac49-acd6ba37f6ea/communes-elus-2015-1-0.xlsx?ETag=7fca1f51b56bff28ef48caa33a9dd562",
+  "bytes": 2189518,
+  "sha256": "8b5e6d23756087409a77fbaa00c0e25428c699245dbc3241d280b914600fd341",
+  "sheets": [
+    {
+      "name": "données",
+      "path": "xl/worksheets/sheet1.xml",
+      "preview_rows": [
+        [
+          "idRegion",
+          "idWilaya",
+          "idPrefProv",
+          "idSousPref",
+          "idCommune",
+          "idCirconscription",
+          "region",
+          "wilaya",
+          "prefProv",
+          "sousPref",
+          "commune",
+          "circonscription",
+          "prenomNom",
+          "parti",
+          "teteDeListe",
+          "role"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10390",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "1",
+          "فيصل علام",
+          "PI",
+          "1",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10391",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "2",
+          "بناصر ورحمان",
+          "RNI",
+          "1",
+          "vice président 3"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10392",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "3",
+          "ابراهيم الرداد",
+          "MP",
+          "1",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10393",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "4",
+          "صالح حيون",
+          "PI",
+          "1",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10393",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "4",
+          "نعيمة اعزيزي",
+          "PI",
+          "0",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10394",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "5",
+          "سعيد اوحمي",
+          "PI",
+          "1",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10394",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "5",
+          "نورة حساني",
+          "PI",
+          "0",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10395",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "6",
+          "عبد الرحمان اعموم",
+          "RNI",
+          "1",
+          "vice président 2"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10395",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "6",
+          "فاتحة ماحي",
+          "RNI",
+          "0",
+          "vice président 4"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10396",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "7",
+          "احمد بويقوشان",
+          "RNI",
+          "1",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10397",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "8",
+          "حفيظة اقدار",
+          "RNI",
+          "0",
+          "vice président 5"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10397",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "8",
+          "محمد العيدي",
+          "RNI",
+          "1",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10398",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "9",
+          "محمد البوابراهيمي",
+          "RNI",
+          "1",
+          "vice secrétaire du conseil"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10399",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "10",
+          "محمد ايشو",
+          "RNI",
+          "1",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10400",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "11",
+          "موحى بنيشو",
+          "MP",
+          "1",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10401",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "12",
+          "سعيد الرداد",
+          "ALAHD",
+          "1",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10402",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "13",
+          "المصطفى الرداد",
+          "RNI",
+          "1",
+          "président"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10403",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "14",
+          "محمد وزمي",
+          "RNI",
+          "1",
+          "vice président 1"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10404",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "15",
+          "علاء ربعطي",
+          "RNI",
+          "1",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10405",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "16",
+          "عبداللطيف اعموم",
+          "RNI",
+          "1",
+          "secrétaire du conseil"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10406",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "17",
+          "عبد الحق اخويا",
+          "RNI",
+          "1",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10407",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "18",
+          "ميمون تكورة",
+          "RNI",
+          "1",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10408",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "19",
+          "بناصر مصاط",
+          "RNI",
+          "1",
+          "conseiller"
+        ],
+        [
+          "627",
+          "23",
+          "271",
+          "",
+          "1135",
+          "10409",
+          "Beni-Mellal - Khénifra",
+          "Beni-Mellal - Khénifra",
+          "Azilal",
+          "",
+          "Afourar",
+          "20",
+          "بناصر حيمى",
+          "RNI",
+          "1",
+          "vice président 6"
+        ]
+      ]
+    },
+    {
+      "name": "dictionnaire",
+      "path": "xl/worksheets/sheet2.xml",
+      "preview_rows": [
+        [
+          "Label",
+          "Définition (FR)",
+          "Définition (EN)"
+        ],
+        [
+          "idRegion",
+          "id région",
+          "region id"
+        ],
+        [
+          "idWilaya",
+          "id wilaya",
+          "wilaya id"
+        ],
+        [
+          "idPrefProv",
+          "id préfecture ou province",
+          "prefecture or province id"
+        ],
+        [
+          "idSousPref",
+          "id sous-préfecture",
+          "Sous-préfecture id"
+        ],
+        [
+          "idCommune",
+          "id commune",
+          "commune id"
+        ],
+        [
+          "idCirconscription",
+          "id circonscription",
+          "constituency id"
+        ],
+        [
+          "region",
+          "Nom de la région",
+          "Region name"
+        ],
+        [
+          "wilaya",
+          "Nom de la wilaya",
+          "Wilaya name"
+        ],
+        [
+          "prefProv",
+          "Nom de la préfecture ou province",
+          "Prefecture or province name"
+        ],
+        [
+          "sousPref",
+          "Nom de la sous-préfecture",
+          "Sous-prefecture name"
+        ],
+        [
+          "commune",
+          "Nom de la commune",
+          "Commune name"
+        ],
+        [
+          "circonscription",
+          "Nom de la circonscription",
+          "Constituency name"
+        ],
+        [
+          "prenomNom",
+          "Prénom et nom de l'élu",
+          "First and last name of representative"
+        ],
+        [
+          "parti",
+          "Parti ou coalition de l'élu",
+          "Party or coalition of representative"
+        ],
+        [
+          "teteDeListe",
+          "VRAI si l'élu est une tête de liste",
+          "TRUE if representative ranked top of her list"
+        ],
+        [
+          "role",
+          "Rôle de l'élu dans le conseil communal",
+          "Role of representative within communal council"
+        ]
+      ]
+    },
+    {
+      "name": "notes",
+      "path": "xl/worksheets/sheet3.xml",
+      "preview_rows": [
+        [
+          "Source"
+        ],
+        [
+          "Ce jeu de données a été collecté par l'association Tafra. Copie de http://www.elections.ma. ",
+          "This dataset has been collected by the NGO Tafra. Copied from http://www.elections.ma. "
+        ],
+        [
+          "Licence"
+        ],
+        [
+          "Ce jeu de données est mis à votre disposition sous la licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/deed.fr). Vous êtes libre de l'utiliser à votre guise, mais vous devez faire référence à l'auteur en utilisant la citation ci-dessous. ",
+          "This dataset is made availabe under the CC BY 4.0 licence (https://creativecommons.org/licenses/by/4.0/deed). You are free to use it as you see fit, but have to refer to the author using the citation below. "
+        ],
+        [
+          "Citation"
+        ],
+        [
+          "\"Liste des élus communaux des élections communales marocaines de 2015.\" Association Tafra. Rabat. 2019",
+          ""
+        ],
+        [
+          "Version"
+        ],
+        [
+          "Version 1.0.0, Novembre 2019: version initiale",
+          ""
+        ]
+      ]
+    }
+  ]
+}
