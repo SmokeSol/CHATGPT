@@ -49,34 +49,22 @@ jobs:
       - name: Detect existing holdout bundle
         id: bundle
         run: |
-          if test -f morocco26/data/goal100/e_reason/blind/holdout/bundle_manifest.json; then
-            echo 'exists=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'exists=false' >> "$GITHUB_OUTPUT"
-          fi
+          if test -f morocco26/data/goal100/e_reason/blind/holdout/bundle_manifest.json; then echo 'exists=true' >> "$GITHUB_OUTPUT"; else echo 'exists=false' >> "$GITHUB_OUTPUT"; fi
 
       - name: Build blinded holdout and secret mapping
         if: steps.bundle.outputs.exists != 'true'
         run: |
           set -euo pipefail
           mkdir -p "$RUNNER_TEMP/e_reason_holdout_secret"
-          python morocco26/scripts/e_reason_build_blind_holdout_bundle.py \
-            --secret-mapping-output "$RUNNER_TEMP/e_reason_holdout_secret/holdout_mapping.json"
+          python morocco26/scripts/e_reason_build_blind_holdout_bundle.py --secret-mapping-output "$RUNNER_TEMP/e_reason_holdout_secret/holdout_mapping.json"
           python - <<'PY'
           import json
           from pathlib import Path
           e=Path('morocco26/data/goal100/e_reason')
-          m=json.loads((e/'blind/holdout/bundle_manifest.json').read_text())
-          s=json.loads((e/'blind/holdout/mapping_seal.json').read_text())
-          assert m['status']=='FROZEN_BLIND_HOLDOUT_BUNDLE'
-          assert m['packets']==92 and m['party_cells']==828
-          assert m['target_outcome_read'] is False
-          assert m['leakage_scan']['status']=='PASS'
-          assert m['anonymization_independent_from_development'] is True
-          assert s['status']=='SEALED_BEFORE_ANY_HOLDOUT_PREDICTIVE_JUDGMENT'
-          assert s['mapping_material_committed'] is False
-          assert s['mapping_material_judge_access'] is False
-          assert Path("$RUNNER_TEMP/e_reason_holdout_secret/holdout_mapping.json")
+          m=json.loads((e/'blind/holdout/bundle_manifest.json').read_text()); s=json.loads((e/'blind/holdout/mapping_seal.json').read_text())
+          assert m['status']=='FROZEN_BLIND_HOLDOUT_BUNDLE' and m['packets']==92 and m['party_cells']==828
+          assert m['target_outcome_read'] is False and m['leakage_scan']['status']=='PASS' and m['anonymization_independent_from_development'] is True
+          assert s['status']=='SEALED_BEFORE_ANY_HOLDOUT_PREDICTIVE_JUDGMENT' and s['mapping_material_committed'] is False and s['mapping_material_judge_access'] is False
           print('HOLDOUT_BUNDLE_LEAKAGE_GUARD_PASS',m['bundle_sha256'])
           PY
 
@@ -97,30 +85,16 @@ jobs:
         run: |
           set -euo pipefail
           python - <<'PY'
-          import json, os
+          import json,os
           from pathlib import Path
-          e=Path('morocco26/data/goal100/e_reason')
-          s=json.loads((e/'blind/holdout/mapping_seal.json').read_text())
-          x={
-            'schema_version':'1.0',
-            'locator_id':'M26-E-REASON-HOLDOUT-MAPPING-ARTIFACT-LOCATOR-V1',
-            'artifact_name':'e-reason-holdout-secret-mapping',
-            'artifact_id':os.environ['MAP_ARTIFACT_ID'],
-            'workflow_run_id':os.environ['GITHUB_RUN_ID'],
-            'mapping_sha256':s['mapping_sha256'],
-            'mapping_material_committed':False,
-            'access_rule':'DO_NOT_DOWNLOAD_OR_EXPOSE_TO_C2_BEFORE_HOLDOUT_JUDGMENT_HASHES_FREEZE',
-          }
+          e=Path('morocco26/data/goal100/e_reason'); s=json.loads((e/'blind/holdout/mapping_seal.json').read_text())
+          x={'schema_version':'1.0','locator_id':'M26-E-REASON-HOLDOUT-MAPPING-ARTIFACT-LOCATOR-V1','artifact_name':'e-reason-holdout-secret-mapping','artifact_id':os.environ['MAP_ARTIFACT_ID'],'workflow_run_id':os.environ['GITHUB_RUN_ID'],'mapping_sha256':s['mapping_sha256'],'mapping_material_committed':False,'access_rule':'DO_NOT_DOWNLOAD_OR_EXPOSE_TO_C2_BEFORE_HOLDOUT_JUDGMENT_HASHES_FREEZE'}
           (e/'blind/holdout/mapping_artifact_locator.json').write_text(json.dumps(x,sort_keys=True,indent=2)+'\n')
           PY
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add morocco26/data/goal100/e_reason/blind/holdout/
-          git diff --cached --check
+          git config user.name 'github-actions[bot]'; git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/e_reason/blind/holdout/; git diff --cached --check
           git commit -m 'experiment(e-reason): freeze blinded holdout packets before judgments'
-          git fetch origin morocco26-e-reason
-          git rebase origin/morocco26-e-reason
-          git push origin HEAD:morocco26-e-reason
+          git fetch origin morocco26-e-reason; git rebase origin/morocco26-e-reason; git push origin HEAD:morocco26-e-reason
 
       - name: Assert holdout freeze
         run: |
@@ -128,22 +102,15 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
-          e=Path('morocco26/data/goal100/e_reason')
-          m=json.loads((e/'blind/holdout/bundle_manifest.json').read_text())
-          s=json.loads((e/'blind/holdout/mapping_seal.json').read_text())
-          assert m['status']=='FROZEN_BLIND_HOLDOUT_BUNDLE' and m['target_outcome_read'] is False
-          assert s['status']=='SEALED_BEFORE_ANY_HOLDOUT_PREDICTIVE_JUDGMENT'
+          e=Path('morocco26/data/goal100/e_reason'); m=json.loads((e/'blind/holdout/bundle_manifest.json').read_text()); s=json.loads((e/'blind/holdout/mapping_seal.json').read_text())
+          assert m['status']=='FROZEN_BLIND_HOLDOUT_BUNDLE' and m['target_outcome_read'] is False; assert s['status']=='SEALED_BEFORE_ANY_HOLDOUT_PREDICTIVE_JUDGMENT'
           print('HOLDOUT_PACKET_FREEZE_CONFIRMED')
           PY
 
       - name: Detect C1 holdout freeze
         id: c1
         run: |
-          if test -f morocco26/data/goal100/e_reason/judgments/holdout/c1_rule_only/c1_judgment_manifest.json; then
-            echo 'exists=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'exists=false' >> "$GITHUB_OUTPUT"
-          fi
+          if test -f morocco26/data/goal100/e_reason/judgments/holdout/c1_rule_only/c1_judgment_manifest.json; then echo 'exists=true' >> "$GITHUB_OUTPUT"; else echo 'exists=false' >> "$GITHUB_OUTPUT"; fi
 
       - name: Generate and freeze C1 holdout judgments
         if: steps.c1.outputs.exists != 'true'
@@ -153,84 +120,45 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
-          p=Path('morocco26/data/goal100/e_reason/judgments/holdout/c1_rule_only/c1_judgment_manifest.json')
-          x=json.loads(p.read_text())
-          assert x['status']=='PASS_C1_HOLDOUT_JUDGMENTS_FROZEN_AWAITING_C2'
-          assert x['outcomes_seen'] is False and x['mapping_seen'] is False
+          x=json.loads(Path('morocco26/data/goal100/e_reason/judgments/holdout/c1_rule_only/c1_judgment_manifest.json').read_text())
+          assert x['status']=='PASS_C1_HOLDOUT_JUDGMENTS_FROZEN_AWAITING_C2' and x['outcomes_seen'] is False and x['mapping_seen'] is False
           assert x['counts']['packets']==92 and x['counts']['party_cells']==828
           print('C1_HOLDOUT_FREEZE_GUARD_PASS',json.dumps(x['counts']['score_distribution'],sort_keys=True))
           PY
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add morocco26/data/goal100/e_reason/judgments/holdout/c1_rule_only/
-          git diff --cached --check
+          git config user.name 'github-actions[bot]'; git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/e_reason/judgments/holdout/c1_rule_only/; git diff --cached --check
           git commit -m 'experiment(e-reason): freeze deterministic C1 holdout judgments'
-          git fetch origin morocco26-e-reason
-          git rebase origin/morocco26-e-reason
-          git push origin HEAD:morocco26-e-reason
+          git fetch origin morocco26-e-reason; git rebase origin/morocco26-e-reason; git push origin HEAD:morocco26-e-reason
 
       - name: Build hermetic Opus5 holdout handoff
         run: |
           set -euo pipefail
-          SRC='morocco26/data/goal100/e_reason'
-          OUT="$RUNNER_TEMP/opus5_e_reason_c2_holdout_handoff"
-          mkdir -p "$OUT"
-          cp "$SRC/blind/holdout/blind_bundle.json" "$OUT/"
-          cp "$SRC/blind/holdout/bundle_manifest.json" "$OUT/"
-          cp "$SRC/blind/holdout/mapping_seal.json" "$OUT/"
-          cp "$SRC/c2_prompt_v1.md" "$OUT/"
-          cp "$SRC/e_reason_output_schema_v1.json" "$OUT/"
-          cp "$SRC/e_reason_conditions_v1.json" "$OUT/"
+          SRC='morocco26/data/goal100/e_reason'; OUT="$RUNNER_TEMP/opus5_e_reason_c2_holdout_handoff"; mkdir -p "$OUT"
+          cp "$SRC/blind/holdout/blind_bundle.json" "$OUT/"; cp "$SRC/blind/holdout/bundle_manifest.json" "$OUT/"; cp "$SRC/blind/holdout/mapping_seal.json" "$OUT/"
+          cp "$SRC/c2_prompt_v1.md" "$OUT/"; cp "$SRC/e_reason_output_schema_v1.json" "$OUT/"; cp "$SRC/e_reason_conditions_v1.json" "$OUT/"
           python - <<'PY'
           import hashlib,json
           from pathlib import Path
-          out=Path("${{ runner.temp }}/opus5_e_reason_c2_holdout_handoff")
-          manifest=json.loads((out/'bundle_manifest.json').read_text())
-          b=json.loads((out/'blind_bundle.json').read_text())
-          declared=b.pop('bundle_sha256')
-          got=hashlib.sha256(json.dumps(b,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()
-          prompt=hashlib.sha256((out/'c2_prompt_v1.md').read_bytes()).hexdigest()
-          seal=json.loads((out/'mapping_seal.json').read_text())
-          assert got==declared==manifest['bundle_sha256']==seal['blind_bundle_sha256']
-          assert prompt==manifest['c2_prompt_sha256']==seal['c2_prompt_sha256']
-          assert manifest['leakage_scan']['status']=='PASS'
-          assert len(b['packets'])==92 and sum(len(p['parties']) for p in b['packets'])==828
+          out=Path("${{ runner.temp }}/opus5_e_reason_c2_holdout_handoff"); manifest=json.loads((out/'bundle_manifest.json').read_text()); b=json.loads((out/'blind_bundle.json').read_text())
+          declared=b.pop('bundle_sha256'); got=hashlib.sha256(json.dumps(b,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest(); prompt=hashlib.sha256((out/'c2_prompt_v1.md').read_bytes()).hexdigest(); seal=json.loads((out/'mapping_seal.json').read_text())
+          assert got==declared==manifest['bundle_sha256']==seal['blind_bundle_sha256']; assert prompt==manifest['c2_prompt_sha256']==seal['c2_prompt_sha256']; assert manifest['leakage_scan']['status']=='PASS'; assert len(b['packets'])==92 and sum(len(p['parties']) for p in b['packets'])==828
           start=f'''# OPUS 5 — E_reason C2 LOCKED HOLDOUT RUN — EXACT HANDOFF
 
-You are executing the blinded C2 residual-reasoning arm of preregistered experiment `M26-GOAL100-E-REASON-V1` on a LOCKED HOLDOUT.
+Execute the blinded C2 residual-reasoning arm of preregistered experiment `M26-GOAL100-E-REASON-V1` on a LOCKED HOLDOUT.
 
-## Absolute information boundary
-Work ONLY inside this handoff directory. Do not browse, use tools, inspect repositories or git history, request extra context, infer real identities, consult remembered election outcomes, or access any file outside this directory. The target outcome and the real-to-anonymous mapping are intentionally absent. If either becomes visible, STOP with `E_REASON_LEAKAGE_INVALIDATED` and produce no judgments.
+Work ONLY inside this handoff directory. Do not browse, use tools, inspect repositories/git history, request extra context, infer real identities, consult remembered election outcomes, or access anything outside this directory. Outcome and real-to-anonymous mapping are intentionally absent. If either becomes visible, STOP with `E_REASON_LEAKAGE_INVALIDATED` and produce no judgments.
 
-## Frozen treatment
-Use `c2_prompt_v1.md` VERBATIM. This is the same frozen C2 treatment prompt used in DEVELOPMENT; no semantic modification is permitted.
+Use `c2_prompt_v1.md` VERBATIM. Bundle SHA: `{got}`. Prompt SHA: `{prompt}`.
 
-Bundle canonical-core SHA-256: `{got}`
-Prompt SHA-256: `{prompt}`
+Verify 92 packets / 828 party cells. Judge each packet independently using RUN_ID `M26-E-REASON-C2-HOLDOUT-OPUS5-V1`, MODEL_ID `OPUS-5`, ATTEMPT_NUMBER=1 initially and exactly one PACKET_JSON. Validate against `e_reason_output_schema_v1.json` and frozen semantic guards. Retry ONLY schema-invalid JSON with identical prompt/packet and no semantic feedback; retain all attempts.
 
-## Execution
-1. Verify `bundle_manifest.json` and `mapping_seal.json`; leakage scan must be PASS and mapping access false.
-2. There must be exactly 92 packets and 828 party cells.
-3. Judge each packet independently under the exact system prompt/user template in `c2_prompt_v1.md` using RUN_ID `M26-E-REASON-C2-HOLDOUT-OPUS5-V1`, MODEL_ID `OPUS-5`, ATTEMPT_NUMBER 1 initially, and exactly one PACKET_JSON at a time.
-4. No information may flow from one packet into another except the frozen prompt/rules. No real-world recall or re-identification.
-5. Validate each answer against `e_reason_output_schema_v1.json` and all semantic guards in the frozen prompt.
-6. Retry ONLY schema-invalid JSON, with identical prompt/packet and no semantic feedback; retain every attempt.
-7. Write `outputs/c2_judgments.jsonl`, `outputs/c2_all_attempts.jsonl`, `outputs/c2_judgment_manifest.json`, and `outputs/c2_terminal_report.json`.
-8. Manifest must contain ordered packet hashes and ordered canonical judgment SHA-256 hashes, counts/retries, `outcomes_seen=false`, `mapping_seen=false`, `web_used=false`, `tools_used=false`, bundle SHA and prompt SHA.
-9. Terminal status may be `PASS_C2_HOLDOUT_JUDGMENTS_FROZEN_READY_FOR_OUTCOME_UNSEAL` only if all 92 packets have one valid final judgment and every guard passes.
+Write `outputs/c2_judgments.jsonl`, `outputs/c2_all_attempts.jsonl`, `outputs/c2_judgment_manifest.json`, `outputs/c2_terminal_report.json`. Manifest must freeze ordered packet hashes and ordered canonical judgment SHA-256 hashes, counts/retries and `outcomes_seen=false`, `mapping_seen=false`, `web_used=false`, `tools_used=false`. Terminal may be `PASS_C2_HOLDOUT_JUDGMENTS_FROZEN_READY_FOR_OUTCOME_UNSEAL` only if all 92 final judgments pass every guard.
 
-## STOP BOUNDARY
-STOP immediately after the 92 holdout C2 judgments and their hashes are frozen. Do NOT open or seek the target outcome. Do NOT score C0/C1/C2. Do NOT change lambda, prompt, features, baseline or packets. Do NOT create F1 or touch Atlas.
-
-Final human-readable response: terminal status, valid count, retry count, bundle SHA, prompt SHA, judgment-manifest SHA, output paths. No political interpretation.
+STOP immediately after C2 hashes freeze. Do NOT seek/open outcome, score C0/C1/C2, alter lambda/prompt/features/baseline/packets, create F1, or touch Atlas.
 '''
-          (out/'START_HERE_OPUS5.md').write_text(start)
-          print('OPUS5_HOLDOUT_HANDOFF_INTEGRITY_PASS',got,prompt)
+          (out/'START_HERE_OPUS5.md').write_text(start); print('OPUS5_HOLDOUT_HANDOFF_INTEGRITY_PASS',got,prompt)
           PY
-          if find "$OUT" -type f | grep -Ei '(outcome|result|holdout_mapping\.json$|historical.*2021|tafra_legislative_2021)' ; then
-            echo 'Forbidden target/mapping material in Opus holdout handoff' >&2
-            exit 1
-          fi
+          if find "$OUT" -type f | grep -Ei '(outcome|result|holdout_mapping\.json$|historical.*2021|tafra_legislative_2021)' ; then echo 'Forbidden target/mapping material in Opus holdout handoff' >&2; exit 1; fi
           sha256sum "$OUT"/* > "$OUT/HANDOFF_SHA256SUMS.txt"
 
       - name: Upload sealed Opus5 holdout handoff
@@ -243,5 +171,6 @@ Final human-readable response: terminal status, valid count, retry count, bundle
           if-no-files-found: error
 
       - name: Report handoff artifact
-        run: |
-          echo "OPUS5_HOLDOUT_ARTIFACT_ID=${{ steps.opus_upload.outputs.artifact-id }}"
+        run: echo "OPUS5_HOLDOUT_ARTIFACT_ID=${{ steps.opus_upload.outputs.artifact-id }}"
+
+# registered-workflow trigger v2
