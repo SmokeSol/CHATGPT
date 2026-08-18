@@ -9,6 +9,13 @@ on:
       - 'morocco26/data/goal100/e_collect/candidate_intelligence_v2/2021/pjd_closed_roster_v1.json'
       - 'morocco26/scripts/candidate_intelligence_v2_closed_universe_power_gate.py'
       - '.github/workflows/candidate-intelligence-v2-closed-universe-power-gate.yml'
+  pull_request:
+    branches:
+      - morocco26-e-reason
+    paths:
+      - 'morocco26/scripts/candidate_intelligence_v2_closed_universe_trigger.txt'
+      - 'morocco26/scripts/candidate_intelligence_v2_closed_universe_power_gate.py'
+      - '.github/workflows/candidate-intelligence-v2-closed-universe-power-gate.yml'
   workflow_dispatch:
 
 permissions:
