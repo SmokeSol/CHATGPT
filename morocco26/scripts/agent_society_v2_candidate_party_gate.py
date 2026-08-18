@@ -19,9 +19,8 @@ def audit2016():
     return {'districts_total':len(rows),'districts_ge_3_parties':sum(r['party_count']>=3 for r in rows),'districts_ge_3_identities':sum(r['identity_count']>=3 for r in rows),'max_verified_parties_in_one_district':max((r['party_count'] for r in rows),default=0),'party_count_distribution':{str(k):sum(r['party_count']==k for r in rows) for k in sorted({r['party_count'] for r in rows})},'rows':rows}
 
 def audit2021():
-    # Certified enriched roster has one explicit head-list candidate per party/district record.
     gate=read(E/'2021_head_list_rank_enrichment'/'gate.json')
-    roster=read(E/'2021_head_list_rank_enrichment'/'enriched_roster.json')
+    roster=read(E/'2021_head_list_rank_enrichment'/'enriched_candidate_roster.json')
     by=defaultdict(set)
     for r in roster:
         cid=r.get('territory_id'); p=str(r.get('party_bucket') or '').upper()
