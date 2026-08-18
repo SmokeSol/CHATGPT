@@ -1,0 +1,37 @@
+name: morocco26-e-reason-2021-head-list-rank
+on:
+  workflow_dispatch:
+  push:
+    branches: [morocco26-e-reason]
+    paths:
+      - "morocco26/scripts/e_reason_enrich_2021_head_list_rank.py"
+      - "morocco26/data/goal100/e_reason/historical_rosters_latest.json"
+      - ".github/workflows/morocco26-e-reason-2021-head-list-rank.yml"
+permissions:
+  contents: write
+concurrency:
+  group: morocco26-e-reason-2021-head-list-rank
+  cancel-in-progress: true
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: morocco26-e-reason, fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python morocco26/scripts/validate_e_reason_prereg.py
+      - run: python -m pip install --disable-pip-version-check beautifulsoup4==4.13.4
+      - name: Recover rank-one facts from explicit head-of-list labels
+        run: python morocco26/scripts/e_reason_enrich_2021_head_list_rank.py
+      - run: python morocco26/scripts/validate_e_reason_prereg.py
+      - name: Commit additive 2021 enrichment evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/data/goal100/e_reason/evidence/2021_head_list_rank_enrichment
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "experiment(e-reason): freeze explicit 2021 head-list rank facts"
+          git pull --rebase origin morocco26-e-reason
+          git push origin HEAD:morocco26-e-reason
