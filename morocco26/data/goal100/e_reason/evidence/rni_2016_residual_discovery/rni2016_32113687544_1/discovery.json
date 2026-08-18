@@ -1,0 +1,237 @@
+{
+  "schema_version": "1.0",
+  "run_id": "rni2016_32113687544_1",
+  "created_at": "2026-08-18T07:55:19+00:00",
+  "cutoff_utc": "2016-10-06T22:59:59+00:00",
+  "source_class": "T1_OFFICIAL_PARTY",
+  "qualified_domain": "rni.ma",
+  "target_rule": "CURRENT_COMBINED_GATE_DISTRICTS_WITH_EXACTLY_TWO_VERIFIED_IDENTITIES",
+  "targets": [
+    {
+      "constituency_id": "boujdour",
+      "historical_constituency": "Boujdour",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "es-semara",
+      "historical_constituency": "Es-Smara",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "fahs-anjra",
+      "historical_constituency": "Fahs - Anjra",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "guelmim",
+      "historical_constituency": "Guelmim",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "guercif",
+      "historical_constituency": "Guercif",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "ifrane",
+      "historical_constituency": "Ifrane",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "jerada",
+      "historical_constituency": "Jerada",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "mediouna",
+      "historical_constituency": "Médiouna",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "moulay-yaacoub",
+      "historical_constituency": "Moulay-Yacoub",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "oued-eddahab",
+      "historical_constituency": "Oued-Ed-Dahab",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "tan-tan",
+      "historical_constituency": "Tan-Tan",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "taourirt",
+      "historical_constituency": "Taourirt",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "tarfaya",
+      "historical_constituency": "Tarfaya",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "tata",
+      "historical_constituency": "Tata",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "tiznit",
+      "historical_constituency": "Tiznit",
+      "current_identities": 2
+    },
+    {
+      "constituency_id": "youssoufia",
+      "historical_constituency": "Youssoufia",
+      "current_identities": 2
+    }
+  ],
+  "queries": [
+    {
+      "constituency_id": "boujdour",
+      "historical_constituency": "Boujdour",
+      "term": "بوجدور",
+      "status": 403,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "es-semara",
+      "historical_constituency": "Es-Smara",
+      "term": "السمارة",
+      "status": 403,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "fahs-anjra",
+      "historical_constituency": "Fahs - Anjra",
+      "term": "الفحص انجرة",
+      "status": 403,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "guelmim",
+      "historical_constituency": "Guelmim",
+      "term": "كلميم",
+      "status": 403,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "guercif",
+      "historical_constituency": "Guercif",
+      "term": "جرسيف",
+      "status": 403,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "ifrane",
+      "historical_constituency": "Ifrane",
+      "term": "افران",
+      "status": 429,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "jerada",
+      "historical_constituency": "Jerada",
+      "term": "جرادة",
+      "status": 403,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "mediouna",
+      "historical_constituency": "Médiouna",
+      "term": "مديونة",
+      "status": 403,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "moulay-yaacoub",
+      "historical_constituency": "Moulay-Yacoub",
+      "term": "مولاي يعقوب",
+      "status": 403,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "oued-eddahab",
+      "historical_constituency": "Oued-Ed-Dahab",
+      "term": "وادي الذهب",
+      "status": 403,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "tan-tan",
+      "historical_constituency": "Tan-Tan",
+      "term": "طانطان",
+      "status": 403,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "taourirt",
+      "historical_constituency": "Taourirt",
+      "term": "تاوريرت",
+      "status": 429,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "tarfaya",
+      "historical_constituency": "Tarfaya",
+      "term": "طرفاية",
+      "status": 403,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "tata",
+      "historical_constituency": "Tata",
+      "term": "طاطا",
+      "status": 403,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "tiznit",
+      "historical_constituency": "Tiznit",
+      "term": "تيزنيت",
+      "status": 403,
+      "rows": 0,
+      "error": null
+    },
+    {
+      "constituency_id": "youssoufia",
+      "historical_constituency": "Youssoufia",
+      "term": "اليوسفية",
+      "status": 429,
+      "rows": 0,
+      "error": null
+    }
+  ],
+  "posts": [],
+  "eligible_posts": [],
+  "counts": {
+    "targets": 16,
+    "queries": 16,
+    "unique_posts": 0,
+    "eligible_pre_cutoff_unmodified_candidate_posts": 0
+  },
+  "invariants": {
+    "candidate_identities_promoted": false,
+    "search_snippets_used_as_evidence": false,
+    "post_cutoff_modified_pages_rejected": true,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "F1_created": false
+  }
+}
