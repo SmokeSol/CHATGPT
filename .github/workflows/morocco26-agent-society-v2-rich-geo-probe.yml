@@ -1,0 +1,63 @@
+name: Morocco26 ASV2 RICH legal geography probe
+on:
+  pull_request:
+    paths:
+      - '.github/asv2-rich-geo-trigger.txt'
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - name: Install PDF tools
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Fetch official decree bundle
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/geo
+          url='https://www.collectivites-territoriales.gov.ma/sites/default/files/2021-05/Dahir%20relatif%20%C3%A0%20la%20Chambre%20des%20repr%C3%A9sentants.pdf'
+          code=$(curl -L --retry 3 --retry-delay 2 --connect-timeout 20 --max-time 180 -sS -w '%{http_code}' -o /tmp/geo/decree.pdf "$url" || true)
+          echo "decree_http=$code" | tee /tmp/geo/fetch.txt
+          file /tmp/geo/decree.pdf | tee -a /tmp/geo/fetch.txt || true
+          sha256sum /tmp/geo/decree.pdf | tee -a /tmp/geo/fetch.txt || true
+          test -s /tmp/geo/decree.pdf
+      - name: Extract split-constituency contexts
+        run: |
+          set -euo pipefail
+          pdftotext -layout /tmp/geo/decree.pdf /tmp/geo/decree.txt || true
+          python - <<'PY'
+          from pathlib import Path
+          import json,re,unicodedata
+          txt=Path('/tmp/geo/decree.txt').read_text(errors='ignore')
+          def norm(s):
+              s=unicodedata.normalize('NFKD',s).encode('ascii','ignore').decode().lower()
+              return re.sub(r'\s+',' ',s)
+          targets=['fes-nord','fes-sud','taounate-tissa','karia-ghafsay','rabat-ocean','rabat-chellah','sale-medina','sale-el-jadida','kenitra','el-gharb','khemisset-oulmes','tiflet-rommani','bzou-ouaouizeght','azilal-demnate','medina-sidi-youssef','gueliz-nakhil','menara','taroudant-sud','taroudant-nord']
+          aliases={
+            'fes-nord':['fes nord'], 'fes-sud':['fes sud'],
+            'taounate-tissa':['taounate tissa'], 'karia-ghafsay':['karia ghafsay','kariat ba mohammed ghafsay','al karia ghafsay'],
+            'rabat-ocean':['rabat ocean','rabat l ocean','rabat el mouhit','rabat almohit'], 'rabat-chellah':['rabat chellah'],
+            'sale-medina':['sale medina'], 'sale-el-jadida':['sale el jadida','sale al jadida'],
+            'el-gharb':['el gharb'], 'khemisset-oulmes':['khemisset oulmes'], 'tiflet-rommani':['tiflet rommani','tiflet errommani'],
+            'bzou-ouaouizeght':['bzou ouaouizeght','bzou ouaouizaght'], 'azilal-demnate':['azilal demnate'],
+            'medina-sidi-youssef':['medina sidi youssef','el medina sidi youssef ben ali'], 'gueliz-nakhil':['gueliz annakhil','gueliz nakhil'],
+            'taroudant-sud':['taroudant sud'], 'taroudant-nord':['taroudant nord']
+          }
+          out={'pdf_chars':len(txt),'targets':{}}
+          lines=txt.splitlines(); nlines=[norm(x) for x in lines]
+          for t in targets:
+              pats=aliases.get(t,[t.replace('-',' ')])
+              hits=[]
+              for i,line in enumerate(nlines):
+                  if any(p in line for p in pats):
+                      hits.append({'line':i+1,'context':'\n'.join(lines[max(0,i-12):min(len(lines),i+55)])})
+              out['targets'][t]=hits[:8]
+          Path('/tmp/geo/geo_probe.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
+          print(json.dumps({'pdf_chars':len(txt),'hit_counts':{k:len(v) for k,v in out['targets'].items()}},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: asv2-rich-legal-geography-probe-v1
+          path: |
+            /tmp/geo/fetch.txt
+            /tmp/geo/geo_probe.json
