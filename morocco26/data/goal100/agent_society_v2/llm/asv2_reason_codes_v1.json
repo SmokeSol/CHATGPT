@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0",
+  "enum_id":"M26-ASV2-REASON-CODES-V1",
+  "codes":[
+    "PRIOR_VOTE_PERSISTENCE",
+    "PRIOR_ABSTENTION_PERSISTENCE",
+    "VERIFIED_CANDIDATE_CONTEXT",
+    "VERIFIED_INCUMBENCY",
+    "VERIFIED_PARTY_SWITCH",
+    "VERIFIED_ENDORSEMENT",
+    "VERIFIED_OFFICE_HOLDING",
+    "VERIFIED_ALLIANCE",
+    "VERIFIED_NEGATIVE_EVENT",
+    "PARTICIPATION_DEMOGRAPHIC_UNCERTAINTY",
+    "NO_DIRECTIONAL_CONTEXT",
+    "MISSING_CONTEXT_LIMITATION"
+  ],
+  "rule":"Codes are audit annotations only and never alter downstream aggregation. A code may be used only when the corresponding input evidence is present or when the code explicitly denotes missing/no-directional context."
+}
