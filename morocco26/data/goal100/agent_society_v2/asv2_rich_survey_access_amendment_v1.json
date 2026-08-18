@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "amendment_id": "M26-ASV2-RICH-SURVEY-ACCESS-AMENDMENT-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "FROZEN_BEFORE_ANY_REAL_ASV2_LLM_OUTPUT",
+  "real_asv2_llm_outputs_seen": false,
+  "trigger": "The official Afrobarometer download endpoint returned an anti-bot HTML challenge rather than the registered SAV bytes in the batch execution environment. HCP RGPH and ENCDM source downloads succeeded.",
+  "scientific_decision": "Do not fabricate, independently sample, or infer person-level political attitudes merely to satisfy the RICH target. The primary x10 voter-state gate must pass without any person-level Afrobarometer donor variables.",
+  "supersedes": {
+    "asv2_rich_enrichment_contract_v1.data_gate.pre_election_attitude_survey_required_each_year": "Survey existence and pre-election timing remain required for contextual validity, but respondent-level attachment is not required in the primary voter-state arm when exact raw bytes are inaccessible. Aggregate survey context may be added only as a territory/common context and is not counted toward the x10 information gate.",
+    "asv2_rich_feature_manifest_v1.source_family_AFROBAROMETER_PRE_ELECTION_ATTITUDE_DONOR": "Reclassified as AFROBAROMETER_PRE_ELECTION_AGGREGATE_CONTEXT_RESERVED; no person-level donor features in RICH V2."
+  },
+  "unchanged_gates": {"safe_voter_dimensions_min": 60,"effective_information_ratio_vs_R0_min": 10.0,"archetypes_per_constituency": 256,"effective_archetype_count_min": 128,"max_single_archetype_weight": 0.05,"all_92_territories_required": true},
+  "forbidden": ["direct vote intention","party closeness","religion","ethnicity","tribe","raw language identity","nationality","target-election outcome","post-cutoff facts","invented person-level attitudes"],
+  "interpretation": "Passing RICH V2 is stronger than the earlier design with respect to the x10 claim because the information-rank threshold must be met by observed anonymized HCP microprofiles, household joint structure, statistically matched ENCDM socioeconomic state, prior-election anchoring and pre-election labour context without synthetic respondent-level attitude noise."
+}

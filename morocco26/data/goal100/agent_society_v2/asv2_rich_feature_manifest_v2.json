@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.1",
+  "manifest_id": "M26-ASV2-RICH-FEATURE-MANIFEST-V2",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "FROZEN_BEFORE_ANY_REAL_ASV2_LLM_OUTPUT",
+  "target_voter_dimensions_min": 60,
+  "target_effective_information_ratio_vs_R0_min": 10.0,
+  "archetypes_per_constituency": 256,
+  "person_level_source_families": ["RGPH2014_INDIVIDUAL_MICRODATA","RGPH2014_HOUSEHOLD_MICRODATA","RGPH_DERIVED_HOUSEHOLD","ENCDM2014_SES_DONOR","PRIOR_ELECTION_ANCHOR","HCP_PRE_ELECTION_LABOUR_CONTEXT"],
+  "common_context_reserved": ["AFROBAROMETER_PRE_ELECTION_AGGREGATE_CONTEXT"],
+  "forbidden": ["religion","ethnicity","tribe","raw language identity","nationality","party closeness","direct vote intention","named future vote preference","real personal voter data","microtargeting identifiers","target-election outcome","post-cutoff facts","invented person-level attitudes"],
+  "epistemic_labels": {"RGPH": "observed anonymized microdata profile","ENCDM": "statistically matched latent socioeconomic donor; not an observed fact about that synthetic person","AFROBAROMETER": "aggregate pre-election context only in V2; not attached to synthetic individuals and not counted toward x10"},
+  "pass_rule": "safe_feature_count >= 60 AND effective_rank_ratio_vs_R0 >= 10.0 AND ESS >= 128 in every constituency AND max_weight <= 0.05 AND no forbidden field is present"
+}

@@ -14,35 +14,36 @@ jobs:
     steps:
       - name: Install readers
         run: python -m pip install -q pyreadstat pandas numpy scikit-learn
-      - name: Fetch frozen builder and source data
+      - name: Fetch frozen builders and source data
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           mkdir -p /tmp/asv2rich/data /tmp/asv2rich/pop /tmp/asv2rich/out
           RAW='https://raw.githubusercontent.com/SmokeSol/CHATGPT/morocco26-agent-society-v2'
-          curl -fsSL --retry 3 -o /tmp/asv2rich/build.py "$RAW/morocco26/scripts/agent_society_v2_build_rich_populations.py"
+          curl -fsSL --retry 3 -o /tmp/asv2rich/agent_society_v2_build_rich_populations.py "$RAW/morocco26/scripts/agent_society_v2_build_rich_populations.py"
+          curl -fsSL --retry 3 -o /tmp/asv2rich/build_v2.py "$RAW/morocco26/scripts/agent_society_v2_build_rich_populations_v2.py"
           curl -fsSL -L -H "Authorization: Bearer $GH_TOKEN" -H 'Accept: application/vnd.github+json' -o /tmp/asv2rich/pop.zip "https://api.github.com/repos/SmokeSol/CHATGPT/actions/artifacts/${POP_ARTIFACT_ID}/zip"
           unzip -q /tmp/asv2rich/pop.zip -d /tmp/asv2rich/pop
           cat >/tmp/asv2rich/urls.txt <<'EOF'
           rgph_individual.dta|https://www.rgph2014.hcp.ma/file/210749/
           rgph_household.dta|https://www.rgph2014.hcp.ma/file/210748/
           encdm_household.sav|https://www.hcp.ma/file/231078/
-          afro_r6.sav|https://www.afrobarometer.org/wp-content/uploads/2022/02/mor_r6_data_eng.sav
-          afro_r8.sav|https://www.afrobarometer.org/wp-content/uploads/2023/03/afrobarometer_release-dataset_mor_r8_en_2023-03-01.sav
           EOF
           while IFS='|' read -r name url; do
             (curl -fL --retry 4 --retry-delay 2 --connect-timeout 30 --max-time 900 -o "/tmp/asv2rich/data/$name" "$url") &
           done </tmp/asv2rich/urls.txt
           wait
-      - name: Build and audit RICH populations
+      - name: Build and audit RICH populations V2
+        env:
+          PYTHONPATH: /tmp/asv2rich
         run: |
           set -euo pipefail
-          python /tmp/asv2rich/build.py --ind /tmp/asv2rich/data/rgph_individual.dta --hh /tmp/asv2rich/data/rgph_household.dta --encdm /tmp/asv2rich/data/encdm_household.sav --af6 /tmp/asv2rich/data/afro_r6.sav --af8 /tmp/asv2rich/data/afro_r8.sav --pop2016 /tmp/asv2rich/pop/populations/2016_population_v1.json --pop2021 /tmp/asv2rich/pop/populations/2021_population_v1.json --outdir /tmp/asv2rich/out
-          cat /tmp/asv2rich/out/rich_data_power_certificate_v1.json
+          python /tmp/asv2rich/build_v2.py --ind /tmp/asv2rich/data/rgph_individual.dta --hh /tmp/asv2rich/data/rgph_household.dta --encdm /tmp/asv2rich/data/encdm_household.sav --pop2016 /tmp/asv2rich/pop/populations/2016_population_v1.json --pop2021 /tmp/asv2rich/pop/populations/2021_population_v1.json --outdir /tmp/asv2rich/out
+          cat /tmp/asv2rich/out/rich_data_power_certificate_v2.json
       - uses: actions/upload-artifact@v4
         with:
-          name: asv2-rich-populations-v1
+          name: asv2-rich-populations-v2
           path: |
-            /tmp/asv2rich/out/asv2-rich-populations-v1.zip
-            /tmp/asv2rich/out/rich_data_power_certificate_v1.json
+            /tmp/asv2rich/out/asv2-rich-populations-v2.zip
+            /tmp/asv2rich/out/rich_data_power_certificate_v2.json
