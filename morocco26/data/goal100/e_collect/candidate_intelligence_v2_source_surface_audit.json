@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "M26-E-COLLECT-CANDIDATE-INTELLIGENCE-V2-SOURCE-SURFACE-20260818",
+  "created_at": "2026-08-18T17:14:00+01:00",
+  "status": "GO_HISTORICAL_RECOVERY",
+  "purpose": "Determine whether a materially denser, historically backtestable candidate-level evidence panel can be reconstructed after E_reason V1 showed insufficient directional evidence density.",
+  "constraints": {
+    "F0_immutable": true,
+    "no_forecast_delta": true,
+    "no_subjective_scores": true,
+    "unknown_is_not_zero": true,
+    "allowed_sources_only": ["T0_OFFICIAL_INSTITUTIONAL", "T1_OFFICIAL_PARTY", "M24_MEDIAS24"],
+    "historical_cutoff_required": true
+  },
+  "current_2026_surface": {
+    "medias24_sqlite_candidate_records": 544,
+    "candidate_records_after_official_pjd_merge": 546,
+    "canonical_local_territories_covered": 92,
+    "canonical_local_territories_total": 92,
+    "parties": 9,
+    "interpretation": "Candidate identity/territory coverage is effectively national; current bottleneck is feature verification, not candidate discovery."
+  },
+  "historical_2021_surface": {
+    "master_constituency_map": {
+      "url": "https://medias24.com/2021/09/05/legislatives-voici-la-liste-des-principaux-candidats-circonscription-par-circonscription/",
+      "published_at": "2021-09-05",
+      "territories": 92,
+      "role": "principal candidate identity/party/territory surface before election day"
+    },
+    "profile_pages": [
+      {
+        "party": "PJD",
+        "url": "https://medias24.com/2021/08/14/voici-les-profils-des-candidats-du-pjd-pour-les-prochaines-legislatives/",
+        "published_at": "2021-08-14",
+        "coverage_statement": "92 local constituencies plus regional lists",
+        "observed_feature_classes": ["INCUMBENT_STATUS", "MOVED_DISTRICT", "PARTY_SWITCH", "LOCAL_EXECUTIVE_OFFICE", "REGIONAL_OFFICE", "PARTY_OFFICE", "FORMER_MINISTER_OR_NATIONAL_OFFICE"],
+        "density_note": "Article states that, with few exceptions, candidates are returning MPs, elected officials or local party officials; descriptions are candidate-specific."
+      },
+      {
+        "party": "RNI",
+        "url": "https://medias24.com/2021/07/25/entrepreneurs-promoteurs-recrues-voici-les-candidats-du-rni-pour-les-prochaines-legislatives/",
+        "published_at": "2021-07-25",
+        "coverage_statement": "region-by-region candidate profiles, continuously updated",
+        "observed_feature_classes": ["CANDIDATE_IDENTITY", "PARTY_SWITCH", "INCUMBENT_STATUS", "LOCAL_OFFICE", "PROFESSIONAL_PROFILE"]
+      },
+      {
+        "party": "PAM",
+        "url": "https://medias24.com/2021/08/25/elections-2021-voici-les-candidats-du-pam-pour-les-legislatives/",
+        "published_at": "2021-08-25",
+        "coverage_statement": "candidate profiles by constituency",
+        "observed_feature_classes": ["INCUMBENT_SAME_DISTRICT", "FORMER_MP", "LOCAL_OFFICE", "REGIONAL_OFFICE", "PARTY_OFFICE"]
+      },
+      {
+        "party": "PI",
+        "url": "https://medias24.com/2021/08/23/elections-2021-voici-les-profils-des-candidats-de-listiqlal-pour-les-legislatives/",
+        "published_at": "2021-08-23",
+        "coverage_statement": "most local heads known before election",
+        "observed_feature_classes": ["INCUMBENT_SAME_DISTRICT", "PARTY_SWITCH", "LOCAL_EXECUTIVE_OFFICE", "REGIONAL_OFFICE", "FORMER_NATIONAL_OFFICE"]
+      }
+    ],
+    "official_global_candidate_context": {
+      "local_candidate_count": 5046,
+      "full_coverage_parties": ["PJD", "PAM", "PI", "RNI"],
+      "repeat_candidates_house_and_council_combined": 225,
+      "source_url": "https://medias24.com/2021/08/27/legislatives-2021-31-partis-1704-listes-et-6-815-candidats-y-participent/"
+    },
+    "assessment": "HIGH_RECOVERABILITY"
+  },
+  "historical_2016_surface": {
+    "master_constituency_map": {
+      "url": "https://medias24.com/2016/10/03/legislatives-les-principaux-candidats-circonscription-par-circonscription-17-cartes/",
+      "published_at": "2016-10-03",
+      "territories": 92,
+      "local_candidates_total": 4742,
+      "role": "pre-election principal-candidate identity/party/territory surface"
+    },
+    "party_surfaces": [
+      {
+        "party": "RNI",
+        "url": "https://medias24.com/2016/09/04/legislatives-le-rni-devoile-81-tetes-de-liste/",
+        "published_at": "2016-09-04",
+        "heads_listed": 81,
+        "observed_feature_classes": ["INCUMBENT_STATUS", "FORMER_MINISTER_OR_NATIONAL_OFFICE", "CANDIDATE_CONTINUITY"]
+      },
+      {
+        "party": "PJD",
+        "url": "https://medias24.com/2016/08/27/legislatives-le-pjd-met-en-avant-ses-tenors/",
+        "published_at": "2016-08-27",
+        "heads_listed": 74,
+        "observed_feature_classes": ["INCUMBENT_STATUS", "NATIONAL_OFFICE", "PARTY_OFFICE", "FORMAL_RECRUITMENT"]
+      },
+      {
+        "party": "PAM",
+        "url": "https://medias24.com/2016/09/23/legislatives-le-pam-inclut-une-forte-presence-feminine-parmi-ses-candidats/",
+        "published_at": "2016-09-23",
+        "candidate_count_statement": 391,
+        "observed_feature_classes": ["CANDIDATE_IDENTITY", "INCUMBENT_STATUS", "PROFILE_CLASS"]
+      }
+    ],
+    "explicit_switch_example": {
+      "candidate": "Lahcen Haddad",
+      "from_party": "MP",
+      "to_party": "PI",
+      "territory": "Khouribga",
+      "url": "https://medias24.com/2016/09/15/lahcen-haddad-tete-de-liste-de-listiqlal-a-khouribga/",
+      "published_at": "2016-09-15"
+    },
+    "assessment": "MEDIUM_TO_HIGH_RECOVERABILITY"
+  },
+  "comparison_to_e_reason_v1": {
+    "e_reason_holdout_party_cells": 828,
+    "e_reason_holdout_nonzero_directional_cells": 59,
+    "e_reason_holdout_directional_density": 0.07125603864734299,
+    "e_reason_2016_issue": "C1 and C2 were identical because only one directional evidence class survived the upstream gate.",
+    "source_surface_conclusion": "The historical web surface contains multiple candidate-specific feature families that were absent from the frozen E_reason V1 bundle. Sparsity was therefore materially driven by acquisition/admissibility design rather than demonstrated absence of public pre-election information."
+  },
+  "recovery_panel_contract": {
+    "unit": "ELECTION_YEAR_X_LOCAL_CONSTITUENCY_X_PARTY",
+    "years": [2016, 2021, 2026],
+    "target_parties_initial": ["RNI", "PAM", "PI", "PJD", "USFP", "MP", "PPS", "UC", "OTHER"],
+    "feature_state": ["VERIFIED_TRUE", "VERIFIED_FALSE", "UNKNOWN", "CONFLICTED"],
+    "never_encode_unknown_as_false": true,
+    "initial_objective_feature_families": [
+      "INCUMBENT_SAME_PARTY_SAME_DISTRICT",
+      "INCUMBENT_SAME_PARTY_MOVED_DISTRICT",
+      "INCUMBENT_PARTY_SWITCH_IN",
+      "INCUMBENT_PARTY_SWITCH_OUT",
+      "FORMER_MP_OR_COUNCILLOR",
+      "LOCAL_EXECUTIVE_OFFICE",
+      "PROVINCIAL_OR_REGIONAL_OFFICE",
+      "NATIONAL_OR_REGIONAL_PARTY_OFFICE",
+      "FORMER_MINISTER_OR_NATIONAL_OFFICE",
+      "FORMAL_ENDORSEMENT",
+      "FORMAL_LIST_ALLIANCE",
+      "WITHDRAWN_OR_DISQUALIFIED",
+      "OFFICIAL_SANCTION_OR_INVESTIGATION"
+    ],
+    "reuse_existing_b2_support_rule": "Predictive binary/count features must meet the frozen historical support/coverage rules before any coefficient is estimated; otherwise effect remains zero.",
+    "pre_reason_power_audit_required": true
+  },
+  "terminal_conclusion": "GO: build the historical candidate-intelligence panel. Do not run another LLM reasoner until the recovered panel is measured for support, missingness, feature diversity and C1-vs-C2 discriminability."
+}
