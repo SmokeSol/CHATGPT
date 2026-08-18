@@ -11,7 +11,7 @@ on:
   pull_request:
     branches: [morocco26-e-reason]
     paths:
-      - 'morocco26/scripts/candidate_intelligence_v2_reconciled_trigger.txt'
+      - 'morocco26/scripts/candidate_intelligence_v2_closed_universe_trigger.txt'
       - 'morocco26/scripts/candidate_intelligence_v2_reconciled_power_gate.py'
   workflow_dispatch:
 permissions:
