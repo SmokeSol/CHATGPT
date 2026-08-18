@@ -1,0 +1,29 @@
+name: Morocco26 Agent Society V2 HCP split inventory
+
+on:
+  pull_request:
+    branches: [morocco26-agent-society-v2]
+    paths:
+      - 'morocco26/data/goal100/agent_society_v2/triggers/hcp_split_inventory.trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-agent-society-v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check requests==2.32.4 openpyxl==3.1.5
+      - run: python morocco26/scripts/agent_society_v2_hcp2014_split_inventory.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: asv2-hcp2014-split-admin-inventory
+          path: morocco26/data/goal100/agent_society_v2/audits/hcp2014_split_admin_inventory_v1.json
