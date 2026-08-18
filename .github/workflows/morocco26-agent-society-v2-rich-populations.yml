@@ -6,44 +6,87 @@ on:
 jobs:
   build:
     runs-on: ubuntu-24.04
+    timeout-minutes: 45
     permissions:
       actions: read
       contents: read
     env:
       POP_ARTIFACT_ID: '9338194867'
+      DONOR_ARTIFACT_ID: '9343976712'
     steps:
       - name: Install readers
         run: python -m pip install -q pyreadstat pandas numpy scikit-learn
-      - name: Fetch frozen builders and source data
+      - name: Fetch frozen builders, source data and verified attitude donors
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          mkdir -p /tmp/asv2rich/data /tmp/asv2rich/pop /tmp/asv2rich/out
-          RAW='https://raw.githubusercontent.com/SmokeSol/CHATGPT/morocco26-agent-society-v2'
-          curl -fsSL --retry 3 -o /tmp/asv2rich/agent_society_v2_build_rich_populations.py "$RAW/morocco26/scripts/agent_society_v2_build_rich_populations.py"
-          curl -fsSL --retry 3 -o /tmp/asv2rich/build_v2.py "$RAW/morocco26/scripts/agent_society_v2_build_rich_populations_v2.py"
-          curl -fsSL -L -H "Authorization: Bearer $GH_TOKEN" -H 'Accept: application/vnd.github+json' -o /tmp/asv2rich/pop.zip "https://api.github.com/repos/SmokeSol/CHATGPT/actions/artifacts/${POP_ARTIFACT_ID}/zip"
+          mkdir -p /tmp/asv2rich/data /tmp/asv2rich/pop /tmp/asv2rich/donors /tmp/asv2rich/out
+          api="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents"
+          for item in \
+            "agent_society_v2_build_rich_populations.py:morocco26/scripts/agent_society_v2_build_rich_populations.py" \
+            "build_v2.py:morocco26/scripts/agent_society_v2_build_rich_populations_v2.py" \
+            "patch_and_run.py:morocco26/scripts/agent_society_v2_rich_patch_and_run_v2.py" \
+            "attitude_overlay.py:morocco26/scripts/agent_society_v2_build_attitude_overlay.py"; do
+            dst="${item%%:*}"; src="${item#*:}"
+            curl -fsSL -H "Authorization: Bearer ${GH_TOKEN}" -H "Accept: application/vnd.github.raw+json" \
+              "${api}/${src}?ref=${GITHUB_SHA}" -o "/tmp/asv2rich/${dst}"
+          done
+          curl -fsSL -L -H "Authorization: Bearer $GH_TOKEN" -H 'Accept: application/vnd.github+json' \
+            -o /tmp/asv2rich/pop.zip \
+            "https://api.github.com/repos/SmokeSol/CHATGPT/actions/artifacts/${POP_ARTIFACT_ID}/zip"
           unzip -q /tmp/asv2rich/pop.zip -d /tmp/asv2rich/pop
+          curl -fsSL -L -H "Authorization: Bearer $GH_TOKEN" -H 'Accept: application/vnd.github+json' \
+            -o /tmp/asv2rich/donors.zip \
+            "https://api.github.com/repos/SmokeSol/CHATGPT/actions/artifacts/${DONOR_ARTIFACT_ID}/zip"
+          unzip -q /tmp/asv2rich/donors.zip -d /tmp/asv2rich/donors
           cat >/tmp/asv2rich/urls.txt <<'EOF'
           rgph_individual.dta|https://www.rgph2014.hcp.ma/file/210749/
           rgph_household.dta|https://www.rgph2014.hcp.ma/file/210748/
           encdm_household.sav|https://www.hcp.ma/file/231078/
           EOF
           while IFS='|' read -r name url; do
-            (curl -fL --retry 4 --retry-delay 2 --connect-timeout 30 --max-time 900 -o "/tmp/asv2rich/data/$name" "$url") &
+            (curl -fL --retry 4 --retry-delay 2 --connect-timeout 30 --max-time 900 \
+              -A 'Mozilla/5.0 (ASV2 academic build)' -o "/tmp/asv2rich/data/$name" "$url") &
           done </tmp/asv2rich/urls.txt
           wait
-      - name: Build and audit RICH populations V2
+          test "$(sha256sum /tmp/asv2rich/donors/afro_r6.sav | cut -d' ' -f1)" = "1ab8a01626244a094e97f874791576cc40270f21d135183d2e4b25ab41fa5a8d"
+          test "$(sha256sum /tmp/asv2rich/donors/afro_r8.sav | cut -d' ' -f1)" = "5e0c8c70bb9e8488eb51866ca225a0babd5fcbf33bc0441238f8688e01a265f3"
+      - name: Build and audit R2 x10 population
         env:
           PYTHONPATH: /tmp/asv2rich
         run: |
           set -euo pipefail
-          python /tmp/asv2rich/build_v2.py --ind /tmp/asv2rich/data/rgph_individual.dta --hh /tmp/asv2rich/data/rgph_household.dta --encdm /tmp/asv2rich/data/encdm_household.sav --pop2016 /tmp/asv2rich/pop/populations/2016_population_v1.json --pop2021 /tmp/asv2rich/pop/populations/2021_population_v1.json --outdir /tmp/asv2rich/out
+          python /tmp/asv2rich/patch_and_run.py \
+            --source /tmp/asv2rich/build_v2.py \
+            --ind /tmp/asv2rich/data/rgph_individual.dta \
+            --hh /tmp/asv2rich/data/rgph_household.dta \
+            --encdm /tmp/asv2rich/data/encdm_household.sav \
+            --pop2016 /tmp/asv2rich/pop/populations/2016_population_v1.json \
+            --pop2021 /tmp/asv2rich/pop/populations/2021_population_v1.json \
+            --outdir /tmp/asv2rich/out
           cat /tmp/asv2rich/out/rich_data_power_certificate_v2.json
+      - name: Build pre-election R3 latent-attitude overlay
+        run: |
+          set -euo pipefail
+          python /tmp/asv2rich/attitude_overlay.py \
+            --pop2016 /tmp/asv2rich/out/2016_rich_population_v2.json \
+            --pop2021 /tmp/asv2rich/out/2021_rich_population_v2.json \
+            --af6 /tmp/asv2rich/donors/afro_r6.sav \
+            --af8 /tmp/asv2rich/donors/afro_r8.sav \
+            --outdir /tmp/asv2rich/out
+          cat /tmp/asv2rich/out/rich_attitude_overlay_certificate_v1.json
       - uses: actions/upload-artifact@v4
         with:
-          name: asv2-rich-populations-v2
+          name: asv2-rich-populations-v2-fixed
+          retention-days: 90
           path: |
             /tmp/asv2rich/out/asv2-rich-populations-v2.zip
             /tmp/asv2rich/out/rich_data_power_certificate_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: asv2-rich-attitude-overlay-v1
+          retention-days: 90
+          path: |
+            /tmp/asv2rich/out/asv2-rich-attitude-overlay-v1.zip
+            /tmp/asv2rich/out/rich_attitude_overlay_certificate_v1.json

@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "patch_id": "M26-ASV2-RICH-POPULATION-ENGINEERING-PATCH-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "FROZEN_BEFORE_ANY_REAL_ASV2_LLM_OUTPUT",
+  "scientific_changes": false,
+  "target_outcomes_used": false,
+  "real_llm_outputs_seen": false,
+  "fixes": [
+    "Guarantee positive support for every pre-frozen demographic marginal before IPF, instead of relying on an unconstrained random 256-row sample.",
+    "Make the pre-frozen effective-rank diagnostic finite and deterministic by explicit missing-value imputation and a numerically stable eig/SVD fallback."
+  ],
+  "unchanged": [
+    "source data",
+    "256 archetypes per constituency",
+    "target marginals",
+    "prior-election anchoring",
+    "ESS >= 128",
+    "max weight <= 0.05",
+    "safe dimensions >= 60",
+    "effective-rank ratio >= 10",
+    "no target outcomes",
+    "no real LLM output",
+    "F0"
+  ]
+}

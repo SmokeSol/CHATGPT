@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "overlay_id": "M26-ASV2-RICH-ATTITUDE-OVERLAY-CONTRACT-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "FROZEN_BEFORE_ANY_REAL_ASV2_LLM_OUTPUT",
+  "scientific_role": "R3_LATENT_ATTITUDE_ABLATION_ONLY",
+  "base_required": "R2 microdemography+household+SES must independently pass the x10 data-power gate before this overlay may be used.",
+  "method": "Attach pre-election Afrobarometer conditional posterior means and standard deviations by broad demographic stratum; never copy a real respondent and never assert the latent values as observed facts.",
+  "allowed_dimensions": [
+    "economic_condition",
+    "living_conditions",
+    "food_deprivation",
+    "water_deprivation",
+    "cash_deprivation",
+    "political_discussion",
+    "democracy_support",
+    "democracy_satisfaction",
+    "trust_parliament",
+    "trust_local_government",
+    "perceived_mp_corruption",
+    "perceived_local_corruption",
+    "government_economic_performance",
+    "government_poverty_performance",
+    "government_anticorruption_performance",
+    "local_responsiveness",
+    "internet_use"
+  ],
+  "forbidden": [
+    "direct vote intention",
+    "party closeness",
+    "religion",
+    "ethnicity",
+    "tribe",
+    "language identity",
+    "named political leader preference",
+    "target-election outcome",
+    "post-cutoff information"
+  ],
+  "not_counted_toward_x10": true,
+  "minimum_donor_stratum_n": 15,
+  "source_sha256": {
+    "afrobarometer_round6": "1ab8a01626244a094e97f874791576cc40270f21d135183d2e4b25ab41fa5a8d",
+    "afrobarometer_round8": "5e0c8c70bb9e8488eb51866ca225a0babd5fcbf33bc0441238f8688e01a265f3"
+  }
+}
