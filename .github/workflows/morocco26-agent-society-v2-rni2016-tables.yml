@@ -1,0 +1,29 @@
+name: Morocco26 Agent Society V2 RNI 2016 table acquisition
+
+on:
+  pull_request:
+    branches: [morocco26-agent-society-v2]
+    paths:
+      - 'morocco26/data/goal100/agent_society_v2/triggers/rni2016_tables.trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-agent-society-v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check requests==2.32.4
+      - run: python morocco26/scripts/agent_society_v2_fetch_rni2016_tables.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: asv2-rni2016-tables
+          path: morocco26/data/goal100/agent_society_v2/acquisition/rni2016_tables/
