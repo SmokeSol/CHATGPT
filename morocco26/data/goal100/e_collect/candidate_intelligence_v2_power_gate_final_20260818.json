@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "M26-CANDIDATE-INTELLIGENCE-V2-POWER-GATE-FINAL-20260818",
+  "created_at": "2026-08-18T17:57:00+01:00",
+  "status": "NO_GO_E_REASON_V2_VERIFIED_PANEL_UNDERPOWERED",
+  "decision": {
+    "run_e_reason_v2_now": false,
+    "fit_predictive_coefficients_now": false,
+    "modify_f0": false,
+    "continue_historical_recovery": true,
+    "reason": "The public pre-election source surface is demonstrably rich enough to justify recovery, but the currently adjudicated cross-source panel does not meet the frozen B2 coverage or support thresholds. A model fit now would substitute recoverability potential for verified data and would recreate the V1 documentation/missingness problem."
+  },
+  "frozen_thresholds_reused_from_b2_v1": {
+    "minimum_core_panel_territory_coverage_each_transition": 0.8,
+    "minimum_positive_instances_binary_feature": 30,
+    "missing_is_not_zero": true,
+    "fit_transition": "2011_TO_2016",
+    "validation_transition": "2016_TO_2021"
+  },
+  "subgates": {
+    "integrity": {
+      "status": "PASS",
+      "f0_immutable": true,
+      "e_reason_v1_terminal_preserved": "E_REASON_NO_PROMOTION",
+      "subjective_scores_ingested": false,
+      "hand_set_effects_ingested": false
+    },
+    "source_surface_recoverability": {
+      "status": "PASS",
+      "2016": {
+        "evidence": [
+          "PJD publicly disclosed 74 heads, then 85 local heads before the election.",
+          "RNI publicly disclosed 81 heads; its outgoing parliamentary group had 56 MPs, 12 from national lists.",
+          "PAM reported 301 local candidates in 91 constituencies, 16 outgoing MPs reconducted, 6 new candidates from other parties and 13 commune presidents leaving for other parties.",
+          "A pre-election Medias24 estimate placed outgoing MPs seeking another mandate at 200-250; national-list incumbents were legally barred from simply rerunning on the same national lists."
+        ],
+        "source_urls": [
+          "https://medias24.com/2016/08/27/legislatives-le-pjd-met-en-avant-ses-tenors/",
+          "https://medias24.com/2016/09/03/legislatives-le-pjd-confirme-hamdaoui-a-larache-et-ouazzani-a-al-hoceima/",
+          "https://medias24.com/2016/09/04/legislatives-le-rni-devoile-81-tetes-de-liste/",
+          "https://medias24.com/2016/09/23/legislatives-le-pam-inclut-une-forte-presence-feminine-parmi-ses-candidats/",
+          "https://medias24.com/2016/08/20/legislatives-les-listes-definitives-de-candidatures-seront-connues-fin-aout/"
+        ]
+      },
+      "2021": {
+        "evidence": [
+          "PJD, PAM, Istiqlal and RNI each covered 100% of local and regional constituencies in the final candidacy filings.",
+          "The PJD pre-election profile page explicitly covers the 92 local constituencies and is dominated by MPs, elected officials and local party officials.",
+          "The RNI profile page contains dense explicit incumbency, party-switch and local-office information across regions.",
+          "A manual conservative audit of the PJD page found 82 of 91 usable local rows with at least one objective political feature and 38 explicit parliamentary-mandate mentions."
+        ],
+        "source_urls": [
+          "https://medias24.com/2021/08/27/legislatives-2021-31-partis-1704-listes-et-6-815-candidats-y-participent/",
+          "https://medias24.com/2021/08/14/voici-les-profils-des-candidats-du-pjd-pour-les-prochaines-legislatives/",
+          "https://medias24.com/2021/07/25/entrepreneurs-promoteurs-recrues-voici-les-candidats-du-rni-pour-les-prochaines-legislatives/"
+        ]
+      },
+      "interpretation": "The V1 sparsity cannot be attributed to an absence of public candidate-level political information. Acquisition/gating materially compressed the available signal."
+    },
+    "verified_core_panel_coverage": {
+      "status": "FAIL",
+      "2011_TO_2016": {
+        "seed_territories_touched": 26,
+        "seed_territory_coverage": 0.2826086956521739,
+        "cross_source_verified_rows": 11,
+        "verified_territory_coverage_upper_bound": 0.11956521739130435,
+        "required": 0.8,
+        "note": "The upper bound assumes every exact verified row lies in a distinct territory; actual verified feature-state coverage cannot be higher."
+      },
+      "2016_TO_2021": {
+        "seed_territories_touched": 49,
+        "seed_territory_coverage": 0.532608695652174,
+        "cross_source_verified_rows": 22,
+        "cross_source_verified_territories": 22,
+        "verified_territory_coverage": 0.2391304347826087,
+        "required": 0.8
+      },
+      "failure_reason": "Neither transition currently has a provenance-complete VERIFIED_TRUE/VERIFIED_FALSE/UNKNOWN feature panel over at least 74 of 92 territories."
+    },
+    "binary_feature_support": {
+      "status": "FAIL_CURRENT_VERIFIED_PANEL",
+      "required_positive_instances": 30,
+      "2011_TO_2016_verified_sample": {
+        "PRIOR_CYCLE_MP": 11,
+        "INCUMBENT_SAME_PARTY_SAME_DISTRICT": 9,
+        "INCUMBENT_PARTY_SWITCH_IN": 2
+      },
+      "2016_TO_2021_verified_sample": {
+        "PRIOR_CYCLE_MP": 22,
+        "INCUMBENT_SAME_PARTY_SAME_DISTRICT": 18,
+        "INCUMBENT_SAME_PARTY_MOVED_DISTRICT": 2,
+        "INCUMBENT_PARTY_SWITCH_IN": 2
+      },
+      "source_surface_support_note": "The source universe strongly suggests that incumbency support will exceed 30 after full recovery (for example, 38 explicit parliamentary mentions are already visible among usable PJD local heads in 2021), but potential or unadjudicated support is not counted toward the frozen gate."
+    },
+    "negative_state_and_missingness_control": {
+      "status": "FAIL",
+      "reason": "A systematic scan establishing VERIFIED_FALSE versus UNKNOWN has not yet been completed across >=80% of territories in both transitions. Without this, documentation intensity can remain confounded with political salience."
+    },
+    "reasoner_identifiability": {
+      "status": "FAIL_NOT_YET_CERTIFIED",
+      "reason": "No complete panel yet demonstrates multiple independently varying, non-collinear feature families at adequate support in both transitions. Running C1/C2 now could again collapse to a narrow or degenerate contrast."
+    }
+  },
+  "terminal_interpretation": {
+    "what_is_proven": "There is substantially more recoverable pre-election candidate intelligence than E_reason V1 admitted, on both historical transitions and for 2026.",
+    "what_is_not_proven": "The currently verified panel is not yet large or complete enough to estimate predictive effects or identify incremental LLM reasoning value.",
+    "scientific_terminal": "POWER_GATE_FAIL_CLOSED_CURRENT_PANEL",
+    "operational_terminal": "RECOVER_MORE_DATA_BEFORE_MODEL"
+  },
+  "exact_unlock_condition": {
+    "coverage": "For both 2011_TO_2016 and 2016_TO_2021, produce provenance-complete feature states over at least 74 of 92 local territories for the declared core panel.",
+    "support": "Any binary feature admitted to the predictive model must have at least 30 VERIFIED_TRUE territory-transition instances under the frozen counting rule; otherwise it remains zero/reporting-only.",
+    "missingness": "Publish VERIFIED_TRUE, VERIFIED_FALSE, UNKNOWN and CONFLICTED counts by feature and transition; UNKNOWN may never be converted to FALSE.",
+    "identifiability": "Before C2 is invoked, publish the prospective C1-vs-C2 contrast surface and reject a bundle in which the reasoner is structurally unable to differ on a meaningful number of cells.",
+    "model": "Only after the above passes may a separate immutable V2 model specification be frozen and fit on 2011_TO_2016 with retrospective validation on 2016_TO_2021."
+  }
+}
