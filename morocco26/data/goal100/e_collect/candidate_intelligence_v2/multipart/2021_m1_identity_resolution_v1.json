@@ -1,9 +1,9 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "artifact_id": "M26-CANDIDATE-INTELLIGENCE-V2-MULTIPART-2021-M1-IDENTITY-RESOLUTION-V1",
   "purpose": "Resolve exactly eight previously UNKNOWN 2021 head-of-list identities needed to test the already-frozen M1 support gate. Decisions are based only on pre-election candidate profiles plus the closed prior-House universe; no 2021 outcome is used.",
   "feature": "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT",
-  "decision_rule": "Promote only when a pre-election profile explicitly identifies the focal head as an incumbent/deputy of the same constituency and the closed prior-House universe contains the corresponding same-party territorial identity variant. Set M1 TRUE, M2 FALSE, M3 FALSE. Do not promote any additional high-similarity identity.",
+  "decision_rule": "Promote only when the pre-election profile and the closed prior-House universe jointly establish the same candidate, same party and same local constituency. Set M1 TRUE, M2 FALSE, M3 FALSE. Do not promote any additional high-similarity identity.",
   "outcomes_used": false,
   "threshold_changed": false,
   "decisions": [
@@ -13,7 +13,8 @@
     {"party":"PJD","territory_id":"ouarzazate","candidate_name":"Said Essadik","state":"VERIFIED_TRUE","source_url":"https://medias24.com/2021/08/14/voici-les-profils-des-candidats-du-pjd-pour-les-prochaines-legislatives/","source_date":"2021-08-14","source_claim":"depute PJD de la meme circonscription","closed_universe_variant":"SAID ES-SADEK / PJD / Ouarzazate","method":"PRE_ELECTION_EXPLICIT_SAME_PARTY_SAME_CONSTITUENCY_PLUS_CLOSED_UNIVERSE_VARIANT"},
     {"party":"PJD","territory_id":"oued-ed-dahab","candidate_name":"Azouha El Arrak","state":"VERIFIED_TRUE","source_url":"https://medias24.com/2021/08/14/voici-les-profils-des-candidats-du-pjd-pour-les-prochaines-legislatives/","source_date":"2021-08-14","source_claim":"deputee PJD de la meme circonscription, appelee Oued Ed Dahab auparavant","closed_universe_variant":"AZZOUHA EL ARRAK / PJD / Oued-Ed-Dahab","method":"PRE_ELECTION_EXPLICIT_SAME_PARTY_SAME_CONSTITUENCY_PLUS_CLOSED_UNIVERSE_VARIANT"},
     {"party":"PJD","territory_id":"oujda-angad","candidate_name":"Abdallah Hamel","state":"VERIFIED_TRUE","source_url":"https://medias24.com/2021/08/14/voici-les-profils-des-candidats-du-pjd-pour-les-prochaines-legislatives/","source_date":"2021-08-14","source_claim":"depute PJD de la meme circonscription","closed_universe_variant":"ABDELLAH HAMAL / PJD / Oujda-Angad","method":"PRE_ELECTION_EXPLICIT_SAME_PARTY_SAME_CONSTITUENCY_PLUS_CLOSED_UNIVERSE_VARIANT"},
-    {"party":"RNI","territory_id":"tiflet-rommani","candidate_name":"Hassan Filali","state":"VERIFIED_TRUE","source_url":"https://medias24.com/2021/07/25/entrepreneurs-promoteurs-recrues-voici-les-candidats-du-rni-pour-les-prochaines-legislatives/","source_date":"2021-07-25","source_claim":"actuel depute RNI de la meme circonscription","closed_universe_variant":"HASSAN EL FILALI / RNI / Tiflet-Rommani","method":"PRE_ELECTION_EXPLICIT_SAME_PARTY_SAME_CONSTITUENCY_PLUS_CLOSED_UNIVERSE_VARIANT"},
+    {"party":"PJD","territory_id":"taza","candidate_name":"Jamal Massaoudi","state":"VERIFIED_TRUE","source_url":"https://medias24.com/2021/08/14/voici-les-profils-des-candidats-du-pjd-pour-les-prochaines-legislatives/","source_date":"2021-08-14","source_claim":"depute PJD et actuel maire de Taza","closed_universe_variant":"JAMAL MESSAOUDI / PJD / Taza","method":"PRE_ELECTION_EXPLICIT_CURRENT_PJD_MP_PLUS_CLOSED_UNIVERSE_SAME_TERRITORY_VARIANT"},
     {"party":"RNI","territory_id":"tinghir","candidate_name":"Adi Khzou","state":"VERIFIED_TRUE","source_url":"https://medias24.com/2021/07/25/entrepreneurs-promoteurs-recrues-voici-les-candidats-du-rni-pour-les-prochaines-legislatives/","source_date":"2021-07-25","source_claim":"actuel depute RNI de la meme circonscription","closed_universe_variant":"ADDI KHEZOU / RNI / Tinghir","method":"PRE_ELECTION_EXPLICIT_SAME_PARTY_SAME_CONSTITUENCY_PLUS_CLOSED_UNIVERSE_VARIANT"}
-  ]
+  ],
+  "excluded_confirmed_case": {"party":"RNI","territory_id":"tiflet-rommani","candidate_name":"Hassan Filali","reason":"The pre-election profile confirms incumbency, but the certified head roster used by this frozen cohort contains no matching party-territory cell, so the case is not inserted or backfilled."}
 }
