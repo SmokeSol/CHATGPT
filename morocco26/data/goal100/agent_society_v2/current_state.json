@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "branch": "morocco26-agent-society-v2",
+  "phase": "PRE_LLM_DATA_POWER_AUDIT",
+  "protocol_status": "FROZEN_BEFORE_ASV2_EXECUTION",
+  "F0_status": "OFFICIAL_UNCHANGED",
+  "real_llm_votes_generated": false,
+  "target_outcomes_used_for_ASV2_tuning": false,
+  "known_feasibility": {
+    "historical_vote_anchors_2011_2016_2021": "AVAILABLE_IN_REPO",
+    "2026_structural_F0": "AVAILABLE_AND_IMMUTABLE",
+    "RGPH_2014_demographic_surface": "AUTHORITATIVE_SOURCE_IDENTIFIED",
+    "RGPH_2024_demographic_surface": "AUTHORITATIVE_SOURCE_IDENTIFIED",
+    "2026_candidate_surface": "EXISTS_IN_ATLAS_B2_EVIDENCE_LAYER",
+    "historical_context_density": "MUST_BE_AUDITED; E_REASON_SHOWED SEVERE SPARSITY"
+  },
+  "next_allowed_action": "BUILD constituency-to-RGPH crosswalk and demographic marginals for 2016/2021/2026, then compute the ASV2 data-power audit including historical context-family coverage. Do not call OPUS-5 until the gate passes.",
+  "stop_rule": "If the data-power gate fails, improve source coverage only under a separately versioned acquisition plan; do not weaken thresholds and do not run LLM voting on an underpowered society."
+}
