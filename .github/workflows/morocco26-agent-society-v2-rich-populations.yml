@@ -26,7 +26,7 @@ jobs:
           for item in \
             "agent_society_v2_build_rich_populations.py:morocco26/scripts/agent_society_v2_build_rich_populations.py" \
             "build_v2.py:morocco26/scripts/agent_society_v2_build_rich_populations_v2.py" \
-            "patch_v2.py:morocco26/scripts/agent_society_v2_rich_patch_and_run_v2.py" \
+            "agent_society_v2_rich_patch_and_run_v2.py:morocco26/scripts/agent_society_v2_rich_patch_and_run_v2.py" \
             "patch_and_run.py:morocco26/scripts/agent_society_v2_rich_patch_and_run_v3.py" \
             "attitude_overlay.py:morocco26/scripts/agent_society_v2_build_attitude_overlay.py"; do
             dst="${item%%:*}"; src="${item#*:}"
