@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Recompute the 2016 collection gate from conservative evidence layers only.
 
-This audit deliberately excludes PPS_DIRECT and PPS_LEGACY_FALLBACK after a
-manual integrity check found non-person phrases among rows counted as candidate
-identities in the direct-extension layer. It uses only:
+The direct typographic extension and legacy layout fallback remain excluded in
+full after integrity concerns. Counted evidence is limited to:
   * fail-closed PJD parsed slate rows,
   * the original exact-header PPS typographic parser,
-  * the narrowly validated Moulay-Yacoub targeted OCR artifact.
-No outcome data are opened. This artifact is an integrity audit and becomes the
-scientific gate of record only if/when its thresholds pass.
+  * narrowly validated Moulay-Yacoub targeted OCR evidence,
+  * Ifrane/Sidi-Ifni identities cross-modally verified by an exact OCR header
+    plus an exact standalone embedded-text name line on the same PDF page.
+No outcome data are opened.
 """
 from __future__ import annotations
 import json
@@ -20,6 +20,8 @@ ER=ROOT/'morocco26/data/goal100/e_reason'
 PJD=ER/'evidence/pjd_2016_parsed_slates/parsed_slates.json'
 PPS=ER/'evidence/pps_2016_typographic_identities/parsed_identities.json'
 OCR=ER/'evidence/pps_2016_ocr_moulay_yacoub/evidence.json'
+CROSSMODAL=ER/'evidence/strict_2016_ifrane_sidi_crossmodal_candidates/evidence.json'
+CROSSDIAG=ER/'evidence/strict_2016_ifrane_sidi_embedded_name_diagnostic/diagnostic.json'
 OUT=ER/'evidence/strict_2016_integrity_gate'
 
 def identity(c):
@@ -29,10 +31,27 @@ def main():
     pjd=json.loads(PJD.read_text(encoding='utf-8'))
     pps=json.loads(PPS.read_text(encoding='utf-8'))
     ocr=json.loads(OCR.read_text(encoding='utf-8'))
-    if ocr.get('status')!='PASS': raise RuntimeError('targeted OCR artifact not PASS')
-    if ocr.get('invariants',{}).get('person_name_fuzzy_matching') is not False: raise RuntimeError('OCR fuzzy-name invariant drift')
+    cross=json.loads(CROSSMODAL.read_text(encoding='utf-8'))
+    cdiag=json.loads(CROSSDIAG.read_text(encoding='utf-8'))
+    if ocr.get('status')!='PASS': raise RuntimeError('targeted Moulay-Yacoub OCR artifact not PASS')
+    if ocr.get('invariants',{}).get('person_name_fuzzy_matching') is not False: raise RuntimeError('Moulay-Yacoub fuzzy-name invariant drift')
+    if cross.get('status')!='PASS': raise RuntimeError('cross-modal Ifrane/Sidi evidence not PASS')
+    cinv=cross.get('invariants',{})
+    if cinv.get('exact_header_ocr_required') is not True or cinv.get('exact_same_page_standalone_name_line_required') is not True or cinv.get('person_name_fuzzy_matching') is not False or cinv.get('biography_lines_promoted') is not False:
+        raise RuntimeError('cross-modal safety invariants missing')
+    # Re-verify every promoted cross-modal identity against the frozen diagnostic
+    # rather than trusting the derived evidence file alone.
+    drows={r['constituency_id']:r for r in cdiag.get('rows',[])}
+    if set(drows)!={'ifrane','sidi-ifni'}: raise RuntimeError('cross-modal diagnostic target drift')
+    for c in cross.get('candidate_rows',[]):
+        cid=c.get('constituency_id'); ident=identity(c); dr=drows.get(cid)
+        if dr is None or dr.get('header_exact_match') is not True: raise RuntimeError(f'exact-header diagnostic missing for {cid}')
+        if ident not in set(dr.get('embedded_text_lines_normalized',[])): raise RuntimeError(f'{cid} identity absent as exact embedded line: {ident}')
+        if int(c.get('evidence',{}).get('pdf_page',-1))!=int(dr.get('page',-2)): raise RuntimeError(f'{cid} page mismatch')
+        if c.get('evidence',{}).get('content_sha256')!=dr.get('pdf_sha256'): raise RuntimeError(f'{cid} PDF hash mismatch')
     rows=[]
-    for label,payload in [('PJD',pjd),('PPS_TYPO',pps),('PPS_OCR_FINAL',ocr)]:
+    sources=[('PJD',pjd),('PPS_TYPO',pps),('PPS_OCR_MOULAY',ocr),('PPS_CROSSMODAL',cross)]
+    for label,payload in sources:
         for c in payload.get('candidate_rows',[]):
             cid=c.get('constituency_id'); ident=identity(c)
             if cid and ident:
@@ -40,16 +59,16 @@ def main():
     by=defaultdict(dict)
     for c in rows:
         by[c['constituency_id']][(str(c.get('party')),c['gate_identity'])]=c
+    pipelines=tuple(x[0] for x in sources)
     districts=[]
     for cid,items in sorted(by.items()):
-        xs=list(items.values())
-        n=len(xs)
+        xs=list(items.values());n=len(xs)
         districts.append({
             'constituency_id':cid,
             'verified_distinct_candidate_identities':n,
             'identity_coverage_pass':n>=3,
             'enriched_candidate_fact_present':any(x.get('FORMAL_ENDORSEMENT') is True for x in xs),
-            'pipeline_identity_counts':{p:sum(x['evidence_pipeline']==p for x in xs) for p in ('PJD','PPS_TYPO','PPS_OCR_FINAL')},
+            'pipeline_identity_counts':{p:sum(x['evidence_pipeline']==p for x in xs) for p in pipelines},
             'candidate_keys':[{'party':x.get('party'),'identity':x['gate_identity'],'pipeline':x['evidence_pipeline']} for x in xs],
         })
     identity_n=sum(x['identity_coverage_pass'] for x in districts)
@@ -60,7 +79,7 @@ def main():
         for x in districts if x['verified_distinct_candidate_identities']<3
     ],key=lambda x:(-x['verified_distinct_candidate_identities'],x['constituency_id']))
     payload={
-        'schema_version':'1.0',
+        'schema_version':'2.0',
         'created_at':datetime.now(timezone.utc).isoformat(timespec='seconds'),
         'year':2016,
         'status':'E_REASON_2016_STRICT_INTEGRITY_GATE_PASS' if gate else 'E_REASON_2016_STRICT_INTEGRITY_PARTIAL',
@@ -68,7 +87,7 @@ def main():
             'PPS_DIRECT':'EXCLUDED_WHOLE_LAYER_AFTER_NON_PERSON_PHRASES_WERE_OBSERVED_AMONG_COUNTED_IDENTITIES',
             'PPS_LEGACY_FALLBACK':'EXCLUDED_FROM_STRICT_AUDIT_TO_AVOID_LAYOUT_HEURISTIC_DEPENDENCE',
         },
-        'source_artifacts':{'PJD':str(PJD.relative_to(ROOT)),'PPS_TYPO':str(PPS.relative_to(ROOT)),'PPS_OCR_FINAL':str(OCR.relative_to(ROOT))},
+        'source_artifacts':{'PJD':str(PJD.relative_to(ROOT)),'PPS_TYPO':str(PPS.relative_to(ROOT)),'PPS_OCR_MOULAY':str(OCR.relative_to(ROOT)),'PPS_CROSSMODAL':str(CROSSMODAL.relative_to(ROOT)),'PPS_CROSSMODAL_DIAGNOSTIC':str(CROSSDIAG.relative_to(ROOT))},
         'counts':{
             'candidate_rows_before_dedupe':len(rows),
             'districts_with_any_candidate':len(districts),
@@ -85,6 +104,7 @@ def main():
         'invariants':{
             'direct_extension_rows_counted':False,
             'legacy_fallback_rows_counted':False,
+            'crossmodal_rows_reverified_against_frozen_diagnostic':True,
             'outcomes_unsealed':False,
             'predictive_judgments_generated':False,
             'forecast_delta_generated':False,
