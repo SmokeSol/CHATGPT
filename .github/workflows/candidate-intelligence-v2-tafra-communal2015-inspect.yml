@@ -5,6 +5,12 @@ on:
     paths:
       - 'morocco26/scripts/inspect_tafra_communal2015_xlsx.py'
       - '.github/workflows/candidate-intelligence-v2-tafra-communal2015-inspect.yml'
+  pull_request:
+    branches: [morocco26-e-reason]
+    paths:
+      - 'morocco26/scripts/candidate_intelligence_v2_closed_universe_trigger.txt'
+      - 'morocco26/scripts/inspect_tafra_communal2015_xlsx.py'
+      - '.github/workflows/candidate-intelligence-v2-tafra-communal2015-inspect.yml'
   workflow_dispatch:
 permissions:
   contents: write
