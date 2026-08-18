@@ -1,0 +1,25 @@
+name: Morocco26 Agent Society V2 HCP Casablanca label audit
+
+on:
+  pull_request:
+    paths:
+      - 'morocco26/data/goal100/agent_society_v2/triggers/hcp_casablanca_audit.trigger'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4cff429ed7a5c9df41949e422001845ca326b38d
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check requests==2.32.4 openpyxl==3.1.5
+      - run: python morocco26/scripts/agent_society_v2_hcp_casablanca_key_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: agent-society-v2-hcp-casablanca-labels
+          path: morocco26/data/goal100/agent_society_v2/hcp_casablanca_key_audit_v1.json
