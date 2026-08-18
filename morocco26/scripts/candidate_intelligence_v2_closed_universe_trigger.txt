@@ -1,4 +1,4 @@
-trigger_id=M26-CANDIDATE-INTEL-V2-LOCAL2015-2021-UNKNOWN-COMPACT-20260818
+trigger_id=M26-CANDIDATE-INTEL-V2-LOCAL2015-2021-AUDITED-GATE-20260818
 base=morocco26-e-reason
 network_required=true
-purpose=print_compact_context_for_19_remaining_2021_identity_unknowns
+purpose=rerun_2021_local2015_power_gate_after_19_identity_adjudications
