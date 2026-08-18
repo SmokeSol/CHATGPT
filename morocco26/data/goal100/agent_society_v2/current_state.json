@@ -1,17 +1,45 @@
 {
-  "schema_version":"1.1",
-  "experiment_id":"M26-AGENT-SOCIETY-V2-001",
-  "branch":"morocco26-agent-society-v2",
-  "phase":"ASV2_RICH_MICROFOUNDATION_PASS_BUILDING_SES_ATTITUDES_AND_EXACT_GEOGRAPHY",
-  "protocol_status":"PRE_LLM_RICH_ENRICHMENT_GATES_FROZEN",
-  "F0_status":"OFFICIAL_UNCHANGED",
-  "real_llm_votes_generated":false,
-  "target_outcomes_used_for_ASV2_tuning":false,
-  "minimal_handoff":{"status":"SEALED_RETAINED_NOT_EXECUTED","public_zip_sha256":"9798dcb7c9b227322eb6b8158d4929e5536b8e0c4e41dc890d9b4cfeec063209"},
-  "rich_source_catalog":{"status":"PASS_SOURCE_CATALOG_READY","parsed_sources":11,"rgph_person_rows":3341426,"rgph_household_rows":730099,"encdm_household_columns":792,"afrobarometer_r6_columns":334,"afrobarometer_r8_columns":377},
-  "rich_microfoundation":{"status":"PASS_RICH_MICROFOUNDATION_INFORMATION_GATE","qualifying_observed_fields":60,"raw_surface_ratio_vs_R0":12.0,"effective_rank_R0":23.372259047810537,"effective_rank_R1":222.15283489039948,"effective_rank_ratio":9.504979147970307,"adult_sample":96412,"person_household_join_rate":1.0},
-  "github_operating_mode":{"mode":"BATCH_GIT_DATA_API_PLUS_PATH_SCOPED_PR_JOBS","improvements":["multiple repo files committed atomically through create_tree/create_commit/update_ref","no actions/checkout for heavy audits","workflow path filters prevent unrelated heavy jobs","large public sources processed outside Git history","only terminal compact artifacts downloaded"]},
-  "next_required_gates":["R2_SES_MATCHING_PASS","R3_ATTITUDE_LAYER_2016_2021_PASS","RICH_SPLIT_GEOGRAPHY_19_OF_19_PASS","RICH_COMPRESSION_128_OR_256_PASS","RICH_BLINDING_LEAKAGE_PASS"],
-  "next_allowed_action":"Build and audit R2 socioeconomic posteriors and R3 pre-election attitude constructs in parallel with the exact 19 split-constituency geography crosswalk. Do not run any real Opus handoff yet.",
-  "stop_rule":"No real ASV2 Opus execution until all RICH data, geography, compression and leakage gates pass and a new sealed handoff/scorer are frozen."
+  "F0_status": "OFFICIAL_UNCHANGED",
+  "branch": "morocco26-agent-society-v2",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "github_operating_mode": {
+    "mode": "BATCH_GIT_DATA_API_PLUS_SINGLE_PATH_SCOPED_WORKFLOW",
+    "verified_improvements": [
+      "related repo edits committed atomically through Git trees and one commit",
+      "one path-scoped workflow run built R2 and R3 together",
+      "large public datasets and artifacts remain outside Git history",
+      "only compact certificates and hashes are persisted"
+    ]
+  },
+  "minimal_handoff": {
+    "public_zip_sha256": "9798dcb7c9b227322eb6b8158d4929e5536b8e0c4e41dc890d9b4cfeec063209",
+    "status": "SEALED_RETAINED_NOT_EXECUTED"
+  },
+  "next_allowed_action": "Resolve or certify the 34 proxy-geography territories, then compress/packetize R2 and R3, run blind-memory leakage checks, freeze the new sealed historical handoff and scorer. Do not run Opus yet.",
+  "next_required_gates": [
+    "RICH_GEOGRAPHY_ROBUSTNESS_PASS",
+    "RICH_COMPRESSION_128_OR_256_PASS",
+    "RICH_BLINDING_LEAKAGE_PASS",
+    "RICH_HANDOFF_AND_SCORER_FROZEN"
+  ],
+  "phase": "ASV2_RICH_X10_AND_ATTITUDE_PASS_PENDING_GEOGRAPHY_COMPRESSION_LEAKAGE_HANDOFF",
+  "protocol_status": "PRE_LLM_RICH_ENRICHMENT_GATES_FROZEN",
+  "real_llm_votes_generated": false,
+  "rich_build": {
+    "direct_geography_territories": 58,
+    "proxy_geography_territories": 34,
+    "r2_effective_rank_ratio_vs_R0": 12.669897140648988,
+    "r2_max_single_weight": 0.015917382990493847,
+    "r2_min_ess": 226.93685800863827,
+    "r2_safe_feature_count": 125,
+    "r2_territories_each_year": 92,
+    "r3_attitude_dimensions": 17,
+    "r3_posterior_fields_per_archetype": 34,
+    "r3_rows_each_year": 23552,
+    "status": "ASV2_RICH_POPULATION_AND_ATTITUDE_BUILD_PASS",
+    "workflow_run_id": 32194378490
+  },
+  "schema_version": "1.2",
+  "stop_rule": "No real ASV2 Opus execution until geography, compression, leakage, handoff and scorer certificates all pass.",
+  "target_outcomes_used_for_ASV2_tuning": false
 }
