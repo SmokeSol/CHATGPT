@@ -2,19 +2,25 @@
   "schema_version": "1.0",
   "experiment_id": "M26-AGENT-SOCIETY-V2-001",
   "branch": "morocco26-agent-society-v2",
-  "phase": "PRE_LLM_DATA_POWER_AUDIT",
+  "phase": "READY_FOR_BLINDED_HISTORICAL_LLM_HANDOFF",
   "protocol_status": "FROZEN_BEFORE_ASV2_EXECUTION",
   "F0_status": "OFFICIAL_UNCHANGED",
   "real_llm_votes_generated": false,
   "target_outcomes_used_for_ASV2_tuning": false,
-  "known_feasibility": {
-    "historical_vote_anchors_2011_2016_2021": "AVAILABLE_IN_REPO",
-    "2026_structural_F0": "AVAILABLE_AND_IMMUTABLE",
-    "RGPH_2014_demographic_surface": "AUTHORITATIVE_SOURCE_IDENTIFIED",
-    "RGPH_2024_demographic_surface": "AUTHORITATIVE_SOURCE_IDENTIFIED",
-    "2026_candidate_surface": "EXISTS_IN_ATLAS_B2_EVIDENCE_LAYER",
-    "historical_context_density": "MUST_BE_AUDITED; E_REASON_SHOWED SEVERE SPARSITY"
+  "data_power": {
+    "combined_status": "ASV2_DATA_POWER_PASS",
+    "candidate_party": "PASS_STRICT",
+    "context_diversity": "PASS_FORMAL_WITH_SEVERE_2016_DISCRIMINATION_WARNING",
+    "demographic_population": "PASS_92_OF_92_BOTH_HISTORICAL_YEARS",
+    "population_2016_min_ess": 100.83442591428567,
+    "population_2021_min_ess": 93.61618150692544,
+    "national_demographic_fallback_weight": 0.0
   },
-  "next_allowed_action": "BUILD constituency-to-RGPH crosswalk and demographic marginals for 2016/2021/2026, then compute the ASV2 data-power audit including historical context-family coverage. Do not call OPUS-5 until the gate passes.",
-  "stop_rule": "If the data-power gate fails, improve source coverage only under a separately versioned acquisition plan; do not weaken thresholds and do not run LLM voting on an underpowered society."
+  "known_limitations": [
+    "2016 formally passes the context-density gate but has zero districts with at least two cross-party discriminative context families.",
+    "19 split constituencies use explicitly flagged whole prefecture/province HCP demographic fallback rather than exact constituency demographics.",
+    "Ages 18-19 are deterministically approximated as 2/5 of the HCP 15-19 age band and require sensitivity analysis."
+  ],
+  "next_allowed_action": "BUILD and freeze blinded AS2_LLM_INDEPENDENT and AS2_SHUFFLED_CONTEXT historical packets, freeze one prompt/output schema, contract-test on dummy packets only, then hand the sealed package to OPUS-5.",
+  "stop_rule": "Do not inspect target outcomes while constructing or judging historical ASV2 packets; do not modify prompt, model, aggregation or gates after real benchmark outputs are inspected."
 }
