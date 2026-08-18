@@ -1,0 +1,105 @@
+{
+  "contract_frozen_at": "2026-08-18T18:20:00+01:00",
+  "contract_id": "M26-CANDIDATE-INTELLIGENCE-V2-REASONER-POWER-CONTRACT-V1",
+  "feature_A": "V2_HEAD_PRIOR_CYCLE_MP",
+  "feature_B": "V2_HEAD_ELECTED_LOCAL_COUNCIL_2015",
+  "feature_B_selection_reason": "Executive candidate failed >=30 positive support; council membership passed in both transitions under frozen priority rule.",
+  "forecast_modified": false,
+  "gate_id": "M26-CANDIDATE-INTELLIGENCE-V2-REASONER-POWER-GATE-V1",
+  "llm_treatment_authorized": false,
+  "next_if_pass": "Freeze a separate immutable E_reason V2 model/reasoner specification and prospective C1-vs-C2 contrast surface before invoking any LLM.",
+  "predictive_value_estimated": false,
+  "schema_version": "1.0",
+  "status": "FAIL_REASONER_POWER",
+  "transitions": {
+    "2011_TO_2016": {
+      "A_rows": 74,
+      "A_values_present": [
+        0,
+        1
+      ],
+      "B_rows": 74,
+      "B_values_present": [
+        0,
+        1
+      ],
+      "absolute_phi": 0.006080403791133919,
+      "discordant_cells_01_plus_10": 38,
+      "gate_pass": true,
+      "gates": {
+        "both_values": true,
+        "discordance": true,
+        "joint_coverage": true,
+        "patterns": true,
+        "phi": true
+      },
+      "joint_known_territories": 74,
+      "patterns": {
+        "00": 16,
+        "01": 26,
+        "10": 12,
+        "11": 20
+      },
+      "patterns_with_at_least_5_cells": 4,
+      "phi": 0.006080403791133919,
+      "territories_intersection": 74,
+      "transition": "2011_TO_2016",
+      "unknown_joint_rows": []
+    },
+    "2016_TO_2021": {
+      "A_rows": 91,
+      "A_values_present": [
+        0,
+        1
+      ],
+      "B_rows": 74,
+      "B_values_present": [
+        0,
+        1
+      ],
+      "absolute_phi": 0.09870334871066368,
+      "discordant_cells_01_plus_10": 35,
+      "gate_pass": false,
+      "gates": {
+        "both_values": true,
+        "discordance": true,
+        "joint_coverage": false,
+        "patterns": true,
+        "phi": true
+      },
+      "joint_known_territories": 70,
+      "patterns": {
+        "00": 18,
+        "01": 28,
+        "10": 7,
+        "11": 17
+      },
+      "patterns_with_at_least_5_cells": 4,
+      "phi": 0.09870334871066368,
+      "territories_intersection": 74,
+      "transition": "2016_TO_2021",
+      "unknown_joint_rows": [
+        {
+          "A_state": "UNKNOWN",
+          "B_state": "VERIFIED_TRUE",
+          "territory_id": "el-gharb"
+        },
+        {
+          "A_state": "UNKNOWN",
+          "B_state": "VERIFIED_TRUE",
+          "territory_id": "laayoune"
+        },
+        {
+          "A_state": "UNKNOWN",
+          "B_state": "VERIFIED_FALSE",
+          "territory_id": "rabat-ocean"
+        },
+        {
+          "A_state": "UNKNOWN",
+          "B_state": "VERIFIED_TRUE",
+          "territory_id": "sidi-slimane"
+        }
+      ]
+    }
+  }
+}
