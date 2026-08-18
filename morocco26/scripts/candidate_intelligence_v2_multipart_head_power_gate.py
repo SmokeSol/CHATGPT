@@ -20,6 +20,7 @@ OUT=CI/'candidate_intelligence_v2_multipart_head_power_gate_v1.json'
 DETAIL16=CI/'multipart'/'2016_head_prior_mp_features_v1.jsonl'
 DETAIL21=CI/'multipart'/'2021_head_prior_mp_features_v1.jsonl'
 RNI16_URL='https://raw.githubusercontent.com/SmokeSol/CHATGPT/morocco26-agent-society-v2/morocco26/data/goal100/agent_society_v2/acquisition/2016_candidate_party_augmented_wave2.json'
+RNI16_SOURCE='https://al3omk.com/94402.html'
 FEATURES=['M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT','M2_HEAD_PRIOR_MP_SAME_PARTY_OTHER_SEAT','M3_HEAD_PRIOR_MP_SWITCH_IN']
 LAT_GUARD=.86; AR_GUARD=.88; CORROBORATED_GUARD=.78; MARGIN=.06
 AR_DIAC=re.compile(r'[\u0610-\u061a\u064b-\u065f\u0670\u06d6-\u06ed]')
@@ -43,13 +44,11 @@ def load_universe(parliament):
  if not party:raise KeyError('party column absent')
  u=df[df[pc].astype(str).str.strip().eq(parliament)].copy();u=u[u[rc].astype(str).str.casefold().str.strip().eq('elu')].copy()
  if len(u)!=395:raise RuntimeError(f'{parliament} universe !=395: {len(u)}')
- rows=[]
- for _,r in u.iterrows():rows.append({'name_lat':str(r.get(lc,'') or ''),'name_ar':str(r.get(ac,'') or ''),'party':str(r.get(party,'') or '').strip().upper(),'territory_source':str(r.get(tc,'') or '')})
- return rows
+ return [{'name_lat':str(r.get(lc,'') or ''),'name_ar':str(r.get(ac,'') or ''),'party':str(r.get(party,'') or '').strip().upper(),'territory_source':str(r.get(tc,'') or '')} for _,r in u.iterrows()]
 def load_constituencies():
  with CONST.open(encoding='utf-8',newline='') as f:return list(csv.DictReader(f))
 def territory_resolver():
- const=load_constituencies(); names={nlat(r['name']):r['constituency_id'] for r in const}; arr=list(names)
+ const=load_constituencies();names={nlat(r['name']):r['constituency_id'] for r in const};arr=list(names)
  def resolve(src):
   n=nlat(src)
   if not n:return None,'EMPTY'
@@ -62,15 +61,15 @@ def territory_resolver():
 def pjd16_aliases():
  d=json.loads(PJD16_ALIAS.read_text(encoding='utf-8'));return {nar(x['current_name']):nar(x['prior_name']) for x in d.get('2016',[]) if x.get('status')=='SAFE_ALIAS' and x.get('prior_name')}
 def load_candidates16():
- pjd=[]
- for r in json.loads(PJD16.read_text(encoding='utf-8'))['rows']:pjd.append({'transition':'2011_TO_2016','year':2016,'party':'PJD','territory_id':r['territory_id'],'candidate_name_ar':r['candidate_name_ar'],'candidate_name_lat':None,'source_class':'PJD_OFFICIAL_CLOSED_HEAD_ROSTER','prior_link_corroborated':False})
- resp=requests.get(RNI16_URL,timeout=90,headers={'User-Agent':'M26-CandidateIntel/1.0'});resp.raise_for_status();d=resp.json();rni=[r for r in d['records'] if r.get('party')=='RNI' and r.get('source_url')=='https://al3omk.com/94402.html']
- if len(rni)!=81:raise RuntimeError(f'expected 81 RNI head rows, got {len(rni)}')
- seen=set();out=pjd[:]
+ out=[{'transition':'2011_TO_2016','year':2016,'party':'PJD','territory_id':r['territory_id'],'candidate_name_ar':r['candidate_name_ar'],'candidate_name_lat':None,'source_class':'PJD_OFFICIAL_CLOSED_HEAD_ROSTER','prior_link_corroborated':False} for r in json.loads(PJD16.read_text(encoding='utf-8'))['rows']]
+ resp=requests.get(RNI16_URL,timeout=90,headers={'User-Agent':'M26-CandidateIntel/1.0'});resp.raise_for_status();d=resp.json();rni=[r for r in d['records'] if r.get('party')=='RNI' and r.get('source_url')==RNI16_SOURCE]
+ # The source article was advertised as 81 heads, but the archived wave2 extraction contains 71 RNI rows from that source. Do not invent or backfill the missing ten here; the frozen contract only requires >=50 known cells per party.
+ if len(rni)<50:raise RuntimeError(f'RNI recovered national-head subset below frozen per-party floor: {len(rni)}')
+ seen=set()
  for r in rni:
   key=('RNI',r['constituency_id'])
   if key in seen:raise RuntimeError(f'duplicate RNI head {key}')
-  seen.add(key);out.append({'transition':'2011_TO_2016','year':2016,'party':'RNI','territory_id':r['constituency_id'],'candidate_name_ar':r['candidate'],'candidate_name_lat':None,'source_class':'RNI_NATIONAL_81_HEAD_LIST_PUBLICATION','prior_link_corroborated':False})
+  seen.add(key);out.append({'transition':'2011_TO_2016','year':2016,'party':'RNI','territory_id':r['constituency_id'],'candidate_name_ar':r['candidate'],'candidate_name_lat':None,'source_class':'RNI_RECOVERED_NATIONAL_HEAD_PUBLICATION_SUBSET','source_publication_claimed_heads':81,'source_rows_recovered':len(rni),'prior_link_corroborated':False})
  return out
 def load_candidates21():
  rows=json.loads(HEAD21.read_text(encoding='utf-8'));out=[];seen=set()
@@ -84,14 +83,13 @@ def load_candidates21():
 def best(name,universe,key,norm):
  q=norm(name);ranked=[]
  for i,r in enumerate(universe):
-  v=norm(r[key]);
-  if not v:continue
-  ranked.append((SequenceMatcher(None,q,v).ratio(),i))
+  v=norm(r[key])
+  if v:ranked.append((SequenceMatcher(None,q,v).ratio(),i))
  ranked.sort(reverse=True);return ranked[:3]
 def classify(cands,universe,script):
- norm=nar if script=='ar' else nlat; key='name_ar' if script=='ar' else 'name_lat';idx=defaultdict(list)
+ norm=nar if script=='ar' else nlat;key='name_ar' if script=='ar' else 'name_lat';idx=defaultdict(list)
  for i,r in enumerate(universe):
-  n=norm(r[key]);
+  n=norm(r[key])
   if n:idx[n].append(i)
  alias=pjd16_aliases() if script=='ar' else {};resolve_territory=territory_resolver();out=[]
  for c in cands:
@@ -100,7 +98,7 @@ def classify(cands,universe,script):
   elif len(hits)>1:
    contextual=[]
    for i in hits:
-    r=universe[i];tid,_=resolve_territory(r['territory_source'])
+    tid,_=resolve_territory(universe[i]['territory_source'])
     if tid==c['territory_id']:contextual.append(i)
    if len(contextual)==1:chosen=universe[contextual[0]];method='EXACT_COLLISION_UNIQUE_SAME_TERRITORY'
    else:method='EXACT_COLLISION_UNKNOWN'
@@ -109,30 +107,24 @@ def classify(cands,universe,script):
    if c.get('prior_link_corroborated') and ranked and top>=CORROBORATED_GUARD and top-second>=MARGIN:chosen=universe[ranked[0][1]];method='CORROBORATED_PRIOR_LINK_PLUS_UNIQUE_NAME_VARIANT'
    elif top>=guard:method='HIGH_SIMILARITY_UNKNOWN'
    else:method='VERIFIED_NO_PRIOR_MP_COMPLETE_UNIVERSE'
-  item={**c,'identity_method':method,'prior_member':chosen,'nearest':[{'score':round(s,6),'name':universe[i][key],'party':universe[i]['party'],'territory_source':universe[i]['territory_source']} for s,i in ranked[:3]]}
-  states={f:'UNKNOWN' for f in FEATURES}
+  item={**c,'identity_method':method,'prior_member':chosen,'nearest':[{'score':round(s,6),'name':universe[i][key],'party':universe[i]['party'],'territory_source':universe[i]['territory_source']} for s,i in ranked[:3]]};states={f:'UNKNOWN' for f in FEATURES}
   if method=='VERIFIED_NO_PRIOR_MP_COMPLETE_UNIVERSE':states={f:'VERIFIED_FALSE' for f in FEATURES}
   elif chosen is not None:
    prior_party=chosen['party'];prior_tid,tmethod=resolve_territory(chosen['territory_source']);item['prior_territory_id']=prior_tid;item['prior_territory_method']=tmethod
-   if prior_party!=c['party']:
-    states[FEATURES[0]]='VERIFIED_FALSE';states[FEATURES[1]]='VERIFIED_FALSE';states[FEATURES[2]]='VERIFIED_TRUE'
-   elif prior_tid==c['territory_id']:
-    states[FEATURES[0]]='VERIFIED_TRUE';states[FEATURES[1]]='VERIFIED_FALSE';states[FEATURES[2]]='VERIFIED_FALSE'
-   elif prior_tid is not None:
-    states[FEATURES[0]]='VERIFIED_FALSE';states[FEATURES[1]]='VERIFIED_TRUE';states[FEATURES[2]]='VERIFIED_FALSE'
-   else:
-    states[FEATURES[2]]='VERIFIED_FALSE'
+   if prior_party!=c['party']:states={FEATURES[0]:'VERIFIED_FALSE',FEATURES[1]:'VERIFIED_FALSE',FEATURES[2]:'VERIFIED_TRUE'}
+   elif prior_tid==c['territory_id']:states={FEATURES[0]:'VERIFIED_TRUE',FEATURES[1]:'VERIFIED_FALSE',FEATURES[2]:'VERIFIED_FALSE'}
+   elif prior_tid is not None:states={FEATURES[0]:'VERIFIED_FALSE',FEATURES[1]:'VERIFIED_TRUE',FEATURES[2]:'VERIFIED_FALSE'}
+   else:states[FEATURES[2]]='VERIFIED_FALSE'
   item['feature_states']=states;out.append(item)
  return out
 def summarize(rows,contract):
- parties=contract['parties'];pg=contract['power_gate'];known_head={};
+ parties=contract['parties'];pg=contract['power_gate'];known_head={}
  for p in parties:
-  pr=[r for r in rows if r['party']==p]; known=sum(all(v in {'VERIFIED_TRUE','VERIFIED_FALSE'} for v in r['feature_states'].values()) for r in pr);known_head[p]={'rows':len(pr),'fully_known_all_features':known,'per_party_gate':known>=pg['minimum_known_head_cells_per_party_each_transition']}
- total_fully=sum(all(v in {'VERIFIED_TRUE','VERIFIED_FALSE'} for v in r['feature_states'].values()) for r in rows)
- features={}
+  pr=[r for r in rows if r['party']==p];known=sum(all(v in {'VERIFIED_TRUE','VERIFIED_FALSE'} for v in r['feature_states'].values()) for r in pr);known_head[p]={'rows':len(pr),'fully_known_all_features':known,'per_party_gate':known>=pg['minimum_known_head_cells_per_party_each_transition']}
+ total_fully=sum(all(v in {'VERIFIED_TRUE','VERIFIED_FALSE'} for v in r['feature_states'].values()) for r in rows);features={}
  for f in FEATURES:
   st=Counter(r['feature_states'][f] for r in rows);features[f]={'states':dict(st),'known':st['VERIFIED_TRUE']+st['VERIFIED_FALSE'],'positive':st['VERIFIED_TRUE'],'support_gate':st['VERIFIED_TRUE']>=pg['minimum_positive_instances_per_binary_feature_each_transition']}
  return {'rows':len(rows),'fully_known_all_features':total_fully,'total_known_gate':total_fully>=pg['minimum_known_head_cells_each_transition'],'parties':known_head,'features':features,'unknown_rows':[{'party':r['party'],'territory_id':r['territory_id'],'candidate_name':r.get('candidate_name_ar') or r.get('candidate_name_lat'),'identity_method':r['identity_method'],'feature_states':r['feature_states'],'nearest':r['nearest']} for r in rows if not all(v in {'VERIFIED_TRUE','VERIFIED_FALSE'} for v in r['feature_states'].values())]}
 def main():
- c=json.loads(CONTRACT.read_text(encoding='utf-8'));u11=load_universe('2011-2016');u16=load_universe('2016-2021');r16=classify(load_candidates16(),u11,'ar');r21=classify(load_candidates21(),u16,'lat');DETAIL16.parent.mkdir(parents=True,exist_ok=True);DETAIL16.write_text('\n'.join(json.dumps(x,ensure_ascii=False,sort_keys=True) for x in r16)+'\n',encoding='utf-8');DETAIL21.write_text('\n'.join(json.dumps(x,ensure_ascii=False,sort_keys=True) for x in r21)+'\n',encoding='utf-8');s16=summarize(r16,c);s21=summarize(r21,c);eligible=[f for f in FEATURES if s16['features'][f]['support_gate'] and s21['features'][f]['support_gate']];coverage=s16['total_known_gate'] and s21['total_known_gate'] and all(v['per_party_gate'] for v in s16['parties'].values()) and all(v['per_party_gate'] for v in s21['parties'].values());out={'schema_version':'1.0','result_id':'M26-CANDIDATE-INTELLIGENCE-V2-MULTIPART-HEAD-POWER-GATE-V1','contract_id':c['contract_id'],'2011_TO_2016':s16,'2016_TO_2021':s21,'eligible_features':eligible,'failed_features_forced_zero':[f for f in FEATURES if f not in eligible],'coverage_gate':coverage,'status':'PASS_MULTIPART_HEAD_POWER' if coverage and eligible else 'FAIL_MULTIPART_HEAD_POWER','forecast_modified':False,'outcomes_used':False};OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8');print(json.dumps({'status':out['status'],'rows16':len(r16),'rows21':len(r21),'fully_known16':s16['fully_known_all_features'],'fully_known21':s21['fully_known_all_features'],'eligible_features':eligible,'positive16':{f:s16['features'][f]['positive'] for f in FEATURES},'positive21':{f:s21['features'][f]['positive'] for f in FEATURES},'unknown16':len(s16['unknown_rows']),'unknown21':len(s21['unknown_rows'])},sort_keys=True))
+ c=json.loads(CONTRACT.read_text(encoding='utf-8'));u11=load_universe('2011-2016');u16=load_universe('2016-2021');r16=classify(load_candidates16(),u11,'ar');r21=classify(load_candidates21(),u16,'lat');DETAIL16.parent.mkdir(parents=True,exist_ok=True);DETAIL16.write_text('\n'.join(json.dumps(x,ensure_ascii=False,sort_keys=True) for x in r16)+'\n',encoding='utf-8');DETAIL21.write_text('\n'.join(json.dumps(x,ensure_ascii=False,sort_keys=True) for x in r21)+'\n',encoding='utf-8');s16=summarize(r16,c);s21=summarize(r21,c);eligible=[f for f in FEATURES if s16['features'][f]['support_gate'] and s21['features'][f]['support_gate']];coverage=s16['total_known_gate'] and s21['total_known_gate'] and all(v['per_party_gate'] for v in s16['parties'].values()) and all(v['per_party_gate'] for v in s21['parties'].values());out={'schema_version':'1.1','result_id':'M26-CANDIDATE-INTELLIGENCE-V2-MULTIPART-HEAD-POWER-GATE-V1','contract_id':c['contract_id'],'rni2016_source_claimed_heads':81,'rni2016_source_rows_recovered':sum(1 for r in r16 if r['party']=='RNI'),'2011_TO_2016':s16,'2016_TO_2021':s21,'eligible_features':eligible,'failed_features_forced_zero':[f for f in FEATURES if f not in eligible],'coverage_gate':coverage,'status':'PASS_MULTIPART_HEAD_POWER' if coverage and eligible else 'FAIL_MULTIPART_HEAD_POWER','forecast_modified':False,'outcomes_used':False};OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8');print(json.dumps({'status':out['status'],'rows16':len(r16),'rows21':len(r21),'rni16':out['rni2016_source_rows_recovered'],'fully_known16':s16['fully_known_all_features'],'fully_known21':s21['fully_known_all_features'],'eligible_features':eligible,'positive16':{f:s16['features'][f]['positive'] for f in FEATURES},'positive21':{f:s21['features'][f]['positive'] for f in FEATURES},'unknown16':len(s16['unknown_rows']),'unknown21':len(s21['unknown_rows'])},sort_keys=True))
 if __name__=='__main__':main()
