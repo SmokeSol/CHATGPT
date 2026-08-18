@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "amendment_id": "M26-ASV2-POPULATION-BUILDER-ENGINEERING-V2",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "classification": "ENGINEERING_ONLY_NO_SCIENTIFIC_CHANGE",
+  "recorded_before_real_llm_votes": true,
+  "target_outcomes_used": false,
+  "change": "Replace repeated Python mask reconstruction inside IPF with precomputed category-index arrays and execute eight deterministic support candidates per constituency, selecting the successful support with the lowest demographic-prior dependence among them.",
+  "mathematical_transform_unchanged": "Iterative proportional fitting applies the same sequential target/current multiplicative update for the same six dimensions and same target marginals.",
+  "unchanged": [
+    "128 archetypes per constituency",
+    "HCP 2014 demographic targets",
+    "exact prior-election party/abstention mass",
+    "demographic marginal error <=0.5 percentage points",
+    "political marginal tolerance <=1e-9",
+    "effective archetype count >=64",
+    "maximum single archetype weight <=0.10",
+    "no target-election outcome use",
+    "no demographic-partisan factual prior"
+  ],
+  "failure_rule": "Fail closed if none of the eight deterministic supports satisfies every frozen numerical gate.",
+  "status": "FROZEN_BEFORE_VECTORIZED_RERUN"
+}
