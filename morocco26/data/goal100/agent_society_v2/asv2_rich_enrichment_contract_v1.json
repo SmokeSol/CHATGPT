@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-ASV2-RICH-ENRICHMENT-CONTRACT-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "FROZEN_BEFORE_ANY_REAL_ASV2_LLM_OUTPUT",
+  "supersedes_execution_of": "ASV2-MINIMAL historical handoff (retained as benchmark only; do not execute unless ASV2-RICH fails its own data gate)",
+  "scientific_goal": "Increase the information content of each synthetic Moroccan voter by roughly an order of magnitude while preserving historical pre-election leakage discipline and keeping F0 unchanged.",
+  "design_change": {
+    "old_population": "128 IPF/maximum-entropy archetypes using a small set of marginal demographics",
+    "new_population": "micro-founded synthetic voters seeded from anonymized HCP RGPH 2014 individual+household microdata, small-area reweighted to constituency marginals, then dynamically updated to each target election using only pre-target official statistics",
+    "old_information_dimensions_approx": 6,
+    "new_target_observed_or_constrained_dimensions_min": 60,
+    "reason": "Avoid repeating E_reason's failure mode: strong protocol over an information set too sparse to express heterogeneous voter behavior."
+  },
+  "source_layers": [
+    {
+      "id": "HCP_RGPH2014_MICRO",
+      "role": "joint demographic/household backbone",
+      "scope": "3,341,426 anonymized persons in 730,099 households; 85 variables according to HCP anonymisation documentation",
+      "geography": "microdata supports national/regional/provincial analysis; constituency localisation obtained by small-area reweighting against published commune/territory marginals",
+      "historical_use": {
+        "2016": "direct pre-election backbone",
+        "2021": "backbone aged/reweighted using only statistics published before election"
+      },
+      "allowed": "anonymous statistical population synthesis only",
+      "forbidden": "attempted re-identification"
+    },
+    {
+      "id": "HCP_RGPH2014_COMMUNAL",
+      "role": "small-area constituency constraints",
+      "scope": "communal individual and household indicators plus mobility/transport and profession/economic activity tables",
+      "historical_use": {
+        "2016": "direct",
+        "2021": "base spatial structure with target-year official updates where available"
+      }
+    },
+    {
+      "id": "HCP_ENCDM2014",
+      "role": "socioeconomic/consumption latent layer",
+      "scope": "16,000-household national consumption survey and anonymized household/person microdata",
+      "method": "statistical matching onto RGPH synthetic households using covariates common to both sources; propagate imputation uncertainty",
+      "forbidden": "treat imputed household consumption as observed individual fact"
+    },
+    {
+      "id": "HCP_POP_PROJECTIONS_2014_2030",
+      "role": "target-year age/sex/geographic reweighting",
+      "scope": "official region/province/prefecture population projections",
+      "historical_use": {
+        "2016": "2016 projection",
+        "2021": "2021 projection"
+      }
+    },
+    {
+      "id": "HCP_EMPLOYMENT",
+      "role": "target-year labour-market reweighting and national economic context",
+      "historical_use": {
+        "2016": "latest publication available before election",
+        "2021": "2020 annual and 2021 Q1 publications available before election"
+      },
+      "variables": "activity, employment, unemployment, underemployment, profession/sector where sourceable"
+    },
+    {
+      "id": "AFROBAROMETER_MOROCCO",
+      "role": "pre-election latent public-attitude distribution",
+      "historical_use": {
+        "2016": "Round 6 fielded 2-22 Nov 2015",
+        "2021": "Round 8 fielded 8-25 Feb 2021"
+      },
+      "method": "fit broad-demographic conditional distributions and sample synthetic latent attitudes; never copy respondents; no direct forthcoming-party vote intention in core arm"
+    },
+    {
+      "id": "ARAB_BAROMETER_MOROCCO",
+      "role": "independent public-attitude robustness layer",
+      "historical_use": {
+        "2016": "Wave III 2012-2014 only if item date precedes target cutoff",
+        "2021": "Wave VI parts fielded Jul 2020-Apr 2021"
+      },
+      "method": "use generic numeric attitude/context dimensions; exclude election-outcome or post-cutoff information and exclude direct forthcoming-party vote intention"
+    },
+    {
+      "id": "E_REASON_VERIFIED_POLITICAL_CONTEXT",
+      "role": "party/candidate/local context",
+      "scope": "already verified candidate identities and pre-election feature/event packets",
+      "historical_use": {
+        "2016": "reuse frozen pre-election evidence",
+        "2021": "reuse frozen pre-election evidence"
+      }
+    }
+  ],
+  "voter_state_target": {
+    "minimum_dimensions": 60,
+    "families": {
+      "demography_household": {
+        "target_min": 12,
+        "examples": ["age_band","sex","marital_status","relationship_to_household_head","household_size","children_count_bands","adult_count","elderly_count","dependency_ratio","generation_structure","head_age_band","urban_rural"]
+      },
+      "education_language": {
+        "target_min": 7,
+        "examples": ["literacy","schooling_status","education_level","diploma_level","local_language_use","derived_education_years_band","student_status"]
+      },
+      "labour_economic": {
+        "target_min": 9,
+        "examples": ["activity_status","employment_status","occupation_major_group","industry_section","professional_status","workplace_geography","commute_mode","regional_labour_tightness","household_worker_count"]
+      },
+      "migration_mobility": {
+        "target_min": 5,
+        "examples": ["birthplace_relation","previous_residence_relation","internal_mobility_status","international_migration_relation","commute_or_school_mobility"]
+      },
+      "housing_material_conditions": {
+        "target_min": 12,
+        "examples": ["dwelling_type","tenure_status","rooms","persons_per_room","dwelling_age_band","water_access","sanitation","wastewater_mode","lighting_electricity","selected_household_equipment_index","housing_quality_index","crowding_index"]
+      },
+      "socioeconomic_latent": {
+        "target_min": 5,
+        "examples": ["consumption_decile_posterior","poverty_risk_posterior","vulnerability_risk_posterior","asset_index","material_deprivation_index"],
+        "epistemic_rule": "posterior/imputed features must carry uncertainty and may be ablated separately"
+      },
+      "pre_election_attitudes": {
+        "target_min": 10,
+        "examples": ["economic_evaluation","personal_financial_stress","institutional_trust_index","corruption_perception","democratic_norm_support","political_interest","participation_propensity","government_performance_index","media_use_index","top_issue_family"],
+        "epistemic_rule": "synthetic latent draws from pre-election anonymous national surveys, conditioned only on broad source-supported strata; never asserted as observed person facts"
+      }
+    }
+  },
+  "territory_national_context": {
+    "minimum_dimensions": 15,
+    "include": ["previous_election_turnout","previous_election_party_shares","seat_magnitude","candidate_incumbency_and_party_switch","verified_local_or_regional_office","verified_party_or_national_office","verified_endorsement_alliance_withdrawal_sanction","government_or_opposition_status_if_pre_cutoff","national_unemployment_level_and_change","youth_unemployment_if_sourceable","inflation_or_cost_pressure_generic_numeric_index","growth_or_activity_generic_numeric_index","aggregate_public_economic_mood","aggregate_institutional_trust","aggregate_corruption_concern"],
+    "historical_blinding": "Use opaque IDs and generic standardized numeric context fields. Do not include distinctive event names, dates, leaders or prose that could reveal 2016/2021 to a model with historical memory."
+  },
+  "population_synthesis": {
+    "unit": "weighted synthetic voter archetype / synthetic household member",
+    "target_archetypes_per_constituency": 256,
+    "why_256": "Richer joint state requires more support than 128 while remaining computationally manageable; 128 remains an ablation arm.",
+    "construction": ["Sample/cluster anonymized RGPH person-household records within the narrowest available geography.","Rake/calibrate weights to constituency-level published marginals without breaking within-record joint relationships.","For 2021, age/reweight the 2014 backbone using only pre-election HCP population projections and labour statistics.","Statistically match ENCDM socioeconomic variables with multiple imputation; retain uncertainty flags.","Attach anonymous survey-derived attitude latent states through demographic-stratum conditional models with multiple draws; do not attach real respondents.","Anchor political state to prior-election vote/abstention exactly as in the original protocol."],
+    "do_not": ["invent unsupported correlations","reidentify microdata respondents","use target-election outcome in synthesis","use post-cutoff survey waves","use direct party-vote intention in the core rich arm"]
+  },
+  "ablation_arms": ["R0_MINIMAL_128: original six-ish-dimension electorate (sealed benchmark only)","R1_MICRODEMOGRAPHY: rich RGPH joint person/household state, no survey attitudes","R2_MICRODEMOGRAPHY_SES: R1 + ENCDM socioeconomic posterior","R3_RICH_INDEPENDENT: R2 + pre-election latent attitude layer; primary rich independent-voter arm","R3_SHUFFLED_POLITICAL_CONTEXT: negative control with density-matched shuffled party/candidate context","R4_NETWORKED: only after R3 historical sanity passes; empirical/bounded social network interactions"],
+  "data_gate": {
+    "all_92_territories_required": true,
+    "observed_or_constrained_voter_dimensions_min": 60,
+    "source_families_min": 5,
+    "microdata_joint_backbone_required": true,
+    "target_year_reweighting_required": true,
+    "pre_election_attitude_survey_required_each_year": true,
+    "no_single_imputed_dimension_may_dominate_prediction": "must pass ablation/sensitivity",
+    "effective_archetype_count_min_per_constituency": 128,
+    "max_single_archetype_weight": 0.05,
+    "historical_leakage_scan_required": true,
+    "failure_state": "ASV2_RICH_DATA_POWER_INSUFFICIENT"
+  },
+  "execution_policy": {
+    "minimal_handoff_status": "RETAINED_NOT_EXECUTED",
+    "rich_handoff_required_before_real_opus_calls": true,
+    "no_real_opus_outputs_seen": true,
+    "F0_remains_official": true,
+    "no_threshold_tuning_after_real_outputs": true,
+    "next_action": "Acquire/parse source codebooks and microdata, construct R1-R3 populations, run richness/power/leakage audit, then seal a new ASV2-RICH handoff."
+  },
+  "github_operating_mode": {
+    "mode": "LOCAL_BATCH_THEN_MINIMAL_GITHUB_WRITES",
+    "rules": ["Use GitHub connector for one bulk discovery/read pass per phase, not file-by-file conversational browsing.","Perform joins, parsing, validation and artifact generation locally in /mnt/data.","Accumulate related repo edits into one consolidated commit where connector capabilities permit; otherwise keep to the smallest number of file writes.","Do not poll Actions repeatedly; trigger once and inspect only terminal job/result unless an actual failure needs logs.","Keep large raw public datasets outside Git history; commit manifests, hashes, scripts and derived compact artifacts only."]
+  }
+}
