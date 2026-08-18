@@ -9,13 +9,14 @@ on:
     branches: [morocco26-agent-society-v2]
     paths:
       - 'morocco26/data/goal100/agent_society_v2/triggers/build_historical_populations_observable.trigger'
+      - 'morocco26/data/goal100/agent_society_v2/triggers/build_historical_populations_observable_v2.trigger'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: morocco26-agent-society-v2-build-historical-populations
+  group: morocco26-agent-society-v2-build-historical-populations-${{ github.event_name }}-${{ github.run_id }}
   cancel-in-progress: false
 
 jobs:
