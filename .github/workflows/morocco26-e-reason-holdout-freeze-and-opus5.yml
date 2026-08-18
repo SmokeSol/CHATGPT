@@ -276,3 +276,5 @@ Final human-readable response: terminal status, valid count, retry count, bundle
       - name: Report handoff artifact
         run: |
           echo "OPUS5_HOLDOUT_ARTIFACT_ID=${{ steps.opus_upload.outputs.artifact-id }}"
+
+# one-shot trigger: 2026-08-18T12:04Z
