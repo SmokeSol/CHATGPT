@@ -2,42 +2,35 @@
   "schema_version": "1.0",
   "experiment_id": "M26-AGENT-SOCIETY-V2-001",
   "branch": "morocco26-agent-society-v2",
-  "phase": "SEALED_HISTORICAL_HANDOFF_AWAITING_OPUS5_EXECUTION",
-  "protocol_status": "FROZEN_BEFORE_ASV2_EXECUTION",
+  "phase": "ASV2_RICH_ENRICHMENT_IN_PROGRESS_BEFORE_ANY_REAL_LLM_EXECUTION",
+  "protocol_status": "AMENDED_PRE_LLM_WITH_ASV2_RICH_ENRICHMENT_CONTRACT_V1",
   "F0_status": "OFFICIAL_UNCHANGED",
   "real_llm_votes_generated": false,
   "target_outcomes_used_for_ASV2_tuning": false,
-  "data_power": {
-    "combined_status": "ASV2_DATA_POWER_PASS",
-    "candidate_party": "PASS_STRICT",
-    "context_diversity": "PASS_FORMAL_WITH_SEVERE_2016_DISCRIMINATION_WARNING",
-    "demographic_population": "PASS_92_OF_92_BOTH_HISTORICAL_YEARS",
-    "population_2016_min_ess": 100.83442591428567,
-    "population_2021_min_ess": 93.61618150692544,
-    "national_demographic_fallback_weight": 0.0
+  "minimal_handoff": {
+    "status": "SEALED_RETAINED_NOT_EXECUTED",
+    "reason": "User required approximately 10x richer Moroccan society representation before any Opus execution.",
+    "public_zip_sha256": "9798dcb7c9b227322eb6b8158d4929e5536b8e0c4e41dc890d9b4cfeec063209"
   },
-  "historical_handoff": {
-    "status": "SEALED_READY_FOR_OPUS5",
-    "packet_count": 1472,
-    "output_rows_expected": 47104,
-    "public_zip_sha256": "9798dcb7c9b227322eb6b8158d4929e5536b8e0c4e41dc890d9b4cfeec063209",
-    "public_manifest_sha256": "fc019dabf0bb0a24302a119948fa68d06f6841608d748d31a500aa503283a92e",
-    "mapping_material_present": false,
-    "target_outcomes_present": false,
-    "conditions_semantically_blinded": true
+  "rich_target": {
+    "voter_dimensions_min": 60,
+    "territory_national_context_dimensions_min": 15,
+    "target_archetypes_per_constituency": 256,
+    "micro_foundation": "HCP RGPH 2014 anonymized individual+household microdata (85 variables documented by HCP) + commune constraints",
+    "socioeconomic_layer": "HCP ENCDM 2014 statistical matching with uncertainty",
+    "dynamic_2021_layer": "HCP population projections + pre-election labour statistics",
+    "attitude_layer_2016": "Afrobarometer Morocco Round 6 fielded Nov 2015; Arab Barometer Wave III only where pre-cutoff",
+    "attitude_layer_2021": "Afrobarometer Morocco Round 8 fielded Feb 2021 + Arab Barometer Wave VI Jul 2020-Apr 2021",
+    "political_context": "reuse frozen E_reason pre-election verified evidence",
+    "historical_blinding": "opaque IDs plus generic numeric context; no distinctive event names/dates/leaders"
   },
-  "scoring": {
-    "contract_status": "FROZEN_BEFORE_ANY_REAL_ASV2_LLM_OUTPUT_IS_INSPECTED",
-    "dryrun_status": "PASS_END_TO_END_SCORER_DRYRUN",
-    "dryrun_rows_validated": 47104,
-    "terminal_states": ["ASV2_HISTORICAL_SANITY_PASS_READY_FOR_2026_FREEZE", "ASV2_KILL_BEFORE_2026"]
-  },
-  "known_limitations": [
-    "2016 formally passes the context-density gate but has zero districts with at least two cross-party discriminative context families.",
-    "19 split constituencies use explicitly flagged whole prefecture/province HCP demographic fallback rather than exact constituency demographics.",
-    "Ages 18-19 are deterministically approximated as 2/5 of the HCP 15-19 age band and require sensitivity analysis."
+  "next_gate": "ASV2_RICH_DATA_POWER_AUDIT",
+  "next_allowed_actions": [
+    "Acquire and parse source codebooks/microdata without target outcomes.",
+    "Construct R1 microdemographic, R2 socioeconomic, and R3 rich independent-voter populations.",
+    "Run joint-distribution fidelity, effective support, imputation uncertainty, leakage and ablation audits.",
+    "Only if PASS, seal a new ASV2-RICH Opus handoff and freeze scorer before real LLM outputs."
   ],
-  "next_allowed_action": "Give only the sealed public historical handoff ZIP to OPUS-5. OPUS-5 must follow START_HERE_OPUS5.md verbatim, produce all 47,104 voter-condition outputs, freeze the output manifest and terminal report, and stop before scoring. Then run the already-frozen scorer without changing any contract element.",
-  "external_blocker": "OPUS-5 execution occurs outside this connected runtime. No further scientific or engineering decision is pending before that execution.",
-  "stop_rule": "Do not modify prompt, conditions, packet contents, model, aggregation, metrics or gates after any real ASV2 Opus-5 output is inspected."
+  "github_operating_mode": "LOCAL_BATCH_THEN_MINIMAL_GITHUB_WRITES",
+  "stop_rule": "Do not execute the previously sealed minimal Opus handoff and do not inspect any real ASV2 LLM output until ASV2-RICH is either sealed or formally fails its data-power gate."
 }
