@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "addendum_id": "M26-E-COLLECT-V1.1-HUMAN-SEED-CANDIDATE-INTELLIGENCE-20260818",
+  "created_at": "2026-08-18T16:38:00+01:00",
+  "status": "DISCOVERY_SEED_REGISTERED_NO_FORECAST_AUTHORITY",
+  "parent_amendment": "M26-GOAL100-E-COLLECT-V1.1-HUMAN-SEED",
+  "scientific_context": {
+    "post_e_reason_v1": true,
+    "e_reason_terminal": "E_REASON_NO_PROMOTION",
+    "purpose": "Increase the density and diversity of candidate-level pre-election evidence without assigning subjective scores or changing F0.",
+    "forecast_delta_authorized": false,
+    "f0_may_be_modified": false
+  },
+  "existing_medias24_surface": {
+    "root_url": "https://assets.medias24.com/elections/",
+    "database_url": "https://assets.medias24.com/elections/data/elections.db",
+    "database_sha256": "d268cbbde34328f6bbfe207bf21f26919149fc111f24105255321395b25162ea",
+    "snapshot_retrieved_at": "2026-08-17T17:38:56+00:00",
+    "candidate_records_raw": 544,
+    "candidate_records_after_official_pjd_merge": 546,
+    "parties": 9,
+    "local_territories_with_medias24_records": 91,
+    "local_territories_after_pjd_merge": 92,
+    "interpretation": "This is the canonical candidate/territory discovery surface. It is evidence-layer coverage, not calibrated predictive signal."
+  },
+  "user_supplied_workbooks": [
+    {
+      "filename": "transfuges politiques 2026.xlsx",
+      "sha256": "bd3966d741cfcf4b6a282879f38149d70d606d613bc2a0d616f6bbeb0eed3170",
+      "rows_with_named_movements": 24,
+      "role": "Human-seeded discovery ledger for party switches, incumbency and local-office leads. The workbook is not evidence by itself."
+    },
+    {
+      "filename": "Modele projection legislatives 2026.xlsx",
+      "sha256": "e19cabf14af8cdf89f59ca63566b5d5eb44d4a71f4bfb620854354bece2552fe",
+      "role": "Methodology inspiration only. Subjective scores, hand-set weights and seat probabilities are explicitly excluded from ingestion."
+    }
+  ],
+  "transfuge_workbook_audit": {
+    "named_movement_rows": 24,
+    "rows_citing_medias24_among_sources": 15,
+    "rows_without_any_v1_allowed_media_source_in_workbook_citation": 9,
+    "rows_with_explicit_mp_or_parliamentary_profile_lead": 10,
+    "rows_with_explicit_local_or_regional_elected_office_lead": 11,
+    "overlap_between_lead_classes_allowed": true,
+    "rule": "All 24 rows remain discovery leads until source-level verification. Rows based only on Le360, TelQuel, Maghreb Intelligence or other disallowed media are quarantined under E_collect V1 source policy."
+  },
+  "feature_bridge": [
+    {
+      "external_concept": "transfuge/ralliement",
+      "allowed_target_features": ["B2_P03_INCUMBENT_PARTY_SWITCH_IN", "B2_P04_INCUMBENT_PARTY_SWITCH_OUT", "B2_P08_FORMAL_DEFECTION"],
+      "verification_rule": "T0, or T1 official party source plus independent MEDIAS24/T0 corroboration."
+    },
+    {
+      "external_concept": "depute sortant / parlementaire",
+      "allowed_target_features": ["B2_P01_INCUMBENT_SAME_PARTY_SAME_DISTRICT", "B2_P02_INCUMBENT_SAME_PARTY_MOVED_DISTRICT"],
+      "verification_rule": "Resolve historical identity, current party and territory independently; unknown remains NA."
+    },
+    {
+      "external_concept": "president/vice-president de commune ou region / elu local",
+      "allowed_target_features": ["B2_P05_LOCAL_EXECUTIVE_OFFICE"],
+      "verification_rule": "Objective named elected office only; no subjective notability score."
+    },
+    {
+      "external_concept": "fonction nationale ou regionale de parti",
+      "allowed_target_features": ["B2_P06_NATIONAL_OR_REGIONAL_PARTY_OFFICE"],
+      "verification_rule": "Official party organ or permitted corroborated source with dated office identity."
+    }
+  ],
+  "explicit_exclusions": [
+    "No C1/C2/C3/C4/C5/C6 subjective 0-10 scores",
+    "No hand-set feature weights",
+    "No national-dynamics score duplicated across constituencies",
+    "No unknown-equals-zero encoding",
+    "No seat probability generated from this addendum",
+    "No candidate claim accepted solely because it appears in a user workbook"
+  ],
+  "power_implication": {
+    "prior_e_reason_holdout_party_cells": 828,
+    "prior_e_reason_nonzero_directional_cells": 59,
+    "prior_directional_density": 0.07125603864734299,
+    "candidate_surface_records_now_available": 546,
+    "conclusion": "Candidate identity coverage is no longer the primary bottleneck. The remaining bottleneck is converting candidate records into independently verified, historically backtestable directional features with enough variation and true/false support."
+  },
+  "next_action": "Verify and adjudicate the human-seeded party-switch/incumbency/local-office leads against allowed T0/T1/MEDIAS24 sources, then run an information-density/power audit before any new E_reason or forecast update."
+}
