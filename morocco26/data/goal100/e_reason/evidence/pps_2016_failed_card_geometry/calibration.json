@@ -1,0 +1,3414 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-18T06:38:02+00:00",
+  "target_pages": 13,
+  "documents": [
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 6,
+      "constituency_id": "khenifra",
+      "historical_constituency": "Khénifra",
+      "historical_seats_2016": 3,
+      "page_width": 491.197,
+      "page_height": 661.275,
+      "parser_cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 412.96,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "فؤاد حج",
+          "raw_words": [
+            "داﺆﻓ",
+            "“ﺠﺣ"
+          ],
+          "anchors": [
+            "فؤاد"
+          ],
+          "line_candidates": [
+            "فؤاد حج"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 413.18,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "(cid:127)ا",
+            "ﻲﻗﻮﺳ"
+          ],
+          "anchors": [
+            "عبد",
+            "سوقي"
+          ],
+          "line_candidates": [],
+          "guess": "عبد ا سوقي"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 413.18,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "لطيفة معديني",
+          "raw_words": [
+            "ﺔﻔﻴﻄﻟ",
+            "ﻲﻨﻳﺪﻌﻣ"
+          ],
+          "anchors": [
+            "لطيفة",
+            "معديني"
+          ],
+          "line_candidates": [
+            "لطيفة معديني"
+          ],
+          "guess": null
+        }
+      ],
+      "geometry_lines": [
+        {
+          "top": 412.96,
+          "top_fraction": 0.6245,
+          "groups": [
+            {
+              "x0": 84.28,
+              "x1": 143.0,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﻔﻴﻄﻟ",
+                "ﻲﻨﻳﺪﻌﻣ"
+              ],
+              "logical_text": "لطيفة معديني"
+            },
+            {
+              "x0": 201.95,
+              "x1": 258.33,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﺒﻋ",
+                "(cid:127)ا",
+                "ﻲﻗﻮﺳ"
+              ],
+              "logical_text": "عبد ا)721:dic( سوقي"
+            },
+            {
+              "x0": 339.08,
+              "x1": 385.98,
+              "font_sizes": [
+                15.0
+              ],
+              "raw_words_rtl": [
+                "داﺆﻓ",
+                "“ﺠﺣ"
+              ],
+              "logical_text": "فؤاد حج“"
+            }
+          ]
+        },
+        {
+          "top": 426.71,
+          "top_fraction": 0.6453,
+          "groups": [
+            {
+              "x0": 87.44,
+              "x1": 137.77,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﻘﺴﻨﻣ",
+                "ىﺪﺘﻨﻣ"
+              ],
+              "logical_text": "منسقة منتدى"
+            },
+            {
+              "x0": 219.34,
+              "x1": 238.87,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "دﺎﺘﺳأ"
+              ],
+              "logical_text": "أستاد"
+            },
+            {
+              "x0": 346.69,
+              "x1": 380.45,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "رﺎﻃإ",
+                "–ﺎﻋ"
+              ],
+              "logical_text": "إطار عا–"
+            }
+          ]
+        },
+        {
+          "top": 439.71,
+          "top_fraction": 0.6649,
+          "groups": [
+            {
+              "x0": 63.58,
+              "x1": 159.74,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﻔﺻﺎﻨﳌا",
+                "ةاوﺎﺴﳌاو",
+                "ةﺮﻔﻴﻨﺨﺑ"
+              ],
+              "logical_text": "املناصفة واملساواة بخنيفرة"
+            },
+            {
+              "x0": 204.99,
+              "x1": 253.23,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﻋﺎﻓ",
+                "يﻮﻌﻤﺟ"
+              ],
+              "logical_text": "فاعل جمعوي"
+            }
+          ]
+        },
+        {
+          "top": 442.54,
+          "top_fraction": 0.6692,
+          "groups": [
+            {
+              "x0": 311.76,
+              "x1": 413.29,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺞﻳﺮﺧ",
+                "ﺔﻌﻣﺎﺟ",
+                "كوﺮﺑﺮﺷ",
+                "اﺪﻨﻜﺑ"
+              ],
+              "logical_text": "خريج جامعة شربروك بكندا"
+            }
+          ]
+        },
+        {
+          "top": 452.71,
+          "top_fraction": 0.6846,
+          "groups": [
+            {
+              "x0": 70.76,
+              "x1": 154.46,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﻠﻋﺎﻓ",
+                "لﺎﻟﻤﺠا",
+                "ﻲﺣﻼﻔﻟا"
+              ],
+              "logical_text": "فاعلة اجملال الفالحي"
+            },
+            {
+              "x0": 196.77,
+              "x1": 261.44,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺲﻴﺋر",
+                "ﺔﻋﺎﻤﺟ",
+                "ﻖﺑﺎﺳ"
+              ],
+              "logical_text": "رئيس جماعة سابق"
+            }
+          ]
+        },
+        {
+          "top": 456.54,
+          "top_fraction": 0.6904,
+          "groups": [
+            {
+              "x0": 316.71,
+              "x1": 408.34,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﻮﻀﻋ",
+                "ﺐﺘﻜﳌا",
+                "ﻲﺳﺎﻴﺴﻟا"
+              ],
+              "logical_text": "عضو املكتب السياسي"
+            }
+          ]
+        },
+        {
+          "top": 477.08,
+          "top_fraction": 0.7214,
+          "groups": [
+            {
+              "x0": 91.19,
+              "x1": 150.2,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "ﻲﻣوﺮﻜﻟا"
+              ],
+              "logical_text": ")22:dic(مد الكرومي"
+            }
+          ]
+        },
+        {
+          "top": 490.48,
+          "top_fraction": 0.7417,
+          "groups": [
+            {
+              "x0": 106.29,
+              "x1": 137.06,
+              "font_sizes": [
+                9.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﺟر",
+                "لﺎﻤﻋأ"
+              ],
+              "logical_text": "رجل أعمال"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 7,
+      "constituency_id": "mohammedia",
+      "historical_constituency": "Mohammadia",
+      "historical_seats_2016": 3,
+      "page_width": 491.197,
+      "page_height": 661.275,
+      "parser_cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 416.21,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﻲﻄﻳوﺮﻏ"
+          ],
+          "anchors": [
+            "غرويطي"
+          ],
+          "line_candidates": [],
+          "guess": "مد غرويطي"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 412.13,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "احمد الصبيحي",
+          "raw_words": [
+            "ﺪﻤﺣأ",
+            "ﻲﺤﻴﺒﺼﻟا"
+          ],
+          "anchors": [
+            "احمد",
+            "الصبيحي"
+          ],
+          "line_candidates": [
+            "احمد الصبيحي"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 412.13,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "عبد الصمد حقيقي",
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "ﺪﻤﺼﻟا",
+            "ﻲﻘﻴﻘﺣ"
+          ],
+          "anchors": [
+            "عبد",
+            "الصمد",
+            "حقيقي"
+          ],
+          "line_candidates": [
+            "عبد الصمد حقيقي"
+          ],
+          "guess": null
+        }
+      ],
+      "geometry_lines": [
+        {
+          "top": 412.13,
+          "top_fraction": 0.6232,
+          "groups": [
+            {
+              "x0": 68.58,
+              "x1": 152.29,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﺒﻋ",
+                "ﺪﻤﺼﻟا",
+                "ﻲﻘﻴﻘﺣ"
+              ],
+              "logical_text": "عبد الصمد حقيقي"
+            },
+            {
+              "x0": 197.55,
+              "x1": 260.66,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤﺣأ",
+                "ﻲﺤﻴﺒﺼﻟا"
+              ],
+              "logical_text": "أحمد الصبيحي"
+            }
+          ]
+        },
+        {
+          "top": 416.21,
+          "top_fraction": 0.6294,
+          "groups": [
+            {
+              "x0": 325.38,
+              "x1": 398.52,
+              "font_sizes": [
+                15.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "ﻲﻄﻳوﺮﻏ"
+              ],
+              "logical_text": ")22:dic(مد غرويطي"
+            }
+          ]
+        },
+        {
+          "top": 428.18,
+          "top_fraction": 0.6475,
+          "groups": [
+            {
+              "x0": 77.49,
+              "x1": 145.46,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "رﺎﻃإ",
+                "ﺔﻛﺮﺸﺑ",
+                "ﺔﺻﺎﺧ"
+              ],
+              "logical_text": "إطار بشركة خاصة"
+            },
+            {
+              "x0": 205.87,
+              "x1": 252.34,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺮﻃﺆﻣ",
+                "يﻮﺑﺮﺗ"
+              ],
+              "logical_text": "مؤطر تربوي"
+            }
+          ]
+        },
+        {
+          "top": 435.74,
+          "top_fraction": 0.6589,
+          "groups": [
+            {
+              "x0": 308.25,
+              "x1": 415.64,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "Œﺒﺧ",
+                "مﻮﻠﻌﻟا",
+                "ﺔﻴﺳﺎﻴﺴﻟا"
+              ],
+              "logical_text": "خبŒ العلوم السياسية"
+            }
+          ]
+        },
+        {
+          "top": 477.08,
+          "top_fraction": 0.7214,
+          "groups": [
+            {
+              "x0": 91.19,
+              "x1": 150.2,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "ﻲﻣوﺮﻜﻟا"
+              ],
+              "logical_text": ")22:dic(مد الكرومي"
+            }
+          ]
+        },
+        {
+          "top": 490.48,
+          "top_fraction": 0.7417,
+          "groups": [
+            {
+              "x0": 106.29,
+              "x1": 137.06,
+              "font_sizes": [
+                9.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﺟر",
+                "لﺎﻤﻋأ"
+              ],
+              "logical_text": "رجل أعمال"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 9,
+      "constituency_id": "berrechid",
+      "historical_constituency": "Berrechid",
+      "historical_seats_2016": 4,
+      "page_width": 491.197,
+      "page_height": 661.275,
+      "parser_cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 307.43,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "ﻖﳊا",
+            "(cid:2)ﻼﺒﻋ"
+          ],
+          "anchors": [
+            "عبد",
+            "احلق"
+          ],
+          "line_candidates": [],
+          "guess": "عبد احلق عبال"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 457.76,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "اطار بشركة",
+          "raw_words": [
+            "€ﺴﻣ",
+            "ﺔﻛﺮﺷ"
+          ],
+          "anchors": [
+            "شركة"
+          ],
+          "line_candidates": [
+            "اطار بشركة"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 460.93,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "املصطفي فهيم امنة احلاجي",
+          "raw_words": [
+            "ﻰﻔﻄﺼﳌا",
+            "ﻢﻴﻬﻓ",
+            "ﺔﻨﻣآ",
+            "ﻲﺟﺎﳊا"
+          ],
+          "anchors": [
+            "املصطفي",
+            "فهيم",
+            "امنة",
+            "احلاجي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ],
+      "geometry_lines": [
+        {
+          "top": 307.43,
+          "top_fraction": 0.4649,
+          "groups": [
+            {
+              "x0": 135.27,
+              "x1": 193.5,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﺒﻋ",
+                "ﻖﳊا",
+                "(cid:2)ﻼﺒﻋ"
+              ],
+              "logical_text": "عبد احلق عبال)2:dic("
+            }
+          ]
+        },
+        {
+          "top": 321.96,
+          "top_fraction": 0.4869,
+          "groups": [
+            {
+              "x0": 145.58,
+              "x1": 183.19,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﺟر",
+                "لﺎﻤﻋأ"
+              ],
+              "logical_text": "رجل أعمال"
+            }
+          ]
+        },
+        {
+          "top": 436.71,
+          "top_fraction": 0.6604,
+          "groups": [
+            {
+              "x0": 317.61,
+              "x1": 399.06,
+              "font_sizes": [
+                16.0
+              ],
+              "raw_words_rtl": [
+                "ﻦﻳﺪﻟاﺰﻋ",
+                "ﻲﳝﺮﻛ"
+              ],
+              "logical_text": "عزالدين كرميي"
+            }
+          ]
+        },
+        {
+          "top": 457.76,
+          "top_fraction": 0.6922,
+          "groups": [
+            {
+              "x0": 330.34,
+              "x1": 386.33,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "€ﺴﻣ",
+                "ﺔﻛﺮﺷ"
+              ],
+              "logical_text": "مس€ شركة"
+            }
+          ]
+        },
+        {
+          "top": 460.93,
+          "top_fraction": 0.697,
+          "groups": [
+            {
+              "x0": 93.12,
+              "x1": 134.64,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﻨﻣآ",
+                "ﻲﺟﺎﳊا"
+              ],
+              "logical_text": "آمنة احلاجي"
+            },
+            {
+              "x0": 182.47,
+              "x1": 248.3,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﻰﻔﻄﺼﳌا",
+                "ﻢﻴﻬﻓ"
+              ],
+              "logical_text": "املصطفى فهيم"
+            }
+          ]
+        },
+        {
+          "top": 475.46,
+          "top_fraction": 0.719,
+          "groups": [
+            {
+              "x0": 91.19,
+              "x1": 150.2,
+              "font_sizes": [
+                12.0,
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "ةﺮﺟﺎﺗ",
+                "ﻲﻣوﺮﻜﻟا"
+              ],
+              "logical_text": ")22:dic(مد تاجرة الكرومي"
+            },
+            {
+              "x0": 195.23,
+              "x1": 235.54,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "رﺎﻃا",
+                "ﺔﻛﺮﺸﺑ"
+              ],
+              "logical_text": "اطار بشركة"
+            }
+          ]
+        },
+        {
+          "top": 490.48,
+          "top_fraction": 0.7417,
+          "groups": [
+            {
+              "x0": 106.29,
+              "x1": 137.06,
+              "font_sizes": [
+                9.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﺟر",
+                "لﺎﻤﻋأ"
+              ],
+              "logical_text": "رجل أعمال"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 13,
+      "constituency_id": "ain-sebaa-hay-mohammadi",
+      "historical_constituency": "Aïn-Sebaâ - Hay-Mohammadi",
+      "historical_seats_2016": 4,
+      "page_width": 491.197,
+      "page_height": 661.275,
+      "parser_cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 308.38,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﻲﺷﺎﻳﺮﻟا"
+          ],
+          "anchors": [
+            "الرياشي"
+          ],
+          "line_candidates": [],
+          "guess": "مد الرياشي"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 459.26,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "مدير وكالة",
+          "raw_words": [
+            "ﺮﻳﺪﻣ",
+            "ﺔﻟﺎﻛو"
+          ],
+          "anchors": [
+            "مدير",
+            "وكالة"
+          ],
+          "line_candidates": [
+            "مدير وكالة"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 462.38,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "لطيفة بلعرش مسعود ا اد",
+          "raw_words": [
+            "ﺔﻔﻴﻄﻟ",
+            "شﺮﻌﻠﺑ",
+            "دﻮﻌﺴﻣ",
+            "دﺎ‹أ"
+          ],
+          "anchors": [
+            "لطيفة",
+            "بلعرش",
+            "مسعود",
+            "ا اد"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ],
+      "geometry_lines": [
+        {
+          "top": 308.38,
+          "top_fraction": 0.4663,
+          "groups": [
+            {
+              "x0": 132.93,
+              "x1": 195.83,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "ﻲﺷﺎﻳﺮﻟا"
+              ],
+              "logical_text": ")22:dic(مد الرياشي"
+            }
+          ]
+        },
+        {
+          "top": 321.96,
+          "top_fraction": 0.4869,
+          "groups": [
+            {
+              "x0": 123.47,
+              "x1": 205.29,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "لوﺆﺴﻣ",
+                "دراﻮﳌا",
+                "ﺔﻳﺮﺸﺒﻟا"
+              ],
+              "logical_text": "مسؤول املوارد البشرية"
+            }
+          ]
+        },
+        {
+          "top": 438.16,
+          "top_fraction": 0.6626,
+          "groups": [
+            {
+              "x0": 324.38,
+              "x1": 393.29,
+              "font_sizes": [
+                18.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻴﻤﺣ",
+                "ﻲﻠﻴﺣﺎﻧ"
+              ],
+              "logical_text": "حميد ناحيلي"
+            }
+          ]
+        },
+        {
+          "top": 459.26,
+          "top_fraction": 0.6945,
+          "groups": [
+            {
+              "x0": 333.57,
+              "x1": 384.1,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﺮﻳﺪﻣ",
+                "ﺔﻟﺎﻛو"
+              ],
+              "logical_text": "مدير وكالة"
+            }
+          ]
+        },
+        {
+          "top": 462.38,
+          "top_fraction": 0.6992,
+          "groups": [
+            {
+              "x0": 81.33,
+              "x1": 143.44,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "دﻮﻌﺴﻣ",
+                "دﺎ‹أ"
+              ],
+              "logical_text": "مسعود أ‹اد"
+            },
+            {
+              "x0": 183.48,
+              "x1": 246.28,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﻔﻴﻄﻟ",
+                "شﺮﻌﻠﺑ"
+              ],
+              "logical_text": "لطيفة بلعرش"
+            }
+          ]
+        },
+        {
+          "top": 475.96,
+          "top_fraction": 0.7198,
+          "groups": [
+            {
+              "x0": 91.19,
+              "x1": 150.2,
+              "font_sizes": [
+                12.0,
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "ﺪﻋﺎﻘﺘﻣ",
+                "ﻲﻣوﺮﻜﻟا"
+              ],
+              "logical_text": ")22:dic(مد متقاعد الكرومي"
+            },
+            {
+              "x0": 205.26,
+              "x1": 224.5,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﻴﻨﻘﺗ"
+              ],
+              "logical_text": "تقنية"
+            }
+          ]
+        },
+        {
+          "top": 490.48,
+          "top_fraction": 0.7417,
+          "groups": [
+            {
+              "x0": 106.29,
+              "x1": 137.06,
+              "font_sizes": [
+                9.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﺟر",
+                "لﺎﻤﻋأ"
+              ],
+              "logical_text": "رجل أعمال"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "region": "marrakech-safi",
+      "page": 8,
+      "constituency_id": "essaouira",
+      "historical_constituency": "Essaouira",
+      "historical_seats_2016": 4,
+      "page_width": 491.197,
+      "page_height": 661.275,
+      "parser_cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 307.27,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "الدميقراطية للمنتخبني التقدميني",
+          "raw_words": [
+            "ﺔﻴﻃاﺮﻘﳝﺪﻟا",
+            "ﲔﺒﺨﺘﻨﻤﻠﻟ",
+            "ﲔﻴﻣﺪﻘﺘﻟا"
+          ],
+          "anchors": [
+            "الدميقراطية",
+            "للمنتخبني",
+            "التقدميني"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 447.62,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "مراكش اسفي",
+          "raw_words": [
+            "ﺶﻛاﺮﻣ",
+            "ﻲﻔﺳآ"
+          ],
+          "anchors": [
+            "مراكش",
+            "اسفي"
+          ],
+          "line_candidates": [
+            "مراكش اسفي"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 450.21,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﻲﻣوﺮﻜﻟا"
+          ],
+          "anchors": [
+            "الكرومي"
+          ],
+          "line_candidates": [],
+          "guess": "مد الكرومي"
+        }
+      ],
+      "geometry_lines": [
+        {
+          "top": 279.53,
+          "top_fraction": 0.4227,
+          "groups": [
+            {
+              "x0": 124.15,
+              "x1": 201.9,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﻰﻔﻄﺼﳌا",
+                "ﺎﻜﻨﻴﻠﺑا"
+              ],
+              "logical_text": "املصطفى ابلينكا"
+            }
+          ]
+        },
+        {
+          "top": 295.27,
+          "top_fraction": 0.4465,
+          "groups": [
+            {
+              "x0": 125.22,
+              "x1": 209.75,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺐﺗﺎﻜﻟا",
+                "يﻮﻬﳉا",
+                "ﺔﻴﻌﻤﺠﻠﻟ"
+              ],
+              "logical_text": "الكاتب اجلهوي للجمعية"
+            }
+          ]
+        },
+        {
+          "top": 307.27,
+          "top_fraction": 0.4647,
+          "groups": [
+            {
+              "x0": 107.67,
+              "x1": 225.39,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﻴﻃاﺮﻘﳝﺪﻟا",
+                "ﲔﺒﺨﺘﻨﻤﻠﻟ",
+                "ﲔﻴﻣﺪﻘﺘﻟا"
+              ],
+              "logical_text": "الدميقراطية للمنتخبني التقدميني"
+            }
+          ]
+        },
+        {
+          "top": 319.28,
+          "top_fraction": 0.4828,
+          "groups": [
+            {
+              "x0": 126.97,
+              "x1": 207.97,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﻮﻀﻋ",
+                "ﺲﻠﻟﻤﺠا",
+                "ﻲﻤﻴﻠﻗ†ا"
+              ],
+              "logical_text": "عضو اجمللس ا†قليمي"
+            }
+          ]
+        },
+        {
+          "top": 331.28,
+          "top_fraction": 0.501,
+          "groups": [
+            {
+              "x0": 132.43,
+              "x1": 202.52,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺲﻴﺋر",
+                "ﺔﻋﺎﻤﺟ",
+                "ضﺮﻛأ"
+              ],
+              "logical_text": "رئيس جماعة أكرض"
+            }
+          ]
+        },
+        {
+          "top": 413.51,
+          "top_fraction": 0.6253,
+          "groups": [
+            {
+              "x0": 311.02,
+              "x1": 384.32,
+              "font_sizes": [
+                17.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻴﻌﺳ",
+                "ﻲﻠﻌﺑدا"
+              ],
+              "logical_text": "سعيد ادبعلي"
+            }
+          ]
+        },
+        {
+          "top": 431.61,
+          "top_fraction": 0.6527,
+          "groups": [
+            {
+              "x0": 310.96,
+              "x1": 384.38,
+              "font_sizes": [
+                13.0
+              ],
+              "raw_words_rtl": [
+                "ﻮﻀﻋ",
+                "ﺲﻠ£",
+                "ﺔﻬﺟ"
+              ],
+              "logical_text": "عضو £لس جهة"
+            }
+          ]
+        },
+        {
+          "top": 447.62,
+          "top_fraction": 0.6769,
+          "groups": [
+            {
+              "x0": 315.87,
+              "x1": 377.23,
+              "font_sizes": [
+                13.0
+              ],
+              "raw_words_rtl": [
+                "ﺶﻛاﺮﻣ",
+                "ﻲﻔﺳآ"
+              ],
+              "logical_text": "مراكش آسفي"
+            }
+          ]
+        },
+        {
+          "top": 450.21,
+          "top_fraction": 0.6808,
+          "groups": [
+            {
+              "x0": 95.88,
+              "x1": 147.3,
+              "font_sizes": [
+                10.46
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "ﻲﻣوﺮﻜﻟا"
+              ],
+              "logical_text": ")22:dic(مد الكرومي"
+            }
+          ]
+        },
+        {
+          "top": 459.86,
+          "top_fraction": 0.6954,
+          "groups": [
+            {
+              "x0": 97.42,
+              "x1": 141.97,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤﺣأ",
+                "ﻻﺎﺷا"
+              ],
+              "logical_text": "أحمد اشاال"
+            },
+            {
+              "x0": 171.8,
+              "x1": 246.25,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﻦﻳﺪﻟاﺰﻋ",
+                "ﻞﻳﻮﻳرﺰﻟا"
+              ],
+              "logical_text": "عزالدين الزريويل"
+            }
+          ]
+        },
+        {
+          "top": 463.62,
+          "top_fraction": 0.7011,
+          "groups": [
+            {
+              "x0": 306.02,
+              "x1": 389.32,
+              "font_sizes": [
+                13.0
+              ],
+              "raw_words_rtl": [
+                "ﺲﻴﺋر",
+                "ﺔﻋﺎﻤﺟ",
+                "داﺮﻜﻣا"
+              ],
+              "logical_text": "رئيس جماعة امكراد"
+            }
+          ]
+        },
+        {
+          "top": 473.44,
+          "top_fraction": 0.7159,
+          "groups": [
+            {
+              "x0": 113.21,
+              "x1": 126.17,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺮﺟﺎﺗ"
+              ],
+              "logical_text": "تاجر"
+            },
+            {
+              "x0": 199.26,
+              "x1": 218.79,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ذﺎﺘﺳأ"
+              ],
+              "logical_text": "أستاذ"
+            }
+          ]
+        },
+        {
+          "top": 485.44,
+          "top_fraction": 0.7341,
+          "groups": [
+            {
+              "x0": 84.48,
+              "x1": 154.91,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺲﻴﺋر",
+                "ﺔﻋﺎﻤﺟ",
+                "ﻒﻴﻠﻛا"
+              ],
+              "logical_text": "رئيس جماعة اكليف"
+            },
+            {
+              "x0": 181.6,
+              "x1": 236.45,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "رﺎﺸﺘﺴﻣ",
+                "ﻲﻋﺎﻤﺟ"
+              ],
+              "logical_text": "مستشار جماعي"
+            }
+          ]
+        },
+        {
+          "top": 497.44,
+          "top_fraction": 0.7522,
+          "groups": [
+            {
+              "x0": 184.91,
+              "x1": 233.15,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﻋﺎﻓ",
+                "يﻮﻌﻤﺟ"
+              ],
+              "logical_text": "فاعل جمعوي"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "region": "oriental",
+      "page": 2,
+      "constituency_id": "figuig",
+      "historical_constituency": "Figuig",
+      "historical_seats_2016": 3,
+      "page_width": 491.197,
+      "page_height": 661.275,
+      "parser_cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 393.74,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﺶﻴﻠﻴﻌﺑ"
+          ],
+          "anchors": [
+            "بعيليش"
+          ],
+          "line_candidates": [],
+          "guess": "مد بعيليش"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 416.18,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "مسعود حركاس",
+          "raw_words": [
+            "دﻮﻌﺴﻣ",
+            "سﺎﻛﺮﺣ"
+          ],
+          "anchors": [
+            "مسعود",
+            "حركاس"
+          ],
+          "line_candidates": [
+            "مسعود حركاس"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 416.18,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "البش رحاوي",
+          "raw_words": [
+            "ƒﺸﺒﻟا",
+            "يوﺎﺣر"
+          ],
+          "anchors": [
+            "البش",
+            "رحاوي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ],
+      "geometry_lines": [
+        {
+          "top": 393.74,
+          "top_fraction": 0.5954,
+          "groups": [
+            {
+              "x0": 326.97,
+              "x1": 392.33,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "ﺶﻴﻠﻴﻌﺑ"
+              ],
+              "logical_text": ")22:dic(مد بعيليش"
+            }
+          ]
+        },
+        {
+          "top": 408.79,
+          "top_fraction": 0.6182,
+          "groups": [
+            {
+              "x0": 318.82,
+              "x1": 409.81,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺮﻳﺪﻣ",
+                "ﻲﺟﻮﻏاﺪﻴﺑ",
+                "ﺔﺳرﺪﲟ"
+              ],
+              "logical_text": "مدير بيداغوجي مبدرسة"
+            }
+          ]
+        },
+        {
+          "top": 416.18,
+          "top_fraction": 0.6294,
+          "groups": [
+            {
+              "x0": 92.15,
+              "x1": 139.21,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ƒﺸﺒﻟا",
+                "يوﺎﺣر"
+              ],
+              "logical_text": "البشƒ رحاوي"
+            },
+            {
+              "x0": 197.4,
+              "x1": 260.81,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "دﻮﻌﺴﻣ",
+                "سﺎﻛﺮﺣ"
+              ],
+              "logical_text": "مسعود حركاس"
+            }
+          ]
+        },
+        {
+          "top": 422.79,
+          "top_fraction": 0.6394,
+          "groups": [
+            {
+              "x0": 320.24,
+              "x1": 406.32,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﻴﺻﻮﺼﺧ",
+                "ﲔﺳﺪﻨﻬﻤﻠﻟ"
+              ],
+              "logical_text": "خصوصية للمهندسني"
+            }
+          ]
+        },
+        {
+          "top": 430.71,
+          "top_fraction": 0.6513,
+          "groups": [
+            {
+              "x0": 103.88,
+              "x1": 123.33,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﻣﺎﻋ"
+              ],
+              "logical_text": "عامل"
+            },
+            {
+              "x0": 196.35,
+              "x1": 261.86,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺮﻳﺪﻣ",
+                "ﻲﻨﻘﺗ",
+                "ﺔﻛﺮﺸﻟ"
+              ],
+              "logical_text": "مدير تقني لشركة"
+            }
+          ]
+        },
+        {
+          "top": 436.79,
+          "top_fraction": 0.6605,
+          "groups": [
+            {
+              "x0": 337.06,
+              "x1": 389.5,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ذﺎﺘﺳأ",
+                "ﺪﻗﺎﻌﺘﻣ"
+              ],
+              "logical_text": "أستاذ متعاقد"
+            }
+          ]
+        },
+        {
+          "top": 444.71,
+          "top_fraction": 0.6725,
+          "groups": [
+            {
+              "x0": 91.39,
+              "x1": 139.63,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﻋﺎﻓ",
+                "يﻮﻌﻤﺟ"
+              ],
+              "logical_text": "فاعل جمعوي"
+            },
+            {
+              "x0": 206.88,
+              "x1": 255.12,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﻋﺎﻓ",
+                "يﻮﻌﻤﺟ"
+              ],
+              "logical_text": "فاعل جمعوي"
+            }
+          ]
+        },
+        {
+          "top": 450.8,
+          "top_fraction": 0.6817,
+          "groups": [
+            {
+              "x0": 331.47,
+              "x1": 408.32,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﺻﺎﺣ",
+                "ﻰﻠﻋ",
+                "هارﻮﺘﻛد"
+              ],
+              "logical_text": "حاصل على دكتوراه"
+            }
+          ]
+        },
+        {
+          "top": 464.8,
+          "top_fraction": 0.7029,
+          "groups": [
+            {
+              "x0": 315.82,
+              "x1": 408.68,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﻚﻴﻧو™ﻜﻟšا",
+                "تﻻﺎﺼﺗﻻاو"
+              ],
+              "logical_text": "اšلكMTونيك واالتصاالت"
+            }
+          ]
+        },
+        {
+          "top": 477.08,
+          "top_fraction": 0.7214,
+          "groups": [
+            {
+              "x0": 91.19,
+              "x1": 150.2,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "ﻲﻣوﺮﻜﻟا"
+              ],
+              "logical_text": ")22:dic(مد الكرومي"
+            }
+          ]
+        },
+        {
+          "top": 490.48,
+          "top_fraction": 0.7417,
+          "groups": [
+            {
+              "x0": 106.29,
+              "x1": 137.06,
+              "font_sizes": [
+                9.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﺟر",
+                "لﺎﻤﻋأ"
+              ],
+              "logical_text": "رجل أعمال"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "region": "oriental",
+      "page": 5,
+      "constituency_id": "nador",
+      "historical_constituency": "Nador",
+      "historical_seats_2016": 4,
+      "page_width": 491.197,
+      "page_height": 661.275,
+      "parser_cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 313.63,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "اطار بالوكاية احلضرية للناظور",
+          "raw_words": [
+            "رﺎﻃإ",
+            "ﺔﻳﺎﻛﻮﻟﺎﺑ",
+            "ﺔﻳﺮﻀﳊا",
+            "رﻮﻇﺎﻨﻠﻟ"
+          ],
+          "anchors": [
+            "اطار",
+            "بالوكاية",
+            "احلضرية",
+            "للناظور"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 497.28,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺐﺋﺎﻨﻟا"
+          ],
+          "anchors": [
+            "النائب"
+          ],
+          "line_candidates": [
+            "النائب الثا",
+            "النائب الثالث لرئيس جماعة"
+          ],
+          "guess": "النائب"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 470.75,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "فريد عزاوي احمد احلدوتي",
+          "raw_words": [
+            "ﺪﻳﺮﻓ",
+            "يواﺰﻋ",
+            "ﺪﻤﺣا",
+            "ﻲﺗوﺪﳊا"
+          ],
+          "anchors": [
+            "فريد",
+            "عزاوي",
+            "احمد",
+            "احلدوتي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ],
+      "geometry_lines": [
+        {
+          "top": 299.1,
+          "top_fraction": 0.4523,
+          "groups": [
+            {
+              "x0": 144.11,
+              "x1": 184.66,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "داﻮﺟ",
+                "ﻲﻠﻌﻨﺑ"
+              ],
+              "logical_text": "جواد بنعلي"
+            }
+          ]
+        },
+        {
+          "top": 313.63,
+          "top_fraction": 0.4743,
+          "groups": [
+            {
+              "x0": 114.35,
+              "x1": 214.42,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "رﺎﻃإ",
+                "ﺔﻳﺎﻛﻮﻟﺎﺑ",
+                "ﺔﻳﺮﻀﳊا",
+                "رﻮﻇﺎﻨﻠﻟ"
+              ],
+              "logical_text": "إطار بالوكاية احلضرية للناظور"
+            }
+          ]
+        },
+        {
+          "top": 327.63,
+          "top_fraction": 0.4954,
+          "groups": [
+            {
+              "x0": 107.13,
+              "x1": 221.64,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺐﺋﺎﻨﻟا",
+                "ﺎﺜﻟا",
+                "ﺲﻴﺋﺮﻟ",
+                "ﺔﻋﺎﻤﺟ",
+                "كﺮﻋﻮﺑ"
+              ],
+              "logical_text": "النائب الثا لرئيس جماعة بوعرك"
+            }
+          ]
+        },
+        {
+          "top": 401.32,
+          "top_fraction": 0.6069,
+          "groups": [
+            {
+              "x0": 323.95,
+              "x1": 395.83,
+              "font_sizes": [
+                18.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ›",
+                "مﺎﻤﻬﻟ"
+              ],
+              "logical_text": "›مد لهمام"
+            }
+          ]
+        },
+        {
+          "top": 421.42,
+          "top_fraction": 0.6373,
+          "groups": [
+            {
+              "x0": 334.4,
+              "x1": 382.27,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﺟر",
+                "لﺎﻤﻋأ"
+              ],
+              "logical_text": "رجل أعمال"
+            }
+          ]
+        },
+        {
+          "top": 439.43,
+          "top_fraction": 0.6645,
+          "groups": [
+            {
+              "x0": 307.33,
+              "x1": 409.35,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﺲﻴﺋر",
+                "ﺔﻋﺎﻤﺟ",
+                "سأر",
+                "ءﺎﳌا"
+              ],
+              "logical_text": "رئيس جماعة رأس املاء"
+            }
+          ]
+        },
+        {
+          "top": 470.75,
+          "top_fraction": 0.7119,
+          "groups": [
+            {
+              "x0": 80.79,
+              "x1": 133.06,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤﺣا",
+                "ﻲﺗوﺪﳊا"
+              ],
+              "logical_text": "احمد احلدوتي"
+            },
+            {
+              "x0": 199.57,
+              "x1": 243.62,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻳﺮﻓ",
+                "يواﺰﻋ"
+              ],
+              "logical_text": "فريد عزاوي"
+            }
+          ]
+        },
+        {
+          "top": 484.27,
+          "top_fraction": 0.7323,
+          "groups": [
+            {
+              "x0": 199.6,
+              "x1": 243.59,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ˆﺴﻣ",
+                "ﺔﻛﺮﺷ"
+              ],
+              "logical_text": "مسˆ شركة"
+            }
+          ]
+        },
+        {
+          "top": 487.27,
+          "top_fraction": 0.7369,
+          "groups": [
+            {
+              "x0": 65.53,
+              "x1": 148.33,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﻒﻇﻮﻣ",
+                "ﺔﺴﺳﺆﲟ",
+                "ﺔﻴﻜﻨﺑ"
+              ],
+              "logical_text": "موظف مبؤسسة بنكية"
+            }
+          ]
+        },
+        {
+          "top": 497.28,
+          "top_fraction": 0.752,
+          "groups": [
+            {
+              "x0": 175.98,
+              "x1": 267.2,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺐﺋﺎﻨﻟا",
+                "ﺚﻟﺎﺜﻟا",
+                "ﺲﻴﺋﺮﻟ",
+                "ﺔﻋﺎﻤﺟ"
+              ],
+              "logical_text": "النائب الثالث لرئيس جماعة"
+            }
+          ]
+        },
+        {
+          "top": 503.28,
+          "top_fraction": 0.7611,
+          "groups": [
+            {
+              "x0": 68.49,
+              "x1": 145.37,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "رﺎﺸﺘﺴﻣ",
+                "ﺔﻋﺎﻤﺠﺑ",
+                "اداﺪﺣا"
+              ],
+              "logical_text": "مستشار بجماعة احدادا"
+            }
+          ]
+        },
+        {
+          "top": 510.28,
+          "top_fraction": 0.7717,
+          "groups": [
+            {
+              "x0": 191.64,
+              "x1": 249.63,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﻲﻨﺑ",
+                "لاﺪﻴﺳ",
+                "ﻞﺒﳉا"
+              ],
+              "logical_text": "بني سيدال اجلبل"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "region": "oriental",
+      "page": 6,
+      "constituency_id": "berkane",
+      "historical_constituency": "Berkane",
+      "historical_seats_2016": 3,
+      "page_width": 491.197,
+      "page_height": 661.275,
+      "parser_cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 411.21,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "خليد عزوزي",
+          "raw_words": [
+            "ﺪﻴﻠﺧ",
+            "يزوﺰﻋ"
+          ],
+          "anchors": [
+            "خليد",
+            "عزوزي"
+          ],
+          "line_candidates": [
+            "خليد عزوزي"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 413.18,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "تﺎﻳﻮﻧﺎﺛ"
+          ],
+          "anchors": [
+            "ثانويات"
+          ],
+          "line_candidates": [],
+          "guess": "مد ثانويات"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 413.18,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "عبد الصمد بودشيش",
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "ﺪﻤﺼﻟا",
+            "ﺶﻴﺷدﻮﺑ"
+          ],
+          "anchors": [
+            "عبد",
+            "الصمد",
+            "بودشيش"
+          ],
+          "line_candidates": [
+            "عبد الصمد بودشيش"
+          ],
+          "guess": null
+        }
+      ],
+      "geometry_lines": [
+        {
+          "top": 411.21,
+          "top_fraction": 0.6218,
+          "groups": [
+            {
+              "x0": 69.68,
+              "x1": 151.2,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﺒﻋ",
+                "ﺪﻤﺼﻟا",
+                "ﺶﻴﺷدﻮﺑ"
+              ],
+              "logical_text": "عبد الصمد بودشيش"
+            },
+            {
+              "x0": 202.06,
+              "x1": 256.15,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "تﺎﻳﻮﻧﺎﺛ"
+              ],
+              "logical_text": ")22:dic(مد ثانويات"
+            },
+            {
+              "x0": 335.68,
+              "x1": 390.88,
+              "font_sizes": [
+                15.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻴﻠﺧ",
+                "يزوﺰﻋ"
+              ],
+              "logical_text": "خليد عزوزي"
+            }
+          ]
+        },
+        {
+          "top": 426.79,
+          "top_fraction": 0.6454,
+          "groups": [
+            {
+              "x0": 97.13,
+              "x1": 123.75,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﻒﻇﻮﻣ"
+              ],
+              "logical_text": "موظف"
+            },
+            {
+              "x0": 222.62,
+              "x1": 235.59,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺮﺟﺎﺗ"
+              ],
+              "logical_text": "تاجر"
+            },
+            {
+              "x0": 326.33,
+              "x1": 400.23,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺮﻳﺪﻣ",
+                "ˆﺴﻣو",
+                "ﺔﻛﺮﺷ"
+              ],
+              "logical_text": "مدير ومسˆ شركة"
+            }
+          ]
+        },
+        {
+          "top": 440.79,
+          "top_fraction": 0.6666,
+          "groups": [
+            {
+              "x0": 297.85,
+              "x1": 428.72,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺐﺋﺎﻨﻟا",
+                "Žﺎﺜﻟا",
+                "ﺲﻴﺋﺮﻟ",
+                "ﺔﻳﺪﻠﺑ",
+                "ﺔﻳﺪﻴﻌﺴﻟا"
+              ],
+              "logical_text": "النائب الثاŽ لرئيس بلدية السعيدية"
+            }
+          ]
+        },
+        {
+          "top": 477.08,
+          "top_fraction": 0.7214,
+          "groups": [
+            {
+              "x0": 91.19,
+              "x1": 150.2,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "ﻲﻣوﺮﻜﻟا"
+              ],
+              "logical_text": ")22:dic(مد الكرومي"
+            }
+          ]
+        },
+        {
+          "top": 490.48,
+          "top_fraction": 0.7417,
+          "groups": [
+            {
+              "x0": 106.29,
+              "x1": 137.06,
+              "font_sizes": [
+                9.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﺟر",
+                "لﺎﻤﻋأ"
+              ],
+              "logical_text": "رجل أعمال"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "region": "rabat-sale-kenitra",
+      "page": 9,
+      "constituency_id": "kenitra",
+      "historical_constituency": "Kénitra",
+      "historical_seats_2016": 4,
+      "page_width": 491.197,
+      "page_height": 661.275,
+      "parser_cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 306.38,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "نادية التهامي",
+          "raw_words": [
+            "ﺔﻳدﺎﻧ",
+            "ﻲﻣﺎﻬﺘﻟا"
+          ],
+          "anchors": [
+            "نادية",
+            "التهامي"
+          ],
+          "line_candidates": [
+            "نادية التهامي"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 450.81,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "استاذة جامعية",
+          "raw_words": [
+            "ةذﺎﺘﺳأ",
+            "ﺔﻴﻌﻣﺎﺟ"
+          ],
+          "anchors": [
+            "استاذة",
+            "جامعية"
+          ],
+          "line_candidates": [
+            "استاذة جامعية"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 476.38,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "عزالدين بنسعيد عبد القادر جنان",
+          "raw_words": [
+            "ﻦﻳﺪﻟاﺰﻋ",
+            "ﺪﻴﻌﺴﻨﺑ",
+            "ﺪﺒﻋ",
+            "ردﺎﻘﻟا",
+            "نﺎﻨﺟ"
+          ],
+          "anchors": [
+            "عزالدين",
+            "بنسعيد",
+            "عبد",
+            "القادر",
+            "جنان"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ],
+      "geometry_lines": [
+        {
+          "top": 306.38,
+          "top_fraction": 0.4633,
+          "groups": [
+            {
+              "x0": 134.77,
+              "x1": 194.0,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﻳدﺎﻧ",
+                "ﻲﻣﺎﻬﺘﻟا"
+              ],
+              "logical_text": "نادية التهامي"
+            }
+          ]
+        },
+        {
+          "top": 320.96,
+          "top_fraction": 0.4854,
+          "groups": [
+            {
+              "x0": 138.48,
+              "x1": 190.29,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ةذﺎﺘﺳأ",
+                "ﺔﻴﻌﻣﺎﺟ"
+              ],
+              "logical_text": "أستاذة جامعية"
+            }
+          ]
+        },
+        {
+          "top": 333.96,
+          "top_fraction": 0.505,
+          "groups": [
+            {
+              "x0": 139.53,
+              "x1": 189.24,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﻠﻋﺎﻓ",
+                "ﺔﻳﻮﻌﻤﺟ"
+              ],
+              "logical_text": "فاعلة جمعوية"
+            }
+          ]
+        },
+        {
+          "top": 431.71,
+          "top_fraction": 0.6528,
+          "groups": [
+            {
+              "x0": 317.49,
+              "x1": 399.19,
+              "font_sizes": [
+                16.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﺸﺋﺎﻋ",
+                "يﺪﻤﺤﻤﻨﺑ"
+              ],
+              "logical_text": "عائشة بنمحمدي"
+            }
+          ]
+        },
+        {
+          "top": 450.81,
+          "top_fraction": 0.6817,
+          "groups": [
+            {
+              "x0": 330.07,
+              "x1": 386.6,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ةذﺎﺘﺳأ",
+                "ﺔﻴﻌﻣﺎﺟ"
+              ],
+              "logical_text": "أستاذة جامعية"
+            }
+          ]
+        },
+        {
+          "top": 467.81,
+          "top_fraction": 0.7074,
+          "groups": [
+            {
+              "x0": 331.22,
+              "x1": 385.45,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﻠﻋﺎﻓ",
+                "ﺔﻳﻮﻌﻤﺟ"
+              ],
+              "logical_text": "فاعلة جمعوية"
+            }
+          ]
+        },
+        {
+          "top": 476.38,
+          "top_fraction": 0.7204,
+          "groups": [
+            {
+              "x0": 83.97,
+              "x1": 148.79,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﺒﻋ",
+                "ردﺎﻘﻟا",
+                "نﺎﻨﺟ"
+              ],
+              "logical_text": "عبد القادر جنان"
+            },
+            {
+              "x0": 177.22,
+              "x1": 248.88,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﻦﻳﺪﻟاﺰﻋ",
+                "ﺪﻴﻌﺴﻨﺑ"
+              ],
+              "logical_text": "عزالدين بنسعيد"
+            }
+          ]
+        },
+        {
+          "top": 488.38,
+          "top_fraction": 0.7385,
+          "groups": [
+            {
+              "x0": 106.62,
+              "x1": 126.15,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ذﺎﺘﺳأ"
+              ],
+              "logical_text": "أستاذ"
+            },
+            {
+              "x0": 188.87,
+              "x1": 237.23,
+              "font_sizes": [
+                14.0,
+                11.0
+              ],
+              "raw_words_rtl": [
+                "أ",
+                "ذﺎﺘﺳ",
+                "ﺪﻋﺎﻘﺘﻣ"
+              ],
+              "logical_text": "أ ستاذ متقاعد"
+            }
+          ]
+        },
+        {
+          "top": 501.96,
+          "top_fraction": 0.7591,
+          "groups": [
+            {
+              "x0": 92.27,
+              "x1": 140.51,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﻋﺎﻓ",
+                "يﻮﻌﻤﺟ"
+              ],
+              "logical_text": "فاعل جمعوي"
+            },
+            {
+              "x0": 188.93,
+              "x1": 237.17,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﻋﺎﻓ",
+                "يﻮﻌﻤﺟ"
+              ],
+              "logical_text": "فاعل جمعوي"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "region": "rabat-sale-kenitra",
+      "page": 10,
+      "constituency_id": "tiflet-rommani",
+      "historical_constituency": "Tifelt - Rommani",
+      "historical_seats_2016": 3,
+      "page_width": 491.197,
+      "page_height": 661.275,
+      "parser_cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 413.74,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "احمد الهيلع",
+          "raw_words": [
+            "ﺪﻤﺣأ",
+            "ﻊﻠﻴﻬﻟا"
+          ],
+          "anchors": [
+            "احمد",
+            "الهيلع"
+          ],
+          "line_candidates": [
+            "احمد الهيلع"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 412.5,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "(cid:157)ا",
+            "ﻞﻐﺟأ"
+          ],
+          "anchors": [
+            "عبد",
+            "اجغل"
+          ],
+          "line_candidates": [],
+          "guess": "عبد ا اجغل"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 412.5,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "الطيبي بنحميدان",
+          "raw_words": [
+            "ﻲﺒﻴﻄﻟا",
+            "ناﺪﻴﻤﺤﻨﺑ"
+          ],
+          "anchors": [
+            "الطيبي",
+            "بنحميدان"
+          ],
+          "line_candidates": [
+            "الطيبي بنحميدان"
+          ],
+          "guess": null
+        }
+      ],
+      "geometry_lines": [
+        {
+          "top": 412.5,
+          "top_fraction": 0.6238,
+          "groups": [
+            {
+              "x0": 81.0,
+              "x1": 150.9,
+              "font_sizes": [
+                13.25
+              ],
+              "raw_words_rtl": [
+                "ﻲﺒﻴﻄﻟا",
+                "ناﺪﻴﻤﺤﻨﺑ"
+              ],
+              "logical_text": "الطيبي بنحميدان"
+            },
+            {
+              "x0": 198.02,
+              "x1": 253.88,
+              "font_sizes": [
+                13.25
+              ],
+              "raw_words_rtl": [
+                "ﺪﺒﻋ",
+                "(cid:157)ا",
+                "ﻞﻐﺟأ"
+              ],
+              "logical_text": "عبد ا)751:dic( أجغل"
+            },
+            {
+              "x0": 337.71,
+              "x1": 388.86,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤﺣأ",
+                "ﻊﻠﻴﻬﻟا"
+              ],
+              "logical_text": "أحمد الهيلع"
+            }
+          ]
+        },
+        {
+          "top": 428.21,
+          "top_fraction": 0.6475,
+          "groups": [
+            {
+              "x0": 78.78,
+              "x1": 153.12,
+              "font_sizes": [
+                10.0
+              ],
+              "raw_words_rtl": [
+                "ﺐﺗﺎﻛ",
+                "ﺲﻠﻟﻤﺠا",
+                "ﻲﻋﺎﻤﳉا"
+              ],
+              "logical_text": "كاتب اجمللس اجلماعي"
+            },
+            {
+              "x0": 192.5,
+              "x1": 259.4,
+              "font_sizes": [
+                10.0
+              ],
+              "raw_words_rtl": [
+                "ﺲﻴﺋر",
+                "ﺔﻴﻧوﺎﻌﺗ",
+                "ﺔﻴﺣﻼﻓ"
+              ],
+              "logical_text": "رئيس تعاونية فالحية"
+            },
+            {
+              "x0": 351.08,
+              "x1": 375.48,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺐﻴﺒﻃ"
+              ],
+              "logical_text": "طبيب"
+            }
+          ]
+        },
+        {
+          "top": 442.21,
+          "top_fraction": 0.6687,
+          "groups": [
+            {
+              "x0": 88.8,
+              "x1": 143.11,
+              "font_sizes": [
+                10.0
+              ],
+              "raw_words_rtl": [
+                "ﺖﻳ‘",
+                "ﻲﺣاو",
+                "حﻼﻓ"
+              ],
+              "logical_text": "‘يت واحي فالح"
+            },
+            {
+              "x0": 203.24,
+              "x1": 248.65,
+              "font_sizes": [
+                10.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﻋﺎﻓ",
+                "يوﺎﻌﻤﺟ"
+              ],
+              "logical_text": "فاعل جمعاوي"
+            },
+            {
+              "x0": 327.97,
+              "x1": 398.58,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺲﻴﺋر",
+                "ﺔﻳﺪﻠﺑ",
+                "(cid:4)ﺎﻣﺮﻟا"
+              ],
+              "logical_text": "رئيس بلدية الرما)4:dic("
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "region": "souss-massa",
+      "page": 4,
+      "constituency_id": "taroudant-nord",
+      "historical_constituency": "Taroudannt - Chamalia",
+      "historical_seats_2016": 3,
+      "page_width": 491.197,
+      "page_height": 661.275,
+      "parser_cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 419.02,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "عبد اللطيف اشكري",
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "ﻒﻴﻄﻠﻟا",
+            "يﺮﻜﺷا"
+          ],
+          "anchors": [
+            "عبد",
+            "اللطيف",
+            "اشكري"
+          ],
+          "line_candidates": [
+            "عبد اللطيف اشكري"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 413.18,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﻲﻠﻋدا"
+          ],
+          "anchors": [
+            "ادعلي"
+          ],
+          "line_candidates": [],
+          "guess": "مد ادعلي"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 413.18,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﺎﻜﻠﻴﺑ"
+          ],
+          "anchors": [
+            "بيلكا"
+          ],
+          "line_candidates": [],
+          "guess": "مد بيلكا"
+        }
+      ],
+      "geometry_lines": [
+        {
+          "top": 413.18,
+          "top_fraction": 0.6248,
+          "groups": [
+            {
+              "x0": 91.0,
+              "x1": 134.61,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "ﺎﻜﻠﻴﺑ"
+              ],
+              "logical_text": ")22:dic(مد بيلكا"
+            },
+            {
+              "x0": 205.13,
+              "x1": 253.07,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "ﻲﻠﻋدا"
+              ],
+              "logical_text": ")22:dic(مد ادعلي"
+            }
+          ]
+        },
+        {
+          "top": 419.02,
+          "top_fraction": 0.6337,
+          "groups": [
+            {
+              "x0": 312.64,
+              "x1": 413.92,
+              "font_sizes": [
+                16.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﺒﻋ",
+                "ﻒﻴﻄﻠﻟا",
+                "يﺮﻜﺷا"
+              ],
+              "logical_text": "عبد اللطيف اشكري"
+            }
+          ]
+        },
+        {
+          "top": 427.71,
+          "top_fraction": 0.6468,
+          "groups": [
+            {
+              "x0": 74.1,
+              "x1": 151.35,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ذﺎﺘﺳأ",
+                "ﻢﻴﻠﻌﺘﻟا",
+                "ﻲﺋاﺪﺘﺑﻻا"
+              ],
+              "logical_text": "أستاذ التعليم االبتدائي"
+            },
+            {
+              "x0": 216.83,
+              "x1": 243.28,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻋﺎﻘﺘﻣ"
+              ],
+              "logical_text": "متقاعد"
+            }
+          ]
+        },
+        {
+          "top": 435.12,
+          "top_fraction": 0.658,
+          "groups": [
+            {
+              "x0": 356.21,
+              "x1": 370.35,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺮﺟﺎﺗ"
+              ],
+              "logical_text": "تاجر"
+            }
+          ]
+        },
+        {
+          "top": 441.71,
+          "top_fraction": 0.668,
+          "groups": [
+            {
+              "x0": 70.92,
+              "x1": 152.61,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﻂﺷﺎﻧ",
+                "يﻮﻌﻤﺟ",
+                "و",
+                "ﻲﻣﻼﻋإ"
+              ],
+              "logical_text": "ناشط جمعوي و إعالمي"
+            },
+            {
+              "x0": 204.86,
+              "x1": 253.33,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "طﺎﺸﻧ",
+                "يﻮﻌﻤﺟ"
+              ],
+              "logical_text": "نشاط جمعوي"
+            }
+          ]
+        },
+        {
+          "top": 449.12,
+          "top_fraction": 0.6792,
+          "groups": [
+            {
+              "x0": 314.95,
+              "x1": 413.69,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺲﻴﺋر",
+                "ﺔﻋﺎﻤﺟ",
+                "يﺪﻴﺳ",
+                "ﻞﻋﻮﺑ"
+              ],
+              "logical_text": "رئيس جماعة سيدي بوعل"
+            }
+          ]
+        },
+        {
+          "top": 463.13,
+          "top_fraction": 0.7004,
+          "groups": [
+            {
+              "x0": 338.01,
+              "x1": 390.64,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﻋﺎﻓ",
+                "يﻮﻌﻤﺟ"
+              ],
+              "logical_text": "فاعل جمعوي"
+            }
+          ]
+        },
+        {
+          "top": 477.08,
+          "top_fraction": 0.7214,
+          "groups": [
+            {
+              "x0": 91.19,
+              "x1": 150.2,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ(cid:22)",
+                "ﻲﻣوﺮﻜﻟا"
+              ],
+              "logical_text": ")22:dic(مد الكرومي"
+            }
+          ]
+        },
+        {
+          "top": 490.48,
+          "top_fraction": 0.7417,
+          "groups": [
+            {
+              "x0": 106.29,
+              "x1": 137.06,
+              "font_sizes": [
+                9.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﺟر",
+                "لﺎﻤﻋأ"
+              ],
+              "logical_text": "رجل أعمال"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "region": "souss-massa",
+      "page": 5,
+      "constituency_id": "taroudant-sud",
+      "historical_constituency": "Taroudannt - Al-Janoubia",
+      "historical_seats_2016": 4,
+      "page_width": 491.197,
+      "page_height": 661.275,
+      "parser_cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 304.38,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "حسن الهياق",
+          "raw_words": [
+            "ﻦﺴﺣ",
+            "قﺎﻴﻬﻟا"
+          ],
+          "anchors": [
+            "حسن",
+            "الهياق"
+          ],
+          "line_candidates": [
+            "حسن الهياق"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 448.7,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "لوﺎﻘﻣ"
+          ],
+          "anchors": [
+            "مقاول"
+          ],
+          "line_candidates": [],
+          "guess": "مقاول"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 465.05,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "عائشة همشان حسن اكزول",
+          "raw_words": [
+            "ﺔﺸﺋﺎﻋ",
+            "نﺎﺸﻤﻫ",
+            "ﻦﺴﺣ",
+            "لوﺰﻛا"
+          ],
+          "anchors": [
+            "عائشة",
+            "همشان",
+            "حسن",
+            "اكزول"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ],
+      "geometry_lines": [
+        {
+          "top": 304.38,
+          "top_fraction": 0.4603,
+          "groups": [
+            {
+              "x0": 137.03,
+              "x1": 191.74,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﻦﺴﺣ",
+                "قﺎﻴﻬﻟا"
+              ],
+              "logical_text": "حسن الهياق"
+            }
+          ]
+        },
+        {
+          "top": 319.43,
+          "top_fraction": 0.4831,
+          "groups": [
+            {
+              "x0": 140.39,
+              "x1": 188.38,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "(cid:4)ﺴﻣ",
+                "ﺔﻛﺮﺷ"
+              ],
+              "logical_text": "مس)4:dic( شركة"
+            }
+          ]
+        },
+        {
+          "top": 431.71,
+          "top_fraction": 0.6528,
+          "groups": [
+            {
+              "x0": 323.13,
+              "x1": 393.54,
+              "font_sizes": [
+                16.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﺒﻋ",
+                "…ا",
+                "شود"
+              ],
+              "logical_text": "عبد ا... دوش"
+            }
+          ]
+        },
+        {
+          "top": 448.7,
+          "top_fraction": 0.6785,
+          "groups": [
+            {
+              "x0": 341.0,
+              "x1": 375.66,
+              "font_sizes": [
+                16.0
+              ],
+              "raw_words_rtl": [
+                "لوﺎﻘﻣ"
+              ],
+              "logical_text": "مقاول"
+            }
+          ]
+        },
+        {
+          "top": 465.05,
+          "top_fraction": 0.7033,
+          "groups": [
+            {
+              "x0": 85.38,
+              "x1": 142.06,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﻦﺴﺣ",
+                "لوﺰﻛا"
+              ],
+              "logical_text": "حسن اكزول"
+            },
+            {
+              "x0": 183.7,
+              "x1": 249.06,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﺔﺸﺋﺎﻋ",
+                "نﺎﺸﻤﻫ"
+              ],
+              "logical_text": "عائشة همشان"
+            },
+            {
+              "x0": 323.25,
+              "x1": 393.42,
+              "font_sizes": [
+                16.0
+              ],
+              "raw_words_rtl": [
+                "ﻞﻋﺎﻓ",
+                "يﻮﻌﻤﺟ"
+              ],
+              "logical_text": "فاعل جمعوي"
+            }
+          ]
+        },
+        {
+          "top": 480.1,
+          "top_fraction": 0.726,
+          "groups": [
+            {
+              "x0": 100.72,
+              "x1": 126.71,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "لوﺎﻘﻣ"
+              ],
+              "logical_text": "مقاول"
+            },
+            {
+              "x0": 189.84,
+              "x1": 242.92,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ةﺮﻃﺆﻣ",
+                "ﺔﻳﻮﺑﺮﺗ"
+              ],
+              "logical_text": "مؤطرة تربوية"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "region": "tanger-tetouan-al-hoceima",
+      "page": 3,
+      "constituency_id": "al-hoceima",
+      "historical_constituency": "Al-Hoceïma",
+      "historical_seats_2016": 4,
+      "page_width": 491.197,
+      "page_height": 661.275,
+      "parser_cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 304.43,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺮﺿﺎﳋا",
+            "ن(cid:12)ﺴﻜﺑا"
+          ],
+          "anchors": [
+            "اخلاضر"
+          ],
+          "line_candidates": [],
+          "guess": "اخلاضر ابكس ن"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 461.82,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "نائب رئيس اجمللس اجلهوي",
+          "raw_words": [
+            "ﺐﺋﺎﻧ",
+            "ﺲﻴﺋر",
+            "ﺲﻠﻟﻤﺠا",
+            "يﻮﻬﳉا"
+          ],
+          "anchors": [
+            "نائب",
+            "رئيس",
+            "اجمللس",
+            "اجلهوي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 463.43,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "احمد الشريك مد اخلطابي",
+          "raw_words": [
+            "ﺪﻤﺣأ",
+            "ﻚﻳﺮﺸﻟا",
+            "ﺪﻤ",
+            "ﻲﺑﺎﻄﳋا"
+          ],
+          "anchors": [
+            "احمد",
+            "الشريك",
+            "اخلطابي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ],
+      "geometry_lines": [
+        {
+          "top": 304.43,
+          "top_fraction": 0.4604,
+          "groups": [
+            {
+              "x0": 133.44,
+              "x1": 195.33,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺮﺿﺎﳋا",
+                "ن(cid:12)ﺴﻜﺑا"
+              ],
+              "logical_text": "اخلاضر ابكس)21:dic(ن"
+            }
+          ]
+        },
+        {
+          "top": 317.96,
+          "top_fraction": 0.4808,
+          "groups": [
+            {
+              "x0": 151.16,
+              "x1": 177.6,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻋﺎﻘﺘﻣ"
+              ],
+              "logical_text": "متقاعد"
+            }
+          ]
+        },
+        {
+          "top": 409.26,
+          "top_fraction": 0.6189,
+          "groups": [
+            {
+              "x0": 328.99,
+              "x1": 387.69,
+              "font_sizes": [
+                14.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤﺣأ",
+                "يﺮﻳوﺪﻟا"
+              ],
+              "logical_text": "أحمد الدويري"
+            }
+          ]
+        },
+        {
+          "top": 427.83,
+          "top_fraction": 0.647,
+          "groups": [
+            {
+              "x0": 323.08,
+              "x1": 393.6,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺲﻴﺋر",
+                "ﺔﻋﺎﻤﺟ",
+                "ناﺮﻘﺷ"
+              ],
+              "logical_text": "رئيس جماعة شقران"
+            }
+          ]
+        },
+        {
+          "top": 444.83,
+          "top_fraction": 0.6727,
+          "groups": [
+            {
+              "x0": 331.08,
+              "x1": 385.58,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ضﻮﻔﻣ",
+                "ﻲﺋﺎﻀﻗ"
+              ],
+              "logical_text": "مفوض قضائي"
+            }
+          ]
+        },
+        {
+          "top": 461.82,
+          "top_fraction": 0.6984,
+          "groups": [
+            {
+              "x0": 84.74,
+              "x1": 127.52,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤ",
+                "ﻲﺑﺎﻄﳋا"
+              ],
+              "logical_text": "مد اخلطابي"
+            },
+            {
+              "x0": 189.61,
+              "x1": 240.16,
+              "font_sizes": [
+                12.0
+              ],
+              "raw_words_rtl": [
+                "ﺪﻤﺣأ",
+                "ﻚﻳﺮﺸﻟا"
+              ],
+              "logical_text": "أحمد الشريك"
+            },
+            {
+              "x0": 310.19,
+              "x1": 406.47,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﺐﺋﺎﻧ",
+                "ﺲﻴﺋر",
+                "ﺲﻠﻟﻤﺠا",
+                "يﻮﻬﳉا"
+              ],
+              "logical_text": "نائب رئيس اجمللس اجلهوي"
+            }
+          ]
+        },
+        {
+          "top": 476.96,
+          "top_fraction": 0.7213,
+          "groups": [
+            {
+              "x0": 65.76,
+              "x1": 158.01,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "فﺮﺸﻣ",
+                "ﺔﻈﻓﺎﶈﺎﺑ",
+                "ﺔﻳرﺎﻘﻌﻟا"
+              ],
+              "logical_text": "مشرف باحملافظة العقارية"
+            },
+            {
+              "x0": 182.77,
+              "x1": 247.0,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "رﺎﻃإ",
+                "يﻮﺑﺮﺗ",
+                "ﺪﻋﺎﻘﺘﻣ"
+              ],
+              "logical_text": "إطار تربوي متقاعد"
+            },
+            {
+              "x0": 289.47,
+              "x1": 425.3,
+              "font_sizes": [
+                11.0
+              ],
+              "raw_words_rtl": [
+                "ﲔﺿﻮﻔﻤﻠﻟ",
+                "ﲔﻴﺋﺎﻀﻘﻟا",
+                "ﺔﻴﻓﺎﻨﺌﺘﺳﺈﺑ",
+                "ةﺪﺟو"
+              ],
+              "logical_text": "للمفوضني القضائيني بإستئنافية وجدة"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "invariants": {
+    "candidate_facts_promoted": false,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "F1_created": false
+  }
+}
