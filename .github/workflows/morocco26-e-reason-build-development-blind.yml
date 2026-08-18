@@ -1,0 +1,93 @@
+name: Morocco26 E_reason blind development bundle
+
+on:
+  push:
+    branches:
+      - morocco26-e-reason
+    paths:
+      - 'morocco26/scripts/e_reason_build_blind_development_bundle.py'
+      - 'morocco26/data/goal100/e_reason/c2_prompt_v1.md'
+      - '.github/workflows/morocco26-e-reason-build-development-blind.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: morocco26-e-reason-blind-development
+  cancel-in-progress: false
+
+jobs:
+  build-freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact branch state
+        uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+          fetch-depth: 0
+
+      - name: Validate frozen preregistration and immutable ancestry
+        run: |
+          set -euo pipefail
+          python morocco26/scripts/validate_e_reason_prereg.py
+
+      - name: Assert historical collection closure PASS
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('morocco26/data/goal100/e_reason/evidence/historical_collection_closure/certificate.json')
+          x=json.loads(p.read_text())
+          assert x['status']=='PASS'
+          assert x['collection_phase']=='CLOSED_PASS'
+          assert x['invariants']['outcomes_unsealed'] is False
+          assert x['invariants']['predictive_judgments_generated'] is False
+          print('E_REASON_HISTORICAL_COLLECTION_CLOSURE_PASS')
+          PY
+
+      - name: Build blinded development packets and secret mapping
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/e_reason_secret"
+          python morocco26/scripts/e_reason_build_blind_development_bundle.py \
+            --secret-mapping-output "$RUNNER_TEMP/e_reason_secret/development_mapping.json"
+
+      - name: Verify secret mapping is not in repository worktree
+        run: |
+          set -euo pipefail
+          test -f "$RUNNER_TEMP/e_reason_secret/development_mapping.json"
+          if find morocco26 -type f \( -name '*mapping*.json' -o -name '*anonymization*.json' \) \
+             | grep -v '/mapping_seal.json$' \
+             | grep -v 'b2_identity_crosswalk.json' \
+             | grep -q 'blind/development'; then
+            echo 'Secret mapping material leaked into repository output' >&2
+            exit 1
+          fi
+
+      - name: Upload secret mapping outside judge bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: e-reason-development-secret-mapping
+          path: ${{ runner.temp }}/e_reason_secret/development_mapping.json
+          retention-days: 90
+          if-no-files-found: error
+
+      - name: Freeze only blind artifacts and seals
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/e_reason/blind/development/blind_bundle.json \
+            morocco26/data/goal100/e_reason/blind/development/bundle_manifest.json \
+            morocco26/data/goal100/e_reason/blind/development/mapping_seal.json \
+            morocco26/data/goal100/e_reason/blind/development/c2_prompt_freeze.json
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'No new blind-bundle artifacts to freeze.'
+            exit 0
+          fi
+          git commit -m 'experiment(e-reason): freeze blinded development packet bundle'
+          git push origin HEAD:morocco26-e-reason
