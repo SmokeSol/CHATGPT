@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-ASV2-CONTEXT-POWER-CERTIFICATE-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "target_outcomes_used": false,
+  "frozen_formal_requirement": "At least 50 districts in each historical benchmark with at least two nontrivial VERIFIED context feature families, excluding BALLOT_LIST_PRESENT, EVIDENCE_COUNT and SOURCE_CLASS_MAX.",
+  "formal_gate": {
+    "2016_districts_ge_2_nontrivial_present": 80,
+    "2021_districts_ge_2_nontrivial_present": 88,
+    "required_each_year": 50,
+    "2016_pass": true,
+    "2021_pass": true,
+    "overall_pass": true
+  },
+  "stronger_nonblocking_diagnostics": {
+    "2016_districts_ge_2_cross_party_discriminative_families": 0,
+    "2021_districts_ge_2_cross_party_discriminative_families": 41,
+    "2016_districts_ge_2_directional_true_families": 0,
+    "2021_districts_ge_2_directional_true_families": 7,
+    "interpretation": "The preregistered formal context-density gate passes, but historical political context remains weakly discriminative, especially in 2016. This warning is retained and does not alter the frozen formal threshold."
+  },
+  "audit_workflow_run_id": 32153929753,
+  "audit_artifact_id": 9330975686,
+  "audit_artifact_digest": "sha256:2bc95eea19892f9344dd3f190ed14b83b205fb09ed1ce33692db811599e946c9",
+  "status": "PASS_FORMAL_CONTEXT_POWER_GATE_WITH_SEVERE_2016_DISCRIMINATIVE_WARNING"
+}
