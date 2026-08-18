@@ -1,0 +1,108 @@
+{
+  "bundle_sha256": "d43fd7b23911f5ce5c878d6d952aba9dd447c9b4d9c343d0093c528855cca9b0",
+  "c2_judgments_preunseal_sha256": "03b630c5a6c07ca32443a4fc3ba43ff30cb08d32c0f7634e78a34752f8e06446",
+  "comparisons": {
+    "C1_MINUS_C0": {
+      "bootstrap_probability_treatment_better": 0.3243,
+      "control": "C0",
+      "percentile_95_interval_delta": [
+        -0.0016874086791083438,
+        0.0032047889030637267
+      ],
+      "point_delta_RMSE_treatment_minus_control": 0.0005948402366360711,
+      "relative_improvement": -0.0050234967768829665,
+      "treatment": "C1"
+    },
+    "C2_MINUS_C0": {
+      "bootstrap_probability_treatment_better": 0.7996,
+      "control": "C0",
+      "percentile_95_interval_delta": [
+        -0.001730934565214871,
+        0.0007793588444261911
+      ],
+      "point_delta_RMSE_treatment_minus_control": -0.000544936275925556,
+      "relative_improvement": 0.004602051873961339,
+      "treatment": "C2"
+    },
+    "C2_MINUS_C1": {
+      "bootstrap_probability_treatment_better": 0.9712,
+      "control": "C1",
+      "percentile_95_interval_delta": [
+        -0.002484635962977077,
+        3.416202525355213e-05
+      ],
+      "point_delta_RMSE_treatment_minus_control": -0.0011397765125616272,
+      "relative_improvement": 0.009577436429808362,
+      "treatment": "C2"
+    }
+  },
+  "experiment_id": "M26-GOAL100-E-REASON-V1",
+  "implementation_note": "Mechanical execution of the preregistered formulas, lambda values, 10,000 paired constituency bootstrap replicates and seed; no parameter or threshold was selected after outcome access.",
+  "lambda_C1": 0.3,
+  "lambda_C2": 0.3,
+  "mandatory_primary_C2_gates_all_pass": false,
+  "mapping_sha256": "41acca5f3d025facb4953b6367bb1f7b4755689b72695c699d70111cdf8707b3",
+  "metrics": {
+    "C0": {
+      "macro_party_share_RMSE": 0.11841158918890837,
+      "mean_constituency_L1": 0.7537427582136319,
+      "top_party_accuracy": 0.20652173913043478
+    },
+    "C1": {
+      "macro_party_share_RMSE": 0.11900642942554444,
+      "mean_constituency_L1": 0.7515472744304433,
+      "top_party_accuracy": 0.22826086956521738
+    },
+    "C2": {
+      "macro_party_share_RMSE": 0.11786665291298282,
+      "mean_constituency_L1": 0.7463228139659326,
+      "top_party_accuracy": 0.21739130434782608
+    }
+  },
+  "outcome_file_sha256": "aaaf837e9789bbc2d940e08b63c30994be40fee3360a0bf4070c9e113ebc779e",
+  "outcome_unsealed_after_c2_freeze": true,
+  "outcome_year": 2021,
+  "panel": {
+    "party_cells": 828,
+    "territories": 92
+  },
+  "probabilistic": {
+    "C0": {
+      "mean_energy_score": 0.3724926834838391
+    },
+    "C1": {
+      "mean_energy_score": 0.3746015316629671
+    },
+    "C2": {
+      "mean_energy_score": 0.3721573722885451,
+      "relative_degradation_vs_C0": -0.0009001819637312573,
+      "relative_degradation_vs_C1": -0.006524691352893426
+    }
+  },
+  "promotion_gates_evaluated": {
+    "energy_degradation_vs_C0_pass": true,
+    "top_party_accuracy_degradation_pass": true,
+    "vs_C0_bootstrap_probability_pass": false,
+    "vs_C0_relative_improvement_pass": false,
+    "vs_C1_bootstrap_probability_pass": true,
+    "vs_C1_relative_improvement_pass": true
+  },
+  "reporting_label": "COMPONENT_LEVEL_LOCKED_HOLDOUT",
+  "result_id": "M26-E-REASON-HOLDOUT-2021-SCORE-V1",
+  "schema_version": "1.0",
+  "seat_MAE_gate_status": "NOT_NEEDED_FOR_TERMINAL_DECISION_IF_ANY_MANDATORY_PRIMARY_GATE_FAILS",
+  "terminal_decision_determined_by_primary_gates": "E_REASON_NO_PROMOTION",
+  "z_audit": {
+    "c1": {
+      "0": 769,
+      "1": 12,
+      "2": 47
+    },
+    "c2": {
+      "0": 769,
+      "1": 59,
+      "2": 0
+    },
+    "different_cells": 47
+  }
+}
