@@ -1,0 +1,16 @@
+{
+  "schema_version":"1.0",
+  "artifact_id":"M26-CANDIDATE-INTEL-V2-PJD-2016-EXPLICIT-PRIOR-MP-CLAIMS-V1",
+  "election_year":2016,
+  "current_party":"PJD",
+  "rule":"These are pre-election source claims that explicitly identify the 2016 head as a member of the outgoing House/parliamentary group, or a closed-universe identity bridge independently establishes the same prior-cycle MP. The claim ledger itself does not assign a predictive effect.",
+  "claims":[
+    {"candidate_name_ar":"عبد الإله ابن كيران","territory_id":"sale-medina","claim":"PRIOR_CYCLE_MP","source_class":"TAFRA_CLOSED_UNIVERSE_PLUS_T1_ROSTER","source_url":"https://www.pjd.ma/74167-38534.html","corroboration":"TAFRA 2011 stable person ABDELILAH BENKIRANE, PJD, sale-medina"},
+    {"candidate_name_ar":"أبو زيد املقرئ اإلدريس ي","territory_id":"el-jadida","claim":"PRIOR_CYCLE_MP","source_class":"T1_OFFICIAL_PARTY","source_url":"https://www.pjd.ma/74207-38552.html","source_assertion":"Official candidacy page identifies him as a member of the House of Representatives."},
+    {"candidate_name_ar":"حسن حارس","territory_id":"settat","claim":"PRIOR_CYCLE_MP","source_class":"T1_OFFICIAL_PARTY","source_url":"https://www.pjd.ma/74207-38552.html","source_assertion":"Official candidacy page identifies him among three parliamentarians heading local lists."},
+    {"candidate_name_ar":"أمينة ماء العينين","territory_id":"hay-hassani","claim":"PRIOR_CYCLE_MP","source_class":"T1_OFFICIAL_PARTY","source_url":"https://www.pjd.ma/74207-38552.html","source_assertion":"Official candidacy page explicitly describes her as a parliamentarian."},
+    {"candidate_name_ar":"بلعيد أعلوالل","territory_id":"el-kelaa-des-sraghna","claim":"PRIOR_CYCLE_MP","source_class":"T1_OFFICIAL_PARTY","source_url":"https://www.pjd.ma/25582-12910.html","source_assertion":"Official party parliamentary article identifies Belaid Aalloulal as a PJD MP during the 2011-2016 legislature."},
+    {"candidate_name_ar":"عبد الحليم عالوي","territory_id":"ouezzane","claim":"PRIOR_CYCLE_MP","source_class":"T1_OFFICIAL_PARTY","source_url":"https://www.pjd.ma/65543-33782.html","source_assertion":"March 2016 official party article identifies Abdelhalim Alaoui among PJD parliamentarians."},
+    {"candidate_name_ar":"نجيب بوليف","territory_id":"tanger-assilah","claim":"PRIOR_CYCLE_MP","source_class":"TAFRA_CLOSED_UNIVERSE_PLUS_T1_ROSTER","source_url":"https://www.pjd.ma/74205-38553.html","corroboration":"Outgoing-parliament closed universe contains Mohamed Najib Boulif; current official roster names Najib Boulif in Tanger-Assilah."}
+  ]
+}
