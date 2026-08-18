@@ -1,0 +1,11 @@
+{
+  "bundle_sha256": "19706fa27cd436dc51820b98bf84948a5a83068948206596e77f280296d0d2ca",
+  "mapping_seen": false,
+  "next_allowed_action": "UNSEAL_2016_AND_CALIBRATE_LAMBDA_C1_C2_USING_FROZEN_JUDGMENTS_ONLY",
+  "outcomes_seen": false,
+  "report_id": "M26-E-REASON-C1-DEV-TERMINAL-REPORT-V1",
+  "run_id": "M26-E-REASON-C1-DEV-RULE-V1",
+  "schema_version": "1.0",
+  "terminal_status": "PASS_C1_JUDGMENTS_FROZEN_READY_FOR_2016_CALIBRATION",
+  "valid_final_judgments": "92/92"
+}
