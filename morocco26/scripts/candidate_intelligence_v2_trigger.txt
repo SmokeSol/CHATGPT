@@ -1,4 +1,4 @@
-trigger_id=M26-CANDIDATE-INTEL-V2-2021-FIRST-PASS-20260818-R2
+trigger_id=M26-CANDIDATE-INTEL-V2-2021-OFFLINE-CROSSCHECK-20260818
 base=morocco26-e-reason
-purpose=observable_pull_request_execution_only
-transport_fallbacks=enabled
+purpose=offline_tafra_crosscheck
+network_required=false
