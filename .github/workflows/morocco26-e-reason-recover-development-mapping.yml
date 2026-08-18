@@ -1,0 +1,120 @@
+name: Morocco26 E_reason recover sealed development mapping
+
+on:
+  pull_request:
+    branches:
+      - morocco26-e-reason
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout scientific branch
+        uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+          fetch-depth: 1
+
+      - name: Assert C1 and C2 judgments are frozen before mapping unseal
+        run: |
+          set -euo pipefail
+          test -f morocco26/data/goal100/e_reason/judgments/development/c2_opus5_freeze_receipt_v1.json
+          test -f morocco26/data/goal100/e_reason/judgments/development/c1_c2_preunseal_equivalence_receipt_v1.json
+          test -f morocco26/data/goal100/e_reason/judgments/development/c1_rule_only/c1_judgment_manifest.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          e=Path('morocco26/data/goal100/e_reason')
+          c2=json.loads((e/'judgments/development/c2_opus5_freeze_receipt_v1.json').read_text())
+          eq=json.loads((e/'judgments/development/c1_c2_preunseal_equivalence_receipt_v1.json').read_text())
+          c1=json.loads((e/'judgments/development/c1_rule_only/c1_judgment_manifest.json').read_text())
+          assert c2['terminal_status']=='PASS_C2_JUDGMENTS_FROZEN_READY_FOR_2016_CALIBRATION'
+          assert c1['status']=='PASS_C1_JUDGMENTS_FROZEN_READY_FOR_2016_CALIBRATION'
+          assert eq['stage']=='BEFORE_2016_OUTCOME_UNSEAL'
+          print('JUDGMENTS_FROZEN_BEFORE_MAPPING_UNSEAL_PASS')
+          PY
+
+      - name: Locate original sealed mapping artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os, subprocess
+          repo=os.environ['GITHUB_REPOSITORY']
+          raw=subprocess.check_output(['gh','api',f'repos/{repo}/actions/artifacts','--paginate','-F','per_page=100'], text=True)
+          # gh --paginate may emit multiple JSON documents; decode them sequentially.
+          dec=json.JSONDecoder(); pos=0; docs=[]
+          while pos < len(raw):
+              while pos < len(raw) and raw[pos].isspace(): pos += 1
+              if pos>=len(raw): break
+              obj,end=dec.raw_decode(raw,pos); docs.append(obj); pos=end
+          arts=[]
+          for d in docs: arts.extend(d.get('artifacts',[]))
+          cand=[a for a in arts if a.get('name')=='e-reason-development-secret-mapping' and not a.get('expired')]
+          if not cand:
+              raise SystemExit('NO_LIVE_SECRET_MAPPING_ARTIFACT')
+          cand.sort(key=lambda a:a.get('created_at',''))
+          # Original successful builder artifact must predate frozen bundle commit 2026-08-18T10:23:49Z.
+          cand=[a for a in cand if a.get('created_at','') <= '2026-08-18T10:23:49Z']
+          if not cand:
+              raise SystemExit('NO_PRE_BUNDLE_SECRET_MAPPING_ARTIFACT')
+          a=cand[-1]
+          print(json.dumps({'artifact_id':a['id'],'created_at':a['created_at'],'workflow_run':a.get('workflow_run')},sort_keys=True))
+          open(os.environ['RUNNER_TEMP']+'/artifact_id.txt','w').write(str(a['id']))
+          PY
+
+      - name: Download and verify original mapping against frozen seal
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          AID=$(cat "$RUNNER_TEMP/artifact_id.txt")
+          mkdir -p "$RUNNER_TEMP/mapping_zip" "$RUNNER_TEMP/unsealed"
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$AID/zip" > "$RUNNER_TEMP/mapping.zip"
+          unzip -q "$RUNNER_TEMP/mapping.zip" -d "$RUNNER_TEMP/unsealed"
+          MAP=$(find "$RUNNER_TEMP/unsealed" -type f -name 'development_mapping.json' | head -1)
+          test -n "$MAP"
+          python - "$MAP" <<'PY'
+          import hashlib,json,sys
+          from pathlib import Path
+          map_path=Path(sys.argv[1])
+          mapping=json.loads(map_path.read_text())
+          canon=json.dumps(mapping,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
+          got=hashlib.sha256(canon).hexdigest()
+          seal=json.loads(Path('morocco26/data/goal100/e_reason/blind/development/mapping_seal.json').read_text())
+          assert got==seal['mapping_sha256'], (got,seal['mapping_sha256'])
+          assert len(mapping['territories'])==92
+          assert len(mapping['parties'])==9
+          print('MAPPING_UNSEAL_SHA_PASS',got)
+          PY
+          cp "$MAP" "$RUNNER_TEMP/unsealed/development_mapping_verified.json"
+
+      - name: Package mapping plus 2016 calibration inputs for separate scorer
+        run: |
+          set -euo pipefail
+          OUT="$RUNNER_TEMP/e_reason_2016_calibration_inputs"
+          mkdir -p "$OUT"
+          cp "$RUNNER_TEMP/unsealed/development_mapping_verified.json" "$OUT/"
+          cp morocco26/data/goal100/e_reason/blind/development/blind_bundle.json "$OUT/"
+          cp morocco26/data/goal100/e_reason/blind/development/mapping_seal.json "$OUT/"
+          cp morocco26/data/goal100/e_reason/e_reason_conditions_v1.json "$OUT/"
+          cp morocco26/data/goal100/e_reason/e_reason_scoring_contract_v1.json "$OUT/"
+          cp morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json "$OUT/"
+          cp morocco26/data/goal100/e_reason/judgments/development/c1_rule_only/c1_judgments.jsonl "$OUT/"
+          cp morocco26/data/goal100/e_reason/judgments/development/c1_rule_only/c1_judgment_manifest.json "$OUT/"
+          sha256sum "$OUT"/* > "$OUT/INPUT_SHA256SUMS.txt"
+
+      - name: Upload post-freeze 2016 calibration inputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: e-reason-2016-calibration-inputs-after-judgment-freeze
+          path: ${{ runner.temp }}/e_reason_2016_calibration_inputs
+          retention-days: 30
+          if-no-files-found: error
