@@ -1,0 +1,30 @@
+name: Morocco26 Agent Society V2 direct blind-bundle schema probe
+
+on:
+  pull_request:
+    branches: [morocco26-agent-society-v2]
+    paths:
+      - 'morocco26/data/goal100/agent_society_v2/triggers/bundle_schema_probe_direct.trigger'
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Fetch frozen blind bundles directly
+        run: |
+          curl -fsSL -o /tmp/dev.json https://raw.githubusercontent.com/SmokeSol/CHATGPT/morocco26-agent-society-v2/morocco26/data/goal100/e_reason/blind/development/blind_bundle.json
+          curl -fsSL -o /tmp/hold.json https://raw.githubusercontent.com/SmokeSol/CHATGPT/morocco26-agent-society-v2/morocco26/data/goal100/e_reason/blind/holdout/blind_bundle.json
+      - name: Probe keys only
+        run: |
+          python - <<'PY'
+          import json
+          for name,path in [('2016','/tmp/dev.json'),('2021','/tmp/hold.json')]:
+              b=json.load(open(path)); p=b['packets'][0]; q=p['parties'][0]; f=q['features'][0]
+              print(name)
+              print('bundle_keys',sorted(b))
+              print('packet_keys',sorted(p))
+              print('party_keys',sorted(q))
+              print('feature_keys',sorted(f))
+              print('packets',len(b['packets']),'party_cells',sum(len(x['parties']) for x in b['packets']))
+          PY
