@@ -1,0 +1,16 @@
+{
+  "schema_version":"1.0",
+  "artifact_id":"M26-CANDIDATE-INTEL-V2-AUDITED-IDENTITY-OVERRIDES-V1",
+  "principle":"Overrides resolve identity only; they do not create political facts. Every TRUE still needs a closed-universe prior member or an explicit pre-election MP claim plus closed-universe corroboration.",
+  "2016":[
+    {"current_name":"عبد الإله ابن كيران","prior_name":"عبد الإله بنكيران","status":"SAFE_ALIAS","rule":"compound surname spacing/orthography","territory_id":"sale-medina"},
+    {"current_name":"أبو زيد املقرئ اإلدريس ي","prior_name":"ابو زيد المقري الادريسي","status":"SAFE_ALIAS","rule":"PDF bidi/hamza orthography repair","territory_id":"el-jadida"},
+    {"current_name":"حسن حارس","prior_name":"حسن الحارس","status":"SAFE_ALIAS","rule":"optional Arabic definite article on unique surname","territory_id":"settat"},
+    {"current_name":"عبد الحليم عالوي","prior_name":"عبد الحليم علاوي","status":"SAFE_ALIAS","rule":"single-letter order/spelling variant with explicit parliamentary corroboration","territory_id":"ouezzane"},
+    {"current_name":"بلعيد أعلوالل","prior_name":"بلعيد اعلولال","status":"SAFE_ALIAS","rule":"single-word spelling variant with explicit parliamentary corroboration","territory_id":"el-kelaa-des-sraghna"},
+    {"current_name":"مراد الكورش","prior_name":"مراد لكورش","status":"SAFE_ALIAS","rule":"optional Arabic definite article on unique surname","territory_id":"al-haouz"},
+    {"current_name":"نجيب بوليف","prior_name":"محمد نجيب بوليف","status":"SAFE_ALIAS","rule":"prior registry includes additional common given name Mohamed; unique candidate identity","territory_id":"tanger-assilah"},
+    {"current_name":"املصطفى القوري","status":"CONFIRMED_NO_ALIAS","rule":"nearest prior name has a different surname; keep non-match rather than fuzzy-promote","territory_id":"berkane"}
+  ],
+  "2021":[]
+}
