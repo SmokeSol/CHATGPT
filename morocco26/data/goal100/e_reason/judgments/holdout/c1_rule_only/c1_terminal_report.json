@@ -1,0 +1,10 @@
+{
+  "bundle_sha256": "d43fd7b23911f5ce5c878d6d952aba9dd447c9b4d9c343d0093c528855cca9b0",
+  "mapping_seen": false,
+  "next_allowed_action": "RUN_C2_OPUS5_ON_SAME_FROZEN_HOLDOUT_PACKETS_AND_FREEZE_HASHES_BEFORE_OUTCOME_UNSEAL",
+  "outcomes_seen": false,
+  "run_id": "M26-E-REASON-C1-HOLDOUT-RULE-V1",
+  "schema_version": "1.0",
+  "terminal_status": "PASS_C1_HOLDOUT_JUDGMENTS_FROZEN_AWAITING_C2",
+  "valid_final_judgments": "92/92"
+}
