@@ -1,0 +1,36 @@
+{
+  "contract_id": "M26-CANDIDATE-INTELLIGENCE-V2-FEATURE-C-EXPANSION-V1",
+  "feature_C": "V2_HEAD_ELECTED_AS_LOCAL_LIST_HEAD_2015",
+  "forecast_modified": false,
+  "predictive_scoring_performed": false,
+  "result_id": "M26-CANDIDATE-INTELLIGENCE-V2-FEATURE-C-POWER-GATE-V1",
+  "schema_version": "1.0",
+  "status": "FAIL_FEATURE_C_DATA_POWER",
+  "transitions": {
+    "2016": {
+      "coverage_gate": false,
+      "gate_pass": false,
+      "known": 73,
+      "positive": 35,
+      "rows": 74,
+      "states": {
+        "UNKNOWN": 1,
+        "VERIFIED_FALSE": 38,
+        "VERIFIED_TRUE": 35
+      },
+      "support_gate": true
+    },
+    "2021": {
+      "coverage_gate": true,
+      "gate_pass": false,
+      "known": 74,
+      "positive": 29,
+      "rows": 74,
+      "states": {
+        "VERIFIED_FALSE": 45,
+        "VERIFIED_TRUE": 29
+      },
+      "support_gate": false
+    }
+  }
+}
