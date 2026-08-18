@@ -1,32 +1,31 @@
 {
   "V2_HEAD_ELECTED_LOCAL_COUNCIL_2015": {
-    "gate_pass": false,
-    "known": 53,
-    "known_gate": false,
-    "positive": 34,
+    "gate_pass": true,
+    "known": 74,
+    "known_gate": true,
+    "positive": 46,
     "states": {
-      "UNKNOWN": 21,
-      "VERIFIED_FALSE": 19,
-      "VERIFIED_TRUE": 34
+      "VERIFIED_FALSE": 28,
+      "VERIFIED_TRUE": 46
     },
     "support_gate": true
   },
   "V2_HEAD_LOCAL_COUNCIL_EXECUTIVE_2015": {
     "gate_pass": false,
-    "known": 53,
-    "known_gate": false,
-    "positive": 23,
+    "known": 74,
+    "known_gate": true,
+    "positive": 28,
     "states": {
-      "UNKNOWN": 21,
-      "VERIFIED_FALSE": 30,
-      "VERIFIED_TRUE": 23
+      "VERIFIED_FALSE": 46,
+      "VERIFIED_TRUE": 28
     },
     "support_gate": false
   },
   "coefficient_authorized": false,
   "forecast_modified": false,
+  "identity_override_artifact": "morocco26/data/goal100/e_collect/candidate_intelligence_v2/2016/pjd_local2015_identity_overrides_v1.json",
   "roster_rows": 74,
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "source_rows": 31482,
   "source_sha256": "8b5e6d23756087409a77fbaa00c0e25428c699245dbc3241d280b914600fd341",
   "source_url": "https://open.africa/dataset/07a04224-c0ad-4861-9705-0518f5d49dbd/resource/7ae81ece-1b3d-4cdc-ac49-acd6ba37f6ea/download/communes-elus-2015-1-0.xlsx",
