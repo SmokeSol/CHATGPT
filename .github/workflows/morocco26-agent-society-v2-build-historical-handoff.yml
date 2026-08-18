@@ -1,0 +1,79 @@
+name: Morocco26 Agent Society V2 build sealed historical Opus handoff
+
+on:
+  pull_request:
+    branches: [morocco26-agent-society-v2]
+    paths:
+      - 'morocco26/data/goal100/agent_society_v2/triggers/build_historical_handoff.trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      BASE_SHA: 5d02b62dd65ce75546cd6ac73a099f1c6727cd5f
+      POP_ARTIFACT_ID: '9338194867'
+      MAP2021_ARTIFACT_ID: '9325247866'
+    steps:
+      - name: Fetch frozen public inputs directly by exact commit
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/asv2/src /tmp/asv2/pop /tmp/asv2/map /tmp/asv2/out
+          RAW="https://raw.githubusercontent.com/SmokeSol/CHATGPT/${BASE_SHA}"
+          curl -fsSL -o /tmp/asv2/src/dev.json "$RAW/morocco26/data/goal100/e_reason/blind/development/blind_bundle.json"
+          curl -fsSL -o /tmp/asv2/src/hold.json "$RAW/morocco26/data/goal100/e_reason/blind/holdout/blind_bundle.json"
+          curl -fsSL -o /tmp/asv2/src/recon2016.json "$RAW/morocco26/data/goal100/e_reason/calibration/development_2016/identity_reconstruction_postfreeze_v1.json"
+          curl -fsSL -o /tmp/asv2/src/prompt.md "$RAW/morocco26/data/goal100/agent_society_v2/as2_prompt_v2.md"
+          curl -fsSL -o /tmp/asv2/src/schema.json "$RAW/morocco26/data/goal100/agent_society_v2/as2_output_schema_v2.json"
+          curl -fsSL -o /tmp/asv2/src/powercert.json "$RAW/morocco26/data/goal100/agent_society_v2/combined_data_power_certificate_v1.json"
+          curl -fsSL -o /tmp/asv2/src/amendment.json "$RAW/morocco26/data/goal100/agent_society_v2/engineering_amendment_v3.json"
+          curl -fsSL -o /tmp/asv2/src/contractfreeze.json "$RAW/morocco26/data/goal100/agent_society_v2/pre_llm_contract_freeze_v2.json"
+          curl -fsSL -o /tmp/asv2/build.py "$RAW/morocco26/scripts/agent_society_v2_build_historical_handoff.py"
+      - name: Download frozen population and private 2021 mapping artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          curl -fsSL -L -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" -o /tmp/asv2/pop.zip "https://api.github.com/repos/SmokeSol/CHATGPT/actions/artifacts/${POP_ARTIFACT_ID}/zip"
+          unzip -q /tmp/asv2/pop.zip -d /tmp/asv2/pop
+          curl -fsSL -L -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" -o /tmp/asv2/map.zip "https://api.github.com/repos/SmokeSol/CHATGPT/actions/artifacts/${MAP2021_ARTIFACT_ID}/zip"
+          unzip -q /tmp/asv2/map.zip -d /tmp/asv2/map
+          test -f /tmp/asv2/pop/populations/2016_population_v1.json
+          test -f /tmp/asv2/pop/populations/2021_population_v1.json
+          test -f /tmp/asv2/map/holdout_mapping.json
+      - name: Build and seal judge/public and private/orchestrator packages
+        run: |
+          python /tmp/asv2/build.py \
+            --dev /tmp/asv2/src/dev.json \
+            --hold /tmp/asv2/src/hold.json \
+            --pop2016 /tmp/asv2/pop/populations/2016_population_v1.json \
+            --pop2021 /tmp/asv2/pop/populations/2021_population_v1.json \
+            --recon2016 /tmp/asv2/src/recon2016.json \
+            --map2021 /tmp/asv2/map/holdout_mapping.json \
+            --prompt /tmp/asv2/src/prompt.md \
+            --schema /tmp/asv2/src/schema.json \
+            --powercert /tmp/asv2/src/powercert.json \
+            --amendment /tmp/asv2/src/amendment.json \
+            --contractfreeze /tmp/asv2/src/contractfreeze.json \
+            --outdir /tmp/asv2/out
+          cat /tmp/asv2/out/handoff_seal_v1.json
+      - name: Ensure public handoff excludes private material
+        run: |
+          set -euo pipefail
+          unzip -l /tmp/asv2/out/opus5-agent-society-v2-historical-sealed.zip | tee /tmp/public-list.txt
+          ! grep -Ei 'mapping|private_orchestrator|real_election|shuffle_donor|weight_manifest' /tmp/public-list.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: opus5-agent-society-v2-historical-sealed
+          path: |
+            /tmp/asv2/out/opus5-agent-society-v2-historical-sealed.zip
+            /tmp/asv2/out/handoff_seal_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: agent-society-v2-historical-private-orchestrator
+          path: /tmp/asv2/out/agent-society-v2-historical-private-orchestrator.zip
