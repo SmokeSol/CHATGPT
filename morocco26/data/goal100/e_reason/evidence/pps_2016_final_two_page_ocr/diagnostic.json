@@ -1,0 +1,535 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-18T08:06:55+00:00",
+  "source_class": "T1_OFFICIAL_PARTY",
+  "source_pdf_sha256": "ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375",
+  "source_pdf_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_regional_pdf_probe/pps_pdf_probe_32080529414_1/raw/ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375.pdf",
+  "parent_page_url": "https://pps.ma/10462/",
+  "parent_page_timestamps": [
+    "2016-10-03",
+    "2016-10-04"
+  ],
+  "target_pages": [
+    3,
+    5
+  ],
+  "pages": [
+    {
+      "page": 3,
+      "raster_sha256": "e09fb0d9882bb9a83cb2edb40c326599d9d9f8f4662cfde22366bdd0411519a5",
+      "raster_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_final_two_page_ocr/page_3.png",
+      "raster_width": 1965,
+      "raster_height": 2646,
+      "ocr_text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_final_two_page_ocr/page_3.txt",
+      "ocr_words_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_final_two_page_ocr/page_3_words.json",
+      "ocr_text": "ظ 4 5- 20/09/16 1 02م.22222 22227 © ظ\n3 2 ني خزب التقلورالاشتراعية لجع 2 2\nا خم واأعاا+ م مومع | 0 ويسووكونر\nدما عذأاةأء50 بلغع 2205185 نال روط\n0 1 ل الدائرة الإنتخابية\nالانتخابات التشريعية - 07 اكتوبر2016 00\nمولاي يعقوب\nوكيل اللائحة\n0 ْ\n7 3\n0-0 :\nٍ | 1\n1 ظ ّ\nا ا ا ‎٠‏ 3\n‎١‏ كٌّ\nظ 64 2-2\nد 5\n‎٠. ٠. 03‏ 00 ٍِ\nاسامة البياز محمد النوايتى 1\nتقني متخصص طالب جامعي ”\nفاعل جمعوي فاعل جمعوي\nل ‎١‏\n‏( / 0\n38 ' ل . ا 1 30 0\n000 1 1 /م 5 مام ا(\n69 صوتوا بوضع علامة )0 على الكتاب 8 26\n0 لل للم هه\n",
+      "ocr_text_normalized": "ظ 4 5 20 09 16 1 02م 22222 22227 ظ 3 2 ني خزب التقلورالاشتراعية لجع 2 2 ا خم وااعاا م مومع 0 ويسووكونر دما عذااةاء50 بلغع 2205185 نال روط 0 1 ل الدائرة الانتخابية الانتخابات التشريعية 07 اكتوبر2016 00 مولاي يعقوب وكيل اللائحة 0 7 3 0 0 1 1 ظ ا ا ا ٠ 3 ١ ك ظ 64 2 2 د 5 ٠ ٠ 03 00 اسامة البياز محمد النوايتي 1 تقني متخصص طالب جامعي فاعل جمعوي فاعل جمعوي ل ١ 0 38 ل ا 1 30 0 000 1 1 م 5 مام ا 69 صوتوا بوضع علامة 0 علي الكتاب 8 26 0 لل للم هه",
+      "word_count": 122,
+      "high_conf_arabic_words": [
+        {
+          "text": "1",
+          "normalized_ar": "1",
+          "conf": 88.0,
+          "left": 546,
+          "top": 31,
+          "width": 9,
+          "height": 15
+        },
+        {
+          "text": "22227",
+          "normalized_ar": "22227",
+          "conf": 84.0,
+          "left": 287,
+          "top": 31,
+          "width": 66,
+          "height": 15
+        },
+        {
+          "text": "3",
+          "normalized_ar": "3",
+          "conf": 84.0,
+          "left": 1875,
+          "top": 168,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "text": "2",
+          "normalized_ar": "2",
+          "conf": 78.0,
+          "left": 1474,
+          "top": 195,
+          "width": 126,
+          "height": 202
+        },
+        {
+          "text": "م",
+          "normalized_ar": "م",
+          "conf": 89.0,
+          "left": 1072,
+          "top": 324,
+          "width": 24,
+          "height": 28
+        },
+        {
+          "text": "دما",
+          "normalized_ar": "دما",
+          "conf": 70.0,
+          "left": 1349,
+          "top": 261,
+          "width": 289,
+          "height": 180
+        },
+        {
+          "text": "الدائرة",
+          "normalized_ar": "الدائرة",
+          "conf": 90.0,
+          "left": 508,
+          "top": 512,
+          "width": 140,
+          "height": 57
+        },
+        {
+          "text": "الإنتخابية",
+          "normalized_ar": "الانتخابية",
+          "conf": 92.0,
+          "left": 288,
+          "top": 515,
+          "width": 198,
+          "height": 51
+        },
+        {
+          "text": "الانتخابات",
+          "normalized_ar": "الانتخابات",
+          "conf": 92.0,
+          "left": 1543,
+          "top": 553,
+          "width": 196,
+          "height": 62
+        },
+        {
+          "text": "التشريعية",
+          "normalized_ar": "التشريعية",
+          "conf": 91.0,
+          "left": 1307,
+          "top": 553,
+          "width": 208,
+          "height": 62
+        },
+        {
+          "text": "07",
+          "normalized_ar": "07",
+          "conf": 90.0,
+          "left": 1195,
+          "top": 559,
+          "width": 44,
+          "height": 38
+        },
+        {
+          "text": "اكتوبر2016",
+          "normalized_ar": "اكتوبر2016",
+          "conf": 89.0,
+          "left": 924,
+          "top": 557,
+          "width": 241,
+          "height": 54
+        },
+        {
+          "text": "مولاي",
+          "normalized_ar": "مولاي",
+          "conf": 91.0,
+          "left": 484,
+          "top": 599,
+          "width": 150,
+          "height": 54
+        },
+        {
+          "text": "يعقوب",
+          "normalized_ar": "يعقوب",
+          "conf": 91.0,
+          "left": 304,
+          "top": 612,
+          "width": 157,
+          "height": 41
+        },
+        {
+          "text": "وكيل",
+          "normalized_ar": "وكيل",
+          "conf": 91.0,
+          "left": 1387,
+          "top": 796,
+          "width": 163,
+          "height": 74
+        },
+        {
+          "text": "اللائحة",
+          "normalized_ar": "اللائحة",
+          "conf": 89.0,
+          "left": 1215,
+          "top": 796,
+          "width": 153,
+          "height": 51
+        },
+        {
+          "text": "3",
+          "normalized_ar": "3",
+          "conf": 70.0,
+          "left": 189,
+          "top": 1153,
+          "width": 24,
+          "height": 32
+        },
+        {
+          "text": "3",
+          "normalized_ar": "3",
+          "conf": 78.0,
+          "left": 189,
+          "top": 1490,
+          "width": 18,
+          "height": 36
+        },
+        {
+          "text": "ظ",
+          "normalized_ar": "ظ",
+          "conf": 77.0,
+          "left": 1291,
+          "top": 1622,
+          "width": 5,
+          "height": 15
+        },
+        {
+          "text": "اسامة",
+          "normalized_ar": "اسامة",
+          "conf": 92.0,
+          "left": 1373,
+          "top": 1732,
+          "width": 134,
+          "height": 50
+        },
+        {
+          "text": "البياز",
+          "normalized_ar": "البياز",
+          "conf": 88.0,
+          "left": 1265,
+          "top": 1732,
+          "width": 92,
+          "height": 65
+        },
+        {
+          "text": "محمد",
+          "normalized_ar": "محمد",
+          "conf": 95.0,
+          "left": 708,
+          "top": 1727,
+          "width": 107,
+          "height": 74
+        },
+        {
+          "text": "النوايتى",
+          "normalized_ar": "النوايتي",
+          "conf": 87.0,
+          "left": 491,
+          "top": 1727,
+          "width": 190,
+          "height": 74
+        },
+        {
+          "text": "1",
+          "normalized_ar": "1",
+          "conf": 76.0,
+          "left": 197,
+          "top": 1735,
+          "width": 19,
+          "height": 9
+        },
+        {
+          "text": "تقني",
+          "normalized_ar": "تقني",
+          "conf": 90.0,
+          "left": 1429,
+          "top": 1803,
+          "width": 76,
+          "height": 53
+        },
+        {
+          "text": "متخصص",
+          "normalized_ar": "متخصص",
+          "conf": 90.0,
+          "left": 1268,
+          "top": 1803,
+          "width": 151,
+          "height": 40
+        },
+        {
+          "text": "طالب",
+          "normalized_ar": "طالب",
+          "conf": 96.0,
+          "left": 678,
+          "top": 1798,
+          "width": 78,
+          "height": 61
+        },
+        {
+          "text": "جامعي",
+          "normalized_ar": "جامعي",
+          "conf": 84.0,
+          "left": 556,
+          "top": 1798,
+          "width": 102,
+          "height": 61
+        },
+        {
+          "text": "فاعل",
+          "normalized_ar": "فاعل",
+          "conf": 92.0,
+          "left": 1412,
+          "top": 1845,
+          "width": 78,
+          "height": 74
+        },
+        {
+          "text": "جمعوي",
+          "normalized_ar": "جمعوي",
+          "conf": 90.0,
+          "left": 1282,
+          "top": 1845,
+          "width": 112,
+          "height": 74
+        },
+        {
+          "text": "فاعل",
+          "normalized_ar": "فاعل",
+          "conf": 93.0,
+          "left": 681,
+          "top": 1854,
+          "width": 77,
+          "height": 75
+        },
+        {
+          "text": "جمعوي",
+          "normalized_ar": "جمعوي",
+          "conf": 91.0,
+          "left": 550,
+          "top": 1854,
+          "width": 114,
+          "height": 75
+        },
+        {
+          "text": "ل",
+          "normalized_ar": "ل",
+          "conf": 87.0,
+          "left": 1667,
+          "top": 1920,
+          "width": 31,
+          "height": 52
+        },
+        {
+          "text": "١‏",
+          "normalized_ar": "١",
+          "conf": 82.0,
+          "left": 1606,
+          "top": 1915,
+          "width": 31,
+          "height": 61
+        },
+        {
+          "text": "0",
+          "normalized_ar": "0",
+          "conf": 95.0,
+          "left": 424,
+          "top": 2242,
+          "width": 69,
+          "height": 119
+        },
+        {
+          "text": "0",
+          "normalized_ar": "0",
+          "conf": 83.0,
+          "left": 320,
+          "top": 2205,
+          "width": 81,
+          "height": 153
+        },
+        {
+          "text": "5",
+          "normalized_ar": "5",
+          "conf": 88.0,
+          "left": 811,
+          "top": 2361,
+          "width": 25,
+          "height": 24
+        },
+        {
+          "text": "علامة",
+          "normalized_ar": "علامة",
+          "conf": 89.0,
+          "left": 1418,
+          "top": 2386,
+          "width": 102,
+          "height": 95
+        },
+        {
+          "text": "على",
+          "normalized_ar": "علي",
+          "conf": 96.0,
+          "left": 1276,
+          "top": 2386,
+          "width": 66,
+          "height": 95
+        },
+        {
+          "text": "الكتاب",
+          "normalized_ar": "الكتاب",
+          "conf": 93.0,
+          "left": 1126,
+          "top": 2390,
+          "width": 389,
+          "height": 76
+        },
+        {
+          "text": "0",
+          "normalized_ar": "0",
+          "conf": 75.0,
+          "left": 1738,
+          "top": 2568,
+          "width": 46,
+          "height": 46
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "raster_sha256": "4d290517db3f2de22218a262fc0926a39f68f201060a2229852967b6d236887a",
+      "raster_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_final_two_page_ocr/page_5.png",
+      "raster_width": 1965,
+      "raster_height": 2646,
+      "ocr_text_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_final_two_page_ocr/page_5.txt",
+      "ocr_words_path": "morocco26/data/goal100/e_reason/evidence/pps_2016_final_two_page_ocr/page_5_words.json",
+      "ocr_text": "»4 77- 17/09/16 1 2لم. 22222 © ظ\n4 / حزب التقام و الاشتراكية ؟ « 4\nهاا ا|+ 8 ه5100 | 0مومكاء م 7\nِ 5031150 بال غم 2206185 نال روط\nوكيل اللائحة\n4\nالة 3\n05 1\n'ْ .د 3\n5 0\n3\n9\n5\n2 1\n3و\n‎١‏ 5\n3\n5 | 5515م 03\n",
+      "ocr_text_normalized": "4 77 17 09 16 1 2لم 22222 ظ 4 حزب التقام و الاشتراكية ؟ 4 هاا ا 8 ه5100 0مومكاء م 7 5031150 بال غم 2206185 نال روط وكيل اللائحة 4 الة 3 05 1 د 3 5 0 3 9 5 2 1 3و ١ 5 3 5 5515م 03",
+      "word_count": 57,
+      "high_conf_arabic_words": [
+        {
+          "text": "1",
+          "normalized_ar": "1",
+          "conf": 83.0,
+          "left": 460,
+          "top": 31,
+          "width": 9,
+          "height": 15
+        },
+        {
+          "text": "حزب",
+          "normalized_ar": "حزب",
+          "conf": 89.0,
+          "left": 1177,
+          "top": 235,
+          "width": 125,
+          "height": 55
+        },
+        {
+          "text": "التقام",
+          "normalized_ar": "التقام",
+          "conf": 89.0,
+          "left": 1012,
+          "top": 225,
+          "width": 127,
+          "height": 73
+        },
+        {
+          "text": "و",
+          "normalized_ar": "و",
+          "conf": 92.0,
+          "left": 979,
+          "top": 250,
+          "width": 17,
+          "height": 41
+        },
+        {
+          "text": "4",
+          "normalized_ar": "4",
+          "conf": 71.0,
+          "left": 18,
+          "top": 168,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "text": "نال",
+          "normalized_ar": "نال",
+          "conf": 80.0,
+          "left": 776,
+          "top": 387,
+          "width": 43,
+          "height": 37
+        },
+        {
+          "text": "وكيل",
+          "normalized_ar": "وكيل",
+          "conf": 89.0,
+          "left": 1387,
+          "top": 812,
+          "width": 162,
+          "height": 74
+        },
+        {
+          "text": "اللائحة",
+          "normalized_ar": "اللائحة",
+          "conf": 89.0,
+          "left": 1215,
+          "top": 812,
+          "width": 153,
+          "height": 51
+        },
+        {
+          "text": "4",
+          "normalized_ar": "4",
+          "conf": 76.0,
+          "left": 188,
+          "top": 1103,
+          "width": 24,
+          "height": 37
+        },
+        {
+          "text": "3",
+          "normalized_ar": "3",
+          "conf": 72.0,
+          "left": 189,
+          "top": 1335,
+          "width": 24,
+          "height": 46
+        },
+        {
+          "text": "5",
+          "normalized_ar": "5",
+          "conf": 95.0,
+          "left": 1354,
+          "top": 1395,
+          "width": 32,
+          "height": 16
+        },
+        {
+          "text": "3",
+          "normalized_ar": "3",
+          "conf": 76.0,
+          "left": 189,
+          "top": 1490,
+          "width": 17,
+          "height": 36
+        }
+      ]
+    }
+  ],
+  "status": "OCR_DIAGNOSTIC_COMPLETE",
+  "invariants": {
+    "ocr_scope_pages_exactly": [
+      3,
+      5
+    ],
+    "underlying_pdf_mechanically_admissible": true,
+    "candidate_identities_promoted": false,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "F1_created": false
+  }
+}
