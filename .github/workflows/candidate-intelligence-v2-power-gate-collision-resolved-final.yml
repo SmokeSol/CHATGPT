@@ -1,0 +1,36 @@
+name: Candidate Intelligence V2 Collision Resolved Final Power Gate
+on:
+  push:
+    branches: [morocco26-e-reason]
+    paths:
+      - 'morocco26/scripts/candidate_intelligence_v2_power_gate_collision_resolved_final.py'
+      - 'morocco26/data/goal100/e_collect/candidate_intelligence_v2/local2015_collision_resolution_v1.json'
+      - '.github/workflows/candidate-intelligence-v2-power-gate-collision-resolved-final.yml'
+  pull_request:
+    branches: [morocco26-e-reason]
+    paths:
+      - 'morocco26/scripts/candidate_intelligence_v2_collision_resolved_final_trigger.txt'
+      - 'morocco26/scripts/candidate_intelligence_v2_power_gate_collision_resolved_final.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python morocco26/scripts/candidate_intelligence_v2_power_gate_collision_resolved_final.py
+      - run: cat morocco26/data/goal100/e_collect/candidate_intelligence_v2/candidate_intelligence_v2_power_gate_collision_resolved_final_v1.json
+      - run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/candidate_intelligence_v2_power_gate_collision_resolved_final_v1.json
+          git commit -m 'gate(candidate-intel): record collision-resolved final power gate' || exit 0
+          git pull --rebase origin morocco26-e-reason
+          git push origin HEAD:morocco26-e-reason
