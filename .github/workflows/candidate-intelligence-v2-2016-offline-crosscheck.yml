@@ -1,0 +1,42 @@
+name: Candidate Intelligence V2 2016 Offline Crosscheck
+
+on:
+  pull_request:
+    branches:
+      - morocco26-e-reason
+    paths:
+      - 'morocco26/scripts/candidate_intelligence_v2_trigger.txt'
+      - 'morocco26/data/goal100/e_collect/candidate_intelligence_v2/2016/cross_source_seed_v1.jsonl'
+      - 'morocco26/scripts/candidate_intelligence_v2_crosscheck_2016_seed.py'
+      - '.github/workflows/candidate-intelligence-v2-2016-offline-crosscheck.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  crosscheck-2016:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run offline TAFRA 2011 crosscheck
+        run: python morocco26/scripts/candidate_intelligence_v2_crosscheck_2016_seed.py
+      - name: Show audit
+        run: cat morocco26/data/goal100/e_collect/candidate_intelligence_v2/2016/cross_source_seed_audit_v1.json
+      - name: Commit audit artifacts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/2016/cross_source_seed_audit_v1.json
+          git add morocco26/data/goal100/e_collect/candidate_intelligence_v2/2016/cross_source_seed_verified_v1.jsonl
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'data(candidate-intel): record offline 2016 cross-source audit'
+            git push origin HEAD:morocco26-e-reason
+          fi
