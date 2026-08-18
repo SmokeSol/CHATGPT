@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-ASV2-HISTORICAL-SCORING-CONTRACT-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "FROZEN_BEFORE_ANY_REAL_ASV2_LLM_OUTPUT_IS_INSPECTED",
+  "real_asv2_llm_outputs_seen_at_freeze": false,
+  "historical_years": [2016, 2021],
+  "scientific_role": "RETROSPECTIVE_SANITY_FILTER_ONLY_NOT_PRISTINE_PROOF",
+  "input_integrity": {
+    "required_public_handoff_zip_sha256": "9798dcb7c9b227322eb6b8158d4929e5536b8e0c4e41dc890d9b4cfeec063209",
+    "required_public_manifest_sha256": "fc019dabf0bb0a24302a119948fa68d06f6841608d748d31a500aa503283a92e",
+    "required_output_rows": 47104,
+    "required_packets": 1472,
+    "required_terminal_status": "PASS_ASV2_HISTORICAL_VOTES_FROZEN_READY_FOR_SCORING",
+    "condition_roles_are_resolved_only_from_private_orchestrator_manifest_after_llm_outputs_are_frozen": true
+  },
+  "aggregation": {
+    "per_archetype_weight_source": "private_orchestrator_manifest",
+    "territory_expected_turnout": "sum_i(weight_i * turnout_probability_i)",
+    "territory_party_unconditional_mass": "sum_i(weight_i * turnout_probability_i * conditional_party_probability_i[p])",
+    "territory_conditional_party_share": "party_unconditional_mass[p] / sum_q(party_unconditional_mass[q])",
+    "no_posthoc_reweighting": true,
+    "missing_or_invalid_rows": "do not impute; count contract-invalid"
+  },
+  "control_definitions": {
+    "C0_STRUCTURAL": "frozen baseline_vote_share for the same anonymous 92x9 panel stored in the private orchestrator manifest",
+    "AS1_PRIOR_ONLY": "previous-election conditional party shares supplied in the common territory card; no LLM transition",
+    "AS2_LLM_INDEPENDENT": "weighted aggregate of the opaque condition privately mapped to true political context",
+    "AS2_SHUFFLED_CONTEXT": "weighted aggregate of the opaque condition privately mapped to density-matched deranged political context"
+  },
+  "primary_metric": {
+    "name": "macro_party_share_RMSE",
+    "panel": "92 territories x fixed 9 anonymous parties = 828 equally weighted cells per year",
+    "formula": "sqrt(mean_over_828_cells((predicted_conditional_party_share - observed_conditional_party_share)^2))",
+    "lower_is_better": true
+  },
+  "secondary_metrics": {
+    "mean_constituency_L1": "mean over territories of sum_p(abs(pred_share[p]-observed_share[p]))",
+    "top_party_accuracy": "fraction of territories where argmax predicted share equals argmax observed share; deterministic ties resolved lexicographically by anonymous party ID",
+    "turnout_MAE": "mean over territories of abs(predicted turnout - observed turnout) when a canonical comparable turnout denominator exists for both control and treatment; otherwise report NOT_SCORABLE without changing the primary gate",
+    "local_seat_national_MAE": "diagnostic only where a frozen historical legal allocator and compatible seat magnitude are available; NOT required for the historical sanity terminal gate",
+    "mean_energy_score": "diagnostic only if the preregistered 20,000 ballot simulation is executed; NOT required for the historical sanity terminal gate"
+  },
+  "paired_bootstrap_diagnostic": {
+    "unit": "territory",
+    "replicates": 10000,
+    "seed": 260818,
+    "probability_treatment_better": "fraction of bootstrap replicates with RMSE_treatment < RMSE_control",
+    "role": "diagnostic for historical benchmarks; does not replace the frozen point-estimate historical sanity gates"
+  },
+  "contract_validity": {
+    "numerator": "schema-valid output rows whose packet/archetype IDs and party simplex exactly match the sealed handoff contract",
+    "denominator": 47104,
+    "minimum_rate": 0.99,
+    "full_package_completion_required_for_terminal_PASS": true,
+    "reason": "The protocol threshold is >=0.99, but the sealed Opus handoff itself requires all 47,104 rows before returning its PASS terminal status. No partial output is promoted to a passing terminal experiment."
+  },
+  "historical_sanity_gates_exact": {
+    "gate_1_contract": "contract_validity_rate >= 0.99 AND sealed Opus terminal status is PASS_ASV2_HISTORICAL_VOTES_FROZEN_READY_FOR_SCORING",
+    "gate_2_not_materially_worse_2016": "RMSE_AS2_TRUE_2016 <= 1.01 * RMSE_C0_2016",
+    "gate_3_not_materially_worse_2021": "RMSE_AS2_TRUE_2021 <= 1.01 * RMSE_C0_2021",
+    "gate_4_positive_signal": "relative_improvement_AS2_TRUE_vs_C0 >= 0.01 in at least one of 2016 or 2021, where relative_improvement=(RMSE_C0-RMSE_AS2_TRUE)/RMSE_C0",
+    "gate_5_negative_control_2016": "RMSE_AS2_TRUE_2016 <= RMSE_AS2_SHUFFLED_2016",
+    "gate_6_negative_control_2021": "RMSE_AS2_TRUE_2021 <= RMSE_AS2_SHUFFLED_2021",
+    "all_six_required": true,
+    "pass_state": "ASV2_HISTORICAL_SANITY_PASS_READY_FOR_2026_FREEZE",
+    "failure_state": "ASV2_KILL_BEFORE_2026"
+  },
+  "interpretation_constraints": [
+    "2016 and 2021 are retrospective benchmarks and cannot establish pristine prospective alpha.",
+    "The severe 2016 context-discrimination warning must be printed in every scoring report: formal context density passed but zero districts had at least two cross-party discriminative context families.",
+    "AS2 beating AS1 is interesting but is not a frozen promotion gate; C0 and shuffled-context comparisons determine the historical sanity terminal state.",
+    "No prompt, model, archetype population, context shuffle, aggregation formula, metric, threshold or condition mapping may be changed after real ASV2 LLM outputs are inspected."
+  ],
+  "next_action_after_pass": "Freeze a separate prospective 2026 Agent Society population, context snapshot, prompt/model hash, outputs and forecast before election day. F0 remains official.",
+  "next_action_after_fail": "Stop ASV2 before 2026; do not run AS3 networked arm and do not tune on 2016/2021 outcomes."
+}
