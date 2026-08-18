@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-ASV2-HISTORICAL-SCORER-DRYRUN-CERTIFICATE-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "status": "PASS_END_TO_END_SCORER_DRYRUN",
+  "real_asv2_llm_outputs_used": false,
+  "dryrun_input": "47,104 deterministic prior-only rows generated mechanically from the sealed public handoff solely to exercise the scorer",
+  "workflow_run_id": 32176634871,
+  "workflow_job_id": 95839990633,
+  "artifact_id": 9339262017,
+  "checks": {
+    "python_compile": true,
+    "rows_raw": 47104,
+    "valid_rows": 47104,
+    "invalid_rows": 0,
+    "missing_rows": 0,
+    "full_contract_pass": true,
+    "mapping_2016_resolved": true,
+    "mapping_2021_resolved": true,
+    "canonical_outcomes_loaded": true,
+    "paired_bootstrap_10000_seed_260818_executed": true,
+    "six_terminal_gates_executed": true
+  },
+  "baseline_reconstruction_check": {
+    "2016_C0_RMSE": 0.08850462894692873,
+    "2021_C0_RMSE": 0.11841158918890837,
+    "status": "MATCHES_PREVIOUSLY_FROZEN_BASELINE_SCORING"
+  },
+  "note": "The dry-run terminal state itself has no scientific meaning because AS2 rows were deliberately set equal to prior-only. The certificate validates only the mechanical scoring pipeline before real Opus-5 outputs are inspected."
+}
