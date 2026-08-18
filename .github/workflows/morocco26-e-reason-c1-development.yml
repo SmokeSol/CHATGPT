@@ -1,0 +1,62 @@
+name: Morocco26 E_reason C1 blinded development
+
+on:
+  pull_request:
+    branches:
+      - morocco26-e-reason
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout scientific branch
+        uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+          fetch-depth: 0
+
+      - name: Guard frozen preregistration
+        run: |
+          set -euo pipefail
+          python morocco26/scripts/validate_e_reason_prereg.py
+          test -f morocco26/data/goal100/e_reason/judgments/development/c2_opus5_freeze_receipt_v1.json
+
+      - name: Generate deterministic blinded C1 judgments
+        run: |
+          set -euo pipefail
+          python morocco26/scripts/e_reason_generate_c1_development.py
+
+      - name: Assert no target outcome or mapping access is encoded
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('morocco26/data/goal100/e_reason/judgments/development/c1_rule_only/c1_judgment_manifest.json')
+          x=json.loads(p.read_text())
+          assert x['status']=='PASS_C1_JUDGMENTS_FROZEN_READY_FOR_2016_CALIBRATION'
+          assert x['outcomes_seen'] is False
+          assert x['mapping_seen'] is False
+          assert x['counts']['packets']==92
+          assert x['counts']['party_cells']==828
+          print('C1_FREEZE_GUARD_PASS')
+          PY
+
+      - name: Commit C1 frozen judgments
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/e_reason/judgments/development/c1_rule_only/
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'No C1 artifacts to commit.'
+            exit 0
+          fi
+          git commit -m 'experiment(e-reason): freeze blinded C1 development judgments'
+          git push origin HEAD:morocco26-e-reason
