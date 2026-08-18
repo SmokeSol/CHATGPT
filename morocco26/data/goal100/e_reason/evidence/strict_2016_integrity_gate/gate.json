@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "created_at": "2026-08-18T08:15:29+00:00",
+  "schema_version": "2.0",
+  "created_at": "2026-08-18T08:32:34+00:00",
   "year": 2016,
   "status": "E_REASON_2016_STRICT_INTEGRITY_PARTIAL",
   "excluded_layers": {
@@ -10,12 +10,14 @@
   "source_artifacts": {
     "PJD": "morocco26/data/goal100/e_reason/evidence/pjd_2016_parsed_slates/parsed_slates.json",
     "PPS_TYPO": "morocco26/data/goal100/e_reason/evidence/pps_2016_typographic_identities/parsed_identities.json",
-    "PPS_OCR_FINAL": "morocco26/data/goal100/e_reason/evidence/pps_2016_ocr_moulay_yacoub/evidence.json"
+    "PPS_OCR_MOULAY": "morocco26/data/goal100/e_reason/evidence/pps_2016_ocr_moulay_yacoub/evidence.json",
+    "PPS_CROSSMODAL": "morocco26/data/goal100/e_reason/evidence/strict_2016_ifrane_sidi_crossmodal_candidates/evidence.json",
+    "PPS_CROSSMODAL_DIAGNOSTIC": "morocco26/data/goal100/e_reason/evidence/strict_2016_ifrane_sidi_embedded_name_diagnostic/diagnostic.json"
   },
   "counts": {
-    "candidate_rows_before_dedupe": 381,
+    "candidate_rows_before_dedupe": 384,
     "districts_with_any_candidate": 80,
-    "districts_with_at_least_three_verified_candidate_identities": 64,
+    "districts_with_at_least_three_verified_candidate_identities": 66,
     "required_identity_districts": 70,
     "districts_with_at_least_one_enriched_candidate_fact": 80,
     "required_enriched_districts": 50,
@@ -30,7 +32,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -51,7 +54,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -72,7 +76,8 @@
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -93,7 +98,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -114,7 +120,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -130,33 +137,13 @@
       ]
     },
     {
-      "constituency_id": "ifrane",
-      "verified_distinct_candidate_identities": 2,
-      "pipeline_identity_counts": {
-        "PJD": 2,
-        "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
-      },
-      "candidate_keys": [
-        {
-          "party": "PJD",
-          "identity": "احمد الراشدي",
-          "pipeline": "PJD"
-        },
-        {
-          "party": "PJD",
-          "identity": "امحمد بحري",
-          "pipeline": "PJD"
-        }
-      ]
-    },
-    {
       "constituency_id": "jerada",
       "verified_distinct_candidate_identities": 2,
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -177,7 +164,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -198,7 +186,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -214,33 +203,13 @@
       ]
     },
     {
-      "constituency_id": "sidi-ifni",
-      "verified_distinct_candidate_identities": 2,
-      "pipeline_identity_counts": {
-        "PJD": 2,
-        "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
-      },
-      "candidate_keys": [
-        {
-          "party": "PJD",
-          "identity": "عمر بومريس",
-          "pipeline": "PJD"
-        },
-        {
-          "party": "PJD",
-          "identity": "مولاي محمد الواصيفي",
-          "pipeline": "PJD"
-        }
-      ]
-    },
-    {
       "constituency_id": "tan-tan",
       "verified_distinct_candidate_identities": 2,
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -261,7 +230,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -282,7 +252,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -303,7 +274,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -324,7 +296,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -345,7 +318,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -370,7 +344,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -413,7 +388,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -446,7 +422,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -474,7 +451,8 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -527,7 +505,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -560,7 +539,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -588,7 +568,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -631,7 +612,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -674,7 +656,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -702,7 +685,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -735,7 +719,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -758,7 +743,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -801,7 +787,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -844,7 +831,8 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -897,7 +885,8 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -950,7 +939,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -978,7 +968,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1006,7 +997,8 @@
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1039,7 +1031,8 @@
       "pipeline_identity_counts": {
         "PJD": 6,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1082,7 +1075,8 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1135,7 +1129,8 @@
       "pipeline_identity_counts": {
         "PJD": 5,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1173,7 +1168,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1196,7 +1192,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1229,7 +1226,8 @@
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1252,7 +1250,8 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1305,7 +1304,8 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1358,7 +1358,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1386,7 +1387,8 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1439,7 +1441,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1482,7 +1485,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1505,7 +1509,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1528,7 +1533,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1565,13 +1571,14 @@
     },
     {
       "constituency_id": "ifrane",
-      "verified_distinct_candidate_identities": 2,
-      "identity_coverage_pass": false,
+      "verified_distinct_candidate_identities": 3,
+      "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 1
       },
       "candidate_keys": [
         {
@@ -1583,6 +1590,11 @@
           "party": "PJD",
           "identity": "امحمد بحري",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "حسن السعودي",
+          "pipeline": "PPS_CROSSMODAL"
         }
       ]
     },
@@ -1594,7 +1606,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1617,7 +1630,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1660,7 +1674,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1693,7 +1708,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1721,7 +1737,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1749,7 +1766,8 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1782,7 +1800,8 @@
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1815,7 +1834,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1858,7 +1878,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1881,7 +1902,8 @@
       "pipeline_identity_counts": {
         "PJD": 6,
         "PPS_TYPO": 6,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1954,7 +1976,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -1997,7 +2020,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2040,7 +2064,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2068,7 +2093,8 @@
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 2
+        "PPS_OCR_MOULAY": 2,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2084,12 +2110,12 @@
         {
           "party": "PPS",
           "identity": "اسامة البياز",
-          "pipeline": "PPS_OCR_FINAL"
+          "pipeline": "PPS_OCR_MOULAY"
         },
         {
           "party": "PPS",
           "identity": "محمد النوايتي",
-          "pipeline": "PPS_OCR_FINAL"
+          "pipeline": "PPS_OCR_MOULAY"
         }
       ]
     },
@@ -2101,7 +2127,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2134,7 +2161,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2177,7 +2205,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2220,7 +2249,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2243,7 +2273,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2286,7 +2317,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2329,7 +2361,8 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2382,7 +2415,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2425,7 +2459,8 @@
       "pipeline_identity_counts": {
         "PJD": 6,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2468,7 +2503,8 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2501,7 +2537,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2544,7 +2581,8 @@
       "pipeline_identity_counts": {
         "PJD": 6,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2587,7 +2625,8 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2620,7 +2659,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2657,13 +2697,14 @@
     },
     {
       "constituency_id": "sidi-ifni",
-      "verified_distinct_candidate_identities": 2,
-      "identity_coverage_pass": false,
+      "verified_distinct_candidate_identities": 4,
+      "identity_coverage_pass": true,
       "enriched_candidate_fact_present": true,
       "pipeline_identity_counts": {
         "PJD": 2,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 2
       },
       "candidate_keys": [
         {
@@ -2675,6 +2716,16 @@
           "party": "PJD",
           "identity": "مولاي محمد الواصيفي",
           "pipeline": "PJD"
+        },
+        {
+          "party": "PPS",
+          "identity": "مبارك البطاح",
+          "pipeline": "PPS_CROSSMODAL"
+        },
+        {
+          "party": "PPS",
+          "identity": "نعيمة كريم",
+          "pipeline": "PPS_CROSSMODAL"
         }
       ]
     },
@@ -2686,7 +2737,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 5,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2724,7 +2776,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2767,7 +2820,8 @@
       "pipeline_identity_counts": {
         "PJD": 4,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2820,7 +2874,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2843,7 +2898,8 @@
       "pipeline_identity_counts": {
         "PJD": 5,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2881,7 +2937,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2924,7 +2981,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2947,7 +3005,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2970,7 +3029,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -2998,7 +3058,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 4,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -3031,7 +3092,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -3054,7 +3116,8 @@
       "pipeline_identity_counts": {
         "PJD": 5,
         "PPS_TYPO": 0,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -3092,7 +3155,8 @@
       "pipeline_identity_counts": {
         "PJD": 5,
         "PPS_TYPO": 5,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -3155,7 +3219,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -3183,7 +3248,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -3226,7 +3292,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -3249,7 +3316,8 @@
       "pipeline_identity_counts": {
         "PJD": 0,
         "PPS_TYPO": 2,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -3272,7 +3340,8 @@
       "pipeline_identity_counts": {
         "PJD": 3,
         "PPS_TYPO": 3,
-        "PPS_OCR_FINAL": 0
+        "PPS_OCR_MOULAY": 0,
+        "PPS_CROSSMODAL": 0
       },
       "candidate_keys": [
         {
@@ -3311,6 +3380,7 @@
   "invariants": {
     "direct_extension_rows_counted": false,
     "legacy_fallback_rows_counted": false,
+    "crossmodal_rows_reverified_against_frozen_diagnostic": true,
     "outcomes_unsealed": false,
     "predictive_judgments_generated": false,
     "forecast_delta_generated": false,
