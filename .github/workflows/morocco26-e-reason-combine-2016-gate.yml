@@ -6,6 +6,8 @@ on:
     paths:
       - "morocco26/scripts/e_reason_combine_2016_candidate_evidence.py"
       - "morocco26/data/goal100/e_reason/evidence/pjd_2016_parsed_slates/parsed_slates.json"
+      - "morocco26/data/goal100/e_reason/evidence/pps_2016_typographic_identities/parsed_identities.json"
+      - "morocco26/data/goal100/e_reason/evidence/pps_2016_direct_typographic_extension/extension.json"
       - "morocco26/data/goal100/e_reason/evidence/pps_2016_parsed_missing_slates/parsed_missing_slates.json"
       - ".github/workflows/morocco26-e-reason-combine-2016-gate.yml"
 permissions:
