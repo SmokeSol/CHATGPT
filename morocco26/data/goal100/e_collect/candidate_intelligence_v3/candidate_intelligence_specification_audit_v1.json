@@ -1,0 +1,98 @@
+{
+  "corrected_interpretation": {
+    "f0_status": "UNCHANGED_NO_PROMOTION",
+    "superseding_decision": "RETRACT_GENERAL_KILL_PRESERVE_NUMERIC_V2_RESULT",
+    "what_v2_did_not_show": [
+      "Candidate intelligence has no predictive value.",
+      "Candidate intelligence adds no value over F0.",
+      "A locally conditioned or party-heterogeneous candidate layer cannot help seat probabilities.",
+      "An LLM reasoner cannot add value when supplied with a correctly specified transition representation."
+    ],
+    "what_v2_did_show": "Under its asymmetric baseline and universal-coefficient specification, retained same-party same-district incumbency did not improve pooled 2021 vote-share RMSE."
+  },
+  "corrective_actions": [
+    "Run a symmetric same-family diagnostic on both transitions using prior-cycle vote as the baseline.",
+    "Remove observed party-level national swing and score only territorial redistribution.",
+    "Compare a mean-reversion structural model against a candidate-augmented model.",
+    "Represent retained incumbency as a transition indicator and interact it with prior local strength.",
+    "Allow ridge-shrunk party heterogeneity rather than hand-set party weights.",
+    "Bootstrap by territory clusters.",
+    "Do not claim incremental value over F0 until a symmetric historical F0/pseudo-F0 exists.",
+    "Do not invoke Opus or modify F0 from this retrospective diagnostic."
+  ],
+  "created_at": "2026-08-18T22:00:00+01:00",
+  "material_caveats": [
+    {
+      "consequence": "V2 does not identify the incremental value of candidate intelligence over F0.",
+      "finding": "The 2011→2016 fit used raw 2011 vote shares as its baseline, while the 2016→2021 validation used B*/F0-like structural predictions. A coefficient learned as a correction to lagged vote was therefore tested as a correction to a different model.",
+      "id": "C1_BASELINE_FAMILY_MISMATCH",
+      "severity": "FATAL_FOR_INCREMENTAL_OVER_F0_CLAIM"
+    },
+    {
+      "consequence": "The pooled PJD/RNI cancellation is not a clean test of local candidate information.",
+      "finding": "The candidate layer was evaluated on absolute party vote-share error even though PJD and RNI underwent very different national swings. A local candidate layer should redistribute a party's national strength territorially, not estimate the national level itself.",
+      "id": "C2_NATIONAL_SWING_CONTAMINATION",
+      "severity": "HIGH"
+    },
+    {
+      "consequence": "The estimand mixes persistence, mean reversion, nomination selection and any true candidate effect.",
+      "finding": "Retained incumbency was treated as an unconditional additive level effect although prior local vote already embeds the performance of the incumbent and local machine.",
+      "id": "C3_STATIC_LEVEL_DOUBLE_COUNTING",
+      "severity": "HIGH"
+    },
+    {
+      "consequence": "A candidate coefficient can proxy for regression to the mean or seat-selection strategy.",
+      "finding": "The V2 candidate coefficient was not tested incrementally against a symmetric local mean-reversion baseline based on prior territorial strength.",
+      "id": "C4_UNMODELLED_MEAN_REVERSION",
+      "severity": "HIGH"
+    },
+    {
+      "consequence": "Pooling can erase a real heterogeneous effect or manufacture a misleading average.",
+      "finding": "One universal incumbency coefficient was imposed on PJD and RNI, despite heterogeneous party organization and a validation result with opposite signs by party.",
+      "id": "C5_UNIVERSAL_PARTY_EFFECT",
+      "severity": "HIGH"
+    },
+    {
+      "consequence": "Uncertainty was not aligned with the clustering structure.",
+      "finding": "The prior bootstrap sampled party-territory cells independently although observations share territories, regions and political shocks.",
+      "id": "C6_IID_BOOTSTRAP",
+      "severity": "MEDIUM"
+    },
+    {
+      "consequence": "PASS_MULTIPART_HEAD_POWER must be read as a data-support gate only.",
+      "finding": "The ≥30 positive and ≥120 known-cell gates demonstrated support and coverage, not ex-ante statistical power or temporal transportability.",
+      "id": "C7_SUPPORT_IS_NOT_STATISTICAL_POWER",
+      "severity": "MEDIUM"
+    },
+    {
+      "consequence": "No seat-level value claim, positive or negative, is identified by V2.",
+      "finding": "Pooled vote-share RMSE was treated as the decisive election metric. Candidate information may matter primarily near constituency rank and last-seat cutoffs.",
+      "id": "C8_WRONG_FORECAST_OBJECT",
+      "severity": "MEDIUM"
+    },
+    {
+      "consequence": "A clean historical incremental-over-F0 test remains unavailable without 2007 reconstruction or another pre-registered pseudo-F0 design.",
+      "finding": "The archive contains canonical 2011, 2016 and 2021 results but no 2007 cycle; the same multi-cycle structural baseline used for 2021 cannot currently be reproduced for 2016.",
+      "id": "C9_NO_SYMMETRIC_F0_BACKTEST_AVAILABLE",
+      "severity": "FATAL_FOR_INCREMENTAL_OVER_F0_CLAIM"
+    },
+    {
+      "consequence": "Only 2026 can serve as the next prospective falsifiable test.",
+      "finding": "2021 is already opened and all V3 work is retrospective exploratory development.",
+      "id": "C10_RETROSPECTIVE_NOT_BLIND",
+      "severity": "MEDIUM"
+    }
+  ],
+  "preserved_prior_result": {
+    "certificate": "morocco26/data/goal100/e_collect/candidate_intelligence_v2/candidate_intelligence_v2_terminal_certificate_v2.json",
+    "f0_modified": false,
+    "llm_invoked": false,
+    "power_gate": "PASS_MULTIPART_HEAD_POWER",
+    "predictive_result": "NO_RETROSPECTIVE_PREDICTIVE_SIGNAL_UNDER_V2_SPECIFICATION",
+    "prior_terminal_decision": "KILL_E_REASON_V2_CANDIDATE_LAYER"
+  },
+  "schema_version": "1.0",
+  "scope": "Methodological audit of the candidate-intelligence V2 experiment after the terminal certificate, preserving all original artifacts and numerical results.",
+  "status": "V2_TERMINAL_KILL_SUPERSEDED_AS_OVERBROAD",
+  "audit_id": "M26-CANDIDATE-INTELLIGENCE-SPECIFICATION-AUDIT-V1"
+}

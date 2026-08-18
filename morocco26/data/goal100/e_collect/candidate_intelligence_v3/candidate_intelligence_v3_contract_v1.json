@@ -1,0 +1,106 @@
+{
+  "decision_rule": {
+    "candidate_material_signal": {
+      "C2_vs_C1_relative_RMSE_improvement_min": 0.005,
+      "bootstrap_probability_C2_better_min": 0.9,
+      "maximum_allowed_party_specific_deterioration": 0.005
+    },
+    "no_transportable_candidate_signal": "Pooled C2 RMSE is not lower than C1 RMSE.",
+    "positive_but_not_material": "Pooled C2 improvement is positive but at least one material gate fails."
+  },
+  "estimation": {
+    "alpha_selection": "Leave-one-region-out CV on 2011_TO_2016 separately for C1 and C2; lowest centered-residual RMSE, ties favor stronger regularization.",
+    "coefficient_transport": "Apply 2016-selected alpha and coefficients unchanged to 2021 after permitted pre-election feature centering.",
+    "intercept": false,
+    "ridge_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0
+    ]
+  },
+  "estimand": {
+    "f0_incremental_claim": "FORBIDDEN",
+    "interpretation": "Territorial redistribution conditional on the observed national party swing; this is an oracle-national-swing retrospective diagnostic, not an operational forecast.",
+    "national_swing_prediction": "OUT_OF_SCOPE",
+    "raw_change": "logit(current_party_share) - logit(prior_party_share)",
+    "target": "raw_change minus the within-transition, within-party mean raw_change"
+  },
+  "forbidden": [
+    "Invoke an LLM in this experiment.",
+    "Modify F0.",
+    "Use 2021 performance to change features, alpha grid, thresholds or party structure after execution.",
+    "Recode UNKNOWN as false.",
+    "Claim a seat-level result from vote-share diagnostics.",
+    "Treat the old V2 terminal KILL as a valid general candidate-intelligence conclusion."
+  ],
+  "frozen_at": "2026-08-18T22:00:00+01:00",
+  "interpretation_limits": [
+    "A positive result would justify a new prospective 2026 candidate-layer specification, not modification of F0 today.",
+    "A negative result applies only to retained-incumbent information in this PJD/RNI panel and corrected specification.",
+    "This run cannot establish causal candidate effects.",
+    "This run cannot establish incremental value over F0.",
+    "2021 is retrospective and not blind."
+  ],
+  "metrics": {
+    "primary": "C2 versus C1 centered-territorial-logit-change RMSE on 2021",
+    "seat_metrics": "NOT_CLAIMED_UNTIL_A_CROSS_YEAR_VALIDATED_LEGAL_ALLOCATOR_AND_RANK_TARGET_ARE_FROZEN",
+    "secondary": [
+      "C1 versus C0 centered-territorial-logit-change RMSE",
+      "oracle-national-swing conditional local vote-share RMSE",
+      "party-specific RMSE and MAE"
+    ],
+    "uncertainty": "Paired territory-cluster bootstrap, 10000 replicates, seed 260818"
+  },
+  "models": {
+    "C0_SWING_ONLY": {
+      "meaning": "All territories receive the observed party-level swing; no local redistribution model.",
+      "prediction": 0.0
+    },
+    "C1_MEAN_REVERSION": {
+      "features": [
+        "centered_prior_logit_share",
+        "centered_prior_logit_share_x_RNI"
+      ]
+    },
+    "C2_CANDIDATE_AUGMENTED": {
+      "features": [
+        "all_C1_features",
+        "centered_retained_incumbent",
+        "centered_retained_incumbent_x_RNI",
+        "centered_retained_incumbent_x_centered_prior_strength",
+        "centered_retained_incumbent_x_centered_prior_strength_x_RNI"
+      ],
+      "interpretation": "Ridge-shrunk global and party-heterogeneous persistence effects; no hand-set party weights."
+    }
+  },
+  "panel": {
+    "candidate_feature_source_2016": "morocco26/data/goal100/e_collect/candidate_intelligence_v2/multipart/2016_head_prior_mp_features_v4.jsonl",
+    "candidate_feature_source_2021": "morocco26/data/goal100/e_collect/candidate_intelligence_v2/multipart/2021_head_prior_mp_features_v4.jsonl",
+    "duplicate_policy": "USE_ALREADY_DEDUPED_V4_HEAD_ROSTERS",
+    "eligible_candidate_feature": "M1_HEAD_PRIOR_MP_SAME_PARTY_SAME_DISTRICT",
+    "parties": [
+      "PJD",
+      "RNI"
+    ],
+    "unknown_policy": "EXCLUDE_CELL_NEVER_CONVERT_UNKNOWN_TO_FALSE"
+  },
+  "preprocessing": {
+    "feature_centering": "Within each transition and party using only pre-election prior shares and candidate states.",
+    "outcome_centering": "Within each transition and party.",
+    "prediction_constraint": "Center predicted territorial residuals to zero within each party so the candidate layer cannot create national swing.",
+    "share_clip_epsilon": 1e-06
+  },
+  "purpose": "Determine whether retained-incumbent information improves the transportable territorial redistribution of PJD and RNI support after national party swing and local mean reversion are separated.",
+  "schema_version": "1.0",
+  "scientific_status": "POST_2021_EXPLORATORY_SPECIFICATION_REPAIR",
+  "status": "FROZEN_BEFORE_V3_EXECUTION",
+  "transitions": {
+    "baseline_family": "PRIOR_CYCLE_LOCAL_VOTE_SHARE_FOR_BOTH_TRANSITIONS",
+    "fit": "2011_TO_2016",
+    "validation": "2016_TO_2021"
+  },
+  "contract_id": "M26-CANDIDATE-INTELLIGENCE-V3-SYMMETRIC-TERRITORIAL-V1"
+}
