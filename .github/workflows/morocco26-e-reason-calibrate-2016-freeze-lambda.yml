@@ -1,0 +1,70 @@
+name: Morocco26 E_reason calibrate 2016 freeze lambda
+
+on:
+  pull_request:
+    branches:
+      - morocco26-e-reason
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  calibrate-freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout scientific branch
+        uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+          fetch-depth: 0
+
+      - name: Guard pre-unseal freezes
+        run: |
+          set -euo pipefail
+          python morocco26/scripts/validate_e_reason_prereg.py
+          test -f morocco26/data/goal100/e_reason/judgments/development/c2_opus5_freeze_receipt_v1.json
+          test -f morocco26/data/goal100/e_reason/judgments/development/c1_c2_preunseal_equivalence_receipt_v1.json
+          test -f morocco26/data/goal100/e_reason/judgments/development/c1_rule_only/c1_judgment_manifest.json
+
+      - name: Calibrate on 2016 and freeze lambdas
+        run: |
+          set -euo pipefail
+          python morocco26/scripts/e_reason_calibrate_2016_freeze_lambda.py
+
+      - name: Validate freeze state
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          e=Path('morocco26/data/goal100/e_reason')
+          f=json.loads((e/'lambda_freeze_v1.json').read_text())
+          r=json.loads((e/'calibration/development_2016/calibration_2016_v1.json').read_text())
+          i=json.loads((e/'calibration/development_2016/identity_reconstruction_postfreeze_v1.json').read_text())
+          assert f['status']=='FROZEN_BEFORE_2021_JUDGMENTS'
+          assert f['holdout_2021_outcome_seen_before_freeze'] is False
+          assert r['holdout_2021_outcome_read'] is False
+          assert i['target_outcome_used_for_identity_resolution'] is False
+          assert i['territory_mapping_bijective_92_of_92'] is True
+          assert i['party_mapping_bijective_9_of_9'] is True
+          print('E_REASON_2016_CALIBRATION_FREEZE_PASS')
+          PY
+
+      - name: Commit calibration and lambda freeze
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            morocco26/data/goal100/e_reason/calibration/development_2016/identity_reconstruction_postfreeze_v1.json \
+            morocco26/data/goal100/e_reason/calibration/development_2016/calibration_2016_v1.json \
+            morocco26/data/goal100/e_reason/lambda_freeze_v1.json
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo 'No calibration artifacts to commit.'
+            exit 0
+          fi
+          git commit -m 'experiment(e-reason): freeze 2016-calibrated lambdas before 2021'
+          git push origin HEAD:morocco26-e-reason
