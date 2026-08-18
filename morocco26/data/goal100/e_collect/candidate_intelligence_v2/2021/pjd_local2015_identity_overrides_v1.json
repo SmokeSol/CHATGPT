@@ -1,0 +1,28 @@
+{
+  "schema_version":"1.0",
+  "artifact_id":"M26-CANDIDATE-INTEL-V2-PJD-2021-LOCAL2015-IDENTITY-OVERRIDES-V1",
+  "purpose":"Resolve the 19 UNKNOWN Arabic identity rows from the 2021 head-of-list to complete-2015-communal-universe join. Identity only; no effect size or political fact is invented.",
+  "source_universe_sha256":"8b5e6d23756087409a77fbaa00c0e25428c699245dbc3241d280b914600fd341",
+  "rules":{"SAFE_ALIAS":"Mechanical Arabic spelling/spacing variant plus PJD and compatible local geography/context in the closed universe.","CONFIRMED_NO_ALIAS":"No compatible PJD/local identity among the strongest candidates; remains FALSE in the complete universe.","no_fuzzy_promotion":true},
+  "decisions":[
+    {"current_name":"رضى الحكيم بناني","status":"SAFE_ALIAS","closed_universe_name":"رضى لحكيم بناني","reason":"PJD, Hay-Hassani arrondissement, distinctive full name"},
+    {"current_name":"عبد المجيد أيت لعديلة","status":"SAFE_ALIAS","closed_universe_name":"عبد المجيد ايت العديلة","reason":"hamza/alef spelling only; PJD Sidi Bernoussi"},
+    {"current_name":"الفاطمي الرميد","status":"SAFE_ALIAS","closed_universe_name":"الفاطمي رميد","reason":"optional definite article; PJD president Al-Fida"},
+    {"current_name":"محمد بنجلون","status":"SAFE_ALIAS","closed_universe_name":"محمد بنجلول","reason":"single-letter surname variant; PJD Benslimane/Bouznika"},
+    {"current_name":"مصطفى الخلفي","status":"CONFIRMED_NO_ALIAS","reason":"nearest same-looking record is MP/Safi and other candidates are different people; no compatible PJD/local identity"},
+    {"current_name":"عبد الرحيم عزمي","status":"SAFE_ALIAS","closed_universe_name":"عبدالرحيم عزمي","reason":"compound-name whitespace only; PJD El Jadida vice-president"},
+    {"current_name":"مصطفى العلوي","status":"CONFIRMED_NO_ALIAS","reason":"top equal-name candidates are USFP/Beni-Mellal and PJD/Jerada, incompatible with Berrechid candidate context"},
+    {"current_name":"محمد توفلا","status":"SAFE_ALIAS","closed_universe_name":"محمد توفلة","reason":"final-letter orthography; PJD president Ménara"},
+    {"current_name":"عبد الخالد البصري","status":"SAFE_ALIAS","closed_universe_name":"عبد الخاليد البصري","reason":"minor vowel-letter spelling; PJD Ben Guerir/Rehamna"},
+    {"current_name":"حمزة الصوفي","status":"SAFE_ALIAS","closed_universe_name":"حمز الصوفي","reason":"given-name terminal-letter variant; PJD president in Chichaoua"},
+    {"current_name":"وفاء لمحمدي","status":"SAFE_ALIAS","closed_universe_name":"وفاء المحمدي","reason":"optional definite article; PJD Tiflet in Khemisset"},
+    {"current_name":"إبراهيم شويخ","status":"SAFE_ALIAS","closed_universe_name":"ابراهيم الشويخ","reason":"hamza/definite-article variant; PJD president in Kenitra province, compatible El Gharb"},
+    {"current_name":"الطيبي إلهامي","status":"CONFIRMED_NO_ALIAS","reason":"nearest candidate is PI/Khemisset and PJD alternative is a different name/geography"},
+    {"current_name":"أمينة بن عبد الوهاب","status":"SAFE_ALIAS","closed_universe_name":"امينة ابن عبد الوهاب","reason":"ben/ibn orthography; PJD Tetouan vice-president"},
+    {"current_name":"نبيل الأندلسي","status":"SAFE_ALIAS","closed_universe_name":"نبيل الاندلوسي","reason":"single-vowel orthographic variant; PJD Al Hoceima"},
+    {"current_name":"جمال المسعودي","status":"SAFE_ALIAS","closed_universe_name":"جمال مسعودي","reason":"optional definite article; PJD president Taza"},
+    {"current_name":"عبد الله الهامل","status":"SAFE_ALIAS","closed_universe_name":"عبد الله هامل","reason":"optional definite article; PJD Oujda"},
+    {"current_name":"خالد تيكوكين","status":"SAFE_ALIAS","closed_universe_name":"خاليد تكوكين","reason":"minor given-name/surname spelling; PJD president in Azilal province"},
+    {"current_name":"محمد اد أحمد","status":"SAFE_ALIAS","closed_universe_name":"محمد اداحمد","reason":"whitespace-only patronymic variant; PJD Tata"}
+  ]
+}
