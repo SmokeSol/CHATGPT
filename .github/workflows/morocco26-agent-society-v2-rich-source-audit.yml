@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - morocco26-agent-society-v2-rich-source-audit-trigger
+  pull_request:
+    branches:
+      - morocco26-agent-society-v2
 
 permissions:
   contents: read
