@@ -1,0 +1,132 @@
+[
+  {
+    "candidate_name_ar": "سعد الدين العثماني",
+    "candidate_name_fr": "Saad Eddine El Otmani",
+    "exact_arabic_match_count": 1,
+    "territory_id": "rabat-ocean",
+    "top_candidates": [
+      {
+        "name_ar": "سعد الدين العثماني",
+        "name_lat": "SAADEDDINE EL OTHMANI",
+        "party": "PJD",
+        "score": 1.0,
+        "territory": "Mohammadia"
+      },
+      {
+        "name_ar": "عبد الرحمان العمري",
+        "name_lat": "ABDERRAHMAN EL AMRI",
+        "party": "MP",
+        "score": 0.666667,
+        "territory": "Chefchaouen"
+      },
+      {
+        "name_ar": "سليمان العمراني",
+        "name_lat": "SLIMANE AMRANI",
+        "party": "PJD",
+        "score": 0.666667,
+        "territory": "Rabat - Challah"
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "إبراهيم شويخ",
+    "candidate_name_fr": "Ibrahim Chouikh",
+    "exact_arabic_match_count": 0,
+    "territory_id": "el-gharb",
+    "top_candidates": [
+      {
+        "name_ar": "ابراهيم الشويخ",
+        "name_lat": "AMAM CHOKRANE",
+        "party": "USFP",
+        "score": 0.923077,
+        "territory": "Liste nationale"
+      },
+      {
+        "name_ar": "ابراهيم الموحي",
+        "name_lat": "IBRAHIM EL MOUHI",
+        "party": "PAM",
+        "score": 0.769231,
+        "territory": "Azilal - Demnate"
+      },
+      {
+        "name_ar": "ابراهيم بوغضن",
+        "name_lat": "BRAHIM BOUAKHADEN",
+        "party": "PJD",
+        "score": 0.72,
+        "territory": "Tiznit"
+      },
+      {
+        "name_ar": "ابراهيم الضعيف",
+        "name_lat": "BRAHIM DAAIF",
+        "party": "PJD",
+        "score": 0.692308,
+        "territory": "Laâyoune"
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "محمد عيادي",
+    "candidate_name_fr": "Mohammed El Ayadi",
+    "exact_arabic_match_count": 0,
+    "territory_id": "sidi-slimane",
+    "top_candidates": [
+      {
+        "name_ar": "محمد خيي",
+        "name_lat": "MOHAMED KHAYI",
+        "party": "PJD",
+        "score": 0.777778,
+        "territory": "Tanger - Assilah"
+      },
+      {
+        "name_ar": "محمد يتيم",
+        "name_lat": "MOHAMED YATIM",
+        "party": "PJD",
+        "score": 0.736842,
+        "territory": "Sidi-Bernoussi"
+      },
+      {
+        "name_ar": "محمد اد موسى",
+        "name_lat": "MOHAMED ADMOUSA",
+        "party": "PI",
+        "score": 0.727273,
+        "territory": "Al-Haouz"
+      },
+      {
+        "name_ar": "احمد رشيدي",
+        "name_lat": "AHMED RACHIDI",
+        "party": "PJD",
+        "score": 0.7,
+        "territory": "Ifrane"
+      }
+    ]
+  },
+  {
+    "candidate_name_ar": "محمد لمين ديدة",
+    "candidate_name_fr": "Mohamed Lamine Dida",
+    "exact_arabic_match_count": 0,
+    "territory_id": "laayoune",
+    "top_candidates": [
+      {
+        "name_ar": "محمد الامين ديدى",
+        "name_lat": "MOHAMMED EL AMINE DAIEDDA",
+        "party": "MP",
+        "score": 0.866667,
+        "territory": "Oued-Ed-Dahab"
+      },
+      {
+        "name_ar": "محمد الحفياني",
+        "name_lat": "MOHAMED EL HAFYANI",
+        "party": "PJD",
+        "score": 0.666667,
+        "territory": "Sidi Slimane"
+      },
+      {
+        "name_ar": "محمد مبديع",
+        "name_lat": "MOHAMED MOUBDII",
+        "party": "MP",
+        "score": 0.666667,
+        "territory": "Fquih Ben Salah"
+      }
+    ]
+  }
+]
