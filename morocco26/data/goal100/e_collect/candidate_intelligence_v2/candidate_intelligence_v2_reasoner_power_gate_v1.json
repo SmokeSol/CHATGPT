@@ -1,4 +1,5 @@
 {
+  "A21_identity_resolution_artifact": "morocco26/data/goal100/e_collect/candidate_intelligence_v2/2021/pjd_prior_mp_identity_resolution_v2.json",
   "contract_frozen_at": "2026-08-18T18:20:00+01:00",
   "contract_id": "M26-CANDIDATE-INTELLIGENCE-V2-REASONER-POWER-CONTRACT-V1",
   "feature_A": "V2_HEAD_PRIOR_CYCLE_MP",
@@ -9,10 +10,11 @@
   "llm_treatment_authorized": false,
   "next_if_pass": "Freeze a separate immutable E_reason V2 model/reasoner specification and prospective C1-vs-C2 contrast surface before invoking any LLM.",
   "predictive_value_estimated": false,
-  "schema_version": "1.0",
-  "status": "FAIL_REASONER_POWER",
+  "schema_version": "1.1",
+  "status": "PASS_REASONER_POWER",
   "transitions": {
     "2011_TO_2016": {
+      "A_identity_resolutions_applied": [],
       "A_rows": 74,
       "A_values_present": [
         0,
@@ -47,6 +49,28 @@
       "unknown_joint_rows": []
     },
     "2016_TO_2021": {
+      "A_identity_resolutions_applied": [
+        {
+          "method": "EXACT_ARABIC_CLOSED_UNIVERSE",
+          "state": "VERIFIED_TRUE",
+          "territory_id": "rabat-ocean"
+        },
+        {
+          "method": "INDEPENDENT_PRE_ELECTION_PARLIAMENTARY_CORROBORATION_PLUS_CLOSED_UNIVERSE_VARIANT",
+          "state": "VERIFIED_TRUE",
+          "territory_id": "el-gharb"
+        },
+        {
+          "method": "NO_MATCH_IN_COMPLETE_CLOSED_UNIVERSE_PLUS_PRE_ELECTION_ROLE_CORROBORATION",
+          "state": "VERIFIED_FALSE",
+          "territory_id": "sidi-slimane"
+        },
+        {
+          "method": "DISTINCT_HOMONYM_RESOLUTION_BY_PARTY_GEOGRAPHY_AND_CONCURRENT_LOCAL_OFFICE_HISTORY",
+          "state": "VERIFIED_FALSE",
+          "territory_id": "laayoune"
+        }
+      ],
       "A_rows": 91,
       "A_values_present": [
         0,
@@ -57,49 +81,28 @@
         0,
         1
       ],
-      "absolute_phi": 0.09870334871066368,
-      "discordant_cells_01_plus_10": 35,
-      "gate_pass": false,
+      "absolute_phi": 0.0673076923076923,
+      "discordant_cells_01_plus_10": 38,
+      "gate_pass": true,
       "gates": {
         "both_values": true,
         "discordance": true,
-        "joint_coverage": false,
+        "joint_coverage": true,
         "patterns": true,
         "phi": true
       },
-      "joint_known_territories": 70,
+      "joint_known_territories": 74,
       "patterns": {
         "00": 18,
-        "01": 28,
-        "10": 7,
-        "11": 17
+        "01": 30,
+        "10": 8,
+        "11": 18
       },
       "patterns_with_at_least_5_cells": 4,
-      "phi": 0.09870334871066368,
+      "phi": 0.0673076923076923,
       "territories_intersection": 74,
       "transition": "2016_TO_2021",
-      "unknown_joint_rows": [
-        {
-          "A_state": "UNKNOWN",
-          "B_state": "VERIFIED_TRUE",
-          "territory_id": "el-gharb"
-        },
-        {
-          "A_state": "UNKNOWN",
-          "B_state": "VERIFIED_TRUE",
-          "territory_id": "laayoune"
-        },
-        {
-          "A_state": "UNKNOWN",
-          "B_state": "VERIFIED_FALSE",
-          "territory_id": "rabat-ocean"
-        },
-        {
-          "A_state": "UNKNOWN",
-          "B_state": "VERIFIED_TRUE",
-          "territory_id": "sidi-slimane"
-        }
-      ]
+      "unknown_joint_rows": []
     }
   }
 }
