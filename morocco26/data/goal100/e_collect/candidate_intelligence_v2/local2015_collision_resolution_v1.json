@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "M26-CANDIDATE-INTEL-V2-LOCAL2015-COLLISION-RESOLUTION-V1",
+  "purpose": "Resolve the seven residual UNKNOWN identity rows from the collision-safe TAFRA/elections.ma 2015 communal-universe join. This file adjudicates identity only. It does not fit coefficients or inspect election outcomes.",
+  "principles": [
+    "No fuzzy similarity alone can create a TRUE.",
+    "TRUE requires a distinctive identity bridge supported by party/geography/local-office context.",
+    "FALSE requires the complete 2015 universe to contain no compatible identity after homonym/geography review.",
+    "The underlying raw and collision-safe ledgers remain immutable; these decisions are an explicit overlay."
+  ],
+  "decisions": [
+    {
+      "transition": "2011_TO_2016",
+      "territory_id": "boulemane",
+      "candidate_name_ar": "محمد ادريس ي",
+      "state": "VERIFIED_FALSE",
+      "method": "DISTINCT_HOMONYMS_OUTSIDE_CANDIDATE_POLITICAL_GEOGRAPHY",
+      "evidence_urls": ["https://www.pjd.ma/74177-38547.html"],
+      "reason": "The official PJD pre-election announcement identifies Mohamed Idrissi as the Boulemane head. The complete communal universe contains exact-name homonyms only as MP in Beni-Mellal, PRV in Errachidia and RNI in Khemisset, with no compatible Boulemane/Fes-Meknes identity."
+    },
+    {
+      "transition": "2011_TO_2016",
+      "territory_id": "ouezzane",
+      "candidate_name_ar": "عبد الحليم عالوي",
+      "state": "VERIFIED_TRUE",
+      "method": "OFFICIAL_PJD_LOCAL_EXECUTIVE_IDENTITY_PLUS_ORTHOGRAPHIC_ALIAS",
+      "closed_universe_name": "عبد الحليم علاوي",
+      "evidence_urls": ["https://www.pjd.ma/31780-16126.html", "https://www.hespress.com/%D8%A7%D9%84%D8%AF%D8%A7%D8%AE%D9%84%D9%8A%D8%A9-%D8%AA%D8%B1%D9%81%D8%B6-%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%A9-%D9%85%D8%AC%D9%84%D8%B3-%D8%AC%D9%85%D8%A7%D8%B9%D8%A9-%D9%88%D8%B2-329189.html"],
+      "reason": "PJD's 2015 presidents-of-communes list names Abd El Halim Allaoui as president of Ouezzane; independent reporting identifies him as president of the municipal council. The spelling difference is a one-letter Arabic orthographic variant."
+    },
+    {
+      "transition": "2011_TO_2016",
+      "territory_id": "chtouka-ait-baha",
+      "candidate_name_ar": "محمد لشكر",
+      "state": "VERIFIED_TRUE",
+      "method": "EXACT_NAME_PLUS_EXACT_2015_COMMUNAL_LIST_GEOGRAPHY",
+      "closed_universe_name": "محمد لشكر",
+      "evidence_urls": ["https://www.hespress.com/%D8%AD%D8%B2%D8%A8%D8%A7-%D8%B4%D8%A8%D8%A7%D8%B7-%D9%88%D8%A8%D9%86%D9%83%D9%8A%D8%B1%D8%A7%D9%86-%D9%8A%D8%AA%D8%AD%D8%A7%D9%84%D9%81%D8%A7%D9%86-%D8%A8%D8%A2%D9%8A%D8%AA-%D8%B9%D9%85%D9%8A%D8%B1-241970.html", "https://www.pjd.ma/74187-38542.html"],
+      "reason": "Hespress identifies MP Mohamed Lachgar as second on the PJD communal list in Ait Amira in the September 2015 communal election. The complete TAFRA universe contains an exact-name PJD elected member in Ait Amira; this resolves the relevant identity despite another same-name PJD row elsewhere in Souss-Massa."
+    },
+    {
+      "transition": "2011_TO_2016",
+      "territory_id": "al-haouz",
+      "candidate_name_ar": "مراد الكورش",
+      "state": "VERIFIED_TRUE",
+      "method": "DISTINCTIVE_ALIAS_PLUS_AIT_SIDI_DAOUD_LOCAL_CONTINUITY",
+      "closed_universe_name": "مراد لكورش",
+      "evidence_urls": ["https://www.pjd.ma/120627-63124.html", "https://www.chambredesrepresentants.ma/ar/%D9%85%D8%B1%D8%A7%D9%82%D8%A8%D8%A9-%D8%A7%D9%84%D8%B9%D9%85%D9%84-%D8%A7%D9%84%D8%AD%D9%83%D9%88%D9%85%D9%8A/%D8%A7%D9%84%D8%A3%D8%B3%D9%80%D8%A6%D9%84%D8%A9-%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8%D9%8A%D8%A9/%D8%A5%D8%AA%D9%85%D8%A7%D9%85-%D8%A5%D9%86%D8%AC%D8%A7%D8%B2-%D9%85%D8%B4%D8%B1%D9%88%D8%B9-%D8%AA%D8%B2%D9%88%D9%8A%D8%AF-%D8%AC%D9%85%D8%A7%D8%B9%D8%A9-%D8%A7%D9%8A%D8%AA-%D8%B3%D9%8A%D8%AF%D9%8A-%D8%AF%D8%A7%D9%88%D8%AF-%D8%A8%D8%A5%D9%82%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%AD%D9%88%D8%B2"],
+      "reason": "The closed universe contains the distinctive spelling variant Mourad Lakourch as a PJD elected member in Ait Sidi Daoud. Parliamentary and party sources independently tie Mourad Lakourch to Al Haouz and repeated Ait Sidi Daoud local activity, resolving the alias."
+    },
+    {
+      "transition": "2011_TO_2016",
+      "territory_id": "driouch",
+      "candidate_name_ar": "محمد لحرش",
+      "state": "VERIFIED_FALSE",
+      "method": "DISTINCT_SAME_NAME_PJD_PERSON_BY_PRE_2015_POLITICAL_GEOGRAPHY",
+      "evidence_urls": ["https://www.nadorcity.com/%D8%AD%D8%B2%D8%A8-%D8%A7%D9%84%D8%B9%D8%AF%D8%A7%D9%84%D8%A9-%D9%88%D8%A7%D9%84%D8%AA%D9%86%D9%85%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%AF%D8%B1%D9%8A%D9%88%D8%B4-%D9%8A%D9%86%D8%B8%D9%85-%D9%84%D9%82%D8%A7%D8%A1-%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D9%8A%D8%A7-%D9%88%D9%8A%D9%86%D8%A7%D9%82%D8%B4-%D9%85%D9%88%D8%B6%D9%88%D8%B9_a24713.html", "https://www.pjd.ma/46668-23770.html"],
+      "reason": "The focal Mohamed Lharsh was already PJD provincial secretary in Driouch in 2014. The same-name PJD communal elected record is independently identified in April 2015 as deputy local party secretary in Bouchfaa, Taza, demonstrating a distinct same-name person. Other exact homonyms are in Settat/Taourirt."
+    },
+    {
+      "transition": "2016_TO_2021",
+      "territory_id": "sidi-slimane",
+      "candidate_name_ar": "محمد عيادي",
+      "state": "VERIFIED_FALSE",
+      "method": "DISTINCT_HOMONYMS_AND_NO_COMPATIBLE_PJD_LOCAL_IDENTITY",
+      "reason": "The complete 2015 communal universe contains exact-name homonyms only under USFP/PAM in the Oriental region, not a compatible PJD/Rabat-Sale-Kenitra identity. Independent 2021 candidate profiling identifies the focal El Ayadi through his national communications role rather than a 2015 local elected mandate."
+    },
+    {
+      "transition": "2016_TO_2021",
+      "territory_id": "beni-mellal",
+      "candidate_name_ar": "محمد مرزوق",
+      "state": "VERIFIED_FALSE",
+      "method": "DISTINCT_HOMONYMS_BY_PARTY_AND_LOCAL_GEOGRAPHY",
+      "evidence_urls": ["https://www.chambredesrepresentants.ma/m/mmarzouk20162021", "https://www.benimellalnews.net/2016/09/blog-post_39.html"],
+      "reason": "The focal Mohamed Marzouk is the PJD Beni-Mellal parliamentary identity elected in 2016. Exact-name 2015 communal records are MDS/Tanant (Azilal) and PAM/Kasbat Ben Mchich (Berrechid); neither matches the focal party/geographic trajectory, and no compatible PJD Beni-Mellal local identity exists in the complete communal universe."
+    }
+  ],
+  "forecast_modified": false,
+  "coefficient_fitted": false
+}
