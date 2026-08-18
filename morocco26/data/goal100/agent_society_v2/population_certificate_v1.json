@@ -1,0 +1,38 @@
+{
+  "age_eligibility_assumption": "Uniform within HCP 15-19 band; exactly 2/5 assigned to ages 18-19. This is a pre-outcome deterministic approximation and must be sensitivity-tested.",
+  "certificate_id": "M26-ASV2-HISTORICAL-POPULATION-CERTIFICATE-V1",
+  "elections": [
+    {
+      "failures": [],
+      "fallback_split_constituencies": 19,
+      "max_demo_error": 1.9830659336861345e-10,
+      "max_demo_prior_dependence": 0.026501318077132366,
+      "max_political_error": 1.1102230246251565e-16,
+      "max_weight": 0.03536982073655264,
+      "min_ess": 100.83442591428567,
+      "status": "PASS",
+      "target_year": 2016,
+      "territories": 92
+    },
+    {
+      "failures": [],
+      "fallback_split_constituencies": 19,
+      "max_demo_error": 1.9000245821132467e-10,
+      "max_demo_prior_dependence": 0.02592541648264292,
+      "max_political_error": 2.220446049250313e-16,
+      "max_weight": 0.02292874540282498,
+      "min_ess": 93.61618150692544,
+      "status": "PASS",
+      "target_year": 2021,
+      "territories": 92
+    }
+  ],
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "hcp_source_sha256": "c20c1f7d08c1089bf4610f81a0eac89516a278fddb24b8577588284e2fc9a2d0",
+  "hcp_source_url": "https://www.rgph2014.hcp.ma/file/190479/",
+  "national_demographic_fallback_weight": 0.0,
+  "schema_version": "1.0",
+  "split_constituency_policy": "19 constituencies in nine split province/prefecture units inherit the official whole-unit HCP demographic marginals as an explicitly flagged hierarchical fallback; never represented as exact constituency demographics.",
+  "status": "PASS",
+  "target_outcomes_used": false
+}
