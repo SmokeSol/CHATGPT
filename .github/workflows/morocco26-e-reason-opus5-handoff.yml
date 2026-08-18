@@ -1,0 +1,122 @@
+name: Morocco26 E_reason Opus5 sealed handoff
+
+on:
+  pull_request:
+    branches:
+      - morocco26-e-reason
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact frozen scientific state
+        uses: actions/checkout@v4
+        with:
+          ref: 4604caba2cd12d4346c18f13825436bca3cb9e0e
+          fetch-depth: 1
+
+      - name: Build hermetic Opus 5 handoff
+        run: |
+          set -euo pipefail
+          SRC='morocco26/data/goal100/e_reason'
+          OUT="$RUNNER_TEMP/opus5_e_reason_c2_handoff"
+          mkdir -p "$OUT"
+          cp "$SRC/blind/development/blind_bundle.json" "$OUT/"
+          cp "$SRC/blind/development/bundle_manifest.json" "$OUT/"
+          cp "$SRC/blind/development/mapping_seal.json" "$OUT/"
+          cp "$SRC/blind/development/c2_prompt_freeze.json" "$OUT/"
+          cp "$SRC/c2_prompt_v1.md" "$OUT/"
+          cp "$SRC/e_reason_output_schema_v1.json" "$OUT/"
+          cp "$SRC/e_reason_conditions_v1.json" "$OUT/"
+
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          out = Path("${{ runner.temp }}/opus5_e_reason_c2_handoff")
+          manifest = json.loads((out/'bundle_manifest.json').read_text())
+          bundle_sha = hashlib.sha256((out/'blind_bundle.json').read_bytes()).hexdigest()
+          prompt_sha = hashlib.sha256((out/'c2_prompt_v1.md').read_bytes()).hexdigest()
+          assert bundle_sha == manifest['bundle_sha256'], (bundle_sha, manifest['bundle_sha256'])
+          assert prompt_sha == manifest['c2_prompt_sha256'], (prompt_sha, manifest['c2_prompt_sha256'])
+          seal = json.loads((out/'mapping_seal.json').read_text())
+          assert seal['status'] == 'SEALED_BEFORE_ANY_PREDICTIVE_JUDGMENT'
+          assert seal['mapping_material_committed'] is False
+          assert seal['mapping_material_judge_access'] is False
+          assert seal['blind_bundle_sha256'] == bundle_sha
+          assert seal['c2_prompt_sha256'] == prompt_sha
+          assert seal['leakage_scan']['status'] == 'PASS'
+          print('HANDOFF_INTEGRITY_PASS', bundle_sha, prompt_sha)
+          PY
+
+          cat > "$OUT/START_HERE_OPUS5.md" <<'EOF'
+          # OPUS 5 — E_reason C2 DEVELOPMENT RUN — EXACT HANDOFF
+
+          You are executing the blinded C2 residual-reasoning arm of the preregistered experiment `M26-GOAL100-E-REASON-V1`.
+
+          ## Absolute scientific boundary
+          Work ONLY inside this handoff directory. Do not clone, inspect, browse, search, or query the parent repository, git history, web, external tools, historical results, real party names, real territory names, real candidate names, election years, or the anonymization mapping. Do not attempt re-identification. If any such material becomes visible, STOP and report `E_REASON_LEAKAGE_INVALIDATED` without producing judgments.
+
+          This handoff intentionally contains NO outcome files and NO real-to-anonymous mapping.
+
+          ## Frozen inputs
+          - `blind_bundle.json`: exact blinded DEVELOPMENT input, 92 territory packets / 828 party cells.
+          - `bundle_manifest.json`: frozen packet hashes and bundle SHA-256.
+          - `mapping_seal.json`: proof that the hidden mapping was sealed before judgments; the mapping itself is unavailable to you.
+          - `c2_prompt_v1.md`: exact frozen C2 treatment prompt. Use it verbatim.
+          - `c2_prompt_freeze.json`: prompt freeze certificate.
+          - `e_reason_output_schema_v1.json`: exact required output schema.
+          - `e_reason_conditions_v1.json`: frozen experimental condition contract.
+
+          ## Your job
+          1. Verify the bundle SHA-256 equals `19706fa27cd436dc51820b98bf84948a5a83068948206596e77f280296d0d2ca`.
+          2. Verify the C2 prompt SHA-256 equals `188853304a6d20a385a055deac0d63ee57b97248f3aa386f5f1b7ae360a0b946`.
+          3. Verify `mapping_seal.json` says `SEALED_BEFORE_ANY_PREDICTIVE_JUDGMENT`, mapping material is not committed and judge access is false, and leakage scan is PASS.
+          4. Parse `blind_bundle.json`. There must be exactly 92 packets, each with exactly 9 anonymous parties.
+          5. For each packet independently, execute the exact `SYSTEM PROMPT` and `USER INVOCATION TEMPLATE` from `c2_prompt_v1.md` with:
+             - `RUN_ID = M26-E-REASON-C2-DEV-OPUS5-V1`
+             - `MODEL_ID = OPUS-5`
+             - `ATTEMPT_NUMBER = 1` initially
+             - `PACKET_JSON = that one packet only`
+          6. Do not browse and do not use any context beyond the packet and frozen prompt. Do not infer real identities. Do not use remembered election outcomes or political world knowledge.
+          7. Validate every returned object against `e_reason_output_schema_v1.json` plus these semantic guards:
+             - exactly 9 unique anonymous parties, exactly matching the packet;
+             - `packet_sha256` exactly matches the packet;
+             - score only in {-2,-1,0,1,2};
+             - if `abstain=true`, score must be 0;
+             - any nonzero score cites >=1 directional, non-missing admissible feature actually present for that party;
+             - no invented feature IDs;
+             - no real-world name/year/geography/party/candidate/URL/post-event fact.
+          8. Retry ONLY schema-invalid JSON. Retry uses identical prompt and identical packet, increments `ATTEMPT_NUMBER`, and receives NO semantic feedback. Retain every attempt.
+          9. Write:
+             - `outputs/c2_judgments.jsonl`: one final valid JSON object per packet, ordered exactly as bundle packets;
+             - `outputs/c2_all_attempts.jsonl`: every attempt including invalid ones;
+             - `outputs/c2_judgment_manifest.json`: run id, model id, prompt SHA, bundle SHA, ordered packet hashes, ordered judgment hashes, counts, retry counts, validation status, and `outcomes_seen=false`, `mapping_seen=false`, `web_used=false`, `tools_used=false`;
+             - `outputs/c2_terminal_report.json`: `PASS_C2_JUDGMENTS_FROZEN_READY_FOR_2016_CALIBRATION` only if all 92 packets have one valid final judgment and every guard passes. Otherwise fail closed with the exact reason.
+          10. SHA-256 every final judgment as canonical JSON (`sort_keys=true`, separators `(',', ':')`, UTF-8, `ensure_ascii=false`) and freeze the ordered hashes in the manifest.
+
+          ## Stop boundary
+          STOP after freezing the 92 DEVELOPMENT C2 judgments and manifest. Do NOT access 2016 outcomes. Do NOT calibrate lambda. Do NOT create or inspect 2021 packets. Do NOT run E_full. Do NOT update F0/F1 or Atlas.
+
+          Your final human-readable response should contain only: terminal status, 92/92 valid count, retry count, bundle SHA, prompt SHA, judgment-manifest SHA, and output paths. No political interpretation.
+          EOF
+
+          # Defense in depth: reject forbidden filenames/material inside handoff.
+          if find "$OUT" -type f | grep -Ei '(outcome|result|mapping\.json$|historical.*2021|historical.*2016)' | grep -v 'mapping_seal.json' ; then
+            echo 'Forbidden material in Opus handoff' >&2
+            exit 1
+          fi
+          sha256sum "$OUT"/* > "$OUT/HANDOFF_SHA256SUMS.txt"
+          printf '%s\n' 'SOURCE_COMMIT=4604caba2cd12d4346c18f13825436bca3cb9e0e' > "$OUT/SOURCE_COMMIT.txt"
+
+      - name: Upload sealed Opus 5 handoff
+        uses: actions/upload-artifact@v4
+        with:
+          name: opus5-e-reason-c2-development-sealed-handoff
+          path: ${{ runner.temp }}/opus5_e_reason_c2_handoff
+          retention-days: 90
+          if-no-files-found: error
