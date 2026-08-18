@@ -7,6 +7,13 @@ on:
     paths:
       - 'morocco26/scripts/candidate_intelligence_v2_recover_2021.py'
       - '.github/workflows/candidate-intelligence-v2-2021-first-pass.yml'
+  pull_request:
+    branches:
+      - morocco26-e-reason
+    paths:
+      - 'morocco26/scripts/candidate_intelligence_v2_recover_2021.py'
+      - 'morocco26/scripts/candidate_intelligence_v2_trigger.txt'
+      - '.github/workflows/candidate-intelligence-v2-2021-first-pass.yml'
   workflow_dispatch:
 
 permissions:
@@ -39,5 +46,3 @@ jobs:
             git commit -m 'data(candidate-intel): recover 2021 first-pass panel'
             git push origin HEAD:morocco26-e-reason
           fi
-
-# explicit rerun trigger: 2026-08-18T17:27+01:00
