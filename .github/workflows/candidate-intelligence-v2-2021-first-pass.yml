@@ -6,12 +6,14 @@ on:
       - morocco26-e-reason
     paths:
       - 'morocco26/scripts/candidate_intelligence_v2_recover_2021.py'
+      - 'morocco26/scripts/candidate_intelligence_v2_recover_2021_fallback.py'
       - '.github/workflows/candidate-intelligence-v2-2021-first-pass.yml'
   pull_request:
     branches:
       - morocco26-e-reason
     paths:
       - 'morocco26/scripts/candidate_intelligence_v2_recover_2021.py'
+      - 'morocco26/scripts/candidate_intelligence_v2_recover_2021_fallback.py'
       - 'morocco26/scripts/candidate_intelligence_v2_trigger.txt'
       - '.github/workflows/candidate-intelligence-v2-2021-first-pass.yml'
   workflow_dispatch:
@@ -32,7 +34,7 @@ jobs:
       - name: Install parser dependencies
         run: python -m pip install --disable-pip-version-check requests beautifulsoup4
       - name: Recover 2021 candidate intelligence
-        run: python morocco26/scripts/candidate_intelligence_v2_recover_2021.py
+        run: python morocco26/scripts/candidate_intelligence_v2_recover_2021_fallback.py
       - name: Show audit
         run: cat morocco26/data/goal100/e_collect/candidate_intelligence_v2/2021/power_audit_first_pass.json
       - name: Commit append-only recovery artifacts
