@@ -1,36 +1,17 @@
 {
-  "schema_version": "1.0",
-  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
-  "branch": "morocco26-agent-society-v2",
-  "phase": "ASV2_RICH_ENRICHMENT_IN_PROGRESS_BEFORE_ANY_REAL_LLM_EXECUTION",
-  "protocol_status": "AMENDED_PRE_LLM_WITH_ASV2_RICH_ENRICHMENT_CONTRACT_V1",
-  "F0_status": "OFFICIAL_UNCHANGED",
-  "real_llm_votes_generated": false,
-  "target_outcomes_used_for_ASV2_tuning": false,
-  "minimal_handoff": {
-    "status": "SEALED_RETAINED_NOT_EXECUTED",
-    "reason": "User required approximately 10x richer Moroccan society representation before any Opus execution.",
-    "public_zip_sha256": "9798dcb7c9b227322eb6b8158d4929e5536b8e0c4e41dc890d9b4cfeec063209"
-  },
-  "rich_target": {
-    "voter_dimensions_min": 60,
-    "territory_national_context_dimensions_min": 15,
-    "target_archetypes_per_constituency": 256,
-    "micro_foundation": "HCP RGPH 2014 anonymized individual+household microdata (85 variables documented by HCP) + commune constraints",
-    "socioeconomic_layer": "HCP ENCDM 2014 statistical matching with uncertainty",
-    "dynamic_2021_layer": "HCP population projections + pre-election labour statistics",
-    "attitude_layer_2016": "Afrobarometer Morocco Round 6 fielded Nov 2015; Arab Barometer Wave III only where pre-cutoff",
-    "attitude_layer_2021": "Afrobarometer Morocco Round 8 fielded Feb 2021 + Arab Barometer Wave VI Jul 2020-Apr 2021",
-    "political_context": "reuse frozen E_reason pre-election verified evidence",
-    "historical_blinding": "opaque IDs plus generic numeric context; no distinctive event names/dates/leaders"
-  },
-  "next_gate": "ASV2_RICH_DATA_POWER_AUDIT",
-  "next_allowed_actions": [
-    "Acquire and parse source codebooks/microdata without target outcomes.",
-    "Construct R1 microdemographic, R2 socioeconomic, and R3 rich independent-voter populations.",
-    "Run joint-distribution fidelity, effective support, imputation uncertainty, leakage and ablation audits.",
-    "Only if PASS, seal a new ASV2-RICH Opus handoff and freeze scorer before real LLM outputs."
-  ],
-  "github_operating_mode": "LOCAL_BATCH_THEN_MINIMAL_GITHUB_WRITES",
-  "stop_rule": "Do not execute the previously sealed minimal Opus handoff and do not inspect any real ASV2 LLM output until ASV2-RICH is either sealed or formally fails its data-power gate."
+  "schema_version":"1.1",
+  "experiment_id":"M26-AGENT-SOCIETY-V2-001",
+  "branch":"morocco26-agent-society-v2",
+  "phase":"ASV2_RICH_MICROFOUNDATION_PASS_BUILDING_SES_ATTITUDES_AND_EXACT_GEOGRAPHY",
+  "protocol_status":"PRE_LLM_RICH_ENRICHMENT_GATES_FROZEN",
+  "F0_status":"OFFICIAL_UNCHANGED",
+  "real_llm_votes_generated":false,
+  "target_outcomes_used_for_ASV2_tuning":false,
+  "minimal_handoff":{"status":"SEALED_RETAINED_NOT_EXECUTED","public_zip_sha256":"9798dcb7c9b227322eb6b8158d4929e5536b8e0c4e41dc890d9b4cfeec063209"},
+  "rich_source_catalog":{"status":"PASS_SOURCE_CATALOG_READY","parsed_sources":11,"rgph_person_rows":3341426,"rgph_household_rows":730099,"encdm_household_columns":792,"afrobarometer_r6_columns":334,"afrobarometer_r8_columns":377},
+  "rich_microfoundation":{"status":"PASS_RICH_MICROFOUNDATION_INFORMATION_GATE","qualifying_observed_fields":60,"raw_surface_ratio_vs_R0":12.0,"effective_rank_R0":23.372259047810537,"effective_rank_R1":222.15283489039948,"effective_rank_ratio":9.504979147970307,"adult_sample":96412,"person_household_join_rate":1.0},
+  "github_operating_mode":{"mode":"BATCH_GIT_DATA_API_PLUS_PATH_SCOPED_PR_JOBS","improvements":["multiple repo files committed atomically through create_tree/create_commit/update_ref","no actions/checkout for heavy audits","workflow path filters prevent unrelated heavy jobs","large public sources processed outside Git history","only terminal compact artifacts downloaded"]},
+  "next_required_gates":["R2_SES_MATCHING_PASS","R3_ATTITUDE_LAYER_2016_2021_PASS","RICH_SPLIT_GEOGRAPHY_19_OF_19_PASS","RICH_COMPRESSION_128_OR_256_PASS","RICH_BLINDING_LEAKAGE_PASS"],
+  "next_allowed_action":"Build and audit R2 socioeconomic posteriors and R3 pre-election attitude constructs in parallel with the exact 19 split-constituency geography crosswalk. Do not run any real Opus handoff yet.",
+  "stop_rule":"No real ASV2 Opus execution until all RICH data, geography, compression and leakage gates pass and a new sealed handoff/scorer are frozen."
 }

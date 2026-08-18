@@ -1,0 +1,42 @@
+{
+  "schema_version":"1.0",
+  "certificate_id":"M26-ASV2-RICH-MICROFOUNDATION-INFORMATION-CERTIFICATE-V1",
+  "experiment_id":"M26-AGENT-SOCIETY-V2-001",
+  "status":"PASS_RICH_MICROFOUNDATION_INFORMATION_GATE",
+  "real_asv2_llm_outputs_seen":false,
+  "target_election_outcomes_loaded":false,
+  "workflow_run_id":32181955212,
+  "artifact_id":9341096025,
+  "artifact_zip_sha256":"564ada1e8a6182a317425cb05f19bcec6f34719d0973dafeea66ce83f8379e09",
+  "inner_json_sha256":"dc5480d88c86890af2ebcf60510b4396287ffba1899d73d2be712357819bdc32",
+  "source_integrity": {
+    "rgph2014_individual_sha256":"62dbbfc69073d52841fc3a7096113ce1342a3baec2e7e620e0f3309393fdda77",
+    "rgph2014_household_sha256":"0c630cfaf65d02e1b2e37d8b81c0c2704f28db80115f13942d3ac0e75665319f"
+  },
+  "sample": {"full_person_records_seen":3341426,"adult_records_seen":2222503,"deterministic_weighted_adult_sample":96412,"person_household_join_rate":1.0},
+  "richness": {
+    "R0_social_raw_fields":5,
+    "R1_qualifying_observed_raw_fields":60,
+    "surface_ratio":12.0,
+    "R0_effective_rank":23.372259047810537,
+    "R1_effective_rank":222.15283489039948,
+    "effective_rank_ratio":9.504979147970307,
+    "R0_encoded_columns":31,
+    "R1_encoded_columns":433,
+    "R0_nonzero_variance_columns":26,
+    "R1_nonzero_variance_columns":344,
+    "R0_largest_eigenvalue_share":0.10621461699078216,
+    "R1_largest_eigenvalue_share":0.055089416369335266,
+    "qualifying_fields_over_80pct_missing":[]
+  },
+  "frozen_gate_results": {
+    "join_rate_ge_0_99":true,
+    "observed_fields_ge_60":true,
+    "surface_ratio_ge_10":true,
+    "no_qualifying_field_over_80pct_missing":true,
+    "R1_effective_rank_ge_20":true,
+    "effective_rank_ratio_ge_3":true
+  },
+  "interpretation":"The HCP person-household microfoundation is not merely wider: under the preregistered encoding/rank diagnostic it carries roughly 9.5x the effective social-state dimensionality of the old R0 social state, while the raw qualifying state is 12x wider. This clears the pre-LLM information-richness gate. It does not by itself establish predictive value.",
+  "next_required_gates":["R2 socioeconomic statistical-match/uncertainty audit","R3 pre-election attitude layer audit for 2016 and 2021","19 split-constituency exact geography gate","128-vs-256 compression fidelity gate","historical leakage/blinding scan"]
+}
