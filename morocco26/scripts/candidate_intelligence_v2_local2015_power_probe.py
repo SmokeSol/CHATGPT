@@ -8,7 +8,7 @@ import requests
 
 ROOT=Path(__file__).resolve().parents[2]
 M26=ROOT/'morocco26'; G=M26/'data'/'goal100'; CI=G/'e_collect'/'candidate_intelligence_v2'
-ROSTER=CI/'2016'/'pjd_closed_roster_v1.json'; OVR=CI/'identity_overrides_v1.json'
+ROSTER=CI/'2016'/'pjd_closed_roster_v1.json'; OVR=CI/'identity_overrides_v1.json'; LOCAL_OVR=CI/'2016'/'pjd_local2015_identity_overrides_v1.json'
 OUT=CI/'2016'/'pjd_local2015_power_probe_v1.json'; DETAIL=CI/'2016'/'pjd_local2015_closed_universe_v1.jsonl'
 URL='https://open.africa/dataset/07a04224-c0ad-4861-9705-0518f5d49dbd/resource/7ae81ece-1b3d-4cdc-ac49-acd6ba37f6ea/download/communes-elus-2015-1-0.xlsx'
 NS={'m':'http://schemas.openxmlformats.org/spreadsheetml/2006/main','r':'http://schemas.openxmlformats.org/officeDocument/2006/relationships','pr':'http://schemas.openxmlformats.org/package/2006/relationships'}
@@ -49,7 +49,13 @@ def main():
   n=nar(r.get('prenomNom'))
   if n:names[n].append(r)
  all_norm=list(names)
- roster=json.loads(ROSTER.read_text())['rows']; overrides=json.loads(OVR.read_text())['2016']; amap={o['current_name']:o.get('prior_name') for o in overrides if o['status']=='SAFE_ALIAS'}
+ roster=json.loads(ROSTER.read_text())['rows']
+ base_overrides=json.loads(OVR.read_text())['2016']
+ local_overrides=json.loads(LOCAL_OVR.read_text())['decisions']
+ amap={o['current_name']:o.get('prior_name') for o in base_overrides if o['status']=='SAFE_ALIAS'}
+ for o in local_overrides:
+  if o['status']=='SAFE_ALIAS': amap[o['current_name']]=o['closed_universe_name']
+ forced_false={o['current_name'] for o in local_overrides if o['status']=='CONFIRMED_NO_ALIAS'}
  detail=[]
  for x in roster:
   raw=x['candidate_name_ar']; q=nar(raw); candidates=names.get(q,[]); method='EXACT_NORMALIZED'
@@ -57,10 +63,11 @@ def main():
    candidates=names.get(nar(amap[raw]),[]); method='AUDITED_ALIAS'
   item={**x,'feature_family':'V2_LOCAL2015','matched_rows':len(candidates)}
   if candidates:
-   # Multiple council seats/communes for the same person do not make identity ambiguous if all name forms are exact; retain all roles.
    roles=sorted({str(r.get('role','')).strip() for r in candidates if str(r.get('role','')).strip()}); parties=sorted({str(r.get('parti','')).strip() for r in candidates if str(r.get('parti','')).strip()}); communes=sorted({str(r.get('commune','')).strip() for r in candidates if str(r.get('commune','')).strip()})
    exec_roles=[z for z in roles if nar(z)!='conseiller' and z.casefold().strip()!='conseiller']
    item.update({'identity_state':'VERIFIED_MATCH','identity_method':method,'council_member_state':'VERIFIED_TRUE','executive_state':'VERIFIED_TRUE' if exec_roles else 'VERIFIED_FALSE','roles':roles,'executive_roles':exec_roles,'2015_parties':parties,'communes':communes})
+  elif raw in forced_false:
+   item.update({'identity_state':'VERIFIED_NO_MATCH_CLOSED_UNIVERSE_AFTER_AUDIT','identity_method':'AUDITED_CONFIRMED_NO_ALIAS','council_member_state':'VERIFIED_FALSE','executive_state':'VERIFIED_FALSE'})
   else:
    best=0.; bestn=None
    for n in all_norm:
@@ -74,6 +81,6 @@ def main():
  DETAIL.write_text('\n'.join(json.dumps(x,ensure_ascii=False,sort_keys=True) for x in detail)+'\n',encoding='utf-8')
  def s(key):
   st=Counter(x[key] for x in detail); known=st['VERIFIED_TRUE']+st['VERIFIED_FALSE']; return {'states':dict(st),'known':known,'known_gate':known>=MIN_KNOWN,'positive':st['VERIFIED_TRUE'],'support_gate':st['VERIFIED_TRUE']>=MIN_POS,'gate_pass':known>=MIN_KNOWN and st['VERIFIED_TRUE']>=MIN_POS}
- result={'schema_version':'1.0','source_url':URL,'source_sha256':hashlib.sha256(data).hexdigest(),'source_rows':len(rows),'roster_rows':len(roster),'thresholds':{'known':MIN_KNOWN,'positive':MIN_POS},'V2_HEAD_ELECTED_LOCAL_COUNCIL_2015':s('council_member_state'),'V2_HEAD_LOCAL_COUNCIL_EXECUTIVE_2015':s('executive_state'),'forecast_modified':False,'coefficient_authorized':False}
+ result={'schema_version':'1.1','source_url':URL,'source_sha256':hashlib.sha256(data).hexdigest(),'source_rows':len(rows),'roster_rows':len(roster),'thresholds':{'known':MIN_KNOWN,'positive':MIN_POS},'V2_HEAD_ELECTED_LOCAL_COUNCIL_2015':s('council_member_state'),'V2_HEAD_LOCAL_COUNCIL_EXECUTIVE_2015':s('executive_state'),'forecast_modified':False,'coefficient_authorized':False,'identity_override_artifact':str(LOCAL_OVR.relative_to(ROOT))}
  OUT.write_text(json.dumps(result,ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8'); print(json.dumps(result,ensure_ascii=False,indent=2,sort_keys=True))
 if __name__=='__main__':main()
