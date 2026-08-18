@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-18T06:35:44+00:00",
+  "source_run_id": "historical_rosters_32074753067_2",
+  "source_roster": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/candidate_roster.json",
+  "counts": {
+    "source_2021_candidate_rows": 508,
+    "explicit_rank_candidate_facts": 508,
+    "unmatched_candidate_rows": 0,
+    "resolved_canonical_districts": 82,
+    "districts_with_at_least_three_verified_candidate_identities": 82,
+    "required_identity_districts": 70,
+    "districts_with_at_least_one_enriched_candidate_fact": 82,
+    "required_enriched_districts": 50,
+    "identity_gate_pass": true,
+    "enriched_gate_pass": true,
+    "gate_pass": true
+  },
+  "status": "E_REASON_2021_COLLECTION_GATE_PASS",
+  "proof_rule": "Same normalized candidate identity inside a pre-cutoff table explicitly labelled Candidats têtes de liste.",
+  "unmatched": [],
+  "invariants": {
+    "candidate_rank_inferred_from_row_order": false,
+    "rank_one_from_explicit_head_list_label_only": true,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "forecast_delta_generated": false,
+    "F1_created": false
+  }
+}

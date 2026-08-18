@@ -1,0 +1,1384 @@
+[
+  {
+    "content_sha256": "01ac5079ef52c820df9bfd5e71e53d196a58c9f29b43ba2881d45b75f1246515",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/01ac5079ef52c820df9bfd5e71e53d196a58c9f29b43ba2881d45b75f1246515.html",
+    "district_tables": [
+      {
+        "district_source": "Casablanca",
+        "district_normalized": "casablanca",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [],
+        "candidate_count": 0
+      },
+      {
+        "district_source": "Nouaceur",
+        "district_normalized": "nouaceur",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "taha bouchaib",
+          "abderrahim bendou",
+          "said hjiej",
+          "noureddine rafik",
+          "reda naour",
+          "souhail el maati"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Sidi Bennour",
+        "district_normalized": "sidi bennour",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mostafa el khalfi",
+          "abdelfattah ammar",
+          "mohamed ennaji",
+          "abdelkader kandil",
+          "mohamed benhina",
+          "rachid said",
+          "abdelghani makhdad"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Ben Slimane",
+        "district_normalized": "ben slimane",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed karimen",
+          "mohamed benjalloul",
+          "rabii lambarki",
+          "yassine oukacha",
+          "said ezzaidi",
+          "nabil berkaoui",
+          "karim ziadi"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Mediouna",
+        "district_normalized": "mediouna",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "hachem amine echchafik",
+          "salah eddine aboulghali",
+          "hicham messaadi",
+          "amine nakti",
+          "mostafa el maanaoui",
+          "said jaafar"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Berrechid",
+        "district_normalized": "berrechid",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "nourreddine elbidi",
+          "saber kiyaf",
+          "mostafa alaoui",
+          "tarek kadiri",
+          "allal ennassiri",
+          "mounaim tamim",
+          "mohamed el bouamiri"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "El Jadida",
+        "district_normalized": "el jadida",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "rafik bennacer",
+          "mohamed mohaddab",
+          "abderrahim azmi",
+          "mbarek tarmounia",
+          "youssef bayzid",
+          "moulay el mehdi el fatemi"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Settat",
+        "district_normalized": "settat",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "larbi herrami",
+          "hassan haris",
+          "mohamed ghiyat",
+          "el mostafa el kacimi",
+          "abdelhamid benchikh",
+          "zakaria essghir",
+          "said anmili"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Mohammedia",
+        "district_normalized": "mohammedia",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "najib beqqali",
+          "hicham ait mana",
+          "said tadlaoui",
+          "tahar bimezzagh",
+          "younes serraj",
+          "said bouris",
+          "abdelhamid jmahri"
+        ],
+        "candidate_count": 7
+      }
+    ],
+    "explicit_head_list_tables": 9
+  },
+  {
+    "content_sha256": "1cf9ff748d36bccb2bfe3ebac3b45219fc58129c639734fa89628b07407490c3",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/1cf9ff748d36bccb2bfe3ebac3b45219fc58129c639734fa89628b07407490c3.html",
+    "district_tables": [
+      {
+        "district_source": "El Kelaa Sraghna",
+        "district_normalized": "el kelaa sraghna",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "rachid el basset",
+          "el aiyachi el ferfar",
+          "mokhtar benfaida",
+          "noureddine ait lhaj"
+        ],
+        "candidate_count": 4
+      },
+      {
+        "district_source": "Al Haouz",
+        "district_normalized": "al haouz",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "salah najmi",
+          "said lkourch",
+          "mohamed id moussa",
+          "ahmed touizi",
+          "lahcen ait zidane"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Essaouira",
+        "district_normalized": "essaouira",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed jenni",
+          "asmae chaabi",
+          "aziz el fidi",
+          "sami el kharouaa",
+          "mohamed mellal"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Chichaoua",
+        "district_normalized": "chichaoua",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "hamza soufi",
+          "abderrahmane rabeh",
+          "hissine ait el hayyane",
+          "hicham el m hajri",
+          "mohamed belfqih"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Marrakech",
+        "district_normalized": "marrakech",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [],
+        "candidate_count": 0
+      },
+      {
+        "district_source": "Youssoufia",
+        "district_normalized": "youssoufia",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "hassan el bihi",
+          "larbi zakri",
+          "rachid el hachimi",
+          "abdelkabir haddane"
+        ],
+        "candidate_count": 4
+      },
+      {
+        "district_source": "Rehamna",
+        "district_normalized": "rehamna",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abdellatif sendil",
+          "abdelhalim el mansouri",
+          "abdelkhaled el basri",
+          "bahia benkhar"
+        ],
+        "candidate_count": 4
+      },
+      {
+        "district_source": "Safi",
+        "district_normalized": "safi",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "reda bougmazi",
+          "mohamed haidaoui",
+          "hicham saanane",
+          "mohamed ajdia"
+        ],
+        "candidate_count": 4
+      }
+    ],
+    "explicit_head_list_tables": 8
+  },
+  {
+    "content_sha256": "1e0ed1bddadf1fad10c779fb450df91f3ccb0779fa5031881e0e295d799b3bbe",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/1e0ed1bddadf1fad10c779fb450df91f3ccb0779fa5031881e0e295d799b3bbe.html",
+    "district_tables": [
+      {
+        "district_source": "Laâyoune",
+        "district_normalized": "laayoune",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed lamine dida",
+          "hamdi ould rachid",
+          "mohamed aiyach",
+          "mohamed el jamai",
+          "driss hnikra",
+          "mohamed errazma"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Tarfaya",
+        "district_normalized": "tarfaya",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abdallah blat",
+          "mohamed ali el bachra",
+          "sidi ahmed azzaoui",
+          "abdelhay hartoun",
+          "mohamed dakdak",
+          "ali errazma"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Boujdour",
+        "district_normalized": "boujdour",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abdelaziz aba",
+          "mostafa ben bilal",
+          "sid ibrahim khi",
+          "siyyed brahim himad",
+          "habdi insar"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Es Smara",
+        "district_normalized": "es smara",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "zoubeir habdi",
+          "mohamed fadil omari",
+          "sidi hmed chiguer",
+          "mohamed el khalifa el ouaabane",
+          "el hanafi el adli"
+        ],
+        "candidate_count": 5
+      }
+    ],
+    "explicit_head_list_tables": 4
+  },
+  {
+    "content_sha256": "20a7aa653237a9be6db13f8022a9eada2999cc17a62c35740bea2ce8f4b481fe",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/20a7aa653237a9be6db13f8022a9eada2999cc17a62c35740bea2ce8f4b481fe.html",
+    "district_tables": [
+      {
+        "district_source": "Aïn Chock",
+        "district_normalized": "ain chock",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "ismail benbi",
+          "mohamed chafik benkirane",
+          "abdelhak chafik",
+          "abdelaziz el omari",
+          "abdelhak hilal",
+          "el mokhtar dlimi",
+          "mohamed chaouki"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Hay Hassani",
+        "district_normalized": "hay hassani",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "driss chraibi",
+          "mohamed errakani",
+          "reda hakim bennani",
+          "salaheddine chenguiti",
+          "el mostafa mandour",
+          "jamila ikou",
+          "mohamed mouhib"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Aïn Sebaa - Hay Mohammadi",
+        "district_normalized": "ain sebaa hay mohammadi",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "hakima fasli",
+          "hassan benomar",
+          "rachid afilal alami idrissi",
+          "adil el bitar",
+          "mohamed bachir bachiri",
+          "zahra ajaraam",
+          "abdelmaqsoud rachidi"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "El Fida - Mers Sultan",
+        "district_normalized": "el fida mers sultan",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed boudrika",
+          "mohamed toumi benjelloun",
+          "el houcine nasrallah",
+          "el fatmi ramid",
+          "najia abdelkarim",
+          "omar boukhris",
+          "khalid ouchchen"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Moulay Rachid",
+        "district_normalized": "moulay rachid",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abdellah amehdi",
+          "mohamed hammadi",
+          "mohamed jbiel",
+          "mohcine moufidi",
+          "abdellah chiguer",
+          "abdellatif el moutawakil",
+          "abdelaziz el jamali"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Ben Msik",
+        "district_normalized": "ben msik",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed khetar",
+          "taoufik kamil",
+          "abdelmjid mazour",
+          "mostafa jeddad",
+          "adil sahel",
+          "salah el housni",
+          "abderrahim hamed"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Sidi Bernoussi",
+        "district_normalized": "sidi bernoussi",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "hicham el hayd",
+          "abdelmajid ait laadila",
+          "abderrahim outtas",
+          "ahmed brija",
+          "younes hamama",
+          "younes boureqadi",
+          "said aguerdi"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Anfa",
+        "district_normalized": "anfa",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "hassan berkani",
+          "said naciri",
+          "mostafa chenaoui",
+          "mohamed chebbak",
+          "bassima hakkaoui",
+          "aicha lablaq",
+          "abdullah abaakil",
+          "ibrahim rachidi"
+        ],
+        "candidate_count": 8
+      }
+    ],
+    "explicit_head_list_tables": 8
+  },
+  {
+    "content_sha256": "343ff605cd4f22f2407a687e2ca989516accb03248c296bab8dbd6ae06b2e4fd",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/343ff605cd4f22f2407a687e2ca989516accb03248c296bab8dbd6ae06b2e4fd.html",
+    "district_tables": [
+      {
+        "district_source": "Taounate - Tissa old",
+        "district_normalized": "taounate tissa old",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "bouchta boussef",
+          "said el aarabi",
+          "khalid ezzahir"
+        ],
+        "candidate_count": 3
+      },
+      {
+        "district_source": "Moulay Yacoub",
+        "district_normalized": "moulay yacoub",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "el hassan chahbi",
+          "mohamed youssef",
+          "thami akbi",
+          "hassan khoulani idrissi"
+        ],
+        "candidate_count": 4
+      },
+      {
+        "district_source": "Ifrane",
+        "district_normalized": "ifrane",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed ouataleb",
+          "abderrazak hachimi",
+          "ahmed rachidi",
+          "touria achiibi"
+        ],
+        "candidate_count": 4
+      },
+      {
+        "district_source": "El Hajeb",
+        "district_normalized": "el hajeb",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "lahcen el amoud",
+          "mourad sahsah",
+          "abdelkamel mekouar"
+        ],
+        "candidate_count": 3
+      },
+      {
+        "district_source": "Fès",
+        "district_normalized": "fes",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [],
+        "candidate_count": 0
+      },
+      {
+        "district_source": "Taounate - Tissa",
+        "district_normalized": "taounate tissa",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "bouchta boussef",
+          "said el aarabi",
+          "khalid ezzahir",
+          "abdelhafid el messaoudi"
+        ],
+        "candidate_count": 4
+      },
+      {
+        "district_source": "Meknès",
+        "district_normalized": "meknes",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abdelouahed el ansari",
+          "abdallah bouanou",
+          "badr tahiri",
+          "mostafa azine"
+        ],
+        "candidate_count": 4
+      },
+      {
+        "district_source": "Sefrou",
+        "district_normalized": "sefrou",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "ibrahim el ayachi",
+          "driss meskine",
+          "hafid ouchak",
+          "idriss chtaibi"
+        ],
+        "candidate_count": 4
+      },
+      {
+        "district_source": "Taza",
+        "district_normalized": "taza",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "khalil seddiki",
+          "mounir chentir",
+          "jamal massaoudi",
+          "hafed benguemra"
+        ],
+        "candidate_count": 4
+      },
+      {
+        "district_source": "Boulemane",
+        "district_normalized": "boulemane",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abdelmoula el harchi",
+          "mohamed chouki",
+          "mostafa belafdil",
+          "mohamed outayet"
+        ],
+        "candidate_count": 4
+      }
+    ],
+    "explicit_head_list_tables": 10
+  },
+  {
+    "content_sha256": "39170482560b1a225e4b9e861361dba70e86f0257dfa425214f66344e4781bb8",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/39170482560b1a225e4b9e861361dba70e86f0257dfa425214f66344e4781bb8.html",
+    "district_tables": [
+      {
+        "district_source": "Khénifra",
+        "district_normalized": "khenifra",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed badou",
+          "saleh oughbal",
+          "rachid hachimi",
+          "hassan el omari",
+          "said chaouki",
+          "lahcen ait ychou"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Khouribga",
+        "district_normalized": "khouribga",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "rachid said",
+          "hamid el archi",
+          "mohamed zekrani",
+          "abdessamad khanani",
+          "abdelouhed ellahbi",
+          "habib el malki"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Azilal-Bzou-Ouaouizart",
+        "district_normalized": "azilal bzou ouaouizart",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "ibrahim hasnaoui",
+          "mostafa raddad",
+          "azilal ouaouizeght",
+          "mohamed achikh",
+          "ibrahim moudoud",
+          "allal basraoui"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Béni Mellal",
+        "district_normalized": "beni mellal",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abderrahmane khiyr",
+          "mohamed marzouk",
+          "khalid el mansouri",
+          "meriem ouahsat",
+          "fadel barass"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Fquih Ben Salah",
+        "district_normalized": "fquih ben salah",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "rahal el mekkaoui",
+          "bouabid labida",
+          "kamal mahfoud",
+          "rabie majd",
+          "cheqaoui znaidi"
+        ],
+        "candidate_count": 5
+      }
+    ],
+    "explicit_head_list_tables": 5
+  },
+  {
+    "content_sha256": "44470ef4d9441d5d71066a91e3861b28e9f07841335e7ad4f1a384cbfaab6507",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/44470ef4d9441d5d71066a91e3861b28e9f07841335e7ad4f1a384cbfaab6507.html",
+    "district_tables": [
+      {
+        "district_source": "Rabat Chellah",
+        "district_normalized": "rabat chellah",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed tahiri",
+          "alaeddine bahraoui",
+          "omar benjelloun",
+          "adib benbrahim",
+          "el bachir sakhi",
+          "hassan lachgar"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Rabat Océan",
+        "district_normalized": "rabat ocean",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abderrahim ouaslem",
+          "saad eddine elothmani",
+          "nabil benabdellah",
+          "meryem benkhouya",
+          "mehdi bensaid",
+          "abdellah idrissi bouzidi",
+          "badr tnacheri ouazzani"
+        ],
+        "candidate_count": 7
+      }
+    ],
+    "explicit_head_list_tables": 2
+  },
+  {
+    "content_sha256": "5190dd3b95417a95d236ca273ee6fb88ec4f371e1c5c55fe3fbf5b93b99634f5",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/5190dd3b95417a95d236ca273ee6fb88ec4f371e1c5c55fe3fbf5b93b99634f5.html",
+    "district_tables": [
+      {
+        "district_source": "Kénitra",
+        "district_normalized": "kenitra",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mostafa ibrahimi",
+          "hatim ben rkia",
+          "faouzi chaabi",
+          "mohamed el azri",
+          "mostafa el kameh",
+          "amr nmich",
+          "idriss saadaoui"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Salé",
+        "district_normalized": "sale",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [],
+        "candidate_count": 0
+      },
+      {
+        "district_source": "Skhirate - Temara",
+        "district_normalized": "skhirate temara",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed el hilali",
+          "rachid sajid",
+          "rachid el hamri",
+          "slimane el amrani",
+          "kamal karimeddine",
+          "el alami harouni",
+          "mahmoud boutkhil"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Khemisset-Ouelmes",
+        "district_normalized": "khemisset ouelmes",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed chrourou",
+          "adil benhamza",
+          "abdessalam el bouirmani",
+          "taibi ilhami",
+          "mohamed boujat",
+          "mohamed el harch",
+          "houda el hardouz"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Sidi Slimane",
+        "district_normalized": "sidi slimane",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "anouar sabri",
+          "hicham hamdani",
+          "lahcen aouad",
+          "mohamed el ayadi",
+          "abdelkarim kamal",
+          "abdelouahed radi"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Sidi Kecem",
+        "district_normalized": "sidi kecem",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "saad ben zeroual",
+          "ahmed el ghazoui",
+          "abdallah ben abdeslam",
+          "mohamed el hafid",
+          "abdennabi salikane",
+          "mohamed laessel"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Rabat",
+        "district_normalized": "rabat",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [],
+        "candidate_count": 0
+      },
+      {
+        "district_source": "El Gharb",
+        "district_normalized": "el gharb",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "jaouad gharib",
+          "ibrahim chouikh",
+          "kacem el badaoui",
+          "abdelaziz el bouhssaini",
+          "essadik nachat",
+          "karim qardas",
+          "abderrahim amid"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Tiflet Romani",
+        "district_normalized": "tiflet romani",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "hassan filali",
+          "ouafae lmhamdi",
+          "bouamrou teghouane",
+          "rahhou el hilaa",
+          "mbarek zayer",
+          "younes beleglouch"
+        ],
+        "candidate_count": 6
+      }
+    ],
+    "explicit_head_list_tables": 9
+  },
+  {
+    "content_sha256": "5db522a6db5bf53873e994d580423a00614829cf4efe87307c96d829b27c9eb6",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/5db522a6db5bf53873e994d580423a00614829cf4efe87307c96d829b27c9eb6.html",
+    "district_tables": [
+      {
+        "district_source": "Salé Medina",
+        "district_normalized": "sale medina",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "noueddine elazrak",
+          "rachid el abdi",
+          "nabil cheikhi",
+          "abdelkarim hassini",
+          "mohamed aouad",
+          "moncef hadari",
+          "mohamed bousfiha"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Sala Jadida",
+        "district_normalized": "sala jadida",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "youssef gharbi",
+          "abdelkarim zemzami",
+          "omar sentissi",
+          "mohamed benatia",
+          "hamani amahzoun",
+          "zakaria chelouati",
+          "seddik zniber"
+        ],
+        "candidate_count": 7
+      }
+    ],
+    "explicit_head_list_tables": 2
+  },
+  {
+    "content_sha256": "67b31128b4ebb407e2232b77961953fc5e27a9e314ba8b311b0e6965bcf2acfc",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/67b31128b4ebb407e2232b77961953fc5e27a9e314ba8b311b0e6965bcf2acfc.html",
+    "district_tables": [
+      {
+        "district_source": "Oued Eddahab",
+        "district_normalized": "oued eddahab",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "yenja el khattat",
+          "azouha el arrak",
+          "mohamed boussif"
+        ],
+        "candidate_count": 3
+      },
+      {
+        "district_source": "Aousserd",
+        "district_normalized": "aousserd",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "boussif lmami",
+          "abdelfattah ahl mekki",
+          "khadjoula lakhlifi"
+        ],
+        "candidate_count": 3
+      }
+    ],
+    "explicit_head_list_tables": 2
+  },
+  {
+    "content_sha256": "833c4ab5d49d25328b948353b11e9fec2e98d443ce5f0c9e8dd3c2bc1cc66acd",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/833c4ab5d49d25328b948353b11e9fec2e98d443ce5f0c9e8dd3c2bc1cc66acd.html",
+    "district_tables": [
+      {
+        "district_source": "Driouch",
+        "district_normalized": "driouch",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "hakim zerrouk",
+          "abdallah el boukili",
+          "abdelmounaim el fettahi",
+          "baghdad azaoum",
+          "driss haddouch"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Nador",
+        "district_normalized": "nador",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "farouk tahiri",
+          "mohammadi toutouh",
+          "mohamed ettaibi",
+          "abdelkader koudad",
+          "youssef dahmazi",
+          "mohamed aberkane"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Taourirt",
+        "district_normalized": "taourirt",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "hmida mahjoubi",
+          "driss jeddi",
+          "abdelmalik makour",
+          "boujamaa dachou",
+          "mohamed azlaf"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Guercif",
+        "district_normalized": "guercif",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abdelouafi meziane",
+          "mokhtar sahli",
+          "ali el jaghaoui",
+          "mohamed lakhel",
+          "said baaziz"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Figuig",
+        "district_normalized": "figuig",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "lahcen tajmouati",
+          "el kabir kada",
+          "el houcine ouhlis",
+          "ahmed sbai",
+          "lahcen oulakhchich"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Berkane",
+        "district_normalized": "berkane",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "rafik oubachir",
+          "mohamed sadiki",
+          "abdelhakim benabdellah bouazza",
+          "boumediene el ousaidi",
+          "ahmed salam",
+          "abdelmounaim mouhsini"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Jrada",
+        "district_normalized": "jrada",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "taoufik ouchbel",
+          "mostafa toutou",
+          "yassine deghou",
+          "said marzouki",
+          "el mokhtar rachidi"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Oujda Angad",
+        "district_normalized": "oujda angad",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abdallah hamel",
+          "mohamed houar",
+          "omar hjira",
+          "hicham baraka",
+          "mostafa safsafi",
+          "omar anane"
+        ],
+        "candidate_count": 6
+      }
+    ],
+    "explicit_head_list_tables": 8
+  },
+  {
+    "content_sha256": "89786e62da9a8d71685e3f26d37b7b3eca2e5ae235d63ef6a4baf5ad94216421",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/89786e62da9a8d71685e3f26d37b7b3eca2e5ae235d63ef6a4baf5ad94216421.html",
+    "district_tables": [
+      {
+        "district_source": "Menara",
+        "district_normalized": "menara",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abdelouahed chafai",
+          "mohamed toufla",
+          "abderazzak ahlouch",
+          "khalid zouini"
+        ],
+        "candidate_count": 4
+      },
+      {
+        "district_source": "Guéliz - Annakhil",
+        "district_normalized": "gueliz annakhil",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "ismail el barhoumi",
+          "fatima zahra bentaleb",
+          "mohamed najib el khaldi",
+          "zakia lemrini",
+          "youssef ait lhaj lahcen",
+          "mohamed benchekroun"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Médina (Sidi Youssef Ben Ali)",
+        "district_normalized": "medina sidi youssef ben ali",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "fatima zahra mansouri",
+          "younes benslimane",
+          "mohamed larbi belgaid",
+          "abdelaziz eddriouech",
+          "khalid fettaoui"
+        ],
+        "candidate_count": 5
+      }
+    ],
+    "explicit_head_list_tables": 3
+  },
+  {
+    "content_sha256": "8a5f2679c28fc9efe066f3f60f19dfede31b236352a872f1ccaa52d400f72b83",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/8a5f2679c28fc9efe066f3f60f19dfede31b236352a872f1ccaa52d400f72b83.html",
+    "district_tables": [
+      {
+        "district_source": "Fès Sud",
+        "district_normalized": "fes sud",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "aziz lebbar",
+          "driss el azami",
+          "allal el amraoui",
+          "rachid fayek",
+          "fatima zahra barsat",
+          "oussama oufarid",
+          "abdelkader el boussiri"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Fès Nord",
+        "district_normalized": "fes nord",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed el harti",
+          "abdelmajid fassi fihri",
+          "khadija hjoubi",
+          "thami ouazzani",
+          "abdelmajid belhaj",
+          "mohamed yassir jaouhar"
+        ],
+        "candidate_count": 6
+      }
+    ],
+    "explicit_head_list_tables": 2
+  },
+  {
+    "content_sha256": "d3946b792d2392473a82fdf1b69f293d2bf60b66264e6880b49989f76c51457a",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/d3946b792d2392473a82fdf1b69f293d2bf60b66264e6880b49989f76c51457a.html",
+    "district_tables": [
+      {
+        "district_source": "Zagora",
+        "district_normalized": "zagora",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mimoun amiri",
+          "abderrahman essoufi",
+          "el houssine oualal",
+          "ahmad hassou",
+          "abderrahim chahid"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Ouarzazate",
+        "district_normalized": "ouarzazate",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "youssef chiri",
+          "said essadik",
+          "mohamed oualehror",
+          "lahcen ahmam",
+          "omar oubouhou",
+          "samir sebbane"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Tinghir",
+        "district_normalized": "tinghir",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "adi khzou",
+          "abdelouahed seddiki",
+          "hassan bouargalne",
+          "mohamed fadel",
+          "addi chajri",
+          "mohamed el khamoui",
+          "mohamed choukri"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Errachidia",
+        "district_normalized": "errachidia",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed drissi",
+          "abdallah el omari",
+          "omar oujil",
+          "moulay lahcen benlafqih",
+          "omar ezzaim",
+          "farid qachni",
+          "el mehdi el allaoui"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Midelt",
+        "district_normalized": "midelt",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "lahbib choubani",
+          "adnane rachid",
+          "marouane chbaatou",
+          "mohamed aabirouch",
+          "fatima zahra chaoui",
+          "moulay driss hasnaoui"
+        ],
+        "candidate_count": 6
+      }
+    ],
+    "explicit_head_list_tables": 5
+  },
+  {
+    "content_sha256": "dd27a0f1cc8d3f13fd2d7d787ec970bf27c7f7cdfd1fbd9379964e479cc0d19b",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/dd27a0f1cc8d3f13fd2d7d787ec970bf27c7f7cdfd1fbd9379964e479cc0d19b.html",
+    "district_tables": [
+      {
+        "district_source": "Chtouka Ait baha",
+        "district_normalized": "chtouka ait baha",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "ahmed boutgourine",
+          "chtouka ait baha",
+          "abdelaziz moussaid",
+          "omar cheikh",
+          "ahmed el gaabouz"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Tiznit",
+        "district_normalized": "tiznit",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abdallah ghazi",
+          "mohamed amekraz",
+          "hanane adbaoui",
+          "jamal abahoummane",
+          "lahcen benouari"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Taroudant Nord",
+        "district_normalized": "taroudant nord",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mhamed ait bella selmane",
+          "abdelaziz el bahja",
+          "abdellatif ouahbi",
+          "abdallah achkri"
+        ],
+        "candidate_count": 4
+      },
+      {
+        "district_source": "Agadir Ida Ou Tanane",
+        "district_normalized": "agadir ida ou tanane",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "brahim hafidi",
+          "mohamed bakiri",
+          "jamal diwani",
+          "hassan amribet",
+          "kenza kacimi",
+          "abderazzak mouissat"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Inezgane Ait Melloul",
+        "district_normalized": "inezgane ait melloul",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "ahmed aderrak",
+          "khalid chennaq",
+          "aicha amghar",
+          "mostafa faq",
+          "yassine biqandaren"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Tata",
+        "district_normalized": "tata",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mostafa tadoumant",
+          "mohamed id ahmed",
+          "el houcine bouzhay",
+          "latifa boughouch",
+          "mohamed haj"
+        ],
+        "candidate_count": 5
+      }
+    ],
+    "explicit_head_list_tables": 6
+  },
+  {
+    "content_sha256": "f4e72b291e1d04e59ab244ce87110efd3c5bba4877b7e6fdc7293c5970dfa53f",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/f4e72b291e1d04e59ab244ce87110efd3c5bba4877b7e6fdc7293c5970dfa53f.html",
+    "district_tables": [
+      {
+        "district_source": "Sidi Ifni",
+        "district_normalized": "sidi ifni",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mostafa baytas",
+          "abdallah mestabcher",
+          "abderrahmane fibiyane",
+          "omar abahmane",
+          "mohamed abedrar"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Assa-Zag",
+        "district_normalized": "assa zag",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "hamdi ouayssi",
+          "houssine hrich",
+          "ahmed chiyahou",
+          "mouloud brik",
+          "mahmoud abba"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "Guelmim",
+        "district_normalized": "guelmim",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed rejdal",
+          "mnina moudden",
+          "abderrahim benabida",
+          "el mokhtar zabila",
+          "abdallah lekoua",
+          "abdelkarim naji"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Tan-Tan",
+        "district_normalized": "tan tan",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mae elaynine aabid",
+          "abdallah abberki",
+          "mohamed hammou",
+          "essalek bouloune"
+        ],
+        "candidate_count": 4
+      }
+    ],
+    "explicit_head_list_tables": 4
+  },
+  {
+    "content_sha256": "fe7b87d48ca5f406a5544c3847ee17dfdb3f6aff4f716e42b8eb6a86762f6ee2",
+    "raw_path": "morocco26/data/goal100/e_reason/evidence/historical_rosters/historical_rosters_32074753067_2/raw/fe7b87d48ca5f406a5544c3847ee17dfdb3f6aff4f716e42b8eb6a86762f6ee2.html",
+    "district_tables": [
+      {
+        "district_source": "Al Hoceima",
+        "district_normalized": "al hoceima",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "boutahar boutahri",
+          "mohamed el hammouti",
+          "nabil andaloussi",
+          "noureddine mediane",
+          "abdessalam rammach",
+          "mohamed el azzouzi",
+          "abdelhak amghar"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Chefchaouen",
+        "district_normalized": "chefchaouen",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abderrahim bouazza",
+          "ismail beqqali",
+          "abderrahmane el omari",
+          "dounia boukachkouch",
+          "abdallah el jout",
+          "el amine tahiri beqqali"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Ouezzane",
+        "district_normalized": "ouezzane",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abdelaziz lachheb",
+          "mohamed ahouite",
+          "larbi lamharchi",
+          "abdelhalim el allaoui",
+          "abderrahim el housni",
+          "mohamed ghaddane"
+        ],
+        "candidate_count": 6
+      },
+      {
+        "district_source": "Larache",
+        "district_normalized": "larache",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "nizar baraka",
+          "mohamed essimo",
+          "mohamed hamani",
+          "said khairoun",
+          "mohamed el bachir jbari",
+          "mohamed salam",
+          "mechij el karkri"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Fahs-Anjra",
+        "district_normalized": "fahs anjra",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "abdessalam el hasnaoui",
+          "idriss saour el mansouri",
+          "said khayroun",
+          "anissa alhichou qrabchi",
+          "ahmed naimi idrissi"
+        ],
+        "candidate_count": 5
+      },
+      {
+        "district_source": "M’Diq-Fnidq",
+        "district_normalized": "m diq fnidq",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "ahmed el mrabet soussi",
+          "mohamed larbi lamrabat",
+          "abderrahim ennaou",
+          "youssef abatoui",
+          "othmane khotar",
+          "mohamed el ghalali",
+          "abdennour hasnaoui"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Tanger Assilah",
+        "district_normalized": "tanger assilah",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "adil dfouf",
+          "omar moro",
+          "mohamed el hamami",
+          "mohamed amahjour",
+          "samir berhou",
+          "jamal el asri",
+          "abdelkader taher"
+        ],
+        "candidate_count": 7
+      },
+      {
+        "district_source": "Tétouan",
+        "district_normalized": "tetouan",
+        "explicit_head_list_label": "Candidats têtes de liste",
+        "candidate_names_under_label": [
+          "mohamed larbi ahnine",
+          "amina benabdelouahab",
+          "moncef ettob",
+          "rachid talbi alami",
+          "zouhair rougani",
+          "ahmed el qaidi",
+          "hamid derraq"
+        ],
+        "candidate_count": 7
+      }
+    ],
+    "explicit_head_list_tables": 8
+  }
+]
