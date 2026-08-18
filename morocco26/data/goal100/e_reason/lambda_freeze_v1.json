@@ -1,0 +1,26 @@
+{
+  "C2_judgment_manifest_sha256": "74d325b68f6b9ebb2edd51261728bf9bf65fe7473b2c2f2281e59880546e3d9c",
+  "C2_prompt_sha256": "188853304a6d20a385a055deac0d63ee57b97248f3aa386f5f1b7ae360a0b946",
+  "all_judgment_generation_rules_frozen": true,
+  "development_calibration_result_status": "PASS_DEVELOPMENT_CALIBRATION_LAMBDA_SELECTED",
+  "experiment_id": "M26-GOAL100-E-REASON-V1",
+  "freeze_id": "M26-E-REASON-LAMBDA-FREEZE-V1",
+  "holdout_2021_outcome_seen_before_freeze": false,
+  "lambda_C1": 0.3,
+  "lambda_C2": 0.3,
+  "lambda_grid": [
+    0.0,
+    0.025,
+    0.05,
+    0.075,
+    0.1,
+    0.15,
+    0.2,
+    0.3
+  ],
+  "next_allowed_action": "BUILD_FREEZE_2021_BLINDED_PACKETS_THEN_RUN_C1_C2_WITH_FROZEN_RULES",
+  "schema_version": "1.0",
+  "selection_metric": "2016 macro_party_share_RMSE",
+  "status": "FROZEN_BEFORE_2021_JUDGMENTS",
+  "tie_breaker": "smaller lambda"
+}

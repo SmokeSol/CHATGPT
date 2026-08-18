@@ -1,0 +1,76 @@
+{
+  "C0_lambda_zero_metrics": {
+    "lambda": 0.0,
+    "macro_party_share_RMSE": 0.08850462894693681,
+    "mean_constituency_L1": 0.5606371069817372,
+    "top_party_accuracy": 0.5434782608695652
+  },
+  "development_year": 2016,
+  "holdout_2021_outcome_read": false,
+  "identity_reconstruction_status": "PASS_UNIQUE_POSTFREEZE_IDENTITY_RECONSTRUCTION",
+  "lambda_grid_results": [
+    {
+      "lambda": 0.0,
+      "macro_party_share_RMSE": 0.08850462894693681,
+      "mean_constituency_L1": 0.5606371069817372,
+      "top_party_accuracy": 0.5434782608695652
+    },
+    {
+      "lambda": 0.025,
+      "macro_party_share_RMSE": 0.08827210958779558,
+      "mean_constituency_L1": 0.5588258289814068,
+      "top_party_accuracy": 0.5543478260869565
+    },
+    {
+      "lambda": 0.05,
+      "macro_party_share_RMSE": 0.08805478079789436,
+      "mean_constituency_L1": 0.5571163447015129,
+      "top_party_accuracy": 0.5434782608695652
+    },
+    {
+      "lambda": 0.075,
+      "macro_party_share_RMSE": 0.08785321175107572,
+      "mean_constituency_L1": 0.5554335316441279,
+      "top_party_accuracy": 0.5434782608695652
+    },
+    {
+      "lambda": 0.1,
+      "macro_party_share_RMSE": 0.08766796439737273,
+      "mean_constituency_L1": 0.5539095597163972,
+      "top_party_accuracy": 0.5434782608695652
+    },
+    {
+      "lambda": 0.15,
+      "macro_party_share_RMSE": 0.08734863707375601,
+      "mean_constituency_L1": 0.5514494327311205,
+      "top_party_accuracy": 0.5434782608695652
+    },
+    {
+      "lambda": 0.2,
+      "macro_party_share_RMSE": 0.08710109017807983,
+      "mean_constituency_L1": 0.5497899460002305,
+      "top_party_accuracy": 0.532608695652174
+    },
+    {
+      "lambda": 0.3,
+      "macro_party_share_RMSE": 0.08683736674031693,
+      "mean_constituency_L1": 0.5476108496087059,
+      "top_party_accuracy": 0.532608695652174
+    }
+  ],
+  "outcome_unsealed_after_c1_c2_freeze": true,
+  "primary_metric": "macro_party_share_RMSE",
+  "relative_RMSE_improvement_vs_C0": 0.01883813565976858,
+  "result_id": "M26-E-REASON-DEVELOPMENT-2016-CALIBRATION-V1",
+  "schema_version": "1.0",
+  "selected_lambda_C1": 0.3,
+  "selected_lambda_C2": 0.3,
+  "selected_metrics": {
+    "lambda": 0.3,
+    "macro_party_share_RMSE": 0.08683736674031693,
+    "mean_constituency_L1": 0.5476108496087059,
+    "top_party_accuracy": 0.532608695652174
+  },
+  "selection_reason_C2": "C2 development ordinal residuals are frozen cellwise-identical to C1 on all 828 cells; same baseline, transform, grid and tie rule imply same selected lambda.",
+  "status": "PASS_DEVELOPMENT_CALIBRATION_LAMBDA_SELECTED"
+}
