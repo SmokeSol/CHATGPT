@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-18T08:30:00+00:00",
+  "status": "PASS",
+  "source_diagnostic": "morocco26/data/goal100/e_reason/evidence/strict_2016_ifrane_sidi_embedded_name_diagnostic/diagnostic.json",
+  "territory_rows": [
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "ifrane",
+      "historical_id_constituency": 552,
+      "historical_constituency": "Ifrane",
+      "historical_region": "Fès - Meknès",
+      "seats": 2,
+      "candidate_count_promoted": 1,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "identity_verification": "EXACT_HEADER_OCR_PLUS_EXACT_SAME_PAGE_EMBEDDED_NAME_LINE",
+      "pdf_sha256": "ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375",
+      "parent_page_url": "https://pps.ma/10462/",
+      "parent_page_timestamps": ["2016-10-03", "2016-10-04"],
+      "page": 5
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "sidi-ifni",
+      "historical_id_constituency": 604,
+      "historical_constituency": "Sidi Ifni",
+      "historical_region": "Guelmim - Oued-Noun",
+      "seats": 2,
+      "candidate_count_promoted": 2,
+      "FORMAL_ENDORSEMENT": true,
+      "source_class": "T1_OFFICIAL_PARTY",
+      "identity_verification": "EXACT_HEADER_OCR_PLUS_EXACT_SAME_PAGE_EMBEDDED_NAME_LINE",
+      "pdf_sha256": "b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270",
+      "parent_page_url": "https://pps.ma/10528/",
+      "parent_page_timestamps": ["2016-10-03", "2016-10-04"],
+      "page": 1
+    }
+  ],
+  "candidate_rows": [
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "ifrane",
+      "historical_id_constituency": 552,
+      "historical_constituency": "Ifrane",
+      "candidate_name_ar": "حسن السعودي",
+      "candidate_name_ar_normalized": "حسن السعودي",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "identity_verification": "EXACT_HEADER_OCR_PLUS_EXACT_SAME_PAGE_EMBEDDED_NAME_LINE",
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "ddab92c2fc11561dba42941a2f99736defb5b82dfea20d1a759bd65c9bbbf375",
+        "parent_page_url": "https://pps.ma/10462/",
+        "pdf_page": 5,
+        "matched_header_variant_compact_ar": "افران",
+        "exact_embedded_name_line": "حسن السعودي"
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "sidi-ifni",
+      "historical_id_constituency": 604,
+      "historical_constituency": "Sidi Ifni",
+      "candidate_name_ar": "مبارك البطاح",
+      "candidate_name_ar_normalized": "مبارك البطاح",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "identity_verification": "EXACT_HEADER_OCR_PLUS_EXACT_SAME_PAGE_EMBEDDED_NAME_LINE",
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270",
+        "parent_page_url": "https://pps.ma/10528/",
+        "pdf_page": 1,
+        "matched_header_variant_compact_ar": "سيديافني",
+        "exact_embedded_name_line": "مبارك البطاح"
+      }
+    },
+    {
+      "year": 2016,
+      "party": "PPS",
+      "constituency_id": "sidi-ifni",
+      "historical_id_constituency": 604,
+      "historical_constituency": "Sidi Ifni",
+      "candidate_name_ar": "نعيمة كريم",
+      "candidate_name_ar_normalized": "نعيمة كريم",
+      "candidate_rank": null,
+      "CANDIDATE_REGISTERED_RANK": null,
+      "rank_evidence_status": "MISSING_NOT_INFERRED",
+      "FORMAL_ENDORSEMENT": true,
+      "party_fact_status": "PARTY_ANNOUNCED",
+      "identity_verification": "EXACT_HEADER_OCR_PLUS_EXACT_SAME_PAGE_EMBEDDED_NAME_LINE",
+      "evidence": {
+        "publication_time": "2016-10-03",
+        "source_class": "T1_OFFICIAL_PARTY",
+        "content_sha256": "b4f9134e546d70720d73dd6e4afb17ce0f3820a6a8d446db7f5fdd7563a9f270",
+        "parent_page_url": "https://pps.ma/10528/",
+        "pdf_page": 1,
+        "matched_header_variant_compact_ar": "سيديافني",
+        "exact_embedded_name_line": "نعيمة كريم"
+      }
+    }
+  ],
+  "explicit_rejections": [
+    "للشؤون الصحراوية",
+    "والخدمات بجهة كلميم وادنون",
+    "والخدمات بجهة كلميم السمارة"
+  ],
+  "invariants": {
+    "exact_header_ocr_required": true,
+    "exact_same_page_standalone_name_line_required": true,
+    "person_name_fuzzy_matching": false,
+    "biography_lines_promoted": false,
+    "candidate_rank_inferred": false,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "F1_created": false
+  }
+}
