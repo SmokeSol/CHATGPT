@@ -1,0 +1,5247 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-18T06:34:07+00:00",
+  "source_parser_schema": "4.1",
+  "current": {
+    "pjd_ge3_districts": 44,
+    "pps_ge3_districts": 12,
+    "union_ge3_districts": 46,
+    "required_ge3_districts": 70,
+    "remaining_ge3_districts": 24,
+    "pps_success_territories": 23,
+    "pps_failure_pages": 39,
+    "pps_unresolved_header_pages": 30,
+    "resolved_failure_pages_that_would_add_new_ge3": 13,
+    "high_similarity_unresolved_headers_for_audit": 3
+  },
+  "error_counts": {
+    "UNRESOLVED_CARD": 63,
+    "CANDIDATE_COUNT_2_NE_SEATS_3": 13,
+    "CANDIDATE_COUNT_2_NE_SEATS_4": 9,
+    "CANDIDATE_COUNT_1_NE_SEATS_3": 6,
+    "CANDIDATE_COUNT_1_NE_SEATS_2": 4,
+    "CANDIDATE_COUNT_1_NE_SEATS_4": 2,
+    "CANDIDATE_COUNT_3_NE_SEATS_4": 2,
+    "CANDIDATE_COUNT_0_NE_SEATS_3": 1,
+    "CANDIDATE_COUNT_5_NE_SEATS_6": 1,
+    "CANDIDATE_COUNT_0_NE_SEATS_4": 1
+  },
+  "card_method_counts_on_failed_pages": {
+    "CARD_NAME_UNRESOLVED": 46,
+    "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS": 37,
+    "FIRST_ARABIC_LINE_IN_CARD": 30,
+    "EMPTY_CARD": 17
+  },
+  "resolved_failure_pages_new_ge3_first": [
+    {
+      "region": "rabat-sale-kenitra",
+      "page": 9,
+      "constituency_id": "kenitra",
+      "historical_constituency": "Kénitra",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": true,
+      "resolved_card_names": 3,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_3_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "القنيطرة",
+        "نادية التهامي",
+        "استاذة جامعية",
+        "فاعلة جمعوية"
+      ],
+      "matched_header_pattern": "القنيطرة",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 306.38,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "نادية التهامي",
+          "raw_words": [
+            "ﺔﻳدﺎﻧ",
+            "ﻲﻣﺎﻬﺘﻟا"
+          ],
+          "anchors": [
+            "نادية",
+            "التهامي"
+          ],
+          "line_candidates": [
+            "نادية التهامي"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 450.81,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "استاذة جامعية",
+          "raw_words": [
+            "ةذﺎﺘﺳأ",
+            "ﺔﻴﻌﻣﺎﺟ"
+          ],
+          "anchors": [
+            "استاذة",
+            "جامعية"
+          ],
+          "line_candidates": [
+            "استاذة جامعية"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 476.38,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "عزالدين بنسعيد عبد القادر جنان",
+          "raw_words": [
+            "ﻦﻳﺪﻟاﺰﻋ",
+            "ﺪﻴﻌﺴﻨﺑ",
+            "ﺪﺒﻋ",
+            "ردﺎﻘﻟا",
+            "نﺎﻨﺟ"
+          ],
+          "anchors": [
+            "عزالدين",
+            "بنسعيد",
+            "عبد",
+            "القادر",
+            "جنان"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 6,
+      "constituency_id": "khenifra",
+      "historical_constituency": "Khénifra",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": true,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "خنيفرة"
+      ],
+      "matched_header_pattern": "خنيفرة",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 412.96,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "فؤاد حج",
+          "raw_words": [
+            "داﺆﻓ",
+            "“ﺠﺣ"
+          ],
+          "anchors": [
+            "فؤاد"
+          ],
+          "line_candidates": [
+            "فؤاد حج"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 413.18,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "(cid:127)ا",
+            "ﻲﻗﻮﺳ"
+          ],
+          "anchors": [
+            "عبد",
+            "سوقي"
+          ],
+          "line_candidates": [],
+          "guess": "عبد ا سوقي"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 413.18,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "لطيفة معديني",
+          "raw_words": [
+            "ﺔﻔﻴﻄﻟ",
+            "ﻲﻨﻳﺪﻌﻣ"
+          ],
+          "anchors": [
+            "لطيفة",
+            "معديني"
+          ],
+          "line_candidates": [
+            "لطيفة معديني"
+          ],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 7,
+      "constituency_id": "mohammedia",
+      "historical_constituency": "Mohammadia",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": true,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b2",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "المحمدية"
+      ],
+      "matched_header_pattern": "المحمدية",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 416.21,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﻲﻄﻳوﺮﻏ"
+          ],
+          "anchors": [
+            "غرويطي"
+          ],
+          "line_candidates": [],
+          "guess": "مد غرويطي"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 412.13,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "احمد الصبيحي",
+          "raw_words": [
+            "ﺪﻤﺣأ",
+            "ﻲﺤﻴﺒﺼﻟا"
+          ],
+          "anchors": [
+            "احمد",
+            "الصبيحي"
+          ],
+          "line_candidates": [
+            "احمد الصبيحي"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 412.13,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "عبد الصمد حقيقي",
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "ﺪﻤﺼﻟا",
+            "ﻲﻘﻴﻘﺣ"
+          ],
+          "anchors": [
+            "عبد",
+            "الصمد",
+            "حقيقي"
+          ],
+          "line_candidates": [
+            "عبد الصمد حقيقي"
+          ],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 9,
+      "constituency_id": "berrechid",
+      "historical_constituency": "Berrechid",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": true,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_2_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "برشيد"
+      ],
+      "matched_header_pattern": "برشيد",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 307.43,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "ﻖﳊا",
+            "(cid:2)ﻼﺒﻋ"
+          ],
+          "anchors": [
+            "عبد",
+            "احلق"
+          ],
+          "line_candidates": [],
+          "guess": "عبد احلق عبال"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 457.76,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "اطار بشركة",
+          "raw_words": [
+            "€ﺴﻣ",
+            "ﺔﻛﺮﺷ"
+          ],
+          "anchors": [
+            "شركة"
+          ],
+          "line_candidates": [
+            "اطار بشركة"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 460.93,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "املصطفي فهيم امنة احلاجي",
+          "raw_words": [
+            "ﻰﻔﻄﺼﳌا",
+            "ﻢﻴﻬﻓ",
+            "ﺔﻨﻣآ",
+            "ﻲﺟﺎﳊا"
+          ],
+          "anchors": [
+            "املصطفي",
+            "فهيم",
+            "امنة",
+            "احلاجي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 13,
+      "constituency_id": "ain-sebaa-hay-mohammadi",
+      "historical_constituency": "Aïn-Sebaâ - Hay-Mohammadi",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": true,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_2_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "عين السبع الحي المحمدي"
+      ],
+      "matched_header_pattern": "عينالسبعالحيالمحمدي",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 308.38,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﻲﺷﺎﻳﺮﻟا"
+          ],
+          "anchors": [
+            "الرياشي"
+          ],
+          "line_candidates": [],
+          "guess": "مد الرياشي"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 459.26,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "مدير وكالة",
+          "raw_words": [
+            "ﺮﻳﺪﻣ",
+            "ﺔﻟﺎﻛو"
+          ],
+          "anchors": [
+            "مدير",
+            "وكالة"
+          ],
+          "line_candidates": [
+            "مدير وكالة"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 462.38,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "لطيفة بلعرش مسعود ا اد",
+          "raw_words": [
+            "ﺔﻔﻴﻄﻟ",
+            "شﺮﻌﻠﺑ",
+            "دﻮﻌﺴﻣ",
+            "دﺎ‹أ"
+          ],
+          "anchors": [
+            "لطيفة",
+            "بلعرش",
+            "مسعود",
+            "ا اد"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "marrakech-safi",
+      "page": 8,
+      "constituency_id": "essaouira",
+      "historical_constituency": "Essaouira",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": true,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r1_b0",
+        "CANDIDATE_COUNT_2_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "الصويرة"
+      ],
+      "matched_header_pattern": "الصويرة",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 307.27,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "الدميقراطية للمنتخبني التقدميني",
+          "raw_words": [
+            "ﺔﻴﻃاﺮﻘﳝﺪﻟا",
+            "ﲔﺒﺨﺘﻨﻤﻠﻟ",
+            "ﲔﻴﻣﺪﻘﺘﻟا"
+          ],
+          "anchors": [
+            "الدميقراطية",
+            "للمنتخبني",
+            "التقدميني"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 447.62,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "مراكش اسفي",
+          "raw_words": [
+            "ﺶﻛاﺮﻣ",
+            "ﻲﻔﺳآ"
+          ],
+          "anchors": [
+            "مراكش",
+            "اسفي"
+          ],
+          "line_candidates": [
+            "مراكش اسفي"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 450.21,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﻲﻣوﺮﻜﻟا"
+          ],
+          "anchors": [
+            "الكرومي"
+          ],
+          "line_candidates": [],
+          "guess": "مد الكرومي"
+        }
+      ]
+    },
+    {
+      "region": "oriental",
+      "page": 2,
+      "constituency_id": "figuig",
+      "historical_constituency": "Figuig",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": true,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b2",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "فجيج"
+      ],
+      "matched_header_pattern": "فجيج",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 393.74,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﺶﻴﻠﻴﻌﺑ"
+          ],
+          "anchors": [
+            "بعيليش"
+          ],
+          "line_candidates": [],
+          "guess": "مد بعيليش"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 416.18,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "مسعود حركاس",
+          "raw_words": [
+            "دﻮﻌﺴﻣ",
+            "سﺎﻛﺮﺣ"
+          ],
+          "anchors": [
+            "مسعود",
+            "حركاس"
+          ],
+          "line_candidates": [
+            "مسعود حركاس"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 416.18,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "البش رحاوي",
+          "raw_words": [
+            "ƒﺸﺒﻟا",
+            "يوﺎﺣر"
+          ],
+          "anchors": [
+            "البش",
+            "رحاوي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "oriental",
+      "page": 5,
+      "constituency_id": "nador",
+      "historical_constituency": "Nador",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": true,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r1_b1",
+        "CANDIDATE_COUNT_2_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "الناظور",
+        "جواد بنعلي",
+        "اطار بالوكاية الحضرية للناظور"
+      ],
+      "matched_header_pattern": "الناظور",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 313.63,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "اطار بالوكاية احلضرية للناظور",
+          "raw_words": [
+            "رﺎﻃإ",
+            "ﺔﻳﺎﻛﻮﻟﺎﺑ",
+            "ﺔﻳﺮﻀﳊا",
+            "رﻮﻇﺎﻨﻠﻟ"
+          ],
+          "anchors": [
+            "اطار",
+            "بالوكاية",
+            "احلضرية",
+            "للناظور"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 497.28,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺐﺋﺎﻨﻟا"
+          ],
+          "anchors": [
+            "النائب"
+          ],
+          "line_candidates": [
+            "النائب الثا",
+            "النائب الثالث لرئيس جماعة"
+          ],
+          "guess": "النائب"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 470.75,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "فريد عزاوي احمد احلدوتي",
+          "raw_words": [
+            "ﺪﻳﺮﻓ",
+            "يواﺰﻋ",
+            "ﺪﻤﺣا",
+            "ﻲﺗوﺪﳊا"
+          ],
+          "anchors": [
+            "فريد",
+            "عزاوي",
+            "احمد",
+            "احلدوتي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "oriental",
+      "page": 6,
+      "constituency_id": "berkane",
+      "historical_constituency": "Berkane",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": true,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "بركان"
+      ],
+      "matched_header_pattern": "بركان",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 411.21,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "خليد عزوزي",
+          "raw_words": [
+            "ﺪﻴﻠﺧ",
+            "يزوﺰﻋ"
+          ],
+          "anchors": [
+            "خليد",
+            "عزوزي"
+          ],
+          "line_candidates": [
+            "خليد عزوزي"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 413.18,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "تﺎﻳﻮﻧﺎﺛ"
+          ],
+          "anchors": [
+            "ثانويات"
+          ],
+          "line_candidates": [],
+          "guess": "مد ثانويات"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 413.18,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "عبد الصمد بودشيش",
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "ﺪﻤﺼﻟا",
+            "ﺶﻴﺷدﻮﺑ"
+          ],
+          "anchors": [
+            "عبد",
+            "الصمد",
+            "بودشيش"
+          ],
+          "line_candidates": [
+            "عبد الصمد بودشيش"
+          ],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "rabat-sale-kenitra",
+      "page": 10,
+      "constituency_id": "tiflet-rommani",
+      "historical_constituency": "Tifelt - Rommani",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": true,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "تيفلت الرماني",
+        "احمد الهيلع",
+        "طبيب"
+      ],
+      "matched_header_pattern": "تيفلتالرماني",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 413.74,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "احمد الهيلع",
+          "raw_words": [
+            "ﺪﻤﺣأ",
+            "ﻊﻠﻴﻬﻟا"
+          ],
+          "anchors": [
+            "احمد",
+            "الهيلع"
+          ],
+          "line_candidates": [
+            "احمد الهيلع"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 412.5,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "(cid:157)ا",
+            "ﻞﻐﺟأ"
+          ],
+          "anchors": [
+            "عبد",
+            "اجغل"
+          ],
+          "line_candidates": [],
+          "guess": "عبد ا اجغل"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 412.5,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "الطيبي بنحميدان",
+          "raw_words": [
+            "ﻲﺒﻴﻄﻟا",
+            "ناﺪﻴﻤﺤﻨﺑ"
+          ],
+          "anchors": [
+            "الطيبي",
+            "بنحميدان"
+          ],
+          "line_candidates": [
+            "الطيبي بنحميدان"
+          ],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "souss-massa",
+      "page": 5,
+      "constituency_id": "taroudant-sud",
+      "historical_constituency": "Taroudannt - Al-Janoubia",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": true,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r1_b1",
+        "CANDIDATE_COUNT_2_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "تارودانت الجنوبية",
+        "حسن الهياق",
+        "مس",
+        "عائشة همشان"
+      ],
+      "matched_header_pattern": "تارودانتالجنوبية",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 304.38,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "حسن الهياق",
+          "raw_words": [
+            "ﻦﺴﺣ",
+            "قﺎﻴﻬﻟا"
+          ],
+          "anchors": [
+            "حسن",
+            "الهياق"
+          ],
+          "line_candidates": [
+            "حسن الهياق"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 448.7,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "لوﺎﻘﻣ"
+          ],
+          "anchors": [
+            "مقاول"
+          ],
+          "line_candidates": [],
+          "guess": "مقاول"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 465.05,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "عائشة همشان حسن اكزول",
+          "raw_words": [
+            "ﺔﺸﺋﺎﻋ",
+            "نﺎﺸﻤﻫ",
+            "ﻦﺴﺣ",
+            "لوﺰﻛا"
+          ],
+          "anchors": [
+            "عائشة",
+            "همشان",
+            "حسن",
+            "اكزول"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "tanger-tetouan-al-hoceima",
+      "page": 3,
+      "constituency_id": "al-hoceima",
+      "historical_constituency": "Al-Hoceïma",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": true,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_2_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "الحسيمة",
+        "الخاضر ابكس",
+        "متقاعد",
+        "احمد الشريك"
+      ],
+      "matched_header_pattern": "الحسيمة",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 304.43,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺮﺿﺎﳋا",
+            "ن(cid:12)ﺴﻜﺑا"
+          ],
+          "anchors": [
+            "اخلاضر"
+          ],
+          "line_candidates": [],
+          "guess": "اخلاضر ابكس ن"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 461.82,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "نائب رئيس اجمللس اجلهوي",
+          "raw_words": [
+            "ﺐﺋﺎﻧ",
+            "ﺲﻴﺋر",
+            "ﺲﻠﻟﻤﺠا",
+            "يﻮﻬﳉا"
+          ],
+          "anchors": [
+            "نائب",
+            "رئيس",
+            "اجمللس",
+            "اجلهوي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 463.43,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "احمد الشريك مد اخلطابي",
+          "raw_words": [
+            "ﺪﻤﺣأ",
+            "ﻚﻳﺮﺸﻟا",
+            "ﺪﻤ",
+            "ﻲﺑﺎﻄﳋا"
+          ],
+          "anchors": [
+            "احمد",
+            "الشريك",
+            "اخلطابي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "souss-massa",
+      "page": 4,
+      "constituency_id": "taroudant-nord",
+      "historical_constituency": "Taroudannt - Chamalia",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": true,
+      "resolved_card_names": 1,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_1_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "تارودانت الشمالية"
+      ],
+      "matched_header_pattern": "تارودانتالشمالية",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 419.02,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "عبد اللطيف اشكري",
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "ﻒﻴﻄﻠﻟا",
+            "يﺮﻜﺷا"
+          ],
+          "anchors": [
+            "عبد",
+            "اللطيف",
+            "اشكري"
+          ],
+          "line_candidates": [
+            "عبد اللطيف اشكري"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 413.18,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﻲﻠﻋدا"
+          ],
+          "anchors": [
+            "ادعلي"
+          ],
+          "line_candidates": [],
+          "guess": "مد ادعلي"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 413.18,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﺎﻜﻠﻴﺑ"
+          ],
+          "anchors": [
+            "بيلكا"
+          ],
+          "line_candidates": [],
+          "guess": "مد بيلكا"
+        }
+      ]
+    },
+    {
+      "region": "dakhla-oued-ed-dahab",
+      "page": 1,
+      "constituency_id": "oued-eddahab",
+      "historical_constituency": "Oued-Ed-Dahab",
+      "historical_seats_2016": 2,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 1,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_1_NE_SEATS_2"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "وادي الذهب",
+        "عمر الشرقاوي",
+        "فاعل جمعوي",
+        "عبد الكريم الغزا"
+      ],
+      "matched_header_pattern": "واديالذهب",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 436.19,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "عمر الشرقاوي",
+          "raw_words": [
+            "ﺮﻤﻋ",
+            "يوﺎﻗﺮﺸﻟا"
+          ],
+          "anchors": [
+            "عمر",
+            "الشرقاوي"
+          ],
+          "line_candidates": [
+            "عمر الشرقاوي"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 431.34,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "ﱘﺮﻜﻟا",
+            "(cid:3)اﺰﻐﻟا"
+          ],
+          "anchors": [
+            "عبد",
+            "الكرمي"
+          ],
+          "line_candidates": [],
+          "guess": "عبد الكرمي الغزا"
+        }
+      ]
+    },
+    {
+      "region": "fes-meknes",
+      "page": 6,
+      "constituency_id": "el-hajeb",
+      "historical_constituency": "El-Hajeb",
+      "historical_seats_2016": 2,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 1,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_1_NE_SEATS_2"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "الحاجب",
+        "فلاح",
+        "ملود امرد"
+      ],
+      "matched_header_pattern": "الحاجب",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 437.6,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:8)",
+            "نﺎﻳﺰﻣا"
+          ],
+          "anchors": [
+            "امزيان"
+          ],
+          "line_candidates": [],
+          "guess": "مد امزيان"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 433.98,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "ملود امرد",
+          "raw_words": [
+            "دﻮﻠﻣ",
+            "دﺮﻣا"
+          ],
+          "anchors": [
+            "ملود",
+            "امرد"
+          ],
+          "line_candidates": [
+            "ملود امرد"
+          ],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "guelmim-oued-noun",
+      "page": 2,
+      "constituency_id": "tan-tan",
+      "historical_constituency": "Tan-Tan",
+      "historical_seats_2016": 2,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 1,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_1_NE_SEATS_2"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "طانطان",
+        "زينب ابوه",
+        "تاجرة",
+        "فاعلة جمعوية"
+      ],
+      "matched_header_pattern": "طانطان",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 437.16,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "زينب ابوه",
+          "raw_words": [
+            "ﺐﻨﻳز",
+            "هﻮﺑا"
+          ],
+          "anchors": [
+            "زينب",
+            "ابوه"
+          ],
+          "line_candidates": [
+            "زينب ابوه"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 428.55,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺔﳌﺎﺳ",
+            "(cid:2)ﺧو"
+          ],
+          "anchors": [
+            "ساملة"
+          ],
+          "line_candidates": [],
+          "guess": "ساملة وخ"
+        }
+      ]
+    },
+    {
+      "region": "souss-massa",
+      "page": 7,
+      "constituency_id": "tata",
+      "historical_constituency": "Tata",
+      "historical_seats_2016": 2,
+      "already_passes_via_pjd": false,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 1,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_1_NE_SEATS_2"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "طاطا",
+        "اسماعيل اوسا",
+        "طالب جامعي",
+        "فاعل جمعوي"
+      ],
+      "matched_header_pattern": "طاطا",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 408.11,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "اسماعيل بلشيش",
+          "raw_words": [
+            "ﻞﻴﻋﺎﻤﺳإ",
+            "ﺶﻴﺸﻠﺑ"
+          ],
+          "anchors": [
+            "اسماعيل",
+            "بلشيش"
+          ],
+          "line_candidates": [
+            "اسماعيل بلشيش"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 412.28,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﻞﻴﻋﺎﻤﺳا",
+            "(cid:13)ﺎﺳوا"
+          ],
+          "anchors": [
+            "اسماعيل"
+          ],
+          "line_candidates": [
+            "اسماعيل اوسا",
+            "اسماعيل بلشيش"
+          ],
+          "guess": "اسماعيل اوسا"
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 11,
+      "constituency_id": "settat",
+      "historical_constituency": "Settat",
+      "historical_seats_2016": 6,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 5,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_5_NE_SEATS_6"
+      ],
+      "header_lines": [
+        "انميلي سعيد",
+        "مفوض قضائي",
+        "رئيس جماعة",
+        "عين الضربان لحلاف",
+        "يوسف لعيا",
+        "فلاح",
+        "عضو بالغرفة الفلاحية",
+        "لجهة الدار البيضاء سطات"
+      ],
+      "matched_header_pattern": "سطات",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 303.16,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "امنيلي سعيد",
+          "raw_words": [
+            "ﻲﻠﻴﳕأ",
+            "ﺪﻴﻌﺳ"
+          ],
+          "anchors": [
+            "امنيلي",
+            "سعيد"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 301.44,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "عضو بالغرفة الفالحية",
+          "raw_words": [
+            "ﻮﻀﻋ",
+            "ﺔﻓﺮﻐﻟﺎﺑ",
+            "ﺔﻴﺣﻼﻔﻟا"
+          ],
+          "anchors": [
+            "عضو",
+            "بالغرفة",
+            "الفالحية"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 305.8,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "لوﺎﻘﻣ"
+          ],
+          "anchors": [
+            "مقاول"
+          ],
+          "line_candidates": [],
+          "guess": "مقاول"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 2,
+          "first_line_top": 460.27,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "احلاج عبد السالم",
+          "raw_words": [
+            "جﺎﳊا",
+            "ﺪﺒﻋ",
+            "مﻼﺴﻟا"
+          ],
+          "anchors": [
+            "احلاج",
+            "عبد",
+            "السالم"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 459.8,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "جبلي حجاج مزابي",
+          "raw_words": [
+            "ﻲﻠﺒﺟ",
+            "جﺎﺠﺣ",
+            "ﻲﺑاﺰﻣ"
+          ],
+          "anchors": [
+            "جبلي",
+            "حجاج",
+            "مزابي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 459.3,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "حلسن طلحة",
+          "raw_words": [
+            "ﻦﺴﳊ",
+            "ﺔﺤﻠﻃ"
+          ],
+          "anchors": [
+            "حلسن",
+            "طلحة"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "rabat-sale-kenitra",
+      "page": 5,
+      "constituency_id": "rabat-ocean",
+      "historical_constituency": "Rabat - El Mouhit",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 3,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_3_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "الرباط المحيط",
+        "حسن المزدوي"
+      ],
+      "matched_header_pattern": "الرباطالمحيط",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 309.43,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "حسن املزدوي",
+          "raw_words": [
+            "ﻦﺴﺣ",
+            "يودﺰﳌا"
+          ],
+          "anchors": [
+            "حسن",
+            "املزدوي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 456.19,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "عضو املكتب السياسي للحزب",
+          "raw_words": [
+            "ﻮﻀﻋ",
+            "ﺐﺘﻜﳌا",
+            "ﻲﺳﺎﻴﺴﻟا",
+            "بﺰﺤﻠﻟ"
+          ],
+          "anchors": [
+            "عضو",
+            "املكتب",
+            "السياسي",
+            "للحزب"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 461.6,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "عزيز لبيب",
+          "raw_words": [
+            "ﺰﻳﺰﻋ",
+            "ﺐﻴﺒﻟ"
+          ],
+          "anchors": [
+            "عزيز",
+            "لبيب"
+          ],
+          "line_candidates": [
+            "عزيز لبيب"
+          ],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "draa-tafilalet",
+      "page": 1,
+      "constituency_id": "tinghir",
+      "historical_constituency": "Tinghir",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "تنغير"
+      ],
+      "matched_header_pattern": "تنغير",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 383.35,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "احلسني عدنان",
+          "raw_words": [
+            "ﲔﺴﳊا",
+            "نﺎﻧﺪﻋ"
+          ],
+          "anchors": [
+            "احلسني",
+            "عدنان"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 412.13,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ودأ"
+          ],
+          "anchors": [
+            "ادو"
+          ],
+          "line_candidates": [],
+          "guess": "مد ادو"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 412.13,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "موحي بغاط",
+          "raw_words": [
+            "ﻰﺣﻮﻣ",
+            "طﺎﻐﺑ"
+          ],
+          "anchors": [
+            "موحي",
+            "بغاط"
+          ],
+          "line_candidates": [
+            "موحي بغاط"
+          ],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "draa-tafilalet",
+      "page": 2,
+      "constituency_id": "zagora",
+      "historical_constituency": "Zagora",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "زاكورة",
+        "هند كنانة",
+        "مس"
+      ],
+      "matched_header_pattern": "زاكورة",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 408.28,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "هند كنانة",
+          "raw_words": [
+            "ﺪﻨﻫ",
+            "ﺔﻧﺎﻨﻛ"
+          ],
+          "anchors": [
+            "هند",
+            "كنانة"
+          ],
+          "line_candidates": [
+            "هند كنانة"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 387.7,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "فؤاد الورزازي",
+          "raw_words": [
+            "داﺆﻓ",
+            "يزازرﻮﻟا"
+          ],
+          "anchors": [
+            "فؤاد",
+            "الورزازي"
+          ],
+          "line_candidates": [
+            "فؤاد الورزازي"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 389.4,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻋﺎﻘﺘﻣ"
+          ],
+          "anchors": [
+            "متقاعد"
+          ],
+          "line_candidates": [],
+          "guess": "متقاعد"
+        }
+      ]
+    },
+    {
+      "region": "draa-tafilalet",
+      "page": 3,
+      "constituency_id": "midelt",
+      "historical_constituency": "Midelt",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "ميدلت",
+        "موحي اعسيلا",
+        "مقاول"
+      ],
+      "matched_header_pattern": "ميدلت",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 416.19,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "موحي اعسيال",
+          "raw_words": [
+            "ﻰﺣﻮﻣ",
+            "ﻼﻴﺴﻋا"
+          ],
+          "anchors": [
+            "موحي",
+            "اعسيال"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 399.79,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:143)",
+            "يزوﺰﻣأ"
+          ],
+          "anchors": [
+            "امزوزي"
+          ],
+          "line_candidates": [],
+          "guess": "مد امزوزي"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 408.23,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "موحي اوكدا",
+          "raw_words": [
+            "ﻰﺣﻮﻣ",
+            "اﺪﻛوأ"
+          ],
+          "anchors": [
+            "موحي",
+            "اوكدا"
+          ],
+          "line_candidates": [
+            "موحي اوكدا"
+          ],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "draa-tafilalet",
+      "page": 4,
+      "constituency_id": "ouarzazate",
+      "historical_constituency": "Ouarzazate",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "ورزازات",
+        "اعمال حرة"
+      ],
+      "matched_header_pattern": "ورزازات",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 391.31,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "نائب رئيس جهة درعة تافياللت",
+          "raw_words": [
+            "ﺐﺋﺎﻧ",
+            "ﺲﻴﺋر",
+            "ﺔﻬﺟ",
+            "ﺔﻋرد",
+            "ﺖﻟﻼﻴﻓﺎﺗ"
+          ],
+          "anchors": [
+            "نائب",
+            "رئيس",
+            "جهة",
+            "درعة",
+            "تافياللت"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 404.13,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:7)",
+            "ﺖﻳا",
+            "ﺪﻳﺰﻴﻟا"
+          ],
+          "anchors": [
+            "ايت",
+            "اليزيد"
+          ],
+          "line_candidates": [],
+          "guess": "مد ايت اليزيد"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 412.13,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "يوسف البوها",
+          "raw_words": [
+            "ﻒﺳﻮﻳ",
+            "ƒﺎﻫﻮﺒﻟا"
+          ],
+          "anchors": [
+            "يوسف",
+            "البوها"
+          ],
+          "line_candidates": [
+            "يوسف البوها"
+          ],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "fes-meknes",
+      "page": 7,
+      "constituency_id": "karia-ghafsay",
+      "historical_constituency": "Karia - Rhafsai",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b2",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "القرية غفساي"
+      ],
+      "matched_header_pattern": "القريةغفساي",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 421.69,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "يوﺎﻨﳊا"
+          ],
+          "anchors": [
+            "احلناوي"
+          ],
+          "line_candidates": [],
+          "guess": "مد احلناوي"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 413.4,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "نو الدين احلوسني",
+          "raw_words": [
+            "ﻮﻧ",
+            "ﻦﻳﺪﻟا",
+            "ﻲﻨﺳﻮﳊا"
+          ],
+          "anchors": [
+            "الدين",
+            "احلوسني"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 413.4,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "عبد الرحمان هيدور",
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "نﺎﻤﺣﺮﻟا",
+            "روﺪﻴﻫ"
+          ],
+          "anchors": [
+            "عبد",
+            "الرحمان",
+            "هيدور"
+          ],
+          "line_candidates": [
+            "عبد الرحمان هيدور"
+          ],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "fes-meknes",
+      "page": 11,
+      "constituency_id": "sefrou",
+      "historical_constituency": "Sefrou",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "صفرو"
+      ],
+      "matched_header_pattern": "صفرو",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 414.74,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "ادريس بوطاهر",
+          "raw_words": [
+            "ﺲﻳردإ",
+            "ﺮﻫﺎﻃﻮﺑ"
+          ],
+          "anchors": [
+            "ادريس",
+            "بوطاهر"
+          ],
+          "line_candidates": [
+            "ادريس بوطاهر"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 412.13,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "يداﺪﻐﺒﻟا"
+          ],
+          "anchors": [
+            "البغدادي"
+          ],
+          "line_candidates": [],
+          "guess": "مد البغدادي"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 411.13,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "حميد لمش",
+          "raw_words": [
+            "ﺪﻴﻤﺣ",
+            "ح(cid:144)ﺸﳌ"
+          ],
+          "anchors": [
+            "حميد"
+          ],
+          "line_candidates": [
+            "حميد لمش"
+          ],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "marrakech-safi",
+      "page": 2,
+      "constituency_id": "medina-sidi-youssef",
+      "historical_constituency": "Médina - Sidi-Youssef-Ben-Ali",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "المدينة سيدي يوسف بن علي"
+      ],
+      "matched_header_pattern": "المدينةسيدييوسفبنعلي",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 411.16,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "موالي عبد العزيز املعيار",
+          "raw_words": [
+            "يﻻﻮﻣ",
+            "ﺪﺒﻋ",
+            "ﺰﻳﺰﻌﻟا",
+            "رﺎﻴﻌﳌا"
+          ],
+          "anchors": [
+            "موالي",
+            "عبد",
+            "العزيز",
+            "املعيار"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 411.16,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "االدريسي موالي رشيد العلوي",
+          "raw_words": [
+            "ﻲﺴﻳردﻻا",
+            "يﻻﻮﻣ",
+            "ﺪﻴﺷر",
+            "يﻮﻠﻌﻟا"
+          ],
+          "anchors": [
+            "االدريسي",
+            "موالي",
+            "رشيد",
+            "العلوي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 414.08,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﺪﻟو",
+            "ﺔﺤﻠﺸﻟا"
+          ],
+          "anchors": [
+            "ولد",
+            "الشلحة"
+          ],
+          "line_candidates": [],
+          "guess": "مد ولد الشلحة"
+        }
+      ]
+    },
+    {
+      "region": "marrakech-safi",
+      "page": 3,
+      "constituency_id": "chichaoua",
+      "historical_constituency": "Chichaoua",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r1_b1",
+        "CANDIDATE_COUNT_2_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "شيشاوة"
+      ],
+      "matched_header_pattern": "شيشاوة",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 309.43,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "كرمي بن لكطو",
+          "raw_words": [
+            "ﱘﺮﻛ",
+            "ﻦﺑ",
+            "ﻮﻄﻜﻟ"
+          ],
+          "anchors": [
+            "كرمي",
+            "لكطو"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 451.76,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "لوﺎﻘﻣ"
+          ],
+          "anchors": [
+            "مقاول"
+          ],
+          "line_candidates": [],
+          "guess": "مقاول"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 461.43,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "حميد الشاوي موالي عبد السالم ابوزيد",
+          "raw_words": [
+            "ﺪﻴﻤﺣ",
+            "يوﺎﺸﻟا",
+            "يﻻﻮﻣ",
+            "ﺪﺒﻋ",
+            "مﻼﺴﻟا",
+            "ﺪﻳزﻮﺑأ"
+          ],
+          "anchors": [
+            "حميد",
+            "الشاوي",
+            "موالي",
+            "عبد",
+            "السالم",
+            "ابوزيد"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "marrakech-safi",
+      "page": 4,
+      "constituency_id": "el-kelaa-des-sraghna",
+      "historical_constituency": "El-Kelâa-des-Sraghna",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r1_b0",
+        "CANDIDATE_COUNT_2_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "قلعة السراغنة"
+      ],
+      "matched_header_pattern": "قلعةالسراغنة",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 315.96,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "كمال الطاهري",
+          "raw_words": [
+            "لﺎﻤﻛ",
+            "يﺮﻫﺎﻄﻟا"
+          ],
+          "anchors": [
+            "كمال",
+            "الطاهري"
+          ],
+          "line_candidates": [
+            "كمال الطاهري"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 461.01,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "رئيس لس جهة",
+          "raw_words": [
+            "ﺲﻴﺋر",
+            "ﺲﻠŽ",
+            "ﺔﻬﺟ"
+          ],
+          "anchors": [
+            "رئيس",
+            "جهة"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 477.08,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﻲﻣوﺮﻜﻟا"
+          ],
+          "anchors": [
+            "الكرومي"
+          ],
+          "line_candidates": [],
+          "guess": "مد الكرومي"
+        }
+      ]
+    },
+    {
+      "region": "rabat-sale-kenitra",
+      "page": 2,
+      "constituency_id": "sidi-slimane",
+      "historical_constituency": "Sidi Slimane",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_2_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "سيدي سليمان"
+      ],
+      "matched_header_pattern": "سيديسليمان",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 418.07,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "خالد العسري",
+          "raw_words": [
+            "ﺪﻟﺎﺧ",
+            "يﺮﺴﻌﻟا"
+          ],
+          "anchors": [
+            "خالد",
+            "العسري"
+          ],
+          "line_candidates": [
+            "خالد العسري"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 411.79,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﻖﻴﻔﺷ"
+          ],
+          "anchors": [
+            "شفيق"
+          ],
+          "line_candidates": [],
+          "guess": "مد شفيق"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 411.79,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "عبد ا اله املصمودي",
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "هﻻ‡ا",
+            "يدﻮﻤﺼﳌا"
+          ],
+          "anchors": [
+            "عبد",
+            "ا اله",
+            "املصمودي"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "tanger-tetouan-al-hoceima",
+      "page": 7,
+      "constituency_id": "chefchaouen",
+      "historical_constituency": "Chefchaouen",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 2,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r1_b1",
+        "CANDIDATE_COUNT_2_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "شفشاون",
+        "الحسين اورياغل",
+        "تاجر"
+      ],
+      "matched_header_pattern": "شفشاون",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 308.43,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "احلسني اورياغل",
+          "raw_words": [
+            "ﲔﺴﳊا",
+            "ﻞﻏﺎﻳروا"
+          ],
+          "anchors": [
+            "احلسني",
+            "اورياغل"
+          ],
+          "line_candidates": [],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 459.4,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "لوﺎﻘﻣ"
+          ],
+          "anchors": [
+            "مقاول"
+          ],
+          "line_candidates": [],
+          "guess": "مقاول"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 464.93,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "مصطفي احموت حامد السرغيني",
+          "raw_words": [
+            "ﻰﻔﻄﺼﻣ",
+            "تﻮﻤﺣأ",
+            "ﺪﻣﺎﺣ",
+            "ﻲﻨﻴﻏﺮﺴﻟا"
+          ],
+          "anchors": [
+            "مصطفي",
+            "احموت",
+            "حامد",
+            "السرغيني"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 3,
+      "constituency_id": "bzou-ouaouizeght",
+      "historical_constituency": "Bzou - Ouaouizaght",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 1,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_1_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "بزو واويزغت",
+        "رجل اعمال"
+      ],
+      "matched_header_pattern": "بزوواويزغت",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 419.74,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "صالح ديان",
+          "raw_words": [
+            "ﺢﻟﺎﺻ",
+            "نﺎﻳد"
+          ],
+          "anchors": [
+            "صالح",
+            "ديان"
+          ],
+          "line_candidates": [
+            "صالح ديان"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 413.18,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:8)",
+            "نﻮﺒﺳﺎﺣ"
+          ],
+          "anchors": [
+            "حاسبون"
+          ],
+          "line_candidates": [],
+          "guess": "مد حاسبون"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 413.18,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:8)",
+            "ﻲﻣوﺮﻜﻟا"
+          ],
+          "anchors": [
+            "الكرومي"
+          ],
+          "line_candidates": [],
+          "guess": "مد الكرومي"
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 1,
+      "constituency_id": "ain-chock",
+      "historical_constituency": "Aïn-Chock",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 1,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b2",
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_1_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "عين الشق"
+      ],
+      "matched_header_pattern": "عينالشق",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 420.69,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﲔﺴ(cid:22)",
+            "ﻮﺸﻴﻨﺑ"
+          ],
+          "anchors": [
+            "بنيشو"
+          ],
+          "line_candidates": [],
+          "guess": "سني بنيشو"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 412.13,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "رﻮﺼﻨﻣ"
+          ],
+          "anchors": [
+            "منصور"
+          ],
+          "line_candidates": [],
+          "guess": "مد منصور"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 412.13,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "فدوي مراتب",
+          "raw_words": [
+            "ىوﺪﻓ",
+            "ﺐﺗاﺮﻣ"
+          ],
+          "anchors": [
+            "فدوي",
+            "مراتب"
+          ],
+          "line_candidates": [
+            "فدوي مراتب"
+          ],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "fes-meknes",
+      "page": 1,
+      "constituency_id": "fes-nord",
+      "historical_constituency": "Fès-Chamalia",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 1,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "UNRESOLVED_CARD_r1_b1",
+        "CANDIDATE_COUNT_1_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "فاس الشمالية"
+      ],
+      "matched_header_pattern": "فاسالشمالية",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 308.62,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺮﻤﺜﺘﺴﻣ"
+          ],
+          "anchors": [
+            "مستثمر"
+          ],
+          "line_candidates": [],
+          "guess": "مستثمر"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 460.26,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺮﻤﺜﺘﺴﻣ"
+          ],
+          "anchors": [
+            "مستثمر"
+          ],
+          "line_candidates": [],
+          "guess": "مستثمر"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 463.06,
+          "method": "FIRST_ARABIC_LINE_IN_CARD",
+          "candidate_name_ar": "ليلي الليمو احلسن ساعو",
+          "raw_words": [
+            "ﻰﻠﻴﻟ",
+            "‚ﻮﻤﻴﻠﻟا",
+            "ﻦﺴﳊا",
+            "ﻮﻋﺎﺳ"
+          ],
+          "anchors": [
+            "ليلي",
+            "الليمو",
+            "احلسن",
+            "ساعو"
+          ],
+          "line_candidates": [],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "fes-meknes",
+      "page": 10,
+      "constituency_id": "taounate-tissa",
+      "historical_constituency": "Taounate - Tissa",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 1,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b2",
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_1_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "تاونات تيسة",
+        "عبد اللطيف العباسي",
+        "مدلك طبي"
+      ],
+      "matched_header_pattern": "تاوناتتيسة",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 391.29,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺮﺟﺎﺗ"
+          ],
+          "anchors": [
+            "تاجر"
+          ],
+          "line_candidates": [],
+          "guess": "تاجر"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 383.63,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "عبد اللطيف العباسي",
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "ﻒﻴﻄﻠﻟا",
+            "ﻲﺳﺎﺒﻌﻟا"
+          ],
+          "anchors": [
+            "عبد",
+            "اللطيف",
+            "العباسي"
+          ],
+          "line_candidates": [
+            "عبد اللطيف العباسي"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 391.68,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "حﻼﻓ"
+          ],
+          "anchors": [
+            "فالح"
+          ],
+          "line_candidates": [],
+          "guess": "فالح"
+        }
+      ]
+    },
+    {
+      "region": "marrakech-safi",
+      "page": 7,
+      "constituency_id": "rehamna",
+      "historical_constituency": "Rehamna",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 1,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b2",
+        "UNRESOLVED_CARD_r0_b1",
+        "CANDIDATE_COUNT_1_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "الرحامنة"
+      ],
+      "matched_header_pattern": "الرحامنة",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 413.69,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﺒﻋ",
+            "(cid:127)ا",
+            "حﺎﳒ"
+          ],
+          "anchors": [
+            "عبد",
+            "جناح"
+          ],
+          "line_candidates": [],
+          "guess": "عبد ا جناح"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 410.23,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﻒﺳﻮﻳ",
+            "ﻦﺴ(cid:22)"
+          ],
+          "anchors": [
+            "يوسف"
+          ],
+          "line_candidates": [],
+          "guess": "يوسف سن"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 410.22,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "عبداللطيف بوداد",
+          "raw_words": [
+            "ﻒﻴﻄﻠﻟاﺪﺒﻋ",
+            "دادﻮﺑ"
+          ],
+          "anchors": [
+            "عبداللطيف",
+            "بوداد"
+          ],
+          "line_candidates": [
+            "عبداللطيف بوداد"
+          ],
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "rabat-sale-kenitra",
+      "page": 7,
+      "constituency_id": "skhirate-temara",
+      "historical_constituency": "Skhirate - Témara",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 1,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "UNRESOLVED_CARD_r1_b0",
+        "CANDIDATE_COUNT_1_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "الصخيرات تمارة",
+        "رشيد الطلبة",
+        "رجل اعمال ،مس"
+      ],
+      "matched_header_pattern": "الصخيراتتمارة",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 313.96,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﻞﺟر",
+            "لﺎﻤﻋأ",
+            "(cid:5)ﺴﻣ،",
+            "ﺔﻛﺮﺷ"
+          ],
+          "anchors": [
+            "رجل",
+            "اعمال",
+            "شركة"
+          ],
+          "line_candidates": [],
+          "guess": "رجل اعمال ،مس شركة"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 473.78,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "موزع تجاري،مستشار جماعي",
+          "raw_words": [
+            "عزﻮﻣ"
+          ],
+          "anchors": [
+            "موزع"
+          ],
+          "line_candidates": [
+            "موزع تجاري،مستشار جماعي"
+          ],
+          "guess": null
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 462.25,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ",
+            "كو(cid:157)ﻣ",
+            "حﻼﺻ",
+            "ﻦﻳﺪﻟا",
+            "ﻲﻠﻀﻓ"
+          ],
+          "anchors": [
+            "صالح",
+            "الدين",
+            "فضلي"
+          ],
+          "line_candidates": [],
+          "guess": "مد م وك صالح الدين فضلي"
+        }
+      ]
+    },
+    {
+      "region": "tanger-tetouan-al-hoceima",
+      "page": 2,
+      "constituency_id": "ouezzane",
+      "historical_constituency": "Ouezzane",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 1,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_1_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "وزان"
+      ],
+      "matched_header_pattern": "وزان",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": 417.69,
+          "method": "UNIQUE_PYPDF_LINE_FROM_CARD_ANCHORS",
+          "candidate_name_ar": "سعيد الشرعي",
+          "raw_words": [
+            "ﺪﻴﻌﺳ",
+            "ﻲﻋﺮﺸﻟا"
+          ],
+          "anchors": [
+            "سعيد",
+            "الشرعي"
+          ],
+          "line_candidates": [
+            "سعيد الشرعي"
+          ],
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": 413.18,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "ﺰﻨﻴﻔﻟا"
+          ],
+          "anchors": [
+            "الفينز"
+          ],
+          "line_candidates": [],
+          "guess": "مد الفينز"
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 413.18,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤ(cid:22)",
+            "يﺮﻜﺷ"
+          ],
+          "anchors": [
+            "شكري"
+          ],
+          "line_candidates": [],
+          "guess": "مد شكري"
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 3,
+      "constituency_id": "ben-m-sick",
+      "historical_constituency": "Ben-M'sick",
+      "historical_seats_2016": 3,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 0,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b2",
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "CANDIDATE_COUNT_0_NE_SEATS_3"
+      ],
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "ابن مسيك",
+        "وكيل اللائحة",
+        "عادل سهل"
+      ],
+      "matched_header_pattern": "ابنمسيك",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 2,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        }
+      ]
+    },
+    {
+      "region": "marrakech-safi",
+      "page": 6,
+      "constituency_id": "al-haouz",
+      "historical_constituency": "Al-Haouz",
+      "historical_seats_2016": 4,
+      "already_passes_via_pjd": true,
+      "new_ge3_district_if_recovered": false,
+      "resolved_card_names": 0,
+      "errors": [
+        "UNRESOLVED_CARD_r0_b1",
+        "UNRESOLVED_CARD_r0_b0",
+        "UNRESOLVED_CARD_r1_b1",
+        "UNRESOLVED_CARD_r1_b0",
+        "CANDIDATE_COUNT_0_NE_SEATS_4"
+      ],
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "الحوز"
+      ],
+      "matched_header_pattern": "الحوز",
+      "cards": [
+        {
+          "row": 0,
+          "bin_from_left": 1,
+          "first_line_top": null,
+          "method": "EMPTY_CARD",
+          "candidate_name_ar": null,
+          "raw_words": [],
+          "anchors": null,
+          "line_candidates": null,
+          "guess": null
+        },
+        {
+          "row": 0,
+          "bin_from_left": 0,
+          "first_line_top": 302.88,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ﺪﻤﺣأ",
+            "(cid:2)ﻫز"
+          ],
+          "anchors": [
+            "احمد"
+          ],
+          "line_candidates": [
+            "احمد زه",
+            "احمد علا"
+          ],
+          "guess": "احمد زه"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 1,
+          "first_line_top": 459.21,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "ذﺎﺘﺳأ"
+          ],
+          "anchors": [
+            "استاذ"
+          ],
+          "line_candidates": [],
+          "guess": "استاذ"
+        },
+        {
+          "row": 1,
+          "bin_from_left": 0,
+          "first_line_top": 465.13,
+          "method": "CARD_NAME_UNRESOLVED",
+          "candidate_name_ar": null,
+          "raw_words": [
+            "†ﺎﻌﻟا",
+            "ﺐﻳدﺆﳌا",
+            "ة(cid:2)ﻤﺳ",
+            "ﺔﻗﺎﻣ"
+          ],
+          "anchors": [
+            "العا",
+            "املؤديب",
+            "ماقة"
+          ],
+          "line_candidates": [],
+          "guess": "العا املؤديب سم ة ماقة"
+        }
+      ]
+    }
+  ],
+  "unresolved_header_pages_high_score_first": [
+    {
+      "region": "oriental",
+      "page": 4,
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "الدريوش"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.857143,
+      "second_score": 0.545455,
+      "score_margin": 0.311688,
+      "top_candidates": [
+        {
+          "constituency_id": "driouch",
+          "historical_constituency": "Driouch",
+          "historical_seats_2016": 3,
+          "score": 0.857143,
+          "best_pair": {
+            "header_line": "الدريوش",
+            "variant": "الدرويش"
+          }
+        },
+        {
+          "constituency_id": "nador",
+          "historical_constituency": "Nador",
+          "historical_seats_2016": 4,
+          "score": 0.545455,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الناظور"
+          }
+        },
+        {
+          "constituency_id": "jerada",
+          "historical_constituency": "Jerada",
+          "historical_seats_2016": 2,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "جرادة"
+          }
+        },
+        {
+          "constituency_id": "taourirt",
+          "historical_constituency": "Taourirt",
+          "historical_seats_2016": 2,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "الدريوش",
+            "variant": "تاوريرت"
+          }
+        },
+        {
+          "constituency_id": "oujda-angad",
+          "historical_constituency": "Oujda - Angad",
+          "historical_seats_2016": 4,
+          "score": 0.421053,
+          "best_pair": {
+            "header_line": "رجل اعمال",
+            "variant": "وجدة انجاد"
+          }
+        }
+      ]
+    },
+    {
+      "region": "tanger-tetouan-al-hoceima",
+      "page": 4,
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "العرا"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.833333,
+      "second_score": 0.5,
+      "score_margin": 0.333333,
+      "top_candidates": [
+        {
+          "constituency_id": "larache",
+          "historical_constituency": "Larache",
+          "historical_seats_2016": 4,
+          "score": 0.833333,
+          "best_pair": {
+            "header_line": "العرا",
+            "variant": "العرائش"
+          }
+        },
+        {
+          "constituency_id": "m-diq-fnideq",
+          "historical_constituency": "M'Diq - Fnideq",
+          "historical_seats_2016": 2,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "المعقول",
+            "variant": "المضيق الفنيدق"
+          }
+        },
+        {
+          "constituency_id": "fahs-anjra",
+          "historical_constituency": "Fahs - Anjra",
+          "historical_seats_2016": 2,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الفحص انجرة"
+          }
+        },
+        {
+          "constituency_id": "al-hoceima",
+          "historical_constituency": "Al-Hoceïma",
+          "historical_seats_2016": 4,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "المعقول",
+            "variant": "الحسيمة"
+          }
+        },
+        {
+          "constituency_id": "tanger-assilah",
+          "historical_constituency": "Tanger - Assilah",
+          "historical_seats_2016": 5,
+          "score": 0.421053,
+          "best_pair": {
+            "header_line": "رجل اعمال",
+            "variant": "طنجة اصيلة"
+          }
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 5,
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "الدار البيضا",
+        "عادل مرصد"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.814815,
+      "second_score": 0.6,
+      "score_margin": 0.214815,
+      "top_candidates": [
+        {
+          "constituency_id": "casablanca-anfa",
+          "historical_constituency": "Casablanca - Anfa",
+          "historical_seats_2016": 4,
+          "score": 0.814815,
+          "best_pair": {
+            "header_line": "الدار البيضا",
+            "variant": "الدار البيضاء انفا"
+          }
+        },
+        {
+          "constituency_id": "al-fida-mers-sultan",
+          "historical_constituency": "Al-Fida - Mers-Sultan",
+          "historical_seats_2016": 3,
+          "score": 0.6,
+          "best_pair": {
+            "header_line": "الدار البيضا",
+            "variant": "الفداء مرس السلطان"
+          }
+        },
+        {
+          "constituency_id": "nouaceur",
+          "historical_constituency": "Nouaceur",
+          "historical_seats_2016": 3,
+          "score": 0.545455,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "النواصر"
+          }
+        },
+        {
+          "constituency_id": "el-jadida",
+          "historical_constituency": "El-Jadida",
+          "historical_seats_2016": 6,
+          "score": 0.545455,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الجديدة"
+          }
+        },
+        {
+          "constituency_id": "hay-hassani",
+          "historical_constituency": "Hay-Hassani",
+          "historical_seats_2016": 3,
+          "score": 0.521739,
+          "best_pair": {
+            "header_line": "الدار البيضا",
+            "variant": "الحي الحسني"
+          }
+        }
+      ]
+    },
+    {
+      "region": "rabat-sale-kenitra",
+      "page": 4,
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "الخميسات"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.727273,
+      "second_score": 0.571429,
+      "score_margin": 0.155844,
+      "top_candidates": [
+        {
+          "constituency_id": "khemisset-oulmes",
+          "historical_constituency": "Khémisset - Oulmès",
+          "historical_seats_2016": 3,
+          "score": 0.727273,
+          "best_pair": {
+            "header_line": "الخميسات",
+            "variant": "الخميسات اولماس"
+          }
+        },
+        {
+          "constituency_id": "skhirate-temara",
+          "historical_constituency": "Skhirate - Témara",
+          "historical_seats_2016": 4,
+          "score": 0.571429,
+          "best_pair": {
+            "header_line": "الخميسات",
+            "variant": "الصخيرات تمارة"
+          }
+        },
+        {
+          "constituency_id": "tiflet-rommani",
+          "historical_constituency": "Tifelt - Rommani",
+          "historical_seats_2016": 3,
+          "score": 0.454545,
+          "best_pair": {
+            "header_line": "رجل اعمال",
+            "variant": "تيفلت الرماني"
+          }
+        },
+        {
+          "constituency_id": "sale-medina",
+          "historical_constituency": "Salé - Médina",
+          "historical_seats_2016": 4,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "رجل اعمال",
+            "variant": "سلا المدينة"
+          }
+        },
+        {
+          "constituency_id": "sale-el-jadida",
+          "historical_constituency": "Salé - Al-Jadida",
+          "historical_seats_2016": 3,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "رجل اعمال",
+            "variant": "سلا الجديدة"
+          }
+        }
+      ]
+    },
+    {
+      "region": "guelmim-oued-noun",
+      "page": 1,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "سيدي",
+        "مبارك البطاح",
+        "رجل اعمال",
+        "عضو اللس ا"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.666667,
+      "second_score": 0.5,
+      "score_margin": 0.166667,
+      "top_candidates": [
+        {
+          "constituency_id": "sidi-ifni",
+          "historical_constituency": "Sidi Ifni",
+          "historical_seats_2016": 2,
+          "score": 0.666667,
+          "best_pair": {
+            "header_line": "سيدي",
+            "variant": "سيدي افني"
+          }
+        },
+        {
+          "constituency_id": "assa-zag",
+          "historical_constituency": "Assa-Zag",
+          "historical_seats_2016": 2,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "اسا الزاك"
+          }
+        },
+        {
+          "constituency_id": "tan-tan",
+          "historical_constituency": "Tan-Tan",
+          "historical_seats_2016": 2,
+          "score": 0.4,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "طانطان"
+          }
+        },
+        {
+          "constituency_id": "guelmim",
+          "historical_constituency": "Guelmim",
+          "historical_seats_2016": 2,
+          "score": 0.333333,
+          "best_pair": {
+            "header_line": "المعقول",
+            "variant": "كلميم"
+          }
+        }
+      ]
+    },
+    {
+      "region": "oriental",
+      "page": 3,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "وجدة",
+        "عبد الرحيم بنعلي",
+        "موظف"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.666667,
+      "second_score": 0.615385,
+      "score_margin": 0.051282,
+      "top_candidates": [
+        {
+          "constituency_id": "jerada",
+          "historical_constituency": "Jerada",
+          "historical_seats_2016": 2,
+          "score": 0.666667,
+          "best_pair": {
+            "header_line": "وجدة",
+            "variant": "جرادة"
+          }
+        },
+        {
+          "constituency_id": "oujda-angad",
+          "historical_constituency": "Oujda - Angad",
+          "historical_seats_2016": 4,
+          "score": 0.615385,
+          "best_pair": {
+            "header_line": "وجدة",
+            "variant": "وجدة انجاد"
+          }
+        },
+        {
+          "constituency_id": "nador",
+          "historical_constituency": "Nador",
+          "historical_seats_2016": 4,
+          "score": 0.545455,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الناظور"
+          }
+        },
+        {
+          "constituency_id": "driouch",
+          "historical_constituency": "Driouch",
+          "historical_seats_2016": 3,
+          "score": 0.545455,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الدرويش"
+          }
+        },
+        {
+          "constituency_id": "berkane",
+          "historical_constituency": "Berkane",
+          "historical_seats_2016": 3,
+          "score": 0.333333,
+          "best_pair": {
+            "header_line": "ا",
+            "variant": "بركان"
+          }
+        }
+      ]
+    },
+    {
+      "region": "fes-meknes",
+      "page": 3,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "مو",
+        "اسامة البياز",
+        "تقني متخصص",
+        "فاعل جمعوي"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.636364,
+      "second_score": 0.6,
+      "score_margin": 0.036364,
+      "top_candidates": [
+        {
+          "constituency_id": "fes-nord",
+          "historical_constituency": "Fès-Chamalia",
+          "historical_seats_2016": 4,
+          "score": 0.636364,
+          "best_pair": {
+            "header_line": "اسامة البياز",
+            "variant": "فاس الشمالية"
+          }
+        },
+        {
+          "constituency_id": "fes-sud",
+          "historical_constituency": "Fès-Janoubia",
+          "historical_seats_2016": 4,
+          "score": 0.6,
+          "best_pair": {
+            "header_line": "فاعل جمعوي",
+            "variant": "فاس الجنوبية"
+          }
+        },
+        {
+          "constituency_id": "el-hajeb",
+          "historical_constituency": "El-Hajeb",
+          "historical_seats_2016": 2,
+          "score": 0.6,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الحاجب"
+          }
+        },
+        {
+          "constituency_id": "moulay-yaacoub",
+          "historical_constituency": "Moulay-Yacoub",
+          "historical_seats_2016": 2,
+          "score": 0.470588,
+          "best_pair": {
+            "header_line": "المعقول",
+            "variant": "مولاي يعقوب"
+          }
+        },
+        {
+          "constituency_id": "ifrane",
+          "historical_constituency": "Ifrane",
+          "historical_seats_2016": 2,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "افران"
+          }
+        }
+      ]
+    },
+    {
+      "region": "fes-meknes",
+      "page": 9,
+      "header_lines": [
+        "عبد الرزاق المنصور",
+        "موظف",
+        "رئيس جماعة تايناست",
+        "عزوز كريمة",
+        "تاجر",
+        "النائب ا",
+        "رضوان زريول",
+        "مقاول"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.615385,
+      "second_score": 0.5,
+      "score_margin": 0.115385,
+      "top_candidates": [
+        {
+          "constituency_id": "el-hajeb",
+          "historical_constituency": "El-Hajeb",
+          "historical_seats_2016": 2,
+          "score": 0.615385,
+          "best_pair": {
+            "header_line": "النائب ا",
+            "variant": "الحاجب"
+          }
+        },
+        {
+          "constituency_id": "taza",
+          "historical_constituency": "Taza",
+          "historical_seats_2016": 5,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "تاجر",
+            "variant": "تازة"
+          }
+        },
+        {
+          "constituency_id": "fes-sud",
+          "historical_constituency": "Fès-Janoubia",
+          "historical_seats_2016": 4,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "النائب ا",
+            "variant": "فاس الجنوبية"
+          }
+        },
+        {
+          "constituency_id": "ifrane",
+          "historical_constituency": "Ifrane",
+          "historical_seats_2016": 2,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "تاجر",
+            "variant": "افران"
+          }
+        },
+        {
+          "constituency_id": "taounate-tissa",
+          "historical_constituency": "Taounate - Tissa",
+          "historical_seats_2016": 3,
+          "score": 0.421053,
+          "best_pair": {
+            "header_line": "النائب ا",
+            "variant": "تاونات تيسة"
+          }
+        }
+      ]
+    },
+    {
+      "region": "tanger-tetouan-al-hoceima",
+      "page": 1,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "طنجة",
+        "حياة لاس",
+        "مقاولة",
+        "خب"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.615385,
+      "second_score": 0.545455,
+      "score_margin": 0.06993,
+      "top_candidates": [
+        {
+          "constituency_id": "tanger-assilah",
+          "historical_constituency": "Tanger - Assilah",
+          "historical_seats_2016": 5,
+          "score": 0.615385,
+          "best_pair": {
+            "header_line": "طنجة",
+            "variant": "طنجة اصيلة"
+          }
+        },
+        {
+          "constituency_id": "larache",
+          "historical_constituency": "Larache",
+          "historical_seats_2016": 4,
+          "score": 0.545455,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "العرائش"
+          }
+        },
+        {
+          "constituency_id": "m-diq-fnideq",
+          "historical_constituency": "M'Diq - Fnideq",
+          "historical_seats_2016": 2,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "المعقول",
+            "variant": "المضيق الفنيدق"
+          }
+        },
+        {
+          "constituency_id": "tetouan",
+          "historical_constituency": "Tétouan",
+          "historical_seats_2016": 5,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "طنجة",
+            "variant": "تطوان"
+          }
+        },
+        {
+          "constituency_id": "fahs-anjra",
+          "historical_constituency": "Fahs - Anjra",
+          "historical_seats_2016": 2,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الفحص انجرة"
+          }
+        }
+      ]
+    },
+    {
+      "region": "fes-meknes",
+      "page": 2,
+      "header_lines": [
+        "فاطمة السما",
+        "ممرضة",
+        "عبد ا",
+        "استاذ جامعي",
+        "بوشتي لبيض",
+        "منعش عقاري",
+        "وكيل اللائحة"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.608696,
+      "second_score": 0.47619,
+      "score_margin": 0.132506,
+      "top_candidates": [
+        {
+          "constituency_id": "fes-nord",
+          "historical_constituency": "Fès-Chamalia",
+          "historical_seats_2016": 4,
+          "score": 0.608696,
+          "best_pair": {
+            "header_line": "فاطمة السما",
+            "variant": "فاس الشمالية"
+          }
+        },
+        {
+          "constituency_id": "fes-sud",
+          "historical_constituency": "Fès-Janoubia",
+          "historical_seats_2016": 4,
+          "score": 0.47619,
+          "best_pair": {
+            "header_line": "استاذ جامعي",
+            "variant": "فاس الجنوبية"
+          }
+        },
+        {
+          "constituency_id": "meknes",
+          "historical_constituency": "Meknès",
+          "historical_seats_2016": 6,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "منعش عقاري",
+            "variant": "مكناس"
+          }
+        },
+        {
+          "constituency_id": "boulemane",
+          "historical_constituency": "Boulemane",
+          "historical_seats_2016": 3,
+          "score": 0.4,
+          "best_pair": {
+            "header_line": "عبد ا",
+            "variant": "بولمان"
+          }
+        },
+        {
+          "constituency_id": "taounate-tissa",
+          "historical_constituency": "Taounate - Tissa",
+          "historical_seats_2016": 3,
+          "score": 0.4,
+          "best_pair": {
+            "header_line": "استاذ جامعي",
+            "variant": "تاونات تيسة"
+          }
+        }
+      ]
+    },
+    {
+      "region": "fes-meknes",
+      "page": 5,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "فلاح",
+        "حسن السعودي"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.6,
+      "second_score": 0.521739,
+      "score_margin": 0.078261,
+      "top_candidates": [
+        {
+          "constituency_id": "el-hajeb",
+          "historical_constituency": "El-Hajeb",
+          "historical_seats_2016": 2,
+          "score": 0.6,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الحاجب"
+          }
+        },
+        {
+          "constituency_id": "fes-sud",
+          "historical_constituency": "Fès-Janoubia",
+          "historical_seats_2016": 4,
+          "score": 0.521739,
+          "best_pair": {
+            "header_line": "حسن السعودي",
+            "variant": "فاس الجنوبية"
+          }
+        },
+        {
+          "constituency_id": "moulay-yaacoub",
+          "historical_constituency": "Moulay-Yacoub",
+          "historical_seats_2016": 2,
+          "score": 0.470588,
+          "best_pair": {
+            "header_line": "المعقول",
+            "variant": "مولاي يعقوب"
+          }
+        },
+        {
+          "constituency_id": "fes-nord",
+          "historical_constituency": "Fès-Chamalia",
+          "historical_seats_2016": 4,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "المعقول",
+            "variant": "فاس الشمالية"
+          }
+        },
+        {
+          "constituency_id": "ifrane",
+          "historical_constituency": "Ifrane",
+          "historical_seats_2016": 2,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "افران"
+          }
+        }
+      ]
+    },
+    {
+      "region": "fes-meknes",
+      "page": 4,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "وزان",
+        "احمد الكوراري",
+        "فلاح مستشار جماعي"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.6,
+      "second_score": 0.6,
+      "score_margin": 0.0,
+      "top_candidates": [
+        {
+          "constituency_id": "el-hajeb",
+          "historical_constituency": "El-Hajeb",
+          "historical_seats_2016": 2,
+          "score": 0.6,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الحاجب"
+          }
+        },
+        {
+          "constituency_id": "boulemane",
+          "historical_constituency": "Boulemane",
+          "historical_seats_2016": 3,
+          "score": 0.6,
+          "best_pair": {
+            "header_line": "وزان",
+            "variant": "بولمان"
+          }
+        },
+        {
+          "constituency_id": "fes-nord",
+          "historical_constituency": "Fès-Chamalia",
+          "historical_seats_2016": 4,
+          "score": 0.48,
+          "best_pair": {
+            "header_line": "احمد الكوراري",
+            "variant": "فاس الشمالية"
+          }
+        },
+        {
+          "constituency_id": "fes-sud",
+          "historical_constituency": "Fès-Janoubia",
+          "historical_seats_2016": 4,
+          "score": 0.48,
+          "best_pair": {
+            "header_line": "احمد الكوراري",
+            "variant": "فاس الجنوبية"
+          }
+        },
+        {
+          "constituency_id": "moulay-yaacoub",
+          "historical_constituency": "Moulay-Yacoub",
+          "historical_seats_2016": 2,
+          "score": 0.470588,
+          "best_pair": {
+            "header_line": "المعقول",
+            "variant": "مولاي يعقوب"
+          }
+        }
+      ]
+    },
+    {
+      "region": "souss-massa",
+      "page": 1,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "اشتوكة",
+        "احمد الكعبوز",
+        "مدير مكتب"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.555556,
+      "second_score": 0.5,
+      "score_margin": 0.055556,
+      "top_candidates": [
+        {
+          "constituency_id": "chtouka-ait-baha",
+          "historical_constituency": "Chtouka - Aït-Baha",
+          "historical_seats_2016": 3,
+          "score": 0.555556,
+          "best_pair": {
+            "header_line": "اشتوكة",
+            "variant": "شتوكة ايت باها"
+          }
+        },
+        {
+          "constituency_id": "tata",
+          "historical_constituency": "Tata",
+          "historical_seats_2016": 2,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "طاطا"
+          }
+        },
+        {
+          "constituency_id": "agadir-ida-outanane",
+          "historical_constituency": "Agadir - Ida-ou-Tanane",
+          "historical_seats_2016": 4,
+          "score": 0.416667,
+          "best_pair": {
+            "header_line": "مدير مكتب",
+            "variant": "اكادير اداوتنان"
+          }
+        },
+        {
+          "constituency_id": "taroudant-sud",
+          "historical_constituency": "Taroudannt - Al-Janoubia",
+          "historical_seats_2016": 4,
+          "score": 0.413793,
+          "best_pair": {
+            "header_line": "احمد الكعبوز",
+            "variant": "تارودانت الجنوبية"
+          }
+        },
+        {
+          "constituency_id": "inezgane-ait-melloul",
+          "historical_constituency": "Inézgane - Aït-Melloul",
+          "historical_seats_2016": 3,
+          "score": 0.4,
+          "best_pair": {
+            "header_line": "المعقول",
+            "variant": "انزكان ايت ملول"
+          }
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 6,
+      "header_lines": [
+        "رجل اعمال",
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "الفدا"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.545455,
+      "second_score": 0.545455,
+      "score_margin": 0.0,
+      "top_candidates": [
+        {
+          "constituency_id": "nouaceur",
+          "historical_constituency": "Nouaceur",
+          "historical_seats_2016": 3,
+          "score": 0.545455,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "النواصر"
+          }
+        },
+        {
+          "constituency_id": "el-jadida",
+          "historical_constituency": "El-Jadida",
+          "historical_seats_2016": 6,
+          "score": 0.545455,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الجديدة"
+          }
+        },
+        {
+          "constituency_id": "mohammedia",
+          "historical_constituency": "Mohammadia",
+          "historical_seats_2016": 3,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "المحمدية"
+          }
+        },
+        {
+          "constituency_id": "al-fida-mers-sultan",
+          "historical_constituency": "Al-Fida - Mers-Sultan",
+          "historical_seats_2016": 3,
+          "score": 0.47619,
+          "best_pair": {
+            "header_line": "الفدا",
+            "variant": "الفداء مرس السلطان"
+          }
+        },
+        {
+          "constituency_id": "hay-hassani",
+          "historical_constituency": "Hay-Hassani",
+          "historical_seats_2016": 3,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الحي الحسني"
+          }
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 15,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "مو",
+        "ادريس هركان",
+        "طبيب اخصائي"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.545455,
+      "second_score": 0.545455,
+      "score_margin": 0.0,
+      "top_candidates": [
+        {
+          "constituency_id": "nouaceur",
+          "historical_constituency": "Nouaceur",
+          "historical_seats_2016": 3,
+          "score": 0.545455,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "النواصر"
+          }
+        },
+        {
+          "constituency_id": "el-jadida",
+          "historical_constituency": "El-Jadida",
+          "historical_seats_2016": 6,
+          "score": 0.545455,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الجديدة"
+          }
+        },
+        {
+          "constituency_id": "mediouna",
+          "historical_constituency": "Médiouna",
+          "historical_seats_2016": 2,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "مو",
+            "variant": "مديونة"
+          }
+        },
+        {
+          "constituency_id": "mohammedia",
+          "historical_constituency": "Mohammadia",
+          "historical_seats_2016": 3,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "المحمدية"
+          }
+        },
+        {
+          "constituency_id": "casablanca-anfa",
+          "historical_constituency": "Casablanca - Anfa",
+          "historical_seats_2016": 4,
+          "score": 0.482759,
+          "best_pair": {
+            "header_line": "ادريس هركان",
+            "variant": "الدار البيضاء انفا"
+          }
+        }
+      ]
+    },
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 1,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "يوسف فارس",
+        "فاعل جمعوي"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.533333,
+      "second_score": 0.428571,
+      "score_margin": 0.104762,
+      "top_candidates": [
+        {
+          "constituency_id": "azilal-demnate",
+          "historical_constituency": "Azilal - Demnate",
+          "historical_seats_2016": 3,
+          "score": 0.533333,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "ازيلال دمنات"
+          }
+        },
+        {
+          "constituency_id": "khenifra",
+          "historical_constituency": "Khénifra",
+          "historical_seats_2016": 3,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "يوسف فارس",
+            "variant": "خنيفرة"
+          }
+        },
+        {
+          "constituency_id": "fquih-ben-salah",
+          "historical_constituency": "Fquih Ben Salah",
+          "historical_seats_2016": 4,
+          "score": 0.421053,
+          "best_pair": {
+            "header_line": "المعقول",
+            "variant": "الفقيه بن صالح"
+          }
+        },
+        {
+          "constituency_id": "beni-mellal",
+          "historical_constituency": "Béni-Mellal",
+          "historical_seats_2016": 6,
+          "score": 0.363636,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "بني ملال"
+          }
+        },
+        {
+          "constituency_id": "bzou-ouaouizeght",
+          "historical_constituency": "Bzou - Ouaouizaght",
+          "historical_seats_2016": 3,
+          "score": 0.363636,
+          "best_pair": {
+            "header_line": "صوتوا بوضع علامة علي الكتاب",
+            "variant": "بزو واويزغت"
+          }
+        }
+      ]
+    },
+    {
+      "region": "rabat-sale-kenitra",
+      "page": 3,
+      "header_lines": [
+        "دكتور بيولوجي",
+        "مستشار جماعي",
+        "كناه ادريس",
+        "تقني",
+        "رئيس جماعة زيرارة",
+        "احمد الغزوي",
+        "مدير شركة"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.521739,
+      "second_score": 0.5,
+      "score_margin": 0.021739,
+      "top_candidates": [
+        {
+          "constituency_id": "tiflet-rommani",
+          "historical_constituency": "Tifelt - Rommani",
+          "historical_seats_2016": 3,
+          "score": 0.521739,
+          "best_pair": {
+            "header_line": "مستشار جماعي",
+            "variant": "تيفلت الرماني"
+          }
+        },
+        {
+          "constituency_id": "kenitra",
+          "historical_constituency": "Kénitra",
+          "historical_seats_2016": 4,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "تقني",
+            "variant": "القنيطرة"
+          }
+        },
+        {
+          "constituency_id": "khemisset-oulmes",
+          "historical_constituency": "Khémisset - Oulmès",
+          "historical_seats_2016": 3,
+          "score": 0.48,
+          "best_pair": {
+            "header_line": "مستشار جماعي",
+            "variant": "الخميسات اولماس"
+          }
+        },
+        {
+          "constituency_id": "sale-medina",
+          "historical_constituency": "Salé - Médina",
+          "historical_seats_2016": 4,
+          "score": 0.47619,
+          "best_pair": {
+            "header_line": "كناه ادريس",
+            "variant": "سلا المدينة"
+          }
+        },
+        {
+          "constituency_id": "sale-el-jadida",
+          "historical_constituency": "Salé - Al-Jadida",
+          "historical_seats_2016": 3,
+          "score": 0.47619,
+          "best_pair": {
+            "header_line": "كناه ادريس",
+            "variant": "سلا الجديدة"
+          }
+        }
+      ]
+    },
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 4,
+      "header_lines": [
+        "ساعيد تاري",
+        "تاجر",
+        "عبد الرحيم بن حمو",
+        "سائق",
+        "عبد العا",
+        "عامل",
+        "جمال باحفيض",
+        "عامل"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.516129,
+      "second_score": 0.5,
+      "score_margin": 0.016129,
+      "top_candidates": [
+        {
+          "constituency_id": "fquih-ben-salah",
+          "historical_constituency": "Fquih Ben Salah",
+          "historical_seats_2016": 4,
+          "score": 0.516129,
+          "best_pair": {
+            "header_line": "عبد الرحيم بن حمو",
+            "variant": "الفقيه بن صالح"
+          }
+        },
+        {
+          "constituency_id": "beni-mellal",
+          "historical_constituency": "Béni-Mellal",
+          "historical_seats_2016": 6,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "عبد العا",
+            "variant": "بني ملال"
+          }
+        },
+        {
+          "constituency_id": "azilal-demnate",
+          "historical_constituency": "Azilal - Demnate",
+          "historical_seats_2016": 3,
+          "score": 0.4,
+          "best_pair": {
+            "header_line": "ساعيد تاري",
+            "variant": "ازيلال دمنات"
+          }
+        },
+        {
+          "constituency_id": "bzou-ouaouizeght",
+          "historical_constituency": "Bzou - Ouaouizaght",
+          "historical_seats_2016": 3,
+          "score": 0.315789,
+          "best_pair": {
+            "header_line": "ساعيد تاري",
+            "variant": "بزو واويزغت"
+          }
+        },
+        {
+          "constituency_id": "khenifra",
+          "historical_constituency": "Khénifra",
+          "historical_seats_2016": 3,
+          "score": 0.266667,
+          "best_pair": {
+            "header_line": "ساعيد تاري",
+            "variant": "خنيفرة"
+          }
+        }
+      ]
+    },
+    {
+      "region": "souss-massa",
+      "page": 2,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "عبد ا",
+        "متصرف درجة او",
+        "خريج جامعة فارونيج بروسيا الفدرالية"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.5,
+      "second_score": 0.425532,
+      "score_margin": 0.074468,
+      "top_candidates": [
+        {
+          "constituency_id": "tata",
+          "historical_constituency": "Tata",
+          "historical_seats_2016": 2,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "طاطا"
+          }
+        },
+        {
+          "constituency_id": "taroudant-nord",
+          "historical_constituency": "Taroudannt - Chamalia",
+          "historical_seats_2016": 3,
+          "score": 0.425532,
+          "best_pair": {
+            "header_line": "خريج جامعة فارونيج بروسيا الفدرالية",
+            "variant": "تارودانت الشمالية"
+          }
+        },
+        {
+          "constituency_id": "inezgane-ait-melloul",
+          "historical_constituency": "Inézgane - Aït-Melloul",
+          "historical_seats_2016": 3,
+          "score": 0.4,
+          "best_pair": {
+            "header_line": "المعقول",
+            "variant": "انزكان ايت ملول"
+          }
+        },
+        {
+          "constituency_id": "taroudant-sud",
+          "historical_constituency": "Taroudannt - Al-Janoubia",
+          "historical_seats_2016": 4,
+          "score": 0.4,
+          "best_pair": {
+            "header_line": "متصرف درجة او",
+            "variant": "تارودانت الجنوبية"
+          }
+        },
+        {
+          "constituency_id": "chtouka-ait-baha",
+          "historical_constituency": "Chtouka - Aït-Baha",
+          "historical_seats_2016": 3,
+          "score": 0.342857,
+          "best_pair": {
+            "header_line": "صوتوا بوضع علامة علي الكتاب",
+            "variant": "شتوكة ايت باها"
+          }
+        }
+      ]
+    },
+    {
+      "region": "draa-tafilalet",
+      "page": 5,
+      "header_lines": [
+        "الحسن قاسمي",
+        "رئيس جماعة لولايتين",
+        "حاصل علي الاجازة",
+        "المصطفي الكوط",
+        "اعمال حرة",
+        "عبد ا",
+        "فلاح",
+        "عمر معمر"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.5,
+      "second_score": 0.428571,
+      "score_margin": 0.071429,
+      "top_candidates": [
+        {
+          "constituency_id": "errachidia",
+          "historical_constituency": "Errachidia",
+          "historical_seats_2016": 5,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "اعمال حرة",
+            "variant": "الرشيدية"
+          }
+        },
+        {
+          "constituency_id": "zagora",
+          "historical_constituency": "Zagora",
+          "historical_seats_2016": 3,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "اعمال حرة",
+            "variant": "زاكورة"
+          }
+        },
+        {
+          "constituency_id": "ouarzazate",
+          "historical_constituency": "Ouarzazate",
+          "historical_seats_2016": 3,
+          "score": 0.333333,
+          "best_pair": {
+            "header_line": "رئيس جماعة لولايتين",
+            "variant": "ورزازات"
+          }
+        },
+        {
+          "constituency_id": "midelt",
+          "historical_constituency": "Midelt",
+          "historical_seats_2016": 3,
+          "score": 0.307692,
+          "best_pair": {
+            "header_line": "اعمال حرة",
+            "variant": "ميدلت"
+          }
+        },
+        {
+          "constituency_id": "tinghir",
+          "historical_constituency": "Tinghir",
+          "historical_seats_2016": 3,
+          "score": 0.266667,
+          "best_pair": {
+            "header_line": "الحسن قاسمي",
+            "variant": "تنغير"
+          }
+        }
+      ]
+    },
+    {
+      "region": "guelmim-oued-noun",
+      "page": 4,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "موظف",
+        "فاعل جمعوي"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.5,
+      "second_score": 0.428571,
+      "score_margin": 0.071429,
+      "top_candidates": [
+        {
+          "constituency_id": "assa-zag",
+          "historical_constituency": "Assa-Zag",
+          "historical_seats_2016": 2,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "اسا الزاك"
+          }
+        },
+        {
+          "constituency_id": "guelmim",
+          "historical_constituency": "Guelmim",
+          "historical_seats_2016": 2,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "فاعل جمعوي",
+            "variant": "كلميم"
+          }
+        },
+        {
+          "constituency_id": "tan-tan",
+          "historical_constituency": "Tan-Tan",
+          "historical_seats_2016": 2,
+          "score": 0.4,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "طانطان"
+          }
+        },
+        {
+          "constituency_id": "sidi-ifni",
+          "historical_constituency": "Sidi Ifni",
+          "historical_seats_2016": 2,
+          "score": 0.235294,
+          "best_pair": {
+            "header_line": "فاعل جمعوي",
+            "variant": "سيدي افني"
+          }
+        }
+      ]
+    },
+    {
+      "region": "marrakech-safi",
+      "page": 5,
+      "header_lines": [
+        "عبد الرحيم بومهد",
+        "موظف",
+        "عضو بجماعة اولاد سلمان",
+        "المصطفي الكانو",
+        "رجل اعمال",
+        "عضو بجماعة سيدي تيجي",
+        "موظف"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.5,
+      "second_score": 0.454545,
+      "score_margin": 0.045455,
+      "top_candidates": [
+        {
+          "constituency_id": "gueliz-nakhil",
+          "historical_constituency": "Guéliz - Annakhil",
+          "historical_seats_2016": 3,
+          "score": 0.5,
+          "best_pair": {
+            "header_line": "رجل اعمال",
+            "variant": "جليز النخيل"
+          }
+        },
+        {
+          "constituency_id": "medina-sidi-youssef",
+          "historical_constituency": "Médina - Sidi-Youssef-Ben-Ali",
+          "historical_seats_2016": 3,
+          "score": 0.454545,
+          "best_pair": {
+            "header_line": "عضو بجماعة سيدي تيجي",
+            "variant": "المدينة سيدي يوسف بن علي"
+          }
+        },
+        {
+          "constituency_id": "rehamna",
+          "historical_constituency": "Rehamna",
+          "historical_seats_2016": 3,
+          "score": 0.454545,
+          "best_pair": {
+            "header_line": "عبد الرحيم بومهد",
+            "variant": "الرحامنة"
+          }
+        },
+        {
+          "constituency_id": "el-kelaa-des-sraghna",
+          "historical_constituency": "El-Kelâa-des-Sraghna",
+          "historical_seats_2016": 4,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "المصطفي الكانو",
+            "variant": "قلعة السراغنة"
+          }
+        },
+        {
+          "constituency_id": "al-haouz",
+          "historical_constituency": "Al-Haouz",
+          "historical_seats_2016": 4,
+          "score": 0.421053,
+          "best_pair": {
+            "header_line": "عبد الرحيم بومهد",
+            "variant": "الحوز"
+          }
+        }
+      ]
+    },
+    {
+      "region": "rabat-sale-kenitra",
+      "page": 1,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "س",
+        "مهندس دولة",
+        "نائب رئيس عمدة مدينة سلا"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.47619,
+      "second_score": 0.444444,
+      "score_margin": 0.031746,
+      "top_candidates": [
+        {
+          "constituency_id": "khemisset-oulmes",
+          "historical_constituency": "Khémisset - Oulmès",
+          "historical_seats_2016": 3,
+          "score": 0.47619,
+          "best_pair": {
+            "header_line": "المعقول",
+            "variant": "الخميسات اولماس"
+          }
+        },
+        {
+          "constituency_id": "el-gharb",
+          "historical_constituency": "El-Gharb",
+          "historical_seats_2016": 3,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الغرب"
+          }
+        },
+        {
+          "constituency_id": "rabat-chellah",
+          "historical_constituency": "Rabat - Challah",
+          "historical_seats_2016": 3,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الرباط شالة"
+          }
+        },
+        {
+          "constituency_id": "sale-medina",
+          "historical_constituency": "Salé - Médina",
+          "historical_seats_2016": 4,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "سلا المدينة"
+          }
+        },
+        {
+          "constituency_id": "sale-el-jadida",
+          "historical_constituency": "Salé - Al-Jadida",
+          "historical_seats_2016": 3,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "سلا الجديدة"
+          }
+        }
+      ]
+    },
+    {
+      "region": "rabat-sale-kenitra",
+      "page": 11,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "ا",
+        "الدا",
+        "س",
+        "رشيد حطاد"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.47619,
+      "second_score": 0.444444,
+      "score_margin": 0.031746,
+      "top_candidates": [
+        {
+          "constituency_id": "khemisset-oulmes",
+          "historical_constituency": "Khémisset - Oulmès",
+          "historical_seats_2016": 3,
+          "score": 0.47619,
+          "best_pair": {
+            "header_line": "المعقول",
+            "variant": "الخميسات اولماس"
+          }
+        },
+        {
+          "constituency_id": "el-gharb",
+          "historical_constituency": "El-Gharb",
+          "historical_seats_2016": 3,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الغرب"
+          }
+        },
+        {
+          "constituency_id": "sidi-kacem",
+          "historical_constituency": "Sidi-Kacem",
+          "historical_seats_2016": 5,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "رشيد حطاد",
+            "variant": "سيدي قاسم"
+          }
+        },
+        {
+          "constituency_id": "rabat-chellah",
+          "historical_constituency": "Rabat - Challah",
+          "historical_seats_2016": 3,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "الرباط شالة"
+          }
+        },
+        {
+          "constituency_id": "sale-medina",
+          "historical_constituency": "Salé - Médina",
+          "historical_seats_2016": 4,
+          "score": 0.428571,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "سلا المدينة"
+          }
+        }
+      ]
+    },
+    {
+      "region": "dakhla-oued-ed-dahab",
+      "page": 2,
+      "header_lines": [
+        "المعقول",
+        "صوتوا بوضع علامة علي الكتاب",
+        "الدا",
+        "سيدي باهي",
+        "موظف",
+        "ياسين بوحلا"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.444444,
+      "second_score": 0.421053,
+      "score_margin": 0.023391,
+      "top_candidates": [
+        {
+          "constituency_id": "aousserd",
+          "historical_constituency": "Aousserd",
+          "historical_seats_2016": 2,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "الدا",
+            "variant": "اوسرد"
+          }
+        },
+        {
+          "constituency_id": "oued-eddahab",
+          "historical_constituency": "Oued-Ed-Dahab",
+          "historical_seats_2016": 2,
+          "score": 0.421053,
+          "best_pair": {
+            "header_line": "سيدي باهي",
+            "variant": "وادي الذهب"
+          }
+        }
+      ]
+    },
+    {
+      "region": "tanger-tetouan-al-hoceima",
+      "page": 6,
+      "header_lines": [
+        "ابراهيم بنصبيح",
+        "رئيس جماعة",
+        "زاوية سيدي قاسم",
+        "فلاح",
+        "رئيس جماعة ازلا",
+        "فلاح",
+        "وكيل اللائحة"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.444444,
+      "second_score": 0.444444,
+      "score_margin": 0.0,
+      "top_candidates": [
+        {
+          "constituency_id": "larache",
+          "historical_constituency": "Larache",
+          "historical_seats_2016": 4,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "وكيل اللائحة",
+            "variant": "العرائش"
+          }
+        },
+        {
+          "constituency_id": "al-hoceima",
+          "historical_constituency": "Al-Hoceïma",
+          "historical_seats_2016": 4,
+          "score": 0.444444,
+          "best_pair": {
+            "header_line": "وكيل اللائحة",
+            "variant": "الحسيمة"
+          }
+        },
+        {
+          "constituency_id": "m-diq-fnideq",
+          "historical_constituency": "M'Diq - Fnideq",
+          "historical_seats_2016": 2,
+          "score": 0.413793,
+          "best_pair": {
+            "header_line": "زاوية سيدي قاسم",
+            "variant": "المضيق الفنيدق"
+          }
+        },
+        {
+          "constituency_id": "tanger-assilah",
+          "historical_constituency": "Tanger - Assilah",
+          "historical_seats_2016": 5,
+          "score": 0.4,
+          "best_pair": {
+            "header_line": "رئيس جماعة ازلا",
+            "variant": "طنجة اصيلة"
+          }
+        },
+        {
+          "constituency_id": "chefchaouen",
+          "historical_constituency": "Chefchaouen",
+          "historical_seats_2016": 4,
+          "score": 0.4,
+          "best_pair": {
+            "header_line": "فلاح",
+            "variant": "شفشاون"
+          }
+        }
+      ]
+    },
+    {
+      "region": "beni-mellal-khenifra",
+      "page": 5,
+      "header_lines": [
+        "عبدالصماد خنا",
+        "رجل اعمال",
+        "منصف الرفيق",
+        "مستخدم",
+        "عبدالغني نبوتي",
+        "تاجر",
+        "حميد حدوا",
+        "تاجر"
+      ],
+      "best_hits_from_parser": [],
+      "best_score": 0.434783,
+      "second_score": 0.4,
+      "score_margin": 0.034783,
+      "top_candidates": [
+        {
+          "constituency_id": "azilal-demnate",
+          "historical_constituency": "Azilal - Demnate",
+          "historical_seats_2016": 3,
+          "score": 0.434783,
+          "best_pair": {
+            "header_line": "عبدالصماد خنا",
+            "variant": "ازيلال دمنات"
+          }
+        },
+        {
+          "constituency_id": "beni-mellal",
+          "historical_constituency": "Béni-Mellal",
+          "historical_seats_2016": 6,
+          "score": 0.4,
+          "best_pair": {
+            "header_line": "رجل اعمال",
+            "variant": "بني ملال"
+          }
+        },
+        {
+          "constituency_id": "khenifra",
+          "historical_constituency": "Khénifra",
+          "historical_seats_2016": 3,
+          "score": 0.375,
+          "best_pair": {
+            "header_line": "منصف الرفيق",
+            "variant": "خنيفرة"
+          }
+        },
+        {
+          "constituency_id": "fquih-ben-salah",
+          "historical_constituency": "Fquih Ben Salah",
+          "historical_seats_2016": 4,
+          "score": 0.363636,
+          "best_pair": {
+            "header_line": "منصف الرفيق",
+            "variant": "الفقيه بن صالح"
+          }
+        },
+        {
+          "constituency_id": "bzou-ouaouizeght",
+          "historical_constituency": "Bzou - Ouaouizaght",
+          "historical_seats_2016": 3,
+          "score": 0.347826,
+          "best_pair": {
+            "header_line": "عبدالغني نبوتي",
+            "variant": "بزو واويزغت"
+          }
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 2,
+      "header_lines": [],
+      "best_hits_from_parser": [],
+      "best_score": 0.0,
+      "second_score": 0.0,
+      "score_margin": 0.0,
+      "top_candidates": [
+        {
+          "constituency_id": "casablanca-anfa",
+          "historical_constituency": "Casablanca - Anfa",
+          "historical_seats_2016": 4,
+          "score": 0.0,
+          "best_pair": null
+        },
+        {
+          "constituency_id": "al-fida-mers-sultan",
+          "historical_constituency": "Al-Fida - Mers-Sultan",
+          "historical_seats_2016": 3,
+          "score": 0.0,
+          "best_pair": null
+        },
+        {
+          "constituency_id": "ain-sebaa-hay-mohammadi",
+          "historical_constituency": "Aïn-Sebaâ - Hay-Mohammadi",
+          "historical_seats_2016": 4,
+          "score": 0.0,
+          "best_pair": null
+        },
+        {
+          "constituency_id": "hay-hassani",
+          "historical_constituency": "Hay-Hassani",
+          "historical_seats_2016": 3,
+          "score": 0.0,
+          "best_pair": null
+        },
+        {
+          "constituency_id": "ain-chock",
+          "historical_constituency": "Aïn-Chock",
+          "historical_seats_2016": 3,
+          "score": 0.0,
+          "best_pair": null
+        }
+      ]
+    },
+    {
+      "region": "casablanca-settat",
+      "page": 16,
+      "header_lines": [],
+      "best_hits_from_parser": [],
+      "best_score": 0.0,
+      "second_score": 0.0,
+      "score_margin": 0.0,
+      "top_candidates": [
+        {
+          "constituency_id": "casablanca-anfa",
+          "historical_constituency": "Casablanca - Anfa",
+          "historical_seats_2016": 4,
+          "score": 0.0,
+          "best_pair": null
+        },
+        {
+          "constituency_id": "al-fida-mers-sultan",
+          "historical_constituency": "Al-Fida - Mers-Sultan",
+          "historical_seats_2016": 3,
+          "score": 0.0,
+          "best_pair": null
+        },
+        {
+          "constituency_id": "ain-sebaa-hay-mohammadi",
+          "historical_constituency": "Aïn-Sebaâ - Hay-Mohammadi",
+          "historical_seats_2016": 4,
+          "score": 0.0,
+          "best_pair": null
+        },
+        {
+          "constituency_id": "hay-hassani",
+          "historical_constituency": "Hay-Hassani",
+          "historical_seats_2016": 3,
+          "score": 0.0,
+          "best_pair": null
+        },
+        {
+          "constituency_id": "ain-chock",
+          "historical_constituency": "Aïn-Chock",
+          "historical_seats_2016": 3,
+          "score": 0.0,
+          "best_pair": null
+        }
+      ]
+    },
+    {
+      "region": "souss-massa",
+      "page": 3,
+      "header_lines": [],
+      "best_hits_from_parser": [],
+      "best_score": 0.0,
+      "second_score": 0.0,
+      "score_margin": 0.0,
+      "top_candidates": [
+        {
+          "constituency_id": "agadir-ida-outanane",
+          "historical_constituency": "Agadir - Ida-ou-Tanane",
+          "historical_seats_2016": 4,
+          "score": 0.0,
+          "best_pair": null
+        },
+        {
+          "constituency_id": "inezgane-ait-melloul",
+          "historical_constituency": "Inézgane - Aït-Melloul",
+          "historical_seats_2016": 3,
+          "score": 0.0,
+          "best_pair": null
+        },
+        {
+          "constituency_id": "chtouka-ait-baha",
+          "historical_constituency": "Chtouka - Aït-Baha",
+          "historical_seats_2016": 3,
+          "score": 0.0,
+          "best_pair": null
+        },
+        {
+          "constituency_id": "taroudant-sud",
+          "historical_constituency": "Taroudannt - Al-Janoubia",
+          "historical_seats_2016": 4,
+          "score": 0.0,
+          "best_pair": null
+        },
+        {
+          "constituency_id": "taroudant-nord",
+          "historical_constituency": "Taroudannt - Chamalia",
+          "historical_seats_2016": 3,
+          "score": 0.0,
+          "best_pair": null
+        }
+      ]
+    }
+  ],
+  "invariants": {
+    "similarity_promotes_evidence": false,
+    "candidate_facts_generated": false,
+    "outcomes_unsealed": false,
+    "predictive_judgments_generated": false,
+    "F1_created": false
+  }
+}
