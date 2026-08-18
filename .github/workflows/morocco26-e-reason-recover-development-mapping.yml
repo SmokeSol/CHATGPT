@@ -48,7 +48,7 @@ jobs:
           python - <<'PY'
           import json, os, subprocess
           repo=os.environ['GITHUB_REPOSITORY']
-          raw=subprocess.check_output(['gh','api',f'repos/{repo}/actions/artifacts','--paginate','-F','per_page=100'], text=True)
+          raw=subprocess.check_output(['gh','api','--method','GET',f'repos/{repo}/actions/artifacts','--paginate','-f','per_page=100'], text=True)
           # gh --paginate may emit multiple JSON documents; decode them sequentially.
           dec=json.JSONDecoder(); pos=0; docs=[]
           while pos < len(raw):
