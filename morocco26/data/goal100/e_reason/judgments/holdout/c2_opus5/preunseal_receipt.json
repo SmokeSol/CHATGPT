@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-E-REASON-C2-HOLDOUT-RECEIPT-V1",
+  "experiment_id": "M26-GOAL100-E-REASON-V1",
+  "status": "PASS_C2_HOLDOUT_FROZEN_READY_FOR_OUTCOME_UNSEAL",
+  "recorded_before_outcome_unseal": true,
+  "received_from": "OPUS-5",
+  "run_id": "M26-E-REASON-C2-HOLDOUT-OPUS5-V1",
+  "condition_id": "C2_LLM_RESIDUAL",
+  "bundle_sha256": "d43fd7b23911f5ce5c878d6d952aba9dd447c9b4d9c343d0093c528855cca9b0",
+  "prompt_sha256": "188853304a6d20a385a055deac0d63ee57b97248f3aa386f5f1b7ae360a0b946",
+  "lambda_freeze_sha256": "df6fa0c8846f055a262b45e29513c0b08d1f9a83b540dbfafca4f62d3f4a3fa5",
+  "counts": {
+    "packets": 92,
+    "party_cells": 828,
+    "attempts": 92,
+    "retries": 0
+  },
+  "integrity": {
+    "c2_judgments_file_sha256": "03b630c5a6c07ca32443a4fc3ba43ff30cb08d32c0f7634e78a34752f8e06446",
+    "c2_all_attempts_file_sha256": "1f09b074cdca2f10e6ecbd6c951f306b7dac845e51dd8fb65c968a43b4a1e7af",
+    "c2_judgment_manifest_canonical_sha256": "b8338d1d004d13bc2f9b89066074d628643a504e5e92735695ac2a8bfe2d5ff5",
+    "c2_judgment_manifest_file_sha256": "d414c992c39a158835c535d5a8d34801fa15f0a1867941dad28b7a485c72e173",
+    "c2_terminal_report_canonical_sha256": "bfac6d046de2f5f372e12667add74348e7d5b53e7ea702cb68bb32495912e3de",
+    "c2_terminal_report_file_sha256": "b43771d74aa20e31384c7a4261103f9f796e42f451ef27d476acbd1c101130f4",
+    "declared_judgments_hash_matches": true,
+    "declared_attempts_hash_matches": true,
+    "terminal_manifest_canonical_hash_matches": true,
+    "bundle_hash_matches_handoff": true,
+    "prompt_hash_matches_handoff": true,
+    "packet_hashes_self_consistent": true,
+    "no_leakage_detected": true
+  },
+  "c1_c2_preunseal_comparison": {
+    "same_nonzero_cell_partition": true,
+    "same_direction_signs": true,
+    "c1_distribution": {"-2": 0, "-1": 0, "0": 769, "1": 12, "2": 47},
+    "c2_distribution": {"-2": 0, "-1": 0, "0": 769, "1": 59, "2": 0},
+    "different_cells": 47,
+    "difference_pattern": "47 cells: C1 +2 -> C2 +1",
+    "different_cells_feature": "INCUMBENT_SAME_PARTY_SAME_DISTRICT",
+    "party_switch_in_cells_identical": 12,
+    "note": "Descriptive pre-unseal comparison only; no target outcomes used and no performance inference made."
+  },
+  "outcome_access": {
+    "target_outcome_present_in_handoff": false,
+    "opus_outcome_seen": false,
+    "validator_outcome_opened": false,
+    "mapping_opened_by_validator": false
+  },
+  "next_allowed_action": "OPEN_SEALED_MAPPING_AND_2021_TARGET_OUTCOME_THEN_SCORE_C0_C1_C2_WITH_FROZEN_LAMBDAS_0_3"
+}
