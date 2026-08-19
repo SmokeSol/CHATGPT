@@ -1,0 +1,10 @@
+{
+  "assertion": "TARGET_OUTCOME_NOT_USED_IN_PRE_ELECTION_RECOVERY_V2",
+  "ci_file_open_audit": "PASS",
+  "clean_base_commit": "2508256551f94ad67c23a39d7263e01202431bfe",
+  "cutoff": "2007-09-06",
+  "derived_same_year_outcome_paths_present": false,
+  "legacy_raw_workbook_is_sealed_not_input": true,
+  "same_year_result_workbook_opened": false,
+  "status": "PASS_RECOVERY_RESEARCH_ONLY"
+}

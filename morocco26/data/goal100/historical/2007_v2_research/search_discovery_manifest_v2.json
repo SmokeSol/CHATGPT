@@ -1,0 +1,29 @@
+{
+  "queries": [
+    {
+      "query": "site:lematin.ma/journal/2007 legislatives circonscription sièges \"7 septembre\" MAP",
+      "urls": []
+    },
+    {
+      "query": "site:lematin.ma/journal/2007 \"circonscriptions\" \"sièges\" \"scrutin du 7 septembre\"",
+      "urls": []
+    },
+    {
+      "query": "site:aujourdhui.ma 2007 \"tour du maroc des circonscriptions électorales\"",
+      "urls": []
+    },
+    {
+      "query": "site:assahraa.ma/journal/2007 circonscriptions élections sièges septembre 2007",
+      "urls": []
+    },
+    {
+      "query": "site:lematin.ma/journal/2007 \"listes\" \"candidats\" \"sièges\" \"circonscription\" élections",
+      "urls": []
+    },
+    {
+      "query": "site:lematin.ma/journal/2007 \"nouveau découpage\" circonscription élections 2007",
+      "urls": []
+    }
+  ],
+  "schema_version": "2.0"
+}

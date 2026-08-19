@@ -1,0 +1,20 @@
+{
+  "cutoff": "2007-09-06",
+  "eligible_article_count": 2,
+  "explicit_district_magnitude_fact_count": 0,
+  "facts": [],
+  "lineage": {
+    "base_is_ancestor": true,
+    "clean_base": "2508256551f94ad67c23a39d7263e01202431bfe",
+    "derived_outcome_paths_present": [],
+    "head_at_run": "5abcf01934d52c7d5ec5233fabba33d02627f9fb",
+    "sealed_legacy_raw_workbook_policy": "MAY_EXIST_BUT_MUST_NOT_BE_OPENED__CI_SYSCALL_AUDIT",
+    "sealed_legacy_raw_workbook_present": true
+  },
+  "outcome_used": false,
+  "research_id": "M26-HIST-2007-PRE-ELECTION-MAP-RECOVERY-V2",
+  "schema_version": "2.0",
+  "scope": "SOURCE_DISCOVERY_AND_HIGH_PRECISION_EXTRACTION_ONLY__NOT_YET_CANONICAL_SNAPSHOT",
+  "search_queries_are_outcome_independent": true,
+  "source_count_discovered": 4
+}
