@@ -1,0 +1,69 @@
+{
+  "schema_version": "3.0",
+  "contract_id": "M26-GOAL100-F1-BASELINE-REBUILD-V3",
+  "parent_contract_id": "M26-GOAL100-F1-BASELINE-REBUILD-V2",
+  "frozen_on": "2026-08-19",
+  "scientific_status": "POST_2021_DEVELOPMENT_2026_UNTOUCHED",
+  "purpose": "Test whether the conventional baseline failure is caused by assuming perfect territorial persistence in the conditional mean, after V2 showed that covariance repair alone cannot achieve party-level calibration without losing sharpness.",
+  "revision_trigger": {
+    "v2_result": "F1_FULL_SUPPORT_UNCERTAINTY_NOT_READY_PARTY_CALIBRATION",
+    "eligible_candidates": 0,
+    "best_v2_near_miss": {
+      "national_scale": 2.0,
+      "national_isotropic_fraction": 1.0,
+      "territorial_scale": 1.75,
+      "territorial_pool_fraction": 0.5,
+      "mean_width95": 0.6288505448956238,
+      "mean_energy_score": 0.3472471989800579,
+      "heldout_2011_to_2016_min80": 0.6521739130434783,
+      "heldout_2011_to_2016_min95": 0.782608695652174,
+      "heldout_2016_to_2021_min80": 0.6195652173913043,
+      "heldout_2016_to_2021_min95": 0.6304347826086957
+    },
+    "diagnosis": "The persistence mean is now the binding assumption. A very wide full-support uncertainty distribution still misses repeated party dimensions, so further global widening is forbidden."
+  },
+  "mean_family": {
+    "name": "HIERARCHICAL_TERRITORIAL_PERSISTENCE",
+    "definition": "Within each training transition, decompose each party CLR value into a territory-equal national mean plus a territorial deviation. Fit a no-intercept slope mapping prior territorial deviation to next-election territorial deviation. Fit both party-specific slopes and one pooled slope; shrink party slopes toward the pooled slope using only the training transition. Apply the trained slopes to the held-out transition while keeping the national mean at persistence.",
+    "party_slope_pool_fraction_grid": [0.0, 0.5, 1.0],
+    "slope_clip": [0.0, 1.25],
+    "heldout_outcomes_used_for_slope_fit": false
+  },
+  "uncertainty_family": {
+    "national_isotropic_fraction": 1.0,
+    "national_scale_grid": [0.75, 1.0, 1.25, 1.5],
+    "territorial_scale_grid": [1.0, 1.25, 1.5],
+    "territorial_pool_fraction": 0.5,
+    "draws_per_territory": 4096,
+    "common_random_numbers_across_candidates": true,
+    "seed_fold_2011_to_2016": 26081931,
+    "seed_fold_2016_to_2021": 26081932,
+    "candidate_count": 36
+  },
+  "crossfit": {
+    "fold_A": "fit mean slopes and residual uncertainty on 2016->2021; evaluate 2011->2016",
+    "fold_B": "fit mean slopes and residual uncertainty on 2011->2016; evaluate 2016->2021",
+    "2026_used": false
+  },
+  "gates": {
+    "party_coverage80_floor": 0.7182,
+    "party_coverage95_floor": 0.9054,
+    "coverage_gate": "All 9 party buckets clear both floors in both folds.",
+    "sharpness_gate": "Mean 95% interval width strictly below 0.5445930074002108.",
+    "selection": "Among coverage-eligible candidates, minimize calibration error, then energy score, then 95% width.",
+    "forbidden": [
+      "relax coverage floors",
+      "expand the grid after results",
+      "fit slopes on held-out outcomes",
+      "inject candidate or agentic features",
+      "modify F0",
+      "use 2026 outcomes"
+    ]
+  },
+  "terminal_states": [
+    "F1_HIERARCHICAL_MEAN_READY_FOR_REFIT",
+    "F1_HIERARCHICAL_MEAN_FAIL_SHARPNESS",
+    "F1_HIERARCHICAL_MEAN_NOT_READY_PARTY_CALIBRATION"
+  ],
+  "status": "FROZEN_BEFORE_F1_HIERARCHICAL_MEAN_EXECUTION"
+}
