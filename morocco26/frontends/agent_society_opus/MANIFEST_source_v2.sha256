@@ -3,8 +3,15 @@
 # Archive d'origine : atlas-societe-artificielle-maroc-final (1).zip
 # sha256(zip) = e30c810b8ac28dd01ea29135be6dfa9258f7595b371dcd994fff6c28c9598cc1
 # octets(zip) = 50552747
-# fichiers extraits et versionnes : 1863
+# fichiers versionnes : 1863
 # exclusion : scripts/__pycache__/ (artefact d'execution Python, non source)
+#
+# DIVERGENCE ASSUMEE — deux fichiers ne correspondent plus a l'archive d'origine.
+# Ils portent les correctifs sans lesquels la page ne s'affiche pas du tout
+# (voir AUDIT_CONFORMITE_FRONT_V2.md, section 6). Empreintes telles que livrees :
+#   web/app.js     a08ce4c16dc3331e923744d6e41a47cb060601426340fbe151a90eeaf45691cb
+#   web/reader.js  351723242e8c72fd62b3c150735808d3778312a8be9bba0b0441fd878baf3423
+# Tous les autres fichiers restent identiques a l'archive, octet pour octet.
 #
 857d480d1fec6e432fa86e63bd8703a8188fb5091a54cedd44761099f4845e93 *README.md
 82c04c6ccbcf11a5960808b6e6b8be7e9f6b659a17ef4094a7c0407702872f21 *integration/claude_connector.txt
@@ -17,7 +24,7 @@ aa25559870abd9fe7afac2689cabbbd56f9913aa4ec56ffb37f5737e1e157af7 *integration/gp
 1afd12124688d40f4975839e4baa409e22a5e54bdb9a52a86a448264d1030798 *scripts/judge_engine.py
 41f4cbbf8240fcf68b943a90d37f8406390d5a59085857c03e6f8e3da80e1ad0 *scripts/make_sim.py
 966d0cfbcd1ba3223cdda2bf6f6a62d42378fe355536f5041708b538c3905b8a *vercel.json
-a08ce4c16dc3331e923744d6e41a47cb060601426340fbe151a90eeaf45691cb *web/app.js
+792426482fdc923af39b57606b98cf8bf380e12d46a063a0f9c0ccd0859153c5 *web/app.js
 d56db112461af492136d0c65ab9446a999aa42cdaf2ef5d0b1d65d605dd91a2e *web/data/contrib/contexts/E_0BB34DC2900A7390/C_4F91A2D7/T_0267CFF87A2606F5.json.gz
 fa32785b88ef9a0ad60538337d6a1d2e86496b4afa58954f5f2cafd780174b29 *web/data/contrib/contexts/E_0BB34DC2900A7390/C_4F91A2D7/T_0C96B5AE60CD7FBF.json.gz
 9011e305a872cb6d9943e0d1561cfdcbae1deb8f4cab924957605fcab2cd51fe *web/data/contrib/contexts/E_0BB34DC2900A7390/C_4F91A2D7/T_0E56148971A98401.json.gz
@@ -1867,5 +1874,5 @@ c170d675ec454768509f183a1de9944a9ef82eb851adedef3797584a71fb2d7e *web/data/contr
 a1e677a7aec1d0dd9461cd28a951ff952c6a857578631451d4d886b9043d721e *web/index.html
 2317fda4efd076a518699533b4c0a9f798563bb07f093fcf99bf0f1a51c6b853 *web/privacy.html
 fcef354b40a004b238a10957538524101f8dd10ae07b90395083fb05c2cf2649 *web/reader-final.css
-351723242e8c72fd62b3c150735808d3778312a8be9bba0b0441fd878baf3423 *web/reader.js
+987463051e4a546bcbe7ddffc5debfe28ad4b6b3d4c93b7cc9c41e74546ff822 *web/reader.js
 a9109c47d9f284b084a74e0405e454e17eedf33556e020d30715c98d6597671f *web/styles.css

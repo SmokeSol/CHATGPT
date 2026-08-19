@@ -253,14 +253,17 @@ function publiciseRenderedLabels() {
   var map={'1':'PAM','2':'Autres','3':'RNI','4':'PPS','5':'Mouvement populaire','6':'PJD','7':'Union constitutionnelle','8':'USFP','9':'Istiqlal'};
   document.querySelectorAll('#detail, #verdict-card, #demonstrateur').forEach(function(root){
     var walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);var n;
-    while((n=walker.nextNode())){if(!n.nodeValue||n.parentNode&&/SCRIPT|STYLE/.test(n.parentNode.nodeName))continue;n.nodeValue=n.nodeValue
+    while((n=walker.nextNode())){if(!n.nodeValue||n.parentNode&&/SCRIPT|STYLE/.test(n.parentNode.nodeName))continue;var next=n.nodeValue
       .replace(/\bliste\s+([1-9])\b/gi,function(_,d){return map[d]||_;})
       .replace(/\bAgents\b/g,'Citoyens')
       .replace(/\bagents\b/g,'citoyens')
       .replace(/\bCet agent\b/g,'Ce citoyen')
       .replace(/\bun agent\b/g,'un citoyen')
       .replace(/\bl’agent\b/g,'le citoyen')
-      .replace(/\bl'agent\b/g,'le citoyen');}
+      .replace(/\bl'agent\b/g,'le citoyen');
+      /* Assigner nodeValue emet une mutation characterData meme a valeur egale :
+         sans ce test, l'observateur ci-dessous se rappelle lui-meme sans fin. */
+      if(next!==n.nodeValue)n.nodeValue=next;}
   });
 }
 
@@ -268,7 +271,13 @@ function readerBoot() {
   loadMaroc(); readerEditorial(); readerMethod(); readerKpis(); refreshProgress(); setInterval(refreshProgress,60000);
   var join=reader$('#join-society'); if(join)join.addEventListener('click',assistantChooser);
   setTimeout(function(){readerEditorial();readerKpis();refreshProgress();readerMethod();publiciseRenderedLabels();},800);
-  var obs=new MutationObserver(function(){publiciseRenderedLabels();});var demo=reader$('#demonstrateur');if(demo)obs.observe(demo,{subtree:true,childList:true,characterData:true});
+  var demo=reader$('#demonstrateur');
+  var OBS_OPTS={subtree:true,childList:true,characterData:true};
+  var obs=new MutationObserver(function(){
+    obs.disconnect();
+    try{publiciseRenderedLabels();}finally{if(demo)obs.observe(demo,OBS_OPTS);}
+  });
+  if(demo)obs.observe(demo,OBS_OPTS);
   try{ACTIVE_CONTRIBUTION=JSON.parse(localStorage.getItem('atlas-active-contribution')||'null');}catch(e){}
 }
 

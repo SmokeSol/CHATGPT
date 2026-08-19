@@ -153,5 +153,56 @@ Aucun de ces points n'exige de revenir sur la direction artistique, la CSP, ni l
 Extraction fidèle de `atlas-societe-artificielle-maroc-final (1).zip`
 (50 552 747 octets, `sha256 = e30c810b8ac28dd01ea29135be6dfa9258f7595b371dcd994fff6c28c9598cc1`),
 1 863 fichiers versionnés. Seule exclusion : `scripts/__pycache__/`, artefact d'exécution Python.
-Empreinte de chaque fichier dans `MANIFEST_source_v2.sha256`. Aucun octet du front n'a été modifié
-par cet audit — les correctifs listés en §2 restent à appliquer.
+Empreinte de chaque fichier dans `MANIFEST_source_v2.sha256`. Deux fichiers, `web/app.js` et
+`web/reader.js`, divergent désormais de l'archive : ils portent les correctifs de la section 6.
+Le manifeste conserve leurs empreintes d'origine. Tout le reste est identique octet pour octet.
+Les écarts de conformité listés en §2 restent, eux, à traiter.
+
+---
+
+## 6. Deux défauts qui empêchaient toute page de s'afficher
+
+Découverts en construisant la version de démonstration, après la première rédaction de cet audit.
+Ils ne relèvent pas de la conformité mais du fonctionnement : **en l'état livré, le front ne
+s'affichait pas du tout**, quel que soit l'hébergeur. Tous deux sont corrigés dans `source_v2`.
+
+### 6.1 — `header()` écrivait dans des nœuds absents  *(page vide)*
+
+`web/app.js` : `header()` est la première fonction appelée par `boot()`. Elle écrivait dans
+`#hero-part`, `#hero-sanc` et `#foot-hash` — trois identifiants qui n'existent plus dans
+`index.html`. `$` étant un `querySelector` nu, chaque accès renvoyait `null` et l'écriture levait
+une `TypeError`. Comme `boot()` est appelé depuis un `.then()`, le `.catch()` de `loadData()`
+avalait l'erreur : aucune section ne se construisait, et la page affichait seulement
+« Les données de la société n'ont pas pu être chargées ».
+
+Les quatre écritures sont désormais gardées, comme l'étaient déjà `#m-rows` et `#m-terr` deux
+lignes plus haut.
+
+### 6.2 — Boucle infinie entre `publiciseRenderedLabels()` et son observateur  *(onglet gelé)*
+
+`web/reader.js` : la fonction réassignait `n.nodeValue` **sans condition**. Or assigner
+`nodeValue` émet une mutation `characterData` même lorsque la valeur est identique — et le
+`MutationObserver` de `readerBoot()` observait `#demonstrateur` en `characterData` en rappelant
+cette même fonction. Chaque passage engendrait le suivant.
+
+Le fil principal ne rendait plus la main : `boot()` ne terminait pas, les blocs `.rise` restaient
+à `opacity: 0`, les `setTimeout` ne se déclenchaient jamais, et le navigateur finissait par tuer
+l'onglet. C'est ce défaut, et non un problème de mise en page, qui rendait la page à la fois vide,
+lente et instable.
+
+Deux garde-fous : `nodeValue` n'est réécrit que si le remplacement change réellement le texte, et
+l'observateur se débranche pendant la réécriture puis se rebranche. Le premier suffit ; le second
+garantit qu'aucune mutation émise là ne puisse se re-déclencher.
+
+### 6.3 — `reveal()` sans filet
+
+`web/app.js` : les blocs `.rise` sont à `opacity: 0` jusqu'à ce qu'un `IntersectionObserver` leur
+ajoute `.in`. Dans un cadre auto-dimensionné, l'observateur ne se déclenche jamais et le contenu
+reste invisible. Un filet à 800 ms rend les blocs visibles quoi qu'il arrive, sans retirer
+l'animation d'entrée là où elle fonctionne.
+
+### Vérifié sain
+
+La galerie de portraits est bornée à 48 cartes (`slice(0, 48)`), l'animation du canvas s'arrête
+après 40 images et respecte `prefers-reduced-motion`, et il n'existe qu'un seul `MutationObserver`
+dans tout le front — celui de 6.2. La boucle en était la cause unique.

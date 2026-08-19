@@ -190,10 +190,10 @@ function boot() {
 function header() {
   var g = S.global['*'];
   var mr=$('#m-rows'), mt=$('#m-terr'); if(mr)mr.textContent=nf(S.meta.rows); if(mt)mt.textContent='92';
-  $('#hero-fid').textContent = '0 contribution';
-  $('#hero-part').textContent = '0';
-  $('#hero-sanc').textContent = '0';
-  $('#foot-hash').textContent = 'Société artificielle du Maroc · 92 circonscriptions · horizon 2026';
+  var hf=$('#hero-fid'); if(hf)hf.textContent='0 contribution';
+  var hp=$('#hero-part'); if(hp)hp.textContent='0';
+  var hs=$('#hero-sanc'); if(hs)hs.textContent='0';
+  var fh=$('#foot-hash'); if(fh)fh.textContent='Société artificielle du Maroc · 92 circonscriptions · horizon 2026';
 }
 
 function kpis() {
@@ -1413,6 +1413,11 @@ function reveal() {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('.rise').forEach(function (n) { io.observe(n); });
+  /* Si l'observateur ne se declenche pas (iframe auto-dimensionnee, viewport sans
+     defilement), les blocs resteraient a opacity:0. Filet de securite. */
+  setTimeout(function () {
+    document.querySelectorAll('.rise').forEach(function (n) { n.classList.add('in'); });
+  }, 800);
 }
 
 function spy() {
