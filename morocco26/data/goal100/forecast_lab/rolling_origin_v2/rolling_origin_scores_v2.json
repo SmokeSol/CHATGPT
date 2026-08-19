@@ -9,20 +9,20 @@
   "contract_id": "M26-FORECAST-LAB-ROLLING-ORIGIN-V2",
   "crossfold": {
     "HALF_SHRINK": {
-      "n_cells": 1989,
-      "weighted_RMSE": 0.10813051419023227
+      "n_cells": 2169,
+      "weighted_RMSE": 0.1088144131975525
     },
     "NATIONAL_ONLY": {
-      "n_cells": 1989,
-      "weighted_RMSE": 0.11624085479113953
+      "n_cells": 2169,
+      "weighted_RMSE": 0.11638065495514563
     },
     "PERSIST": {
-      "n_cells": 1989,
-      "weighted_RMSE": 0.1164556371747408
+      "n_cells": 2169,
+      "weighted_RMSE": 0.11776822832545304
     },
     "ROLLING_LAMBDA": {
-      "n_cells": 1989,
-      "weighted_RMSE": 0.10851953164129326
+      "n_cells": 2169,
+      "weighted_RMSE": 0.10930111095208445
     }
   },
   "crossfold_ranking": [
@@ -198,7 +198,7 @@
           "UC": 0.05797875030555392,
           "USFP": 0.08599930881596804
         },
-        "territorial_residual_correlation": 0.4252590804910036
+        "territorial_residual_correlation": 0.4252590804910034
       },
       "ranking_by_RMSE_then_topS": [
         "HALF_SHRINK",
@@ -211,21 +211,10 @@
       "target_mapping": {
         "collisions": [],
         "fuzzy_used": false,
-        "mapped": 82,
+        "mapped": 92,
         "method": "EXACT_NORMALIZED_PLUS_FROZEN_ALIASES",
         "target_universe": 92,
-        "unresolved": [
-          "Agadir - Ida-ou-Tanane",
-          "Bzou - Ouaouizaght",
-          "Es-Smara",
-          "Guéliz - Annakhil",
-          "Karia - Rhafsai",
-          "Mohammadia",
-          "Médina - Sidi-Youssef-Ben-Ali",
-          "Oued-Ed-Dahab",
-          "Salé - Al-Jadida",
-          "Tifelt - Rommani"
-        ],
+        "unresolved": [],
         "year": 2011
       },
       "transition": "2007->2011",
@@ -233,7 +222,7 @@
     },
     "2016": {
       "dropped_forecast_ids_without_exact_target_resolution": [],
-      "forecast_support": 82,
+      "forecast_support": 92,
       "lambda_fit": {
         "grid": {
           "max": 1,
@@ -493,21 +482,10 @@
             "target_mapping": {
               "collisions": [],
               "fuzzy_used": false,
-              "mapped": 82,
+              "mapped": 92,
               "method": "EXACT_NORMALIZED_PLUS_FROZEN_ALIASES",
               "target_universe": 92,
-              "unresolved": [
-                "Agadir - Ida-ou-Tanane",
-                "Bzou - Ouaouizaght",
-                "Es-Smara",
-                "Guéliz - Annakhil",
-                "Karia - Rhafsai",
-                "Mohammadia",
-                "Médina - Sidi-Youssef-Ben-Ali",
-                "Oued-Ed-Dahab",
-                "Salé - Al-Jadida",
-                "Tifelt - Rommani"
-              ],
+              "unresolved": [],
               "year": 2011
             },
             "transition": "2007->2011"
@@ -517,33 +495,33 @@
       "models": {
         "HALF_SHRINK": {
           "RMSE_by_party": {
-            "MP": 0.060379578081609854,
-            "OTHER": 0.09301866074222502,
-            "PAM": 0.1316994259657983,
-            "PI": 0.06210217081233984,
-            "PJD": 0.10924258688313299,
-            "PPS": 0.052217672153199876,
-            "RNI": 0.06964717733637855,
-            "UC": 0.048950950878206737,
-            "USFP": 0.07015274104119015
+            "MP": 0.06840724065197575,
+            "OTHER": 0.09284953955757527,
+            "PAM": 0.1361525918505194,
+            "PI": 0.06159215730963339,
+            "PJD": 0.11071249733317313,
+            "PPS": 0.050170112328262045,
+            "RNI": 0.07286816117927511,
+            "UC": 0.048117769114037486,
+            "USFP": 0.06802430620293927
           },
-          "mean_territory_L1": 0.5613962663253007,
-          "n_cells": 738,
-          "party_rank_MAE": 1.6964769647696476,
-          "party_share_MAE": 0.06237736292503341,
-          "party_share_RMSE": 0.08187289822057654,
-          "sse": 4.946940539721222,
-          "topS_exact_set_accuracy": 0.14634146341463414,
-          "topS_membership_accuracy": 0.7506775067750677,
-          "topS_set_Jaccard": 0.5175377468060396,
-          "topS_share_gap_MAE": 0.023952055883438586,
-          "top_party_accuracy": 0.5365853658536586,
+          "mean_territory_L1": 0.5675086107130202,
+          "n_cells": 828,
+          "party_rank_MAE": 1.6980676328502415,
+          "party_share_MAE": 0.06305651230144668,
+          "party_share_RMSE": 0.08343886768744727,
+          "sse": 5.764572962717638,
+          "topS_exact_set_accuracy": 0.14130434782608695,
+          "topS_membership_accuracy": 0.7487922705314007,
+          "topS_set_Jaccard": 0.5087474120082817,
+          "topS_share_gap_MAE": 0.028347398958316023,
+          "top_party_accuracy": 0.5434782608695652,
           "vs_NATIONAL_ONLY_bootstrap": {
             "cluster": "territory",
             "comparator": "NATIONAL_ONLY",
             "delta_RMSE_model_minus_comparator_interval95": [
-              -0.0207100001104448,
-              -0.011094057580582337
+              -0.020054313749959193,
+              -0.011086111233051638
             ],
             "probability_model_better": 1.0,
             "replicates": 10000
@@ -551,91 +529,91 @@
         },
         "NATIONAL_ONLY": {
           "RMSE_by_party": {
-            "MP": 0.07571671583607766,
-            "OTHER": 0.09761394854236652,
-            "PAM": 0.14208889800734842,
-            "PI": 0.08541614739119527,
-            "PJD": 0.15581915897800594,
-            "PPS": 0.054062386232098844,
-            "RNI": 0.08295346637422576,
-            "UC": 0.05829514090830629,
-            "USFP": 0.07692485227168949
+            "MP": 0.07988557453312564,
+            "OTHER": 0.09843799825441822,
+            "PAM": 0.14469561874967626,
+            "PI": 0.08635905647716659,
+            "PJD": 0.1590726059301722,
+            "PPS": 0.05258285014123344,
+            "RNI": 0.08253052370388173,
+            "UC": 0.05777629908456162,
+            "USFP": 0.07463087299651534
           },
-          "mean_territory_L1": 0.6700234952838869,
-          "n_cells": 738,
-          "party_rank_MAE": 2.140921409214092,
-          "party_share_MAE": 0.074447055031543,
-          "party_share_RMSE": 0.09783549856939125,
-          "sse": 7.063977167877162,
-          "topS_exact_set_accuracy": 0.012195121951219513,
-          "topS_membership_accuracy": 0.6395663956639566,
-          "topS_set_Jaccard": 0.3387340301974448,
-          "topS_share_gap_MAE": 0.02660934166742688,
-          "top_party_accuracy": 0.4024390243902439
+          "mean_territory_L1": 0.6786678942651836,
+          "n_cells": 828,
+          "party_rank_MAE": 2.13768115942029,
+          "party_share_MAE": 0.07540754380724261,
+          "party_share_RMSE": 0.09902561880036762,
+          "sse": 8.119428592042857,
+          "topS_exact_set_accuracy": 0.010869565217391304,
+          "topS_membership_accuracy": 0.6376811594202898,
+          "topS_set_Jaccard": 0.33053830227743275,
+          "topS_share_gap_MAE": 0.02959078062068774,
+          "top_party_accuracy": 0.42391304347826086
         },
         "PERSIST": {
           "RMSE_by_party": {
-            "MP": 0.05915561390129789,
-            "OTHER": 0.11274781236504296,
-            "PAM": 0.1402225248747803,
-            "PI": 0.06299476633252107,
-            "PJD": 0.09249993121630569,
-            "PPS": 0.06116573803273218,
-            "RNI": 0.08312894410600376,
-            "UC": 0.05278511559247539,
-            "USFP": 0.07601267030286363
+            "MP": 0.06961800642060763,
+            "OTHER": 0.11354629035827375,
+            "PAM": 0.14550826849314943,
+            "PI": 0.06115298328715904,
+            "PJD": 0.09181036426645851,
+            "PPS": 0.05848508651941853,
+            "RNI": 0.08815754543103284,
+            "UC": 0.0517070167641654,
+            "USFP": 0.07450393907304839
           },
-          "mean_territory_L1": 0.5605280238420008,
-          "n_cells": 738,
-          "party_rank_MAE": 1.8943089430894309,
-          "party_share_MAE": 0.062280891538000094,
-          "party_share_RMSE": 0.08667580305922992,
-          "sse": 5.544368788940259,
-          "topS_exact_set_accuracy": 0.15853658536585366,
-          "topS_membership_accuracy": 0.7344173441734417,
-          "topS_set_Jaccard": 0.5019163763066203,
-          "topS_share_gap_MAE": 0.02735996570232366,
-          "top_party_accuracy": 0.5365853658536586,
+          "mean_territory_L1": 0.5606371069817603,
+          "n_cells": 828,
+          "party_rank_MAE": 1.8840579710144927,
+          "party_share_MAE": 0.06229301188686225,
+          "party_share_RMSE": 0.08850462894692614,
+          "sse": 6.485781417687386,
+          "topS_exact_set_accuracy": 0.15217391304347827,
+          "topS_membership_accuracy": 0.7342995169082124,
+          "topS_set_Jaccard": 0.4948240165631471,
+          "topS_share_gap_MAE": 0.029057661830610072,
+          "top_party_accuracy": 0.5434782608695652,
           "vs_NATIONAL_ONLY_bootstrap": {
             "cluster": "territory",
             "comparator": "NATIONAL_ONLY",
             "delta_RMSE_model_minus_comparator_interval95": [
-              -0.019920285956711373,
-              -0.00240656413393916
+              -0.018875323402017245,
+              -0.002329270556429685
             ],
-            "probability_model_better": 0.9936,
+            "probability_model_better": 0.9949,
             "replicates": 10000
           }
         },
         "ROLLING_LAMBDA": {
           "RMSE_by_party": {
-            "MP": 0.060379578081609854,
-            "OTHER": 0.09301866074222502,
-            "PAM": 0.1316994259657983,
-            "PI": 0.06210217081233984,
-            "PJD": 0.10924258688313299,
-            "PPS": 0.052217672153199876,
-            "RNI": 0.06964717733637855,
-            "UC": 0.048950950878206737,
-            "USFP": 0.07015274104119015
+            "MP": 0.06840724065197575,
+            "OTHER": 0.09284953955757527,
+            "PAM": 0.1361525918505194,
+            "PI": 0.06159215730963339,
+            "PJD": 0.11071249733317313,
+            "PPS": 0.050170112328262045,
+            "RNI": 0.07286816117927511,
+            "UC": 0.048117769114037486,
+            "USFP": 0.06802430620293927
           },
-          "mean_territory_L1": 0.5613962663253007,
-          "n_cells": 738,
-          "party_rank_MAE": 1.6964769647696476,
-          "party_share_MAE": 0.06237736292503341,
-          "party_share_RMSE": 0.08187289822057654,
-          "sse": 4.946940539721222,
-          "topS_exact_set_accuracy": 0.14634146341463414,
-          "topS_membership_accuracy": 0.7506775067750677,
-          "topS_set_Jaccard": 0.5175377468060396,
-          "topS_share_gap_MAE": 0.023952055883438586,
-          "top_party_accuracy": 0.5365853658536586,
+          "mean_territory_L1": 0.5675086107130202,
+          "n_cells": 828,
+          "party_rank_MAE": 1.6980676328502415,
+          "party_share_MAE": 0.06305651230144668,
+          "party_share_RMSE": 0.08343886768744727,
+          "sse": 5.764572962717638,
+          "topS_exact_set_accuracy": 0.14130434782608695,
+          "topS_membership_accuracy": 0.7487922705314007,
+          "topS_set_Jaccard": 0.5087474120082817,
+          "topS_share_gap_MAE": 0.028347398958316023,
+          "top_party_accuracy": 0.5434782608695652,
           "vs_NATIONAL_ONLY_bootstrap": {
             "cluster": "territory",
             "comparator": "NATIONAL_ONLY",
             "delta_RMSE_model_minus_comparator_interval95": [
-              -0.0207100001104448,
-              -0.011094057580582337
+              -0.020054313749959193,
+              -0.011086111233051638
             ],
             "probability_model_better": 1.0,
             "replicates": 10000
@@ -645,10 +623,10 @@
       "national_territorial_decomposition": {
         "national_shift_L1": 0.2852031086777442,
         "national_shift_RMSE": 0.04409134073737092,
-        "oracle_target_national_only_RMSE": 0.08661672117446707,
-        "oracle_target_national_plus_prior_residual_RMSE": 0.06699391012539475,
-        "oracle_territorial_lambda": 0.64,
-        "oracle_territorial_relative_improvement": 0.22654760862567427,
+        "oracle_target_national_only_RMSE": 0.08743055417146119,
+        "oracle_target_national_plus_prior_residual_RMSE": 0.06855881286013937,
+        "oracle_territorial_lambda": 0.63,
+        "oracle_territorial_relative_improvement": 0.21584835519070597,
         "oracle_warning": "Uses target national shares after outcome open; diagnostic only, never a deployable forecast.",
         "prior_national_share": {
           "MP": 0.07469592117130407,
@@ -672,7 +650,7 @@
           "UC": 0.046547463822698754,
           "USFP": 0.06365715849095156
         },
-        "territorial_residual_correlation": 0.633774379178061
+        "territorial_residual_correlation": 0.6205233046934736
       },
       "ranking_by_RMSE_then_topS": [
         "HALF_SHRINK",
@@ -680,26 +658,15 @@
         "PERSIST",
         "NATIONAL_ONLY"
       ],
-      "score_support": 82,
-      "score_support_fraction_of_92": 0.8913043478260869,
+      "score_support": 92,
+      "score_support_fraction_of_92": 1.0,
       "target_mapping": {
         "collisions": [],
         "fuzzy_used": false,
-        "mapped": 82,
+        "mapped": 92,
         "method": "EXACT_NORMALIZED_PLUS_FROZEN_ALIASES",
         "target_universe": 92,
-        "unresolved": [
-          "Agadir - Ida-ou-Tanane",
-          "Bzou - Ouaouizaght",
-          "Es-Smara",
-          "Guéliz - Annakhil",
-          "Karia - Rhafsai",
-          "Mohammadia",
-          "Médina - Sidi-Youssef-Ben-Ali",
-          "Oued-Ed-Dahab",
-          "Salé - Al-Jadida",
-          "Tifelt - Rommani"
-        ],
+        "unresolved": [],
         "year": 2016
       },
       "transition": "2011->2016",
@@ -707,7 +674,7 @@
     },
     "2021": {
       "dropped_forecast_ids_without_exact_target_resolution": [],
-      "forecast_support": 82,
+      "forecast_support": 92,
       "lambda_fit": {
         "grid": {
           "max": 1,
@@ -715,7 +682,7 @@
           "step": 0.01
         },
         "policy": "PAST_FOLDS_ONLY_GRID_RMSE",
-        "pooled_training_rmse": 0.1005114327504584,
+        "pooled_training_rmse": 0.10015433831550781,
         "selected_lambda": 0.58,
         "training_folds": [
           {
@@ -967,21 +934,10 @@
             "target_mapping": {
               "collisions": [],
               "fuzzy_used": false,
-              "mapped": 82,
+              "mapped": 92,
               "method": "EXACT_NORMALIZED_PLUS_FROZEN_ALIASES",
               "target_universe": 92,
-              "unresolved": [
-                "Agadir - Ida-ou-Tanane",
-                "Bzou - Ouaouizaght",
-                "Es-Smara",
-                "Guéliz - Annakhil",
-                "Karia - Rhafsai",
-                "Mohammadia",
-                "Médina - Sidi-Youssef-Ben-Ali",
-                "Oued-Ed-Dahab",
-                "Salé - Al-Jadida",
-                "Tifelt - Rommani"
-              ],
+              "unresolved": [],
               "year": 2011
             },
             "transition": "2007->2011"
@@ -990,43 +946,21 @@
             "prior_mapping": {
               "collisions": [],
               "fuzzy_used": false,
-              "mapped": 82,
+              "mapped": 92,
               "method": "EXACT_NORMALIZED_PLUS_FROZEN_ALIASES",
               "target_universe": 92,
-              "unresolved": [
-                "Agadir - Ida-ou-Tanane",
-                "Bzou - Ouaouizaght",
-                "Es-Smara",
-                "Guéliz - Annakhil",
-                "Karia - Rhafsai",
-                "Mohammadia",
-                "Médina - Sidi-Youssef-Ben-Ali",
-                "Oued-Ed-Dahab",
-                "Salé - Al-Jadida",
-                "Tifelt - Rommani"
-              ],
+              "unresolved": [],
               "year": 2011
             },
-            "rmse_at_selected_lambda": 0.08115124408857118,
-            "support": 82,
+            "rmse_at_selected_lambda": 0.08277534062605038,
+            "support": 92,
             "target_mapping": {
               "collisions": [],
               "fuzzy_used": false,
-              "mapped": 82,
+              "mapped": 92,
               "method": "EXACT_NORMALIZED_PLUS_FROZEN_ALIASES",
               "target_universe": 92,
-              "unresolved": [
-                "Agadir - Ida-ou-Tanane",
-                "Bzou - Ouaouizaght",
-                "Es-Smara",
-                "Guéliz - Annakhil",
-                "Karia - Rhafsai",
-                "Mohammadia",
-                "Médina - Sidi-Youssef-Ben-Ali",
-                "Oued-Ed-Dahab",
-                "Salé - Al-Jadida",
-                "Tifelt - Rommani"
-              ],
+              "unresolved": [],
               "year": 2016
             },
             "transition": "2011->2016"
@@ -1036,127 +970,127 @@
       "models": {
         "HALF_SHRINK": {
           "RMSE_by_party": {
-            "MP": 0.061061278411563565,
-            "OTHER": 0.06385499017207813,
-            "PAM": 0.08907180460790318,
-            "PI": 0.09297901219061146,
-            "PJD": 0.23017156898136526,
-            "PPS": 0.048268033261811456,
-            "RNI": 0.20591517626468103,
-            "UC": 0.05448147863771074,
-            "USFP": 0.060142876350780104
+            "MP": 0.06382627083106106,
+            "OTHER": 0.06329111806819629,
+            "PAM": 0.08727656817087955,
+            "PI": 0.10054580773049494,
+            "PJD": 0.2343289625499752,
+            "PPS": 0.04593215845294794,
+            "RNI": 0.20804249951838105,
+            "UC": 0.052296580545810045,
+            "USFP": 0.057767755465085814
           },
-          "mean_territory_L1": 0.7589725736932402,
-          "n_cells": 738,
-          "party_rank_MAE": 2.1327913279132793,
-          "party_share_MAE": 0.08433028596591559,
-          "party_share_RMSE": 0.11957333114216237,
-          "sse": 10.551762762079715,
-          "topS_exact_set_accuracy": 0.024390243902439025,
-          "topS_membership_accuracy": 0.6964769647696476,
-          "topS_set_Jaccard": 0.4130371660859466,
-          "topS_share_gap_MAE": 0.04017365078062428,
-          "top_party_accuracy": 0.08536585365853659,
+          "mean_territory_L1": 0.7636126761849371,
+          "n_cells": 828,
+          "party_rank_MAE": 2.1231884057971016,
+          "party_share_MAE": 0.08484585290943746,
+          "party_share_RMSE": 0.1211884531822669,
+          "sse": 12.160538900940292,
+          "topS_exact_set_accuracy": 0.03260869565217391,
+          "topS_membership_accuracy": 0.6956521739130435,
+          "topS_set_Jaccard": 0.4108954451345756,
+          "topS_share_gap_MAE": 0.0401583247549458,
+          "top_party_accuracy": 0.07608695652173914,
           "vs_NATIONAL_ONLY_bootstrap": {
             "cluster": "territory",
             "comparator": "NATIONAL_ONLY",
             "delta_RMSE_model_minus_comparator_interval95": [
-              -0.007989256710078038,
-              0.0016898440874306415
+              -0.00675089321507008,
+              0.0027936534335269102
             ],
-            "probability_model_better": 0.8915,
+            "probability_model_better": 0.7906,
             "replicates": 10000
           }
         },
         "NATIONAL_ONLY": {
           "RMSE_by_party": {
-            "MP": 0.07149334146026677,
-            "OTHER": 0.06389390798086028,
-            "PAM": 0.09102493026427035,
-            "PI": 0.10921002062999738,
-            "PJD": 0.22843577457036623,
-            "PPS": 0.04739788443217574,
-            "RNI": 0.2082627974541421,
-            "UC": 0.06615421641527147,
-            "USFP": 0.06244289827010141
+            "MP": 0.06997324348421372,
+            "OTHER": 0.0661234173428087,
+            "PAM": 0.08970846240947881,
+            "PI": 0.11584168817271977,
+            "PJD": 0.2290189952295306,
+            "PPS": 0.04546120079509983,
+            "RNI": 0.20876656484846184,
+            "UC": 0.06380041457596129,
+            "USFP": 0.05985669607692143
           },
-          "mean_territory_L1": 0.806205523798781,
-          "n_cells": 738,
-          "party_rank_MAE": 2.1571815718157183,
-          "party_share_MAE": 0.08957839153319788,
-          "party_share_RMSE": 0.12269404003245162,
-          "sse": 11.109724665099812,
-          "topS_exact_set_accuracy": 0.012195121951219513,
-          "topS_membership_accuracy": 0.6693766937669378,
-          "topS_set_Jaccard": 0.3765389082462253,
-          "topS_share_gap_MAE": 0.04490339534966587,
+          "mean_territory_L1": 0.8052671711852613,
+          "n_cells": 828,
+          "party_rank_MAE": 2.142512077294686,
+          "party_share_MAE": 0.0894741301316957,
+          "party_share_RMSE": 0.12314791584332119,
+          "sse": 12.556958798186479,
+          "topS_exact_set_accuracy": 0.010869565217391304,
+          "topS_membership_accuracy": 0.6739130434782609,
+          "topS_set_Jaccard": 0.37727743271221537,
+          "topS_share_gap_MAE": 0.046384301328405896,
           "top_party_accuracy": 0.0
         },
         "PERSIST": {
           "RMSE_by_party": {
-            "MP": 0.07211142370905275,
-            "OTHER": 0.0773367285211859,
-            "PAM": 0.11034845112735368,
-            "PI": 0.09509121076301982,
-            "PJD": 0.25564153392236305,
-            "PPS": 0.06188186573136204,
-            "RNI": 0.2114760728395093,
-            "UC": 0.05650720582674948,
-            "USFP": 0.07835416433842754
+            "MP": 0.08025188391161288,
+            "OTHER": 0.07502397729523481,
+            "PAM": 0.11008101634213767,
+            "PI": 0.10267229800564867,
+            "PJD": 0.2630632135147583,
+            "PPS": 0.059076051832345246,
+            "RNI": 0.21492939668520247,
+            "UC": 0.05448703433849488,
+            "USFP": 0.07540031296731353
           },
-          "mean_territory_L1": 0.7924557275755727,
-          "n_cells": 738,
-          "party_rank_MAE": 2.151761517615176,
-          "party_share_MAE": 0.08805063639728586,
-          "party_share_RMSE": 0.13150271394495738,
-          "sse": 12.762207265868295,
-          "topS_exact_set_accuracy": 0.04878048780487805,
-          "topS_membership_accuracy": 0.6964769647696476,
-          "topS_set_Jaccard": 0.42418699186991865,
-          "topS_share_gap_MAE": 0.04314630897194422,
-          "top_party_accuracy": 0.2073170731707317,
+          "mean_territory_L1": 0.8021315124244132,
+          "n_cells": 828,
+          "party_rank_MAE": 2.142512077294686,
+          "party_share_MAE": 0.08912572360271255,
+          "party_share_RMSE": 0.13427555285394166,
+          "sse": 14.928777150023832,
+          "topS_exact_set_accuracy": 0.06521739130434782,
+          "topS_membership_accuracy": 0.6980676328502414,
+          "topS_set_Jaccard": 0.42626811594202907,
+          "topS_share_gap_MAE": 0.046081141526812336,
+          "top_party_accuracy": 0.1956521739130435,
           "vs_NATIONAL_ONLY_bootstrap": {
             "cluster": "territory",
             "comparator": "NATIONAL_ONLY",
             "delta_RMSE_model_minus_comparator_interval95": [
-              -0.0007133144103324546,
-              0.018138713506562723
+              0.0018453672856652997,
+              0.020241712769310437
             ],
-            "probability_model_better": 0.0336,
+            "probability_model_better": 0.0077,
             "replicates": 10000
           }
         },
         "ROLLING_LAMBDA": {
           "RMSE_by_party": {
-            "MP": 0.06141756062200577,
-            "OTHER": 0.06522094281272126,
-            "PAM": 0.09112572930755544,
-            "PI": 0.09198602258011407,
-            "PJD": 0.23276752273391008,
-            "PPS": 0.04974491313443682,
-            "RNI": 0.20627921440424393,
-            "UC": 0.05380026390540604,
-            "USFP": 0.06190540831659015
+            "MP": 0.06510100835271149,
+            "OTHER": 0.06427855675738649,
+            "PAM": 0.08947588733350202,
+            "PI": 0.09963503953369561,
+            "PJD": 0.2374904512449794,
+            "PPS": 0.04733645256248543,
+            "RNI": 0.20864257452120433,
+            "UC": 0.05164193074837135,
+            "USFP": 0.05948533360929016
           },
-          "mean_territory_L1": 0.7584647634043572,
-          "n_cells": 738,
-          "party_rank_MAE": 2.13550135501355,
-          "party_share_MAE": 0.08427386260048414,
-          "party_share_RMSE": 0.12051940983319855,
-          "sse": 10.719396972148346,
-          "topS_exact_set_accuracy": 0.024390243902439025,
-          "topS_membership_accuracy": 0.6910569105691057,
-          "topS_set_Jaccard": 0.4082171893147504,
-          "topS_share_gap_MAE": 0.039369130514500084,
-          "top_party_accuracy": 0.12195121951219512,
+          "mean_territory_L1": 0.7636956732717045,
+          "n_cells": 828,
+          "party_rank_MAE": 2.1256038647342996,
+          "party_share_MAE": 0.08485507480796718,
+          "party_share_RMSE": 0.12233039127568504,
+          "sse": 12.3907919933603,
+          "topS_exact_set_accuracy": 0.03260869565217391,
+          "topS_membership_accuracy": 0.6908212560386474,
+          "topS_set_Jaccard": 0.40659937888198766,
+          "topS_share_gap_MAE": 0.0402392350410855,
+          "top_party_accuracy": 0.11956521739130435,
           "vs_NATIONAL_ONLY_bootstrap": {
             "cluster": "territory",
             "comparator": "NATIONAL_ONLY",
             "delta_RMSE_model_minus_comparator_interval95": [
-              -0.007867184063515503,
-              0.003406093630047087
+              -0.006364571490337595,
+              0.004699927178500123
             ],
-            "probability_model_better": 0.7733,
+            "probability_model_better": 0.6099,
             "replicates": 10000
           }
         }
@@ -1164,10 +1098,10 @@
       "national_territorial_decomposition": {
         "national_shift_L1": 0.5345856215064622,
         "national_shift_RMSE": 0.09991079018029769,
-        "oracle_target_national_only_RMSE": 0.07041064934480805,
-        "oracle_target_national_plus_prior_residual_RMSE": 0.06463429222460117,
-        "oracle_territorial_lambda": 0.35000000000000003,
-        "oracle_territorial_relative_improvement": 0.08203811744327877,
+        "oracle_target_national_only_RMSE": 0.07058069807588728,
+        "oracle_target_national_plus_prior_residual_RMSE": 0.06507471795597812,
+        "oracle_territorial_lambda": 0.34,
+        "oracle_territorial_relative_improvement": 0.07800971469549953,
         "oracle_warning": "Uses target national shares after outcome open; diagnostic only, never a deployable forecast.",
         "prior_national_share": {
           "MP": 0.07083686145353357,
@@ -1191,7 +1125,7 @@
           "UC": 0.05517279095157742,
           "USFP": 0.07884201170059188
         },
-        "territorial_residual_correlation": 0.3849780831237483
+        "territorial_residual_correlation": 0.3767676936050175
       },
       "ranking_by_RMSE_then_topS": [
         "HALF_SHRINK",
@@ -1199,26 +1133,15 @@
         "NATIONAL_ONLY",
         "PERSIST"
       ],
-      "score_support": 82,
-      "score_support_fraction_of_92": 0.8913043478260869,
+      "score_support": 92,
+      "score_support_fraction_of_92": 1.0,
       "target_mapping": {
         "collisions": [],
         "fuzzy_used": false,
-        "mapped": 82,
+        "mapped": 92,
         "method": "EXACT_NORMALIZED_PLUS_FROZEN_ALIASES",
         "target_universe": 92,
-        "unresolved": [
-          "Agadir - Ida-ou-Tanane",
-          "Bzou - Ouaouizaght",
-          "Es-Smara",
-          "Guéliz - Annakhil",
-          "Karia - Rhafsai",
-          "Mohammadia",
-          "Médina - Sidi-Youssef-Ben-Ali",
-          "Oued-Ed-Dahab",
-          "Salé - Al-Jadida",
-          "Tifelt - Rommani"
-        ],
+        "unresolved": [],
         "year": 2021
       },
       "transition": "2016->2021",
