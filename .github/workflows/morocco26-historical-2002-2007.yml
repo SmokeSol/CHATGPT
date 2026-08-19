@@ -1,0 +1,81 @@
+name: Morocco26 Historical 2002 2007 Reconstruction
+
+on:
+  push:
+    branches:
+      - morocco26-historical-2002-2007
+    paths:
+      - 'morocco26/scripts/.historical_payload.part1.txt'
+      - 'morocco26/scripts/.historical_payload.part2.txt'
+      - 'morocco26/scripts/.historical_payload.part3.txt'
+      - '.github/workflows/morocco26-historical-2002-2007.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reconstruct:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-historical-2002-2007
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deterministic parser dependencies
+        run: python -m pip install --disable-pip-version-check pandas openpyxl beautifulsoup4 requests
+      - name: Configure commit identity
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Materialize audited reconstruction scripts and commit before data
+        run: |
+          cat morocco26/scripts/.historical_payload.part1.txt morocco26/scripts/.historical_payload.part2.txt morocco26/scripts/.historical_payload.part3.txt > /tmp/historical_payload.b64
+          base64 -d /tmp/historical_payload.b64 > /tmp/historical_payload.tar.gz
+          echo '80bdcdc1505c49663b750993f6a3a64d6fe093a2a441582c7543f8c494324b3d  /tmp/historical_payload.tar.gz' | sha256sum -c -
+          tar -xzf /tmp/historical_payload.tar.gz -C morocco26/scripts
+          chmod +x morocco26/scripts/historical_pre_election_2002_2007.py morocco26/scripts/historical_outcome_2002_2007.py morocco26/scripts/validate_historical_2002_2007.py
+          python -m py_compile morocco26/scripts/historical_pre_election_2002_2007.py morocco26/scripts/historical_outcome_2002_2007.py morocco26/scripts/validate_historical_2002_2007.py
+          git rm morocco26/scripts/.historical_payload.part1.txt morocco26/scripts/.historical_payload.part2.txt morocco26/scripts/.historical_payload.part3.txt
+          git add morocco26/scripts/historical_pre_election_2002_2007.py morocco26/scripts/historical_outcome_2002_2007.py morocco26/scripts/validate_historical_2002_2007.py
+          git commit -m 'chore(historical): materialize audited 2002 2007 reconstruction scripts'
+          git push origin HEAD:morocco26-historical-2002-2007
+      - name: Freeze 2002 pre-election snapshot before opening 2002 outcome
+        run: |
+          python morocco26/scripts/historical_pre_election_2002_2007.py --year 2002
+          python morocco26/scripts/validate_historical_2002_2007.py --snapshot-only 2002
+          grep -R 'TARGET_OUTCOME_NOT_USED_IN_PRE_ELECTION_SNAPSHOT' morocco26/data/goal100/historical/2002/anti_leakage_certificate.json
+          git add morocco26/data/goal100/historical/2002
+          git commit -m 'data(historical): freeze leakage-safe 2002 pre-election snapshot'
+          git push origin HEAD:morocco26-historical-2002-2007
+      - name: Ingest 2002 outcome only after snapshot freeze
+        run: |
+          python morocco26/scripts/historical_outcome_2002_2007.py --year 2002
+          git add morocco26/data/goal100/historical/2002
+          git commit -m 'data(historical): ingest source-neutral 2002 outcome'
+          git push origin HEAD:morocco26-historical-2002-2007
+      - name: Freeze 2007 pre-election snapshot before opening 2007 outcome
+        run: |
+          python morocco26/scripts/historical_pre_election_2002_2007.py --year 2007
+          python morocco26/scripts/validate_historical_2002_2007.py --snapshot-only 2007
+          grep -R 'TARGET_OUTCOME_NOT_USED_IN_PRE_ELECTION_SNAPSHOT' morocco26/data/goal100/historical/2007/anti_leakage_certificate.json
+          git add morocco26/data/goal100/historical/2007
+          git commit -m 'data(historical): freeze leakage-safe 2007 pre-election snapshot'
+          git push origin HEAD:morocco26-historical-2002-2007
+      - name: Ingest 2007 outcome only after snapshot freeze
+        run: |
+          python morocco26/scripts/historical_outcome_2002_2007.py --year 2007
+          git add morocco26/data/goal100/historical/2007
+          git commit -m 'data(historical): ingest official-archive 2007 outcome'
+          git push origin HEAD:morocco26-historical-2002-2007
+      - name: Run anti-leakage integrity and acceptance gates
+        run: |
+          python morocco26/scripts/validate_historical_2002_2007.py
+          cat morocco26/data/goal100/historical/2002/acceptance_gate.json
+          cat morocco26/data/goal100/historical/2007/acceptance_gate.json
+          git add morocco26/data/goal100/historical/2002 morocco26/data/goal100/historical/2007 morocco26/data/goal100/historical/historical_2002_2007_acceptance_summary.json
+          git commit -m 'test(historical): certify 2002 2007 reconstruction gates'
+          git push origin HEAD:morocco26-historical-2002-2007
