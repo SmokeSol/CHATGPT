@@ -1,13 +1,13 @@
 {
-  "schema_version": "2.1",
+  "schema_version": "2.2",
   "experiment_id": "M26-AGENT-SOCIETY-V2-001",
   "branch": "morocco26-agent-society-v2-front-vote-llm",
-  "phase": "E0_REGISTERED_AS2_FRESH_CONTEXT_PENDING",
-  "protocol_status": "FROZEN_BEFORE_ANY_TRUE_AS2_OPUS5_FRESH_CONTEXT_OUTPUT_OR_2016_UNSEAL",
+  "phase": "AS2_STAGE1_FRESH_CONTEXT_COST_GATE_SEALED",
+  "protocol_status": "FROZEN_PRE_OUTCOME_STAGE1_READY_NO_2016_OR_2021_UNSEAL",
   "F0_status": "OFFICIAL_UNCHANGED",
   "real_llm_votes_generated": false,
   "target_outcomes_used_for_ASV2_tuning": false,
-  "supersedes": "SEALED_FULL_ELECTION_ENVIRONMENT_AWAITING_OPUS5_EXECUTION",
+  "supersedes": "E0_REGISTERED_AS2_FRESH_CONTEXT_PENDING",
   "synthetic_electorate": {
     "territories_each_year": 92,
     "archetypes_per_constituency": 256,
@@ -58,6 +58,7 @@
     "status": "REGISTERED_REFERENCE_ONLY_NOT_AS2",
     "archive": "external_outputs/e0_deterministic_reference/EXP_7C8A2F11_FULL_ENV_OUTPUTS_FROZEN.zip",
     "archive_sha256": "f4fb045755221a6a0b80d8e8ee940b485a0ddcf6dc35fb49991ff4b4d449c566",
+    "user_resupplied_archive_sha256_verified_identical": true,
     "terminal_status": "FROZEN_SCHEMA_COMPLETE_WITH_EXECUTION_CONTRACT_DEVIATION",
     "schema_and_completeness_gate": "PASS_FULL_ENV_ASV2_HISTORICAL_VOTES_FROZEN_READY_FOR_SCORING",
     "model_label": "claude-opus-5",
@@ -68,8 +69,43 @@
     "eligible_as_AS2": false,
     "eligible_for_AS3_calibration": false
   },
+  "as2_stage1_cost_gate": {
+    "status": "SEALED_READY_FOR_OPUS5_FRESH_CONTEXT_EXECUTION",
+    "protocol": "AS2_STAGE1_CLUSTER_SAMPLE_PROTOCOL_V1.json",
+    "builder": "morocco26/scripts/agent_society_v2_build_as2_stage1_cluster_handoff.py",
+    "residual_gate": "morocco26/scripts/agent_society_v2_stage1_residual_gate.py",
+    "handoff_zip_sha256": "3440a965db9e14b17bc939a1395e6c581015c50e83a04cef354d4f6d15e753c6",
+    "byte_identical_rebuild_verified": true,
+    "anonymous_election_territory_pairs": 184,
+    "selected_voter_batches": 184,
+    "work_items": 368,
+    "rows_expected": 11776,
+    "full_protocol_work_items": 2944,
+    "work_item_reduction_factor": 8.0,
+    "same_selected_batch_for_both_opaque_conditions": true,
+    "balanced_batch_assignment": true,
+    "selection_uses_mapping": false,
+    "selection_uses_outcomes": false,
+    "contains_e0_outputs": false,
+    "contains_mapping": false,
+    "contains_outcomes": false,
+    "required_model_family": "claude-opus-5",
+    "fresh_model_context_per_work_item_required": true,
+    "deterministic_engine_substitution_allowed": false,
+    "pass_terminal_status": "PASS_AS2_STAGE1_FRESH_CONTEXT_OUTPUTS_FROZEN_READY_FOR_RESIDUAL_GATE",
+    "blocked_terminal_status": "BLOCKED_FRESH_CONTEXT_EXECUTION_NOT_AVAILABLE",
+    "residual_gate_decisions": [
+      "ADVANCE_AS2",
+      "KILL_AS2_EXPANSION",
+      "STAGE1B_SECOND_CLUSTER_REQUIRED",
+      "BLOCKED"
+    ],
+    "does_not_replace_full_as2": true,
+    "does_not_unlock_2016": true,
+    "does_not_open_2021": true
+  },
   "as2_opus5_isolated": {
-    "status": "PENDING_TRUE_FRESH_CONTEXT_EXECUTION",
+    "status": "FULL_PROTOCOL_PENDING_STAGE1_DECISION",
     "required_terminal_status": "PASS_FULL_ENV_ASV2_HISTORICAL_VOTES_FROZEN_READY_FOR_SCORING",
     "required_model": "claude-opus-5",
     "fresh_model_context_per_work_item": true,
@@ -83,6 +119,7 @@
     "channels": ["family", "work", "neighborhood"],
     "rounds": ["R0_ISOLATED", "R1_SYNCHRONOUS", "R2_SYNCHRONOUS_STOP"],
     "conditions": ["ISO", "FAM", "WORK", "NEIGH", "ALL", "SHUFFLE", "ALL_R2"],
+    "real_graphs_mechanics_validation": "PASS_SOCIAL_GRAPH_VALIDATION_1472_GRAPHS_LOCAL_PRE_OUTCOME",
     "E0_mechanics_runs_allowed_only_when_explicit": true,
     "2016_outcomes_opened": false,
     "2021_outcomes_opened_for_social_experiment": false
@@ -107,7 +144,7 @@
       "status": "MATCHES_FROZEN_BASELINE"
     }
   },
-  "next_allowed_action": "Validate/obtain a TRUE AS2 Opus-5 isolated output generated with one fresh model context per each of the 2,944 work items. baseline_gate.require_as2_baseline must PASS. Only then unseal 2016 and calibrate the pre-registered social lambdas. Keep 2021 sealed until lambda freeze.",
-  "external_blocker": "The received Opus-produced archive is E0 deterministic reference because fresh_model_context_per_work_item=false. A true AS2 fresh-context execution is still required before 2016 unseal.",
-  "stop_rule": "Do not modify the voter population, election environment, AS2 prompt/schema, model requirement, party remapping, true/shuffled mapping, social graph rules, lambda grid, aggregation, metrics or gates after any true AS2 Opus-5 output is inspected. Do not open 2021 before 2016 lambda freeze."
+  "next_allowed_action": "Give only the frozen AS2 Stage-1 handoff ZIP (sha256 3440a965db9e14b17bc939a1395e6c581015c50e83a04cef354d4f6d15e753c6) to Claude Opus 5. It must execute 368 genuinely fresh contexts, one per work item, or return BLOCKED_FRESH_CONTEXT_EXECUTION_NOT_AVAILABLE. If a valid PASS archive returns, run the outcome-free residual gate against E0. Do not open 2016 from Stage-1; if ADVANCE_AS2, freeze either Stage-1B or the full AS2 expansion first. Keep 2021 sealed.",
+  "external_blocker": "A genuine Opus-5 fresh-context execution is still external to this runtime. Stage-1 reduces the immediate requirement from 2,944 to 368 contexts but forbids deterministic-engine substitution.",
+  "stop_rule": "Do not modify the voter population, full-environment prompt/schema, Stage-1 selection, residual thresholds, model-family requirement, party remapping, true/shuffled mapping, social graph rules, lambda grid, aggregation, metrics or gates after any genuine Stage-1 Opus-5 output is inspected. Stage-1 alone never authorizes 2016 unseal. Do not open 2021 before a true-AS2-based 2016 lambda freeze."
 }
