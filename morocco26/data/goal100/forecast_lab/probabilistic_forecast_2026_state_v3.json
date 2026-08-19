@@ -1,0 +1,109 @@
+{
+  "schema_version": "3.0",
+  "state_id": "M26-PROBABILISTIC-FORECAST-2026-V3",
+  "as_of": "2026-08-19T17:09:00+01:00",
+  "target_year": 2026,
+  "north_star": "Produce a frozen and falsifiable 2026 territorial probabilistic forecast whose national centre, territorial geography and uncertainty are separately validated before any seat probability is promoted.",
+  "pipeline": [
+    "CURRENT_PRE_ELECTION_2026_SNAPSHOT",
+    "NATIONAL_PARTY_FORECAST",
+    "LAMBDA_0_5_TERRITORIALIZATION",
+    "92_LOCAL_VOTE_CENTERS",
+    "HISTORICALLY_RECALIBRATED_UNCERTAINTY",
+    "FAIL_CLOSED_2026_LEGAL_ALLOCATOR",
+    "AT_LEAST_50000_COHERENT_ELECTIONS",
+    "CALIBRATED_SEAT_PROBABILITIES"
+  ],
+  "gates": {
+    "historical_2007_2011_2016_2021": {
+      "status": "PASS_FOR_REQUIRED_ROLLING_ORIGIN_USE",
+      "evidence": "morocco26/data/goal100/forecast_lab/baseline_scores_v2.json"
+    },
+    "rolling_origin_model_selection": {
+      "status": "PASS",
+      "winner": "HALF_SHRINK",
+      "lambda": 0.5,
+      "folds": [
+        "2007_TO_2011",
+        "2011_TO_2016",
+        "2016_TO_2021"
+      ],
+      "selection_metric": "equal-weight mean party-share RMSE across folds",
+      "evidence": "morocco26/data/goal100/forecast_lab/baseline_scores_v2.json"
+    },
+    "structural_point_seat_reference": {
+      "status": "AVAILABLE_AS_SKILL_FLOOR_REFERENCE",
+      "evidence": "morocco26/data/goal100/forecast_lab/structural_seat_forecast_2026_v2.json",
+      "mean_seats": {
+        "RNI": 69.94996,
+        "PAM": 59.73952,
+        "PI": 49.76628,
+        "MP": 44.051,
+        "PJD": 42.90086,
+        "UC": 38.89102,
+        "USFP": 35.52058,
+        "PPS": 33.50622,
+        "OTHER": 20.67456
+      },
+      "interpretation": "Credible structural centre/reference only; its v2 quantiles and first-party probabilities are NOT promoted as calibrated 2026 probabilities."
+    },
+    "current_national_2026_point": {
+      "status": "BLOCKED_NUMERIC_FORECAST_NOT_YET_PROMOTED",
+      "contract": "morocco26/data/goal100/forecast_lab/national_forecast_2026_contract_v1.json",
+      "evidence_ledger": "morocco26/data/goal100/forecast_lab/national_2026_evidence_ledger_v1.json",
+      "reason": "Current public evidence collected so far contains useful turnout, revealed-preference and candidate/dynamics signals but no defensible representative party vote-intention shares."
+    },
+    "territorial_center_v3": {
+      "status": "IMPLEMENTED_WAITING_FOR_NATIONAL_POINT_INPUT",
+      "lambda": 0.5,
+      "code": "morocco26/scripts/forecast_v3_center.py",
+      "primitive": "morocco26/src/morocco26/forecast_v3.py",
+      "formula": "national_2026 + 0.5*(territory_2021-national_2021), followed only when necessary by positive raking to recover the exact national target",
+      "invariant": "If national_2026 equals national_2021, the formula is exactly the validated HALF_SHRINK centre."
+    },
+    "conditional_territorial_uncertainty_v3": {
+      "status": "IMPLEMENTED_PENDING_CI_GENERATION_AND_VALIDATION",
+      "code": "morocco26/scripts/calibrate_uncertainty_v3.py",
+      "scope": "Retrospective territorial residuals conditional on realized target national strength, separating geography error from national-shock error.",
+      "expected_folds": [
+        "2007_TO_2011_COMMON_EXPLICIT_SUPPORT",
+        "2011_TO_2016_FULL_92",
+        "2016_TO_2021_FULL_92"
+      ]
+    },
+    "national_uncertainty_v3": {
+      "status": "BLOCKED",
+      "reason": "The new national point model must first be defined; its uncertainty then needs comparable historical calibration or an explicitly conservative frozen alternative."
+    },
+    "legal_allocator_2026": {
+      "status": "PASS_EXISTING",
+      "house_seats": 395,
+      "policy": "reuse existing fail-closed allocator; do not modify legal mechanics merely because the statistical centre changed"
+    },
+    "final_50000_simulations": {
+      "status": "BLOCKED_UPSTREAM",
+      "minimum_draws": 50000,
+      "required_invariant": "exactly 395 seats every draw"
+    },
+    "probabilistic_forecast_2026": {
+      "status": "NOT_PROMOTED",
+      "publishable_now": false
+    }
+  },
+  "deprecated_for_v3_inference": {
+    "old_Fminus1_uncertainty_around_new_half_shrink_center": {
+      "reason": "It was calibrated for the previous persistence-centred architecture and produces implausibly broad v2 seat intervals when transplanted around the new centre.",
+      "allowed_use": "legacy diagnostic/stress-test only"
+    },
+    "structural_v2_first_party_probabilities": {
+      "allowed_use": "diagnostic only",
+      "examples_not_to_publish_as_calibrated": {
+        "RNI_P_first_or_tied": 0.48486,
+        "PAM_P_first_or_tied": 0.24822,
+        "PJD_P_first_or_tied": 0.24978
+      }
+    }
+  },
+  "promotion_rule": "PROMOTED only after current national point + national uncertainty + conditional territorial residual calibration + correlation/resampling rule + rolling-origin interval coverage + >=50000 legally valid 395-seat simulations all pass.",
+  "current_label": "STRUCTURAL_CENTER_CREDIBLE__PROBABILISTIC_FORECAST_NOT_YET_PROMOTED"
+}
