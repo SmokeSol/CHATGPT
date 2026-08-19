@@ -1,0 +1,22 @@
+{
+  "outcome": [],
+  "snapshot": [
+    {
+      "fact": "Nombre total de listes locales",
+      "status": "AMBIGUOUS",
+      "type": "source_conflict",
+      "values": [
+        {
+          "source_id": "LM_INTERIOR_20070831",
+          "value": 1870
+        },
+        {
+          "source_id": "LM_REGIONS_20070902",
+          "value": 1862
+        }
+      ]
+    }
+  ],
+  "unresolved_count": 1,
+  "year": 2007
+}

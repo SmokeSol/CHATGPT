@@ -1,0 +1,53 @@
+{
+  "candidate_coverage_pct": 0.224,
+  "candidate_denominator_documented": 6691,
+  "candidate_names_verified_count": 15,
+  "controls": {
+    "git_freeze_order": "PASS",
+    "outcome_isolation": "PASS",
+    "provenance": "PASS",
+    "reproducibility": "PASS",
+    "seat_arithmetic": "PASS",
+    "temporal_leakage": "PASS",
+    "territorial_integrity": "PASS",
+    "unknown_discipline": "PASS",
+    "vote_arithmetic": "NOT_EVALUABLE_EXACTLY"
+  },
+  "crosswalk_approx_pct": 0.0,
+  "crosswalk_exact_pct": 60.0,
+  "crosswalk_unresolved_pct": 40.0,
+  "district_seat_allocation_status": "PASS_EXACT_OFFICIAL_AGGREGATE_MATCH",
+  "facts_AMBIGUOUS": 0,
+  "facts_MISSING": 1330,
+  "facts_VERIFIED": 19,
+  "git_freeze_order": {
+    "outcome_ingest_commit": "c8b160436dd5ff6e9205fe29fbdd688cabae6a26",
+    "snapshot_freeze_commit": "ef12b6728e1d7976857e7cfb2892e90cd9ce61eb",
+    "status": "PASS"
+  },
+  "incumbent_coverage_pct": null,
+  "incumbent_coverage_reason": "MISSING_COMPLETE_PRE_ELECTION_INCUMBENT_ROSTER",
+  "incumbent_verified_facts": 4,
+  "local_office_coverage_pct": null,
+  "local_office_coverage_reason": "MISSING_COMPLETE_LOCAL_OFFICE_DENOMINATOR",
+  "local_office_verified_facts": 4,
+  "local_vote_matrix_status": "OFFICIAL_ARCHIVE_FULL_LOCAL_PARTY_MATRIX",
+  "not_sufficient_for": "Strict full-snapshot 2007 rolling-origin until the complete pre-election 95-district legal/official map is recovered or independently frozen from a pre-election source.",
+  "outcome_coverage_definition": "share of native local constituencies with a result row; matrix completeness is reported separately",
+  "outcome_covered_pct": 100.0,
+  "parties_contesting_reported": 33,
+  "party_switch_coverage_pct": null,
+  "party_switch_coverage_reason": "MISSING_COMPLETE_SWITCH_DENOMINATOR",
+  "party_switch_verified_facts": 3,
+  "party_vote_columns_documented": 38,
+  "real_constituency_count": 95,
+  "schema_version": "1.0",
+  "scientific_status": "PARTIAL_PRE_ELECTION_SNAPSHOT",
+  "source_quality_counts": {
+    "T0": 4,
+    "T2": 13
+  },
+  "sufficient_for_backtest": "2007 local outcome is materially complete, but strict rolling-origin requires a frozen full pre-election native map/candidate surface; current snapshot is partial.",
+  "unresolved_contradictions": 1,
+  "year": 2007
+}
