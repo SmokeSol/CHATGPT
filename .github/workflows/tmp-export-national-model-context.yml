@@ -6,6 +6,8 @@ on:
       - morocco26-national-model-v1
     paths:
       - ".github/workflows/tmp-export-national-model-context.yml"
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 permissions:
   contents: read
