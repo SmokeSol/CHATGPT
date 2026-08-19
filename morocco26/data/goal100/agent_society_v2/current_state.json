@@ -1,9 +1,9 @@
 {
-  "schema_version": "2.3",
+  "schema_version": "2.4",
   "experiment_id": "M26-AGENT-SOCIETY-V2-001",
   "branch": "morocco26-agent-society-v2-front-vote-llm",
   "phase": "PUBLIC_LLM_COLLECTION_LIVE_SOCIAL_PIPELINE_CONNECTED",
-  "protocol_status": "PRE_OUTCOME_PUBLIC_COLLECTION_READY_NO_2016_OR_2021_UNSEAL",
+  "protocol_status": "FROZEN_PRE_OUTCOME_PUBLIC_COLLECTION_READY_NO_2016_OR_2021_UNSEAL",
   "F0_status": "OFFICIAL_UNCHANGED",
   "real_llm_votes_generated": false,
   "target_outcomes_used_for_ASV2_tuning": false,
@@ -102,13 +102,14 @@
     "live_pipeline": {
       "on_each_valid_submit": "preserve immutable R0 -> reconstruct deterministic graph -> derive synchronous R1 -> derive synchronous R2",
       "social_edge_function": "agent-society-social",
-      "social_edge_function_version": 1,
+      "social_edge_function_version": 2,
       "private_table": "asv2_social_previews",
       "private_table_rls": true,
       "anon_table_select": false,
       "authenticated_table_select": false,
       "public_status_is_non_directional_only": true,
       "directional_R0_R1_R2_sample_locked_until_reveal": true,
+      "post_reveal_frontend_switches_to_real_R0_and_frozen_graph": true,
       "current_completed_R0": 0,
       "current_socialized_R1_R2": 0
     },
@@ -123,7 +124,9 @@
       "R0_R1_R2_controls": true,
       "live_backend_status_connected": true,
       "contribution_payload_bridge_connected": true,
-      "collective_direction_hidden_while_collecting": true
+      "collective_direction_hidden_while_collecting": true,
+      "after_reveal_uses_real_participative_R0": true,
+      "after_reveal_uses_real_frozen_social_graph": true
     },
     "2016_outcomes_opened": false,
     "2021_outcomes_opened_for_social_experiment": false
@@ -157,7 +160,7 @@
     "social_private_table_direct_public_access": false,
     "user_requested_secret_rotation_after_wiring": true
   },
-  "next_allowed_action": "Open/continue the public bring-your-own-LLM collection. Every validated user contribution is automatically preserved as R0 and socialized into illustrative R1/R2 while collective directional results remain hidden. Accumulate sufficient independent LLM coverage and freeze the scientific promotion/calibration gate before any 2016 outcome unseal. Keep 2021 sealed.",
-  "external_blocker": "NONE_FOR_PUBLIC_COLLECTION. Scientific calibration/promotion remains intentionally blocked until sufficient true independent LLM contributions and a frozen pre-outcome gate exist.",
+  "next_allowed_action": "Open/continue the public bring-your-own-LLM collection. Every validated user contribution is automatically preserved as R0 and socialized into illustrative R1/R2 while collective directional results remain hidden. After the explicit reveal, the social frontend switches to real participative R0 plus the real frozen social graph. Accumulate sufficient independent LLM coverage and freeze the scientific promotion/calibration gate before any 2016 outcome unseal. Keep 2021 sealed.",
+  "external_blocker": "NONE_FOR_BACKEND_OR_COLLECTION. The current GitHub-triggered Vercel frontend deployment is blocked only by the account build-rate-limit; the branch contains the connected frontend code.",
   "stop_rule": "Do not use the illustrative live lambdas as calibrated evidence. Do not reveal directional collective R0/R1/R2 during collection. Do not modify the blinded voter population, election environment, mapping, scientific graph rules, lambda grid, aggregation, metrics or gates after opening historical outcomes. Do not open 2021 before a valid 2016-only freeze."
 }
