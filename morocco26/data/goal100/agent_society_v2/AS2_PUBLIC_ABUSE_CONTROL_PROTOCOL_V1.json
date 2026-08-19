@@ -1,13 +1,25 @@
 {
-  "schema_version": "AS2_PUBLIC_ABUSE_CONTROL_PROTOCOL_V1",
+  "schema_version": "AS2_PUBLIC_ABUSE_CONTROL_PROTOCOL_V1_1",
   "status": "FROZEN_PRE_OUTCOME",
-  "policy_version": "ATLAS_ABUSE_V1_FROZEN",
+  "policy_version": "ATLAS_ABUSE_V1_FROZEN_POW",
+  "supersedes_policy_version": "ATLAS_ABUSE_V1_FROZEN",
+  "amendment_reason": "No Cloudflare account exists; before any real contribution, the external Turnstile dependency was replaced by a native one-time proof-of-work gate.",
   "purpose": "prevent automated work-item exhaustion, replay and corpus poisoning without conditioning exclusions on political content",
-  "turnstile": {
-    "required": true,
-    "verification": "server_side_cloudflare_siteverify",
-    "action": "atlas_claim",
-    "claim_without_valid_verification": false
+  "entry_gate": {
+    "mode": "ATLAS_POW_V1",
+    "third_party_account_required": false,
+    "captcha_required": false,
+    "algorithm": "SHA-256 leading-zero bits",
+    "difficulty_bits": 16,
+    "challenge_ttl_seconds": 300,
+    "challenge_single_use": true,
+    "challenge_binding": [
+      "peppered browser hash",
+      "peppered IP hash"
+    ],
+    "client_preimage": "nonce|browser_id|counter",
+    "server_verification_cost": "one SHA-256 after challenge lookup",
+    "turnstile": "optional future additional layer, inactive"
   },
   "participant_pseudonym": {
     "browser_identifier": "random local browser UUID",
@@ -31,6 +43,8 @@
     "max_completed_per_participant_24h": 3,
     "max_tickets_per_participant_hour": 5,
     "max_tickets_per_ip_hour": 20,
+    "max_pow_challenges_per_browser_hour": 8,
+    "max_pow_challenges_per_ip_hour": 30,
     "expired_claims_per_ip_24h_before_cooldown": 5
   },
   "work_assignment": {
@@ -50,11 +64,21 @@
   "automatic_quarantine": {
     "threshold": 100,
     "signals": [
-      {"code": "EXACT_BEHAVIOR_FINGERPRINT_REPEAT", "points": 100},
-      {"code": "EXACT_OUTPUT_REPLAY", "points": 100}
+      {
+        "code": "EXACT_BEHAVIOR_FINGERPRINT_REPEAT",
+        "points": 100
+      },
+      {
+        "code": "EXACT_OUTPUT_REPLAY",
+        "points": 100
+      }
     ],
     "observation_only_signals": [
-      {"code": "EXTREME_SUBMISSION_SPEED_METADATA_ONLY", "points": 10, "can_quarantine_alone": false}
+      {
+        "code": "EXTREME_SUBMISSION_SPEED_METADATA_ONLY",
+        "points": 10,
+        "can_quarantine_alone": false
+      }
     ],
     "forbidden_content_based_signals": [
       "party preference direction",
@@ -69,6 +93,20 @@
     "quarantined_rows_socialized": false,
     "quarantined_work_item_can_be_reassigned": true,
     "disposition_disclosed_to_contributor": false
+  },
+  "verification": {
+    "pre_collection_pow_test": "PASS",
+    "required_bits": 16,
+    "observed_test_bits": 18,
+    "single_use_replay_test": "PASS_REPLAY_REJECTED",
+    "test_rows_cleaned": true,
+    "post_test_counts": {
+      "pow_challenges": 0,
+      "security_events": 0,
+      "tickets": 0,
+      "claims": 0,
+      "completed": 0
+    }
   },
   "historical_outcomes": {
     "2016_opened_by_this_protocol": false,
