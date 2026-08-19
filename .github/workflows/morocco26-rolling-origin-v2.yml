@@ -1,0 +1,48 @@
+name: Morocco26 Rolling Origin V2
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [morocco26-e-reason]
+    paths:
+      - 'morocco26/scripts/forecast_lab_rolling_generate_v2.py'
+      - 'morocco26/scripts/forecast_lab_rolling_score_v2.py'
+      - 'morocco26/data/goal100/forecast_lab/rolling_origin_contract_v2.json'
+      - 'morocco26/data/goal100/historical/2007/**'
+      - '.github/workflows/morocco26-rolling-origin-v2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  rolling-origin:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install runtime
+        run: python -m pip install --disable-pip-version-check numpy
+      - name: Generate strict pre-election forecasts
+        run: |
+          python morocco26/scripts/forecast_lab_rolling_generate_v2.py --target 2011
+          python morocco26/scripts/forecast_lab_rolling_generate_v2.py --target 2016
+          python morocco26/scripts/forecast_lab_rolling_generate_v2.py --target 2021
+      - name: Open targets only in scorer
+        run: python morocco26/scripts/forecast_lab_rolling_score_v2.py
+      - name: Persist frozen outputs
+        run: |
+          git config user.name "morocco26-rolling-origin-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add morocco26/data/goal100/forecast_lab/rolling_origin_v2
+          if git diff --cached --quiet; then
+            echo "No output changes"
+            exit 0
+          fi
+          git commit -m "forecast-lab: persist strict rolling-origin v2 results"
+          git push origin HEAD:morocco26-e-reason

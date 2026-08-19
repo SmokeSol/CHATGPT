@@ -1,0 +1,40 @@
+{
+  "schema_version": "2.0",
+  "contract_id": "M26-FORECAST-LAB-ROLLING-ORIGIN-V2",
+  "scientific_status": "FROZEN_AFTER_2007_LINEAGE_IMPORT_BEFORE_NEW_TUNING",
+  "historical_folds": [
+    {"prior": 2007, "target": 2011},
+    {"prior": 2011, "target": 2016},
+    {"prior": 2016, "target": 2021}
+  ],
+  "party_buckets": ["RNI", "PAM", "PI", "PJD", "USFP", "MP", "UC", "PPS", "OTHER"],
+  "territorial_policy": {
+    "native_first": true,
+    "fuzzy_matching_forbidden": true,
+    "forced_92_coercion_forbidden": true,
+    "2007_to_modern": "use frozen crosswalk_to_modern.json; only one-to-one explicit mappings are forecastable",
+    "2011_2016_2021": "exact normalized names plus frozen explicit alias dictionary only",
+    "score_models_on_same_explicit_common_support": true
+  },
+  "rolling_lambda_policy": {
+    "2011": "cold-start lambda=0.50, fixed before scoring 2011",
+    "2016": "lambda selected only from completed 2007->2011 fold",
+    "2021": "lambda selected only from completed 2007->2011 and 2011->2016 folds",
+    "2026": "future: lambda selected only from completed 2007->2011, 2011->2016, 2016->2021 folds",
+    "grid": "0.00..1.00 step 0.01",
+    "loss": "party-territory share RMSE"
+  },
+  "models": ["NATIONAL_ONLY", "HALF_SHRINK", "PERSIST", "ROLLING_LAMBDA"],
+  "decomposition": {
+    "national": "prior national party shares versus target national party shares",
+    "territorial": "party-territory residual around national share, evaluated only after target open",
+    "oracle_national_diagnostics_are_not_deployable_models": true
+  },
+  "anti_leakage": {
+    "forecast_generator_must_not_open_target_outcome": true,
+    "past_outcomes_strictly_earlier_than_target_are_allowed_for_training": true,
+    "2007_acceptance_gate_required": "PASS_FOR_ROLLING_ORIGIN_BACKTEST"
+  },
+  "seat_policy": "top-S diagnostics are not legal seat allocation; legal allocator is a separate validated module",
+  "F0_modified": false
+}
