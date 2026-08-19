@@ -1,0 +1,39 @@
+{
+  "as_if_date": "PRE_2016_ELECTION",
+  "forbidden_target_path": "data/goal100/historical/tafra_legislative_2016_canonical.json",
+  "generator": "forecast_lab_rolling_generate_v2.py",
+  "lineage_2007": {
+    "matched_rows": 95,
+    "seat_mismatches": 0,
+    "snapshot_unchanged": true,
+    "status": "PASS_FOR_ROLLING_ORIGIN_BACKTEST"
+  },
+  "prior_mapping": {
+    "collisions": [],
+    "fuzzy_used": false,
+    "mapped": 82,
+    "method": "EXACT_NORMALIZED_PLUS_FROZEN_ALIASES",
+    "target_universe": 92,
+    "unresolved": [
+      "Agadir - Ida-ou-Tanane",
+      "Bzou - Ouaouizaght",
+      "Es-Smara",
+      "Guéliz - Annakhil",
+      "Karia - Rhafsai",
+      "Mohammadia",
+      "Médina - Sidi-Youssef-Ben-Ali",
+      "Oued-Ed-Dahab",
+      "Salé - Al-Jadida",
+      "Tifelt - Rommani"
+    ],
+    "year": 2011
+  },
+  "prior_year": 2011,
+  "schema_version": "2.0",
+  "snapshot_id": "M26-ROLLING-PRE-ELECTION-2016-V2",
+  "support_territories": 82,
+  "target_outcome_present": false,
+  "target_universe_territories": 92,
+  "target_year": 2016,
+  "territorial_policy": "NATIVE_FIRST_EXPLICIT_CROSSWALK_NO_FUZZY_NO_FORCED_92"
+}

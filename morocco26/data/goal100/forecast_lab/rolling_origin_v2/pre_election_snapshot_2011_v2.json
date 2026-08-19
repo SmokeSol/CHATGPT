@@ -1,0 +1,262 @@
+{
+  "as_if_date": "PRE_2011_ELECTION",
+  "forbidden_target_path": "data/goal100/historical/tafra_legislative_2011_canonical.json",
+  "generator": "forecast_lab_rolling_generate_v2.py",
+  "lineage_2007": {
+    "matched_rows": 95,
+    "seat_mismatches": 0,
+    "snapshot_unchanged": true,
+    "status": "PASS_FOR_ROLLING_ORIGIN_BACKTEST"
+  },
+  "prior_mapping": {
+    "accepted_types": [
+      "EXACT",
+      "EXPLICIT",
+      "RENAMED"
+    ],
+    "collisions": [],
+    "excluded": [
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Khouribga - Oulad-Labhar - Laksar-et-Esghar",
+        "native_id": "M26-2007-002",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Oued-Zem - Bejaad",
+        "native_id": "M26-2007-003",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Ben-Ahmed",
+        "native_id": "M26-2007-004",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "El-Jadida - Azemmour",
+        "native_id": "M26-2007-007",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Oulad-Bouaziz - Zemamra",
+        "native_id": "M26-2007-008",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Sidi-Bennour - Oulad-Frej",
+        "native_id": "M26-2007-009",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Safi - Chamalia",
+        "native_id": "M26-2007-010",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Safi - Janoubia",
+        "native_id": "M26-2007-011",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Fès - Chamalia",
+        "native_id": "M26-2007-013",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Fès - Janoubia",
+        "native_id": "M26-2007-014",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Moulay-Yacoub",
+        "native_id": "M26-2007-015",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Bni-Hssen",
+        "native_id": "M26-2007-017",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Ouezzane - Had-Kourt - Jorf-El-Melha",
+        "native_id": "M26-2007-020",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Sidi-Kacem - Mechra-Bel-Ksiri - Dar-Gueddari",
+        "native_id": "M26-2007-021",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Mohammadia",
+        "native_id": "M26-2007-031",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Es-Smara",
+        "native_id": "M26-2007-034",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Sraghna - Zemrane",
+        "native_id": "M26-2007-043",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Guéliz - Annakhil",
+        "native_id": "M26-2007-045",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Médina - Sidi-Youssef-Ben-Ali",
+        "native_id": "M26-2007-046",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Gheris - Tislit",
+        "native_id": "M26-2007-049",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Ziz - Tafilalet",
+        "native_id": "M26-2007-050",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Midelt - El-Kbab",
+        "native_id": "M26-2007-053",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Al-Ismaïlia - Guerrouane",
+        "native_id": "M26-2007-054",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Hamrya - Meknès-Banlieue - Zerhoun",
+        "native_id": "M26-2007-055",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Chamalia - Gharbia",
+        "native_id": "M26-2007-059",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Janoubia - Charkia",
+        "native_id": "M26-2007-060",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Oued-Ed-Dahab",
+        "native_id": "M26-2007-064",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Tifelt - Rommani",
+        "native_id": "M26-2007-066",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Rabat - Challah",
+        "native_id": "M26-2007-067",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Rabat - El Mouhit",
+        "native_id": "M26-2007-068",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Salé - Al-Jadida",
+        "native_id": "M26-2007-069",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Agadir - Ida-ou-Tanane",
+        "native_id": "M26-2007-072",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Taroudannt - Al-Janoubia",
+        "native_id": "M26-2007-076",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Taroudannt - Chamalia",
+        "native_id": "M26-2007-077",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Bzou - Ouaouizaght",
+        "native_id": "M26-2007-081",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Bni-Moussa - Bni-Amir",
+        "native_id": "M26-2007-083",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "El-Ksiba - Tadla",
+        "native_id": "M26-2007-084",
+        "target_count": 0
+      },
+      {
+        "mapping_type": "UNRESOLVED",
+        "name": "Karia - Rhafsai",
+        "native_id": "M26-2007-092",
+        "target_count": 0
+      }
+    ],
+    "excluded_count": 38,
+    "fuzzy_used": false,
+    "mapped": 57,
+    "method": "FROZEN_CROSSWALK_ONE_TO_ONE_ONLY",
+    "year": 2007
+  },
+  "prior_year": 2007,
+  "schema_version": "2.0",
+  "snapshot_id": "M26-ROLLING-PRE-ELECTION-2011-V2",
+  "support_territories": 57,
+  "target_outcome_present": false,
+  "target_universe_territories": 92,
+  "target_year": 2011,
+  "territorial_policy": "NATIVE_FIRST_EXPLICIT_CROSSWALK_NO_FUZZY_NO_FORCED_92"
+}
