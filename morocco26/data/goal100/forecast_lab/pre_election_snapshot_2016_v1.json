@@ -1,0 +1,22 @@
+{
+  "allowed_prior_result_year": 2011,
+  "as_if_date": "PRE_2016_ELECTION",
+  "forbidden_target_path": "data/goal100/historical/tafra_legislative_2016_canonical.json",
+  "generator": "forecast_lab_generate_v1.py",
+  "inputs": [
+    {
+      "path": "data/goal100/historical/tafra_legislative_2011_canonical.json",
+      "role": "PRIOR_ELECTION_RESULT",
+      "sha256": "a2ef356167c54d9da68609739fd441434e5ceaf50ad81792e3f6fe8f1fdc8bb5"
+    },
+    {
+      "path": "data/constituencies_goal75.csv",
+      "role": "FROZEN_TERRITORY_METADATA",
+      "sha256": "88a92d1da98228346bb6420cb27d2ab2024006eeaf937ed1c8a4613164043bd4"
+    }
+  ],
+  "schema_version": "1.0",
+  "snapshot_id": "M26-PRE-ELECTION-SNAPSHOT-2016-V1",
+  "target_outcome_present": false,
+  "target_year": 2016
+}

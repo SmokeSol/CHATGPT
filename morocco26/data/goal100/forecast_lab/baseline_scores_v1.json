@@ -1,0 +1,235 @@
+{
+  "F0_modified": false,
+  "contract_id": "M26-FORECAST-LAB-SKILL-FLOOR-V1",
+  "crossfold": {
+    "HALF_SHRINK": {
+      "mean_RMSE": 0.10231366043485708,
+      "mean_rank_MAE": 1.9106280193236715,
+      "mean_topS_Jaccard": 0.4598214285714286
+    },
+    "NATIONAL_ONLY": {
+      "mean_RMSE": 0.11108676732184442,
+      "mean_rank_MAE": 2.140096618357488,
+      "mean_topS_Jaccard": 0.35390786749482406
+    },
+    "PERSIST": {
+      "mean_RMSE": 0.11139009090043389,
+      "mean_rank_MAE": 2.013285024154589,
+      "mean_topS_Jaccard": 0.4605460662525881
+    }
+  },
+  "crossfold_ranking": [
+    "HALF_SHRINK",
+    "NATIONAL_ONLY",
+    "PERSIST"
+  ],
+  "folds": {
+    "2016": {
+      "models": {
+        "HALF_SHRINK": {
+          "RMSE_by_party": {
+            "MP": 0.06840724065197575,
+            "OTHER": 0.09284953955757527,
+            "PAM": 0.1361525918505194,
+            "PI": 0.06159215730963339,
+            "PJD": 0.11071249733317313,
+            "PPS": 0.050170112328262045,
+            "RNI": 0.07286816117927511,
+            "UC": 0.04811776911403749,
+            "USFP": 0.06802430620293927
+          },
+          "mean_territory_L1": 0.5675086107130202,
+          "party_rank_MAE": 1.6980676328502415,
+          "party_share_MAE": 0.06305651230144668,
+          "party_share_RMSE": 0.08343886768744727,
+          "topS_exact_set_accuracy": 0.14130434782608695,
+          "topS_membership_accuracy": 0.7487922705314007,
+          "topS_set_Jaccard": 0.5087474120082817,
+          "topS_share_gap_MAE": 0.028347398958316023,
+          "top_party_accuracy": 0.5434782608695652,
+          "vs_NATIONAL_ONLY_bootstrap": {
+            "cluster": "territory",
+            "comparator": "NATIONAL_ONLY",
+            "delta_RMSE_model_minus_comparator_interval95": [
+              -0.0200590832795199,
+              -0.011117410014893433
+            ],
+            "probability_model_better": 1.0,
+            "replicates": 10000
+          }
+        },
+        "NATIONAL_ONLY": {
+          "RMSE_by_party": {
+            "MP": 0.07988557453312564,
+            "OTHER": 0.09843799825441822,
+            "PAM": 0.14469561874967626,
+            "PI": 0.08635905647716659,
+            "PJD": 0.1590726059301722,
+            "PPS": 0.05258285014123344,
+            "RNI": 0.08253052370388173,
+            "UC": 0.05777629908456162,
+            "USFP": 0.07463087299651534
+          },
+          "mean_territory_L1": 0.6786678942651836,
+          "party_rank_MAE": 2.13768115942029,
+          "party_share_MAE": 0.07540754380724261,
+          "party_share_RMSE": 0.09902561880036762,
+          "topS_exact_set_accuracy": 0.010869565217391304,
+          "topS_membership_accuracy": 0.6376811594202898,
+          "topS_set_Jaccard": 0.33053830227743275,
+          "topS_share_gap_MAE": 0.02959078062068774,
+          "top_party_accuracy": 0.42391304347826086
+        },
+        "PERSIST": {
+          "RMSE_by_party": {
+            "MP": 0.06961800642060763,
+            "OTHER": 0.11354629035827375,
+            "PAM": 0.14550826849314943,
+            "PI": 0.06115298328715904,
+            "PJD": 0.09181036426645851,
+            "PPS": 0.05848508651941853,
+            "RNI": 0.08815754543103284,
+            "UC": 0.0517070167641654,
+            "USFP": 0.07450393907304839
+          },
+          "mean_territory_L1": 0.5606371069817603,
+          "party_rank_MAE": 1.8840579710144927,
+          "party_share_MAE": 0.06229301188686226,
+          "party_share_RMSE": 0.08850462894692614,
+          "topS_exact_set_accuracy": 0.15217391304347827,
+          "topS_membership_accuracy": 0.7342995169082124,
+          "topS_set_Jaccard": 0.4948240165631471,
+          "topS_share_gap_MAE": 0.029057661830610072,
+          "top_party_accuracy": 0.5434782608695652,
+          "vs_NATIONAL_ONLY_bootstrap": {
+            "cluster": "territory",
+            "comparator": "NATIONAL_ONLY",
+            "delta_RMSE_model_minus_comparator_interval95": [
+              -0.01888003567068035,
+              -0.002270645762246409
+            ],
+            "probability_model_better": 0.9946,
+            "replicates": 10000
+          }
+        }
+      },
+      "ranking_by_RMSE_then_topS": [
+        "HALF_SHRINK",
+        "PERSIST",
+        "NATIONAL_ONLY"
+      ],
+      "winner": "HALF_SHRINK"
+    },
+    "2021": {
+      "models": {
+        "HALF_SHRINK": {
+          "RMSE_by_party": {
+            "MP": 0.06382627083106106,
+            "OTHER": 0.06329111806819629,
+            "PAM": 0.08727656817087955,
+            "PI": 0.10054580773049494,
+            "PJD": 0.23432896254997523,
+            "PPS": 0.04593215845294794,
+            "RNI": 0.20804249951838105,
+            "UC": 0.052296580545810045,
+            "USFP": 0.057767755465085814
+          },
+          "mean_territory_L1": 0.7636126761849371,
+          "party_rank_MAE": 2.1231884057971016,
+          "party_share_MAE": 0.08484585290943746,
+          "party_share_RMSE": 0.1211884531822669,
+          "topS_exact_set_accuracy": 0.03260869565217391,
+          "topS_membership_accuracy": 0.6956521739130435,
+          "topS_set_Jaccard": 0.4108954451345756,
+          "topS_share_gap_MAE": 0.0401583247549458,
+          "top_party_accuracy": 0.07608695652173914,
+          "vs_NATIONAL_ONLY_bootstrap": {
+            "cluster": "territory",
+            "comparator": "NATIONAL_ONLY",
+            "delta_RMSE_model_minus_comparator_interval95": [
+              -0.0066541483757601785,
+              0.002900899931983491
+            ],
+            "probability_model_better": 0.7843,
+            "replicates": 10000
+          }
+        },
+        "NATIONAL_ONLY": {
+          "RMSE_by_party": {
+            "MP": 0.06997324348421372,
+            "OTHER": 0.0661234173428087,
+            "PAM": 0.08970846240947883,
+            "PI": 0.11584168817271974,
+            "PJD": 0.22901899522953068,
+            "PPS": 0.04546120079509983,
+            "RNI": 0.2087665648484618,
+            "UC": 0.06380041457596129,
+            "USFP": 0.05985669607692142
+          },
+          "mean_territory_L1": 0.8052671711852613,
+          "party_rank_MAE": 2.142512077294686,
+          "party_share_MAE": 0.0894741301316957,
+          "party_share_RMSE": 0.1231479158433212,
+          "topS_exact_set_accuracy": 0.010869565217391304,
+          "topS_membership_accuracy": 0.6739130434782609,
+          "topS_set_Jaccard": 0.37727743271221537,
+          "topS_share_gap_MAE": 0.046384301328405896,
+          "top_party_accuracy": 0.0
+        },
+        "PERSIST": {
+          "RMSE_by_party": {
+            "MP": 0.08025188391161288,
+            "OTHER": 0.07502397729523481,
+            "PAM": 0.11008101634213767,
+            "PI": 0.10267229800564866,
+            "PJD": 0.2630632135147583,
+            "PPS": 0.059076051832345246,
+            "RNI": 0.21492939668520247,
+            "UC": 0.05448703433849488,
+            "USFP": 0.07540031296731353
+          },
+          "mean_territory_L1": 0.8021315124244132,
+          "party_rank_MAE": 2.142512077294686,
+          "party_share_MAE": 0.08912572360271256,
+          "party_share_RMSE": 0.13427555285394166,
+          "topS_exact_set_accuracy": 0.06521739130434782,
+          "topS_membership_accuracy": 0.6980676328502414,
+          "topS_set_Jaccard": 0.42626811594202907,
+          "topS_share_gap_MAE": 0.046081141526812336,
+          "top_party_accuracy": 0.1956521739130435,
+          "vs_NATIONAL_ONLY_bootstrap": {
+            "cluster": "territory",
+            "comparator": "NATIONAL_ONLY",
+            "delta_RMSE_model_minus_comparator_interval95": [
+              0.002164111112147387,
+              0.02025857523646002
+            ],
+            "probability_model_better": 0.0067,
+            "replicates": 10000
+          }
+        }
+      },
+      "ranking_by_RMSE_then_topS": [
+        "HALF_SHRINK",
+        "NATIONAL_ONLY",
+        "PERSIST"
+      ],
+      "winner": "HALF_SHRINK"
+    }
+  },
+  "forecastability_diagnostic": {
+    "interpretation": "If territory-aware baselines beat NATIONAL_ONLY on both folds, historical geography contains reusable forecast signal. This does not establish calibrated 2026 probabilities.",
+    "shrinkage_beats_raw_persistence": true,
+    "territorial_memory_present": false
+  },
+  "historical_status": "RETROSPECTIVE_DEVELOPMENT_ONLY",
+  "probabilistic_status": {
+    "2016": "BLOCKED_NO_PRE_2011_TRANSITION_FOR_EX_ANTE_RESIDUAL_CALIBRATION",
+    "2021": "POSSIBLE_USING_2011_TO_2016_BUT_NOT_IMPLEMENTED_IN_POINT_SKILL_V1",
+    "next_unlock": "ADD_2007_AND_IDEALLY_2002_FOR_ROLLING_ORIGIN_PROBABILITY_CALIBRATION"
+  },
+  "result_id": "M26-FORECAST-LAB-SKILL-FLOOR-RESULT-V1",
+  "schema_version": "1.0",
+  "seat_metrics_status": "BLOCKED_CROSS_YEAR_LEGAL_ALLOCATOR_NOT_FOUND_IN_REPO_SEARCH",
+  "skill_floor_winner": "HALF_SHRINK"
+}
