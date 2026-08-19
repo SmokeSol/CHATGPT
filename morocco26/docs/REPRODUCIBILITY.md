@@ -1,27 +1,70 @@
-# MOROCCO//26 Phase 2 — reproducibility record
+# MOROCCO//26 — Reproducibility Record
 
-## Frozen identifiers
+## Current promoted forecast
 
-- Protocol: `M26-PHASE2-ABC-D-001` v1.1.1
-- Protocol hash: `0b519444cd6edacae29c8c777ecc14de0b948276c6217054cafdc1e74f131421`
-- Run-ledger hash: `d826930154db1fd7eb805c81bfb5f3d7e53e24704efde7e958618adf6f8678b2`
-- Source archive SHA-256: `4b05f2a46a193c73434b6055fe620cd38c7744fa1e5470666ca342df5e859137`
-- Evidence pack SHA-256: `04f009c3a5989e2e899d0ed07f4b7c10cd463f946759a832b2368bc70f649563`
+**Forecast:** `M26-PROBABILISTIC-FORECAST-2026-V1`  
+**State:** Forecast-Lab V4, `PROMOTED`  
+**Machine authority:** `../data/goal100/forecast_lab/probabilistic_forecast_2026_state_v4.json`
 
-## Executed scope
+The current forecast is deterministic conditional on the frozen inputs, parameters and RNG seeds.
 
-- 4 constituencies / 14 local seats
-- 2,880 weighted synthetic electors
-- 7 experiment arms
-- 96 universes per applicable arm and constituency
-- 4,624 run-ledger rows
-- Models A, B, C0 and C executed
-- Model D prepared but not executed
+## Canonical reproduction
 
-## Verification
+```bash
+python morocco26/scripts/simulate_final_forecast_2026_v1.py \
+  --output /tmp/final_probabilistic_forecast_2026_v1.json
+```
 
-The latest offline suite completed with **52/52 tests passing**. All 15 blocking gates pass. The national forecast remains blocked until 92 local and 12 regional replays plus a frozen holdout are available.
+Expected identifiers:
+
+- draws: `50000`;
+- seats in every draw: `395`;
+- generated JSON SHA256: `c7ab03321c0e3883048862a6d94faeb545066ea996a81a710691c6085f5726d6`;
+- joint 50,000-draw seat-stream SHA256: `a10becb1e85c2b3327e9430cd76c7801e6d3f515046ab8ec991c787e016bdf0d`;
+- canonical successful CI run: `32289928633`;
+- canonical artifact: `9379123421`.
+
+A second clean-head 50,000-draw CI run reproduced the same joint seat-stream hash before handover.
+
+## Model-selection reproducibility
+
+The active point model is not an informal assumption:
+
+- national winner: `PREVIOUS_NATIONAL_PERSISTENCE` over four rolling-origin folds;
+- territorial winner: `HALF_SHRINK`, `lambda = 0.5` over the historical territorial folds;
+- national uncertainty and conditional geography uncertainty are calibrated separately;
+- the combined historical coverage gate passes before the final simulation is promoted.
+
+See `../CURRENT_STATE.md` for concise metrics and the V4 machine state for exact values.
+
+## Legal reproducibility
+
+The final simulation reuses the certified F-1 V1.1 legal/runtime mechanics for registered-N/turnout/list availability/integer votes/statutory ties, but it does **not** reuse the old F-1 vote-uncertainty generator around the new V4 centre.
+
+Every promoted draw must:
+
+- include 92 local and 12 regional contests;
+- allocate exactly 395 seats;
+- have zero unique-list threshold failures;
+- have zero unfilled-seat exceptions;
+- have zero unresolved statutory ties after the frozen exchangeable-age prior where ages are unknown.
+
+## Handover validation
+
+Before accepting documentation/state maintenance:
+
+```bash
+python morocco26/scripts/validate_handover.py
+python morocco26/scripts/validate_anti_drift.py
+python morocco26/scripts/validate_goal100_tracking.py
+```
+
+Forecast-changing work additionally requires the relevant frozen historical admission/calibration/coverage workflows and a new immutable simulation artifact.
+
+## Historical Phase-2 experiments
+
+Earlier AgentSociety/Phase-2 reproducibility artifacts remain preserved as historical research records. They are not the current forecast authority. See `PHASE2_ARCHITECTURE.md` and `AGENTSOCIETY2_RUNBOOK.md`, both explicitly marked historical archives.
 
 ## Public boundary
 
-This repository studies aggregate electoral mechanisms. It does not generate campaign persuasion, optimize political messages, target voter groups, or ingest personal voter data.
+This repository studies aggregate electoral mechanisms and forecasting. It does not generate campaign persuasion, optimize political messages, target voter groups or ingest personal voter data.
