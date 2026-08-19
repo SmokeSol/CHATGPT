@@ -1,8 +1,8 @@
 {
-  "schema_version": "2.6",
+  "schema_version": "2.7",
   "experiment_id": "M26-AGENT-SOCIETY-V2-001",
   "branch": "morocco26-agent-society-v2-front-vote-llm",
-  "phase": "PUBLIC_LLM_COLLECTION_NATIVE_POW_PROTECTED_FRONTEND_PENDING_DEPLOY",
+  "phase": "PUBLIC_LLM_COLLECTION_NATIVE_POW_PROTECTED_GITHUB_PAGES_WORKFLOW_READY",
   "protocol_status": "FROZEN_PRE_OUTCOME_PUBLIC_COLLECTION_PROTECTED_NO_2016_OR_2021_UNSEAL",
   "F0_status": "OFFICIAL_UNCHANGED",
   "real_llm_votes_generated": false,
@@ -35,7 +35,7 @@
     "eligible_for_AS3_calibration": false
   },
   "public_llm_collection": {
-    "status": "BACKEND_PROTECTED_READY_FRONTEND_DEPLOY_PENDING",
+    "status": "BACKEND_PROTECTED_READY_GITHUB_PAGES_WORKFLOW_COMMITTED",
     "distribution_model": "USERS_BRING_THEIR_OWN_LLM",
     "cohort_id": "AS2_PUBLIC_V1",
     "target_work_items": 2944,
@@ -154,25 +154,9 @@
   },
   "social_extension": {
     "status": "LIVE_R0_TO_R1_R2_CONNECTED_ILLUSTRATIVE_NOT_CALIBRATED",
-    "channels": [
-      "family",
-      "work",
-      "neighborhood"
-    ],
-    "rounds": [
-      "R0_ISOLATED",
-      "R1_SYNCHRONOUS",
-      "R2_SYNCHRONOUS_STOP"
-    ],
-    "scientific_conditions": [
-      "ISO",
-      "FAM",
-      "WORK",
-      "NEIGH",
-      "ALL",
-      "SHUFFLE",
-      "ALL_R2"
-    ],
+    "channels": ["family", "work", "neighborhood"],
+    "rounds": ["R0_ISOLATED", "R1_SYNCHRONOUS", "R2_SYNCHRONOUS_STOP"],
+    "scientific_conditions": ["ISO", "FAM", "WORK", "NEIGH", "ALL", "SHUFFLE", "ALL_R2"],
     "real_graphs_mechanics_validation": "PASS_SOCIAL_GRAPH_VALIDATION_1472_GRAPHS_LOCAL_PRE_OUTCOME",
     "typescript_vs_python_parity": {
       "real_voter_batch_tested": true,
@@ -198,7 +182,13 @@
     "captcha_at_submit": false,
     "mcp_ticket_button": true,
     "collective_direction_hidden_while_collecting": true,
-    "production_deployment_status": "BLOCKED_BY_VERCEL_ACCOUNT_BUILD_RATE_LIMIT"
+    "deployment_channel": "GITHUB_PAGES",
+    "github_pages_workflow": ".github/workflows/deploy-agent-society-pages.yml",
+    "github_pages_source_branch": "morocco26-agent-society-v2-front-vote-llm",
+    "github_pages_publish_path": "morocco26/frontends/agent_society_opus/source_v2/web",
+    "github_pages_workflow_commit": "5e0416c1b6876d7792306cc7aa8b72dea1c9b1c4",
+    "github_pages_source_setting_required": "GITHUB_ACTIONS",
+    "production_deployment_status": "WORKFLOW_COMMITTED_PAGES_SOURCE_SETTING_UNVERIFIED"
   },
   "as2_stage1_cost_gate": {
     "status": "OPTIONAL_PRE_OUTCOME_DIAGNOSTIC_NOT_CURRENT_DISTRIBUTION_PATH",
@@ -217,9 +207,8 @@
     "retired_ingest_hardcoded_secret_removed": true,
     "external_captcha_secret_required": false
   },
-  "next_allowed_action": "Deploy the current branch frontend once the Vercel build-rate-limit clears, verify the public UI reports protection_mode=POW and protection_ready=true, then open the BYO-LLM collection. Keep 2016 and 2021 sealed.",
-  "external_blockers": [
-    "Vercel GitHub deployment is currently blocked by the account build-rate-limit."
-  ],
+  "next_allowed_action": "Verify repository Settings > Pages uses Source = GitHub Actions. The committed workflow then deploys only morocco26/frontends/agent_society_opus/source_v2/web from branch morocco26-agent-society-v2-front-vote-llm. Verify the public UI reports protection_mode=POW and protection_ready=true, then open the BYO-LLM collection. Keep 2016 and 2021 sealed.",
+  "deployment_gate": "VERIFY_GITHUB_PAGES_SOURCE_IS_GITHUB_ACTIONS",
+  "external_blockers": [],
   "stop_rule": "Do not weaken the native PoW/ticket/rate-limit controls after collection begins without a versioned protocol amendment. Never quarantine based on political direction or substantive LLM output shape. Do not reveal directional collective R0/R1/R2 during collection. Do not use illustrative social lambdas as calibrated evidence. Do not open 2016 or 2021 as a consequence of this anti-abuse implementation."
 }
