@@ -1,0 +1,30 @@
+{
+  "F0_modified": false,
+  "boundary_rule": "Native constituency geometry is preserved. Pre-2011 91/95-district outcomes may enter national and native legal layers immediately, but territorial models require an explicit forecast-eligible bridge to the frozen 2011-reference geometry; fuzzy row dropping/duplication is forbidden.",
+  "branch": "morocco26-forecast-pipeline-v2",
+  "contract_id": "M26-FORECAST-PIPELINE-V2",
+  "schema_version": "1.0",
+  "seat_rule": "No exact seat forecast from standardized 9-bucket shares. Exact legal allocation requires the real list universe; 2021/2026 additionally require registered-voter counts and absolute votes.",
+  "status": "FROZEN_ARCHITECTURE_ACTIVE_DEVELOPMENT",
+  "temporal_rule": "For target election Y, a forecast generator may open only artifacts whose information timestamp is strictly before Y's poll and historical outcomes with year < Y. The target outcome is opened only by the scorer after the forecast artifact is frozen.",
+  "workstreams": {
+    "legal_allocator": {
+      "engine": "scripts/legal_seat_allocator.py",
+      "registry": "data/goal100/forecast_pipeline/legal_regimes_v1.json"
+    },
+    "national_territorial": {
+      "output": "data/goal100/forecast_pipeline/national_territorial_decomposition_v1.json",
+      "target_leakage_allowed": false
+    },
+    "rolling_origin": {
+      "auto_discovers_older_canonical_years": true,
+      "boundary_audit_output": "data/goal100/forecast_pipeline/boundary_compatibility_v1.json",
+      "boundary_contract": "data/goal100/forecast_pipeline/geography_bridge_contract_v1.json",
+      "output": "data/goal100/forecast_pipeline/rolling_origin_status_v1.json"
+    },
+    "snapshot_2026": {
+      "output": "data/goal100/forecast_pipeline/snapshot_2026_current_v1.json",
+      "status": "CURRENT_SHADOW_NOT_FINAL"
+    }
+  }
+}
