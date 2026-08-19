@@ -1,0 +1,17 @@
+{
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "mapping_material_present_in_public": false,
+  "output_rows_expected": 94208,
+  "party_ids_territory_local": true,
+  "private_zip_bytes": 471312,
+  "private_zip_sha256": "d2a8998bd7db1ff8d484ee1f641b3d87e2730bd44f8e7a58114e1ffd7d4499ab",
+  "public_manifest_sha256": "66a85f2b295eb0f81b2b19d71d38e5e296724bacfdb88feedd46e30541e895e1",
+  "public_zip_bytes": 70313088,
+  "public_zip_sha256": "ab710f494ecff8b0935d6f86618a153f24276362f9a74e9c77c10ade841977ed",
+  "real_llm_outputs_seen": false,
+  "schema_version": "1.0",
+  "seal_id": "M26-ASV2-RICH-HISTORICAL-HANDOFF-SEAL-V1",
+  "status": "SEALED_READY_FOR_OPUS5",
+  "target_outcomes_present": false,
+  "work_items": 2944
+}

@@ -1,0 +1,15 @@
+{
+  "batch_size": 32,
+  "batches_per_territory_condition": 8,
+  "candidate_128_rejected_by_frozen_ess_constraint": true,
+  "certificate_id": "M26-ASV2-RICH-COMPRESSION-CERTIFICATE-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "proof": "For n archetypes, ESS <= n with equality only under exactly uniform weights. The frozen RICH gate requires ESS >= 128. A 128-card compression would therefore have zero slack and generally cannot preserve the exact non-1/128 core marginals. The validated 256-card population has min ESS 226.936858 and max weight 0.0159174.",
+  "real_llm_outputs_seen": false,
+  "schema_version": "1.0",
+  "selected_archetypes_per_constituency": 256,
+  "status": "PASS_KEEP_256",
+  "target_outcomes_used": false,
+  "validated_max_weight": 0.015917382990493847,
+  "validated_min_ess": 228.19626717913388
+}

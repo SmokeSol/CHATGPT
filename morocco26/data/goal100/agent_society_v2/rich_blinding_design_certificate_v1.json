@@ -1,0 +1,23 @@
+{
+  "certificate_id": "M26-ASV2-RICH-BLINDING-DESIGN-CERTIFICATE-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "judge_input_files_scanned": 1842,
+  "judge_input_findings": 0,
+  "measures": [
+    "anonymous election and territory IDs retained from the already sealed minimal handoff",
+    "party IDs are re-pseudonymized independently inside each target territory as Q_01..Q_09; no party pseudonym has cross-territory meaning",
+    "the same target-local party permutation is used for true and shuffled conditions so the negative control remains valid",
+    "raw target-year unemployment/female/youth/underemployment rates are removed from voter cards to reduce year fingerprinting",
+    "Afrobarometer source name, fieldwork dates, year, and respondent IDs are not exposed; only broad-stratum posterior means/SDs are exposed",
+    "real constituency names, real party names, mappings, weights, geography-confidence labels, outcomes and target years remain private",
+    "fresh model context per batch and explicit ban on memory-based re-identification remain mandatory"
+  ],
+  "minimum_required_ratio": 10.0,
+  "public_safe_fields_approx": 157,
+  "public_safe_information_effective_rank_ratio_after_macro_rate_removal_plus_attitudes": 13.133682596524139,
+  "real_llm_outputs_seen": false,
+  "schema_version": "1.0",
+  "status": "PASS_BYTE_AND_DESIGN_SCAN",
+  "storage_deduplication_preserves_work_item_semantics": true,
+  "target_outcomes_used": false
+}

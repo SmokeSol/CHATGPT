@@ -1,0 +1,26 @@
+{
+  "baseline_reconstruction_check": {
+    "2016_C0_RMSE": 0.08850462894692873,
+    "2021_C0_RMSE": 0.11841158918890837,
+    "status": "MATCHES_PREVIOUSLY_FROZEN_BASELINE_SCORING"
+  },
+  "certificate_id": "M26-ASV2-RICH-SCORER-DRYRUN-CERTIFICATE-V1",
+  "checks": {
+    "aggregation_pass": true,
+    "all92_scoring": true,
+    "bootstrap_10000_seed_260819": true,
+    "direct58_scoring": true,
+    "full_contract_pass": true,
+    "invalid_rows": 0,
+    "missing_rows": 0,
+    "rows_raw": 94208,
+    "terminal_gates_executed": true,
+    "valid_rows": 94208
+  },
+  "dryrun_input": "94,208 deterministic uniform dummy rows solely to exercise contract, aggregation, mappings, canonical outcomes, ALL_92 and DIRECT_58 metrics, bootstrap and terminal gates.",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "note": "The dummy R3 scores and resulting scientific terminal state are meaningless; this certificate validates only the mechanical frozen scoring pipeline before real Opus-5 outputs.",
+  "real_asv2_llm_outputs_used": false,
+  "schema_version": "1.0",
+  "status": "PASS_END_TO_END_RICH_SCORER_DRYRUN"
+}
