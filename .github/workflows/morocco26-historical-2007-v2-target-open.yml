@@ -1,0 +1,77 @@
+name: Morocco26 Historical 2007 V2 Target Open
+
+on:
+  push:
+    branches:
+      - morocco26-historical-2002-2007-v2
+    paths:
+      - '.github/workflows/morocco26-historical-2007-v2-target-open.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  target_open_and_reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-historical-2002-2007-v2
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deterministic outcome parser dependencies
+        run: python -m pip install --disable-pip-version-check pandas openpyxl
+      - name: Configure commit identity
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Prove snapshot is frozen before target open
+        shell: bash
+        run: |
+          set -euo pipefail
+          SNAP='morocco26/data/goal100/historical/2007/historical_native_map_pre_election_v2.json'
+          test -f "$SNAP"
+          test ! -e morocco26/data/goal100/historical/2007/legislative_2007_outcome_canonical.json
+          FREEZE=$(git log --diff-filter=A --format=%H -- "$SNAP" | tail -1)
+          test "$FREEZE" = 'b463f84d7c0a5d3ce402520b264ec9f89ba6d569'
+          sha256sum morocco26/data/goal100/historical/2007/*_v2.json > /tmp/pre_target_v2_hashes.txt
+          cat /tmp/pre_target_v2_hashes.txt
+      - name: Open and canonicalize 2007 outcome after freeze
+        run: |
+          python morocco26/scripts/historical_outcome_2002_2007.py --year 2007
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=Path('morocco26/data/goal100/historical/2007')
+          o=json.loads((d/'legislative_2007_outcome_canonical.json').read_text())
+          assert len(o['local_rows'])==95
+          assert sum(int(r['magnitude']) for r in o['local_rows'])==295
+          assert o['district_seat_reconstruction']['status']=='PASS_EXACT_OFFICIAL_AGGREGATE_MATCH'
+          print('PASS_2007_OUTCOME_95_295_ALLOCATOR')
+          PY
+          git add morocco26/data/goal100/historical/2007/legislative_2007_outcome_canonical.json \
+                  morocco26/data/goal100/historical/2007/historical_native_map_outcome_transcription.json \
+                  morocco26/data/goal100/historical/2007/historical_native_map.json \
+                  morocco26/data/goal100/historical/2007/crosswalk_to_modern.json \
+                  morocco26/data/goal100/historical/2007/source_inventory_outcome.json \
+                  morocco26/data/goal100/historical/2007/ambiguities_outcome.json \
+                  morocco26/data/goal100/historical/2007/coverage_outcome.json \
+                  morocco26/data/goal100/historical/2007/outcome_manifest.json \
+                  morocco26/data/goal100/historical/2007/outcome_hashes_sha256.json
+          git commit -m 'data(historical): ingest 2007 outcome after v2 snapshot freeze'
+          git push origin HEAD:morocco26-historical-2002-2007-v2
+      - name: Reconcile frozen map to target without mutating snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          sha256sum -c /tmp/pre_target_v2_hashes.txt
+          python morocco26/scripts/reconcile_2007_v2_post_freeze.py
+          sha256sum -c /tmp/pre_target_v2_hashes.txt
+          cat morocco26/data/goal100/historical/2007/acceptance_gate_v2.json
+          git add morocco26/data/goal100/historical/2007/territorial_reconciliation_v2.json \
+                  morocco26/data/goal100/historical/2007/acceptance_gate_v2.json
+          git commit -m 'test(historical): reconcile frozen 2007 v2 map after target open'
+          git push origin HEAD:morocco26-historical-2002-2007-v2
