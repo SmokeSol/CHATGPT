@@ -54,7 +54,7 @@
       "reason": "Current public evidence collected so far contains useful turnout, revealed-preference and candidate/dynamics signals but no defensible representative party vote-intention shares."
     },
     "territorial_center_v3": {
-      "status": "IMPLEMENTED_WAITING_FOR_NATIONAL_POINT_INPUT",
+      "status": "IMPLEMENTED_AND_UNIT_TESTED_WAITING_FOR_NATIONAL_POINT_INPUT",
       "lambda": 0.5,
       "code": "morocco26/scripts/forecast_v3_center.py",
       "primitive": "morocco26/src/morocco26/forecast_v3.py",
@@ -62,14 +62,17 @@
       "invariant": "If national_2026 equals national_2021, the formula is exactly the validated HALF_SHRINK centre."
     },
     "conditional_territorial_uncertainty_v3": {
-      "status": "IMPLEMENTED_PENDING_CI_GENERATION_AND_VALIDATION",
+      "status": "PASS_CONDITIONAL_COMPONENT",
       "code": "morocco26/scripts/calibrate_uncertainty_v3.py",
+      "summary": "morocco26/data/goal100/forecast_lab/uncertainty_calibration_v3_summary.json",
+      "ci_run_id": 32276052520,
       "scope": "Retrospective territorial residuals conditional on realized target national strength, separating geography error from national-shock error.",
-      "expected_folds": [
-        "2007_TO_2011_COMMON_EXPLICIT_SUPPORT",
-        "2011_TO_2016_FULL_92",
-        "2016_TO_2021_FULL_92"
-      ]
+      "fold_support": [57, 92, 92],
+      "n_observations": 241,
+      "pooled_share_rmse": 0.07098844167241973,
+      "pooled_share_mae": 0.05175159965554559,
+      "pooled_mean_territory_l1": 0.46576439689991045,
+      "interpretation": "This calibrates only the conditional geography component; it is not total prospective forecast error."
     },
     "national_uncertainty_v3": {
       "status": "BLOCKED",
@@ -105,5 +108,5 @@
     }
   },
   "promotion_rule": "PROMOTED only after current national point + national uncertainty + conditional territorial residual calibration + correlation/resampling rule + rolling-origin interval coverage + >=50000 legally valid 395-seat simulations all pass.",
-  "current_label": "STRUCTURAL_CENTER_CREDIBLE__PROBABILISTIC_FORECAST_NOT_YET_PROMOTED"
+  "current_label": "STRUCTURAL_CENTER_CREDIBLE__CONDITIONAL_GEOGRAPHY_CALIBRATED__NATIONAL_AND_FINAL_PROBABILITIES_BLOCKED"
 }
