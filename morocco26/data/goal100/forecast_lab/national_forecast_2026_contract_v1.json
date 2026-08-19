@@ -1,0 +1,61 @@
+{
+  "schema_version": "3.0",
+  "contract_id": "M26-NATIONAL-2026-CONTRACT-V1",
+  "target_year": 2026,
+  "purpose": "Provide the exogenous current national party-strength input that replaces implicit 2021 national persistence before territorialization.",
+  "required_status_for_structural_center": "READY_FOR_STRUCTURAL_CENTER",
+  "required_data_class": "CURRENT_PRE_ELECTION_NATIONAL_FORECAST",
+  "party_order": [
+    "RNI",
+    "PAM",
+    "PI",
+    "PJD",
+    "USFP",
+    "MP",
+    "UC",
+    "PPS",
+    "OTHER"
+  ],
+  "required_fields": {
+    "forecast_id": "non-empty immutable identifier",
+    "target_year": 2026,
+    "as_of": "ISO-8601 evidence cutoff strictly before election outcome",
+    "status": "READY_FOR_STRUCTURAL_CENTER",
+    "data_class": "CURRENT_PRE_ELECTION_NATIONAL_FORECAST",
+    "target_outcome_used": false,
+    "party_order": "exact contract order",
+    "point_share": "exactly one strictly-positive valid-vote share per party bucket, summing to 1 without implicit normalization",
+    "evidence": "non-empty source/provenance lineage"
+  },
+  "point_forecast_policy": {
+    "2021_role": "prior/base-rate only; never silently reused as the 2026 national answer",
+    "current_evidence": [
+      "representative pre-election vote-intention evidence when methodologically admissible",
+      "post-2021 revealed electoral results with explicit scope and comparability limits",
+      "candidate/list coverage and verified high-impact defections/ralliements",
+      "turnout-intention evidence",
+      "other pre-election signals only when provenance and transformation are explicit"
+    ],
+    "forbidden_shortcuts": [
+      "derive national vote share mechanically from the current structural seat means",
+      "treat self-selected web polls as representative voting-intention polls",
+      "convert qualitative press narratives directly into arbitrary percentage-point adjustments",
+      "use 2026 election outcome or any post-election information"
+    ]
+  },
+  "uncertainty_policy": {
+    "point_ready_does_not_imply_probability_ready": true,
+    "probabilistic_promotion_requires": [
+      "an explicit national uncertainty distribution or reproducible draw generator",
+      "historical/prospective calibration evidence or an explicitly documented conservative alternative",
+      "joint integration with the conditional territorial residual library",
+      "rolling-origin interval-coverage diagnostics"
+    ]
+  },
+  "downstream": {
+    "territorial_builder": "morocco26/scripts/forecast_v3_center.py",
+    "territorial_lambda": 0.5,
+    "territorial_selection_evidence": "morocco26/data/goal100/forecast_lab/baseline_scores_v2.json",
+    "conditional_uncertainty_calibration": "morocco26/scripts/calibrate_uncertainty_v3.py"
+  }
+}
