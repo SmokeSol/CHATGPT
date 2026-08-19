@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-COMBINED-TERRITORIAL-COVERAGE-V1",
+  "target_year": 2026,
+  "purpose": "Test prospective territorial interval coverage after combining the selected national point/uncertainty with the validated lambda=0.5 geography and conditional historical geography residuals, without double-counting national shocks.",
+  "freeze_status": "FROZEN_BEFORE_COMBINED_REPLAY_SCORING",
+  "national_component": {
+    "point_model": "PREVIOUS_NATIONAL_PERSISTENCE",
+    "selection_evidence": "morocco26/data/goal100/forecast_lab/national_model_selection_2026_v1_summary.json",
+    "uncertainty_contract": "morocco26/data/goal100/forecast_lab/national_uncertainty_contract_v1.json",
+    "draw_family": "SPHERICAL_COMPOSITIONAL_STUDENT_T_DF3",
+    "prequential_scale_rule": "maximum national residual RMSE whose target year is at or before the scored fold origin",
+    "downstream_positive_floor": 1e-08
+  },
+  "geography_component": {
+    "lambda": 0.5,
+    "center_formula": "national_draw + 0.5*(origin_territory_share-origin_national_share), then positive row normalization and weighted raking to the exact same national draw",
+    "origin_weight": "valid local-ballot votes available at the fold origin",
+    "residual_space_for_sampling": "RAW_SHARE_ERROR_ACTUAL_MINUS_CONDITIONAL_CENTER",
+    "clr_residual_role": "DIAGNOSTIC_ONLY_NOT_MONTE_CARLO_SUPPORT",
+    "reason_not_clr_sampling": "Historical zero/near-zero cells generate extreme CLR residuals that are valid diagnostics but unstable direct Monte Carlo support.",
+    "residual_row_sampling": "Sample complete nine-party residual rows with replacement; preserve within-row cross-party dependence; assign exchangeably across target territories.",
+    "residual_scale": 1.0,
+    "post_residual_projection": "floor at 1e-10, normalize each territory row, then rake every 92-territory draw back to that draw's exact national vector using origin valid-vote weights.",
+    "national_geography_dependence": "INDEPENDENT_CONDITIONAL_RESIDUAL_RESAMPLING_GIVEN_NATIONAL_DRAW"
+  },
+  "prequential_support": {
+    "2007_TO_2011": "TRAINING_GEOGRAPHY_SUPPORT_ONLY; 57 conservative explicit one-to-one residual rows; not scored because no earlier comparable territorial residual library is available.",
+    "2011_TO_2016": "Score all 92 target territories using only 2007_TO_2011 geography residual rows.",
+    "2016_TO_2021": "Score all 92 target territories using pooled 2007_TO_2011 plus 2011_TO_2016 geography residual rows.",
+    "target_outcome_residuals_for_same_fold": "FORBIDDEN"
+  },
+  "simulation": {
+    "draws_per_scored_fold": 20000,
+    "scored_folds": ["2011_TO_2016", "2016_TO_2021"],
+    "national_seed_rule": "Reuse national uncertainty coverage seeds 26092600 + transition index in [2002_TO_2007,2007_TO_2011,2011_TO_2016,2016_TO_2021]",
+    "geography_seeds": {"2011_TO_2016": 26092702, "2016_TO_2021": 26092703},
+    "batch_size": 500
+  },
+  "coverage_gate": {
+    "pooled_unit": "territory x party x scored fold; 92*9*2 = 1656 cells",
+    "intervals": [0.80, 0.95],
+    "required_coverage80": 0.80,
+    "required_coverage95": 0.95,
+    "post_score_parameter_tuning": "FORBIDDEN"
+  },
+  "required_invariants": [
+    "Every simulated territorial row is finite, non-negative and sums to one.",
+    "Every simulated 92-territory weighted aggregate matches its exact national draw within 1e-8.",
+    "Only residual rows whose target year is at or before the scored fold origin are sampled.",
+    "No realized scored-fold national or territorial outcome enters its forecast draws.",
+    "The residual sampling uses complete nine-party rows, never independently sampled party components."
+  ],
+  "failure_policy": "If pooled 80% or 95% coverage misses its frozen threshold, final 2026 probabilities remain NOT_PROMOTED. Any V2 uncertainty rule must be frozen before being scored and may not be tuned to individual party misses.",
+  "limitations": [
+    "Only two full 92-territory folds can be prospectively scored because 2007_TO_2011 supplies the first comparable geography residual library.",
+    "Residual rows are exchangeable across territories; territory-specific variance cannot be estimated robustly from this history.",
+    "The gate validates marginal cell interval coverage, not the complete joint dependence of all 92 territories."
+  ]
+}
