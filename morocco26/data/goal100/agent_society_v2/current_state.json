@@ -1,66 +1,68 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "2.0",
   "experiment_id": "M26-AGENT-SOCIETY-V2-001",
   "branch": "morocco26-agent-society-v2",
-  "phase": "SEALED_RICH_HANDOFF_AWAITING_OPUS5_EXECUTION",
-  "protocol_status": "FROZEN_BEFORE_ANY_REAL_RICH_ASV2_LLM_OUTPUT",
+  "phase": "SEALED_FULL_ELECTION_ENVIRONMENT_AWAITING_OPUS5_EXECUTION",
+  "protocol_status": "FROZEN_BEFORE_ANY_REAL_FULL_ENV_ASV2_LLM_OUTPUT",
   "F0_status": "OFFICIAL_UNCHANGED",
   "real_llm_votes_generated": false,
   "target_outcomes_used_for_ASV2_tuning": false,
-  "rich_population": {
-    "status": "ASV2_RICH_DATA_POWER_PASS",
+  "supersedes": "SEALED_RICH_HANDOFF_AWAITING_OPUS5_EXECUTION",
+  "synthetic_electorate": {
     "territories_each_year": 92,
     "archetypes_per_constituency": 256,
     "safe_feature_count": 125,
-    "effective_rank_ratio_vs_R0": 12.669897140648988,
-    "min_ess": 226.93685800863827,
-    "max_single_weight": 0.015917382990493847,
+    "effective_rank_ratio_vs_minimal": 12.669897140648988,
     "attitude_dimensions": 17,
-    "attitude_posterior_fields_per_archetype": 34,
-    "x10_pass_independent_of_attitude_layer": true
+    "attitude_posterior_fields_per_archetype": 34
   },
-  "geography": {
-    "status": "PASS_WITH_DUAL_PANEL_ROBUSTNESS",
-    "all_territories": 92,
-    "direct_microdata_territories": 58,
-    "proxy_territories": 34,
-    "required_scoring_panels": ["ALL_92", "DIRECT_58"]
-  },
-  "compression": {
-    "status": "PASS_KEEP_256",
-    "selected_archetypes_per_constituency": 256,
-    "batch_size": 32,
-    "batches_per_territory_condition": 8
+  "full_election_environment": {
+    "status": "PASS_FULL_ELECTION_ENVIRONMENT_CONSTRUCTED_PRE_LLM",
+    "program_axes": 18,
+    "national_issue_axes": 12,
+    "named_party_offer_cards_per_election": 8,
+    "aggregate_other_card": true,
+    "local_candidate_context": true,
+    "government_opposition_status": true,
+    "negative_control": "same national context, but party-policy cards and local candidate/context are deterministically shuffled",
+    "behavior_outputs": [
+      "turnout_probability",
+      "conditional_party_probability_simplex",
+      "11_factor_importance_simplex",
+      "closed_reason_codes"
+    ]
   },
   "blinding": {
-    "status": "PASS_BYTE_AND_DESIGN_SCAN",
-    "judge_input_findings": 0,
+    "status": "PASS_FULL_ENV_JUDGE_BLINDING",
+    "real_party_names_present": false,
+    "real_territory_names_present": false,
+    "real_election_years_present": false,
+    "country_or_city_labels_present": false,
+    "source_urls_present": false,
+    "engineering_or_scoring_certificates_exposed_to_judge": false,
     "party_ids_territory_local": true,
-    "public_safe_information_effective_rank_ratio": 13.133682596524139
+    "scan_findings": 0
   },
-  "rich_handoff": {
+  "judge_handoff": {
     "status": "SEALED_READY_FOR_OPUS5",
-    "public_zip_sha256": "ab710f494ecff8b0935d6f86618a153f24276362f9a74e9c77c10ade841977ed",
-    "public_zip_bytes": 70313088,
-    "public_manifest_sha256": "66a85f2b295eb0f81b2b19d71d38e5e296724bacfdb88feedd46e30541e895e1",
-    "work_manifest_sha256": "9d30b102d70a473dd8b7c63124e6cd3d50bbf77a8cb48c8e36a1a476a638c0bf",
-    "private_manifest_sha256": "d3e3809d498f0a48d361023bffd48e7589a4cfbb57212410bf9ca0698f92e6a9",
-    "private_zip_sha256": "d2a8998bd7db1ff8d484ee1f641b3d87e2730bd44f8e7a58114e1ffd7d4499ab",
-    "scoring_contract_sha256": "c8ce5080e48cfb23010548795279f3ee67cdf92ae23e69db9fa7e1a9d04f8d25",
+    "public_zip_sha256": "e8acad28dea5a531c21171db570b60d612993edd91db8f893e58c187c226696a",
+    "public_environment_id": "ENV_4D19B3E7",
+    "public_experiment_id": "EXP_7C8A2F11",
     "work_items": 2944,
     "output_rows_expected": 94208,
-    "target_outcomes_present_in_public": false,
-    "mapping_material_present_in_public": false
+    "target_outcomes_present": false,
+    "mapping_material_present": false
   },
   "scorer": {
-    "status": "PASS_END_TO_END_RICH_SCORER_DRYRUN",
-    "workflow_run_id": 32229344448,
-    "artifact_id": 9356660729,
-    "artifact_digest": "sha256:8c185494b620adc8fcb23f0828a923326e5c63910150cfa312988836f0ade2bd",
+    "status": "PASS_END_TO_END_FULL_ENV_SCORER_DRYRUN",
+    "workflow_run_id": 32239700431,
+    "artifact_id": 9360293935,
+    "artifact_digest": "sha256:c5caa7d952620bffda95ef8f7f64c2fa5d3a929659bfcd08ff044445fae8178d",
+    "scorer_sha256": "9a160c85ea491445cdb082f3653ce5ec909dae73ce1a94f4a9a0b916896e54a8",
     "rows_validated": 94208,
     "invalid_rows": 0,
-    "missing_rows": 0,
     "aggregation_pass": true,
+    "behavioral_diagnostics_pass": true,
     "all92_scoring_pass": true,
     "direct58_scoring_pass": true,
     "bootstrap_replicates": 10000,
@@ -68,10 +70,10 @@
     "baseline_reconstruction": {
       "2016_C0_RMSE": 0.08850462894692873,
       "2021_C0_RMSE": 0.11841158918890837,
-      "status": "MATCHES_PREVIOUSLY_FROZEN_BASELINE_SCORING"
+      "status": "MATCHES_FROZEN_BASELINE"
     }
   },
-  "next_allowed_action": "Give only the sealed public RICH historical handoff ZIP to OPUS-5. OPUS-5 must follow START_HERE_OPUS5_RICH.md exactly, use only the ZIP, produce all 94,208 outputs plus manifest and terminal report, and stop before scoring. Then run the already-frozen scorer without changing any contract element.",
+  "next_allowed_action": "Give only the sealed FULL ELECTION ENVIRONMENT judge ZIP to OPUS-5. OPUS-5 must follow its START_HERE instructions, use only the ZIP, produce all 94,208 outputs plus manifest and terminal report, and stop before scoring. Then run the frozen scorer without changing any prompt, input, mapping, metric, threshold or gate.",
   "external_blocker": "Real OPUS-5 execution occurs outside this connected runtime.",
-  "stop_rule": "Do not modify prompt, model, population, party remapping, condition mapping, aggregation, metrics or gates after any real RICH Opus-5 output is inspected."
+  "stop_rule": "Do not modify the voter population, election environment, prompt, model, party remapping, true/shuffled mapping, aggregation, metrics or gates after any real Opus-5 output is inspected."
 }

@@ -1,0 +1,26 @@
+{
+  "baseline_reconstruction": {
+    "2016_C0_RMSE": 0.08850462894692873,
+    "2021_C0_RMSE": 0.11841158918890837,
+    "status": "MATCHES_FROZEN_BASELINE"
+  },
+  "certificate_id": "M26-ASV2-FULL-ENV-SCORER-DRYRUN-CERTIFICATE-V1",
+  "checks": {
+    "aggregation_pass": true,
+    "all92_scoring": true,
+    "behavioral_diagnostics_pass": true,
+    "bootstrap_10000_seed_260819": true,
+    "direct58_scoring": true,
+    "full_contract_pass": true,
+    "invalid_rows": 0,
+    "rows_raw": 94208,
+    "valid_rows": 94208
+  },
+  "environment_extension_id": "M26-ASV2-FULL-ELECTION-ENV-V1",
+  "expected_public_judge_zip_sha256": "e8acad28dea5a531c21171db570b60d612993edd91db8f893e58c187c226696a",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "note": "Dummy treatment scores are scientifically meaningless; this certifies only the frozen mechanics before real Opus output.",
+  "real_llm_outputs_used": false,
+  "schema_version": "1.0",
+  "status": "PASS_END_TO_END_FULL_ENV_SCORER_DRYRUN"
+}
