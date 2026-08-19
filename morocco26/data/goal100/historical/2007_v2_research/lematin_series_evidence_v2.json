@@ -1,0 +1,72 @@
+{
+  "articles": [
+    {
+      "bytes": 271780,
+      "election_related_links": [],
+      "final_url": "https://lematin.ma/journal/2007/Legislatives-a-travers-les-regions_15-listes-locales-a-Laayoune-et-23-a-Meknes-Tafilelt/76043.html",
+      "http_status": 200,
+      "publication_date": "2007-09-02",
+      "sha256": "1777aa3d1083d76bebc5d3aa610497dc1e27022d4663548bb99644d1f3dbf065",
+      "status": "ELIGIBLE_PRE_ELECTION",
+      "title": "15 listes locales à Laâyoune et 23 à Meknès-Tafilelt - Le Matin.ma",
+      "url": "https://lematin.ma/journal/2007/Legislatives-a-travers-les-regions_15-listes-locales-a-Laayoune-et-23-a-Meknes-Tafilelt/76043.html"
+    },
+    {
+      "bytes": 280908,
+      "election_related_links": [],
+      "final_url": "https://lematin.ma/journal/2007/Scrutin-du-7-septembre_Journal-de-campagne--716-plaintes-pour-violation-du-code-electoral/74300.html",
+      "http_status": 200,
+      "publication_date": "2007-08-31",
+      "sha256": "37b984d551ae44802c2b8fb82388a09ee20212e07474649cc30b8775dcb1ddae",
+      "status": "ELIGIBLE_PRE_ELECTION",
+      "title": "Journal de campagne : 716 plaintes pour violation du code électoral - Le Matin.ma",
+      "url": "https://lematin.ma/journal/2007/Scrutin-du-7-septembre_Journal-de-campagne--716-plaintes-pour-violation-du-code-electoral/74300.html"
+    }
+  ],
+  "cutoff": "2007-09-06",
+  "eligible_pages": 2,
+  "lineage": {
+    "base": "2508256551f94ad67c23a39d7263e01202431bfe",
+    "derived_outcome_paths_present": [],
+    "head": "a8adf80c1462577bf0215b397bf52fbe5050ec43"
+  },
+  "outcome_used": false,
+  "pages_seen": 2,
+  "research_id": "M26-HIST-2007-LEMATIN-MAP-PRE-ELECTION-SERIES-V2",
+  "schema_version": "2.0",
+  "seat_context_count": 4,
+  "seat_contexts": [
+    {
+      "publication_date": "2007-09-02",
+      "source_title": "15 listes locales à Laâyoune et 23 à Meknès-Tafilelt - Le Matin.ma",
+      "status": "VERIFIED_SOURCE_CONTEXT",
+      "supporting_context": "latives prévues le 7 septembre prochain, a atteint 64.913 cartes, soit 71% du corps électoral dans la province. L'opération de retrait des cartes d'électeurs se poursuit encore dans la province de Laâyoune où le nombre des inscrits sur les listes électorales est estimé à 91.425 personnes, dont 43.871 femmes. La province de Laâyoune compte 244 bureaux de vote, dont 60 bureaux centraux. Quelque 15 listes, totalisant 45 candidats représentant dix-huit formations politiques, sont en lice pour les 3 sièges parlementaires à pourvoir au niveau de la province de Laâyoune lors du scrutin du 7 septembre prochain. Deux listes représentent respectivement l'union du Parti 110nal démocratique (PND) - Al Ahd et l'alliance formée du Parti de l'avant-garde démocratique 116ialiste (PADS), du Congrès 110nal ittihadi (CNI) et du Parti 116ialiste unifié (PSU). Sur les 45 candidats en lice pour les prochaines législatives au niveau de la province de Laâyoune figurent 2 femmes se présentant sous les étiquettes du ",
+      "url": "https://lematin.ma/journal/2007/Legislatives-a-travers-les-regions_15-listes-locales-a-Laayoune-et-23-a-Meknes-Tafilelt/76043.html"
+    },
+    {
+      "publication_date": "2007-08-31",
+      "source_title": "Journal de campagne : 716 plaintes pour violation du code électoral - Le Matin.ma",
+      "status": "VERIFIED_SOURCE_CONTEXT",
+      "supporting_context": "media. Le directeur des Affaires pénales et de grâces au ministère de la Justice a également tenu à préciser que parmi les 300 plaintes soumises au parquet général, 289 ont été classées pour manque de preuve ou d'élément pénal et 10 affaires ont fait l'objet de poursuites, le reste étant en cours d'enquête. Auparavant, Jamal Moukhtatar, gouverneur-directeur des études et des analyses au ministère de l'Intérieur, a rappelé que trente-trois partis politiques et 2 unions de partis se disputent les sièges à pourvoir contre 26 partis en 2002, soit une hausse de 5,53%. Selon les mêmes données, un total de 1.870 listes locales ont été déposées pour ce scrutin contre 1.772 listes en 2002. Vingt-six listes nationales réservées aux femmes ont été également déposées contre 24 en 2002. Le responsable du ministère de l'Intérieur a ajouté que les candidats des listes locales se disputeront 295 sièges au sein de la Chambre des représentants au niveau de 95 circonscriptions électorales locales, alors que le",
+      "url": "https://lematin.ma/journal/2007/Scrutin-du-7-septembre_Journal-de-campagne--716-plaintes-pour-violation-du-code-electoral/74300.html"
+    },
+    {
+      "publication_date": "2007-08-31",
+      "source_title": "Journal de campagne : 716 plaintes pour violation du code électoral - Le Matin.ma",
+      "status": "VERIFIED_SOURCE_CONTEXT",
+      "supporting_context": "istère de l'Intérieur, a rappelé que trente-trois partis politiques et 2 unions de partis se disputent les sièges à pourvoir contre 26 partis en 2002, soit une hausse de 5,53%. Selon les mêmes données, un total de 1.870 listes locales ont été déposées pour ce scrutin contre 1.772 listes en 2002. Vingt-six listes nationales réservées aux femmes ont été également déposées contre 24 en 2002. Le responsable du ministère de l'Intérieur a ajouté que les candidats des listes locales se disputeront 295 sièges au sein de la Chambre des représentants au niveau de 95 circonscriptions électorales locales, alors que les 26 listes nationales sont en lice pour pourvoir 30 sièges réservés à la circonscription nationale. Les statistiques du ministère de l'Intérieur sur le niveau d'instruction des candidats «têtes de listes» pour les élections du 7 septembre font ressortir que 57% de cette catégorie disposent d'un niveau d'enseignement supérieur, 30% d'un niveau secondaire et 13% d'un niveau primaire. Par pro",
+      "url": "https://lematin.ma/journal/2007/Scrutin-du-7-septembre_Journal-de-campagne--716-plaintes-pour-violation-du-code-electoral/74300.html"
+    },
+    {
+      "publication_date": "2007-08-31",
+      "source_title": "Journal de campagne : 716 plaintes pour violation du code électoral - Le Matin.ma",
+      "status": "VERIFIED_SOURCE_CONTEXT",
+      "supporting_context": " de 5,53%. Selon les mêmes données, un total de 1.870 listes locales ont été déposées pour ce scrutin contre 1.772 listes en 2002. Vingt-six listes nationales réservées aux femmes ont été également déposées contre 24 en 2002. Le responsable du ministère de l'Intérieur a ajouté que les candidats des listes locales se disputeront 295 sièges au sein de la Chambre des représentants au niveau de 95 circonscriptions électorales locales, alors que les 26 listes nationales sont en lice pour pourvoir 30 sièges réservés à la circonscription nationale. Les statistiques du ministère de l'Intérieur sur le niveau d'instruction des candidats «têtes de listes» pour les élections du 7 septembre font ressortir que 57% de cette catégorie disposent d'un niveau d'enseignement supérieur, 30% d'un niveau secondaire et 13% d'un niveau primaire. Par professions, les «têtes de listes» se recrutent à hauteur de 23% dans l'enseignement et le secteur public, de 17% parmi les chefs d'entreprises, commerçants ou artisans,",
+      "url": "https://lematin.ma/journal/2007/Scrutin-du-7-septembre_Journal-de-campagne--716-plaintes-pour-violation-du-code-electoral/74300.html"
+    }
+  ],
+  "seed_urls": [
+    "https://lematin.ma/journal/2007/Legislatives-a-travers-les-regions_15-listes-locales-a-Laayoune-et-23-a-Meknes-Tafilelt/76043.html",
+    "https://lematin.ma/journal/2007/Scrutin-du-7-septembre_Journal-de-campagne--716-plaintes-pour-violation-du-code-electoral/74300.html"
+  ]
+}
