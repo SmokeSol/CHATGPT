@@ -1,0 +1,59 @@
+{
+  "F0_modified": false,
+  "audit_id": "M26-HISTORICAL-BOUNDARY-COMPATIBILITY-V1",
+  "rule": "Boundary mismatch never triggers fuzzy row dropping/duplication. National layer remains usable independently.",
+  "schema_version": "1.0",
+  "stable_reference": "2011+ 92 local constituency geometry",
+  "transitions": [
+    {
+      "native_counts": [
+        92,
+        92
+      ],
+      "same_reference_territorial_fit_available": true,
+      "status": "READY",
+      "transition": "2011_TO_2016"
+    },
+    {
+      "native_counts": [
+        92,
+        92
+      ],
+      "same_reference_territorial_fit_available": true,
+      "status": "READY",
+      "transition": "2016_TO_2021"
+    }
+  ],
+  "years": {
+    "2011": {
+      "bridge_forecast_eligible": null,
+      "bridge_path": "data/goal100/forecast_pipeline/geography_bridges/2011_to_2011_reference_v1.json",
+      "bridge_present": false,
+      "direct_2011_reference_geometry_candidate": true,
+      "expected_native_local_rows": 92,
+      "native_count_matches_registry": true,
+      "native_local_rows": 92,
+      "territorial_status": "DIRECT_92_REFERENCE_COMPATIBLE"
+    },
+    "2016": {
+      "bridge_forecast_eligible": null,
+      "bridge_path": "data/goal100/forecast_pipeline/geography_bridges/2016_to_2011_reference_v1.json",
+      "bridge_present": false,
+      "direct_2011_reference_geometry_candidate": true,
+      "expected_native_local_rows": 92,
+      "native_count_matches_registry": true,
+      "native_local_rows": 92,
+      "territorial_status": "DIRECT_92_REFERENCE_COMPATIBLE"
+    },
+    "2021": {
+      "bridge_forecast_eligible": null,
+      "bridge_path": "data/goal100/forecast_pipeline/geography_bridges/2021_to_2011_reference_v1.json",
+      "bridge_present": false,
+      "direct_2011_reference_geometry_candidate": true,
+      "expected_native_local_rows": 92,
+      "native_count_matches_registry": true,
+      "native_local_rows": 92,
+      "territorial_status": "DIRECT_92_REFERENCE_COMPATIBLE"
+    }
+  }
+}

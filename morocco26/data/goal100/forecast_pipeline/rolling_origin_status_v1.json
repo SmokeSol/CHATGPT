@@ -1,0 +1,131 @@
+{
+  "F0_modified": false,
+  "detected_canonical_years": [
+    2011,
+    2016,
+    2021
+  ],
+  "folds": [
+    {
+      "forecast_freeze_sha256_before_target_open": "d97ad3ffe0fae3d95aa269670da314f22720751b4c6103cc1bb46f477bfc2d06",
+      "forecast_model_hashes": {
+        "national": {
+          "PREVIOUS_NATIONAL": "5a82b4bbbf5b73c4af9146d403d6932c19f4885e1151fbfaa31b47f338ba0bcf"
+        },
+        "territorial": {
+          "HALF_SHRINK_FIXED_DIAGNOSTIC": "69310a43d668f68d8ce2f39b2fb084d35542d3f0b5b13a9bb35eeb3b1534e016",
+          "NATIONAL_ONLY_REFERENCE_GEOGRAPHY": "711697022745358e7ae353b4bdf75373f3a9ac2e6fb23a8cd1be45132759066d",
+          "PERSIST_REFERENCE_GEOGRAPHY": "288370b2fb0d10b257969225830106f0aafeabb2404c145987a66a6fb8709788"
+        }
+      },
+      "full_two_layer_status": "BLOCKED_NO_PRIOR_HARMONIZED_TERRITORIAL_TRANSITION",
+      "generator_allowed_outcome_years": [
+        2011
+      ],
+      "generator_forbidden_target_path": "data/goal100/historical/tafra_legislative_2016_canonical.json",
+      "generator_inputs": [
+        {
+          "path": "data/goal100/historical/tafra_legislative_2011_canonical.json",
+          "sha256": "a2ef356167c54d9da68609739fd441434e5ceaf50ad81792e3f6fe8f1fdc8bb5",
+          "year": 2011
+        }
+      ],
+      "lambda_fitted_from_prior_harmonized_transitions": null,
+      "national_scores_party_share_RMSE": {
+        "PREVIOUS_NATIONAL": 0.04409134073737092
+      },
+      "national_training_transitions": [],
+      "prior_year": 2011,
+      "scorer_target_sha256": "e74855c1cc66657327b5d91559cfb7eb574dcc4fbf0879c948ebd63a856ff774",
+      "target_outcome_used_by_generator": false,
+      "target_territorial_geometry_status": "AVAILABLE_REFERENCE_GEOGRAPHY",
+      "target_year": 2016,
+      "territorial_scores_party_share_RMSE": {
+        "HALF_SHRINK_FIXED_DIAGNOSTIC": 0.08343886768744727,
+        "NATIONAL_ONLY_REFERENCE_GEOGRAPHY": 0.09902561880036762,
+        "PERSIST_REFERENCE_GEOGRAPHY": 0.08850462894692614
+      },
+      "territorial_training_transitions": [],
+      "uncertainty_calibration_status": "NO_PRIOR_NATIONAL_TRANSITION"
+    },
+    {
+      "forecast_freeze_sha256_before_target_open": "43bbf1378a67cf4cb009f56f8cf40b9b4e94ac2b7eda5ed422d161f511987777",
+      "forecast_model_hashes": {
+        "national": {
+          "LEARNED_MEAN_NATIONAL_SWING": "dae56ae3ed9901d6879f5981d7934ce696896fb8ef758e2509ad1f2acd9b67e0",
+          "PREVIOUS_NATIONAL": "822dfe6dc556586fa84b07b3974e56f20731c67255b27fc23dd306ca651a175c"
+        },
+        "territorial": {
+          "HALF_SHRINK_FIXED_DIAGNOSTIC": "7cf7a796f80c79ad226a72b404bddb04fd37849221845f21c99f5356da20e18e",
+          "LEARNED_TWO_LAYER": "61c54a29c5cc87c04856240347dd0285ad8449a290be0955d43e596886bfa0ad",
+          "NATIONAL_ONLY_REFERENCE_GEOGRAPHY": "b78287590e588bdfe2143c26c5248ee65c2ebf293ddc9484db8ddfcda0a76bfb",
+          "PERSIST_REFERENCE_GEOGRAPHY": "b20e1d610b82898d3245aed2f25ee7e876d78ca5db8b2f2e397c8c01d8c455a4"
+        }
+      },
+      "full_two_layer_status": "SCORED_AFTER_PRE_TARGET_FREEZE",
+      "generator_allowed_outcome_years": [
+        2011,
+        2016
+      ],
+      "generator_forbidden_target_path": "data/goal100/historical/tafra_legislative_2021_canonical.json",
+      "generator_inputs": [
+        {
+          "path": "data/goal100/historical/tafra_legislative_2011_canonical.json",
+          "sha256": "a2ef356167c54d9da68609739fd441434e5ceaf50ad81792e3f6fe8f1fdc8bb5",
+          "year": 2011
+        },
+        {
+          "path": "data/goal100/historical/tafra_legislative_2016_canonical.json",
+          "sha256": "e74855c1cc66657327b5d91559cfb7eb574dcc4fbf0879c948ebd63a856ff774",
+          "year": 2016
+        }
+      ],
+      "lambda_fitted_from_prior_harmonized_transitions": 0.7927513248040123,
+      "national_scores_party_share_RMSE": {
+        "LEARNED_MEAN_NATIONAL_SWING": 0.07552919871569322,
+        "PREVIOUS_NATIONAL": 0.09991079018029769
+      },
+      "national_training_transitions": [
+        "2011_TO_2016"
+      ],
+      "prior_year": 2016,
+      "scorer_target_sha256": "aaaf837e9789bbc2d940e08b63c30994be40fee3360a0bf4070c9e113ebc779e",
+      "target_outcome_used_by_generator": false,
+      "target_territorial_geometry_status": "AVAILABLE_REFERENCE_GEOGRAPHY",
+      "target_year": 2021,
+      "territorial_scores_party_share_RMSE": {
+        "HALF_SHRINK_FIXED_DIAGNOSTIC": 0.1211884531822669,
+        "LEARNED_TWO_LAYER": 0.12665403859691196,
+        "NATIONAL_ONLY_REFERENCE_GEOGRAPHY": 0.12314791584332119,
+        "PERSIST_REFERENCE_GEOGRAPHY": 0.13427555285394166
+      },
+      "territorial_training_transitions": [
+        "2011_TO_2016"
+      ],
+      "uncertainty_calibration_status": "ONE_PRIOR_TRANSITION_INSUFFICIENT_FOR_STABILITY"
+    }
+  ],
+  "geometry_guarantee": "Native 91/95-district pre-2011 outcomes are never fuzzy-forced to 92. National information activates immediately; territorial information requires an explicit forecast-eligible bridge to the 2011 reference geometry.",
+  "harness_id": "M26-ROLLING-ORIGIN-HARNESS-V1",
+  "historical_2002_present": false,
+  "historical_2007_present": false,
+  "schema_version": "1.1",
+  "scientific_status": "RETROSPECTIVE_ROLLING_ORIGIN_DEVELOPMENT_METHOD_DESIGNED_IN_2026",
+  "seat_scoring_status": {
+    "bucketed_vote_model": "cannot be converted exactly because it contains OTHER",
+    "exact_allocator": "ready separately at real list level",
+    "post_2021_extra_input": "registered voters required"
+  },
+  "status": "READY_FOR_2007_DROPIN",
+  "temporal_guarantee": "Target outcome content is opened only after national/territorial forecasts for the fold are generated and hashed. Strictly earlier outcomes only train the generator.",
+  "what_2002_unlocks": {
+    "immediate": "adds 2002 to national and legal history at native 91-district geometry",
+    "territorial": "adds 2002→2007 only after controlled bridges/harmonization",
+    "uncertainty": "provides an additional independent transition for stability/residual estimation"
+  },
+  "what_2007_unlocks": {
+    "2021": "adds one more strictly prior national transition; territorial contribution depends on bridge",
+    "immediate": "adds 2007 to national-swing rolling training and legal replay at native 95-district geometry",
+    "territorial": "2007→2011 activates only after controlled 2007-to-2011 geography bridge is built"
+  }
+}

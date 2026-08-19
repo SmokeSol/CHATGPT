@@ -1,0 +1,116 @@
+{
+  "F0_modified": false,
+  "coverage": {
+    "local_constituencies_total": 92,
+    "local_constituencies_with_any_candidate_evidence": 92,
+    "local_coverage_fraction": 1.0,
+    "regional_constituencies_total": 12,
+    "regional_constituency_candidate_roster_status": "NOT_YET_CANONICALLY_CAPTURED_IN_THIS_SNAPSHOT"
+  },
+  "diagnostic_multi_claim_cells_preview": [
+    {
+      "claim_count": 2,
+      "party": "USFP",
+      "territory_id": "essaouira"
+    }
+  ],
+  "final_freeze_gate": [
+    "Legally accepted local list universe captured at list level (no aggregate OTHER).",
+    "Regional list universe captured for all 12 regional constituencies.",
+    "Registered-voter counts available for each legal seat-allocation unit.",
+    "Every input archived/hashed and timestamped before election outcome availability."
+  ],
+  "forecast_effect_authorized": false,
+  "identity_safety": {
+    "cross_language_candidate_identity_merged_here": false,
+    "prior_checkpoint_reported_reconciled_surface": {
+      "candidate_records": 546,
+      "conclusion": "Candidate discovery/territory coverage is no longer the principal bottleneck.",
+      "local_territories_covered": 92,
+      "local_territories_total": 92,
+      "parties": 9,
+      "source_core": "Medias24 elections SQLite plus official PJD merge"
+    },
+    "reason": "Medias24 Latin-script claims and official Arabic PJD names remain separate source layers; this snapshot does not infer person identity across scripts.",
+    "unified_unique_candidate_count": null
+  },
+  "inputs": [
+    {
+      "path": "data/goal100/e_collect/runs/medias24_db_32051248846_1/candidate_ledger.json",
+      "role": "MEDIAS24_STRUCTURED_CANDIDATE_CLAIMS",
+      "sha256": "2a6a1ccf18d19bff8a48bda45a33998b57f844356256894b79103767c643733b"
+    },
+    {
+      "path": "data/goal100/e_collect/runs/medias24_db_32051248846_1/run_manifest.json",
+      "role": "MEDIAS24_RUN_MANIFEST",
+      "sha256": "6c75c35af7af1580eb41a4099743a4287024b50750d8d8f6145cba89ce0228c2"
+    },
+    {
+      "path": "data/goal100/b2_2026_ballot_roster.json",
+      "role": "PARTY_OFFICIAL_PJD_HEAD_LIST_ROSTER",
+      "sha256": "b206ad303869c744d8ade5e3dc09442611d2a59cc15c87aedb19265aae171b86"
+    },
+    {
+      "path": "data/goal100/e_collect/arabic_territory_crosswalk_v1.json",
+      "role": "IDENTITY_ONLY_ARABIC_TERRITORY_CROSSWALK",
+      "sha256": "5101b15b87b23b6280fc486b995f11081ee49e5928e5863fbd2487952eb13362"
+    },
+    {
+      "path": "data/goal100/b2_2026_ballot_certificate.json",
+      "role": "LEGACY_BALLOT_GATE_STATUS_NOT_CURRENT_COVERAGE",
+      "sha256": "87532da29133d6e72cce7b9c3f387488429cf5657bb28ceb30d7679b894e8e90"
+    },
+    {
+      "path": "data/goal100/e_collect/candidate_intelligence_v2_checkpoint_20260818.json",
+      "role": "PRIOR_RECONCILED_CANDIDATE_SURFACE_CHECKPOINT_REFERENCE_ONLY",
+      "sha256": "63c93af24fe98779cfc0c5c8fbfc1fa8231ce943b419a555f700c81f34729b42"
+    }
+  ],
+  "layers": {
+    "medias24": {
+      "candidate_claim_records": 544,
+      "legal_status": "MEDIA_REPORTED_OR_PARTY_ANNOUNCED_NOT_FINAL_ACCEPTED_BALLOT",
+      "local_territories_with_candidate_records": 91,
+      "multi_claim_party_territory_cells": 1,
+      "parties": 9,
+      "resolved_candidate_records": 522,
+      "territory_coverage_by_party": {
+        "FGD": 42,
+        "MP": 1,
+        "PAM": 89,
+        "PI": 79,
+        "PJD": 90,
+        "PPS": 60,
+        "RNI": 83,
+        "UC": 14,
+        "USFP": 63
+      }
+    },
+    "official_pjd": {
+      "crosswalk_resolved_rows": 92,
+      "legal_status": "PARTY_OFFICIAL_ANNOUNCEMENT_NOT_FINAL_ACCEPTED_BALLOT",
+      "local_territories_covered": 92,
+      "party": "PJD",
+      "roster_rows": 92
+    }
+  },
+  "legacy_gate_context": {
+    "b2_gate": "FAIL",
+    "interpretation": "The older B2 FAIL reflects its former corroboration/matching gate and is not evidence that current source coverage is 0/92; the later accepted Arabic crosswalk resolves the PJD roster 92/92."
+  },
+  "schema_version": "1.0",
+  "seat_forecast_prerequisites": {
+    "exact_local_list_universe": "IN_PROGRESS_NOT_FINAL_BALLOT",
+    "regional_list_universe": "MISSING_FROM_CURRENT_CANONICAL_SNAPSHOT",
+    "registered_voters_by_local_constituency": "MISSING_FROM_CURRENT_FORECAST_PIPELINE",
+    "rule": "No exact 2026 seat forecast until these inputs are present and frozen pre-poll."
+  },
+  "snapshot_id": "M26-PRE-ELECTION-2026-CURRENT-V1",
+  "source_timestamps": {
+    "arabic_crosswalk_created_at": "2026-08-17T17:46:47+00:00",
+    "medias24_run_created_at": "2026-08-17T17:38:56+00:00",
+    "pjd_roster_generated_at": "2026-08-17T11:17:35+01:00"
+  },
+  "status": "SHADOW_PRE_ELECTION_EVIDENCE_SNAPSHOT_NOT_FINAL_BALLOT",
+  "temporal_boundary": "All inputs are pre-election evidence. This current snapshot is re-frozen as sources evolve; a separate final pre-poll snapshot must be frozen after legally accepted candidacies are available."
+}

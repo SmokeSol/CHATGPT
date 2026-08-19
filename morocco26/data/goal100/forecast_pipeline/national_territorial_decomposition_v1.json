@@ -1,0 +1,153 @@
+{
+  "F0_modified": false,
+  "definition": {
+    "forecast_equation": "z_territory,target = z_national,target + lambda * relative_geography_previous + residual",
+    "interpretation": "National regime and relative geography are separate prediction problems; target national outcomes are used here only for retrospective decomposition, never as forecast inputs.",
+    "national_layer": "Election-wide party swing in CLR space, computed from aggregate local-list votes.",
+    "territorial_layer": "Within-election territory-relative CLR deviation around the national composition."
+  },
+  "diagnostic": {
+    "conclusion": "PARTIAL_TERRITORIAL_MEMORY_BUT_NATIONAL_AND_TERRITORIAL_DYNAMICS_MUST_BE_MODELED_SEPARATELY",
+    "lambda_2016": 0.7927513248040123,
+    "lambda_2021": 0.3898997318471329,
+    "lambda_nonstationarity": 0.40285159295687945
+  },
+  "party_order": [
+    "RNI",
+    "PAM",
+    "PI",
+    "PJD",
+    "USFP",
+    "MP",
+    "UC",
+    "PPS",
+    "OTHER"
+  ],
+  "result_id": "M26-NATIONAL-TERRITORIAL-DECOMPOSITION-V1",
+  "schema_version": "1.0",
+  "scientific_status": "RETROSPECTIVE_DEVELOPMENT_ONLY",
+  "transitions": [
+    {
+      "conditional_geography_RMSE_at_oracle_lambda": 0.08262946704114518,
+      "national_clr_swing": {
+        "MP": -0.00341700042719305,
+        "OTHER": -0.10820272506273541,
+        "PAM": 0.15251870975391724,
+        "PI": -0.014621755932136759,
+        "PJD": 0.06250077614609885,
+        "PPS": -0.011890355466072632,
+        "RNI": -0.023956716496236083,
+        "UC": -0.017379119730900214,
+        "USFP": -0.03555181278474194
+      },
+      "national_share_from": {
+        "MP": 0.07469592117130407,
+        "OTHER": 0.15443411414651415,
+        "PAM": 0.11050220420273607,
+        "PI": 0.11858020684946517,
+        "PJD": 0.22777737973819298,
+        "PPS": 0.056755270278243716,
+        "RNI": 0.11327684449202188,
+        "UC": 0.05797875030555392,
+        "USFP": 0.08599930881596804
+      },
+      "national_share_to": {
+        "MP": 0.07083686145353357,
+        "OTHER": 0.08537202404143356,
+        "PAM": 0.20873380744342454,
+        "PI": 0.10758039352176525,
+        "PJD": 0.2721473308363766,
+        "PPS": 0.048350571339023346,
+        "RNI": 0.0967743890507928,
+        "UC": 0.046547463822698754,
+        "USFP": 0.06365715849095156
+      },
+      "oracle_conditional_territorial_memory_lambda": 0.7927513248040123,
+      "relative_geography_correlation": {
+        "MP": 0.3734348051202448,
+        "OTHER": -0.12152535165185703,
+        "PAM": 0.23626996178783716,
+        "PI": 0.6909780251142694,
+        "PJD": 0.5940810330185586,
+        "PPS": 0.2769145178618699,
+        "RNI": 0.2425113686518543,
+        "UC": 0.29521329855218326,
+        "USFP": 0.4151434270014509
+      },
+      "territorial_residual_change_sd": {
+        "MP": 2.614174095409316,
+        "OTHER": 1.1995402213248774,
+        "PAM": 1.6047712325854389,
+        "PI": 0.881668049711828,
+        "PJD": 0.8766209034721042,
+        "PPS": 1.448553904549893,
+        "RNI": 2.3250759597198365,
+        "UC": 2.8961683494744723,
+        "USFP": 1.261295433123074
+      },
+      "territories": 92,
+      "transition": "2011_TO_2016"
+    },
+    {
+      "conditional_geography_RMSE_at_oracle_lambda": 0.0925486402583232,
+      "national_clr_swing": {
+        "MP": -0.00021908023398776856,
+        "OTHER": -0.0219627640135477,
+        "PAM": -0.034250755527962876,
+        "PI": 0.09603633711027469,
+        "PJD": -0.352395042138404,
+        "PPS": 0.005556882084548508,
+        "RNI": 0.2639280664117075,
+        "UC": 0.016190608822098093,
+        "USFP": 0.027115747485273553
+      },
+      "national_share_from": {
+        "MP": 0.07083686145353357,
+        "OTHER": 0.08537202404143356,
+        "PAM": 0.20873380744342454,
+        "PI": 0.10758039352176525,
+        "PJD": 0.2721473308363766,
+        "PPS": 0.048350571339023346,
+        "RNI": 0.0967743890507928,
+        "UC": 0.046547463822698754,
+        "USFP": 0.06365715849095156
+      },
+      "national_share_to": {
+        "MP": 0.07040807115499034,
+        "OTHER": 0.0723510098497662,
+        "PAM": 0.18450564373351536,
+        "PI": 0.16846796569284728,
+        "PJD": 0.04253248828326528,
+        "PPS": 0.05111270269967536,
+        "RNI": 0.27660731593377086,
+        "UC": 0.05517279095157742,
+        "USFP": 0.07884201170059188
+      },
+      "oracle_conditional_territorial_memory_lambda": 0.3898997318471329,
+      "relative_geography_correlation": {
+        "MP": 0.05123483211485516,
+        "OTHER": 0.3891182797803001,
+        "PAM": 0.20935604570101962,
+        "PI": 0.6092156416756833,
+        "PJD": 0.3362301903125434,
+        "PPS": 0.1852381234742304,
+        "RNI": 0.11585498843622459,
+        "UC": 0.33024897649008395,
+        "USFP": 0.5757231369675917
+      },
+      "territorial_residual_change_sd": {
+        "MP": 3.6869017426639448,
+        "OTHER": 1.0880903959926809,
+        "PAM": 1.455115927061399,
+        "PI": 1.0092735490835143,
+        "PJD": 1.1522048172208827,
+        "PPS": 1.8377495914417645,
+        "RNI": 2.400090391667929,
+        "UC": 3.8223765542897863,
+        "USFP": 1.2191909651434534
+      },
+      "territories": 92,
+      "transition": "2016_TO_2021"
+    }
+  ]
+}
