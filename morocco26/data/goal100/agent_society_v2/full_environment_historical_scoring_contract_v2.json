@@ -1,0 +1,54 @@
+{
+  "all_92_gates": {
+    "contract": "validity_rate >= 0.99 AND full 94,208-row package AND terminal PASS_FULL_ENV_ASV2_HISTORICAL_VOTES_FROZEN_READY_FOR_SCORING",
+    "negative_control_2016": "RMSE_TRUE <= RMSE_FULL_SHUFFLED",
+    "negative_control_2021": "RMSE_TRUE <= RMSE_FULL_SHUFFLED",
+    "not_materially_worse_2016": "RMSE_TRUE <= 1.01 * RMSE_C0",
+    "not_materially_worse_2021": "RMSE_TRUE <= 1.01 * RMSE_C0",
+    "positive_signal": "relative improvement TRUE vs C0 >= 0.01 in at least one year"
+  },
+  "behavioral_diagnostics_mandatory_nondecisive": [
+    "mean factor_importance by year and condition",
+    "reason-code frequencies by year and condition",
+    "mean turnout probability",
+    "mean probability retained on prior party among prior voters",
+    "top-choice switch rate among prior voters",
+    "mean program-policy-fit weight; no minimum is imposed because real program convergence may make low weight rational"
+  ],
+  "bootstrap": {
+    "replicates": 10000,
+    "role": "diagnostic; frozen point-estimate gates remain decisive",
+    "seed": 260819,
+    "unit": "territory"
+  },
+  "constraints": [
+    "No post-output changes to prompt, population, policy cards, national context, condition mapping, aggregation, metrics or gates",
+    "Program cards are coarse salience summaries; LOW is not opposition",
+    "National context is held fixed across true/shuffled within election",
+    "Ablations may be run only after the primary full-environment verdict and cannot rescue a failed primary"
+  ],
+  "contract_id": "M26-ASV2-FULL-ENV-HISTORICAL-SCORING-CONTRACT-V2",
+  "direct_58_robustness_gates": {
+    "negative_control_both_years": "TRUE RMSE <= FULL_SHUFFLED RMSE in both years",
+    "not_materially_worse_both_years": "TRUE RMSE <= 1.01*C0 RMSE in both years",
+    "positive_signal_not_proxy_confined": "for at least one year where ALL_92 relative improvement >=1%, TRUE relative improvement on DIRECT_58 must be >=0"
+  },
+  "environment_extension_id": "M26-ASV2-FULL-ELECTION-ENV-V1",
+  "expected": {
+    "archetypes_per_territory": 256,
+    "batch_size": 32,
+    "conditions": 2,
+    "direct_geography_territories": 58,
+    "output_rows": 94208,
+    "territories_per_year": 92,
+    "work_items": 2944
+  },
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "historical_role": "RETROSPECTIVE_SANITY_FILTER_ONLY_NOT_PRISTINE_PROOF",
+  "primary_metric": "macro_party_share_RMSE over 92x9 cells per year; lower is better",
+  "real_llm_outputs_seen_at_freeze": false,
+  "schema_version": "2.0",
+  "status": "FROZEN_BEFORE_ANY_REAL_FULL_ENV_LLM_OUTPUT_IS_INSPECTED",
+  "terminal_fail": "ASV2_FULL_ENV_KILL_BEFORE_2026",
+  "terminal_pass": "ASV2_FULL_ENV_HISTORICAL_SANITY_PASS_READY_FOR_2026_FREEZE"
+}

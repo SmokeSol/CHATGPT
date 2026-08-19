@@ -1,0 +1,22 @@
+{
+  "environment_extension_id": "M26-ASV2-FULL-ELECTION-ENV-V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "mapping_material_present_in_public": false,
+  "output_rows_expected": 94208,
+  "private_election_environment_evidence_sha256": "22eb83325e919d1899a47803a8be069067d2bf92228294c1dda55d067bfd5035",
+  "private_orchestrator_zip_sha256": "999243f2bd08af8b61a8dae7a60141874013d5f9538b8aa00dd5fcf5123d9cb0",
+  "public_handoff_manifest_sha256": "f572170432bab6973309a188161a34a34f13d244e22b1598b3979d2a0097a5b3",
+  "public_judge_zip_bytes": 70557775,
+  "public_judge_zip_sha256": "e8acad28dea5a531c21171db570b60d612993edd91db8f893e58c187c226696a",
+  "public_prompt_sha256": "a2561eb021e6a8371b4194e5365437a6c20ac5c9a87e619511a6eb904c8f71b6",
+  "public_schema_sha256": "fc4d26be5094acac76deffb0447d5153a3edb4de90cfd8c8daea6ddf7c96b74f",
+  "public_work_manifest_sha256": "f0c625462a68f78c0cc6d8cb4c585add9ac6b82b7162317f69f4032c09db5e43",
+  "real_llm_outputs_seen": false,
+  "schema_version": "1.0",
+  "scoring_contract_sha256": "68bb9822cce4b450b17cd2edec76036c257c83f3c8cef37a2e807b96a225992e",
+  "seal_id": "M26-ASV2-FULL-ELECTION-ENV-HANDOFF-SEAL-V2",
+  "status": "SEALED_BLINDED_FULL_ENVIRONMENT_PENDING_SCORER_DRYRUN",
+  "supersedes_unexecuted_public_handoff_sha256": "ab710f494ecff8b0935d6f86618a153f24276362f9a74e9c77c10ade841977ed",
+  "target_outcomes_present_in_public": false,
+  "work_items": 2944
+}
