@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "formula_contract_id": "M26-NATIONAL-MODEL-FORMULAS-V1",
+  "parent_selection_contract": "morocco26/data/goal100/forecast_lab/national_model_selection_contract_v1.json",
+  "freeze_status": "FROZEN_BEFORE_MODEL_SCORING",
+  "target_year": 2026,
+  "party_order": ["RNI", "PAM", "PI", "PJD", "USFP", "MP", "UC", "PPS", "OTHER"],
+  "historical_series": {
+    "required_years": [1997, 2002, 2007, 2011, 2016, 2021],
+    "scored_folds": [
+      {"origin_year": 2002, "target_year": 2007, "status": "OPTIONAL_ACTIVATED_ONLY_AFTER_COMPLETE_2002_NATIONAL_VECTOR_CERTIFICATION"},
+      {"origin_year": 2007, "target_year": 2011, "status": "MANDATORY"},
+      {"origin_year": 2011, "target_year": 2016, "status": "MANDATORY"},
+      {"origin_year": 2016, "target_year": 2021, "status": "MANDATORY"}
+    ],
+    "1997_role": "TRAINING_HISTORY_ONLY_FOR_THE_2002_TO_2007_FOLD; 1997_TO_2002_IS_NOT_AN_ADDED_SCORED_FOLD",
+    "anti_leakage": "For each target, model inputs and fitted quantities may use only election outcomes at or before the stated origin year."
+  },
+  "party_identity_policy": {
+    "PAM_before_2011": "EXACT_ZERO_NEW_PARTY_NOT_RETROACTIVELY_BACKFILLED",
+    "PJD_1997": "Constitutional and Democratic Popular Movement is mapped prospectively to the PJD lineage.",
+    "PPS_1997": "Party of Renewal and Progress led by Ismail Alaoui is mapped to the PPS lineage.",
+    "OTHER": "All parties outside the eight named buckets, including independents, mergers, entrants and exits not explicitly crosswalked, remain in OTHER.",
+    "historical_zero_policy": "Zeros are retained during scoring and are allowed to incur entrant error.",
+    "prospective_floor": 1e-08
+  },
+  "common_transformation": {
+    "raw_output": "Each model emits one nine-component real vector.",
+    "simplex_projection": "Deterministic Euclidean projection onto the non-negative unit simplex using the standard sorted-threshold algorithm.",
+    "prospective_only": "After winner refit for 2026, apply the fixed 1e-8 floor and renormalize only to satisfy the downstream strictly-positive contract.",
+    "implicit_normalization_forbidden": true
+  },
+  "models": {
+    "PREVIOUS_NATIONAL_PERSISTENCE": {
+      "formula": "p_hat_t = p_origin",
+      "free_parameters": 0
+    },
+    "POOLED_SHRUNK_NATIONAL_SWING": {
+      "formula": "Let Delta_i=p_i-p_(i-1) for all consecutive elections ending at or before origin. With k prior transitions and mu=mean_i(Delta_i), p_hat_t=ProjectSimplex(p_origin + [k/(k+1)]*mu). If k=0, use persistence.",
+      "shrinkage_interpretation": "One zero-swing pseudo-transition, shared across all parties.",
+      "tuned_hyperparameters": 0
+    },
+    "PARTY_SHRUNK_NATIONAL_SWING": {
+      "formula": "With k prior transitions, mu_j=mean_i(Delta_ij), q=mean_(i,j)(Delta_ij^2), and r_j=(k*mu_j^2)/(k*mu_j^2+q) when q>0, p_hat_t=ProjectSimplex(p_origin + r elementwise mu). If k=0 or q=0, use persistence.",
+      "shrinkage_interpretation": "Party components with weak historical directional signal relative to pooled swing energy are shrunk more strongly.",
+      "tuned_hyperparameters": 0
+    },
+    "SHRUNK_MEAN_REVERSION": {
+      "formula": "For each eligible historical transition with at least two elections available at its origin, d_i=mean(shares through origin_i)-p_origin_i and Delta_i=p_target_i-p_origin_i. Estimate beta=clip([sum_i d_i dot Delta_i]/[2*sum_i d_i dot d_i],0,1). For the current origin, d=mean(shares through origin)-p_origin and p_hat_t=ProjectSimplex(p_origin+beta*d). If no eligible transition or zero denominator, beta=0.",
+      "shrinkage_interpretation": "Non-negative mean-reversion coefficient with a ridge penalty equal to the observed predictor energy, halving the unregularized pooled coefficient.",
+      "tuned_hyperparameters": 0
+    }
+  },
+  "selection": {
+    "primary": "Equal-weight mean across scored folds of RMSE over the nine party-share buckets.",
+    "secondary": "Equal-weight mean fold MAE.",
+    "tertiary": "Worst-fold RMSE, then top-party accuracy, then fixed model order as deterministic final tie-break.",
+    "fixed_model_order": ["PREVIOUS_NATIONAL_PERSISTENCE", "POOLED_SHRUNK_NATIONAL_SWING", "PARTY_SHRUNK_NATIONAL_SWING", "SHRUNK_MEAN_REVERSION"],
+    "post_score_formula_changes_forbidden": true
+  }
+}

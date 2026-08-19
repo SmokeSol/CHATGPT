@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "M26-NATIONAL-MODEL-SELECTION-2026-V1-SUMMARY",
+  "generator": "morocco26/scripts/select_national_model_2026_v1.py",
+  "selection_contract": "morocco26/data/goal100/forecast_lab/national_model_selection_contract_v1.json",
+  "formula_contract": "morocco26/data/goal100/forecast_lab/national_model_formulas_v1.json",
+  "ci": {
+    "run_id": 32287500338,
+    "head_sha": "7558cd11cbd9e0964fc42821d1bb9a14f7961ca8",
+    "conclusion": "success",
+    "artifact_id": 9378193851,
+    "artifact_zip_sha256": "f51366e64109dc698cdd325ffb01c0b541f5003931fe4cdd37b6cedf7fb56437"
+  },
+  "scored_folds": ["2002_TO_2007", "2007_TO_2011", "2011_TO_2016", "2016_TO_2021"],
+  "winner": "PREVIOUS_NATIONAL_PERSISTENCE",
+  "ranking": [
+    "PREVIOUS_NATIONAL_PERSISTENCE",
+    "SHRUNK_MEAN_REVERSION",
+    "POOLED_SHRUNK_NATIONAL_SWING",
+    "PARTY_SHRUNK_NATIONAL_SWING"
+  ],
+  "scores": {
+    "PREVIOUS_NATIONAL_PERSISTENCE": {"mean_fold_rmse": 0.06500749128449343, "mean_fold_mae": 0.04162688221855391, "worst_fold_rmse": 0.09991079018029769, "top_party_accuracy": 0.5},
+    "SHRUNK_MEAN_REVERSION": {"mean_fold_rmse": 0.06541317904321134, "mean_fold_mae": 0.04212271249721212, "worst_fold_rmse": 0.09991079018029769, "top_party_accuracy": 0.5},
+    "POOLED_SHRUNK_NATIONAL_SWING": {"mean_fold_rmse": 0.06966755544152085, "mean_fold_mae": 0.04520948367103547, "worst_fold_rmse": 0.11579384374246819, "top_party_accuracy": 0.5},
+    "PARTY_SHRUNK_NATIONAL_SWING": {"mean_fold_rmse": 0.07195563851980523, "mean_fold_mae": 0.046432617283535496, "worst_fold_rmse": 0.11456873128530043, "top_party_accuracy": 0.5}
+  },
+  "diagnostic_sensitivity": {
+    "exclude_PAM": {"winner_raw": "PREVIOUS_NATIONAL_PERSISTENCE", "winner_conditional": "PREVIOUS_NATIONAL_PERSISTENCE"},
+    "exclude_OTHER": {"winner_raw": "PREVIOUS_NATIONAL_PERSISTENCE", "winner_conditional": "PREVIOUS_NATIONAL_PERSISTENCE"},
+    "exclude_PAM_and_OTHER": {"winner_raw": "PREVIOUS_NATIONAL_PERSISTENCE", "winner_conditional": "PREVIOUS_NATIONAL_PERSISTENCE"},
+    "role": "DIAGNOSTIC_ONLY_NO_POST_HOC_MODEL_CHANGE"
+  },
+  "point_forecast_2026": {
+    "RNI": 0.27660731593377086,
+    "PAM": 0.18450564373351536,
+    "PI": 0.16846796569284728,
+    "PJD": 0.04253248828326528,
+    "USFP": 0.07884201170059188,
+    "MP": 0.07040807115499034,
+    "UC": 0.05517279095157742,
+    "PPS": 0.05111270269967536,
+    "OTHER": 0.0723510098497662
+  },
+  "interpretation": "2021 national local-ballot shares become the 2026 national point because persistence wins the frozen four-fold rolling-origin tournament; they are not reused by assumption. No current-only 2026 political signal enters this point."
+}

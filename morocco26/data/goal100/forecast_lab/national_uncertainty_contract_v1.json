@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-NATIONAL-UNCERTAINTY-V1",
+  "target_year": 2026,
+  "point_model_required": "PREVIOUS_NATIONAL_PERSISTENCE selected by M26-NATIONAL-MODEL-SELECTION-2026-V1",
+  "principle": "National uncertainty is calibrated on strict chronological errors of the selected point model and must not reuse territorial residuals or current-only political judgement.",
+  "calibration_history": {
+    "training_transition": "1997_TO_2002",
+    "scored_prequential_folds": ["2002_TO_2007", "2007_TO_2011", "2011_TO_2016", "2016_TO_2021"],
+    "rule": "For a target fold, use only selected-model residual transitions whose target year is at or before that fold's origin year."
+  },
+  "scale_rule": {
+    "residual": "e_t = national_share_t - national_share_(t-1)",
+    "transition_energy": "sqrt(mean_j(e_tj^2)) over the nine frozen buckets",
+    "prospective_scale": "maximum transition energy among chronologically available prior residuals",
+    "reason": "A monotone worst-observed national-shock floor avoids unstable party covariance estimation from only a handful of independent elections and allows a shock to migrate to a different party."
+  },
+  "draw_rule": {
+    "family": "SPHERICAL_COMPOSITIONAL_STUDENT_T",
+    "degrees_of_freedom": 3,
+    "dimension": 9,
+    "tangent_constraint": "Draw a common multivariate Student-t innovation in the sum-zero simplex tangent space. The Gaussian precursor is centered across the nine components and scaled by sqrt(8/9) so each raw component has the frozen scalar t scale.",
+    "simplex_recovery": "Euclidean projection of point_share + innovation onto the non-negative unit simplex.",
+    "prospective_strict_positive_floor": 1e-08,
+    "cross_party_covariance": "No fitted 9x9 covariance; exchangeable tangent dependence only (sum-to-zero implies negative off-diagonal dependence).",
+    "seed_coverage_base": 26092600,
+    "seed_2026": 26092352
+  },
+  "coverage_gate": {
+    "intervals": [0.80, 0.95],
+    "prequential_draws_per_fold": 100000,
+    "pooled_unit": "36 party-fold component observations across the four scored folds",
+    "required_coverage80": 0.80,
+    "required_coverage95": 0.95,
+    "no_target_leakage": true
+  },
+  "limitations": [
+    "Only five historical national transitions are available including the training transition; tail probabilities are therefore structurally uncertain.",
+    "The spherical tangent rule deliberately sacrifices party-specific precision rather than infer a fragile covariance matrix from n<<p.",
+    "A PASS means historical interval coverage is adequate under the frozen diagnostic; it does not guarantee 2026 calibration."
+  ],
+  "freeze_status": "FROZEN_BEFORE_FINAL_2026_SEAT_SIMULATION"
+}

@@ -1,0 +1,88 @@
+name: National model rolling-origin V1
+
+on:
+  push:
+    branches: [morocco26-national-model-v1]
+    paths:
+      - "morocco26/scripts/select_national_model_2026_v1.py"
+      - "morocco26/scripts/calibrate_national_uncertainty_2026_v1.py"
+      - "morocco26/tests/test_national_model_selection_v1.py"
+      - "morocco26/data/goal100/forecast_lab/national_*.json"
+      - "morocco26/data/goal100/historical/**"
+      - ".github/workflows/national-model-selection-v1.yml"
+  pull_request:
+    branches: [morocco26-rolling-origin-2007-v2]
+    paths:
+      - "morocco26/scripts/select_national_model_2026_v1.py"
+      - "morocco26/scripts/calibrate_national_uncertainty_2026_v1.py"
+      - "morocco26/tests/test_national_model_selection_v1.py"
+      - "morocco26/data/goal100/forecast_lab/national_*.json"
+      - ".github/workflows/national-model-selection-v1.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  select-and-calibrate-national:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install numeric dependency
+        run: python -m pip install --disable-pip-version-check numpy
+      - name: Compile
+        run: |
+          python -m py_compile morocco26/scripts/select_national_model_2026_v1.py
+          python -m py_compile morocco26/scripts/calibrate_national_uncertainty_2026_v1.py
+      - name: Unit tests
+        run: python -m unittest morocco26/tests/test_national_model_selection_v1.py -v
+      - name: Select model under frozen contract
+        run: |
+          python morocco26/scripts/select_national_model_2026_v1.py \
+            --output /tmp/national_model_selection_2026_v1.json
+      - name: Point-model invariants
+        run: |
+          python - <<'PY'
+          import json, math
+          x=json.load(open('/tmp/national_model_selection_2026_v1.json'))
+          assert x['target_outcome_used'] is False
+          assert len(x['scored_folds']) == 4
+          assert x['winner'] == 'PREVIOUS_NATIONAL_PERSISTENCE'
+          assert set(x['ranking']) == {
+            'PREVIOUS_NATIONAL_PERSISTENCE',
+            'POOLED_SHRUNK_NATIONAL_SWING',
+            'PARTY_SHRUNK_NATIONAL_SWING',
+            'SHRUNK_MEAN_REVERSION',
+          }
+          s=x['forecast_2026']['point_share']
+          assert all(math.isfinite(v) and v > 0 for v in s.values())
+          assert abs(sum(s.values())-1.0) < 1e-10
+          assert x['forecast_2026']['status'] == 'READY_FOR_STRUCTURAL_CENTER'
+          print('NATIONAL_SELECTION_INVARIANTS_PASS')
+          PY
+      - name: Prequential national uncertainty calibration
+        run: |
+          python morocco26/scripts/calibrate_national_uncertainty_2026_v1.py \
+            --output /tmp/national_uncertainty_2026_v1.json
+      - name: Uncertainty invariants
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open('/tmp/national_uncertainty_2026_v1.json'))
+          p=x['prequential']
+          assert p['status'] == 'PASS'
+          assert p['pooled_component_n'] == 36
+          assert p['coverage80'] >= p['required_coverage80']
+          assert p['coverage95'] >= p['required_coverage95']
+          assert x['prospective_2026']['generator_status'] == 'READY_FOR_DOWNSTREAM_SIMULATION'
+          print('NATIONAL_UNCERTAINTY_INVARIANTS_PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: national-v1-point-and-uncertainty
+          path: |
+            /tmp/national_model_selection_2026_v1.json
+            /tmp/national_uncertainty_2026_v1.json
+          if-no-files-found: error
