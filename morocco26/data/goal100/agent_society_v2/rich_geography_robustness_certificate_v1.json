@@ -1,0 +1,19 @@
+{
+  "all_territories": 92,
+  "certificate_id": "M26-ASV2-RICH-GEOGRAPHY-ROBUSTNESS-CERTIFICATE-V1",
+  "direct_microdata_territories": 58,
+  "direct_subset_same_both_years": true,
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "no_invented_commune_assignment": true,
+  "official_pdf_timeout_did_not_trigger_invented_boundaries": true,
+  "proxy_breakdown": {
+    "PARENT_PROXY_LEGACY_2014_ADMIN": 15,
+    "PARENT_PROXY_SPLIT_CONSTITUENCY": 19
+  },
+  "proxy_territories": 34,
+  "real_llm_outputs_seen": false,
+  "rule": "Historical scoring is mandatory on ALL_92 and on the identical 58-territory DIRECT_MICRODATA_ADMIN subset. A positive all-92 result is rejected if it reverses on the direct subset or if true context loses to shuffled context there.",
+  "schema_version": "1.0",
+  "status": "PASS_WITH_DUAL_PANEL_ROBUSTNESS",
+  "target_outcomes_used": false
+}
