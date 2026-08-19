@@ -1,0 +1,83 @@
+{
+  "archive": null,
+  "attempts": [
+    {
+      "bytes": 1259,
+      "content_type": "text/html",
+      "final_url": "https://www.sgg.gov.ma/BO/AR/2007/BO_5513_Ar.pdf",
+      "is_pdf": false,
+      "requested_url": "https://www.sgg.gov.ma/BO/AR/2007/BO_5513_Ar.pdf",
+      "status_code": 404
+    },
+    {
+      "bytes": 1259,
+      "content_type": "text/html",
+      "final_url": "https://www.sgg.gov.ma/BO/bulletin/Ar/2007/BO_5513_Ar.pdf",
+      "is_pdf": false,
+      "requested_url": "https://www.sgg.gov.ma/BO/bulletin/Ar/2007/BO_5513_Ar.pdf",
+      "status_code": 404
+    },
+    {
+      "bytes": 1259,
+      "content_type": "text/html",
+      "final_url": "https://www.sgg.gov.ma/BO/bulletin/AR/2007/BO_5513_Ar.pdf",
+      "is_pdf": false,
+      "requested_url": "https://www.sgg.gov.ma/BO/bulletin/AR/2007/BO_5513_Ar.pdf",
+      "status_code": 404
+    },
+    {
+      "bytes": 315,
+      "content_type": "text/html; charset=us-ascii",
+      "final_url": "http://www.sgg.gov.ma/BO/bulletin/AR/2007/BO_5513_Ar.pdf",
+      "is_pdf": false,
+      "requested_url": "http://www.sgg.gov.ma/BO/bulletin/AR/2007/BO_5513_Ar.pdf",
+      "status_code": 404
+    },
+    {
+      "bytes": 315,
+      "content_type": "text/html; charset=us-ascii",
+      "final_url": "http://www.sgg.gov.ma/BO/bulletin/Ar/2007/BO_5513_Ar.pdf",
+      "is_pdf": false,
+      "requested_url": "http://www.sgg.gov.ma/BO/bulletin/Ar/2007/BO_5513_Ar.pdf",
+      "status_code": 404
+    },
+    {
+      "bytes": 8178065,
+      "content_type": "application/pdf",
+      "final_url": "https://www.sgg.gov.ma/BO/bo_fr/2007/bo_5514_fr.pdf",
+      "is_pdf": true,
+      "requested_url": "https://www.sgg.gov.ma/BO/bo_fr/2007/bo_5514_fr.pdf",
+      "status_code": 200
+    }
+  ],
+  "bytes": 8178065,
+  "expected_document_date": "2007-03-30",
+  "expected_gazettes": [
+    {
+      "date": "2007-04-02",
+      "language": "ar",
+      "number": "5513"
+    },
+    {
+      "date": "2007-04-05",
+      "language": "fr",
+      "number": "5514"
+    }
+  ],
+  "lineage": {
+    "base": "2508256551f94ad67c23a39d7263e01202431bfe",
+    "derived_outcome_paths_present": [],
+    "head": "e57fb34d8c61fa9e008949a5cfc552b770a96813"
+  },
+  "original_official_url": "https://www.sgg.gov.ma/BO/bo_fr/2007/bo_5514_fr.pdf",
+  "outcome_used": false,
+  "path": "data/goal100/historical/2007_v2_research/official_gazette/BO_5513_or_5514_recovered.pdf",
+  "recovered": true,
+  "research_id": "M26-HIST-2007-OFFICIAL-GAZETTE-RECOVERY-V2",
+  "schema_version": "2.0",
+  "sha256": "82d83684c190d36eb31000097b284c73cf8fd0b1f9b20987312411f70a7e1020",
+  "target_decree": "2-07-160",
+  "text_extraction": {
+    "status": "PDFTOTEXT_UNAVAILABLE"
+  }
+}
