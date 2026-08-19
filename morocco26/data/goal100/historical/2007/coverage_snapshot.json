@@ -1,0 +1,19 @@
+{
+  "candidate_coverage_denominator_status": "CONTEMPORARY_NATIONAL_CANDIDATE_TOTAL",
+  "candidate_coverage_pct": 0.224,
+  "candidate_denominator_documented": 6691,
+  "candidate_names_verified_count": 15,
+  "facts_AMBIGUOUS": 0,
+  "facts_MISSING": 1330,
+  "facts_VERIFIED": 19,
+  "incumbent_coverage_pct": null,
+  "incumbent_facts_verified_count": 4,
+  "local_office_facts_verified_count": 4,
+  "native_map_pre_election_coverage_pct": 0.0,
+  "native_map_pre_election_rows_recovered": 0,
+  "party_switch_facts_verified_count": 3,
+  "phase": "PRE_ELECTION_SNAPSHOT",
+  "real_constituency_count": 95,
+  "snapshot_scientific_status": "PARTIAL_PRE_ELECTION_SNAPSHOT",
+  "year": 2007
+}

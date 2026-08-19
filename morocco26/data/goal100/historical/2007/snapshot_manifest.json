@@ -1,0 +1,34 @@
+{
+  "cutoff": "2007-09-07",
+  "files": [
+    {
+      "path": "data/goal100/historical/2007/historical_native_map_pre_election.json",
+      "sha256": "148f5abec42bb066b0ccaff02dee88c1f4ab0085ce2f0b971aa676b5f550ce11"
+    },
+    {
+      "path": "data/goal100/historical/2007/pre_election_snapshot.json",
+      "sha256": "001c2b0d93b507c7828e5b77f436e92b6026e6db647654ac1dcf4643829b40ed"
+    },
+    {
+      "path": "data/goal100/historical/2007/source_inventory_snapshot.json",
+      "sha256": "4297f82d1a29945d8cda4cebf8fe5eabccfc69eaaf167fcd538748ab5feccdd2"
+    },
+    {
+      "path": "data/goal100/historical/2007/recovery_log_snapshot.json",
+      "sha256": "3ff73a879f6c424df4f6cbeee2496e3b9a26331dea165456f6053d698df54070"
+    },
+    {
+      "path": "data/goal100/historical/2007/ambiguities_snapshot.json",
+      "sha256": "e823a0b8d496e3e4ee0636b8f007db3e4ccbe5e5b8125dc33516b2d46d318821"
+    },
+    {
+      "path": "data/goal100/historical/2007/coverage_snapshot.json",
+      "sha256": "7eb542879a37f2a3faabf027d2f9bb5bfcb3f4b96a185e8e68d435ea48ad94de"
+    }
+  ],
+  "forbidden_same_year_outcome_dependencies": true,
+  "generator": "historical_pre_election_2002_2007.py",
+  "phase": "PRE_ELECTION_SNAPSHOT",
+  "schema_version": "1.0",
+  "year": 2007
+}

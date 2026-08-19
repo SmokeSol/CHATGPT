@@ -1,0 +1,26 @@
+{
+  "attempts": [
+    {
+      "detail": "Decree identifier and pre-election existence established; exact full 95-row table was not recovered from the accessible official search surface.",
+      "result": "IDENTIFIED_TEXT_REFERENCE_NOT_FULL_TABLE_RECOVERED",
+      "route": "SGG_official_decree_2_07_160"
+    },
+    {
+      "detail": "The repo outcome workbook is an archive copy of the official result site, but it is outcome-layer material and is forbidden as a source of snapshot district names.",
+      "result": "REJECTED_FOR_SNAPSHOT_WITHOUT_PRE_CUTOFF_ARCHIVE",
+      "route": "elections2007_gov_ma_archive"
+    },
+    {
+      "detail": "Contemporary sources establish 95 districts, selected redistricting facts and many district/list counts, but not a complete 95-row native map.",
+      "result": "PARTIAL",
+      "route": "contemporary_media_district_articles"
+    },
+    {
+      "detail": "No complete pre-7-Sep-2007 archived official 95-district table was recovered in the research pass; no post-election geometry was backfilled.",
+      "result": "UNRESOLVED",
+      "route": "web_archive_pre_cutoff_probe"
+    }
+  ],
+  "phase": "PRE_ELECTION_RECOVERY",
+  "year": 2007
+}

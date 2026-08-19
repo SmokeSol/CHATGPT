@@ -1,0 +1,215 @@
+{
+  "anti_leakage_assertion": "TARGET_OUTCOME_NOT_USED_IN_PRE_ELECTION_SNAPSHOT",
+  "cutoff": "2007-09-07",
+  "election_date": "2007-09-07",
+  "electoral_system": {
+    "allocation": "PROPORTIONAL_LIST_LARGEST_REMAINDER",
+    "local_constituencies": 95,
+    "local_seats": 295,
+    "local_threshold_pct": 6.0,
+    "national_list_kind": "NATIONAL_WOMEN_RESERVED",
+    "national_list_rule_note": "30 sièges réservés aux listes nationales des femmes, en parallèle des 295 sièges locaux dans 95 circonscriptions.",
+    "national_seats": 30
+  },
+  "notes": [
+    "No same-year outcome file is imported or opened by this generator.",
+    "2007 full native district table remains separated from snapshot unless recovered from a pre-election legal/archive source."
+  ],
+  "schema_version": "1.0",
+  "target_outcome_present": false,
+  "territory_snapshot": [],
+  "unknown_policy": "Unknown != false != zero. Missing values remain null with status MISSING.",
+  "verified_facts": [
+    {
+      "candidate": null,
+      "fact": "Le PJD a arrêté les têtes de liste d'environ 70 des 95 circonscriptions; le reste devait suivre.",
+      "fact_id": "2007-F0001",
+      "fact_type": "party_coverage",
+      "party": "PJD",
+      "source_id": "ALM_PJD_20070424",
+      "status": "VERIFIED",
+      "territory": null
+    },
+    {
+      "candidate": "Abdessamad Haïker",
+      "fact": "Élu à Anfa en 2002, Abdessamad Haïker doit se présenter à Hay Hassani, séparée de Aïn Chock par le nouveau découpage.",
+      "fact_id": "2007-F0002",
+      "fact_type": "district_change",
+      "party": "PJD",
+      "source_id": "ALM_PJD_20070424",
+      "status": "VERIFIED",
+      "territory": "Hay Hassani"
+    },
+    {
+      "candidate": "Ahmed Benjelloun",
+      "fact": "Ahmed Benjelloun conduira la liste de l'union PADS-PSU-CNI à Rabat-Océan.",
+      "fact_id": "2007-F0003",
+      "fact_type": "head_of_list",
+      "party": "PADS-PSU-CNI",
+      "source_id": "ALM_LEFT_20070529",
+      "status": "VERIFIED",
+      "territory": "Rabat-Océan"
+    },
+    {
+      "candidate": null,
+      "fact": "Union formelle PADS-PSU-CNI avec programme et candidatures communes; 75 circonscriptions arrêtées à cette date.",
+      "fact_id": "2007-F0004",
+      "fact_type": "alliance",
+      "party": "PADS-PSU-CNI",
+      "source_id": "ALM_LEFT_20070529",
+      "status": "VERIFIED",
+      "territory": null
+    },
+    {
+      "candidate": null,
+      "fact": "Le MP déclare ne pas présenter de liste à Boujdour.",
+      "fact_id": "2007-F0005",
+      "fact_type": "withdrawal",
+      "party": "MP",
+      "source_id": "LM_LAST_20070824",
+      "status": "VERIFIED",
+      "territory": "Boujdour"
+    },
+    {
+      "candidate": null,
+      "fact": "Le MP déclare ne pas présenter de liste à Tan-Tan.",
+      "fact_id": "2007-F0006",
+      "fact_type": "withdrawal",
+      "party": "MP",
+      "source_id": "LM_LAST_20070824",
+      "status": "VERIFIED",
+      "territory": "Tan-Tan"
+    },
+    {
+      "candidate": "Mohamed Moubdii",
+      "fact": "Mohamed Moubdii, député sortant, quitte le giron MP et conduit une liste sans appartenance politique.",
+      "fact_id": "2007-F0007",
+      "fact_type": "party_switch",
+      "party": "SAP",
+      "source_id": "LM_LAST_20070824",
+      "status": "VERIFIED",
+      "territory": "Fqih Ben Salah"
+    },
+    {
+      "candidate": "Mohamed Réda Slaouni",
+      "fact": "Député sortant élu en 2002 à Fès Jdid Dar Dbibagh; placé deuxième sur la liste PJD Fès-Nord.",
+      "fact_id": "2007-F0008",
+      "fact_type": "incumbency",
+      "party": "PJD",
+      "source_id": "ALM_FES_20070629",
+      "status": "VERIFIED",
+      "territory": "Fès-Nord"
+    },
+    {
+      "candidate": "Lahcen Daoudi",
+      "fact": "Lahcen Daoudi choisi tête de liste PJD à Fès-Nord.",
+      "fact_id": "2007-F0009",
+      "fact_type": "head_of_list",
+      "party": "PJD",
+      "source_id": "ALM_FES_20070629",
+      "status": "VERIFIED",
+      "territory": "Fès-Nord"
+    },
+    {
+      "candidate": "Hamid Chabat",
+      "fact": "Hamid Chabat, maire de Fès, dirige la liste PI à Fès-Nord.",
+      "fact_id": "2007-F0010",
+      "fact_type": "local_office",
+      "party": "PI",
+      "source_id": "ALM_FES_20070629",
+      "status": "VERIFIED",
+      "territory": "Fès-Nord"
+    },
+    {
+      "candidate": "Abdelilah Benkirane",
+      "fact": "Député sortant de Salé-Médina et président du conseil national PJD, candidat de nouveau.",
+      "fact_id": "2007-F0011",
+      "fact_type": "incumbent_head",
+      "party": "PJD",
+      "source_id": "ALM_SALE_20070815",
+      "status": "VERIFIED",
+      "territory": "Salé-Médina"
+    },
+    {
+      "candidate": "Driss Sentissi",
+      "fact": "Maire de Salé, député sortant et vice-président de la Chambre, candidat de nouveau.",
+      "fact_id": "2007-F0012",
+      "fact_type": "local_office",
+      "party": "MP",
+      "source_id": "ALM_SALE_20070815",
+      "status": "VERIFIED",
+      "territory": "Salé-Médina"
+    },
+    {
+      "candidate": "Mohamed Abbou",
+      "fact": "Député sortant et président du groupe RNI à la Chambre, candidat à Taounate-Tissa.",
+      "fact_id": "2007-F0013",
+      "fact_type": "incumbent_head",
+      "party": "RNI",
+      "source_id": "ALM_TAOUNATE_20070831",
+      "status": "VERIFIED",
+      "territory": "Taounate-Tissa"
+    },
+    {
+      "candidate": "Messaoudi Ayyachi",
+      "fact": "Député sortant ne se représente pas pour raisons de santé.",
+      "fact_id": "2007-F0014",
+      "fact_type": "withdrawal_health",
+      "party": "PPS",
+      "source_id": "ALM_TAOUNATE_20070831",
+      "status": "VERIFIED",
+      "territory": "Taounate-Tissa"
+    },
+    {
+      "candidate": "Ahmed Zarouf",
+      "fact": "Député sortant passé du MP au PPS; absent du scrutin, sa liste PT n'ayant pas été retenue pour inéligibilité du mandataire.",
+      "fact_id": "2007-F0015",
+      "fact_type": "party_switch",
+      "party": "PPS",
+      "source_id": "ALM_TAOUNATE_20070831",
+      "status": "VERIFIED",
+      "territory": "Taounate-Tissa"
+    },
+    {
+      "candidate": "Brahim Chkil",
+      "fact": "Candidat Al Ahd et président de la commune de Skhirat.",
+      "fact_id": "2007-F0016",
+      "fact_type": "local_office",
+      "party": "Al Ahd",
+      "source_id": "ALM_TEMARA_2007",
+      "status": "VERIFIED",
+      "territory": "Skhirat-Témara"
+    },
+    {
+      "candidate": "Brahim El Ouadeh",
+      "fact": "Candidat FFD et président de la commune d'Aïn Atik.",
+      "fact_id": "2007-F0017",
+      "fact_type": "local_office",
+      "party": "FFD",
+      "source_id": "ALM_TEMARA_2007",
+      "status": "VERIFIED",
+      "territory": "Skhirat-Témara"
+    },
+    {
+      "candidate": "Ahmed Bella",
+      "fact": "Seul député sortant de la circonscription cherchant un nouveau mandat selon la source.",
+      "fact_id": "2007-F0018",
+      "fact_type": "incumbency",
+      "party": "MP",
+      "source_id": "ALM_TEMARA_2007",
+      "status": "VERIFIED",
+      "territory": "Skhirat-Témara"
+    },
+    {
+      "candidate": "Mohammed Khalidi",
+      "fact": "Député sortant, candidat PRV et ancien PJD.",
+      "fact_id": "2007-F0019",
+      "fact_type": "party_switch",
+      "party": "PRV",
+      "source_id": "ALM_OUJDA_2007",
+      "status": "VERIFIED",
+      "territory": "Oujda"
+    }
+  ],
+  "year": 2007
+}
