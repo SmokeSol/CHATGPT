@@ -10,18 +10,20 @@ def test_2002_three_percent_threshold():
     votes={"A":6000,"B":3000,"C":250}
     r=lsa.allocate(votes,3,2002)
     assert "C" in r["excluded_lists"]
+    assert abs(r["quotient"]-(9250/3))<1e-9
     assert sum(r["seats"].values())==3
 
 def test_2007_six_percent_threshold():
     votes={"A":6000,"B":3000,"C":500}
     r=lsa.allocate(votes,3,2007)
     assert "C" in r["excluded_lists"]
+    assert abs(r["quotient"]-(9500/3))<1e-9
     assert sum(r["seats"].values())==3
 
-def test_2016_three_percent_threshold_and_eligible_quotient():
+def test_2016_three_percent_threshold_and_all_valid_vote_quotient():
     votes={"A":20000,"B":13000,"C":9000,"D":5600,"E":1400}
     r=lsa.allocate(votes,4,2016)
-    assert abs(r["quotient"]-11900)<1e-9
+    assert abs(r["quotient"]-12250)<1e-9
     assert r["seats"]["E"]==0
     assert r["seats"]["A"]==2
     assert r["seats"]["B"]==1
@@ -32,6 +34,7 @@ def test_2011_six_percent_threshold():
     votes={"A":6000,"B":3000,"C":500}
     r=lsa.allocate(votes,3,2011)
     assert "C" in r["excluded_lists"]
+    assert abs(r["quotient"]-(9500/3))<1e-9
     assert sum(r["seats"].values())==3
 
 def test_2011_national_must_be_allocated_by_independent_segment():
