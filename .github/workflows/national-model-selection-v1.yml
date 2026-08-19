@@ -1,0 +1,61 @@
+name: National model rolling-origin V1
+
+on:
+  push:
+    branches: [morocco26-national-model-v1]
+    paths:
+      - "morocco26/scripts/select_national_model_2026_v1.py"
+      - "morocco26/data/goal100/forecast_lab/national_model_*.json"
+      - "morocco26/data/goal100/forecast_lab/national_history_1997_2002_v1.json"
+      - "morocco26/data/goal100/historical/**"
+      - ".github/workflows/national-model-selection-v1.yml"
+  pull_request:
+    branches: [morocco26-rolling-origin-2007-v2]
+    paths:
+      - "morocco26/scripts/select_national_model_2026_v1.py"
+      - "morocco26/data/goal100/forecast_lab/national_model_*.json"
+      - "morocco26/data/goal100/forecast_lab/national_history_1997_2002_v1.json"
+      - ".github/workflows/national-model-selection-v1.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  select-national-model:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile
+        run: python -m py_compile morocco26/scripts/select_national_model_2026_v1.py
+      - name: Select model under frozen contract
+        run: |
+          python morocco26/scripts/select_national_model_2026_v1.py \
+            --output /tmp/national_model_selection_2026_v1.json
+      - name: Fail-closed invariants
+        run: |
+          python - <<'PY'
+          import json, math
+          p='/tmp/national_model_selection_2026_v1.json'
+          x=json.load(open(p))
+          assert x['target_outcome_used'] is False
+          assert len(x['scored_folds']) == 4
+          assert set(x['ranking']) == {
+            'PREVIOUS_NATIONAL_PERSISTENCE',
+            'POOLED_SHRUNK_NATIONAL_SWING',
+            'PARTY_SHRUNK_NATIONAL_SWING',
+            'SHRUNK_MEAN_REVERSION',
+          }
+          s=x['forecast_2026']['point_share']
+          assert all(math.isfinite(v) and v > 0 for v in s.values())
+          assert abs(sum(s.values())-1.0) < 1e-10
+          assert x['forecast_2026']['status'] == 'READY_FOR_STRUCTURAL_CENTER'
+          print('NATIONAL_SELECTION_INVARIANTS_PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: national-model-selection-v1
+          path: /tmp/national_model_selection_2026_v1.json
+          if-no-files-found: error
