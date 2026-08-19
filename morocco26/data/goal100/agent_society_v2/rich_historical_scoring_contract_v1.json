@@ -1,0 +1,48 @@
+{
+  "all_92_gates": {
+    "contract": "validity_rate >= 0.99 AND full 94,208-row package AND terminal PASS_RICH_ASV2_HISTORICAL_VOTES_FROZEN_READY_FOR_SCORING",
+    "negative_control_2016": "RMSE_TRUE <= RMSE_SHUFFLED",
+    "negative_control_2021": "RMSE_TRUE <= RMSE_SHUFFLED",
+    "not_materially_worse_2016": "RMSE_TRUE <= 1.01 * RMSE_C0",
+    "not_materially_worse_2021": "RMSE_TRUE <= 1.01 * RMSE_C0",
+    "positive_signal": "relative improvement TRUE vs C0 >= 0.01 in at least one year"
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "role": "diagnostic; frozen point-estimate gates remain decisive",
+    "seed": 260819,
+    "unit": "territory"
+  },
+  "constraints": [
+    "2016 context remains weakly discriminative and must be flagged",
+    "no threshold/prompt/model/population/condition mapping changes after real outputs are inspected",
+    "R2/no-attitude ablation may be run only after the primary R3 verdict and cannot rescue a failed primary verdict"
+  ],
+  "contract_id": "M26-ASV2-RICH-HISTORICAL-SCORING-CONTRACT-V1",
+  "direct_58_robustness_gates": {
+    "negative_control_both_years": "TRUE RMSE <= SHUFFLED RMSE in both years on the direct subset",
+    "not_materially_worse_both_years": "TRUE RMSE <= 1.01*C0 RMSE in 2016 and 2021 on the identical 58-territory direct-microdata subset",
+    "positive_signal_not_proxy_confined": "for at least one year where ALL_92 relative improvement >=1%, TRUE relative improvement on DIRECT_58 must be >=0"
+  },
+  "expected": {
+    "archetypes_per_territory": 256,
+    "batch_size": 32,
+    "conditions": 2,
+    "direct_geography_territories": 58,
+    "output_rows": 94208,
+    "packets": 2944,
+    "territories_per_year": 92
+  },
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "historical_years": [
+    2016,
+    2021
+  ],
+  "primary_metric": "macro_party_share_RMSE over 92x9 cells per year; lower is better",
+  "real_rich_llm_outputs_seen_at_freeze": false,
+  "schema_version": "1.0",
+  "scientific_role": "RETROSPECTIVE_SANITY_FILTER_ONLY_NOT_PRISTINE_PROOF",
+  "status": "FROZEN_BEFORE_ANY_REAL_RICH_ASV2_LLM_OUTPUT_IS_INSPECTED",
+  "terminal_fail": "ASV2_RICH_KILL_BEFORE_2026",
+  "terminal_pass": "ASV2_RICH_HISTORICAL_SANITY_PASS_READY_FOR_2026_FREEZE"
+}
