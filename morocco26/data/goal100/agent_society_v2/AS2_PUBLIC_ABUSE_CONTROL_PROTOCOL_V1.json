@@ -1,0 +1,77 @@
+{
+  "schema_version": "AS2_PUBLIC_ABUSE_CONTROL_PROTOCOL_V1",
+  "status": "FROZEN_PRE_OUTCOME",
+  "policy_version": "ATLAS_ABUSE_V1_FROZEN",
+  "purpose": "prevent automated work-item exhaustion, replay and corpus poisoning without conditioning exclusions on political content",
+  "turnstile": {
+    "required": true,
+    "verification": "server_side_cloudflare_siteverify",
+    "action": "atlas_claim",
+    "claim_without_valid_verification": false
+  },
+  "participant_pseudonym": {
+    "browser_identifier": "random local browser UUID",
+    "server_storage": "peppered SHA256 only",
+    "raw_ip_stored": false,
+    "ip_storage": "peppered SHA256 only"
+  },
+  "ticket": {
+    "ttl_seconds": 300,
+    "single_use": true,
+    "raw_ticket_stored": false,
+    "server_storage": "SHA256 only",
+    "web_browser_binding": true,
+    "mcp_consumes_web_issued_ticket": true
+  },
+  "rate_limits": {
+    "max_active_claims_per_participant": 1,
+    "max_active_claims_per_ip": 3,
+    "max_claims_per_participant_24h": 3,
+    "max_claims_per_ip_24h": 10,
+    "max_completed_per_participant_24h": 3,
+    "max_tickets_per_participant_hour": 5,
+    "max_tickets_per_ip_hour": 20,
+    "expired_claims_per_ip_24h_before_cooldown": 5
+  },
+  "work_assignment": {
+    "selection": "deterministic_pseudorandom_order_keyed_by_single_use_ticket",
+    "outcomes_used": false,
+    "mapping_used": false,
+    "directional_results_exposed": false
+  },
+  "submission_validation": {
+    "exact_rows": 32,
+    "claimed_work_identity_required": true,
+    "archetype_order_required": true,
+    "party_simplex_required": true,
+    "factor_simplex_required": true,
+    "closed_reason_codes_required": true
+  },
+  "automatic_quarantine": {
+    "threshold": 100,
+    "signals": [
+      {"code": "EXACT_BEHAVIOR_FINGERPRINT_REPEAT", "points": 100},
+      {"code": "EXACT_OUTPUT_REPLAY", "points": 100}
+    ],
+    "observation_only_signals": [
+      {"code": "EXTREME_SUBMISSION_SPEED_METADATA_ONLY", "points": 10, "can_quarantine_alone": false}
+    ],
+    "forbidden_content_based_signals": [
+      "party preference direction",
+      "turnout level",
+      "party-probability uniformity or diversity",
+      "party-probability entropy",
+      "factor-importance pattern",
+      "reason-code political content"
+    ],
+    "quarantined_rows_preserved": true,
+    "quarantined_rows_aggregated": false,
+    "quarantined_rows_socialized": false,
+    "quarantined_work_item_can_be_reassigned": true,
+    "disposition_disclosed_to_contributor": false
+  },
+  "historical_outcomes": {
+    "2016_opened_by_this_protocol": false,
+    "2021_opened_by_this_protocol": false
+  }
+}

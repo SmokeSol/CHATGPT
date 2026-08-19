@@ -1,0 +1,2 @@
+-- Historical remote migration marker.
+-- The complete reproducible final anti-abuse schema is reconciled in 20260819220030_reconcile_asv2_abuse_control_v1.sql.

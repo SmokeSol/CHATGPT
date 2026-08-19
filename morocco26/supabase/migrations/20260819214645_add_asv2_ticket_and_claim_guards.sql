@@ -1,0 +1,2 @@
+-- Historical remote migration marker.
+-- Superseded for local reconstruction by 20260819220030_reconcile_asv2_abuse_control_v1.sql.

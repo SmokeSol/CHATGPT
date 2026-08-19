@@ -1,0 +1,1 @@
+-- Historical Supabase migration marker. Intentionally empty.
