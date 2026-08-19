@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "state": "READY_FOR_PAYLOAD_ACTIVATION",
+  "reader_experience": "FINAL_ONE_SOCIETY",
+  "public_cta": "Apportez votre IA",
+  "source_package_sha256": "e8acad28dea5a531c21171db570b60d612993edd91db8f893e58c187c226696a",
+  "work_items_registered": 2944,
+  "work_items_payload_ready": 2944,
+  "backend_claim_smoke_test": "PASS_AND_RESET",
+  "test_assignments_remaining": 0,
+  "edge_function": "agent-society-participation@v4",
+  "payload_storage_marker_required": "_READY.json",
+  "results_revealed_during_collection": false,
+  "next_terminal_state": "READY_TO_LAUNCH_AFTER_ACTIVATION_SCRIPT"
+}
