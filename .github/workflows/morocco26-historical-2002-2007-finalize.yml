@@ -1,0 +1,50 @@
+name: Morocco26 Historical 2002 2007 Finalize
+
+on:
+  push:
+    branches:
+      - morocco26-historical-2002-2007
+    paths:
+      - '.github/workflows/morocco26-historical-2002-2007-finalize.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-historical-2002-2007
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Patch validator import only
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('morocco26/scripts/validate_historical_2002_2007.py')
+          s=p.read_text(encoding='utf-8')
+          old='import argparse, hashlib, json, re\n'
+          new='import argparse, hashlib, json, re, subprocess\n'
+          if old not in s and new not in s:
+              raise SystemExit('unexpected validator import line')
+          if old in s:
+              p.write_text(s.replace(old,new,1),encoding='utf-8')
+          PY
+          python -m py_compile morocco26/scripts/validate_historical_2002_2007.py
+      - name: Run final integrity and acceptance gates without regenerating data
+        run: |
+          python morocco26/scripts/validate_historical_2002_2007.py
+          cat morocco26/data/goal100/historical/2002/acceptance_gate.json
+          cat morocco26/data/goal100/historical/2007/acceptance_gate.json
+      - name: Commit validator fix and certified reports
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/scripts/validate_historical_2002_2007.py morocco26/data/goal100/historical/2002 morocco26/data/goal100/historical/2007 morocco26/data/goal100/historical/historical_2002_2007_acceptance_summary.json
+          git commit -m 'test(historical): certify 2002 2007 reconstruction gates'
+          git push origin HEAD:morocco26-historical-2002-2007
