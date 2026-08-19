@@ -1,41 +1,32 @@
 name: Extract Opus Agent Society frontend
 on:
-  push:
-    branches: [morocco26-agent-society-v2-front-final]
+  pull_request:
+    branches: [morocco26-agent-society-v2]
     paths:
       - 'morocco26/frontends/agent_society_opus/extract.trigger'
+      - '.github/workflows/agent-society-opus-extract.yml'
 permissions:
-  contents: write
+  contents: read
 jobs:
   extract:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: morocco26-agent-society-v2-front-final
-      - name: Extract archived Opus source
+      - name: Extract archived Opus source verbatim
         shell: bash
         run: |
           set -euo pipefail
           SRC='morocco26/frontends/agent_society_opus/atlas-agentsociety-maroc.zip'
-          DST='morocco26/frontends/agent_society_opus/source'
+          DST='/tmp/opus-front'
           rm -rf "$DST"
-          mkdir -p "$DST" /tmp/opus-front
-          rm -rf /tmp/opus-front/*
-          unzip -q "$SRC" -d /tmp/opus-front
-          root=$(find /tmp/opus-front -mindepth 1 -maxdepth 1 -type d | head -1)
-          if [ -n "$root" ] && [ "$(find /tmp/opus-front -mindepth 1 -maxdepth 1 | wc -l)" -eq 1 ]; then
-            cp -a "$root"/. "$DST"/
-          else
-            cp -a /tmp/opus-front/. "$DST"/
-          fi
+          mkdir -p "$DST"
+          unzip -q "$SRC" -d "$DST"
           find "$DST" -name '__MACOSX' -prune -exec rm -rf {} + || true
-          git add "$DST"
-          if git diff --cached --quiet; then
-            echo 'No extraction changes.'
-            exit 0
-          fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'agent society frontend: extract Opus source verbatim'
-          git push origin HEAD:morocco26-agent-society-v2-front-final
+          find "$DST" -maxdepth 3 -type f -printf '%P\n' | sort > /tmp/opus-front-filelist.txt
+          cat /tmp/opus-front-filelist.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: opus-agent-society-frontend-source
+          path: /tmp/opus-front/
+          if-no-files-found: error
+          retention-days: 7
