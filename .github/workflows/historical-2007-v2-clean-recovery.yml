@@ -9,6 +9,7 @@ on:
       - 'morocco26/scripts/historical_2007_assahraa_expand_v2.py'
       - 'morocco26/scripts/historical_2007_lematin_expand_v2.py'
       - 'morocco26/scripts/historical_2007_fetch_official_gazette_v2.py'
+      - 'morocco26/scripts/historical_2007_normalize_pre_election_map_v2.py'
       - '.github/workflows/historical-2007-v2-clean-recovery.yml'
   workflow_dispatch:
 
@@ -37,7 +38,8 @@ jobs:
           strace -f -e trace=openat -o /tmp/m26_openat_ar.log python morocco26/scripts/historical_2007_assahraa_expand_v2.py
           strace -f -e trace=openat -o /tmp/m26_openat_lm.log python morocco26/scripts/historical_2007_lematin_expand_v2.py
           strace -f -e trace=openat -o /tmp/m26_openat_bo.log python morocco26/scripts/historical_2007_fetch_official_gazette_v2.py
-          cat /tmp/m26_openat_main.log /tmp/m26_openat_ar.log /tmp/m26_openat_lm.log /tmp/m26_openat_bo.log > /tmp/m26_openat.log
+          strace -f -e trace=openat -o /tmp/m26_openat_norm.log python morocco26/scripts/historical_2007_normalize_pre_election_map_v2.py
+          cat /tmp/m26_openat_main.log /tmp/m26_openat_ar.log /tmp/m26_openat_lm.log /tmp/m26_openat_bo.log /tmp/m26_openat_norm.log > /tmp/m26_openat.log
           if grep -E 'parlement-elections-2007|legislative_2007_outcome|historical_native_map_outcome' /tmp/m26_openat.log; then
             echo 'LEAKAGE_GUARD_FAIL: recovery opened sealed/derived 2007 outcome material'
             exit 1
@@ -64,7 +66,8 @@ jobs:
           a=json.loads((root/'assahraa_series_evidence_v2.json').read_text())
           l=json.loads((root/'lematin_series_evidence_v2.json').read_text())
           b=json.loads((root/'official_gazette'/'official_gazette_recovery_manifest_v2.json').read_text())
-          print({'main':{k:d[k] for k in ('source_count_discovered','eligible_article_count','explicit_district_magnitude_fact_count')},'assahraa':{k:a[k] for k in ('pages_seen','eligible_pages','seat_context_count')},'lematin':{k:l[k] for k in ('pages_seen','eligible_pages','seat_context_count')},'gazette':{'recovered':b['recovered'],'text_status':b.get('text_extraction',{}).get('status'),'hits':len(b.get('text_extraction',{}).get('hits',[]))}})
+          n=json.loads((root/'district_evidence_candidates_v2.json').read_text())
+          print({'main':{k:d[k] for k in ('source_count_discovered','eligible_article_count')},'assahraa':{k:a[k] for k in ('eligible_pages','seat_context_count')},'lematin':{k:l[k] for k in ('eligible_pages','seat_context_count')},'gazette':{'recovered':b['recovered'],'text_status':b.get('text_extraction',{}).get('status'),'hits':len(b.get('text_extraction',{}).get('hits',[]))},'normalized':{'unique':n['unique_verified_label_count'],'seat_sum':n['verified_seat_sum_over_unique_labels'],'conflicts':n['conflict_count'],'gate':n['promotion_gate']['status']}})
           PY
       - name: Commit recovery evidence only
         run: |
@@ -74,6 +77,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'No recovery changes to commit'
           else
-            git commit -m 'data(historical): extract official BO 5514 evidence v2'
+            git commit -m 'data(historical): normalize clean pre-election 2007 evidence v2'
             git push origin HEAD:morocco26-historical-2007-v2-clean
           fi
