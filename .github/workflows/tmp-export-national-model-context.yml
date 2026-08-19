@@ -1,0 +1,51 @@
+name: Temporary National Model Context Export
+
+on:
+  push:
+    branches:
+      - morocco26-national-model-v1
+    paths:
+      - ".github/workflows/tmp-export-national-model-context.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble context
+        run: |
+          mkdir -p national-model-context/morocco26/data/goal100/historical
+          mkdir -p national-model-context/morocco26/data/goal100/forecast_lab
+          mkdir -p national-model-context/morocco26/data/goal75
+          mkdir -p national-model-context/morocco26/scripts
+          mkdir -p national-model-context/morocco26/src/morocco26
+          cp morocco26/data/goal100/historical/tafra_legislative_2011_canonical.json national-model-context/morocco26/data/goal100/historical/
+          cp morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json national-model-context/morocco26/data/goal100/historical/
+          cp morocco26/data/goal100/historical/tafra_legislative_2021_canonical.json national-model-context/morocco26/data/goal100/historical/
+          cp -R morocco26/data/goal100/historical/2002 national-model-context/morocco26/data/goal100/historical/
+          cp -R morocco26/data/goal100/historical/2007 national-model-context/morocco26/data/goal100/historical/
+          cp morocco26/data/goal100/forecast_lab/*.json national-model-context/morocco26/data/goal100/forecast_lab/
+          cp morocco26/data/goal100/geometry_2026_certificate.json national-model-context/morocco26/data/goal100/
+          cp morocco26/data/goal100/local_N_posterior.json national-model-context/morocco26/data/goal100/
+          cp morocco26/data/goal100/fminus1_protocol_v1.json national-model-context/morocco26/data/goal100/
+          cp morocco26/data/goal100/uncertainty_calibration.json national-model-context/morocco26/data/goal100/
+          cp morocco26/data/goal75/local_92_closure_v3.json national-model-context/morocco26/data/goal75/
+          cp morocco26/data/constituencies_goal75.csv national-model-context/morocco26/data/
+          cp morocco26/scripts/forecast_lab_rolling_v2.py national-model-context/morocco26/scripts/
+          cp morocco26/scripts/forecast_structural_seats_2026_v2.py national-model-context/morocco26/scripts/
+          cp morocco26/scripts/forecast_v3_center.py national-model-context/morocco26/scripts/
+          cp morocco26/scripts/calibrate_uncertainty_v3.py national-model-context/morocco26/scripts/
+          cp morocco26/scripts/goal100_run_fminus1.py national-model-context/morocco26/scripts/
+          cp morocco26/scripts/goal100_fminus1_runtime_v4.py national-model-context/morocco26/scripts/
+          cp morocco26/scripts/e_reason_build_blind_holdout_bundle.py national-model-context/morocco26/scripts/
+          cp morocco26/src/morocco26/forecast_v3.py national-model-context/morocco26/src/morocco26/
+          cp morocco26/src/morocco26/legal_allocator_2026.py national-model-context/morocco26/src/morocco26/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: national-model-context
+          path: national-model-context
+          if-no-files-found: error
+          retention-days: 1
