@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "M26-2026-SHADOW-PRE-ELECTION-SNAPSHOT-20260819",
+  "as_of": "2026-08-19T15:00:00+01:00",
+  "status": "SHADOW_PRE_ELECTION_SNAPSHOT_NOT_FINAL_BALLOT_CERTIFIED",
+  "purpose": "Reproducible checkpoint of information available before the 2026 election. It is not the final frozen forecast snapshot and authorizes no model or coefficient change.",
+  "protected_state": {
+    "F0_immutable": true,
+    "forecast_effect_authorized": false,
+    "predictive_coefficients_modified": false,
+    "E_reason_reopened": false,
+    "unknown_is_zero": false
+  },
+  "structural_prior": {
+    "path": "data/goal100/historical/tafra_legislative_2021_canonical.json",
+    "git_blob_sha": "29081da64c655ffb93e0d2423eeb90e665db6e4a",
+    "role": "LAST_COMPLETED_ELECTION_OUTCOME_PRIOR"
+  },
+  "territory_universe": {
+    "path": "data/constituencies_goal75.csv",
+    "git_blob_sha": "62ef354a3970eba4c68e874e2e96471524be1896",
+    "local_territories": 92
+  },
+  "candidate_surface": {
+    "checkpoint_path": "data/goal100/e_collect/candidate_intelligence_v2_checkpoint_20260818.json",
+    "checkpoint_git_blob_sha": "8eecf263fff64a460415dba0027de213d4bf9f53",
+    "candidate_records": 546,
+    "local_territories_covered": 92,
+    "parties": 9,
+    "source_core": "Medias24 elections SQLite plus official PJD merge",
+    "model_use_status": "DISCOVERY_COMPLETE_ENOUGH_FOR_SHADOW_SNAPSHOT_BUT_NOT_AUTHORIZED_FOR_PREDICTIVE_EFFECTS"
+  },
+  "candidate_power_gate": {
+    "path": "data/goal100/e_collect/candidate_intelligence_v2_power_gate_final_20260818.json",
+    "git_blob_sha": "e91261c4bac4a0776c52db40ec950113f1f766a9",
+    "status": "NO_GO_E_REASON_V2_VERIFIED_PANEL_UNDERPOWERED"
+  },
+  "medias24_acquisition": {
+    "path": "data/goal100/e_collect/runs/medias24_db_32051248846_1/run_manifest.json",
+    "git_blob_sha": "8460105d4a2d8ff94a68d69d296dbb3b60c9b923",
+    "candidate_records_at_core_extract": 544,
+    "parties": 9,
+    "forecast_effect_authorized": false
+  },
+  "legal_ballot_state": {
+    "path": "data/goal100/b2_2026_ballot_certificate.json",
+    "git_blob_sha": "c875d1c19f174a4bac57202ed2cfe3e8114b8a05",
+    "gate": "FAIL",
+    "interpretation": "Current candidate discovery may be broad, but the final legally certified ballot universe is not frozen. This snapshot therefore cannot be the terminal 2026 forecast snapshot."
+  },
+  "freeze_policy": {
+    "this_snapshot_may_be_updated": false,
+    "future_information_must_create_new_snapshot_id": true,
+    "final_2026_snapshot_requires": [
+      "legally stable candidate/ballot universe",
+      "explicit source provenance and timestamps",
+      "final model specification frozen before forecast generation",
+      "no post-election information"
+    ]
+  },
+  "scientific_interpretation": "This is a dated shadow photograph, not a forecast. It preserves what was known now so later model improvements cannot silently rewrite the pre-election information set."
+}
