@@ -1,0 +1,55 @@
+{
+  "ambiguities": [
+    {
+      "candidate": "Mohamed Karam",
+      "fact": "Mohamed Karam doit conduire la liste USFP à Aïn Chock.",
+      "fact_id": "2002-F0008",
+      "fact_type": "head_of_list",
+      "party": "USFP",
+      "source_id": "LM_HEADS_20020826",
+      "status": "AMBIGUOUS",
+      "territory": "Aïn Chock-Hay Hassani"
+    },
+    {
+      "row": {
+        "ambiguities": [
+          "candidate_arithmetic:42!=42+2"
+        ],
+        "constituency": "Zagora",
+        "female_candidates_documented": 2,
+        "magnitude": 3,
+        "male_candidates_documented": 42,
+        "native_id": "M26-2002-023",
+        "number_candidates_documented": 42,
+        "number_lists_documented": 14,
+        "population_reported": 255812,
+        "prefprov": "Zagora",
+        "registered_reported": 112601,
+        "source_id": "LM_MAP_20020921",
+        "status": "AMBIGUOUS"
+      },
+      "type": "native_map_row"
+    },
+    {
+      "row": {
+        "ambiguities": [
+          "candidate_arithmetic:39!=39+9"
+        ],
+        "constituency": "Guercif",
+        "female_candidates_documented": 9,
+        "magnitude": 3,
+        "male_candidates_documented": 39,
+        "native_id": "M26-2002-026",
+        "number_candidates_documented": 39,
+        "number_lists_documented": 13,
+        "population_reported": 302047,
+        "prefprov": "Taza",
+        "registered_reported": 163568,
+        "source_id": "LM_MAP_20020921",
+        "status": "AMBIGUOUS"
+      },
+      "type": "native_map_row"
+    }
+  ],
+  "year": 2002
+}

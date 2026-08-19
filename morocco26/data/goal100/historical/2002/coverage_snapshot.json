@@ -1,0 +1,19 @@
+{
+  "candidate_coverage_denominator_status": "PRE_ELECTION_TECHNICAL_SHEET_SUM",
+  "candidate_coverage_pct": 0.204,
+  "candidate_denominator_documented": 5876,
+  "candidate_names_verified_count": 12,
+  "facts_AMBIGUOUS": 3,
+  "facts_MISSING": 1267,
+  "facts_VERIFIED": 101,
+  "incumbent_coverage_pct": null,
+  "incumbent_facts_verified_count": 2,
+  "local_office_facts_verified_count": 1,
+  "native_map_pre_election_coverage_pct": 100.0,
+  "native_map_pre_election_rows_recovered": 91,
+  "party_switch_facts_verified_count": 2,
+  "phase": "PRE_ELECTION_SNAPSHOT",
+  "real_constituency_count": 91,
+  "snapshot_scientific_status": "PARTIAL_PRE_ELECTION_SNAPSHOT",
+  "year": 2002
+}
