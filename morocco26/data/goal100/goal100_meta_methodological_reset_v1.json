@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "reset_id": "M26-GOAL100-META-METHODOLOGICAL-RESET-V1",
+  "frozen_on": "2026-08-19",
+  "status": "CANONICAL_GLOBAL_RESET_BEFORE_2026_OUTCOME",
+  "trigger": "Repeated individually clean historical experiments produced unstable or overbroad interpretations because the research sequence adaptively reused the same 2011, 2016 and 2021 elections.",
+  "north_star": "Freeze a falsifiable probabilistic territorial and seat forecast for Morocco 2026, then determine prospectively whether conventional or agentic information adds measurable value beyond F0.",
+  "fatal_meta_caveat": {
+    "id": "ADAPTIVE_REUSE_OF_TWO_TRANSITIONS",
+    "finding": "The project preregistered individual runs but did not preregister the full sequence of model families, feature searches and specification repairs. Each reset reacted to results from the same finite historical record.",
+    "effective_replication": "The independent election-regime evidence is approximately two transitions, not hundreds of party-territory cells. Territory-level or cell-level bootstrap cannot manufacture additional election regimes.",
+    "consequence": "All models, feature families and uncertainty repairs developed after inspecting 2021 are exploratory development. They cannot independently confirm or generally kill a scientific mechanism."
+  },
+  "preserved_results": [
+    {
+      "artifact": "morocco26/data/goal100/e_collect/candidate_intelligence_v2/candidate_intelligence_v2_terminal_certificate_v2.json",
+      "valid_inference": "A common additive static same-party same-district head-incumbency coefficient did not transport in the tested PJD/RNI vote-share specification.",
+      "invalid_inference": "Candidate intelligence as a class is dead."
+    },
+    {
+      "artifact": "morocco26/data/goal100/e_collect/candidate_intelligence_v3/candidate_intelligence_v3_terminal_certificate_v1.json",
+      "valid_inference": "A corrected retrospective territorial diagnostic produced a positive but non-material signal and did not identify incremental value over F0.",
+      "invalid_inference": "The diagnostic is a fresh confirmatory validation."
+    },
+    {
+      "artifact": "morocco26/data/goal100/b2_current_state.json",
+      "valid_inference": "F0 remains the immutable registered preliminary forecast and contains no candidate or agentic adjustment.",
+      "invalid_inference": "F0 validates every structural assumption or is known to be optimal."
+    }
+  ],
+  "hard_corrections": [
+    {
+      "id": "SEQUENCE_LEVEL_PREREGISTRATION",
+      "rule": "No new historical feature family, model family or threshold may be promoted or killed from 2011/2016/2021 after this reset. Historical work may diagnose implementation and estimate plausible ranges only."
+    },
+    {
+      "id": "CORRECT_UNIT",
+      "rule": "Candidate intelligence is represented at party-list x territory x transition level, not as an isolated candidate-level bonus."
+    },
+    {
+      "id": "CORRECT_ESTIMAND",
+      "rule": "Use upgrade/downgrade relative to the same party's previous list and risk set: retention, replacement, asset gain/loss and verified switch pairs. Static incumbency levels are not candidate effects."
+    },
+    {
+      "id": "CORRECT_FORECAST_OBJECT",
+      "rule": "Primary outcomes are probability of at least one local seat, probability of finishing in the territory top-S lists, last-seat rank margin and national seat distribution. Vote-share RMSE is secondary."
+    },
+    {
+      "id": "FULL_COMPETITIVE_FIELD",
+      "rule": "Every included territory must retain the full modeled party field. Candidate effects are relative and zero-sum through the legal seat allocator; two-party isolated scoring is diagnostic only."
+    },
+    {
+      "id": "NATIONAL_REGIME_SEPARATION",
+      "rule": "National party swing, electoral-law regime and territorial redistribution are separate layers. A local candidate layer cannot be credited or blamed for national movement it was not designed to predict."
+    },
+    {
+      "id": "DEPENDENCE_AWARE_UNCERTAINTY",
+      "rule": "Cluster by territory and report party-election sensitivity. Claims of cross-election transportability require additional election regimes or the prospective 2026 outcome."
+    },
+    {
+      "id": "ONLY_2026_CONFIRMS",
+      "rule": "2021 is burned. Promotion of any new conventional, candidate or agentic arm is decided only after scoring the arm frozen before the 2026 outcome."
+    }
+  ],
+  "prospective_2026_stack": {
+    "F0_OFFICIAL": {
+      "status": "REGISTERED_IMMUTABLE",
+      "role": "Official structural reference forecast."
+    },
+    "F1_CONVENTIONAL_SHADOW": {
+      "status": "DEVELOPMENT_FITTED_NOT_CONFIRMED",
+      "role": "One conventional probabilistic challenger frozen before 2026; historical results are model development, not promotion evidence."
+    },
+    "F2_CANDIDATE_LIST_DELTA_SHADOW": {
+      "status": "TO_BE_FROZEN_BEFORE_2026_OUTCOME",
+      "unit": "party_list_x_territory_x_2021_TO_2026",
+      "features": [
+        "HEAD_RETAINED_OR_REPLACED_DELTA",
+        "PRIOR_MP_GAIN_MINUS_LOSS_ON_FULL_LIST",
+        "SWITCH_IN_MINUS_SWITCH_OUT",
+        "LOCAL_EXECUTIVE_GAIN_MINUS_LOSS",
+        "PARTY_OFFICE_GAIN_MINUS_LOSS",
+        "FORMER_MINISTER_OR_NATIONAL_OFFICE_GAIN_MINUS_LOSS",
+        "VERIFIED_LIST_DEPTH_CHANGE",
+        "FORMAL_ALLIANCE_OR_ENDORSEMENT_CHANGE"
+      ],
+      "role": "Prospective non-agent candidate/list challenger. If historical coefficient stability is not identifiable, publish scenario uncertainty rather than a fabricated point bonus."
+    },
+    "F3_AGENTIC_SHADOW": {
+      "status": "LOCKED_UNTIL_CONTRAST_AUDIT",
+      "role": "Constrained reasoner may judge only verified delta combinations after the deterministic panel is frozen.",
+      "unlock": [
+        "Complete and freeze F2 evidence panel",
+        "Demonstrate a non-degenerate set of cases where C2 can legitimately differ from deterministic C1",
+        "Freeze prompt, abstention rule and scoring before 2026 outcomes"
+      ]
+    }
+  },
+  "scoring_policy": {
+    "confirmatory_dataset": "2026 outcome only",
+    "primary": [
+      "Brier and log loss for party-list winning at least one local seat",
+      "Brier and log loss for top-S inclusion",
+      "proper score for national and party seat-count distributions",
+      "last-seat rank-margin error"
+    ],
+    "secondary": [
+      "territorial party-share error",
+      "rank accuracy",
+      "regional and party calibration"
+    ],
+    "promotion": "Arm-specific materiality and safety thresholds must be frozen before the 2026 outcome. No threshold may be changed after scoring.",
+    "reporting": "Report F0 and every frozen shadow arm, including null and adverse results."
+  },
+  "forbidden_from_now": [
+    "Calling another 2011/2016/2021 backtest an independent confirmation",
+    "Searching additional historical features until one beats F0 and then promoting it",
+    "Treating party-territory cells as independent election regimes",
+    "Killing candidate intelligence from failure of one static universal coefficient",
+    "Promoting candidate intelligence from an oracle-national-swing retrospective diagnostic",
+    "Using an LLM to choose features or weights after seeing 2021",
+    "Overwriting F0"
+  ],
+  "immediate_execution_order": [
+    "Stop adaptive historical model-family search.",
+    "Create one canonical 2021->2026 full-list delta panel with provenance and explicit UNKNOWN/CONFLICTED states.",
+    "Freeze one F2 deterministic shadow specification and one legal seat/rank scorer.",
+    "Run the deterministic-versus-reasoner contrast audit before any Opus invocation.",
+    "Freeze all 2026 shadow outputs before the outcome.",
+    "Score F0/F1/F2/F3 prospectively after the election and publish the complete comparison."
+  ],
+  "forecast_status": {
+    "F0_modified": false,
+    "historical_evidence_status": "EXPLORATORY_DEVELOPMENT_ONLY",
+    "candidate_intelligence_status": "OPEN_ONLY_AS_PROSPECTIVE_LIST_DELTA_SHADOW",
+    "e_reason_status": "LOCKED_PENDING_PROSPECTIVE_CONTRAST_AUDIT",
+    "next_confirmatory_event": "MOROCCO_2026_LEGISLATIVE_OUTCOME"
+  },
+  "github_batch_protocol": {
+    "status": "MANDATORY_FOR_ALL_FUTURE_REPO_WORK",
+    "read_phase": [
+      "Read branch metadata once.",
+      "Fetch one recursive Git tree and cache it.",
+      "Fetch only required blobs and cache by SHA; never refetch the same SHA in a batch."
+    ],
+    "compute_phase": [
+      "Run parsing, matching, simulations and tests in the working runtime.",
+      "Do not use GitHub Actions as an interactive REPL.",
+      "Do not create trigger-only commits or one-off diagnostic workflows."
+    ],
+    "write_phase": [
+      "Publish all changed paths in one create_tree/create_commit/update_ref sequence.",
+      "Normal maximum is one commit; two only for a scientifically required pre-outcome seal followed by post-seal computation."
+    ],
+    "ci_phase": [
+      "Use one consolidated final CI run only when local execution cannot certify the result.",
+      "Poll coarsely and fetch logs only after completion or failure."
+    ],
+    "default_connector_budget": {
+      "branch_reads": 1,
+      "recursive_tree_reads": 1,
+      "blob_reads_max": 5,
+      "tree_writes": 1,
+      "commit_writes": 1,
+      "ref_updates": 1,
+      "final_verifications": 1
+    },
+    "legacy_workflows": "Historical micro-workflows remain reproducibility artifacts and must not be invoked for new work."
+  }
+}
