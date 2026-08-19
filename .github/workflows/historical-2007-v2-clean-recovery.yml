@@ -1,0 +1,49 @@
+name: Historical 2007 V2 Clean Recovery
+
+on:
+  push:
+    branches:
+      - morocco26-historical-2007-v2-clean
+    paths:
+      - 'morocco26/scripts/historical_2007_pre_election_recovery_v2.py'
+      - '.github/workflows/historical-2007-v2-clean-recovery.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  recover-pre-election-map:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-historical-2007-v2-clean
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install parser dependencies
+        run: python -m pip install --disable-pip-version-check requests beautifulsoup4
+      - name: Enforce absence of 2007 outcome and recover pre-election corpus
+        run: python morocco26/scripts/historical_2007_pre_election_recovery_v2.py
+      - name: Show recovery metrics
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('morocco26/data/goal100/historical/2007_v2_research/pre_election_map_evidence_raw_v2.json')
+          d=json.loads(p.read_text())
+          print({k:d[k] for k in ('cutoff','outcome_used','source_count_discovered','eligible_article_count','explicit_district_magnitude_fact_count')})
+          PY
+      - name: Commit recovery evidence only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/historical/2007_v2_research
+          if git diff --cached --quiet; then
+            echo 'No recovery changes to commit'
+          else
+            git commit -m 'data(historical): recover clean pre-election 2007 map evidence v2'
+            git push origin HEAD:morocco26-historical-2007-v2-clean
+          fi
