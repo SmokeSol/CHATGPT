@@ -1,0 +1,33 @@
+name: Forecast Lab Rolling V2
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "morocco26/scripts/forecast_lab_rolling_v2.py"
+      - ".github/workflows/forecast-lab-rolling-v2.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  rolling-origin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install runtime
+        run: python -m pip install --disable-pip-version-check numpy
+      - name: Run rolling-origin V2
+        run: python morocco26/scripts/forecast_lab_rolling_v2.py
+      - name: Upload forecast artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: forecast-lab-rolling-v2
+          path: |
+            morocco26/data/goal100/forecast_lab/baseline_scores_v2.json
+            morocco26/data/goal100/forecast_lab/baseline_forecast_2026_v2.json
+            morocco26/data/goal100/forecast_lab/pre_election_snapshot_2026_v2.json
+            morocco26/data/goal100/forecast_lab/run_summary_v2.json
