@@ -49,7 +49,7 @@
       "uncertainty_calibration_status": "NO_PRIOR_NATIONAL_TRANSITION"
     },
     {
-      "forecast_freeze_sha256_before_target_open": "43bbf1378a67cf4cb009f56f8cf40b9b4e94ac2b7eda5ed422d161f511987777",
+      "forecast_freeze_sha256_before_target_open": "fbfaa0559eafc2559c9791f2825852dd65761d6d01380b517564e6ab16258786",
       "forecast_model_hashes": {
         "national": {
           "LEARNED_MEAN_NATIONAL_SWING": "dae56ae3ed9901d6879f5981d7934ce696896fb8ef758e2509ad1f2acd9b67e0",
@@ -57,7 +57,7 @@
         },
         "territorial": {
           "HALF_SHRINK_FIXED_DIAGNOSTIC": "7cf7a796f80c79ad226a72b404bddb04fd37849221845f21c99f5356da20e18e",
-          "LEARNED_TWO_LAYER": "61c54a29c5cc87c04856240347dd0285ad8449a290be0955d43e596886bfa0ad",
+          "LEARNED_TWO_LAYER": "1a6d06f40db9a81844ee1bcab23dfe0ecd9e41253d3715d777af746dda280327",
           "NATIONAL_ONLY_REFERENCE_GEOGRAPHY": "b78287590e588bdfe2143c26c5248ee65c2ebf293ddc9484db8ddfcda0a76bfb",
           "PERSIST_REFERENCE_GEOGRAPHY": "b20e1d610b82898d3245aed2f25ee7e876d78ca5db8b2f2e397c8c01d8c455a4"
         }
