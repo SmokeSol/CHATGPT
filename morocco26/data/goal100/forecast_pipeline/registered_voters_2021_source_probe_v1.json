@@ -1,0 +1,38 @@
+{
+  "F0_modified": false,
+  "authority_scope": "elections.ma only",
+  "candidate_pages_with_electorate_terms": [],
+  "discovered_legislative_or_electorate_links": [],
+  "district_level_registered_counts_parsed": false,
+  "official_rule_confirmed": "2021 legislative quotient uses registered voters in the constituency divided by seats.",
+  "pages_fetched": {
+    "https://www.elections.ma/": {
+      "contains_electorate_terms": false,
+      "digit_groups_sample": [],
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "requested_url": "https://www.elections.ma/"
+    },
+    "https://www.elections.ma/elections/legislatives/resultats.aspx?IE=1&Id=T1uzm+f7U%2FWFF+rn+x03Zg%3D%3D": {
+      "contains_electorate_terms": false,
+      "digit_groups_sample": [],
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "requested_url": "https://www.elections.ma/elections/legislatives/resultats.aspx?IE=1&Id=T1uzm+f7U%2FWFF+rn+x03Zg%3D%3D"
+    },
+    "https://www.elections.ma/faq/legislatives/faq.aspx": {
+      "contains_electorate_terms": false,
+      "digit_groups_sample": [],
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "requested_url": "https://www.elections.ma/faq/legislatives/faq.aspx"
+    },
+    "https://www.elections.ma/index.aspx": {
+      "contains_electorate_terms": false,
+      "digit_groups_sample": [],
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "requested_url": "https://www.elections.ma/index.aspx"
+    }
+  },
+  "probe_id": "M26-2021-REGISTERED-VOTERS-OFFICIAL-SOURCE-PROBE-V1",
+  "safety_rule": "Never infer registered voters from turnout, valid votes, or seat outcomes.",
+  "schema_version": "1.0",
+  "status": "NO_MACHINE_READABLE_DISTRICT_COUNTS_FOUND_ON_PROBED_OFFICIAL_SURFACE"
+}
