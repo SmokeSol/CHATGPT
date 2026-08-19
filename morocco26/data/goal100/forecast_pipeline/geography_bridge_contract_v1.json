@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-HISTORICAL-GEOGRAPHY-BRIDGE-V1",
+  "purpose": "Prevent silent one-to-one matching across elections whose local constituency boundaries/counts differ.",
+  "stable_reference_geometry": "2011+ frozen 92 local constituencies in morocco26/data/constituencies_goal75.csv",
+  "known_native_local_counts": {
+    "2002": 91,
+    "2007": 95,
+    "2011": 92,
+    "2016": 92,
+    "2021": 92,
+    "2026": 92
+  },
+  "rules": [
+    "National vote aggregation is geometry-independent and may use any valid native historical file immediately.",
+    "A territorial transition may be fitted only when both elections are expressed on a scientifically admissible common geography.",
+    "Never drop, duplicate or fuzzy-force 2002/2007 native districts merely to obtain 92 rows.",
+    "A pre-2011 bridge must archive its source basis and state whether it is exact or approximate.",
+    "Approximate split weights based on population/registered voters remain research-only unless pre-registered and sensitivity-tested; target election outcomes may never be used to choose those weights."
+  ],
+  "bridge_path_pattern": "morocco26/data/goal100/forecast_pipeline/geography_bridges/<YEAR>_to_2011_reference_v1.json",
+  "accepted_bridge_modes": {
+    "EXACT_HARMONIZED_ROWS": "Bridge artifact contains or points to 92 harmonized rows built from lower-level source components without using future election outcomes.",
+    "PRE_ELECTION_WEIGHTED_CROSSWALK": "Source districts are apportioned by weights fixed from non-outcome pre-election geography/demography; usable only when forecast_eligible=true and sensitivity audit passes."
+  },
+  "minimum_bridge_metadata": [
+    "source_year",
+    "target_geometry",
+    "mode",
+    "forecast_eligible",
+    "source_provenance",
+    "source_sha256",
+    "construction_timestamp",
+    "future_outcome_used=false"
+  ],
+  "current_status": "NO_PRE_2011_BRIDGE_REQUIRED_UNTIL_2007_OR_2002_CANONICAL_DATA_ARRIVES"
+}
