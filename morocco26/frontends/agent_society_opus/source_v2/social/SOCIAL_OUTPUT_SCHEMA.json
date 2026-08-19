@@ -1,0 +1,86 @@
+{
+  "$id": "ATLAS_SOCIAL_LLM_OUTPUT_V1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "party_logit_adjustments": {
+      "additionalProperties": {
+        "maximum": 1.0,
+        "minimum": -1.0,
+        "type": "number"
+      },
+      "description": "Keys must be only the party pseudonyms supplied in the request; each relative logit adjustment is bounded to [-1,1].",
+      "type": "object"
+    },
+    "reason_codes": {
+      "items": {
+        "enum": [
+          "FAMILY_ALIGNMENT",
+          "FAMILY_CONFLICT",
+          "WORK_ALIGNMENT",
+          "WORK_CONFLICT",
+          "NEIGHBORHOOD_ALIGNMENT",
+          "NEIGHBORHOOD_CONFLICT",
+          "PRIVATE_CONVICTION_RESISTS",
+          "CROSS_PRESSURE",
+          "SOCIAL_REINFORCEMENT",
+          "PARTICIPATION_ENCOURAGED",
+          "PARTICIPATION_DISCOURAGED"
+        ]
+      },
+      "maxItems": 4,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "relation_reliance": {
+      "additionalProperties": false,
+      "properties": {
+        "family": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "neighborhood": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "work": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "family",
+        "work",
+        "neighborhood"
+      ],
+      "type": "object"
+    },
+    "social_response": {
+      "enum": [
+        "RESIST",
+        "REINFORCE",
+        "ADOPT",
+        "CONFLICTED",
+        "WITHDRAW",
+        "NO_CHANGE"
+      ]
+    },
+    "turnout_delta_logit": {
+      "maximum": 0.75,
+      "minimum": -0.75,
+      "type": "number"
+    }
+  },
+  "required": [
+    "social_response",
+    "turnout_delta_logit",
+    "party_logit_adjustments",
+    "relation_reliance",
+    "reason_codes"
+  ],
+  "title": "Bounded social response",
+  "type": "object"
+}

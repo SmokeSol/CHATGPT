@@ -1,0 +1,63 @@
+/* ATLAS // couche sociale V1 — additive, sans style inline. */
+.social-notice {
+  display:grid; gap:10px; margin-bottom:18px; padding:16px 18px;
+  border:1px solid rgba(255,162,77,.30); background:rgba(255,162,77,.055);
+}
+.social-notice-top { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.social-badge {
+  display:inline-flex; align-items:center; min-height:25px; padding:5px 9px;
+  border:1px solid rgba(255,162,77,.38); border-radius:99px;
+  color:var(--s2); font:650 9px/1.2 var(--sans); letter-spacing:.11em; text-transform:uppercase;
+}
+.social-notice p { color:var(--ink-2); font-size:12px; }
+.social-console { display:grid; gap:16px; }
+.social-controls { display:grid; gap:14px; }
+@media(min-width:900px){.social-controls{grid-template-columns:1.35fr 1fr 1fr;align-items:end}}
+.social-control label,.social-control .social-label {
+  display:block; margin-bottom:7px; color:var(--muted);
+  font:650 9.5px/1.3 var(--sans); letter-spacing:.13em; text-transform:uppercase;
+}
+.social-toggles { display:flex; gap:5px; flex-wrap:wrap; }
+.social-toggles button {
+  padding:8px 11px; border:1px solid var(--line-2); border-radius:99px;
+  color:var(--muted); background:var(--well); font:600 11.5px/1 var(--sans);
+}
+.social-toggles button:hover { color:var(--ink); border-color:var(--line-3); }
+.social-toggles button[aria-pressed="true"] { color:var(--plane); background:var(--s2); border-color:var(--s2); }
+.social-toggles.rounds button[aria-pressed="true"] { color:var(--ink); background:var(--accent-soft); border-color:var(--accent-line); }
+.social-grid { display:grid; gap:16px; }
+@media(min-width:980px){.social-grid{grid-template-columns:1fr 1fr}}
+.social-state h3 { display:flex; justify-content:space-between; gap:12px; align-items:baseline; }
+.social-state h3 span { color:var(--muted); font:600 10px/1 var(--mono); }
+.social-probs { display:grid; gap:8px; margin-top:15px; }
+.social-prob { display:grid; grid-template-columns:70px 1fr 52px; gap:9px; align-items:center; }
+.social-prob b { color:var(--ink-2); font:600 11px/1 var(--mono); }
+.social-prob output { text-align:right; font:650 11px/1 var(--mono); }
+.social-prob progress { width:100%; height:10px; appearance:none; border:0; background:var(--well); }
+.social-prob progress::-webkit-progress-bar { background:var(--well); border-radius:2px; }
+.social-prob progress::-webkit-progress-value { background:linear-gradient(90deg,var(--s3),var(--s2)); border-radius:2px; }
+.social-prob progress::-moz-progress-bar { background:var(--s2); border-radius:2px; }
+.social-state.after .social-prob progress::-webkit-progress-value { background:linear-gradient(90deg,var(--accent),var(--accent-2)); }
+.social-state.after .social-prob progress::-moz-progress-bar { background:var(--accent); }
+.social-turnout { display:flex; gap:12px; align-items:baseline; margin-top:14px; padding-top:12px; border-top:1px solid var(--line); }
+.social-turnout b { font:700 22px/1 var(--mono); }
+.social-turnout span { color:var(--muted); font-size:11px; }
+.social-exposure-grid { display:grid; gap:10px; }
+@media(min-width:760px){.social-exposure-grid{grid-template-columns:repeat(3,1fr)}}
+.social-relation { background:var(--well); border:1px solid var(--line); padding:14px; min-height:146px; }
+.social-relation.off { opacity:.48; }
+.social-relation-head { display:flex; justify-content:space-between; gap:8px; align-items:baseline; }
+.social-relation-head b { font-size:13px; }
+.social-relation-head span { color:var(--s2); font:650 10px/1 var(--mono); }
+.social-contact-list { display:grid; gap:6px; margin-top:10px; }
+.social-contact { display:flex; justify-content:space-between; gap:10px; font-size:11px; color:var(--ink-2); }
+.social-contact span:last-child { color:var(--muted); font-family:var(--mono); }
+.social-empty { color:var(--faint); font-size:11px; margin-top:10px; }
+.social-summary { display:grid; gap:1px; background:var(--line); border:1px solid var(--line); }
+@media(min-width:760px){.social-summary{grid-template-columns:repeat(4,1fr)}}
+.social-metric { background:var(--surface); padding:15px 16px; }
+.social-metric b { display:block; font:700 21px/1 var(--mono); }
+.social-metric span { display:block; color:var(--muted); font-size:10px; margin-top:5px; text-transform:uppercase; letter-spacing:.07em; }
+.social-protocol { margin-top:16px; }
+.social-error { border-left:2px solid var(--crit); padding:12px 14px; color:var(--ink-2); background:rgba(216,85,63,.06); }
+@media(max-width:620px){.social-prob{grid-template-columns:58px 1fr 47px}.social-summary{grid-template-columns:1fr 1fr}}

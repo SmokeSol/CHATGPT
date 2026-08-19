@@ -1,0 +1,55 @@
+{
+  "$id": "ATLAS_SOCIAL_OUTCOME_ADAPTER_V1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "items": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "anonymous_election_id": {
+            "type": "string"
+          },
+          "anonymous_territory_id": {
+            "type": "string"
+          },
+          "condition_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "party_shares": {
+            "additionalProperties": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "minProperties": 1,
+            "type": "object"
+          },
+          "turnout": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "anonymous_election_id",
+          "anonymous_territory_id",
+          "party_shares"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "items"
+  ],
+  "title": "Explicit post-unseal historical outcome adapter",
+  "type": "object"
+}

@@ -1,0 +1,106 @@
+{
+  "agentic_social": {
+    "input": "private Rk decision + aggregate frozen social exposure + non-political synthetic profile",
+    "maximum_party_adjustment_per_pseudonym_logit": 1.0,
+    "maximum_turnout_delta_logit": 0.75,
+    "output": "bounded social adjustments only",
+    "role": "incremental treatment over the deterministic social baseline",
+    "same_relation_strength_budget_as_deterministic_model": true,
+    "temperature": 0
+  },
+  "calibration": {
+    "calibration_election": "2016_ANONYMOUS_ID_MUST_BE_SUPPLIED_AT_RUNTIME",
+    "holdout_election": "2021_MUST_NOT_BE_PRESENT_IN_CALIBRATION_OUTCOME_FILE",
+    "lambda_candidates": {
+      "family": [
+        0.0,
+        0.05,
+        0.1,
+        0.15,
+        0.2
+      ],
+      "neighborhood": [
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08
+      ],
+      "work": [
+        0.0,
+        0.03,
+        0.06,
+        0.09,
+        0.12
+      ]
+    },
+    "objective": "party_share_rmse + 0.25 * turnout_rmse",
+    "primary_model_condition": "ALL_R2",
+    "tie_break": [
+      "lower objective",
+      "lower party_share_rmse",
+      "lower sum of lambdas",
+      "lower family lambda",
+      "lower work lambda",
+      "lower neighborhood lambda"
+    ]
+  },
+  "conditions": [
+    "ISO",
+    "FAM",
+    "WORK",
+    "NEIGH",
+    "ALL",
+    "SHUFFLE",
+    "ALL_R2"
+  ],
+  "environment": "ENV_4D19B3E7",
+  "experiment": "EXP_7C8A2F11",
+  "extension": "SOCIAL_INFLUENCE_V1",
+  "gates": [
+    "graph builder reads voter cards only",
+    "zero-lambda identity max delta <= 1e-15",
+    "ISO core decisions exactly equal R0",
+    "all party distributions sum to 1 within 1e-8",
+    "all updates synchronous",
+    "calibration file contains exactly one declared election id",
+    "calibrated lambdas frozen before any holdout scoring"
+  ],
+  "graph": {
+    "builder_seed": "ATLAS_SOCIAL_V1",
+    "min_compatibility": {
+      "family": 0.34,
+      "neighborhood": 0.28,
+      "work": 0.32
+    },
+    "placebo_seed": "ATLAS_SOCIAL_SHUFFLE_V1",
+    "relations": [
+      "family",
+      "work",
+      "neighborhood"
+    ],
+    "top_k": {
+      "family": 4,
+      "neighborhood": 8,
+      "work": 6
+    }
+  },
+  "principle": {
+    "R0": "existing frozen isolated-agent decisions; immutable control",
+    "R1": "synchronous direct social exposure from R0 only",
+    "R2": "synchronous second-order propagation from complete R1 only; stop after R2",
+    "graph_semantics": "archetype exposure distributions, not literal person-to-person claims",
+    "no_cross_territory_edges": true,
+    "no_free_conversation": true,
+    "no_outcome_access_in_graph_or_influence_engines": true,
+    "party_pseudonyms_never_cross_work_items": true
+  },
+  "public_frontend": {
+    "data_source": "existing 3000 portrait sample",
+    "must_not_be_interpreted_as_forecast": true,
+    "purpose": "explain R0/R1/R2 and relation channels without exposing historical target outcomes",
+    "status": "ILLUSTRATIVE_NOT_CALIBRATED"
+  },
+  "schema_version": "ATLAS_SOCIAL_EXPERIMENT_MANIFEST_V1",
+  "status": "PRE_REGISTERED_NOT_CALIBRATED"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "ATLAS_SOCIAL_FRONT_DEMO_V1",
+  "status": "ILLUSTRATIVE_NOT_CALIBRATED",
+  "label": "Démonstration sociale — paramètres illustratifs, non calibrés",
+  "semantics": "archetype_exposure_distribution_not_literal_person_edges",
+  "rounds": ["R0", "R1", "R2"],
+  "relations": {
+    "family": {"label": "Famille", "lambda": 0.18, "top_k": 4},
+    "work": {"label": "Collègues", "lambda": 0.10, "top_k": 6},
+    "neighborhood": {"label": "Voisinage", "lambda": 0.06, "top_k": 8}
+  },
+  "warnings": [
+    "Les liens visibles représentent des expositions entre strates d'archétypes, pas des personnes réellement apparentées ou voisines.",
+    "Les paramètres de cette vue sont illustratifs. Les lambda scientifiques sont calibrés uniquement dans le pipeline gelé 2016 puis évalués sur le holdout 2021.",
+    "Aucun résultat historique n'est utilisé par cette démonstration pour fabriquer les relations ou déplacer un choix."
+  ]
+}

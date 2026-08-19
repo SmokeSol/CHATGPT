@@ -5,27 +5,103 @@ Front-end public de l'expérience de société électorale artificielle `EXP_7C8
 
 **Ce que la page montre.** Comment 94 208 décisions de vote simulées se forment : les onze
 forces qui les pilotent, les profils qui changent de camp, ceux qui sanctionnent le bilan
-sortant, ceux qui répondent au programme ou à la figure locale, et un démonstrateur qui
-recalcule une décision en direct pendant qu'on déplace les curseurs.
+sortant, ceux qui répondent au programme ou à la figure locale, un démonstrateur qui recalcule
+une décision en direct et, désormais, une couche sociale illustrative famille / collègues /
+voisinage qui permet de comprendre la propagation R0 → R1 → R2.
 
-**Ce que la page ne montre pas.** Aucun résultat électoral, aucune part de voix, aucun siège,
-aucun classement de partis, aucun nom réel de parti ou de territoire, aucune date de scrutin.
-Les agrégats sont bruts, non pondérés — le corpus ne fournit d'ailleurs aucun poids de
-population.
+**Ce que la page ne montre pas.** Aucun résultat électoral caché, aucun siège ni information
+provenant d'un outcome non unsealed n'est utilisé par la couche sociale. Les agrégats publics
+du corpus historique restent bruts et non pondérés — le corpus ne fournit aucun poids de
+population. La section sociale publique est explicitement marquée **illustrative et non
+calibrée** : elle n'est pas le résultat du backtest 2016 → 2021.
 
 ## Arborescence
 
-```
+```text
 vercel.json              en-têtes de sécurité + réécritures
 web/
   index.html             structure, aucun script ni style en ligne
   styles.css             charte, rampes ordinales, thème sombre unique
-  app.js                 rendu, interactions, portage du moteur de décision
+  reader-final.css       extension du lecteur historique
+  social.css             présentation de la couche sociale
+  app.js                 rendu, interactions, portage du moteur de décision privé
+  reader.js              lecteur 2016 / 2021
+  social.js              démonstrateur social R0 / R1 / R2, non calibré
   data/
-    societe.json         agrégats descriptifs sur les 94 208 décisions   (~123 Ko)
-    portraits.json       3 000 décisions individuelles échantillonnées   (~1,4 Mo)
-    simulateur.json      contexte d'un territoire + vecteurs de base + points de contrôle
+    societe.json         agrégats descriptifs sur les 94 208 décisions
+    portraits.json       3 000 décisions individuelles échantillonnées
+    simulateur.json      contexte + vecteurs de base + points de contrôle
+    social_config.json   paramètres uniquement illustratifs du front
+social/
+  PROTOCOL.md
+  SOCIAL_EXPERIMENT_MANIFEST.json
+  SOCIAL_GRAPH_SPEC.json
+  SOCIAL_OUTPUT_SCHEMA.json
+  OUTCOME_ADAPTER_SCHEMA.json
+  SOCIAL_PROMPT.txt
+  SOCIAL_MANIFEST.sha256
+  engine/
+    build_social_graph.py
+    deterministic_social.py
+    run_social_experiment.py
+    calibrate_lambda.py
+    score_social.py
+    run_agentic_social.py
+    validate_social.py
+  tests/
+    test_social_engine.py
 ```
+
+## Invariant de la V1 isolée
+
+`scripts/judge_engine.py` reste le juge privé de référence et n'est pas modifié par cette
+extension. Ses décisions constituent **R0 / ISO**, le contrôle immuable.
+
+La couche sociale ne remplace donc pas le vote privé. Elle consomme R0 après coup, au travers
+d'un graphe synthétique séparé et gelé.
+
+## Ce que signifie le graphe social
+
+Les 256 objets d'un territoire sont des **archétypes**, pas 256 personnes littéralement
+voisines. Une relation sociale est donc une distribution d'exposition plausible entre strates :
+
+- `family` : structure du foyer, taille, statut matrimonial, âge, milieu, niveau de vie ;
+- `work` : uniquement pour les actifs employés, avec secteur / occupation / profession ;
+- `neighborhood` : milieu, niveau de vie, SES, âge, structure du foyer, secteur, éducation.
+
+Aucun lien ne traverse un work item et les pseudonymes `Q_01 ... Q_09` ne circulent jamais entre
+territoires.
+
+## Dynamique R0 → R1 → R2
+
+- **R0 / ISO** : décisions isolées existantes ;
+- **R1** : exposition directe, calculée simultanément depuis l'intégralité de R0 ;
+- **R2** : propagation de second ordre, calculée simultanément depuis l'intégralité de R1 ;
+- **STOP** : aucune simulation jusqu'à convergence.
+
+Le moteur déterministe applique un pooling logarithmique borné. Une décision très certaine
+résiste davantage qu'une décision diffuse. La participation est déplacée en log-odds. Lorsque
+les trois `lambda` valent zéro, la décision est identique bit pour bit sur les champs de décision.
+
+## Ablations et falsification
+
+Les conditions pré-enregistrées sont :
+
+`ISO, FAM, WORK, NEIGH, ALL, SHUFFLE, ALL_R2`
+
+`SHUFFLE` conserve pour chaque agent le nombre de contacts et leurs poids sortants mais
+réassigne les cibles : il sert de placebo de topologie.
+
+La calibration de `lambda_family / lambda_work / lambda_neighborhood` se fait uniquement sur le
+scrutin de calibration explicitement unsealed. Le script refuse un fichier outcome contenant
+un deuxième scrutin. Le fichier de lambdas est ensuite gelé avant le holdout suivant.
+
+La couche LLM est elle aussi séparée : elle ne peut retourner que des ajustements sociaux bornés
+à partir de l'état privé et des expositions agrégées. Elle n'est jamais autorisée à introduire
+de nouveaux faits politiques ou à refaire le vote privé. Le vrai test est donc également
+`agentic social` vs `deterministic social`.
+
+Voir `social/PROTOCOL.md` et `social/README.md` pour le protocole et les commandes exactes.
 
 ## Déploiement
 
@@ -43,51 +119,33 @@ python -m http.server 5178 --directory web
 
 ## Sécurité
 
-`vercel.json` applique une CSP stricte sans aucune échappatoire :
+`vercel.json` applique une CSP stricte sans aucune échappatoire. La couche sociale ne rajoute
+ni CDN, ni police distante, ni télémétrie, ni appel outcome. `social.js` charge seulement
+`data/portraits.json` et `data/social_config.json` depuis la même origine.
 
-```
-default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';
-script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self';
-connect-src 'self'; media-src 'none'; object-src 'none'; worker-src 'none';
-manifest-src 'self'; upgrade-insecure-requests
-```
-
-Ni `unsafe-inline`, ni `unsafe-eval`, ni CDN, ni police distante, ni image distante, ni
-télémétrie. Le code respecte ces contraintes de bout en bout : aucun attribut `style` n'est
-écrit dans le balisage ni via `setAttribute`, toute mise en forme dynamique passe par le CSSOM.
-S'y ajoutent `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy: no-referrer`,
-`Permissions-Policy` fermée, les trois en-têtes `Cross-Origin-*`, HSTS et `X-Robots-Tag: noindex`.
-
-## Le démonstrateur
+## Fidélité du démonstrateur privé
 
 `app.js` réimplémente le moteur de décision utilisé pour produire le corpus. La fidélité de ce
-portage n'est pas supposée : `data/simulateur.json` embarque douze points de contrôle calculés
-par le moteur Python de référence, et la page les rejoue au chargement. L'écart maximal
-constaté est de 5,2 × 10⁻⁷, soit l'arrondi des valeurs de référence. Le résultat est écrit
-dans la console du navigateur à chaque chargement.
+portage reste contrôlée par les douze points de contrôle existants de `data/simulateur.json`.
+La couche sociale n'altère ni ces points de contrôle ni `scripts/judge_engine.py`.
 
-Le territoire utilisé par le démonstrateur est un territoire réel du corpus, retenu pour sa
-configuration ordinaire — participation précédente proche de la médiane, candidatures locales
-documentées. Il reste anonyme, comme tous les autres.
+## Reproductibilité sociale
 
-## Accessibilité et robustesse
+Depuis `source_v2/` :
 
-- Un seul thème, sombre, entièrement peint : aucune surface ne dépend du thème de l'hôte.
-- La couleur ne porte jamais seule le sens : chaque barre, chaque tuile et chaque état porte
-  un libellé et un chiffre.
-- Rampes ordinales à teinte unique, luminance monotone.
-- Tuiles de l'atlas atteignables au clavier, infobulle en `aria-live`.
-- `prefers-reduced-motion` coupe l'animation du champ d'agents et les transitions de barres.
-- Tableaux larges confinés dans un conteneur défilant : le corps de page ne défile jamais
-  horizontalement.
+```bash
+python -m unittest discover -s social/tests -p 'test_*.py' -v
+python social/engine/build_social_graph.py /path/to/FROZEN_ENV /path/to/social_graphs
+python social/engine/validate_social.py graphs /path/to/FROZEN_ENV /path/to/social_graphs
+```
 
-## Régénérer les données
+La procédure complète calibration → ablations → validation → holdout est documentée dans
+`social/README.md`.
 
-Les trois fichiers de `web/data/` sont dérivés de l'arborescence gelée des décisions par les
-scripts livrés avec l'archive de sortie (`engine/derive.py` et `engine/make_sim.py`). Ils ne
-contiennent aucun résultat électoral, aucune pondération et aucune agrégation vers un résultat.
+## Provenance
 
-## Suite
+Le `MANIFEST_source_v2.sha256` parent reste la trace du bundle historique et des divergences déjà
+documentées avant cette extension. Il n'est pas réécrit pour faire disparaître l'historique.
 
-Cette version simule des agents strictement isolés : aucun ne voit la réponse d'un autre.
-La version 2 introduit la famille, les collègues, le voisinage et l'influence entre agents.
+`social/SOCIAL_MANIFEST.sha256` est le manifest **additif** de cette couche et enregistre les
+fichiers scientifiques et frontaux ajoutés ou modifiés pour l'expérience sociale.

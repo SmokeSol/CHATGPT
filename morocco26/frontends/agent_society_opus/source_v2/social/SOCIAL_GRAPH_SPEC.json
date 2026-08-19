@@ -1,0 +1,128 @@
+{
+  "$id": "ATLAS_SOCIAL_GRAPH_SPEC_V1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "description": "Archetype-to-archetype exposure distributions. Edges are probabilistic stratum exposure, not literal interpersonal claims.",
+  "properties": {
+    "min_score": {
+      "type": "object"
+    },
+    "nodes": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "relations": {
+            "additionalProperties": false,
+            "properties": {
+              "family": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "i": {
+                      "minimum": 0,
+                      "type": "integer"
+                    },
+                    "w": {
+                      "exclusiveMinimum": 0,
+                      "maximum": 1,
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "i",
+                    "w"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "neighborhood": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "i": {
+                      "minimum": 0,
+                      "type": "integer"
+                    },
+                    "w": {
+                      "exclusiveMinimum": 0,
+                      "maximum": 1,
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "i",
+                    "w"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "work": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "i": {
+                      "minimum": 0,
+                      "type": "integer"
+                    },
+                    "w": {
+                      "exclusiveMinimum": 0,
+                      "maximum": 1,
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "i",
+                    "w"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "family",
+              "work",
+              "neighborhood"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "id",
+          "relations"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "ATLAS_SOCIAL_GRAPH_V1"
+    },
+    "seed": {
+      "type": "string"
+    },
+    "semantics": {
+      "type": "string"
+    },
+    "source_key": {
+      "type": "string"
+    },
+    "top_k": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "semantics",
+    "source_key",
+    "seed",
+    "nodes"
+  ],
+  "title": "ATLAS synthetic social exposure graph",
+  "type": "object"
+}

@@ -9,13 +9,13 @@
 <meta name="color-scheme" content="dark">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="reader-final.css">
+<link rel="stylesheet" href="social.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23070b11'/><g fill='none' stroke='%23ffa24d' stroke-width='1.8'><rect x='9' y='9' width='14' height='14'/><rect x='9' y='9' width='14' height='14' transform='rotate(45 16 16)'/></g><circle cx='16' cy='16' r='2.4' fill='%236e8bff'/></svg>">
 </head>
 <body>
 <div class="zellige" aria-hidden="true"></div>
 <div class="shell">
 
-<!-- ═══ EN-TÊTE ══════════════════════════════════════════════════════════ -->
 <header class="top">
   <div class="wrap">
     <div class="top-row">
@@ -49,6 +49,7 @@
         <li><a href="#maroc">Explorer le Maroc</a></li>
         <li><a href="#participer">Participer</a></li>
         <li><a href="#demonstrateur">Faites voter un citoyen</a></li>
+        <li><a href="#social">L'entourage</a></li>
         <li><a href="#forces">Ce qui fait voter</a></li>
         <li><a href="#sanction">Le regard sur le bilan</a></li>
         <li><a href="#bascule">Qui change d'avis</a></li>
@@ -59,7 +60,6 @@
   </div>
 </header>
 
-<!-- ═══ HÉROS ════════════════════════════════════════════════════════════ -->
 <section class="hero">
   <canvas class="hero-canvas" id="field" aria-hidden="true"></canvas>
   <div class="wrap hero-grid">
@@ -81,7 +81,6 @@
   <div class="wrap"><div class="kpis" id="kpis"></div></div>
 </section>
 
-<!-- ═══ MAROC ═══════════════════════════════════════════════════════════ -->
 <section class="band tint" id="maroc">
   <div class="wrap">
     <div class="band-head rise">
@@ -110,7 +109,6 @@
   </div>
 </section>
 
-<!-- ═══ PARTICIPER ═══════════════════════════════════════════════════════ -->
 <section class="band" id="participer">
   <div class="wrap">
     <div class="band-head rise">
@@ -126,11 +124,10 @@
         <button class="cta primary" id="join-society" type="button">Participer</button>
       </article>
     </div>
-    <div class="reader-lock rise"><span class="dot"></span><div><b>La révélation viendra à la fin.</b><p>Pendant que la société se construit, personne ne voit le résultat collectif. Chaque participation reste indépendante des précédentes.</p></div></div>
+    <div class="reader-lock rise"><span class="dot"></span><div><b>La révélation viendra à la fin.</b><p>Pendant que la société se construit, personne ne voit le résultat collectif. Chaque contribution est collectée sans voir les précédentes ; la couche sociale est appliquée ensuite dans un protocole séparé et gelé.</p></div></div>
   </div>
 </section>
 
-<!-- ═══ MÉCANISME ════════════════════════════════════════════════════════ -->
 <section class="band tint" id="mecanisme">
   <div class="wrap">
     <div class="band-head rise">
@@ -142,7 +139,6 @@
   </div>
 </section>
 
-<!-- ═══ DÉMONSTRATEUR ════════════════════════════════════════════════════ -->
 <section class="band" id="demonstrateur">
   <div class="wrap">
     <div class="band-head rise">
@@ -184,7 +180,65 @@
   </div>
 </section>
 
-<!-- ═══ FORCES ═══════════════════════════════════════════════════════════ -->
+<section class="band tint" id="social">
+  <div class="wrap" id="social-app">
+    <div class="band-head rise">
+      <h2>Un citoyen ne vote pas seul. <em>L'entourage entre dans le choix.</em></h2>
+      <p class="say">La première couche observait chaque agent isolément. Cette extension construit maintenant des expositions synthétiques compatibles — famille, collègues, voisinage — puis rejoue les décisions de façon synchrone, sans montrer à un agent une décision du même tour.</p>
+    </div>
+    <div class="social-notice rise">
+      <div class="social-notice-top"><span class="social-badge" id="social-status">Démonstration sociale</span><b>Une relation représente une exposition entre strates, pas une famille réelle.</b></div>
+      <p>Cette vue sert à comprendre le mécanisme. Ses paramètres sont illustratifs et ne constituent pas la calibration scientifique 2016→2021. Le pipeline gelé, les ablations et le placebo sont séparés du front public.</p>
+    </div>
+    <div class="card pad social-console rise">
+      <div class="social-controls">
+        <div class="social-control">
+          <label for="social-agent">Citoyen synthétique</label>
+          <select id="social-agent"></select>
+        </div>
+        <div class="social-control">
+          <span class="social-label">Expositions actives</span>
+          <div class="social-toggles" role="group" aria-label="Expositions sociales">
+            <button type="button" data-social-relation="family" aria-pressed="true">Famille</button>
+            <button type="button" data-social-relation="work" aria-pressed="true">Collègues</button>
+            <button type="button" data-social-relation="neighborhood" aria-pressed="true">Voisinage</button>
+          </div>
+        </div>
+        <div class="social-control">
+          <span class="social-label">Tour social</span>
+          <div class="social-toggles rounds" role="group" aria-label="Tour de propagation">
+            <button type="button" data-social-round="R0" aria-pressed="false">R0 isolé</button>
+            <button type="button" data-social-round="R1" aria-pressed="true">R1 direct</button>
+            <button type="button" data-social-round="R2" aria-pressed="false">R2 cascade</button>
+          </div>
+        </div>
+      </div>
+      <div class="social-exposure-grid" id="social-exposures" aria-label="Entourage synthétique"></div>
+      <div class="social-grid">
+        <div class="card pad social-state">
+          <h3>Avant l'entourage <span id="social-before-title">—</span></h3>
+          <p class="sub">R0 · choix privé de l'agent</p>
+          <div class="social-probs" id="social-before"></div>
+          <div class="social-turnout"><b id="social-before-turnout">—</b><span>probabilité de participer</span></div>
+        </div>
+        <div class="card pad social-state after">
+          <h3>Après l'entourage <span id="social-after-title">—</span></h3>
+          <p class="sub">Mêmes informations politiques ; seule l'exposition sociale change.</p>
+          <div class="social-probs" id="social-after"></div>
+          <div class="social-turnout"><b id="social-after-turnout">—</b><span>probabilité de participer</span></div>
+        </div>
+      </div>
+      <div class="social-summary" aria-label="Mesures du déplacement social">
+        <div class="social-metric"><b id="social-shift">—</b><span>déplacement total du choix</span></div>
+        <div class="social-metric"><b id="social-turnout-shift">—</b><span>déplacement de participation</span></div>
+        <div class="social-metric"><b id="social-largest">—</b><span>option la plus déplacée</span></div>
+        <div class="social-metric"><b id="social-contacts">—</b><span>expositions actives</span></div>
+      </div>
+    </div>
+    <p class="note rise social-protocol"><b>Le test scientifique est plus strict que cette animation.</b> ISO, famille seule, collègues seuls, voisinage seul, tous liens, graphe mélangé placebo et cascade R2 sont exécutés séparément. Les paramètres sont calibrés sur l'élection déclarée de calibration puis gelés avant le holdout.</p>
+  </div>
+</section>
+
 <section class="band tint" id="forces">
   <div class="wrap">
     <div class="band-head rise">
@@ -208,7 +262,6 @@
   </div>
 </section>
 
-<!-- ═══ SANCTION ═════════════════════════════════════════════════════════ -->
 <section class="band" id="sanction">
   <div class="wrap">
     <div class="band-head rise">
@@ -241,7 +294,6 @@
   </div>
 </section>
 
-<!-- ═══ BASCULE ══════════════════════════════════════════════════════════ -->
 <section class="band tint" id="bascule">
   <div class="wrap">
     <div class="band-head rise">
@@ -269,7 +321,6 @@
   </div>
 </section>
 
-<!-- ═══ ÉCOUTE ═══════════════════════════════════════════════════════════ -->
 <section class="band" id="ecoute">
   <div class="wrap">
     <div class="band-head rise">
@@ -285,7 +336,6 @@
   </div>
 </section>
 
-<!-- ═══ PORTRAITS ════════════════════════════════════════════════════════ -->
 <section class="band tint" id="portraits">
   <div class="wrap">
     <div class="band-head rise">
@@ -299,7 +349,6 @@
   </div>
 </section>
 
-<!-- ═══ HORIZON ═════════════════════════════════════════════════════════ -->
 <section class="band" id="horizon">
   <div class="wrap">
     <div class="band-head rise">
@@ -314,7 +363,6 @@
   </div>
 </section>
 
-<!-- ═══ MÉTHODE ══════════════════════════════════════════════════════════ -->
 <section class="band tint" id="methode">
   <div class="wrap">
     <div class="band-head rise">
@@ -336,5 +384,6 @@
 <div class="tip" id="tip" role="status" aria-live="polite"></div>
 <script src="app.js"></script>
 <script src="reader.js"></script>
+<script src="social.js"></script>
 </body>
 </html>
