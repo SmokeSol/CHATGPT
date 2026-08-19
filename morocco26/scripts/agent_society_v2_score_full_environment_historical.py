@@ -126,68 +126,18 @@ def validate_outputs(opus_zip,expected):
    if k in valid:raise ValueError('duplicate row')
    if set(r)!={'anonymous_election_id','anonymous_territory_id','condition_id','batch_id','weighted_archetype_id','turnout_probability','conditional_party_probabilities','factor_importance','reason_codes'}:raise ValueError('output keys mismatch')
    u=float(r['turnout_probability'])
-   if not math.isfinite(u) or not 0<=u<=1:raise ValueError('invalid turnout')
-   probs=r['conditional_party_probabilities'];exp=set(expected[k])
-   if set(probs)!=exp:raise ValueError('party keys mismatch')
-   vals={p:float(probs[p]) for p in expected[k]}
-   if any(not math.isfinite(x) or x<0 or x>1 for x in vals.values()):raise ValueError('invalid party prob')
-   if abs(sum(vals.values())-1)>1e-9:raise ValueError('party simplex mismatch')
-   fi=r['factor_importance']
-   if set(fi)!=set(FACTOR_KEYS):raise ValueError('factor_importance keys mismatch')
-   factors={f:float(fi[f]) for f in FACTOR_KEYS}
-   if any(not math.isfinite(x) or x<0 or x>1 for x in factors.values()):raise ValueError('factor importance invalid')
-   if abs(sum(factors.values())-1)>1e-9:raise ValueError('factor importance simplex mismatch')
+   if not math.isfinite(u) or not 0<=u<=1:raise ValueError('turnout invalid')
+   probs=r['conditional_party_probabilities'];parties=expected[k]
+   if set(probs)!=set(parties):raise ValueError('party probability keys mismatch')
+   vals=[float(probs[p]) for p in parties]
+   if any(not math.isfinite(x) or x<0 or x>1 for x in vals) or abs(sum(vals)-1)>1e-9:raise ValueError('party simplex invalid')
+   fac=r['factor_importance']
+   if set(fac)!=set(FACTOR_KEYS):raise ValueError('factor keys mismatch')
+   fv=[float(fac[x]) for x in FACTOR_KEYS]
+   if any(not math.isfinite(x) or x<0 or x>1 for x in fv) or abs(sum(fv)-1)>1e-9:raise ValueError('factor simplex invalid')
    reasons=r['reason_codes']
    if not isinstance(reasons,list) or not 1<=len(reasons)<=4 or len(set(reasons))!=len(reasons) or any(x not in ALLOWED_REASONS for x in reasons):raise ValueError('reason codes invalid')
-   valid[k]={'turnout':u,'probs':vals,'factors':factors,'reasons':tuple(reasons)}
+   valid[k]={'turnout':u,'probs':{p:float(probs[p]) for p in parties},'factors':{x:float(fac[x]) for x in FACTOR_KEYS},'reasons':reasons}
   except Exception as e:invalid.append({'line':i,'error':type(e).__name__+':'+str(e)})
- missing=len(set(expected)-set(valid));rate=len(valid)/EXPECTED_ROWS;term_ok=terminal.get('terminal_status')==PASS_TERMINAL
- return {'terminal':terminal,'manifest':manifest,'rows_raw':len(rows),'valid_rows':len(valid),'invalid_rows':invalid[:100],'missing_expected_rows':missing,'invalidity_rate':1-rate,'validity_rate':rate,'terminal_ok':term_ok,'full_contract_pass':len(valid)==EXPECTED_ROWS and not invalid and missing==0 and term_ok},valid
-
-
-def behavior_diagnostics(valid,priv,voter_meta):
- true_cid=next(k for k,v in priv['condition_role_by_id'].items() if v=='FULL_TRUE_ENVIRONMENT');shuf_cid=next(k for k,v in priv['condition_role_by_id'].items() if v=='FULL_SHUFFLED_ENVIRONMENT')
- res={}
- for year in [2016,2021]:
-  eid=next(e for e,y in priv['year_by_anonymous_election_id'].items() if int(y)==year);res[str(year)]={}
-  for cid,label in [(true_cid,'FULL_TRUE'),(shuf_cid,'FULL_SHUFFLED')]:
-   fac_sum={k:0.0 for k in FACTOR_KEYS};reason=Counter();turn=0.0;n=0;prior_retain=[];switches=0;prior_voters=0
-   for k,vin valid.items():
-    if k[0]!=eid or j[2]!=cid:continue
-    turn += v['turnout'];n += 1
-    for f in FACTOR_KEYSfac_sum[f]+=v.get('factors',{}).get(f,0.0)
-    for r in v.get('reasons',[]):reason[r]+=1
-    meta=voter_meta.get((k[0],k[1],k[3],k[4]),{});prior=meta.get('prior_vote_or_abstention','ABSTAIN')
-    if prior!='ABSTAIN':
-    prior_voters+=1;p=next((q for q,g in priv['local_party_to_global_by_election_territory'][eid][k[1]].items() if g==prior),None)
-    if p is not None:
-     prior_retain.append(v['probs'][p])
-      switches += max(v['probs'],key=v['probs'].get) != p
-   res[str(year)[][X™[O^ÉÛYX[—Ù˜XÝÜ—Ú[\Ü[˜ÙIÎžÙŽ™˜X×ÜÝ[VÙ—KÛˆ›Üˆˆ[ˆPÕÔ—ÒÑVTßK	Ü™X\ÛÛ—ØÛÙWÙœ™\]Y[˜ÚY\ÉÎžÚÎ‹Ûˆ›ÜˆËˆ[ˆÛÜY
-™X\ÛÛ‹š][\Ê
-J_K	ÛYX[—Ý\››Ý]Ü›Ø˜Xš[]IÎ\›‹Û‹	ÛYX[—Ü›Ø˜Xš[]WÜ™]Z[™YÛÛ—Üš[Ü—Ü\IÎœÝ[Jš[Ü—Ü™]Z[ŠKÛ[Šš[Ü—Ü™]Z[ŠHYˆš[Ü—Ü™]Z[ˆ[ÙH›Û™K	ÝÜØÚÚXÙWÜÝÚ]ÚÜ˜]WØ[[Û™×Üš[Ü—Ý›Ý\œÉÎœÝÚ]Ú\ËÜš[Ü—Ý›Ý\œÈYˆš[Ü—Ý›Ý\œÈ[ÙH›Û™K	ÛYX[—ÜÛXÞWÜ›ÙÜ˜[WÙš]ÝÙZYÚ	Î™˜X×ÜÝ[VÉÜÛXÞWÜ›ÙÜ˜[WÙš]	×KÛŸBˆ™]\›ˆ™\Â‚™YˆYÙÜ™YØ]J˜[Yš]ŠN‚ˆÜ›Ý\YY˜][XÝ
-\Ý
-Bˆ›ÜˆËˆ[ˆ˜[Yš][\Ê
-N™Ü›Ý\ÚÖÎŒ×WK˜\[™
-
-ÖÍKŠJBˆYWØÚY[™^
-È›ÜˆËˆ[ˆš]–ÉØÛÛ™][Û—Ü›ÛWØžWÚY	×Kš][\Ê
-HYˆOIÑ•SÕ•QWÑS•’T“Ó“QS•	ÊNÜÚY—ØÚY[™^
-È›ÜˆËˆ[ˆš]–ÉØÛÛ™][Û—Ü›ÛWØžWÚY	×Kš][\Ê
-HYˆOIÑ•SÔÒQ‘“QÑS•’T“Ó“QS•	ÊBˆ™Y^ÉÐÌ	ÎžßK	Ñ•SÕ•QIÎžßK	Ñ•SÔÒQ‘“Q	Îžß_Bˆ›ÜˆZYH[ˆš]–ÉÞYX\—ØžWØ[›Ûž[[Ý\×Ù[XÝ[Û—ÚY	×Kš][\Ê
-N‚ˆ›ÜˆY˜\ÙH[ˆš]–ÉØ˜\Ù[[™WÝ›ÝWÜÚ\™WÙÛØ˜[ØžWÙ[XÝ[Û—Ý\œš]ÜžI×VÚYKš][\Ê
-N‚ˆ™YÉÐÌ	×VÊZYY
-WO^ÉÜÚ\™\ÉÎžÜ™›Ø]
-ŠH›Üˆˆ[ˆ˜\ÙKš][\Ê
-__BˆØØ[\š]–ÉÛØØ[Ü\WÝ×ÙÛØ˜[ØžWÙ[XÝ[Û—Ý\œš]ÜžI×VÚYVÝYNÝÙZYÚÏ\š]–ÉÝÙZYÚ×ØžWÙ[XÝ[Û—Ý\œš]ÜžWØ\˜Ú]\I×VÙZYVÝYBˆ›ÜˆÚY˜[YH[ˆÊYWØÚY	Ñ•SÕ•QIÊK
-ÚY—ØÚY	Ñ•SÔÒQ‘“Q	ÊWN‚ˆ][\ÏYÜ›Ý\ÊZYYÚY
-WBˆYˆ[Š][\ÊHOPTÒUTTÎœ˜Z\ÙH[[YQ\œ›ÜŠ	Ú[˜ÛÛ\]HYÙÜ™YØ][ÛˆÜ›Ý\	ÊBˆX\ÜÏ^ÜŒŒ›ÜˆÈ[ˆÙ]
-ØØ[˜[Y\Ê
-J_NÜÙY[\Ù]
-
-Bˆ›ÜˆZYˆ[ˆ][\Î‚ˆYˆZY[ˆÙY[Žœ˜Z\ÙH[[YQ\œ›ÜŠ	Ù\XØ]H\˜Ú]\IÊBˆÙY[‹˜Y
-ZY
-NÝÏY›Ø]
-ÙZYÚÖØZYJNÝO]–ÉÝ\››Ý]	×Bˆ›ÜˆK]ˆ[ˆ–ÉÜ›ØœÉ×Kš][\Ê
-N›X\ÜÖÛØØ[ÜWWJÏ]ÊJœ]‚ˆ[\Ý[JX\ÜË˜[Y\Ê
-JBˆYˆ[Lœ˜Z\ÙH[[YQ\œ›ÜŠ	Þ™\›È\››Ý]X\ÜÉÊBˆ™YÛ˜[YWI•¥±Ñ¥¥tõìÍ¡…É•Ìœéíœéµ…ÍÍmt½‘•¸™½Èœ¥¸Í½ÉÑ•¡µ…ÍÌ¥õô(É•ÑÕÉ¸ÁÉ•()‘•˜½ÕÑ½µ•}µ…ÁÌ¡½ÕÐÄØ±½ÕÐÈÄ±É•½¸ÄØ±µ…ÀÈÄ±Á½ÀÈÄ±ÁÉ¥Ø¤è(¼ÄØõíÍÑÈ¡Él¥‘}½¹ÍÑ¥ÑÕ•¹ät¤éÈ™½ÈÈ¥¸½ÕÐÄÙlÉ½ÝÌt¥˜È¹•Ð ±¥ÍÑ}ÑåÁ”œ¤ôô±½…±”ôí¼ÈÄõíÍÑÈ¡Él¥‘}½¹ÍÑ¥ÑÕ•¹ät¤éÈ™½ÈÈ¥¸½ÕÐÈÅl‰É½ÝÌ‰t¥˜È¹•Ð ‰±¥ÍÑ}ÑåÁ”ˆ¤ôô‰±½…±”‰ô(¥˜±•¸¡¼ÄØ¤ôôäÈ½È±•¸¡¼ÈÄ¤„ôäÈéÉ…¥Í”IÕ¹Ñ¥µ•ÉÉ½È …¹½¹¥…°½ÕÑ½µ”Ñ•ÉÉ¥Ñ½Éä½Õ¹Ð€„ôäÈœ¤(•¥ÄØõ¹•áÐ¡”™½È”±ä¥¸ÁÉ¥Ùlå•…É}‰å
+ missing=len(set(expected)-set(valid));rate=len(valid)/EXPECTED_ROWS;terminal_ok=terminal.get('terminal_status')==PASS_TERMINAL;full=(len(rows)==EXPECTED_ROWS and len(valid)==EXPECTED_ROWS and not invalid and missing==0 and terminal_ok)
+ return {'rows_raw':len(rows),'
