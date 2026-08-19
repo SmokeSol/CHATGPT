@@ -1,0 +1,60 @@
+name: Forecast V3 National + Lambda05 Calibration
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "morocco26/src/morocco26/forecast_v3.py"
+      - "morocco26/tests/test_forecast_v3.py"
+      - "morocco26/scripts/forecast_v3_center.py"
+      - "morocco26/scripts/calibrate_uncertainty_v3.py"
+      - "morocco26/data/goal100/forecast_lab/national_forecast_2026_contract_v1.json"
+      - "morocco26/data/goal100/forecast_lab/national_2026_evidence_ledger_v1.json"
+      - "morocco26/data/goal100/forecast_lab/probabilistic_forecast_2026_state_v3.json"
+      - ".github/workflows/forecast-v3-calibration.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  v3-calibration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install runtime
+        run: python -m pip install --disable-pip-version-check numpy
+      - name: Compile v3 code
+        run: |
+          python -m py_compile morocco26/src/morocco26/forecast_v3.py
+          python -m py_compile morocco26/scripts/forecast_v3_center.py
+          python -m py_compile morocco26/scripts/calibrate_uncertainty_v3.py
+      - name: Unit-test national-to-territorial centering
+        run: python -m unittest discover -s morocco26/tests -p 'test_forecast_v3.py' -v
+      - name: Build conditional territorial residual calibration
+        run: python morocco26/scripts/calibrate_uncertainty_v3.py
+      - name: Verify calibration gate invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('morocco26/data/goal100/forecast_lab')
+          scores = json.loads((root/'baseline_scores_v2.json').read_text())
+          cal = json.loads((root/'uncertainty_calibration_v3_conditional.json').read_text())
+          expected = sum(int(scores['folds'][year]['mapped_territories']) for year in ('2011','2016','2021'))
+          assert scores['skill_floor_winner'] == 'HALF_SHRINK'
+          assert float(scores['lambda_selected_for_2026']) == 0.5
+          assert cal['status'] == 'CONDITIONAL_TERRITORIAL_RESIDUAL_LIBRARY_BUILT'
+          assert cal['probabilistic_forecast_status'] == 'NOT_PROMOTED'
+          assert cal['empirical_residual_library']['n_observations'] == expected
+          assert cal['national_uncertainty_status'].startswith('BLOCKED_')
+          print({'expected_residual_rows': expected, 'lambda': 0.5, 'probabilistic': 'NOT_PROMOTED'})
+          PY
+      - name: Upload v3 conditional calibration
+        uses: actions/upload-artifact@v4
+        with:
+          name: forecast-v3-conditional-calibration
+          path: morocco26/data/goal100/forecast_lab/uncertainty_calibration_v3_conditional.json
+          if-no-files-found: error
