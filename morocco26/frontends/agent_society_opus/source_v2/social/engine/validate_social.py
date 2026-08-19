@@ -5,16 +5,14 @@ import argparse
 import os
 
 try:
+    from .baseline_gate import classify_baseline
     from .build_social_graph import validate_graph
-    from .common import (
-        read_json, read_jsonl, sha256_file,
-    )
+    from .common import read_json, read_jsonl, sha256_file
     from .deterministic_social import max_decision_delta, run_condition
 except ImportError:
+    from baseline_gate import classify_baseline
     from build_social_graph import validate_graph
-    from common import (
-        read_json, read_jsonl, sha256_file,
-    )
+    from common import read_json, read_jsonl, sha256_file
     from deterministic_social import max_decision_delta, run_condition
 
 
@@ -77,6 +75,25 @@ def validate_run(env, baseline_run, graph_root, run_root):
     manifest = read_json(os.path.join(run_root, "run_manifest.json"))
     errors = []
 
+    actual_baseline = classify_baseline(baseline_run)
+    recorded_baseline = manifest.get("baseline_provenance") or {}
+    if recorded_baseline.get("baseline_class") != actual_baseline.get("baseline_class"):
+        errors.append("run baseline_class differs from current baseline provenance")
+    if recorded_baseline.get("terminal_report_sha256") != actual_baseline.get("terminal_report_sha256"):
+        errors.append("run terminal report provenance hash mismatch")
+    if recorded_baseline.get("output_manifest_sha256") != actual_baseline.get("output_manifest_sha256"):
+        errors.append("run output manifest provenance hash mismatch")
+
+    scientific_status = manifest.get("scientific_status")
+    if scientific_status == "AS3_FROM_TRUE_AS2_BASELINE":
+        if actual_baseline.get("eligible_for_as3_calibration") is not True:
+            errors.append("AS3 scientific run does not have a true AS2 fresh-context baseline")
+    elif scientific_status == "E0_MECHANICS_REFERENCE_ONLY_NOT_AS3":
+        if actual_baseline.get("baseline_class") != "E0_DETERMINISTIC_REFERENCE":
+            errors.append("E0 mechanics run is not backed by E0 deterministic provenance")
+    else:
+        errors.append("unknown or missing scientific_status in run manifest")
+
     if manifest["work_manifest_sha256"] != sha256_file(os.path.join(env, "work_manifest.json")):
         errors.append("run work_manifest hash mismatch")
     if manifest["graph_index_sha256"] != sha256_file(os.path.join(graph_root, "graph_index.json")):
@@ -103,7 +120,6 @@ def validate_run(env, baseline_run, graph_root, run_root):
             continue
         baseline = read_jsonl(baseline_path)
 
-        # Re-run the zero-influence identity from the frozen graph.
         gref = gi["graphs"][item["voter_batch_path"]]
         graph = read_json(os.path.join(graph_root, gref["graph"]))
         ident = run_condition(baseline, graph, "ALL_R2", zero)
@@ -145,7 +161,8 @@ def validate_run(env, baseline_run, graph_root, run_root):
 
     if errors:
         raise ValueError("\n".join(errors[:100]))
-    print("PASS_SOCIAL_RUN_VALIDATION %d work_items" % len(manifest["work_items"]))
+    print("PASS_SOCIAL_RUN_VALIDATION %d work_items baseline=%s status=%s" %
+          (len(manifest["work_items"]), actual_baseline["baseline_class"], scientific_status))
 
 
 def cli(argv=None):
