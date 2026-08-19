@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "M26-COMBINED-TERRITORIAL-COVERAGE-V1-SUMMARY",
+  "contract": "morocco26/data/goal100/forecast_lab/combined_territorial_coverage_contract_v1.json",
+  "scored_cells": 1656,
+  "pooled": {
+    "coverage80": 0.8907004830917874,
+    "coverage95": 0.9867149758454107,
+    "required_coverage80": 0.80,
+    "required_coverage95": 0.95,
+    "status": "PASS"
+  },
+  "folds": {
+    "2011_TO_2016": {"coverage80": 0.927536231884058, "coverage95": 0.9939613526570048, "geography_residual_rows_available": 57},
+    "2016_TO_2021": {"coverage80": 0.8538647342995169, "coverage95": 0.9794685990338164, "geography_residual_rows_available": 149}
+  },
+  "party_diagnostics": {
+    "RNI": {"coverage80": 0.6467391304347826, "coverage95": 0.9293478260869565},
+    "PAM": {"coverage80": 0.8967391304347826, "coverage95": 0.9891304347826086},
+    "PI": {"coverage80": 0.907608695652174, "coverage95": 0.9782608695652174},
+    "PJD": {"coverage80": 0.7934782608695652, "coverage95": 0.9945652173913043},
+    "USFP": {"coverage80": 0.9728260869565217, "coverage95": 0.9945652173913043},
+    "MP": {"coverage80": 0.9619565217391305, "coverage95": 0.9945652173913043},
+    "UC": {"coverage80": 0.8641304347826086, "coverage95": 1.0},
+    "PPS": {"coverage80": 0.9891304347826086, "coverage95": 1.0},
+    "OTHER": {"coverage80": 0.9836956521739131, "coverage95": 1.0}
+  },
+  "ci": {
+    "run_id": 32288826856,
+    "artifact_id": 9378747080,
+    "artifact_zip_sha256": "83a9e7f44d1ff95b85e4fa9fb0c7eceddcfb0ce8ea8a9ba96e981c29abeb0084",
+    "conclusion": "success"
+  },
+  "interpretation": "The frozen combined national-plus-geography generator passes pooled prequential marginal cell coverage. RNI remains undercovered at the party-specific diagnostic level, especially at 80%, and that limitation must remain disclosed rather than post-hoc tuned."
+}
