@@ -1,0 +1,54 @@
+{
+  "schema_version": "ATLAS_CHATGPT_ACCOUNT_BASELINE_FREEZE_MANIFEST_V1",
+  "status": "FROZEN_BEFORE_ANY_G0_CHATGPT_OUTPUT",
+  "baseline_id": "G0_CHATGPT_GPT56_TERRA",
+  "experiment_id": "EXP_7C8A2F11",
+  "environment_id": "ENV_4D19B3E7",
+  "branch": "morocco26-agent-society-v2-front-vote-llm",
+  "frozen_model": "gpt-5.6-terra",
+  "frozen_reasoning_effort": "medium",
+  "auth_mode": "CHATGPT_MANAGED_CODEX_LOGIN",
+  "api_key_allowed": false,
+  "fresh_context_per_work_item": true,
+  "expected_work_items": 2944,
+  "expected_rows": 94208,
+  "rows_per_work_item": 32,
+  "files": {
+    ".gitignore": {
+      "git_blob_sha": "e9dad20687c26c5827e1147855e2b883b704fc9e",
+      "bytes": 340
+    },
+    "CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1.json": {
+      "git_blob_sha": "aa6dc03abf672ac55f4304e90ed3023c42571401",
+      "bytes": 3540
+    },
+    "README.md": {
+      "git_blob_sha": "76b82e359ccf426fae0641e781fc65b6e3c67b20",
+      "bytes": 6567
+    },
+    "run_chatgpt_baseline.py": {
+      "git_blob_sha": "f04b6c7ddc31718a5e72738130ddadd4d0ba10b9",
+      "bytes": 45630
+    },
+    "tests/test_runner.py": {
+      "git_blob_sha": "3b310224e1fd5e7a599a0f26067b9dab30703139",
+      "bytes": 6477
+    },
+    ".github/workflows/test-agent-society-chatgpt-baseline.yml": {
+      "git_blob_sha": "a2a9e6fd55f75465b5c1d6b02f362f9d4ab1af5c"
+    }
+  },
+  "invariants": [
+    "E0 remains the immutable deterministic control and is never relabeled as LLM output",
+    "G0 is not promoted before exactly 2944 validated fresh-context work items and 94208 rows",
+    "the owner authenticates locally with Sign in with ChatGPT; auth material is never committed or shared",
+    "OPENAI_API_KEY and CODEX_API_KEY are removed from every child process",
+    "web search, apps, MCP, shell, memories, goals, hooks and multi-agent tools are disabled",
+    "each work item uses codex exec --ephemeral and never resumes another thread",
+    "only the frozen prompt, frozen row schema and one frozen work item enter a model context",
+    "one identical retry is allowed only after schema-invalid output, with no semantic feedback",
+    "2016 and 2021 outcomes remain sealed during G0 generation",
+    "the public frontend remains on E0 until G0 passes the terminal promotion gate"
+  ],
+  "terminal_required": "PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING"
+}
