@@ -1,0 +1,63 @@
+{
+  "F0_modified": false,
+  "agentic_relevance": "NONE_TO_OBJECTIVE",
+  "contract_id": "M26-FORECAST-LAB-SKILL-FLOOR-V1",
+  "fixed_point_baselines": {
+    "HALF_SHRINK": "0.5 previous territory share + 0.5 previous-election national share, renormalized.",
+    "NATIONAL_ONLY": "Every territory receives the previous-election national party-share vector.",
+    "PERSIST": "Each territory receives its previous-election party-share vector."
+  },
+  "frozen_on": "2026-08-19",
+  "generator_boundary": {
+    "allowed_inputs": [
+      "morocco26/data/constituencies_goal75.csv",
+      "morocco26/data/goal100/historical/tafra_legislative_{prior_year}_canonical.json"
+    ],
+    "forbidden": "The forecast generator may not open the target-year canonical result.",
+    "scoring": "Target-year canonical result is opened only by the separate scorer after the forecast artifact exists."
+  },
+  "interpretation_rules": [
+    "These are skill-floor benchmarks, not candidate final models.",
+    "A target outcome may never be used to choose or construct that target's forecast.",
+    "2016 and 2021 are development folds, not fresh confirmatory holdouts.",
+    "No claim of calibrated probabilistic seat forecasting is allowed from this V1 point-forecast lab.",
+    "When 2007/2002 arrive, rerun as rolling-origin forecasting before freezing 2026."
+  ],
+  "metrics": {
+    "primary_available_now": [
+      "party_share_RMSE",
+      "party_share_MAE",
+      "topS_set_Jaccard",
+      "topS_membership_accuracy",
+      "top_party_accuracy",
+      "party_rank_MAE",
+      "topS_share_gap_MAE"
+    ],
+    "probabilistic_calibration": "BLOCKED_FOR_2016_UNTIL_2007_OR_EARLIER_TRANSITION_AVAILABLE",
+    "seat_metrics": "BLOCKED_CROSS_YEAR_LEGAL_ALLOCATOR_NOT_FOUND_IN_REPO_SEARCH",
+    "uncertainty": "Paired territory-cluster bootstrap for point-error differences; does not create additional election-regime replication."
+  },
+  "north_star": "Build and freeze before the 2026 election the most accurate calibrated falsifiable territorial and seat forecast supported by the data; model technology is irrelevant.",
+  "schema_version": "1.0",
+  "scientific_status": "RETROSPECTIVE_DEVELOPMENT_2026_UNTOUCHED",
+  "temporal_folds": {
+    "2011": {
+      "status": "BLOCKED_PENDING_2007"
+    },
+    "2016": {
+      "allowed_outcomes": [
+        2011
+      ],
+      "status": "POINT_SKILL_EVALUABLE_PROBABILITY_CALIBRATION_LIMITED_WITHOUT_2007",
+      "target_outcome": 2016
+    },
+    "2021": {
+      "allowed_outcomes": [
+        2011,
+        2016
+      ],
+      "status": "RETROSPECTIVE_DEVELOPMENT_ONLY",
+      "target_outcome": 2021
+    }
+  }
+}

@@ -1,0 +1,37 @@
+name: Morocco26 Forecast Lab skill floor V1
+on:
+  push:
+    branches: [morocco26-e-reason]
+    paths:
+      - 'morocco26/data/goal100/forecast_lab/forecast_skill_contract_v1.json'
+      - 'morocco26/scripts/forecast_lab_generate_v1.py'
+      - 'morocco26/scripts/forecast_lab_score_v1.py'
+      - '.github/workflows/morocco26-forecast-lab-skill-floor-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy
+      - run: python morocco26/scripts/forecast_lab_generate_v1.py --target 2016
+      - run: python morocco26/scripts/forecast_lab_generate_v1.py --target 2021
+      - run: python morocco26/scripts/forecast_lab_score_v1.py
+      - name: Persist frozen outputs
+        run: |
+          git config user.name "morocco26-forecast-lab-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add morocco26/data/goal100/forecast_lab/pre_election_snapshot_*_v1.json \
+                  morocco26/data/goal100/forecast_lab/baseline_forecast_*_v1.json \
+                  morocco26/data/goal100/forecast_lab/baseline_scores_v1.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "forecast-lab: score frozen pre-election skill floors"
+          git push origin HEAD:morocco26-e-reason
