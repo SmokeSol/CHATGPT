@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "reference_id": "M26-LEGAL-SEAT-REFERENCE-RESULTS-V1",
+  "scope": "Independent aggregate local-seat reference totals used only to validate legal replay. They are never forecast inputs.",
+  "years": {
+    "2011": {
+      "local_seats_total": 305,
+      "local_seats_by_published_party_code": {
+        "PJD": 83,
+        "PI": 47,
+        "RNI": 40,
+        "PAM": 35,
+        "USFP": 30,
+        "MP": 24,
+        "UC": 17,
+        "PPS": 12,
+        "PT": 4,
+        "MDS": 2,
+        "PRE": 2,
+        "PEDD": 2,
+        "AHD": 2,
+        "PGV": 1,
+        "PLJS": 1,
+        "FFD": 1,
+        "PA": 1,
+        "PUD": 1
+      },
+      "source": "Final 2011 results published from Interior Ministry/MAP and reproduced by IPU; NDI final report appendices provide the allocation formula and district summary.",
+      "use": "VALIDATION_ONLY_POST_OUTCOME"
+    },
+    "2016": {
+      "local_seats_total": 305,
+      "local_seats_by_published_party_code": {
+        "PJD": 98,
+        "PAM": 81,
+        "PI": 35,
+        "RNI": 28,
+        "MP": 20,
+        "UC": 15,
+        "USFP": 14,
+        "PPS": 7,
+        "MDS": 3,
+        "FGD": 2,
+        "PUD": 1,
+        "PGV": 1
+      },
+      "source": "Final 2016 constituency-seat results reported by the Moroccan Interior Ministry and reproduced by IPU Parline.",
+      "use": "VALIDATION_ONLY_POST_OUTCOME"
+    }
+  },
+  "scientific_boundary": "Reference outcomes are read by the allocator-validation replay only. They are forbidden from pre-election forecast generation and rolling-origin fitting."
+}
