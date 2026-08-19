@@ -8,7 +8,7 @@
   var RELATIONS = ["family", "work", "neighborhood"];
   var LIVE_API = "https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/agent-society-social";
   var AGE = {"18_24":21,"25_34":29,"35_44":39,"45_59":51,"60_PLUS":68};
-  var state = {config:null, agents:[], selected:0, round:"R1", enabled:{family:true,work:true,neighborhood:true}};
+  var state = {config:null, agents:[], selected:0, round:"R1", enabled:{family:true,work:true,neighborhood:true}, liveGraph:null, liveSampleLoaded:false};
 
   function byId(id){ return document.getElementById(id); }
   function clip(x, lo, hi){ return Math.max(lo, Math.min(hi, x)); }
@@ -45,6 +45,7 @@
   var SCORE={family:familyScore,work:workScore,neighborhood:neighborhoodScore};
 
   function contactsFor(i, relation){
+    if(state.liveGraph && state.liveGraph.nodes && state.liveGraph.nodes[i]){return (state.liveGraph.nodes[i].relations[relation]||[]).map(function(e){return {i:Number(e.i),w:Number(e.w)};});}
     var cfg=state.config.relations[relation], a=state.agents[i], scored=[];
     state.agents.forEach(function(b,j){
       if(j===i){return;}
@@ -194,10 +195,29 @@
     };
   }
 
+  function liveAgent(profile,row){
+    var keys=Object.keys(row.conditional_party_probabilities||{}).sort();
+    return {id:profile.weighted_archetype_id,age:profile.age_band,ans:profile.age_years,sx:profile.sex,mi:profile.urban_rural,ed:profile.education_level,ac:profile.activity_status,qv:profile.latent_national_quintile,pp:keys.map(function(k){return Number(row.conditional_party_probabilities[k]);}),part:Number(row.turnout_probability)};
+  }
+  function refreshAgentSelect(){
+    var sel=byId("social-agent"); if(!sel){return;} sel.textContent=""; state.agents.forEach(function(a,i){var o=el("option",null,agentLabel(a,i));o.value=String(i);sel.appendChild(o);}); state.selected=0; sel.value="0";
+  }
+  function loadRevealedSample(){
+    if(state.liveSampleLoaded){return Promise.resolve(true);}
+    return fetch(LIVE_API+"/sample",{cache:"no-store"}).then(function(r){if(!r.ok){throw new Error("social sample "+r.status);}return r.json();}).then(function(sample){
+      if(!sample.available||!Array.isArray(sample.profiles)||!Array.isArray(sample.r0)){return false;}
+      state.liveGraph=sample.graph; state.agents=sample.profiles.map(function(p,i){return liveAgent(p,sample.r0[i]);}); state.liveSampleLoaded=true; refreshAgentSelect(); render();
+      var badge=byId("social-status"); if(badge){badge.textContent="Données participatives révélées · R0 → R1 → R2";}
+      var note=byId("social-live-note"); if(note){note.textContent="La révélation est ouverte : ce démonstrateur utilise désormais un vrai lot R0 collecté et son graphe famille / collègues / voisinage. Les boutons recalculent R1/R2 sur ce graphe.";}
+      return true;
+    }).catch(function(err){if(window.console){console.warn("ATLAS revealed social sample",err);}return false;});
+  }
+
   function setLiveText(id,value){ var n=byId(id); if(n){n.textContent=String(value==null?0:value);} }
   function loadLiveStatus(){
     return fetch(LIVE_API+"/status",{cache:"no-store"}).then(function(r){if(!r.ok){throw new Error("social live "+r.status);}return r.json();}).then(function(s){
       var completed=Number(s.completed||0), socialized=Number(s.socialized||0);
+      if(state.config&&s.config&&s.config.lambdas){RELATIONS.forEach(function(r){if(state.config.relations[r]){state.config.relations[r].lambda=Number(s.config.lambdas[r]);}});}
       setLiveText("social-live-r0",completed); setLiveText("social-live-r12",socialized);
       setLiveText("social-live-family",Number(s.family_edges||0));
       setLiveText("social-live-work",Number(s.work_edges||0));
@@ -206,6 +226,7 @@
       if(badge){badge.textContent=socialized ? (socialized+" contribution"+(socialized>1?"s":"")+" reliée"+(socialized>1?"s":"")+" à R1/R2") : "Pipeline social relié — en attente des premières contributions";badge.classList.add("live");}
       var note=byId("social-live-note");
       if(note){note.textContent=socialized ? "Chaque contribution validée devient un R0 immuable, puis famille, collègues et voisinage produisent R1 et R2 automatiquement. Les directions de vote restent cachées pendant la collecte." : "Le raccordement R0 → famille / collègues / voisinage → R1 → R2 est actif. Les choix collectifs restent cachés pendant la collecte.";}
+      if(s.results_revealed){loadRevealedSample();}
       return s;
     }).catch(function(err){
       var note=byId("social-live-note"); if(note){note.textContent="Le démonstrateur reste disponible ; l’état du pipeline réel n’a pas pu être chargé dans cette vue.";}
