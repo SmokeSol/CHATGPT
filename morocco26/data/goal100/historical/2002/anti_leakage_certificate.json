@@ -1,0 +1,10 @@
+{
+  "assertion": "TARGET_OUTCOME_NOT_USED_IN_PRE_ELECTION_SNAPSHOT",
+  "certificate_id": "M26-HIST-2002-PRE-ELECTION-FREEZE-V1",
+  "cutoff": "2002-09-27",
+  "gate": "PASS",
+  "manifest_sha256": "b53021dcbc0e077daa46eed2d3911078f67ca8956332536aab14584971994f70",
+  "same_year_outcome_imported": false,
+  "same_year_raw_xlsx_opened": false,
+  "year": 2002
+}

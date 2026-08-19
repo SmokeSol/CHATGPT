@@ -1,0 +1,19 @@
+{
+  "crosswalk_APPROX_count": 3,
+  "crosswalk_APPROX_pct": 3.3,
+  "crosswalk_EXACT_count": 47,
+  "crosswalk_EXACT_pct": 51.65,
+  "crosswalk_UNRESOLVED_count": 41,
+  "crosswalk_UNRESOLVED_pct": 45.05,
+  "district_seat_allocation_status": "NOT_RUN_INCOMPLETE_MATRIX",
+  "local_vote_matrix_status": "PARTIAL_MAJOR_PARTIES_ONLY",
+  "national_vote_counts_status": "MISSING",
+  "official_local_seat_aggregate_status": "VERIFIED",
+  "official_total_seat_aggregate_status": "VERIFIED",
+  "outcome_territory_coverage_pct": 100.0,
+  "outcome_territory_rows": 91,
+  "party_columns_documented": 9,
+  "phase": "OUTCOME",
+  "real_constituency_count": 91,
+  "year": 2002
+}

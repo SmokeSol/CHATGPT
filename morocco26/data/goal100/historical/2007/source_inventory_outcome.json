@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "access_date": "2026-08-19",
+      "archive_date": null,
+      "candidate": null,
+      "fact": "TAFRA archived copy of official elections2007.gov.ma results.",
+      "party": null,
+      "provenance": "TAFRA_ARCHIVE_OF_OFFICIAL_ELECTIONS2007_GOV_MA",
+      "publication_date": null,
+      "source_class": "T0",
+      "source_id": "OPENAFRICA_TAFRA_2007",
+      "status": "VERIFIED",
+      "territory": "ALL_LOCAL",
+      "url": "https://open.africa/dataset/1f48eeec-ff94-46a2-ae8e-ed56b66dd529/resource/0ec47fad-4f8a-4753-b107-82b0cc76d94c/download/parlement-elections-2007-1-0.xlsx"
+    },
+    {
+      "access_date": "2026-08-19",
+      "archive_date": null,
+      "candidate": null,
+      "fact": "Final Ministry of Interior local + national seat results.",
+      "party": null,
+      "provenance": "POST_ELECTION_OUTCOME_SOURCE",
+      "publication_date": "2007-09-11",
+      "source_class": "T2",
+      "source_id": "OFFICIAL_AGGREGATE_2007",
+      "status": "VERIFIED",
+      "territory": "NATIONAL",
+      "url": "https://assahraa.ma/journal/2007/47193"
+    },
+    {
+      "access_date": "2026-08-19",
+      "archive_date": null,
+      "candidate": null,
+      "fact": "Institutional final result cross-check.",
+      "party": null,
+      "provenance": "POST_ELECTION_OUTCOME_CROSSCHECK",
+      "publication_date": null,
+      "source_class": "T0",
+      "source_id": "IPU_FINAL_2007",
+      "status": "VERIFIED",
+      "territory": "NATIONAL",
+      "url": "https://data.ipu.org/election-summary/HTML/1221_07.htm"
+    }
+  ],
+  "year": 2007
+}

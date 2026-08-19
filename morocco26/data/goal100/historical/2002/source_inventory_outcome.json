@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "access_date": "2026-08-19",
+      "archive_date": null,
+      "candidate": null,
+      "fact": "TAFRA: primary Le Matin coverage incomplete; secondary source contains errors; small-party results unavailable.",
+      "party": null,
+      "provenance": "TAFRA_COMPOSITE_PARTIAL",
+      "publication_date": null,
+      "source_class": "T3",
+      "source_id": "OPENAFRICA_TAFRA_2002",
+      "status": "AMBIGUOUS",
+      "territory": "ALL_LOCAL",
+      "url": "https://open.africa/dataset/863697f2-bffa-4607-afe7-2c38d6b78adf/resource/19018416-2921-4abf-87a2-463160892f07/download/parlement-elections-2002-1-0.xlsx"
+    },
+    {
+      "access_date": "2026-08-19",
+      "archive_date": null,
+      "candidate": null,
+      "fact": "Official Ministry of Interior aggregate local seat distribution.",
+      "party": null,
+      "provenance": "POST_ELECTION_OUTCOME_SOURCE",
+      "publication_date": "2002-09-30",
+      "source_class": "T2",
+      "source_id": "OFFICIAL_AGGREGATE_2002",
+      "status": "VERIFIED",
+      "territory": "NATIONAL",
+      "url": "https://lematin.ma/journal/2002/Resultats--du-scrutin-legislatif-du-27-septembre-portant-sur-64-circonscriptions/21192.html"
+    },
+    {
+      "access_date": "2026-08-19",
+      "archive_date": null,
+      "candidate": null,
+      "fact": "Institutional final result cross-check.",
+      "party": null,
+      "provenance": "POST_ELECTION_OUTCOME_CROSSCHECK",
+      "publication_date": null,
+      "source_class": "T0",
+      "source_id": "IPU_FINAL_2002",
+      "status": "VERIFIED",
+      "territory": "NATIONAL",
+      "url": "https://data.ipu.org/election-summary/HTML/2221_02.htm"
+    }
+  ],
+  "year": 2002
+}

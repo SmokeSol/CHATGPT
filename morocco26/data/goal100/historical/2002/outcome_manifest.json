@@ -1,0 +1,38 @@
+{
+  "files": [
+    {
+      "path": "data/goal100/historical/2002/legislative_2002_outcome_canonical.json",
+      "sha256": "ae68207f0e162e3d3970cffc969fe1ecbdb5d5b758e37df1098539553465544b"
+    },
+    {
+      "path": "data/goal100/historical/2002/historical_native_map_outcome_transcription.json",
+      "sha256": "e11b4e64f7414ab61b1d7bb01227233e2b5e8862479cddea33a622ccfc95ec34"
+    },
+    {
+      "path": "data/goal100/historical/2002/historical_native_map.json",
+      "sha256": "42a985bc8fb2a103697354c8852c73187d081f627565b5438f975abb4f453a82"
+    },
+    {
+      "path": "data/goal100/historical/2002/crosswalk_to_modern.json",
+      "sha256": "8e2a2c7d4123704f82ae376bf2b58f1db0dbf69a9cce4e134babe1a66e203df6"
+    },
+    {
+      "path": "data/goal100/historical/2002/source_inventory_outcome.json",
+      "sha256": "a2bd0c6a4c33f418282a73b87ffe79dd502ed111f686a18699880eaf1cb09472"
+    },
+    {
+      "path": "data/goal100/historical/2002/ambiguities_outcome.json",
+      "sha256": "ba0177f33730bd124d5ba1d2357f347a1c8b6a3c3f099473782910d9d127eab5"
+    },
+    {
+      "path": "data/goal100/historical/2002/coverage_outcome.json",
+      "sha256": "d04b76c3a03b634b764395c25540d3fb25b09f457ad786f78c884a0308db5e45"
+    }
+  ],
+  "generator": "historical_outcome_2002_2007.py",
+  "phase": "OUTCOME",
+  "raw_input": "data/goal100/older_history_probe/raw/parlement-elections-2002-1-0.xlsx",
+  "raw_sha256": "18caf7f7c23779f9bb2c0e31a6b9ed9ba48cee0266e5987df0b48474ac28a26a",
+  "schema_version": "1.0",
+  "year": 2002
+}

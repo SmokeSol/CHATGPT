@@ -1,0 +1,738 @@
+{
+  "artifact_role": "CANONICAL_HISTORICAL_NATIVE_MAP_POST_FREEZE",
+  "rows": [
+    {
+      "constituency": "Benslimane",
+      "id_constituency": 409,
+      "magnitude": 3,
+      "native_id": "M26-2002-001",
+      "prefprov": "Benslimane",
+      "region": "Chaouia - Ouardigha"
+    },
+    {
+      "constituency": "Khouribga - Oulad-Labhar - Laksar-et-Esghar",
+      "id_constituency": 407,
+      "magnitude": 3,
+      "native_id": "M26-2002-002",
+      "prefprov": "Khouribga",
+      "region": "Chaouia - Ouardigha"
+    },
+    {
+      "constituency": "Oued-Zem - Bejaad",
+      "id_constituency": 408,
+      "magnitude": 3,
+      "native_id": "M26-2002-003",
+      "prefprov": "Khouribga",
+      "region": "Chaouia - Ouardigha"
+    },
+    {
+      "constituency": "Ben-Ahmed",
+      "id_constituency": 406,
+      "magnitude": 3,
+      "native_id": "M26-2002-004",
+      "prefprov": "Settat",
+      "region": "Chaouia - Ouardigha"
+    },
+    {
+      "constituency": "Berrechid",
+      "id_constituency": 405,
+      "magnitude": 3,
+      "native_id": "M26-2002-005",
+      "prefprov": "Settat",
+      "region": "Chaouia - Ouardigha"
+    },
+    {
+      "constituency": "Settat",
+      "id_constituency": 404,
+      "magnitude": 4,
+      "native_id": "M26-2002-006",
+      "prefprov": "Settat",
+      "region": "Chaouia - Ouardigha"
+    },
+    {
+      "constituency": "El-Jadida - Azemmour",
+      "id_constituency": 401,
+      "magnitude": 3,
+      "native_id": "M26-2002-007",
+      "prefprov": "El-Jadida",
+      "region": "Doukkala - Abda"
+    },
+    {
+      "constituency": "Oulad-Bouaziz - Zemamra",
+      "id_constituency": 402,
+      "magnitude": 3,
+      "native_id": "M26-2002-008",
+      "prefprov": "El-Jadida",
+      "region": "Doukkala - Abda"
+    },
+    {
+      "constituency": "Sidi-Bennour - Oulad-Frej",
+      "id_constituency": 403,
+      "magnitude": 4,
+      "native_id": "M26-2002-009",
+      "prefprov": "El-Jadida",
+      "region": "Doukkala - Abda"
+    },
+    {
+      "constituency": "Safi - Chamalia",
+      "id_constituency": 399,
+      "magnitude": 4,
+      "native_id": "M26-2002-010",
+      "prefprov": "Safi",
+      "region": "Doukkala - Abda"
+    },
+    {
+      "constituency": "Safi - Janoubia",
+      "id_constituency": 400,
+      "magnitude": 4,
+      "native_id": "M26-2002-011",
+      "prefprov": "Safi",
+      "region": "Doukkala - Abda"
+    },
+    {
+      "constituency": "Boulemane",
+      "id_constituency": 361,
+      "magnitude": 3,
+      "native_id": "M26-2002-012",
+      "prefprov": "Boulemane",
+      "region": "Fès - Boulemane"
+    },
+    {
+      "constituency": "Fès - El-Jadid - Dar-Dbibagh",
+      "id_constituency": 357,
+      "magnitude": 3,
+      "native_id": "M26-2002-013",
+      "prefprov": "Fès-El-Jadid - Dar-Dbibagh",
+      "region": "Fès - Boulemane"
+    },
+    {
+      "constituency": "Fès - Médina",
+      "id_constituency": 358,
+      "magnitude": 3,
+      "native_id": "M26-2002-014",
+      "prefprov": "Fès-Médina",
+      "region": "Fès - Boulemane"
+    },
+    {
+      "constituency": "Sefrou",
+      "id_constituency": 360,
+      "magnitude": 3,
+      "native_id": "M26-2002-015",
+      "prefprov": "Sefrou",
+      "region": "Fès - Boulemane"
+    },
+    {
+      "constituency": "Zouagha - Moulay-Yacoub",
+      "id_constituency": 359,
+      "magnitude": 4,
+      "native_id": "M26-2002-016",
+      "prefprov": "Zouagha - Moulay-Yacoub",
+      "region": "Fès - Boulemane"
+    },
+    {
+      "constituency": "Bni-Hssen",
+      "id_constituency": 368,
+      "magnitude": 3,
+      "native_id": "M26-2002-017",
+      "prefprov": "Kénitra",
+      "region": "Gharb - Chrarda - Béni-Hssen"
+    },
+    {
+      "constituency": "El-Gharb",
+      "id_constituency": 369,
+      "magnitude": 3,
+      "native_id": "M26-2002-018",
+      "prefprov": "Kénitra",
+      "region": "Gharb - Chrarda - Béni-Hssen"
+    },
+    {
+      "constituency": "Kénitra",
+      "id_constituency": 367,
+      "magnitude": 4,
+      "native_id": "M26-2002-019",
+      "prefprov": "Kénitra",
+      "region": "Gharb - Chrarda - Béni-Hssen"
+    },
+    {
+      "constituency": "Ouezzane - Had-Kourt - Jorf-El-Melha",
+      "id_constituency": 370,
+      "magnitude": 4,
+      "native_id": "M26-2002-020",
+      "prefprov": "Sidi-Kacem",
+      "region": "Gharb - Chrarda - Béni-Hssen"
+    },
+    {
+      "constituency": "Sidi-Kacem - Mechra-Bel-Ksiri - Dar-Gueddari",
+      "id_constituency": 371,
+      "magnitude": 3,
+      "native_id": "M26-2002-021",
+      "prefprov": "Sidi-Kacem",
+      "region": "Gharb - Chrarda - Béni-Hssen"
+    },
+    {
+      "constituency": "Aïn-Chock - Hay-Hassani",
+      "id_constituency": 334,
+      "magnitude": 5,
+      "native_id": "M26-2002-022",
+      "prefprov": "Aïn-Chock - Hay Hassani",
+      "region": "Grand Casablanca"
+    },
+    {
+      "constituency": "Aïn-Sebaâ - Hay-Mohammadi",
+      "id_constituency": 333,
+      "magnitude": 5,
+      "native_id": "M26-2002-023",
+      "prefprov": "Aïn-Sebaâ - Hay Mohammadi",
+      "region": "Grand Casablanca"
+    },
+    {
+      "constituency": "Al-Fida - Mers-Sultan",
+      "id_constituency": 332,
+      "magnitude": 4,
+      "native_id": "M26-2002-024",
+      "prefprov": "Al-Fida - Mers-Sultan",
+      "region": "Grand Casablanca"
+    },
+    {
+      "constituency": "Ben-M'sick - Médiouana",
+      "id_constituency": 336,
+      "magnitude": 4,
+      "native_id": "M26-2002-025",
+      "prefprov": "Ben-M'sick - Mediouana",
+      "region": "Grand Casablanca"
+    },
+    {
+      "constituency": "Casablanca - Anfa",
+      "id_constituency": 331,
+      "magnitude": 5,
+      "native_id": "M26-2002-026",
+      "prefprov": "Casablanca - Anfa",
+      "region": "Grand Casablanca"
+    },
+    {
+      "constituency": "Mohammadia",
+      "id_constituency": 338,
+      "magnitude": 2,
+      "native_id": "M26-2002-027",
+      "prefprov": "Mohammadia",
+      "region": "Grand Casablanca"
+    },
+    {
+      "constituency": "Moulay-Rachid - Sidi-Othmane",
+      "id_constituency": 337,
+      "magnitude": 3,
+      "native_id": "M26-2002-028",
+      "prefprov": "Moulay Rachid - Sidi-Othmane",
+      "region": "Grand Casablanca"
+    },
+    {
+      "constituency": "Sidi-Bernoussi - Zénata",
+      "id_constituency": 335,
+      "magnitude": 3,
+      "native_id": "M26-2002-029",
+      "prefprov": "Sidi-Bernoussi - Zenata",
+      "region": "Grand Casablanca"
+    },
+    {
+      "constituency": "Assa-Zag",
+      "id_constituency": 364,
+      "magnitude": 2,
+      "native_id": "M26-2002-030",
+      "prefprov": "Assa-Zag",
+      "region": "Guelmim - Es-Semara"
+    },
+    {
+      "constituency": "Es-Smara",
+      "id_constituency": 365,
+      "magnitude": 2,
+      "native_id": "M26-2002-031",
+      "prefprov": "Es-Semara",
+      "region": "Guelmim - Es-Semara"
+    },
+    {
+      "constituency": "Guelmim",
+      "id_constituency": 362,
+      "magnitude": 2,
+      "native_id": "M26-2002-032",
+      "prefprov": "Guelmim",
+      "region": "Guelmim - Es-Semara"
+    },
+    {
+      "constituency": "Tan-Tan",
+      "id_constituency": 366,
+      "magnitude": 2,
+      "native_id": "M26-2002-033",
+      "prefprov": "Tan-Tan",
+      "region": "Guelmim - Es-Semara"
+    },
+    {
+      "constituency": "Tata",
+      "id_constituency": 363,
+      "magnitude": 2,
+      "native_id": "M26-2002-034",
+      "prefprov": "Tata",
+      "region": "Guelmim - Es-Semara"
+    },
+    {
+      "constituency": "Boujdour",
+      "id_constituency": 373,
+      "magnitude": 2,
+      "native_id": "M26-2002-035",
+      "prefprov": "Boujdour",
+      "region": "Laâyoune - Boujdour - Sakia-El-Hamra"
+    },
+    {
+      "constituency": "Laâyoune",
+      "id_constituency": 372,
+      "magnitude": 3,
+      "native_id": "M26-2002-036",
+      "prefprov": "Laâyoune",
+      "region": "Laâyoune - Boujdour - Sakia-El-Hamra"
+    },
+    {
+      "constituency": "Al-Haouz",
+      "id_constituency": 378,
+      "magnitude": 4,
+      "native_id": "M26-2002-037",
+      "prefprov": "Al-Haouz",
+      "region": "Marrakech - Tensift - Al-haouz"
+    },
+    {
+      "constituency": "Chichaoua",
+      "id_constituency": 377,
+      "magnitude": 4,
+      "native_id": "M26-2002-038",
+      "prefprov": "Chichaoua",
+      "region": "Marrakech - Tensift - Al-haouz"
+    },
+    {
+      "constituency": "Rehamna",
+      "id_constituency": 379,
+      "magnitude": 3,
+      "native_id": "M26-2002-039",
+      "prefprov": "El-Kelâa-des-Sraghna",
+      "region": "Marrakech - Tensift - Al-haouz"
+    },
+    {
+      "constituency": "Sraghna - Zemrane",
+      "id_constituency": 380,
+      "magnitude": 4,
+      "native_id": "M26-2002-040",
+      "prefprov": "El-Kelâa-des-Sraghna",
+      "region": "Marrakech - Tensift - Al-haouz"
+    },
+    {
+      "constituency": "Essaouira",
+      "id_constituency": 381,
+      "magnitude": 4,
+      "native_id": "M26-2002-041",
+      "prefprov": "Essaouira",
+      "region": "Marrakech - Tensift - Al-haouz"
+    },
+    {
+      "constituency": "Marrakech - Médina",
+      "id_constituency": 375,
+      "magnitude": 2,
+      "native_id": "M26-2002-042",
+      "prefprov": "Marrakech - Médina",
+      "region": "Marrakech - Tensift - Al-haouz"
+    },
+    {
+      "constituency": "Marrakech - Ménara",
+      "id_constituency": 374,
+      "magnitude": 4,
+      "native_id": "M26-2002-043",
+      "prefprov": "Marrakech - Ménara",
+      "region": "Marrakech - Tensift - Al-haouz"
+    },
+    {
+      "constituency": "Sidi-Youssef-Ben-Ali",
+      "id_constituency": 376,
+      "magnitude": 3,
+      "native_id": "M26-2002-044",
+      "prefprov": "Sidi-Youssef-Ben-Ali",
+      "region": "Marrakech - Tensift - Al-haouz"
+    },
+    {
+      "constituency": "Al-Ismaïlia",
+      "id_constituency": 383,
+      "magnitude": 3,
+      "native_id": "M26-2002-045",
+      "prefprov": "Al-Ismaïlia",
+      "region": "Meknès - Tafilalet"
+    },
+    {
+      "constituency": "El-Hajeb",
+      "id_constituency": 384,
+      "magnitude": 2,
+      "native_id": "M26-2002-046",
+      "prefprov": "El-Hajeb",
+      "region": "Meknès - Tafilalet"
+    },
+    {
+      "constituency": "Gheris - Tislit",
+      "id_constituency": 388,
+      "magnitude": 3,
+      "native_id": "M26-2002-047",
+      "prefprov": "Errachidia",
+      "region": "Meknès - Tafilalet"
+    },
+    {
+      "constituency": "Ziz - Tafilalet",
+      "id_constituency": 389,
+      "magnitude": 3,
+      "native_id": "M26-2002-048",
+      "prefprov": "Errachidia",
+      "region": "Meknès - Tafilalet"
+    },
+    {
+      "constituency": "Ifrane",
+      "id_constituency": 385,
+      "magnitude": 2,
+      "native_id": "M26-2002-049",
+      "prefprov": "Ifrane",
+      "region": "Meknès - Tafilalet"
+    },
+    {
+      "constituency": "Khénifra",
+      "id_constituency": 386,
+      "magnitude": 3,
+      "native_id": "M26-2002-050",
+      "prefprov": "Khénifra",
+      "region": "Meknès - Tafilalet"
+    },
+    {
+      "constituency": "Midelt - El-Kbab",
+      "id_constituency": 387,
+      "magnitude": 3,
+      "native_id": "M26-2002-051",
+      "prefprov": "Khénifra",
+      "region": "Meknès - Tafilalet"
+    },
+    {
+      "constituency": "Meknès - El-Menzeh",
+      "id_constituency": 382,
+      "magnitude": 3,
+      "native_id": "M26-2002-052",
+      "prefprov": "Meknès - El-Menzah",
+      "region": "Meknès - Tafilalet"
+    },
+    {
+      "constituency": "Berkane",
+      "id_constituency": 394,
+      "magnitude": 3,
+      "native_id": "M26-2002-053",
+      "prefprov": "Berkane",
+      "region": "Oriental"
+    },
+    {
+      "constituency": "Figuig",
+      "id_constituency": 396,
+      "magnitude": 3,
+      "native_id": "M26-2002-054",
+      "prefprov": "Figuig",
+      "region": "Oriental"
+    },
+    {
+      "constituency": "Jerada",
+      "id_constituency": 393,
+      "magnitude": 2,
+      "native_id": "M26-2002-055",
+      "prefprov": "Jerada",
+      "region": "Oriental"
+    },
+    {
+      "constituency": "Chamalia - Gharbia",
+      "id_constituency": 397,
+      "magnitude": 4,
+      "native_id": "M26-2002-056",
+      "prefprov": "Nador",
+      "region": "Oriental"
+    },
+    {
+      "constituency": "Janoubia - Charkia",
+      "id_constituency": 398,
+      "magnitude": 3,
+      "native_id": "M26-2002-057",
+      "prefprov": "Nador",
+      "region": "Oriental"
+    },
+    {
+      "constituency": "Oujda - Angad",
+      "id_constituency": 392,
+      "magnitude": 4,
+      "native_id": "M26-2002-058",
+      "prefprov": "Oujda - Angad",
+      "region": "Oriental"
+    },
+    {
+      "constituency": "Taourirt",
+      "id_constituency": 395,
+      "magnitude": 2,
+      "native_id": "M26-2002-059",
+      "prefprov": "Taourirt",
+      "region": "Oriental"
+    },
+    {
+      "constituency": "Aousserd",
+      "id_constituency": 391,
+      "magnitude": 2,
+      "native_id": "M26-2002-060",
+      "prefprov": "Aousserd",
+      "region": "Oued Ed-Dahab - Lagouira"
+    },
+    {
+      "constituency": "Oued-Ed-Dahab",
+      "id_constituency": 390,
+      "magnitude": 2,
+      "native_id": "M26-2002-061",
+      "prefprov": "Oued Ed-Dahab",
+      "region": "Oued Ed-Dahab - Lagouira"
+    },
+    {
+      "constituency": "Khémisset - Oulmès",
+      "id_constituency": 329,
+      "magnitude": 3,
+      "native_id": "M26-2002-062",
+      "prefprov": "Khémisset",
+      "region": "Rabat - Salé - Zemmour - Zaër"
+    },
+    {
+      "constituency": "Tifelt - Rommani",
+      "id_constituency": 330,
+      "magnitude": 3,
+      "native_id": "M26-2002-063",
+      "prefprov": "Khémisset",
+      "region": "Rabat - Salé - Zemmour - Zaër"
+    },
+    {
+      "constituency": "Rabat - Challah",
+      "id_constituency": 325,
+      "magnitude": 3,
+      "native_id": "M26-2002-064",
+      "prefprov": "Rabat",
+      "region": "Rabat - Salé - Zemmour - Zaër"
+    },
+    {
+      "constituency": "Rabat - El Mouhit",
+      "id_constituency": 324,
+      "magnitude": 4,
+      "native_id": "M26-2002-065",
+      "prefprov": "Rabat",
+      "region": "Rabat - Salé - Zemmour - Zaër"
+    },
+    {
+      "constituency": "Salé - Al-Jadida",
+      "id_constituency": 327,
+      "magnitude": 3,
+      "native_id": "M26-2002-066",
+      "prefprov": "Salé - Al-Jadida",
+      "region": "Rabat - Salé - Zemmour - Zaër"
+    },
+    {
+      "constituency": "Salé - Médina",
+      "id_constituency": 326,
+      "magnitude": 4,
+      "native_id": "M26-2002-067",
+      "prefprov": "Salé - Médina",
+      "region": "Rabat - Salé - Zemmour - Zaër"
+    },
+    {
+      "constituency": "Skhirate - Témara",
+      "id_constituency": 328,
+      "magnitude": 3,
+      "native_id": "M26-2002-068",
+      "prefprov": "Skhirate - Temara",
+      "region": "Rabat - Salé - Zemmour - Zaër"
+    },
+    {
+      "constituency": "Agadir - Ida-ou-Tanane",
+      "id_constituency": 339,
+      "magnitude": 4,
+      "native_id": "M26-2002-069",
+      "prefprov": "Agadir - Ida-ou-Tanane",
+      "region": "Souss - Massa - Drâa"
+    },
+    {
+      "constituency": "Chtouka - Aït-Baha",
+      "id_constituency": 341,
+      "magnitude": 3,
+      "native_id": "M26-2002-070",
+      "prefprov": "Chtouka - Aït-Baha",
+      "region": "Souss - Massa - Drâa"
+    },
+    {
+      "constituency": "Inézgane - Aït-Melloul",
+      "id_constituency": 340,
+      "magnitude": 3,
+      "native_id": "M26-2002-071",
+      "prefprov": "Inezgane - Aït-Melloul",
+      "region": "Souss - Massa - Drâa"
+    },
+    {
+      "constituency": "Ouarzazate",
+      "id_constituency": 345,
+      "magnitude": 5,
+      "native_id": "M26-2002-072",
+      "prefprov": "Ouarzazate",
+      "region": "Souss - Massa - Drâa"
+    },
+    {
+      "constituency": "Taroudannt - Al-Janoubia",
+      "id_constituency": 342,
+      "magnitude": 4,
+      "native_id": "M26-2002-073",
+      "prefprov": "Taroudannt",
+      "region": "Souss - Massa - Drâa"
+    },
+    {
+      "constituency": "Taroudannt - Chamalia",
+      "id_constituency": 343,
+      "magnitude": 3,
+      "native_id": "M26-2002-074",
+      "prefprov": "Taroudannt",
+      "region": "Souss - Massa - Drâa"
+    },
+    {
+      "constituency": "Tiznit",
+      "id_constituency": 344,
+      "magnitude": 3,
+      "native_id": "M26-2002-075",
+      "prefprov": "Tiznit",
+      "region": "Souss - Massa - Drâa"
+    },
+    {
+      "constituency": "Zagora",
+      "id_constituency": 346,
+      "magnitude": 3,
+      "native_id": "M26-2002-076",
+      "prefprov": "Zagora",
+      "region": "Souss - Massa - Drâa"
+    },
+    {
+      "constituency": "Azilal - Demnate",
+      "id_constituency": 356,
+      "magnitude": 3,
+      "native_id": "M26-2002-077",
+      "prefprov": "Azilal",
+      "region": "Tadla - Azilal"
+    },
+    {
+      "constituency": "Bzou - Ouaouizaght",
+      "id_constituency": 355,
+      "magnitude": 3,
+      "native_id": "M26-2002-078",
+      "prefprov": "Azilal",
+      "region": "Tadla - Azilal"
+    },
+    {
+      "constituency": "Béni-Mellal",
+      "id_constituency": 352,
+      "magnitude": 3,
+      "native_id": "M26-2002-079",
+      "prefprov": "Beni-Mellal",
+      "region": "Tadla - Azilal"
+    },
+    {
+      "constituency": "Bni-Moussa - Bni-Amir",
+      "id_constituency": 354,
+      "magnitude": 4,
+      "native_id": "M26-2002-080",
+      "prefprov": "Beni-Mellal",
+      "region": "Tadla - Azilal"
+    },
+    {
+      "constituency": "El-Ksiba - Tadla",
+      "id_constituency": 353,
+      "magnitude": 3,
+      "native_id": "M26-2002-081",
+      "prefprov": "Beni-Mellal",
+      "region": "Tadla - Azilal"
+    },
+    {
+      "constituency": "Chefchaouen",
+      "id_constituency": 414,
+      "magnitude": 5,
+      "native_id": "M26-2002-082",
+      "prefprov": "Chefchaouen",
+      "region": "Tanger - Tétouan"
+    },
+    {
+      "constituency": "Fahs - Bni-Makada",
+      "id_constituency": 411,
+      "magnitude": 2,
+      "native_id": "M26-2002-083",
+      "prefprov": "Fahs - Bni-Makada",
+      "region": "Tanger - Tétouan"
+    },
+    {
+      "constituency": "Larache",
+      "id_constituency": 413,
+      "magnitude": 4,
+      "native_id": "M26-2002-084",
+      "prefprov": "Larache",
+      "region": "Tanger - Tétouan"
+    },
+    {
+      "constituency": "Tanger - Assilah",
+      "id_constituency": 410,
+      "magnitude": 4,
+      "native_id": "M26-2002-085",
+      "prefprov": "Tanger - Assilah",
+      "region": "Tanger - Tétouan"
+    },
+    {
+      "constituency": "Tétouan",
+      "id_constituency": 412,
+      "magnitude": 5,
+      "native_id": "M26-2002-086",
+      "prefprov": "Tétouan",
+      "region": "Tanger - Tétouan"
+    },
+    {
+      "constituency": "Al-Hoceïma",
+      "id_constituency": 347,
+      "magnitude": 4,
+      "native_id": "M26-2002-087",
+      "prefprov": "Al Hoceima",
+      "region": "Taza - Al Hoceima - Taounate"
+    },
+    {
+      "constituency": "Karia - Rhafsai",
+      "id_constituency": 351,
+      "magnitude": 3,
+      "native_id": "M26-2002-088",
+      "prefprov": "Taounate",
+      "region": "Taza - Al Hoceima - Taounate"
+    },
+    {
+      "constituency": "Taounate - Tissa",
+      "id_constituency": 350,
+      "magnitude": 3,
+      "native_id": "M26-2002-089",
+      "prefprov": "Taounate",
+      "region": "Taza - Al Hoceima - Taounate"
+    },
+    {
+      "constituency": "Guercif",
+      "id_constituency": 349,
+      "magnitude": 3,
+      "native_id": "M26-2002-090",
+      "prefprov": "Taza",
+      "region": "Taza - Al Hoceima - Taounate"
+    },
+    {
+      "constituency": "Taza",
+      "id_constituency": 348,
+      "magnitude": 4,
+      "native_id": "M26-2002-091",
+      "prefprov": "Taza",
+      "region": "Taza - Al Hoceima - Taounate"
+    }
+  ],
+  "schema_version": "1.0",
+  "scientific_boundary": "May support geography/crosswalk reconstruction but MUST NOT be imported by the same-year pre-election snapshot generator.",
+  "source_layer": "OUTCOME_TRANSCRIPTION_ONLY",
+  "warning": "NOT_AN_ELIGIBLE_PRE_ELECTION_SNAPSHOT_INPUT",
+  "year": 2002
+}

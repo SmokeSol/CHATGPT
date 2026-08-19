@@ -1,0 +1,7660 @@
+{
+  "anti_leakage_assertion": "TARGET_OUTCOME_NOT_USED_IN_PRE_ELECTION_SNAPSHOT",
+  "cutoff": "2002-09-27",
+  "election_date": "2002-09-27",
+  "electoral_system": {
+    "allocation": "PROPORTIONAL_LIST_LARGEST_REMAINDER",
+    "local_constituencies": 91,
+    "local_seats": 295,
+    "local_threshold_pct": 3.0,
+    "national_list_kind": "NATIONAL_WOMEN_CONSENSUS",
+    "national_list_rule_note": "30 sièges à l’échelle nationale; accord interpartis pré-électoral visant à réserver ces candidatures aux femmes.",
+    "national_seats": 30
+  },
+  "notes": [
+    "No same-year outcome file is imported or opened by this generator.",
+    "2007 full native district table remains separated from snapshot unless recovered from a pre-election legal/archive source."
+  ],
+  "schema_version": "1.0",
+  "target_outcome_present": false,
+  "territory_snapshot": [
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 88,
+        "number_lists_documented": 22,
+        "registered_reported": 203904
+      },
+      "native_id": "M26-2002-001",
+      "territory": "Rabat-Almohit"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 69,
+        "number_lists_documented": 23,
+        "registered_reported": 150941
+      },
+      "native_id": "M26-2002-002",
+      "territory": "Rabat-Chellah"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 88,
+        "number_lists_documented": 22,
+        "registered_reported": 215476
+      },
+      "native_id": "M26-2002-003",
+      "territory": "Salé-Médina"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 72,
+        "number_lists_documented": 24,
+        "registered_reported": 106533
+      },
+      "native_id": "M26-2002-004",
+      "territory": "Salé-El Jadida"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 75,
+        "number_lists_documented": 25,
+        "registered_reported": 147896
+      },
+      "native_id": "M26-2002-005",
+      "territory": "Skhirate-Témara"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 60,
+        "number_lists_documented": 20,
+        "registered_reported": 137627
+      },
+      "native_id": "M26-2002-006",
+      "territory": "Khémisset-Oulmès"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 54,
+        "number_lists_documented": 18,
+        "registered_reported": 129385
+      },
+      "native_id": "M26-2002-007",
+      "territory": "Tiflet-Rommani"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [
+            "2002-F0007"
+          ],
+          "status": "VERIFIED",
+          "value": [
+            "Khalid Alioua",
+            "USFP",
+            "Khalid Alioua est choisi tête de liste USFP à Anfa."
+          ]
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 5,
+        "number_candidates_documented": 130,
+        "number_lists_documented": 26,
+        "registered_reported": 292922
+      },
+      "native_id": "M26-2002-008",
+      "territory": "Casablanca-Anfa"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [
+            "2002-F0005"
+          ],
+          "status": "VERIFIED",
+          "value": [
+            "Badiâ Skkali",
+            "USFP",
+            "Badiâ Skkali est annoncée tête de liste locale USFP à Al Fida-Derb Sultan."
+          ]
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 104,
+        "number_lists_documented": 26,
+        "registered_reported": 226098
+      },
+      "native_id": "M26-2002-009",
+      "territory": "Al Fida-Derb Sultan"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 5,
+        "number_candidates_documented": 110,
+        "number_lists_documented": 22,
+        "registered_reported": 319926
+      },
+      "native_id": "M26-2002-010",
+      "territory": "Aïn Sebaâ-Hay Mohammadi"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [
+            "2002-F0008"
+          ],
+          "status": "AMBIGUOUS",
+          "value": [
+            "Mohamed Karam",
+            "USFP",
+            "Mohamed Karam doit conduire la liste USFP à Aïn Chock."
+          ]
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 5,
+        "number_candidates_documented": 130,
+        "number_lists_documented": 26,
+        "registered_reported": 296564
+      },
+      "native_id": "M26-2002-011",
+      "territory": "Aïn Chock-Hay Hassani"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 60,
+        "number_lists_documented": 20,
+        "registered_reported": 149506
+      },
+      "native_id": "M26-2002-012",
+      "territory": "Sidi Bernoussi-Zénata"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 80,
+        "number_lists_documented": 20,
+        "registered_reported": 195663
+      },
+      "native_id": "M26-2002-013",
+      "territory": "Ben M'sick-Médiouna"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 63,
+        "number_lists_documented": 21,
+        "registered_reported": 187259
+      },
+      "native_id": "M26-2002-014",
+      "territory": "Moulay Rachid-Sidi Othmane"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 38,
+        "number_lists_documented": 19,
+        "registered_reported": 91347
+      },
+      "native_id": "M26-2002-015",
+      "territory": "Mohammadia"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 68,
+        "number_lists_documented": 17,
+        "registered_reported": 215162
+      },
+      "native_id": "M26-2002-016",
+      "territory": "Agadir ida-Outanane"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 45,
+        "number_lists_documented": 15,
+        "registered_reported": 179344
+      },
+      "native_id": "M26-2002-017",
+      "territory": "Inezgane-Aït Melloul"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 36,
+        "number_lists_documented": 12,
+        "registered_reported": 131608
+      },
+      "native_id": "M26-2002-018",
+      "territory": "Chtouka-Aït Baha"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 56,
+        "number_lists_documented": 14,
+        "registered_reported": 208858
+      },
+      "native_id": "M26-2002-019",
+      "territory": "Taroudannt"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 36,
+        "number_lists_documented": 12,
+        "registered_reported": 187054
+      },
+      "native_id": "M26-2002-020",
+      "territory": "Taroudannt Achamalia"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 66,
+        "number_lists_documented": 22,
+        "registered_reported": 180184
+      },
+      "native_id": "M26-2002-021",
+      "territory": "Tiznit"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 5,
+        "number_candidates_documented": 125,
+        "number_lists_documented": 25,
+        "registered_reported": 217375
+      },
+      "native_id": "M26-2002-022",
+      "territory": "Ouarzazate"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 42,
+        "number_lists_documented": 14,
+        "registered_reported": 112601
+      },
+      "native_id": "M26-2002-023",
+      "territory": "Zagora"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 76,
+        "number_lists_documented": 19,
+        "registered_reported": 195044
+      },
+      "native_id": "M26-2002-024",
+      "territory": "al hoceima"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [
+            "2002-F0011"
+          ],
+          "status": "VERIFIED",
+          "value": [
+            "Abdesslam Seddiki",
+            "FFD",
+            "Abdesslam Seddiki, député sortant, est tête de liste FFD à Taza."
+          ]
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 88,
+        "number_lists_documented": 22,
+        "registered_reported": 208721
+      },
+      "native_id": "M26-2002-025",
+      "territory": "Taza"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 39,
+        "number_lists_documented": 13,
+        "registered_reported": 163568
+      },
+      "native_id": "M26-2002-026",
+      "territory": "Guercif"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 72,
+        "number_lists_documented": 24,
+        "registered_reported": 167399
+      },
+      "native_id": "M26-2002-027",
+      "territory": "Taounate-Tissa"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 39,
+        "number_lists_documented": 13,
+        "registered_reported": 152038
+      },
+      "native_id": "M26-2002-028",
+      "territory": "Karia-Rhafsai"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 63,
+        "number_lists_documented": 21,
+        "registered_reported": 153475
+      },
+      "native_id": "M26-2002-029",
+      "territory": "Béni Mellal"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 51,
+        "number_lists_documented": 17,
+        "registered_reported": 123002
+      },
+      "native_id": "M26-2002-030",
+      "territory": "El Ksiba-Tadla"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 80,
+        "number_lists_documented": 20,
+        "registered_reported": 173950
+      },
+      "native_id": "M26-2002-031",
+      "territory": "beni moussa-beni amir"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 72,
+        "number_lists_documented": 24,
+        "registered_reported": 129456
+      },
+      "native_id": "M26-2002-032",
+      "territory": "Bzou-Ouaouizerht"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 48,
+        "number_lists_documented": 16,
+        "registered_reported": 109879
+      },
+      "native_id": "M26-2002-033",
+      "territory": "Azilal-Demnate"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 60,
+        "number_lists_documented": 20,
+        "registered_reported": 131762
+      },
+      "native_id": "M26-2002-034",
+      "territory": "Fès-El-Jadid-Dar Dbibagh"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 51,
+        "number_lists_documented": 17,
+        "registered_reported": 130982
+      },
+      "native_id": "M26-2002-035",
+      "territory": "Fès-Médina"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 80,
+        "number_lists_documented": 20,
+        "registered_reported": 188156
+      },
+      "native_id": "M26-2002-036",
+      "territory": "Zouagha-Moulay Yacoub"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 60,
+        "number_lists_documented": 20,
+        "registered_reported": 133497
+      },
+      "native_id": "M26-2002-037",
+      "territory": "Sefrou"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 54,
+        "number_lists_documented": 18,
+        "registered_reported": 83131
+      },
+      "native_id": "M26-2002-038",
+      "territory": "Boulemane"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 42,
+        "number_lists_documented": 21,
+        "registered_reported": 69574
+      },
+      "native_id": "M26-2002-039",
+      "territory": "guelmim"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 28,
+        "number_lists_documented": 14,
+        "registered_reported": 60133
+      },
+      "native_id": "M26-2002-040",
+      "territory": "Tata"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 16,
+        "number_lists_documented": 8,
+        "registered_reported": 11747
+      },
+      "native_id": "M26-2002-041",
+      "territory": "Assa-Zag"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 32,
+        "number_lists_documented": 16,
+        "registered_reported": 20899
+      },
+      "native_id": "M26-2002-042",
+      "territory": "Es-Semara"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 36,
+        "number_lists_documented": 18,
+        "registered_reported": 30011
+      },
+      "native_id": "M26-2002-043",
+      "territory": "Tan-Tan"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 104,
+        "number_lists_documented": 26,
+        "registered_reported": 233179
+      },
+      "native_id": "M26-2002-044",
+      "territory": "Kénitra"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 51,
+        "number_lists_documented": 17,
+        "registered_reported": 152226
+      },
+      "native_id": "M26-2002-045",
+      "territory": "Béni hssen"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 63,
+        "number_lists_documented": 21,
+        "registered_reported": 142375
+      },
+      "native_id": "M26-2002-046",
+      "territory": "El Rharb"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 92,
+        "number_lists_documented": 23,
+        "registered_reported": 176752
+      },
+      "native_id": "M26-2002-047",
+      "territory": "Ouezzane-Had Kourt-Jorf Melha"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 45,
+        "number_lists_documented": 15,
+        "registered_reported": 143599
+      },
+      "native_id": "M26-2002-048",
+      "territory": "Sidi Kacem-Mechraa Belkciri-Dar Keddari"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 72,
+        "number_lists_documented": 24,
+        "registered_reported": 86758
+      },
+      "native_id": "M26-2002-049",
+      "territory": "Laâyoune"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 24,
+        "number_lists_documented": 12,
+        "registered_reported": 15528
+      },
+      "native_id": "M26-2002-050",
+      "territory": "Boujdour"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [
+            "2002-F0009"
+          ],
+          "status": "VERIFIED",
+          "value": [
+            "M'hamed Khalifa",
+            "PI",
+            "M'hamed Khalifa reçoit la circonscription Marrakech-Ménara selon l'article."
+          ]
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 84,
+        "number_lists_documented": 21,
+        "registered_reported": 243782
+      },
+      "native_id": "M26-2002-051",
+      "territory": "Marrakech-Ménara"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 34,
+        "number_lists_documented": 17,
+        "registered_reported": 109192
+      },
+      "native_id": "M26-2002-052",
+      "territory": "Marrakech-Médina"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 45,
+        "number_lists_documented": 15,
+        "registered_reported": 131694
+      },
+      "native_id": "M26-2002-053",
+      "territory": "Sidi Youssef Ben Ali"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 88,
+        "number_lists_documented": 22,
+        "registered_reported": 180629
+      },
+      "native_id": "M26-2002-054",
+      "territory": "Chichaoua"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 68,
+        "number_lists_documented": 17,
+        "registered_reported": 229217
+      },
+      "native_id": "M26-2002-055",
+      "territory": "Al Haouz"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 48,
+        "number_lists_documented": 16,
+        "registered_reported": 133770
+      },
+      "native_id": "M26-2002-056",
+      "territory": "Rhamna"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 72,
+        "number_lists_documented": 18,
+        "registered_reported": 212009
+      },
+      "native_id": "M26-2002-057",
+      "territory": "Sraghna-Zemrane"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [
+            "2002-F0013"
+          ],
+          "status": "VERIFIED",
+          "value": [
+            "Saïd Berdouz",
+            "ADL",
+            "Président du conseil préfectoral UC et président de la municipalité d'Al Hanchane, investi par ADL."
+          ]
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 92,
+        "number_lists_documented": 23,
+        "registered_reported": 225745
+      },
+      "native_id": "M26-2002-058",
+      "territory": "Essaouira"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 78,
+        "number_lists_documented": 26,
+        "registered_reported": 166213
+      },
+      "native_id": "M26-2002-059",
+      "territory": "Meknès-El Menzeh"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 54,
+        "number_lists_documented": 18,
+        "registered_reported": 181978
+      },
+      "native_id": "M26-2002-060",
+      "territory": "Al-Ismaïlia"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 38,
+        "number_lists_documented": 19,
+        "registered_reported": 106097
+      },
+      "native_id": "M26-2002-061",
+      "territory": "El-Hajeb"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 50,
+        "number_lists_documented": 25,
+        "registered_reported": 75846
+      },
+      "native_id": "M26-2002-062",
+      "territory": "Ifrane"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 72,
+        "number_lists_documented": 24,
+        "registered_reported": 140619
+      },
+      "native_id": "M26-2002-063",
+      "territory": "Khénifra"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 60,
+        "number_lists_documented": 20,
+        "registered_reported": 114002
+      },
+      "native_id": "M26-2002-064",
+      "territory": "Midelt-Kbab"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 60,
+        "number_lists_documented": 20,
+        "registered_reported": 134317
+      },
+      "native_id": "M26-2002-065",
+      "territory": "Aghriss-Tisselit"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 42,
+        "number_lists_documented": 14,
+        "registered_reported": 136305
+      },
+      "native_id": "M26-2002-066",
+      "territory": "Ziz-Tafilalet"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 36,
+        "number_lists_documented": 18,
+        "registered_reported": 18437
+      },
+      "native_id": "M26-2002-067",
+      "territory": "Oued Ed-Dahab"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 34,
+        "number_lists_documented": 17,
+        "registered_reported": 5410
+      },
+      "native_id": "M26-2002-068",
+      "territory": "Aousserd"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 84,
+        "number_lists_documented": 21,
+        "registered_reported": 222993
+      },
+      "native_id": "M26-2002-069",
+      "territory": "Oujda-Angad"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 42,
+        "number_lists_documented": 21,
+        "registered_reported": 53831
+      },
+      "native_id": "M26-2002-070",
+      "territory": "Jérada"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 69,
+        "number_lists_documented": 23,
+        "registered_reported": 137845
+      },
+      "native_id": "M26-2002-071",
+      "territory": "Berkane"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 36,
+        "number_lists_documented": 18,
+        "registered_reported": 100581
+      },
+      "native_id": "M26-2002-072",
+      "territory": "Taourirt"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 48,
+        "number_lists_documented": 16,
+        "registered_reported": 59932
+      },
+      "native_id": "M26-2002-073",
+      "territory": "Figuig"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 76,
+        "number_lists_documented": 19,
+        "registered_reported": 209332
+      },
+      "native_id": "M26-2002-074",
+      "territory": "Achamalia-Al Gharbia"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 42,
+        "number_lists_documented": 14,
+        "registered_reported": 137256
+      },
+      "native_id": "M26-2002-075",
+      "territory": "Al Janoubia-Acharquia"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 96,
+        "number_lists_documented": 24,
+        "registered_reported": 187539
+      },
+      "native_id": "M26-2002-076",
+      "territory": "Safi Chamalia"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 76,
+        "number_lists_documented": 19,
+        "registered_reported": 203460
+      },
+      "native_id": "M26-2002-077",
+      "territory": "Safi Al Janoubia"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 69,
+        "number_lists_documented": 23,
+        "registered_reported": 149807
+      },
+      "native_id": "M26-2002-078",
+      "territory": "El Jadida-Azemmour"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 48,
+        "number_lists_documented": 16,
+        "registered_reported": 147573
+      },
+      "native_id": "M26-2002-079",
+      "territory": "Ouled Bouaziz-Zemamra"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 68,
+        "number_lists_documented": 17,
+        "registered_reported": 187837
+      },
+      "native_id": "M26-2002-080",
+      "territory": "Sidi Bennour-Ouled Frej"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 96,
+        "number_lists_documented": 24,
+        "registered_reported": 184510
+      },
+      "native_id": "M26-2002-081",
+      "territory": "Settat"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 48,
+        "number_lists_documented": 16,
+        "registered_reported": 131165
+      },
+      "native_id": "M26-2002-082",
+      "territory": "Berrchid"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 39,
+        "number_lists_documented": 13,
+        "registered_reported": 145069
+      },
+      "native_id": "M26-2002-083",
+      "territory": "Ben Ahmed"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 69,
+        "number_lists_documented": 23,
+        "registered_reported": 146381
+      },
+      "native_id": "M26-2002-084",
+      "territory": "Khouribga-Ouled Lbher Kbar et Sghar"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 72,
+        "number_lists_documented": 24,
+        "registered_reported": 126774
+      },
+      "native_id": "M26-2002-085",
+      "territory": "Oued Zem-Abi Jaâd"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 3,
+        "number_candidates_documented": 57,
+        "number_lists_documented": 19,
+        "registered_reported": 116659
+      },
+      "native_id": "M26-2002-086",
+      "territory": "Benslimane"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 88,
+        "number_lists_documented": 22,
+        "registered_reported": 231574
+      },
+      "native_id": "M26-2002-087",
+      "territory": "Tanger-Assilah"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [
+            "2002-F0006"
+          ],
+          "status": "VERIFIED",
+          "value": [
+            "Fatima Bellahcen",
+            "PJD",
+            "Fatima Bellahcen est annoncée tête de liste PJD à Tanger/Fahss-Makada."
+          ]
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 2,
+        "number_candidates_documented": 34,
+        "number_lists_documented": 17,
+        "registered_reported": 95148
+      },
+      "native_id": "M26-2002-088",
+      "territory": "Al Fahss-Bni Makada"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 5,
+        "number_candidates_documented": 130,
+        "number_lists_documented": 26,
+        "registered_reported": 207721
+      },
+      "native_id": "M26-2002-089",
+      "territory": "Chefchaouen"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 5,
+        "number_candidates_documented": 125,
+        "number_lists_documented": 25,
+        "registered_reported": 288977
+      },
+      "native_id": "M26-2002-090",
+      "territory": "Tétouan"
+    },
+    {
+      "fields": {
+        "candidate_roster": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "death_or_incapacity": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_alliance": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "formal_endorsement": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_minister_or_national_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "former_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "head_of_list": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_mp": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "incumbent_party": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "local_elected_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_responsibility": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "party_switch": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "provincial_or_regional_office": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        },
+        "withdrawal_or_invalidation": {
+          "evidence": [],
+          "status": "MISSING",
+          "value": null
+        }
+      },
+      "known_pre_election": {
+        "magnitude": 4,
+        "number_candidates_documented": 76,
+        "number_lists_documented": 19,
+        "registered_reported": 193868
+      },
+      "native_id": "M26-2002-091",
+      "territory": "Larache"
+    }
+  ],
+  "unknown_policy": "Unknown != false != zero. Missing values remain null with status MISSING.",
+  "verified_facts": [
+    {
+      "candidate": "Abbas El Fassi",
+      "fact": "Abbas El Fassi est tête de liste PI à Larache.",
+      "fact_id": "2002-F0001",
+      "fact_type": "head_of_list",
+      "party": "PI",
+      "source_id": "LM_PI_20020909",
+      "status": "VERIFIED",
+      "territory": null
+    },
+    {
+      "candidate": null,
+      "fact": "26 des 32 députés sortants PI sont candidats.",
+      "fact_id": "2002-F0002",
+      "fact_type": "incumbency",
+      "party": "PI",
+      "source_id": "LM_PI_20020909",
+      "status": "VERIFIED",
+      "territory": null
+    },
+    {
+      "candidate": "Nouzha Chekrouni",
+      "fact": "Nouzha Chekrouni est confirmée tête de la liste nationale USFP.",
+      "fact_id": "2002-F0003",
+      "fact_type": "head_of_list",
+      "party": "USFP",
+      "source_id": "LM_WOMEN_20020903",
+      "status": "VERIFIED",
+      "territory": "NATIONAL"
+    },
+    {
+      "candidate": "Fettoum Koudama",
+      "fact": "Fettoum Koudama est annoncée deuxième sur la liste nationale USFP.",
+      "fact_id": "2002-F0004",
+      "fact_type": "candidate_rank",
+      "party": "USFP",
+      "source_id": "LM_WOMEN_20020903",
+      "status": "VERIFIED",
+      "territory": "NATIONAL"
+    },
+    {
+      "candidate": "Badiâ Skkali",
+      "fact": "Badiâ Skkali est annoncée tête de liste locale USFP à Al Fida-Derb Sultan.",
+      "fact_id": "2002-F0005",
+      "fact_type": "head_of_list",
+      "party": "USFP",
+      "source_id": "LM_WOMEN_20020903",
+      "status": "VERIFIED",
+      "territory": "Al Fida-Derb Sultan"
+    },
+    {
+      "candidate": "Fatima Bellahcen",
+      "fact": "Fatima Bellahcen est annoncée tête de liste PJD à Tanger/Fahss-Makada.",
+      "fact_id": "2002-F0006",
+      "fact_type": "head_of_list",
+      "party": "PJD",
+      "source_id": "LM_WOMEN_20020903",
+      "status": "VERIFIED",
+      "territory": "Al Fahss-Bni Makada"
+    },
+    {
+      "candidate": "Khalid Alioua",
+      "fact": "Khalid Alioua est choisi tête de liste USFP à Anfa.",
+      "fact_id": "2002-F0007",
+      "fact_type": "head_of_list",
+      "party": "USFP",
+      "source_id": "LM_HEADS_20020826",
+      "status": "VERIFIED",
+      "territory": "Casablanca-Anfa"
+    },
+    {
+      "candidate": "Mohamed Karam",
+      "fact": "Mohamed Karam doit conduire la liste USFP à Aïn Chock.",
+      "fact_id": "2002-F0008",
+      "fact_type": "head_of_list",
+      "party": "USFP",
+      "source_id": "LM_HEADS_20020826",
+      "status": "AMBIGUOUS",
+      "territory": "Aïn Chock-Hay Hassani"
+    },
+    {
+      "candidate": "M'hamed Khalifa",
+      "fact": "M'hamed Khalifa reçoit la circonscription Marrakech-Ménara selon l'article.",
+      "fact_id": "2002-F0009",
+      "fact_type": "head_of_list",
+      "party": "PI",
+      "source_id": "LM_HEADS_20020826",
+      "status": "VERIFIED",
+      "territory": "Marrakech-Ménara"
+    },
+    {
+      "candidate": "Derraji",
+      "fact": "Derraji quitte le RNI pour le MNP après l'investiture de Mohamed Aujjar.",
+      "fact_id": "2002-F0010",
+      "fact_type": "party_switch",
+      "party": "MNP",
+      "source_id": "LM_HEADS_20020826",
+      "status": "VERIFIED",
+      "territory": "Rabat-Yacoub El Mansour"
+    },
+    {
+      "candidate": "Abdesslam Seddiki",
+      "fact": "Abdesslam Seddiki, député sortant, est tête de liste FFD à Taza.",
+      "fact_id": "2002-F0011",
+      "fact_type": "incumbent_head",
+      "party": "FFD",
+      "source_id": "LM_HEADS_20020826",
+      "status": "VERIFIED",
+      "territory": "Taza"
+    },
+    {
+      "candidate": "Abderrahmane El Kamel",
+      "fact": "Député sortant; parcours MDS puis RNI, investi par ADL.",
+      "fact_id": "2002-F0012",
+      "fact_type": "party_switch",
+      "party": "ADL",
+      "source_id": "ALM_ADL_2002",
+      "status": "VERIFIED",
+      "territory": "El Jadida"
+    },
+    {
+      "candidate": "Saïd Berdouz",
+      "fact": "Président du conseil préfectoral UC et président de la municipalité d'Al Hanchane, investi par ADL.",
+      "fact_id": "2002-F0013",
+      "fact_type": "local_office",
+      "party": "ADL",
+      "source_id": "ALM_ADL_2002",
+      "status": "VERIFIED",
+      "territory": "Essaouira"
+    }
+  ],
+  "year": 2002
+}

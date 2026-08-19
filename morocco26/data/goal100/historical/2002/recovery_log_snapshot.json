@@ -1,0 +1,16 @@
+{
+  "attempts": [
+    {
+      "detail": "91 parsed native constituencies from 21 Sep 2002 pre-election article.",
+      "result": "RECOVERED",
+      "route": "contemporary_Le_Matin_MAP_technical_sheets"
+    },
+    {
+      "detail": "Official pre-election decree identified; contemporary map transcription used for row-level machine data.",
+      "result": "IDENTIFIED",
+      "route": "BO_5030_decree_2_02_587"
+    }
+  ],
+  "phase": "PRE_ELECTION_RECOVERY",
+  "year": 2002
+}
