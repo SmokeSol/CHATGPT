@@ -140,6 +140,43 @@ class RunnerContractTests(unittest.TestCase):
             self.assertEqual(len(discovered), 1)
             self.assertEqual(len(discovered[0].expected_rows), 32)
 
+    def test_cli_dry_run_creates_a_resumable_preflight_without_codex(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = pathlib.Path(tmp) / "bundle"
+            output = pathlib.Path(tmp) / "output"
+            packet_dir = root / "packets" / "E_X" / "C_ABCDEF12" / "T_X"
+            packet_dir.mkdir(parents=True)
+            (packet_dir / "B01.json").write_text(
+                json.dumps(task().packet), encoding="utf-8"
+            )
+            (root / "as2_prompt_v2.md").write_text(
+                "Use only the supplied packet. Return the required rows.",
+                encoding="utf-8",
+            )
+            (root / "as2_output_schema_v2.json").write_text(
+                json.dumps(schema()), encoding="utf-8"
+            )
+
+            code = R.main(
+                [
+                    "--bundle",
+                    str(root),
+                    "--output",
+                    str(output),
+                    "--dry-run",
+                    "--allow-noncanonical-counts",
+                ]
+            )
+            self.assertEqual(code, 0)
+            preflight = json.loads((output / "preflight.json").read_text())
+            state = json.loads((output / "run_state.json").read_text())
+            self.assertEqual(preflight["work_items_discovered"], 1)
+            self.assertEqual(preflight["rows_discovered"], 32)
+            self.assertEqual(preflight["codex_version"], "DRY_RUN_NO_CODEX")
+            self.assertEqual(state["status"], "IN_PROGRESS_RESUMABLE")
+            self.assertEqual(state["work_items_validated"], 0)
+            self.assertEqual(state["rows_validated"], 0)
+
 
 if __name__ == "__main__":
     unittest.main()
