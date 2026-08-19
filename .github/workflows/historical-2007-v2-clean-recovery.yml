@@ -25,8 +25,25 @@ jobs:
           python-version: '3.11'
       - name: Install parser dependencies
         run: python -m pip install --disable-pip-version-check requests beautifulsoup4
-      - name: Enforce absence of 2007 outcome and recover pre-election corpus
-        run: python morocco26/scripts/historical_2007_pre_election_recovery_v2.py
+      - name: Recover pre-election corpus with file-open audit
+        run: |
+          strace -f -e trace=openat -o /tmp/m26_openat.log python morocco26/scripts/historical_2007_pre_election_recovery_v2.py
+          if grep -E 'parlement-elections-2007|legislative_2007_outcome|historical_native_map_outcome' /tmp/m26_openat.log; then
+            echo 'LEAKAGE_GUARD_FAIL: recovery opened sealed/derived 2007 outcome material'
+            exit 1
+          fi
+          echo 'OUTCOME_FILE_OPEN_AUDIT_PASS'
+      - name: Finalize anti-leakage certificate after syscall audit
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('morocco26/data/goal100/historical/2007_v2_research/anti_leakage_recovery_certificate_v2.json')
+          d=json.loads(p.read_text())
+          d['ci_file_open_audit']='PASS'
+          d['status']='PASS_RECOVERY_RESEARCH_ONLY'
+          p.write_text(json.dumps(d,indent=2,sort_keys=True)+'\n')
+          PY
       - name: Show recovery metrics
         run: |
           python - <<'PY'
