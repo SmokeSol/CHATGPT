@@ -1,0 +1,131 @@
+name: Morocco26 Agent Society V2 FULL ENV scorer dry-run
+on:
+  pull_request:
+    branches: [morocco26-agent-society-v2]
+    paths: ['morocco26/data/goal100/agent_society_v2/runs/full_env_scorer_dryrun_+']
+permissions:
+  actions: read
+  contents: read
+jobs:
+  dryrun:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      MIN_PUBLIC_ARTIFACT_ID: '9338958480'
+      MIN_PRIVATE_ARTIFACT_ID: '9338959082'
+      MIN_POP_ARTIFACT_ID: '9338194867'
+      RICH_POP_ARTIFAACT_ID: '9345421649'
+      MAP2021_ARTIFACT_ID: '9325247866'
+      EXPECTED_WORK_SHA: 'f0c625462a68f78c0cc6d8cb4c585add9ac6b82b7162317f69f4032c09db5e43'
+      EXPECTED_PUBLIC_ZIP_SHA: 'e8acad28dea5a531c21171db570b60d612993edd91db8f893e58c187c226696a'
+    steps:
+      - name: Fetch frozen scorer, rebuilder, contract and canonical outcomes
+        env: {GH_TOKEN: '${{ github.token }}'}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/asv2/{src,minpubart,minpublic,minprivart,minprivate,minpop,richart,rich,map,rebuilt,dummy,out}
+          api="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents"
+          for item in \
+            "score.py:morocco26/scripts/agent_society_v2_score_full_environment_historical.py" \
+            "rebuild.py:morocco26/scripts/agent_society_v2_rich_rebuild_manifests.py" \
+            "contract.json:morocco26/data/goal100/agent_society_v2/full_environment_historical_scoring_contract_v2.json" \
+            "out16.json:morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json" \
+            "out21.json:morocco26/data/goal100/historical/tafra_legislative_2021_canonical.json" \
+            "recon16.json:morocco26/data/goal100/e_reason/calibration/development_2016/identity_reconstruction_postfreeze_v1.json"; do
+              dst="${item%%:*}"; src="${item#*:}"
+              curl -fsSL -H "Authorization: Bearer ${GH_TOKEN}" -H 'Accept: application/vnd.github.rav+json' "${api}/${src}?ref=${GITHUB_SHA}" -o "/tmp/asv2/src/${dst}"
+          done
+          python -m py_compile /tmp/asv2/src/*.py
+      - name: Download frozen artifacts once
+        env: {GH_TOKEN: '${{ github.token }}'}
+        run: |
+          set -euo pipefail
+          get_artifact(){ curl -fsSL -L -H "Authorization: Bearer ${GH_TOKEN}" -H 'Accept: application/vnd.github+json' -o "$2" "https://api.github.com/repo/${GITHUB_REPOSITORY}/actions/artifacts/$1/zip"; }
+          get_artifact "$MIN_PUBLIC_ARTIFACT_ID" /tmp/asv2/minpub.zip
+          get_artifact "$MIN_PRIVATE_ARTIFACT_ID" /tmp/asv2/minpriv.zip
+          get_artifact "$MIN_POP_ARTIFACT_ID" /tmp/asv2/minpop.zip
+          get_artifact "$RICH_POP_ARTIFACT_ID" /tmp/asv2/rich.zip
+          get_artifact "$MAP2021_ARTIFACT_ID" /tmp/asv2/map.zip
+          unzip -q /tmp/asv2/minpub.zip -d /tmp/asv2/minpubart
+          unzip -q /tmp/asv2/minpriv.zip -d /tmp/asv2/minprivart
+          unzip -q /tmp/asv2/minpop.zip -d /tmp/asv2/minpop
+          unzip -q /tmp/asv2/rich.zip -d /tmp/asv2/richart
+          unzip -q /tmp/asv2/map.zip -d /tmp/asv2/map
+          min_public_inner=$(find /tmp/asv2/minpubart -type f -name 'opus5-agent-society-v2-historical-sealed.zip' -print -quit)
+          min_private_inner=$(find /tmp/asv2/minprivart -type f -name 'agent-society-v2-historical-private-orchestrator.zip' -print -quit)
+          rich_inner=$(find /tmp/asv2/richart -type f -name 'asv2-rich-populations-v2.zip' -print -quit)
+          test -n "$min_public_inner" && test -n "$min_private_inner" && test -n "$rich_inner"
+          unzip -q "$min_public_inner" -d /tmp/asv2/minpublic
+          unzip -q "$min_private_inner" -d /tmp/asv2/minprivate
+          unzip -q "$rich_inner" -d /tmp/asv2/rich
+          test -s /tmp/asv2/map/holdout_mapping.json
+      - name: Rebuild private weights and exact FULL ENV work manifest
+        run: |
+          set -euo pipefail
+          python /tmp/asv2/src/rebuild.py \
+            --min16 /tmp/asv2/minpop/populations/2016_population_v1.json \
+            --min21 /tmp/asv2/minpop/populations/2021_population_v1.json \
+            --rich16 /tmp/asv2/rich/2016_rich_population_v2.json \
+            --rich21 /tmp/asv2/rich/2021_rich_population_v2.json \
+            --oldpublicdir /tmp/asv2/minpublic \
+            --oldprivatejson /tmp/asv2/minprivate/private_orchestrator_manifest.json \
+            --outdir /tmp/asv2/rebuilt
+          python - <<'PY'
+          import json
+          wp='/tmp/asv2/rebuilt/work_manifest.json'; pp='/tmp/asv2/rebuilt/private_orchestrator_manifest.json'
+          w=json.load(open(wp)); w['schema_version']='2.0'; w['manifest_id']='FULL_ENV_WORK_MANIFEST_V2'; w['experiment_id']='EXP_7C8A2F11'; w['environment_extension_id']='ENV_4D19B3E7'
+          open(wp,'w').write(json.dumps(w,ensure_ascii=False,sort_keys=True,separators=(',',':'))+'\n')
+          p=json.load(open(pp)); p['environment_extension_id']='M26-ASV2-FULL-ELECTION-ENV-V1'; p['condition_role_by_id']={'C_4F91A2D7':'FULL_TRUE_ENVIRONMENT','C_B73C08E1':'FULL_SHUFFLED_ENVIRONMENT'}
+          open(pp,'w').write(json.dumps(p,ensure_ascii=False,sort_keys=True,indent=2)+'\n')
+          PY
+          test "$(sha256sum /tmp/asv2/rebuilt/work_manifest.json | cut -d' ' -f1)" = "$EXPECTED_WORK_SHA"
+      - name: Generate deterministic 94,208-row FULL ENV dummy package
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,zipfile
+          from pathlib import Path
+          FACTORS=['prior_vote_inertia','turnout_habit','personal_economic_conditions','employment_and_income','social_protection_and_public_services','policy_program_fit','governance_and_institutions','territorial_rural_fit','government_reward_punishment','local_candidate_context','other_verified_context']
+          w=json.load(open('/tmp/asv2/rebuilt/work_manifest.json'));p=json.load(open('/tmp/asv2/rebuilt/private_orchestrator_manifest.json'));o=Path('/tmp/asv2/dummy');o.mkdir(parents=True,exist_ok=True);n=0
+          with open(o/'as2_full_environment_all_outputs.jsonl','w') as f:
+            for wi in w['work_items']:
+              eid,tid,cid,bid=wi['anonymous_election_id'],wi['anonymous_territory_id'],wi['condition_id'],wi['batch_id']; qs=sorted(p['local_party_to_global_by_election_territory'][eid][tid]);probs={q:1/9 for q in qs};fac={x:1/11 for x in FACTORS};bi=int(bid[1:])
+              for i in range((bi-1)*32+1,bi*32+1):
+                r={'anonymous_election_id':eid,'anonymous_territory_id':tid,'condition_id':cid,'batch_id':bid,'weighted_archetype_id':f'A{i:03d}','turnout_probability':0.5,'conditional_party_probabilities':probs,'factor_importance':fac,'reason_codes':['NO_DIRECTIONAL_EVIDENCE']};f.write(json.dumps(r,sort_keys=True,separators=(',',':'))+'\n');n+=1
+          assert n==94208
+          json.dump({'output_rows':n,'dryrun':True},open(o/'as2_full_environment_output_manifest.json','w'))
+          json.dump({'terminal_status':'PASS_FULL_ENV_ASV2_HISTORICAL_VOTES_FROZEN_READY_FOR_SCORING','dryrun':True},open(o/'as2_full_environment_terminal_report.json','w'))
+          with zipfile.ZipFile('/tmp/asv2/dummy.zip','w',zipfile.ZIP_DEFLATED) as z:
+            for x in o.iterdir():z.write(x,'outputs/'+x.name)
+          PY
+      - name: Run frozen FULL ENV scorer through canonical historical outcomes
+        run: |
+          set -euo pipefail
+          python /tmp/asv2/src/score.py \
+            --opuszip /tmp/asv2/dummy.zip \
+            --workmanifest /tmp/asv2/rebuilt/work_manifest.json \
+            --privatejson /tmp/asv2/rebuilt/private_orchestrator_manifest.json \
+            --contract /tmp/asv2/src/contract.json \
+            --outcome2016 /tmp/asv2/src/out16.json \
+            --outcome2021 /tmp/asv2/src/out21.json \
+            --recon2016 /tmp/asv2/src/recon16.json \
+            --map2021 /tmp/asv2/map/holdout_mapping.json \
+            --pop2021 /tmp/asv2/minpop/populations/2021_population_v1.json \
+            --outdir /tmp/asv2/out
+          python - <<'PY'
+          import json
+          r=json.load(open('/tmp/asv2/out/full_environment_historical_score_v2.json'));m=r['metrics']
+          assert r['contract_validity']['rows_raw']==94208 and r['contract_validity']['valid_rows']==94208 and r['contract_validity']['full_contract_pass'] is True
+          assert r['aggregation_pass'] is True
+          assert abs(m['ALL_92']['2016']['C0']['macro_party_share_RMSE']-0.08850462894692873)<1e-12
+          assert abs(m['ALL_92']['2021']['C0']['macro_party_share_RMSE']-0.11841158918890837)<1e-12
+          assert set(m['DIRECT_58'])=={'2016','2021'}
+          assert 'behavioral_diagnostics' in r and set(r['behavioral_diagnostics'])=={'2016','2021'}
+          cert={'schema_version':'1.0','certificate_id':'M26-ASV2-FULL-ENV-SCORER-DRYRUN-CERTIFICATE-V1','experiment_id':'M26-AGENT-SOCIETY-V2-001','environment_extension_id':'M26-ASV2-FULL-ELECTION-ENV-V1','status':'PASS_END_TO_END_FULL_ENV_SCORER_DRYRUN','real_llm_outputs_used':False,'expected_public_judge_zip_sha256':__import__('os').environ['EXPECTED_PUBLIC_ZIP_SHA'],'checks':{'rows_raw':94208,'valid_rows':94208,'invalid_rows':0,'full_contract_pass':True,'aggregation_pass':True,'behavioral_diagnostics_pass':True,'all92_scoring':True,'direct58_scoring':True,'bootstrap_10000_seed_260819':True},'baseline_reconstruction':{'2016_C0_RMSE':m['ALL_92']['2016']['C0']['macro_party_share_RMSE'],'2021_C0_RMSE':m['ALL_92']['2021']['C0']['macro_party_share_RMSE'],'status':'MATCHES_FROZEN_BASELINE'},'note':'Dummy treatment scores are scientifically meaningless; this certifies only the frozen mechanics before real Opus output.'}
+          json.dump(cert,open('/tmp/asv2/out/full_env_scorer_dryrun_certificate_v1.json','w'),sort_keys=True,indent=2);print(json.dumps(cert,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: asv2-full-env-scorer-dryrun-v1
+          retention-days: 90
+          path: /tmp/asv2/out/

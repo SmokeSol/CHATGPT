@@ -1,0 +1,39 @@
+{
+  "aggregate_other_card": true,
+  "attitude_dimensions": 17,
+  "behavior_outputs": [
+    "turnout probability",
+    "party probability simplex",
+    "11-factor importance simplex",
+    "closed reason codes"
+  ],
+  "certificate_id": "M26-ASV2-FULL-ELECTION-ENV-DESIGN-CERTIFICATE-V2",
+  "environment_extension_id": "M26-ASV2-FULL-ELECTION-ENV-V1",
+  "exact_numeric_promises_exposed": false,
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "government_status_public_values": [
+    "INCUMBENT_COALITION",
+    "OPPOSITION",
+    "AGGREGATE_OTHER"
+  ],
+  "leader_names_exposed": false,
+  "named_party_offer_cards_per_election": 8,
+  "national_issue_axes": 12,
+  "negative_control": [
+    "local candidate/context shuffled",
+    "named-party offer cards deterministically permuted",
+    "national issue pressures held fixed"
+  ],
+  "private_evidence_sha256": "22eb83325e919d1899a47803a8be069067d2bf92228294c1dda55d067bfd5035",
+  "program_axes": 18,
+  "public_program_text_exposed": false,
+  "real_llm_outputs_seen": false,
+  "schema_version": "1.0",
+  "sensitive_identity_features_exposed": false,
+  "slogans_exposed": false,
+  "source_urls_exposed": false,
+  "status": "PASS_FULL_ELECTION_ENVIRONMENT_CONSTRUCTED_PRE_LLM",
+  "target_outcomes_used_for_environment_coding": false,
+  "voter_effective_rank_ratio_vs_minimal": 12.669897140648988,
+  "voter_state_dimensions_safe": 125
+}

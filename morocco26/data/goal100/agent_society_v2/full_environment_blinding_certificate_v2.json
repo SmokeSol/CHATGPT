@@ -1,0 +1,27 @@
+{
+  "certificate_id": "M26-ASV2-FULL-ENV-BLINDING-CERTIFICATE-V2",
+  "condition_ids_opaque": true,
+  "engineering_or_scoring_certificates_exposed_to_judge": false,
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "explicit_country_or_city_labels_present": false,
+  "explicit_real_election_years_present": false,
+  "explicit_real_party_labels_present": false,
+  "files_in_judge_zip": 2040,
+  "judge_zip_sha256": "e8acad28dea5a531c21171db570b60d612993edd91db8f893e58c187c226696a",
+  "note": "Judge sees only voter batches, anonymous context cards, output schema, prompt, work manifest, handoff manifest and checksums. Private mappings, source evidence, scoring contract and engineering certificates are excluded.",
+  "party_ids_territory_local": true,
+  "public_environment_id": "ENV_4D19B3E7",
+  "public_experiment_id": "EXP_7C8A2F11",
+  "real_llm_outputs_seen": false,
+  "scan_findings": 0,
+  "scan_patterns": [
+    "target election years",
+    "country/city names",
+    "major party names",
+    "survey/source names",
+    "source URLs"
+  ],
+  "schema_version": "1.0",
+  "source_urls_present": false,
+  "status": "PASS_FULL_ENV_JUDGE_BLINDING"
+}
