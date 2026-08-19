@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "research_id": "M26-HIST-2007-PRE-ELECTION-MAP-RECOVERY-V2-DELTA-20260819B",
+  "generated_at": "2026-08-19",
+  "cutoff": "2007-09-06T23:59:59+00:00",
+  "status": "POST_FREEZE_RESEARCH_ONLY",
+  "eligible_for_snapshot_v2": false,
+  "anti_leakage_rule": "NO_VALUE_COPIED_FROM_2007_OUTCOME; OUTCOME_TRANSCRIPTION_IS_CHECKLIST_ONLY",
+  "sources": [
+    {
+      "source_id": "ALM20070906_OUJDA",
+      "url": "https://aujourdhui.ma/politique/tour-des-circonscriptions-electorales-oujda-un-paysage-politique-qui-se-reconfigure-94694",
+      "publication_date": "2007-09-06",
+      "access_date": "2026-08-19",
+      "source_class": "T2_CONTEMPORARY",
+      "provenance": "Aujourd'hui le Maroc, pre-election constituency tour",
+      "fact_supported": "Oujda-Angad: 24 lists compete for 4 seats."
+    },
+    {
+      "source_id": "LM20070830_MULTI_ZAGORA",
+      "url": "https://lematin.ma/journal/2006/LA-CAMPAGNE-ELECTORALE_Al-Hoceima---20-listes-electorales-presentees/74265.html",
+      "publication_date": "2007-08-30",
+      "access_date": "2026-08-19",
+      "source_class": "T2_MAP_CONTEMPORARY",
+      "provenance": "Le Matin / MAP contemporary pre-election multi-province report",
+      "fact_supported": "Zagora: 12 lists compete for 3 seats."
+    },
+    {
+      "source_id": "LM2007_SAFI_TOTAL8",
+      "url": "https://lematin.ma/journal/2006/Safi_28-partis-se-disputent-huit-tickets/74162.html",
+      "publication_date": null,
+      "publication_date_status": "UNRESOLVED_EXACT_DATE_PRE_ELECTION_CONTEXT",
+      "access_date": "2026-08-19",
+      "source_class": "T2_CONTEMPORARY_DATE_AMBIGUOUS",
+      "provenance": "Le Matin pre-election report",
+      "fact_supported": "Safi Nord and Safi Sud jointly account for 8 seats; 27 and 28 lists respectively. Not sufficient to split magnitude 4+4 without another admissible source."
+    },
+    {
+      "source_id": "ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED",
+      "url": "https://aujourdhui.ma/?p=60488",
+      "publication_date": null,
+      "publication_date_status": "UNRESOLVED_EXACT_DATE_PRE_ELECTION_CONTEXT",
+      "access_date": "2026-08-19",
+      "source_class": "T2_CONTEMPORARY_DATE_AMBIGUOUS",
+      "provenance": "Aujourd'hui le Maroc, Decoupage electoral: Benmoussa livre sa copie",
+      "fact_supported": "Prospective new-map table gives Moulay Yacoub 2; Ismailia-Guerrouane 3; Hamria-Ahouaz Meknes-Zerhoune 3; Tetouan 4; Fahs-Anjra 2; Chefchaouen 4, among other already corroborated urban changes. Exact publication date must be resolved before VERIFIED use."
+    }
+  ],
+  "verified_cells": [
+    {
+      "native_id": "M26-2007-061",
+      "constituency": "Oujda - Angad",
+      "magnitude": 4,
+      "status": "DIRECT_VERIFIED",
+      "source_ids": ["ALM20070906_OUJDA"]
+    },
+    {
+      "native_id": "M26-2007-079",
+      "constituency": "Zagora",
+      "magnitude": 3,
+      "status": "DIRECT_VERIFIED",
+      "source_ids": ["LM20070830_MULTI_ZAGORA"]
+    }
+  ],
+  "ambiguous_triangulations": [
+    {"native_id":"M26-2007-015","constituency":"Moulay-Yacoub","magnitude":2,"status":"AMBIGUOUS_SOURCE_DATE","source_ids":["ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED"]},
+    {"native_id":"M26-2007-054","constituency":"Al-Ismailia - Guerrouane","magnitude":3,"status":"AMBIGUOUS_SOURCE_DATE","source_ids":["ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED"]},
+    {"native_id":"M26-2007-055","constituency":"Hamrya - Meknes-Banlieue - Zerhoun","magnitude":3,"status":"AMBIGUOUS_SOURCE_DATE","source_ids":["ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED"]},
+    {"native_id":"M26-2007-085","constituency":"Chefchaouen","magnitude":4,"status":"AMBIGUOUS_SOURCE_DATE","source_ids":["ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED"]},
+    {"native_id":"M26-2007-086","constituency":"Fahs - Anjra","magnitude":2,"status":"AMBIGUOUS_SOURCE_DATE","source_ids":["ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED"]},
+    {"native_id":"M26-2007-090","constituency":"Tetouan","magnitude":4,"status":"AMBIGUOUS_SOURCE_DATE","source_ids":["ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED"]}
+  ],
+  "partial_constraints": [
+    {
+      "constraint_id": "SAFI_2007_TOTAL_SEATS",
+      "territories": ["M26-2007-010", "M26-2007-011"],
+      "constraint": "magnitude_sum = 8",
+      "status": "AMBIGUOUS_SOURCE_DATE",
+      "source_ids": ["LM2007_SAFI_TOTAL8"],
+      "warning": "Do not infer 4+4 from the same-year outcome or from 2002 alone."
+    }
+  ],
+  "notes": [
+    "Only verified_cells may increase the verified coverage count.",
+    "ambiguous_triangulations and partial_constraints are retained for targeted follow-up and cannot enter a snapshot-v2.",
+    "A clean snapshot-v2 lineage must start before any 2007 outcome ingestion."
+  ]
+}
