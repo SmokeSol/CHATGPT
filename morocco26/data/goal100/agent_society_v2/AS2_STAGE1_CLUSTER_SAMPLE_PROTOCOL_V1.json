@@ -30,7 +30,9 @@
     "zip_sha256": "3440a965db9e14b17bc939a1395e6c581015c50e83a04cef354d4f6d15e753c6",
     "handoff_manifest_sha256": "6522163c6802a0fb80c89dfb60d72e2b381392ccc005cb27b282f02749578112",
     "start_here_sha256": "6f09c0345ef6aa09040e5a4978694ecdf39410a51db66a399a3b95912c5e91ae",
-    "builder_sha256": "67c7c3382c42998505ab2b55dc52d1c864b28ebd16e938ae11cde1596a46edb8",
+    "handoff_build_implementation_sha256": "67c7c3382c42998505ab2b55dc52d1c864b28ebd16e938ae11cde1596a46edb8",
+    "builder_source_git_blob_sha": "c3c8940e5502193ed5668c1e639268ce261c3a3a",
+    "byte_identical_rebuild_verified": true,
     "contains_e0_outputs": false,
     "contains_mapping": false,
     "contains_outcomes": false
