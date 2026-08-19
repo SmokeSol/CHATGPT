@@ -1,0 +1,39 @@
+name: Extract Opus Agent Society frontend
+on:
+  pull_request:
+    branches: [morocco26-agent-society-v2]
+    paths:
+      - 'morocco26/frontends/agent_society_opus/extract.trigger'
+      - '.github/workflows/agent-society-opus-extract.yml'
+permissions:
+  contents: read
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract archived Opus source verbatim
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC='morocco26/frontends/agent_society_opus/atlas-agentsociety-maroc.zip'
+          DST='/tmp/opus-front'
+          rm -rf "$DST" /tmp/reference
+          mkdir -p "$DST" /tmp/reference
+          unzip -q "$SRC" -d "$DST"
+          find "$DST" -name '__MACOSX' -prune -exec rm -rf {} + || true
+          cp morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json /tmp/reference/
+          cp morocco26/data/goal100/historical/tafra_legislative_2021_canonical.json /tmp/reference/
+          cp morocco26/data/goal100/e_reason/calibration/development_2016/identity_reconstruction_postfreeze_v1.json /tmp/reference/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: opus-agent-society-frontend-source
+          path: /tmp/opus-front/
+          if-no-files-found: error
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        with:
+          name: agent-society-historical-reference
+          path: /tmp/reference/
+          if-no-files-found: error
+          retention-days: 7

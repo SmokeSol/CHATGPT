@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0",
+  "state_id": "M26-ASV2-READER-EXPERIENCE-V2",
+  "status": "READER_FRONT_FINAL_UNIFIED_SOCIETY",
+  "visual_source": "Opus atlas-agentsociety-maroc",
+  "visual_style_must_not_change": true,
+  "reader_language": "fr",
+  "reader_title": "Société artificielle du Maroc",
+  "primary_cta": "Participer",
+  "public_collection": "AS2_PUBLIC_V1",
+  "assistant_choice_is_secondary": true,
+  "provider_specific_counters_visible": false,
+  "collective_results_hidden_until_freeze": true,
+  "constituencies": 92,
+  "historical_elections": [2016, 2021],
+  "prospective_destination": 2026,
+  "participation_service": "https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/agent-society-participation",
+  "claude_mcp": "https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/agent-society-mcp",
+  "next_gate": "LOAD_EXACT_FROZEN_INPUT_PAYLOADS_AND_OPEN_PUBLIC_COLLECTION"
+}
