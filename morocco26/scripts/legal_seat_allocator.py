@@ -83,10 +83,7 @@ def allocate(
 
     total_valid = sum(votes.values())
     threshold = float(rule.get("threshold_fraction_valid_votes", 0.0))
-    eligible = {
-        k: v for k, v in votes.items()
-        if v + 1e-12 >= threshold * total_valid
-    }
+    eligible = {k: v for k, v in votes.items() if v + 1e-12 >= threshold * total_valid}
     excluded = sorted(set(votes) - set(eligible))
 
     if not eligible:
@@ -98,40 +95,13 @@ def allocate(
             "unallocated_seats": seats, "tie_groups": []
         }
 
-    if len(eligible) == 1 and rule.get("single_eligible_list_gets_all_seats"):
-        winner = next(iter(eligible))
-        out = {k: 0 for k in votes}; out[winner] = seats
-        return {
-            "year": year, "tier": tier, "seats_requested": seats,
-            "seats_allocated": seats, "seats": out,
-            "eligible_lists": [winner], "excluded_lists": excluded,
-            "quotient": sum(eligible.values()) / seats,
-            "status": "ALLOCATED_SINGLE_ELIGIBLE_LIST",
-            "unallocated_seats": 0, "tie_groups": []
-        }
-
     mode = rule["quotient_mode"]
-    if mode == "eligible_valid_votes_div_seats":
-        qbase = sum(eligible.values())
+    if mode == "all_valid_votes_div_seats":
+        qbase = total_valid
     elif mode == "registered_voters_div_seats":
         if registered_voters is None or float(registered_voters) <= 0:
-            raise AllocationError(
-                f"{year} {tier}: registered_voters is required and must be positive"
-            )
+            raise AllocationError(f"{year} {tier}: registered_voters is required and must be positive")
         registered_voters = float(registered_voters)
-        if len(eligible) == 1:
-            min_frac = rule.get("single_list_min_registered_fraction")
-            if min_frac is not None:
-                only = next(iter(eligible.values()))
-                if only + 1e-12 < float(min_frac) * registered_voters:
-                    return {
-                        "year": year, "tier": tier, "seats_requested": seats,
-                        "seats_allocated": 0, "seats": {k: 0 for k in votes},
-                        "eligible_lists": list(eligible), "excluded_lists": excluded,
-                        "quotient": registered_voters / seats,
-                        "status": "UNIQUE_LIST_BELOW_REGISTERED_VOTER_MINIMUM",
-                        "unallocated_seats": seats, "tie_groups": []
-                    }
         qbase = registered_voters
     else:
         raise AllocationError(f"unknown quotient mode {mode}")
@@ -139,6 +109,34 @@ def allocate(
     quotient = qbase / seats
     if quotient <= 0:
         raise AllocationError("non-positive quotient")
+
+    if len(eligible) == 1 and rule.get("single_eligible_list_gets_all_seats"):
+        winner = next(iter(eligible))
+        out = {k: 0 for k in votes}; out[winner] = seats
+        return {
+            "year": year, "tier": tier, "seats_requested": seats,
+            "seats_allocated": seats, "seats": out,
+            "eligible_lists": [winner], "excluded_lists": excluded,
+            "threshold_fraction_valid_votes": threshold,
+            "quotient_mode": mode, "quotient": quotient,
+            "status": "ALLOCATED_SINGLE_ELIGIBLE_LIST",
+            "unallocated_seats": 0, "tie_groups": []
+        }
+
+    if mode == "registered_voters_div_seats" and len(eligible) == 1:
+        min_frac = rule.get("single_list_min_registered_fraction")
+        if min_frac is not None:
+            only = next(iter(eligible.values()))
+            if only + 1e-12 < float(min_frac) * registered_voters:
+                return {
+                    "year": year, "tier": tier, "seats_requested": seats,
+                    "seats_allocated": 0, "seats": {k: 0 for k in votes},
+                    "eligible_lists": list(eligible), "excluded_lists": excluded,
+                    "threshold_fraction_valid_votes": threshold,
+                    "quotient_mode": mode, "quotient": quotient,
+                    "status": "UNIQUE_LIST_BELOW_REGISTERED_VOTER_MINIMUM",
+                    "unallocated_seats": seats, "tie_groups": []
+                }
 
     seat_map = {k: 0 for k in votes}
     remainders = {}
@@ -162,9 +160,6 @@ def allocate(
             tie_groups.append([k for k,_ in ranked[i:j]])
         i = j
 
-    # Largest-remainder seats are one additional seat per list in the standard
-    # operation. If a legal edge case leaves more seats than lists, do not invent
-    # a second cycle; expose the unresolved remainder.
     awarded = 0
     cutoff_tie = None
     for pos, (k, rem) in enumerate(ranked):
@@ -204,10 +199,7 @@ def main() -> None:
     ap.add_argument("--votes-json", required=True, help="JSON object of list->absolute votes")
     ap.add_argument("--registered-voters", type=float)
     args = ap.parse_args()
-    result = allocate(
-        json.loads(args.votes_json), args.seats, args.year,
-        tier=args.tier, registered_voters=args.registered_voters
-    )
+    result = allocate(json.loads(args.votes_json), args.seats, args.year, tier=args.tier, registered_voters=args.registered_voters)
     print(json.dumps(result, ensure_ascii=False, sort_keys=True))
 
 if __name__ == "__main__":
