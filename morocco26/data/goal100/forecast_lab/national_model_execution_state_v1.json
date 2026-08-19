@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "state_id": "M26-NATIONAL-MODEL-EXECUTION-V1",
+  "target_year": 2026,
+  "point_selection": {
+    "status": "IMPLEMENTED_AWAITING_CI_SCORE_FREEZE",
+    "script": "morocco26/scripts/select_national_model_2026_v1.py",
+    "selection_contract": "morocco26/data/goal100/forecast_lab/national_model_selection_contract_v1.json",
+    "formula_contract": "morocco26/data/goal100/forecast_lab/national_model_formulas_v1.json",
+    "scored_folds": ["2002_TO_2007", "2007_TO_2011", "2011_TO_2016", "2016_TO_2021"]
+  },
+  "national_uncertainty": {
+    "status": "BLOCKED_UNTIL_POINT_WINNER_CI_FREEZE"
+  },
+  "final_probabilistic_forecast": {
+    "status": "NOT_PROMOTED"
+  }
+}
