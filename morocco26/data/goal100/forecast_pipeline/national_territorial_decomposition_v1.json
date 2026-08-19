@@ -2,16 +2,24 @@
   "F0_modified": false,
   "definition": {
     "forecast_equation": "z_territory,target = z_national,target + lambda * relative_geography_previous + residual",
-    "interpretation": "National regime and relative geography are separate prediction problems; target national outcomes are used here only for retrospective decomposition, never as forecast inputs.",
-    "national_layer": "Election-wide party swing in CLR space, computed from aggregate local-list votes.",
-    "territorial_layer": "Within-election territory-relative CLR deviation around the national composition."
+    "interpretation": "Target national outcomes are used only for retrospective decomposition. A pre-2011 boundary mismatch never blocks the national layer and never authorizes fuzzy territorial matching.",
+    "national_layer": "Election-wide party swing in CLR space; valid at native election geometry.",
+    "territorial_layer": "Within-election territory-relative CLR deviation; fitted only on forecast-eligible common geography."
   },
+  "detected_canonical_years": [
+    2011,
+    2016,
+    2021
+  ],
   "diagnostic": {
+    "available_territorial_transition_count": 2,
     "conclusion": "PARTIAL_TERRITORIAL_MEMORY_BUT_NATIONAL_AND_TERRITORIAL_DYNAMICS_MUST_BE_MODELED_SEPARATELY",
-    "lambda_2016": 0.7927513248040123,
-    "lambda_2021": 0.3898997318471329,
-    "lambda_nonstationarity": 0.40285159295687945
+    "territorial_lambdas": {
+      "2011_TO_2016": 0.7927513248040123,
+      "2016_TO_2021": 0.3898997318471329
+    }
   },
+  "dropin_behavior": "Any newly canonical historical year is included automatically. National decomposition activates immediately; territorial decomposition activates only if both adjacent elections have admissible common geometry.",
   "party_order": [
     "RNI",
     "PAM",
@@ -24,11 +32,12 @@
     "OTHER"
   ],
   "result_id": "M26-NATIONAL-TERRITORIAL-DECOMPOSITION-V1",
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "scientific_status": "RETROSPECTIVE_DEVELOPMENT_ONLY",
   "transitions": [
     {
       "conditional_geography_RMSE_at_oracle_lambda": 0.08262946704114518,
+      "from_year": 2011,
       "national_clr_swing": {
         "MP": -0.00341700042719305,
         "OTHER": -0.10820272506273541,
@@ -62,6 +71,7 @@
         "UC": 0.046547463822698754,
         "USFP": 0.06365715849095156
       },
+      "national_status": "AVAILABLE_NATIVE_GEOMETRY",
       "oracle_conditional_territorial_memory_lambda": 0.7927513248040123,
       "relative_geography_correlation": {
         "MP": 0.3734348051202448,
@@ -74,6 +84,10 @@
         "UC": 0.29521329855218326,
         "USFP": 0.4151434270014509
       },
+      "territorial_geometry_modes": [
+        "DIRECT_2011_REFERENCE",
+        "DIRECT_2011_REFERENCE"
+      ],
       "territorial_residual_change_sd": {
         "MP": 2.614174095409316,
         "OTHER": 1.1995402213248774,
@@ -85,11 +99,14 @@
         "UC": 2.8961683494744723,
         "USFP": 1.261295433123074
       },
+      "territorial_status": "AVAILABLE_COMMON_REFERENCE_GEOGRAPHY",
       "territories": 92,
+      "to_year": 2016,
       "transition": "2011_TO_2016"
     },
     {
       "conditional_geography_RMSE_at_oracle_lambda": 0.0925486402583232,
+      "from_year": 2016,
       "national_clr_swing": {
         "MP": -0.00021908023398776856,
         "OTHER": -0.0219627640135477,
@@ -123,6 +140,7 @@
         "UC": 0.05517279095157742,
         "USFP": 0.07884201170059188
       },
+      "national_status": "AVAILABLE_NATIVE_GEOMETRY",
       "oracle_conditional_territorial_memory_lambda": 0.3898997318471329,
       "relative_geography_correlation": {
         "MP": 0.05123483211485516,
@@ -135,6 +153,10 @@
         "UC": 0.33024897649008395,
         "USFP": 0.5757231369675917
       },
+      "territorial_geometry_modes": [
+        "DIRECT_2011_REFERENCE",
+        "DIRECT_2011_REFERENCE"
+      ],
       "territorial_residual_change_sd": {
         "MP": 3.6869017426639448,
         "OTHER": 1.0880903959926809,
@@ -146,7 +168,9 @@
         "UC": 3.8223765542897863,
         "USFP": 1.2191909651434534
       },
+      "territorial_status": "AVAILABLE_COMMON_REFERENCE_GEOGRAPHY",
       "territories": 92,
+      "to_year": 2021,
       "transition": "2016_TO_2021"
     }
   ]
