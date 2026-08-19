@@ -7,6 +7,7 @@ on:
     paths:
       - 'morocco26/scripts/historical_2007_pre_election_recovery_v2.py'
       - 'morocco26/scripts/historical_2007_assahraa_expand_v2.py'
+      - 'morocco26/scripts/historical_2007_lematin_expand_v2.py'
       - 'morocco26/scripts/historical_2007_fetch_official_gazette_v2.py'
       - '.github/workflows/historical-2007-v2-clean-recovery.yml'
   workflow_dispatch:
@@ -31,8 +32,9 @@ jobs:
         run: |
           strace -f -e trace=openat -o /tmp/m26_openat_main.log python morocco26/scripts/historical_2007_pre_election_recovery_v2.py
           strace -f -e trace=openat -o /tmp/m26_openat_ar.log python morocco26/scripts/historical_2007_assahraa_expand_v2.py
+          strace -f -e trace=openat -o /tmp/m26_openat_lm.log python morocco26/scripts/historical_2007_lematin_expand_v2.py
           strace -f -e trace=openat -o /tmp/m26_openat_bo.log python morocco26/scripts/historical_2007_fetch_official_gazette_v2.py
-          cat /tmp/m26_openat_main.log /tmp/m26_openat_ar.log /tmp/m26_openat_bo.log > /tmp/m26_openat.log
+          cat /tmp/m26_openat_main.log /tmp/m26_openat_ar.log /tmp/m26_openat_lm.log /tmp/m26_openat_bo.log > /tmp/m26_openat.log
           if grep -E 'parlement-elections-2007|legislative_2007_outcome|historical_native_map_outcome' /tmp/m26_openat.log; then
             echo 'LEAKAGE_GUARD_FAIL: recovery opened sealed/derived 2007 outcome material'
             exit 1
@@ -57,8 +59,9 @@ jobs:
           root=Path('morocco26/data/goal100/historical/2007_v2_research')
           d=json.loads((root/'pre_election_map_evidence_raw_v2.json').read_text())
           a=json.loads((root/'assahraa_series_evidence_v2.json').read_text())
+          l=json.loads((root/'lematin_series_evidence_v2.json').read_text())
           b=json.loads((root/'official_gazette'/'official_gazette_recovery_manifest_v2.json').read_text())
-          print({'main':{k:d[k] for k in ('source_count_discovered','eligible_article_count','explicit_district_magnitude_fact_count')},'assahraa':{k:a[k] for k in ('pages_seen','eligible_pages','seat_context_count')},'gazette':{'recovered':b['recovered'],'hits':len(b.get('text_extraction',{}).get('hits',[]))}})
+          print({'main':{k:d[k] for k in ('source_count_discovered','eligible_article_count','explicit_district_magnitude_fact_count')},'assahraa':{k:a[k] for k in ('pages_seen','eligible_pages','seat_context_count')},'lematin':{k:l[k] for k in ('pages_seen','eligible_pages','seat_context_count')},'gazette':{'recovered':b['recovered'],'hits':len(b.get('text_extraction',{}).get('hits',[]))}})
           PY
       - name: Commit recovery evidence only
         run: |
