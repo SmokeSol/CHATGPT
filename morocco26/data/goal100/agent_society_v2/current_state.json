@@ -1,13 +1,13 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "2.1",
   "experiment_id": "M26-AGENT-SOCIETY-V2-001",
-  "branch": "morocco26-agent-society-v2",
-  "phase": "SEALED_FULL_ELECTION_ENVIRONMENT_AWAITING_OPUS5_EXECUTION",
-  "protocol_status": "FROZEN_BEFORE_ANY_REAL_FULL_ENV_ASV2_LLM_OUTPUT",
+  "branch": "morocco26-agent-society-v2-front-vote-llm",
+  "phase": "E0_REGISTERED_AS2_FRESH_CONTEXT_PENDING",
+  "protocol_status": "FROZEN_BEFORE_ANY_TRUE_AS2_OPUS5_FRESH_CONTEXT_OUTPUT_OR_2016_UNSEAL",
   "F0_status": "OFFICIAL_UNCHANGED",
   "real_llm_votes_generated": false,
   "target_outcomes_used_for_ASV2_tuning": false,
-  "supersedes": "SEALED_RICH_HANDOFF_AWAITING_OPUS5_EXECUTION",
+  "supersedes": "SEALED_FULL_ELECTION_ENVIRONMENT_AWAITING_OPUS5_EXECUTION",
   "synthetic_electorate": {
     "territories_each_year": 92,
     "archetypes_per_constituency": 256,
@@ -44,14 +44,48 @@
     "scan_findings": 0
   },
   "judge_handoff": {
-    "status": "SEALED_READY_FOR_OPUS5",
+    "status": "SEALED_READY_FOR_TRUE_OPUS5_AS2",
     "public_zip_sha256": "e8acad28dea5a531c21171db570b60d612993edd91db8f893e58c187c226696a",
     "public_environment_id": "ENV_4D19B3E7",
     "public_experiment_id": "EXP_7C8A2F11",
     "work_items": 2944,
     "output_rows_expected": 94208,
     "target_outcomes_present": false,
-    "mapping_material_present": false
+    "mapping_material_present": false,
+    "fresh_model_context_per_work_item_required": true
+  },
+  "e0_deterministic_reference": {
+    "status": "REGISTERED_REFERENCE_ONLY_NOT_AS2",
+    "archive": "external_outputs/e0_deterministic_reference/EXP_7C8A2F11_FULL_ENV_OUTPUTS_FROZEN.zip",
+    "archive_sha256": "f4fb045755221a6a0b80d8e8ee940b485a0ddcf6dc35fb49991ff4b4d449c566",
+    "terminal_status": "FROZEN_SCHEMA_COMPLETE_WITH_EXECUTION_CONTRACT_DEVIATION",
+    "schema_and_completeness_gate": "PASS_FULL_ENV_ASV2_HISTORICAL_VOTES_FROZEN_READY_FOR_SCORING",
+    "model_label": "claude-opus-5",
+    "fresh_model_context_per_work_item": false,
+    "work_items_processed": 2944,
+    "rows_emitted": 94208,
+    "scientific_role": "DETERMINISTIC_REFERENCE_AND_MECHANICS_ONLY",
+    "eligible_as_AS2": false,
+    "eligible_for_AS3_calibration": false
+  },
+  "as2_opus5_isolated": {
+    "status": "PENDING_TRUE_FRESH_CONTEXT_EXECUTION",
+    "required_terminal_status": "PASS_FULL_ENV_ASV2_HISTORICAL_VOTES_FROZEN_READY_FOR_SCORING",
+    "required_model": "claude-opus-5",
+    "fresh_model_context_per_work_item": true,
+    "work_items_required": 2944,
+    "rows_required": 94208,
+    "provenance_gate": "source_v2/social/engine/baseline_gate.py",
+    "eligible_for_2016_unseal_only_after_gate_pass": true
+  },
+  "social_extension": {
+    "status": "PRE_REGISTERED_CALIBRATION_BLOCKED_PENDING_TRUE_AS2",
+    "channels": ["family", "work", "neighborhood"],
+    "rounds": ["R0_ISOLATED", "R1_SYNCHRONOUS", "R2_SYNCHRONOUS_STOP"],
+    "conditions": ["ISO", "FAM", "WORK", "NEIGH", "ALL", "SHUFFLE", "ALL_R2"],
+    "E0_mechanics_runs_allowed_only_when_explicit": true,
+    "2016_outcomes_opened": false,
+    "2021_outcomes_opened_for_social_experiment": false
   },
   "scorer": {
     "status": "PASS_END_TO_END_FULL_ENV_SCORER_DRYRUN",
@@ -73,7 +107,7 @@
       "status": "MATCHES_FROZEN_BASELINE"
     }
   },
-  "next_allowed_action": "Give only the sealed FULL ELECTION ENVIRONMENT judge ZIP to OPUS-5. OPUS-5 must follow its START_HERE instructions, use only the ZIP, produce all 94,208 outputs plus manifest and terminal report, and stop before scoring. Then run the frozen scorer without changing any prompt, input, mapping, metric, threshold or gate.",
-  "external_blocker": "Real OPUS-5 execution occurs outside this connected runtime.",
-  "stop_rule": "Do not modify the voter population, election environment, prompt, model, party remapping, true/shuffled mapping, aggregation, metrics or gates after any real Opus-5 output is inspected."
+  "next_allowed_action": "Validate/obtain a TRUE AS2 Opus-5 isolated output generated with one fresh model context per each of the 2,944 work items. baseline_gate.require_as2_baseline must PASS. Only then unseal 2016 and calibrate the pre-registered social lambdas. Keep 2021 sealed until lambda freeze.",
+  "external_blocker": "The received Opus-produced archive is E0 deterministic reference because fresh_model_context_per_work_item=false. A true AS2 fresh-context execution is still required before 2016 unseal.",
+  "stop_rule": "Do not modify the voter population, election environment, AS2 prompt/schema, model requirement, party remapping, true/shuffled mapping, social graph rules, lambda grid, aggregation, metrics or gates after any true AS2 Opus-5 output is inspected. Do not open 2021 before 2016 lambda freeze."
 }
