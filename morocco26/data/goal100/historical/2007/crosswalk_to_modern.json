@@ -1,0 +1,1053 @@
+{
+  "modern_universe_path": "data/constituencies_goal75.csv",
+  "policy": "Exact normalized names + small explicit mapping table only; no fuzzy coercion.",
+  "rows": [
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "benslimane",
+          "name": "Benslimane"
+        }
+      ],
+      "native_constituency": "Benslimane",
+      "native_id": "M26-2007-001",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Khouribga - Oulad-Labhar - Laksar-et-Esghar",
+      "native_id": "M26-2007-002",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Oued-Zem - Bejaad",
+      "native_id": "M26-2007-003",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Ben-Ahmed",
+      "native_id": "M26-2007-004",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "berrechid",
+          "name": "Berrechid"
+        }
+      ],
+      "native_constituency": "Berrechid",
+      "native_id": "M26-2007-005",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "settat",
+          "name": "Settat"
+        }
+      ],
+      "native_constituency": "Settat",
+      "native_id": "M26-2007-006",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "El-Jadida - Azemmour",
+      "native_id": "M26-2007-007",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Oulad-Bouaziz - Zemamra",
+      "native_id": "M26-2007-008",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Sidi-Bennour - Oulad-Frej",
+      "native_id": "M26-2007-009",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Safi - Chamalia",
+      "native_id": "M26-2007-010",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Safi - Janoubia",
+      "native_id": "M26-2007-011",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "boulemane",
+          "name": "Boulemane"
+        }
+      ],
+      "native_constituency": "Boulemane",
+      "native_id": "M26-2007-012",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Fès - Chamalia",
+      "native_id": "M26-2007-013",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Fès - Janoubia",
+      "native_id": "M26-2007-014",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Moulay-Yacoub",
+      "native_id": "M26-2007-015",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "sefrou",
+          "name": "Séfrou"
+        }
+      ],
+      "native_constituency": "Sefrou",
+      "native_id": "M26-2007-016",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Bni-Hssen",
+      "native_id": "M26-2007-017",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "el-gharb",
+          "name": "El Gharb"
+        }
+      ],
+      "native_constituency": "El-Gharb",
+      "native_id": "M26-2007-018",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "kenitra",
+          "name": "Kénitra"
+        }
+      ],
+      "native_constituency": "Kénitra",
+      "native_id": "M26-2007-019",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Ouezzane - Had-Kourt - Jorf-El-Melha",
+      "native_id": "M26-2007-020",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Sidi-Kacem - Mechra-Bel-Ksiri - Dar-Gueddari",
+      "native_id": "M26-2007-021",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "ain-chock",
+          "name": "Aïn Chock"
+        }
+      ],
+      "native_constituency": "Aïn-Chock",
+      "native_id": "M26-2007-022",
+      "note": "Name identity.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "ain-sebaa-hay-mohammadi",
+          "name": "Aïn Sebaâ-Hay Mohammadi"
+        }
+      ],
+      "native_constituency": "Aïn-Sebaâ - Hay-Mohammadi",
+      "native_id": "M26-2007-023",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "al-fida-mers-sultan",
+          "name": "Al Fida-Mers Sultan"
+        }
+      ],
+      "native_constituency": "Al-Fida - Mers-Sultan",
+      "native_id": "M26-2007-024",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "ben-m-sick",
+          "name": "Ben M'sick"
+        }
+      ],
+      "native_constituency": "Ben-M'sick",
+      "native_id": "M26-2007-025",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "casablanca-anfa",
+          "name": "Casablanca-Anfa"
+        }
+      ],
+      "native_constituency": "Casablanca - Anfa",
+      "native_id": "M26-2007-026",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "hay-hassani",
+          "name": "Hay Hassani"
+        }
+      ],
+      "native_constituency": "Hay-Hassani",
+      "native_id": "M26-2007-027",
+      "note": "Name identity.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "moulay-rachid",
+          "name": "Moulay Rachid"
+        }
+      ],
+      "native_constituency": "Moulay-Rachid",
+      "native_id": "M26-2007-028",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "sidi-bernoussi",
+          "name": "Sidi Bernoussi"
+        }
+      ],
+      "native_constituency": "Sidi-Bernoussi",
+      "native_id": "M26-2007-029",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "mediouna",
+          "name": "Médiouna"
+        }
+      ],
+      "native_constituency": "Médiouna",
+      "native_id": "M26-2007-030",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Mohammadia",
+      "native_id": "M26-2007-031",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "nouaceur",
+          "name": "Nouaceur"
+        }
+      ],
+      "native_constituency": "Nouaceur",
+      "native_id": "M26-2007-032",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "assa-zag",
+          "name": "Assa-Zag"
+        }
+      ],
+      "native_constituency": "Assa-Zag",
+      "native_id": "M26-2007-033",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Es-Smara",
+      "native_id": "M26-2007-034",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "guelmim",
+          "name": "Guelmim"
+        }
+      ],
+      "native_constituency": "Guelmim",
+      "native_id": "M26-2007-035",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "tan-tan",
+          "name": "Tan-Tan"
+        }
+      ],
+      "native_constituency": "Tan-Tan",
+      "native_id": "M26-2007-036",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "tata",
+          "name": "Tata"
+        }
+      ],
+      "native_constituency": "Tata",
+      "native_id": "M26-2007-037",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "boujdour",
+          "name": "Boujdour"
+        }
+      ],
+      "native_constituency": "Boujdour",
+      "native_id": "M26-2007-038",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "laayoune",
+          "name": "Laâyoune"
+        }
+      ],
+      "native_constituency": "Laâyoune",
+      "native_id": "M26-2007-039",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "al-haouz",
+          "name": "Al Haouz"
+        }
+      ],
+      "native_constituency": "Al-Haouz",
+      "native_id": "M26-2007-040",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "chichaoua",
+          "name": "Chichaoua"
+        }
+      ],
+      "native_constituency": "Chichaoua",
+      "native_id": "M26-2007-041",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "rehamna",
+          "name": "Rehamna"
+        }
+      ],
+      "native_constituency": "Rehamna",
+      "native_id": "M26-2007-042",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Sraghna - Zemrane",
+      "native_id": "M26-2007-043",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "essaouira",
+          "name": "Essaouira"
+        }
+      ],
+      "native_constituency": "Essaouira",
+      "native_id": "M26-2007-044",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Guéliz - Annakhil",
+      "native_id": "M26-2007-045",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Médina - Sidi-Youssef-Ben-Ali",
+      "native_id": "M26-2007-046",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "menara",
+          "name": "Menara"
+        }
+      ],
+      "native_constituency": "Ménara",
+      "native_id": "M26-2007-047",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "el-hajeb",
+          "name": "El Hajeb"
+        }
+      ],
+      "native_constituency": "El-Hajeb",
+      "native_id": "M26-2007-048",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Gheris - Tislit",
+      "native_id": "M26-2007-049",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Ziz - Tafilalet",
+      "native_id": "M26-2007-050",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "ifrane",
+          "name": "Ifrane"
+        }
+      ],
+      "native_constituency": "Ifrane",
+      "native_id": "M26-2007-051",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "khenifra",
+          "name": "Khénifra"
+        }
+      ],
+      "native_constituency": "Khénifra",
+      "native_id": "M26-2007-052",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Midelt - El-Kbab",
+      "native_id": "M26-2007-053",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Al-Ismaïlia - Guerrouane",
+      "native_id": "M26-2007-054",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Hamrya - Meknès-Banlieue - Zerhoun",
+      "native_id": "M26-2007-055",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "berkane",
+          "name": "Berkane"
+        }
+      ],
+      "native_constituency": "Berkane",
+      "native_id": "M26-2007-056",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "figuig",
+          "name": "Figuig"
+        }
+      ],
+      "native_constituency": "Figuig",
+      "native_id": "M26-2007-057",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "jerada",
+          "name": "Jerada"
+        }
+      ],
+      "native_constituency": "Jerada",
+      "native_id": "M26-2007-058",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Chamalia - Gharbia",
+      "native_id": "M26-2007-059",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Janoubia - Charkia",
+      "native_id": "M26-2007-060",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "oujda-angad",
+          "name": "Oujda-Angad"
+        }
+      ],
+      "native_constituency": "Oujda - Angad",
+      "native_id": "M26-2007-061",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "taourirt",
+          "name": "Taourirt"
+        }
+      ],
+      "native_constituency": "Taourirt",
+      "native_id": "M26-2007-062",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "aousserd",
+          "name": "Aousserd"
+        }
+      ],
+      "native_constituency": "Aousserd",
+      "native_id": "M26-2007-063",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Oued-Ed-Dahab",
+      "native_id": "M26-2007-064",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "khemisset-oulmes",
+          "name": "Khémisset-Oulmès"
+        }
+      ],
+      "native_constituency": "Khémisset - Oulmès",
+      "native_id": "M26-2007-065",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Tifelt - Rommani",
+      "native_id": "M26-2007-066",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Rabat - Challah",
+      "native_id": "M26-2007-067",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Rabat - El Mouhit",
+      "native_id": "M26-2007-068",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Salé - Al-Jadida",
+      "native_id": "M26-2007-069",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "sale-medina",
+          "name": "Salé-Médina"
+        }
+      ],
+      "native_constituency": "Salé - Médina",
+      "native_id": "M26-2007-070",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "skhirate-temara",
+          "name": "Skhirate-Témara"
+        }
+      ],
+      "native_constituency": "Skhirate - Témara",
+      "native_id": "M26-2007-071",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Agadir - Ida-ou-Tanane",
+      "native_id": "M26-2007-072",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "chtouka-ait-baha",
+          "name": "Chtouka-Aït Baha"
+        }
+      ],
+      "native_constituency": "Chtouka - Aït-Baha",
+      "native_id": "M26-2007-073",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "inezgane-ait-melloul",
+          "name": "Inezgane-Aït Melloul"
+        }
+      ],
+      "native_constituency": "Inézgane - Aït-Melloul",
+      "native_id": "M26-2007-074",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "ouarzazate",
+          "name": "Ouarzazate"
+        }
+      ],
+      "native_constituency": "Ouarzazate",
+      "native_id": "M26-2007-075",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Taroudannt - Al-Janoubia",
+      "native_id": "M26-2007-076",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Taroudannt - Chamalia",
+      "native_id": "M26-2007-077",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "tiznit",
+          "name": "Tiznit"
+        }
+      ],
+      "native_constituency": "Tiznit",
+      "native_id": "M26-2007-078",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "zagora",
+          "name": "Zagora"
+        }
+      ],
+      "native_constituency": "Zagora",
+      "native_id": "M26-2007-079",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "azilal-demnate",
+          "name": "Azilal-Demnate"
+        }
+      ],
+      "native_constituency": "Azilal - Demnate",
+      "native_id": "M26-2007-080",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Bzou - Ouaouizaght",
+      "native_id": "M26-2007-081",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "beni-mellal",
+          "name": "Béni-Mellal"
+        }
+      ],
+      "native_constituency": "Béni-Mellal",
+      "native_id": "M26-2007-082",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Bni-Moussa - Bni-Amir",
+      "native_id": "M26-2007-083",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "El-Ksiba - Tadla",
+      "native_id": "M26-2007-084",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "chefchaouen",
+          "name": "Chefchaouen"
+        }
+      ],
+      "native_constituency": "Chefchaouen",
+      "native_id": "M26-2007-085",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "fahs-anjra",
+          "name": "Fahs-Anjra"
+        }
+      ],
+      "native_constituency": "Fahs - Anjra",
+      "native_id": "M26-2007-086",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "larache",
+          "name": "Larache"
+        }
+      ],
+      "native_constituency": "Larache",
+      "native_id": "M26-2007-087",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "m-diq-fnideq",
+          "name": "M'diq-Fnideq"
+        }
+      ],
+      "native_constituency": "M'Diq - Fnideq",
+      "native_id": "M26-2007-088",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "tanger-assilah",
+          "name": "Tanger-Assilah"
+        }
+      ],
+      "native_constituency": "Tanger - Assilah",
+      "native_id": "M26-2007-089",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "tetouan",
+          "name": "Tétouan"
+        }
+      ],
+      "native_constituency": "Tétouan",
+      "native_id": "M26-2007-090",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "al-hoceima",
+          "name": "Al Hoceïma"
+        }
+      ],
+      "native_constituency": "Al-Hoceïma",
+      "native_id": "M26-2007-091",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "UNRESOLVED",
+      "modern_targets": [],
+      "native_constituency": "Karia - Rhafsai",
+      "native_id": "M26-2007-092",
+      "note": "No exact-name or explicitly documented mapping; intentionally unresolved.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "taounate-tissa",
+          "name": "Taounate-Tissa"
+        }
+      ],
+      "native_constituency": "Taounate - Tissa",
+      "native_id": "M26-2007-093",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "guercif",
+          "name": "Guercif"
+        }
+      ],
+      "native_constituency": "Guercif",
+      "native_id": "M26-2007-094",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    },
+    {
+      "mapping_type": "EXACT",
+      "modern_targets": [
+        {
+          "constituency_id": "taza",
+          "name": "Taza"
+        }
+      ],
+      "native_constituency": "Taza",
+      "native_id": "M26-2007-095",
+      "note": "Normalized exact constituency-name identity only.",
+      "year": 2007
+    }
+  ],
+  "schema_version": "1.0",
+  "year": 2007
+}

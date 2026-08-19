@@ -1,0 +1,19 @@
+{
+  "crosswalk_APPROX_count": 0,
+  "crosswalk_APPROX_pct": 0.0,
+  "crosswalk_EXACT_count": 57,
+  "crosswalk_EXACT_pct": 60.0,
+  "crosswalk_UNRESOLVED_count": 38,
+  "crosswalk_UNRESOLVED_pct": 40.0,
+  "district_seat_allocation_status": "PASS_EXACT_OFFICIAL_AGGREGATE_MATCH",
+  "local_vote_matrix_status": "OFFICIAL_ARCHIVE_FULL_LOCAL_PARTY_MATRIX",
+  "national_vote_counts_status": "MISSING",
+  "official_local_seat_aggregate_status": "VERIFIED",
+  "official_total_seat_aggregate_status": "VERIFIED",
+  "outcome_territory_coverage_pct": 100.0,
+  "outcome_territory_rows": 95,
+  "party_columns_documented": 38,
+  "phase": "OUTCOME",
+  "real_constituency_count": 95,
+  "year": 2007
+}
