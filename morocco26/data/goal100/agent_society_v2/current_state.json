@@ -1,21 +1,12 @@
 {
-  "schema_version": "2.4",
+  "schema_version": "2.5",
   "experiment_id": "M26-AGENT-SOCIETY-V2-001",
   "branch": "morocco26-agent-society-v2-front-vote-llm",
-  "phase": "PUBLIC_LLM_COLLECTION_LIVE_SOCIAL_PIPELINE_CONNECTED",
-  "protocol_status": "FROZEN_PRE_OUTCOME_PUBLIC_COLLECTION_READY_NO_2016_OR_2021_UNSEAL",
+  "phase": "PUBLIC_LLM_COLLECTION_ANTI_ABUSE_CONNECTED_FAIL_CLOSED",
+  "protocol_status": "FROZEN_PRE_OUTCOME_PUBLIC_COLLECTION_PROTECTED_NO_2016_OR_2021_UNSEAL",
   "F0_status": "OFFICIAL_UNCHANGED",
   "real_llm_votes_generated": false,
   "target_outcomes_used_for_ASV2_tuning": false,
-  "supersedes": "AS2_STAGE1_FRESH_CONTEXT_COST_GATE_SEALED",
-  "synthetic_electorate": {
-    "territories_each_year": 92,
-    "archetypes_per_constituency": 256,
-    "safe_feature_count": 125,
-    "effective_rank_ratio_vs_minimal": 12.669897140648988,
-    "attitude_dimensions": 17,
-    "attitude_posterior_fields_per_archetype": 34
-  },
   "full_election_environment": {
     "status": "PASS_FULL_ELECTION_ENVIRONMENT_CONSTRUCTED_PRE_LLM",
     "public_environment_id": "ENV_4D19B3E7",
@@ -23,31 +14,19 @@
     "work_items": 2944,
     "output_rows_expected": 94208,
     "target_outcomes_present": false,
-    "mapping_material_present": false,
-    "program_axes": 18,
-    "national_issue_axes": 12,
-    "named_party_offer_cards_per_election": 8,
-    "aggregate_other_card": true,
-    "local_candidate_context": true,
-    "government_opposition_status": true
+    "mapping_material_present": false
   },
   "blinding": {
     "status": "PASS_FULL_ENV_JUDGE_BLINDING",
     "real_party_names_present": false,
     "real_territory_names_present": false,
     "real_election_years_present": false,
-    "country_or_city_labels_present": false,
     "source_urls_present": false,
-    "engineering_or_scoring_certificates_exposed_to_judge": false,
-    "party_ids_territory_local": true,
-    "scan_findings": 0
+    "party_ids_territory_local": true
   },
   "e0_deterministic_reference": {
     "status": "REGISTERED_REFERENCE_ONLY_NOT_AS2",
-    "archive": "external_outputs/e0_deterministic_reference/EXP_7C8A2F11_FULL_ENV_OUTPUTS_FROZEN.zip",
     "archive_sha256": "f4fb045755221a6a0b80d8e8ee940b485a0ddcf6dc35fb49991ff4b4d449c566",
-    "user_resupplied_archive_sha256_verified_identical": true,
-    "terminal_status": "FROZEN_SCHEMA_COMPLETE_WITH_EXECUTION_CONTRACT_DEVIATION",
     "fresh_model_context_per_work_item": false,
     "work_items_processed": 2944,
     "rows_emitted": 94208,
@@ -56,36 +35,113 @@
     "eligible_for_AS3_calibration": false
   },
   "public_llm_collection": {
-    "status": "READY_COLLECTING",
+    "status": "PROTECTED_FAIL_CLOSED_PENDING_TURNSTILE_EXTERNAL_CONFIGURATION",
     "distribution_model": "USERS_BRING_THEIR_OWN_LLM",
     "cohort_id": "AS2_PUBLIC_V1",
     "target_work_items": 2944,
     "payloads_ready": 2944,
     "completed_work_items": 0,
     "active_claims": 0,
-    "chatgpt_completed": 0,
-    "claude_completed": 0,
-    "other_completed": 0,
+    "participants": 0,
+    "tickets": 0,
+    "quarantined": 0,
     "work_item_size_archetypes": 32,
-    "frontend_flow": "choose assistant -> claim -> copy blinded payload -> run in user's LLM -> paste response -> strict submit validation",
+    "frontend_flow": "choose assistant -> Turnstile -> single-use short ticket -> guarded claim -> copy blinded payload -> user's LLM -> paste response -> strict submit validation -> replay guard -> R0/social pipeline",
     "backend": {
       "platform": "Supabase",
       "participation_edge_function": "agent-society-participation",
-      "participation_edge_function_version": 6,
+      "participation_edge_function_version": 8,
+      "participation_policy_version": "ATLAS_ABUSE_V1_FROZEN",
       "mcp_edge_function": "agent-society-mcp",
-      "mcp_edge_function_version": 2,
-      "claim_supports_inline_payload_and_legacy_static_files": true,
-      "strict_submit_validation": [
-        "exact 32 rows",
-        "claimed election/territory/condition/batch identity",
-        "exact voter archetype order",
-        "exact 9 party keys",
-        "exact 11 factor keys",
-        "probability simplexes",
-        "closed unique reason codes"
-      ]
+      "mcp_edge_function_version": 3,
+      "social_edge_function": "agent-society-social",
+      "social_edge_function_version": 2,
+      "claim_supports_inline_payload_and_legacy_static_files": true
     },
+    "strict_submit_validation": [
+      "exact 32 rows",
+      "claimed election/territory/condition/batch identity",
+      "exact voter archetype order",
+      "exact 9 party keys",
+      "exact 11 factor keys",
+      "probability simplexes",
+      "closed unique reason codes"
+    ],
     "results_revealed_during_collection": false
+  },
+  "abuse_control": {
+    "status": "IMPLEMENTED_AND_FROZEN_PRE_OUTCOME",
+    "protocol": "AS2_PUBLIC_ABUSE_CONTROL_PROTOCOL_V1.json",
+    "policy_version": "ATLAS_ABUSE_V1_FROZEN",
+    "turnstile": {
+      "required": true,
+      "server_side_verification": true,
+      "action": "atlas_claim",
+      "database_site_key_present": false,
+      "edge_function_secret_values_readable_by_connector": false,
+      "external_configuration_required_before_opening": [
+        "TURNSTILE_SITE_KEY",
+        "TURNSTILE_SECRET_KEY"
+      ],
+      "fail_closed_when_missing": true
+    },
+    "participant_privacy": {
+      "account_required": false,
+      "browser_identifier": "random local UUID",
+      "browser_identifier_stored_server_side": false,
+      "browser_hash": "peppered SHA256",
+      "raw_ip_stored": false,
+      "ip_hash": "peppered SHA256"
+    },
+    "ticket": {
+      "ttl_seconds": 300,
+      "single_use": true,
+      "raw_ticket_stored": false,
+      "stored_hash": "SHA256",
+      "web_browser_binding": true,
+      "mcp_requires_web_issued_ticket": true
+    },
+    "rate_limits": {
+      "max_active_claims_per_participant": 1,
+      "max_active_claims_per_ip": 3,
+      "max_claims_per_participant_24h": 3,
+      "max_claims_per_ip_24h": 10,
+      "max_completed_per_participant_24h": 3,
+      "max_tickets_per_participant_hour": 5,
+      "max_tickets_per_ip_hour": 20,
+      "expired_claims_per_ip_24h_before_cooldown": 5
+    },
+    "work_item_selection": "PSEUDORANDOM_BY_SINGLE_USE_TICKET_NO_OUTCOME_NO_MAPPING",
+    "automatic_quarantine": {
+      "threshold": 100,
+      "exact_behavior_fingerprint_repeat_points": 100,
+      "exact_output_replay_points": 100,
+      "extreme_submission_speed_metadata_only_points": 10,
+      "content_based_exclusion": false,
+      "political_direction_used": false,
+      "party_probability_diversity_used": false,
+      "turnout_level_used": false,
+      "factor_pattern_used": false,
+      "reason_code_content_used": false,
+      "quarantined_rows_preserved": true,
+      "quarantined_rows_aggregated": false,
+      "quarantined_rows_socialized": false,
+      "disposition_disclosed_to_contributor": false
+    },
+    "database_acl": {
+      "sensitive_security_tables_rls": true,
+      "privileged_rpc_anon_execute": false,
+      "privileged_rpc_authenticated_execute": false,
+      "privileged_rpc_service_role_execute": true
+    },
+    "zero_side_effect_verification": {
+      "completed": 0,
+      "active_claims": 0,
+      "quarantined": 0,
+      "participants": 0,
+      "tickets": 0,
+      "security_events": 0
+    }
   },
   "social_extension": {
     "status": "LIVE_R0_TO_R1_R2_CONNECTED_ILLUSTRATIVE_NOT_CALIBRATED",
@@ -99,37 +155,25 @@
       "max_R1_decision_delta": 1.6653345369377348e-16,
       "max_R2_decision_delta": 1.6653345369377348e-16
     },
-    "live_pipeline": {
-      "on_each_valid_submit": "preserve immutable R0 -> reconstruct deterministic graph -> derive synchronous R1 -> derive synchronous R2",
-      "social_edge_function": "agent-society-social",
-      "social_edge_function_version": 2,
-      "private_table": "asv2_social_previews",
-      "private_table_rls": true,
-      "anon_table_select": false,
-      "authenticated_table_select": false,
-      "public_status_is_non_directional_only": true,
-      "directional_R0_R1_R2_sample_locked_until_reveal": true,
-      "post_reveal_frontend_switches_to_real_R0_and_frozen_graph": true,
-      "current_completed_R0": 0,
-      "current_socialized_R1_R2": 0
-    },
     "live_preview_lambdas": {
       "status": "ILLUSTRATIVE_NOT_CALIBRATED",
       "family": 0.18,
       "work": 0.1,
       "neighborhood": 0.06
     },
-    "frontend": {
-      "interactive_family_work_neighborhood_demo": true,
-      "R0_R1_R2_controls": true,
-      "live_backend_status_connected": true,
-      "contribution_payload_bridge_connected": true,
-      "collective_direction_hidden_while_collecting": true,
-      "after_reveal_uses_real_participative_R0": true,
-      "after_reveal_uses_real_frozen_social_graph": true
-    },
+    "directional_R0_R1_R2_locked_until_reveal": true,
     "2016_outcomes_opened": false,
     "2021_outcomes_opened_for_social_experiment": false
+  },
+  "frontend": {
+    "social_core_preserved": "web/social-core.js",
+    "social_bootstrap": "web/social.js",
+    "anti_abuse_bridge": "web/abuse.js",
+    "turnstile_before_claim": true,
+    "captcha_at_submit": false,
+    "mcp_ticket_button": true,
+    "collective_direction_hidden_while_collecting": true,
+    "production_deployment_status": "BLOCKED_BY_VERCEL_ACCOUNT_BUILD_RATE_LIMIT"
   },
   "as2_stage1_cost_gate": {
     "status": "OPTIONAL_PRE_OUTCOME_DIAGNOSTIC_NOT_CURRENT_DISTRIBUTION_PATH",
@@ -140,27 +184,17 @@
     "does_not_unlock_2016": true,
     "does_not_open_2021": true
   },
-  "scorer": {
-    "status": "PASS_END_TO_END_FULL_ENV_SCORER_DRYRUN",
-    "workflow_run_id": 32239700431,
-    "artifact_id": 9360293935,
-    "scorer_sha256": "9a160c85ea491445cdb082f3653ce5ec909dae73ce1a94f4a9a0b916896e54a8",
-    "rows_validated": 94208,
-    "invalid_rows": 0,
-    "aggregation_pass": true,
-    "behavioral_diagnostics_pass": true,
-    "all92_scoring_pass": true,
-    "direct58_scoring_pass": true,
-    "bootstrap_replicates": 10000,
-    "bootstrap_seed": 260819
-  },
   "security": {
     "service_role_key_hardcoded_in_repo": false,
     "service_role_key_runtime_source": "Supabase Edge Function secret environment",
-    "social_private_table_direct_public_access": false,
-    "user_requested_secret_rotation_after_wiring": true
+    "publishable_key_is_not_treated_as_secret": true,
+    "evidence_of_service_role_leak_found": false,
+    "turnstile_secret_never_sent_to_frontend": true
   },
-  "next_allowed_action": "Open/continue the public bring-your-own-LLM collection. Every validated user contribution is automatically preserved as R0 and socialized into illustrative R1/R2 while collective directional results remain hidden. After the explicit reveal, the social frontend switches to real participative R0 plus the real frozen social graph. Accumulate sufficient independent LLM coverage and freeze the scientific promotion/calibration gate before any 2016 outcome unseal. Keep 2021 sealed.",
-  "external_blocker": "NONE_FOR_BACKEND_OR_COLLECTION. The current GitHub-triggered Vercel frontend deployment is blocked only by the account build-rate-limit; the branch contains the connected frontend code.",
-  "stop_rule": "Do not use the illustrative live lambdas as calibrated evidence. Do not reveal directional collective R0/R1/R2 during collection. Do not modify the blinded voter population, election environment, mapping, scientific graph rules, lambda grid, aggregation, metrics or gates after opening historical outcomes. Do not open 2021 before a valid 2016-only freeze."
+  "next_allowed_action": "Create/configure a Cloudflare Turnstile widget for the production frontend domain and set TURNSTILE_SITE_KEY plus TURNSTILE_SECRET_KEY as Supabase Edge Function secrets. Then deploy the current branch frontend once the Vercel build-rate-limit clears. Only after protection_ready is verified true may public BYO-LLM collection open. Keep 2016 and 2021 sealed.",
+  "external_blockers": [
+    "Cloudflare Turnstile credentials are external and cannot be created or written with the connectors available in this session.",
+    "Vercel GitHub deployment is currently blocked by the account build-rate-limit."
+  ],
+  "stop_rule": "Do not weaken Turnstile/ticket/rate-limit controls after collection begins without a versioned protocol amendment. Never quarantine based on political direction or substantive LLM output shape. Do not reveal directional collective R0/R1/R2 during collection. Do not use illustrative social lambdas as calibrated evidence. Do not open 2016 or 2021 as a consequence of this anti-abuse implementation."
 }
