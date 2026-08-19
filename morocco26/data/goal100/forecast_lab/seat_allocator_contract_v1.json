@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-LEGAL-SEAT-ALLOCATOR-V1",
+  "status": "FROZEN_BEFORE_VALIDATION_RUN",
+  "scope": "House of Representatives constituency-level list seat counts; candidate identity within a winning list is out of scope.",
+  "scientific_boundary": {
+    "allocator_is_not_a_predictive_model": true,
+    "allocator_parameters_may_not_be_fit_to_forecast_error": true,
+    "historical_outcomes_may_only_be_used_to_validate_legal_reproduction": true,
+    "unresolved_legal_tie_must_not_be_silently_broken": true
+  },
+  "regimes": {
+    "2007": {
+      "threshold_fraction_of_expressed_list_votes": 0.06,
+      "quotient_denominator": "SUM_VOTES_OF_LISTS_AT_OR_ABOVE_THRESHOLD",
+      "quotient_divisor": "SEATS",
+      "remaining_seats": "LARGEST_REMAINDERS",
+      "validation_anchor": "historical/2007 canonical reconstruction already reproduces all 295 official local seats in aggregate"
+    },
+    "2011": {
+      "threshold_fraction_of_expressed_list_votes": 0.06,
+      "quotient_denominator": "SUM_VOTES_OF_LISTS_AT_OR_ABOVE_THRESHOLD",
+      "quotient_divisor": "SEATS",
+      "remaining_seats": "LARGEST_REMAINDERS",
+      "primary_legal_anchor": "Constitutional Council application of Article 84: 53,421 qualified-list votes / 3 seats = quotient 17,807"
+    },
+    "2016": {
+      "threshold_fraction_of_expressed_list_votes": 0.03,
+      "quotient_denominator": "SUM_VOTES_OF_LISTS_AT_OR_ABOVE_THRESHOLD",
+      "quotient_divisor": "SEATS",
+      "remaining_seats": "LARGEST_REMAINDERS",
+      "primary_legal_anchor": "Constitutional Council Decision 1012/2016: Article 84 paragraph 2 threshold reduced from 6% to 3%"
+    },
+    "2021": {
+      "threshold_fraction_of_expressed_list_votes": 0.0,
+      "quotient_denominator": "REGISTERED_VOTERS_IN_CONSTITUENCY",
+      "quotient_divisor": "SEATS",
+      "remaining_seats": "LARGEST_REMAINDERS",
+      "registered_voters_required": true,
+      "primary_legal_anchor": "Constitutional Court Decision 118/21, Article 84 paragraph 2"
+    },
+    "2026": {
+      "threshold_fraction_of_expressed_list_votes": 0.0,
+      "quotient_denominator": "REGISTERED_VOTERS_IN_CONSTITUENCY",
+      "quotient_divisor": "SEATS",
+      "remaining_seats": "LARGEST_REMAINDERS",
+      "registered_voters_required": true,
+      "legal_version_note": "Organic Law 53.25 changes Article 84 paragraph 3; the paragraph-2 registered-voter quotient remains the seat-count basis.",
+      "final_ballot_required_for_forecast": true
+    }
+  },
+  "tie_policy": {
+    "exact_remainder_tie_crossing_last_available_seat": "UNRESOLVED_LEGAL_TIE",
+    "no_alphabetical_or_random_tie_break": true
+  },
+  "expected_validation": {
+    "2007": "PASS_EXACT_295_LOCAL_SEATS_AND_OFFICIAL_AGGREGATE",
+    "2011": "PASS_JUDICIAL_NUMERIC_QUOTIENT_TEST_AND_FULL_ROW_ARITHMETIC",
+    "2016": "PASS_VERSIONED_3_PERCENT_RULE_AND_FULL_ROW_ARITHMETIC",
+    "2021": "CODE_READY_DATA_BLOCKED_IF_REGISTERED_VOTERS_ABSENT",
+    "2026": "CODE_READY_AWAITS_FINAL_REGISTERED_COUNTS_AND_BALLOT"
+  },
+  "F0_modified": false
+}
