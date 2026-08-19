@@ -1,0 +1,15 @@
+# Local GPT baseline artifacts — never commit generated decisions or auth material.
+_bundle_cache/
+_runs/
+G0_CHATGPT_*/
+outputs/
+preflight.json
+run_state.json
+output_manifest.json
+*.jsonl
+*.jsonl.meta.json
+
+# Codex authentication is stored outside this directory in ~/.codex.
+# Never copy auth.json into the repository.
+auth.json
+.codex/
