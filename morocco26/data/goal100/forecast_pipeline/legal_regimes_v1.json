@@ -9,7 +9,7 @@
       "amendment": "06.02",
       "law_base": "31.97",
       "local": {
-        "quotient_mode": "eligible_valid_votes_div_seats",
+        "quotient_mode": "all_valid_votes_div_seats",
         "remainder_rule": "largest_remainder",
         "seat_tier": "local",
         "seats_total": 295,
@@ -17,20 +17,20 @@
         "threshold_fraction_valid_votes": 0.03
       },
       "national": {
-        "quotient_mode": "eligible_valid_votes_div_seats",
+        "quotient_mode": "all_valid_votes_div_seats",
         "remainder_rule": "largest_remainder",
         "seat_tier": "national",
         "seats_total": 30,
         "threshold_fraction_valid_votes": 0.03
       },
       "native_local_constituencies": 91,
-      "status": "CORE_RULES_VERIFIED_HISTORICAL"
+      "status": "CORE_RULES_HISTORICAL_PENDING_REFERENCE_REPLAY_WHEN_DATA_ARRIVES"
     },
     "2007": {
       "amendment": "22.06",
       "law_base": "31.97",
       "local": {
-        "quotient_mode": "eligible_valid_votes_div_seats",
+        "quotient_mode": "all_valid_votes_div_seats",
         "remainder_rule": "largest_remainder",
         "seat_tier": "local",
         "seats_total": 295,
@@ -38,19 +38,19 @@
         "threshold_fraction_valid_votes": 0.06
       },
       "national": {
-        "quotient_mode": "eligible_valid_votes_div_seats",
+        "quotient_mode": "all_valid_votes_div_seats",
         "remainder_rule": "largest_remainder",
         "seat_tier": "national",
         "seats_total": 30,
         "threshold_fraction_valid_votes": 0.06
       },
       "native_local_constituencies": 95,
-      "status": "CORE_RULES_VERIFIED_HISTORICAL"
+      "status": "CORE_RULES_HISTORICAL_PENDING_REFERENCE_REPLAY_WHEN_DATA_ARRIVES"
     },
     "2011": {
       "law_base": "27.11",
       "local": {
-        "quotient_mode": "eligible_valid_votes_div_seats",
+        "quotient_mode": "all_valid_votes_div_seats",
         "remainder_rule": "largest_remainder",
         "seat_tier": "local",
         "seats_total": 305,
@@ -60,7 +60,7 @@
       "national": {
         "exact_combined_90_requires_independent_segment_allocation": true,
         "independent_segment_seat_counts": [60, 30],
-        "quotient_mode": "eligible_valid_votes_div_seats",
+        "quotient_mode": "all_valid_votes_div_seats",
         "remainder_rule": "largest_remainder",
         "seat_tier": "national",
         "seats_total": 90,
@@ -68,13 +68,13 @@
         "threshold_fraction_valid_votes": 0.03
       },
       "native_local_constituencies": 92,
-      "status": "CORE_RULES_VERIFIED"
+      "status": "CORE_RULES_VERIFIED_REFERENCE_REPLAY_REQUIRED"
     },
     "2016": {
       "amendment": "20.16",
       "law_base": "27.11",
       "local": {
-        "quotient_mode": "eligible_valid_votes_div_seats",
+        "quotient_mode": "all_valid_votes_div_seats",
         "remainder_rule": "largest_remainder",
         "seat_tier": "local",
         "seats_total": 305,
@@ -84,7 +84,7 @@
       "national": {
         "exact_combined_90_requires_independent_segment_allocation": true,
         "independent_segment_seat_counts": [60, 30],
-        "quotient_mode": "eligible_valid_votes_div_seats",
+        "quotient_mode": "all_valid_votes_div_seats",
         "remainder_rule": "largest_remainder",
         "seat_tier": "national",
         "seats_total": 90,
@@ -92,7 +92,7 @@
         "threshold_fraction_valid_votes": 0.03
       },
       "native_local_constituencies": 92,
-      "status": "CORE_RULES_VERIFIED"
+      "status": "CORE_RULES_VERIFIED_REFERENCE_REPLAY_REQUIRED"
     },
     "2021": {
       "amendment": "04.21",
@@ -168,14 +168,14 @@
     }
   },
   "registry_id": "M26-LEGAL-SEAT-REGIMES-V1",
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "scope": "House of Representatives seat-allocation mechanics needed by the forecast laboratory. This is an implementation registry, not a substitute for official legal texts.",
   "source_basis": [
-    {"authority": "Organic law 31.97 as amended by 06.02 / contemporaneous electoral implementation", "note": "Local and national threshold 3%; eligible-vote quotient and largest remainder; 295 local seats in 91 districts plus 30 national seats.", "year": 2002},
-    {"authority": "Constitutional Council decision 07/630 on organic law 22.06", "note": "Threshold for lists participating in seat allocation raised from 3% to 6% in local and national constituencies; 295 local seats in 95 districts plus 30 national seats.", "year": 2007},
-    {"authority": "Moroccan legal database / organic law 27.11", "note": "Article 84: 6% local threshold, quotient electoral, largest remainders; national threshold 3%.", "year": 2011},
-    {"authority": "Official Gazette / organic law 20.16", "note": "Article 84 local threshold amended from 6% to 3%; article 85 national mechanism retained with 30-seat second segment.", "year": 2016},
-    {"authority": "Official Gazette / organic law 04.21", "note": "Article 84 quotient explicitly becomes registered voters divided by seats; 90 regional seats replace the national tier. Article 84 also requires a unique list/candidate to reach at least one fifth of registered voters.", "year": 2021},
-    {"authority": "Official Gazette / organic law 53.25", "note": "53.25 amends paragraph 3 of article 84 but does not replace the 2021 registered-voter quotient paragraph. The unique-list one-fifth rule remains part of the consolidated Article 84 unless separately amended.", "year": 2026}
+    {"authority": "Organic law 31.97 as amended by 06.02 / contemporaneous electoral implementation", "note": "2002: local/national threshold 3%; quotient based on valid votes; largest remainder; 295 local seats in 91 districts plus 30 national seats. Exact reference replay awaits canonical 2002 data.", "year": 2002},
+    {"authority": "Constitutional Council decision 07/630 on organic law 22.06 / contemporaneous electoral implementation", "note": "2007: threshold for lists participating in seat allocation raised to 6%; quotient based on valid votes; 295 local seats in 95 districts plus 30 national seats. Exact reference replay awaits canonical 2007 data.", "year": 2007},
+    {"authority": "Moroccan legal database / organic law 27.11 and contemporaneous explanations of Article 84", "note": "2011: 6% local threshold; quotient is valid votes divided by seats; threshold excludes lists from allocation but does not redefine the valid-vote denominator; largest remainder. National threshold 3%.", "year": 2011},
+    {"authority": "Official Gazette / organic law 20.16 and contemporaneous explanations", "note": "2016: local threshold amended from 6% to 3%; quotient remains valid votes divided by seats; national 60/30 segments remain independent.", "year": 2016},
+    {"authority": "Official Gazette / organic law 04.21", "note": "Article 84 quotient becomes registered voters divided by seats; 90 regional seats replace the national tier. Unique list/candidate requires at least one fifth of registered voters.", "year": 2021},
+    {"authority": "Official Gazette / organic law 53.25", "note": "53.25 amends paragraph 3 of Article 84 but does not replace the 2021 registered-voter quotient paragraph.", "year": 2026}
   ]
 }
