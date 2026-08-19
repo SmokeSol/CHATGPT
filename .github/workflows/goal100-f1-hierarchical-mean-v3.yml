@@ -1,0 +1,27 @@
+name: Goal100 F1 hierarchical territorial mean V3
+on:
+  pull_request:
+    branches: [morocco26-e-reason]
+    paths:
+      - 'morocco26/data/goal100/f1_baseline_rebuild_contract_v3.json'
+      - 'morocco26/scripts/goal100_f1_hierarchical_mean_v3.py'
+      - '.github/workflows/goal100-f1-hierarchical-mean-v3.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  develop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy
+      - run: python morocco26/scripts/goal100_f1_hierarchical_mean_v3.py
+      - run: python -c "import json; d=json.load(open('morocco26/data/goal100/f1_hierarchical_mean_dev_v3.json')); x=d['selected_candidate'] or d['best_near_miss']; print(json.dumps({'status':d['status'],'eligible_candidate_count':d['eligible_candidate_count'],'candidate_count':d['candidate_count'],'params':{k:x[k] for k in ['party_slope_pool_fraction','national_scale','territorial_scale']},'coverage_shortfall':x['selection_coverage_shortfall'],'calibration_error':x['selection_calibration_error'],'energy':x['selection_energy'],'width95':x['selection_width95'],'rmse':x['selection_rmse']}, ensure_ascii=False))"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: f1-hierarchical-mean-v3-results
+          path: morocco26/data/goal100/f1_hierarchical_mean_dev_v3.json
+          if-no-files-found: error

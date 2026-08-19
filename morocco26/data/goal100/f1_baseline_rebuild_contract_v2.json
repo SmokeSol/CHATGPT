@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "contract_id": "M26-GOAL100-F1-BASELINE-REBUILD-V2",
+  "parent_contract_id": "M26-GOAL100-F1-BASELINE-REBUILD-V1",
+  "frozen_on": "2026-08-19",
+  "scientific_status": "POST_2021_DEVELOPMENT_2026_UNTOUCHED",
+  "purpose": "Repair the conventional F1 uncertainty family after V1 produced zero eligible candidates, without changing the persistence mean model, calibration thresholds, F0, or any agentic layer.",
+  "revision_trigger": {
+    "v1_result": "F1_HIERARCHICAL_UNCERTAINTY_NOT_READY_PARTY_CALIBRATION",
+    "eligible_candidates": 0,
+    "best_v1_context": {
+      "national_scale": 0.5,
+      "territorial_scale": 1.5,
+      "mean_width95": 0.4853277904356166,
+      "mean_energy_score": 0.3374653949081945,
+      "heldout_2011_to_2016_undercoverage": ["PAM", "MP", "UC"],
+      "heldout_2016_to_2021_undercoverage": ["PI", "RNI", "UC", "MP"]
+    },
+    "mechanistic_diagnosis": "V1 national uncertainty is rank-1: every national draw is parallel to the single realized national CLR vector in the training transition. This gives zero or near-zero support to unseen party-direction national shocks. Territorial marginal dispersion is also inherited without shrinkage, allowing training-transition low-variance party dimensions to remain implausibly narrow out of transition."
+  },
+  "frozen_mean_model": "V0_PERSIST",
+  "uncertainty_family": {
+    "national": "Full-support CLR-subspace shrinkage prior: combine the empirical rank-1 training national direction with isotropic zero-mean Gaussian noise projected onto the CLR subspace. The total national scale and isotropic fraction are selected only from the frozen grid.",
+    "territorial": "Bootstrap training territorial residual rows, then shrink party-specific marginal variances toward their pooled variance before CLR recentering. The pooling fraction and total territorial scale are selected only from the frozen grid.",
+    "national_scale_grid": [1.0, 1.5, 2.0],
+    "national_isotropic_fraction_grid": [0.5, 1.0],
+    "territorial_scale_grid": [1.25, 1.5, 1.75],
+    "territorial_pool_fraction_grid": [0.5, 1.0],
+    "candidate_count": 36,
+    "draws_per_territory": 4096,
+    "common_random_numbers_across_candidates": true,
+    "seed_fold_2011_to_2016": 26081921,
+    "seed_fold_2016_to_2021": 26081922
+  },
+  "crossfit": {
+    "fold_A": "train uncertainty on 2016->2021 residual structure; evaluate persistence forecast on 2011->2016",
+    "fold_B": "train uncertainty on 2011->2016 residual structure; evaluate persistence forecast on 2016->2021",
+    "heldout_outcomes_never_used_to_construct_fold_uncertainty": true
+  },
+  "gates": {
+    "party_coverage80_floor": 0.7182,
+    "party_coverage95_floor": 0.9054,
+    "coverage_gate": "Every one of the 9 frozen party buckets must clear both floors in both crossfit folds.",
+    "sharpness_gate": "Selected mean 95% interval width must be strictly below F0 Uncertainty V2 width 0.5445930074002108.",
+    "selection": "Among candidates passing party coverage in both folds, minimize mean absolute calibration error, then mean energy score, then mean 95% interval width.",
+    "forbidden": [
+      "relax coverage floors after seeing results",
+      "widen beyond the frozen candidate grid",
+      "change V0_PERSIST mean model inside this experiment",
+      "use 2026 outcomes",
+      "modify F0",
+      "reopen E_reason"
+    ]
+  },
+  "terminal_states": [
+    "F1_FULL_SUPPORT_UNCERTAINTY_READY_FOR_REFIT",
+    "F1_FULL_SUPPORT_UNCERTAINTY_FAIL_SHARPNESS",
+    "F1_FULL_SUPPORT_UNCERTAINTY_NOT_READY_PARTY_CALIBRATION"
+  ],
+  "status": "FROZEN_BEFORE_F1_FULL_SUPPORT_UNCERTAINTY_EXECUTION"
+}

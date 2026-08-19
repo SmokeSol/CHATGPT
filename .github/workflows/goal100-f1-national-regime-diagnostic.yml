@@ -1,0 +1,26 @@
+name: Goal100 F1 national regime diagnostic
+on:
+  pull_request:
+    branches: [morocco26-e-reason]
+    paths:
+      - 'morocco26/scripts/goal100_f1_national_regime_diagnostic.py'
+      - '.github/workflows/goal100-f1-national-regime-diagnostic.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy
+      - run: python morocco26/scripts/goal100_f1_national_regime_diagnostic.py
+      - run: cat morocco26/data/goal100/f1_national_regime_diagnostic.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: f1-national-regime-diagnostic
+          path: morocco26/data/goal100/f1_national_regime_diagnostic.json
+          if-no-files-found: error
