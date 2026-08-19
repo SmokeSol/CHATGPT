@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-NATIONAL-ROLLING-ORIGIN-SELECTION-V1",
+  "target_year": 2026,
+  "objective": "Select the best national party-strength forecast from historically available pre-election information before any 2026-specific signal can affect the numeric national forecast.",
+  "principle": "The national layer is an empirical forecasting problem, not a political-evidence aggregation exercise.",
+  "mandatory_folds": [
+    {"origin_year": 2007, "target_year": 2011},
+    {"origin_year": 2011, "target_year": 2016},
+    {"origin_year": 2016, "target_year": 2021}
+  ],
+  "optional_fold": {
+    "origin_year": 2002,
+    "target_year": 2007,
+    "gate": "USE_ONLY_IF_A_COMPLETE_AND_COMPARABLE_NATIONAL_PARTY_SHARE_VECTOR_CAN_BE_CERTIFIED; partial 2002 district vote matrices must not be silently completed"
+  },
+  "base_input_class": "PRIOR_LEGISLATIVE_NATIONAL_PARTY_SHARES",
+  "candidate_family_policy": {
+    "small_sample_guardrail": "Prefer a small preregistered family with shrinkage; do not search an unrestricted model space over three principal folds.",
+    "required_baselines": [
+      "PREVIOUS_NATIONAL_PERSISTENCE",
+      "POOLED_SHRUNK_NATIONAL_SWING",
+      "PARTY_SHRUNK_NATIONAL_SWING",
+      "SHRUNK_MEAN_REVERSION"
+    ],
+    "entrant_exit_policy": "Party births, mergers, disappearances and OTHER must use an explicit historically reproducible crosswalk; no retroactive knowledge of target outcomes."
+  },
+  "selection": {
+    "primary_metric": "equal-weight mean fold compositional party-share RMSE",
+    "secondary_metrics": [
+      "party-share MAE",
+      "fold worst-case RMSE",
+      "rank/top-party accuracy"
+    ],
+    "winner_rule": "Choose the preregistered candidate with the lowest primary metric unless it fails a predeclared stability or entrant/exit integrity gate.",
+    "target_outcome_leakage": "FORBIDDEN"
+  },
+  "incremental_input_admission": {
+    "default": "REJECTED",
+    "rule": "A new pre-election information class may affect the 2026 national forecast only if the same class can be reconstructed comparably before historical target elections and adding it improves rolling-origin national forecast skill out of sample under a frozen transformation.",
+    "examples_not_automatically_admitted": [
+      "opinion polls",
+      "partial/intermediate election results",
+      "candidate/list coverage",
+      "defections/ralliements",
+      "turnout intentions",
+      "qualitative political reporting",
+      "prediction markets"
+    ],
+    "no_current_only_exception": true
+  },
+  "national_uncertainty_gate": {
+    "required_after_point_model_selection": true,
+    "method": "Calibrate national forecast residuals from strict rolling-origin errors of the selected national model, using shrinkage/variance floors appropriate to the small number of independent election transitions.",
+    "must_report": [
+      "fold residual vectors",
+      "party and pooled error scales",
+      "cross-party dependence rule",
+      "interval-coverage diagnostics",
+      "small-sample limitation"
+    ]
+  },
+  "downstream_only_after_pass": [
+    "national_2026_point_vector",
+    "national_2026_draw_generator",
+    "lambda_0_5_territorialization",
+    "conditional_territorial_residual_resampling",
+    "legal_395_seat_simulation",
+    "probability_promotion"
+  ],
+  "status": "PREREGISTERED_READY_TO_IMPLEMENT"
+}
