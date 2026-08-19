@@ -1,0 +1,44 @@
+name: Morocco26 Legal Seat Allocator V1
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [morocco26-e-reason]
+    paths:
+      - 'morocco26/scripts/legal_seat_allocator_v1.py'
+      - 'morocco26/scripts/validate_legal_seat_allocator_v1.py'
+      - 'morocco26/data/goal100/forecast_lab/seat_allocator_contract_v1.json'
+      - 'morocco26/data/goal100/historical/2007/**'
+      - 'morocco26/data/goal100/historical/tafra_legislative_2011_canonical.json'
+      - 'morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json'
+      - 'morocco26/data/goal100/historical/tafra_legislative_2021_canonical.json'
+      - '.github/workflows/morocco26-seat-allocator-v1.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-e-reason
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate legal seat allocator
+        run: python morocco26/scripts/validate_legal_seat_allocator_v1.py
+      - name: Persist validation result
+        run: |
+          git config user.name "morocco26-seat-allocator-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add morocco26/data/goal100/forecast_lab/seat_allocator_validation_v1.json
+          if git diff --cached --quiet; then
+            echo "No validation output changes"
+            exit 0
+          fi
+          git commit -m "forecast-lab: persist legal seat allocator validation v1"
+          git push origin HEAD:morocco26-e-reason
