@@ -1,4 +1,6 @@
-# Phase-2 architecture and causal contract
+# HISTORICAL ARCHIVE — Phase-2 architecture and causal contract
+
+> **Not current operating authority.** This file documents an earlier Phase-2 architecture and is preserved for reproducibility/audit. The current forecast authority is `../CURRENT_STATE.md` plus `../data/goal100/forecast_lab/probabilistic_forecast_2026_state_v4.json`. New 2026 evidence must follow `LIVE_2026_UPDATE_RUNBOOK.md`.
 
 ```text
 PUBLIC SOURCES / OFFICIAL RESULTS / MEDIAS24

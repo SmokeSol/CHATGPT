@@ -1,0 +1,40 @@
+{
+  "F0_modified": false,
+  "draws_each": 50000,
+  "interpretation": "Primary applies the empirically selected lambda=0.5 only where it was validated (local constituencies). Sensitivity also applies lambda=0.5 to regional ballots to measure the effect of that unvalidated extrapolation.",
+  "primary": {
+    "draws": 50000,
+    "parties": {
+      "MP": {"P_first_or_tied": 0.01622, "P_fractional_first": 0.015103333333333335, "P_sole_first": 0.014, "mean": 44.051, "median": 42.0, "q025": 19.0, "q975": 78.0},
+      "OTHER": {"P_first_or_tied": 0.0, "P_fractional_first": 0.0, "P_sole_first": 0.0, "mean": 20.67456, "median": 20.0, "q025": 5.0, "q975": 41.0},
+      "PAM": {"P_first_or_tied": 0.24822, "P_fractional_first": 0.24822, "P_sole_first": 0.24822, "mean": 59.73952, "median": 51.0, "q025": 8.0, "q975": 142.0},
+      "PI": {"P_first_or_tied": 0.0, "P_fractional_first": 0.0, "P_sole_first": 0.0, "mean": 49.76628, "median": 52.0, "q025": 20.0, "q975": 77.0},
+      "PJD": {"P_first_or_tied": 0.24978, "P_fractional_first": 0.24978, "P_sole_first": 0.24978, "mean": 42.90086, "median": 19.0, "q025": 1.0, "q975": 128.0},
+      "PPS": {"P_first_or_tied": 0.00002, "P_fractional_first": 0.00001, "P_sole_first": 0.0, "mean": 33.50622, "median": 33.0, "q025": 19.0, "q975": 50.0},
+      "RNI": {"P_first_or_tied": 0.48486, "P_fractional_first": 0.4835633333333333, "P_sole_first": 0.48228, "mean": 69.94996, "median": 68.0, "q025": 9.0, "q975": 151.0},
+      "UC": {"P_first_or_tied": 0.00362, "P_fractional_first": 0.003303333333333334, "P_sole_first": 0.003, "mean": 38.89102, "median": 36.0, "q025": 15.0, "q975": 71.0},
+      "USFP": {"P_first_or_tied": 0.00002, "P_fractional_first": 0.00002, "P_sole_first": 0.00002, "mean": 35.52058, "median": 34.0, "q025": 19.0, "q975": 56.0}
+    },
+    "snapshot_id": "F-ROLLING-V2-LOCAL"
+  },
+  "primary_snapshot": "F-ROLLING-V2-LOCAL",
+  "schema_version": "2.0",
+  "selected_lambda": 0.5,
+  "sensitivity": {
+    "draws": 50000,
+    "parties": {
+      "MP": {"P_first_or_tied": 0.01714, "P_fractional_first": 0.01605, "P_sole_first": 0.01496, "mean": 44.25494, "median": 42.0, "q025": 19.0, "q975": 79.0},
+      "OTHER": {"P_first_or_tied": 0.0, "P_fractional_first": 0.0, "P_sole_first": 0.0, "mean": 20.36046, "median": 19.0, "q025": 5.0, "q975": 41.0},
+      "PAM": {"P_first_or_tied": 0.24822, "P_fractional_first": 0.24822, "P_sole_first": 0.24822, "mean": 59.6914, "median": 51.0, "q025": 8.0, "q975": 142.0},
+      "PI": {"P_first_or_tied": 0.0, "P_fractional_first": 0.0, "P_sole_first": 0.0, "mean": 49.52368, "median": 51.0, "q025": 19.0, "q975": 76.0},
+      "PJD": {"P_first_or_tied": 0.24978, "P_fractional_first": 0.24978, "P_sole_first": 0.24978, "mean": 42.904, "median": 19.0, "q025": 1.0, "q975": 128.0},
+      "PPS": {"P_first_or_tied": 0.00002, "P_fractional_first": 0.00001, "P_sole_first": 0.0, "mean": 33.51484, "median": 33.0, "q025": 19.0, "q975": 50.0},
+      "RNI": {"P_first_or_tied": 0.48336, "P_fractional_first": 0.48197, "P_sole_first": 0.48058, "mean": 69.80452, "median": 68.0, "q025": 9.0, "q975": 151.0},
+      "UC": {"P_first_or_tied": 0.00426, "P_fractional_first": 0.00393, "P_sole_first": 0.0036, "mean": 39.311, "median": 37.0, "q025": 15.0, "q975": 72.0},
+      "USFP": {"P_first_or_tied": 0.00006, "P_fractional_first": 0.00004, "P_sole_first": 0.00002, "mean": 35.63516, "median": 34.0, "q025": 19.0, "q975": 56.0}
+    },
+    "snapshot_id": "F-ROLLING-V2-SYMMETRIC"
+  },
+  "sensitivity_snapshot": "F-ROLLING-V2-SYMMETRIC",
+  "target_year": 2026
+}

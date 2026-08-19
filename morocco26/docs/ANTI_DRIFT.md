@@ -1,87 +1,102 @@
-# MOROCCO//26 — Anti-drift operating contract
+# MOROCCO//26 — Anti-Drift Operating Contract
 
-## North star
+## Current north star
 
-MOROCCO//26 exists to **decode the 2026 Moroccan parliamentary election using an empirically anchored artificial electoral society, then test whether agent dynamics add stable out-of-sample value beyond structural baselines**.
+Maintain the strongest falsifiable territory-level probabilistic forecast for Morocco 2026, preserve every frozen historical result, and determine whether new structured or agentic intelligence adds **incremental predictive value** beyond the promoted Forecast-Lab V4 baseline.
 
-The Electoral Intelligence Graph is infrastructure and empirical ground truth. The dashboard is presentation. A forecast is a possible output only after validation. None of those are the north star by themselves.
+Current authority: `../CURRENT_STATE.md` and `../data/goal100/forecast_lab/probabilistic_forecast_2026_state_v4.json`.
 
 ## Priority order
 
-1. **70% — Political understanding of Morocco 2026.** Identify mechanisms that change turnout, party choice, territorial cutoffs, seat risk or coalition structure, and distinguish signal from political noise.
-2. **30% — Artificial-society experiment.** Determine whether calibrated synthetic agents / AgentSociety add falsifiable explanatory or predictive value beyond structural/statistical models.
+1. Preserve forecast validity, provenance and reproducibility.
+2. Improve the empirical 2026 evidence graph.
+3. Test whether new information classes improve frozen out-of-sample forecasting.
+4. Improve product/publication only when it does not silently change science.
 
 ## Mandatory contribution test for every material task
 
-Before work begins, record:
+Before changing model behaviour, record:
 
-1. Which north-star question does this answer?
-2. Which phase exit gate does it advance?
-3. What falsifiable claim becomes testable?
-4. What evidence class is being added?
-   - OBSERVED
-   - DERIVED
-   - SYNTHETIC_CALIBRATED
-   - SYNTHETIC_SENSITIVITY
-   - LLM_DERIVED
-5. What result would kill/reverse the proposed mechanism?
-6. Why is this work more valuable than directly improving the Morocco-2026 evidence graph?
+1. Which forecast/intelligence question is being advanced?
+2. Which evidence class is being added or changed?
+3. What is the frozen comparison baseline?
+4. What predefined metric determines improvement?
+5. What result would reject or kill the proposed change?
+6. Does the change alter evidence, mechanics, predictive inference, or presentation only?
 
-If items 1–5 cannot be answered, the task is **DRIFT / DEFER**.
+If these cannot be answered, classify the task as maintenance/reporting or defer it.
 
 ## Hard anti-drift rules
 
-### AD-01 — Infrastructure is never a scientific milestone
-GitHub, Vercel, UI, dashboards, deployment, refactors and monitoring count as progress only when they unblock a named scientific/political gate. UI polish cannot move the formal project-completion percentage.
+### AD-01 — Frozen artifacts are immutable
 
-### AD-02 — No forecast-by-default
-National or constituency forecasts remain `BLOCKED` until the constitution's forecast unlock gate passes. A simulation result must not be relabeled a forecast.
+Never overwrite F-1, F0, B2 freeze artifacts, prior promoted forecasts, failed runs or consumed historical scoring artifacts. Corrections create new versions/snapshots with provenance.
 
-### AD-03 — No synthetic-to-observed laundering
-Synthetic demographics, diffusion, trust, portability, peer influence or LLM outputs must retain their epistemic labels. They cannot silently become facts about Moroccan voters.
+### AD-02 — Evidence is not a numeric effect
 
-### AD-04 — AgentSociety has to earn its existence
-Model D is retained only if it is replayable, stable and improves frozen out-of-sample performance versus both B and C. Better prose, plausible narratives or larger agent counts are not evidence.
+A true candidate/event/poll/news fact does not automatically change probabilities. It must be classified as `MECHANICAL`, `PREDICTIVE_CALIBRATED`, `REPORTING_ONLY/SHADOW`, or `PENDING/EXCLUDED`.
 
-### AD-05 — Seat impact requires a chain
-A political event is not called electorally material unless the analysis can trace:
-`observed event -> mechanism -> affected geography -> behavior/turnout/vote effect -> local cutoff/seat or coalition consequence`.
-If the chain breaks, classify the result as salience/reach only.
+### AD-03 — Predictive classes must earn admission historically
 
-### AD-06 — No tuning toward drama
-Parameters may not be tuned because a result looks politically uninteresting. Null and non-material findings are retained. Changes require an amendment with timing, reason and anti-p-hacking note.
+A new predictive class must be reconstructed with pre-target historical information and demonstrate incremental out-of-sample skill against the current frozen baseline under a preregistered rule. No arbitrary candidate/notable/defection/poll weights.
+
+### AD-04 — Mechanical changes create new snapshots
+
+Official list status, list rank, candidate withdrawal/disqualification, authoritative age when legally relevant, official registered-voter counts, geometry or law may change mechanical inputs. They never rewrite an older snapshot.
+
+### AD-05 — UNKNOWN stays UNKNOWN
+
+Missing identity, party, territory, candidate status or source confirmation never silently becomes zero, false, absent or a guessed transliteration/match.
+
+### AD-06 — No tuning toward political plausibility
+
+Do not tune because a forecast looks surprising, boring, implausible or inconsistent with commentary. Null and negative results remain visible. Post-hoc party-specific repair after seeing validation outcomes requires a new preregistered experiment, not an edit.
 
 ### AD-07 — Prospective beats retrospective
-Once a 2026 claim is frozen, later evidence may score or falsify it, not rewrite the original prediction/mechanism. Retrospective explanation must be stored separately from prospective output.
 
-### AD-08 — Keep structural baselines alive
-Every agent result must remain comparable to A/B/C0/C. The project must never become an LLM-only society simulation.
+Once a 2026 snapshot/claim is frozen, later information may score or supersede it only through a new snapshot. It may not rewrite what the system claimed at the earlier date.
 
-### AD-09 — Scope boundary
-No voter microtargeting, persuasive political messaging, party campaign optimization or personal voter data. Aggregate mechanism analysis only.
+### AD-08 — Agentic components have no privileged status
 
-## Weekly / milestone drift audit
+LLM/agent outputs must beat the frozen non-agentic baseline on proper scoring. Better explanations, confidence or narrative richness are not evidence of forecast value.
 
-Score each item 0 or 1:
+### AD-09 — Product and science remain separate
 
-- The last material work advanced a canonical value-chain step.
-- At least one falsifiable claim became easier to test.
-- Empirical coverage or out-of-sample validity improved.
-- Synthetic assumptions did not gain epistemic status without evidence.
-- The agent layer was compared against a non-agent baseline.
-- Forecast gates were respected.
-- At least 70% of research effort still serves political understanding of Morocco 2026.
-- A kill criterion remains active for the current experimental layer.
+The Atlas 395 product branch may publish new evidence and changes while the numeric forecast remains unchanged. UI/deployment/product activity does not constitute scientific progress by itself.
 
-**8/8:** ON MISSION  
-**6–7/8:** WATCH  
-**<=5/8:** DRIFT — stop new feature work and return to the evidence/gate backlog.
+### AD-10 — Legal invariants are non-negotiable
 
-## Current interpretation
+Any promoted simulation must preserve the certified electoral mechanics and allocate exactly 395 seats in every draw, with no unexplained legal failures.
 
-The Phase-2 A/B/C0/C pilot is aligned with the original prompt because it tests the causal value of a social-agent layer on top of real territorial anchors. Its strongest current finding is negative but useful: network diffusion can increase reach without producing a material electoral effect under current priors.
+### AD-11 — No synthetic-to-observed laundering
 
-The next useful step is **not a larger simulation for its own sake**. It is a paired advance:
+Synthetic assumptions, inferred features, LLM judgments and sensitivity scenarios retain their epistemic labels and may not silently become observed facts.
 
-1. complete enough of the territorial graph/replay to create a genuine frozen holdout;
-2. run the bounded AgentSociety Model D once against that frozen benchmark and kill it if it fails.
+### AD-12 — Scope boundary
+
+No voter microtargeting, persuasive political messaging optimization, personal voter targeting or campaign manipulation. Aggregate electoral intelligence only.
+
+## Live-update decision rule
+
+When new 2026 information appears, follow `LIVE_2026_UPDATE_RUNBOOK.md`.
+
+The default safe outcome for an uncalibrated but verified fact is:
+
+**Evidence updated. Forecast unchanged.**
+
+## Drift audit
+
+A material change is ON MISSION only if all applicable answers are yes:
+
+- Does provenance remain explicit?
+- Is the current V4 baseline still identifiable and reproducible?
+- Are frozen lineages untouched?
+- Is the new information role explicit?
+- If predictive, was admission tested historically before use?
+- If mechanical, is a new snapshot used rather than an overwrite?
+- Are null/negative results retained?
+- Do legal and simulation invariants remain intact?
+- Is product presentation separated from scientific inference?
+- Can a future evaluator reconstruct exactly what changed and why?
+
+Any failure blocks promotion until corrected.

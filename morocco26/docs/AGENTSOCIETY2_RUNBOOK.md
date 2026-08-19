@@ -1,4 +1,6 @@
-# AgentSociety 2 bounded-execution runbook
+# HISTORICAL ARCHIVE — AgentSociety 2 bounded-execution runbook
+
+> **Not current operating authority.** This runbook documents an earlier Phase-2 experiment and is preserved for reproducibility/audit. New maintainers must start from `../CURRENT_STATE.md`, `../HANDOVER.md` and `LIVE_2026_UPDATE_RUNBOOK.md`. Do not restart this protocol or use it to mutate the current V4 forecast unless a new experiment is explicitly preregistered.
 
 ## Purpose
 

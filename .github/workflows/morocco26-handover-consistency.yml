@@ -1,0 +1,36 @@
+name: MOROCCO26 handover consistency
+
+on:
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'README.md'
+      - 'morocco26/**'
+      - '.github/workflows/morocco26-handover-consistency.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'AGENTS.md'
+      - 'README.md'
+      - 'morocco26/**'
+      - '.github/workflows/morocco26-handover-consistency.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-handover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile handover validator
+        run: python -m py_compile morocco26/scripts/validate_handover.py
+      - name: Validate handover authority and anti-drift pointers
+        run: python morocco26/scripts/validate_handover.py
+      - name: Preserve existing anti-drift gate
+        run: python morocco26/scripts/validate_anti_drift.py
+      - name: Preserve Goal100 registered-state gate
+        run: python morocco26/scripts/validate_goal100_tracking.py

@@ -1,0 +1,67 @@
+{
+  "schema_version": "3.0",
+  "calibration_id": "M26-UNCERTAINTY-V3-CONDITIONAL-TERRITORIAL-SUMMARY",
+  "source_workflow_run_id": 32275894815,
+  "source_artifact_id": 9373977232,
+  "source_artifact_sha256_zip": "8b9500d0ae898488de39aca0082d736a6ba0543fac43f3ac6252b51af87b32b2",
+  "generated_library_file": "uncertainty_calibration_v3_conditional.json",
+  "generated_library_sha256": "8d0a31727ddfca1b0fce5a4187dfaf4a2ec975195b6d98c3034b53fce35380be",
+  "generated_library_canonical_json_sha256": "4f3c36f7eb1e51c414630ed6ecc941e97a1d2e6525b5084bb0a6341a2b8a4704",
+  "canonical_regeneration_command": "python morocco26/scripts/calibrate_uncertainty_v3.py",
+  "freeze_policy": "The complete 241-observation residual library is deterministically regenerated from versioned historical inputs and MUST match generated_library_canonical_json_sha256 before downstream probabilistic use.",
+  "status": "PASS_CONDITIONAL_TERRITORIAL_COMPONENT",
+  "probabilistic_forecast_status": "NOT_PROMOTED",
+  "lambda": 0.5,
+  "fold_support": [57, 92, 92],
+  "n_observations": 241,
+  "pooled": {
+    "share_rmse": 0.07098844167241973,
+    "share_mae": 0.05175159965554559,
+    "mean_territory_l1": 0.46576439689991045
+  },
+  "folds": [
+    {
+      "origin_year": 2007,
+      "target_year": 2011,
+      "mapped_territories": 57,
+      "share_rmse": 0.08152677746973648,
+      "share_mae": 0.05812360586769718,
+      "mean_territory_l1": 0.5231124528092745
+    },
+    {
+      "origin_year": 2011,
+      "target_year": 2016,
+      "mapped_territories": 92,
+      "share_rmse": 0.06946330648362951,
+      "share_mae": 0.05134346147378862,
+      "mean_territory_l1": 0.4620911532640975
+    },
+    {
+      "origin_year": 2016,
+      "target_year": 2021,
+      "mapped_territories": 92,
+      "share_rmse": 0.06525156299851938,
+      "share_mae": 0.04821186442325215,
+      "mean_territory_l1": 0.4339067798092692
+    }
+  ],
+  "territory_l1_quantiles": {
+    "q50": 0.44351792996449,
+    "q80": 0.5448473976621626,
+    "q90": 0.6927237419342119,
+    "q95": 0.7964398097950535
+  },
+  "absolute_party_share_error_q95": {
+    "RNI": 0.15375145599083062,
+    "PAM": 0.1783847908735685,
+    "PI": 0.1347669970495991,
+    "PJD": 0.16696019769370368,
+    "USFP": 0.12784044643307013,
+    "MP": 0.1353298881391988,
+    "UC": 0.10725169162046881,
+    "PPS": 0.09437686889311647,
+    "OTHER": 0.14804527209545382
+  },
+  "interpretation": "These errors measure geography conditional on realized target national party strength. They are not the total prospective 2026 forecast error and must not be used alone to publish seat probabilities.",
+  "remaining_hard_gate": "CURRENT_NATIONAL_2026_POINT_AND_UNCERTAINTY"
+}

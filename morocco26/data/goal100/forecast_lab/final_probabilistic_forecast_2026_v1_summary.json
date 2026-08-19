@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "forecast_id": "M26-PROBABILISTIC-FORECAST-2026-V1-SUMMARY",
+  "target_year": 2026,
+  "status": "PROMOTED",
+  "draws": 50000,
+  "house_seats": 395,
+  "majority_threshold": 198,
+  "seat_stream_sha256": "a10becb1e85c2b3327e9430cd76c7801e6d3f515046ab8ec991c787e016bdf0d",
+  "national_395": {
+    "RNI": {"mean": 88.38036, "median": 98, "q10": 38, "q90": 117, "q025": 0, "q975": 131, "P_first_or_tied": 0.5101, "P_unique_first": 0.49698, "P_majority_198": 0.00006},
+    "PAM": {"mean": 65.11034, "median": 72, "q10": 8, "q90": 105, "q025": 0, "q975": 120, "P_first_or_tied": 0.16508, "P_unique_first": 0.15642, "P_majority_198": 0.00004},
+    "PI": {"mean": 62.70452, "median": 67, "q10": 6, "q90": 106, "q025": 0, "q975": 119, "P_first_or_tied": 0.16938, "P_unique_first": 0.16148, "P_majority_198": 0.0},
+    "USFP": {"mean": 35.08336, "median": 28, "q10": 0, "q90": 84, "q025": 0, "q975": 106, "P_first_or_tied": 0.04424, "P_unique_first": 0.04218, "P_majority_198": 0.0},
+    "OTHER": {"mean": 32.27238, "median": 22, "q10": 2, "q90": 75, "q025": 1, "q975": 128, "P_first_or_tied": 0.0431, "P_unique_first": 0.04194, "P_majority_198": 0.00468},
+    "MP": {"mean": 31.19436, "median": 24, "q10": 0, "q90": 77, "q025": 0, "q975": 94, "P_first_or_tied": 0.0196, "P_unique_first": 0.0184, "P_majority_198": 0.0},
+    "PPS": {"mean": 28.90774, "median": 18, "q10": 0, "q90": 79, "q025": 0, "q975": 104, "P_first_or_tied": 0.03694, "P_unique_first": 0.03552, "P_majority_198": 0.0},
+    "PJD": {"mean": 27.22372, "median": 15, "q10": 0, "q90": 74, "q025": 0, "q975": 102, "P_first_or_tied": 0.02798, "P_unique_first": 0.02682, "P_majority_198": 0.0},
+    "UC": {"mean": 24.12322, "median": 18, "q10": 0, "q90": 61, "q025": 0, "q975": 76, "P_first_or_tied": 0.00216, "P_unique_first": 0.00186, "P_majority_198": 0.0}
+  },
+  "legal_diagnostics": {
+    "contest_count": 104,
+    "contest_draws": 5200000,
+    "statutory_age_prior_contest_draws": 125932,
+    "statutory_age_prior_rate_per_contest_draw": 0.024217692307692308,
+    "statutory_age_prior_seats_marginalized": 164710,
+    "unique_list_threshold_failures": 0,
+    "unfilled_seat_exceptions": 0,
+    "unresolved_after_age_prior": 0,
+    "zero_vote_eligible_lists": 0
+  },
+  "vote_generator_diagnostics": {
+    "national_scale": 0.09991079018029769,
+    "geography_residual_rows": 241,
+    "max_rake_error_runtime": 9.968723513331668e-09,
+    "max_stored_weighted_aggregate_error": 1.0195522134881507e-08
+  },
+  "ci": {
+    "run_id": 32289928633,
+    "head_sha": "bd6cb01465f0703c3f512512e430a6f96fcd54c3",
+    "conclusion": "success",
+    "artifact_id": 9379123421,
+    "artifact_zip_sha256": "d22ccd92f81b22d65e0864ab2ad08e332f27c1a2e1230b7b182554e94d4d60d3"
+  },
+  "interpretation": "This is the first promoted seat probability output of the new separated national/geography architecture. The point is historically selected persistence; probabilities are broad because uncertainty is calibrated conservatively from sparse Moroccan election transitions rather than narrowed by 2026-specific judgement."
+}

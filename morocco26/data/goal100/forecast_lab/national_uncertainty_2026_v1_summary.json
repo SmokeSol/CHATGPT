@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "M26-NATIONAL-UNCERTAINTY-2026-V1-SUMMARY",
+  "contract": "morocco26/data/goal100/forecast_lab/national_uncertainty_contract_v1.json",
+  "selected_point_model": "PREVIOUS_NATIONAL_PERSISTENCE",
+  "prequential": {
+    "scored_folds": ["2002_TO_2007", "2007_TO_2011", "2011_TO_2016", "2016_TO_2021"],
+    "pooled_component_n": 36,
+    "coverage80": 0.8611111111111112,
+    "coverage95": 0.9722222222222222,
+    "required_coverage80": 0.80,
+    "required_coverage95": 0.95,
+    "status": "PASS"
+  },
+  "prospective_2026": {
+    "family": "SPHERICAL_COMPOSITIONAL_STUDENT_T",
+    "degrees_of_freedom": 3,
+    "scale": 0.09991079018029769,
+    "seed": 26092352,
+    "generator_status": "READY_FOR_DOWNSTREAM_SIMULATION"
+  },
+  "ci": {
+    "run_id": 32289928547,
+    "head_sha": "bd6cb01465f0703c3f512512e430a6f96fcd54c3",
+    "conclusion": "success",
+    "artifact_id": 9379070955,
+    "artifact_zip_sha256": "b7613e38c8647ae2fe2ebdfdfb5db1f3c0f745e43d25600bf7cd041892860e05"
+  },
+  "interpretation": "The national uncertainty gate passes chronological componentwise interval coverage. This is a deliberately conservative low-sample tail model; it does not imply narrow party intervals."
+}

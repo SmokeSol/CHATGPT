@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "handover_id": "M26-HANDOVER-V1",
+  "as_of": "2026-08-19T20:14:00+01:00",
+  "canonical_integration_branch": "main",
+  "project_root": "morocco26",
+  "read_order": [
+    "AGENTS.md",
+    "README.md",
+    "morocco26/HANDOVER.md",
+    "morocco26/CURRENT_STATE.md",
+    "morocco26/NORTH_STAR.md",
+    "morocco26/docs/LIVE_2026_UPDATE_RUNBOOK.md",
+    "morocco26/data/goal100/forecast_lab/probabilistic_forecast_2026_state_v4.json",
+    "morocco26/STATUS.md"
+  ],
+  "authoritative_current_state": {
+    "human": "morocco26/CURRENT_STATE.md",
+    "machine": "morocco26/data/goal100/forecast_lab/probabilistic_forecast_2026_state_v4.json",
+    "status": "PROBABILISTIC_FORECAST_2026_PROMOTED"
+  },
+  "active_forecast": {
+    "forecast_id": "M26-PROBABILISTIC-FORECAST-2026-V1",
+    "status": "PROMOTED",
+    "national_model": "PREVIOUS_NATIONAL_PERSISTENCE",
+    "territorial_model": "HALF_SHRINK",
+    "lambda": 0.5,
+    "draws": 50000,
+    "house_seats_every_draw": 395,
+    "seat_stream_sha256": "a10becb1e85c2b3327e9430cd76c7801e6d3f515046ab8ec991c787e016bdf0d",
+    "generated_json_sha256": "c7ab03321c0e3883048862a6d94faeb545066ea996a81a710691c6085f5726d6"
+  },
+  "lineages": {
+    "conventional_immutable": {
+      "sequence": ["F-1", "B2", "F0"],
+      "policy": "READ_ONLY_FROZEN_RESULTS"
+    },
+    "forecast_lab": {
+      "current_state": "V4",
+      "policy": "CURRENT_PROMOTED_RESEARCH_BASELINE"
+    },
+    "agentic_incremental_value": {
+      "policy": "MUST_BE_SCORED_AGAINST_FROZEN_BASELINE"
+    },
+    "atlas_product": {
+      "branch": "atlas395-v0",
+      "policy": "PUBLICATION_DOES_NOT_SILENTLY_MUTATE_SCIENCE"
+    }
+  },
+  "live_2026_policy": {
+    "runbook": "morocco26/docs/LIVE_2026_UPDATE_RUNBOOK.md",
+    "default_unvalidated_role": "REPORTING_ONLY_OR_PENDING",
+    "mechanical_updates_require_new_snapshot": true,
+    "predictive_updates_require_historical_admission": true,
+    "frozen_snapshots_may_be_overwritten": false,
+    "unknown_may_be_zeroed": false
+  },
+  "historical_documents": {
+    "goal100_tracker": "AUDIT_HISTORY_NOT_CURRENT_AUTHORITY",
+    "agentsociety2_runbook": "HISTORICAL_PHASE2_ARCHIVE",
+    "phase2_architecture": "HISTORICAL_PHASE2_ARCHIVE"
+  },
+  "validators": [
+    "python morocco26/scripts/validate_handover.py",
+    "python morocco26/scripts/validate_anti_drift.py",
+    "python morocco26/scripts/validate_goal100_tracking.py"
+  ],
+  "next_scientific_objective": "Run incremental intelligence admission tournaments against the promoted V4 baseline, beginning with historically reconstructable candidate/list information classes; retain null results and keep unadmitted current-only information in shadow/reporting layers."
+}

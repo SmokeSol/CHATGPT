@@ -1,0 +1,53 @@
+{
+  "schema_version": "4.0",
+  "contract_id": "M26-NATIONAL-2026-CONTRACT-V2",
+  "target_year": 2026,
+  "purpose": "Admit a numeric national 2026 point only through a historically selected forecasting rule; current-only political evidence cannot alter the point by judgement.",
+  "required_status_for_structural_center": "READY_FOR_STRUCTURAL_CENTER",
+  "required_data_class": "CURRENT_PRE_ELECTION_NATIONAL_FORECAST",
+  "party_order": ["RNI", "PAM", "PI", "PJD", "USFP", "MP", "UC", "PPS", "OTHER"],
+  "national_point_rule": {
+    "authority": "morocco26/data/goal100/forecast_lab/national_model_selection_contract_v1.json",
+    "formula_authority": "morocco26/data/goal100/forecast_lab/national_model_formulas_v1.json",
+    "base_input_class": "PRIOR_LEGISLATIVE_NATIONAL_LOCAL_BALLOT_SHARES_ONLY",
+    "winner_must_be_selected_by_strict_rolling_origin": true,
+    "2026_specific_judgement_adjustment": "FORBIDDEN"
+  },
+  "incremental_input_admission": {
+    "default": "REJECTED",
+    "rule": "An information class may affect the numeric 2026 point only after a frozen transformation using the same class before historical target elections demonstrably improves out-of-sample national forecast skill.",
+    "not_admitted_by_default": [
+      "opinion polls",
+      "partial or intermediate elections",
+      "candidate or list coverage",
+      "defections or ralliements",
+      "turnout intentions",
+      "qualitative political reporting",
+      "prediction markets"
+    ],
+    "current_only_exception": false
+  },
+  "required_fields": {
+    "forecast_id": "non-empty immutable identifier",
+    "target_year": 2026,
+    "as_of": "ISO-8601 cutoff strictly before the election outcome",
+    "status": "READY_FOR_STRUCTURAL_CENTER",
+    "data_class": "CURRENT_PRE_ELECTION_NATIONAL_FORECAST",
+    "target_outcome_used": false,
+    "party_order": "exact contract order",
+    "point_share": "strictly positive nine-bucket vector summing exactly to one within numerical tolerance",
+    "model": "winner of the frozen rolling-origin tournament",
+    "evidence": "versioned historical inputs + frozen model-selection output"
+  },
+  "uncertainty_policy": {
+    "point_ready_does_not_imply_probability_ready": true,
+    "national_uncertainty_must_be_calibrated_separately": true,
+    "future_2026_signal_may_not_reduce_uncertainty_without_historical_validation": true
+  },
+  "downstream": {
+    "territorial_builder": "morocco26/scripts/forecast_v3_center.py",
+    "territorial_lambda": 0.5,
+    "conditional_geography_calibration": "morocco26/scripts/calibrate_uncertainty_v3.py",
+    "final_probability_gate": "national point + national uncertainty + conditional geography residuals + legal allocator + rolling-origin coverage + >=50000 valid simulations"
+  }
+}

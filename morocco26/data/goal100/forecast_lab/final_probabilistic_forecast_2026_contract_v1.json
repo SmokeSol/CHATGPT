@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "M26-FINAL-PROBABILISTIC-FORECAST-2026-V1",
+  "target_year": 2026,
+  "freeze_status": "FROZEN_BEFORE_FINAL_50000_SEAT_SIMULATION",
+  "purpose": "Assemble only components that already passed their upstream gates into 50,000 legally valid current-law elections; do not tune the forecast from resulting seat probabilities.",
+  "upstream_gates": {
+    "national_point": "PASS_PREVIOUS_NATIONAL_PERSISTENCE_SELECTED_BY_FOUR_FOLD_ROLLING_ORIGIN",
+    "national_uncertainty": "PASS_PREQUENTIAL_80_AND_95_COVERAGE",
+    "territorial_lambda": "PASS_LAMBDA_0_5_THREE_FOLD_ROLLING_ORIGIN",
+    "conditional_geography": "PASS_241_HISTORICAL_RESIDUAL_ROWS",
+    "combined_vote_coverage": "PASS_1656_CELL_PREQUENTIAL_COVERAGE",
+    "legal_mechanics": "PASS_REUSE_CERTIFIED_FMINUS1_V1_1_RUNTIME"
+  },
+  "vote_generator": {
+    "national_point": "morocco26/data/goal100/forecast_lab/national_forecast_2026_v1.json",
+    "national_uncertainty": "M26-NATIONAL-UNCERTAINTY-V1: spherical simplex-tangent Student-t df=3, prospective scale=max historical selected-model national residual RMSE, seed 26092352",
+    "territorial_center": "national_draw + 0.5*(territory_2021-national_2021), normalized then raked to the exact national draw using 2021 local valid-vote weights",
+    "geography_residuals": "sample complete nine-party raw share residual rows actual-minus-conditional-center from 2007_TO_2011, 2011_TO_2016 and 2016_TO_2021; 241 rows total",
+    "geography_seed": 26092854,
+    "geography_residual_scale": 1.0,
+    "post_residual": "floor, row-normalize, then rake all 92 territories back to the same exact national draw",
+    "clr_sampling": "FORBIDDEN"
+  },
+  "regional_ballot_bridge": {
+    "status": "STRUCTURAL_FIRST_PROSPECTIVE_TEST",
+    "formula": "For each region and draw, regional_share_2026 is proportional to regional_share_2021 * simulated_local_region_share_2026 / local_region_share_2021, componentwise, then normalized.",
+    "local_region_aggregation_weights": "2021 local valid votes",
+    "interpretation": "Transfer the simulated local partisan swing into the 2021 regional-ballot composition while preserving the region-specific 2021 regional-versus-local ballot propensity.",
+    "free_parameters": 0,
+    "no_additional_regional_vote_shock": true,
+    "limitation": "2021 is the only election with the current regional-list ballot, so this bridge has no historical current-system transition for calibration."
+  },
+  "reused_structural_legal_mechanics": {
+    "protocol_reference": "morocco26/data/goal100/fminus1_protocol_v1_1.json",
+    "certified_runtime": "morocco26/scripts/goal100_fminus1_runtime_v4.py",
+    "certified_snapshot_code_commit": "18f685769c7e601887467c96428f445511f7ad29",
+    "registered_N": "reuse frozen latent N92 posterior sampler; every draw sums to 15,801,162",
+    "turnout": "reuse robust F-1 V1.1 turnout hierarchy only; old F-1 vote uncertainty is not reused",
+    "valid_vote_fraction": "reuse frozen 2011 local valid-vote fraction model and 2021 regional-to-local valid-vote bridge",
+    "eligible_lists": "positive-vote 2021 lists only, as in F-1 V1.1",
+    "OTHER": "split to actual positive-vote 2021 minor-party codes in observed proportions",
+    "integer_votes": "one support vote per eligible list plus balanced randomized rounding",
+    "vote_rounding_seed": 26092358,
+    "statutory_tie_prior": "UNKNOWN_AGE_EXCHANGEABLE; uniformly sample required lists without replacement only inside a binding equal-remainder group",
+    "statutory_age_prior_seed": 26092360
+  },
+  "monte_carlo": {
+    "draws": 50000,
+    "batch_size": 500,
+    "house_seats": 395,
+    "majority_threshold": 198
+  },
+  "fail_closed_invariants": [
+    "Every national vote draw is finite, strictly positive after numerical floor and sums to one.",
+    "Every pre-legal 92-territory weighted aggregate matches its same national draw within 1e-8.",
+    "Every local and regional share row is finite, non-negative and normalized.",
+    "Every N92 draw contains 92 positive integers summing to 15,801,162.",
+    "Every contest has at least as many eligible positive-vote lists as seats and every eligible list receives at least one simulated valid vote.",
+    "Zero UNIQUE_LIST_THRESHOLD_NOT_MET outcomes.",
+    "Zero UNFILLED_SEATS_EXCEPTIONAL outcomes.",
+    "Zero unresolved statutory ties after exchangeable-age marginalization.",
+    "All 104 contests allocate their exact configured magnitudes.",
+    "Every national draw sums to exactly 395 seats."
+  ],
+  "promotion_rule": "PROMOTED only if all fail-closed invariants pass for all 50,000 draws. Seat probabilities may not be used to revise the already-frozen point or uncertainty parameters.",
+  "mandatory_limitations": [
+    "Only five historical national transitions inform prospective national tails.",
+    "Conditional geography residuals are exchangeable across territories and cannot identify territory-specific variance robustly.",
+    "The regional-ballot bridge is structural and uncalibrated under the current system because no prior transition exists.",
+    "Local registered-voter counts remain latent rather than official 2026 local counts.",
+    "2021 list availability is a structural placeholder; verified 2026 list changes require a later immutable snapshot.",
+    "Binding remainder ties use an exchangeable prior because candidate ages are not part of this structural snapshot."
+  ]
+}

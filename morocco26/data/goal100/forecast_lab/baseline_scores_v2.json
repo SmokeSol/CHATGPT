@@ -1,0 +1,190 @@
+{
+  "crossfold": {
+    "HALF_SHRINK": {
+      "mean_L1": 0.692147566598205,
+      "mean_RMSE": 0.10919833307022304,
+      "mean_topS_Jaccard": 0.4347291840712894
+    },
+    "NATIONAL_ONLY": {
+      "mean_L1": 0.7567021484408945,
+      "mean_RMSE": 0.11747067622398788,
+      "mean_topS_Jaccard": 0.35930254379911136
+    },
+    "PERSIST": {
+      "mean_L1": 0.7168198616829757,
+      "mean_RMSE": 0.11758932950303004,
+      "mean_topS_Jaccard": 0.44092099209376107
+    }
+  },
+  "crossfold_ranking": [
+    "HALF_SHRINK",
+    "NATIONAL_ONLY",
+    "PERSIST"
+  ],
+  "folds": {
+    "2011": {
+      "mapped_territories": 57,
+      "models": {
+        "HALF_SHRINK": {
+          "mean_territory_L1": 0.7453214128966578,
+          "party_share_MAE": 0.08281349032185086,
+          "party_share_RMSE": 0.122967678340955,
+          "topS_set_Jaccard": 0.38454422788633325,
+          "top_party_accuracy": 0.2807017543859649,
+          "vs_NATIONAL_ONLY_bootstrap": {
+            "cluster": "territory",
+            "delta_RMSE_model_minus_NATIONAL_ONLY_interval95": [
+              -0.013383676604057587,
+              -0.001433199892119473
+            ],
+            "probability_model_better": 0.9933,
+            "replicates": 10000
+          }
+        },
+        "NATIONAL_ONLY": {
+          "mean_territory_L1": 0.7861713793848049,
+          "party_share_MAE": 0.08735237548720055,
+          "party_share_RMSE": 0.1302384940282748,
+          "topS_set_Jaccard": 0.3692760180995475,
+          "top_party_accuracy": 0.14035087719298245
+        },
+        "PERSIST": {
+          "mean_territory_L1": 0.7876909656427537,
+          "party_share_MAE": 0.08752121840475041,
+          "party_share_RMSE": 0.12998780670822233,
+          "topS_set_Jaccard": 0.4026610644257703,
+          "top_party_accuracy": 0.3684210526315789,
+          "vs_NATIONAL_ONLY_bootstrap": {
+            "cluster": "territory",
+            "delta_RMSE_model_minus_NATIONAL_ONLY_interval95": [
+              -0.012197657129902364,
+              0.012367373526879391
+            ],
+            "probability_model_better": 0.5163,
+            "replicates": 10000
+          }
+        }
+      },
+      "national_only_full_target": {
+        "mean_territory_L1": 0.7938936582180398,
+        "party_share_MAE": 0.0882104064686711,
+        "party_share_RMSE": 0.13384205649101602,
+        "topS_set_Jaccard": 0.3729813664596273,
+        "top_party_accuracy": 0.14130434782608695
+      },
+      "origin_native_territories": 95,
+      "origin_year": 2007,
+      "support_policy": "COMMON_EXPLICIT_1_TO_1_CROSSWALK_ONLY",
+      "target_native_territories": 92,
+      "target_year": 2011
+    },
+    "2016": {
+      "mapped_territories": 92,
+      "models": {
+        "HALF_SHRINK": {
+          "mean_territory_L1": 0.5675086107130202,
+          "party_share_MAE": 0.06305651230144668,
+          "party_share_RMSE": 0.08343886768744727,
+          "topS_set_Jaccard": 0.5087474120082817,
+          "top_party_accuracy": 0.5434782608695652,
+          "vs_NATIONAL_ONLY_bootstrap": {
+            "cluster": "territory",
+            "delta_RMSE_model_minus_NATIONAL_ONLY_interval95": [
+              -0.0200590832795199,
+              -0.011117410014893433
+            ],
+            "probability_model_better": 1.0,
+            "replicates": 10000
+          }
+        },
+        "NATIONAL_ONLY": {
+          "mean_territory_L1": 0.6786678942651836,
+          "party_share_MAE": 0.07540754380724261,
+          "party_share_RMSE": 0.09902561880036762,
+          "topS_set_Jaccard": 0.33053830227743275,
+          "top_party_accuracy": 0.42391304347826086
+        },
+        "PERSIST": {
+          "mean_territory_L1": 0.5606371069817603,
+          "party_share_MAE": 0.06229301188686226,
+          "party_share_RMSE": 0.08850462894692614,
+          "topS_set_Jaccard": 0.4948240165631471,
+          "top_party_accuracy": 0.5434782608695652,
+          "vs_NATIONAL_ONLY_bootstrap": {
+            "cluster": "territory",
+            "delta_RMSE_model_minus_NATIONAL_ONLY_interval95": [
+              -0.01888003567068035,
+              -0.002270645762246409
+            ],
+            "probability_model_better": 0.9946,
+            "replicates": 10000
+          }
+        }
+      },
+      "origin_native_territories": 92,
+      "origin_year": 2011,
+      "support_policy": "FULL_NATIVE_IDENTITY_92",
+      "target_native_territories": 92,
+      "target_year": 2016
+    },
+    "2021": {
+      "mapped_territories": 92,
+      "models": {
+        "HALF_SHRINK": {
+          "mean_territory_L1": 0.7636126761849371,
+          "party_share_MAE": 0.08484585290943746,
+          "party_share_RMSE": 0.1211884531822669,
+          "topS_set_Jaccard": 0.4108954451345756,
+          "top_party_accuracy": 0.07608695652173914,
+          "vs_NATIONAL_ONLY_bootstrap": {
+            "cluster": "territory",
+            "delta_RMSE_model_minus_NATIONAL_ONLY_interval95": [
+              -0.0066541483757601785,
+              0.002900899931983491
+            ],
+            "probability_model_better": 0.7843,
+            "replicates": 10000
+          }
+        },
+        "NATIONAL_ONLY": {
+          "mean_territory_L1": 0.8052671711852613,
+          "party_share_MAE": 0.0894741301316957,
+          "party_share_RMSE": 0.1231479158433212,
+          "topS_set_Jaccard": 0.37727743271221537,
+          "top_party_accuracy": 0.0
+        },
+        "PERSIST": {
+          "mean_territory_L1": 0.8021315124244132,
+          "party_share_MAE": 0.08912572360271256,
+          "party_share_RMSE": 0.13427555285394166,
+          "topS_set_Jaccard": 0.42626811594202907,
+          "top_party_accuracy": 0.1956521739130435,
+          "vs_NATIONAL_ONLY_bootstrap": {
+            "cluster": "territory",
+            "delta_RMSE_model_minus_NATIONAL_ONLY_interval95": [
+              0.002164111112147387,
+              0.02025857523646002
+            ],
+            "probability_model_better": 0.0067,
+            "replicates": 10000
+          }
+        }
+      },
+      "origin_native_territories": 92,
+      "origin_year": 2016,
+      "support_policy": "FULL_NATIVE_IDENTITY_92",
+      "target_native_territories": 92,
+      "target_year": 2021
+    }
+  },
+  "integrity": {
+    "2007_acceptance_gate": "PASS_FOR_ROLLING_ORIGIN_BACKTEST",
+    "2007_territorial_scoring_only_on_explicit_one_to_one_crosswalk": true,
+    "F0_modified": false,
+    "no_95_to_92_coercion": true
+  },
+  "lambda_selected_for_2026": 0.5,
+  "schema_version": "2.0",
+  "selection_rule": "Lowest equal-weight mean fold RMSE; tie-break topS Jaccard then L1. Lambda grid frozen at {0,0.5,1}.",
+  "skill_floor_winner": "HALF_SHRINK"
+}

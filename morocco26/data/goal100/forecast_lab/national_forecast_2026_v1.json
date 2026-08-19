@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "forecast_id": "M26-NATIONAL-2026-POINT-V1",
+  "target_year": 2026,
+  "as_of": "2026-08-19T18:28:28+01:00",
+  "status": "READY_FOR_STRUCTURAL_CENTER",
+  "data_class": "CURRENT_PRE_ELECTION_NATIONAL_FORECAST",
+  "target_outcome_used": false,
+  "party_order": ["RNI", "PAM", "PI", "PJD", "USFP", "MP", "UC", "PPS", "OTHER"],
+  "point_share": {
+    "RNI": 0.27660731593377086,
+    "PAM": 0.18450564373351536,
+    "PI": 0.16846796569284728,
+    "PJD": 0.04253248828326528,
+    "USFP": 0.07884201170059188,
+    "MP": 0.07040807115499034,
+    "UC": 0.05517279095157742,
+    "PPS": 0.05111270269967536,
+    "OTHER": 0.0723510098497662
+  },
+  "model": "PREVIOUS_NATIONAL_PERSISTENCE",
+  "selection_evidence": "morocco26/data/goal100/forecast_lab/national_model_selection_2026_v1_summary.json",
+  "contract": "morocco26/data/goal100/forecast_lab/national_forecast_2026_contract_v2.json",
+  "evidence": [
+    "Four strict rolling-origin folds: 2002→2007, 2007→2011, 2011→2016, 2016→2021.",
+    "Persistence wins the preregistered four-model tournament on equal-weight mean fold RMSE.",
+    "Persistence remains the diagnostic winner after excluding PAM, OTHER, or both.",
+    "No 2026-only poll, candidate, partial-election, press, turnout-intention or prediction-market adjustment is used."
+  ],
+  "probability_status": "POINT_ONLY_NATIONAL_UNCERTAINTY_NOT_YET_PROMOTED"
+}
