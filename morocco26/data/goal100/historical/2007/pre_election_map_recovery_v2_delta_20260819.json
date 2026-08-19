@@ -36,14 +36,13 @@
       "fact_supported": "Safi Nord and Safi Sud jointly account for 8 seats; 27 and 28 lists respectively. Not sufficient to split magnitude 4+4 without another admissible source."
     },
     {
-      "source_id": "ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED",
+      "source_id": "ALM20070206_BENMOUSSA_DRAFT_MAP",
       "url": "https://aujourdhui.ma/?p=60488",
-      "publication_date": null,
-      "publication_date_status": "UNRESOLVED_EXACT_DATE_PRE_ELECTION_CONTEXT",
+      "publication_date": "2007-02-06",
       "access_date": "2026-08-19",
-      "source_class": "T2_CONTEMPORARY_DATE_AMBIGUOUS",
+      "source_class": "T2_CONTEMPORARY_DRAFT_NOT_FINAL",
       "provenance": "Aujourd'hui le Maroc, Decoupage electoral: Benmoussa livre sa copie",
-      "fact_supported": "Prospective new-map table gives Moulay Yacoub 2; Ismailia-Guerrouane 3; Hamria-Ahouaz Meknes-Zerhoune 3; Tetouan 4; Fahs-Anjra 2; Chefchaouen 4, among other already corroborated urban changes. Exact publication date must be resolved before VERIFIED use."
+      "fact_supported": "Interior Ministry consultation draft still had 91 districts. Its table proposed Moulay Yacoub 2; Ismailia-Guerrouane 3; Hamria-Ahouaz Meknes-Zerhoune 3; Tetouan 4; Fahs-Anjra 2; Chefchaouen 4, among other urban changes. Because the final map later had 95 districts, draft values require independent post-decree/pre-election confirmation before VERIFIED use."
     }
   ],
   "verified_cells": [
@@ -63,12 +62,12 @@
     }
   ],
   "ambiguous_triangulations": [
-    {"native_id":"M26-2007-015","constituency":"Moulay-Yacoub","magnitude":2,"status":"AMBIGUOUS_SOURCE_DATE","source_ids":["ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED"]},
-    {"native_id":"M26-2007-054","constituency":"Al-Ismailia - Guerrouane","magnitude":3,"status":"AMBIGUOUS_SOURCE_DATE","source_ids":["ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED"]},
-    {"native_id":"M26-2007-055","constituency":"Hamrya - Meknes-Banlieue - Zerhoun","magnitude":3,"status":"AMBIGUOUS_SOURCE_DATE","source_ids":["ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED"]},
-    {"native_id":"M26-2007-085","constituency":"Chefchaouen","magnitude":4,"status":"AMBIGUOUS_SOURCE_DATE","source_ids":["ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED"]},
-    {"native_id":"M26-2007-086","constituency":"Fahs - Anjra","magnitude":2,"status":"AMBIGUOUS_SOURCE_DATE","source_ids":["ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED"]},
-    {"native_id":"M26-2007-090","constituency":"Tetouan","magnitude":4,"status":"AMBIGUOUS_SOURCE_DATE","source_ids":["ALM2007_BENMOUSSA_NEW_MAP_DATE_UNRESOLVED"]}
+    {"native_id":"M26-2007-015","constituency":"Moulay-Yacoub","magnitude":2,"status":"AMBIGUOUS_DRAFT_NOT_FINAL","source_ids":["ALM20070206_BENMOUSSA_DRAFT_MAP"]},
+    {"native_id":"M26-2007-054","constituency":"Al-Ismailia - Guerrouane","magnitude":3,"status":"AMBIGUOUS_DRAFT_NOT_FINAL","source_ids":["ALM20070206_BENMOUSSA_DRAFT_MAP"]},
+    {"native_id":"M26-2007-055","constituency":"Hamrya - Meknes-Banlieue - Zerhoun","magnitude":3,"status":"AMBIGUOUS_DRAFT_NOT_FINAL","source_ids":["ALM20070206_BENMOUSSA_DRAFT_MAP"]},
+    {"native_id":"M26-2007-085","constituency":"Chefchaouen","magnitude":4,"status":"AMBIGUOUS_DRAFT_NOT_FINAL","source_ids":["ALM20070206_BENMOUSSA_DRAFT_MAP"]},
+    {"native_id":"M26-2007-086","constituency":"Fahs - Anjra","magnitude":2,"status":"AMBIGUOUS_DRAFT_NOT_FINAL","source_ids":["ALM20070206_BENMOUSSA_DRAFT_MAP"]},
+    {"native_id":"M26-2007-090","constituency":"Tetouan","magnitude":4,"status":"AMBIGUOUS_DRAFT_NOT_FINAL","source_ids":["ALM20070206_BENMOUSSA_DRAFT_MAP"]}
   ],
   "partial_constraints": [
     {
@@ -82,6 +81,7 @@
   ],
   "notes": [
     "Only verified_cells may increase the verified coverage count.",
+    "The February draft is temporally admissible but substantively non-final; it must not be promoted merely because later outcomes happen to match it.",
     "ambiguous_triangulations and partial_constraints are retained for targeted follow-up and cannot enter a snapshot-v2.",
     "A clean snapshot-v2 lineage must start before any 2007 outcome ingestion."
   ]
