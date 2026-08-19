@@ -1,0 +1,59 @@
+name: Combined territorial coverage V1
+
+on:
+  push:
+    branches: [morocco26-national-model-v1]
+    paths:
+      - "morocco26/scripts/replay_combined_territorial_coverage_v1.py"
+      - "morocco26/data/goal100/forecast_lab/combined_territorial_coverage_contract_v1.json"
+      - ".github/workflows/combined-territorial-coverage-v1.yml"
+  pull_request:
+    branches: [morocco26-rolling-origin-2007-v2]
+    paths:
+      - "morocco26/scripts/replay_combined_territorial_coverage_v1.py"
+      - "morocco26/data/goal100/forecast_lab/combined_territorial_coverage_contract_v1.json"
+      - ".github/workflows/combined-territorial-coverage-v1.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  replay-combined-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install numeric dependency
+        run: python -m pip install --disable-pip-version-check numpy
+      - name: Compile combined replay
+        run: python -m py_compile morocco26/scripts/replay_combined_territorial_coverage_v1.py
+      - name: Replay two prequential territorial folds
+        run: |
+          python morocco26/scripts/replay_combined_territorial_coverage_v1.py \
+            --draws 20000 \
+            --batch-size 500 \
+            --output /tmp/combined_territorial_coverage_v1.json
+      - name: Fail-closed coverage invariants
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open('/tmp/combined_territorial_coverage_v1.json'))
+          p=x['pooled']
+          assert p['total_cells'] == 1656
+          assert p['coverage80'] >= p['required_coverage80']
+          assert p['coverage95'] >= p['required_coverage95']
+          assert p['status'] == 'PASS'
+          assert x['promotion_effect'] == 'READY_FOR_FINAL_2026_LEGAL_SIMULATION'
+          for f in x['scored_folds']:
+              assert f['territories'] == 92
+              assert f['party_count'] == 9
+              assert f['max_rake_error'] <= 1e-8
+          print('COMBINED_TERRITORIAL_COVERAGE_INVARIANTS_PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: combined-territorial-coverage-v1
+          path: /tmp/combined_territorial_coverage_v1.json
+          if-no-files-found: error
