@@ -13,23 +13,45 @@ def first_add(rel):
  return xs[-1]
 def ancestor(a,b): return subprocess.run(['git','merge-base','--is-ancestor',a,b],cwd=ROOT).returncode==0
 ALIASES={
- norm('Hamria-Ahouaz Meknès-Zerhoune'):{norm('Meknès-El Menzeh'),norm('Meknes El Menzeh')},
- norm('Ismaïlia-Guerrouane'):{norm('Al-Ismaïlia'),norm('Meknès-Al Ismaïlia'),norm('Meknes Al Ismailia'),norm('Ismailia Karouan')},
- norm('Marrakech ville-Sidi Youssef Ben Ali'):{norm('Marrakech-Médina-Sidi Youssef Ben Ali'),norm('Marrakech Medina-Sidi Youssef Ben Ali')},
- norm('Rabat-Océan'):{norm('Rabat-Almohit'),norm('Rabat-El Mouhit')},
- norm('Aghriss-Tisselit'):{norm('Gheris-Tislit'),norm('Ghris Tislit')},
- norm('Karia-Rhafsai'):{norm('Karia-Ghafsai'),norm('Karia Ghafsai')},
- norm('El Rharb'):{norm('El-Gharb'),norm('El Gharb')},
- norm('Oued Zem-Abi Jaâd'):{norm('Oued-Zem - Bejaad'),norm('Oued Zem Bejaad')},
+ # Already-recognized historical/orthographic variants.
+ norm('Rabat-Océan'):{norm('Rabat - El Mouhit')},
+ norm('Aghriss-Tisselit'):{norm('Gheris - Tislit')},
+ norm('Karia-Rhafsai'):{norm('Karia - Ghafsai')},
+ norm('El Rharb'):{norm('El-Gharb')},
+ norm('Oued Zem-Abi Jaâd'):{norm('Oued-Zem - Bejaad')},
  norm('Berrchid'):{norm('Berrechid')},
- norm('Guercif'):{norm('Taza-Guercif'),norm('Taza Guercif')},
- norm('Sidi Kacem-Mechraa Belkciri-Dar Keddari'):{norm('Sidi-Kacem - Mechra-Bel-Ksiri - Dar-Gueddari'),norm('Sidi Kacem Mechra Bel Ksiri Dar Gueddari')},
- norm('Ouezzane-Had Kourt-Jorf Melha'):{norm('Ouezzane - Had-Kourt - Jorf-El-Melha'),norm('Ouezzane Had Kourt Jorf El Melha')},
- norm('Khouribga-Ouled Lbher Kbar et Sghar'):{norm('Khouribga - Oulad-Labhar - Laksar-et-Esghar'),norm('Khouribga Oulad Labhar Laksar et Esghar')},
- norm('Achamalia-Al Gharbia'):{norm('Nador-Nord-Ouest'),norm('Nador nord ouest')},
- norm('Al Janoubia-Acharquia'):{norm('Nador-Sud-Est'),norm('Nador sud est')},
- norm('Safi Chamalia'):{norm('Safi-Nord'),norm('Safi nord')},
- norm('Safi Al Janoubia'):{norm('Safi-Sud'),norm('Safi sud')},
+ norm('Guercif'):{norm('Taza - Guercif')},
+ norm('Sidi Kacem-Mechraa Belkciri-Dar Keddari'):{norm('Sidi-Kacem - Mechra-Bel-Ksiri - Dar-Gueddari')},
+ norm('Ouezzane-Had Kourt-Jorf Melha'):{norm('Ouezzane - Had-Kourt - Jorf-El-Melha')},
+ norm('Khouribga-Ouled Lbher Kbar et Sghar'):{norm('Khouribga - Oulad-Labhar - Laksar-et-Esghar')},
+
+ # Explicit post-freeze name reconciliation. These mappings do not alter the
+ # frozen snapshot; they only reconcile transliteration/directional aliases
+ # against the post-freeze outcome labels, and magnitude equality is required.
+ norm('Achamalia-Al Gharbia'):{norm('Chamalia - Gharbia')},
+ norm('Agadir ida-Outanane'):{norm('Agadir - Ida-ou-Tanane')},
+ norm('Al Janoubia-Acharquia'):{norm('Janoubia - Charkia')},
+ norm('Béni hssen'):{norm('Bni-Hssen')},
+ norm('beni moussa-beni amir'):{norm('Bni-Moussa - Bni-Amir')},
+ norm('Bzou-Ouaouizerht'):{norm('Bzou - Ouaouizaght')},
+ norm('Es-Semara'):{norm('Es-Smara')},
+ norm('Fès-Nord'):{norm('Fès - Chamalia')},
+ norm('Fès-Sud'):{norm('Fès - Janoubia')},
+ norm('Guéliz-Ennakhil'):{norm('Guéliz - Annakhil')},
+ norm('Hamria-Ahouaz Meknès-Zerhoune'):{norm('Hamrya - Meknès-Banlieue - Zerhoun')},
+ norm('Ismaïlia-Guerrouane'):{norm('Al-Ismaïlia - Guerrouane')},
+ norm('Marrakech ville-Sidi Youssef Ben Ali'):{norm('Médina - Sidi-Youssef-Ben-Ali')},
+ norm('Midelt-Kbab'):{norm('Midelt - El-Kbab')},
+ norm('Mohammedia'):{norm('Mohammadia')},
+ norm('Ouled Bouaziz-Zemamra'):{norm('Oulad-Bouaziz - Zemamra')},
+ norm('Rabat-Chellah'):{norm('Rabat - Challah')},
+ norm('Rhamna'):{norm('Rehamna')},
+ norm('Safi Al Janoubia'):{norm('Safi - Janoubia')},
+ norm('Salé-El Jadida'):{norm('Salé - Al-Jadida')},
+ norm('Sidi Bennour-Ouled Frej'):{norm('Sidi-Bennour - Oulad-Frej')},
+ norm('Taroudant-Nord'):{norm('Taroudannt - Chamalia')},
+ norm('Taroudant-Sud'):{norm('Taroudannt - Al-Janoubia')},
+ norm('Tiflet-Rommani'):{norm('Tifelt - Rommani')},
 }
 for k,vs in list(ALIASES.items()):
  for v in vs: ALIASES.setdefault(v,set()).add(k)
