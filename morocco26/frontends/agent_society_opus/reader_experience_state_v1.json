@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "state_id": "M26-ASV2-READER-EXPERIENCE-V1",
+  "status": "READER_FRONT_READY_COLLECTION_PAYLOADS_LOCKED",
+  "visual_source": "Opus atlas-agentsociety-maroc",
+  "visual_style_must_not_change": true,
+  "reader_language": "fr",
+  "reader_title": "Société artificielle du Maroc",
+  "constituencies": 92,
+  "citizens_per_election": 23552,
+  "citizens_per_contribution": 32,
+  "contributions_per_provider": 2944,
+  "providers": ["chatgpt", "claude"],
+  "participation_service": "https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/agent-society-participation",
+  "claude_mcp": "https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/agent-society-mcp",
+  "registered_work_items": 2944,
+  "payloads_ready": 0,
+  "collection_results_hidden_until_freeze": true,
+  "next_gate": "LOAD_EXACT_FROZEN_INPUT_PAYLOADS_THEN_OPEN_COLLECTION"
+}
