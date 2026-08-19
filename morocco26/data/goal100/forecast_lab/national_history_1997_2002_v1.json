@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "M26-NATIONAL-HISTORY-1997-2002-V1",
+  "scope": "NATIONAL_VALID_LOCAL_BALLOT_VOTE_COUNTS_ONLY",
+  "status": "PASS_FOR_NATIONAL_ROLLING_ORIGIN_ONLY",
+  "territorial_use": "FORBIDDEN",
+  "party_order": ["RNI", "PAM", "PI", "PJD", "USFP", "MP", "UC", "PPS", "OTHER"],
+  "years": {
+    "1997": {
+      "election_date": "1997-11-14",
+      "valid_votes": 6371630,
+      "bucket_vote_counts": {
+        "RNI": 705397,
+        "PAM": 0,
+        "PI": 840315,
+        "PJD": 264324,
+        "USFP": 884061,
+        "MP": 659331,
+        "UC": 647746,
+        "PPS": 274862,
+        "OTHER": 2095594
+      },
+      "bucket_share": {
+        "RNI": 0.11070903363817422,
+        "PAM": 0.0,
+        "PI": 0.1318838350626135,
+        "PJD": 0.041484518090347366,
+        "USFP": 0.1387495821320447,
+        "MP": 0.1034791725194338,
+        "UC": 0.10166095645855142,
+        "PPS": 0.04313841199190788,
+        "OTHER": 0.3288944901069271
+      },
+      "lineage_crosswalk": {
+        "PJD": "Constitutional and Democratic Popular Movement, 264324 votes, treated as the pre-PJD lineage.",
+        "PPS": "Party of Renewal and Progress led by Ismail Alaoui, 274862 votes, treated as the PPS lineage.",
+        "PAM": "Exact zero; PAM did not yet exist."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/1997_Moroccan_general_election",
+        "underlying_reference": "Dieter Nohlen, Michael Krennerich and Bernhard Thibaut, Elections in Africa: A Data Handbook, p.635",
+        "table_total_check": "PASS_6371630",
+        "accessed": "2026-08-19"
+      }
+    },
+    "2002": {
+      "election_date": "2002-09-27",
+      "valid_votes": 6050679,
+      "bucket_vote_counts": {
+        "RNI": 561514,
+        "PAM": 0,
+        "PI": 598226,
+        "PJD": 595439,
+        "USFP": 718725,
+        "MP": 396932,
+        "UC": 310939,
+        "PPS": 275024,
+        "OTHER": 2593880
+      },
+      "bucket_share": {
+        "RNI": 0.09280181612675205,
+        "PAM": 0.0,
+        "PI": 0.09886923434543463,
+        "PJD": 0.0984086248832569,
+        "USFP": 0.11878418934469999,
+        "MP": 0.06560123252282926,
+        "UC": 0.051389108561204454,
+        "PPS": 0.04545341109650669,
+        "OTHER": 0.428692383119316
+      },
+      "lineage_crosswalk": {
+        "PAM": "Exact zero; PAM did not yet exist.",
+        "OTHER": "Includes all non-core parties and independents exactly as the published complete national table."
+      },
+      "source": {
+        "url": "https://en.wikipedia.org/wiki/2002_Moroccan_general_election",
+        "underlying_reference": "Bernabé López García result table; aggregate turnout and seat distribution cross-checked against the Inter-Parliamentary Union archive.",
+        "table_total_check": "PASS_6050679",
+        "accessed": "2026-08-19"
+      }
+    }
+  },
+  "certification": {
+    "complete_national_vectors": true,
+    "shares_sum_to_one": true,
+    "party_bucket_counts_sum_to_valid_votes": true,
+    "optional_2002_to_2007_fold_gate": "PASS",
+    "1997_to_2002_scored_fold": false,
+    "1997_role": "strictly prior training history for forecasting 2007",
+    "target_outcomes_after_each_fold_used_by_generator": false
+  },
+  "limitations": [
+    "This artifact repairs only the missing national aggregates; it does not repair or authorize the incomplete 2002 district-by-party matrix.",
+    "The cited web tables are secondary reproductions of published historical result tables, not a newly discovered official machine-readable dataset.",
+    "Historical party-lineage decisions are explicit and confined to the fixed nine-bucket national model."
+  ]
+}
