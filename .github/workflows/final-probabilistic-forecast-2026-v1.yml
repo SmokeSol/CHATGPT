@@ -5,13 +5,29 @@ on:
     branches: [morocco26-national-model-v1]
     paths:
       - "morocco26/scripts/simulate_final_forecast_2026_v1.py"
-      - "morocco26/data/goal100/forecast_lab/final_probabilistic_forecast_2026_contract_v1.json"
+      - "morocco26/scripts/calibrate_national_uncertainty_2026_v1.py"
+      - "morocco26/scripts/replay_combined_territorial_coverage_v1.py"
+      - "morocco26/scripts/calibrate_uncertainty_v3.py"
+      - "morocco26/data/goal100/forecast_lab/**"
+      - "morocco26/data/goal100/fminus1_protocol_v1_1.json"
+      - "morocco26/data/goal100/uncertainty_calibration_v2.json"
+      - "morocco26/data/goal100/local_N_posterior.json"
+      - "morocco26/scripts/goal100_fminus1_runtime_v4.py"
+      - "morocco26/scripts/goal100_fminus1_vector_allocator_v2.py"
       - ".github/workflows/final-probabilistic-forecast-2026-v1.yml"
   pull_request:
     branches: [morocco26-rolling-origin-2007-v2]
     paths:
       - "morocco26/scripts/simulate_final_forecast_2026_v1.py"
-      - "morocco26/data/goal100/forecast_lab/final_probabilistic_forecast_2026_contract_v1.json"
+      - "morocco26/scripts/calibrate_national_uncertainty_2026_v1.py"
+      - "morocco26/scripts/replay_combined_territorial_coverage_v1.py"
+      - "morocco26/scripts/calibrate_uncertainty_v3.py"
+      - "morocco26/data/goal100/forecast_lab/**"
+      - "morocco26/data/goal100/fminus1_protocol_v1_1.json"
+      - "morocco26/data/goal100/uncertainty_calibration_v2.json"
+      - "morocco26/data/goal100/local_N_posterior.json"
+      - "morocco26/scripts/goal100_fminus1_runtime_v4.py"
+      - "morocco26/scripts/goal100_fminus1_vector_allocator_v2.py"
       - ".github/workflows/final-probabilistic-forecast-2026-v1.yml"
 
 permissions:
@@ -38,15 +54,25 @@ jobs:
         run: |
           python morocco26/scripts/simulate_final_forecast_2026_v1.py \
             --output /tmp/final_probabilistic_forecast_2026_v1.json
-      - name: Fail-closed promotion invariants
+      - name: Fail-closed promotion and freeze invariants
         run: |
           python - <<'PY'
-          import json, math
-          x=json.load(open('/tmp/final_probabilistic_forecast_2026_v1.json'))
+          import hashlib, json, math
+          from pathlib import Path
+
+          generated_path = Path('/tmp/final_probabilistic_forecast_2026_v1.json')
+          expected_json_sha = 'c7ab03321c0e3883048862a6d94faeb545066ea996a81a710691c6085f5726d6'
+          expected_stream_sha = 'a10becb1e85c2b3327e9430cd76c7801e6d3f515046ab8ec991c787e016bdf0d'
+
+          generated_bytes = generated_path.read_bytes()
+          assert hashlib.sha256(generated_bytes).hexdigest() == expected_json_sha
+
+          x=json.loads(generated_bytes)
           assert x['status'] == 'PROMOTED'
           assert x['draws'] == 50000
           assert x['house_seats'] == 395
           assert x['national_395']['seat_total_every_draw'] == 395
+          assert x['national_395']['joint_bucket_seat_stream_sha256'] == expected_stream_sha
           assert abs(x['national_395']['expected_seat_sum'] - 395.0) < 1e-10
           assert len(x['local_92']) == 92
           assert len(x['regional_12']) == 12
@@ -62,7 +88,7 @@ jobs:
           for party, s in x['national_395']['bucket_seat_distribution'].items():
               for key in ('mean','median','q025','q975','P_first_or_tied','P_majority_198'):
                   assert math.isfinite(s[key])
-          print('FINAL_2026_PROMOTION_INVARIANTS_PASS')
+          print('FINAL_2026_PROMOTION_AND_FREEZE_INVARIANTS_PASS')
           PY
       - uses: actions/upload-artifact@v4
         with:

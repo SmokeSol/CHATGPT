@@ -1,18 +1,42 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "state_id": "M26-NATIONAL-MODEL-EXECUTION-V1",
   "target_year": 2026,
   "point_selection": {
-    "status": "IMPLEMENTED_AWAITING_CI_SCORE_FREEZE",
+    "status": "PASS_CI_FROZEN",
+    "winner": "PREVIOUS_NATIONAL_PERSISTENCE",
     "script": "morocco26/scripts/select_national_model_2026_v1.py",
     "selection_contract": "morocco26/data/goal100/forecast_lab/national_model_selection_contract_v1.json",
     "formula_contract": "morocco26/data/goal100/forecast_lab/national_model_formulas_v1.json",
-    "scored_folds": ["2002_TO_2007", "2007_TO_2011", "2011_TO_2016", "2016_TO_2021"]
+    "summary": "morocco26/data/goal100/forecast_lab/national_model_selection_2026_v1_summary.json",
+    "scored_folds": ["2002_TO_2007", "2007_TO_2011", "2011_TO_2016", "2016_TO_2021"],
+    "mean_fold_rmse": 0.06500749128449343,
+    "current_only_signal_adjustment": "NONE"
   },
   "national_uncertainty": {
-    "status": "BLOCKED_UNTIL_POINT_WINNER_CI_FREEZE"
+    "status": "PASS",
+    "coverage80": 0.8611111111111112,
+    "coverage95": 0.9722222222222222,
+    "prospective_scale": 0.09991079018029769,
+    "summary": "morocco26/data/goal100/forecast_lab/national_uncertainty_2026_v1_summary.json"
+  },
+  "combined_national_geography_coverage": {
+    "status": "PASS",
+    "cells": 1656,
+    "coverage80": 0.8907004830917874,
+    "coverage95": 0.9867149758454107,
+    "summary": "morocco26/data/goal100/forecast_lab/combined_territorial_coverage_v1_summary.json"
   },
   "final_probabilistic_forecast": {
-    "status": "NOT_PROMOTED"
-  }
+    "status": "PROMOTED",
+    "draws": 50000,
+    "house_seats": 395,
+    "ci_artifact_id": 9379123421,
+    "generated_json_sha256": "c7ab03321c0e3883048862a6d94faeb545066ea996a81a710691c6085f5726d6",
+    "summary": "morocco26/data/goal100/forecast_lab/final_probabilistic_forecast_2026_v1_summary.json",
+    "seat_stream_sha256": "a10becb1e85c2b3327e9430cd76c7801e6d3f515046ab8ec991c787e016bdf0d",
+    "ci_run_id": 32289928633,
+    "ci_artifact_zip_sha256": "d22ccd92f81b22d65e0864ab2ad08e332f27c1a2e1230b7b182554e94d4d60d3"
+  },
+  "authoritative_research_state": "morocco26/data/goal100/forecast_lab/probabilistic_forecast_2026_state_v4.json"
 }
