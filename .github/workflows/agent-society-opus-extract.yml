@@ -18,15 +18,22 @@ jobs:
           set -euo pipefail
           SRC='morocco26/frontends/agent_society_opus/atlas-agentsociety-maroc.zip'
           DST='/tmp/opus-front'
-          rm -rf "$DST"
-          mkdir -p "$DST"
+          rm -rf "$DST" /tmp/reference
+          mkdir -p "$DST" /tmp/reference
           unzip -q "$SRC" -d "$DST"
           find "$DST" -name '__MACOSX' -prune -exec rm -rf {} + || true
-          find "$DST" -maxdepth 3 -type f -printf '%P\n' | sort > /tmp/opus-front-filelist.txt
-          cat /tmp/opus-front-filelist.txt
+          cp morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json /tmp/reference/
+          cp morocco26/data/goal100/historical/tafra_legislative_2021_canonical.json /tmp/reference/
+          cp morocco26/data/goal100/e_reason/calibration/development_2016/identity_reconstruction_postfreeze_v1.json /tmp/reference/
       - uses: actions/upload-artifact@v4
         with:
           name: opus-agent-society-frontend-source
           path: /tmp/opus-front/
+          if-no-files-found: error
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        with:
+          name: agent-society-historical-reference
+          path: /tmp/reference/
           if-no-files-found: error
           retention-days: 7
