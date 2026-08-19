@@ -6,6 +6,7 @@ on:
       - morocco26-historical-2007-v2-clean
     paths:
       - 'morocco26/scripts/historical_2007_pre_election_recovery_v2.py'
+      - 'morocco26/scripts/historical_2007_assahraa_expand_v2.py'
       - '.github/workflows/historical-2007-v2-clean-recovery.yml'
   workflow_dispatch:
 
@@ -27,7 +28,9 @@ jobs:
         run: python -m pip install --disable-pip-version-check requests beautifulsoup4
       - name: Recover pre-election corpus with file-open audit
         run: |
-          strace -f -e trace=openat -o /tmp/m26_openat.log python morocco26/scripts/historical_2007_pre_election_recovery_v2.py
+          strace -f -e trace=openat -o /tmp/m26_openat_main.log python morocco26/scripts/historical_2007_pre_election_recovery_v2.py
+          strace -f -e trace=openat -o /tmp/m26_openat_ar.log python morocco26/scripts/historical_2007_assahraa_expand_v2.py
+          cat /tmp/m26_openat_main.log /tmp/m26_openat_ar.log > /tmp/m26_openat.log
           if grep -E 'parlement-elections-2007|legislative_2007_outcome|historical_native_map_outcome' /tmp/m26_openat.log; then
             echo 'LEAKAGE_GUARD_FAIL: recovery opened sealed/derived 2007 outcome material'
             exit 1
@@ -49,9 +52,10 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
-          p=Path('morocco26/data/goal100/historical/2007_v2_research/pre_election_map_evidence_raw_v2.json')
-          d=json.loads(p.read_text())
-          print({k:d[k] for k in ('cutoff','outcome_used','source_count_discovered','eligible_article_count','explicit_district_magnitude_fact_count')})
+          root=Path('morocco26/data/goal100/historical/2007_v2_research')
+          d=json.loads((root/'pre_election_map_evidence_raw_v2.json').read_text())
+          a=json.loads((root/'assahraa_series_evidence_v2.json').read_text())
+          print({'main':{k:d[k] for k in ('cutoff','outcome_used','source_count_discovered','eligible_article_count','explicit_district_magnitude_fact_count')},'assahraa':{k:a[k] for k in ('pages_seen','eligible_pages','seat_context_count')}})
           PY
       - name: Commit recovery evidence only
         run: |
@@ -61,6 +65,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'No recovery changes to commit'
           else
-            git commit -m 'data(historical): recover clean pre-election 2007 map evidence v2'
+            git commit -m 'data(historical): expand clean Arabic pre-election 2007 evidence v2'
             git push origin HEAD:morocco26-historical-2007-v2-clean
           fi
