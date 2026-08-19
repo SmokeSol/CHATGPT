@@ -6,6 +6,7 @@
   "use strict";
 
   var RELATIONS = ["family", "work", "neighborhood"];
+  var LIVE_API = "https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/agent-society-social";
   var AGE = {"18_24":21,"25_34":29,"35_44":39,"45_59":51,"60_PLUS":68};
   var state = {config:null, agents:[], selected:0, round:"R1", enabled:{family:true,work:true,neighborhood:true}};
 
@@ -172,14 +173,57 @@
 
   function fail(err){ var box=byId("social-app"); if(box){box.innerHTML="";box.appendChild(el("p","social-error","La démonstration sociale n’a pas pu charger ses données. Le reste de l’expérience reste disponible."));} if(window.console){console.error("ATLAS social demo",err);} }
 
+  function ensureLiveStatusUI(){
+    if(byId("social-live-grid")){return;}
+    var notice=document.querySelector(".social-notice"); if(!notice){return;}
+    var grid=el("div","social-summary"); grid.id="social-live-grid"; grid.setAttribute("aria-label","Pipeline social réel");
+    [["social-live-r0","contributions R0 validées"],["social-live-r12","lots passés en R1 / R2"],["social-live-family","liens famille construits"],["social-live-work","liens collègues construits"],["social-live-neighborhood","liens voisinage construits"]].forEach(function(x){var m=el("div","social-metric");m.append(el("b",null,"0"),el("span",null,x[1]));m.firstChild.id=x[0];grid.appendChild(m);});
+    var note=el("p","note","Le flux réel est raccordé. Les choix collectifs restent cachés pendant la collecte pour ne pas influencer les prochaines contributions."); note.id="social-live-note";
+    notice.append(grid,note);
+  }
+
+  function installContributionBridge(){
+    if(typeof window.claimContribution!=="function"||typeof READER_API==="undefined"){return;}
+    window.claimContribution=function(provider){
+      var choices=typeof reader$==="function"?reader$(".assistant-choices"):null;if(choices){choices.classList.add("busy");}
+      fetch(READER_API+"/claim",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({provider:provider})}).then(function(r){return r.json().then(function(j){if(!r.ok){throw j;}return j;});}).then(function(claim){
+        ACTIVE_CONTRIBUTION={provider:provider,claim_token:claim.claim_token};localStorage.setItem("atlas-active-contribution",JSON.stringify(ACTIVE_CONTRIBUTION));
+        var pp=claim.payload&&claim.payload.context&&claim.payload.voter_batch?Promise.resolve(claim.payload):(claim.files?loadContributionFiles(claim.files):Promise.reject(new Error("CLAIM_PAYLOAD_MISSING")));
+        return pp.then(function(payload){return copyText(contributionPrompt(payload)).then(function(){showContributionReady(provider);});});
+      }).catch(function(){closeModal();toast("L’expérience ouvre très bientôt","La participation n’a pas pu être préparée. Réessayez dans quelques instants.");});
+    };
+  }
+
+  function setLiveText(id,value){ var n=byId(id); if(n){n.textContent=String(value==null?0:value);} }
+  function loadLiveStatus(){
+    return fetch(LIVE_API+"/status",{cache:"no-store"}).then(function(r){if(!r.ok){throw new Error("social live "+r.status);}return r.json();}).then(function(s){
+      var completed=Number(s.completed||0), socialized=Number(s.socialized||0);
+      setLiveText("social-live-r0",completed); setLiveText("social-live-r12",socialized);
+      setLiveText("social-live-family",Number(s.family_edges||0));
+      setLiveText("social-live-work",Number(s.work_edges||0));
+      setLiveText("social-live-neighborhood",Number(s.neighborhood_edges||0));
+      var badge=byId("social-status");
+      if(badge){badge.textContent=socialized ? (socialized+" contribution"+(socialized>1?"s":"")+" reliée"+(socialized>1?"s":"")+" à R1/R2") : "Pipeline social relié — en attente des premières contributions";badge.classList.add("live");}
+      var note=byId("social-live-note");
+      if(note){note.textContent=socialized ? "Chaque contribution validée devient un R0 immuable, puis famille, collègues et voisinage produisent R1 et R2 automatiquement. Les directions de vote restent cachées pendant la collecte." : "Le raccordement R0 → famille / collègues / voisinage → R1 → R2 est actif. Les choix collectifs restent cachés pendant la collecte.";}
+      return s;
+    }).catch(function(err){
+      var note=byId("social-live-note"); if(note){note.textContent="Le démonstrateur reste disponible ; l’état du pipeline réel n’a pas pu être chargé dans cette vue.";}
+      if(window.console){console.warn("ATLAS social live status",err);}
+      return null;
+    });
+  }
+
   function boot(){
     if(!byId("social-app")){return;}
+    installContributionBridge(); ensureLiveStatusUI();
     Promise.all([
       fetch("data/social_config.json",{cache:"no-store"}).then(function(r){if(!r.ok){throw new Error("social config "+r.status);}return r.json();}),
       fetch("data/portraits.json").then(function(r){if(!r.ok){throw new Error("portraits "+r.status);}return r.json();})
     ]).then(function(x){
       state.config=x[0]; state.agents=parsePortraits(x[1]); if(state.agents.length<2){throw new Error("not enough compatible public portraits");}
       byId("social-status").textContent=state.config.label; bindControls(); render();
+      loadLiveStatus(); window.setInterval(loadLiveStatus,60000);
     }).catch(fail);
   }
   if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",boot);}else{boot();}
