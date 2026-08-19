@@ -16,7 +16,7 @@
     "conclusion": "PARTIAL_TERRITORIAL_MEMORY_BUT_NATIONAL_AND_TERRITORIAL_DYNAMICS_MUST_BE_MODELED_SEPARATELY",
     "territorial_lambdas": {
       "2011_TO_2016": 0.7927513248040123,
-      "2016_TO_2021": 0.3898997318471329
+      "2016_TO_2021": 0.38989973184713295
     }
   },
   "dropin_behavior": "Any newly canonical historical year is included automatically. National decomposition activates immediately; territorial decomposition activates only if both adjacent elections have admissible common geometry.",
@@ -141,7 +141,7 @@
         "USFP": 0.07884201170059188
       },
       "national_status": "AVAILABLE_NATIVE_GEOMETRY",
-      "oracle_conditional_territorial_memory_lambda": 0.3898997318471329,
+      "oracle_conditional_territorial_memory_lambda": 0.38989973184713295,
       "relative_geography_correlation": {
         "MP": 0.05123483211485516,
         "OTHER": 0.3891182797803001,
