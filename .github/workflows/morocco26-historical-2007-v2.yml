@@ -1,0 +1,99 @@
+name: Morocco26 Historical 2007 Snapshot V2
+
+on:
+  push:
+    branches:
+      - morocco26-historical-2002-2007-v2
+    paths:
+      - 'morocco26/scripts/build_2007_pre_election_snapshot_v2.py'
+      - '.github/workflows/morocco26-historical-2007-v2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  freeze_snapshot_v2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-historical-2002-2007-v2
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Configure commit identity
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Prove target-year outcome isolation at runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          test ! -e morocco26/data/goal100/historical/2007/legislative_2007_outcome_canonical.json
+          RAW='morocco26/data/goal100/older_history_probe/raw/parlement-elections-2007-1-0.xlsx'
+          test -f "$RAW"
+          mv "$RAW" /tmp/forbidden_target_2007.xlsx
+          python -m py_compile morocco26/scripts/build_2007_pre_election_snapshot_v2.py
+          python morocco26/scripts/build_2007_pre_election_snapshot_v2.py
+          mv /tmp/forbidden_target_2007.xlsx "$RAW"
+          test -f "$RAW"
+
+      - name: Validate temporal leakage geometry missingness and hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json
+          from datetime import date
+          from pathlib import Path
+          root=Path('morocco26')
+          d=root/'data/goal100/historical/2007'
+          mp=json.loads((d/'historical_native_map_pre_election_v2.json').read_text())
+          snap=json.loads((d/'pre_election_snapshot_v2.json').read_text())
+          inv=json.loads((d/'source_inventory_snapshot_v2.json').read_text())
+          cert=json.loads((d/'anti_leakage_certificate_v2.json').read_text())
+          cov=json.loads((d/'coverage_snapshot_v2.json').read_text())
+          assert len(mp['rows'])==95
+          assert mp['real_constituency_count']==95
+          assert sum(int(r['magnitude']) for r in mp['rows'])==295
+          assert mp['local_seat_sum']==295
+          assert len({r['native_id'] for r in mp['rows']})==95
+          assert cert['declaration']=='TARGET_OUTCOME_NOT_USED_IN_PRE_ELECTION_SNAPSHOT'
+          cutoff=date.fromisoformat('2007-09-07')
+          for s in inv['sources']:
+              assert s['publication_date'] is not None
+              assert date.fromisoformat(s['publication_date']) < cutoff, s
+          for t in snap['territories']:
+              for fact in t['facts'].values():
+                  if fact['status']=='MISSING':
+                      assert fact['value'] is None
+          assert cov['native_map_coverage_pct']==100.0
+          manifest=json.loads((d/'snapshot_manifest_v2.json').read_text())
+          for ent in manifest['files']:
+              p=root/ent['path']
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==ent['sha256'], ent
+          hashes=json.loads((d/'snapshot_hashes_sha256_v2.json').read_text())['files']
+          for name,want in hashes.items():
+              assert hashlib.sha256((d/name).read_bytes()).hexdigest()==want, name
+          print('PASS_2007_V2_PRE_ELECTION_FREEZE_GATE', cov['map_status_counts'], cov['evidence_mode_counts'])
+          PY
+          grep -q 'TARGET_OUTCOME_NOT_USED_IN_PRE_ELECTION_SNAPSHOT' morocco26/data/goal100/historical/2007/anti_leakage_certificate_v2.json
+          git diff --exit-code -- morocco26/data/goal100/older_history_probe/raw/parlement-elections-2007-1-0.xlsx
+
+      - name: Freeze v2 snapshot before target open
+        run: |
+          git add morocco26/data/goal100/historical/2007/historical_native_map_pre_election_v2.json \
+                  morocco26/data/goal100/historical/2007/pre_election_snapshot_v2.json \
+                  morocco26/data/goal100/historical/2007/source_inventory_snapshot_v2.json \
+                  morocco26/data/goal100/historical/2007/ambiguities_snapshot_v2.json \
+                  morocco26/data/goal100/historical/2007/coverage_snapshot_v2.json \
+                  morocco26/data/goal100/historical/2007/anti_leakage_certificate_v2.json \
+                  morocco26/data/goal100/historical/2007/snapshot_manifest_v2.json \
+                  morocco26/data/goal100/historical/2007/snapshot_hashes_sha256_v2.json
+          git commit -m 'data(historical): freeze leakage-safe 2007 pre-election snapshot v2'
+          git push origin HEAD:morocco26-historical-2002-2007-v2
