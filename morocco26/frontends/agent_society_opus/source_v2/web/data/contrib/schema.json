@@ -1,0 +1,153 @@
+{
+  "$id": "FULL_ENV_OUTPUT_SCHEMA_V2",
+  "additionalProperties": false,
+  "properties": {
+    "anonymous_election_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "anonymous_territory_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "batch_id": {
+      "pattern": "^B[0-9]{2}$",
+      "type": "string"
+    },
+    "condition_id": {
+      "pattern": "^C_[A-F0-9]{8}$",
+      "type": "string"
+    },
+    "conditional_party_probabilities": {
+      "additionalProperties": {
+        "maximum": 1,
+        "minimum": 0,
+        "type": "number"
+      },
+      "maxProperties": 9,
+      "minProperties": 9,
+      "type": "object"
+    },
+    "factor_importance": {
+      "additionalProperties": false,
+      "properties": {
+        "employment_and_income": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "governance_and_institutions": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "government_reward_punishment": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "local_candidate_context": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "other_verified_context": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "personal_economic_conditions": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "policy_program_fit": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "prior_vote_inertia": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "social_protection_and_public_services": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "territorial_rural_fit": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        },
+        "turnout_habit": {
+          "maximum": 1,
+          "minimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "prior_vote_inertia",
+        "turnout_habit",
+        "personal_economic_conditions",
+        "employment_and_income",
+        "social_protection_and_public_services",
+        "policy_program_fit",
+        "governance_and_institutions",
+        "territorial_rural_fit",
+        "government_reward_punishment",
+        "local_candidate_context",
+        "other_verified_context"
+      ],
+      "type": "object"
+    },
+    "reason_codes": {
+      "items": {
+        "enum": [
+          "PRIOR_VOTE_INERTIA",
+          "PRIOR_ABSTENTION_INERTIA",
+          "TURNOUT_HABIT",
+          "ECONOMIC_SELF_INTEREST",
+          "EMPLOYMENT_INCOME_FIT",
+          "SOCIAL_PROTECTION_PUBLIC_SERVICES_FIT",
+          "POLICY_PROGRAM_FIT",
+          "GOVERNANCE_INSTITUTIONAL_FIT",
+          "TERRITORIAL_RURAL_FIT",
+          "GOVERNMENT_REWARD",
+          "GOVERNMENT_PUNISHMENT",
+          "LOCAL_CANDIDATE_STRENGTH",
+          "LOCAL_CANDIDATE_WEAKNESS",
+          "ATTITUDE_POSTERIOR",
+          "OTHER_VERIFIED_CONTEXT",
+          "NO_DIRECTIONAL_EVIDENCE"
+        ]
+      },
+      "maxItems": 4,
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "turnout_probability": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "weighted_archetype_id": {
+      "pattern": "^A(00[1-9]|0[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-6])$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "anonymous_election_id",
+    "anonymous_territory_id",
+    "condition_id",
+    "batch_id",
+    "weighted_archetype_id",
+    "turnout_probability",
+    "conditional_party_probabilities",
+    "factor_importance",
+    "reason_codes"
+  ],
+  "type": "object"
+}

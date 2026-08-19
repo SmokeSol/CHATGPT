@@ -10,3 +10,9 @@ morocco26/data/goal100/older_history_probe/raw/** -text -diff
 
 # E_collect raw evidence is append-only and hash-addressed.
 morocco26/data/goal100/e_collect/runs/**/raw/** -text -diff
+
+# Le front v2 est extrait d'une archive dont chaque fichier est hache dans
+# MANIFEST_source_v2.sha256. Toute traduction de fin de ligne, a la lecture comme a
+# l'ecriture, invaliderait le manifeste : l'arbre entier est traite comme binaire.
+morocco26/frontends/agent_society_opus/source_v2/** -text
+morocco26/frontends/agent_society_opus/source_v2/web/data/contrib/** -text -diff
