@@ -1,0 +1,1974 @@
+{
+  "artifact_role": "PRE_ELECTION_NATIVE_MAP_V2",
+  "construction_rule": "Derived only from the frozen 2002 pre-election map and sources published before 2007-09-07. Target-year result data are forbidden inputs.",
+  "election_date": "2007-09-07",
+  "local_seat_sum": 295,
+  "real_constituency_count": 95,
+  "rows": [
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Achamalia-Al Gharbia",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-074",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-001",
+      "prefprov": "Nador",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Agadir ida-Outanane",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-016",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-002",
+      "prefprov": "agadir ida outanane",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Aghriss-Tisselit",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-065",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-003",
+      "prefprov": "Errachidia",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Aïn Chock",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-008",
+        "M26-2002-009",
+        "M26-2002-010",
+        "M26-2002-011",
+        "M26-2002-012",
+        "M26-2002-013",
+        "M26-2002-014",
+        "M26-2002-015"
+      ],
+      "magnitude": 2,
+      "native_id": "M26-2007V2-004",
+      "prefprov": "Aïn Chock",
+      "provenance": "MAP source of 1 Sep directly lists all 11 Greater Casablanca constituencies and their magnitudes.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Aïn Sebaâ-Hay Mohammadi",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-008",
+        "M26-2002-009",
+        "M26-2002-010",
+        "M26-2002-011",
+        "M26-2002-012",
+        "M26-2002-013",
+        "M26-2002-014",
+        "M26-2002-015"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-005",
+      "prefprov": "Aïn Sebaâ-Hay Mohammadi",
+      "provenance": "MAP source of 1 Sep directly lists all 11 Greater Casablanca constituencies and their magnitudes.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Al Fida-Mers Sultan",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-008",
+        "M26-2002-009",
+        "M26-2002-010",
+        "M26-2002-011",
+        "M26-2002-012",
+        "M26-2002-013",
+        "M26-2002-014",
+        "M26-2002-015"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-006",
+      "prefprov": "Al Fida-Mers Sultan",
+      "provenance": "MAP source of 1 Sep directly lists all 11 Greater Casablanca constituencies and their magnitudes.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Al Haouz",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-055",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-007",
+      "prefprov": "Al Haouz",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "al hoceima",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-024",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-008",
+      "prefprov": "al hoceima",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Al Janoubia-Acharquia",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-075",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-009",
+      "prefprov": "Nador",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Aousserd",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-068",
+      "magnitude": 2,
+      "native_id": "M26-2007V2-010",
+      "prefprov": "Aousserd",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Assa-Zag",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-041",
+      "magnitude": 2,
+      "native_id": "M26-2007V2-011",
+      "prefprov": "Assa-Zag",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Azilal-Demnate",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-033",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-012",
+      "prefprov": "Azilal",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Ben Ahmed",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-083",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-013",
+      "prefprov": "Settat",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Ben M'sick",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-008",
+        "M26-2002-009",
+        "M26-2002-010",
+        "M26-2002-011",
+        "M26-2002-012",
+        "M26-2002-013",
+        "M26-2002-014",
+        "M26-2002-015"
+      ],
+      "magnitude": 2,
+      "native_id": "M26-2007V2-014",
+      "prefprov": "Ben M'sick",
+      "provenance": "MAP source of 1 Sep directly lists all 11 Greater Casablanca constituencies and their magnitudes.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Béni hssen",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-045",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-015",
+      "prefprov": "Kénitra",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Béni Mellal",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-029",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-016",
+      "prefprov": "beni mellal",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "beni moussa-beni amir",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-031",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-017",
+      "prefprov": "beni mellal",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Benslimane",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-086",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-018",
+      "prefprov": "Benslimane",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Berkane",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-071",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-019",
+      "prefprov": "berkane",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Berrchid",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-082",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-020",
+      "prefprov": "Settat",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Boujdour",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": "M26-2002-050",
+      "magnitude": 2,
+      "native_id": "M26-2007V2-021",
+      "prefprov": "Boujdour",
+      "provenance": "MAP 29 Aug directly states Boujdour has two seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Boulemane",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-038",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-022",
+      "prefprov": "Boulemane",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Bzou-Ouaouizerht",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-032",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-023",
+      "prefprov": "Azilal",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Casablanca-Anfa",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-008",
+        "M26-2002-009",
+        "M26-2002-010",
+        "M26-2002-011",
+        "M26-2002-012",
+        "M26-2002-013",
+        "M26-2002-014",
+        "M26-2002-015"
+      ],
+      "magnitude": 4,
+      "native_id": "M26-2007V2-024",
+      "prefprov": "Casablanca-Anfa",
+      "provenance": "MAP source of 1 Sep directly lists all 11 Greater Casablanca constituencies and their magnitudes.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "February table changes Chefchaouen from five to four seats; 2 Sep Interior/MAP list distribution confirms final constituency existence but not magnitude."
+      ],
+      "constituency": "Chefchaouen",
+      "evidence_mode": "PROPOSAL_PLUS_FINAL_EXISTENCE",
+      "inherited_2002_native_id": [
+        "M26-2002-088",
+        "M26-2002-089",
+        "M26-2002-090"
+      ],
+      "magnitude": 4,
+      "native_id": "M26-2007V2-025",
+      "prefprov": "Chefchaouen",
+      "provenance": "February table changes Chefchaouen from five to four seats; 2 Sep Interior/MAP list distribution confirms final constituency existence but not magnitude.",
+      "source_ids": [
+        "ALM_PROPOSAL_20070206",
+        "ALM_GOV_20070222",
+        "LM_MAP_20070902"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Chichaoua",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-054",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-026",
+      "prefprov": "Chichaoua",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Chtouka-Aït Baha",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-018",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-027",
+      "prefprov": "Chtouka-Aït Baha",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "El-Hajeb",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-061",
+      "magnitude": 2,
+      "native_id": "M26-2007V2-028",
+      "prefprov": "El-Hajeb",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "El Jadida-Azemmour",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-078",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-029",
+      "prefprov": "El Jadida",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "El Ksiba-Tadla",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-030",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-030",
+      "prefprov": "Béni Mellal",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "El Rharb",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-046",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-031",
+      "prefprov": "Kénitra",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Es-Semara",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-042",
+      "magnitude": 2,
+      "native_id": "M26-2007V2-032",
+      "prefprov": "Es-Semara",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Essaouira",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-058",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-033",
+      "prefprov": "Essaouira",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "February table creates/renames Fahs-Anjra at two seats; government-stage project says no change from that version."
+      ],
+      "constituency": "Fahs-Anjra",
+      "evidence_mode": "PROPOSAL_PLUS_GOVERNMENT_ADOPTION",
+      "inherited_2002_native_id": [
+        "M26-2002-088",
+        "M26-2002-089",
+        "M26-2002-090"
+      ],
+      "magnitude": 2,
+      "native_id": "M26-2007V2-034",
+      "prefprov": "Fahs-Anjra",
+      "provenance": "February table creates/renames Fahs-Anjra at two seats; government-stage project says no change from that version.",
+      "source_ids": [
+        "ALM_PROPOSAL_20070206",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Fès-Nord",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-034",
+        "M26-2002-035",
+        "M26-2002-036"
+      ],
+      "magnitude": 4,
+      "native_id": "M26-2007V2-035",
+      "prefprov": "Fès",
+      "provenance": "MAP source of 29 Aug directly states Fes-Nord has four seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Fès-Sud",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-034",
+        "M26-2002-035",
+        "M26-2002-036"
+      ],
+      "magnitude": 4,
+      "native_id": "M26-2007V2-036",
+      "prefprov": "Fès",
+      "provenance": "MAP source of 29 Aug directly states Fes-Sud has four seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Figuig",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-073",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-037",
+      "prefprov": "Figuig",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Guéliz-Ennakhil",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-051",
+        "M26-2002-052",
+        "M26-2002-053"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-038",
+      "prefprov": "Marrakech",
+      "provenance": "MAP source of 29 Aug directly states the three Marrakech districts each elect three members.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "guelmim",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-039",
+      "magnitude": 2,
+      "native_id": "M26-2007V2-039",
+      "prefprov": "guelmim",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Guercif",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-026",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-040",
+      "prefprov": "Taza",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "February table gives this new Meknes district three seats and government-stage project says no change from that version; final campaign alias not independently recovered."
+      ],
+      "constituency": "Hamria-Ahouaz Meknès-Zerhoune",
+      "evidence_mode": "PROPOSAL_PLUS_GOVERNMENT_ADOPTION",
+      "inherited_2002_native_id": [
+        "M26-2002-059",
+        "M26-2002-060"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-041",
+      "prefprov": "Meknès",
+      "provenance": "February table gives this new Meknes district three seats and government-stage project says no change from that version; final campaign alias not independently recovered.",
+      "source_ids": [
+        "ALM_PROPOSAL_20070206",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Hay Hassani",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-008",
+        "M26-2002-009",
+        "M26-2002-010",
+        "M26-2002-011",
+        "M26-2002-012",
+        "M26-2002-013",
+        "M26-2002-014",
+        "M26-2002-015"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-042",
+      "prefprov": "Hay Hassani",
+      "provenance": "MAP source of 1 Sep directly lists all 11 Greater Casablanca constituencies and their magnitudes.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Ifrane",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-062",
+      "magnitude": 2,
+      "native_id": "M26-2007V2-043",
+      "prefprov": "Ifrane",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Inezgane-Aït Melloul",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-017",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-044",
+      "prefprov": "Inezgane-Aït melloul",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "February table gives three seats; 2 Sep Interior/MAP distribution independently confirms final Ismailia Karouan naming, but the late article does not restate magnitude."
+      ],
+      "constituency": "Ismaïlia-Guerrouane",
+      "evidence_mode": "PROPOSAL_PLUS_FINAL_EXISTENCE",
+      "inherited_2002_native_id": [
+        "M26-2002-059",
+        "M26-2002-060"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-045",
+      "prefprov": "Meknès",
+      "provenance": "February table gives three seats; 2 Sep Interior/MAP distribution independently confirms final Ismailia Karouan naming, but the late article does not restate magnitude.",
+      "source_ids": [
+        "ALM_PROPOSAL_20070206",
+        "ALM_GOV_20070222",
+        "LM_MAP_20070902"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Jérada",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-070",
+      "magnitude": 2,
+      "native_id": "M26-2007V2-046",
+      "prefprov": "Jérada",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Karia-Rhafsai",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-028",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-047",
+      "prefprov": "Taounate",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Kénitra",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-044",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-048",
+      "prefprov": "Kénitra",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Khémisset-Oulmès",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": "M26-2002-006",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-049",
+      "prefprov": "khemisset",
+      "provenance": "MAP 29 Aug directly states Khemisset-Oulmes has three seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Khénifra",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-063",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-050",
+      "prefprov": "Khénifra",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Khouribga-Ouled Lbher Kbar et Sghar",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-084",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-051",
+      "prefprov": "Khouribga",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Laâyoune",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": "M26-2002-049",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-052",
+      "prefprov": "Laâyoune",
+      "provenance": "MAP/Interior 2 Sep directly states Laayoune has three seats.",
+      "source_ids": [
+        "LM_MAP_20070902"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Larache",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-091",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-053",
+      "prefprov": "Larache",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "M'Diq-Fnideq prefecture is independently documented pre-election. Two-seat magnitude is the residual required by the documented North reconfiguration while preserving the unchanged 295-seat national total and the legal minimum of two seats; no direct pre-election row-level magnitude citation was recovered."
+      ],
+      "constituency": "M'Diq-Fnideq",
+      "evidence_mode": "AMBIGUOUS_LEGAL_DERIVATION",
+      "inherited_2002_native_id": [
+        "M26-2002-088",
+        "M26-2002-089",
+        "M26-2002-090"
+      ],
+      "magnitude": 2,
+      "native_id": "M26-2007V2-054",
+      "prefprov": "M'Diq-Fnideq",
+      "provenance": "M'Diq-Fnideq prefecture is independently documented pre-election. Two-seat magnitude is the residual required by the documented North reconfiguration while preserving the unchanged 295-seat national total and the legal minimum of two seats; no direct pre-election row-level magnitude citation was recovered.",
+      "source_ids": [
+        "ALM_PROPOSAL_20070206",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824",
+        "ASSAHRAA_ADMIN_20070904"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Marrakech ville-Sidi Youssef Ben Ali",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-051",
+        "M26-2002-052",
+        "M26-2002-053"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-055",
+      "prefprov": "Marrakech",
+      "provenance": "MAP source of 29 Aug directly states the three Marrakech districts each elect three members.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Médiouna",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-008",
+        "M26-2002-009",
+        "M26-2002-010",
+        "M26-2002-011",
+        "M26-2002-012",
+        "M26-2002-013",
+        "M26-2002-014",
+        "M26-2002-015"
+      ],
+      "magnitude": 2,
+      "native_id": "M26-2007V2-056",
+      "prefprov": "Médiouna",
+      "provenance": "MAP source of 1 Sep directly lists all 11 Greater Casablanca constituencies and their magnitudes.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Ménara",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-051",
+        "M26-2002-052",
+        "M26-2002-053"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-057",
+      "prefprov": "Marrakech",
+      "provenance": "MAP source of 29 Aug directly states the three Marrakech districts each elect three members.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Midelt-Kbab",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-064",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-058",
+      "prefprov": "Khénifra",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Mohammedia",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-008",
+        "M26-2002-009",
+        "M26-2002-010",
+        "M26-2002-011",
+        "M26-2002-012",
+        "M26-2002-013",
+        "M26-2002-014",
+        "M26-2002-015"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-059",
+      "prefprov": "Mohammedia",
+      "provenance": "MAP source of 1 Sep directly lists all 11 Greater Casablanca constituencies and their magnitudes.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Moulay Rachid",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-008",
+        "M26-2002-009",
+        "M26-2002-010",
+        "M26-2002-011",
+        "M26-2002-012",
+        "M26-2002-013",
+        "M26-2002-014",
+        "M26-2002-015"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-060",
+      "prefprov": "Moulay Rachid",
+      "provenance": "MAP source of 1 Sep directly lists all 11 Greater Casablanca constituencies and their magnitudes.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "February pre-election table gives Moulay Yacoub two seats and government-stage project says no change from that version; no direct late-campaign row citation recovered."
+      ],
+      "constituency": "Moulay Yacoub",
+      "evidence_mode": "PROPOSAL_PLUS_GOVERNMENT_ADOPTION",
+      "inherited_2002_native_id": [
+        "M26-2002-034",
+        "M26-2002-035",
+        "M26-2002-036"
+      ],
+      "magnitude": 2,
+      "native_id": "M26-2007V2-061",
+      "prefprov": "Moulay Yacoub",
+      "provenance": "February pre-election table gives Moulay Yacoub two seats and government-stage project says no change from that version; no direct late-campaign row citation recovered.",
+      "source_ids": [
+        "ALM_PROPOSAL_20070206",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Nouaceur",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-008",
+        "M26-2002-009",
+        "M26-2002-010",
+        "M26-2002-011",
+        "M26-2002-012",
+        "M26-2002-013",
+        "M26-2002-014",
+        "M26-2002-015"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-062",
+      "prefprov": "Nouaceur",
+      "provenance": "MAP source of 1 Sep directly lists all 11 Greater Casablanca constituencies and their magnitudes.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Ouarzazate",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-022",
+      "magnitude": 5,
+      "native_id": "M26-2007V2-063",
+      "prefprov": "Ouarzazate",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Oued Ed-Dahab",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-067",
+      "magnitude": 2,
+      "native_id": "M26-2007V2-064",
+      "prefprov": "Oued Ed-Dhab",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Oued Zem-Abi Jaâd",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-085",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-065",
+      "prefprov": "Khouribga",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Ouezzane-Had Kourt-Jorf Melha",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-047",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-066",
+      "prefprov": "Sidi Kacem",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Oujda-Angad",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-069",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-067",
+      "prefprov": "Oujda-Angad",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Ouled Bouaziz-Zemamra",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-079",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-068",
+      "prefprov": "El Jadida",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Rabat-Chellah",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-002"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-069",
+      "prefprov": "Rabat",
+      "provenance": "MAP source of 29 Aug directly states Rabat-Chellah has three seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Rabat-Océan",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-001"
+      ],
+      "magnitude": 4,
+      "native_id": "M26-2007V2-070",
+      "prefprov": "Rabat",
+      "provenance": "MAP source of 29 Aug directly states Rabat-Ocean has four seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Rhamna",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": "M26-2002-056",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-071",
+      "prefprov": "El Kelaâ des Sraghna",
+      "provenance": "MAP 1 Sep directly states Rhamna has three seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Safi Al Janoubia",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-077",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-072",
+      "prefprov": "Safi",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Safi Chamalia",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-076",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-073",
+      "prefprov": "safi",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Salé-El Jadida",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": "M26-2002-004",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-074",
+      "prefprov": "Salé-El Jadida",
+      "provenance": "MAP 29 Aug directly states Sale-El Jadida has three seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Salé-Médina",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": "M26-2002-003",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-075",
+      "prefprov": "Salé-Médina",
+      "provenance": "MAP 29 Aug directly states Sale-Medina has four seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Sefrou",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": "M26-2002-037",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-076",
+      "prefprov": "sefrou",
+      "provenance": "MAP 1 Sep directly states Sefrou has three seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Settat",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-081",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-077",
+      "prefprov": "settat",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Sidi Bennour-Ouled Frej",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-080",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-078",
+      "prefprov": "El Jadida",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Sidi Bernoussi",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-008",
+        "M26-2002-009",
+        "M26-2002-010",
+        "M26-2002-011",
+        "M26-2002-012",
+        "M26-2002-013",
+        "M26-2002-014",
+        "M26-2002-015"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-079",
+      "prefprov": "Sidi Bernoussi",
+      "provenance": "MAP source of 1 Sep directly lists all 11 Greater Casablanca constituencies and their magnitudes.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Sidi Kacem-Mechraa Belkciri-Dar Keddari",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-048",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-080",
+      "prefprov": "Sidi Kacem",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Skhirate-Témara",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": "M26-2002-005",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-081",
+      "prefprov": "Skhirate-Témara",
+      "provenance": "MAP 29 Aug directly states Skhirate-Temara has three seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Sraghna-Zemrane",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": "M26-2002-057",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-082",
+      "prefprov": "el kelaa des sraghna",
+      "provenance": "MAP 1 Sep directly states Sraghna-Zemrane has four seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070901"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Tan-Tan",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-043",
+      "magnitude": 2,
+      "native_id": "M26-2007V2-083",
+      "prefprov": "Tan-Tan",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Tanger-Assilah",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-087",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-084",
+      "prefprov": "tanger-assilah",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Taounate-Tissa",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-027",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-085",
+      "prefprov": "Taounate",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Taourirt",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-072",
+      "magnitude": 2,
+      "native_id": "M26-2007V2-086",
+      "prefprov": "Taourirt",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Taroudant-Nord",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-019",
+        "M26-2002-020"
+      ],
+      "magnitude": 3,
+      "native_id": "M26-2007V2-087",
+      "prefprov": "Taroudant",
+      "provenance": "MAP source of 29 Aug directly states Taroudant northern district has three seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Taroudant-Sud",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": [
+        "M26-2002-019",
+        "M26-2002-020"
+      ],
+      "magnitude": 4,
+      "native_id": "M26-2007V2-088",
+      "prefprov": "Taroudant",
+      "provenance": "MAP source of 29 Aug directly states Taroudant southern district has four seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Tata",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-040",
+      "magnitude": 2,
+      "native_id": "M26-2007V2-089",
+      "prefprov": "Tata",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Taza",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-025",
+      "magnitude": 4,
+      "native_id": "M26-2007V2-090",
+      "prefprov": "taza",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "February table changes Tetouan from five to four seats; government-stage project says no change from that version."
+      ],
+      "constituency": "Tétouan",
+      "evidence_mode": "PROPOSAL_PLUS_GOVERNMENT_ADOPTION",
+      "inherited_2002_native_id": [
+        "M26-2002-088",
+        "M26-2002-089",
+        "M26-2002-090"
+      ],
+      "magnitude": 4,
+      "native_id": "M26-2007V2-091",
+      "prefprov": "Tétouan",
+      "provenance": "February table changes Tetouan from five to four seats; government-stage project says no change from that version.",
+      "source_ids": [
+        "ALM_PROPOSAL_20070206",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [],
+      "constituency": "Tiflet-Rommani",
+      "evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "inherited_2002_native_id": "M26-2002-007",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-092",
+      "prefprov": "Khémisset",
+      "provenance": "MAP 29 Aug directly states Tiflet-Rommani has three seats.",
+      "source_ids": [
+        "ASSAHRAA_MAP_20070829"
+      ],
+      "status": "VERIFIED",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Tiznit",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-021",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-093",
+      "prefprov": "Tiznit",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Zagora",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-023",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-094",
+      "prefprov": "Zagora",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    },
+    {
+      "ambiguities": [
+        "No row-specific final pre-election 2007 magnitude citation attached; carry-forward remains explicit uncertainty, never false/zero."
+      ],
+      "constituency": "Ziz-Tafilalet",
+      "evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "inherited_2002_native_id": "M26-2002-066",
+      "magnitude": 3,
+      "native_id": "M26-2007V2-095",
+      "prefprov": "Errachidia",
+      "provenance": "2002 verified native row carried into 2007 because the 2007 legal process explicitly modifies/completes the 2002 decree; sources call the listed urban changes the principal changes, not an exhaustive no-change certificate for every other row.",
+      "source_ids": [
+        "LM_MAP_20020921",
+        "ALM_GOV_20070222",
+        "LM_GOV_20070222",
+        "ALM_ADOPTION_20070326",
+        "LM_GLOBAL_20070824"
+      ],
+      "status": "AMBIGUOUS",
+      "year": 2007
+    }
+  ],
+  "schema_version": "2.0",
+  "year": 2007
+}

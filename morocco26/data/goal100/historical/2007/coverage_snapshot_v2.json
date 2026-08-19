@@ -1,0 +1,25 @@
+{
+  "candidate_feature_coverage_pct": 0.0,
+  "candidate_feature_policy": "EXPLICIT_MISSING_NOT_ZERO",
+  "direct_pre_election_final_row_pct": 31.58,
+  "direct_pre_election_final_seat_pct": 31.53,
+  "evidence_mode_counts": {
+    "AMBIGUOUS_LEGAL_DERIVATION": 1,
+    "DIRECT_PRE_ELECTION_FINAL": 30,
+    "LEGAL_CARRY_FORWARD_FROM_2002": 58,
+    "PROPOSAL_PLUS_FINAL_EXISTENCE": 2,
+    "PROPOSAL_PLUS_GOVERNMENT_ADOPTION": 4
+  },
+  "local_seat_sum": 295,
+  "map_status_counts": {
+    "AMBIGUOUS": 65,
+    "VERIFIED": 30
+  },
+  "native_map_coverage_pct": 100.0,
+  "native_map_rows": 95,
+  "phase": "PRE_ELECTION_SNAPSHOT_V2",
+  "real_constituency_count": 95,
+  "reason": "Native map is complete 95/295 from pre-election lineage, but a substantial share remains legal carry-forward/ambiguous pending independent target-open reconciliation; no same-year target was consulted.",
+  "scientific_status_before_target_open": "PARTIAL_PRE_ELECTION_SNAPSHOT",
+  "year": 2007
+}

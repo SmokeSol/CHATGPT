@@ -1,0 +1,33 @@
+{
+  "files": [
+    {
+      "path": "data/goal100/historical/2007/historical_native_map_pre_election_v2.json",
+      "sha256": "6416dc441e601f86cdca001506c7af97afdd0294f384a882b00656a0a0afe2d2"
+    },
+    {
+      "path": "data/goal100/historical/2007/pre_election_snapshot_v2.json",
+      "sha256": "8d192881abe976fa2b4654a72271ca0cde0b6811b333a82a1e66b9034cc672fc"
+    },
+    {
+      "path": "data/goal100/historical/2007/source_inventory_snapshot_v2.json",
+      "sha256": "06362cccddaeca621bf75592b67600c840a1b5cc83c29ccd8518b1f066999985"
+    },
+    {
+      "path": "data/goal100/historical/2007/ambiguities_snapshot_v2.json",
+      "sha256": "f43a9e6f3b6cc9dfcd7ecefd954021e1fdc546b9c264becfc45141c5fd815d3d"
+    },
+    {
+      "path": "data/goal100/historical/2007/coverage_snapshot_v2.json",
+      "sha256": "592039e96cd58e7dbb33154cc17534b5cc82d5666ea590225c83adf028347af9"
+    },
+    {
+      "path": "data/goal100/historical/2007/anti_leakage_certificate_v2.json",
+      "sha256": "20dd962bc82b31aac88e10b06a0c7a8c7a9c1cbf06900130b0edf6330205bfe9"
+    }
+  ],
+  "generated_at": "2026-08-19",
+  "generator": "scripts/build_2007_pre_election_snapshot_v2.py",
+  "phase": "PRE_ELECTION_SNAPSHOT_V2",
+  "schema_version": "2.0",
+  "year": 2007
+}

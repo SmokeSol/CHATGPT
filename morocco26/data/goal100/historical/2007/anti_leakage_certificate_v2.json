@@ -1,0 +1,15 @@
+{
+  "base_input": "data/goal100/historical/2002/historical_native_map_pre_election.json",
+  "base_input_sha256": "fce1fc8362101fcf79d34c0a92e0bfa0c1d86b068cab948ab8f13bf3af6ca40b",
+  "cutoff": "2007-09-07",
+  "declaration": "TARGET_OUTCOME_NOT_USED_IN_PRE_ELECTION_SNAPSHOT",
+  "forbidden_same_year_inputs": [
+    "data/goal100/older_history_probe/raw/parlement-elections-2007-1-0.xlsx",
+    "data/goal100/historical/2007/legislative_2007_outcome_canonical.json"
+  ],
+  "generator": "scripts/build_2007_pre_election_snapshot_v2.py",
+  "schema_version": "2.0",
+  "temporal_check": "ALL_SOURCE_PUBLICATION_DATES_LT_ELECTION_DATE",
+  "unknown_discipline": "MISSING_VALUES_REMAIN_NULL_AND_NEVER_COERCED_TO_FALSE_OR_ZERO",
+  "year": 2007
+}
