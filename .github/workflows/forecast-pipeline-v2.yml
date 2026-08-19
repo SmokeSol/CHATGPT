@@ -1,0 +1,63 @@
+name: forecast-pipeline-v2
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [morocco26-forecast-pipeline-v2]
+    paths:
+      - "morocco26/scripts/legal_seat_allocator.py"
+      - "morocco26/scripts/forecast_pipeline_*.py"
+      - "morocco26/tests/test_legal_seat_allocator.py"
+      - "morocco26/data/goal100/forecast_pipeline/legal_regimes_v1.json"
+      - "morocco26/data/goal100/forecast_pipeline/forecast_pipeline_contract_v2.json"
+      - "morocco26/data/goal100/forecast_pipeline/historical_dropin_contract_v1.json"
+      - "morocco26/data/goal100/forecast_pipeline/geography_bridge_contract_v1.json"
+      - "morocco26/data/goal100/forecast_pipeline/geography_bridges/**"
+      - "morocco26/data/goal100/historical/**"
+      - "morocco26/data/goal100/e_collect/runs/**/candidate_ledger.json"
+      - "morocco26/data/goal100/b2_2026_ballot_roster.json"
+      - "morocco26/data/goal100/e_collect/arabic_territory_crosswalk_v1.json"
+      - ".github/workflows/forecast-pipeline-v2.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-forecast-pipeline-v2
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --quiet numpy pytest
+      - name: Legal allocator unit tests
+        run: pytest -q morocco26/tests/test_legal_seat_allocator.py
+      - name: Historical allocator replay
+        run: python morocco26/scripts/forecast_pipeline_validate_allocator_v1.py
+      - name: Boundary compatibility audit
+        run: python morocco26/scripts/forecast_pipeline_boundary_audit_v1.py
+      - name: National / territorial decomposition
+        run: python morocco26/scripts/forecast_pipeline_decompose_v1.py
+      - name: Current 2026 pre-election snapshot
+        run: python morocco26/scripts/forecast_pipeline_snapshot_2026_v1.py
+      - name: Rolling-origin harness
+        run: python morocco26/scripts/forecast_pipeline_rolling_origin_v1.py
+      - name: Persist derived audit artifacts
+        run: |
+          git config user.name "morocco26-forecast-pipeline-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add morocco26/data/goal100/forecast_pipeline/boundary_compatibility_v1.json
+          git add morocco26/data/goal100/forecast_pipeline/national_territorial_decomposition_v1.json
+          git add morocco26/data/goal100/forecast_pipeline/legal_allocator_historical_replay_v1.json
+          git add morocco26/data/goal100/forecast_pipeline/snapshot_2026_current_v1.json
+          git add morocco26/data/goal100/forecast_pipeline/rolling_origin_status_v1.json
+          if git diff --cached --quiet; then
+            echo "No derived changes"
+          else
+            git commit -m "forecast-pipeline: refresh derived audit artifacts"
+            git push origin HEAD:morocco26-forecast-pipeline-v2
+          fi
