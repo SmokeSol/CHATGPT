@@ -1,0 +1,85 @@
+{
+  "schema_version": "4.0",
+  "state_id": "M26-PROBABILISTIC-FORECAST-2026-V4",
+  "as_of": "2026-08-19T19:55:25+01:00",
+  "target_year": 2026,
+  "north_star": "Produce a frozen and falsifiable 2026 territorial probabilistic forecast whose national centre, territorial geography and uncertainty are separately validated before any seat probability is promoted.",
+  "gates": {
+    "historical_national_vectors": {"status": "PASS", "years": [1997, 2002, 2007, 2011, 2016, 2021]},
+    "national_model_selection": {
+      "status": "PASS",
+      "winner": "PREVIOUS_NATIONAL_PERSISTENCE",
+      "scored_folds": ["2002_TO_2007", "2007_TO_2011", "2011_TO_2016", "2016_TO_2021"],
+      "mean_fold_rmse": 0.06500749128449343,
+      "evidence": "morocco26/data/goal100/forecast_lab/national_model_selection_2026_v1_summary.json"
+    },
+    "current_national_2026_point": {
+      "status": "PASS_READY_FOR_STRUCTURAL_CENTER",
+      "model": "PREVIOUS_NATIONAL_PERSISTENCE",
+      "evidence": "morocco26/data/goal100/forecast_lab/national_forecast_2026_v1.json",
+      "current_only_signal_adjustment": "NONE"
+    },
+    "national_uncertainty": {
+      "status": "PASS",
+      "coverage80": 0.8611111111111112,
+      "coverage95": 0.9722222222222222,
+      "evidence": "morocco26/data/goal100/forecast_lab/national_uncertainty_2026_v1_summary.json"
+    },
+    "rolling_origin_territorial_model": {
+      "status": "PASS",
+      "winner": "HALF_SHRINK",
+      "lambda": 0.5,
+      "folds": ["2007_TO_2011", "2011_TO_2016", "2016_TO_2021"],
+      "evidence": "morocco26/data/goal100/forecast_lab/baseline_scores_v2.json"
+    },
+    "conditional_geography_uncertainty": {
+      "status": "PASS",
+      "historical_residual_rows": 241,
+      "pooled_share_rmse": 0.07098844167241973,
+      "resampling_space": "RAW_SHARE_ERROR_FOR_MONTE_CARLO__CLR_DIAGNOSTIC_ONLY"
+    },
+    "combined_national_geography_coverage": {
+      "status": "PASS",
+      "cells": 1656,
+      "coverage80": 0.8907004830917874,
+      "coverage95": 0.9867149758454107,
+      "evidence": "morocco26/data/goal100/forecast_lab/combined_territorial_coverage_v1_summary.json"
+    },
+    "legal_allocator_2026": {
+      "status": "PASS_REUSED_CERTIFIED_FMINUS1_V1_1_RUNTIME",
+      "house_seats": 395,
+      "statutory_tie_prior": "UNKNOWN_AGE_EXCHANGEABLE"
+    },
+    "final_50000_simulations": {
+      "status": "PASS",
+      "draws": 50000,
+      "contest_draws": 5200000,
+      "exact_seats_every_draw": 395,
+      "unique_list_threshold_failures": 0,
+      "unfilled_seat_exceptions": 0,
+      "unresolved_after_age_prior": 0,
+      "seat_stream_sha256": "a10becb1e85c2b3327e9430cd76c7801e6d3f515046ab8ec991c787e016bdf0d",
+      "evidence": "morocco26/data/goal100/forecast_lab/final_probabilistic_forecast_2026_v1_summary.json"
+    },
+    "probabilistic_forecast_2026": {
+      "status": "PROMOTED",
+      "publishable_now": true,
+      "forecast_id": "M26-PROBABILISTIC-FORECAST-2026-V1-SUMMARY"
+    }
+  },
+  "current_label": "PROBABILISTIC_FORECAST_2026_PROMOTED__CALIBRATED_CONSERVATIVE_UNCERTAINTY",
+  "mandatory_cautions": [
+    "The national point equals the 2021 national local-ballot composition because persistence won the frozen historical tournament, not because persistence was assumed.",
+    "The national tail model has only five historical transitions and intentionally produces broad intervals.",
+    "The pooled combined coverage gate passes, but RNI party-specific coverage is weaker (64.7% at nominal 80%; 92.9% at nominal 95%).",
+    "Conditional geography residuals are exchangeable across territories.",
+    "The current regional-ballot bridge has no historical current-system transition for calibration.",
+    "Registered-voter counts are latent local draws rather than official 2026 local counts.",
+    "2021 list availability and an exchangeable candidate-age tie prior remain structural placeholders until later immutable evidence snapshots."
+  ],
+  "deprecated_for_inference": [
+    "structural_seat_forecast_2026_v2 probability intervals and first-party probabilities",
+    "old F-minus-1 vote uncertainty around the new lambda=.5 centre",
+    "current-only political signal blending without historical admission"
+  ]
+}
