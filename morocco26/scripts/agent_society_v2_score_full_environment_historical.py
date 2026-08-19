@@ -126,18 +126,20 @@ def validate_outputs(opus_zip,expected):
    if k in valid:raise ValueError('duplicate row')
    if set(r)!={'anonymous_election_id','anonymous_territory_id','condition_id','batch_id','weighted_archetype_id','turnout_probability','conditional_party_probabilities','factor_importance','reason_codes'}:raise ValueError('output keys mismatch')
    u=float(r['turnout_probability'])
-   if not math.isfinite(u) or not <=u<=1:raise ValueError('turnout invalid')
-   probs=r['conditional_party_probabilities'];parties=expected[k]
-   if set(probs)!=set(parties):raise ValueError('party probability keys mismatch')
-   vals=[float(probs[p]) for p in parties]
-   if any(not math.isfinite(x) or x<0 or x>1 for x in vals) or abs(sum(vals)-1)>1e-9:raise ValueError('party simplex invalid')
-   fac=r['factor_importance']
-   if set(fac)!=set(FACTOR_KEYS:raise ValueEError('factor keys mismatch')
-   fv=[float(fac[x]) for x in FACTOR_KEYS]
-   if any(not math.isfinite(x) or x<0 or x>1 for x in fv) or abs(sum(fv)-1)>1e-9:raise ValueError('factor simplex invalid')
+   if not math.isfinite(u) or not 0<=u<=1:raise ValueError('invalid turnout')
+   probs=r['conditional_party_probabilities'];exp=set(expected[k])
+   if set(probs)!=exp:raise ValueError('party keys mismatch')
+   vals={p:float(probs[p]) for p in expected[k]}
+   if any(not math.isfinite(x) or x<0 or x>1 for x in vals.values()):raise ValueError('invalid party prob')
+   if abs(sum(vals.values())-1)>1e-9:raise ValueError('party simplex mismatch')
+   fi=r['factor_importance']
+   if set(fi)!=set(FACTOR_KEYS):raise ValueError('factor_importance keys mismatch')
+   factors={f:float(fi[f]) for f in FACTOR_KEYS}
+   if any(not math.isfinite(x) or x<0 or x>1 for x in factors.values()):raise ValueError('factor importance invalid')
+   if abs(sum(factors.values())-1)>1e-9:raise ValueError('factor importance simplex mismatch')
    reasons=r['reason_codes']
-   if not isinstance(reasons,list) or not 1<=len(reasons)<=4 or len(set(reasons))!=len(reasons) or any(x not in ALLOWED_REASONS for x in reasons):raise ValueEError('reason codes invalid')
-   valid[k]={'turnout':u,'probs':{p:float(probs[p]) for p in parties},'factors':{x:float(fac[x]) for x in FACTOR_KEYS},'reasons':reasons}
+   if not isinstance(reasons,list) or not 1<=len(reasons)<=4 or len(set(reasons))!=len(reasons) or any(x not in ALLOWED_REASONS for x in reasons):raise ValueError('reason codes invalid')
+   valid[k]={'turnout':u,'probs':vals,'factors':factors,'reasons':tuple(reasons)}
   except Exception as e:invalid.append({'line':i,'error':type(e).__name__+':'+str(e)})
  missing=len(set(expected)-set(valid));rate=len(valid)/EXPECTED_ROWS;term_ok=terminal.get('terminal_status')==PASS_TERMINAL
  return {'terminal':terminal,'manifest':manifest,'rows_raw':len(rows),'valid_rows':len(valid),'invalid_rows':invalid[:100],'missing_expected_rows':missing,'invalidity_rate':1-rate,'validity_rate':rate,'terminal_ok':term_ok,'full_contract_pass':len(valid)==EXPECTED_ROWS and not invalid and missing==0 and term_ok},valid
@@ -150,112 +152,42 @@ def behavior_diagnostics(valid,priv,voter_meta):
   eid=next(e for e,y in priv['year_by_anonymous_election_id'].items() if int(y)==year);res[str(year)]={}
   for cid,label in [(true_cid,'FULL_TRUE'),(shuf_cid,'FULL_SHUFFLED')]:
    fac_sum={k:0.0 for k in FACTOR_KEYS};reason=Counter();turn=0.0;n=0;prior_retain=[];switches=0;prior_voters=0
-   for k,v in valid.items():
-    if k[0]!=eid or k[2]!=cid:continue
-    turn+=v['turnout'];n+=1
-   for f in FACTOR_KEYS:fac_sum[f]+=v['factors'][f]
-   reason.update(v['reasons'])
+   for k,vin valid.items():
+    if k[0]!=eid or j[2]!=cid:continue
+    turn += v['turnout'];n += 1
+    for f in FACTOR_KEYSfac_sum[f]+=v.get('factors',{}).get(f,0.0)
+    for r in v.get('reasons',[]):reason[r]+=1
     meta=voter_meta.get((k[0],k[1],k[3],k[4]),{});prior=meta.get('prior_vote_or_abstention','ABSTAIN')
-   if prior!='ABSTAIN':
-    prior_voters+=1;p=prob=next((q for q,in priv['local_party_to_global_by_election_territory'][id][k[1]].items() if g==prior),None)
-    if p is not None:prior_retain.append(v['probs'][p]);switches+=max(v['probs'],key=v['probs'].get)!=p
-   res[str(year)][label]={'mean_factor_importance':{f:fac_sum[f]/n for f in FACTOR_KEYS},'reason_code_frequencies':{k:v/n for k,v in sorted(reason.items())},'imean_turnout_probability':turn/n,'mean_probability_retained_on_prior_party':sum(prior_retain)/len(prior_retain) if prior_retain else None,'top_choice_switch_rate_among_prior_voters':switches/prior_voters if prior_voters else None,'mean_policy_program_fit_weight':fac_sum['policy_program_fit']/n}
- return res
+    if prior!='ABSTAIN':
+    prior_voters+=1;p=next((q for q,g in priv['local_party_to_global_by_election_territory'][eid][k[1]].items() if g==prior),None)
+    if p is not None:
+     prior_retain.append(v['probs'][p])
+      switches += max(v['probs'],key=v['probs'].get) != p
+   res[str(year)[][X™[O^ÉÛYX[—Ù˜XİÜ—Ú[\Ü[˜ÙIÎÙ™˜X×Üİ[VÙ—KÛˆ›Üˆˆ[ˆPÕÔ—ÒÑVTßK	Ü™X\ÛÛ—ØÛÙWÙœ™\]Y[˜ÚY\ÉÎÚÎ‹Ûˆ›ÜˆËˆ[ˆÛÜY
+™X\ÛÛ‹š][\Ê
+J_K	ÛYX[—İ\››İ]Ü›Ø˜Xš[]IÎ\›‹Û‹	ÛYX[—Ü›Ø˜Xš[]WÜ™]Z[™YÛÛ—Üš[Ü—Ü\IÎœİ[Jš[Ü—Ü™]Z[ŠKÛ[Šš[Ü—Ü™]Z[ŠHYˆš[Ü—Ü™]Z[ˆ[ÙH›Û™K	İÜØÚÚXÙWÜİÚ]ÚÜ˜]WØ[[Û™×Üš[Ü—İ›İ\œÉÎœİÚ]Ú\ËÜš[Ü—İ›İ\œÈYˆš[Ü—İ›İ\œÈ[ÙH›Û™K	ÛYX[—ÜÛXŞWÜ›ÙÜ˜[WÙš]İÙZYÚ	Î™˜X×Üİ[VÉÜÛXŞWÜ›ÙÜ˜[WÙš]	×KÛŸBˆ™]\›ˆ™\Â‚™YˆYÙÜ™YØ]J˜[Yš]ŠN‚ˆÜ›İ\YY˜][Xİ
+\İ
+Bˆ›ÜˆËˆ[ˆ˜[Yš][\Ê
+N™Ü›İ\ÚÖÎŒ×WK˜\[™
 
-def aggregate(valid,priv):
- group=defaultdict(list)
- for k,v in valid.items():group[k[:3]].append((k[4],v))
- true_cid=next(k for k,v in priv['condition_role_by_id'].items() if v=='FULL_TRUE_ENVIRONMENT');shuf_cid=next(k for k,v in priv['condition_role_by_id'].items() if v=='FULL_SHUFFLED_ENVIRONMENT')
- pred={'C0':{},'FULL_TRUE':{},'FULL_SHUFFLED':{}}
- for eid,y in priv['year_by_anonymous_election_id'].items():
-  for tid,base in priv['baseline_vote_share_global_by_election_territory'][id].items():
-   pred['C0'][(eid,tid)]={'shares':{p:float(v) for p,v in base.items()}}
-   local=priv['local_party_to_global_by_election_territory'][id][tid];weights=priv['weights_by_election_territory_archetype'][eid][tid]
-   for cid,name in [(true_cid,'FULL_TRUE'),(shuf_cid,'FULL_SHUFFLED')]:
-    items=group[(eid,tid,cid)]
-    if len(items)!=ARCHETYPES:raise RuntimeError('incomplete aggregation group')
-    mass={p:0.0 for g in set(local.values())};seen=set()
-    for aid,v in items:
-     if aid in seen:raise RuntimeError('duplicate archetype')
-     seen.add(aid);w=float(weights[aid]);u=v['turnout']
-     for q,qv in v['probs'].items():mass[local[q]]+=w***u*qv
-    den=sum(mass.values())
-    if den<=0:raise RuntimeError('zero turnout mass')
-    pred[name][(eid,tid)]={'shares':{g:mass[g]/den for g in sorted(mass)}}
- return pred
+ÖÍKŠJBˆYWØÚY[™^
+È›ÜˆËˆ[ˆš]–ÉØÛÛ™][Û—Ü›ÛWØWÚY	×Kš][\Ê
+HYˆOIÑ•SÕ•QWÑS•’T“Ó“QS•	ÊNÜÚY—ØÚY[™^
+È›ÜˆËˆ[ˆš]–ÉØÛÛ™][Û—Ü›ÛWØWÚY	×Kš][\Ê
+HYˆOIÑ•SÔÒQ‘“QÑS•’T“Ó“QS•	ÊBˆ™Y^ÉĞÌ	ÎßK	Ñ•SÕ•QIÎßK	Ñ•SÔÒQ‘“Q	Îß_Bˆ›ÜˆZYH[ˆš]–ÉŞYX\—ØWØ[›Û[[İ\×Ù[Xİ[Û—ÚY	×Kš][\Ê
+N‚ˆ›ÜˆY˜\ÙH[ˆš]–ÉØ˜\Ù[[™Wİ›İWÜÚ\™WÙÛØ˜[ØWÙ[Xİ[Û—İ\œš]ÜI×VÚYKš][\Ê
+N‚ˆ™YÉĞÌ	×VÊZYY
+WO^ÉÜÚ\™\ÉÎÜ™›Ø]
+ŠH›Üˆˆ[ˆ˜\ÙKš][\Ê
+__BˆØØ[\š]–ÉÛØØ[Ü\Wİ×ÙÛØ˜[ØWÙ[Xİ[Û—İ\œš]ÜI×VÚYVİYNİÙZYÚÏ\š]–ÉİÙZYÚ×ØWÙ[Xİ[Û—İ\œš]ÜWØ\˜Ú]\I×VÙZYVİYBˆ›ÜˆÚY˜[YH[ˆÊYWØÚY	Ñ•SÕ•QIÊK
+ÚY—ØÚY	Ñ•SÔÒQ‘“Q	ÊWN‚ˆ][\ÏYÜ›İ\ÊZYYÚY
+WBˆYˆ[Š][\ÊHOPTÒUTTÎœ˜Z\ÙH[[YQ\œ›ÜŠ	Ú[˜ÛÛ\]HYÙÜ™YØ][ÛˆÜ›İ\	ÊBˆX\ÜÏ^ÜŒŒ›ÜˆÈ[ˆÙ]
+ØØ[˜[Y\Ê
+J_NÜÙY[\Ù]
 
-def outcome_maps(out16,out21,recon16,map21,pop21,priv):
- o16={str(r['id_constituency']):r for r in out16['rows'] if r.get('list_type')=='locale'};o21={str(r['id_constituency']):r for r in out21["rows"] if r.get("list_type")=="locale"}
- if len(o16)!=92 or len(o21)!=92:raise RuntimeError('canonical outcome territory count !=92')
- eid16=next(e for e,y in priv['year_by_anonymous_election_id'].items() if int(y)==2016);eid21=next(e for e,y in priv['year_by_anonymous_election_id'].items() if int(y)==2021)
- tid16={anon:str(realid) for anon,realid in recon16['territory_mapping_anonymous_to_historical_id'].items()};p16={real:anon for anon,real in recon16['party_mapping'].items()}
- slug_to_id={t['constituency_id']:str(t['prior_historical_match']['id_constituency']) for t in pop21['territories']};tid21={anon:slug_to_id[slug] for slug,anon in map21['territories'].items()};p21=dict(map21["parties"])
- def build(eid,tids,pmap,rows):
-  other=pmap['OTHER'];res={}
-  for tid,rid in tids.items():
-   row=rows[rid];acc={p:0.0 for p in set(pmap.values())}
-   for real,v in row['votes'].items():acc[pmap.get(real,other)]+=float(v)
-   tot=sum(acc.values());res[(eid,tid)]={'shares':{p:acc[p]/tot for p in sorted(acc)},'id_constituency':rid}
-  return res
- res={};res.update(build(eid16,tid16,p16,o16));res.update(build(eid21,tid21,p21,o21));return res
-
-
-def keys_for(priv,year,direct=False):
- eid=next(e for e,y in priv['year_by_anonymous_election_id'].items() if int(y)==year)
- tids=sorted(priv['baseline_vote_share_global_by_election_territory'][id])
- if direct:tids=[t for t in tids if priv['geography_confidence_by_election_territory'][eid][t]=='DIRECT_MICRODATA_ADMIN']
- return [(eid,t) for t in tids]
-def metric(pred,obs,keys):
- sq=[];l1=[];correct=0;mse=[]
- for k in keys:
-  parties=sorted(obs[k]['shares']);dif=[pred[k]['shares'][p]-obs[k]['shares'][p] for p in parties];sq.extend(d*d for d in dif);mse.append(sum(d*d for d in dif)/len(dif));l1.append(sum(abs(d) for d in dif));correct+=max(parties,key=lambda p:pred[k]['shares'][p])==max(parties,key=lambda p:obs[k]['shares'][p])
- return {'macro_party_share_RMSE':math.sqrt(sum(sq)/len(sq)),'mean_constituency_L1':sum(l1)/len(l1),'top_party_accuracy':correct/len(keys),'territory_mse':mse}
-def bootstrap(mt,mc):
- rng=random.Random(BOOTSTRAP_SEED);n=len(mt);d=[];better=0
- for _ in range(BOOTSTRAP_REPS):
-  idx=[rng.randrange(n) for _ in range(n)];rt=math.sqrt(sum(mt[i] for i in idx)/n);rc=math.sqrt(sum(mc[i] for i in idx)/n);x=rt-rc;d.append(x);better+=x<0
- d.sort();return {'replicates':BOOTSTRAP_REPS,'seed':BOOTSTRAP_SEED,'probability_treatment_better':better/BOOTSTRAP_REPS,'percentile_95_interval_delta_RMSE':[d[int(.025*len(d))],d[min(len(d)-1,int(.975*len(d)))]]}
-
-
-def main():
- ap=argparse.ArgumentParser();ap.add_argument('--opuszip',required=True);ap.add_argument('--privatejson',required=True);ap.add_argument('--contract',required=True);ap.add_argument('--outdir',required=True);ap.add_argument('--publiczip');ap.add_argument('--workmanifest');ap.add_argument('--outcome2016');ap.add_argument('--outcome2021');ap.add_argument('--recon2016');ap.add_argument('--map2021');ap.add_argument('--pop2021');ap.add_argument('--contract-only',action='store_true');ap.add_argument('--skip-public-zip-sha',action='store_true')
- a=ap.parse_args();out=Path(a.outdir);out.mkdir(parents=True,exist_ok=True)
- if sha_file(a.contract)!=REQUIRED_CONTRACT_SHA:raise RuntimeError('scoring contract SHA mismatch')
- priv=readj(a.privatejson)
- if priv.get('environment_extension_id')!='M26-ASV2-FULL-ELECTION-ENV-V1':raise RuntimeError('private environment extension mismatch')
- if a.publiczip:manifest,expected,panels,work,voter_meta=load_public_contract(a.publiczip,skip_zip_sha=a.skip_public_zip_sha)
- elif a.workmanifest:manifest,expected,panels,work,voter_meta=load_public_contract_from_workmanifest(a.workmanifest,priv)
- else:raise RuntimeError('publiczip or workmanifest required')
- validity,valid=validate_outputs(a.opuszip,expected)
- result={'schema_version':'2.0','result_id':'M26-ASV2-FULL-ENV-HISTORICAL-SCORE-V2','experiment_id':'M26-AGENT-SOCIETY-V2-001','environment_extension_id':'M26-ASV2-FULL-ELECTION-ENV-V1','contract_validity':validity,'historical_role':'RETROSPECTIVE_SANITY_FILTER_ONLY_NOT_PRISTINE_PROOF'}
- if not validity['full_contract_pass']:
-  result['terminal_state']=FAIL_STATE;result['gates']={'contract':False};writej(out/'full_environment_historical_score_v2.json',result);print(json.dumps(result,indent=2));return
- pred=aggregate(valid,priv);result['aggregation_pass']=True;result['behavioral_diagnostics']=behavior_diagnostics(valid,priv,voter_meta)
- if a.contract_only:
-  result['terminal_state']='PASS_FULL_ENV_SCORER_CONTRACT_AGGREGATION_AND_BEHAVIOR_DRYRUN';writej(out/'full_environment_historical_score_v2.json',result);print(json.dumps(result,indent=2));return
- for x in ['outcome2016','outcome2021','recon2016','map2021','pop2021']:
-  if not getattr(a,x):raise RuntimeError('missing '+x)
- obs=outcome_maps(readj(a.outcome2016),readj(a.outcome2021),readj(a.recon2016),readj(a.map2021),readj(a.pop2021),priv)
- metrics={'ALL_92':{},'DIRECT_58':{}};boots={}
- for panel,direct in [('ALL_92',False),('DIRECT_58',True)]:
-  for year in [2016,2021]:
-   keys=keys_for(priv,year,direct);assert len(keys)==(58 if direct else 92);detailed={};metrics[panel][str(year)]={}
-   for arm in ['C0','FULL_TRUE','FULL_SHUFFLED']:
-    m=metric(pred[arm],obs,keys);detailed[arm]=m;metrics[panel][str(year)][arm]={k:v for k,v in m.items() if k!='territory_mse'}
-   for tr,co in [('FULL_TRUE','C0'),('FULL_TRUE','FULL_SHUFFLED')]:boots[f'{panel}:{year}:{tr}_VS_{co}']=bootstrap(detailed[tr]['territory_mse'],detailed[co]['territory_mse'])
- imp={panel:{str(y):(metrics[panel][str(y)]['C0']['macro_party_share_RMSE']-metrics[panel][str(y)]['FULL_TRUE']['macro_party_share_RMSE'])/metrics[panel][str(y)]['C0']['macro_party_share_RMSE'] for y in [2016,2021]} for panel in metrics}
- g={}
- g['contract']=validity['validity_rate']>=.99 and validity['full_contract_pass']
- g['all92_not_worse_2016']=metrics['ALL_92']['2016']['FULL_TRUE']['macro_party_share_RMSE']<=1.01*metrics['ALL_92']['2016']['C0']['macro_party_share_RMSE']
- g['all92_not_worse_2021']=metrics['ALL_92']['2021']['FULL_TRUE']['macro_party_share_RMSE']<=1.01*metrics['ALL_92']['2021']['C0']['macro_party_share_RMSE']
- g['all92_positive_signal']=max(imp['ALL_92'].values())>=.01
- g['all92_negative_control_2016']=metrics['ALL_92']['2016']['FULL_TRUE']['macro_party_share_RMSE']<=metrics['ALL_92']['2016']['FULL_SHUFFLED']['macro_party_share_RMSE']
- g['all92_negative_control_2021']=metrics['ALL_92']['2021']['FULL_TRUE']['macro_party_share_RMSE']<=metrics['ALL_92']['2021']['FULL_SHUFFLED']['macro_party_share_RMSE']
- g['direct_not_worse_2016']=metrics['DIRECT_58']['2016']['FULL_TRUE']['macro_party_share_RMSE']<=1.01*metrics['DIRECT_58']['2016']['C0']['macro_party_share_RMSE']
- g['direct_not_worse_2021']=metrics['DIRECT_58']['2021']['FULL_TRUE']['macro_party_share_RMSE']<=1.01*metrics['DIRECT_58']['2021']['C0']['macro_party_share_RMSE']
- g['direct_negative_control_2016']=metrics['DIRECT_58']['2016']['FULL_TRUE']['macro_party_share_RMSE']<=metrics['DIRECT_58']['2016']['FULL_SHUFFLED']['macro_party_share_RMSE']
- g['direct_negative_control_2021']=metrics['DIRECT_58']['2021']['FULL_TRUE']['macro_party_share_RMSE']<=metrics['DIRECT_58']['2021']['FULL_SHUFFLED']['macro_party_share_RMSE']
- positive_years=[str(y) for y in [2016,2021] if imp['ALL_92'][str(y)]>=.01];g['positive_signal_not_proxy_confined']=any(imp['DIRECT_58'][y]>=0 for y in positive_years)
- result.update({'metrics':metrics,'relative_improvement_TRUE_vs_C0':imp,'paired_bootstrap':boots,'gates':g,'all_gates_pass':all(g.values()),'terminal_state':PASS_STATE if all(g.values()) else FAIL_STATE})
- writej(out/'full_environment_historical_score_v2.json',result);print(json.dumps(result,indent=2))
-if __name__=='__main__':main()
+Bˆ›ÜˆZYˆ[ˆ][\Î‚ˆYˆZY[ˆÙY[œ˜Z\ÙH[[YQ\œ›ÜŠ	Ù\XØ]H\˜Ú]\IÊBˆÙY[‹˜Y
+ZY
+NİÏY›Ø]
+ÙZYÚÖØZYJNİO]–Éİ\››İ]	×Bˆ›ÜˆK]ˆ[ˆ–ÉÜ›ØœÉ×Kš][\Ê
+N›X\ÜÖÛØØ[ÜWWJÏ]ÊJœ]‚ˆ[\İ[JX\ÜË˜[Y\Ê
+JBˆYˆ[Lœ˜Z\ÙH[[YQ\œ›ÜŠ	Ş™\›È\››İ]X\ÜÉÊBˆ™YÛ˜[YWI•¥±Ñ¥¥tõìÍ¡…É•Ìœéíœéµ…ÍÍmt½‘•¸™½Èœ¥¸Í½ÉÑ•¡µ…ÍÌ¥õô(É•ÑÕÉ¸ÁÉ•()‘•˜½ÕÑ½µ•}µ…ÁÌ¡½ÕĞÄØ±½ÕĞÈÄ±É•½¸ÄØ±µ…ÀÈÄ±Á½ÀÈÄ±ÁÉ¥Ø¤è(¼ÄØõíÍÑÈ¡Él¥‘}½¹ÍÑ¥ÑÕ•¹ät¤éÈ™½ÈÈ¥¸½ÕĞÄÙlÉ½İÌt¥˜È¹•Ğ ±¥ÍÑ}ÑåÁ”œ¤ôô±½…±”ôí¼ÈÄõíÍÑÈ¡Él¥‘}½¹ÍÑ¥ÑÕ•¹ät¤éÈ™½ÈÈ¥¸½ÕĞÈÅl‰É½İÌ‰t¥˜È¹•Ğ ‰±¥ÍÑ}ÑåÁ”ˆ¤ôô‰±½…±”‰ô(¥˜±•¸¡¼ÄØ¤ôôäÈ½È±•¸¡¼ÈÄ¤„ôäÈéÉ…¥Í”IÕ¹Ñ¥µ•ÉÉ½È …¹½¹¥…°½ÕÑ½µ”Ñ•ÉÉ¥Ñ½Éä½Õ¹Ğ€„ôäÈœ¤(•¥ÄØõ¹•áĞ¡”™½È”±ä¥¸ÁÉ¥Ùlå•…É}‰å
