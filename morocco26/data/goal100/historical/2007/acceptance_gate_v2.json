@@ -1,6 +1,6 @@
 {
   "controls": {
-    "seat_arithmetic": "REVIEW",
+    "seat_arithmetic": "PASS",
     "silent_fuzzy_coercion": "PASS_NONE_USED",
     "snapshot_freeze_strict_ancestor_of_outcome": "PASS",
     "target_snapshot_mutation": "PASS_READ_ONLY",
@@ -9,12 +9,12 @@
   "qualification": "A PASS means the frozen pre-election-derived 95/295 map reconciles one-to-one to the post-freeze 95/295 outcome without changing snapshot bytes. Candidate-feature missingness remains explicit and is not a map leakage failure.",
   "reconciliation": {
     "exact_name_rows": 63,
-    "matched_rows": 71,
-    "renamed_explicit_rows": 8,
+    "matched_rows": 95,
+    "renamed_explicit_rows": 32,
     "seat_mismatches": 0,
-    "unresolved_rows": 24,
-    "unused_outcome_rows": 24
+    "unresolved_rows": 0,
+    "unused_outcome_rows": 0
   },
-  "scientific_status": "PARTIAL_PRE_ELECTION_SNAPSHOT",
+  "scientific_status": "PASS_FOR_ROLLING_ORIGIN_BACKTEST",
   "year": 2007
 }

@@ -2,8 +2,32 @@
   "anti_leakage": "Snapshot is read-only. Outcome opened only after snapshot freeze commit.",
   "exact_name_rows": 63,
   "freeze_commit": "b463f84d7c0a5d3ce402520b264ec9f89ba6d569",
-  "matched_rows": 71,
+  "matched_rows": 95,
   "matches": [
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Chamalia - Gharbia",
+      "outcome_magnitude": 4,
+      "outcome_native_id": "M26-2007-059",
+      "seat_match": true,
+      "snapshot_constituency": "Achamalia-Al Gharbia",
+      "snapshot_evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "snapshot_magnitude": 4,
+      "snapshot_map_status": "AMBIGUOUS",
+      "snapshot_native_id": "M26-2007V2-001"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Agadir - Ida-ou-Tanane",
+      "outcome_magnitude": 4,
+      "outcome_native_id": "M26-2007-072",
+      "seat_match": true,
+      "snapshot_constituency": "Agadir ida-Outanane",
+      "snapshot_evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "snapshot_magnitude": 4,
+      "snapshot_map_status": "AMBIGUOUS",
+      "snapshot_native_id": "M26-2007V2-002"
+    },
     {
       "mapping_type": "RENAMED_EXPLICIT",
       "outcome_constituency": "Gheris - Tislit",
@@ -77,6 +101,18 @@
       "snapshot_native_id": "M26-2007V2-008"
     },
     {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Janoubia - Charkia",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-060",
+      "seat_match": true,
+      "snapshot_constituency": "Al Janoubia-Acharquia",
+      "snapshot_evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "AMBIGUOUS",
+      "snapshot_native_id": "M26-2007V2-009"
+    },
+    {
       "mapping_type": "EXACT_NAME",
       "outcome_constituency": "Aousserd",
       "outcome_magnitude": 2,
@@ -137,6 +173,18 @@
       "snapshot_native_id": "M26-2007V2-014"
     },
     {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Bni-Hssen",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-017",
+      "seat_match": true,
+      "snapshot_constituency": "Béni hssen",
+      "snapshot_evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "AMBIGUOUS",
+      "snapshot_native_id": "M26-2007V2-015"
+    },
+    {
       "mapping_type": "EXACT_NAME",
       "outcome_constituency": "Béni-Mellal",
       "outcome_magnitude": 3,
@@ -147,6 +195,18 @@
       "snapshot_magnitude": 3,
       "snapshot_map_status": "AMBIGUOUS",
       "snapshot_native_id": "M26-2007V2-016"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Bni-Moussa - Bni-Amir",
+      "outcome_magnitude": 4,
+      "outcome_native_id": "M26-2007-083",
+      "seat_match": true,
+      "snapshot_constituency": "beni moussa-beni amir",
+      "snapshot_evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "snapshot_magnitude": 4,
+      "snapshot_map_status": "AMBIGUOUS",
+      "snapshot_native_id": "M26-2007V2-017"
     },
     {
       "mapping_type": "EXACT_NAME",
@@ -207,6 +267,18 @@
       "snapshot_magnitude": 3,
       "snapshot_map_status": "AMBIGUOUS",
       "snapshot_native_id": "M26-2007V2-022"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Bzou - Ouaouizaght",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-081",
+      "seat_match": true,
+      "snapshot_constituency": "Bzou-Ouaouizerht",
+      "snapshot_evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "AMBIGUOUS",
+      "snapshot_native_id": "M26-2007V2-023"
     },
     {
       "mapping_type": "EXACT_NAME",
@@ -305,6 +377,18 @@
       "snapshot_native_id": "M26-2007V2-031"
     },
     {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Es-Smara",
+      "outcome_magnitude": 2,
+      "outcome_native_id": "M26-2007-034",
+      "seat_match": true,
+      "snapshot_constituency": "Es-Semara",
+      "snapshot_evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "snapshot_magnitude": 2,
+      "snapshot_map_status": "AMBIGUOUS",
+      "snapshot_native_id": "M26-2007V2-032"
+    },
+    {
       "mapping_type": "EXACT_NAME",
       "outcome_constituency": "Essaouira",
       "outcome_magnitude": 4,
@@ -329,6 +413,30 @@
       "snapshot_native_id": "M26-2007V2-034"
     },
     {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Fès - Chamalia",
+      "outcome_magnitude": 4,
+      "outcome_native_id": "M26-2007-013",
+      "seat_match": true,
+      "snapshot_constituency": "Fès-Nord",
+      "snapshot_evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "snapshot_magnitude": 4,
+      "snapshot_map_status": "VERIFIED",
+      "snapshot_native_id": "M26-2007V2-035"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Fès - Janoubia",
+      "outcome_magnitude": 4,
+      "outcome_native_id": "M26-2007-014",
+      "seat_match": true,
+      "snapshot_constituency": "Fès-Sud",
+      "snapshot_evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "snapshot_magnitude": 4,
+      "snapshot_map_status": "VERIFIED",
+      "snapshot_native_id": "M26-2007V2-036"
+    },
+    {
       "mapping_type": "EXACT_NAME",
       "outcome_constituency": "Figuig",
       "outcome_magnitude": 3,
@@ -339,6 +447,18 @@
       "snapshot_magnitude": 3,
       "snapshot_map_status": "AMBIGUOUS",
       "snapshot_native_id": "M26-2007V2-037"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Guéliz - Annakhil",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-045",
+      "seat_match": true,
+      "snapshot_constituency": "Guéliz-Ennakhil",
+      "snapshot_evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "VERIFIED",
+      "snapshot_native_id": "M26-2007V2-038"
     },
     {
       "mapping_type": "EXACT_NAME",
@@ -363,6 +483,18 @@
       "snapshot_magnitude": 3,
       "snapshot_map_status": "AMBIGUOUS",
       "snapshot_native_id": "M26-2007V2-040"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Hamrya - Meknès-Banlieue - Zerhoun",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-055",
+      "seat_match": true,
+      "snapshot_constituency": "Hamria-Ahouaz Meknès-Zerhoune",
+      "snapshot_evidence_mode": "PROPOSAL_PLUS_GOVERNMENT_ADOPTION",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "AMBIGUOUS",
+      "snapshot_native_id": "M26-2007V2-041"
     },
     {
       "mapping_type": "EXACT_NAME",
@@ -399,6 +531,18 @@
       "snapshot_magnitude": 3,
       "snapshot_map_status": "AMBIGUOUS",
       "snapshot_native_id": "M26-2007V2-044"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Al-Ismaïlia - Guerrouane",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-054",
+      "seat_match": true,
+      "snapshot_constituency": "Ismaïlia-Guerrouane",
+      "snapshot_evidence_mode": "PROPOSAL_PLUS_FINAL_EXISTENCE",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "AMBIGUOUS",
+      "snapshot_native_id": "M26-2007V2-045"
     },
     {
       "mapping_type": "EXACT_NAME",
@@ -509,6 +653,18 @@
       "snapshot_native_id": "M26-2007V2-054"
     },
     {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Médina - Sidi-Youssef-Ben-Ali",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-046",
+      "seat_match": true,
+      "snapshot_constituency": "Marrakech ville-Sidi Youssef Ben Ali",
+      "snapshot_evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "VERIFIED",
+      "snapshot_native_id": "M26-2007V2-055"
+    },
+    {
       "mapping_type": "EXACT_NAME",
       "outcome_constituency": "Médiouna",
       "outcome_magnitude": 2,
@@ -531,6 +687,30 @@
       "snapshot_magnitude": 3,
       "snapshot_map_status": "VERIFIED",
       "snapshot_native_id": "M26-2007V2-057"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Midelt - El-Kbab",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-053",
+      "seat_match": true,
+      "snapshot_constituency": "Midelt-Kbab",
+      "snapshot_evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "AMBIGUOUS",
+      "snapshot_native_id": "M26-2007V2-058"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Mohammadia",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-031",
+      "seat_match": true,
+      "snapshot_constituency": "Mohammedia",
+      "snapshot_evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "VERIFIED",
+      "snapshot_native_id": "M26-2007V2-059"
     },
     {
       "mapping_type": "EXACT_NAME",
@@ -630,6 +810,30 @@
     },
     {
       "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Oulad-Bouaziz - Zemamra",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-008",
+      "seat_match": true,
+      "snapshot_constituency": "Ouled Bouaziz-Zemamra",
+      "snapshot_evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "AMBIGUOUS",
+      "snapshot_native_id": "M26-2007V2-068"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Rabat - Challah",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-067",
+      "seat_match": true,
+      "snapshot_constituency": "Rabat-Chellah",
+      "snapshot_evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "VERIFIED",
+      "snapshot_native_id": "M26-2007V2-069"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
       "outcome_constituency": "Rabat - El Mouhit",
       "outcome_magnitude": 4,
       "outcome_native_id": "M26-2007-068",
@@ -639,6 +843,30 @@
       "snapshot_magnitude": 4,
       "snapshot_map_status": "VERIFIED",
       "snapshot_native_id": "M26-2007V2-070"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Rehamna",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-042",
+      "seat_match": true,
+      "snapshot_constituency": "Rhamna",
+      "snapshot_evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "VERIFIED",
+      "snapshot_native_id": "M26-2007V2-071"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Safi - Janoubia",
+      "outcome_magnitude": 4,
+      "outcome_native_id": "M26-2007-011",
+      "seat_match": true,
+      "snapshot_constituency": "Safi Al Janoubia",
+      "snapshot_evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "snapshot_magnitude": 4,
+      "snapshot_map_status": "AMBIGUOUS",
+      "snapshot_native_id": "M26-2007V2-072"
     },
     {
       "mapping_type": "EXACT_NAME",
@@ -651,6 +879,18 @@
       "snapshot_magnitude": 4,
       "snapshot_map_status": "AMBIGUOUS",
       "snapshot_native_id": "M26-2007V2-073"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Salé - Al-Jadida",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-069",
+      "seat_match": true,
+      "snapshot_constituency": "Salé-El Jadida",
+      "snapshot_evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "VERIFIED",
+      "snapshot_native_id": "M26-2007V2-074"
     },
     {
       "mapping_type": "EXACT_NAME",
@@ -687,6 +927,18 @@
       "snapshot_magnitude": 4,
       "snapshot_map_status": "AMBIGUOUS",
       "snapshot_native_id": "M26-2007V2-077"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Sidi-Bennour - Oulad-Frej",
+      "outcome_magnitude": 4,
+      "outcome_native_id": "M26-2007-009",
+      "seat_match": true,
+      "snapshot_constituency": "Sidi Bennour-Ouled Frej",
+      "snapshot_evidence_mode": "LEGAL_CARRY_FORWARD_FROM_2002",
+      "snapshot_magnitude": 4,
+      "snapshot_map_status": "AMBIGUOUS",
+      "snapshot_native_id": "M26-2007V2-078"
     },
     {
       "mapping_type": "EXACT_NAME",
@@ -785,6 +1037,30 @@
       "snapshot_native_id": "M26-2007V2-086"
     },
     {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Taroudannt - Chamalia",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-077",
+      "seat_match": true,
+      "snapshot_constituency": "Taroudant-Nord",
+      "snapshot_evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "VERIFIED",
+      "snapshot_native_id": "M26-2007V2-087"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Taroudannt - Al-Janoubia",
+      "outcome_magnitude": 4,
+      "outcome_native_id": "M26-2007-076",
+      "seat_match": true,
+      "snapshot_constituency": "Taroudant-Sud",
+      "snapshot_evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "snapshot_magnitude": 4,
+      "snapshot_map_status": "VERIFIED",
+      "snapshot_native_id": "M26-2007V2-088"
+    },
+    {
       "mapping_type": "EXACT_NAME",
       "outcome_constituency": "Tata",
       "outcome_magnitude": 2,
@@ -819,6 +1095,18 @@
       "snapshot_magnitude": 4,
       "snapshot_map_status": "AMBIGUOUS",
       "snapshot_native_id": "M26-2007V2-091"
+    },
+    {
+      "mapping_type": "RENAMED_EXPLICIT",
+      "outcome_constituency": "Tifelt - Rommani",
+      "outcome_magnitude": 3,
+      "outcome_native_id": "M26-2007-066",
+      "seat_match": true,
+      "snapshot_constituency": "Tiflet-Rommani",
+      "snapshot_evidence_mode": "DIRECT_PRE_ELECTION_FINAL",
+      "snapshot_magnitude": 3,
+      "snapshot_map_status": "VERIFIED",
+      "snapshot_native_id": "M26-2007V2-092"
     },
     {
       "mapping_type": "EXACT_NAME",
@@ -860,952 +1148,14 @@
   "outcome_commit": "7a8c24959b36a6f4dfe96cb665e6cb8ee27e02af",
   "outcome_rows": 95,
   "phase": "POST_FREEZE_TARGET_RECONCILIATION",
-  "renamed_explicit_rows": 8,
+  "renamed_explicit_rows": 32,
   "schema_version": "2.0",
   "seat_mismatch_details": [],
   "seat_mismatches": 0,
   "snapshot_rows": 95,
-  "unresolved": [
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.889,
-          "outcome_constituency": "Chamalia - Gharbia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-059"
-        },
-        {
-          "name_similarity": 0.545,
-          "outcome_constituency": "Safi - Chamalia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-010"
-        },
-        {
-          "name_similarity": 0.5,
-          "outcome_constituency": "Fès - Chamalia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-013"
-        },
-        {
-          "name_similarity": 0.476,
-          "outcome_constituency": "Taroudannt - Al-Janoubia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-076"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Rabat - El Mouhit",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-068"
-        }
-      ],
-      "snapshot_constituency": "Achamalia-Al Gharbia",
-      "snapshot_magnitude": 4,
-      "snapshot_native_id": "M26-2007V2-001",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.974,
-          "outcome_constituency": "Agadir - Ida-ou-Tanane",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-072"
-        },
-        {
-          "name_similarity": 0.412,
-          "outcome_constituency": "Casablanca - Anfa",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-026"
-        },
-        {
-          "name_similarity": 0.412,
-          "outcome_constituency": "Sraghna - Zemrane",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-043"
-        },
-        {
-          "name_similarity": 0.412,
-          "outcome_constituency": "Rabat - El Mouhit",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-068"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Chamalia - Gharbia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-059"
-        }
-      ],
-      "snapshot_constituency": "Agadir ida-Outanane",
-      "snapshot_magnitude": 4,
-      "snapshot_native_id": "M26-2007V2-002",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.811,
-          "outcome_constituency": "Janoubia - Charkia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-060"
-        },
-        {
-          "name_similarity": 0.471,
-          "outcome_constituency": "Moulay-Rachid",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-028"
-        },
-        {
-          "name_similarity": 0.462,
-          "outcome_constituency": "El-Jadida - Azemmour",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-007"
-        },
-        {
-          "name_similarity": 0.45,
-          "outcome_constituency": "Taroudannt - Chamalia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-077"
-        },
-        {
-          "name_similarity": 0.414,
-          "outcome_constituency": "Nouaceur",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-032"
-        }
-      ],
-      "snapshot_constituency": "Al Janoubia-Acharquia",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-009",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.947,
-          "outcome_constituency": "Bni-Hssen",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-017"
-        },
-        {
-          "name_similarity": 0.571,
-          "outcome_constituency": "Béni-Mellal",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-082"
-        },
-        {
-          "name_similarity": 0.5,
-          "outcome_constituency": "Benslimane",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-001"
-        },
-        {
-          "name_similarity": 0.471,
-          "outcome_constituency": "Berkane",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-056"
-        },
-        {
-          "name_similarity": 0.421,
-          "outcome_constituency": "Boulemane",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-012"
-        }
-      ],
-      "snapshot_constituency": "Béni hssen",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-015",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.95,
-          "outcome_constituency": "Bni-Moussa - Bni-Amir",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-083"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Essaouira",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-044"
-        },
-        {
-          "name_similarity": 0.389,
-          "outcome_constituency": "Rabat - El Mouhit",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-068"
-        },
-        {
-          "name_similarity": 0.375,
-          "outcome_constituency": "Oujda - Angad",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-061"
-        },
-        {
-          "name_similarity": 0.364,
-          "outcome_constituency": "Sidi-Bennour - Oulad-Frej",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-009"
-        }
-      ],
-      "snapshot_constituency": "beni moussa-beni amir",
-      "snapshot_magnitude": 4,
-      "snapshot_native_id": "M26-2007V2-017",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.875,
-          "outcome_constituency": "Bzou - Ouaouizaght",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-081"
-        },
-        {
-          "name_similarity": 0.541,
-          "outcome_constituency": "Oulad-Bouaziz - Zemamra",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-008"
-        },
-        {
-          "name_similarity": 0.417,
-          "outcome_constituency": "Nouaceur",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-032"
-        },
-        {
-          "name_similarity": 0.375,
-          "outcome_constituency": "Chtouka - Aït-Baha",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-073"
-        },
-        {
-          "name_similarity": 0.345,
-          "outcome_constituency": "Moulay-Rachid",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-028"
-        }
-      ],
-      "snapshot_constituency": "Bzou-Ouaouizerht",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-023",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.941,
-          "outcome_constituency": "Es-Smara",
-          "outcome_magnitude": 2,
-          "outcome_native_id": "M26-2007-034"
-        },
-        {
-          "name_similarity": 0.526,
-          "outcome_constituency": "Fahs - Anjra",
-          "outcome_magnitude": 2,
-          "outcome_native_id": "M26-2007-086"
-        },
-        {
-          "name_similarity": 0.455,
-          "outcome_constituency": "Oued-Ed-Dahab",
-          "outcome_magnitude": 2,
-          "outcome_native_id": "M26-2007-064"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Jerada",
-          "outcome_magnitude": 2,
-          "outcome_native_id": "M26-2007-058"
-        },
-        {
-          "name_similarity": 0.308,
-          "outcome_constituency": "Tata",
-          "outcome_magnitude": 2,
-          "outcome_native_id": "M26-2007-037"
-        }
-      ],
-      "snapshot_constituency": "Es-Semara",
-      "snapshot_magnitude": 2,
-      "snapshot_native_id": "M26-2007V2-032",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.6,
-          "outcome_constituency": "Fès - Janoubia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-014"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Fès - Chamalia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-013"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Kénitra",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-019"
-        },
-        {
-          "name_similarity": 0.381,
-          "outcome_constituency": "Safi - Janoubia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-011"
-        },
-        {
-          "name_similarity": 0.323,
-          "outcome_constituency": "Sidi-Bennour - Oulad-Frej",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-009"
-        }
-      ],
-      "snapshot_constituency": "Fès-Nord",
-      "snapshot_magnitude": 4,
-      "snapshot_native_id": "M26-2007V2-035",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.526,
-          "outcome_constituency": "Fès - Janoubia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-014"
-        },
-        {
-          "name_similarity": 0.421,
-          "outcome_constituency": "Fès - Chamalia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-013"
-        },
-        {
-          "name_similarity": 0.333,
-          "outcome_constituency": "Salé - Médina",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-070"
-        },
-        {
-          "name_similarity": 0.3,
-          "outcome_constituency": "Safi - Janoubia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-011"
-        },
-        {
-          "name_similarity": 0.286,
-          "outcome_constituency": "Tanger - Assilah",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-089"
-        }
-      ],
-      "snapshot_constituency": "Fès-Sud",
-      "snapshot_magnitude": 4,
-      "snapshot_native_id": "M26-2007V2-036",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.933,
-          "outcome_constituency": "Guéliz - Annakhil",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-045"
-        },
-        {
-          "name_similarity": 0.429,
-          "outcome_constituency": "Moulay-Rachid",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-028"
-        },
-        {
-          "name_similarity": 0.429,
-          "outcome_constituency": "Ziz - Tafilalet",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-050"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Oued-Zem - Bejaad",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-003"
-        },
-        {
-          "name_similarity": 0.389,
-          "outcome_constituency": "Oulad-Bouaziz - Zemamra",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-008"
-        }
-      ],
-      "snapshot_constituency": "Guéliz-Ennakhil",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-038",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.678,
-          "outcome_constituency": "Hamrya - Meknès-Banlieue - Zerhoun",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-055"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Oulad-Bouaziz - Zemamra",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-008"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Khémisset - Oulmès",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-065"
-        },
-        {
-          "name_similarity": 0.392,
-          "outcome_constituency": "Al-Ismaïlia - Guerrouane",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-054"
-        },
-        {
-          "name_similarity": 0.333,
-          "outcome_constituency": "Moulay-Rachid",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-028"
-        }
-      ],
-      "snapshot_constituency": "Hamria-Ahouaz Meknès-Zerhoune",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-041",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.927,
-          "outcome_constituency": "Al-Ismaïlia - Guerrouane",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-054"
-        },
-        {
-          "name_similarity": 0.444,
-          "outcome_constituency": "Laâyoune",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-039"
-        },
-        {
-          "name_similarity": 0.424,
-          "outcome_constituency": "Sidi-Bernoussi",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-029"
-        },
-        {
-          "name_similarity": 0.408,
-          "outcome_constituency": "Hamrya - Meknès-Banlieue - Zerhoun",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-055"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Sefrou",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-016"
-        }
-      ],
-      "snapshot_constituency": "Ismaïlia-Guerrouane",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-045",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.73,
-          "outcome_constituency": "Médina - Sidi-Youssef-Ben-Ali",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-046"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Sidi-Bernoussi",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-029"
-        },
-        {
-          "name_similarity": 0.327,
-          "outcome_constituency": "Moulay-Rachid",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-028"
-        },
-        {
-          "name_similarity": 0.32,
-          "outcome_constituency": "Midelt - El-Kbab",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-053"
-        },
-        {
-          "name_similarity": 0.32,
-          "outcome_constituency": "Taounate - Tissa",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-093"
-        }
-      ],
-      "snapshot_constituency": "Marrakech ville-Sidi Youssef Ben Ali",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-055",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.88,
-          "outcome_constituency": "Midelt - El-Kbab",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-053"
-        },
-        {
-          "name_similarity": 0.48,
-          "outcome_constituency": "Tifelt - Rommani",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-066"
-        },
-        {
-          "name_similarity": 0.308,
-          "outcome_constituency": "Guéliz - Annakhil",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-045"
-        },
-        {
-          "name_similarity": 0.296,
-          "outcome_constituency": "Janoubia - Charkia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-060"
-        },
-        {
-          "name_similarity": 0.286,
-          "outcome_constituency": "Mohammadia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-031"
-        }
-      ],
-      "snapshot_constituency": "Midelt-Kbab",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-058",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.9,
-          "outcome_constituency": "Mohammadia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-031"
-        },
-        {
-          "name_similarity": 0.471,
-          "outcome_constituency": "Rehamna",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-042"
-        },
-        {
-          "name_similarity": 0.417,
-          "outcome_constituency": "Salé - Al-Jadida",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-069"
-        },
-        {
-          "name_similarity": 0.417,
-          "outcome_constituency": "Taounate - Tissa",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-093"
-        },
-        {
-          "name_similarity": 0.414,
-          "outcome_constituency": "Taroudannt - Chamalia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-077"
-        }
-      ],
-      "snapshot_constituency": "Mohammedia",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-059",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.952,
-          "outcome_constituency": "Oulad-Bouaziz - Zemamra",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-008"
-        },
-        {
-          "name_similarity": 0.486,
-          "outcome_constituency": "Bzou - Ouaouizaght",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-081"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Taroudannt - Chamalia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-077"
-        },
-        {
-          "name_similarity": 0.389,
-          "outcome_constituency": "Guéliz - Annakhil",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-045"
-        },
-        {
-          "name_similarity": 0.389,
-          "outcome_constituency": "Skhirate - Témara",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-071"
-        }
-      ],
-      "snapshot_constituency": "Ouled Bouaziz-Zemamra",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-068",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.923,
-          "outcome_constituency": "Rabat - Challah",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-067"
-        },
-        {
-          "name_similarity": 0.5,
-          "outcome_constituency": "Taroudannt - Chamalia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-077"
-        },
-        {
-          "name_similarity": 0.483,
-          "outcome_constituency": "Janoubia - Charkia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-060"
-        },
-        {
-          "name_similarity": 0.37,
-          "outcome_constituency": "Taounate - Tissa",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-093"
-        },
-        {
-          "name_similarity": 0.364,
-          "outcome_constituency": "Bni-Hssen",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-017"
-        }
-      ],
-      "snapshot_constituency": "Rabat-Chellah",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-069",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.923,
-          "outcome_constituency": "Rehamna",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-042"
-        },
-        {
-          "name_similarity": 0.5,
-          "outcome_constituency": "Mohammadia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-031"
-        },
-        {
-          "name_similarity": 0.421,
-          "outcome_constituency": "Rabat - Challah",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-067"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Taroudannt - Chamalia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-077"
-        },
-        {
-          "name_similarity": 0.381,
-          "outcome_constituency": "Skhirate - Témara",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-071"
-        }
-      ],
-      "snapshot_constituency": "Rhamna",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-071",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.897,
-          "outcome_constituency": "Safi - Janoubia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-011"
-        },
-        {
-          "name_similarity": 0.714,
-          "outcome_constituency": "Fès - Janoubia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-014"
-        },
-        {
-          "name_similarity": 0.684,
-          "outcome_constituency": "Taroudannt - Al-Janoubia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-076"
-        },
-        {
-          "name_similarity": 0.621,
-          "outcome_constituency": "Safi - Chamalia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-010"
-        },
-        {
-          "name_similarity": 0.5,
-          "outcome_constituency": "Chamalia - Gharbia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-059"
-        }
-      ],
-      "snapshot_constituency": "Safi Al Janoubia",
-      "snapshot_magnitude": 4,
-      "snapshot_native_id": "M26-2007V2-072",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.929,
-          "outcome_constituency": "Salé - Al-Jadida",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-069"
-        },
-        {
-          "name_similarity": 0.483,
-          "outcome_constituency": "Skhirate - Témara",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-071"
-        },
-        {
-          "name_similarity": 0.429,
-          "outcome_constituency": "Midelt - El-Kbab",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-053"
-        },
-        {
-          "name_similarity": 0.417,
-          "outcome_constituency": "Mohammadia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-031"
-        },
-        {
-          "name_similarity": 0.37,
-          "outcome_constituency": "Sidi-Kacem - Mechra-Bel-Ksiri - Dar-Gueddari",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-021"
-        }
-      ],
-      "snapshot_constituency": "Salé-El Jadida",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-074",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.957,
-          "outcome_constituency": "Sidi-Bennour - Oulad-Frej",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-009"
-        },
-        {
-          "name_similarity": 0.333,
-          "outcome_constituency": "Safi - Janoubia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-011"
-        },
-        {
-          "name_similarity": 0.286,
-          "outcome_constituency": "Fès - Janoubia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-014"
-        },
-        {
-          "name_similarity": 0.279,
-          "outcome_constituency": "Agadir - Ida-ou-Tanane",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-072"
-        },
-        {
-          "name_similarity": 0.263,
-          "outcome_constituency": "Sraghna - Zemrane",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-043"
-        }
-      ],
-      "snapshot_constituency": "Sidi Bennour-Ouled Frej",
-      "snapshot_magnitude": 4,
-      "snapshot_native_id": "M26-2007V2-078",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.606,
-          "outcome_constituency": "Taroudannt - Chamalia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-077"
-        },
-        {
-          "name_similarity": 0.357,
-          "outcome_constituency": "Tifelt - Rommani",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-066"
-        },
-        {
-          "name_similarity": 0.343,
-          "outcome_constituency": "Oulad-Bouaziz - Zemamra",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-008"
-        },
-        {
-          "name_similarity": 0.333,
-          "outcome_constituency": "Al-Ismaïlia - Guerrouane",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-054"
-        },
-        {
-          "name_similarity": 0.3,
-          "outcome_constituency": "Tiznit",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-078"
-        }
-      ],
-      "snapshot_constituency": "Taroudant-Nord",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-087",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.629,
-          "outcome_constituency": "Taroudannt - Al-Janoubia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-076"
-        },
-        {
-          "name_similarity": 0.5,
-          "outcome_constituency": "Tétouan",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-090"
-        },
-        {
-          "name_similarity": 0.353,
-          "outcome_constituency": "Taza",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-095"
-        },
-        {
-          "name_similarity": 0.32,
-          "outcome_constituency": "Fès - Janoubia",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-014"
-        },
-        {
-          "name_similarity": 0.312,
-          "outcome_constituency": "Bni-Moussa - Bni-Amir",
-          "outcome_magnitude": 4,
-          "outcome_native_id": "M26-2007-083"
-        }
-      ],
-      "snapshot_constituency": "Taroudant-Sud",
-      "snapshot_magnitude": 4,
-      "snapshot_native_id": "M26-2007V2-088",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    },
-    {
-      "candidate_only": [
-        {
-          "name_similarity": 0.929,
-          "outcome_constituency": "Tifelt - Rommani",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-066"
-        },
-        {
-          "name_similarity": 0.417,
-          "outcome_constituency": "Mohammadia",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-031"
-        },
-        {
-          "name_similarity": 0.4,
-          "outcome_constituency": "Tiznit",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-078"
-        },
-        {
-          "name_similarity": 0.389,
-          "outcome_constituency": "Al-Ismaïlia - Guerrouane",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-054"
-        },
-        {
-          "name_similarity": 0.37,
-          "outcome_constituency": "Ziz - Tafilalet",
-          "outcome_magnitude": 3,
-          "outcome_native_id": "M26-2007-050"
-        }
-      ],
-      "snapshot_constituency": "Tiflet-Rommani",
-      "snapshot_magnitude": 3,
-      "snapshot_native_id": "M26-2007V2-092",
-      "status": "UNRESOLVED_NO_AUTOMATIC_FUZZY_COERCION"
-    }
-  ],
-  "unresolved_rows": 24,
-  "unused_outcome_constituencies": [
-    "Agadir - Ida-ou-Tanane",
-    "Al-Ismaïlia - Guerrouane",
-    "Bni-Hssen",
-    "Bni-Moussa - Bni-Amir",
-    "Bzou - Ouaouizaght",
-    "Chamalia - Gharbia",
-    "Es-Smara",
-    "Fès - Chamalia",
-    "Fès - Janoubia",
-    "Guéliz - Annakhil",
-    "Hamrya - Meknès-Banlieue - Zerhoun",
-    "Janoubia - Charkia",
-    "Médina - Sidi-Youssef-Ben-Ali",
-    "Midelt - El-Kbab",
-    "Mohammadia",
-    "Oulad-Bouaziz - Zemamra",
-    "Rabat - Challah",
-    "Rehamna",
-    "Safi - Janoubia",
-    "Salé - Al-Jadida",
-    "Sidi-Bennour - Oulad-Frej",
-    "Taroudannt - Al-Janoubia",
-    "Taroudannt - Chamalia",
-    "Tifelt - Rommani"
-  ],
-  "unused_outcome_rows": 24,
+  "unresolved": [],
+  "unresolved_rows": 0,
+  "unused_outcome_constituencies": [],
+  "unused_outcome_rows": 0,
   "year": 2007
 }
