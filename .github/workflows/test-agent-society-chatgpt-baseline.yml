@@ -1,0 +1,32 @@
+name: Test Agent Society ChatGPT-account baseline runner
+
+on:
+  push:
+    branches:
+      - morocco26-agent-society-v2-front-vote-llm
+    paths:
+      - 'morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/**'
+      - '.github/workflows/test-agent-society-chatgpt-baseline.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile runner
+        run: >-
+          python -m py_compile
+          morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_chatgpt_baseline.py
+      - name: Run contract tests
+        run: >-
+          python -m unittest discover -v
+          -s morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/tests
+          -p 'test_*.py'
