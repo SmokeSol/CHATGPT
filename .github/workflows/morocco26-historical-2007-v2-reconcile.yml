@@ -1,0 +1,71 @@
+name: Morocco26 Historical 2007 V2 Final Reconcile
+
+on:
+  push:
+    branches:
+      - morocco26-historical-2002-2007-v2
+    paths:
+      - '.github/workflows/morocco26-historical-2007-v2-reconcile.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-historical-2002-2007-v2
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Configure commit identity
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Capture frozen snapshot hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          sha256sum morocco26/data/goal100/historical/2007/historical_native_map_pre_election_v2.json \
+                    morocco26/data/goal100/historical/2007/pre_election_snapshot_v2.json \
+                    morocco26/data/goal100/historical/2007/source_inventory_snapshot_v2.json \
+                    morocco26/data/goal100/historical/2007/ambiguities_snapshot_v2.json \
+                    morocco26/data/goal100/historical/2007/coverage_snapshot_v2.json \
+                    morocco26/data/goal100/historical/2007/anti_leakage_certificate_v2.json \
+                    morocco26/data/goal100/historical/2007/snapshot_manifest_v2.json \
+                    morocco26/data/goal100/historical/2007/snapshot_hashes_sha256_v2.json > /tmp/frozen_snapshot_hashes.txt
+          test "$(git log --diff-filter=A --format=%H -- morocco26/data/goal100/historical/2007/historical_native_map_pre_election_v2.json | tail -1)" = 'b463f84d7c0a5d3ce402520b264ec9f89ba6d569'
+      - name: Reconcile explicit aliases only
+        run: |
+          python -m py_compile morocco26/scripts/reconcile_2007_v2_post_freeze.py
+          python morocco26/scripts/reconcile_2007_v2_post_freeze.py
+      - name: Acceptance gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          sha256sum -c /tmp/frozen_snapshot_hashes.txt
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=Path('morocco26/data/goal100/historical/2007')
+          g=json.loads((d/'acceptance_gate_v2.json').read_text())
+          r=json.loads((d/'territorial_reconciliation_v2.json').read_text())
+          assert g['scientific_status']=='PASS_FOR_ROLLING_ORIGIN_BACKTEST', g
+          assert r['matched_rows']==95
+          assert r['unresolved_rows']==0
+          assert r['unused_outcome_rows']==0
+          assert r['seat_mismatches']==0
+          assert all(m['mapping_type'] in {'EXACT_NAME','RENAMED_EXPLICIT'} for m in r['matches'])
+          assert all(m['seat_match'] is True for m in r['matches'])
+          print('PASS_2007_V2_ROLLING_ORIGIN_MAP', g['reconciliation'])
+          PY
+      - name: Commit reconciliation only
+        run: |
+          git add morocco26/data/goal100/historical/2007/territorial_reconciliation_v2.json \
+                  morocco26/data/goal100/historical/2007/acceptance_gate_v2.json
+          git commit -m 'test(historical): pass frozen 2007 v2 territorial reconciliation'
+          git push origin HEAD:morocco26-historical-2002-2007-v2
