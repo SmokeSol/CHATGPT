@@ -1,0 +1,41 @@
+name: Historical 2007 Map V2 Evidence Gate
+
+on:
+  push:
+    branches:
+      - morocco26-historical-2007-v2-evidence
+    paths:
+      - 'morocco26/data/goal100/historical/2007/pre_election_map_recovery_v2_evidence.json'
+      - 'morocco26/data/goal100/historical/2007/pre_election_map_recovery_v2_delta_*.json'
+      - 'morocco26/scripts/historical_2007_map_v2_gate.py'
+      - '.github/workflows/historical-2007-map-v2-recovery-gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: morocco26-historical-2007-v2-evidence
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run fail-closed evidence gate
+        run: python morocco26/scripts/historical_2007_map_v2_gate.py
+      - name: Show gate
+        run: cat morocco26/data/goal100/historical/2007/pre_election_map_recovery_v2_gate.json
+      - name: Commit deterministic gate report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add morocco26/data/goal100/historical/2007/pre_election_map_recovery_v2_gate.json
+          if git diff --cached --quiet; then
+            echo 'No gate-report change to commit'
+          else
+            git commit -m 'test(historical): checkpoint 2007 map-v2 evidence gate'
+            git push origin HEAD:morocco26-historical-2007-v2-evidence
+          fi
