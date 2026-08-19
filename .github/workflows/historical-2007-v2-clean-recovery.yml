@@ -27,7 +27,10 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install parser dependencies
-        run: python -m pip install --disable-pip-version-check requests beautifulsoup4
+        run: |
+          python -m pip install --disable-pip-version-check requests beautifulsoup4
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
       - name: Recover pre-election corpus with file-open audit
         run: |
           strace -f -e trace=openat -o /tmp/m26_openat_main.log python morocco26/scripts/historical_2007_pre_election_recovery_v2.py
@@ -61,7 +64,7 @@ jobs:
           a=json.loads((root/'assahraa_series_evidence_v2.json').read_text())
           l=json.loads((root/'lematin_series_evidence_v2.json').read_text())
           b=json.loads((root/'official_gazette'/'official_gazette_recovery_manifest_v2.json').read_text())
-          print({'main':{k:d[k] for k in ('source_count_discovered','eligible_article_count','explicit_district_magnitude_fact_count')},'assahraa':{k:a[k] for k in ('pages_seen','eligible_pages','seat_context_count')},'lematin':{k:l[k] for k in ('pages_seen','eligible_pages','seat_context_count')},'gazette':{'recovered':b['recovered'],'hits':len(b.get('text_extraction',{}).get('hits',[]))}})
+          print({'main':{k:d[k] for k in ('source_count_discovered','eligible_article_count','explicit_district_magnitude_fact_count')},'assahraa':{k:a[k] for k in ('pages_seen','eligible_pages','seat_context_count')},'lematin':{k:l[k] for k in ('pages_seen','eligible_pages','seat_context_count')},'gazette':{'recovered':b['recovered'],'text_status':b.get('text_extraction',{}).get('status'),'hits':len(b.get('text_extraction',{}).get('hits',[]))}})
           PY
       - name: Commit recovery evidence only
         run: |
@@ -71,6 +74,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'No recovery changes to commit'
           else
-            git commit -m 'data(historical): expand clean pre-election 2007 evidence v2'
+            git commit -m 'data(historical): extract official BO 5514 evidence v2'
             git push origin HEAD:morocco26-historical-2007-v2-clean
           fi
