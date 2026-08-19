@@ -57,7 +57,7 @@ jobs:
           git add morocco26/data/goal100/forecast_pipeline/legal_allocator_historical_replay_v1.json
           git add morocco26/data/goal100/forecast_pipeline/snapshot_2026_current_v1.json
           git add morocco26/data/goal100/forecast_pipeline/rolling_origin_status_v1.json
-          git add morocco26/data/goal100/forecast_pipeline/diagnostic_2011_raw_party_universe_v1.json
+          git add morocco26/data/goal100/forecast_pipeline/diagnostic_2011_raw_party_universe_v2.json
           git add morocco26/data/goal100/forecast_pipeline/registered_voters_2021_source_probe_v1.json
           if git diff --cached --quiet; then
             echo "No derived changes"
