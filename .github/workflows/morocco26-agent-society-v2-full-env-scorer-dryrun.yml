@@ -2,7 +2,7 @@ name: Morocco26 Agent Society V2 FULL ENV scorer dry-run
 on:
   pull_request:
     branches: [morocco26-agent-society-v2]
-    paths: ['morocco26/data/goal100/agent_society_v2/runs/full_env_scorer_dryrun_+']
+    paths: ['morocco26/data/goal100/agent_society_v2/runs/full_env_scorer_dryrun_*']
 permissions:
   actions: read
   contents: read
@@ -14,7 +14,7 @@ jobs:
       MIN_PUBLIC_ARTIFACT_ID: '9338958480'
       MIN_PRIVATE_ARTIFACT_ID: '9338959082'
       MIN_POP_ARTIFACT_ID: '9338194867'
-      RICH_POP_ARTIFAACT_ID: '9345421649'
+      RICH_POP_ARTIFACT_ID: '9345421649'
       MAP2021_ARTIFACT_ID: '9325247866'
       EXPECTED_WORK_SHA: 'f0c625462a68f78c0cc6d8cb4c585add9ac6b82b7162317f69f4032c09db5e43'
       EXPECTED_PUBLIC_ZIP_SHA: 'e8acad28dea5a531c21171db570b60d612993edd91db8f893e58c187c226696a'
@@ -33,14 +33,14 @@ jobs:
             "out21.json:morocco26/data/goal100/historical/tafra_legislative_2021_canonical.json" \
             "recon16.json:morocco26/data/goal100/e_reason/calibration/development_2016/identity_reconstruction_postfreeze_v1.json"; do
               dst="${item%%:*}"; src="${item#*:}"
-              curl -fsSL -H "Authorization: Bearer ${GH_TOKEN}" -H 'Accept: application/vnd.github.rav+json' "${api}/${src}?ref=${GITHUB_SHA}" -o "/tmp/asv2/src/${dst}"
+              curl -fsSL -H "Authorization: Bearer ${GH_TOKEN}" -H 'Accept: application/vnd.github.raw+json' "${api}/${src}?ref=${GITHUB_SHA}" -o "/tmp/asv2/src/${dst}"
           done
           python -m py_compile /tmp/asv2/src/*.py
       - name: Download frozen artifacts once
         env: {GH_TOKEN: '${{ github.token }}'}
         run: |
           set -euo pipefail
-          get_artifact(){ curl -fsSL -L -H "Authorization: Bearer ${GH_TOKEN}" -H 'Accept: application/vnd.github+json' -o "$2" "https://api.github.com/repo/${GITHUB_REPOSITORY}/actions/artifacts/$1/zip"; }
+          get_artifact(){ curl -fsSL -L -H "Authorization: Bearer ${GH_TOKEN}" -H 'Accept: application/vnd.github+json' -o "$2" "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/$1/zip"; }
           get_artifact "$MIN_PUBLIC_ARTIFACT_ID" /tmp/asv2/minpub.zip
           get_artifact "$MIN_PRIVATE_ARTIFACT_ID" /tmp/asv2/minpriv.zip
           get_artifact "$MIN_POP_ARTIFACT_ID" /tmp/asv2/minpop.zip
