@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "diagnostic_id": "M26-FORECAST-LAB-FORECASTABILITY-INTERPRETATION-V1",
+  "source_result": "morocco26/data/goal100/forecast_lab/baseline_scores_v1.json",
+  "status": "RETROSPECTIVE_DEVELOPMENT_DIAGNOSTIC",
+  "correction": {
+    "misleading_field": "forecastability_diagnostic.territorial_memory_present",
+    "original_test": "PERSIST mean RMSE < NATIONAL_ONLY mean RMSE",
+    "correct_reading": "This tests full 100% territorial persistence, not the existence of partial reusable territorial information.",
+    "replacement_terms": {
+      "full_territorial_persistence_stable": false,
+      "partial_territorial_memory_observed": true
+    }
+  },
+  "folds": {
+    "2016": {
+      "HALF_SHRINK_RMSE": 0.08343886768744727,
+      "NATIONAL_ONLY_RMSE": 0.09902561880036762,
+      "PERSIST_RMSE": 0.08850462894692614,
+      "HALF_SHRINK_relative_improvement_vs_NATIONAL_ONLY": 0.15740119881848683,
+      "PERSIST_relative_improvement_vs_NATIONAL_ONLY": 0.10624513111754896,
+      "HALF_SHRINK_bootstrap_probability_better_than_NATIONAL_ONLY": 1.0
+    },
+    "2021": {
+      "HALF_SHRINK_RMSE": 0.1211884531822669,
+      "NATIONAL_ONLY_RMSE": 0.1231479158433212,
+      "PERSIST_RMSE": 0.13427555285394166,
+      "HALF_SHRINK_relative_improvement_vs_NATIONAL_ONLY": 0.01591145613497261,
+      "PERSIST_relative_improvement_vs_NATIONAL_ONLY": -0.09035992963760706,
+      "HALF_SHRINK_bootstrap_probability_better_than_NATIONAL_ONLY": 0.7843
+    }
+  },
+  "crossfold": {
+    "HALF_SHRINK_mean_RMSE": 0.10231366043485708,
+    "NATIONAL_ONLY_mean_RMSE": 0.11108676732184442,
+    "PERSIST_mean_RMSE": 0.11139009090043389,
+    "HALF_SHRINK_relative_improvement_vs_NATIONAL_ONLY": 0.07897526499776149,
+    "HALF_SHRINK_relative_improvement_vs_PERSIST": 0.08148328448434236
+  },
+  "territorial_memory_strength_diagnostic": {
+    "method": "Because forecast shares are linear in lambda for lambda*territory_prior + (1-lambda)*national_prior, MSE is exactly quadratic in lambda. The oracle lambda for each fold is therefore exactly recoverable from the three frozen scores at lambda=0,0.5,1.",
+    "oracle_lambda_2016": 0.6327708989139851,
+    "oracle_lambda_2021": 0.3126323411433784,
+    "lambda_shift_2021_minus_2016": -0.3201385577706067,
+    "RMSE_2021_if_using_lambda_learned_on_2016": 0.12329524112848542,
+    "relative_improvement_vs_2021_NATIONAL_ONLY": -0.0011963278806249114,
+    "relative_improvement_vs_2021_HALF_SHRINK": -0.01738439505494735,
+    "interpretation": "The amount of territorial persistence is non-stationary across the two observed transitions. A lambda learned on 2011->2016 would not improve 2021 over NATIONAL_ONLY."
+  },
+  "forecastability_conclusion": {
+    "reusable_signal": "YES_BUT_PARTIAL_AND_REGIME_DEPENDENT",
+    "national_regime_problem": "MATERIAL",
+    "territorial_structure_problem": "PARTIALLY_PREDICTABLE_WITH_SHRINKAGE",
+    "calibrated_probabilistic_forecast_identified": false,
+    "why_not_yet": "Only one earlier transition exists before the 2016 fold, so ex-ante calibration of transition uncertainty and stability of territorial-memory strength cannot be established without 2007 or earlier data.",
+    "next_data_unlock": "2007, ideally 2002, enabling rolling-origin training/calibration before 2011, 2016 and 2021."
+  },
+  "F0_modified": false
+}
