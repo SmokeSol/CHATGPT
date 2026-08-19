@@ -8,6 +8,15 @@
     "same_relation_strength_budget_as_deterministic_model": true,
     "temperature": 0
   },
+  "baseline_provenance": {
+    "as3_scientific_baseline_required": "AS2_OPUS5_ISOLATED_FRESH_CONTEXT",
+    "e0_registered_role": "DETERMINISTIC_REFERENCE_AND_MECHANICS_ONLY_NOT_AS2",
+    "e0_fresh_model_context_per_work_item": false,
+    "e0_terminal_status": "FROZEN_SCHEMA_COMPLETE_WITH_EXECUTION_CONTRACT_DEVIATION",
+    "required_as2_fresh_model_context_per_work_item": true,
+    "required_as2_terminal_status": "PASS_FULL_ENV_ASV2_HISTORICAL_VOTES_FROZEN_READY_FOR_SCORING",
+    "calibration_gate": "baseline_gate.require_as2_baseline MUST pass before any 2016 outcome file is opened"
+  },
   "calibration": {
     "calibration_election": "2016_ANONYMOUS_ID_MUST_BE_SUPPLIED_AT_RUNTIME",
     "holdout_election": "2021_MUST_NOT_BE_PRESENT_IN_CALIBRATION_OUTCOME_FILE",
@@ -59,8 +68,11 @@
   "extension": "SOCIAL_INFLUENCE_V1",
   "gates": [
     "graph builder reads voter cards only",
+    "E0 is never relabeled AS2",
+    "scientific AS3 requires true AS2 Opus-5 fresh context per work item",
+    "2016 outcomes are not opened until AS2 provenance passes",
     "zero-lambda identity max delta <= 1e-15",
-    "ISO core decisions exactly equal R0",
+    "ISO core decisions exactly equal the declared isolated baseline",
     "all party distributions sum to 1 within 1e-8",
     "all updates synchronous",
     "calibration file contains exactly one declared election id",
@@ -86,7 +98,8 @@
     }
   },
   "principle": {
-    "R0": "existing frozen isolated-agent decisions; immutable control",
+    "E0": "registered deterministic isolated reference; reproducible mechanics benchmark only; not an Opus behavioural sample and not eligible for AS3 calibration",
+    "R0": "for the scientific AS3 track, the true AS2 Opus-5 isolated fresh-context decisions; immutable once accepted by the provenance gate",
     "R1": "synchronous direct social exposure from R0 only",
     "R2": "synchronous second-order propagation from complete R1 only; stop after R2",
     "graph_semantics": "archetype exposure distributions, not literal person-to-person claims",
@@ -101,6 +114,6 @@
     "purpose": "explain R0/R1/R2 and relation channels without exposing historical target outcomes",
     "status": "ILLUSTRATIVE_NOT_CALIBRATED"
   },
-  "schema_version": "ATLAS_SOCIAL_EXPERIMENT_MANIFEST_V1",
-  "status": "PRE_REGISTERED_NOT_CALIBRATED"
+  "schema_version": "ATLAS_SOCIAL_EXPERIMENT_MANIFEST_V1_1_BASELINE_PROVENANCE_AMENDMENT",
+  "status": "PRE_REGISTERED_CALIBRATION_BLOCKED_PENDING_TRUE_AS2"
 }
