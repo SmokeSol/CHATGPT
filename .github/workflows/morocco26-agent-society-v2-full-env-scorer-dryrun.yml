@@ -26,7 +26,6 @@ jobs:
           mkdir -p /tmp/asv2/{src,minpubart,minpublic,minprivart,minprivate,minpop,richart,rich,map,rebuilt,dummy,out}
           api="https://api.github.com/repos/${GITHUB_REPOSITORY}/contents"
           for item in \
-            "score.py:morocco26/scripts/agent_society_v2_score_full_environment_historical.py" \
             "rebuild.py:morocco26/scripts/agent_society_v2_rich_rebuild_manifests.py" \
             "contract.json:morocco26/data/goal100/agent_society_v2/full_environment_historical_scoring_contract_v2.json" \
             "out16.json:morocco26/data/goal100/historical/tafra_legislative_2016_canonical.json" \
@@ -35,6 +34,12 @@ jobs:
               dst="${item%%:*}"; src="${item#*:}"
               curl -fsSL -H "Authorization: Bearer ${GH_TOKEN}" -H 'Accept: application/vnd.github.raw+json' "${api}/${src}?ref=${GITHUB_SHA}" -o "/tmp/asv2/src/${dst}"
           done
+          for i in 01 02 03 04 05 06 07; do
+            curl -fsSL -H "Authorization: Bearer ${GH_TOKEN}" -H 'Accept: application/vnd.github.raw+json' \
+              "${api}/morocco26/scripts/full_env_scorer_parts/part${i}?ref=${GITHUB_SHA}" -o "/tmp/asv2/src/score.part${i}"
+          done
+          cat /tmp/asv2/src/score.part0* | base64 -d > /tmp/asv2/src/score.py
+          test "$(sha256sum /tmp/asv2/src/score.py | cut -d' ' -f1)" = "9a160c85ea491445cdb082f3653ce5ec909dae73ce1a94f4a9a0b916896e54a8"
           python -m py_compile /tmp/asv2/src/*.py
       - name: Download frozen artifacts once
         env: {GH_TOKEN: '${{ github.token }}'}
