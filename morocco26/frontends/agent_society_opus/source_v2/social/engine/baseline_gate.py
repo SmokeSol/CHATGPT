@@ -17,7 +17,7 @@ except ImportError:
 
 EXPECTED_EXPERIMENT = "EXP_7C8A2F11"
 EXPECTED_ENVIRONMENT = "ENV_4D19B3E7"
-EXPECTED_MODEL = "claude-opus-5"
+EXPECTED_MODEL_FAMILY = "claude-opus-5"
 EXPECTED_WORK_ITEMS = 2944
 EXPECTED_ROWS = 94208
 PASS_STATUS = "PASS_FULL_ENV_ASV2_HISTORICAL_VOTES_FROZEN_READY_FOR_SCORING"
@@ -42,6 +42,14 @@ def _locate(baseline_run, filename):
 
 def _bool(mapping, key):
     return mapping.get(key) is True
+
+
+def _is_opus5_model(value):
+    """Accept the frozen family label and dated/provider suffixes, never another family."""
+    if not isinstance(value, str):
+        return False
+    model = value.strip().lower()
+    return model == EXPECTED_MODEL_FAMILY or model.startswith(EXPECTED_MODEL_FAMILY + "-")
 
 
 def classify_baseline(baseline_run):
@@ -93,10 +101,12 @@ def classify_baseline(baseline_run):
     fresh = comp.get("fresh_model_context_per_work_item")
     manifest_fresh = generated.get("fresh_model_context_per_work_item")
 
-    if model != EXPECTED_MODEL:
-        errors.append("terminal model is not %s" % EXPECTED_MODEL)
-    if manifest_model != EXPECTED_MODEL:
-        errors.append("manifest model_id is not %s" % EXPECTED_MODEL)
+    if not _is_opus5_model(model):
+        errors.append("terminal model is not in the %s family" % EXPECTED_MODEL_FAMILY)
+    if not _is_opus5_model(manifest_model):
+        errors.append("manifest model_id is not in the %s family" % EXPECTED_MODEL_FAMILY)
+    if model != manifest_model:
+        errors.append("model id differs between terminal report and manifest")
     if fresh is not manifest_fresh:
         errors.append("fresh-context flag differs between terminal report and manifest")
 
