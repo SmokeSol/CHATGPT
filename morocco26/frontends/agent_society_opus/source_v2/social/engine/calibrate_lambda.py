@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """Calibrate social lambdas on one explicitly declared historical election.
 
-The script refuses an outcome payload containing any other election id.  This
-is intentional: a 2016 calibration run must not accidentally ingest a 2021
-holdout outcome.
+The script refuses an outcome payload containing any other election id. It
+also refuses to open the calibration outcome at all unless the isolated
+baseline passes the AS2 Opus-5 fresh-context provenance gate.
 """
 from __future__ import division
 import argparse
@@ -13,10 +13,12 @@ import os
 import time
 
 try:
+    from .baseline_gate import require_as2_baseline
     from .common import read_json, read_jsonl, sha256_file, write_json
     from .deterministic_social import run_condition
     from .score_social import aggregate_rows, outcome_lookup
 except ImportError:
+    from baseline_gate import require_as2_baseline
     from common import read_json, read_jsonl, sha256_file, write_json
     from deterministic_social import run_condition
     from score_social import aggregate_rows, outcome_lookup
@@ -95,6 +97,10 @@ def _evaluate_tuple(items, env, baseline_run, graph_root, graph_index,
 
 def calibrate(env, baseline_run, graph_root, outcomes_json, election_id,
               output_path, experiment_manifest_path, experiment_condition_ids=None):
+    # CRITICAL ORDERING: provenance is checked before outcomes_json is opened.
+    # This keeps the 2016 unseal behind the true AS2 fresh-context gate.
+    baseline_provenance = require_as2_baseline(baseline_run)
+
     outcome_payload = read_json(outcomes_json)
     outcome_elections = sorted(set(x["anonymous_election_id"] for x in outcome_payload.get("items", [])))
     if outcome_elections != [election_id]:
@@ -148,6 +154,7 @@ def calibrate(env, baseline_run, graph_root, outcomes_json, election_id,
         "best_score": best[1]["score"],
         "grid_size": len(trials),
         "trials": trials,
+        "baseline_provenance": baseline_provenance,
         "provenance": {
             "created_unix": int(time.time()),
             "work_manifest_sha256": sha256_file(wm_path),
@@ -158,8 +165,11 @@ def calibrate(env, baseline_run, graph_root, outcomes_json, election_id,
     }
     write_json(output_path, result, pretty=True)
     print(
-        "PASS_SOCIAL_LAMBDA_FROZEN %s objective=%.6f lambdas=%s" %
-        (election_id, best[1]["score"]["objective"], best[1]["lambdas"])
+        "PASS_SOCIAL_LAMBDA_FROZEN %s objective=%.6f lambdas=%s baseline=%s" %
+        (
+            election_id, best[1]["score"]["objective"], best[1]["lambdas"],
+            baseline_provenance["baseline_class"]
+        )
     )
     return result
 
