@@ -1,0 +1,84 @@
+{
+  "schema_version": "AS2_STAGE1_CLUSTER_SAMPLE_PROTOCOL_V1",
+  "experiment_id": "EXP_7C8A2F11",
+  "environment_id": "ENV_4D19B3E7",
+  "status": "PRE_OUTCOME_STAGE1_COST_GATE_FROZEN",
+  "purpose": "Determine whether genuine fresh-context Opus-5 judgements contain a material behavioural residual relative to the frozen E0 deterministic reference before paying for larger AS2 execution.",
+  "does_not_replace_full_as2": true,
+  "does_not_unlock_2016": true,
+  "does_not_open_2021": true,
+  "e0_reference_sha256": "f4fb045755221a6a0b80d8e8ee940b485a0ddcf6dc35fb49991ff4b4d449c566",
+  "parent_full_env_sha256": "e8acad28dea5a531c21171db570b60d612993edd91db8f893e58c187c226696a",
+  "selection": {
+    "seed": "EXP_7C8A2F11_AS2_STAGE1_CLUSTER_SAMPLE_V1",
+    "unit": "one 32-archetype batch among B01..B08 per anonymous election-territory pair",
+    "anonymous_election_territory_pairs": 184,
+    "selected_voter_batches": 184,
+    "opaque_conditions_per_selected_batch": 2,
+    "work_items": 368,
+    "rows_expected": 11776,
+    "full_protocol_work_items": 2944,
+    "work_item_reduction_factor": 8.0,
+    "same_selected_batch_for_both_opaque_conditions": true,
+    "balanced_batch_assignment_within_each_anonymous_election": true,
+    "uses_mapping": false,
+    "uses_outcomes": false,
+    "selection_manifest_sha256": "3716be99d85619f25f91824db57c5c9e09e457fc332ce694306a081b1d2a7021",
+    "stage1_work_manifest_sha256": "43d51b9f6f0820986067d25e347a67485474029298f1343127083a8a8270ebc1"
+  },
+  "handoff": {
+    "zip_sha256": "3440a965db9e14b17bc939a1395e6c581015c50e83a04cef354d4f6d15e753c6",
+    "handoff_manifest_sha256": "6522163c6802a0fb80c89dfb60d72e2b381392ccc005cb27b282f02749578112",
+    "start_here_sha256": "6f09c0345ef6aa09040e5a4978694ecdf39410a51db66a399a3b95912c5e91ae",
+    "builder_sha256": "67c7c3382c42998505ab2b55dc52d1c864b28ebd16e938ae11cde1596a46edb8",
+    "contains_e0_outputs": false,
+    "contains_mapping": false,
+    "contains_outcomes": false
+  },
+  "execution_contract": {
+    "model_family": "CLAUDE_OPUS_5",
+    "fresh_model_context_per_work_item": true,
+    "shared_context_batch_judging": false,
+    "deterministic_engine_or_emulator_substitution": false,
+    "outside_information": false,
+    "condition_role_inference": false,
+    "retry_schema_invalid_only": true,
+    "semantic_feedback_on_retry": false,
+    "stop_before_scoring": true,
+    "pass_terminal_status": "PASS_AS2_STAGE1_FRESH_CONTEXT_OUTPUTS_FROZEN_READY_FOR_RESIDUAL_GATE",
+    "blocked_terminal_status": "BLOCKED_FRESH_CONTEXT_EXECUTION_NOT_AVAILABLE"
+  },
+  "residual_gate": {
+    "unit_of_analysis": "condition-cell aggregate of the selected 32-archetype cluster",
+    "reference": "paired Opus-5 minus E0 on the exact same selected work item",
+    "primary_metrics": {
+      "mean_cell_party_l1": "L1 distance between Opus and E0 mean party simplexes within each selected work item, averaged across the 368 cells",
+      "mean_cell_turnout_abs_delta": "absolute difference between Opus and E0 mean turnout within each selected work item, averaged across the 368 cells",
+      "cell_top_party_change_rate": "share of the 368 selected condition-cells whose aggregate top party differs between Opus and E0"
+    },
+    "materiality_thresholds": {
+      "mean_cell_party_l1": 0.02,
+      "mean_cell_turnout_abs_delta": 0.01,
+      "cell_top_party_change_rate": 0.05
+    },
+    "bootstrap": {
+      "replicates": 10000,
+      "seed": 260819,
+      "resampling_unit": "anonymous election-territory pair carrying both opaque conditions",
+      "interval": "percentile_95"
+    },
+    "decision_rule": {
+      "ADVANCE_AS2": "at least one point estimate meets or exceeds its materiality threshold",
+      "KILL_AS2_EXPANSION": "all three 95% upper confidence bounds are strictly below their thresholds",
+      "STAGE1B_SECOND_CLUSTER_REQUIRED": "neither ADVANCE_AS2 nor KILL_AS2_EXPANSION applies",
+      "BLOCKED": "execution contract, identity, completeness or schema validation fails"
+    },
+    "outcomes_used": false,
+    "mapping_used": false
+  },
+  "after_advance": {
+    "before_any_outcome_unseal": true,
+    "preferred_next_step": "collect a second independently frozen batch per anonymous election-territory pair or execute the full AS2 protocol; choice must be frozen before opening 2016",
+    "social_layer_note": "because social edges are confined to a voter batch/work item, the same cluster-sampling design can estimate Opus-vs-E0 social residuals without cross-cluster contamination"
+  }
+}
