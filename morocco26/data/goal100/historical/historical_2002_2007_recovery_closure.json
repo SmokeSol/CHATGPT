@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-08-19",
+  "branch": "morocco26-historical-2002-2007",
+  "protocol": "POST_FREEZE_RECOVERY_RESEARCH_ONLY__DO_NOT_MUTATE_FROZEN_SNAPSHOTS",
+  "conclusion": {
+    "2002": "SERIOUS_SEARCH_EXHAUSTED_NO_COMPLETE_LOCAL_ALL_PARTY_VOTE_MATRIX_RECOVERED",
+    "2007": "STRONG_PRE_ELECTION_PARTIAL_MAP_CORPUS_RECOVERED_BUT_NO_COMPLETE_95_ROW_PRE_ELECTION_ANNEX_RECOVERED",
+    "rolling_origin_unlock": "PARTIAL_ONLY"
+  },
+  "year_2002": {
+    "usable": [
+      "91-row native pre-election map already frozen",
+      "electoral law/rules and 295 local + 30 national seat architecture",
+      "partial major-party local vote matrix"
+    ],
+    "blocking_gap": "No complete party-by-constituency local vote matrix for all parties was recovered. Existing archived dataset explicitly documents unavailable small-party local results; no zero-filling or imputation is permitted.",
+    "scientific_status": "PARTIAL_PRE_ELECTION_SNAPSHOT"
+  },
+  "year_2007": {
+    "usable": [
+      "95-row complete official-archive outcome matrix already frozen post-snapshot",
+      "district allocator reproduces official aggregate exactly",
+      "pre-election contemporary sources independently confirm 95 districts, 295 local seats, 33 parties, 1870 local lists and many district names/magnitudes"
+    ],
+    "legal_recovery": {
+      "decree": "2-07-160",
+      "date": "2007-03-30",
+      "official_gazette": "5514",
+      "official_gazette_date": "2007-04-05",
+      "fact": "modifies/completes decree 2-02-587 creating Chamber of Representatives constituencies and fixing seats"
+    },
+    "pre_election_sources_recovered_after_v1_freeze": [
+      {
+        "source_class": "T2_MAP_CONTEMPORARY",
+        "url": "https://assahraa.ma/journal/2007/46530",
+        "publication_date": "2007-08-29",
+        "supports": "Rabat, Marrakech, Boujdour, Fes, Taroudant and Rabat-Sale-Zemmour-Zaer district names/magnitudes and pre-election candidate/list counts"
+      },
+      {
+        "source_class": "T2_MAP_CONTEMPORARY",
+        "url": "https://assahraa.ma/journal/2007/46728",
+        "publication_date": "2007-09-01",
+        "supports": "all 11 Greater Casablanca district names/magnitudes plus Errachidia, Kelaa Sraghna and Sefrou district names/magnitudes"
+      },
+      {
+        "source_class": "T0_GOVERNMENT_CONTEMPORARY",
+        "url": "https://www.tgr.gov.ma/wps/wcm/connect/77726811-dfe0-4f90-aa31-288828de9c0e/ALR20MARS202007.pdf?CACHEID=77726811-dfe0-4f90-aa31-288828de9c0e&MOD=AJPERES",
+        "publication_date": "2007-03",
+        "supports": "government record identifies project decree 2-07-160 as modifying/completing decree 2-02-587 for constituencies and seats"
+      }
+    ],
+    "blocking_gap": "The complete 95-row annex of decree 2-07-160 was not recovered from a source demonstrably available before the 2007 election. Because same-year outcome is already known on the current lineage, the frozen v1 snapshot is not retroactively amended. Partial contemporary map evidence is retained as recovery research only.",
+    "scientific_status": "PARTIAL_PRE_ELECTION_SNAPSHOT"
+  },
+  "anti_leakage_decision": "NO_POST_HOC_COMPLETION_FROM_2007_OUTCOME_AND_NO_RETROACTIVE_MUTATION_OF_FROZEN_SNAPSHOT",
+  "next_scientific_use": {
+    "2007": "Outcome can be used as a scoring target only when the forecasting snapshot is constructed from a clean pre-election evidence lineage; current branch does not certify a complete 2007 rolling-origin snapshot.",
+    "2002": "Can serve as prior historical information and native-map evidence, but not as a complete all-party district-vote scoring target."
+  }
+}
