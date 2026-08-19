@@ -1,0 +1,40 @@
+{
+  "schema_version": "ATLAS_CHATGPT_ACCOUNT_G0_STATE_V1",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "public_experiment_id": "EXP_7C8A2F11",
+  "public_environment_id": "ENV_4D19B3E7",
+  "branch": "morocco26-agent-society-v2-front-vote-llm",
+  "status": "PRE_REGISTERED_RUNNER_READY_OWNER_CHATGPT_LOGIN_AND_FULL_BUNDLE_REQUIRED",
+  "created_before_any_G0_output": true,
+  "outcomes_opened": {
+    "2016": false,
+    "2021": false
+  },
+  "roles": {
+    "E0": "IMMUTABLE_DETERMINISTIC_CONTROL_CURRENT_PUBLIC_REFERENCE",
+    "G0": "CANDIDATE_PRIMARY_GPT_REFERENCE_NOT_YET_GENERATED",
+    "R0_PUBLIC": "READER_BYO_LLM_REPLICATION_COHORT"
+  },
+  "G0": {
+    "baseline_id": "G0_CHATGPT_GPT56_TERRA",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": "medium",
+    "auth": "OWNER_NORMAL_CHATGPT_LOGIN_VIA_CODEX_CLI",
+    "api_key": false,
+    "fresh_context_per_work_item": true,
+    "work_items_expected": 2944,
+    "rows_expected": 94208,
+    "runner": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_chatgpt_baseline.py",
+    "protocol": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1.json",
+    "freeze_manifest": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/FREEZE_MANIFEST.json",
+    "terminal_required": "PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING"
+  },
+  "promotion_policy": {
+    "before_terminal": "keep E0 explicitly labeled deterministic in the public frontend",
+    "after_terminal_and_audit": "publish G0 as the primary GPT simulation while preserving E0 as visible control",
+    "predictive_claim_before_blind_scoring": false,
+    "social_lambda_calibration_unlocked_by_G0_generation_alone": false
+  },
+  "next_required_owner_action": "On a trusted local machine, install Codex CLI, run codex login and choose Sign in with ChatGPT, then run the dry-run preflight and the frozen 8-work-item probe against the 2944-work-item full-environment ZIP. Never send or commit ~/.codex/auth.json.",
+  "external_dependency": "ChatGPT/Codex usage limits may pause the run; rerun the identical command after reset or with eligible credits. Validated work items are skipped and no model thread is resumed."
+}
