@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "certificate_id": "M26-GOAL100-F1-BASELINE-RESET-CERTIFICATE-V1",
+  "documented_on": "2026-08-19",
+  "document_class": "POST_RESULT_SCIENTIFIC_DIAGNOSTIC_NOT_PREREGISTRATION",
+  "scientific_status": "POST_2021_DEVELOPMENT_2026_UNTOUCHED",
+  "north_star": "Build a falsifiable 2026 territorial probabilistic forecast, then test whether agentic collection/reasoning adds predictive information beyond a correctly specified conventional baseline.",
+  "immutability": {
+    "F_minus_1_modified": false,
+    "F0_modified": false,
+    "F0_role": "IMMUTABLE_PRELIMINARY_PARENT_NOT_FINAL_BASELINE",
+    "E_reason_reopened_for_promotion": false,
+    "2026_outcomes_used": false
+  },
+  "sequence_correction": "The agentic residual experiment had been pursued before the conventional baseline was fully adequate for party-level probabilistic calibration. E_reason promotion remains suspended until a stronger conventional F1 is specified and frozen.",
+  "frozen_party_calibration_gates": {
+    "party_coverage80_floor": 0.7182,
+    "party_coverage95_floor": 0.9054,
+    "rule": "Every one of the nine frozen party buckets must clear both floors in both historical crossfit folds.",
+    "sharpness_reference_F0_mean_width95": 0.5445930074002108,
+    "gates_relaxed_after_results": false
+  },
+  "F0_diagnosis": {
+    "uncertainty_version": "M26-GOAL100-UNCERTAINTY-CALIBRATION-V2",
+    "aggregate_coverage80": 0.7717391304347826,
+    "aggregate_coverage95": 0.9118357487922706,
+    "mean_interval_width95": 0.5445930074002108,
+    "minimum_party_coverage80": 0.29347826086956524,
+    "minimum_party_coverage95": 0.6739130434782609,
+    "verdict": "AGGREGATE_PASS_MASKS_SEVERE_PARTY_LEVEL_MISCALIBRATION"
+  },
+  "historical_crossfit_program": {
+    "fold_A": "train on 2016->2021 structure and evaluate 2011->2016",
+    "fold_B": "train on 2011->2016 structure and evaluate 2016->2021",
+    "territories_per_fold": 92,
+    "party_buckets": ["RNI", "PAM", "PI", "PJD", "USFP", "MP", "UC", "PPS", "OTHER"],
+    "important_independence_note": "The 92 territories are not 92 independent observations of the election-level national regime. The historical core contains only two modern election-to-election transitions for national regime learning."
+  },
+  "falsified_simple_repairs": [
+    {
+      "id": "F1_V1_RANK1_NATIONAL_PLUS_TERRITORIAL",
+      "contract": "morocco26/data/goal100/f1_baseline_rebuild_contract_v1.json",
+      "script": "morocco26/scripts/goal100_f1_baseline_rebuild_v1.py",
+      "workflow_run_id": 32226549557,
+      "artifact_id": 9355722790,
+      "candidate_count": 16,
+      "eligible_candidate_count": 0,
+      "terminal_status": "F1_HIERARCHICAL_UNCERTAINTY_NOT_READY_PARTY_CALIBRATION",
+      "best_context": {
+        "national_scale": 0.5,
+        "territorial_scale": 1.5,
+        "mean_energy_score": 0.3374653949081945,
+        "mean_interval_width95": 0.4853277904356166,
+        "heldout_2011_to_2016_min80": 0.42391304347826086,
+        "heldout_2011_to_2016_min95": 0.782608695652174,
+        "heldout_2016_to_2021_min80": 0.3695652173913043,
+        "heldout_2016_to_2021_min95": 0.6304347826086957
+      },
+      "falsified_claim": "F0 is mainly fixable by a common national shock along the observed training direction plus wider territorial residuals."
+    },
+    {
+      "id": "F1_V2_FULL_SUPPORT_COVARIANCE",
+      "contract": "morocco26/data/goal100/f1_baseline_rebuild_contract_v2.json",
+      "contract_freeze_commit": "185fecf7a81bbd719a10dc967deb975ed985a19a",
+      "script": "morocco26/scripts/goal100_f1_full_support_uncertainty_v2.py",
+      "workflow_run_id": 32227008290,
+      "artifact_id": 9355892317,
+      "candidate_count": 36,
+      "eligible_candidate_count": 0,
+      "terminal_status": "F1_FULL_SUPPORT_UNCERTAINTY_NOT_READY_PARTY_CALIBRATION",
+      "best_near_miss": {
+        "national_scale": 2.0,
+        "national_isotropic_fraction": 1.0,
+        "territorial_scale": 1.75,
+        "territorial_pool_fraction": 0.5,
+        "coverage_shortfall": 0.7576869565217389,
+        "mean_energy_score": 0.3472471989800579,
+        "mean_interval_width95": 0.6288505448956238,
+        "heldout_2011_to_2016_min80": 0.6521739130434783,
+        "heldout_2011_to_2016_min95": 0.782608695652174,
+        "heldout_2016_to_2021_min80": 0.6195652173913043,
+        "heldout_2016_to_2021_min95": 0.6304347826086957
+      },
+      "falsified_claim": "The binding defect is only lack of full-support national covariance or party-marginal variance shrinkage."
+    },
+    {
+      "id": "F1_V3_HIERARCHICAL_TERRITORIAL_MEAN",
+      "contract": "morocco26/data/goal100/f1_baseline_rebuild_contract_v3.json",
+      "contract_freeze_commit": "33fbeab6d21a369a6689ae99491b13a323d9f36f",
+      "script": "morocco26/scripts/goal100_f1_hierarchical_mean_v3.py",
+      "workflow_run_id": 32227440348,
+      "artifact_id": 9356049671,
+      "candidate_count": 36,
+      "eligible_candidate_count": 0,
+      "terminal_status": "F1_HIERARCHICAL_MEAN_NOT_READY_PARTY_CALIBRATION",
+      "best_near_miss": {
+        "party_slope_pool_fraction": 1.0,
+        "national_scale": 1.5,
+        "territorial_scale": 1.5,
+        "coverage_shortfall": 0.9642086956521737,
+        "mean_energy_score": 0.353866324407213,
+        "mean_interval_width95": 0.6056401446264306,
+        "mean_share_rmse": 0.11124057199557769,
+        "heldout_2011_to_2016_min80": 0.5978260869565217,
+        "heldout_2011_to_2016_min95": 0.782608695652174,
+        "heldout_2016_to_2021_min80": 0.5652173913043478,
+        "heldout_2016_to_2021_min95": 0.6304347826086957
+      },
+      "trained_pooled_territorial_persistence": {
+        "train_2016_to_2021_for_heldout_2011_to_2016": 0.2322927574,
+        "train_2011_to_2016_for_heldout_2016_to_2021": 0.5627950505
+      },
+      "falsified_claim": "The binding defect is only that territorial deviations need stable mean reversion instead of unit persistence."
+    }
+  ],
+  "national_regime_oracle_diagnostic": {
+    "script": "morocco26/scripts/goal100_f1_national_regime_diagnostic.py",
+    "workflow_run_id": 32227742226,
+    "artifact_id": 9356120342,
+    "status": "DIAGNOSTIC_ONLY_OUTCOME_AWARE_NOT_A_FORECAST_MODEL",
+    "cross_transition_national_clr_swing": {
+      "pearson_correlation": -0.2589767504749715,
+      "cosine_similarity": -0.2589767504749715,
+      "same_sign_party_fraction": 0.3333333333333333,
+      "same_sign_parties": ["PI", "UC", "OTHER"],
+      "sign_flip_parties": ["RNI", "PAM", "PJD", "USFP", "MP", "PPS"]
+    },
+    "transition_2011_to_2016": {
+      "persistence_share_rmse": 0.08850462894692614,
+      "oracle_true_national_swing_share_rmse": 0.09713665250032098,
+      "oracle_relative_rmse_improvement": -0.09753188794872232,
+      "national_clr_rms": 0.729861083738032
+    },
+    "transition_2016_to_2021": {
+      "persistence_share_rmse": 0.13427555285394166,
+      "oracle_true_national_swing_share_rmse": 0.11842524029316802,
+      "oracle_relative_rmse_improvement": 0.11804317482881513,
+      "national_clr_rms": 0.9841044902588963
+    },
+    "interpretation": "National party state is important in some regimes, especially 2016->2021, but is not sufficient: applying the exact held-out national swing uniformly worsens 2011->2016. The missing conventional structure is therefore an interaction between election-level party regime and its territorial localization, not a scalar national swing alone."
+  },
+  "terminal_scientific_verdict": {
+    "code": "F1_BASELINE_REBUILD_REQUIRES_NEW_REGIME_INFORMATION",
+    "statement": "The 2011/2016/2021 legislative core alone does not identify a sharp, party-calibrated joint national-by-territorial regime model under the frozen gates. Continuing to tune increasingly flexible models on these same two macro transitions would create a material overfitting risk.",
+    "what_is_not_concluded": [
+      "The 2026 forecast project is impossible.",
+      "Territorial information has no predictive value.",
+      "National state alone solves the forecast.",
+      "Candidate intelligence has zero value.",
+      "E_reason should be promoted."
+    ]
+  },
+  "required_next_information_before_F1_V4": {
+    "priority_1_more_independent_regime_support": [
+      "Audit 2007 party continuity and use it only for admissible national-regime prior support under an explicit protocol.",
+      "Keep 2002 quarantined/sensitivity-only unless its documented incompleteness and party-continuity problems are resolved under a new protocol."
+    ],
+    "priority_2_contemporaneous_2026_national_state": [
+      "Collect fixed-rule, timestamped pre-election national indicators that can inform the 2026 party vector without using outcomes: credible surveys/polls if available, nationwide party-support signals, leadership/coalition/list-system events and other preregistered national covariates.",
+      "Treat these as conventional inputs before any agentic residual experiment."
+    ],
+    "priority_3_joint_national_territorial_model": "Condition territorial party distributions on a sampled national party vector and learn historical territorial localization/shrinkage, rather than applying a uniform national swing or tuning local residuals independently.",
+    "priority_4_2026_ballot_support": "Replace the 2021 eligible-list support in a new immutable snapshot only when admissible 2026 roster/list evidence is sufficiently verified; candidate/list delta comes after the national-by-territorial conventional baseline.",
+    "agentic_gate": "Do not reopen E_reason for promotion until the conventional F1 baseline passes its own frozen calibration/sharpness gates or a new protocol explicitly documents why a different proper scoring contract is required."
+  },
+  "next_allowed_model_state": "F1_V4_NOT_AUTHORIZED_UNTIL_NEW_REGIME_INFORMATION_IS_ACQUIRED_AND_PREREGISTERED",
+  "status": "CERTIFIED_POST_RESULT_RESET"
+}
