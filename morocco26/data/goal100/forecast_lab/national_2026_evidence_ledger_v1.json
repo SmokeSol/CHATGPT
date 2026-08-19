@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "ledger_id": "M26-NATIONAL-2026-EVIDENCE-V1",
+  "as_of": "2026-08-19T17:09:00+01:00",
+  "target_year": 2026,
+  "status": "EVIDENCE_LEDGER_OPEN_NUMERIC_NATIONAL_FORECAST_NOT_PROMOTED",
+  "election_date": "2026-09-23",
+  "core_conclusion": "Current public evidence is already useful for turnout and directional political context, but this pass did not identify a methodologically credible representative party vote-intention poll that can directly supply national party vote shares. No arbitrary national percentages are therefore emitted.",
+  "signals": [
+    {
+      "signal_id": "OFFICIAL_ELECTION_DATE",
+      "class": "OFFICIAL_CONTEXT",
+      "admissibility": "A",
+      "source": "https://www.maroc.ma/fr/actualites/la-date-des-elections-des-membres-de-la-chambre-des-representants-fixee-au-mercredi-23-septembre-2026",
+      "observed": "The House of Representatives election is scheduled for 23 September 2026.",
+      "national_share_use": "context_only"
+    },
+    {
+      "signal_id": "SUNERGIA_TURNOUT_INTENTION_DEC2025",
+      "class": "REPRESENTATIVE_SURVEY_TURNOUT",
+      "admissibility": "A_FOR_TURNOUT_NOT_PARTY_SHARE",
+      "source": "https://groupe-sunergia.com/market-insights/elections-legislatives-2026-les-marocains-iront-ils-voter/",
+      "fieldwork": "2025-12-01_to_2025-12-17",
+      "method": "CATI; n=1006 randomly interviewed; sample redressed to HCP RGPH 2024 population structure; stated maximum margin of error +/-3%",
+      "observed": {
+        "intend_to_vote": 0.61,
+        "certain_to_vote": 0.54,
+        "intend_not_to_vote": 0.24,
+        "no_answer": 0.15,
+        "among_intending_voters_change_current_direction": 0.38,
+        "among_intending_voters_person_or_list_motivation": 0.13
+      },
+      "national_share_use": "turnout_and_change-demand_covariate_only"
+    },
+    {
+      "signal_id": "PARTIAL_LOCAL_ELECTIONS_2025_07_01",
+      "class": "REVEALED_LOCAL_ELECTORAL_RESULT",
+      "admissibility": "B_WITH_STRONG_SCOPE_LIMIT",
+      "source": "https://www.yabiladi.com/articles/details/170804/elections-partielles-istiqlal-remportent-sieges.html",
+      "observed": {
+        "seats_contested": 82,
+        "PAM": 22,
+        "RNI": 20,
+        "PI": 19,
+        "MP": 10,
+        "PJD": 4,
+        "USFP": 3,
+        "PPS": 1
+      },
+      "national_share_use": "revealed_preference_proxy_only_not_a_national_vote_poll",
+      "warning": "Non-random partial local elections cannot be converted directly into national legislative vote shares."
+    },
+    {
+      "signal_id": "MAJORITY_RECOMPOSITION_2026_07_23",
+      "class": "QUALITATIVE_PRE_ELECTION_REPORTING",
+      "admissibility": "C",
+      "source": "https://medias24.com/2026/07/23/legislatives-2026-le-rapport-de-forces-est-en-train-de-se-recomposer-1728697/",
+      "observed": "Reporting describes an open contest among RNI, PAM and Istiqlal, with PAM showing visible recent momentum, RNI retaining a powerful machine, and Istiqlal remaining a serious contender.",
+      "national_share_use": "directional_feature_only_no_direct_percentage_adjustment"
+    },
+    {
+      "signal_id": "PAM_RALLIEMENTS_2026_07",
+      "class": "CANDIDATE_ORGANIZATIONAL_SIGNAL",
+      "admissibility": "C",
+      "source": "https://telquel.ma/2026/07/27/fouzi-lekjaa-au-pam-premieres-reactions-des-partis-politiques_2000802",
+      "observed": "Fouzi Lekjaa was reported as officially joining the PAM leadership on 25 July 2026; Yanja El Khattat also joined after leaving Istiqlal.",
+      "national_share_use": "candidate_network_feature_only"
+    },
+    {
+      "signal_id": "PREDICTION_MARKET_WINNER_2026_08",
+      "class": "REVEALED_BELIEF_MARKET",
+      "admissibility": "D_LOW_LIQUIDITY",
+      "source": "https://polymarket.com/event/morocco-legislative-elections-party-winner-20260728174826232",
+      "observed": "A low-volume winner market exists for the 2026 Moroccan legislative election.",
+      "national_share_use": "weak_rank_signal_only_not_vote_share_and_not_calibration_target",
+      "warning": "Winner probabilities are seat-rank beliefs, not national vote intentions, and market depth is limited."
+    }
+  ],
+  "explicit_exclusions": [
+    {
+      "class": "SELF_SELECTED_WEB_PARTY_POLLS",
+      "reason": "No representative sampling frame; cannot be interpreted as national voting intention."
+    },
+    {
+      "class": "STRUCTURAL_2026_SEAT_MEANS",
+      "reason": "Seat outputs are downstream consequences and cannot be inverted into an independent national-vote input without circularity."
+    },
+    {
+      "class": "QUALITATIVE_NEWS_AS_ARBITRARY_SWING",
+      "reason": "Narrative direction can define features but cannot justify hand-entered percentage-point adjustments."
+    }
+  ],
+  "next_data_objective": "Find or construct a reproducible national party-strength estimate using representative vote-intention evidence if available, otherwise a historically validated model combining 2021 national base rates with comparable revealed electoral/candidate/turnout covariates.",
+  "ready_for_structural_center": false,
+  "ready_for_probability": false
+}
