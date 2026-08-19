@@ -21,7 +21,17 @@ ALIASES = {
  "marrakech medina":"medina sidi youssef", "marrakech gueliz ennakhil":"gueliz nakhil",
  "marrakech gueliz nakhil":"gueliz nakhil", "marrakech menara":"menara",
  "moulay yacoub":"moulay yaacoub", "m diq fnideq":"m diq fnideq",
- "taroudannt al janoubia":"taroudant sud", "taroudannt chamalia":"taroudant nord"
+ "taroudannt al janoubia":"taroudant sud", "taroudannt chamalia":"taroudant nord",
+ "agadir ida ou tanane":"agadir ida outanane",
+ "bzou ouaouizaght":"bzou ouaouizeght",
+ "es smara":"es semara",
+ "gueliz annakhil":"gueliz nakhil",
+ "karia rhafsai":"karia ghafsay",
+ "mohammadia":"mohammedia",
+ "medina sidi youssef ben ali":"medina sidi youssef",
+ "oued ed dahab":"oued eddahab",
+ "sale al jadida":"sale el jadida",
+ "tifelt rommani":"tiflet rommani"
 }
 
 def rj(p): return json.loads(Path(p).read_text(encoding="utf-8"))
