@@ -1,0 +1,15 @@
+{
+  "ambiguities": [
+    {
+      "fact": "District party-vote matrix omits small parties; source explicitly warns of incomplete primary coverage and errors in secondary reconstruction.",
+      "status": "AMBIGUOUS",
+      "type": "source_limitation"
+    },
+    {
+      "fact": "Per-district seat allocation is not inferred from the incomplete 2002 vote matrix.",
+      "status": "MISSING",
+      "type": "district_seats"
+    }
+  ],
+  "year": 2002
+}
