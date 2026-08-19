@@ -1,271 +1,130 @@
-# MOROCCO//26 — NORTH STAR V2
-Frozen direction: 2026-08-17
+# MOROCCO//26 — NORTH STAR
 
-## PRIMARY MISSION
+**Current operating north star — 19 August 2026**
 
-Build ATLAS 395:
+The previous North Star dated 17 August 2026 is preserved at `docs/NORTH_STAR_ARCHIVE_2026-08-17.md` for audit history.
 
-The independent, territory-first probabilistic electoral intelligence
-system for Morocco's 2026 legislative election.
+## Mission
 
-Atlas 395 must continuously answer four questions:
+Build and maintain the most credible territory-level probabilistic view of Morocco's 2026 legislative election, make every forecast auditable and falsifiable, and measure whether structured or agentic intelligence adds predictive information beyond the strongest frozen baseline.
 
-1. WHAT DO WE KNOW?
-2. WHAT IS THE SOURCE?
-3. WHAT DOES IT ACTUALLY CHANGE?
-4. HOW UNCERTAIN ARE WE?
+MOROCCO//26 / Atlas 395 is an electoral-intelligence and forecasting system, not a poll, political-opinion engine, campaign persuasion system or LLM prediction machine.
 
-The system is not a poll, a political opinion engine, or an LLM prediction.
+## Four questions the system must continuously answer
 
-It is an evidence-linked, probabilistic, versioned and falsifiable
-representation of the election.
+1. **What do we know?**
+2. **What is the source and verification state?**
+3. **What does this information actually change: evidence, mechanics, prediction, or nothing?**
+4. **How uncertain are we?**
 
----
+## Current scientific baseline
 
-## PRODUCT NORTH STAR
+The current promoted research baseline is Forecast-Lab V4 / `M26-PROBABILISTIC-FORECAST-2026-V1`.
 
-Before the 23 September 2026 election, Atlas 395 should provide:
+It has already earned the following components historically:
 
-### P1 — TERRITORIAL FORECAST
+- national point: `PREVIOUS_NATIONAL_PERSISTENCE`;
+- territorial rule: `HALF_SHRINK`, `lambda = 0.5`;
+- separate calibrated national uncertainty;
+- separate calibrated conditional geography uncertainty;
+- passing combined historical coverage;
+- 50,000 current-law elections with exactly 395 seats in every draw.
 
-A probabilistic forecast for the full electoral system:
+This baseline is now the benchmark that every richer intelligence layer must beat.
 
-- 92 local constituencies
-- 305 local seats
-- 12 regional constituencies
-- 90 regional seats
-- 395 seats accounted for in every simulation
+## Product north star — Atlas 395
 
-For every territory where mathematically supported:
+Before the election, Atlas 395 should provide:
 
-- expected seats
-- probability of >=1 seat
-- probability of additional seats
-- uncertainty distribution
-- historical context
-- structural position
-- current evidence state
+- auditable forecasts for 92 local constituencies and 12 regional contests;
+- party seat distributions and probability of finishing first;
+- constituency-level seat/cutoff risk;
+- sourced candidate/list/event intelligence;
+- explicit uncertainty;
+- an append-only change ledger distinguishing new evidence from model changes;
+- immutable time-machine snapshots showing what the system knew and forecast at each date;
+- a preregistered post-election scoring framework.
 
-National projections must be aggregations of territorial simulations,
-not editorial point estimates.
+National projections are aggregations of coherent territorial simulations, not editorial seat guesses.
 
-### P2 — ELECTORAL INTELLIGENCE GRAPH
+## Evidence graph north star
 
-Maintain a sourced graph connecting:
+Maintain a sourced graph linking:
 
-PERSON
-PARTY
-CONSTITUENCY
-ELECTION
-CANDIDACY
-LIST RANK
-MANDATE
-INCUMBENCY
-PARTY SWITCH
-RESULT
-EVENT
-SOURCE
+`PERSON -> PARTY -> CONSTITUENCY -> CANDIDACY -> LIST/RANK -> MANDATE/INCUMBENCY -> PARTY SWITCH -> EVENT -> SOURCE -> ELECTION RESULT`
 
-Facts and model effects must remain separate.
+Facts and model effects are separate objects.
 
-### P3 — WHAT CHANGED?
+A correct system response to new evidence can be:
 
-Create an append-only change intelligence layer distinguishing:
+**Evidence updated. Forecast unchanged.**
 
-NEW EVIDENCE
+## Live 2026 rule
 
-from
+New candidate/list/poll/event information is classified as:
 
-MODEL CHANGE.
+- `MECHANICAL`;
+- `PREDICTIVE_CALIBRATED`;
+- `REPORTING_ONLY/SHADOW`;
+- `PENDING/EXCLUDED`.
 
-Every material forecast update must be attributable to a versioned input
-or model transition.
+Mechanical facts may alter a new snapshot when they change ballot/legal inputs. Predictive effects are admitted only after the same information class demonstrates incremental historical out-of-sample skill under a frozen rule. Current-only intuition never receives an arbitrary coefficient.
 
-"No forecast change" is a valid response to new evidence.
+See `docs/LIVE_2026_UPDATE_RUNBOOK.md`.
 
-### P4 — TIME MACHINE
+## Scientific experiment
 
-Every public forecast snapshot must be immutable and timestamped.
+The original question remains active but is now cleaner because a strong baseline exists:
 
-Users must eventually be able to inspect:
+> Can candidate/current-information/agentic intelligence produce measurable predictive improvement beyond the promoted structural V4 baseline?
 
-WHAT ATLAS 395 KNEW
-WHAT ATLAS 395 FORECAST
-AT A SPECIFIC DATE.
+The next experiments should compare, separately where possible:
 
-No retrospective rewriting.
+- candidate/list structured information;
+- other historically comparable current-information classes;
+- agentic collection / information acquisition;
+- agentic residual reasoning;
+- combinations only after their individual contribution is measurable.
 
-### P5 — PROBABILISTIC NATIONAL SCENARIOS
+A negative result is valid. The objective is to measure incremental predictive information, not prove that AI must help.
 
-Expose distributions rather than a single deterministic projection:
+## Immutable historical lineages
 
-- party seat distributions
-- probability of finishing first
-- tail outcomes
-- parliamentary configuration distributions
-- uncertainty concentration by territory
+The conventional `F-1 -> B2 -> F0` lineage is preserved exactly. B2 is a frozen negative result and F-1/F0 are immutable. Forecast-Lab V4 is a later separate research lineage; it does not rewrite those records.
 
-Do not convert these into unsupported political narratives.
+Old Phase-2 AgentSociety artifacts remain historical experimental evidence, not current operating instructions.
 
-### P6 — SCORE US
+## Hard anti-drift rules
 
-Before election day, freeze the scoring protocol.
+1. Never overwrite a frozen forecast or failed result.
+2. Never tune a model because its output looks politically plausible or implausible.
+3. Evidence, mechanical consequence, predictive inference and product presentation remain separate layers.
+4. `UNKNOWN` never silently becomes zero, false or absent.
+5. A new predictive information class must earn admission historically before changing 2026 probabilities.
+6. Agentic output receives no privileged status.
+7. Every forecast-changing observation must be traceable to provenance and a versioned rule.
+8. Product publication must not silently mutate science.
+9. Every promoted simulated election allocates exactly 395 seats under the certified legal mechanics.
+10. Post-election evaluation uses the snapshots actually frozen before election day, never reconstructed forecasts.
 
-After the election, publish:
+## Scope boundary
 
-- forecast errors
-- calibration
-- territorial performance
-- seat-distribution performance
-- largest misses
-- largest correct calls
-- decomposition of failure modes
+No voter microtargeting, persuasive political messaging optimization, personal voter targeting or campaign manipulation. Aggregate electoral intelligence and falsifiable forecasting only.
 
-The forecast must be falsifiable.
+## Success before election day
 
----
+Operational success means:
 
-## PRIMARY USERS
-
-Atlas 395 is designed primarily for:
-
-- sophisticated economic and political media
-- political analysts
-- institutional researchers
-- investors / political-risk analysts
-- candidates and political actors seeking neutral constituency intelligence
-- sophisticated members of the public
-
-It is NOT designed for voter persuasion, microtargeting, campaign
-messaging optimization or manipulation.
-
----
-
-## SCIENTIFIC NORTH STAR
-
-The original experiment remains intact underneath Atlas 395.
-
-We must:
-
-1. construct the strongest reasonable non-agentic structural baseline;
-2. freeze it before observing election outcomes;
-3. separately measure whether agentic intelligence adds incremental signal.
-
-Experimental sequence:
-
-F-1
-    frozen structural probabilistic baseline
-
-→ B2
-    deterministic structured evidence
-
-→ F0
-    strongest reasonable non-agentic baseline
-
-→ E_collect
-    agentic collection + deterministic transformation
-
-→ E_reason
-    identical F0 information + agentic residual reasoning
-
-→ E_full
-    agentic collection + agentic reasoning
-
-→ PRE-ELECTION FREEZE
-
-→ 23 SEPTEMBER 2026 OUTCOME
-
-→ OUT-OF-SAMPLE FALSIFICATION
-
-Measure separately:
-
-Delta_collect
-Delta_reason
-Delta_full
-Agentic interaction effect
-
-A negative result is valid.
-
-The objective is to measure agentic alpha, not to prove it exists.
-
----
-
-## PRODUCT / SCIENCE SEPARATION
-
-PUBLIC STORY:
-
-Atlas 395 is an independent probabilistic electoral intelligence system.
-
-INTERNAL R&D STORY:
-
-Determine whether agentic collection and reasoning improve election
-forecasting beyond an optimized non-agentic baseline.
-
-Agentic machinery is NOT the primary product proposition.
-
----
-
-## HARD ANTI-DRIFT RULES
-
-1. No product requirement may modify a frozen scientific result.
-
-2. No model may be tuned because its output "looks politically plausible".
-
-3. Evidence, inference and forecast must remain separate layers.
-
-4. Every forecast-changing observation must be traceable to provenance.
-
-5. UNKNOWN must never silently become FALSE or ZERO.
-
-6. F-1 remains immutable.
-
-7. B2 V1.1 is the final major deterministic historical source-universe
-   expansion. Do not create endless B2 expansions to maximize completeness.
-
-8. If B2 V1.1 still cannot recover specified historical evidence,
-   unresolved cells become the controlled E_collect test set.
-
-9. Product completeness must not delay reaching the agentic
-   counterfactual experiment before election day.
-
-10. Scientific experimentation must, where inexpensive, produce reusable
-    product artifacts rather than research-only outputs.
-
-11. Product UI must represent uncertainty rather than hide it.
-
-12. Post-election evaluation must use the preregistered frozen snapshots,
-    never reconstructed forecasts.
-
----
-
-## SUCCESS CONDITION BEFORE ELECTION DAY
-
-The project succeeds operationally if Atlas 395 has:
-
-- an immutable probabilistic baseline;
+- a maintained promoted probabilistic baseline;
 - auditable territorial forecasts;
-- a usable constituency explorer;
-- evidence provenance;
-- a change ledger;
-- frozen historical snapshots;
-- clear uncertainty;
-- a machine-readable data layer;
-- a pre-registered post-election scoring framework.
+- verified candidate/list/evidence graph;
+- change ledger and immutable snapshots;
+- clear uncertainty and provenance;
+- a usable Atlas 395 publication layer;
+- a frozen scoring protocol for the final election outcome.
 
-The project succeeds scientifically if it also reaches and freezes:
+Scientific success additionally means that the main candidate/current-information/agentic challengers have been tested against the frozen baseline, including publishing null results.
 
-F0
-E_collect
-E_reason
-E_full
+## One-sentence north star
 
-in time for genuine out-of-sample comparison against the election result.
-
----
-
-## ONE-SENTENCE NORTH STAR
-
-Build the most credible territory-level probabilistic view of Morocco's
-2026 legislative election, make every forecast auditable and falsifiable,
-and use that infrastructure to measure whether agentic intelligence
-actually adds predictive information.
+**Maintain a falsifiable 395-seat territorial forecast, make every change explainable from evidence to model effect, and admit new intelligence only when it proves incremental predictive value.**
