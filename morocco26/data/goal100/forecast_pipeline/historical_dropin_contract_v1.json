@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.1",
+  "contract_id": "M26-HISTORICAL-DROPIN-V1",
+  "destination": "morocco26/data/goal100/historical/",
+  "canonical_filename": "tafra_legislative_<YEAR>_canonical.json",
+  "purpose": "Make 2007/2002 immediately discoverable by the national, legal and rolling-origin pipeline after one source-specific normalization step.",
+  "required": {
+    "fields": ["year", "id_constituency", "constituency", "list_type", "seats", "votes"],
+    "votes": "dictionary of raw list/party labels to absolute vote counts",
+    "native_local_row_count": "must preserve the source election's real districting; do not force 92 rows"
+  },
+  "known_native_local_counts": {
+    "2002": 91,
+    "2007": 95,
+    "2011": 92,
+    "2016": 92,
+    "2021": 92
+  },
+  "strongly_preferred": [
+    "registered_reported",
+    "turnout_rate_reported",
+    "invalid_reported",
+    "province/prefecture parent geography",
+    "source provenance / archive metadata",
+    "lower-level geographic components when available (commune/arrondissement)"
+  ],
+  "validation": [
+    "Native local row count matches the source election rather than the 2011+ geometry.",
+    "Every local vote vector is non-negative and has positive total.",
+    "District magnitude is present and local seat totals match the applicable legal regime.",
+    "Original raw source is archived and hashed.",
+    "No result from a later election may be used to repair an earlier pre-election snapshot or boundary bridge."
+  ],
+  "automatic_effect": {
+    "national_layer": "immediately active for every newly discovered canonical year because aggregation is geometry-independent",
+    "legal_allocator_replay": "immediately active if full list-level votes and applicable legal inputs are present",
+    "territorial_layer": "activates only through an admissible common-geometry bridge when native districting differs",
+    "rolling_origin": "new year is automatically inserted in chronological folds; unavailable territorial components remain explicitly blocked rather than guessed"
+  },
+  "note": "If the source arrives as Excel/PDF/CSV, only the source-specific normalization adapter remains. Boundary harmonization is a separate controlled pipeline stage, not part of source ingestion."
+}
