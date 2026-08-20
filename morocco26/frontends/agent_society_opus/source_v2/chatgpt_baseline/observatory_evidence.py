@@ -2,6 +2,21 @@ from __future__ import annotations
 
 from observatory_base import *
 
+NON_DIRECTIONAL_SENTINELS = {
+    "MISSING",
+    "UNKNOWN",
+    "AMBIGUOUS",
+    "UNVERIFIED",
+    "NOT_FOUND",
+    "DATA_BLOCKED",
+    "CONFLICTED",
+}
+
+
+def _sentinel(value: Any) -> bool:
+    return isinstance(value, str) and value.strip().upper() in NON_DIRECTIONAL_SENTINELS
+
+
 def add_evidence(
     catalogue: list[dict[str, Any]],
     evidence_id: str,
@@ -16,6 +31,11 @@ def add_evidence(
 ) -> None:
     if value is None:
         return
+    # Fail closed: absence, ambiguity, unverified/conflicted status and data
+    # block markers may be displayed as epistemic context, but never cited as
+    # directional support for a choice or turnout decision.
+    if _sentinel(value) or _sentinel(status):
+        directional = False
     catalogue.append(
         {
             "evidence_id": evidence_id,
