@@ -1,11 +1,19 @@
 # Local GPT baseline artifacts — never commit generated decisions or auth material.
 _bundle_cache/
 _runs/
+_observatory_runs/
 G0_CHATGPT_*/
 outputs/
+deliberations/
+counterfactuals/
+promotion_preview/
+deliberation_frontend_preview/
 preflight.json
 run_state.json
 output_manifest.json
+observatory_preflight.json
+observatory_state.json
+observatory_report.json
 *.jsonl
 *.jsonl.meta.json
 
