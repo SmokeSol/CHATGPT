@@ -1,14 +1,17 @@
-/* ATLAS bootstrap: preserve the social core, then install the anti-abuse bridge last. */
+/* ATLAS bootstrap: install the public-reference switch, preserve the social core,
+   then install the anti-abuse bridge last. */
 (function(){
   'use strict';
-  var core=document.createElement('script');
-  core.src='social-core.js';
-  core.async=false;
-  core.onload=function(){
-    var abuse=document.createElement('script');
-    abuse.src='abuse.js';
-    abuse.async=false;
-    document.body.appendChild(abuse);
-  };
-  document.body.appendChild(core);
+  function load(src,done){
+    var script=document.createElement('script');
+    script.src=src;
+    script.async=false;
+    script.onload=done||function(){};
+    document.body.appendChild(script);
+  }
+  load('g0-reference.js',function(){
+    load('social-core.js',function(){
+      load('abuse.js');
+    });
+  });
 }());
