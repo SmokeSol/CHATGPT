@@ -7,8 +7,12 @@ on:
     paths:
       - 'morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/**'
       - 'morocco26/frontends/agent_society_opus/source_v2/web/g0-reference.js'
+      - 'morocco26/frontends/agent_society_opus/source_v2/web/deliberation.js'
+      - 'morocco26/frontends/agent_society_opus/source_v2/web/deliberation.css'
       - 'morocco26/frontends/agent_society_opus/source_v2/web/social.js'
+      - 'morocco26/frontends/agent_society_opus/source_v2/web/abuse.js'
       - 'morocco26/frontends/agent_society_opus/source_v2/web/data/reference_provenance.json'
+      - 'morocco26/frontends/agent_society_opus/source_v2/web/data/deliberation_provenance.json'
       - '.github/workflows/test-agent-society-chatgpt-baseline.yml'
   workflow_dispatch:
 
@@ -28,10 +32,29 @@ jobs:
         run: |
           python -m py_compile \
             morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_chatgpt_baseline.py \
-            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/promote_g0_frontend.py
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_g0_sol.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/observatory_base.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/observatory_evidence.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/observatory_selection.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/observatory_exec.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/observatory_transforms.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/observatory_causal.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/observatory_report.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_deliberation_observatory.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/promote_g0_frontend.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/promote_g0_sol_frontend.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/promote_deliberation_frontend.py
+      - name: Validate frozen JSON contracts
+        run: |
+          python -m json.tool morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1.json >/dev/null
+          python -m json.tool morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/DELIBERATION_OBSERVATORY_PROTOCOL_V1.json >/dev/null
+          python -m json.tool morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/DELIBERATION_OUTPUT_SCHEMA_V1.json >/dev/null
+          python -m json.tool morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/COUNTERFACTUAL_LIBRARY_V1.json >/dev/null
+          python -m json.tool morocco26/frontends/agent_society_opus/source_v2/web/data/deliberation_provenance.json >/dev/null
       - name: Check browser JavaScript syntax
         run: |
           node --check morocco26/frontends/agent_society_opus/source_v2/web/g0-reference.js
+          node --check morocco26/frontends/agent_society_opus/source_v2/web/deliberation.js
           node --check morocco26/frontends/agent_society_opus/source_v2/web/social.js
           node --check morocco26/frontends/agent_society_opus/source_v2/web/abuse.js
       - name: Run contract tests
