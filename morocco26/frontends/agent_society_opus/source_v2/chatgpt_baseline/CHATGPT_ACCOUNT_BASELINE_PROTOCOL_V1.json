@@ -1,17 +1,24 @@
 {
+  "schema_version": "ATLAS_CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V2_SOL_AND_OBSERVATORY",
+  "status": "PRE_REGISTERED_BEFORE_ANY_CHATGPT_BASELINE_OUTPUT",
+  "experiment_id": "EXP_7C8A2F11",
+  "environment_id": "ENV_4D19B3E7",
+  "purpose": "Generate an independently judged GPT voter baseline through the owner's normal ChatGPT-managed Codex login, preserve E0 as a deterministic control, and add a separate auditable deliberation/counterfactual observatory.",
   "baseline_roles": {
     "E0_DETERMINISTIC": "retained immutable mechanics/control baseline; never relabeled as LLM output",
-    "G0_CHATGPT_GPT56_TERRA": "candidate primary isolated GPT baseline generated through the owner's ChatGPT-managed Codex account",
+    "G0_CHATGPT_GPT56_SOL": "candidate primary isolated GPT baseline generated through the owner's ChatGPT-managed Codex account",
     "R0_PUBLIC_BYO_LLM": "independent reader-contributed replication cohort; not required to bootstrap G0"
   },
   "execution": {
+    "canonical_entry_point": "run_g0_sol.py",
+    "generic_runner": "run_chatgpt_baseline.py",
     "api_key_allowed": false,
     "auth": "CHATGPT_MANAGED_CODEX_LOGIN",
     "codex_mode": "codex exec --ephemeral",
     "concurrency_default": 1,
-    "concurrency_max_protocol": 8,
+    "concurrency_max_protocol": 4,
     "fresh_context_per_work_item": true,
-    "model": "gpt-5.6-terra",
+    "model": "gpt-5.6-sol",
     "reasoning_effort": "medium",
     "resume_semantics": "rerun command; validated work items are skipped; Codex threads are never resumed",
     "rows_expected": 94208,
@@ -19,18 +26,32 @@
     "trusted_local_machine_required": true,
     "work_items_expected": 2944
   },
-  "experiment_id": "EXP_7C8A2F11",
-  "frontend_policy": {
-    "after_promotion": "G0 becomes the primary displayed simulation; E0 remains available as the deterministic control",
-    "before_promotion": "continue labeling public numbers as E0 deterministic reference",
-    "never_claim": "that G0 is empirically true before blind historical scoring",
-    "social_lambdas": "remain illustrative until the separate 2016 calibration and 2021 holdout"
-  },
-  "freeze": {
-    "frozen_before_first_output": true,
-    "model_change_after_first_valid_output": false,
-    "outcome_access_before_completion": false,
-    "prompt_or_schema_change_after_first_valid_output": false
+  "three_pass_observatory": {
+    "protocol": "DELIBERATION_OBSERVATORY_PROTOCOL_V1.json",
+    "D0_DECISION": {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "role": "freeze turnout and party probabilities before any narrative explanation"
+    },
+    "L0_OBSERVABLE_DELIBERATION": {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "high",
+      "role": "fresh-context structured explanation of immutable D0, tied to a closed evidence catalogue",
+      "private_chain_of_thought_requested": false
+    },
+    "CF_BEHAVIOURAL_ABLATIONS": {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "role": "fresh-context reruns of preregistered packet perturbations plus a non-political placebo"
+    },
+    "startup_32": {
+      "D0_calls": 32,
+      "D0_decisions": 1024,
+      "L0_calls": 32,
+      "L0_explanations": 1024,
+      "optional_core_counterfactual_calls_per_selected_agent": 5,
+      "default_counterfactual_panel": "SWING"
+    }
   },
   "information_boundary": {
     "2016_unsealed": false,
@@ -50,27 +71,22 @@
     "user_config": "ignored",
     "web_search": "disabled"
   },
+  "decision_freeze": {
+    "frozen_before_first_output": true,
+    "model_change_after_first_valid_output": false,
+    "outcome_access_before_completion": false,
+    "prompt_or_schema_change_after_first_valid_output": false,
+    "explanation_generated_only_after_D0": true,
+    "L0_feedback_into_D0": false
+  },
   "output_transport": {
     "factor_simplex_tolerance": 1e-09,
     "party_simplex_tolerance": 1e-09,
     "scientific_row_schema": "read verbatim from the frozen environment",
     "stored_corpus_format": "JSONL in original archetype order",
-    "wrapper": {
-      "rows": "exactly 32 row objects"
-    },
+    "wrapper": {"rows": "exactly 32 row objects"},
     "wrapper_is_transport_only": true
   },
-  "promotion_gate": [
-    "exactly 2944 validated fresh contexts",
-    "exactly 94208 validated rows",
-    "one frozen model and reasoning effort for every work item",
-    "ChatGPT-managed auth and no API key",
-    "zero web/search/tool/MCP/shell/computer-use events",
-    "all identities, row order, party keys, factor keys and simplexes valid",
-    "complete per-work-item output hashes and usage logs",
-    "terminal state PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING"
-  ],
-  "purpose": "replace the public deterministic reference with an independently generated GPT baseline while retaining E0 as a falsifiable deterministic control",
   "retry": {
     "automatic_retry_only_for_schema_invalid_output": true,
     "identical_prompt_on_retry": true,
@@ -78,7 +94,22 @@
     "semantic_feedback": false,
     "transport_or_execution_contract_failure_retry": false
   },
-  "schema_version": "ATLAS_CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1",
-  "status": "PRE_REGISTERED_BEFORE_ANY_CHATGPT_BASELINE_OUTPUT",
-  "environment_id": "ENV_4D19B3E7"
+  "promotion_gate": [
+    "exactly 2944 validated fresh D0 contexts",
+    "exactly 94208 validated D0 rows",
+    "one frozen Sol model and reasoning effort for every D0 work item",
+    "ChatGPT-managed auth and no API key",
+    "zero web/search/tool/MCP/shell/computer-use events",
+    "all identities, row order, party keys, factor keys and simplexes valid",
+    "complete per-work-item output hashes and usage logs",
+    "terminal state PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING"
+  ],
+  "frontend_policy": {
+    "before_G0_promotion": "continue labeling public numbers as E0 deterministic reference",
+    "after_G0_promotion": "G0 becomes the primary displayed simulation; E0 remains available as the deterministic control",
+    "before_deliberation_promotion": "show the observatory method without invented explanations",
+    "after_deliberation_promotion": "show structured explanations and separately labelled counterfactual diagnostics",
+    "never_claim": "that G0 or a fluent explanation is empirically true before blind historical scoring",
+    "social_lambdas": "remain illustrative until the separate 2016 calibration and 2021 holdout"
+  }
 }
