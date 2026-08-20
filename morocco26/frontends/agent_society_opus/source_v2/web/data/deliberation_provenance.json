@@ -1,0 +1,15 @@
+{
+  "schema_version": "ATLAS_PUBLIC_DELIBERATION_PROVENANCE_V1",
+  "available": false,
+  "status": "PROTOCOL_READY_G0_NOT_GENERATED",
+  "data_path": null,
+  "baseline_id": "G0_CHATGPT_GPT56_SOL",
+  "labels": {
+    "short": "Délibération observable en attente",
+    "long": "Le protocole est gelé, mais aucune décision G0 Sol n’a encore été produite. La page décrit donc la méthode sans inventer de raisonnement."
+  },
+  "private_chain_of_thought": "NOT_REQUESTED_NOT_EXPOSED",
+  "observable_deliberation": "SEPARATE_POST_DECISION_STRUCTURED_EXPLANATION",
+  "counterfactual_validation": "SEPARATE_PACKET_RERUNS_WITH_PLACEBO",
+  "outcomes_opened": false
+}
