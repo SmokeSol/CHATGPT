@@ -6,6 +6,9 @@ on:
       - morocco26-agent-society-v2-front-vote-llm
     paths:
       - 'morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/**'
+      - 'morocco26/frontends/agent_society_opus/source_v2/web/g0-reference.js'
+      - 'morocco26/frontends/agent_society_opus/source_v2/web/social.js'
+      - 'morocco26/frontends/agent_society_opus/source_v2/web/data/reference_provenance.json'
       - '.github/workflows/test-agent-society-chatgpt-baseline.yml'
   workflow_dispatch:
 
@@ -21,10 +24,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Compile runner
-        run: >-
-          python -m py_compile
-          morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_chatgpt_baseline.py
+      - name: Compile Python pipelines
+        run: |
+          python -m py_compile \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_chatgpt_baseline.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/promote_g0_frontend.py
+      - name: Check browser JavaScript syntax
+        run: |
+          node --check morocco26/frontends/agent_society_opus/source_v2/web/g0-reference.js
+          node --check morocco26/frontends/agent_society_opus/source_v2/web/social.js
+          node --check morocco26/frontends/agent_society_opus/source_v2/web/abuse.js
       - name: Run contract tests
         run: >-
           python -m unittest discover -v
