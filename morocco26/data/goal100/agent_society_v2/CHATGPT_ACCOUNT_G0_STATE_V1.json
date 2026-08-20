@@ -1,40 +1,89 @@
 {
-  "schema_version": "ATLAS_CHATGPT_ACCOUNT_G0_STATE_V1",
+  "schema_version": "ATLAS_CHATGPT_ACCOUNT_G0_STATE_V2_SOL_DELIBERATION_OBSERVATORY",
   "experiment_id": "M26-AGENT-SOCIETY-V2-001",
   "public_experiment_id": "EXP_7C8A2F11",
   "public_environment_id": "ENV_4D19B3E7",
   "branch": "morocco26-agent-society-v2-front-vote-llm",
-  "status": "PRE_REGISTERED_RUNNER_READY_OWNER_CHATGPT_LOGIN_AND_FULL_BUNDLE_REQUIRED",
+  "status": "PRE_REGISTERED_SOL_DECISION_AND_DELIBERATION_OBSERVATORY_READY_OWNER_RUN_REQUIRED",
   "created_before_any_G0_output": true,
-  "outcomes_opened": {
-    "2016": false,
-    "2021": false
-  },
+  "outcomes_opened": {"2016": false, "2021": false},
   "roles": {
     "E0": "IMMUTABLE_DETERMINISTIC_CONTROL_CURRENT_PUBLIC_REFERENCE",
-    "G0": "CANDIDATE_PRIMARY_GPT_REFERENCE_NOT_YET_GENERATED",
+    "G0": "CANDIDATE_PRIMARY_SOL_REFERENCE_NOT_YET_GENERATED",
+    "L0": "OBSERVABLE_POST_DECISION_EXPLANATION_NOT_PRIVATE_CHAIN_OF_THOUGHT",
+    "CF": "SYNTHETIC_PACKET_RERUN_CAUSAL_DIAGNOSTIC_WITH_PLACEBO",
     "R0_PUBLIC": "READER_BYO_LLM_REPLICATION_COHORT"
   },
   "G0": {
-    "baseline_id": "G0_CHATGPT_GPT56_TERRA",
-    "model": "gpt-5.6-terra",
+    "baseline_id": "G0_CHATGPT_GPT56_SOL",
+    "model": "gpt-5.6-sol",
     "reasoning_effort": "medium",
     "auth": "OWNER_NORMAL_CHATGPT_LOGIN_VIA_CODEX_CLI",
     "api_key": false,
     "fresh_context_per_work_item": true,
     "work_items_expected": 2944,
     "rows_expected": 94208,
-    "runner": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_chatgpt_baseline.py",
+    "canonical_runner": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_g0_sol.py",
+    "generic_runner": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_chatgpt_baseline.py",
     "protocol": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1.json",
     "freeze_manifest": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/FREEZE_MANIFEST.json",
     "terminal_required": "PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING"
   },
+  "deliberation_observatory": {
+    "status": "PRE_REGISTERED_NO_OUTPUTS",
+    "protocol": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/DELIBERATION_OBSERVATORY_PROTOCOL_V1.json",
+    "runner": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_deliberation_observatory.py",
+    "promotion_runner": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/promote_deliberation_frontend.py",
+    "L0_model": "gpt-5.6-sol",
+    "L0_reasoning_effort": "high",
+    "D0_immutable_before_L0": true,
+    "private_chain_of_thought_requested": false,
+    "closed_evidence_catalogue": true,
+    "counterfactual_model": "gpt-5.6-sol",
+    "counterfactual_reasoning_effort": "medium",
+    "counterfactual_scenarios": [
+      "PRIOR_ANCHOR_ALTERNATIVE",
+      "GOVERNMENT_OUTLOOK_REVERSE",
+      "RUNNER_LOCAL_STRENGTH",
+      "TOP_RUNNER_PROGRAM_SWAP",
+      "NONINFORMATIVE_METADATA_PLACEBO"
+    ],
+    "2016_opened": false,
+    "2021_opened": false
+  },
+  "startup_32": {
+    "status": "NOT_STARTED",
+    "D0_work_items": 32,
+    "D0_rows": 1024,
+    "D0_calls": 32,
+    "L0_scope": "ALL_1024_ROWS",
+    "L0_calls": 32,
+    "counterfactual_core_optional_after_L0": true,
+    "default_counterfactual_panel": "SWING",
+    "counterfactual_scenarios_per_selected_agent": 5,
+    "maximum_default_counterfactual_calls": 160,
+    "sequencing": [
+      "run 32 D0 Sol contexts",
+      "validate and freeze D0",
+      "run 32 separate L0 high-reasoning contexts explaining all 1024 decisions",
+      "inspect observatory report",
+      "optionally run the five counterfactual scenarios on the SWING agent from each work item"
+    ]
+  },
+  "frontend": {
+    "current_primary_reference": "E0_DETERMINISTIC",
+    "deliberation_section": "LIVE_METHOD_PENDING_DATA",
+    "fake_or_placeholder_explanations": false,
+    "automatic_switch_after_validated_promotion": true
+  },
   "promotion_policy": {
-    "before_terminal": "keep E0 explicitly labeled deterministic in the public frontend",
-    "after_terminal_and_audit": "publish G0 as the primary GPT simulation while preserving E0 as visible control",
+    "before_G0_terminal": "keep E0 explicitly labeled deterministic in the public frontend",
+    "after_G0_terminal_and_audit": "publish G0 as the primary GPT simulation while preserving E0 as visible control",
+    "before_L0_promotion": "show the method and pending state only",
+    "after_L0_promotion": "publish evidence-linked observable explanations and separately labelled counterfactual diagnostics",
     "predictive_claim_before_blind_scoring": false,
     "social_lambda_calibration_unlocked_by_G0_generation_alone": false
   },
-  "next_required_owner_action": "On a trusted local machine, install Codex CLI, run codex login and choose Sign in with ChatGPT, then run the dry-run preflight and the frozen 8-work-item probe against the 2944-work-item full-environment ZIP. Never send or commit ~/.codex/auth.json.",
-  "external_dependency": "ChatGPT/Codex usage limits may pause the run; rerun the identical command after reset or with eligible credits. Validated work items are skipped and no model thread is resumed."
+  "next_required_owner_action": "On a trusted local machine with Codex CLI authenticated through Sign in with ChatGPT, run run_g0_sol.py on exactly 32 work items, then run run_deliberation_observatory.py with --scope all --limit 32 and --counterfactual-suite none. Never send or commit ~/.codex/auth.json.",
+  "external_dependency": "ChatGPT/Codex usage limits may pause either phase. Rerun the identical command after reset; validated work items are skipped and no model thread is resumed."
 }
