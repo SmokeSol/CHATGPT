@@ -1,5 +1,5 @@
 {
-  "schema_version": "ATLAS_CHATGPT_ACCOUNT_BASELINE_FREEZE_MANIFEST_V1",
+  "schema_version": "ATLAS_CHATGPT_ACCOUNT_BASELINE_FREEZE_MANIFEST_V2",
   "status": "FROZEN_BEFORE_ANY_G0_CHATGPT_OUTPUT",
   "baseline_id": "G0_CHATGPT_GPT56_TERRA",
   "experiment_id": "EXP_7C8A2F11",
@@ -15,30 +15,40 @@
   "rows_per_work_item": 32,
   "files": {
     ".gitignore": {
-      "git_blob_sha": "e9dad20687c26c5827e1147855e2b883b704fc9e",
-      "bytes": 340
+      "git_blob_sha": "e9dad20687c26c5827e1147855e2b883b704fc9e"
     },
     "CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1.json": {
-      "git_blob_sha": "aa6dc03abf672ac55f4304e90ed3023c42571401",
-      "bytes": 3540
+      "git_blob_sha": "aa6dc03abf672ac55f4304e90ed3023c42571401"
     },
     "README.md": {
-      "git_blob_sha": "76b82e359ccf426fae0641e781fc65b6e3c67b20",
-      "bytes": 6567
+      "git_blob_sha": "1fbec2e8155bdbaba227c32fdb0586c70fce73bb"
     },
     "run_chatgpt_baseline.py": {
-      "git_blob_sha": "f04b6c7ddc31718a5e72738130ddadd4d0ba10b9",
-      "bytes": 45630
+      "git_blob_sha": "f04b6c7ddc31718a5e72738130ddadd4d0ba10b9"
+    },
+    "promote_g0_frontend.py": {
+      "git_blob_sha": "8154d3ac24faa7c3946218b03f49e87c96a36057"
     },
     "tests/test_runner.py": {
-      "git_blob_sha": "3b310224e1fd5e7a599a0f26067b9dab30703139",
-      "bytes": 6477
+      "git_blob_sha": "3b310224e1fd5e7a599a0f26067b9dab30703139"
+    },
+    "tests/test_promotion.py": {
+      "git_blob_sha": "242d753e0664f58aeb8712a508f176a7e913c5bb"
+    },
+    "web/g0-reference.js": {
+      "git_blob_sha": "25e8915f00a8dc4abb3b199a7508fda9743f1837"
+    },
+    "web/social.js": {
+      "git_blob_sha": "aa1c823dca7754ce97735fbed5435acd4d3d791d"
+    },
+    "web/data/reference_provenance.json": {
+      "git_blob_sha": "ee7d117ea37b909a4525a6a5c8d45aab2a989f66"
     },
     ".github/workflows/test-agent-society-chatgpt-baseline.yml": {
-      "git_blob_sha": "a2a9e6fd55f75465b5c1d6b02f362f9d4ab1af5c"
+      "git_blob_sha": "ff7890b12a16f324415aba629781984f11827a02"
     }
   },
-  "invariants": [
+  "generation_invariants": [
     "E0 remains the immutable deterministic control and is never relabeled as LLM output",
     "G0 is not promoted before exactly 2944 validated fresh-context work items and 94208 rows",
     "the owner authenticates locally with Sign in with ChatGPT; auth material is never committed or shared",
@@ -47,8 +57,17 @@
     "each work item uses codex exec --ephemeral and never resumes another thread",
     "only the frozen prompt, frozen row schema and one frozen work item enter a model context",
     "one identical retry is allowed only after schema-invalid output, with no semantic feedback",
-    "2016 and 2021 outcomes remain sealed during G0 generation",
-    "the public frontend remains on E0 until G0 passes the terminal promotion gate"
+    "2016 and 2021 outcomes remain sealed during G0 generation"
   ],
-  "terminal_required": "PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING"
+  "promotion_invariants": [
+    "the frontend remains on E0 until the G0 terminal gate and complete hash audit pass",
+    "promotion is preview-only unless --apply is supplied",
+    "E0 public assets are archived before G0 becomes primary",
+    "the deterministic simulateur.json remains available as an explicit E0 fallback/control",
+    "the primary interactive G0 explorer interpolates only actual frozen GPT decisions and does not call the E0 decision formula",
+    "the named territorial map is promoted only when the E0 fingerprint mapping is near-exact and unambiguous",
+    "G0 generation completion alone does not calibrate social lambdas or prove predictive validity"
+  ],
+  "terminal_required": "PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING",
+  "promotion_terminal_required": "PASS_G0_CHATGPT_REFERENCE_PROMOTED_TO_FRONTEND"
 }
