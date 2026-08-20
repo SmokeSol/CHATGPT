@@ -1,0 +1,38 @@
+{
+  "schema_version": "ATLAS_G0_COUNTERFACTUAL_LIBRARY_V1",
+  "status": "PRE_REGISTERED_BEFORE_ANY_G0_OUTPUT",
+  "interventions": {
+    "PRIOR_ANCHOR_ALTERNATIVE": {
+      "target": "voter.prior_vote_or_abstention",
+      "rule": "If prior equals the D0 top party, replace it with the D0 runner-up; otherwise replace it with the D0 top party. ABSTAIN is treated like any non-top prior.",
+      "interpretation": "Tests sensitivity to the explicit behavioural anchor; not a realistic historical claim."
+    },
+    "GOVERNMENT_OUTLOOK_REVERSE": {
+      "target": "voter latent government-performance and democracy-satisfaction means",
+      "rule": "If the D0 top party is in the incumbent coalition, subtract the registered shifts; otherwise add them. Clamp all modified means to [0,1].",
+      "shifts": {
+        "latent_attitude_government_economic_performance_mean": 0.25,
+        "latent_attitude_government_poverty_performance_mean": 0.25,
+        "latent_attitude_government_anticorruption_performance_mean": 0.25,
+        "latent_attitude_democracy_satisfaction_mean": 0.15,
+        "latent_attitude_economic_condition_mean": 0.10
+      },
+      "interpretation": "Tests reward/punishment sensitivity."
+    },
+    "RUNNER_LOCAL_STRENGTH": {
+      "target": "runner-up party local candidate/context card",
+      "rule": "Set candidate rank=1, FORMER_MP=true, LOCAL_EXECUTIVE_OFFICE=true and PROVINCIAL_OR_REGIONAL_OFFICE=true as VERIFIED/non-conflicted; clear verified negative withdrawal/sanction/incapacity flags to false.",
+      "interpretation": "Tests whether a materially stronger local offer can close the D0 margin."
+    },
+    "TOP_RUNNER_PROGRAM_SWAP": {
+      "target": "top and runner-up program_priority_levels",
+      "rule": "Swap the complete anonymous program-priority maps while preserving party IDs and government status.",
+      "interpretation": "Tests whether relative program fit, rather than identity or incumbency, drives the D0 ordering."
+    },
+    "NONINFORMATIVE_METADATA_PLACEBO": {
+      "target": "packet diagnostic metadata",
+      "rule": "Add an explicitly non-political random-looking but deterministic placebo nonce. Do not alter any voter, party or election field.",
+      "interpretation": "A scientifically stable judge should not materially change its decision."
+    }
+  }
+}
