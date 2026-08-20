@@ -1,5 +1,5 @@
-/* ATLAS bootstrap: install the public-reference switch, preserve the social core,
-   then install the anti-abuse bridge last. */
+/* ATLAS bootstrap: install the public-reference and deliberation layers,
+   preserve the social core, then install the anti-abuse bridge last. */
 (function(){
   'use strict';
   function load(src,done){
@@ -15,8 +15,10 @@
     if(window.S&&window.SIM&&typeof window.simulator==='function'){
       try{window.simulator();}catch(err){console.warn('[atlas] reference rerender',err);}
     }
-    load('social-core.js',function(){
-      load('abuse.js');
+    load('deliberation.js',function(){
+      load('social-core.js',function(){
+        load('abuse.js');
+      });
     });
   });
 }());
