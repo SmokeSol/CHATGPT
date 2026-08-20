@@ -1,0 +1,123 @@
+name: Publish isolated TriggerPack Pages subtree
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/triggerpack-pages-bootstrap.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: triggerpack-pages-bootstrap
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout existing Pages branch
+        uses: actions/checkout@v6
+        with:
+          ref: gh-pages
+          path: site
+          fetch-depth: 0
+
+      - name: Download and verify the validated TriggerPack Edge module
+        env:
+          BUNDLE_URL: https://slgkvmjikvenhkioqglt.supabase.co/storage/v1/object/public/triggerpack-runtime/triggerpack-bundle-29bbd00a46ff5d72f5d2159c6af407d7e0025dda9320631ff0cfc25c9af902a3.js
+          BUNDLE_SHA256: 29bbd00a46ff5d72f5d2159c6af407d7e0025dda9320631ff0cfc25c9af902a3
+        run: |
+          set -euo pipefail
+          mkdir -p site/triggerpack/.well-known
+          curl --fail --silent --show-error --location "$BUNDLE_URL" --output site/triggerpack/triggerpack-bundle.js
+          echo "$BUNDLE_SHA256  site/triggerpack/triggerpack-bundle.js" | sha256sum --check --strict
+          grep -q 'Deno.serve' site/triggerpack/triggerpack-bundle.js
+          if grep -q '0x81870C910875161EEce1e2A6334E957929Ea0ad2' site/triggerpack/triggerpack-bundle.js; then
+            echo 'Unconfirmed payment receiver detected'
+            exit 1
+          fi
+          if grep -q '82ea91cb155b4c3f2bea18b5eecae1c14ab1da268b18bf84a3cd188a88eb7489' site/triggerpack/triggerpack-bundle.js; then
+            echo 'Private smoke secret leaked into module'
+            exit 1
+          fi
+
+      - name: Write isolated static discovery surface
+        env:
+          API_BASE: https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/triggerpack-public
+        run: |
+          set -euo pipefail
+          cat > site/triggerpack/index.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+            <title>TriggerPack — evidence-backed company triggers</title>
+            <meta name="description" content="An agent-native API that finds recent, cited company events and ranks them against a concrete objective.">
+            <style>
+              :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{margin:0;background:#0b0f19;color:#f8fafc}.wrap{max-width:900px;margin:0 auto;padding:80px 24px 96px}.badge{display:inline-flex;border:1px solid #334155;border-radius:999px;padding:6px 11px;color:#cbd5e1;font-size:13px}h1{font-size:clamp(48px,9vw,88px);letter-spacing:-.055em;line-height:.95;margin:28px 0 24px}.lead{font-size:21px;line-height:1.55;max-width:760px;color:#cbd5e1}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:44px}.card{border:1px solid #293548;background:#111827;border-radius:18px;padding:22px}.card h2{font-size:15px;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;margin:0 0 13px}.card p{margin:0;color:#e2e8f0;line-height:1.55}code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;word-break:break-all;color:#bfdbfe}.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}.links a{color:#0b0f19;background:#f8fafc;border-radius:10px;padding:11px 15px;text-decoration:none;font-weight:700}.links a.secondary{background:#172033;color:#e2e8f0;border:1px solid #334155}.foot{margin-top:64px;padding-top:24px;border-top:1px solid #293548;color:#94a3b8;font-size:14px}
+            </style>
+          </head>
+          <body>
+            <main class="wrap">
+              <span class="badge">x402 · Base mainnet · $0.25 per result</span>
+              <h1>TriggerPack</h1>
+              <p class="lead">Give an agent a company domain and a goal. TriggerPack finds what happened recently, separates evidence from inference, and returns whether there is a defensible reason to act now.</p>
+              <div class="grid">
+                <article class="card"><h2>Input</h2><p><code>{"company_domain":"cloudflare.com","goal":"sell developer tooling","lookback_days":90}</code></p></article>
+                <article class="card"><h2>Output</h2><p>Dated triggers, evidence URLs, confidence, goal relevance, recommended action and angle.</p></article>
+                <article class="card"><h2>Payment</h2><p>Temporarily disabled until a confirmed owner-controlled receiving address is supplied.</p></article>
+              </div>
+              <div class="links">
+                <a href="https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/triggerpack-public/openapi.json">OpenAPI 3.1</a>
+                <a class="secondary" href="https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/triggerpack-public/health">API health</a>
+                <a class="secondary" href=".well-known/x402">x402 discovery</a>
+                <a class="secondary" href="llms.txt">llms.txt</a>
+              </div>
+              <div class="foot">API endpoint: <code>POST https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/triggerpack-public/v1/company-trigger-pack</code></div>
+            </main>
+          </body>
+          </html>
+          HTML
+
+          cat > site/triggerpack/.well-known/x402 <<'JSON'
+          {
+            "x402Version": 2,
+            "resources": [
+              {
+                "url": "https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/triggerpack-public/v1/company-trigger-pack",
+                "method": "POST",
+                "description": "Evidence-backed recent company triggers ranked against a supplied goal.",
+                "accepts": []
+              }
+            ]
+          }
+          JSON
+          cp site/triggerpack/.well-known/x402 site/triggerpack/.well-known/x402.json
+
+          cat > site/triggerpack/llms.txt <<'TXT'
+          # TriggerPack
+
+          TriggerPack finds evidence-backed recent company events and ranks them against a supplied objective.
+
+          API endpoint: POST https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/triggerpack-public/v1/company-trigger-pack
+          OpenAPI: https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/triggerpack-public/openapi.json
+          Price: 0.25 USDC on Base through x402 once the owner-controlled receiver is configured.
+
+          A negative result is valid and preferable to an invented signal.
+          TXT
+
+      - name: Commit only the TriggerPack subtree to gh-pages
+        run: |
+          set -euo pipefail
+          git -C site config user.name 'github-actions[bot]'
+          git -C site config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C site add triggerpack
+          if git -C site diff --cached --quiet; then
+            echo 'TriggerPack Pages subtree already up to date.'
+            exit 0
+          fi
+          git -C site commit -m 'pages: publish isolated TriggerPack surface'
+          git -C site push origin HEAD:gh-pages
