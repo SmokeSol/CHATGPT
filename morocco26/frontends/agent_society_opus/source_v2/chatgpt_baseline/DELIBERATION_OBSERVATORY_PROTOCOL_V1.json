@@ -1,0 +1,90 @@
+{
+  "schema_version": "ATLAS_G0_DELIBERATION_OBSERVATORY_PROTOCOL_V1",
+  "status": "PRE_REGISTERED_BEFORE_ANY_G0_OUTPUT",
+  "experiment_id": "EXP_7C8A2F11",
+  "environment_id": "ENV_4D19B3E7",
+  "baseline_id": "G0_CHATGPT_GPT56_SOL",
+  "purpose": "Turn the GPT voter simulation into an auditable electoral-behaviour observatory without requesting or claiming access to private chain-of-thought.",
+  "model_contract": {
+    "decision_model": "gpt-5.6-sol",
+    "decision_reasoning_effort": "medium",
+    "deliberation_model": "gpt-5.6-sol",
+    "deliberation_reasoning_effort": "high",
+    "counterfactual_model": "gpt-5.6-sol",
+    "counterfactual_reasoning_effort": "medium",
+    "auth": "CHATGPT_MANAGED_CODEX_LOGIN",
+    "api_key_allowed": false,
+    "fresh_context_per_work_item_and_pass": true
+  },
+  "three_pass_design": {
+    "D0_DECISION": "The original frozen full-environment prompt and schema produce turnout, party probabilities, factor importance and reason codes. No explanatory prose is requested in this pass.",
+    "L0_OBSERVABLE_DELIBERATION": "A separate fresh context receives the immutable D0 rows, selected voter cards, the original anonymous context and a closed evidence catalogue. It may explain but may not alter D0.",
+    "CF_BEHAVIOURAL_ABLATIONS": "A separate fresh context re-runs the frozen decision task on deterministically modified packets. Counterfactual deltas, not narrative confidence, determine whether a proposed mechanism is supported."
+  },
+  "scope_policy": {
+    "startup_32": {
+      "work_items": 32,
+      "decision_rows": 1024,
+      "observable_deliberation": "ALL_1024_ROWS",
+      "counterfactual_panel_per_work_item": ["SWING", "TURNOUT_PIVOT"],
+      "counterfactual_suite": "CORE_PLUS_PLACEBO"
+    },
+    "full_2944": {
+      "decision_rows": 94208,
+      "observable_deliberation_panel_per_work_item": ["HASH_ANCHOR", "SWING", "TURNOUT_PIVOT", "STRONGEST_SWITCH"],
+      "maximum_deep_rows": 11776,
+      "non_panel_rows": "retain D0 factor simplex and reason codes only",
+      "counterfactual_panel_per_work_item": ["SWING", "TURNOUT_PIVOT"]
+    }
+  },
+  "observable_deliberation": {
+    "language": "fr",
+    "not_private_chain_of_thought": true,
+    "decision_fields_are_recomputed_by_validator": [
+      "top_party_id",
+      "runner_up_party_id",
+      "top_party_probability",
+      "runner_up_probability",
+      "decision_margin",
+      "participation_posture",
+      "transition_type",
+      "decision_certainty_band"
+    ],
+    "evidence_rule": "Every directional claim must cite one or more evidence_id values from the row-specific closed catalogue.",
+    "unsupported_claims_policy": "Any unknown evidence id, identity mismatch, altered D0 number or unsupported-claims flag fails the row closed.",
+    "interpretation": "Observable deliberations are model-generated self-explanations. They are hypotheses until confirmed by counterfactual re-runs."
+  },
+  "counterfactual_library": {
+    "CORE_PLUS_PLACEBO": [
+      "PRIOR_ANCHOR_ALTERNATIVE",
+      "GOVERNMENT_OUTLOOK_REVERSE",
+      "RUNNER_LOCAL_STRENGTH",
+      "TOP_RUNNER_PROGRAM_SWAP",
+      "NONINFORMATIVE_METADATA_PLACEBO"
+    ],
+    "causal_support_thresholds": {
+      "strong_target_probability_delta": 0.05,
+      "partial_target_probability_delta": 0.02,
+      "placebo_max_party_jsd": 0.015,
+      "placebo_max_turnout_delta": 0.02
+    }
+  },
+  "scientific_boundaries": [
+    "D0 decisions are immutable before any L0 explanation is generated.",
+    "L0 cannot be fed back into D0 or historical scoring.",
+    "Narrative fluency is never treated as causal evidence.",
+    "Counterfactual packets are synthetic diagnostics and never confused with observed facts.",
+    "The placebo is evaluated alongside substantive interventions.",
+    "2016 and 2021 outcomes remain sealed during D0, L0 and CF generation.",
+    "Social R1/R2 parameters remain illustrative until the separate calibration and holdout protocol."
+  ],
+  "promotion_gate": [
+    "all requested D0 outputs validate",
+    "all requested L0 rows preserve D0 numbers and identities",
+    "all evidence references resolve to the closed catalogue",
+    "all counterfactual outputs use the same decision model and frozen prompt",
+    "counterfactual transforms and hashes are recorded",
+    "placebo sensitivity is reported",
+    "public UI labels observable deliberation as explanation and counterfactual effects as diagnostics"
+  ]
+}
