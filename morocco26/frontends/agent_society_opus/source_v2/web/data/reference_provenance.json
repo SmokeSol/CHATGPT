@@ -1,0 +1,23 @@
+{
+  "schema_version": "ATLAS_PUBLIC_REFERENCE_PROVENANCE_V1",
+  "primary_reference_id": "E0_DETERMINISTIC",
+  "primary_reference_kind": "DETERMINISTIC_CONTROL",
+  "status": "CURRENT_BEFORE_G0_CHATGPT_COMPLETION",
+  "public_rows": 94208,
+  "public_work_items": 2944,
+  "source_files": {
+    "societe": "data/societe.json",
+    "portraits": "data/portraits.json",
+    "interactive_explainer": "data/simulateur.json"
+  },
+  "interactive_explainer_kind": "DETERMINISTIC_E0_EXPLAINER",
+  "g0_available": false,
+  "g0_simulator_path": null,
+  "labels": {
+    "short": "E0 · référence déterministe",
+    "long": "Les chiffres actuellement affichés proviennent du moteur déterministe E0. Ils constituent le contrôle mécanique de l’expérience, pas encore une population de décisions produites par GPT."
+  },
+  "scientific_claim": "MECHANICS_CONTROL_NOT_EMPIRICAL_LLM_RESULT",
+  "e0_retained_after_g0": true,
+  "social_lambdas_status": "ILLUSTRATIVE_NOT_CALIBRATED"
+}
