@@ -185,3 +185,44 @@ PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING
 ```
 
 Seulement après ce terminal et l’audit du manifest, le frontend peut basculer de E0 vers G0. Cela ne prouve pas encore que G0 prédit correctement : l’évaluation historique aveugle reste une étape séparée.
+
+## Promotion contrôlée vers GitHub Pages
+
+La génération G0 reste locale. GitHub Pages ne reçoit jamais le login ChatGPT : il ne publie que les JSON dérivés après complétion et audit.
+
+Le premier passage construit une prévisualisation sans modifier le site :
+
+```bash
+python promote_g0_frontend.py \
+  --env "/chemin/vers/ENV_4D19B3E7_extrait" \
+  --run "/chemin/vers/G0_CHATGPT_GPT56_TERRA" \
+  --e0-run "/chemin/vers/E0_DETERMINISTIC_REFERENCE_extrait"
+```
+
+Le script vérifie les 2 944 métadonnées, les 94 208 lignes, les hashes, le modèle, l’effort de raisonnement, l’absence d’API key, le caractère éphémère de chaque contexte et l’absence d’outils interdits. Il produit ensuite `promotion_preview/` avec :
+
+- les agrégats G0 `societe.json` ;
+- 3 000 portraits G0 ;
+- un explorateur de 256 décisions GPT réelles, sans recalcul E0 ;
+- la carte des 92 circonscriptions reconstruite à partir de G0 ;
+- un audit de provenance et de correspondance territoriale.
+
+`--e0-run` sert uniquement, **après la génération aveugle**, à retrouver sans ambiguïté la correspondance entre pseudonymes territoriaux/partisans et les libellés publics déjà présents dans `maroc.json`. Si la correspondance E0 n’est pas quasi exacte ou devient ambiguë, la promotion s’arrête sans toucher au site.
+
+Après lecture de `promotion_preview/promotion_audit.json`, appliquer :
+
+```bash
+python promote_g0_frontend.py \
+  --env "/chemin/vers/ENV_4D19B3E7_extrait" \
+  --run "/chemin/vers/G0_CHATGPT_GPT56_TERRA" \
+  --e0-run "/chemin/vers/E0_DETERMINISTIC_REFERENCE_extrait" \
+  --apply
+```
+
+Au premier `--apply`, les fichiers E0 actuels sont archivés sous `web/data/reference/e0/`. G0 est archivé sous `web/data/reference/g0/` puis devient la référence primaire servie par le site. `simulateur.json` n’est pas écrasé : il reste le démonstrateur E0 de contrôle et sert de fallback explicite.
+
+Le frontend charge `data/reference_provenance.json` :
+
+- avant G0, il annonce **E0 · référence déterministe** ;
+- après promotion, il annonce **G0 · référence GPT via compte ChatGPT** ;
+- il n’affirme jamais que G0 est prédictivement juste avant le backtest aveugle.
