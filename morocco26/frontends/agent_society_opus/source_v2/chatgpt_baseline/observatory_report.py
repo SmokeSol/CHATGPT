@@ -9,7 +9,14 @@ from observatory_causal import *
 
 def deliberation_rows_for_task(output_root: pathlib.Path, task: R.FrozenTask) -> list[dict[str, Any]]:
     path = deliberation_output_path(output_root, task)
-    return load_jsonl(path) if path.is_file() else []
+    rows = load_jsonl(path) if path.is_file() else []
+    # task_id is a transport/provenance join key, never a model-generated field.
+    # It lets the public promotion match L0 explanations to CF evaluations
+    # without weakening the frozen deliberation schema or asking the model to
+    # reproduce internal orchestration identifiers.
+    for row in rows:
+        row["task_id"] = task.task_id
+    return rows
 
 
 def build_observatory_report(
