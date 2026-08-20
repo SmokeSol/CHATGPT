@@ -1,0 +1,11 @@
+{
+  "x402Version": 2,
+  "resources": [
+    {
+      "url": "https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/triggerpack-public/v1/company-trigger-pack",
+      "method": "POST",
+      "description": "Evidence-backed recent company triggers ranked against a supplied goal.",
+      "accepts": []
+    }
+  ]
+}

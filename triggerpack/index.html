@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TriggerPack — evidence-backed company triggers</title>
+  <meta name="description" content="An agent-native API that finds recent, cited company events and ranks them against a concrete objective.">
+  <style>
+    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{margin:0;background:#0b0f19;color:#f8fafc}.wrap{max-width:900px;margin:0 auto;padding:80px 24px 96px}.badge{display:inline-flex;border:1px solid #334155;border-radius:999px;padding:6px 11px;color:#cbd5e1;font-size:13px}h1{font-size:clamp(48px,9vw,88px);letter-spacing:-.055em;line-height:.95;margin:28px 0 24px}.lead{font-size:21px;line-height:1.55;max-width:760px;color:#cbd5e1}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:44px}.card{border:1px solid #293548;background:#111827;border-radius:18px;padding:22px}.card h2{font-size:15px;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;margin:0 0 13px}.card p{margin:0;color:#e2e8f0;line-height:1.55}code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;word-break:break-all;color:#bfdbfe}.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}.links a{color:#0b0f19;background:#f8fafc;border-radius:10px;padding:11px 15px;text-decoration:none;font-weight:700}.links a.secondary{background:#172033;color:#e2e8f0;border:1px solid #334155}.foot{margin-top:64px;padding-top:24px;border-top:1px solid #293548;color:#94a3b8;font-size:14px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <span class="badge">x402 · Base mainnet · $0.25 per result</span>
+    <h1>TriggerPack</h1>
+    <p class="lead">Give an agent a company domain and a goal. TriggerPack finds what happened recently, separates evidence from inference, and returns whether there is a defensible reason to act now.</p>
+    <div class="grid">
+      <article class="card"><h2>Input</h2><p><code>{"company_domain":"cloudflare.com","goal":"sell developer tooling","lookback_days":90}</code></p></article>
+      <article class="card"><h2>Output</h2><p>Dated triggers, evidence URLs, confidence, goal relevance, recommended action and angle.</p></article>
+      <article class="card"><h2>Payment</h2><p>Temporarily disabled until a confirmed owner-controlled receiving address is supplied.</p></article>
+    </div>
+    <div class="links">
+      <a href="https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/triggerpack-public/openapi.json">OpenAPI 3.1</a>
+      <a class="secondary" href="https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/triggerpack-public/health">API health</a>
+      <a class="secondary" href=".well-known/x402">x402 discovery</a>
+      <a class="secondary" href="llms.txt">llms.txt</a>
+    </div>
+    <div class="foot">API endpoint: <code>POST https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/triggerpack-public/v1/company-trigger-pack</code></div>
+  </main>
+</body>
+</html>

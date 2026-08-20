@@ -1,0 +1,9 @@
+# TriggerPack
+
+TriggerPack finds evidence-backed recent company events and ranks them against a supplied objective.
+
+API endpoint: POST https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/triggerpack-public/v1/company-trigger-pack
+OpenAPI: https://slgkvmjikvenhkioqglt.supabase.co/functions/v1/triggerpack-public/openapi.json
+Price: 0.25 USDC on Base through x402 once the owner-controlled receiver is configured.
+
+A negative result is valid and preferable to an invented signal.
