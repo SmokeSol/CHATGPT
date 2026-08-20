@@ -1,73 +1,144 @@
 {
-  "schema_version": "ATLAS_CHATGPT_ACCOUNT_BASELINE_FREEZE_MANIFEST_V2",
-  "status": "FROZEN_BEFORE_ANY_G0_CHATGPT_OUTPUT",
-  "baseline_id": "G0_CHATGPT_GPT56_TERRA",
+  "schema_version": "ATLAS_CHATGPT_ACCOUNT_BASELINE_FREEZE_MANIFEST_V3_SOL_DELIBERATION_OBSERVATORY",
+  "status": "FROZEN_BEFORE_ANY_G0_SOL_OUTPUT",
+  "freeze_basis_commit": "788828c1e8c3593f5d65f5731114559511dff8f4",
+  "branch": "morocco26-agent-society-v2-front-vote-llm",
   "experiment_id": "EXP_7C8A2F11",
   "environment_id": "ENV_4D19B3E7",
-  "branch": "morocco26-agent-society-v2-front-vote-llm",
-  "frozen_model": "gpt-5.6-terra",
-  "frozen_reasoning_effort": "medium",
+  "baseline_id": "G0_CHATGPT_GPT56_SOL",
   "auth_mode": "CHATGPT_MANAGED_CODEX_LOGIN",
   "api_key_allowed": false,
-  "fresh_context_per_work_item": true,
-  "expected_work_items": 2944,
-  "expected_rows": 94208,
-  "rows_per_work_item": 32,
-  "files": {
-    ".gitignore": {
-      "git_blob_sha": "e9dad20687c26c5827e1147855e2b883b704fc9e"
-    },
-    "CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1.json": {
-      "git_blob_sha": "aa6dc03abf672ac55f4304e90ed3023c42571401"
-    },
-    "README.md": {
-      "git_blob_sha": "1fbec2e8155bdbaba227c32fdb0586c70fce73bb"
-    },
-    "run_chatgpt_baseline.py": {
-      "git_blob_sha": "f04b6c7ddc31718a5e72738130ddadd4d0ba10b9"
-    },
-    "promote_g0_frontend.py": {
-      "git_blob_sha": "8154d3ac24faa7c3946218b03f49e87c96a36057"
-    },
-    "tests/test_runner.py": {
-      "git_blob_sha": "3b310224e1fd5e7a599a0f26067b9dab30703139"
-    },
-    "tests/test_promotion.py": {
-      "git_blob_sha": "242d753e0664f58aeb8712a508f176a7e913c5bb"
-    },
-    "web/g0-reference.js": {
-      "git_blob_sha": "25e8915f00a8dc4abb3b199a7508fda9743f1837"
-    },
-    "web/social.js": {
-      "git_blob_sha": "aa1c823dca7754ce97735fbed5435acd4d3d791d"
-    },
-    "web/data/reference_provenance.json": {
-      "git_blob_sha": "ee7d117ea37b909a4525a6a5c8d45aab2a989f66"
-    },
-    ".github/workflows/test-agent-society-chatgpt-baseline.yml": {
-      "git_blob_sha": "ff7890b12a16f324415aba629781984f11827a02"
-    }
+  "outcomes_opened_at_freeze": {"2016": false, "2021": false},
+  "decision_contract": {
+    "phase": "D0_DECISION",
+    "canonical_entry_point": "run_g0_sol.py",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "fresh_context_per_work_item": true,
+    "expected_work_items": 2944,
+    "rows_per_work_item": 32,
+    "expected_rows": 94208,
+    "terminal_required": "PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING"
+  },
+  "observable_deliberation_contract": {
+    "phase": "L0_OBSERVABLE_DELIBERATION",
+    "runner": "run_deliberation_observatory.py",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high",
+    "D0_immutable_before_L0": true,
+    "private_chain_of_thought_requested": false,
+    "closed_evidence_catalogue": true,
+    "unknown_evidence_rejected": true,
+    "non_directional_evidence_rejected": true,
+    "startup_terminal_required": "PASS_STARTUP_32_DELIBERATION_OBSERVATORY_COMPLETE"
+  },
+  "counterfactual_contract": {
+    "phase": "CF_BEHAVIOURAL_ABLATIONS",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "same_frozen_D0_prompt": true,
+    "fresh_context_per_scenario": true,
+    "scenarios": [
+      "PRIOR_ANCHOR_ALTERNATIVE",
+      "GOVERNMENT_OUTLOOK_REVERSE",
+      "RUNNER_LOCAL_STRENGTH",
+      "TOP_RUNNER_PROGRAM_SWAP",
+      "NONINFORMATIVE_METADATA_PLACEBO"
+    ],
+    "placebo_required_for_causal_interpretation": true,
+    "causal_statuses": [
+      "SUPPORTED",
+      "PARTIAL",
+      "NOT_SUPPORTED",
+      "REFUTED_DIRECTION",
+      "UNSAFE_PLACEBO_SENSITIVE"
+    ]
+  },
+  "startup_32_contract": {
+    "D0_calls": 32,
+    "D0_rows": 1024,
+    "L0_calls": 32,
+    "L0_rows": 1024,
+    "L0_scope": "ALL_ROWS",
+    "default_CF_panel": "SWING",
+    "CF_scenarios_per_selected_agent": 5,
+    "maximum_default_CF_calls": 160,
+    "sequencing": [
+      "D0 first",
+      "validate and freeze all 1024 D0 rows",
+      "L0 in separate fresh contexts",
+      "inspect L0 report",
+      "CF only after L0, with placebo"
+    ]
+  },
+  "frozen_implementation_paths": [
+    "CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1.json",
+    "DELIBERATION_OBSERVATORY_PROTOCOL_V1.json",
+    "DELIBERATION_PROMPT_V1.md",
+    "DELIBERATION_OUTPUT_SCHEMA_V1.json",
+    "COUNTERFACTUAL_LIBRARY_V1.json",
+    "run_chatgpt_baseline.py",
+    "run_g0_sol.py",
+    "observatory_base.py",
+    "observatory_evidence.py",
+    "observatory_selection.py",
+    "observatory_exec.py",
+    "observatory_transforms.py",
+    "observatory_causal.py",
+    "observatory_report.py",
+    "run_deliberation_observatory.py",
+    "promote_g0_frontend.py",
+    "promote_g0_sol_frontend.py",
+    "promote_deliberation_frontend.py",
+    "tests/test_runner.py",
+    "tests/test_promotion.py",
+    "tests/test_deliberation_observatory.py",
+    "README.md",
+    ".gitignore",
+    "../../web/g0-reference.js",
+    "../../web/deliberation.js",
+    "../../web/deliberation.css",
+    "../../web/social.js",
+    "../../web/data/reference_provenance.json",
+    "../../web/data/deliberation_provenance.json",
+    "../../../../../data/goal100/agent_society_v2/CHATGPT_ACCOUNT_G0_STATE_V1.json",
+    "../../../../../data/goal100/agent_society_v2/G0_DELIBERATION_OBSERVATORY_STATE_V1.json",
+    "../../../../../../.github/workflows/test-agent-society-chatgpt-baseline.yml"
+  ],
+  "known_content_ids": {
+    "CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1.json": "c2e9ba6905029bd76bc3e2491d7393bcb4ceb595",
+    "README.md": "d21048c5ccc3beb7640d8d9f9446d31a312de236",
+    ".gitignore": "560d3c8dd1fee10111fdba9efcc2eaadab5c41e8",
+    "observatory_report.py": "056577f0845877b274c22eb0945c821f44cb7b23",
+    "web/social.js": "07de5389c67b7df978fc19847224c19dc472dc02",
+    "CHATGPT_ACCOUNT_G0_STATE_V1.json": "fa3e7cddbc8dd0ca6b4b0dd5eb10da6e535826ad",
+    "test-agent-society-chatgpt-baseline.yml": "cd7bf180f798c585f3549055e67544d70d70433b"
   },
   "generation_invariants": [
-    "E0 remains the immutable deterministic control and is never relabeled as LLM output",
-    "G0 is not promoted before exactly 2944 validated fresh-context work items and 94208 rows",
-    "the owner authenticates locally with Sign in with ChatGPT; auth material is never committed or shared",
-    "OPENAI_API_KEY and CODEX_API_KEY are removed from every child process",
-    "web search, apps, MCP, shell, memories, goals, hooks and multi-agent tools are disabled",
-    "each work item uses codex exec --ephemeral and never resumes another thread",
-    "only the frozen prompt, frozen row schema and one frozen work item enter a model context",
-    "one identical retry is allowed only after schema-invalid output, with no semantic feedback",
-    "2016 and 2021 outcomes remain sealed during G0 generation"
+    "E0 remains the immutable deterministic control and is never relabeled as LLM output.",
+    "The owner authenticates locally through Sign in with ChatGPT; auth material is never committed or shared.",
+    "OPENAI_API_KEY and CODEX_API_KEY are removed from every child process.",
+    "Web search, apps, MCP, shell, memories, goals, hooks and multi-agent tools are disabled.",
+    "Every D0, L0 and CF work item uses codex exec --ephemeral and never resumes another thread.",
+    "D0 is generated without explanatory prose and becomes immutable before L0.",
+    "L0 cannot change D0 identities, probabilities, margin, participation posture or deterministic transition fields.",
+    "Every directional L0 statement must cite a row-local closed-catalogue evidence id.",
+    "Narrative confidence is not treated as causal evidence.",
+    "CF packets are deterministic synthetic diagnostics and are never confused with observed facts.",
+    "A placebo-sensitive agent cannot receive a supported causal label.",
+    "2016 and 2021 remain sealed throughout D0, L0 and CF generation."
   ],
-  "promotion_invariants": [
-    "the frontend remains on E0 until the G0 terminal gate and complete hash audit pass",
-    "promotion is preview-only unless --apply is supplied",
-    "E0 public assets are archived before G0 becomes primary",
-    "the deterministic simulateur.json remains available as an explicit E0 fallback/control",
-    "the primary interactive G0 explorer interpolates only actual frozen GPT decisions and does not call the E0 decision formula",
-    "the named territorial map is promoted only when the E0 fingerprint mapping is near-exact and unambiguous",
-    "G0 generation completion alone does not calibrate social lambdas or prove predictive validity"
+  "frontend_invariants": [
+    "The public site remains on E0 until G0 passes the complete terminal and promotion audit.",
+    "Before L0 data exist, the frontend displays method and pending status only; it invents no deliberations.",
+    "After promotion, model-generated explanations and counterfactual diagnostics are labelled separately.",
+    "E0 assets are archived and retained when G0 becomes primary.",
+    "G0 generation and fluent explanations do not by themselves establish predictive validity.",
+    "Social lambdas remain illustrative until the separate 2016 calibration and 2021 holdout."
   ],
-  "terminal_required": "PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING",
-  "promotion_terminal_required": "PASS_G0_CHATGPT_REFERENCE_PROMOTED_TO_FRONTEND"
+  "change_control": {
+    "before_first_valid_D0_output": "amendments require a new freeze manifest version and explicit state update",
+    "after_first_valid_D0_output": "model, reasoning effort, D0 prompt/schema, selection rules, evidence catalogue rules, CF transforms and causal thresholds are immutable for this run",
+    "after_any_outcome_unseal": "no pre-outcome generation or diagnostic rule may be changed"
+  }
 }
