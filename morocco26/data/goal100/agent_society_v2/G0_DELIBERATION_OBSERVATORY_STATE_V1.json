@@ -1,0 +1,80 @@
+{
+  "schema_version": "ATLAS_G0_DELIBERATION_OBSERVATORY_STATE_V1",
+  "status": "PRE_REGISTERED_NO_MODEL_OUTPUTS",
+  "experiment_id": "M26-AGENT-SOCIETY-V2-001",
+  "public_experiment_id": "EXP_7C8A2F11",
+  "environment_id": "ENV_4D19B3E7",
+  "branch": "morocco26-agent-society-v2-front-vote-llm",
+  "created_before_any_G0_output": true,
+  "outcomes_opened": {"2016": false, "2021": false},
+  "decision_layer": {
+    "phase": "D0_DECISION",
+    "baseline_id": "G0_CHATGPT_GPT56_SOL",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "runner": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_g0_sol.py",
+    "work_items_expected_full": 2944,
+    "rows_expected_full": 94208,
+    "work_items_generated": 0,
+    "rows_generated": 0,
+    "fresh_context_per_work_item": true,
+    "auth_mode": "CHATGPT_MANAGED_CODEX_LOGIN",
+    "api_key": false
+  },
+  "observable_deliberation_layer": {
+    "phase": "L0_OBSERVABLE_DELIBERATION",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "high",
+    "runner": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_deliberation_observatory.py",
+    "prompt": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/DELIBERATION_PROMPT_V1.md",
+    "schema": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/DELIBERATION_OUTPUT_SCHEMA_V1.json",
+    "D0_immutable_before_L0": true,
+    "private_chain_of_thought_requested": false,
+    "closed_evidence_catalogue": true,
+    "unknown_or_non_directional_evidence_rejected": true,
+    "deliberations_generated": 0
+  },
+  "causal_diagnostic_layer": {
+    "phase": "CF_BEHAVIOURAL_ABLATIONS",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "library": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/COUNTERFACTUAL_LIBRARY_V1.json",
+    "scenarios": [
+      "PRIOR_ANCHOR_ALTERNATIVE",
+      "GOVERNMENT_OUTLOOK_REVERSE",
+      "RUNNER_LOCAL_STRENGTH",
+      "TOP_RUNNER_PROGRAM_SWAP",
+      "NONINFORMATIVE_METADATA_PLACEBO"
+    ],
+    "placebo_required_for_causal_interpretation": true,
+    "counterfactual_outputs_generated": 0
+  },
+  "startup_32": {
+    "status": "NOT_STARTED",
+    "D0_calls": 32,
+    "D0_decisions": 1024,
+    "L0_calls": 32,
+    "L0_explanations": 1024,
+    "default_CF_policy": "OPTIONAL_AFTER_L0_INSPECTION",
+    "default_CF_selected_agent_per_work_item": "SWING",
+    "CF_calls_if_enabled": 160,
+    "terminal_D0_partial": "PASS_PARTIAL_RESUMABLE_RUN",
+    "terminal_L0": "PASS_STARTUP_32_DELIBERATION_OBSERVATORY_COMPLETE"
+  },
+  "frontend": {
+    "status": "METHOD_LIVE_DATA_PENDING",
+    "current_primary_reference": "E0_DETERMINISTIC",
+    "deliberation_provenance": "morocco26/frontends/agent_society_opus/source_v2/web/data/deliberation_provenance.json",
+    "fake_or_placeholder_deliberations": false,
+    "promotion_runner": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/promote_deliberation_frontend.py"
+  },
+  "next_allowed_action": "Run the 32-work-item D0 Sol startup through run_g0_sol.py. After 32 validated D0 outputs and 1024 rows, run the separate L0 observatory with --scope all --limit 32 --counterfactual-suite none. Keep historical outcomes sealed.",
+  "stop_rules": [
+    "Do not change the D0 model, reasoning effort, prompt or scientific row schema after the first valid D0 output.",
+    "Do not feed L0 explanations back into D0 decisions.",
+    "Do not call an L0 narrative causal unless the relevant CF rerun supports it and the placebo remains stable.",
+    "Do not open 2016 or 2021 during D0, L0 or CF generation.",
+    "Do not publish invented explanations while data are absent.",
+    "Do not delete or relabel E0; preserve it as the deterministic control."
+  ]
+}
