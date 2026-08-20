@@ -1,228 +1,284 @@
-# G0 — baseline GPT via le compte ChatGPT du propriétaire
+# G0 — société GPT via le compte ChatGPT du propriétaire
 
-Ce dossier transforme les **2 944 work items gelés** d’Agent Society en **94 208 décisions réellement produites par GPT**, sans clé API OpenAI.
+Ce dossier permet de transformer les **2 944 work items gelés** d’Agent Society en **94 208 décisions réellement produites par GPT‑5.6 Sol**, sans clé API OpenAI.
 
-Le mécanisme officiel utilisé est **Codex CLI connecté avec “Sign in with ChatGPT”**. Un orchestrateur local lance un `codex exec --ephemeral` séparé pour chaque lot de 32 archétypes. Le compte ChatGPT finance/limite donc l’usage via son pool Codex ; le navigateur `chatgpt.com` n’est jamais automatisé et aucun cookie de session n’est extrait.
+L’authentification passe par le CLI Codex officiel et **Sign in with ChatGPT**. Chaque lot de 32 citoyens est traité dans un processus `codex exec --ephemeral` distinct. Aucun cookie navigateur n’est extrait et `~/.codex/auth.json` ne doit jamais être partagé ou committé.
 
-## Statut scientifique
-
-- `E0_DETERMINISTIC` reste l’étalon mécanique immuable.
-- `G0_CHATGPT_GPT56_TERRA` est le candidat appelé à devenir la simulation de référence affichée au public une fois les 2 944 lots validés.
-- `R0_PUBLIC_BYO_LLM` reste une cohorte indépendante produite par les lecteurs.
-
-Ne jamais renommer E0 en sortie LLM. Ne jamais supprimer E0 : la comparaison `G0 − E0` est précisément ce qui mesure ce que GPT ajoute au moteur explicite.
-
-Le protocole gelé est `CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1.json`.
-
-## Pourquoi cette voie
-
-Le CLI Codex accepte l’authentification normale du compte ChatGPT et possède un mode non interactif. Le runner exploite ce mode sans API key :
+## Architecture scientifique
 
 ```text
-un login ChatGPT local
-        ↓
-2 944 processus Codex éphémères
-        ↓
-32 décisions indépendantes par processus
-        ↓
-validation stricte + hash + checkpoint
-        ↓
-94 208 lignes G0
+E0_DETERMINISTIC
+  contrôle mécanique immuable
+
+G0 / D0_DECISION
+  Sol décide dans 2 944 contextes frais
+  → participation
+  → probabilités de vote
+  → facteurs
+  → reason codes
+
+L0_OBSERVABLE_DELIBERATION
+  un second contexte Sol explique la décision D0 déjà gelée
+  → conflit central
+  → pressions favorables/défavorables
+  → pourquoi le premier choix
+  → pourquoi pas l’alternative
+  → hésitation
+  → hypothèse de bascule
+
+CF_BEHAVIOURAL_ABLATIONS
+  de nouveaux contextes Sol rejouent réellement le citoyen
+  après modification déterministe d’un élément du packet
+  → ancrage électoral passé
+  → bilan gouvernemental
+  → offre locale de l’alternative
+  → programme du premier choix et de l’alternative
+  → placebo non politique
 ```
 
-Il n’utilise pas une conversation unique et ne reprend jamais un thread précédent. Chaque work item est donc un contexte modèle neuf.
+L0 n’est pas la chaîne de pensée privée du modèle. C’est une **explication externe structurée**, produite après le gel de D0 et obligatoirement reliée à un catalogue fermé de preuves. Les récits restent des hypothèses ; seuls les rejouements CF permettent d’observer si le comportement bouge réellement.
+
+Le protocole principal est `CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1.json`. Le protocole explicatif et causal est `DELIBERATION_OBSERVATORY_PROTOCOL_V1.json`.
 
 ## Prérequis
 
 Mac, Linux ou Windows avec WSL recommandé, Python 3.10+ et le CLI Codex officiel.
 
-Installation :
-
 ```bash
 curl -fsSL https://chatgpt.com/codex/install.sh | sh
-# ou
-npm install -g @openai/codex
-```
-
-Connexion — une seule fois sur la machine locale contrôlée par le propriétaire :
-
-```bash
+codex --version
 codex
 ```
 
-Choisir **Sign in with ChatGPT**, terminer l’authentification dans le navigateur, puis quitter le TUI. Ne jamais copier ni committer `~/.codex/auth.json` : ce fichier équivaut à un mot de passe.
-
-Le runner supprime `OPENAI_API_KEY` et `CODEX_API_KEY` de l’environnement de chaque subprocess et impose `forced_login_method="chatgpt"`.
-
-## ZIP à utiliser
-
-Utiliser le bundle full-environment qui contient **2 944 work items et 94 208 lignes attendues**. Le runner refuse par défaut l’ancien handoff de 1 472 lots / 47 104 lignes.
-
-Le bundle peut être fourni sous forme ZIP ou déjà extrait. Il doit contenir l’un des formats gelés suivants :
-
-1. `work_manifest.json` + `contexts/` + `voter_batches/`, ou
-2. `packets/**/*.json`.
-
-Le prompt et le schéma sont détectés dans le bundle ; ils ne sont pas recopiés depuis le repo courant.
-
-## Préflight sans consommer GPT
+Dans Codex, choisir **Sign in with ChatGPT**, terminer la connexion dans le navigateur, puis quitter le TUI. Vérification :
 
 ```bash
-python run_chatgpt_baseline.py \
-  --bundle "/chemin/vers/EXP_7C8A2F11_FULL_ENV.zip" \
-  --output "/chemin/vers/G0_CHATGPT_GPT56_TERRA" \
+codex login status
+```
+
+Le runner supprime `OPENAI_API_KEY` et `CODEX_API_KEY` de l’environnement de chaque subprocess et impose l’authentification ChatGPT.
+
+## Bundle requis
+
+Utiliser le package full environment contenant exactement :
+
+```text
+2 944 work items
+94 208 décisions attendues
+32 citoyens par lot
+```
+
+Le runner refuse par défaut l’ancien handoff de 1 472 lots / 47 104 lignes.
+
+Exemple :
+
+```bash
+BUNDLE="$HOME/Downloads/opus5-agent-society-v2-FULL-ELECTION-ENVIRONMENT-FINAL(1).zip"
+D0_OUT="$HOME/agent-society-runs/G0_CHATGPT_GPT56_SOL"
+OBS_OUT="$HOME/agent-society-runs/G0_CHATGPT_GPT56_SOL_OBSERVATORY"
+mkdir -p "$D0_OUT" "$OBS_OUT"
+```
+
+## 1. Préflight gratuit
+
+```bash
+python3 run_g0_sol.py \
+  --bundle "$BUNDLE" \
+  --output "$D0_OUT" \
   --dry-run
 ```
 
-Le préflight doit annoncer :
+Le préflight doit annoncer exactement :
 
 ```text
 2944 work items / 94208 rows
 ```
 
-## Sonde réelle avant le run complet
-
-Cette sonde consomme huit contextes ChatGPT mais ne regarde aucun outcome :
+## 2. Premier run D0 — 32 contextes, 1 024 décisions
 
 ```bash
-python run_chatgpt_baseline.py \
-  --bundle "/chemin/vers/EXP_7C8A2F11_FULL_ENV.zip" \
-  --output "/chemin/vers/G0_CHATGPT_GPT56_TERRA" \
-  --model gpt-5.6-terra \
-  --reasoning medium \
+python3 run_g0_sol.py \
+  --bundle "$BUNDLE" \
+  --output "$D0_OUT" \
   --workers 1 \
-  --limit 8
+  --limit 32
 ```
 
-Elle vérifie le login, la disponibilité du modèle, la sortie structurée et le contrat « zéro outil ».
+`run_g0_sol.py` interdit de changer le modèle ou l’effort de raisonnement : le contrat est gelé sur :
 
-## Run complet
+```text
+model = gpt-5.6-sol
+reasoning = medium
+```
+
+Résultat attendu après ce premier run :
+
+```text
+work_items_validated = 32
+rows_validated = 1024
+status = IN_PROGRESS_RESUMABLE
+```
+
+Le terminal complet `PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING` n’apparaîtra qu’à 2 944 / 2 944.
+
+## 3. Délibération profonde L0 — les 1 024 citoyens
+
+Une fois D0 validé, lancer **32 nouveaux contextes Sol distincts**. Chaque contexte explique les 32 décisions de son lot sans modifier leurs chiffres :
 
 ```bash
-python run_chatgpt_baseline.py \
-  --bundle "/chemin/vers/EXP_7C8A2F11_FULL_ENV.zip" \
-  --output "/chemin/vers/G0_CHATGPT_GPT56_TERRA" \
-  --model gpt-5.6-terra \
-  --reasoning medium \
+python3 run_deliberation_observatory.py \
+  --bundle "$BUNDLE" \
+  --decision-run "$D0_OUT" \
+  --output "$OBS_OUT" \
+  --scope all \
+  --limit 32 \
+  --counterfactual-suite none \
   --workers 1
 ```
 
-Commencer avec `--workers 1`. Monter à `2` uniquement après une sonde propre. Une concurrence supérieure augmente la probabilité de heurter les limites du plan sans améliorer l’indépendance scientifique.
+Ce passage produit pour chacun des 1 024 citoyens :
 
-Le run est **reprenable**. Relancer exactement la même commande :
+- premier choix et alternative ;
+- marge de décision et posture de participation ;
+- fidélité, bascule, mobilisation ou abstention persistante ;
+- conflit électoral central ;
+- deux à cinq drivers directionnels ;
+- références exactes aux éléments du packet utilisés ;
+- pourquoi le premier choix reste devant ;
+- pourquoi l’alternative reste derrière ;
+- logique de participation ou d’abstention ;
+- incertitude réelle ;
+- hypothèse minimale de bascule ;
+- hypothèse minimale de mobilisation/démobilisation ;
+- synthèse en français.
 
-- les work items déjà valides sont relus et sautés ;
-- aucun thread Codex n’est repris ;
-- un lot invalide ne contamine pas les autres ;
-- en cas de limite ChatGPT/Codex, le processus sort avec le code `75`.
+La validation échoue si le modèle :
 
-## Invariants techniques imposés à chaque appel
+- modifie une probabilité D0 ;
+- change l’ordre ou l’identité d’un citoyen ;
+- cite une preuve absente ;
+- cite un champ non directionnel comme preuve ;
+- invente un parti ou une caractéristique ;
+- prétend avoir exposé une chaîne de pensée cachée.
 
-Le runner lance notamment :
-
-```text
-codex exec
-  --ephemeral
-  --ignore-user-config
-  --ignore-rules
-  --sandbox read-only
-  --json
-  --model gpt-5.6-terra
-  --output-schema <schéma spécifique au lot>
-  -c forced_login_method="chatgpt"
-  -c web_search="disabled"
-  -c approval_policy="never"
-  -c features.apps=false
-  -c features.multi_agent=false
-  -c features.shell_tool=false
-  -c features.memories=false
-  -c features.hooks=false
-  -c features.goals=false
-```
-
-Le modèle travaille dans un dossier vide et ne reçoit que :
-
-1. le prompt gelé ;
-2. le schéma gelé ;
-3. le work item gelé.
-
-Le JSON Schema transmis à Codex est spécialisé pour les neuf pseudonymes locaux du lot. Le wrapper `{"rows":[...]}` est uniquement un format de transport pour Structured Outputs ; le corpus final est réécrit en JSONL conforme au schéma scientifique ligne par ligne.
-
-## Validation et retry
-
-Pour chaque lot :
-
-- exactement 32 lignes ;
-- ordre exact des archétypes ;
-- identité élection/territoire/condition/batch exacte ;
-- clés de partis exactes ;
-- probabilités dans `[0,1]` et somme à `1 ± 1e-9` ;
-- facteurs et reason codes conformes au schéma ;
-- aucun événement shell, fichier, MCP, web, computer-use ou autre outil.
-
-Un deuxième appel est autorisé **uniquement** si la sortie finale est schema-invalid. Le second appel reçoit le prompt strictement identique, sans message d’erreur ni feedback sémantique. Une panne transport ou une violation du contrat arrête le lot au lieu de déclencher un retry opportuniste.
-
-## Artifacts
-
-Le dossier de sortie contient :
+Terminal attendu :
 
 ```text
-preflight.json
-run_state.json
-output_manifest.json
-outputs/.../*.jsonl
-outputs/.../*.jsonl.meta.json
-_runs/<task>/attempt_*/events.jsonl
-_runs/<task>/attempt_*/stderr.txt
+PASS_STARTUP_32_DELIBERATION_OBSERVATORY_COMPLETE
 ```
 
-`events.jsonl` conserve l’usage de tokens déclaré par Codex. Les fichiers d’authentification ChatGPT ne sont jamais copiés dans ce dossier.
+## 4. Batterie causale optionnelle CF
 
-Le terminal attendu à la complétion est :
+Après inspection du rapport L0, tester le **citoyen SWING de chaque lot** avec cinq scénarios. Cela représente au maximum :
 
 ```text
-PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING
+32 lots × 1 citoyen × 5 scénarios = 160 contextes supplémentaires
 ```
 
-Seulement après ce terminal et l’audit du manifest, le frontend peut basculer de E0 vers G0. Cela ne prouve pas encore que G0 prédit correctement : l’évaluation historique aveugle reste une étape séparée.
-
-## Promotion contrôlée vers GitHub Pages
-
-La génération G0 reste locale. GitHub Pages ne reçoit jamais le login ChatGPT : il ne publie que les JSON dérivés après complétion et audit.
-
-Le premier passage construit une prévisualisation sans modifier le site :
+Commande :
 
 ```bash
-python promote_g0_frontend.py \
+python3 run_deliberation_observatory.py \
+  --bundle "$BUNDLE" \
+  --decision-run "$D0_OUT" \
+  --output "$OBS_OUT" \
+  --scope all \
+  --limit 32 \
+  --counterfactual-suite core \
+  --counterfactual-panels SWING \
+  --workers 1
+```
+
+Le runner saute les explications L0 déjà validées et n’exécute que les diagnostics manquants.
+
+Statuts causaux possibles :
+
+```text
+SUPPORTED
+PARTIAL
+NOT_SUPPORTED
+REFUTED_DIRECTION
+UNSAFE_PLACEBO_SENSITIVE
+```
+
+Une explication fluide n’est jamais promue comme causalité lorsque le placebo est instable.
+
+## 5. Artefacts locaux
+
+```text
+D0_OUT/
+  preflight.json
+  run_state.json
+  output_manifest.json
+  outputs/**/*.jsonl
+  outputs/**/*.jsonl.meta.json
+  _runs/**/events.jsonl
+
+OBS_OUT/
+  observatory_preflight.json
+  observatory_state.json
+  observatory_report.json
+  deliberations/**/*.jsonl
+  deliberations/**/*.jsonl.meta.json
+  counterfactuals/**/*.jsonl
+  _observatory_runs/**
+```
+
+Le run est reprenable. En cas de quota ChatGPT/Codex : relancer la **même commande**. Les work items déjà valides sont vérifiés puis sautés ; aucun thread n’est repris.
+
+## 6. Promotion vers GitHub Pages
+
+### Référence G0 complète
+
+Après les 94 208 décisions D0, construire une prévisualisation :
+
+```bash
+python3 promote_g0_sol_frontend.py \
   --env "/chemin/vers/ENV_4D19B3E7_extrait" \
-  --run "/chemin/vers/G0_CHATGPT_GPT56_TERRA" \
+  --run "$D0_OUT" \
   --e0-run "/chemin/vers/E0_DETERMINISTIC_REFERENCE_extrait"
 ```
 
-Le script vérifie les 2 944 métadonnées, les 94 208 lignes, les hashes, le modèle, l’effort de raisonnement, l’absence d’API key, le caractère éphémère de chaque contexte et l’absence d’outils interdits. Il produit ensuite `promotion_preview/` avec :
-
-- les agrégats G0 `societe.json` ;
-- 3 000 portraits G0 ;
-- un explorateur de 256 décisions GPT réelles, sans recalcul E0 ;
-- la carte des 92 circonscriptions reconstruite à partir de G0 ;
-- un audit de provenance et de correspondance territoriale.
-
-`--e0-run` sert uniquement, **après la génération aveugle**, à retrouver sans ambiguïté la correspondance entre pseudonymes territoriaux/partisans et les libellés publics déjà présents dans `maroc.json`. Si la correspondance E0 n’est pas quasi exacte ou devient ambiguë, la promotion s’arrête sans toucher au site.
-
-Après lecture de `promotion_preview/promotion_audit.json`, appliquer :
+Puis seulement après lecture de `promotion_preview/promotion_audit.json` :
 
 ```bash
-python promote_g0_frontend.py \
+python3 promote_g0_sol_frontend.py \
   --env "/chemin/vers/ENV_4D19B3E7_extrait" \
-  --run "/chemin/vers/G0_CHATGPT_GPT56_TERRA" \
+  --run "$D0_OUT" \
   --e0-run "/chemin/vers/E0_DETERMINISTIC_REFERENCE_extrait" \
   --apply
 ```
 
-Au premier `--apply`, les fichiers E0 actuels sont archivés sous `web/data/reference/e0/`. G0 est archivé sous `web/data/reference/g0/` puis devient la référence primaire servie par le site. `simulateur.json` n’est pas écrasé : il reste le démonstrateur E0 de contrôle et sert de fallback explicite.
+E0 est archivé et reste disponible comme contrôle ; il n’est jamais supprimé ou renommé G0.
 
-Le frontend charge `data/reference_provenance.json` :
+### Observatoire des délibérations
 
-- avant G0, il annonce **E0 · référence déterministe** ;
-- après promotion, il annonce **G0 · référence GPT via compte ChatGPT** ;
-- il n’affirme jamais que G0 est prédictivement juste avant le backtest aveugle.
+Prévisualisation :
+
+```bash
+python3 promote_deliberation_frontend.py \
+  --observatory-report "$OBS_OUT/observatory_report.json" \
+  --web-root "../web"
+```
+
+Application :
+
+```bash
+python3 promote_deliberation_frontend.py \
+  --observatory-report "$OBS_OUT/observatory_report.json" \
+  --web-root "../web" \
+  --apply
+```
+
+Avant toute donnée réelle, le frontend affiche uniquement la méthode et l’état d’attente. Il n’invente aucune explication. Après promotion, il permet d’ouvrir un citoyen, lire sa décision, ses tensions et ses preuves, puis distinguer clairement les récits L0 des effets CF observés.
+
+## Règles de sécurité et d’intégrité
+
+- ne jamais envoyer ou committer `~/.codex/auth.json` ;
+- ne jamais automatiser `chatgpt.com` avec les cookies du navigateur ;
+- ne jamais ouvrir 2016 ou 2021 pendant D0, L0 ou CF ;
+- ne jamais alimenter D0 avec une explication L0 ;
+- ne jamais sélectionner les citoyens selon les résultats historiques ;
+- ne jamais interpréter un récit comme un effet causal sans rejouement ;
+- conserver E0 comme contrôle falsifiable ;
+- conserver les λ famille/collègues/voisinage comme illustratifs jusqu’au protocole séparé 2016 → freeze → 2021.
