@@ -19,6 +19,7 @@ EID = "E_TEST_ABCDEF"
 PIDS = ["P_ALPHA", "P_BETA", "P_GAMMA"]
 QIDS = ["Q_01", "Q_02", "Q_03"]
 P_TO_Q = {"P_ALPHA": "Q_02", "P_BETA": "Q_03", "P_GAMMA": "Q_01"}
+Q_TO_P = {q: p for p, q in P_TO_Q.items()}
 
 
 def shares(i: int):
@@ -74,6 +75,18 @@ def synthetic_inputs():
             "available_party_ids": QIDS,
             "common_territory_card": {
                 "previous_election_conditional_party_shares": qs,
+                "party_context_cards": [
+                    {
+                        "anonymous_party_id": q,
+                        "features": [{
+                            "feature_id": "LOCAL_EXECUTIVE_OFFICE",
+                            "status": "VERIFIED",
+                            "value": Q_TO_P[q] == "P_ALPHA",
+                            "conflict": False,
+                        }],
+                    }
+                    for q in QIDS
+                ],
             },
             "election_environment_card": {
                 "party_offer_cards": [
@@ -108,7 +121,7 @@ class MainBridgeTests(unittest.TestCase):
         with self.assertRaises(BridgeError):
             align_election_parties(blind, environment)
 
-    def test_overlay_contains_anonymous_candidate_and_programme_layers(self):
+    def test_overlay_is_semantically_equivalent_and_anonymous(self):
         blind, environment = synthetic_inputs()
         overlay = build_overlay(
             main_sha="a" * 40,
@@ -119,12 +132,30 @@ class MainBridgeTests(unittest.TestCase):
         )
         self.assertEqual(overlay["status"], "PASS_FROZEN_MAIN_BRIDGE_READY_FOR_G0_SOL")
         self.assertEqual(overlay["item_count"], 92)
+        self.assertFalse(overlay["model_semantic_delta_v1"])
+        self.assertEqual(
+            overlay["semantic_equivalence_audit"]["status"],
+            "PASS_SEMANTIC_EQUIVALENCE_ONLY",
+        )
         self.assertEqual(leak_scan(overlay["items"]), [])
         item = overlay["items"][f"{EID}|T_000"]
         self.assertEqual(len(item["candidate_offer"]["cards"]), 3)
         self.assertEqual(len(item["programme_offer"]["cards"]), 3)
         self.assertRegex(item["candidate_offer"]["cards"][0]["anonymous_candidate_id"], r"^C_[0-9A-F]{16}$")
         self.assertFalse(item["candidate_offer"]["real_names_present"])
+
+    def test_overlay_fails_closed_on_candidate_semantic_delta(self):
+        blind, environment = synthetic_inputs()
+        card = environment[f"{EID}|T_000"]["common_territory_card"]["party_context_cards"][0]
+        card["features"][0]["value"] = not card["features"][0]["value"]
+        with self.assertRaises(BridgeError):
+            build_overlay(
+                main_sha="a" * 40,
+                blind_bundles=[blind],
+                environment=environment,
+                source_hashes={},
+                controls={},
+            )
 
     def test_enriched_launcher_rejects_non_pass_bridge(self):
         bad = {
@@ -133,9 +164,32 @@ class MainBridgeTests(unittest.TestCase):
             "target_outcomes_present": False,
             "real_identity_material_present": False,
             "floating_main_reads_allowed": False,
+            "model_semantic_delta_v1": False,
+            "semantic_equivalence_audit": {"status": "PASS_SEMANTIC_EQUIVALENCE_ONLY"},
+            "public_leak_scan": {"status": "PASS"},
+            "main_commit_sha": launcher.REGISTERED_MAIN_SHA,
+            "item_count": launcher.EXPECTED_BRIDGE_ITEMS,
+            "items": {f"E|T{i}": {} for i in range(launcher.EXPECTED_BRIDGE_ITEMS)},
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            path = pathlib.Path(tmp) / "bridge.json"
+            path.write_text(json.dumps(bad), encoding="utf-8")
+            with self.assertRaises(Exception):
+                launcher.load_bridge(path)
+
+    def test_enriched_launcher_rejects_unregistered_main_sha(self):
+        bad = {
+            "bridge_id": "M26_AS_MAIN_BRIDGE_V1",
+            "status": "PASS_FROZEN_MAIN_BRIDGE_READY_FOR_G0_SOL",
+            "target_outcomes_present": False,
+            "real_identity_material_present": False,
+            "floating_main_reads_allowed": False,
+            "model_semantic_delta_v1": False,
+            "semantic_equivalence_audit": {"status": "PASS_SEMANTIC_EQUIVALENCE_ONLY"},
             "public_leak_scan": {"status": "PASS"},
             "main_commit_sha": "a" * 40,
-            "items": {"E|T": {}},
+            "item_count": launcher.EXPECTED_BRIDGE_ITEMS,
+            "items": {f"E|T{i}": {} for i in range(launcher.EXPECTED_BRIDGE_ITEMS)},
         }
         with tempfile.TemporaryDirectory() as tmp:
             path = pathlib.Path(tmp) / "bridge.json"
