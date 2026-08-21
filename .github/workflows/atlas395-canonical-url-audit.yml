@@ -12,7 +12,11 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: atlas395-vercel-live-audit
+  cancel-in-progress: true
 
 jobs:
   audit:
@@ -22,90 +26,49 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: atlas395-v0
-      - name: Audit current Atlas Vercel contract
+          fetch-depth: 0
+
+      - name: Audit live Vercel deployment surface
+        shell: bash
+        run: python morocco26/scripts/atlas395_vercel_audit.py
+
+      - name: Persist latest Vercel audit
+        if: always()
         shell: bash
         run: |
-          set -euo pipefail
-          CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
-          candidates=(
-            'https://atlas-395-maroc-2026.vercel.app/'
-            'https://atlas-395-v1.vercel.app/'
-            'https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/'
-            'https://atlas395-maroc-2026.vercel.app/'
-            'https://atlas-395-rescue-20260817.vercel.app/'
-          )
-          required_data=(
-            'current_snapshot.json'
-            'national_projection.json'
-            'constituency_cards.json'
-            'party_cards.json'
-            'evidence_index.json'
-            'methodology_state.json'
-          )
-          repo_index_sha="$(sha256sum morocco26/web/index.html | awk '{print $1}')"
-          repo_app_sha="$(sha256sum morocco26/web/app.js | awk '{print $1}')"
-          repo_core_sha="$(sha256sum morocco26/web/assets/core.js | awk '{print $1}')"
-          echo "REPO index=$repo_index_sha app=$repo_app_sha core=$repo_core_sha"
+          if [ ! -f morocco26/atlas395/vercel_audit_latest.json ]; then
+            echo 'Audit result was not produced.'
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add morocco26/atlas395/vercel_audit_latest.json
+          if git diff --cached --quiet; then
+            echo 'Vercel audit result unchanged.'
+          else
+            git commit -m "atlas395: record live Vercel audit"
+            git push origin HEAD:atlas395-v0
+          fi
 
-          FOUND=''
-          for URL in "${candidates[@]}"; do
-            echo "=== $URL ==="
-            root_code=$(curl -sS -L -o /tmp/root.html -w '%{http_code}' --max-time 30 "$URL" || true)
-            app_code=$(curl -sS -L -o /tmp/app.js -w '%{http_code}' --max-time 30 "${URL}app.js" || true)
-            core_code=$(curl -sS -L -o /tmp/core.js -w '%{http_code}' --max-time 30 "${URL}assets/core.js" || true)
-            echo "HTTP root=$root_code app=$app_code core=$core_code root_bytes=$(wc -c </tmp/root.html 2>/dev/null || echo 0)"
-            if [ "$root_code" = 200 ]; then
-              live_index_sha="$(sha256sum /tmp/root.html | awk '{print $1}')"
-              echo "LIVE_INDEX_SHA=$live_index_sha MATCH_REPO=$([ "$live_index_sha" = "$repo_index_sha" ] && echo yes || echo no)"
-            fi
-            if [ "$app_code" = 200 ]; then
-              live_app_sha="$(sha256sum /tmp/app.js | awk '{print $1}')"
-              echo "LIVE_APP_SHA=$live_app_sha MATCH_REPO=$([ "$live_app_sha" = "$repo_app_sha" ] && echo yes || echo no)"
-            fi
-            if [ "$core_code" = 200 ]; then
-              live_core_sha="$(sha256sum /tmp/core.js | awk '{print $1}')"
-              echo "LIVE_CORE_SHA=$live_core_sha MATCH_REPO=$([ "$live_core_sha" = "$repo_core_sha" ] && echo yes || echo no)"
-              if grep -q "load('methodology_state.json')" /tmp/core.js; then echo 'LIVE_CORE_CONTRACT=methodology_state.json'; fi
-              if grep -q "load('public_methodology.json')" /tmp/core.js; then echo 'LIVE_CORE_CONTRACT=public_methodology.json'; fi
-            fi
-
-            current_ok=true
-            for name in "${required_data[@]}"; do
-              code=$(curl -sS -L -o "/tmp/$name" -w '%{http_code}' --max-time 30 "${URL}data/$name" || true)
-              bytes=$(wc -c <"/tmp/$name" 2>/dev/null || echo 0)
-              echo "DATA $name HTTP=$code BYTES=$bytes"
-              [ "$code" = 200 ] || current_ok=false
-            done
-            legacy_public=$(curl -sS -L -o /tmp/public_methodology.json -w '%{http_code}' --max-time 30 "${URL}data/public_methodology.json" || true)
-            legacy_atlas=$(curl -sS -L -o /tmp/atlas_v1.json -w '%{http_code}' --max-time 30 "${URL}data/atlas_v1.json" || true)
-            echo "LEGACY public_methodology.json=$legacy_public atlas_v1.json=$legacy_atlas"
-
-            [ "$root_code" = 200 ] || continue
-            [ "$core_code" = 200 ] || continue
-            [ "$current_ok" = true ] || continue
-
-            "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=15000 --dump-dom "$URL" >/tmp/dom.html 2>/tmp/chrome.err || true
-            if python - <<'PY'
+      - name: Enforce canonical deployment health
+        if: always()
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
           from pathlib import Path
-          d=Path('/tmp/dom.html').read_text(encoding='utf-8',errors='replace')
-          forbidden=['Atlas 395 ne peut pas charger','Atlas 395 ne peut pas initialiser','Données indisponibles (404)']
-          bad=[x for x in forbidden if x in d]
-          print('DOM_BYTES=',len(d.encode('utf-8')),'BAD=',bad)
-          if bad:
-              raise SystemExit(1)
-          print('CURRENT_SURFACE_PASS')
+          p=Path('morocco26/atlas395/vercel_audit_latest.json')
+          if not p.exists():
+              raise SystemExit('ATLAS395_VERCEL_AUDIT_MISSING')
+          x=json.loads(p.read_text(encoding='utf-8'))
+          canonical=next(a for a in x['aliases'] if a['url']==x['canonical_url'])
+          print('CANONICAL_URL=',x['canonical_url'])
+          print('CANONICAL_PASS=',x['canonical_pass'])
+          print('ROOT_HTTP=',canonical['root']['status'])
+          print('METHODOLOGY_HTTP=',canonical['data']['public_methodology.json']['status'])
+          print('DAILY_ASSET_MATCH=',canonical['hash_match']['assets/daily.js'])
+          print('METHODOLOGY_CONTRACT=',canonical['methodology_contract'])
+          print('BROWSER=',canonical['browser'])
+          if not x['canonical_pass']:
+              raise SystemExit('ATLAS395_VERCEL_CANONICAL_FAIL')
           PY
-            then
-              FOUND="$URL"
-              echo "CANONICAL_CURRENT_URL=$URL"
-              break
-            fi
-          done
-
-          test -n "$FOUND" || { echo 'NO_CURRENT_ATLAS_URL_PASSES'; exit 1; }
-          {
-            echo '### Current Atlas 395 Vercel audit'
-            echo "- URL: **$FOUND**"
-            echo '- Contract: **current 6-file data bundle**'
-            echo '- Browser: **no fatal loading error**'
-          } >> "$GITHUB_STEP_SUMMARY"
