@@ -4,10 +4,10 @@
   "supersedes_for_new_enriched_G0": "CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1.json",
   "experiment_id": "EXP_7C8A2F11",
   "environment_id": "ENV_4D19B3E7",
-  "purpose": "Generate the owner-account GPT-5.6 Sol voter baseline from the frozen full environment plus a reproducible exact-SHA anonymous political-context overlay sourced from main, while preserving E0 and preserving historical blinding.",
+  "purpose": "Generate the owner-account GPT-5.6 Sol voter baseline from the frozen full environment while cryptographically binding candidate/programme provenance to the registered exact main snapshot. Bridge V1 is semantic-equivalence only: it must not duplicate or silently change model-visible political evidence.",
   "baseline_roles": {
     "E0_DETERMINISTIC": "retained immutable mechanics/control baseline; never relabeled as LLM output",
-    "G0_CHATGPT_GPT56_SOL_MAIN_BRIDGE_V1": "candidate primary isolated GPT baseline using the frozen full environment plus M26_AS_MAIN_BRIDGE_V1",
+    "G0_CHATGPT_GPT56_SOL_MAIN_BRIDGE_V1": "candidate primary isolated GPT baseline using the frozen full environment after a PASS exact-main provenance/equivalence gate",
     "R0_PUBLIC_BYO_LLM": "independent reader-contributed replication cohort"
   },
   "execution": {
@@ -39,16 +39,21 @@
     "overlay_items_expected": 184,
     "candidate_layer": "already-blinded pre-cutoff E_reason candidate/event evidence from exact main SHA, with explicit missingness/conflicts/source provenance",
     "programme_layer": "existing frozen anonymous programme-priority cards are preserved in V1; a separate complete historical manifesto corpus is not claimed",
-    "candidate_feature_overlap_with_original_environment_allowed": true,
-    "overlap_interpretation": "If main reproduces a feature already present in the frozen environment, the bridge establishes exact upstream provenance but must not count the duplicate as additional independent evidence.",
-    "future_delta_rule": "A later main SHA or richer manifesto/candidate representation requires a reviewed new bridge snapshot/protocol before any affected G0 output is generated."
+    "semantic_policy": "PASS_SEMANTIC_EQUIVALENCE_ONLY",
+    "model_semantic_delta_v1": false,
+    "overlay_object_injected_into_model_packet": false,
+    "duplicate_candidate_or_programme_evidence_added_to_model": false,
+    "candidate_feature_overlap_with_original_environment_required_to_match": true,
+    "overlap_interpretation": "A main feature already present in the frozen environment confirms exact upstream provenance and is not repeated to the LLM as additional evidence.",
+    "semantic_delta_rule": "Any new or changed directionally usable candidate/programme field causes Bridge V1 to fail closed and requires a new pre-registered bridge protocol before model execution.",
+    "future_main_rule": "A later main SHA requires a reviewed new snapshot/protocol before any affected G0 output is generated."
   },
   "information_boundary": {
     "2016_unsealed": false,
     "2021_unsealed": false,
     "apps_connectors": false,
     "history": false,
-    "input": "only the frozen scientific prompt, row schema, one frozen work item, and the corresponding frozen M26_AS_MAIN_BRIDGE_V1 anonymous overlay item",
+    "model_input": "only the frozen scientific prompt, row schema and one original frozen work item; Bridge V1 is an orchestration/provenance equivalence gate and does not add a second model-visible copy of candidate/programme evidence",
     "mapping_material_in_model_context": false,
     "mcp": false,
     "memory": false,
@@ -70,6 +75,7 @@
     "model_change_after_first_valid_output": false,
     "main_bridge_change_after_first_valid_output": false,
     "main_commit_change_after_first_valid_output": false,
+    "environment_hash_change_after_first_valid_output": false,
     "outcome_access_before_completion": false,
     "prompt_or_schema_change_after_first_valid_output": false,
     "explanation_generated_only_after_D0": true,
@@ -94,6 +100,7 @@
     "D0_work_items": 32,
     "D0_rows": 1024,
     "main_bridge_required": true,
+    "semantic_equivalence_required": true,
     "review_before_scaling": true,
     "L0_after_D0": true,
     "counterfactuals_only_after_L0_review": true
@@ -122,7 +129,8 @@
     "exactly 94208 validated D0 rows",
     "one frozen Sol model and reasoning effort for every D0 work item",
     "one frozen M26_AS_MAIN_BRIDGE_V1 overlay generated from the registered exact main SHA",
-    "bridge PASS status and leak scan PASS",
+    "bridge PASS status, public leak scan PASS and semantic-equivalence PASS",
+    "zero Bridge V1 semantic deltas and zero duplicate model-visible candidate/programme evidence",
     "bridge file SHA and per-item SHA folded into every work-item source provenance",
     "ChatGPT-managed auth and no API key",
     "zero web/search/tool/MCP/shell/computer-use events",
@@ -135,7 +143,7 @@
     "after_G0_promotion": "G0 becomes primary displayed simulation; E0 remains available as deterministic control",
     "before_deliberation_promotion": "show method without invented explanations",
     "after_deliberation_promotion": "show structured explanations and separately labelled counterfactual diagnostics",
-    "never_claim": "that G0, bridge evidence, or a fluent explanation is empirically true before blind historical scoring",
+    "never_claim": "that G0, bridge provenance, or a fluent explanation is empirically true before blind historical scoring",
     "social_lambdas": "remain illustrative until separate 2016 calibration and 2021 holdout"
   }
 }
