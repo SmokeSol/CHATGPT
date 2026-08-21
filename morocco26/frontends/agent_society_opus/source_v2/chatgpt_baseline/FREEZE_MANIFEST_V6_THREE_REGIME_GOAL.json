@@ -1,0 +1,92 @@
+{
+  "P0_blind_control": {
+    "generated_before_this_freeze": true,
+    "primary_simulation": false,
+    "report_sha256": "0bc0ad9abf4b7160918324a330900cbad9fc5577f4c4d14e3b694ebcd0b0e05b",
+    "rows": 32,
+    "scientific_role": "ATTRIBUTE_ONLY_CONTROL",
+    "work_items": 1
+  },
+  "P1_historical_semiblind_rich": {
+    "candidate_programme_value_duplication": false,
+    "exact_raw_P0_snapshot_required": true,
+    "identity_material": false,
+    "initial_gate_rows": 32,
+    "initial_gate_work_items": 1,
+    "outputs_at_freeze": 0,
+    "same_work_item_selection": "HASH_BOUND_ELECTION_CONDITION_TERRITORY_BATCH_REGEX"
+  },
+  "P2_historical_1024": {
+    "locked_until_P1_review": true,
+    "outputs_at_freeze": 0
+  },
+  "P3_realistic_2026_named": {
+    "candidate_fabrication": false,
+    "candidate_independence_clusters_minimum": 2,
+    "canonical_programme_axes_exact": 18,
+    "model_visible_provenance_identifiers": false,
+    "outputs_at_freeze": 0,
+    "paired_named_twin_pilot_required": true,
+    "partial_roster_allowed": false,
+    "status": "BLOCKED_NAMED_2026_INCOMPLETE_ROSTER",
+    "territory_specific_ballot_party_ids": true
+  },
+  "V5_policy": {
+    "main_bridge_overlay_lowercase_false_compatibility": "provided by additive agent_society_v2_main_bridge_v6.py; V5 source not edited",
+    "original_FREEZE_MANIFEST_json_must_remain_byte_stable": true
+  },
+  "automatic_scale_to_94208": false,
+  "frozen_files": {
+    ".github/workflows/test-agent-society-three-regime.yml": "6a1eb0dfd4cc86aaf764a7ed1a0489bda6c30c3fa20fd7fe0ab9a2de76e52f7b",
+    "AGENTS_THREE_REGIME_ADDENDUM.md": "ccfebe20c8356f97f3e3bdfde18196771e3bdac073daeecac9781df0d6574809",
+    "morocco26/data/goal100/agent_society_three_regime_goal_v1.json": "8fa62884b24b1b32acf60c9e4386e30b98f4154491b00b94a6626804309ddb67",
+    "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V4_THREE_REGIME.json": "f0c4a2606776ea6ac018c5e4b66393d5efe6de1739fff235c90c650abac5e9b7",
+    "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/compare_three_regime_startup.py": "dd3d2bb0dfd4a2b1f33404cd17f429e27ec0d22d2bdc80d030356d6cfabac8c7",
+    "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_g0_sol_named_2026.py": "b817e74f3d5871653b5a6d5cb8b31e5e43ed7612685715ce705c394d06144f99",
+    "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_g0_sol_semiblind_rich.py": "201e7180d125f06d36a184c9d065b0ff3a5266d60531940271039971d3d35c79",
+    "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_three_regime_startup.py": "203049cbf6458e3ba081bcacb02b491e28836b9d738ce78d20553463358038ed",
+    "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/tests/test_three_regime_goal.py": "895e1ab89bce839d4e4d80a016d0eb270cfd5c00ae9e6bad5f0ca5e17dd85996",
+    "morocco26/frontends/agent_society_opus/source_v2/simulation_goal/AGENT_SOCIETY_THREE_REGIME_GOAL_V1.json": "a662d9cd8702813d2ad83ae178cb732333cb916be8b961998393f997a2196b09",
+    "morocco26/frontends/agent_society_opus/source_v2/simulation_goal/BLIND_ATTRIBUTE_CONTROL_32_REGISTRATION.json": "a4411ef048248b8ac1a4f13a3d2b22bbda659c1f06bfdac0e4e633ccf84a2278",
+    "morocco26/frontends/agent_society_opus/source_v2/simulation_goal/IMPLEMENTATION_STATUS_V1.json": "936362d0d8ed0b7d8759c98c249c2a1495d56b694833dd73c55892f2ad45140f",
+    "morocco26/frontends/agent_society_opus/source_v2/simulation_goal/MAIN_2026_SOURCE_INVENTORY.json": "299a808285767bf5bebdb353dfedec2909b791cf00b5813f18e7e192e3ee9485",
+    "morocco26/frontends/agent_society_opus/source_v2/simulation_goal/NAMED_2026_INPUT_SCHEMA_V1.json": "c2032bdf4d0c8c612b5a31181117dd9c30e21674e684bd964e412ad0b4bb9542",
+    "morocco26/frontends/agent_society_opus/source_v2/simulation_goal/NAMED_2026_READINESS_STATUS.json": "0029225ff8dc3da05606269ba65774c6dfe04c93144403609adef771632dbcf6",
+    "morocco26/frontends/agent_society_opus/source_v2/simulation_goal/README.md": "1e1efda8fd9599266ef1fde589b569cabc3d6ff073c5b51e1b235be141a9d006",
+    "morocco26/frontends/agent_society_opus/source_v2/simulation_goal/THREE_REGIME_SIMULATION_PROTOCOL_V1.json": "2de81d2461c209bd3a40b4c31184420da52b2dab2e4732ae327acf50a2c851ee",
+    "morocco26/frontends/agent_society_opus/source_v2/simulation_goal/as2_named_2026_output_schema_v2.json": "4b7051f0abade18ac582412592f5ac4b7868bccde7cbdd7edaa86b3f21b672bd",
+    "morocco26/frontends/agent_society_opus/source_v2/simulation_goal/as2_named_2026_prompt_v2.md": "46cb21619bae53f888144f1258e4169d1a7c0f3091763dcf771c50c086b78156",
+    "morocco26/scripts/agent_society_v2_main_bridge_v6.py": "d279f2d9c5abbdaeececc979f70d956e808e1854bd9b18a3bf914bca3f9cc216",
+    "morocco26/scripts/agent_society_v2_three_regime_goal.py": "8d7bd81c35dda5a3311a3955f8bcc725a55c29490073d50cc745800f8f06717f",
+    "morocco26/scripts/three_regime_core.py": "69a26b85d424681297fcf81a7ddb5a88b6e2dda154b51fe14737801d21f6975a"
+  },
+  "frozen_full_environment_sha256": "e8acad28dea5a531c21171db570b60d612993edd91db8f893e58c187c226696a",
+  "goal_id": "M26_AGENT_SOCIETY_THREE_REGIME_GOAL_V1",
+  "historical_outcomes_opened": false,
+  "model": "gpt-5.6-sol",
+  "named_2026_pseudonymized_twin": {
+    "outputs_at_freeze": 0,
+    "primary_regime": false,
+    "purpose": "WITHIN_2026_IDENTITY_LABEL_DIAGNOSTIC"
+  },
+  "parent_branch_head": "774758bdfc1f05813e04d0088ba323354aaac219",
+  "reasoning_effort": "medium",
+  "registered_main_sha": "4df897c356d3f0c36832405c7fcfc7f8f0cd6de2",
+  "schema_version": "ATLAS_FREEZE_MANIFEST_V6_FINAL_THREE_REGIME_GOAL",
+  "status": "FROZEN_AFTER_P0_BEFORE_EXACT_P1_OR_NAMED_P3_OUTPUTS",
+  "terminal_requirements": {
+    "P1": "PASS_P1_HISTORICAL_SEMIBLIND_32_COMPLETE",
+    "P2": "PASS_P2_HISTORICAL_SEMIBLIND_1024_COMPLETE",
+    "P3_source": "PASS_NAMED_2026_INPUT_READY"
+  },
+  "validation_at_freeze": {
+    "historical_outcomes_opened": false,
+    "json_protocol_parse": "PASS",
+    "python_compile": "PASS",
+    "real_full_environment_context_hash_index_sha256": "8e951db7f6c4b50d888141afc2d501b98d1e800fe6e22b9eb9b4f947badab91b",
+    "real_full_environment_contexts_validated": 368,
+    "real_full_environment_election_territory_items": 184,
+    "sol_calls_during_implementation": 0,
+    "unit_tests": 19
+  }
+}

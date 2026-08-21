@@ -1,0 +1,27 @@
+{
+  "components": {
+    "blind_control_pairing_gate": "IMPLEMENTED_EXACT_ONE_WORK_ITEM_RAW_D0_REQUIRED",
+    "blind_control_registration": "IMPLEMENTED_REPORT_HASH_KNOWN_RAW_D0_PATH_EXTERNAL",
+    "goal_state": "IMPLEMENTED",
+    "historical_outcomes_opened": false,
+    "historical_pointer_contract_builder": "IMPLEMENTED",
+    "historical_semiblind_sol_runner": "IMPLEMENTED_NOT_RUN",
+    "model_visible_provenance_scrubber": "IMPLEMENTED",
+    "named_2026_source_audit": "IMPLEMENTED_AND_BLOCKED",
+    "named_environment_builder": "IMPLEMENTED_NOT_EXECUTABLE_UNTIL_SOURCE_GATE_PASS",
+    "named_input_schema": "IMPLEMENTED",
+    "named_pseudonymized_twin": "IMPLEMENTED_NOT_BUILT",
+    "named_sol_runner": "IMPLEMENTED_FAIL_CLOSED",
+    "named_twin_paired_orchestrator": "IMPLEMENTED_FAIL_CLOSED",
+    "paired_comparator": "IMPLEMENTED_NOT_RUN",
+    "sol_calls_during_implementation": 0,
+    "source_independence_gate": "IMPLEMENTED",
+    "startup_gate_orchestrator": "IMPLEMENTED",
+    "territory_specific_named_ballots": "IMPLEMENTED",
+    "tests": "IMPLEMENTED_19_UNIT_TESTS_PLUS_REAL_368_CONTEXT_AUDIT"
+  },
+  "goal_id": "M26_AGENT_SOCIETY_THREE_REGIME_GOAL_V1",
+  "next_valid_action": "Locate the owner-local raw P0 D0 directory, build Bridge V1 and historical pointer contracts, then run P1 with --control-raw-run. Named 2026 remains blocked.",
+  "schema_version": "1.0",
+  "status": "IMPLEMENTED_SOURCE_GATED_NOT_INFERRED"
+}

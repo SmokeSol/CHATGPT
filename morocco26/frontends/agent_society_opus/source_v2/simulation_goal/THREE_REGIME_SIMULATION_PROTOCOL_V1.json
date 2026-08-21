@@ -1,0 +1,101 @@
+{
+  "api_key_allowed": false,
+  "auth": "CHATGPT_MANAGED_CODEX_LOGIN",
+  "environment_id": "ENV_4D19B3E7",
+  "experiment_id": "EXP_7C8A2F11",
+  "goal_id": "M26_AGENT_SOCIETY_THREE_REGIME_GOAL_V1",
+  "hard_stops": [
+    "never interpret the blind control as a realistic election simulation",
+    "never inject a second copy of historical candidate or programme values",
+    "never identify historical parties, candidates, territories or years",
+    "never open 2016 or 2021 outcomes before their registered gate",
+    "never generate named 2026 packets from incomplete or single-source candidate data",
+    "never invent a candidate, party programme, local reputation or ballot presence",
+    "never scale automatically from 32 to 1024 or 94208 decisions",
+    "never call a historical pilot paired unless the raw P0 work item is hash-bound",
+    "never give every territory the global party panel; use the certified local ballot",
+    "never expose source IDs, URLs or hashes to the voter model"
+  ],
+  "information_diet": {
+    "common_context_boundary": "national_context exposes only common_verified_facts; party/candidate material is row-scoped",
+    "excluded_inputs": [
+      "age",
+      "sex",
+      "religion",
+      "ethnicity",
+      "language",
+      "income",
+      "location identity"
+    ],
+    "inputs": [
+      "prior_vote_or_abstention",
+      "latent_attitude_political_discussion_mean"
+    ],
+    "levels": {
+      "HIGH": "all ballot identities, 18 programme axes, full verified candidate profile",
+      "LOW": "all ballot identities, up to 5 salient programme axes, salient verified candidate information",
+      "MEDIUM": "all ballot identities, up to 10 programme axes, basic verified candidate profile"
+    },
+    "purpose": "model what each elector plausibly recognizes rather than give every elector the whole database"
+  },
+  "model": "gpt-5.6-sol",
+  "paired_comparisons": {
+    "blind_vs_historical_semiblind": {
+      "causal_claim": false,
+      "exact_work_item_identity_required": true,
+      "interpretation": "framing/attention sensitivity under unchanged historical facts",
+      "raw_P0_required": true,
+      "same_historical_work_item_required": true
+    },
+    "historical_vs_2026": {
+      "causal_claim": false,
+      "interpretation": "descriptive only"
+    },
+    "named_2026_vs_pseudonymized_twin": {
+      "causal_claim": false,
+      "interpretation": "identity-label sensitivity inside the current 2026 information set",
+      "only_identity_labels_may_differ": true,
+      "paired_pilot_required_before_scale": true,
+      "same_2026_facts_and_voters_required": true
+    }
+  },
+  "reasoning_effort": "medium",
+  "regimes": {
+    "BLIND_ATTRIBUTE_CONTROL": {
+      "candidate_programme_information": "existing anonymous structured attributes",
+      "current_evidence": "one work item / 32 agents already generated",
+      "identity_visibility": "none",
+      "primary_election_simulation": false,
+      "rerun_default": false,
+      "scientific_role": "attribute-only control"
+    },
+    "HISTORICAL_SEMIBLIND_RICH": {
+      "candidate_programme_information": "same existing 16 candidate/local features and 18 programme axes",
+      "identity_visibility": "anonymous party, candidate, election and territory ids",
+      "model_packet_mutated": false,
+      "model_packet_values_duplicated": false,
+      "new_semantic_field_rule": "requires Bridge V2 before any affected output",
+      "outcomes_visible": false,
+      "prompt_delta": "pointer-only card map, candidate pseudonyms, explicit reading instruction and awareness rule",
+      "scientific_role": "historical development/holdout backtest with rich electoral interpretation and preserved blindness",
+      "year_visible": false
+    },
+    "REALISTIC_2026_NAMED": {
+      "ballot_surface": "territory-specific ballot_party_ids; never one artificial national panel",
+      "candidate_fabrication": false,
+      "candidate_verification": "VERIFIED_DOUBLE_ENTRY with at least two registered independence clusters",
+      "current_status": "BLOCKED_NAMED_2026_INCOMPLETE_ROSTER",
+      "elector_omniscience": false,
+      "factual_claim_boundary": "verified packet sources available by snapshot_known_as_of",
+      "identity_visibility": "real party, symbol, leader, territory and verified candidate labels",
+      "information_environment": "per-voter deterministic information diet",
+      "model_visible_provenance": "none; provenance IDs/URLs/hashes are validation-only",
+      "outside_browsing": false,
+      "partial_roster": false,
+      "programme_vocabulary": "exact canonical 18 axes",
+      "scientific_role": "primary current-election synthetic-society simulation"
+    }
+  },
+  "schema_version": "M26_THREE_REGIME_SIMULATION_PROTOCOL_V1",
+  "status": "FROZEN_AFTER_BLIND_CONTROL_BEFORE_NEW_REGIME_OUTPUTS"
+}

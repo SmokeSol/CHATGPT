@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "goal_id": "M26_AGENT_SOCIETY_THREE_REGIME_GOAL_V1",
+  "regime": "BLIND_ATTRIBUTE_CONTROL",
+  "status": "PASS_REPORT_BOUND_RAW_D0_LOCATION_EXTERNAL",
+  "scientific_role": "ATTRIBUTE_ONLY_CONTROL_NOT_PRIMARY_ELECTION_SIMULATION",
+  "work_items": 1,
+  "agents": 32,
+  "batch_id": "B01",
+  "anonymous_territory_id": "T_0267CFF87A2606F5",
+  "report": {
+    "filename": "RAPPORT_VOTES_32.md",
+    "sha256": "0bc0ad9abf4b7160918324a330900cbad9fc5577f4c4d14e3b694ebcd0b0e05b",
+    "bytes": 81506,
+    "lines_observed": 1338
+  },
+  "report_summary": {
+    "mean_turnout_probability": 0.502,
+    "mean_top_two_margin": 0.152,
+    "counterfactuals_executed": false
+  },
+  "raw_D0": {
+    "committed": false,
+    "owner_local_path_required_for_numeric_pairing": true
+  },
+  "registered_after_output": true,
+  "preregistered_control_claim": false,
+  "new_generation_default": false
+}

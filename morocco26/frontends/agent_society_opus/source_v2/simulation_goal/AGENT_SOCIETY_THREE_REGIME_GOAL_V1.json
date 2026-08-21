@@ -1,0 +1,72 @@
+{
+  "branch": "morocco26-agent-society-v2-front-vote-llm",
+  "created_after_blind_control_32": true,
+  "created_before_any_historical_semiblind_rich_output": true,
+  "created_before_any_named_2026_output": true,
+  "gate_sequence": [
+    {
+      "agents": 32,
+      "gate": "P0",
+      "regime": "BLIND_ATTRIBUTE_CONTROL",
+      "role": "attribute-only control; never primary election simulation",
+      "status": "EXISTS_REPORT_BOUND_RAW_D0_REGISTRATION_PENDING",
+      "work_items": 1
+    },
+    {
+      "agents": 32,
+      "gate": "P1",
+      "regime": "HISTORICAL_SEMIBLIND_RICH",
+      "requirements": [
+        "control report SHA pass",
+        "exact raw P0 snapshot with one populated work item / 32 unique archetypes",
+        "same election-condition-territory-batch selected by task regex"
+      ],
+      "role": "same-position paired pilot with candidate/programme interpretation made explicit",
+      "status": "IMPLEMENTED_LOCKED_UNTIL_EXACT_RAW_P0_BOUND",
+      "work_items": 1
+    },
+    {
+      "agents": 1024,
+      "gate": "P2",
+      "regime": "HISTORICAL_SEMIBLIND_RICH",
+      "status": "LOCKED_UNTIL_P1_REVIEW",
+      "work_items": 32
+    },
+    {
+      "agents": null,
+      "gate": "P3",
+      "regime": "REALISTIC_2026_NAMED",
+      "requirements": [
+        "92 named territories with territory-specific ballot_party_ids",
+        "every intended ballot cell has a VERIFIED_DOUBLE_ENTRY candidacy",
+        "candidate sources span at least two independence clusters",
+        "all party programmes contain exactly the canonical 18 axes",
+        "all sources and conditions known_as_of <= snapshot",
+        "named and pseudonymized-twin paired pilot before scale"
+      ],
+      "status": "BLOCKED_NAMED_2026_INCOMPLETE_ROSTER",
+      "work_items": null
+    }
+  ],
+  "goal_id": "M26_AGENT_SOCIETY_THREE_REGIME_GOAL_V1",
+  "internal_diagnostic": "NAMED_2026_PSEUDONYMIZED_TWIN",
+  "objective": "Maintain a fully blind attribute-only control, build rich but pseudonymized historical backtests without duplicating evidence, and make a named realistic 2026 synthetic electorate the current-election primary simulation once exact-SHA ballot and candidate coverage is complete.",
+  "outcomes": {
+    "2016": "SEALED",
+    "2021": "SEALED"
+  },
+  "parent_branch_head": "774758bdfc1f05813e04d0088ba323354aaac219",
+  "primary_regimes": [
+    "BLIND_ATTRIBUTE_CONTROL",
+    "HISTORICAL_SEMIBLIND_RICH",
+    "REALISTIC_2026_NAMED"
+  ],
+  "registered_main_sha": "4df897c356d3f0c36832405c7fcfc7f8f0cd6de2",
+  "scale_policy": {
+    "automatic_full_94208": false,
+    "full_historical_scale_requires": "P1 and P2 audit plus explicit new freeze",
+    "named_scale_requires": "complete named source gate, exact local ballot coverage, and named-vs-pseudonymized-twin paired pilot review"
+  },
+  "schema_version": "1.0",
+  "status": "ACTIVE_CANONICAL_GOAL_NAMED_2026_SOURCE_BLOCKED"
+}

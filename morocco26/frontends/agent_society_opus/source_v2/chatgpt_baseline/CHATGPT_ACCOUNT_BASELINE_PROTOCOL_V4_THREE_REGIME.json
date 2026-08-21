@@ -1,0 +1,76 @@
+{
+  "P0_blind_control": {
+    "new_generation_default": false,
+    "primary_simulation": false,
+    "report_sha256": "0bc0ad9abf4b7160918324a330900cbad9fc5577f4c4d14e3b694ebcd0b0e05b",
+    "rows": 32,
+    "scientific_role": "ATTRIBUTE_ONLY_CONTROL",
+    "status": "GENERATED_BEFORE_THIS_PROTOCOL",
+    "work_items": 1
+  },
+  "P1_historical_semiblind_rich": {
+    "candidate_or_programme_values_duplicated": false,
+    "exact_raw_P0_snapshot_required": true,
+    "identity_material": false,
+    "original_packet_values_changed": false,
+    "outcomes": false,
+    "prompt_delta": "explicit pointer-only reading contract and voter awareness rule",
+    "rows": 32,
+    "same_work_item_position_as_P0": true,
+    "selection": "exact task regex derived from P0 raw election-condition-territory-batch",
+    "status": "PRE_REGISTERED_NOT_RUN",
+    "work_items": 1
+  },
+  "P2_historical_expansion": {
+    "automatic_unlock": false,
+    "rows": 1024,
+    "status": "LOCKED_UNTIL_P1_REVIEW",
+    "work_items": 32
+  },
+  "P3_realistic_named_2026": {
+    "candidate_fabrication": false,
+    "candidate_source_independence_clusters_minimum": 2,
+    "canonical_programme_axes_exact": 18,
+    "canonical_startup": "named and pseudonymized-twin paired pilot",
+    "model_visible_provenance_identifiers": false,
+    "named_source_gate_required": "PASS_NAMED_2026_INPUT_READY",
+    "paired_twin_required_before_scale": true,
+    "partial_roster": false,
+    "per_voter_information_diets": true,
+    "real_names": true,
+    "status": "BLOCKED_NAMED_2026_INCOMPLETE_ROSTER",
+    "territory_specific_ballot_panels": true
+  },
+  "api_key_allowed": false,
+  "auth": "CHATGPT_MANAGED_CODEX_LOGIN",
+  "entry_points": {
+    "comparison": "compare_three_regime_startup.py",
+    "goal_builder": "../../../../scripts/agent_society_v2_three_regime_goal.py",
+    "historical_semiblind": "run_g0_sol_semiblind_rich.py",
+    "named_2026": "run_g0_sol_named_2026.py",
+    "startup_orchestrator": "run_three_regime_startup.py"
+  },
+  "environment_id": "ENV_4D19B3E7",
+  "experiment_id": "EXP_7C8A2F11",
+  "full_scale_policy": "No 94,208-row or named national full run without an explicit later freeze after startup review.",
+  "goal_id": "M26_AGENT_SOCIETY_THREE_REGIME_GOAL_V1",
+  "information_boundary": {
+    "2016_outcomes": "SEALED",
+    "2021_outcomes": "SEALED",
+    "cross_work_item_state": false,
+    "mcp": false,
+    "memory": false,
+    "tools": false,
+    "web": false
+  },
+  "interpretation": {
+    "P0_vs_P1": "framing/attention diagnostic, not a real-world causal effect",
+    "historical_vs_2026": "descriptive only",
+    "named_vs_twin": "within-2026 identity-label sensitivity diagnostic, not a real-world causal effect"
+  },
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "schema_version": "ATLAS_CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V4_THREE_REGIME",
+  "status": "FROZEN_AFTER_P0_BLIND_CONTROL_BEFORE_P1_OR_P3_OUTPUT",
+  "supersedes_for_new_work": "CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V3_MAIN_BRIDGE.json"
+}

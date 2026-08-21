@@ -1,0 +1,48 @@
+{
+  "absolute_rules": [
+    "2016 and 2021 outcomes remain sealed",
+    "no historical identity leak",
+    "no duplicate model-visible historical evidence",
+    "no named candidate invention",
+    "no partial named ballot masquerading as a national simulation",
+    "no automatic scaling",
+    "no fake global party panel across all territories",
+    "no provenance identifiers in model-visible named surfaces"
+  ],
+  "branch": "morocco26-agent-society-v2-front-vote-llm",
+  "current_truth": {
+    "blind_control": {
+      "primary_simulation": false,
+      "raw_run_location": "OWNER_LOCAL_NOT_COMMITTED",
+      "report_sha256": "0bc0ad9abf4b7160918324a330900cbad9fc5577f4c4d14e3b694ebcd0b0e05b",
+      "status": "ONE_WORK_ITEM_32_AGENTS_ALREADY_GENERATED"
+    },
+    "historical_semiblind_rich": {
+      "candidate_programme_values_duplicated": false,
+      "identity": "PSEUDONYMIZED",
+      "status": "CODE_READY_P1_LOCKED_UNTIL_EXACT_RAW_P0_BOUND"
+    },
+    "realistic_2026_named": {
+      "candidate_fabrication": false,
+      "source_certificate_gate": "FAIL",
+      "source_independence_required": true,
+      "status": "BLOCKED_NAMED_2026_INCOMPLETE_ROSTER",
+      "territory_specific_ballots_required": true,
+      "verified_candidate_rows": 0
+    }
+  },
+  "full_environment_sha256": "e8acad28dea5a531c21171db570b60d612993edd91db8f893e58c187c226696a",
+  "gates": {
+    "P0": "preserve/register one-work-item blind control",
+    "P1": "bind the exact raw P0 one-work-item snapshot, then run the same 32 agents under semiblind-rich reading",
+    "P2": "manual review then 32-work-item/1024-agent historical expansion",
+    "P3": "named source completion, local-ballot validation, then named/twin paired pilot",
+    "P4": "explicit new freeze before any full-scale run"
+  },
+  "goal_id": "M26_AGENT_SOCIETY_THREE_REGIME_GOAL_V1",
+  "main_snapshot": "4df897c356d3f0c36832405c7fcfc7f8f0cd6de2",
+  "owner_intent": "Finalize a named realistic 2026 simulation, a rich semi-blind historical backtest, and preserve the fully blind run as a control.",
+  "parent_head": "774758bdfc1f05813e04d0088ba323354aaac219",
+  "schema_version": "M26_AGENT_SOCIETY_THREE_REGIME_GOAL_STATE_V1",
+  "status": "ACTIVE_IMPLEMENTED_NAMED_2026_BLOCKED_BY_SOURCE_GATE"
+}

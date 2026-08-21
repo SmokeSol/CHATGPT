@@ -1,0 +1,377 @@
+{
+  "$id": "M26_NAMED_2026_INPUT_SCHEMA_V1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "candidacies": {
+      "items": {
+        "properties": {
+          "candidate_id": {
+            "type": "string"
+          },
+          "candidate_name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "known_as_of": {
+            "type": "string"
+          },
+          "local_viability_band": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "party_id": {
+            "type": "string"
+          },
+          "public_familiarity_band": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_record_ids": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 2,
+            "type": "array",
+            "uniqueItems": true
+          },
+          "territory_id": {
+            "type": "string"
+          },
+          "verification_state": {
+            "const": "VERIFIED_DOUBLE_ENTRY"
+          },
+          "verified_profile": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "territory_id",
+          "party_id",
+          "candidate_id",
+          "candidate_name",
+          "verification_state",
+          "known_as_of",
+          "source_record_ids"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "conditions": {
+      "items": {
+        "properties": {
+          "condition_id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "known_as_of": {
+            "minLength": 10,
+            "type": "string"
+          }
+        },
+        "required": [
+          "condition_id",
+          "description",
+          "known_as_of"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "coverage": {
+      "properties": {
+        "all_intended_ballot_cells_verified": {
+          "const": true
+        },
+        "intended_ballot_cells": {
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "all_intended_ballot_cells_verified",
+        "intended_ballot_cells"
+      ],
+      "type": "object"
+    },
+    "main_commit_sha": {
+      "const": "4df897c356d3f0c36832405c7fcfc7f8f0cd6de2"
+    },
+    "national_context": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate_specific_material_present": {
+          "const": false
+        },
+        "common_verified_facts": {
+          "type": "object"
+        },
+        "known_as_of": {
+          "minLength": 10,
+          "type": "string"
+        },
+        "party_specific_material_present": {
+          "const": false
+        }
+      },
+      "required": [
+        "known_as_of",
+        "common_verified_facts",
+        "party_specific_material_present",
+        "candidate_specific_material_present"
+      ],
+      "type": "object"
+    },
+    "parties": {
+      "items": {
+        "properties": {
+          "abbreviation": {
+            "type": "string"
+          },
+          "government_status": {
+            "type": "string"
+          },
+          "national_leader_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "national_salience": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "party_id": {
+            "type": "string"
+          },
+          "party_name": {
+            "type": "string"
+          },
+          "party_symbol": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "party_id",
+          "party_name",
+          "abbreviation",
+          "party_symbol",
+          "government_status"
+        ],
+        "type": "object"
+      },
+      "minItems": 2,
+      "type": "array"
+    },
+    "programmes": {
+      "items": {
+        "properties": {
+          "axes": {
+            "maxProperties": 18,
+            "minProperties": 18,
+            "propertyNames": {
+              "enum": [
+                "civil_liberties",
+                "culture",
+                "decentralization",
+                "digital_transition",
+                "economic_sovereignty",
+                "education",
+                "employment",
+                "environment_transition",
+                "fiscal_relief",
+                "gender_equality",
+                "governance_rule_of_law",
+                "health",
+                "housing",
+                "industrial_competitiveness",
+                "private_investment_sme",
+                "public_state_role",
+                "rural_territorial_equity",
+                "social_protection"
+              ]
+            },
+            "type": "object"
+          },
+          "known_as_of": {
+            "type": "string"
+          },
+          "party_id": {
+            "type": "string"
+          },
+          "source_record_ids": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "party_id",
+          "axes",
+          "known_as_of",
+          "source_record_ids"
+        ],
+        "type": "object"
+      },
+      "minItems": 2,
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "1.0"
+    },
+    "snapshot_known_as_of": {
+      "minLength": 10,
+      "type": "string"
+    },
+    "source_records": {
+      "items": {
+        "properties": {
+          "independence_cluster": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "known_as_of": {
+            "type": "string"
+          },
+          "sha256": {
+            "pattern": "^[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "source_class": {
+            "type": "string"
+          },
+          "source_record_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source_record_id",
+          "source_class",
+          "independence_cluster",
+          "known_as_of",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "minItems": 2,
+      "type": "array"
+    },
+    "territories": {
+      "items": {
+        "properties": {
+          "ballot_party_ids": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 2,
+            "type": "array",
+            "uniqueItems": true
+          },
+          "region_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "territory_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "territory_name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "verified_context": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "territory_id",
+          "territory_name",
+          "ballot_party_ids"
+        ],
+        "type": "object"
+      },
+      "maxItems": 92,
+      "minItems": 92,
+      "type": "array"
+    },
+    "voter_population": {
+      "properties": {
+        "artifact_id": {
+          "type": "string"
+        },
+        "batches": {
+          "items": {
+            "properties": {
+              "batch_id": {
+                "type": "string"
+              },
+              "territory_id": {
+                "type": "string"
+              },
+              "voters": {
+                "items": {
+                  "type": "object"
+                },
+                "minItems": 1,
+                "type": "array"
+              }
+            },
+            "required": [
+              "territory_id",
+              "batch_id",
+              "voters"
+            ],
+            "type": "object"
+          },
+          "minItems": 92,
+          "type": "array"
+        },
+        "known_as_of": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "artifact_id",
+        "known_as_of",
+        "batches"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "artifact_id",
+    "main_commit_sha",
+    "snapshot_known_as_of",
+    "national_context",
+    "territories",
+    "parties",
+    "candidacies",
+    "programmes",
+    "source_records",
+    "voter_population",
+    "conditions",
+    "coverage"
+  ],
+  "title": "Exact-SHA realistic named 2026 Agent Society input",
+  "type": "object"
+}

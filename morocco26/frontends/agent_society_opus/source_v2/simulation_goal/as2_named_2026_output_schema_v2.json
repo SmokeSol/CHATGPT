@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ATLAS_NAMED_2026_DECISION_ROW_V2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "anonymous_election_id",
+    "anonymous_territory_id",
+    "condition_id",
+    "batch_id",
+    "weighted_archetype_id",
+    "turnout_probability",
+    "conditional_party_probabilities",
+    "factor_importance",
+    "reason_codes"
+  ],
+  "properties": {
+    "anonymous_election_id": {"type": "string"},
+    "anonymous_territory_id": {"type": "string"},
+    "condition_id": {"type": "string"},
+    "batch_id": {"type": "string"},
+    "weighted_archetype_id": {"type": "string"},
+    "turnout_probability": {"type": "number", "minimum": 0, "maximum": 1},
+    "conditional_party_probabilities": {
+      "type": "object",
+      "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}
+    },
+    "factor_importance": {
+      "type": "object",
+      "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}
+    },
+    "reason_codes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,80}$"}
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "historical_candidate_intelligence_v3": {
+    "allowed_in_historical_backtests": false,
+    "reason": "post-2021 exploratory contract"
+  },
+  "inventory_id": "M26_AGENT_SOCIETY_MAIN_2026_SOURCE_INVENTORY_V1",
+  "main_commit_sha": "4df897c356d3f0c36832405c7fcfc7f8f0cd6de2",
+  "named_2026_candidate_intelligence_v3": {
+    "conditional_use": "only source records explicitly tagged for 2026 with known_as_of <= snapshot and schema-valid provenance",
+    "default": "EXCLUDED"
+  },
+  "next_source_gate": {
+    "candidate_fabrication": false,
+    "independence_clusters": 2,
+    "local_ballot_panels": true,
+    "required": "new exact main SHA and versioned freeze once source acquisition reaches PASS"
+  },
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "canonical_certificate_sha256": "9c3d97b6a8204f4b184ab074b2df77657befbc40080dad5afc5be1ccec8877ec",
+      "gate": "FAIL",
+      "git_blob_sha": "c875d1c19f174a4bac57202ed2cfe3e8114b8a05",
+      "path": "morocco26/data/goal100/b2_2026_ballot_certificate.json",
+      "role": "authoritative named-2026 readiness gate"
+    },
+    {
+      "declared_roster_sha256": "b702b92929f7271c0309c0e3a8d4336b6e1bd79ee87a222b0cf834bc37c767ac",
+      "git_blob_sha": "f707f9ebf112d25f68db77815be155d3e078ebd3",
+      "parties": [
+        "PJD"
+      ],
+      "path": "morocco26/data/goal100/b2_2026_ballot_roster.json",
+      "role": "parsed source roster; not verified named ballot input",
+      "rows": 92
+    }
+  ]
+}

@@ -4,6 +4,22 @@
 >
 > Your job is to preserve the scientific experiment, make progress autonomously, and never trade experimental validity for convenience.
 
+## Current Agent Society override — three-regime electoral goal
+
+Before acting on any older G0 startup instruction in this file, read:
+
+```text
+AGENTS_THREE_REGIME_ADDENDUM.md
+morocco26/data/goal100/agent_society_three_regime_goal_v1.json
+morocco26/frontends/agent_society_opus/source_v2/simulation_goal/AGENT_SOCIETY_THREE_REGIME_GOAL_V1.json
+morocco26/frontends/agent_society_opus/source_v2/simulation_goal/THREE_REGIME_SIMULATION_PROTOCOL_V1.json
+morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/FREEZE_MANIFEST_V6_THREE_REGIME_GOAL.json
+```
+
+The existing Sol evidence is one blind work item / 32 agents, not 32 work items. It is now `BLIND_ATTRIBUTE_CONTROL`; the realistic current-election target is named 2026 and remains fail-closed until its certified candidate roster is complete. This override supersedes stale startup counts or claims below while preserving the historical record.
+
+---
+
 ## 0. One-sentence mission
 
 MOROCCO//26 is building a **pre-election, falsifiable territorial forecasting system for Morocco 2026** and testing whether an agentic synthetic-society layer adds measurable predictive information beyond a strong structural baseline.

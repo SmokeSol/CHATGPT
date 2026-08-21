@@ -1,0 +1,66 @@
+name: Test Agent Society Three-Regime Goal
+
+on:
+  push:
+    branches:
+      - morocco26-agent-society-v2-front-vote-llm
+    paths:
+      - 'morocco26/scripts/three_regime_core.py'
+      - 'morocco26/scripts/agent_society_v2_three_regime_goal.py'
+      - 'morocco26/scripts/agent_society_v2_main_bridge_v6.py'
+      - 'morocco26/frontends/agent_society_opus/source_v2/simulation_goal/**'
+      - 'morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/*three_regime*'
+      - 'morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_g0_sol_semiblind_rich.py'
+      - 'morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_g0_sol_named_2026.py'
+      - 'morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/tests/test_three_regime_goal.py'
+      - '.github/workflows/test-agent-society-three-regime.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile Python
+        run: |
+          python -m py_compile \
+            morocco26/scripts/three_regime_core.py \
+            morocco26/scripts/agent_society_v2_three_regime_goal.py \
+            morocco26/scripts/agent_society_v2_main_bridge_v6.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_g0_sol_semiblind_rich.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_g0_sol_named_2026.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_three_regime_startup.py \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/compare_three_regime_startup.py
+      - name: Validate JSON protocols
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          roots = [
+              Path('morocco26/data/goal100/agent_society_three_regime_goal_v1.json'),
+              Path('morocco26/frontends/agent_society_opus/source_v2/simulation_goal'),
+              Path('morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V4_THREE_REGIME.json'),
+              Path('morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/FREEZE_MANIFEST_V6_THREE_REGIME_GOAL.json'),
+          ]
+          files = []
+          for root in roots:
+              files.extend(root.rglob('*.json') if root.is_dir() else [root])
+          for path in files:
+              json.loads(path.read_text(encoding='utf-8'))
+          print(f'validated {len(files)} JSON files')
+          PY
+      - name: Unit tests
+        run: |
+          python -m unittest -v \
+            morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/tests/test_three_regime_goal.py
+      - name: Freeze verification
+        run: |
+          python morocco26/scripts/agent_society_v2_three_regime_goal.py verify-freeze \
+            --repo-root . \
+            --manifest morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/FREEZE_MANIFEST_V6_THREE_REGIME_GOAL.json

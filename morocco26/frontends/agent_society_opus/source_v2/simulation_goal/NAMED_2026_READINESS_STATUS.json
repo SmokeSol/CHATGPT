@@ -1,0 +1,40 @@
+{
+  "blockers": [
+    "certificate_gate_pass",
+    "territory_coverage_complete",
+    "verified_candidate_rows_present",
+    "more_than_one_party_covered",
+    "territory_specific_ballot_cells_complete",
+    "independent_double_entry_per_candidate",
+    "canonical_18_axis_programmes_complete"
+  ],
+  "candidate_fabrication_allowed": false,
+  "goal_id": "M26_AGENT_SOCIETY_THREE_REGIME_GOAL_V1",
+  "main_commit_sha": "4df897c356d3f0c36832405c7fcfc7f8f0cd6de2",
+  "named_runner_behavior": "FAIL_CLOSED_BEFORE_ANY_SOL_CALL",
+  "observed": {
+    "ambiguous_deterministic_match_rows": 92,
+    "ballot_certificate_gate": "FAIL",
+    "blocked_source_documents": 10,
+    "parsed_roster_rows": 92,
+    "parties_covered": [
+      "PJD"
+    ],
+    "territory_coverage_fraction": 0.0,
+    "verified_double_entry_rows": 0
+  },
+  "partial_named_simulation_allowed": false,
+  "ready_to_generate_named_packets": false,
+  "regime": "REALISTIC_2026_NAMED",
+  "required_future_contract": {
+    "all_known_as_of_at_or_before_snapshot": true,
+    "candidate_verification": "VERIFIED_DOUBLE_ENTRY",
+    "canonical_programme_axes": 18,
+    "independence_clusters_minimum_per_candidate": 2,
+    "model_visible_provenance_identifiers": false,
+    "paired_named_twin_pilot_before_scale": true,
+    "territory_specific_ballots": true
+  },
+  "schema_version": "1.0",
+  "status": "BLOCKED_NAMED_2026_INCOMPLETE_ROSTER"
+}
