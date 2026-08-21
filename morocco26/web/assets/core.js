@@ -75,7 +75,7 @@ async function boot(){
   try{
     const [snapshot,national,constituencies,parties,evidence,methodology] = await Promise.all([
       load('current_snapshot.json'), load('national_projection.json'), load('constituency_cards.json'),
-      load('party_cards.json'), load('evidence_index.json'), load('public_methodology.json')
+      load('party_cards.json'), load('evidence_index.json'), load('methodology_state.json')
     ]);
     D = {snapshot,national,constituencies,parties,evidence,methodology};
     selectedTerritory = [...constituencies.constituencies].sort((a,b)=>b.uncertainty.value-a.uncertainty.value)[0]?.constituency_id;
