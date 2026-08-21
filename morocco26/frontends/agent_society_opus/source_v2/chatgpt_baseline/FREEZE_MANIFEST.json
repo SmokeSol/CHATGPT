@@ -1,7 +1,7 @@
 {
-  "schema_version": "ATLAS_CHATGPT_ACCOUNT_BASELINE_FREEZE_MANIFEST_V4_SOL_MAIN_BRIDGE_DELIBERATION_OBSERVATORY",
-  "status": "FROZEN_BEFORE_ANY_G0_SOL_MAIN_BRIDGE_OUTPUT",
-  "freeze_basis_commit": "2fa20b4ed716947c1d403f643c5a47a95a9d2d13",
+  "schema_version": "ATLAS_CHATGPT_ACCOUNT_BASELINE_FREEZE_MANIFEST_V5_SOL_MAIN_BRIDGE_EQUIVALENCE_DELIBERATION_OBSERVATORY",
+  "status": "FINAL_FROZEN_BEFORE_ANY_G0_SOL_OUTPUT",
+  "freeze_basis_commit": "7c0d8e07522b31bb177e6f7a7ff3e09862ae8c8f",
   "branch": "morocco26-agent-society-v2-front-vote-llm",
   "experiment_id": "EXP_7C8A2F11",
   "environment_id": "ENV_4D19B3E7",
@@ -20,7 +20,14 @@
     "expected_work_items": 2944,
     "expected_rows": 94208,
     "territories": 92,
-    "anonymous_elections": 2
+    "anonymous_elections": 2,
+    "conditions": 2,
+    "batches_per_territory": 8,
+    "rows_per_work_item": 32,
+    "observed_context_structure_at_freeze": {
+      "candidate_non_meta_features_per_party": 16,
+      "programme_priority_axes_per_party": 18
+    }
   },
   "main_bridge_freeze": {
     "bridge_id": "M26_AS_MAIN_BRIDGE_V1",
@@ -44,14 +51,23 @@
     ],
     "source_allowlist_only": true,
     "post_outcome_candidate_intelligence_v3_excluded": true,
-    "real_identity_material_in_model_overlay": false,
+    "real_identity_material_in_model_context": false,
     "target_outcomes_read_by_bridge": false,
     "party_namespace_alignment": "BLIND_BASELINE_SIGNATURE_BIJECTION",
     "party_alignment_tolerance_max_abs": 1e-08,
+    "semantic_equivalence_required": true,
+    "candidate_non_meta_feature_set_must_match": true,
+    "candidate_status_value_conflict_must_match": true,
+    "programme_cards_must_match": true,
+    "model_semantic_delta_v1": false,
+    "on_any_semantic_delta": "FAIL_CLOSED_REQUIRE_NEW_PREREGISTERED_BRIDGE_VERSION",
     "candidate_feature_overlap_rule": "Features already present in the frozen environment are provenance confirmation, never a second independent signal.",
-    "programme_layer": "EXISTING_FROZEN_ANONYMOUS_PRIORITY_CARDS_PRESERVED",
+    "overlay_injected_into_model_packet": false,
+    "duplicate_model_visible_evidence_added": false,
+    "programme_layer": "EXISTING_FROZEN_ANONYMOUS_PRIORITY_CARDS_PRESERVED_AND_VERIFIED",
     "complete_historical_manifesto_corpus_claimed": false,
-    "original_environment_mutated": false
+    "original_environment_mutated": false,
+    "bridge_file_and_item_hashes_folded_into_task_provenance": true
   },
   "decision_contract": {
     "phase": "D0_DECISION",
@@ -62,6 +78,10 @@
     "reasoning_effort": "medium",
     "fresh_context_per_work_item": true,
     "main_bridge_required": true,
+    "exact_full_environment_zip_hash_required": true,
+    "exact_registered_main_sha_required": true,
+    "bridge_semantic_equivalence_PASS_required": true,
+    "model_packet_modified_by_bridge_v1": false,
     "bridge_hash_folded_into_task_source_hash": true,
     "expected_work_items": 2944,
     "rows_per_work_item": 32,
@@ -97,6 +117,7 @@
   },
   "startup_32_contract": {
     "bridge_build_and_PASS_before_D0": true,
+    "semantic_equivalence_PASS_before_D0": true,
     "D0_calls": 32,
     "D0_rows": 1024,
     "L0_calls": 32,
@@ -106,13 +127,13 @@
     "CF_scenarios_per_selected_agent": 5,
     "maximum_default_CF_calls": 160,
     "sequencing": [
-      "build exact-SHA bridge and require PASS",
-      "dry-run exactly 32 enriched D0 work items and verify bridge provenance",
-      "run exactly 32 D0 contexts",
+      "build exact-SHA Bridge V1 and require PASS plus PASS_SEMANTIC_EQUIVALENCE_ONLY",
+      "dry-run exactly 32 D0 work items and verify frozen ZIP plus bridge provenance",
+      "run exactly 32 Sol D0 contexts using the original frozen work-item packets",
       "validate and freeze all 1024 D0 rows",
       "run L0 in separate fresh contexts",
       "inspect L0 report",
-      "CF only after L0, with placebo"
+      "run CF only after L0 review and retain placebo"
     ]
   },
   "frozen_implementation_paths": [
@@ -138,19 +159,22 @@
     "morocco26/scripts/main_bridge_alignment.py",
     "morocco26/scripts/main_bridge_overlay.py",
     "morocco26/frontends/agent_society_opus/source_v2/main_bridge/MAIN_TO_AGENT_SOCIETY_BRIDGE_PROTOCOL_V1.json",
+    "morocco26/frontends/agent_society_opus/source_v2/main_bridge/README.md",
     "morocco26/data/goal100/agent_society_v2/CHATGPT_ACCOUNT_G0_STATE_V1.json",
     "morocco26/data/goal100/agent_society_v2/MAIN_BRIDGE_STATE_V1.json",
     ".github/workflows/test-agent-society-chatgpt-baseline.yml"
   ],
   "generation_invariants": [
     "E0 remains immutable and is never relabeled as LLM output.",
-    "The full-environment ZIP, frozen judge prompt, output schema and work manifest must match the registered SHA-256 values.",
-    "The main bridge reads only the registered exact main commit and the explicit blind/control source allowlist.",
+    "The full-environment ZIP, judge prompt, output schema and work manifest must match the registered hashes.",
+    "Bridge V1 reads only the registered exact main commit and explicit pre-cutoff blind/control source allowlist.",
     "Post-outcome candidate_intelligence_v3 artifacts are forbidden inputs to historical blind G0.",
-    "Real candidate, party, territory and election-year identities never enter the D0 model context.",
-    "A bridge candidate feature already present in the environment is not double-counted as independent evidence.",
-    "No complete manifesto corpus is claimed in Bridge V1; existing frozen anonymous programme-priority cards are preserved without fabrication.",
-    "The bridge overlay and every per-item bridge object are hashed into D0 provenance before model execution.",
+    "Real candidate, party, territory and election-year identities never enter D0 model context.",
+    "Bridge V1 is semantic-equivalence/provenance only and cannot add a directionally usable field.",
+    "A candidate/programme field already in the frozen environment is never repeated to the LLM as a second evidence copy.",
+    "Any semantic delta requires a new preregistered bridge version before affected model output exists.",
+    "No complete historical manifesto corpus is claimed in Bridge V1; existing anonymous programme-priority cards are preserved without fabrication.",
+    "Bridge file SHA and per-item SHA are bound into run/task provenance while the original model packet remains semantically unchanged.",
     "The owner authenticates locally through Sign in with ChatGPT; auth material is never committed or shared.",
     "OPENAI_API_KEY and CODEX_API_KEY are removed from every child process.",
     "Web search, apps, MCP, shell, memories, goals, hooks and multi-agent tools are disabled.",
@@ -161,15 +185,15 @@
     "2016 and 2021 remain sealed throughout D0, L0 and CF generation."
   ],
   "frontend_invariants": [
-    "The public site remains on E0 until G0 passes the complete terminal and promotion audit.",
+    "The public site remains on E0 until G0 passes complete terminal and promotion audit.",
     "Before L0 data exist, the frontend displays method and pending status only.",
     "After promotion, model-generated explanations and counterfactual diagnostics are labelled separately.",
     "E0 assets remain available after G0 becomes primary.",
     "G0 generation does not by itself establish predictive validity."
   ],
   "change_control": {
-    "before_first_valid_D0_output": "Any material input/model/prompt/schema/bridge amendment requires FREEZE_MANIFEST V5 and explicit state update.",
-    "after_first_valid_D0_output": "Model, reasoning effort, environment hash, prompt/schema, registered main SHA, bridge protocol, candidate-information boundary, selection rules, evidence catalogue, CF transforms and causal thresholds are immutable for this run.",
+    "before_first_valid_D0_output": "Any further material input/model/prompt/schema/bridge amendment requires FREEZE_MANIFEST V6 and explicit state update.",
+    "after_first_valid_D0_output": "Model, reasoning effort, environment hash, prompt/schema, registered main SHA, Bridge V1 semantic policy, candidate-information boundary, selection rules, evidence catalogue, CF transforms and causal thresholds are immutable for this run.",
     "after_any_outcome_unseal": "No pre-outcome generation or diagnostic rule may be changed."
   }
 }
