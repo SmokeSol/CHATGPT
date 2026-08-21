@@ -66,6 +66,7 @@ def main() -> None:
     parties = load(data / "party_cards.json")
     evidence = load(data / "evidence_index.json")
     methodology = load(data / "methodology_state.json")
+    public_methodology = load(data / "public_methodology.json")
     public_manifest = load(data / "snapshot_manifest.json")
 
     require(snapshot.get("status") == "FROZEN", "displayed forecast snapshot must be frozen")
@@ -80,6 +81,14 @@ def main() -> None:
     require(cards.get("count") == 92 and len(cards.get("constituencies") or []) == 92, "constituency cards != 92")
     require(sum(int(card.get("magnitude") or 0) for card in cards["constituencies"]) == 305, "local magnitude sum != 305")
     require(len(parties.get("parties") or []) == 9, "party buckets != 9")
+
+    public = public_methodology.get("public_methodology") or {}
+    require(public_methodology.get("product") == "ATLAS 395", "public methodology product mismatch")
+    require(public.get("total_seats") == 395, "public methodology total seats != 395")
+    require(public.get("local_constituencies") == 92, "public methodology local constituencies != 92")
+    require(public.get("regional_constituencies") == 12, "public methodology regional constituencies != 12")
+    require(public.get("manual_party_bonus") == 0, "public methodology manual party bonus must be zero")
+    require(public.get("draws") == snapshot.get("draws"), "public methodology draw count mismatch")
 
     separation = methodology.get("scientific_separation") or {}
     require(separation.get("atlas_views_are_model_inputs") is False, "Atlas views cannot become model inputs")
@@ -124,7 +133,7 @@ def main() -> None:
     print(
         "ATLAS395_VALIDATION_OK "
         f"snapshot={snapshot.get('snapshot_id')} constituencies=92 seats=395 "
-        f"daily={args.require_daily} source_policy={policy.get('policy_id')} read_only=true"
+        f"daily={args.require_daily} source_policy={policy.get('policy_id')} read_only=true public_methodology=true"
     )
 
 
