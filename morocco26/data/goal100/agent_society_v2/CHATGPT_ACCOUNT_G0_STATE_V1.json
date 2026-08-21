@@ -1,10 +1,10 @@
 {
-  "schema_version": "ATLAS_CHATGPT_ACCOUNT_G0_STATE_V3_SOL_MAIN_BRIDGE_DELIBERATION_OBSERVATORY",
+  "schema_version": "ATLAS_CHATGPT_ACCOUNT_G0_STATE_V4_SOL_MAIN_BRIDGE_EQUIVALENCE_DELIBERATION_OBSERVATORY",
   "experiment_id": "M26-AGENT-SOCIETY-V2-001",
   "public_experiment_id": "EXP_7C8A2F11",
   "public_environment_id": "ENV_4D19B3E7",
   "branch": "morocco26-agent-society-v2-front-vote-llm",
-  "status": "PRE_REGISTERED_SOL_MAIN_BRIDGE_DECISION_AND_DELIBERATION_OBSERVATORY_READY_OWNER_LOCAL_BRIDGE_BUILD_AND_RUN_REQUIRED",
+  "status": "PRE_REGISTERED_SOL_MAIN_BRIDGE_EQUIVALENCE_DECISION_AND_DELIBERATION_OBSERVATORY_READY_OWNER_LOCAL_BRIDGE_BUILD_AND_RUN_REQUIRED",
   "created_before_any_G0_output": true,
   "outcomes_opened": {"2016": false, "2021": false},
   "roles": {
@@ -15,18 +15,23 @@
     "R0_PUBLIC": "READER_BYO_LLM_REPLICATION_COHORT"
   },
   "main_bridge": {
-    "status": "IMPLEMENTED_MANDATORY_BEFORE_ANY_NEW_ENRICHED_G0_OUTPUT",
+    "status": "MANDATORY_EXACT_SHA_PROVENANCE_AND_SEMANTIC_EQUIVALENCE_GATE_BEFORE_G0",
     "bridge_id": "M26_AS_MAIN_BRIDGE_V1",
     "registered_main_commit_sha": "4df897c356d3f0c36832405c7fcfc7f8f0cd6de2",
     "state": "morocco26/data/goal100/agent_society_v2/MAIN_BRIDGE_STATE_V1.json",
     "protocol": "morocco26/frontends/agent_society_opus/source_v2/main_bridge/MAIN_TO_AGENT_SOCIETY_BRIDGE_PROTOCOL_V1.json",
     "builder": "morocco26/scripts/agent_society_v2_main_bridge.py",
     "documentation": "morocco26/frontends/agent_society_opus/source_v2/main_bridge/README.md",
-    "candidate_layer": "MAIN_E_REASON_BLINDED_PRE_CUTOFF_EVIDENCE_WITH_EXPLICIT_MISSINGNESS_CONFLICTS_SOURCE_CLASS_AND_SOURCE_RECORD_IDS",
-    "programme_layer": "EXISTING_FROZEN_ANONYMOUS_PROGRAMME_PRIORITY_CARDS_PRESERVED",
+    "candidate_layer": "PROVENANCE_BOUND_TO_MAIN_E_REASON_BLINDED_PRE_CUTOFF_EVIDENCE",
+    "programme_layer": "EXISTING_FROZEN_ANONYMOUS_PROGRAMME_PRIORITY_CARDS_VERIFIED_AND_PRESERVED",
     "complete_historical_manifesto_corpus_registered_in_v1": false,
+    "semantic_equivalence_required": true,
+    "model_semantic_delta_v1": false,
+    "model_packet_modified_by_bridge_v1": false,
+    "duplicate_candidate_or_programme_evidence_added_to_model": false,
+    "semantic_delta_rule": "FAIL_CLOSED_AND_REQUIRE_NEW_PREREGISTERED_BRIDGE_VERSION",
     "target_outcomes_read": false,
-    "real_candidate_party_territory_or_year_labels_in_model_overlay": false,
+    "real_candidate_party_territory_or_year_labels_in_model_context": false,
     "party_namespace_reconciliation": "BLIND_BASELINE_SIGNATURE_BIJECTION_ONLY",
     "floating_main_reads_allowed": false,
     "original_full_environment_mutated": false,
@@ -47,6 +52,7 @@
     "protocol": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V3_MAIN_BRIDGE.json",
     "freeze_manifest": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/FREEZE_MANIFEST.json",
     "main_bridge_required": true,
+    "frozen_full_environment_zip_sha256": "e8acad28dea5a531c21171db570b60d612993edd91db8f893e58c187c226696a",
     "terminal_required": "PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING"
   },
   "deliberation_observatory": {
@@ -77,6 +83,7 @@
     "D0_rows": 1024,
     "D0_calls": 32,
     "D0_main_bridge_required": true,
+    "D0_main_bridge_semantic_equivalence_required": true,
     "L0_scope": "ALL_1024_ROWS",
     "L0_calls": 32,
     "counterfactual_core_optional_after_L0": true,
@@ -85,8 +92,9 @@
     "maximum_default_counterfactual_calls": 160,
     "sequencing": [
       "build and validate the exact-SHA main bridge overlay locally without opening outcomes",
-      "dry-run 32 enriched G0 Sol work items and verify bridge provenance",
-      "run 32 D0 Sol contexts with the frozen bridge",
+      "require PASS_SEMANTIC_EQUIVALENCE_ONLY; any semantic delta stops V1",
+      "dry-run 32 G0 Sol work items and verify bridge provenance plus frozen ZIP hash",
+      "run 32 D0 Sol contexts using the original frozen model packets",
       "validate and freeze D0",
       "run 32 separate L0 high-reasoning contexts explaining all 1024 decisions",
       "inspect observatory report",
@@ -107,6 +115,6 @@
     "predictive_claim_before_blind_scoring": false,
     "social_lambda_calibration_unlocked_by_G0_generation_alone": false
   },
-  "next_required_owner_action": "On a trusted local clone containing main commit 4df897c356d3f0c36832405c7fcfc7f8f0cd6de2, build main_bridge_v1.json with agent_society_v2_main_bridge.py against the frozen full-environment ZIP; require PASS_MAIN_TO_AGENT_SOCIETY_BRIDGE_V1. Then, with Codex CLI authenticated through Sign in with ChatGPT, run run_g0_sol_main_bridge.py --main-bridge <that overlay> on exactly 32 work items. Never send or commit ~/.codex/auth.json.",
+  "next_required_owner_action": "On a trusted local clone containing main commit 4df897c356d3f0c36832405c7fcfc7f8f0cd6de2, build main_bridge_v1.json with agent_society_v2_main_bridge.py against the exact frozen full-environment ZIP; require PASS_MAIN_TO_AGENT_SOCIETY_BRIDGE_V1 and PASS_SEMANTIC_EQUIVALENCE_ONLY. Then, with Codex CLI authenticated through Sign in with ChatGPT, run run_g0_sol_main_bridge.py --main-bridge <that overlay> on exactly 32 work items. Never send or commit ~/.codex/auth.json.",
   "external_dependency": "The actual bridge overlay requires the owner's local full-environment ZIP and git object for the registered main SHA. ChatGPT/Codex usage limits may pause model phases. Rerun an identical command after reset; validated work items are skipped and no model thread is resumed."
 }
