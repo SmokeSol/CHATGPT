@@ -1,0 +1,141 @@
+{
+  "schema_version": "ATLAS_CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V3_SOL_MAIN_BRIDGE_AND_OBSERVATORY",
+  "status": "PRE_REGISTERED_BEFORE_ANY_G0_SOL_OUTPUT",
+  "supersedes_for_new_enriched_G0": "CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1.json",
+  "experiment_id": "EXP_7C8A2F11",
+  "environment_id": "ENV_4D19B3E7",
+  "purpose": "Generate the owner-account GPT-5.6 Sol voter baseline from the frozen full environment plus a reproducible exact-SHA anonymous political-context overlay sourced from main, while preserving E0 and preserving historical blinding.",
+  "baseline_roles": {
+    "E0_DETERMINISTIC": "retained immutable mechanics/control baseline; never relabeled as LLM output",
+    "G0_CHATGPT_GPT56_SOL_MAIN_BRIDGE_V1": "candidate primary isolated GPT baseline using the frozen full environment plus M26_AS_MAIN_BRIDGE_V1",
+    "R0_PUBLIC_BYO_LLM": "independent reader-contributed replication cohort"
+  },
+  "execution": {
+    "canonical_entry_point": "run_g0_sol_main_bridge.py",
+    "legacy_unenriched_entry_point_retained": "run_g0_sol.py",
+    "generic_runner": "run_chatgpt_baseline.py",
+    "api_key_allowed": false,
+    "auth": "CHATGPT_MANAGED_CODEX_LOGIN",
+    "codex_mode": "codex exec --ephemeral",
+    "concurrency_default": 1,
+    "concurrency_max_protocol": 4,
+    "fresh_context_per_work_item": true,
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "resume_semantics": "rerun identical command; validated work items are skipped; Codex threads are never resumed",
+    "rows_expected": 94208,
+    "rows_per_work_item": 32,
+    "trusted_local_machine_required": true,
+    "work_items_expected": 2944
+  },
+  "main_bridge": {
+    "bridge_id": "M26_AS_MAIN_BRIDGE_V1",
+    "registered_main_commit_sha": "4df897c356d3f0c36832405c7fcfc7f8f0cd6de2",
+    "builder": "../../../../scripts/agent_society_v2_main_bridge.py",
+    "protocol": "../main_bridge/MAIN_TO_AGENT_SOCIETY_BRIDGE_PROTOCOL_V1.json",
+    "bridge_required_for_this_G0": true,
+    "floating_ref_reads": false,
+    "original_environment_mutated": false,
+    "overlay_items_expected": 184,
+    "candidate_layer": "already-blinded pre-cutoff E_reason candidate/event evidence from exact main SHA, with explicit missingness/conflicts/source provenance",
+    "programme_layer": "existing frozen anonymous programme-priority cards are preserved in V1; a separate complete historical manifesto corpus is not claimed",
+    "candidate_feature_overlap_with_original_environment_allowed": true,
+    "overlap_interpretation": "If main reproduces a feature already present in the frozen environment, the bridge establishes exact upstream provenance but must not count the duplicate as additional independent evidence.",
+    "future_delta_rule": "A later main SHA or richer manifesto/candidate representation requires a reviewed new bridge snapshot/protocol before any affected G0 output is generated."
+  },
+  "information_boundary": {
+    "2016_unsealed": false,
+    "2021_unsealed": false,
+    "apps_connectors": false,
+    "history": false,
+    "input": "only the frozen scientific prompt, row schema, one frozen work item, and the corresponding frozen M26_AS_MAIN_BRIDGE_V1 anonymous overlay item",
+    "mapping_material_in_model_context": false,
+    "mcp": false,
+    "memory": false,
+    "multi_agent": false,
+    "outside_information": false,
+    "project_rules": "ignored",
+    "real_candidate_names": false,
+    "real_party_names": false,
+    "real_territory_names": false,
+    "real_election_years": false,
+    "sandbox": "read-only empty working directory",
+    "shell_tool": false,
+    "target_outcomes": false,
+    "user_config": "ignored",
+    "web_search": "disabled"
+  },
+  "decision_freeze": {
+    "frozen_before_first_output": true,
+    "model_change_after_first_valid_output": false,
+    "main_bridge_change_after_first_valid_output": false,
+    "main_commit_change_after_first_valid_output": false,
+    "outcome_access_before_completion": false,
+    "prompt_or_schema_change_after_first_valid_output": false,
+    "explanation_generated_only_after_D0": true,
+    "L0_feedback_into_D0": false
+  },
+  "output_transport": {
+    "factor_simplex_tolerance": 1e-09,
+    "party_simplex_tolerance": 1e-09,
+    "scientific_row_schema": "read verbatim from the frozen environment",
+    "stored_corpus_format": "JSONL in original archetype order",
+    "wrapper": {"rows": "exactly 32 row objects"},
+    "wrapper_is_transport_only": true
+  },
+  "retry": {
+    "automatic_retry_only_for_schema_invalid_output": true,
+    "identical_model_context_on_retry": true,
+    "maximum_attempts": 2,
+    "semantic_feedback": false,
+    "transport_or_execution_contract_failure_retry": false
+  },
+  "startup_gate": {
+    "D0_work_items": 32,
+    "D0_rows": 1024,
+    "main_bridge_required": true,
+    "review_before_scaling": true,
+    "L0_after_D0": true,
+    "counterfactuals_only_after_L0_review": true
+  },
+  "three_pass_observatory": {
+    "protocol": "DELIBERATION_OBSERVATORY_PROTOCOL_V1.json",
+    "D0_DECISION": {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "role": "freeze turnout and party probabilities before narrative explanation"
+    },
+    "L0_OBSERVABLE_DELIBERATION": {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "high",
+      "role": "fresh-context structured explanation of immutable D0 tied to a closed evidence catalogue",
+      "private_chain_of_thought_requested": false
+    },
+    "CF_BEHAVIOURAL_ABLATIONS": {
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "role": "fresh-context reruns of preregistered packet perturbations plus a non-political placebo"
+    }
+  },
+  "promotion_gate": [
+    "exactly 2944 validated fresh D0 contexts",
+    "exactly 94208 validated D0 rows",
+    "one frozen Sol model and reasoning effort for every D0 work item",
+    "one frozen M26_AS_MAIN_BRIDGE_V1 overlay generated from the registered exact main SHA",
+    "bridge PASS status and leak scan PASS",
+    "bridge file SHA and per-item SHA folded into every work-item source provenance",
+    "ChatGPT-managed auth and no API key",
+    "zero web/search/tool/MCP/shell/computer-use events",
+    "all identities, row order, party keys, factor keys and simplexes valid",
+    "complete per-work-item output hashes and usage logs",
+    "terminal state PASS_CHATGPT_ACCOUNT_BASELINE_FROZEN_READY_FOR_SCORING"
+  ],
+  "frontend_policy": {
+    "before_G0_promotion": "continue labeling public numbers as E0 deterministic reference",
+    "after_G0_promotion": "G0 becomes primary displayed simulation; E0 remains available as deterministic control",
+    "before_deliberation_promotion": "show method without invented explanations",
+    "after_deliberation_promotion": "show structured explanations and separately labelled counterfactual diagnostics",
+    "never_claim": "that G0, bridge evidence, or a fluent explanation is empirically true before blind historical scoring",
+    "social_lambdas": "remain illustrative until separate 2016 calibration and 2021 holdout"
+  }
+}
