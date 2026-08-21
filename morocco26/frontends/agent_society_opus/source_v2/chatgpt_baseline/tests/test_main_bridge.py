@@ -5,6 +5,23 @@ import sys
 import tempfile
 import unittest
 
+
+import os
+import shutil
+import uuid
+import contextlib
+
+
+@contextlib.contextmanager
+def plain_temp_dir():
+    base = os.environ.get("TEMP") or os.environ.get("TMP") or "."
+    path = os.path.join(base, "test_" + uuid.uuid4().hex)
+    os.mkdir(path)
+    try:
+        yield path
+    finally:
+        shutil.rmtree(path, ignore_errors=True)
+
 HERE = pathlib.Path(__file__).resolve().parents[1]
 SCRIPTS = HERE.parents[3] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
@@ -171,7 +188,7 @@ class MainBridgeTests(unittest.TestCase):
             "item_count": launcher.EXPECTED_BRIDGE_ITEMS,
             "items": {f"E|T{i}": {} for i in range(launcher.EXPECTED_BRIDGE_ITEMS)},
         }
-        with tempfile.TemporaryDirectory() as tmp:
+        with plain_temp_dir() as tmp:
             path = pathlib.Path(tmp) / "bridge.json"
             path.write_text(json.dumps(bad), encoding="utf-8")
             with self.assertRaises(Exception):
@@ -191,7 +208,7 @@ class MainBridgeTests(unittest.TestCase):
             "item_count": launcher.EXPECTED_BRIDGE_ITEMS,
             "items": {f"E|T{i}": {} for i in range(launcher.EXPECTED_BRIDGE_ITEMS)},
         }
-        with tempfile.TemporaryDirectory() as tmp:
+        with plain_temp_dir() as tmp:
             path = pathlib.Path(tmp) / "bridge.json"
             path.write_text(json.dumps(bad), encoding="utf-8")
             with self.assertRaises(Exception):

@@ -5,6 +5,23 @@ import sys
 import tempfile
 import unittest
 
+
+import os
+import shutil
+import uuid
+import contextlib
+
+
+@contextlib.contextmanager
+def plain_temp_dir():
+    base = os.environ.get("TEMP") or os.environ.get("TMP") or "."
+    path = os.path.join(base, "test_" + uuid.uuid4().hex)
+    os.mkdir(path)
+    try:
+        yield path
+    finally:
+        shutil.rmtree(path, ignore_errors=True)
+
 HERE = pathlib.Path(__file__).resolve()
 MODULE = HERE.parents[1] / "run_chatgpt_baseline.py"
 SPEC = importlib.util.spec_from_file_location("atlas_chatgpt_runner", MODULE)
@@ -128,7 +145,7 @@ class RunnerContractTests(unittest.TestCase):
             R.validate_rows({"rows": value}, task(), schema())
 
     def test_packet_discovery(self):
-        with tempfile.TemporaryDirectory() as tmp:
+        with plain_temp_dir() as tmp:
             root = pathlib.Path(tmp)
             path = root / "packets" / "E_X" / "C_ABCDEF12" / "T_X"
             path.mkdir(parents=True)
@@ -141,7 +158,7 @@ class RunnerContractTests(unittest.TestCase):
             self.assertEqual(len(discovered[0].expected_rows), 32)
 
     def test_cli_dry_run_creates_a_resumable_preflight_without_codex(self):
-        with tempfile.TemporaryDirectory() as tmp:
+        with plain_temp_dir() as tmp:
             root = pathlib.Path(tmp) / "bundle"
             output = pathlib.Path(tmp) / "output"
             packet_dir = root / "packets" / "E_X" / "C_ABCDEF12" / "T_X"

@@ -189,12 +189,12 @@ def build_overlay(
                     "cards": cc,
                     "real_names_present": False,
                     "missingness_is_information": False,
-                    "model_semantic_delta_v1": false,
+                    "model_semantic_delta_v1": False,
                 },
                 "programme_offer": {
                     "status": "PRESERVED_EXISTING_FROZEN_ENVIRONMENT_LAYER",
                     "cards": pc,
-                    "model_semantic_delta_v1": false,
+                    "model_semantic_delta_v1": False,
                     "main_bridge_v1_note": (
                         "Bridge V1 found no separately registered canonical full-manifesto corpus on main; "
                         "it preserves the already-frozen anonymous programme-priority cards and does not fabricate detail."

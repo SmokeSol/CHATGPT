@@ -5,6 +5,7 @@ import shutil
 import sys
 import tempfile
 import unittest
+import uuid
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -66,7 +67,9 @@ def _payloads(fresh, status):
 
 class BaselineProvenanceGateTests(unittest.TestCase):
     def setUp(self):
-        self.root = tempfile.mkdtemp(prefix="atlas_baseline_gate_")
+        base = os.environ.get("TEMP") or os.environ.get("TMP") or "."
+        self.root = os.path.join(base, "atlas_baseline_gate_" + uuid.uuid4().hex)
+        os.mkdir(self.root)
         os.makedirs(os.path.join(self.root, "outputs"))
 
     def tearDown(self):
