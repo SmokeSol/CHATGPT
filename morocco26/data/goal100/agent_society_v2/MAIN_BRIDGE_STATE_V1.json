@@ -1,13 +1,13 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "state_id": "M26-AS-MAIN-BRIDGE-STATE-V1",
-  "status": "PROTOCOL_FROZEN_READY_FOR_LOCAL_EXACT_SHA_OVERLAY_BUILD_BEFORE_FIRST_G0_SOL_OUTPUT",
+  "status": "PROTOCOL_FROZEN_READY_FOR_LOCAL_EXACT_SHA_EQUIVALENCE_BUILD_BEFORE_FIRST_G0_SOL_OUTPUT",
   "registered_main_commit_sha": "4df897c356d3f0c36832405c7fcfc7f8f0cd6de2",
   "bridge_protocol": "M26_AS_MAIN_BRIDGE_V1",
   "bridge_protocol_path": "morocco26/frontends/agent_society_opus/source_v2/main_bridge/MAIN_TO_AGENT_SOCIETY_BRIDGE_PROTOCOL_V1.json",
   "g0_protocol_path": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V3_MAIN_BRIDGE.json",
   "g0_freeze_manifest_path": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/FREEZE_MANIFEST.json",
-  "historical_candidate_layer": "CONNECTED_FROM_MAIN_BLINDED_PRE_CUTOFF_E_REASON_EVIDENCE",
+  "historical_candidate_layer": "PROVENANCE_BOUND_TO_MAIN_BLINDED_PRE_CUTOFF_E_REASON_EVIDENCE",
   "historical_source_allowlist": [
     "morocco26/data/goal100/e_reason/blind/development/blind_bundle.json",
     "morocco26/data/goal100/e_reason/blind/holdout/blind_bundle.json",
@@ -19,10 +19,15 @@
     "morocco26/data/goal100/e_collect/candidate_intelligence_v3/**"
   ],
   "programme_layer": "EXISTING_FROZEN_ANONYMOUS_PRIORITY_CARDS_PRESERVED; FULL_MAIN_MANIFESTO_CORPUS_NOT_REGISTERED_IN_V1",
+  "semantic_equivalence_required": true,
+  "model_semantic_delta_v1": false,
+  "model_packet_modified_by_bridge_v1": false,
+  "duplicate_candidate_or_programme_evidence_added_to_model": false,
   "candidate_overlap_policy": "A feature already present in the frozen full environment is provenance confirmation, not a second independent signal.",
+  "semantic_delta_policy": "ANY_NEW_OR_CHANGED_DIRECTIONAL_CANDIDATE_OR_PROGRAMME_FIELD_FAILS_BRIDGE_V1_AND_REQUIRES_A_NEW_PREREGISTERED_BRIDGE_VERSION",
   "target_outcomes_opened": false,
   "real_identity_material_in_public_overlay": false,
   "g0_sol_outputs_generated_after_bridge": false,
   "overlay_expected_items": 184,
-  "required_next_gate": "BUILD_OVERLAY_LOCALLY_AND_REQUIRE_PASS_MAIN_TO_AGENT_SOCIETY_BRIDGE_V1_BEFORE_ANY_ENRICHED_G0_SOL_CALL"
+  "required_next_gate": "BUILD_OVERLAY_LOCALLY_AND_REQUIRE_PASS_MAIN_TO_AGENT_SOCIETY_BRIDGE_V1_WITH_PASS_SEMANTIC_EQUIVALENCE_ONLY_BEFORE_ANY_G0_SOL_CALL"
 }
