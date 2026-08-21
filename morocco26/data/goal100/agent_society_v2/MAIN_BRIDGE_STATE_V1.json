@@ -1,13 +1,28 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "state_id": "M26-AS-MAIN-BRIDGE-STATE-V1",
-  "status": "IMPLEMENTED_AWAITING_LOCAL_EXACT_SHA_OVERLAY_BUILD_BEFORE_FIRST_G0_SOL_OUTPUT",
+  "status": "PROTOCOL_FROZEN_READY_FOR_LOCAL_EXACT_SHA_OVERLAY_BUILD_BEFORE_FIRST_G0_SOL_OUTPUT",
   "registered_main_commit_sha": "4df897c356d3f0c36832405c7fcfc7f8f0cd6de2",
   "bridge_protocol": "M26_AS_MAIN_BRIDGE_V1",
-  "historical_candidate_layer": "CONNECTED_FROM_MAIN_BLINDED_PRE_CUTOFF_EVIDENCE",
+  "bridge_protocol_path": "morocco26/frontends/agent_society_opus/source_v2/main_bridge/MAIN_TO_AGENT_SOCIETY_BRIDGE_PROTOCOL_V1.json",
+  "g0_protocol_path": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V3_MAIN_BRIDGE.json",
+  "g0_freeze_manifest_path": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/FREEZE_MANIFEST.json",
+  "historical_candidate_layer": "CONNECTED_FROM_MAIN_BLINDED_PRE_CUTOFF_E_REASON_EVIDENCE",
+  "historical_source_allowlist": [
+    "morocco26/data/goal100/e_reason/blind/development/blind_bundle.json",
+    "morocco26/data/goal100/e_reason/blind/holdout/blind_bundle.json",
+    "morocco26/data/goal100/e_reason/e_reason_historical_cutoffs_v1.json",
+    "morocco26/data/goal100/e_reason/e_reason_information_set_v1.json",
+    "morocco26/data/goal100/e_reason/e_reason_leakage_control_v1.json"
+  ],
+  "post_outcome_candidate_layers_excluded_from_blind_G0": [
+    "morocco26/data/goal100/e_collect/candidate_intelligence_v3/**"
+  ],
   "programme_layer": "EXISTING_FROZEN_ANONYMOUS_PRIORITY_CARDS_PRESERVED; FULL_MAIN_MANIFESTO_CORPUS_NOT_REGISTERED_IN_V1",
+  "candidate_overlap_policy": "A feature already present in the frozen full environment is provenance confirmation, not a second independent signal.",
   "target_outcomes_opened": false,
   "real_identity_material_in_public_overlay": false,
   "g0_sol_outputs_generated_after_bridge": false,
+  "overlay_expected_items": 184,
   "required_next_gate": "BUILD_OVERLAY_LOCALLY_AND_REQUIRE_PASS_MAIN_TO_AGENT_SOCIETY_BRIDGE_V1_BEFORE_ANY_ENRICHED_G0_SOL_CALL"
 }
