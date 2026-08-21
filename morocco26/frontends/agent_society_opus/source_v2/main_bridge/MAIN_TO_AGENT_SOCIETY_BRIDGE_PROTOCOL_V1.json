@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "bridge_id": "M26_AS_MAIN_BRIDGE_V1",
   "status": "PREREGISTERED_IMPLEMENTATION_READY_NO_G0_OUTPUT_YET",
-  "purpose": "Connect canonical electoral intelligence on main to the frozen Agent Society environment without exposing real historical identities or target outcomes to the LLM judge.",
+  "purpose": "Cryptographically connect canonical pre-cutoff electoral intelligence on main to the frozen Agent Society environment without exposing real historical identities, outcomes, or duplicate political evidence to the LLM judge.",
   "registered_upstream": {
     "repository": "SmokeSol/Elections26",
     "ref_policy": "EXACT_COMMIT_SHA_ONLY",
@@ -13,14 +13,16 @@
     "holdout": "morocco26/data/goal100/e_reason/blind/holdout/blind_bundle.json",
     "cutoffs": "morocco26/data/goal100/e_reason/e_reason_historical_cutoffs_v1.json",
     "information_set": "morocco26/data/goal100/e_reason/e_reason_information_set_v1.json",
-    "leakage_control": "morocco26/data/goal100/e_reason/e_reason_leakage_control_v1.json"
+    "leakage_control": "morocco26/data/goal100/e_reason/e_reason_leakage_control_v1.json",
+    "source_allowlist_only": true,
+    "post_outcome_candidate_intelligence_v3_allowed": false
   },
   "identity_policy": {
     "real_candidate_names_in_model_context": false,
     "real_party_names_in_model_context": false,
     "real_territory_names_in_model_context": false,
     "real_election_year_in_model_context": false,
-    "candidate_ids": "DETERMINISTIC_OPAQUE_IDS_FROM_ALREADY_ANONYMOUS_ELECTION_TERRITORY_PARTY_IDS",
+    "candidate_ids_in_audit_overlay_only": "DETERMINISTIC_OPAQUE_IDS_FROM_ALREADY_ANONYMOUS_ELECTION_TERRITORY_PARTY_IDS",
     "party_namespace_reconciliation": "BLIND_BASELINE_SIGNATURE_BIJECTION_ONLY",
     "real_identity_information_used_for_party_reconciliation": false
   },
@@ -32,17 +34,34 @@
   },
   "candidate_layer": {
     "source": "MAIN_E_REASON_BLINDED_PRE_CUTOFF_EVIDENCE",
-    "preserve_missingness": true,
-    "preserve_conflicts": true,
-    "preserve_source_class": true,
-    "preserve_source_record_ids": true,
-    "imputation": false
+    "preserve_missingness_in_audit_overlay": true,
+    "preserve_conflicts_in_audit_overlay": true,
+    "preserve_source_class_in_audit_overlay": true,
+    "preserve_source_record_ids_in_audit_overlay": true,
+    "imputation": false,
+    "semantic_policy_v1": "REQUIRE_EXACT_EQUIVALENCE_TO_NON_META_CANDIDATE_FEATURES_ALREADY_IN_FROZEN_ENVIRONMENT",
+    "meta_features_not_treated_as_new_model_evidence": [
+      "BALLOT_LIST_PRESENT",
+      "EVIDENCE_COUNT",
+      "SOURCE_CLASS_MAX",
+      "SOURCE_CONFLICT"
+    ],
+    "semantic_delta_allowed_v1": false
   },
   "programme_layer": {
-    "v1_behavior": "PRESERVE_EXISTING_FROZEN_ANONYMOUS_PROGRAMME_PRIORITY_CARDS",
+    "v1_behavior": "REQUIRE_AND_PRESERVE_EXISTING_FROZEN_ANONYMOUS_PROGRAMME_PRIORITY_CARDS",
     "main_full_manifesto_corpus": "NOT_REGISTERED_IN_V1",
     "fabricate_missing_manifesto_detail": false,
+    "semantic_delta_allowed_v1": false,
     "future_extension_rule": "A separately audited pre-cutoff anonymized manifesto source requires a new bridge protocol version before affected G0 outputs are generated."
+  },
+  "semantic_equivalence_gate": {
+    "required": true,
+    "candidate_non_meta_feature_sets_identical": true,
+    "candidate_status_value_conflict_identical": true,
+    "programme_cards_identical": true,
+    "on_any_directional_delta": "FAIL_CLOSED_REQUIRE_NEW_BRIDGE_PROTOCOL",
+    "duplicate_model_visible_evidence": false
   },
   "runtime": {
     "launcher": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_g0_sol_main_bridge.py",
@@ -50,8 +69,11 @@
     "reasoning_effort": "medium",
     "bridge_mandatory": true,
     "original_frozen_environment_mutated": false,
-    "bridge_item_injected_before_context_hash": true,
-    "bridge_hash_folded_into_task_source_hash": true
+    "bridge_overlay_injected_into_model_packet": false,
+    "original_model_packet_remains_semantically_unchanged": true,
+    "bridge_hash_folded_into_task_source_hash": true,
+    "registered_main_sha_enforced_by_launcher": true,
+    "exact_full_environment_zip_hash_enforced_by_launcher": true
   },
-  "promotion_rule": "No enriched G0 result may be promoted unless bridge status, main SHA, overlay hash, packet context hashes and leak scan are present in run provenance."
+  "promotion_rule": "No G0 result may be promoted unless bridge status, exact registered main SHA, overlay hash, semantic-equivalence PASS, packet context hashes and leak scan are present in run provenance."
 }
