@@ -11,8 +11,9 @@ function editionDateFr(value){
 }
 async function boot(){
   try{
+    const methodologyPromise=load('public_methodology.json').catch(()=>load('methodology_state.json'));
     const [snapshot,national,constituencies,parties,evidence,methodology,daily,editionCurrent,editionIndex]=await Promise.all([
-      load('current_snapshot.json'),load('national_projection.json'),load('constituency_cards.json'),load('party_cards.json'),load('evidence_index.json'),load('public_methodology.json'),
+      load('current_snapshot.json'),load('national_projection.json'),load('constituency_cards.json'),load('party_cards.json'),load('evidence_index.json'),methodologyPromise,
       atlasOptional(atlasDataBase(),'daily_update.json'),atlasOptional(atlasEditionBase(),'current.json'),atlasOptional(atlasEditionBase(),'index.json')
     ]);
     D={snapshot,national,constituencies,parties,evidence,methodology,daily,editionCurrent,editionIndex};
