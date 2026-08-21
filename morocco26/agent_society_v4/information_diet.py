@@ -18,7 +18,18 @@ def _unit(value: Any, default: float = 0.5) -> float:
 
 
 def derive_profile(cell: Mapping[str, Any]) -> dict[str, Any]:
-    discussion=_unit(cell.get("political_discussion") or cell.get("latent_attitude_political_discussion_mean"),.35); education=str(cell.get("education_level") or "").upper(); e={"NONE":.1,"PRIMARY":.3,"SECONDARY":.55,"HIGH_SCHOOL":.65,"TERTIARY":.9,"SUPERIEUR":.9,"SUPÉRIEUR":.9}.get(education,.5); localism=_unit(cell.get("localism") or cell.get("latent_attitude_local_responsiveness_mean"),.5); digital=_unit(cell.get("digital_news_exposure"),.4); attention=max(0,min(1,.45*discussion+.30*e+.15*digital+.10*localism)); tier="LOW" if attention<.34 else "MEDIUM" if attention<.68 else "HIGH"; return {"attention":attention,"tier":tier,"localism":localism,"program_literacy":max(0,min(1,.55*e+.45*discussion)),"social_reliance":max(0,min(1,.75-.35*attention+.15*localism))}
+    discussion_raw=cell.get("political_discussion")
+    if discussion_raw is None: discussion_raw=cell.get("latent_attitude_political_discussion_mean")
+    discussion=_unit(discussion_raw,.35)
+    education=str(cell.get("education_level") or "").upper()
+    e={"NONE":.1,"PRIMARY":.3,"SECONDARY":.55,"HIGH_SCHOOL":.65,"TERTIARY":.9,"SUPERIEUR":.9,"SUPÉRIEUR":.9}.get(education,.5)
+    localism_raw=cell.get("localism")
+    if localism_raw is None: localism_raw=cell.get("latent_attitude_local_responsiveness_mean")
+    localism=_unit(localism_raw,.5)
+    digital=_unit(cell.get("digital_news_exposure"),.4)
+    attention=max(0,min(1,.45*discussion+.30*e+.15*digital+.10*localism))
+    tier="LOW" if attention<.34 else "MEDIUM" if attention<.68 else "HIGH"
+    return {"attention":attention,"tier":tier,"localism":localism,"program_literacy":max(0,min(1,.55*e+.45*discussion)),"social_reliance":max(0,min(1,.75-.35*attention+.15*localism))}
 
 
 def _fraction(*parts: Any) -> float:

@@ -5,6 +5,23 @@ import subprocess
 import tempfile
 import unittest
 
+
+import os
+import shutil
+import uuid
+import contextlib
+
+
+@contextlib.contextmanager
+def plain_temp_dir():
+    base = os.environ.get("TEMP") or os.environ.get("TMP") or "."
+    path = os.path.join(base, "test_" + uuid.uuid4().hex)
+    os.mkdir(path)
+    try:
+        yield path
+    finally:
+        shutil.rmtree(path, ignore_errors=True)
+
 from morocco26.agent_society_v4.calibration import CalibrationError, fit_2016, score_2021
 from morocco26.agent_society_v4.contracts import CandidateRecord, CandidateState, BallotType, LambdaCalibration
 from morocco26.agent_society_v4.electorate import calibrate_to_registered_totals
@@ -23,7 +40,7 @@ def source(date='2026-08-20'):
     return {'source_id':'S1','tier':'T1','known_at':date}
 
 def option(party,name,state='OFFICIAL',candidate='Candidate'):
-    return {'party_id':party,'party_name':name,'candidate':{'status':state,'candidate_name':candidate if state not in {'UNKNOWN','NO_LIST'} else None,'known_at':'2026-08-20' if state not in {'UNKNOWN','NO_LIST'} else None,'sources':[source()] if state not in {'UNKNOWN'} else [],'attributes':{},'unknown_reason':'NOT_VERIFIED' if state=='UNKNOWN' else None},'program_axes':{'employment':'HIGH','health':'MEDIUM','governance':'HIGH'}}
+    return {'party_id':party,'party_name':name,'candidate':{'status':state,'candidate_name':candidate if state not in {'UNKNOWN','NO_LIST'} else None,'known_at':'2026-08-20' if state not in {'UNKNOWN','NO_LIST'} else None,'sources':[source()] if state not in {'UNKNOWN'} else [],'attributes':{},'unknown_reason':'NOT_VERIFIED' if state=='UNKNOWN' else None},'program_axes':{'employment':'HIGH','health':'MEDIUM','governance':'HIGH'},'program_sources':[source()] if state != 'NO_LIST' else []}
 
 def spec(as_of='2026-08-21'):
     return {'snapshot_id':'S2026','as_of':as_of,'source_main_commit':SHA,'territories':[{'territory_id':'T1','territory_name':'Territory One','region_id':'R1','region_name':'Region One','registered_electorate':1000,'ballots':{'LOCAL':{'contest_id':'L1','options':[option('P1','Party 1'),option('P2','Party 2','UNKNOWN',None)]},'REGIONAL':{'contest_id':'R1','options':[option('P1','Party 1'),option('P2','Party 2')]}}}]}
@@ -44,7 +61,7 @@ class VintageTests(unittest.TestCase):
 
 class DietAndSocialTests(unittest.TestCase):
     def test_diet_retains_all_ballot_options(self):
-        snap=build_named_vintage(spec()); cell={'cell_id':'C1','political_discussion':0.05,'education_level':'PRIMARY','localism':0.2}; diet=build_information_diet(cell,snap['territories'][0]['ballots']['LOCAL'],snapshot_id=snap['snapshot_id']); self.assertTrue(diet['all_registered_options_retained']); self.assertEqual(len(diet['options']),2); self.assertFalse(diet['omniscient'])
+        snap=build_named_vintage(spec()); cell={'cell_id':'C1','political_discussion':0.05,'education_level':'PRIMARY','localism':0.2}; diet=build_information_diet(cell,snap['territories'][0]['ballots']['LOCAL'],snapshot_id=snap['snapshot_id']); self.assertTrue(diet['all_selectable_options_retained']); self.assertEqual(len(diet['options']),2); self.assertFalse(diet['omniscient'])
     def test_information_profiles_differ(self):
         low=derive_profile({'political_discussion':0,'education_level':'PRIMARY'}); high=derive_profile({'political_discussion':1,'education_level':'TERTIARY'}); self.assertEqual(low['tier'],'LOW'); self.assertEqual(high['tier'],'HIGH')
     def test_social_layer_cannot_edit_vote_probabilities(self):
@@ -81,7 +98,7 @@ class HistoricalTests(unittest.TestCase):
 
 class MainAdapterTests(unittest.TestCase):
     def test_reader_is_commit_pinned_and_filters_future_rows(self):
-        with tempfile.TemporaryDirectory() as tmp:
+        with plain_temp_dir() as tmp:
             root=pathlib.Path(tmp); subprocess.run(['git','init','-q',str(root)],check=True); subprocess.run(['git','-C',str(root),'config','user.email','a@b.c'],check=True); subprocess.run(['git','-C',str(root),'config','user.name','T'],check=True); p=root/'morocco26/data/candidate_ledger.json'; p.parent.mkdir(parents=True); p.write_text('[{"territory_id":"T1","party":"P1","candidate_name":"A","status":"OFFICIAL","source_date":"2026-08-20"},{"territory_id":"T1","party":"P2","candidate_name":"B","status":"OFFICIAL","source_date":"2026-08-25"}]'); subprocess.run(['git','-C',str(root),'add','.'],check=True); subprocess.run(['git','-C',str(root),'commit','-qm','x'],check=True); reader=GitSnapshotReader(root,'HEAD'); self.assertEqual(len(reader.commit_sha),40); rows,_=candidate_records(reader,as_of='2026-08-21'); self.assertEqual([r.party_id for r in rows],['P1']); self.assertFalse(source_inventory(reader)['floating_reads'])
 
 class SeatTests(unittest.TestCase):

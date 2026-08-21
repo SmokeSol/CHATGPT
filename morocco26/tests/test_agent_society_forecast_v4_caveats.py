@@ -1,6 +1,23 @@
 from __future__ import annotations
 import pathlib,subprocess,tempfile,unittest
 from morocco26.agent_society_v4.vintage import build_named_vintage,VintageError
+
+
+import os
+import shutil
+import uuid
+import contextlib
+
+
+@contextlib.contextmanager
+def plain_temp_dir():
+    base = os.environ.get("TEMP") or os.environ.get("TMP") or "."
+    path = os.path.join(base, "test_" + uuid.uuid4().hex)
+    os.mkdir(path)
+    try:
+        yield path
+    finally:
+        shutil.rmtree(path, ignore_errors=True)
 from morocco26.agent_society_v4.information_diet import build_information_diet
 from morocco26.agent_society_v4.main_adapter import GitSnapshotReader,program_records,territory_records
 
@@ -13,6 +30,6 @@ class CaveatTests(unittest.TestCase):
         value=spec(); value['territories'][0]['ballots']['LOCAL']['options'][0]['program_sources']=[]
         with self.assertRaises(VintageError): build_named_vintage(value)
     def test_program_and_territory_adapters_are_pinned(self):
-        with tempfile.TemporaryDirectory() as tmp:
+        with plain_temp_dir() as tmp:
             root=pathlib.Path(tmp); subprocess.run(['git','init','-q',str(root)],check=True); subprocess.run(['git','-C',str(root),'config','user.email','a@b.c'],check=True); subprocess.run(['git','-C',str(root),'config','user.name','T'],check=True); d=root/'morocco26/data'; d.mkdir(parents=True); (d/'party_program.json').write_text('[{"party":"P1","axes":{"employment":"HIGH"},"as_of":"2026-08-20"}]'); (d/'territory_crosswalk.json').write_text('[{"territory_id":"T1","territory_name":"One","region_id":"R1"}]'); subprocess.run(['git','-C',str(root),'add','.'],check=True); subprocess.run(['git','-C',str(root),'commit','-qm','x'],check=True); reader=GitSnapshotReader(root,'HEAD'); programs,_=program_records(reader,as_of='2026-08-21'); territories=territory_records(reader); self.assertEqual(programs[0]['party_id'],'P1'); self.assertEqual(territories[0]['territory_id'],'T1'); self.assertEqual(len(reader.commit_sha),40)
 if __name__=='__main__': unittest.main()
