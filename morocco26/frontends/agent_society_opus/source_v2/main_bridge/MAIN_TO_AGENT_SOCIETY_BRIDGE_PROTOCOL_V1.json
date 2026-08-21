@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "bridge_id": "M26_AS_MAIN_BRIDGE_V1",
+  "status": "PREREGISTERED_IMPLEMENTATION_READY_NO_G0_OUTPUT_YET",
+  "purpose": "Connect canonical electoral intelligence on main to the frozen Agent Society environment without exposing real historical identities or target outcomes to the LLM judge.",
+  "registered_upstream": {
+    "repository": "SmokeSol/Elections26",
+    "ref_policy": "EXACT_COMMIT_SHA_ONLY",
+    "main_commit_sha": "4df897c356d3f0c36832405c7fcfc7f8f0cd6de2"
+  },
+  "historical_sources": {
+    "development": "morocco26/data/goal100/e_reason/blind/development/blind_bundle.json",
+    "holdout": "morocco26/data/goal100/e_reason/blind/holdout/blind_bundle.json",
+    "cutoffs": "morocco26/data/goal100/e_reason/e_reason_historical_cutoffs_v1.json",
+    "information_set": "morocco26/data/goal100/e_reason/e_reason_information_set_v1.json",
+    "leakage_control": "morocco26/data/goal100/e_reason/e_reason_leakage_control_v1.json"
+  },
+  "identity_policy": {
+    "real_candidate_names_in_model_context": false,
+    "real_party_names_in_model_context": false,
+    "real_territory_names_in_model_context": false,
+    "real_election_year_in_model_context": false,
+    "candidate_ids": "DETERMINISTIC_OPAQUE_IDS_FROM_ALREADY_ANONYMOUS_ELECTION_TERRITORY_PARTY_IDS",
+    "party_namespace_reconciliation": "BLIND_BASELINE_SIGNATURE_BIJECTION_ONLY",
+    "real_identity_information_used_for_party_reconciliation": false
+  },
+  "outcome_policy": {
+    "target_outcomes_read": false,
+    "development_outcome_opened_by_bridge": false,
+    "holdout_outcome_opened_by_bridge": false,
+    "post_election_facts_allowed": false
+  },
+  "candidate_layer": {
+    "source": "MAIN_E_REASON_BLINDED_PRE_CUTOFF_EVIDENCE",
+    "preserve_missingness": true,
+    "preserve_conflicts": true,
+    "preserve_source_class": true,
+    "preserve_source_record_ids": true,
+    "imputation": false
+  },
+  "programme_layer": {
+    "v1_behavior": "PRESERVE_EXISTING_FROZEN_ANONYMOUS_PROGRAMME_PRIORITY_CARDS",
+    "main_full_manifesto_corpus": "NOT_REGISTERED_IN_V1",
+    "fabricate_missing_manifesto_detail": false,
+    "future_extension_rule": "A separately audited pre-cutoff anonymized manifesto source requires a new bridge protocol version before affected G0 outputs are generated."
+  },
+  "runtime": {
+    "launcher": "morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/run_g0_sol_main_bridge.py",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "bridge_mandatory": true,
+    "original_frozen_environment_mutated": false,
+    "bridge_item_injected_before_context_hash": true,
+    "bridge_hash_folded_into_task_source_hash": true
+  },
+  "promotion_rule": "No enriched G0 result may be promoted unless bridge status, main SHA, overlay hash, packet context hashes and leak scan are present in run provenance."
+}
