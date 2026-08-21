@@ -50,6 +50,12 @@ python morocco26/scripts/atlas395_apply_intake.py \
   --policy "$SOURCE_POLICY" \
   --public-manifest morocco26/web/data/snapshot_manifest.json
 
+# Preserve the stable public reader contract after the registered exporter has
+# rebuilt web/data. Older deployed readers request public_methodology.json,
+# while the current reader can consume methodology_state.json directly.
+python morocco26/scripts/atlas395_public_methodology.py \
+  --data-dir morocco26/web/data
+
 python morocco26/scripts/atlas395_daily.py build-edition \
   --data-dir morocco26/web/data \
   --editions-dir morocco26/web/editions \
