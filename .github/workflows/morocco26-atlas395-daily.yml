@@ -28,7 +28,9 @@ jobs:
       - name: Check reader interface syntax
         shell: bash
         run: |
-          python -m py_compile morocco26/scripts/atlas395_*.py
+          # Keep py_compile bytecode outside the repository so the subsequent
+          # product-only write-boundary check sees only actual product changes.
+          PYTHONPYCACHEPREFIX="$RUNNER_TEMP/atlas395-pycache" python -m py_compile morocco26/scripts/atlas395_*.py
           node --check morocco26/web/app.js
           for f in morocco26/web/assets/*.js; do node --check "$f"; done
       - name: Enforce product-only write boundary
