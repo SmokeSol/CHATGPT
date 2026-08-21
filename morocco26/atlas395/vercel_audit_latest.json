@@ -1,0 +1,608 @@
+{
+  "schema_version": "1.0",
+  "product": "ATLAS 395",
+  "audited_at": "2026-08-21T10:01:12.541333+00:00",
+  "canonical_url": "https://atlas-395-maroc-2026.vercel.app/",
+  "canonical_attempts": 1,
+  "canonical_pass": true,
+  "required_data": [
+    "current_snapshot.json",
+    "national_projection.json",
+    "constituency_cards.json",
+    "party_cards.json",
+    "evidence_index.json",
+    "methodology_state.json",
+    "public_methodology.json"
+  ],
+  "aliases": [
+    {
+      "url": "https://atlas-395-maroc-2026.vercel.app/",
+      "root": {
+        "status": 200,
+        "bytes": 21270,
+        "sha256": "316c8a5bc1163d19066522d895e0b594a50107aafd882a4bfbf677e1400d4063",
+        "content_type": "text/html; charset=utf-8",
+        "final_url": "https://atlas-395-maroc-2026.vercel.app/"
+      },
+      "assets": {
+        "app.js": {
+          "status": 200,
+          "bytes": 12239,
+          "sha256": "1d66fda32772c895c4b204004a280c9040bb6516e73223a7e1c5a449319c8cd0",
+          "content_type": "application/javascript; charset=utf-8",
+          "final_url": "https://atlas-395-maroc-2026.vercel.app/app.js"
+        },
+        "assets/core.js": {
+          "status": 200,
+          "bytes": 6730,
+          "sha256": "f6f4840ee2f8807894bbdfcf8ae504defd2e825cea9733a6a91a14fe54457849",
+          "content_type": "application/javascript; charset=utf-8",
+          "final_url": "https://atlas-395-maroc-2026.vercel.app/assets/core.js"
+        },
+        "assets/daily.js": {
+          "status": 200,
+          "bytes": 5621,
+          "sha256": "36e6cf5828e6b705b5c3a55e22958c0dad0733b62eb64218747fc8bec828670c",
+          "content_type": "application/javascript; charset=utf-8",
+          "final_url": "https://atlas-395-maroc-2026.vercel.app/assets/daily.js"
+        }
+      },
+      "data": {
+        "current_snapshot.json": {
+          "status": 200,
+          "bytes": 2379,
+          "sha256": "9abd8fead7f7d7b7aec90eb864f440818076f65431395bf37882d1054bca48c1",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395-maroc-2026.vercel.app/data/current_snapshot.json"
+        },
+        "national_projection.json": {
+          "status": 200,
+          "bytes": 2477,
+          "sha256": "03b2c0f7b1b1563fff7025d60f646e9cb46401adea7731155a5ffc3b348f9f27",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395-maroc-2026.vercel.app/data/national_projection.json"
+        },
+        "constituency_cards.json": {
+          "status": 200,
+          "bytes": 1308927,
+          "sha256": "faef6667bf4289216c748e947ff8d2cf8bbf2ba71be9fff3b1953297db4a0994",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395-maroc-2026.vercel.app/data/constituency_cards.json"
+        },
+        "party_cards.json": {
+          "status": 200,
+          "bytes": 39977,
+          "sha256": "f1086ce7d1236ad839a31a1658dceeaf53fa70dde09274a24fa9a166fc908be8",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395-maroc-2026.vercel.app/data/party_cards.json"
+        },
+        "evidence_index.json": {
+          "status": 200,
+          "bytes": 29207,
+          "sha256": "68404a1808884fc13907a1c8d287e7feefb331fa0d4fad17cca3c7a858a5ba59",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395-maroc-2026.vercel.app/data/evidence_index.json"
+        },
+        "methodology_state.json": {
+          "status": 200,
+          "bytes": 3721,
+          "sha256": "a97dc99df11122246fd207ce187641ef2659e28b38f6708a97cb7bef9070ef4c",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395-maroc-2026.vercel.app/data/methodology_state.json"
+        },
+        "public_methodology.json": {
+          "status": 200,
+          "bytes": 2299,
+          "sha256": "5b51b548794cc710d012cfdc47d3878c2fe584e6fe6f381b5dc5b3be173db5ce",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395-maroc-2026.vercel.app/data/public_methodology.json"
+        }
+      },
+      "editions_current": {
+        "status": 200,
+        "bytes": 367,
+        "sha256": "60a080de277e00996fc79d65c923a9e0a5826055fce6290c45ea0f9fba415bcb",
+        "content_type": "application/json; charset=utf-8",
+        "final_url": "https://atlas-395-maroc-2026.vercel.app/editions/current.json"
+      },
+      "repo_hashes": {
+        "index.html": "316c8a5bc1163d19066522d895e0b594a50107aafd882a4bfbf677e1400d4063",
+        "app.js": "1d66fda32772c895c4b204004a280c9040bb6516e73223a7e1c5a449319c8cd0",
+        "assets/core.js": "f6f4840ee2f8807894bbdfcf8ae504defd2e825cea9733a6a91a14fe54457849",
+        "assets/daily.js": "36e6cf5828e6b705b5c3a55e22958c0dad0733b62eb64218747fc8bec828670c"
+      },
+      "live_hashes": {
+        "index.html": "316c8a5bc1163d19066522d895e0b594a50107aafd882a4bfbf677e1400d4063",
+        "app.js": "1d66fda32772c895c4b204004a280c9040bb6516e73223a7e1c5a449319c8cd0",
+        "assets/core.js": "f6f4840ee2f8807894bbdfcf8ae504defd2e825cea9733a6a91a14fe54457849",
+        "assets/daily.js": "36e6cf5828e6b705b5c3a55e22958c0dad0733b62eb64218747fc8bec828670c"
+      },
+      "hash_match": {
+        "index.html": true,
+        "app.js": true,
+        "assets/core.js": true,
+        "assets/daily.js": true
+      },
+      "methodology_contract": "public_methodology_with_methodology_state_fallback",
+      "http_contract_pass": true,
+      "browser": {
+        "available": true,
+        "pass": true,
+        "dom_bytes": 143918,
+        "fatal_strings": [],
+        "returncode": 0
+      },
+      "overall_pass": true
+    },
+    {
+      "url": "https://atlas-395-v1.vercel.app/",
+      "root": {
+        "status": 200,
+        "bytes": 42748,
+        "sha256": "3cb313febc1d0de41df8915422931028790dacb68d06db0b029e065615b84ff2",
+        "content_type": "text/html; charset=utf-8",
+        "final_url": "https://atlas-395-v1.vercel.app/"
+      },
+      "assets": {
+        "app.js": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "9010a90047383a08ff387e83eb15def1ff2eca98fc183b4209c6f27a4fa205c3",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1.vercel.app/app.js"
+        },
+        "assets/core.js": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "dc36c4506151d919377e7f758d7070a074966b75550c58c685f9b6c4ab69ee4c",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1.vercel.app/assets/core.js"
+        },
+        "assets/daily.js": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "f7037f17e170b2aaccc1d96d973fc1852da47bd5c5308bbc4cba3b3b5b01161b",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1.vercel.app/assets/daily.js"
+        }
+      },
+      "data": {
+        "current_snapshot.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "80ec8f3e110715652e798686812a9a62e9f29111b829aeedea3a73025a3befd3",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1.vercel.app/data/current_snapshot.json"
+        },
+        "national_projection.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "08ad323ca17263f3da0d28400b5d360daa3862925b405133a4dbbe5caff3a70d",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1.vercel.app/data/national_projection.json"
+        },
+        "constituency_cards.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "30e93231d24729fc3e2d119477e862a1cb1a4de50b4d0ae5cdb0aa6ded564ef9",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1.vercel.app/data/constituency_cards.json"
+        },
+        "party_cards.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "2b2b5fa1bf4be0a081333c0a0484b27972ae4950079275603fdeee0b928a1e1d",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1.vercel.app/data/party_cards.json"
+        },
+        "evidence_index.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "ff3468c56519ad7b1432d1a3b6a394512e3b6b266c835370142ec8a883d29881",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1.vercel.app/data/evidence_index.json"
+        },
+        "methodology_state.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "5aca7ac956bf42a43ac20b051e2ef9568f29762610826804ad49a25e19c94ee0",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1.vercel.app/data/methodology_state.json"
+        },
+        "public_methodology.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "4f45a39a74256f33d70fb2f88c8d5102967d6ee64c570d6e113682dfcd0da681",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1.vercel.app/data/public_methodology.json"
+        }
+      },
+      "editions_current": {
+        "status": 404,
+        "bytes": 79,
+        "sha256": "0faebf178ece7db8e6f4bfc68e30f14425d311d2cc42f859419d2d99ebe9690c",
+        "content_type": "text/plain; charset=utf-8",
+        "final_url": "https://atlas-395-v1.vercel.app/editions/current.json"
+      },
+      "repo_hashes": {
+        "index.html": "316c8a5bc1163d19066522d895e0b594a50107aafd882a4bfbf677e1400d4063",
+        "app.js": "1d66fda32772c895c4b204004a280c9040bb6516e73223a7e1c5a449319c8cd0",
+        "assets/core.js": "f6f4840ee2f8807894bbdfcf8ae504defd2e825cea9733a6a91a14fe54457849",
+        "assets/daily.js": "36e6cf5828e6b705b5c3a55e22958c0dad0733b62eb64218747fc8bec828670c"
+      },
+      "live_hashes": {
+        "index.html": "3cb313febc1d0de41df8915422931028790dacb68d06db0b029e065615b84ff2",
+        "app.js": "9010a90047383a08ff387e83eb15def1ff2eca98fc183b4209c6f27a4fa205c3",
+        "assets/core.js": "dc36c4506151d919377e7f758d7070a074966b75550c58c685f9b6c4ab69ee4c",
+        "assets/daily.js": "f7037f17e170b2aaccc1d96d973fc1852da47bd5c5308bbc4cba3b3b5b01161b"
+      },
+      "hash_match": {
+        "index.html": false,
+        "app.js": false,
+        "assets/core.js": false,
+        "assets/daily.js": false
+      },
+      "methodology_contract": "unknown",
+      "http_contract_pass": false,
+      "browser": {
+        "available": null,
+        "pass": false,
+        "reason": "http_contract_failed"
+      },
+      "overall_pass": false
+    },
+    {
+      "url": "https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/",
+      "root": {
+        "status": 200,
+        "bytes": 42748,
+        "sha256": "3cb313febc1d0de41df8915422931028790dacb68d06db0b029e065615b84ff2",
+        "content_type": "text/html; charset=utf-8",
+        "final_url": "https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/"
+      },
+      "assets": {
+        "app.js": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "6858611d87073163c131eae7bf1df0130d7cfbcdc4ca92472d352226931509e8",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/app.js"
+        },
+        "assets/core.js": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "6316a78f8e05d55bec96da9e4ffbac904ed797c1c54144f3a5fd39b9c15fb904",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/assets/core.js"
+        },
+        "assets/daily.js": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "16aca00f8bd03d760df18fca41ad782ada51b54bc76494f35c17a1a6960431e7",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/assets/daily.js"
+        }
+      },
+      "data": {
+        "current_snapshot.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "602bb5d526b30fc36477fe53e3ba1c43a6c420acb7f60aa18465673647f6ca54",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/data/current_snapshot.json"
+        },
+        "national_projection.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "8c0243e83f78efb58bbfb9c759aa44e57fcffbd34f03884a18f1ab3a67b0621e",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/data/national_projection.json"
+        },
+        "constituency_cards.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "80ae83a99c746596e017de17d04be04aa80d9c961712c541ff866ccdb9584220",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/data/constituency_cards.json"
+        },
+        "party_cards.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "6dc40843e2312b64e8812c3789dee9cef7ef00fa0853f1829c2d98577d42f5f3",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/data/party_cards.json"
+        },
+        "evidence_index.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "3c09fc6eda46567afe7e700991746128d68f3bb94a65c0a268eca13b190bfdb9",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/data/evidence_index.json"
+        },
+        "methodology_state.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "d630d9f7c26393f0643feed54eacf3959423b5c2fa5d50fe232488915b3320db",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/data/methodology_state.json"
+        },
+        "public_methodology.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "1e3dfb4d81094001f098752779419c8520194ffeab24735cea84a67441432525",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/data/public_methodology.json"
+        }
+      },
+      "editions_current": {
+        "status": 404,
+        "bytes": 79,
+        "sha256": "fb4e41e06ec9928e503b89a27df70b47abc9606cd93e4fa1f2bb6fccf963502b",
+        "content_type": "text/plain; charset=utf-8",
+        "final_url": "https://atlas-395-v1-yannlevy85gmailcoms-projects.vercel.app/editions/current.json"
+      },
+      "repo_hashes": {
+        "index.html": "316c8a5bc1163d19066522d895e0b594a50107aafd882a4bfbf677e1400d4063",
+        "app.js": "1d66fda32772c895c4b204004a280c9040bb6516e73223a7e1c5a449319c8cd0",
+        "assets/core.js": "f6f4840ee2f8807894bbdfcf8ae504defd2e825cea9733a6a91a14fe54457849",
+        "assets/daily.js": "36e6cf5828e6b705b5c3a55e22958c0dad0733b62eb64218747fc8bec828670c"
+      },
+      "live_hashes": {
+        "index.html": "3cb313febc1d0de41df8915422931028790dacb68d06db0b029e065615b84ff2",
+        "app.js": "6858611d87073163c131eae7bf1df0130d7cfbcdc4ca92472d352226931509e8",
+        "assets/core.js": "6316a78f8e05d55bec96da9e4ffbac904ed797c1c54144f3a5fd39b9c15fb904",
+        "assets/daily.js": "16aca00f8bd03d760df18fca41ad782ada51b54bc76494f35c17a1a6960431e7"
+      },
+      "hash_match": {
+        "index.html": false,
+        "app.js": false,
+        "assets/core.js": false,
+        "assets/daily.js": false
+      },
+      "methodology_contract": "unknown",
+      "http_contract_pass": false,
+      "browser": {
+        "available": null,
+        "pass": false,
+        "reason": "http_contract_failed"
+      },
+      "overall_pass": false
+    },
+    {
+      "url": "https://atlas395-maroc-2026.vercel.app/",
+      "root": {
+        "status": 200,
+        "bytes": 2242,
+        "sha256": "5dc0d93e82b843970b967700235a0c5af3160aa84fbf13986808599b56c4a91a",
+        "content_type": "text/html; charset=utf-8",
+        "final_url": "https://atlas395-maroc-2026.vercel.app/"
+      },
+      "assets": {
+        "app.js": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "6d878540a6655a53e887515843de2a1b56d46d200c64a3a0e93c7eeb7f05ad01",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas395-maroc-2026.vercel.app/app.js"
+        },
+        "assets/core.js": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "239a17b7f899b7cb0155cb7056f961bab880dcda1f1d52224c1b99de8531353a",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas395-maroc-2026.vercel.app/assets/core.js"
+        },
+        "assets/daily.js": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "b50b4c18e9931458806ab6558bc8ac0308160f171cad94fe17950fc907137a59",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas395-maroc-2026.vercel.app/assets/daily.js"
+        }
+      },
+      "data": {
+        "current_snapshot.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "e9210197f4ac9b7d4c2d6d464209d9485338ba730e17f9fa6390b119f53ccf39",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas395-maroc-2026.vercel.app/data/current_snapshot.json"
+        },
+        "national_projection.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "12bd04cdd029d398b7dea186fbfc06c2d4de06f3bd10877270cc848c1146f0ac",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas395-maroc-2026.vercel.app/data/national_projection.json"
+        },
+        "constituency_cards.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "f33632be2793132d98808702935a6991a24d3446e946bde47e9e4b6b8a8a6a57",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas395-maroc-2026.vercel.app/data/constituency_cards.json"
+        },
+        "party_cards.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "309325a7435a1148fed3bf3cee357710a56f364be596536d3db06d9775efa372",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas395-maroc-2026.vercel.app/data/party_cards.json"
+        },
+        "evidence_index.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "b78bebf4859f15cc3cd4dc26db8ec933094e8a6801f1210dab03a5f2f0168930",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas395-maroc-2026.vercel.app/data/evidence_index.json"
+        },
+        "methodology_state.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "cddaf56324488093e5fc71cb8e3ee6ca003199c0f8522cc1603c4f21d13cbf96",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas395-maroc-2026.vercel.app/data/methodology_state.json"
+        },
+        "public_methodology.json": {
+          "status": 404,
+          "bytes": 79,
+          "sha256": "a955d8e082f01f06bef29125ba9cc6434d51b4f59eb8fa1e28a3fb2725cbf695",
+          "content_type": "text/plain; charset=utf-8",
+          "final_url": "https://atlas395-maroc-2026.vercel.app/data/public_methodology.json"
+        }
+      },
+      "editions_current": {
+        "status": 404,
+        "bytes": 79,
+        "sha256": "01b167bcf8c41c6490b7887769d565d97926fc146658719a1625166e239b4676",
+        "content_type": "text/plain; charset=utf-8",
+        "final_url": "https://atlas395-maroc-2026.vercel.app/editions/current.json"
+      },
+      "repo_hashes": {
+        "index.html": "316c8a5bc1163d19066522d895e0b594a50107aafd882a4bfbf677e1400d4063",
+        "app.js": "1d66fda32772c895c4b204004a280c9040bb6516e73223a7e1c5a449319c8cd0",
+        "assets/core.js": "f6f4840ee2f8807894bbdfcf8ae504defd2e825cea9733a6a91a14fe54457849",
+        "assets/daily.js": "36e6cf5828e6b705b5c3a55e22958c0dad0733b62eb64218747fc8bec828670c"
+      },
+      "live_hashes": {
+        "index.html": "5dc0d93e82b843970b967700235a0c5af3160aa84fbf13986808599b56c4a91a",
+        "app.js": "6d878540a6655a53e887515843de2a1b56d46d200c64a3a0e93c7eeb7f05ad01",
+        "assets/core.js": "239a17b7f899b7cb0155cb7056f961bab880dcda1f1d52224c1b99de8531353a",
+        "assets/daily.js": "b50b4c18e9931458806ab6558bc8ac0308160f171cad94fe17950fc907137a59"
+      },
+      "hash_match": {
+        "index.html": false,
+        "app.js": false,
+        "assets/core.js": false,
+        "assets/daily.js": false
+      },
+      "methodology_contract": "unknown",
+      "http_contract_pass": false,
+      "browser": {
+        "available": null,
+        "pass": false,
+        "reason": "http_contract_failed"
+      },
+      "overall_pass": false
+    },
+    {
+      "url": "https://atlas-395-rescue-20260817.vercel.app/",
+      "root": {
+        "status": 200,
+        "bytes": 21442,
+        "sha256": "a5aeb495e63fc039d18f1a2e1edbdd45cebe579c0c2a9ec96862fb9ca86c49b0",
+        "content_type": "text/plain; charset=utf-8",
+        "final_url": "https://atlas-395.vercel.app/"
+      },
+      "assets": {
+        "app.js": {
+          "status": 200,
+          "bytes": 11519,
+          "sha256": "391f569eb699b02f773f4734a1bcab137d4512654d9d7a606b5fd425de490b1c",
+          "content_type": "application/javascript; charset=utf-8",
+          "final_url": "https://atlas-395.vercel.app/app.js"
+        },
+        "assets/core.js": {
+          "status": 200,
+          "bytes": 6206,
+          "sha256": "5a096feb09c77668d0ae5ea4e33e96377036d006587a7cb2be08e4c726bb21da",
+          "content_type": "application/javascript; charset=utf-8",
+          "final_url": "https://atlas-395.vercel.app/assets/core.js"
+        },
+        "assets/daily.js": {
+          "status": 200,
+          "bytes": 5166,
+          "sha256": "4ba04c210086edf4f2eb9bde54ca765b0748574c3bbd4a10dbbc4194d343edd8",
+          "content_type": "application/javascript; charset=utf-8",
+          "final_url": "https://atlas-395.vercel.app/assets/daily.js"
+        }
+      },
+      "data": {
+        "current_snapshot.json": {
+          "status": 200,
+          "bytes": 2379,
+          "sha256": "9abd8fead7f7d7b7aec90eb864f440818076f65431395bf37882d1054bca48c1",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395.vercel.app/data/current_snapshot.json"
+        },
+        "national_projection.json": {
+          "status": 200,
+          "bytes": 2477,
+          "sha256": "03b2c0f7b1b1563fff7025d60f646e9cb46401adea7731155a5ffc3b348f9f27",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395.vercel.app/data/national_projection.json"
+        },
+        "constituency_cards.json": {
+          "status": 200,
+          "bytes": 1308927,
+          "sha256": "faef6667bf4289216c748e947ff8d2cf8bbf2ba71be9fff3b1953297db4a0994",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395.vercel.app/data/constituency_cards.json"
+        },
+        "party_cards.json": {
+          "status": 200,
+          "bytes": 39977,
+          "sha256": "f1086ce7d1236ad839a31a1658dceeaf53fa70dde09274a24fa9a166fc908be8",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395.vercel.app/data/party_cards.json"
+        },
+        "evidence_index.json": {
+          "status": 200,
+          "bytes": 29207,
+          "sha256": "b2d266e1cc503c8cc1dbb7f09d2cd81cf11b88927861ac763c1242a5f89d3904",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395.vercel.app/data/evidence_index.json"
+        },
+        "methodology_state.json": {
+          "status": 200,
+          "bytes": 3721,
+          "sha256": "a97dc99df11122246fd207ce187641ef2659e28b38f6708a97cb7bef9070ef4c",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395.vercel.app/data/methodology_state.json"
+        },
+        "public_methodology.json": {
+          "status": 200,
+          "bytes": 2299,
+          "sha256": "5b51b548794cc710d012cfdc47d3878c2fe584e6fe6f381b5dc5b3be173db5ce",
+          "content_type": "application/json; charset=utf-8",
+          "final_url": "https://atlas-395.vercel.app/data/public_methodology.json"
+        }
+      },
+      "editions_current": {
+        "status": 200,
+        "bytes": 373,
+        "sha256": "55cf7d6eb3d2d60e490707a354703cd000774d01cc7409537f867c9f17261be6",
+        "content_type": "application/json; charset=utf-8",
+        "final_url": "https://atlas-395.vercel.app/editions/current.json"
+      },
+      "repo_hashes": {
+        "index.html": "316c8a5bc1163d19066522d895e0b594a50107aafd882a4bfbf677e1400d4063",
+        "app.js": "1d66fda32772c895c4b204004a280c9040bb6516e73223a7e1c5a449319c8cd0",
+        "assets/core.js": "f6f4840ee2f8807894bbdfcf8ae504defd2e825cea9733a6a91a14fe54457849",
+        "assets/daily.js": "36e6cf5828e6b705b5c3a55e22958c0dad0733b62eb64218747fc8bec828670c"
+      },
+      "live_hashes": {
+        "index.html": "a5aeb495e63fc039d18f1a2e1edbdd45cebe579c0c2a9ec96862fb9ca86c49b0",
+        "app.js": "391f569eb699b02f773f4734a1bcab137d4512654d9d7a606b5fd425de490b1c",
+        "assets/core.js": "5a096feb09c77668d0ae5ea4e33e96377036d006587a7cb2be08e4c726bb21da",
+        "assets/daily.js": "4ba04c210086edf4f2eb9bde54ca765b0748574c3bbd4a10dbbc4194d343edd8"
+      },
+      "hash_match": {
+        "index.html": false,
+        "app.js": false,
+        "assets/core.js": false,
+        "assets/daily.js": false
+      },
+      "methodology_contract": "methodology_state",
+      "http_contract_pass": true,
+      "browser": {
+        "available": true,
+        "pass": true,
+        "dom_bytes": 26046,
+        "fatal_strings": [],
+        "returncode": 0
+      },
+      "overall_pass": true
+    }
+  ]
+}
