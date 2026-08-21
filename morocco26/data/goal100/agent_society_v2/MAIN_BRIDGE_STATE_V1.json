@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "state_id": "M26-AS-MAIN-BRIDGE-STATE-V1",
+  "status": "IMPLEMENTED_AWAITING_LOCAL_EXACT_SHA_OVERLAY_BUILD_BEFORE_FIRST_G0_SOL_OUTPUT",
+  "registered_main_commit_sha": "4df897c356d3f0c36832405c7fcfc7f8f0cd6de2",
+  "bridge_protocol": "M26_AS_MAIN_BRIDGE_V1",
+  "historical_candidate_layer": "CONNECTED_FROM_MAIN_BLINDED_PRE_CUTOFF_EVIDENCE",
+  "programme_layer": "EXISTING_FROZEN_ANONYMOUS_PRIORITY_CARDS_PRESERVED; FULL_MAIN_MANIFESTO_CORPUS_NOT_REGISTERED_IN_V1",
+  "target_outcomes_opened": false,
+  "real_identity_material_in_public_overlay": false,
+  "g0_sol_outputs_generated_after_bridge": false,
+  "required_next_gate": "BUILD_OVERLAY_LOCALLY_AND_REQUIRE_PASS_MAIN_TO_AGENT_SOCIETY_BRIDGE_V1_BEFORE_ANY_ENRICHED_G0_SOL_CALL"
+}
