@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Canonical enriched G0 launcher: GPT-5.6 Sol + frozen main bridge."""
+"""Canonical enriched G0 launcher: GPT-5.6 Sol + frozen exact-SHA main bridge."""
 from __future__ import annotations
 import copy, dataclasses, hashlib, json, pathlib, re, sys
 from typing import Any
@@ -10,8 +10,12 @@ import run_chatgpt_baseline as runner
 
 FROZEN_MODEL = "gpt-5.6-sol"
 FROZEN_REASONING = "medium"
-PROTOCOL_ID = "ATLAS_CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V2_MAIN_BRIDGE"
+PROTOCOL_ID = "ATLAS_CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V3_MAIN_BRIDGE"
 BRIDGE_ID = "M26_AS_MAIN_BRIDGE_V1"
+REGISTERED_MAIN_SHA = "4df897c356d3f0c36832405c7fcfc7f8f0cd6de2"
+EXPECTED_BRIDGE_ITEMS = 184
+FROZEN_BUNDLE_SHA256 = "e8acad28dea5a531c21171db570b60d612993edd91db8f893e58c187c226696a"
+
 
 def pop_option(args: list[str], name: str) -> str:
     for i, value in enumerate(list(args)):
@@ -19,13 +23,39 @@ def pop_option(args: list[str], name: str) -> str:
             if i + 1 >= len(args):
                 raise runner.RunnerError(f"{name} requires a value")
             result = args[i + 1]
-            del args[i:i+2]
+            del args[i:i + 2]
             return result
         if value.startswith(name + "="):
             result = value.split("=", 1)[1]
             args.remove(value)
             return result
     raise runner.RunnerError(f"{name} is mandatory for enriched G0")
+
+
+def option_value(args: list[str], name: str) -> str:
+    for i, value in enumerate(args):
+        if value == name:
+            if i + 1 >= len(args):
+                raise runner.RunnerError(f"{name} requires a value")
+            return args[i + 1]
+        if value.startswith(name + "="):
+            return value.split("=", 1)[1]
+    raise runner.RunnerError(f"{name} is mandatory for enriched G0")
+
+
+def enforce_frozen_bundle(args: list[str]) -> pathlib.Path:
+    path = pathlib.Path(option_value(args, "--bundle")).expanduser().resolve()
+    if not path.is_file() or path.suffix.lower() != ".zip":
+        raise runner.RunnerError(
+            "enriched G0 requires the exact frozen full-environment ZIP, not an extracted directory"
+        )
+    digest = runner.sha256_file(path)
+    if digest != FROZEN_BUNDLE_SHA256:
+        raise runner.RunnerError(
+            f"full-environment ZIP hash mismatch: got {digest}, expected {FROZEN_BUNDLE_SHA256}"
+        )
+    return path
+
 
 def load_bridge(path: pathlib.Path) -> tuple[dict[str, Any], str]:
     path = path.expanduser().resolve()
@@ -36,6 +66,7 @@ def load_bridge(path: pathlib.Path) -> tuple[dict[str, Any], str]:
         obj = json.loads(raw)
     except json.JSONDecodeError as exc:
         raise runner.RunnerError(f"invalid main bridge JSON: {exc}") from exc
+    items = obj.get("items")
     checks = {
         "bridge_id": obj.get("bridge_id") == BRIDGE_ID,
         "status": obj.get("status") == "PASS_FROZEN_MAIN_BRIDGE_READY_FOR_G0_SOL",
@@ -43,13 +74,16 @@ def load_bridge(path: pathlib.Path) -> tuple[dict[str, Any], str]:
         "real_identity_material_present": obj.get("real_identity_material_present") is False,
         "floating_main_reads_allowed": obj.get("floating_main_reads_allowed") is False,
         "leak_scan": (obj.get("public_leak_scan") or {}).get("status") == "PASS",
-        "main_sha": bool(re.fullmatch(r"[0-9a-f]{40}", str(obj.get("main_commit_sha", "")))),
-        "items": isinstance(obj.get("items"), dict) and bool(obj.get("items")),
+        "registered_main_sha": obj.get("main_commit_sha") == REGISTERED_MAIN_SHA,
+        "items_type": isinstance(items, dict),
+        "items_count": isinstance(items, dict) and len(items) == EXPECTED_BRIDGE_ITEMS,
+        "declared_item_count": obj.get("item_count") == EXPECTED_BRIDGE_ITEMS,
     }
     failed = sorted(k for k, ok in checks.items() if not ok)
     if failed:
         raise runner.RunnerError(f"main bridge validation failed: {failed}")
     return obj, hashlib.sha256(raw).hexdigest()
+
 
 def patch_runner(bridge_path: pathlib.Path, bridge: dict[str, Any], bridge_file_sha: str) -> None:
     original_discover = runner.discover_tasks
@@ -60,8 +94,10 @@ def patch_runner(bridge_path: pathlib.Path, bridge: dict[str, Any], bridge_file_
     def discover(root: pathlib.Path):
         tasks, mode = original_discover(root)
         enriched, missing = [], []
+        seen_keys = set()
         for task in tasks:
             key = f"{task.election_id}|{task.territory_id}"
+            seen_keys.add(key)
             item = bridge_items.get(key)
             if item is None:
                 missing.append(key)
@@ -84,6 +120,11 @@ def patch_runner(bridge_path: pathlib.Path, bridge: dict[str, Any], bridge_file_
             raise runner.RunnerError(
                 f"main bridge has no item for {len(set(missing))} election-territory keys, sample={sample}"
             )
+        extra = sorted(set(bridge_items) - seen_keys)
+        if extra:
+            raise runner.RunnerError(
+                f"main bridge contains {len(extra)} keys outside the frozen environment, sample={extra[:5]}"
+            )
         return enriched, mode + "+MAIN_BRIDGE_V1"
 
     def write_state(**kwargs):
@@ -94,8 +135,11 @@ def patch_runner(bridge_path: pathlib.Path, bridge: dict[str, Any], bridge_file_
             "main_bridge_path": str(bridge_path),
             "main_bridge_file_sha256": bridge_file_sha,
             "main_commit_sha": main_sha,
+            "registered_main_commit_sha": REGISTERED_MAIN_SHA,
+            "frozen_full_environment_zip_sha256": FROZEN_BUNDLE_SHA256,
             "target_outcomes_present": False,
             "real_identity_material_present": False,
+            "bridge_items": EXPECTED_BRIDGE_ITEMS,
         }
         for name in ("run_state.json", "output_manifest.json", "preflight.json"):
             p = output_root / name
@@ -109,17 +153,18 @@ def patch_runner(bridge_path: pathlib.Path, bridge: dict[str, Any], bridge_file_
     runner.write_run_state = write_state
     runner.PROTOCOL_ID = PROTOCOL_ID
 
+
 def main(argv=None):
     args = list(sys.argv[1:] if argv is None else argv)
-    for forbidden in ("--model", "--reasoning"):
+    for forbidden in ("--model", "--reasoning", "--allow-noncanonical-counts"):
         if forbidden in args or any(v.startswith(forbidden + "=") for v in args):
-            raise runner.RunnerError(
-                f"{forbidden} is frozen by run_g0_sol_main_bridge.py; use {FROZEN_MODEL}/{FROZEN_REASONING}"
-            )
+            raise runner.RunnerError(f"{forbidden} is forbidden by the enriched G0 freeze")
+    enforce_frozen_bundle(args)
     bridge_path = pathlib.Path(pop_option(args, "--main-bridge")).expanduser().resolve()
     bridge, digest = load_bridge(bridge_path)
     patch_runner(bridge_path, bridge, digest)
     return runner.main(args + ["--model", FROZEN_MODEL, "--reasoning", FROZEN_REASONING])
+
 
 if __name__ == "__main__":
     try:
