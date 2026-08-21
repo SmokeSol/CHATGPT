@@ -10,6 +10,7 @@ on:
       - 'morocco26/scripts/agent_society_v2_main_bridge.py'
       - 'morocco26/scripts/main_bridge_*.py'
       - 'morocco26/data/goal100/agent_society_v2/MAIN_BRIDGE_STATE_V1.json'
+      - 'morocco26/data/goal100/agent_society_v2/CHATGPT_ACCOUNT_G0_STATE_V1.json'
       - 'morocco26/frontends/agent_society_opus/source_v2/web/g0-reference.js'
       - 'morocco26/frontends/agent_society_opus/source_v2/web/deliberation.js'
       - 'morocco26/frontends/agent_society_opus/source_v2/web/deliberation.css'
@@ -57,11 +58,14 @@ jobs:
       - name: Validate frozen JSON contracts
         run: |
           python -m json.tool morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V1.json >/dev/null
+          python -m json.tool morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/CHATGPT_ACCOUNT_BASELINE_PROTOCOL_V3_MAIN_BRIDGE.json >/dev/null
+          python -m json.tool morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/FREEZE_MANIFEST.json >/dev/null
           python -m json.tool morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/DELIBERATION_OBSERVATORY_PROTOCOL_V1.json >/dev/null
           python -m json.tool morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/DELIBERATION_OUTPUT_SCHEMA_V1.json >/dev/null
           python -m json.tool morocco26/frontends/agent_society_opus/source_v2/chatgpt_baseline/COUNTERFACTUAL_LIBRARY_V1.json >/dev/null
           python -m json.tool morocco26/frontends/agent_society_opus/source_v2/main_bridge/MAIN_TO_AGENT_SOCIETY_BRIDGE_PROTOCOL_V1.json >/dev/null
           python -m json.tool morocco26/data/goal100/agent_society_v2/MAIN_BRIDGE_STATE_V1.json >/dev/null
+          python -m json.tool morocco26/data/goal100/agent_society_v2/CHATGPT_ACCOUNT_G0_STATE_V1.json >/dev/null
           python -m json.tool morocco26/frontends/agent_society_opus/source_v2/web/data/deliberation_provenance.json >/dev/null
       - name: Check browser JavaScript syntax
         run: |
