@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Canonical enriched G0 launcher: GPT-5.6 Sol + frozen exact-SHA main bridge."""
+"""Canonical G0 launcher: GPT-5.6 Sol gated by the frozen exact-SHA main bridge."""
 from __future__ import annotations
-import copy, dataclasses, hashlib, json, pathlib, re, sys
+import dataclasses, hashlib, json, pathlib, sys
 from typing import Any
 
 HERE = pathlib.Path(__file__).resolve().parent
@@ -67,12 +67,15 @@ def load_bridge(path: pathlib.Path) -> tuple[dict[str, Any], str]:
     except json.JSONDecodeError as exc:
         raise runner.RunnerError(f"invalid main bridge JSON: {exc}") from exc
     items = obj.get("items")
+    semantic = obj.get("semantic_equivalence_audit") or {}
     checks = {
         "bridge_id": obj.get("bridge_id") == BRIDGE_ID,
         "status": obj.get("status") == "PASS_FROZEN_MAIN_BRIDGE_READY_FOR_G0_SOL",
         "target_outcomes_present": obj.get("target_outcomes_present") is False,
         "real_identity_material_present": obj.get("real_identity_material_present") is False,
         "floating_main_reads_allowed": obj.get("floating_main_reads_allowed") is False,
+        "model_semantic_delta_v1": obj.get("model_semantic_delta_v1") is False,
+        "semantic_equivalence": semantic.get("status") == "PASS_SEMANTIC_EQUIVALENCE_ONLY",
         "leak_scan": (obj.get("public_leak_scan") or {}).get("status") == "PASS",
         "registered_main_sha": obj.get("main_commit_sha") == REGISTERED_MAIN_SHA,
         "items_type": isinstance(items, dict),
@@ -86,14 +89,22 @@ def load_bridge(path: pathlib.Path) -> tuple[dict[str, Any], str]:
 
 
 def patch_runner(bridge_path: pathlib.Path, bridge: dict[str, Any], bridge_file_sha: str) -> None:
+    """Bind exact main provenance to every task without duplicating model-visible evidence.
+
+    Bridge V1 must be semantically identical to the candidate/programme information
+    already in the frozen environment. Therefore the original model packet stays
+    unchanged. Any semantic delta is rejected by the bridge builder/load gate and
+    requires a new protocol version.
+    """
     original_discover = runner.discover_tasks
     original_write_state = runner.write_run_state
     bridge_items = bridge["items"]
     main_sha = str(bridge["main_commit_sha"])
+    semantic_audit = bridge["semantic_equivalence_audit"]
 
     def discover(root: pathlib.Path):
         tasks, mode = original_discover(root)
-        enriched, missing = [], []
+        bound, missing = [], []
         seen_keys = set()
         for task in tasks:
             key = f"{task.election_id}|{task.territory_id}"
@@ -102,17 +113,18 @@ def patch_runner(bridge_path: pathlib.Path, bridge: dict[str, Any], bridge_file_
             if item is None:
                 missing.append(key)
                 continue
-            packet = copy.deepcopy(task.packet)
-            packet["main_bridge_v1"] = item
-            enriched.append(dataclasses.replace(
+            if item.get("anonymous_election_id") != task.election_id or item.get("anonymous_territory_id") != task.territory_id:
+                raise runner.RunnerError(f"main bridge identity mismatch for {key}")
+            bound.append(dataclasses.replace(
                 task,
-                packet=packet,
-                source_paths=task.source_paths + (f"MAIN_BRIDGE:{bridge_path}",),
+                packet=task.packet,
+                source_paths=task.source_paths + (f"MAIN_BRIDGE_PROVENANCE:{bridge_path}",),
                 source_sha256=runner.sha256_json({
                     "frozen_environment_source_sha256": task.source_sha256,
                     "main_bridge_file_sha256": bridge_file_sha,
                     "main_bridge_item_sha256": runner.sha256_json(item),
                     "main_commit_sha": main_sha,
+                    "bridge_semantic_policy": "PASS_SEMANTIC_EQUIVALENCE_ONLY_NO_MODEL_PACKET_DUPLICATION",
                 }),
             ))
         if missing:
@@ -125,7 +137,7 @@ def patch_runner(bridge_path: pathlib.Path, bridge: dict[str, Any], bridge_file_
             raise runner.RunnerError(
                 f"main bridge contains {len(extra)} keys outside the frozen environment, sample={extra[:5]}"
             )
-        return enriched, mode + "+MAIN_BRIDGE_V1"
+        return bound, mode + "+MAIN_BRIDGE_V1_PROVENANCE_BOUND"
 
     def write_state(**kwargs):
         original_write_state(**kwargs)
@@ -140,6 +152,9 @@ def patch_runner(bridge_path: pathlib.Path, bridge: dict[str, Any], bridge_file_
             "target_outcomes_present": False,
             "real_identity_material_present": False,
             "bridge_items": EXPECTED_BRIDGE_ITEMS,
+            "semantic_equivalence_status": semantic_audit.get("status"),
+            "model_packet_modified_by_bridge_v1": False,
+            "duplicate_candidate_or_programme_evidence_added_to_model": False,
         }
         for name in ("run_state.json", "output_manifest.json", "preflight.json"):
             p = output_root / name
