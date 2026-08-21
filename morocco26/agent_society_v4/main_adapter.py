@@ -1,12 +1,15 @@
 from __future__ import annotations
 
-import csv,io,json,pathlib,subprocess
+import csv,io,json,pathlib,re,subprocess
 from typing import Any,Iterator,Mapping,Sequence
-from .contracts import BallotType,CandidateRecord,CandidateState,ContractError
+from .contracts import BallotType,CandidateRecord,CandidateState,ContractError,parse_date
 
 class MainAdapterError(ContractError): pass
 class GitSnapshotReader:
-    def __init__(self,repo_root:pathlib.Path,ref:str): self.repo_root=repo_root.resolve(); self.commit_sha=self._git("rev-parse",ref).strip();
+    """Immutable git-tree reader. All source reads are pinned to one commit SHA."""
+    def __init__(self,repo_root:pathlib.Path,ref:str):
+        self.repo_root=repo_root.resolve(); self.commit_sha=self._git("rev-parse",ref).strip().lower()
+        if not re.fullmatch(r"[0-9a-f]{40}",self.commit_sha): raise MainAdapterError("main ref did not resolve to exact commit SHA")
     def _git(self,*args:str,binary:bool=False):
         p=subprocess.run(["git","-C",str(self.repo_root),*args],capture_output=True,text=not binary,check=False)
         if p.returncode: raise MainAdapterError((p.stderr.decode(errors="replace") if binary else p.stderr).strip())
@@ -32,22 +35,21 @@ def source_inventory(reader:GitSnapshotReader)->dict[str,Any]:
             payload=reader.read_bytes(path); records.append({"kind":kind,"path":path,"sha256":hashlib.sha256(payload).hexdigest(),"bytes":len(payload)})
     return {"schema_version":"AGENT_SOCIETY_MAIN_SOURCE_INVENTORY_V4","main_commit_sha":reader.commit_sha,"sources":records,"floating_reads":False}
 
-def _walk(value:Any)->Iterator[Mapping[str,Any]]:
+def _objects(value:Any)->Iterator[Mapping[str,Any]]:
     if isinstance(value,list):
-        for x in value: yield from _walk(x)
+        for x in value: yield from _objects(x)
     elif isinstance(value,dict):
-        keys={str(k).lower() for k in value}
-        if keys.intersection({"party","party_id","party_code","parti"}) and keys.intersection({"territory_id","territory","constituency","circonscription","district"}): yield value
+        yield value
         for x in value.values():
-            if isinstance(x,(dict,list)): yield from _walk(x)
+            if isinstance(x,(dict,list)): yield from _objects(x)
 
-def _rows(payload:bytes,path:str):
+def _decoded(payload:bytes,path:str)->list[Mapping[str,Any]]:
     suffix=pathlib.PurePosixPath(path).suffix.lower()
-    if suffix==".json": return list(_walk(json.loads(payload.decode())))
+    if suffix==".json": return list(_objects(json.loads(payload.decode())))
     if suffix==".jsonl":
         out=[]
         for line in payload.decode().splitlines():
-            if line.strip(): out.extend(_walk(json.loads(line)))
+            if line.strip(): out.extend(_objects(json.loads(line)))
         return out
     if suffix==".csv": return list(csv.DictReader(io.StringIO(payload.decode("utf-8-sig"))))
     return []
@@ -57,9 +59,9 @@ def _first(row:Mapping[str,Any],keys:Sequence[str]):
 def candidate_records(reader:GitSnapshotReader,*,as_of:str)->tuple[list[CandidateRecord],list[dict[str,Any]]]:
     records={}; unresolved=[]; rank={CandidateState.OFFICIAL:5,CandidateState.DECLARED:4,CandidateState.REPORTED:3,CandidateState.UNKNOWN:2,CandidateState.NO_LIST:1}
     for path in discover_sources(reader)["candidate"]:
-        try: rows=_rows(reader.read_bytes(path),path)
+        try: objects=_decoded(reader.read_bytes(path),path)
         except Exception: continue
-        for row in rows:
+        for row in objects:
             party=_first(row,("party","party_id","party_code","parti")); territory=_first(row,("territory_id","territory","constituency","circonscription","district")); name=_first(row,("candidate_name","candidate","name","nom","full_name","tete_de_liste"))
             if not party or not territory: continue
             status=str(_first(row,("status","candidate_status","nomination_status","state")) or ("DECLARED" if name else "UNKNOWN")).upper().replace(" ","_"); status={"REGISTERED":"OFFICIAL","CONFIRMED":"OFFICIAL","DECLARED_ACTIVE":"DECLARED","ANNOUNCED":"DECLARED","PENDING_NOMINATION":"UNKNOWN","PENDING":"UNKNOWN","SOURCE_GAP":"UNKNOWN","REPORTED_UNCONFIRMED":"REPORTED","RUMORED":"REPORTED","ABSENT":"NO_LIST"}.get(status,status); state=CandidateState[status] if status in CandidateState.__members__ else CandidateState.UNKNOWN
@@ -74,14 +76,13 @@ def candidate_records(reader:GitSnapshotReader,*,as_of:str)->tuple[list[Candidat
 def program_records(reader:GitSnapshotReader,*,as_of:str)->tuple[list[dict[str,Any]],list[dict[str,Any]]]:
     programs={}; unresolved=[]
     for path in discover_sources(reader)["program"]:
-        try: rows=_rows(reader.read_bytes(path),path)
+        try: objects=_decoded(reader.read_bytes(path),path)
         except Exception: continue
-        for row in rows:
+        for row in objects:
             party=_first(row,("party","party_id","party_code","parti")); axes=row.get("axes") or row.get("priorities") or row.get("program_priority_levels")
-            if not party or not isinstance(axes,dict): continue
+            if not party or not isinstance(axes,dict) or not axes: continue
             known=str(_first(row,("source_date","known_at","verified_at","as_of","published_at","updated_at")) or as_of)[:10]
             try:
-                from .contracts import parse_date
                 if parse_date(known)>parse_date(as_of): continue
             except Exception as exc: unresolved.append({"path":path,"party":party,"reason":str(exc)}); continue
             record={"party_id":str(party).upper(),"program_axes":axes,"program_sources":[{"source_id":path,"known_at":known,"tier":str(row.get("source_tier") or "UNSPECIFIED")}],"known_at":known}
@@ -91,10 +92,23 @@ def program_records(reader:GitSnapshotReader,*,as_of:str)->tuple[list[dict[str,A
 def territory_records(reader:GitSnapshotReader)->list[dict[str,Any]]:
     result={}
     for path in discover_sources(reader)["territory"]:
-        try: rows=_rows(reader.read_bytes(path),path)
+        try: objects=_decoded(reader.read_bytes(path),path)
         except Exception: continue
-        for row in rows:
-            tid=_first(row,("territory_id","constituency_id","circonscription_id","district_id","id")); name=_first(row,("territory_name","constituency_name","circonscription_name","district_name","public","name","nom","territory","constituency","circonscription"))
+        for row in objects:
+            tid=_first(row,("territory_id","constituency_id","circonscription_id","district_id","atlas_territory_id")); name=_first(row,("territory_name","constituency_name","circonscription_name","district_name","public","name","nom","territory","constituency","circonscription"))
             if not tid: continue
             result[str(tid)]={"territory_id":str(tid),"territory_name":str(name or tid),"region_id":_first(row,("region_id","region")),"source_path":path}
     return [result[k] for k in sorted(result)]
+
+def registered_totals(reader:GitSnapshotReader)->tuple[dict[str,float],list[dict[str,Any]]]:
+    totals={}; unresolved=[]
+    for path in discover_sources(reader)["registered_electorate"]:
+        try: objects=_decoded(reader.read_bytes(path),path)
+        except Exception: continue
+        for row in objects:
+            tid=_first(row,("territory_id","constituency_id","circonscription_id","district_id")); value=_first(row,("registered_electorate","registered_voters","electors_registered","inscrits","electeurs_inscrits"))
+            if not tid or value in (None,""): continue
+            try: number=float(str(value).replace(" ","").replace(",",""))
+            except ValueError: unresolved.append({"path":path,"territory_id":tid,"value":value}); continue
+            if number>0: totals[str(tid)]=number
+    return dict(sorted(totals.items())),unresolved
