@@ -1,0 +1,16 @@
+{
+  "schema_version": "AGENT_SOCIETY_FORECAST_V4_PROTOCOL",
+  "status": "FROZEN_BEFORE_ANY_PRODUCTION_2026_NAMED_SOL_OUTPUT",
+  "mission": "Agent Society estimates historically calibrated behavioural deltas around Atlas; it is not a synthetic poll or standalone forecast.",
+  "regimes": {
+    "NAMED_REALISTIC_2026": {"role": "PRIMARY_PROSPECTIVE_BEHAVIOURAL_ENGINE", "identities": "real as-of-date names", "candidate_states": ["OFFICIAL", "DECLARED", "REPORTED", "UNKNOWN", "NO_LIST"], "unknown_is_not_no_list": true},
+    "RICH_SEMI_BLIND_BACKTEST": {"role": "HISTORICAL_DEVELOPMENT_AND_HOLDOUT", "2016": "DEVELOPMENT_ONLY", "2021": "HOLDOUT_ONLY_AFTER_LAMBDA_FREEZE", "identities": "PSEUDONYMIZED"},
+    "TOTAL_BLIND_CONTROL": {"role": "INFORMATION_ABLATION_CONTROL", "existing_report": "32 agents, B01, one anonymized territory"}
+  },
+  "society_engine": {"target_population": "REGISTERED_ELECTORATE_2026", "information_diet_required": true, "local_and_regional_ballots_separate": true, "split_ticket_allowed": true, "social_layer_mutates_beliefs_not_votes": true, "94_208_rows_are_independent_respondents": false},
+  "forecast_engine": {"equation": "softmax(log(Atlas) + lambda * agentic_log_ratio_delta)", "default_lambda": 0.0, "lambda_fit": "2016_DEVELOPMENT_ONLY", "lambda_freeze_before": "2021_HOLDOUT", "post_holdout_tuning": false, "uncertainty": "CORRELATED_MONTE_CARLO"},
+  "vintages": {"main_commit_pinned": true, "as_of_required": true, "floating_main_reads": false, "unknown_candidates_allowed": true, "silent_imputation": false, "minimal_rerun_on_change": true},
+  "hard_gates": ["No invented candidate", "No historical outcome in model context", "No 2021 holdout before lambda freeze", "No raw Sol aggregate marketed as forecast", "No production full run before the named 32-cell pilot and historical validation", "No seat claim without certified rule config"],
+  "production_scale_authorized": false,
+  "outcomes_opened": false
+}

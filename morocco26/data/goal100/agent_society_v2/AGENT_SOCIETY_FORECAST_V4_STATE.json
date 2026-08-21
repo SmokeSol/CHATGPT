@@ -1,0 +1,13 @@
+{
+  "schema_version": "AGENT_SOCIETY_FORECAST_V4_STATE",
+  "status": "ARCHITECTURE_IMPLEMENTED_SOURCE_MATERIALIZATION_AND_PILOT_PENDING",
+  "branch": "morocco26-agent-society-v2-front-vote-llm",
+  "base_v5_head": "774758bdfc1f05813e04d0088ba323354aaac219",
+  "engines": {"named_vintage": "IMPLEMENTED", "main_sha_adapter": "IMPLEMENTED", "registered_electorate": "IMPLEMENTED", "information_diet": "IMPLEMENTED", "dual_ballot_society": "IMPLEMENTED", "social_belief_layer": "IMPLEMENTED", "agentic_delta": "IMPLEMENTED", "lambda_calibration": "IMPLEMENTED", "hybrid_forecast": "IMPLEMENTED", "correlated_seat_uncertainty": "IMPLEMENTED"},
+  "regimes": {"NAMED_REALISTIC_2026": "READY_FOR_PARTIAL_AS_OF_VINTAGE_AND_32_CELL_PILOT", "RICH_SEMI_BLIND_BACKTEST": "READY_FOR_REGISTERED_HISTORICAL_SEQUENCE_OUTCOMES_STILL_SEALED", "TOTAL_BLIND_CONTROL": "PRESERVED_AS_INFORMATION_ABLATION_CONTROL"},
+  "calibration": {"state": "LOCKED_ZERO_PRE_VALIDATION", "lambda": 0.0},
+  "production_scale_authorized": false,
+  "new_sol_outputs": 0,
+  "2016_outcome": "SEALED",
+  "2021_outcome": "SEALED"
+}

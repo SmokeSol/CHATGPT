@@ -1,0 +1,30 @@
+name: Test Agent Society Forecast V4
+on:
+  push:
+    branches: [morocco26-agent-society-v2-front-vote-llm]
+    paths:
+      - 'morocco26/agent_society_v4/**'
+      - 'morocco26/scripts/agent_society_forecast_v4.py'
+      - 'morocco26/frontends/agent_society_opus/source_v2/forecast_v4/**'
+      - 'morocco26/data/goal100/agent_society_v2/AGENT_SOCIETY_FORECAST_V4_*.json'
+      - 'morocco26/tests/test_agent_society_forecast_v4.py'
+      - '.github/workflows/test-agent-society-forecast-v4.yml'
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile
+        run: python -m py_compile morocco26/agent_society_v4/*.py morocco26/scripts/agent_society_forecast_v4.py
+      - name: JSON contracts
+        run: python -m json.tool morocco26/frontends/agent_society_opus/source_v2/forecast_v4/AGENT_SOCIETY_FORECAST_V4_PROTOCOL.json >/dev/null && python -m json.tool morocco26/data/goal100/agent_society_v2/AGENT_SOCIETY_FORECAST_V4_GOAL.json >/dev/null && python -m json.tool morocco26/data/goal100/agent_society_v2/AGENT_SOCIETY_FORECAST_V4_STATE.json >/dev/null
+      - name: Unit tests
+        run: python -m unittest -v morocco26.tests.test_agent_society_forecast_v4
+      - name: CLI smoke
+        run: python morocco26/scripts/agent_society_forecast_v4.py --help >/dev/null

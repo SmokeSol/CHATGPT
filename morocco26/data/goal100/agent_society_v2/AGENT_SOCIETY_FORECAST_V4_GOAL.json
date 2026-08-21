@@ -1,0 +1,9 @@
+{
+  "schema_version": "AGENT_SOCIETY_FORECAST_V4_GOAL",
+  "status": "ACTIVE_ARCHITECTURE_IMPLEMENTED",
+  "goal": "Simulate a dated realistic 2026 society and use its behavioural signal only as an out-of-sample calibrated delta to the Atlas structural forecast.",
+  "success_criteria": ["named as-of vintages preserve UNKNOWN without imputation", "registered electorate is the poststratification target", "LOCAL and REGIONAL ballots are separate", "information diets prevent omniscient voters", "social influence changes perceptions before vote choice", "2016 fits lambda and 2021 is untouched holdout", "correlated uncertainty is explicit", "blind control remains a control"],
+  "default_lambda": 0.0,
+  "automatic_full_sol_run": false,
+  "outcomes_opened": false
+}
