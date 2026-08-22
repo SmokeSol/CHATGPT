@@ -637,7 +637,11 @@ def engagement_score(voter: Mapping[str, Any]) -> float:
     alter the information diet.
     """
 
-    discussion = voter.get("latent_attitude_political_discussion_mean")
+    discussion = (
+        voter.get("latent_attitude_political_discussion_mean")
+        if voter.get("latent_attitude_political_discussion_mean") is not None
+        else voter.get("political_discussion")
+    )
     try:
         score = float(discussion)
     except (TypeError, ValueError):
