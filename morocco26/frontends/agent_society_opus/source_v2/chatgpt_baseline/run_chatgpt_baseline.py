@@ -471,19 +471,20 @@ def wrapper_schema(
     }.items():
         if key in properties:
             properties[key] = {"type": "string", "enum": [value]}
-    party_prop = properties.get("conditional_party_probabilities")
-    if isinstance(party_prop, dict):
-        number_schema = party_prop.get("additionalProperties")
-        if not isinstance(number_schema, dict):
-            number_schema = {"type": "number", "minimum": 0, "maximum": 1}
-        party_prop.pop("minProperties", None)
-        party_prop.pop("maxProperties", None)
-        party_prop["properties"] = {
-            party: json.loads(json.dumps(number_schema))
-            for party in task.available_party_ids
-        }
-        party_prop["required"] = list(task.available_party_ids)
-        party_prop["additionalProperties"] = False
+    for ballot_key in ("conditional_party_probabilities", "local_party_probabilities", "regional_party_probabilities"):
+        party_prop = properties.get(ballot_key)
+        if isinstance(party_prop, dict):
+            number_schema = party_prop.get("additionalProperties")
+            if not isinstance(number_schema, dict):
+                number_schema = {"type": "number", "minimum": 0, "maximum": 1}
+            party_prop.pop("minProperties", None)
+            party_prop.pop("maxProperties", None)
+            party_prop["properties"] = {
+                party: json.loads(json.dumps(number_schema))
+                for party in task.available_party_ids
+            }
+            party_prop["required"] = list(task.available_party_ids)
+            party_prop["additionalProperties"] = False
     factor_prop = properties.get("factor_importance")
     if isinstance(factor_prop, dict) and not factor_prop.get("properties"):
         number_schema = factor_prop.get("additionalProperties")
@@ -607,19 +608,22 @@ def validate_rows(
         if not 0.0 <= float(turnout) <= 1.0:
             raise ValidationError(f"row {i}: turnout out of range")
 
-        parties = row.get("conditional_party_probabilities")
-        if not isinstance(parties, dict):
-            raise ValidationError(f"row {i}: party probabilities missing")
-        if set(parties) != set(task.available_party_ids):
-            raise ValidationError(f"row {i}: party ids mismatch")
-        pvals = list(parties.values())
-        if any(
-            isinstance(v, bool) or not isinstance(v, (int, float)) or not 0 <= float(v) <= 1
-            for v in pvals
-        ):
-            raise ValidationError(f"row {i}: invalid party probability")
-        if abs(sum(float(v) for v in pvals) - 1.0) > 1e-9:
-            raise ValidationError(f"row {i}: party simplex does not sum to one")
+        for ballot_key in ("conditional_party_probabilities", "local_party_probabilities", "regional_party_probabilities"):
+            parties = row.get(ballot_key)
+            if not isinstance(parties, dict):
+                if ballot_key in (row_schema.get("required") or []):
+                    raise ValidationError(f"row {i}: {ballot_key} missing")
+                continue
+            if set(parties) != set(task.available_party_ids):
+                raise ValidationError(f"row {i}: {ballot_key} party ids mismatch")
+            pvals = list(parties.values())
+            if any(
+                isinstance(v, bool) or not isinstance(v, (int, float)) or not 0 <= float(v) <= 1
+                for v in pvals
+            ):
+                raise ValidationError(f"row {i}: invalid {ballot_key} probability")
+            if abs(sum(float(v) for v in pvals) - 1.0) > 1e-9:
+                raise ValidationError(f"row {i}: {ballot_key} simplex does not sum to one")
 
         if "factor_importance" in required or "factor_importance" in row:
             factors = row.get("factor_importance")
