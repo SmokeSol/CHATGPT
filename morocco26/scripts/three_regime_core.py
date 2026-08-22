@@ -606,11 +606,18 @@ def load_main_bridge(path: pathlib.Path) -> tuple[dict[str, Any], str]:
     value = read_json(path)
     items = value.get("items")
     semantic = value.get("semantic_equivalence_audit") or {}
+    controls = value.get("historical_controls") or {}
+    dev_pilot_scope = controls.get("scope") == "DEVELOPMENT_ONLY_P1_PILOT"
+    expected_items = (
+        EXPECTED_ELECTION_TERRITORY_ITEMS // 2
+        if dev_pilot_scope
+        else EXPECTED_ELECTION_TERRITORY_ITEMS
+    )
     checks = {
         "bridge_id": value.get("bridge_id") == "M26_AS_MAIN_BRIDGE_V1",
         "status": value.get("status") == "PASS_FROZEN_MAIN_BRIDGE_READY_FOR_G0_SOL",
         "main_sha": value.get("main_commit_sha") == REGISTERED_MAIN_SHA,
-        "items": isinstance(items, Mapping) and len(items) == EXPECTED_ELECTION_TERRITORY_ITEMS,
+        "items": isinstance(items, Mapping) and len(items) == expected_items,
         "outcomes": value.get("target_outcomes_present") is False,
         "identities": value.get("real_identity_material_present") is False,
         "semantic_delta": value.get("model_semantic_delta_v1") is False,

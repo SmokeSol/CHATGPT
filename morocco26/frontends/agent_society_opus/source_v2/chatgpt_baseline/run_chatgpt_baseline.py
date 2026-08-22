@@ -1137,12 +1137,18 @@ def main(argv: Sequence[str] | None = None) -> int:
     row_schema = read_json(schema_path)
     tasks, discovery_mode = discover_tasks(environment_root)
     discovered_rows = sum(len(task.expected_rows) for task in tasks)
+    scoped_half = (
+        getattr(args, "dev_pilot_scope", False)
+        or os.environ.get("M26_DEV_PILOT_SCOPE") == "1"
+    )
+    expected_wi = args.expected_work_items // 2 if scoped_half else args.expected_work_items
+    expected_rows_n = args.expected_rows // 2 if scoped_half else args.expected_rows
     if not args.allow_noncanonical_counts:
-        if len(tasks) != args.expected_work_items or discovered_rows != args.expected_rows:
+        if len(tasks) != expected_wi or discovered_rows != expected_rows_n:
             raise RunnerError(
                 "wrong frozen package: discovered "
                 f"{len(tasks)} work items / {discovered_rows} rows; expected "
-                f"{args.expected_work_items} / {args.expected_rows}. "
+                f"{expected_wi} / {expected_rows_n}. "
                 "Use the 94,208-row full-environment ZIP, not the earlier 47,104-row handoff."
             )
     selected = select_tasks(

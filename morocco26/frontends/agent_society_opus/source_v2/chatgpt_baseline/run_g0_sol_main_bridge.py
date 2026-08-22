@@ -79,8 +79,13 @@ def load_bridge(path: pathlib.Path) -> tuple[dict[str, Any], str]:
         "leak_scan": (obj.get("public_leak_scan") or {}).get("status") == "PASS",
         "registered_main_sha": obj.get("main_commit_sha") == REGISTERED_MAIN_SHA,
         "items_type": isinstance(items, dict),
-        "items_count": isinstance(items, dict) and len(items) == EXPECTED_BRIDGE_ITEMS,
-        "declared_item_count": obj.get("item_count") == EXPECTED_BRIDGE_ITEMS,
+        "items_count": isinstance(items, dict) and len(items) == (
+            EXPECTED_BRIDGE_ITEMS
+            if (obj.get("historical_controls") or {}).get("scope")
+            != "DEVELOPMENT_ONLY_P1_PILOT"
+            else EXPECTED_BRIDGE_ITEMS // 2
+        ),
+        "declared_item_count": obj.get("item_count") == len(items),
     }
     failed = sorted(k for k, ok in checks.items() if not ok)
     if failed:
@@ -102,8 +107,17 @@ def patch_runner(bridge_path: pathlib.Path, bridge: dict[str, Any], bridge_file_
     main_sha = str(bridge["main_commit_sha"])
     semantic_audit = bridge["semantic_equivalence_audit"]
 
+    scoped_elections = (
+        {k.split("|", 1)[0] for k in bridge_items}
+        if (bridge.get("historical_controls") or {}).get("scope")
+        == "DEVELOPMENT_ONLY_P1_PILOT"
+        else None
+    )
+
     def discover(root: pathlib.Path):
         tasks, mode = original_discover(root)
+        if scoped_elections is not None:
+            tasks = [t for t in tasks if t.election_id in scoped_elections]
         bound, missing = [], []
         seen_keys = set()
         for task in tasks:

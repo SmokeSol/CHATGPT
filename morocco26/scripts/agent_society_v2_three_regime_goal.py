@@ -135,8 +135,12 @@ def build_historical_contracts(
     contracts_root = output_dir / "historical_semiblind_rich" / "contracts"
     contracts: list[dict[str, Any]] = []
     bridge_items = bridge["items"]
+    controls_scope = (bridge.get("historical_controls") or {}).get("scope")
+    scoped = controls_scope == "DEVELOPMENT_ONLY_P1_PILOT"
     seen_et: set[str] = set()
     for record in records:
+        if scoped and record.election_id not in {k.split("|", 1)[0] for k in bridge_items}:
+            continue
         if record.election_territory_key not in bridge_items:
             raise ThreeRegimeError(
                 f"main bridge missing historical key {record.election_territory_key}"
@@ -178,6 +182,9 @@ def build_historical_contracts(
         "model_packet_values_duplicated": False,
         "prompt_delta": "POINTER_ONLY_READING_CONTRACT_AND_INTERPRETATION_INSTRUCTION",
         "context_audit": audit,
+        "historical_controls": {
+            "scope": (bridge.get("historical_controls") or {}).get("scope"),
+        },
         "contracts": contracts,
         "target_outcomes_read": False,
         "real_identity_material_written": False,
