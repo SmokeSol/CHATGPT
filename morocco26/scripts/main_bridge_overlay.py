@@ -4,7 +4,7 @@ from typing import Any, Mapping, Sequence
 from main_bridge_core import (
     BRIDGE_ID, SCHEMA_VERSION, BridgeError, assert_no_forbidden_keys, leak_scan,
 )
-from main_bridge_alignment import align_election_parties
+from main_bridge_alignment_v2 import align_election_parties_v2
 
 META_FEATURES = {"BALLOT_LIST_PRESENT", "EVIDENCE_COUNT", "SOURCE_CLASS_MAX", "SOURCE_CONFLICT"}
 
@@ -166,14 +166,25 @@ def build_overlay(
     }
     for eid in env_eids:
         bundle = by_eid[eid]
-        ptoq, audit = align_election_parties(bundle, environment)
-        audits[eid] = audit
+        territory_mappings, audit = align_election_parties_v2(bundle, environment)
+        audits[eid] = {
+            "method": audit["method"],
+            "election_id": audit["election_id"],
+            "territories_aligned": audit["territories_aligned"],
+            "global_max_abs_error": audit["global_max_abs_error"],
+            "tolerance": audit["tolerance"],
+            "identity_information_used": False,
+            "target_outcomes_used": False,
+        }
+        territory_mapping_hashes = {
+            tid: a["mapping_sha256"] for tid, a in audit["per_territory_audits"].items()
+        }
         for packet in bundle["packets"]:
             tid = str(packet["anonymous_territory_id"])
             key = f"{eid}|{tid}"
             env = environment[key]
             cc = [
-                candidate_card(eid, tid, ptoq[str(p["anonymous_party_id"])], p)
+                candidate_card(eid, tid, territory_mappings[tid][str(p["anonymous_party_id"])], p)
                 for p in packet["parties"]
             ]
             cc.sort(key=lambda x: x["anonymous_party_id"])
@@ -184,6 +195,7 @@ def build_overlay(
             items[key] = {
                 "anonymous_election_id": eid,
                 "anonymous_territory_id": tid,
+                "party_alignment_mapping_sha256": territory_mapping_hashes[tid],
                 "candidate_offer": {
                     "status": "FROZEN_MAIN_BLIND_EVIDENCE_PROVENANCE_CONNECTED_SEMANTIC_EQUIVALENCE_VERIFIED",
                     "cards": cc,

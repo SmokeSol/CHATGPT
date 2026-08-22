@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
+import os
 import argparse, pathlib, sys, tempfile
 from typing import Sequence
 
@@ -48,8 +49,13 @@ def main(argv: Sequence[str] | None = None) -> int:
             "sha256": digest,
         }
 
-    with tempfile.TemporaryDirectory(prefix="m26-main-bridge-") as tmp:
-        envroot = extract_environment(args.environment, pathlib.Path(tmp))
+    import shutil as _shutil
+    import uuid as _uuid
+    _tmp_base = os.environ.get("TEMP") or os.environ.get("TMP") or "."
+    tmp = pathlib.Path(_tmp_base) / ("m26-main-bridge-" + _uuid.uuid4().hex)
+    tmp.mkdir(parents=True)
+    try:
+        envroot = extract_environment(args.environment, tmp)
         environment, audit = collect_environment(envroot)
         overlay = build_overlay(
             main_sha=sha,
@@ -77,6 +83,8 @@ def main(argv: Sequence[str] | None = None) -> int:
             "candidate_layer_status": "MAIN_BLIND_EVIDENCE_CONNECTED_WITH_SOURCE_PROVENANCE",
         }
         write_json(output.with_suffix(output.suffix + ".manifest.json"), manifest)
+    finally:
+        _shutil.rmtree(tmp, ignore_errors=True)
 
     print(
         f"PASS_MAIN_TO_AGENT_SOCIETY_BRIDGE_V1 items={overlay['item_count']} "
